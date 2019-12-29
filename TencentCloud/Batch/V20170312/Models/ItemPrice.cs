@@ -1,0 +1,68 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Batch.V20170312.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ItemPrice : AbstractModel
+    {
+        
+        /// <summary>
+        /// Subsequent unit price (in RMB).
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("UnitPrice")]
+        public float? UnitPrice{ get; set; }
+
+        /// <summary>
+        /// Subsequent billing unit. Valid values: <br><li>HOUR: bill by hour. Scenarios using this billing unit include: pay as you go for instances on an hourly basis (`POSTPAID_BY_HOUR`), and pay as you go for bandwidth on an hourly basis (`BANDWIDTH_POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. Scenarios using this billing unit include: pay as you go for traffic on an hourly basis (`TRAFFIC_POSTPAID_BY_HOUR`).
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("ChargeUnit")]
+        public string ChargeUnit{ get; set; }
+
+        /// <summary>
+        /// Original price of a prepaid instance (in RMB).
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// Discount price of a prepaid instance (in RMB).
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("DiscountPrice")]
+        public float? DiscountPrice{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
+            this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+        }
+    }
+}
+
