@@ -25,7 +25,8 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 
+        /// This parameter can be used to query whether CLB billing mode switch is successful.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

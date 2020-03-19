@@ -53,7 +53,47 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 取消CMK的计划删除操作
+        /// This API is used to decrypt data with the specified private key that is encrypted with RSA asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption.
+        /// </summary>
+        /// <param name="req"><see cref="AsymmetricRsaDecryptRequest"/></param>
+        /// <returns><see cref="AsymmetricRsaDecryptResponse"/></returns>
+        public async Task<AsymmetricRsaDecryptResponse> AsymmetricRsaDecrypt(AsymmetricRsaDecryptRequest req)
+        {
+             JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AsymmetricRsaDecrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricRsaDecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to decrypt data with the specified private key that is encrypted with SM2 asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption. The length of the ciphertext passed in cannot exceed 256 bytes.
+        /// </summary>
+        /// <param name="req"><see cref="AsymmetricSm2DecryptRequest"/></param>
+        /// <returns><see cref="AsymmetricSm2DecryptResponse"/></returns>
+        public async Task<AsymmetricSm2DecryptResponse> AsymmetricSm2Decrypt(AsymmetricSm2DecryptRequest req)
+        {
+             JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AsymmetricSm2Decrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricSm2DecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Cancel the scheduled deletion of CMK
         /// </summary>
         /// <param name="req"><see cref="CancelKeyDeletionRequest"/></param>
         /// <returns><see cref="CancelKeyDeletionResponse"/></returns>
@@ -73,7 +113,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
+        /// Create a master key CMK (Custom Master Key) for user management data keys
         /// </summary>
         /// <param name="req"><see cref="CreateKeyRequest"/></param>
         /// <returns><see cref="CreateKeyResponse"/></returns>
@@ -93,7 +133,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 本接口用于解密密文，得到明文数据。
+        /// This API is used to decrypt the ciphertext and obtain the plaintext data.
         /// </summary>
         /// <param name="req"><see cref="DecryptRequest"/></param>
         /// <returns><see cref="DecryptResponse"/></returns>
@@ -133,7 +173,47 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
+        /// This API is used to get the attribute details of the CMK with a specified `KeyId`.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeyRequest"/></param>
+        /// <returns><see cref="DescribeKeyResponse"/></returns>
+        public async Task<DescribeKeyResponse> DescribeKey(DescribeKeyRequest req)
+        {
+             JsonResponseModel<DescribeKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the attribute information of CMKs in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeysRequest"/></param>
+        /// <returns><see cref="DescribeKeysResponse"/></returns>
+        public async Task<DescribeKeysResponse> DescribeKeys(DescribeKeysRequest req)
+        {
+             JsonResponseModel<DescribeKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable a master key. The disabled key cannot be used for encryption and decryption operations.
         /// </summary>
         /// <param name="req"><see cref="DisableKeyRequest"/></param>
         /// <returns><see cref="DisableKeyResponse"/></returns>
@@ -153,7 +233,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 对指定的CMK禁止密钥轮换功能。
+        /// Disabled key rotation for the specified CMK.
         /// </summary>
         /// <param name="req"><see cref="DisableKeyRotationRequest"/></param>
         /// <returns><see cref="DisableKeyRotationResponse"/></returns>
@@ -173,7 +253,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 该接口用于批量禁止CMK的使用。
+        /// This API is used to batch prohibit the use of CMK.
         /// </summary>
         /// <param name="req"><see cref="DisableKeysRequest"/></param>
         /// <returns><see cref="DisableKeysResponse"/></returns>
@@ -193,7 +273,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 用于启用一个指定的CMK。
+        /// Enable a specified CMK.
         /// </summary>
         /// <param name="req"><see cref="EnableKeyRequest"/></param>
         /// <returns><see cref="EnableKeyResponse"/></returns>
@@ -213,7 +293,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 对指定的CMK开启密钥轮换功能。
+        /// Turn on the key rotation function for the specified CMK.
         /// </summary>
         /// <param name="req"><see cref="EnableKeyRotationRequest"/></param>
         /// <returns><see cref="EnableKeyRotationResponse"/></returns>
@@ -233,7 +313,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 该接口用于批量启用CMK。
+        /// This API is used to enable CMK in batches.
         /// </summary>
         /// <param name="req"><see cref="EnableKeysRequest"/></param>
         /// <returns><see cref="EnableKeysResponse"/></returns>
@@ -253,7 +333,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
+        /// This API is used to encrypt any data up to 4KB. It can be used to encrypt database passwords, RSA Key, or other small sensitive information. For application data encryption, use the DataKey generated by GenerateDataKey to perform local data encryption and decryption operations
         /// </summary>
         /// <param name="req"><see cref="EncryptRequest"/></param>
         /// <returns><see cref="EncryptResponse"/></returns>
@@ -273,7 +353,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 本接口生成一个数据密钥，您可以用这个密钥进行本地数据的加密。
+        /// This API generates a data key, which you can use to encrypt local data.
         /// </summary>
         /// <param name="req"><see cref="GenerateDataKeyRequest"/></param>
         /// <returns><see cref="GenerateDataKeyResponse"/></returns>
@@ -313,7 +393,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 查询指定的CMK是否开启了密钥轮换功能。
+        /// Query whether the specified CMK has the key rotation function.
         /// </summary>
         /// <param name="req"><see cref="GetKeyRotationStatusRequest"/></param>
         /// <returns><see cref="GetKeyRotationStatusResponse"/></returns>
@@ -353,7 +433,27 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 用于查询该用户是否已开通KMS服务
+        /// This API is used to get the information of the public key that is encrypted with the asymmetric cryptographic algorithm and of which the `KeyUsage` is `ASYMMETRIC_DECRYPT_RSA_2048` or `ASYMMETRIC_DECRYPT_SM2`. This public key can be used to encrypt data locally, and the data encrypted with it can only be decrypted with the corresponding private key through KMS. The public key can only be obtained from the asymmetric key in `Enabled` state.
+        /// </summary>
+        /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
+        /// <returns><see cref="GetPublicKeyResponse"/></returns>
+        public async Task<GetPublicKeyResponse> GetPublicKey(GetPublicKeyRequest req)
+        {
+             JsonResponseModel<GetPublicKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPublicKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPublicKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Used to query whether the user has activated the KMS service.
         /// </summary>
         /// <param name="req"><see cref="GetServiceStatusRequest"/></param>
         /// <returns><see cref="GetServiceStatusResponse"/></returns>
@@ -394,7 +494,27 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 根据指定Offset和Limit获取主密钥列表详情。
+        /// This API is used to list the encryption methods supported in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="ListAlgorithmsRequest"/></param>
+        /// <returns><see cref="ListAlgorithmsResponse"/></returns>
+        public async Task<ListAlgorithmsResponse> ListAlgorithms(ListAlgorithmsRequest req)
+        {
+             JsonResponseModel<ListAlgorithmsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAlgorithms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAlgorithmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Get the master key list details according to the specified Offset and Limit.
         /// </summary>
         /// <param name="req"><see cref="ListKeyDetailRequest"/></param>
         /// <returns><see cref="ListKeyDetailResponse"/></returns>
@@ -434,7 +554,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 使用指定CMK对密文重新加密。
+        /// Re-encrypt the ciphertext using the specified CMK.
         /// </summary>
         /// <param name="req"><see cref="ReEncryptRequest"/></param>
         /// <returns><see cref="ReEncryptResponse"/></returns>
@@ -454,7 +574,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
+        /// CMK planned deletion API, used to specify the time of CMK deletion, the optional time interval is [7,30] days
         /// </summary>
         /// <param name="req"><see cref="ScheduleKeyDeletionRequest"/></param>
         /// <returns><see cref="ScheduleKeyDeletionResponse"/></returns>

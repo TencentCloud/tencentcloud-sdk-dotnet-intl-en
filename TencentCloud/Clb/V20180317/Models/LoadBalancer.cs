@@ -162,8 +162,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string AnycastZone{ get; set; }
 
         /// <summary>
-        /// IP version. Value range: ipv4, ipv6
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// IP version. Valid values: ipv4, ipv6
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AddressIPVersion")]
         public string AddressIPVersion{ get; set; }
@@ -274,23 +274,51 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ConfigId{ get; set; }
 
         /// <summary>
-        /// Whether a real server opens the traffic from a CLB instance to the internet by default
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether a real server opens the traffic from a CLB instance to the internet
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
-        /// 
+        /// Private network dedicated cluster
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExclusiveCluster")]
         public ExclusiveCluster ExclusiveCluster{ get; set; }
 
         /// <summary>
-        /// 
+        /// This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IPv6Mode")]
         public string IPv6Mode{ get; set; }
+
+        /// <summary>
+        /// Whether to enable SnatPro
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SnatPro")]
+        public bool? SnatPro{ get; set; }
+
+        /// <summary>
+        /// SnatIp list after SnatPro load balancing is enabled
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SnatIps")]
+        public SnatIp[] SnatIps{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsBlock")]
+        public bool? IsBlock{ get; set; }
 
 
         /// <summary>
@@ -337,6 +365,10 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
             this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
             this.SetParamSimple(map, prefix + "IPv6Mode", this.IPv6Mode);
+            this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
+            this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamSimple(map, prefix + "IsBlock", this.IsBlock);
         }
     }
 }

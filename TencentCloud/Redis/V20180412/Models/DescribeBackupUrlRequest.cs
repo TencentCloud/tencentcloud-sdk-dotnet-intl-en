@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup ID, which can be queried through the DescribeInstanceBackups API
+        /// Backup ID, which can be queried through the `DescribeInstanceBackups` API
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 
+        /// This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
+        /// <summary>
+        /// Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+        /// </summary>
+        [JsonProperty("KeyUsage")]
+        public string KeyUsage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeyState", this.KeyState);
             this.SetParamSimple(map, prefix + "SearchKeyAlias", this.SearchKeyAlias);
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
+            this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         }
     }
 }

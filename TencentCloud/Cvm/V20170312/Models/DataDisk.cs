@@ -60,6 +60,17 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
+        /// <summary>
+        /// Specifies whether the data disk is encrypted. Values: 
+        /// <li>TRUE: encrypted
+        /// <li>FALSE: not encrypted<br>
+        /// Default value: FALSE<br>
+        /// Currently, this parameter is only used in the `RunInstances` API.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public bool? Encrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +82,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? AuthDelta{ get; set; }
 
         /// <summary>
-        /// Authentication back key.
+        /// Authentication BackKey.
         /// </summary>
         [JsonProperty("AuthBackKey")]
         public string AuthBackKey{ get; set; }

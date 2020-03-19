@@ -24,12 +24,26 @@ namespace TencentCloud.Kms.V20190118.Models
     public class UpdateKeyDescriptionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// ID of the CMK for which to modify the description
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
         }
     }
 }

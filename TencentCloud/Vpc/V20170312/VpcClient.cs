@@ -2087,6 +2087,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API (ModifyCcnRegionBandwidthlimitsType) is used to modify the bandwidth limits policy of the postpaid Ccn instances.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnRegionBandwidthLimitsTypeRequest"/></param>
+        /// <returns><see cref="ModifyCcnRegionBandwidthLimitsTypeResponse"/></returns>
+        public async Task<ModifyCcnRegionBandwidthLimitsTypeResponse> ModifyCcnRegionBandwidthLimitsType(ModifyCcnRegionBandwidthLimitsTypeRequest req)
+        {
+             JsonResponseModel<ModifyCcnRegionBandwidthLimitsTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCcnRegionBandwidthLimitsType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcnRegionBandwidthLimitsTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyHaVipAttribute) is used to modify HAVIP attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyHaVipAttributeRequest"/></param>

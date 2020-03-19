@@ -31,13 +31,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+        /// Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Stream name.
+        /// Stream name. If only the domain name or path is bound, leave this parameter blank.
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }

@@ -194,6 +194,25 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LatestOperationRequestId")]
         public string LatestOperationRequestId{ get; set; }
 
+        /// <summary>
+        /// ID of a spread placement group.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupId")]
+        public string DisasterRecoverGroupId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IPv6Addresses")]
+        public string IPv6Addresses{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CamRoleName")]
+        public string CamRoleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +247,9 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
             this.SetParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
+            this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
+            this.SetParamSimple(map, prefix + "IPv6Addresses", this.IPv6Addresses);
+            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         }
     }
 }

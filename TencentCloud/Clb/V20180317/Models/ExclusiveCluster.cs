@@ -24,12 +24,36 @@ namespace TencentCloud.Clb.V20180317.Models
     public class ExclusiveCluster : AbstractModel
     {
         
+        /// <summary>
+        /// Layer-4 dedicated cluster list
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("L4Clusters")]
+        public ClusterItem[] L4Clusters{ get; set; }
+
+        /// <summary>
+        /// Layer-7 dedicated cluster list
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("L7Clusters")]
+        public ClusterItem[] L7Clusters{ get; set; }
+
+        /// <summary>
+        /// vpcgw cluster
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClassicalCluster")]
+        public ClusterItem ClassicalCluster{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "L4Clusters.", this.L4Clusters);
+            this.SetParamArrayObj(map, prefix + "L7Clusters.", this.L7Clusters);
+            this.SetParamObj(map, prefix + "ClassicalCluster.", this.ClassicalCluster);
         }
     }
 }

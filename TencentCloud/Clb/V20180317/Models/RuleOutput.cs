@@ -140,13 +140,15 @@ namespace TencentCloud.Clb.V20180317.Models
         public string WafDomainId{ get; set; }
 
         /// <summary>
-        /// 
+        /// TRPC callee server route, which is valid when `ForwardType` is `TRPC`.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TrpcCallee")]
         public string TrpcCallee{ get; set; }
 
         /// <summary>
-        /// 
+        /// TRPC calling service API, which is valid when `ForwardType` is `TRPC`.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }

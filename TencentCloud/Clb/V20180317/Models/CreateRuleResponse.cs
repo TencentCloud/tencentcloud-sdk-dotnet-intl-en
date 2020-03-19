@@ -25,6 +25,12 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
+        /// Array of unique IDs of created forwarding rules
+        /// </summary>
+        [JsonProperty("LocationIds")]
+        public string[] LocationIds{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "LocationIds.", this.LocationIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

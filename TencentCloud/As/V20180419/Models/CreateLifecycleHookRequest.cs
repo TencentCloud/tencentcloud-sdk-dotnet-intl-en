@@ -66,6 +66,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
 
+        /// <summary>
+        /// The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+        /// </summary>
+        [JsonProperty("LifecycleTransitionType")]
+        public string LifecycleTransitionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "HeartbeatTimeout", this.HeartbeatTimeout);
             this.SetParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
             this.SetParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
+            this.SetParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
         }
     }
 }

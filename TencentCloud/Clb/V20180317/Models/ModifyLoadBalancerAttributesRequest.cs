@@ -43,10 +43,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public TargetRegionInfo TargetRegionInfo{ get; set; }
 
         /// <summary>
-        /// Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+        /// Network billing parameter
         /// </summary>
         [JsonProperty("InternetChargeInfo")]
         public InternetAccessible InternetChargeInfo{ get; set; }
+
+        /// <summary>
+        /// Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
+
+        /// <summary>
+        /// Whether to enable SnatPro
+        /// </summary>
+        [JsonProperty("SnatPro")]
+        public bool? SnatPro{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
             this.SetParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
         }
     }
 }

@@ -62,7 +62,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Forwarding protocol between CLB and real server. Currently, HTTP is supported
+        /// Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? DefaultServer{ get; set; }
 
         /// <summary>
-        /// Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+        /// Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
         /// </summary>
         [JsonProperty("Http2")]
         public bool? Http2{ get; set; }
@@ -86,13 +86,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// 
+        /// TRPC callee server route, which is required when `ForwardType` is `TRPC`.
         /// </summary>
         [JsonProperty("TrpcCallee")]
         public string TrpcCallee{ get; set; }
 
         /// <summary>
-        /// 
+        /// TRPC calling service API, which is required when `ForwardType` is `TRPC`.
         /// </summary>
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }

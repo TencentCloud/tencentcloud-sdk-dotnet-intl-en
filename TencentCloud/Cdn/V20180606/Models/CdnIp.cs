@@ -25,31 +25,37 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// IP of the node.
+        /// IP to be queried
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
+        /// IP ownership:
+        /// yes: Tencent Cloud CDN node
+        /// no: non-Tencent Cloud CDN node
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// District/country where the node is located. `unknown`: the node location is unknown.
+        /// Node district/country
+        /// unknown: unknown node location
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
-        /// Activation and deactivation history of the node.
+        /// Node activation and deactivation history
         /// </summary>
         [JsonProperty("History")]
         public CdnIpHistory[] History{ get; set; }
 
         /// <summary>
-        /// Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
+        /// Node region
+        /// mainland: cache node in Mainland China
+        /// overseas: cache node outside Mainland China
+        /// unknown: service region unknown
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

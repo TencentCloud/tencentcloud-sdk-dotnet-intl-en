@@ -49,7 +49,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? NotifyWechat{ get; set; }
 
         /// <summary>
-        /// 
+        /// Alert
         /// </summary>
         [JsonProperty("Tips")]
         public ulong? Tips{ get; set; }

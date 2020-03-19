@@ -32,20 +32,20 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Video encoding format:
-        /// H.264/H.265.
+        /// h264/h265.
         /// </summary>
         [JsonProperty("Vcodec")]
         public string Vcodec{ get; set; }
 
         /// <summary>
         /// Audio encoding format:
-        /// AAC/MP3.
+        /// aac/mp3.
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// Audio bitrate. Value range: 0-500. Default value: 0.
+        /// Audio bitrate. Value range: 0–500. Default value: 0.
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
@@ -57,13 +57,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Video bitrate. Value range: 100-8,000
+        /// Video bitrate. Value range: 100–8,000
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// Width. Value range: 0-3,000
+        /// Width. Value range: 0–3,000
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -81,25 +81,25 @@ namespace TencentCloud.Live.V20180801.Models
         public long? NeedAudio{ get; set; }
 
         /// <summary>
-        /// Height. Value range: 0-3,000
+        /// Height. Value range: 0–3,000
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Frame rate. Value range: 0-200
+        /// Frame rate. Value range: 0–200
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// Keyframe interval in seconds. Value range: 0-50
+        /// Keyframe interval in seconds. Value range: 0–50
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
 
         /// <summary>
-        /// Rotation angle. Value range: 0, 90, 180, 270
+        /// Rotation angle. Valid values: 0, 90, 180, 270
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
@@ -130,7 +130,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? FpsToOrig{ get; set; }
 
         /// <summary>
-        /// VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
+        /// VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }

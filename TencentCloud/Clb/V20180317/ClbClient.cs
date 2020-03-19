@@ -53,6 +53,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to bind target groups to CLB listeners (layer-4 protocol) or forwarding rules (layer-7 protocol).
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateTargetGroupsRequest"/></param>
+        /// <returns><see cref="AssociateTargetGroupsResponse"/></returns>
+        public async Task<AssociateTargetGroupsResponse> AssociateTargetGroups(AssociateTargetGroupsRequest req)
+        {
+             JsonResponseModel<AssociateTargetGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateTargetGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateTargetGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// An HTTPS:443 listener needs to be created first, along with a forwarding rule. When this API is called, an HTTP:80 listener will be created automatically if it did not exist and a forwarding rule corresponding to `Domains` (specified in the input parameter) under the HTTPS:443 listener will also be created. After successful creation, access requests to an HTTP:80 address will be redirected to an HTTPS:443 address automatically.
         /// </summary>
         /// <param name="req"><see cref="AutoRewriteRequest"/></param>
@@ -93,8 +114,8 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (BatchModifyTargetWeight) is used to batch modify the forwarding weights of real servers bound to a listener. Currently, it only supports HTTP/HTTPS listeners.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// This API is used to modify the forwarding weights of real servers bound to a CLB listener in batches. It supports layer-4 and layer-7 CLB listeners but not Classic CLB.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
         /// </summary>
         /// <param name="req"><see cref="BatchModifyTargetWeightRequest"/></param>
         /// <returns><see cref="BatchModifyTargetWeightResponse"/></returns>
@@ -114,7 +135,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to bind CVM instances or ENIs in batches. It supports cross-region binding and only layer-4 (TCP/UDP) protocols.
+        /// This API is used to bind CVM instances or ENIs in batches. It supports cross-region binding and layer-4 and layer-7 (TCP, UDP, HTTP, HTTPS) protocols.
         /// </summary>
         /// <param name="req"><see cref="BatchRegisterTargetsRequest"/></param>
         /// <returns><see cref="BatchRegisterTargetsResponse"/></returns>
@@ -198,6 +219,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to create a target group. (The target group feature is currently in beta test. To try it out, submit a ticket for application.)
+        /// </summary>
+        /// <param name="req"><see cref="CreateTargetGroupRequest"/></param>
+        /// <returns><see cref="CreateTargetGroupResponse"/></returns>
+        public async Task<CreateTargetGroupResponse> CreateTargetGroup(CreateTargetGroupRequest req)
+        {
+             JsonResponseModel<CreateTargetGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTargetGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTargetGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a listener from a CLB instance (layer-4 or layer-7).
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>
@@ -272,6 +313,47 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = await this.InternalRequest(req, "DeleteRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a target group.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTargetGroupsRequest"/></param>
+        /// <returns><see cref="DeleteTargetGroupsResponse"/></returns>
+        public async Task<DeleteTargetGroupsResponse> DeleteTargetGroups(DeleteTargetGroupsRequest req)
+        {
+             JsonResponseModel<DeleteTargetGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTargetGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTargetGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a server from a target group.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterTargetGroupInstancesRequest"/></param>
+        /// <returns><see cref="DeregisterTargetGroupInstancesResponse"/></returns>
+        public async Task<DeregisterTargetGroupInstancesResponse> DeregisterTargetGroupInstances(DeregisterTargetGroupInstancesRequest req)
+        {
+             JsonResponseModel<DeregisterTargetGroupInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeregisterTargetGroupInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterTargetGroupInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -403,7 +485,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DescribeListeners) is used to get the list of listeners by CLB IDs, listener protocol, or port. If no filter is specified, the default number (20) of listeners for the instance will be returned.
+        /// This API is used to get the list of listeners by CLB instance ID, listener protocol, or port. If no filter is specified, all listeners under the CLB instance will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeListenersRequest"/></param>
         /// <returns><see cref="DescribeListenersResponse"/></returns>
@@ -423,7 +505,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to query the list of CLB instances.
+        /// This API is used to query the list of CLB instances associated with a certificate in a region by certificate ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerListByCertIdRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerListByCertIdResponse"/></returns>
+        public async Task<DescribeLoadBalancerListByCertIdResponse> DescribeLoadBalancerListByCertId(DescribeLoadBalancerListByCertIdRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancerListByCertIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancerListByCertId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerListByCertIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of CLB instances in a region.
         /// </summary>
         /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>
         /// <returns><see cref="DescribeLoadBalancersResponse"/></returns>
@@ -454,6 +556,66 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = await this.InternalRequest(req, "DescribeRewrite");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the information of servers bound to a target group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetGroupInstancesRequest"/></param>
+        /// <returns><see cref="DescribeTargetGroupInstancesResponse"/></returns>
+        public async Task<DescribeTargetGroupInstancesResponse> DescribeTargetGroupInstances(DescribeTargetGroupInstancesRequest req)
+        {
+             JsonResponseModel<DescribeTargetGroupInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTargetGroupInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetGroupInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the target group list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetGroupListRequest"/></param>
+        /// <returns><see cref="DescribeTargetGroupListResponse"/></returns>
+        public async Task<DescribeTargetGroupListResponse> DescribeTargetGroupList(DescribeTargetGroupListRequest req)
+        {
+             JsonResponseModel<DescribeTargetGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTargetGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the target group information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetGroupsRequest"/></param>
+        /// <returns><see cref="DescribeTargetGroupsResponse"/></returns>
+        public async Task<DescribeTargetGroupsResponse> DescribeTargetGroups(DescribeTargetGroupsRequest req)
+        {
+             JsonResponseModel<DescribeTargetGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTargetGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -514,6 +676,27 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = await this.InternalRequest(req, "DescribeTaskStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind target groups from a rule.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateTargetGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateTargetGroupsResponse"/></returns>
+        public async Task<DisassociateTargetGroupsResponse> DisassociateTargetGroups(DisassociateTargetGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateTargetGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateTargetGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateTargetGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -647,6 +830,68 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to rename a target group or modify its default port attribute.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifyTargetGroupAttributeResponse"/></returns>
+        public async Task<ModifyTargetGroupAttributeResponse> ModifyTargetGroupAttribute(ModifyTargetGroupAttributeRequest req)
+        {
+             JsonResponseModel<ModifyTargetGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTargetGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify server ports of a target group in batches.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetGroupInstancesPortRequest"/></param>
+        /// <returns><see cref="ModifyTargetGroupInstancesPortResponse"/></returns>
+        public async Task<ModifyTargetGroupInstancesPortResponse> ModifyTargetGroupInstancesPort(ModifyTargetGroupInstancesPortRequest req)
+        {
+             JsonResponseModel<ModifyTargetGroupInstancesPortResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTargetGroupInstancesPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetGroupInstancesPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify server weights of a target group in batches.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetGroupInstancesWeightRequest"/></param>
+        /// <returns><see cref="ModifyTargetGroupInstancesWeightResponse"/></returns>
+        public async Task<ModifyTargetGroupInstancesWeightResponse> ModifyTargetGroupInstancesWeight(ModifyTargetGroupInstancesWeightRequest req)
+        {
+             JsonResponseModel<ModifyTargetGroupInstancesWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTargetGroupInstancesWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetGroupInstancesWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyTargetPort) is used to modify the port of a real server bound to a listener.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>
@@ -680,6 +925,27 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = await this.InternalRequest(req, "ModifyTargetWeight");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to register servers to a target group.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RegisterTargetGroupInstancesRequest"/></param>
+        /// <returns><see cref="RegisterTargetGroupInstancesResponse"/></returns>
+        public async Task<RegisterTargetGroupInstancesResponse> RegisterTargetGroupInstances(RegisterTargetGroupInstancesRequest req)
+        {
+             JsonResponseModel<RegisterTargetGroupInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RegisterTargetGroupInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterTargetGroupInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

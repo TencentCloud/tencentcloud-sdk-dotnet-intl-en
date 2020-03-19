@@ -88,18 +88,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Detail{ get; set; }
 
         /// <summary>
-        /// Specifies an ISP when you query the CDN data within Mainland China. If it is left blank, all ISPs will be queried.
-        /// To view ISP codes, please see [Log Management > ISP Mapping](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84).
-        /// If you have specified an ISP, you cannot specify a district or an IP protocol for the same query.
+        /// Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+        /// To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+        /// If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
         /// </summary>
         [JsonProperty("Isp")]
         public long? Isp{ get; set; }
 
         /// <summary>
-        /// Specifies a province when you query the CDN data within Mainland China. If it is left blank, all districts will be queried.
-        /// Specifies a country/region when you query the CDN data outside Mainland China. If it is left blank, all countries/regions will be queried.
-        /// To view codes of provinces or countries/regions, see [Log Management > Province Mapping/Region Mapping](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
-        /// If you have specified a province for your query on CDN data within Mainland China, you cannot specify an ISP or an IP protocol for the same query.
+        /// Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
+        /// Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
+        /// To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+        /// If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
         /// </summary>
         [JsonProperty("District")]
         public long? District{ get; set; }

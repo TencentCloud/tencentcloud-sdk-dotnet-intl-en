@@ -53,6 +53,32 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// This API is used to add existing instances to the compute environment.
+        /// Considerations: <br/>
+        /// 1. The instance should not be in the batch compute system.<br/>
+        /// 2. The instance status should be “running”.<br/>
+        /// 3. It supports dedicated CVMs and pay-as-you-go instances that billed on an hourly basis. Spot instances are not supported.<b/>
+        /// 
+        /// For instances added to the compute environment, their UserData will be reset and the operating systems will be reinstalled.
+        /// </summary>
+        /// <param name="req"><see cref="AttachInstancesRequest"/></param>
+        /// <returns><see cref="AttachInstancesResponse"/></returns>
+        public async Task<AttachInstancesResponse> AttachInstances(AttachInstancesRequest req)
+        {
+             JsonResponseModel<AttachInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a compute environment.
         /// </summary>
         /// <param name="req"><see cref="CreateComputeEnvRequest"/></param>
@@ -426,6 +452,26 @@ namespace TencentCloud.Batch.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DescribeTaskTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove instances that from compute environment. 
+        /// </summary>
+        /// <param name="req"><see cref="DetachInstancesRequest"/></param>
+        /// <returns><see cref="DetachInstancesResponse"/></returns>
+        public async Task<DetachInstancesResponse> DetachInstances(DetachInstancesRequest req)
+        {
+             JsonResponseModel<DetachInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

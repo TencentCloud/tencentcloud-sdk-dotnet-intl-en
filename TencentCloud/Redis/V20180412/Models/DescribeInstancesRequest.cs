@@ -133,7 +133,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string BillingMode{ get; set; }
 
         /// <summary>
-        /// Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+        /// Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -143,6 +143,12 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         [JsonProperty("SearchKeys")]
         public string[] SearchKeys{ get; set; }
+
+        /// <summary>
+        /// Internal parameter, which can be ignored
+        /// </summary>
+        [JsonProperty("TypeList")]
+        public long?[] TypeList{ get; set; }
 
 
         /// <summary>
@@ -170,6 +176,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
+            this.SetParamArraySimple(map, prefix + "TypeList.", this.TypeList);
         }
     }
 }

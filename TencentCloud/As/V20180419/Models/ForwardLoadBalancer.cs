@@ -48,6 +48,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
+        /// <summary>
+        /// The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamArrayObj(map, prefix + "TargetAttributes.", this.TargetAttributes);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

@@ -715,7 +715,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API is used to query the custom error response to the current domain name.
+        /// This API is used to query the custom error response to a domain name.
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainErrorPageInfoRequest"/></param>
         /// <returns><see cref="DescribeDomainErrorPageInfoResponse"/></returns>

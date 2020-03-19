@@ -25,13 +25,19 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Starting time of the queried period, such as `2018-09-09 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query.
+        /// Query start date. Example: 2018-09-09.
+        /// Only supports data query at daily granularity. The date in the input parameter is used as the start date.
+        /// Data generated at or after 00:00:00 on the start date will be returned.
+        /// Only data from the last 90 days will be queried.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the queried period, such as `2018-09-10 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query. For example, to query data on September 10, 2018, just enter `StartTime=2018-09-10 00:00:00` and `EndTime=2018-09-10 00:00:00`.
+        /// Query end date. Example: 2018-09-10
+        /// Only supports data query at daily granularity. The date in the input parameter is used as the end date.
+        /// Data generated before or at 23:59:59 on the end date will be returned.
+        /// EndTime must be greater than or equal to StartTime
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

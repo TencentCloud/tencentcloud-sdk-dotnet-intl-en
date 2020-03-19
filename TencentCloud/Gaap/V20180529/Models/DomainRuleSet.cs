@@ -141,14 +141,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerCertificateDomain{ get; set; }
 
         /// <summary>
-        /// Returns IDs and list of multiple certificates when there are multiple client certificates.
+        /// Returns IDs and aliases of multiple certificates when there are multiple client certificates.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolyClientCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyClientCertificateAliasInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolyRealServerCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyRealServerCertificateAliasInfo{ get; set; }

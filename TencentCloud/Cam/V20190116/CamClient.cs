@@ -773,7 +773,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API is used to set user login, sensitive operations and async login.
+        /// This API is used to set account verification for login and sensitive operation protection.
         /// </summary>
         /// <param name="req"><see cref="SetFlagRequest"/></param>
         /// <returns><see cref="SetFlagResponse"/></returns>

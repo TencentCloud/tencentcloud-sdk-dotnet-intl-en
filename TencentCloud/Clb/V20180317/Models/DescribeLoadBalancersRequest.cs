@@ -80,7 +80,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of CLB instances to be returned. Default value: 20.
+        /// Number of returned CLB instances. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

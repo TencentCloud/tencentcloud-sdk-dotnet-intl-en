@@ -25,14 +25,17 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Node status. `online`: activated; `offline`: deactivated
+        /// Operation type
+        /// online: node is online
+        /// offline: node is offline
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Operation time. If its value is `null`, it means there is no status change record.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Operation time corresponding to operation type
+        /// If this value is null, there are no status change records
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Datetime")]
         public string Datetime{ get; set; }

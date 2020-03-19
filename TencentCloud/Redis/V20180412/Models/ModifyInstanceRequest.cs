@@ -33,14 +33,14 @@ namespace TencentCloud.Redis.V20180412.Models
         /// <summary>
         /// Instance ID
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// New name of an instance
+        /// New name of instance
         /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
+        [JsonProperty("InstanceNames")]
+        public string[] InstanceNames{ get; set; }
 
         /// <summary>
         /// Project ID
@@ -49,7 +49,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+        /// Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+        /// </summary>
+        [JsonProperty("AutoRenews")]
+        public long?[] AutoRenews{ get; set; }
+
+        /// <summary>
+        /// Disused
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Disused
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// Disused
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
@@ -61,9 +79,12 @@ namespace TencentCloud.Redis.V20180412.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArraySimple(map, prefix + "AutoRenews.", this.AutoRenews);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         }
     }

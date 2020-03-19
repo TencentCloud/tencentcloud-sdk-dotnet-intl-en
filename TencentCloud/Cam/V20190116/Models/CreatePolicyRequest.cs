@@ -31,7 +31,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// Policy document
+        /// Policy document, such as `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the resources that the role is authorized to access. For more information on this parameter, please see the `RoleInfo` output parameter of the [GetRole](https://cloud.tencent.com/document/product/598/36221) API
         /// </summary>
         [JsonProperty("PolicyDocument")]
         public string PolicyDocument{ get; set; }

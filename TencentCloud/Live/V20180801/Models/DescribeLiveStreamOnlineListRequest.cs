@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Push domain name.
+        /// Push domain name. If you use multiple paths, enter the `DomainName`.
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+        /// Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

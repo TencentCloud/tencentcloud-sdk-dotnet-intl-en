@@ -51,7 +51,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+        /// A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+        /// IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
         /// </summary>
         [JsonProperty("AddressIPVersion")]
         public string AddressIPVersion{ get; set; }
@@ -88,10 +88,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+        /// CLB network billing mode. This parameter is applicable only to public network CLB instances.
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
+
+        /// <summary>
+        /// This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+        /// </summary>
+        [JsonProperty("VipIsp")]
+        public string VipIsp{ get; set; }
 
         /// <summary>
         /// Tags a CLB instance when purchasing it
@@ -116,6 +122,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MasterZoneId", this.MasterZoneId);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
+            this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

@@ -31,13 +31,16 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
-        /// Policy array. Each item in the array has the fields `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode` 
-        /// `policyId`: Policy ID 
-        /// `policyName`: Policy name
-        /// `addTime`: Time policy created
-        /// `type`: 1 is custom policy; 2 is preset policy 
-        /// `description`: Policy description 
-        /// `createMode`: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax.
+        /// Policy array. Each array contains fields including `policyId`, `policyName`, `addTime`, `type`, `description`, and `createMode`. 
+        /// policyId: policy ID 
+        /// policyName: policy name
+        /// addTime: policy creation time
+        /// type: 1: custom policy, 2: preset policy 
+        /// description: policy description 
+        /// createMode: 1 indicates a policy created based on business permissions, while other values indicate that the policy syntax can be viewed and the policy can be updated using the policy syntax
+        /// Attachments: number of associated users
+        /// ServiceType: the product the policy is associated with
+        /// IsAttached: this value should not be null when querying if a marked entity has been associated with a policy. 0 indicates that no policy has been associated, and 1 indicates that a policy has been associated
         /// </summary>
         [JsonProperty("List")]
         public StrategyInfo[] List{ get; set; }

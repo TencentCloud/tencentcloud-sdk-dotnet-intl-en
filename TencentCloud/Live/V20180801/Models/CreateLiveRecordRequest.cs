@@ -66,7 +66,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// Recording file format. Value range:
+        /// Recording file format. Valid values:
         /// "flv" **(default)**, "hls", "mp4", "aac", "mp3".
         /// In both scheduled and real-time video recording modes, this parameter is valid and is not case sensitive.
         /// </summary>
@@ -92,7 +92,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Recording stream parameter. The following parameters are supported currently:
-        /// record_interval: Recording interval in seconds. Value range: 1,800-7,200
+        /// record_interval: Recording interval in seconds. Value range: 1,800–7,200
         /// storage_time: Recording file duration in seconds
         /// eg. record_interval=3600&storage_time=2592000
         /// Note: The parameter needs url encode.

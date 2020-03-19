@@ -90,6 +90,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("ActionIfComputeNodeInactive")]
         public string ActionIfComputeNodeInactive{ get; set; }
 
+        /// <summary>
+        /// When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
+        /// </summary>
+        [JsonProperty("ResourceMaxRetryCount")]
+        public long? ResourceMaxRetryCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "AgentRunningMode.", this.AgentRunningMode);
             this.SetParamObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
+            this.SetParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
         }
     }
 }

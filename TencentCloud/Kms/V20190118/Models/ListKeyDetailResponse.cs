@@ -25,6 +25,19 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// List of returned attribute information.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KeyMetadatas")]
+        public KeyMetadata[] KeyMetadatas{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +49,8 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

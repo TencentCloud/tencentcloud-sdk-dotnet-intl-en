@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Description.
+        /// Message description
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         public RecordParam HlsParam{ get; set; }
 
         /// <summary>
-        /// MP4 recording parameter.
+        /// Mp4 recording parameter.
         /// </summary>
         [JsonProperty("Mp4Param")]
         public RecordParam Mp4Param{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Live.V20180801.Models
         public HlsSpecialParam HlsSpecialParam{ get; set; }
 
         /// <summary>
-        /// MP3 recording parameter.
+        /// Mp3 recording parameter.
         /// </summary>
         [JsonProperty("Mp3Param")]
         public RecordParam Mp3Param{ get; set; }

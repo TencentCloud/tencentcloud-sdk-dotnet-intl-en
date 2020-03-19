@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+        /// Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }

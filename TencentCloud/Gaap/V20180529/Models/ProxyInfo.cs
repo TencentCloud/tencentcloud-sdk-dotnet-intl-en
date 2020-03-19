@@ -32,7 +32,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Creation time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
+        /// Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }

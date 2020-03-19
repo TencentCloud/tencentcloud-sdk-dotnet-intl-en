@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// ID of the AZ where the instance resides
+        /// AZ ID of instance
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+        /// Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] SecurityGroupIdList{ get; set; }
 
         /// <summary>
-        /// User-defined port. If this parameter is left blank, 6379 will be used by default
+        /// User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }

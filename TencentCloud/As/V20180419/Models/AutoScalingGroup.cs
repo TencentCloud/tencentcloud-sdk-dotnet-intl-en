@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupName{ get; set; }
 
         /// <summary>
-        /// Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br>
+        /// Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
         /// </summary>
         [JsonProperty("AutoScalingGroupStatus")]
         public string AutoScalingGroupStatus{ get; set; }
@@ -174,6 +174,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MultiZoneSubnetPolicy")]
+        public string MultiZoneSubnetPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+            this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
         }
     }
 }

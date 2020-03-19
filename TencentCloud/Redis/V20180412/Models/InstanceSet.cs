@@ -243,6 +243,54 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
+        /// <summary>
+        /// Number of client connections
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientLimit")]
+        public long? ClientLimit{ get; set; }
+
+        /// <summary>
+        /// DTS status (internal parameter, which can be ignored)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DtsStatus")]
+        public long? DtsStatus{ get; set; }
+
+        /// <summary>
+        /// Upper shard bandwidth limit in MB
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NetLimit")]
+        public long? NetLimit{ get; set; }
+
+        /// <summary>
+        /// Password-free instance flag (internal parameter, which can be ignored)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PasswordFree")]
+        public long? PasswordFree{ get; set; }
+
+        /// <summary>
+        /// Read-only instance flag (internal parameter, which can be ignored)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReadOnly")]
+        public long? ReadOnly{ get; set; }
+
+        /// <summary>
+        /// Internal parameter, which can be ignored
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Vip6")]
+        public string Vip6{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RemainBandwidthDuration")]
+        public string RemainBandwidthDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -285,6 +333,13 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
+            this.SetParamSimple(map, prefix + "ClientLimit", this.ClientLimit);
+            this.SetParamSimple(map, prefix + "DtsStatus", this.DtsStatus);
+            this.SetParamSimple(map, prefix + "NetLimit", this.NetLimit);
+            this.SetParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
+            this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamSimple(map, prefix + "Vip6", this.Vip6);
+            this.SetParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
         }
     }
 }

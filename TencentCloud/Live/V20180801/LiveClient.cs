@@ -75,20 +75,144 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to add a domain name. Only one domain name can be submitted at a time, and it must have an ICP filing.
+        /// </summary>
+        /// <param name="req"><see cref="AddLiveDomainRequest"/></param>
+        /// <returns><see cref="AddLiveDomainResponse"/></returns>
+        public async Task<AddLiveDomainResponse> AddLiveDomain(AddLiveDomainRequest req)
+        {
+             JsonResponseModel<AddLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// After a watermark is added and a watermark ID is successfully returned, you need to call the [CreateLiveWatermarkRule](/document/product/267/32629) API and bind the watermark ID to the stream.
+        /// </summary>
+        /// <param name="req"><see cref="AddLiveWatermarkRequest"/></param>
+        /// <returns><see cref="AddLiveWatermarkResponse"/></returns>
+        public async Task<AddLiveWatermarkResponse> AddLiveWatermark(AddLiveWatermarkRequest req)
+        {
+             JsonResponseModel<AddLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a domain name certificate.
+        /// Note: you need to call the `CreateLiveCert` API first to add a certificate. After getting the certificate ID, call this API for binding.
+        /// </summary>
+        /// <param name="req"><see cref="BindLiveDomainCertRequest"/></param>
+        /// <returns><see cref="BindLiveDomainCertResponse"/></returns>
+        public async Task<BindLiveDomainCertResponse> BindLiveDomainCert(BindLiveDomainCertRequest req)
+        {
+             JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindLiveDomainCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// To create a callback rule, you need to first call the [CreateLiveCallbackTemplate](/document/product/267/32637) API to create a callback template and bind the returned template ID to the domain name/path.
+        /// <br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveCallbackRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveCallbackRuleResponse"/></returns>
+        public async Task<CreateLiveCallbackRuleResponse> CreateLiveCallbackRule(CreateLiveCallbackRuleRequest req)
+        {
+             JsonResponseModel<CreateLiveCallbackRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveCallbackRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCallbackRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API and bind the template ID to the domain name/path.
+        /// <br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveCallbackTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveCallbackTemplateResponse"/></returns>
+        public async Task<CreateLiveCallbackTemplateResponse> CreateLiveCallbackTemplate(CreateLiveCallbackTemplateRequest req)
+        {
+             JsonResponseModel<CreateLiveCallbackTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveCallbackTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCallbackTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add a certificate.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveCertRequest"/></param>
+        /// <returns><see cref="CreateLiveCertResponse"/></returns>
+        public async Task<CreateLiveCertResponse> CreateLiveCert(CreateLiveCertRequest req)
+        {
+             JsonResponseModel<CreateLiveCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// - Prerequisites
         ///   1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
-        ///   2. After the recording files are stored, fees (including storage fees and downstream playback traffic fees) are charged according to the VOD billing method. For details, see the [corresponding document](https://cloud.tencent.com/document/product/266/2838).
+        ///   2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the [corresponding document](https://cloud.tencent.com/document/product/266/2838).
         /// 
         /// - Mode description
         ///   This API supports two recording modes:
         ///   1. Scheduled recording mode **(default mode)**.
-        ///     The start time and end time need to be passed in, and the recording task automatically starts and ends based on the time parameters.
+        ///     The start time and end time need to be passed in, and the recording task will automatically start and end based on the time parameters.
         ///   2. Real-time video recording mode.
-        ///     The start time passed in is ignored, and recording is started immediately after the recording task is created. The recording duration can be up to 30 minutes. If the end time passed in is more than 30 minutes after the current time, it will be counted as 30 minutes. Real-time video recording is mainly used for recording highlight scenes, and it is recommended to keep the duration within 5 minutes.
+        ///     The start time passed in will be ignored, and recording will be started immediately after the recording task is created. The recording duration can be up to 30 minutes. If the end time passed in is more than 30 minutes after the current time, it will be counted as 30 minutes. Real-time video recording is mainly used for recording highlight scenes, and you are recommended to keep the duration within 5 minutes.
         /// 
         /// - Precautions
-        ///   1. The API call timeout should be set to more than 3 seconds; otherwise, retries and frequent calls may result in repeated recording tasks.
-        ///   2. Subject to the audio and video file formats (FLV/MP4/HLS), the video encoding format of H.264 and audio encoding format of ACC are supported.
+        ///   1. The API call timeout period should be set to more than 3 seconds; otherwise, retries and frequent calls may result in repeated recording tasks.
+        ///   2. Subject to the audio and video file formats (FLV/MP4/HLS), the video codec of H.264 and audio codec of AAC are supported.
+        ///   3. In order to avoid malicious or non-subjective frequent API requests, the maximum number of tasks that can be created in scheduled recording mode is limited: up to 4,000 tasks can be created per day (excluding deleted ones), and up to 400 ones can run concurrently. If you need a higher upper limit, please submit a ticket for application.
         /// </summary>
         /// <param name="req"><see cref="CreateLiveRecordRequest"/></param>
         /// <returns><see cref="CreateLiveRecordResponse"/></returns>
@@ -150,8 +274,50 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// To create a screencapturing rule, you need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template and bind the returned template ID to the stream.
+        /// <br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveSnapshotRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveSnapshotRuleResponse"/></returns>
+        public async Task<CreateLiveSnapshotRuleResponse> CreateLiveSnapshotRule(CreateLiveSnapshotRuleRequest req)
+        {
+             JsonResponseModel<CreateLiveSnapshotRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveSnapshotRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveSnapshotRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](/document/product/267/32625) API and bind the template ID to the stream.
+        /// <br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveSnapshotTemplateResponse"/></returns>
+        public async Task<CreateLiveSnapshotTemplateResponse> CreateLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest req)
+        {
+             JsonResponseModel<CreateLiveSnapshotTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveSnapshotTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](/document/product/267/32646) API to create a transcoding template and bind the returned template ID to the stream.
-        /// <br>Transcoding-related document: [LVB Encapsulating and Transcoding](/document/product/267/32736).
+        /// <br>Transcoding-related document: [LVB Remuxing and Transcoding](/document/product/267/32736).
         /// </summary>
         /// <param name="req"><see cref="CreateLiveTranscodeRuleRequest"/></param>
         /// <returns><see cref="CreateLiveTranscodeRuleResponse"/></returns>
@@ -172,7 +338,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// After a transcoding template is created and a template ID is successfully returned, you need to call the [CreateLiveTranscodeRule](/document/product/267/32647) API and bind the returned template ID to the stream.
-        /// <br>Transcoding-related document: [LVB Encapsulating and Transcoding](/document/product/267/32736).
+        /// <br>Transcoding-related document: [LVB Remuxing and Transcoding](/document/product/267/32736).
         /// </summary>
         /// <param name="req"><see cref="CreateLiveTranscodeTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveTranscodeTemplateResponse"/></returns>
@@ -192,7 +358,107 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to delete a recording task.
+        /// To create a watermarking rule, you need to first call the [AddLiveWatermark](/document/product/267/30154) API to add a watermark and bind the returned watermark ID to the stream.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveWatermarkRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveWatermarkRuleResponse"/></returns>
+        public async Task<CreateLiveWatermarkRuleResponse> CreateLiveWatermarkRule(CreateLiveWatermarkRuleRequest req)
+        {
+             JsonResponseModel<CreateLiveWatermarkRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveWatermarkRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveWatermarkRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a callback rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveCallbackRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveCallbackRuleResponse"/></returns>
+        public async Task<DeleteLiveCallbackRuleResponse> DeleteLiveCallbackRule(DeleteLiveCallbackRuleRequest req)
+        {
+             JsonResponseModel<DeleteLiveCallbackRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveCallbackRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCallbackRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API deletes a callback template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveCallbackTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveCallbackTemplateResponse"/></returns>
+        public async Task<DeleteLiveCallbackTemplateResponse> DeleteLiveCallbackTemplate(DeleteLiveCallbackTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLiveCallbackTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveCallbackTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a certificate corresponding to the domain name.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveCertRequest"/></param>
+        /// <returns><see cref="DeleteLiveCertResponse"/></returns>
+        public async Task<DeleteLiveCertResponse> DeleteLiveCert(DeleteLiveCertRequest req)
+        {
+             JsonResponseModel<DeleteLiveCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an added LVB domain name.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveDomainRequest"/></param>
+        /// <returns><see cref="DeleteLiveDomainResponse"/></returns>
+        public async Task<DeleteLiveDomainResponse> DeleteLiveDomain(DeleteLiveDomainRequest req)
+        {
+             JsonResponseModel<DeleteLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Note: The `DeleteLiveRecord` API is only used to delete the record of recording tasks but not stop recording or deleting an ongoing recording task. If you need to stop a recording task, please use the [StopLiveRecord](/document/product/267/30146) API.
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveRecordRequest"/></param>
         /// <returns><see cref="DeleteLiveRecordResponse"/></returns>
@@ -252,6 +518,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to delete a screencapturing rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveSnapshotRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveSnapshotRuleResponse"/></returns>
+        public async Task<DeleteLiveSnapshotRuleResponse> DeleteLiveSnapshotRule(DeleteLiveSnapshotRuleRequest req)
+        {
+             JsonResponseModel<DeleteLiveSnapshotRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveSnapshotRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveSnapshotRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a screencapturing template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveSnapshotTemplateResponse"/></returns>
+        public async Task<DeleteLiveSnapshotTemplateResponse> DeleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLiveSnapshotTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveSnapshotTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a transcoding rule.
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveTranscodeRuleRequest"/></param>
@@ -292,6 +598,146 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to delete a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveWatermarkRequest"/></param>
+        /// <returns><see cref="DeleteLiveWatermarkResponse"/></returns>
+        public async Task<DeleteLiveWatermarkResponse> DeleteLiveWatermark(DeleteLiveWatermarkRequest req)
+        {
+             JsonResponseModel<DeleteLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a watermarking rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveWatermarkRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveWatermarkRuleResponse"/></returns>
+        public async Task<DeleteLiveWatermarkRuleResponse> DeleteLiveWatermarkRule(DeleteLiveWatermarkRuleRequest req)
+        {
+             JsonResponseModel<DeleteLiveWatermarkRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveWatermarkRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveWatermarkRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the callback rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCallbackRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveCallbackRulesResponse"/></returns>
+        public async Task<DescribeLiveCallbackRulesResponse> DescribeLiveCallbackRules(DescribeLiveCallbackRulesRequest req)
+        {
+             JsonResponseModel<DescribeLiveCallbackRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveCallbackRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveCallbackRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get a single callback template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCallbackTemplateRequest"/></param>
+        /// <returns><see cref="DescribeLiveCallbackTemplateResponse"/></returns>
+        public async Task<DescribeLiveCallbackTemplateResponse> DescribeLiveCallbackTemplate(DescribeLiveCallbackTemplateRequest req)
+        {
+             JsonResponseModel<DescribeLiveCallbackTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveCallbackTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveCallbackTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the callback template list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCallbackTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveCallbackTemplatesResponse"/></returns>
+        public async Task<DescribeLiveCallbackTemplatesResponse> DescribeLiveCallbackTemplates(DescribeLiveCallbackTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLiveCallbackTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveCallbackTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveCallbackTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get certificate information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCertRequest"/></param>
+        /// <returns><see cref="DescribeLiveCertResponse"/></returns>
+        public async Task<DescribeLiveCertResponse> DescribeLiveCert(DescribeLiveCertRequest req)
+        {
+             JsonResponseModel<DescribeLiveCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the certificate information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveCertsRequest"/></param>
+        /// <returns><see cref="DescribeLiveCertsResponse"/></returns>
+        public async Task<DescribeLiveCertsResponse> DescribeLiveCerts(DescribeLiveCertsRequest req)
+        {
+             JsonResponseModel<DescribeLiveCertsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveCerts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveCertsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of delayed playbacks.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveDelayInfoListRequest"/></param>
@@ -303,6 +749,66 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DescribeLiveDelayInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDelayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the LVB domain name information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainResponse"/></returns>
+        public async Task<DescribeLiveDomainResponse> DescribeLiveDomain(DescribeLiveDomainRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the domain name certificate information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainCertRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainCertResponse"/></returns>
+        public async Task<DescribeLiveDomainCertResponse> DescribeLiveDomainCert(DescribeLiveDomainCertRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query domain names by domain name status and type.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainsRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainsResponse"/></returns>
+        public async Task<DescribeLiveDomainsResponse> DescribeLiveDomains(DescribeLiveDomainsRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -432,6 +938,66 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to get the screencapturing rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSnapshotRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveSnapshotRulesResponse"/></returns>
+        public async Task<DescribeLiveSnapshotRulesResponse> DescribeLiveSnapshotRules(DescribeLiveSnapshotRulesRequest req)
+        {
+             JsonResponseModel<DescribeLiveSnapshotRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveSnapshotRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveSnapshotRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get a single screencapturing template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="DescribeLiveSnapshotTemplateResponse"/></returns>
+        public async Task<DescribeLiveSnapshotTemplateResponse> DescribeLiveSnapshotTemplate(DescribeLiveSnapshotTemplateRequest req)
+        {
+             JsonResponseModel<DescribeLiveSnapshotTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveSnapshotTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the screencapturing template list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveSnapshotTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveSnapshotTemplatesResponse"/></returns>
+        public async Task<DescribeLiveSnapshotTemplatesResponse> DescribeLiveSnapshotTemplates(DescribeLiveSnapshotTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLiveSnapshotTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveSnapshotTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveSnapshotTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query streaming events.<br>
         /// 
         /// Note: This API can filter by IsFilter and return the push history.
@@ -445,26 +1011,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DescribeLiveStreamEventList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamEventListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the active push information list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLiveStreamOnlineInfoRequest"/></param>
-        /// <returns><see cref="DescribeLiveStreamOnlineInfoResponse"/></returns>
-        public async Task<DescribeLiveStreamOnlineInfoResponse> DescribeLiveStreamOnlineInfo(DescribeLiveStreamOnlineInfoRequest req)
-        {
-             JsonResponseModel<DescribeLiveStreamOnlineInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeLiveStreamOnlineInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamOnlineInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -595,6 +1141,66 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to get the information of a single watermark.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveWatermarkRequest"/></param>
+        /// <returns><see cref="DescribeLiveWatermarkResponse"/></returns>
+        public async Task<DescribeLiveWatermarkResponse> DescribeLiveWatermark(DescribeLiveWatermarkRequest req)
+        {
+             JsonResponseModel<DescribeLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the watermarking rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveWatermarkRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveWatermarkRulesResponse"/></returns>
+        public async Task<DescribeLiveWatermarkRulesResponse> DescribeLiveWatermarkRules(DescribeLiveWatermarkRulesRequest req)
+        {
+             JsonResponseModel<DescribeLiveWatermarkRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveWatermarkRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveWatermarkRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the watermark list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveWatermarksRequest"/></param>
+        /// <returns><see cref="DescribeLiveWatermarksResponse"/></returns>
+        public async Task<DescribeLiveWatermarksResponse> DescribeLiveWatermarks(DescribeLiveWatermarksRequest req)
+        {
+             JsonResponseModel<DescribeLiveWatermarksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveWatermarks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveWatermarksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to disconnect the push connection, which can be resumed.
         /// </summary>
         /// <param name="req"><see cref="DropLiveStreamRequest"/></param>
@@ -606,6 +1212,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DropLiveStream");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropLiveStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable a disabled LVB domain name.
+        /// </summary>
+        /// <param name="req"><see cref="EnableLiveDomainRequest"/></param>
+        /// <returns><see cref="EnableLiveDomainResponse"/></returns>
+        public async Task<EnableLiveDomainResponse> EnableLiveDomain(EnableLiveDomainRequest req)
+        {
+             JsonResponseModel<EnableLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable an LVB domain name.
+        /// </summary>
+        /// <param name="req"><see cref="ForbidLiveDomainRequest"/></param>
+        /// <returns><see cref="ForbidLiveDomainResponse"/></returns>
+        public async Task<ForbidLiveDomainResponse> ForbidLiveDomain(ForbidLiveDomainRequest req)
+        {
+             JsonResponseModel<ForbidLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ForbidLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForbidLiveDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -635,6 +1281,66 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to modify a callback template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveCallbackTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveCallbackTemplateResponse"/></returns>
+        public async Task<ModifyLiveCallbackTemplateResponse> ModifyLiveCallbackTemplate(ModifyLiveCallbackTemplateRequest req)
+        {
+             JsonResponseModel<ModifyLiveCallbackTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveCallbackTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a certificate.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveCertRequest"/></param>
+        /// <returns><see cref="ModifyLiveCertResponse"/></returns>
+        public async Task<ModifyLiveCertResponse> ModifyLiveCert(ModifyLiveCertRequest req)
+        {
+             JsonResponseModel<ModifyLiveCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the domain name and certificate binding information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveDomainCertRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainCertResponse"/></returns>
+        public async Task<ModifyLiveDomainCertResponse> ModifyLiveDomainCert(ModifyLiveDomainCertRequest req)
+        {
+             JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveDomainCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the playback authentication key.
         /// </summary>
         /// <param name="req"><see cref="ModifyLivePlayAuthKeyRequest"/></param>
@@ -646,6 +1352,26 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "ModifyLivePlayAuthKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a playback domain name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLivePlayDomainRequest"/></param>
+        /// <returns><see cref="ModifyLivePlayDomainResponse"/></returns>
+        public async Task<ModifyLivePlayDomainResponse> ModifyLivePlayDomain(ModifyLivePlayDomainRequest req)
+        {
+             JsonResponseModel<ModifyLivePlayDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLivePlayDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePlayDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -686,6 +1412,26 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "ModifyLiveRecordTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveRecordTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the screencapturing template configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveSnapshotTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveSnapshotTemplateResponse"/></returns>
+        public async Task<ModifyLiveSnapshotTemplateResponse> ModifyLiveSnapshotTemplate(ModifyLiveSnapshotTemplateRequest req)
+        {
+             JsonResponseModel<ModifyLiveSnapshotTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveSnapshotTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -755,7 +1501,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// Note: Recording files are stored on the VOD platform. To use the recording feature, you need to activate a VOD account and ensure that it is available. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing method. For more information, see the corresponding document.
+        /// Note: Recording files are stored on the VOD platform. To use the recording feature, you need to activate a VOD account and ensure that it is available. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing method. For more information, please see the corresponding document.
         /// </summary>
         /// <param name="req"><see cref="StopLiveRecordRequest"/></param>
         /// <returns><see cref="StopLiveRecordResponse"/></returns>
@@ -766,6 +1512,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "StopLiveRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLiveRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a domain name certificate.
+        /// </summary>
+        /// <param name="req"><see cref="UnBindLiveDomainCertRequest"/></param>
+        /// <returns><see cref="UnBindLiveDomainCertResponse"/></returns>
+        public async Task<UnBindLiveDomainCertResponse> UnBindLiveDomainCert(UnBindLiveDomainCertRequest req)
+        {
+             JsonResponseModel<UnBindLiveDomainCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnBindLiveDomainCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnBindLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLiveWatermarkRequest"/></param>
+        /// <returns><see cref="UpdateLiveWatermarkResponse"/></returns>
+        public async Task<UpdateLiveWatermarkResponse> UpdateLiveWatermark(UpdateLiveWatermarkRequest req)
+        {
+             JsonResponseModel<UpdateLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateLiveWatermarkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -43,10 +43,16 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// If login is allowed
+        /// Whether login is allowed. 1: yes, 0: no
         /// </summary>
         [JsonProperty("ConsoleLogin")]
         public ulong? ConsoleLogin{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SessionDuration")]
+        public ulong? SessionDuration{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
+            this.SetParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
         }
     }
 }

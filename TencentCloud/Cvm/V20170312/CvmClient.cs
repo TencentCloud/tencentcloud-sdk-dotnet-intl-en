@@ -394,6 +394,26 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the list of model families that are available for the current user and in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceFamilyConfigsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceFamilyConfigsResponse"/></returns>
+        public async Task<DescribeInstanceFamilyConfigsResponse> DescribeInstanceFamilyConfigs(DescribeInstanceFamilyConfigsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceFamilyConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceFamilyConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceFamilyConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the model configuration of an instance.
         /// 
         /// * You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see `Filter`.
@@ -591,6 +611,26 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DescribeZoneInstanceConfigInfos");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneInstanceConfigInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query availability zones.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZonesRequest"/></param>
+        /// <returns><see cref="DescribeZonesResponse"/></returns>
+        public async Task<DescribeZonesResponse> DescribeZones(DescribeZonesRequest req)
+        {
+             JsonResponseModel<DescribeZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

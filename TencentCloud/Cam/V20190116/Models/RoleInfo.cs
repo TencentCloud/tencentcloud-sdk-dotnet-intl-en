@@ -66,6 +66,19 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("ConsoleLogin")]
         public ulong? ConsoleLogin{ get; set; }
 
+        /// <summary>
+        /// User role. Valid values: user, system
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RoleType")]
+        public string RoleType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SessionDuration")]
+        public ulong? SessionDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +92,8 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
+            this.SetParamSimple(map, prefix + "RoleType", this.RoleType);
+            this.SetParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
         }
     }
 }

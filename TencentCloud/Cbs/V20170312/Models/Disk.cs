@@ -227,6 +227,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("SnapshotSize")]
         public ulong? SnapshotSize{ get; set; }
 
+        /// <summary>
+        /// Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+        /// </summary>
+        [JsonProperty("BackupDisk")]
+        public bool? BackupDisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -265,6 +271,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
             this.SetParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
             this.SetParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
+            this.SetParamSimple(map, prefix + "BackupDisk", this.BackupDisk);
         }
     }
 }

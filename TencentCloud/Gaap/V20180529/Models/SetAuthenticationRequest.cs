@@ -76,7 +76,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string GaapCertificateId{ get; set; }
 
         /// <summary>
-        /// Origin server CA certificate ID, which is obtained from the certificate management page.
+        /// CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
         /// </summary>
         [JsonProperty("RealServerCertificateId")]
         public string RealServerCertificateId{ get; set; }
@@ -86,6 +86,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("RealServerCertificateDomain")]
         public string RealServerCertificateDomain{ get; set; }
+
+        /// <summary>
+        /// CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
+        /// </summary>
+        [JsonProperty("PolyRealServerCertificateIds")]
+        public string[] PolyRealServerCertificateIds{ get; set; }
 
 
         /// <summary>
@@ -102,6 +108,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "GaapCertificateId", this.GaapCertificateId);
             this.SetParamSimple(map, prefix + "RealServerCertificateId", this.RealServerCertificateId);
             this.SetParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
+            this.SetParamArraySimple(map, prefix + "PolyRealServerCertificateIds.", this.PolyRealServerCertificateIds);
         }
     }
 }

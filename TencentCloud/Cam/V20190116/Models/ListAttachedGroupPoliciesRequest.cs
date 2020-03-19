@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// User Group ID
+        /// User group ID
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public ulong? TargetGroupId{ get; set; }

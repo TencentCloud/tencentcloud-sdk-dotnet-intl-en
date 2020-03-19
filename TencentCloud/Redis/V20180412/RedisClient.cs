@@ -753,7 +753,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to modify instance information (renaming an instance is supported currently).
+        /// This API is used to modify instance information.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
