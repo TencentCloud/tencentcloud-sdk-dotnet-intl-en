@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.2</VersionPrefix>
+    <VersionPrefix>3.0.3</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet-intl-en/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2116,11 +2116,6 @@
     <Compile Include="Mps\V20190612\Models\WorkflowInfo.cs" />
     <Compile Include="Mps\V20190612\Models\WorkflowTask.cs" />
     <Compile Include="Mps\V20190612\Models\WorkflowTrigger.cs" />
-    <Compile Include="Ocr\V20181119\OcrClient.cs" />
-    <Compile Include="Ocr\V20181119\Models\MLIDCardOCRRequest.cs" />
-    <Compile Include="Ocr\V20181119\Models\MLIDCardOCRResponse.cs" />
-    <Compile Include="Ocr\V20181119\Models\MLIDPassportOCRRequest.cs" />
-    <Compile Include="Ocr\V20181119\Models\MLIDPassportOCRResponse.cs" />
     <Compile Include="Organization\V20181225\OrganizationClient.cs" />
     <Compile Include="Organization\V20181225\Models\AcceptOrganizationInvitationRequest.cs" />
     <Compile Include="Organization\V20181225\Models\AcceptOrganizationInvitationResponse.cs" />
