@@ -29,7 +29,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Procedure: video processing task;</li>
         /// <li>EditMedia: video editing task;</li>
         /// <li>WechatPublish: release on WeChat task;</li>
-        /// <li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+        /// <li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
         /// <li>ComposeMedia: media file composing task;</li>
         /// <li>PullUpload: media file pulling for upload task.</li>
         /// 
@@ -53,19 +53,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
@@ -141,7 +141,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+        /// Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WechatMiniProgramPublishTask")]

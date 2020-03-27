@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SourceMedia{ get; set; }
 
         /// <summary>
-        /// Starting time of video segment in material file in seconds. Default value: 0.
+        /// Start time of video segment in material file in seconds. Default value: 0.
         /// </summary>
         [JsonProperty("SourceMediaStartTime")]
         public float? SourceMediaStartTime{ get; set; }

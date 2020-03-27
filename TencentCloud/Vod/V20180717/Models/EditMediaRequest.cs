@@ -69,6 +69,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
+        /// Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+        /// </summary>
+        [JsonProperty("TasksPriority")]
+        public long? TasksPriority{ get; set; }
+
+        /// <summary>
         /// ID used for task deduplication. If there was a request with the same ID in the last day, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
         /// </summary>
         [JsonProperty("SessionId")]
@@ -93,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }

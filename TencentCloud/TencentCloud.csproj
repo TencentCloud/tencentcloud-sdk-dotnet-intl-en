@@ -4,14 +4,14 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.3</VersionPrefix>
+    <VersionPrefix>3.0.4</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
-    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet-intl-en/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
     <PackageId>TencentCloudSDK</PackageId>
-    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet-intl-en</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
     <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
   </PropertyGroup>
@@ -857,6 +857,100 @@
     <Compile Include="Cfs\V20190719\Models\UpdateCfsPGroupResponse.cs" />
     <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleRequest.cs" />
     <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleResponse.cs" />
+    <Compile Include="Ckafka\V20190819\CkafkaClient.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Acl.cs" />
+    <Compile Include="Ckafka\V20190819\Models\AclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\AppIdResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Assignment.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Config.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ConsumerGroupResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ConsumerGroupTopic.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateAclRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreatePartitionRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreatePartitionResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateTopicIpWhiteListResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateTopicRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateTopicResp.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateTopicResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateUserRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateUserResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteAclRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteTopicIpWhiteListRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteTopicIpWhiteListResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteTopicRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteTopicResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteUserRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteUserResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeACLRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeACLResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeAppInfoRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeAppInfoResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeConsumerGroupRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeConsumerGroupResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeGroup.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeGroupInfoRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeGroupInfoResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeGroupOffsetsRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeGroupOffsetsResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeGroupRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeGroupResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeInstanceAttributesRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeInstanceAttributesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeInstancesDetailRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeInstancesDetailResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeTopicAttributesRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeTopicAttributesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeTopicDetailRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeTopicDetailResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeTopicRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeTopicResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeUserRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Filter.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Group.cs" />
+    <Compile Include="Ckafka\V20190819\Models\GroupInfoMember.cs" />
+    <Compile Include="Ckafka\V20190819\Models\GroupInfoResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\GroupInfoTopics.cs" />
+    <Compile Include="Ckafka\V20190819\Models\GroupOffsetPartition.cs" />
+    <Compile Include="Ckafka\V20190819\Models\GroupOffsetResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\GroupOffsetTopic.cs" />
+    <Compile Include="Ckafka\V20190819\Models\GroupResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Instance.cs" />
+    <Compile Include="Ckafka\V20190819\Models\InstanceAttributesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\InstanceConfigDO.cs" />
+    <Compile Include="Ckafka\V20190819\Models\InstanceDetail.cs" />
+    <Compile Include="Ckafka\V20190819\Models\InstanceDetailResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\InstanceResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\JgwOperateResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyGroupOffsetsRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyGroupOffsetsResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyInstanceAttributesConfig.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyInstanceAttributesRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyInstanceAttributesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyPasswordRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyPasswordResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyTopicAttributesRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyTopicAttributesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\OperateResponseData.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Partition.cs" />
+    <Compile Include="Ckafka\V20190819\Models\PartitionOffset.cs" />
+    <Compile Include="Ckafka\V20190819\Models\SubscribedInfo.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Tag.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Topic.cs" />
+    <Compile Include="Ckafka\V20190819\Models\TopicAttributesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\TopicDetail.cs" />
+    <Compile Include="Ckafka\V20190819\Models\TopicDetailResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\TopicPartitionDO.cs" />
+    <Compile Include="Ckafka\V20190819\Models\TopicResult.cs" />
+    <Compile Include="Ckafka\V20190819\Models\User.cs" />
+    <Compile Include="Ckafka\V20190819\Models\UserResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\VipEntity.cs" />
     <Compile Include="Clb\V20180317\ClbClient.cs" />
     <Compile Include="Clb\V20180317\Models\AssociateTargetGroupsRequest.cs" />
     <Compile Include="Clb\V20180317\Models\AssociateTargetGroupsResponse.cs" />
@@ -1180,6 +1274,27 @@
     <Compile Include="Cvm\V20170312\Models\TerminateInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\VirtualPrivateCloud.cs" />
     <Compile Include="Cvm\V20170312\Models\ZoneInfo.cs" />
+    <Compile Include="Dc\V20180410\DcClient.cs" />
+    <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\BgpPeer.cs" />
+    <Compile Include="Dc\V20180410\Models\CreateDirectConnectTunnelRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\CreateDirectConnectTunnelResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\DeleteDirectConnectTunnelRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\DeleteDirectConnectTunnelResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\DescribeDirectConnectTunnelsRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\DescribeDirectConnectTunnelsResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\DescribeDirectConnectsRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\DescribeDirectConnectsResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\DirectConnect.cs" />
+    <Compile Include="Dc\V20180410\Models\DirectConnectTunnel.cs" />
+    <Compile Include="Dc\V20180410\Models\Filter.cs" />
+    <Compile Include="Dc\V20180410\Models\ModifyDirectConnectTunnelAttributeRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\ModifyDirectConnectTunnelAttributeResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\RejectDirectConnectTunnelRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\RejectDirectConnectTunnelResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\RouteFilterPrefix.cs" />
+    <Compile Include="Dc\V20180410\Models\Tag.cs" />
     <Compile Include="Dcdb\V20180411\DcdbClient.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountResponse.cs" />
@@ -2715,6 +2830,7 @@
     <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\AdaptiveStreamTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisResult.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisTaskClassificationInput.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisTaskClassificationOutput.cs" />
@@ -2840,6 +2956,8 @@
     <Compile Include="Vod\V20180717\Models\CreateAIAnalysisTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateAnimatedGraphicsTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateClassRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
@@ -2887,6 +3005,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeMediaProcessUsageDataRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeMediaProcessUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeReviewDetailsRequest.cs" />
@@ -2895,6 +3015,10 @@
     <Compile Include="Vod\V20180717\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeSnapshotByTimeOffsetTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeStorageDataRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeStorageDataResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeStorageDetailsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeStorageDetailsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeSubAppIdsRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeSubAppIdsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailRequest.cs" />
@@ -3047,6 +3171,7 @@
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SortBy.cs" />
+    <Compile Include="Vod\V20180717\Models\SpecificationDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\StatDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\StickerTrackItem.cs" />
     <Compile Include="Vod\V20180717\Models\SubAppIdInfo.cs" />
@@ -3056,6 +3181,8 @@
     <Compile Include="Vod\V20180717\Models\TEHDConfigForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\TaskStatData.cs" />
+    <Compile Include="Vod\V20180717\Models\TaskStatDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\TempCertificate.cs" />
     <Compile Include="Vod\V20180717\Models\TerrorismConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TerrorismImgReviewTemplateInfo.cs" />

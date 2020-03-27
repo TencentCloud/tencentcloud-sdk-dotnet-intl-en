@@ -81,6 +81,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public AudioTrackTemplateInfo[] AudioTrackTemplateSet{ get; set; }
 
         /// <summary>
+        /// Adaptive bitstream format. Valid value:
+        /// <li>HLS.</li>
+        /// </summary>
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
+
+        /// <summary>
+        /// Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
+        /// </summary>
+        [JsonProperty("StreamInfos")]
+        public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
+
+        /// <summary>
         /// Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
         /// <li>0: no,</li>
         /// <li>1: yes.</li>
@@ -122,6 +135,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
             this.SetParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

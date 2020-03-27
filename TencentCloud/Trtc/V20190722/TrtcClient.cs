@@ -73,6 +73,26 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
+        /// </summary>
+        /// <param name="req"><see cref="DismissRoomRequest"/></param>
+        /// <returns><see cref="DismissRoomResponse"/></returns>
+        public DismissRoomResponse DismissRoomSync(DismissRoomRequest req)
+        {
+             JsonResponseModel<DismissRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DismissRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to remove a user from a room. It is applicable to scenarios where the anchor, room owner, or admin wants to kick out a user. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
         /// </summary>
         /// <param name="req"><see cref="RemoveUserRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Trtc.V20190722
              try
              {
                  var strResp = await this.InternalRequest(req, "RemoveUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove a user from a room. It is applicable to scenarios where the anchor, room owner, or admin wants to kick out a user. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserRequest"/></param>
+        /// <returns><see cref="RemoveUserResponse"/></returns>
+        public RemoveUserResponse RemoveUserSync(RemoveUserRequest req)
+        {
+             JsonResponseModel<RemoveUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserResponse>>(strResp);
              }
              catch (JsonSerializationException e)

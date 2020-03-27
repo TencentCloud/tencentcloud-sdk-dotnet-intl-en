@@ -25,8 +25,8 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// URL of the media to be pulled. HLS and Dash formats are not supported for pull currently.
-        /// For the supported extensions, please see [File Types](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+        /// URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
+        /// For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Procedure{ get; set; }
 
         /// <summary>
-        /// Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

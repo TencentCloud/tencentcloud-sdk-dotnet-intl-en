@@ -73,6 +73,26 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to get the details of basic metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaseMetricsRequest"/></param>
+        /// <returns><see cref="DescribeBaseMetricsResponse"/></returns>
+        public DescribeBaseMetricsResponse DescribeBaseMetricsSync(DescribeBaseMetricsRequest req)
+        {
+             JsonResponseModel<DescribeBaseMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBaseMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBaseMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the monitoring data of a Tencent Cloud product by passing in the product's namespace, object dimension description, and monitoring metric.
         /// API call rate limit: 20 calls/sec, 1,200 calls/min.
         /// If you need to call a lot of metrics and objects, there may be cases where the call fails due to the rate limit. It is recommended to spread the call requests as much as possible over time.
@@ -85,6 +105,28 @@ namespace TencentCloud.Monitor.V20180724
              try
              {
                  var strResp = await this.InternalRequest(req, "GetMonitorData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetMonitorDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the monitoring data of a Tencent Cloud product by passing in the product's namespace, object dimension description, and monitoring metric.
+        /// API call rate limit: 20 calls/sec, 1,200 calls/min.
+        /// If you need to call a lot of metrics and objects, there may be cases where the call fails due to the rate limit. It is recommended to spread the call requests as much as possible over time.
+        /// </summary>
+        /// <param name="req"><see cref="GetMonitorDataRequest"/></param>
+        /// <returns><see cref="GetMonitorDataResponse"/></returns>
+        public GetMonitorDataResponse GetMonitorDataSync(GetMonitorDataRequest req)
+        {
+             JsonResponseModel<GetMonitorDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetMonitorData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetMonitorDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)

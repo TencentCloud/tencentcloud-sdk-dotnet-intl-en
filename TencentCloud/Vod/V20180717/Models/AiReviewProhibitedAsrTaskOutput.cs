@@ -41,7 +41,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// List of video segments that contain the ASR-detected prohibited information in speech.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewAsrTextSegmentItem[] SegmentSet{ get; set; }

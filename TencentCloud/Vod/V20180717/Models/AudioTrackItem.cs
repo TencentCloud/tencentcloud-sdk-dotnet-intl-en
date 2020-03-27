@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SourceMedia{ get; set; }
 
         /// <summary>
-        /// Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+        /// Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
         /// </summary>
         [JsonProperty("SourceMediaStartTime")]
         public float? SourceMediaStartTime{ get; set; }

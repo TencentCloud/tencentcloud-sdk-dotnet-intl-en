@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
+        /// Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Status of video release in WeChat Mini Program
+        /// Status of video release on WeChat Mini Program
         /// <li>Pass: succeeded.</li>
         /// <li>Rejected: rejected.</li>
         /// </summary>

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be after the start date.
+        /// End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

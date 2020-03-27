@@ -74,6 +74,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to bind target groups to CLB listeners (layer-4 protocol) or forwarding rules (layer-7 protocol).
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateTargetGroupsRequest"/></param>
+        /// <returns><see cref="AssociateTargetGroupsResponse"/></returns>
+        public AssociateTargetGroupsResponse AssociateTargetGroupsSync(AssociateTargetGroupsRequest req)
+        {
+             JsonResponseModel<AssociateTargetGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateTargetGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateTargetGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// An HTTPS:443 listener needs to be created first, along with a forwarding rule. When this API is called, an HTTP:80 listener will be created automatically if it did not exist and a forwarding rule corresponding to `Domains` (specified in the input parameter) under the HTTPS:443 listener will also be created. After successful creation, access requests to an HTTP:80 address will be redirected to an HTTPS:443 address automatically.
         /// </summary>
         /// <param name="req"><see cref="AutoRewriteRequest"/></param>
@@ -94,6 +115,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// An HTTPS:443 listener needs to be created first, along with a forwarding rule. When this API is called, an HTTP:80 listener will be created automatically if it did not exist and a forwarding rule corresponding to `Domains` (specified in the input parameter) under the HTTPS:443 listener will also be created. After successful creation, access requests to an HTTP:80 address will be redirected to an HTTPS:443 address automatically.
+        /// </summary>
+        /// <param name="req"><see cref="AutoRewriteRequest"/></param>
+        /// <returns><see cref="AutoRewriteResponse"/></returns>
+        public AutoRewriteResponse AutoRewriteSync(AutoRewriteRequest req)
+        {
+             JsonResponseModel<AutoRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AutoRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AutoRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unbind layer-4/layer-7 real servers in batches.
         /// </summary>
         /// <param name="req"><see cref="BatchDeregisterTargetsRequest"/></param>
@@ -104,6 +145,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "BatchDeregisterTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeregisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind layer-4/layer-7 real servers in batches.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeregisterTargetsRequest"/></param>
+        /// <returns><see cref="BatchDeregisterTargetsResponse"/></returns>
+        public BatchDeregisterTargetsResponse BatchDeregisterTargetsSync(BatchDeregisterTargetsRequest req)
+        {
+             JsonResponseModel<BatchDeregisterTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeregisterTargets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeregisterTargetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -135,6 +196,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to modify the forwarding weights of real servers bound to a CLB listener in batches. It supports layer-4 and layer-7 CLB listeners but not Classic CLB.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyTargetWeightRequest"/></param>
+        /// <returns><see cref="BatchModifyTargetWeightResponse"/></returns>
+        public BatchModifyTargetWeightResponse BatchModifyTargetWeightSync(BatchModifyTargetWeightRequest req)
+        {
+             JsonResponseModel<BatchModifyTargetWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchModifyTargetWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTargetWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to bind CVM instances or ENIs in batches. It supports cross-region binding and layer-4 and layer-7 (TCP, UDP, HTTP, HTTPS) protocols.
         /// </summary>
         /// <param name="req"><see cref="BatchRegisterTargetsRequest"/></param>
@@ -145,6 +227,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "BatchRegisterTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRegisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind CVM instances or ENIs in batches. It supports cross-region binding and layer-4 and layer-7 (TCP, UDP, HTTP, HTTPS) protocols.
+        /// </summary>
+        /// <param name="req"><see cref="BatchRegisterTargetsRequest"/></param>
+        /// <returns><see cref="BatchRegisterTargetsResponse"/></returns>
+        public BatchRegisterTargetsResponse BatchRegisterTargetsSync(BatchRegisterTargetsRequest req)
+        {
+             JsonResponseModel<BatchRegisterTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchRegisterTargets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRegisterTargetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -166,6 +268,27 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a listener for a CLB instance.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="CreateListenerRequest"/></param>
+        /// <returns><see cref="CreateListenerResponse"/></returns>
+        public CreateListenerResponse CreateListenerSync(CreateListenerRequest req)
+        {
+             JsonResponseModel<CreateListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateListener");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateListenerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -198,6 +321,28 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (CreateLoadBalancer) is used to create a CLB instance. To use the CLB service, you first need to purchase one or more instances. After this API is called successfully, a unique instance ID will be returned. There are two types of instances: public network and private network. For more information, see the product types in the product documentation.
+        /// Note: (1) To apply for a CLB instance in the specified AZ and cross-AZ disaster recovery, please [submit a ticket](https://console.cloud.tencent.com/workorder/category); (2) Currently, IPv6 is supported only in Beijing, Shanghai, and Guangzhou regions.
+        /// This is an async API. After it is returned successfully, you can call the DescribeLoadBalancers API to query the status of the instance (such as creating and normal) to check whether it is successfully created.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
+        public CreateLoadBalancerResponse CreateLoadBalancerSync(CreateLoadBalancerRequest req)
+        {
+             JsonResponseModel<CreateLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateRule) is used to create a forwarding rule under an existing layer-7 CLB listener, where real servers must be bound to the rule instead of the listener.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>
@@ -219,6 +364,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (CreateRule) is used to create a forwarding rule under an existing layer-7 CLB listener, where real servers must be bound to the rule instead of the listener.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRuleRequest"/></param>
+        /// <returns><see cref="CreateRuleResponse"/></returns>
+        public CreateRuleResponse CreateRuleSync(CreateRuleRequest req)
+        {
+             JsonResponseModel<CreateRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a target group. (The target group feature is currently in beta test. To try it out, submit a ticket for application.)
         /// </summary>
         /// <param name="req"><see cref="CreateTargetGroupRequest"/></param>
@@ -229,6 +395,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateTargetGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTargetGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a target group. (The target group feature is currently in beta test. To try it out, submit a ticket for application.)
+        /// </summary>
+        /// <param name="req"><see cref="CreateTargetGroupRequest"/></param>
+        /// <returns><see cref="CreateTargetGroupResponse"/></returns>
+        public CreateTargetGroupResponse CreateTargetGroupSync(CreateTargetGroupRequest req)
+        {
+             JsonResponseModel<CreateTargetGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTargetGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTargetGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -260,6 +446,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to delete a listener from a CLB instance (layer-4 or layer-7).
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteListenerRequest"/></param>
+        /// <returns><see cref="DeleteListenerResponse"/></returns>
+        public DeleteListenerResponse DeleteListenerSync(DeleteListenerRequest req)
+        {
+             JsonResponseModel<DeleteListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DeleteLoadBalancer) is used to delete one or more specified CLB instances.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
@@ -281,6 +488,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (DeleteLoadBalancer) is used to delete one or more specified CLB instances.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
+        public DeleteLoadBalancerResponse DeleteLoadBalancerSync(DeleteLoadBalancerRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DeleteRewrite) is used to delete the redirection relationship between the specified forwarding rules.
         /// </summary>
         /// <param name="req"><see cref="DeleteRewriteRequest"/></param>
@@ -291,6 +519,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DeleteRewrite) is used to delete the redirection relationship between the specified forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRewriteRequest"/></param>
+        /// <returns><see cref="DeleteRewriteResponse"/></returns>
+        public DeleteRewriteResponse DeleteRewriteSync(DeleteRewriteRequest req)
+        {
+             JsonResponseModel<DeleteRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRewrite");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRewriteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -322,6 +570,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (DeleteRule) is used to delete a forwarding rule under a layer-7 CLB instance listener
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRuleRequest"/></param>
+        /// <returns><see cref="DeleteRuleResponse"/></returns>
+        public DeleteRuleResponse DeleteRuleSync(DeleteRuleRequest req)
+        {
+             JsonResponseModel<DeleteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a target group.
         /// </summary>
         /// <param name="req"><see cref="DeleteTargetGroupsRequest"/></param>
@@ -332,6 +601,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteTargetGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTargetGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a target group.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTargetGroupsRequest"/></param>
+        /// <returns><see cref="DeleteTargetGroupsResponse"/></returns>
+        public DeleteTargetGroupsResponse DeleteTargetGroupsSync(DeleteTargetGroupsRequest req)
+        {
+             JsonResponseModel<DeleteTargetGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTargetGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTargetGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -363,6 +652,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to unbind a server from a target group.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterTargetGroupInstancesRequest"/></param>
+        /// <returns><see cref="DeregisterTargetGroupInstancesResponse"/></returns>
+        public DeregisterTargetGroupInstancesResponse DeregisterTargetGroupInstancesSync(DeregisterTargetGroupInstancesRequest req)
+        {
+             JsonResponseModel<DeregisterTargetGroupInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeregisterTargetGroupInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterTargetGroupInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DeregisterTargets) is used to unbind one or more real servers from a CLB listener or forwarding rule. For layer-4 listeners, only the listener ID needs to be specified. For layer-7 listeners, the forwarding rule also needs to be specified through LocationId or Domain+Url.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>
@@ -374,6 +684,27 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DeregisterTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DeregisterTargets) is used to unbind one or more real servers from a CLB listener or forwarding rule. For layer-4 listeners, only the listener ID needs to be specified. For layer-7 listeners, the forwarding rule also needs to be specified through LocationId or Domain+Url.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterTargetsRequest"/></param>
+        /// <returns><see cref="DeregisterTargetsResponse"/></returns>
+        public DeregisterTargetsResponse DeregisterTargetsSync(DeregisterTargetsRequest req)
+        {
+             JsonResponseModel<DeregisterTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeregisterTargets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterTargetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -405,6 +736,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (DeregisterTargetsFromClassicalLB) is used to unbind real servers from a classic load balancer.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterTargetsFromClassicalLBRequest"/></param>
+        /// <returns><see cref="DeregisterTargetsFromClassicalLBResponse"/></returns>
+        public DeregisterTargetsFromClassicalLBResponse DeregisterTargetsFromClassicalLBSync(DeregisterTargetsFromClassicalLBRequest req)
+        {
+             JsonResponseModel<DeregisterTargetsFromClassicalLBResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeregisterTargetsFromClassicalLB");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterTargetsFromClassicalLBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeClassicalLBByInstanceId) is used to get the list of classic CLB IDs through the real server instance ID.
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicalLBByInstanceIdRequest"/></param>
@@ -415,6 +767,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeClassicalLBByInstanceId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBByInstanceIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeClassicalLBByInstanceId) is used to get the list of classic CLB IDs through the real server instance ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClassicalLBByInstanceIdRequest"/></param>
+        /// <returns><see cref="DescribeClassicalLBByInstanceIdResponse"/></returns>
+        public DescribeClassicalLBByInstanceIdResponse DescribeClassicalLBByInstanceIdSync(DescribeClassicalLBByInstanceIdRequest req)
+        {
+             JsonResponseModel<DescribeClassicalLBByInstanceIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClassicalLBByInstanceId");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBByInstanceIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -445,6 +817,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (DescribeClassicalLBHealthStatus) is used to get the real server health status of a classic CLB
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClassicalLBHealthStatusRequest"/></param>
+        /// <returns><see cref="DescribeClassicalLBHealthStatusResponse"/></returns>
+        public DescribeClassicalLBHealthStatusResponse DescribeClassicalLBHealthStatusSync(DescribeClassicalLBHealthStatusRequest req)
+        {
+             JsonResponseModel<DescribeClassicalLBHealthStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClassicalLBHealthStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBHealthStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeClassicalLBListeners) is used to get the listener information of a classic CLB.
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicalLBListenersRequest"/></param>
@@ -455,6 +847,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeClassicalLBListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeClassicalLBListeners) is used to get the listener information of a classic CLB.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClassicalLBListenersRequest"/></param>
+        /// <returns><see cref="DescribeClassicalLBListenersResponse"/></returns>
+        public DescribeClassicalLBListenersResponse DescribeClassicalLBListenersSync(DescribeClassicalLBListenersRequest req)
+        {
+             JsonResponseModel<DescribeClassicalLBListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClassicalLBListeners");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBListenersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -485,6 +897,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (DescribeClassicalLBTargets) is used to get the real servers bound to a classic CLB.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClassicalLBTargetsRequest"/></param>
+        /// <returns><see cref="DescribeClassicalLBTargetsResponse"/></returns>
+        public DescribeClassicalLBTargetsResponse DescribeClassicalLBTargetsSync(DescribeClassicalLBTargetsRequest req)
+        {
+             JsonResponseModel<DescribeClassicalLBTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClassicalLBTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of listeners by CLB instance ID, listener protocol, or port. If no filter is specified, all listeners under the CLB instance will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeListenersRequest"/></param>
@@ -495,6 +927,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of listeners by CLB instance ID, listener protocol, or port. If no filter is specified, all listeners under the CLB instance will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListenersRequest"/></param>
+        /// <returns><see cref="DescribeListenersResponse"/></returns>
+        public DescribeListenersResponse DescribeListenersSync(DescribeListenersRequest req)
+        {
+             JsonResponseModel<DescribeListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeListeners");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListenersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -525,6 +977,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to query the list of CLB instances associated with a certificate in a region by certificate ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerListByCertIdRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerListByCertIdResponse"/></returns>
+        public DescribeLoadBalancerListByCertIdResponse DescribeLoadBalancerListByCertIdSync(DescribeLoadBalancerListByCertIdRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancerListByCertIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancerListByCertId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerListByCertIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of CLB instances in a region.
         /// </summary>
         /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>
@@ -535,6 +1007,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of CLB instances in a region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancersResponse"/></returns>
+        public DescribeLoadBalancersResponse DescribeLoadBalancersSync(DescribeLoadBalancersRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -565,6 +1057,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (DescribeRewrite) is used to query the redirection relationship between the forwarding rules of a CLB instance by instance ID. If no listener ID or forwarding rule ID is specified, all redirection relationships in the instance will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRewriteRequest"/></param>
+        /// <returns><see cref="DescribeRewriteResponse"/></returns>
+        public DescribeRewriteResponse DescribeRewriteSync(DescribeRewriteRequest req)
+        {
+             JsonResponseModel<DescribeRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the information of servers bound to a target group.
         /// </summary>
         /// <param name="req"><see cref="DescribeTargetGroupInstancesRequest"/></param>
@@ -575,6 +1087,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTargetGroupInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetGroupInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the information of servers bound to a target group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetGroupInstancesRequest"/></param>
+        /// <returns><see cref="DescribeTargetGroupInstancesResponse"/></returns>
+        public DescribeTargetGroupInstancesResponse DescribeTargetGroupInstancesSync(DescribeTargetGroupInstancesRequest req)
+        {
+             JsonResponseModel<DescribeTargetGroupInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTargetGroupInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetGroupInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -605,6 +1137,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to get the target group list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetGroupListRequest"/></param>
+        /// <returns><see cref="DescribeTargetGroupListResponse"/></returns>
+        public DescribeTargetGroupListResponse DescribeTargetGroupListSync(DescribeTargetGroupListRequest req)
+        {
+             JsonResponseModel<DescribeTargetGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTargetGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the target group information.
         /// </summary>
         /// <param name="req"><see cref="DescribeTargetGroupsRequest"/></param>
@@ -615,6 +1167,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTargetGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the target group information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetGroupsRequest"/></param>
+        /// <returns><see cref="DescribeTargetGroupsResponse"/></returns>
+        public DescribeTargetGroupsResponse DescribeTargetGroupsSync(DescribeTargetGroupsRequest req)
+        {
+             JsonResponseModel<DescribeTargetGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTargetGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -645,6 +1217,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (DescribeTargetHealth) is used to query the health check result of a real server of a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetHealthRequest"/></param>
+        /// <returns><see cref="DescribeTargetHealthResponse"/></returns>
+        public DescribeTargetHealthResponse DescribeTargetHealthSync(DescribeTargetHealthRequest req)
+        {
+             JsonResponseModel<DescribeTargetHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTargetHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeTargets) is used to query the list of real servers bound to some listeners of a CLB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeTargetsRequest"/></param>
@@ -665,6 +1257,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (DescribeTargets) is used to query the list of real servers bound to some listeners of a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetsRequest"/></param>
+        /// <returns><see cref="DescribeTargetsResponse"/></returns>
+        public DescribeTargetsResponse DescribeTargetsSync(DescribeTargetsRequest req)
+        {
+             JsonResponseModel<DescribeTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the execution status of an async task. After non-query APIs (used to create/delete CLB instances, listeners, or rules or to bind/unbind real servers) are called successfully, this API needs to be used to query whether the task is successful.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
@@ -675,6 +1287,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the execution status of an async task. After non-query APIs (used to create/delete CLB instances, listeners, or rules or to bind/unbind real servers) are called successfully, this API needs to be used to query whether the task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public DescribeTaskStatusResponse DescribeTaskStatusSync(DescribeTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -706,6 +1338,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to unbind target groups from a rule.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateTargetGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateTargetGroupsResponse"/></returns>
+        public DisassociateTargetGroupsResponse DisassociateTargetGroupsSync(DisassociateTargetGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateTargetGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateTargetGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateTargetGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// After the original access address and the address to be redirected are configured manually, the system will automatically redirect requests made to the original access address to the target address of the corresponding path. Multiple paths can be configured as a redirection policy under one domain name to achieve automatic redirection between HTTP and HTTPS. A redirection policy should meet the following rules: if A has already been redirected to B, then it cannot be redirected to C (unless the original redirection relationship is deleted and a new one is created), and B cannot be redirected to any other addresses.
         /// </summary>
         /// <param name="req"><see cref="ManualRewriteRequest"/></param>
@@ -716,6 +1369,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "ManualRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// After the original access address and the address to be redirected are configured manually, the system will automatically redirect requests made to the original access address to the target address of the corresponding path. Multiple paths can be configured as a redirection policy under one domain name to achieve automatic redirection between HTTP and HTTPS. A redirection policy should meet the following rules: if A has already been redirected to B, then it cannot be redirected to C (unless the original redirection relationship is deleted and a new one is created), and B cannot be redirected to any other addresses.
+        /// </summary>
+        /// <param name="req"><see cref="ManualRewriteRequest"/></param>
+        /// <returns><see cref="ManualRewriteResponse"/></returns>
+        public ManualRewriteResponse ManualRewriteSync(ManualRewriteRequest req)
+        {
+             JsonResponseModel<ManualRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManualRewrite");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualRewriteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -747,6 +1420,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (ModifyDomain) is used to modify a domain name under a layer-7 CLB listener.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainRequest"/></param>
+        /// <returns><see cref="ModifyDomainResponse"/></returns>
+        public ModifyDomainResponse ModifyDomainSync(ModifyDomainRequest req)
+        {
+             JsonResponseModel<ModifyDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the domain name-level attributes of a layer-7 listener's forwarding rule, such as modifying the domain name, changing the DefaultServer, enabling/disabling HTTP/2, and modifying certificates.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
@@ -758,6 +1452,27 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyDomainAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the domain name-level attributes of a layer-7 listener's forwarding rule, such as modifying the domain name, changing the DefaultServer, enabling/disabling HTTP/2, and modifying certificates.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDomainAttributesResponse"/></returns>
+        public ModifyDomainAttributesResponse ModifyDomainAttributesSync(ModifyDomainAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDomainAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainAttributesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -789,6 +1504,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (ModifyListener) is used to modify the attributes of a CLB listener, such as listener name, health check parameter, certificate information, and forwarding policy.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyListenerRequest"/></param>
+        /// <returns><see cref="ModifyListenerResponse"/></returns>
+        public ModifyListenerResponse ModifyListenerSync(ModifyListenerRequest req)
+        {
+             JsonResponseModel<ModifyListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the attributes of a CLB instance such as name and cross-region attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
@@ -799,6 +1535,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyLoadBalancerAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the attributes of a CLB instance such as name and cross-region attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerAttributesResponse"/></returns>
+        public ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributesSync(ModifyLoadBalancerAttributesRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancerAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerAttributesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -830,6 +1586,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (ModifyRule) is used to modify the attributes of a forwarding rule under a layer-7 CLB listener, such as forwarding path, health check attribute, and forwarding policy.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRuleRequest"/></param>
+        /// <returns><see cref="ModifyRuleResponse"/></returns>
+        public ModifyRuleResponse ModifyRuleSync(ModifyRuleRequest req)
+        {
+             JsonResponseModel<ModifyRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to rename a target group or modify its default port attribute.
         /// </summary>
         /// <param name="req"><see cref="ModifyTargetGroupAttributeRequest"/></param>
@@ -840,6 +1617,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyTargetGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to rename a target group or modify its default port attribute.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifyTargetGroupAttributeResponse"/></returns>
+        public ModifyTargetGroupAttributeResponse ModifyTargetGroupAttributeSync(ModifyTargetGroupAttributeRequest req)
+        {
+             JsonResponseModel<ModifyTargetGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTargetGroupAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetGroupAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -871,6 +1668,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to modify server ports of a target group in batches.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetGroupInstancesPortRequest"/></param>
+        /// <returns><see cref="ModifyTargetGroupInstancesPortResponse"/></returns>
+        public ModifyTargetGroupInstancesPortResponse ModifyTargetGroupInstancesPortSync(ModifyTargetGroupInstancesPortRequest req)
+        {
+             JsonResponseModel<ModifyTargetGroupInstancesPortResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTargetGroupInstancesPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetGroupInstancesPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify server weights of a target group in batches.
         /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
         /// </summary>
@@ -882,6 +1700,27 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyTargetGroupInstancesWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetGroupInstancesWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify server weights of a target group in batches.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetGroupInstancesWeightRequest"/></param>
+        /// <returns><see cref="ModifyTargetGroupInstancesWeightResponse"/></returns>
+        public ModifyTargetGroupInstancesWeightResponse ModifyTargetGroupInstancesWeightSync(ModifyTargetGroupInstancesWeightRequest req)
+        {
+             JsonResponseModel<ModifyTargetGroupInstancesWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTargetGroupInstancesWeight");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetGroupInstancesWeightResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -913,6 +1752,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (ModifyTargetPort) is used to modify the port of a real server bound to a listener.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetPortRequest"/></param>
+        /// <returns><see cref="ModifyTargetPortResponse"/></returns>
+        public ModifyTargetPortResponse ModifyTargetPortSync(ModifyTargetPortRequest req)
+        {
+             JsonResponseModel<ModifyTargetPortResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTargetPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyTargetWeight) is used to modify the forwarding weight of a real server bound to a CLB instance.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>
@@ -924,6 +1784,27 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyTargetWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (ModifyTargetWeight) is used to modify the forwarding weight of a real server bound to a CLB instance.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetWeightRequest"/></param>
+        /// <returns><see cref="ModifyTargetWeightResponse"/></returns>
+        public ModifyTargetWeightResponse ModifyTargetWeightSync(ModifyTargetWeightRequest req)
+        {
+             JsonResponseModel<ModifyTargetWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTargetWeight");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetWeightResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -955,6 +1836,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to register servers to a target group.
+        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RegisterTargetGroupInstancesRequest"/></param>
+        /// <returns><see cref="RegisterTargetGroupInstancesResponse"/></returns>
+        public RegisterTargetGroupInstancesResponse RegisterTargetGroupInstancesSync(RegisterTargetGroupInstancesRequest req)
+        {
+             JsonResponseModel<RegisterTargetGroupInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RegisterTargetGroupInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterTargetGroupInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (RegisterTargets) is used to bind one or more real servers to a CLB listener or layer-7 forwarding rule. Before using this API, you need to create relevant layer-4 listeners or layer-7 forwarding rules. For the former (TCP/UDP), only the listener ID needs to be specified, while for the latter (HTTP/HTTPS), the forwarding rule also needs to be specified through LocationId or Domain+Url.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>
@@ -976,6 +1878,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (RegisterTargets) is used to bind one or more real servers to a CLB listener or layer-7 forwarding rule. Before using this API, you need to create relevant layer-4 listeners or layer-7 forwarding rules. For the former (TCP/UDP), only the listener ID needs to be specified, while for the latter (HTTP/HTTPS), the forwarding rule also needs to be specified through LocationId or Domain+Url.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RegisterTargetsRequest"/></param>
+        /// <returns><see cref="RegisterTargetsResponse"/></returns>
+        public RegisterTargetsResponse RegisterTargetsSync(RegisterTargetsRequest req)
+        {
+             JsonResponseModel<RegisterTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RegisterTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (RegisterTargetsWithClassicalLB) is used to bind real servers to a classic CLB.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
@@ -987,6 +1910,27 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "RegisterTargetsWithClassicalLB");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterTargetsWithClassicalLBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (RegisterTargetsWithClassicalLB) is used to bind real servers to a classic CLB.
+        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RegisterTargetsWithClassicalLBRequest"/></param>
+        /// <returns><see cref="RegisterTargetsWithClassicalLBResponse"/></returns>
+        public RegisterTargetsWithClassicalLBResponse RegisterTargetsWithClassicalLBSync(RegisterTargetsWithClassicalLBRequest req)
+        {
+             JsonResponseModel<RegisterTargetsWithClassicalLBResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RegisterTargetsWithClassicalLB");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterTargetsWithClassicalLBResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1020,6 +1964,29 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (ReplaceCertForLoadBalancers) is used to replace the certificate associated with a CLB instance. A new certificates can be associated with a CLB only after the original certificate is disassociated from it.
+        /// This API supports replacing server certificates and client certificates.
+        /// The new certificate to be used can be specified by passing in the certificate ID. If no certificate ID is specified, relevant information such as certificate content must be passed in to create a new certificate and bind it to the CLB.
+        /// Note: This API can only be called in the Guangzhou region; for other regions, an error will occur due to domain name resolution problems.
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceCertForLoadBalancersRequest"/></param>
+        /// <returns><see cref="ReplaceCertForLoadBalancersResponse"/></returns>
+        public ReplaceCertForLoadBalancersResponse ReplaceCertForLoadBalancersSync(ReplaceCertForLoadBalancersRequest req)
+        {
+             JsonResponseModel<ReplaceCertForLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReplaceCertForLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceCertForLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (SetLoadBalancerSecurityGroups) is used to bind/unbind security groups for a public network CLB instance. You can use the DescribeLoadBalancers API to query the security groups bound to a CLB instance. This API uses `set` semantics.
         /// During a binding operation, the input parameters need to be all security groups to be bound to the CLB instance (including those already bound ones and new ones).
         /// During an unbinding operation, the input parameters need to be all the security groups still bound to the CLB instance after the unbinding operation. To unbind all security groups, you can leave this parameter empty or pass in an empty array. Note: Private network CLB do not support binding security groups.
@@ -1042,6 +2009,28 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API (SetLoadBalancerSecurityGroups) is used to bind/unbind security groups for a public network CLB instance. You can use the DescribeLoadBalancers API to query the security groups bound to a CLB instance. This API uses `set` semantics.
+        /// During a binding operation, the input parameters need to be all security groups to be bound to the CLB instance (including those already bound ones and new ones).
+        /// During an unbinding operation, the input parameters need to be all the security groups still bound to the CLB instance after the unbinding operation. To unbind all security groups, you can leave this parameter empty or pass in an empty array. Note: Private network CLB do not support binding security groups.
+        /// </summary>
+        /// <param name="req"><see cref="SetLoadBalancerSecurityGroupsRequest"/></param>
+        /// <returns><see cref="SetLoadBalancerSecurityGroupsResponse"/></returns>
+        public SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroupsSync(SetLoadBalancerSecurityGroupsRequest req)
+        {
+             JsonResponseModel<SetLoadBalancerSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetLoadBalancerSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetLoadBalancerSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to bind or unbind a security group for multiple public network CLB instances. Note: Private network CLB do not support binding security groups.
         /// </summary>
         /// <param name="req"><see cref="SetSecurityGroupForLoadbalancersRequest"/></param>
@@ -1052,6 +2041,26 @@ namespace TencentCloud.Clb.V20180317
              try
              {
                  var strResp = await this.InternalRequest(req, "SetSecurityGroupForLoadbalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetSecurityGroupForLoadbalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind or unbind a security group for multiple public network CLB instances. Note: Private network CLB do not support binding security groups.
+        /// </summary>
+        /// <param name="req"><see cref="SetSecurityGroupForLoadbalancersRequest"/></param>
+        /// <returns><see cref="SetSecurityGroupForLoadbalancersResponse"/></returns>
+        public SetSecurityGroupForLoadbalancersResponse SetSecurityGroupForLoadbalancersSync(SetSecurityGroupForLoadbalancersRequest req)
+        {
+             JsonResponseModel<SetSecurityGroupForLoadbalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetSecurityGroupForLoadbalancers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetSecurityGroupForLoadbalancersResponse>>(strResp);
              }
              catch (JsonSerializationException e)

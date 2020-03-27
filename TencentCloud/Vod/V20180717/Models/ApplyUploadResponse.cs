@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Bucket, which is used as the `bucket_name` in the URL of the upload API.
+        /// Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
         /// </summary>
         [JsonProperty("StorageBucket")]
         public string StorageBucket{ get; set; }

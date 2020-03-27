@@ -73,6 +73,26 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// This API is used to create a GME application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAppRequest"/></param>
+        /// <returns><see cref="CreateAppResponse"/></returns>
+        public CreateAppResponse CreateAppSync(CreateAppRequest req)
+        {
+             JsonResponseModel<CreateAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the usage statistics of a GME application, including those of voice chat, voice messaging and speech-to-text, phrase analysis, etc. The maximum query period is the past 30 days.
         /// </summary>
         /// <param name="req"><see cref="DescribeAppStatisticsRequest"/></param>
@@ -93,6 +113,26 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// This API is used to get the usage statistics of a GME application, including those of voice chat, voice messaging and speech-to-text, phrase analysis, etc. The maximum query period is the past 30 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeAppStatisticsResponse"/></returns>
+        public DescribeAppStatisticsResponse DescribeAppStatisticsSync(DescribeAppStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeAppStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAppStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to change the status of an application's master switch.
         /// </summary>
         /// <param name="req"><see cref="ModifyAppStatusRequest"/></param>
@@ -103,6 +143,26 @@ namespace TencentCloud.Gme.V20180711
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyAppStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to change the status of an application's master switch.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAppStatusRequest"/></param>
+        /// <returns><see cref="ModifyAppStatusResponse"/></returns>
+        public ModifyAppStatusResponse ModifyAppStatusSync(ModifyAppStatusRequest req)
+        {
+             JsonResponseModel<ModifyAppStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAppStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)

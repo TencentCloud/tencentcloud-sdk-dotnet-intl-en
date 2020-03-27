@@ -66,7 +66,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SourceDefinition{ get; set; }
 
         /// <summary>
-        /// Status of video release in WeChat Mini Program. Valid values:
+        /// Status of video release on WeChat Mini Program. Valid values:
         /// <li>Pass: successfully published;</li>
         /// <li>Failed: failed to publish;</li>
         /// <li>Rejected: rejected.</li>

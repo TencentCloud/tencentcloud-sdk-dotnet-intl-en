@@ -74,6 +74,27 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// This API is used to add an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://cloud.tencent.com/document/product/382/39022) before starting an application.
+        /// >⚠️ Note: individual users cannot use this API to apply for SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, please log in to the console to apply for SMS signatures. For detailed directions, please see [Creating SMS Signatures](https://cloud.tencent.com/document/product/382/36136#Sign).
+        /// </summary>
+        /// <param name="req"><see cref="AddSmsSignRequest"/></param>
+        /// <returns><see cref="AddSmsSignResponse"/></returns>
+        public AddSmsSignResponse AddSmsSignSync(AddSmsSignRequest req)
+        {
+             JsonResponseModel<AddSmsSignResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddSmsSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSmsSignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add an SMS template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://cloud.tencent.com/document/product/382/39023) before starting an application.
         /// >⚠️ Note: individual users cannot use this API to apply for SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, please log in to the console to apply for SMS body templates. For detailed directions, please see [Creating SMS Body Templates](https://cloud.tencent.com/document/product/382/36136#Template).
         /// </summary>
@@ -85,6 +106,27 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "AddSmsTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSmsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add an SMS template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://cloud.tencent.com/document/product/382/39023) before starting an application.
+        /// >⚠️ Note: individual users cannot use this API to apply for SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, please log in to the console to apply for SMS body templates. For detailed directions, please see [Creating SMS Body Templates](https://cloud.tencent.com/document/product/382/36136#Template).
+        /// </summary>
+        /// <param name="req"><see cref="AddSmsTemplateRequest"/></param>
+        /// <returns><see cref="AddSmsTemplateResponse"/></returns>
+        public AddSmsTemplateResponse AddSmsTemplateSync(AddSmsTemplateRequest req)
+        {
+             JsonResponseModel<AddSmsTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddSmsTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSmsTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -115,6 +157,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// This API is used to collect statistics on user receipts.
+        /// </summary>
+        /// <param name="req"><see cref="CallbackStatusStatisticsRequest"/></param>
+        /// <returns><see cref="CallbackStatusStatisticsResponse"/></returns>
+        public CallbackStatusStatisticsResponse CallbackStatusStatisticsSync(CallbackStatusStatisticsRequest req)
+        {
+             JsonResponseModel<CallbackStatusStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CallbackStatusStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallbackStatusStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// >⚠️ Note: individual users cannot use this API to delete SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). You can log in to the console to delete SMS signatures. For detailed directions, please see the notes on deleting SMS signatures in [SMS Signature Operations](https://cloud.tencent.com/document/product/382/36136#Sign).
         /// </summary>
         /// <param name="req"><see cref="DeleteSmsSignRequest"/></param>
@@ -125,6 +187,26 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteSmsSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSmsSignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// >⚠️ Note: individual users cannot use this API to delete SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). You can log in to the console to delete SMS signatures. For detailed directions, please see the notes on deleting SMS signatures in [SMS Signature Operations](https://cloud.tencent.com/document/product/382/36136#Sign).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmsSignRequest"/></param>
+        /// <returns><see cref="DeleteSmsSignResponse"/></returns>
+        public DeleteSmsSignResponse DeleteSmsSignSync(DeleteSmsSignRequest req)
+        {
+             JsonResponseModel<DeleteSmsSignResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSmsSign");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSmsSignResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -155,6 +237,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// >⚠️ Note: individual users cannot use this API to delete SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). You can log in to the console to delete SMS body templates. For detailed directions, please see the notes on deleting SMS body templates in [SMS Body Template Operations](https://cloud.tencent.com/document/product/382/36136#Template).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmsTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmsTemplateResponse"/></returns>
+        public DeleteSmsTemplateResponse DeleteSmsTemplateSync(DeleteSmsTemplateRequest req)
+        {
+             JsonResponseModel<DeleteSmsTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSmsTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSmsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// >⚠️ Note: individual users cannot use this API to query SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629).
         /// </summary>
         /// <param name="req"><see cref="DescribeSmsSignListRequest"/></param>
@@ -175,6 +277,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// >⚠️ Note: individual users cannot use this API to query SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmsSignListRequest"/></param>
+        /// <returns><see cref="DescribeSmsSignListResponse"/></returns>
+        public DescribeSmsSignListResponse DescribeSmsSignListSync(DescribeSmsSignListRequest req)
+        {
+             JsonResponseModel<DescribeSmsSignListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSmsSignList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsSignListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// >⚠️ Note: individual users cannot use this API to query SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629).
         /// </summary>
         /// <param name="req"><see cref="DescribeSmsTemplateListRequest"/></param>
@@ -185,6 +307,26 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeSmsTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// >⚠️ Note: individual users cannot use this API to query SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmsTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeSmsTemplateListResponse"/></returns>
+        public DescribeSmsTemplateListResponse DescribeSmsTemplateListSync(DescribeSmsTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeSmsTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSmsTemplateList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsTemplateListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -217,6 +359,28 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// This API is used to modify an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://cloud.tencent.com/document/product/382/39022) before making a modification.
+        /// >- ⚠️ Note: individual users cannot use this API to modify SMS signatures. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, you can log in to the console to modify SMS signatures.
+        /// >- Modifications can be made only if the signature status is **pending review** or **rejected**. **Approved** signatures cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmsSignRequest"/></param>
+        /// <returns><see cref="ModifySmsSignResponse"/></returns>
+        public ModifySmsSignResponse ModifySmsSignSync(ModifySmsSignRequest req)
+        {
+             JsonResponseModel<ModifySmsSignResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySmsSign");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySmsSignResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify an SMS body template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://cloud.tencent.com/document/product/382/39023) before making a modification.
         /// >- ⚠️ Note: individual users cannot use this API to modify SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, you can log in to the console to modify SMS body templates.
         /// >- Modifications can be made only if the body template status is **pending review** or **rejected**. **Approved** body templates cannot be modified.
@@ -229,6 +393,28 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifySmsTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySmsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an SMS body template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://cloud.tencent.com/document/product/382/39023) before making a modification.
+        /// >- ⚠️ Note: individual users cannot use this API to modify SMS body templates. For more information, please see [Identity Verification Overview](https://cloud.tencent.com/document/product/378/3629). If your account identity is individual, you can log in to the console to modify SMS body templates.
+        /// >- Modifications can be made only if the body template status is **pending review** or **rejected**. **Approved** body templates cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmsTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmsTemplateResponse"/></returns>
+        public ModifySmsTemplateResponse ModifySmsTemplateSync(ModifySmsTemplateRequest req)
+        {
+             JsonResponseModel<ModifySmsTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySmsTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySmsTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -259,6 +445,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// This API is used to pull SMS reply status.
+        /// </summary>
+        /// <param name="req"><see cref="PullSmsReplyStatusRequest"/></param>
+        /// <returns><see cref="PullSmsReplyStatusResponse"/></returns>
+        public PullSmsReplyStatusResponse PullSmsReplyStatusSync(PullSmsReplyStatusRequest req)
+        {
+             JsonResponseModel<PullSmsReplyStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PullSmsReplyStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to pull SMS reply status for one single number.
         /// </summary>
         /// <param name="req"><see cref="PullSmsReplyStatusByPhoneNumberRequest"/></param>
@@ -269,6 +475,26 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "PullSmsReplyStatusByPhoneNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pull SMS reply status for one single number.
+        /// </summary>
+        /// <param name="req"><see cref="PullSmsReplyStatusByPhoneNumberRequest"/></param>
+        /// <returns><see cref="PullSmsReplyStatusByPhoneNumberResponse"/></returns>
+        public PullSmsReplyStatusByPhoneNumberResponse PullSmsReplyStatusByPhoneNumberSync(PullSmsReplyStatusByPhoneNumberRequest req)
+        {
+             JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PullSmsReplyStatusByPhoneNumber");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -299,6 +525,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// This API is used to pull SMS delivery status.
+        /// </summary>
+        /// <param name="req"><see cref="PullSmsSendStatusRequest"/></param>
+        /// <returns><see cref="PullSmsSendStatusResponse"/></returns>
+        public PullSmsSendStatusResponse PullSmsSendStatusSync(PullSmsSendStatusRequest req)
+        {
+             JsonResponseModel<PullSmsSendStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PullSmsSendStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to pull SMS delivery status for one single number.
         /// </summary>
         /// <param name="req"><see cref="PullSmsSendStatusByPhoneNumberRequest"/></param>
@@ -309,6 +555,26 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "PullSmsSendStatusByPhoneNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pull SMS delivery status for one single number.
+        /// </summary>
+        /// <param name="req"><see cref="PullSmsSendStatusByPhoneNumberRequest"/></param>
+        /// <returns><see cref="PullSmsSendStatusByPhoneNumberResponse"/></returns>
+        public PullSmsSendStatusByPhoneNumberResponse PullSmsSendStatusByPhoneNumberSync(PullSmsSendStatusByPhoneNumberRequest req)
+        {
+             JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PullSmsSendStatusByPhoneNumber");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -340,6 +606,27 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// This API is used to send SMS verification codes, notification, or marketing messages to users.
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="SendSmsRequest"/></param>
+        /// <returns><see cref="SendSmsResponse"/></returns>
+        public SendSmsResponse SendSmsSync(SendSmsRequest req)
+        {
+             JsonResponseModel<SendSmsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendSms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to collect statistics on SMS sent by users.
         /// </summary>
         /// <param name="req"><see cref="SendStatusStatisticsRequest"/></param>
@@ -360,6 +647,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// This API is used to collect statistics on SMS sent by users.
+        /// </summary>
+        /// <param name="req"><see cref="SendStatusStatisticsRequest"/></param>
+        /// <returns><see cref="SendStatusStatisticsResponse"/></returns>
+        public SendStatusStatisticsResponse SendStatusStatisticsSync(SendStatusStatisticsRequest req)
+        {
+             JsonResponseModel<SendStatusStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendStatusStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendStatusStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to collect statistics on user's packages.
         /// </summary>
         /// <param name="req"><see cref="SmsPackagesStatisticsRequest"/></param>
@@ -370,6 +677,26 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "SmsPackagesStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmsPackagesStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to collect statistics on user's packages.
+        /// </summary>
+        /// <param name="req"><see cref="SmsPackagesStatisticsRequest"/></param>
+        /// <returns><see cref="SmsPackagesStatisticsResponse"/></returns>
+        public SmsPackagesStatisticsResponse SmsPackagesStatisticsSync(SmsPackagesStatisticsRequest req)
+        {
+             JsonResponseModel<SmsPackagesStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SmsPackagesStatistics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmsPackagesStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)

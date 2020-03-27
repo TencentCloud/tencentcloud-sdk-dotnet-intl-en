@@ -26,7 +26,6 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Score of OCR-detected porn information in text between 0 and 100.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -36,14 +35,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
         /// List of video segments that contain the OCR-detected porn information in text.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewOcrTextSegmentItem[] SegmentSet{ get; set; }

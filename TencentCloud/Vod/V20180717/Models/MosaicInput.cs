@@ -63,7 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Blur height. % and px formats are supported:
         /// <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
         /// <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-        /// Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+        /// Default value: 10%.
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }

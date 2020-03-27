@@ -24,12 +24,19 @@ namespace TencentCloud.Vod.V20180717.Models
     public class AiReviewTerrorismOcrTaskInput : AbstractModel
     {
         
+        /// <summary>
+        /// Terrorism information detection template ID.
+        /// </summary>
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }
 }

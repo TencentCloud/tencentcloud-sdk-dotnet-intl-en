@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>EditMediaComplete: video editing completion;</li>
         /// <li>WechatPublishComplete: release on WeChat completion;</li>
         /// <li>ComposeMediaComplete: media file composing completion;</li>
-        /// <li>WechatMiniProgramPublishComplete: release in WeChat Mini Program completion.</li>
+        /// <li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
         /// <b>Event types compatible with v2017:</b>
         /// <li>TranscodeComplete: video transcoding completion;</li>
         /// <li>ConcatComplete: video splicing completion;</li>
@@ -135,7 +135,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ComposeMediaTask ComposeMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Release in WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
+        /// Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WechatMiniProgramPublishCompleteEvent")]
