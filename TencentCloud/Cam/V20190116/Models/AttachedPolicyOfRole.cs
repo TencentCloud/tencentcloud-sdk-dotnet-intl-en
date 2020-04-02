@@ -56,17 +56,25 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? CreateMode{ get; set; }
 
         /// <summary>
-        /// Queries if the policy has been deactivated
+        /// Whether the product has been deprecated (0: no; 1: yes)
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Deactived")]
         public ulong? Deactived{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of deprecated products
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DeactivedDetail")]
         public string[] DeactivedDetail{ get; set; }
+
+        /// <summary>
+        /// Policy description
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -81,6 +89,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "CreateMode", this.CreateMode);
             this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
             this.SetParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

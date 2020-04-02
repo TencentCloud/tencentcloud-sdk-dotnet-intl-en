@@ -311,7 +311,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OriginPullTimeout OriginPullTimeout{ get; set; }
 
         /// <summary>
-        /// 
+        /// S3 bucket origin access authentication configuration
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AwsPrivateAccess")]
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }

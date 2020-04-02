@@ -89,10 +89,17 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? Deactived{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of deprecated products
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DeactivedDetail")]
         public string[] DeactivedDetail{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsServiceLinkedPolicy")]
+        public ulong? IsServiceLinkedPolicy{ get; set; }
 
 
         /// <summary>
@@ -111,6 +118,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "IsAttached", this.IsAttached);
             this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
             this.SetParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
+            this.SetParamSimple(map, prefix + "IsServiceLinkedPolicy", this.IsServiceLinkedPolicy);
         }
     }
 }

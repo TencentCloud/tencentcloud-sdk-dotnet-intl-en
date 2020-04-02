@@ -24,12 +24,33 @@ namespace TencentCloud.Tke.V20180525.Models
     public class InstanceDataDiskMountSetting : AbstractModel
     {
         
+        /// <summary>
+        /// CVM instance type
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// Data disk mounting information
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
+        /// <summary>
+        /// Availability zone where the CVM instance is located
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

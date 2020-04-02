@@ -309,16 +309,24 @@ namespace TencentCloud.Clb.V20180317.Models
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
-        /// 
+        /// Performance guarantee specification
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether VIP is blocked
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsBlock")]
         public bool? IsBlock{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsBlockTime")]
+        public string IsBlockTime{ get; set; }
 
 
         /// <summary>
@@ -369,6 +377,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
             this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
             this.SetParamSimple(map, prefix + "IsBlock", this.IsBlock);
+            this.SetParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
         }
     }
 }

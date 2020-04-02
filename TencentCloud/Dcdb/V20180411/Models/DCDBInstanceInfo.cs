@@ -37,7 +37,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// APPID
+        /// AppID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -163,7 +163,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? IsTmp{ get; set; }
 
         /// <summary>
-        /// Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
+        /// Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
         /// </summary>
         [JsonProperty("ExclusterId")]
         public string ExclusterId{ get; set; }
@@ -181,7 +181,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// Numeric ID of an instance (this field is obsolete and should not be depended on)
+        /// Numeric ID of instance (this field is obsolete and should not be depended on)
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -253,6 +253,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("IsAuditSupported")]
         public ulong? IsAuditSupported{ get; set; }
 
+        /// <summary>
+        /// Number of CPU cores
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -297,6 +303,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Locker", this.Locker);
             this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
             this.SetParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

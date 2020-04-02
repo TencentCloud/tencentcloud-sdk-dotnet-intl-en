@@ -36,6 +36,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RunInstancesPara")]
         public string[] RunInstancesPara{ get; set; }
 
+        /// <summary>
+        /// An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
+        /// </summary>
+        [JsonProperty("InstanceAdvancedSettingsOverrides")]
+        public InstanceAdvancedSettings[] InstanceAdvancedSettingsOverrides{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
             this.SetParamArraySimple(map, prefix + "RunInstancesPara.", this.RunInstancesPara);
+            this.SetParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
         }
     }
 }

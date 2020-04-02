@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Cbs.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAccountResponse : AbstractModel
+    public class GetSnapOverviewResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID, which is passed through from the input parameters.
+        /// The total snapshot size of the user
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TotalSize")]
+        public float? TotalSize{ get; set; }
 
         /// <summary>
-        /// Username, which is passed through from the input parameters.
+        /// The total billed snapshot size of the user
         /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
+        [JsonProperty("RealTradeSize")]
+        public float? RealTradeSize{ get; set; }
 
         /// <summary>
-        /// Host allowed for access, which is passed through from the input parameters.
+        /// Free tier of snapshot
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
+        [JsonProperty("FreeQuota")]
+        public float? FreeQuota{ get; set; }
 
         /// <summary>
-        /// Passed through from the input parameters.
+        /// Total number of snapshots
         /// </summary>
-        [JsonProperty("ReadOnly")]
-        public long? ReadOnly{ get; set; }
+        [JsonProperty("TotalNums")]
+        public long? TotalNums{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -60,10 +60,10 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
-            this.SetParamSimple(map, prefix + "Host", this.Host);
-            this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamSimple(map, prefix + "TotalSize", this.TotalSize);
+            this.SetParamSimple(map, prefix + "RealTradeSize", this.RealTradeSize);
+            this.SetParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
+            this.SetParamSimple(map, prefix + "TotalNums", this.TotalNums);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

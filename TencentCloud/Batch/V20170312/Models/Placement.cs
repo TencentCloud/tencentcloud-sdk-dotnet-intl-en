@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
+        /// The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("HostIps")]
         public string[] HostIps{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HostId")]
+        public string HostId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "HostIds.", this.HostIds);
             this.SetParamArraySimple(map, prefix + "HostIps.", this.HostIps);
+            this.SetParamSimple(map, prefix + "HostId", this.HostId);
         }
     }
 }

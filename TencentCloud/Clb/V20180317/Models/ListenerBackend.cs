@@ -56,6 +56,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Targets")]
         public Backend[] Targets{ get; set; }
 
+        /// <summary>
+        /// Ending port in port range if port range is supported; 0 if port range is not supported
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EndPort")]
+        public long? EndPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
         }
     }
 }

@@ -15,32 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDBInstancesResponse : AbstractModel
+    public class ClusterExtraArgs : AbstractModel
     {
         
         /// <summary>
-        /// Order name
+        /// kube-apiserver custom parameter
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
+        [JsonProperty("KubeAPIServer")]
+        public string[] KubeAPIServer{ get; set; }
 
         /// <summary>
-        /// Order name array
+        /// kube-controller-manager custom parameter
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("DealNames")]
-        public string[] DealNames{ get; set; }
+        [JsonProperty("KubeControllerManager")]
+        public string[] KubeControllerManager{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// kube-scheduler custom parameter
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("KubeScheduler")]
+        public string[] KubeScheduler{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "KubeAPIServer.", this.KubeAPIServer);
+            this.SetParamArraySimple(map, prefix + "KubeControllerManager.", this.KubeControllerManager);
+            this.SetParamArraySimple(map, prefix + "KubeScheduler.", this.KubeScheduler);
         }
     }
 }

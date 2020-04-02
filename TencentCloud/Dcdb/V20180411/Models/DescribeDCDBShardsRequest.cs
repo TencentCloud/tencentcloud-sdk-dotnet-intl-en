@@ -31,7 +31,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List of shard IDs.
+        /// Shard ID list.
         /// </summary>
         [JsonProperty("ShardInstanceIds")]
         public string[] ShardInstanceIds{ get; set; }

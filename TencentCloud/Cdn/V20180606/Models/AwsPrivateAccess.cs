@@ -24,12 +24,35 @@ namespace TencentCloud.Cdn.V20180606.Models
     public class AwsPrivateAccess : AbstractModel
     {
         
+        /// <summary>
+        /// Switch, which can be set to on or off.
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
+        /// Access ID.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccessKey")]
+        public string AccessKey{ get; set; }
+
+        /// <summary>
+        /// Key.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecretKey")]
+        public string SecretKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "AccessKey", this.AccessKey);
+            this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
         }
     }
 }

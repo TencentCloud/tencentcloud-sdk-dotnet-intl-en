@@ -48,6 +48,24 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("MaxClusterServiceNum")]
         public ulong? MaxClusterServiceNum{ get; set; }
 
+        /// <summary>
+        /// The CIDR block used to assign cluster service IP addresses. It must conflict with neither the VPC CIDR block nor with CIDR blocks of other clusters in the same VPC instance. The IP range must be within the private network IP range, such as 10.1.0.0/14, 192.168.0.1/18, and 172.16.0.0/16.
+        /// </summary>
+        [JsonProperty("ServiceCIDR")]
+        public string ServiceCIDR{ get; set; }
+
+        /// <summary>
+        /// Subnet ID of the ENI in VPC-CNI network mode
+        /// </summary>
+        [JsonProperty("EniSubnetIds")]
+        public string[] EniSubnetIds{ get; set; }
+
+        /// <summary>
+        /// Repossession time of ENI IP addresses in VPC-CNI network mode, whose range is [300,15768000)
+        /// </summary>
+        [JsonProperty("ClaimExpiredSeconds")]
+        public long? ClaimExpiredSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "IgnoreClusterCIDRConflict", this.IgnoreClusterCIDRConflict);
             this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
             this.SetParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
+            this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
+            this.SetParamArraySimple(map, prefix + "EniSubnetIds.", this.EniSubnetIds);
+            this.SetParamSimple(map, prefix + "ClaimExpiredSeconds", this.ClaimExpiredSeconds);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.4</VersionPrefix>
+    <VersionPrefix>3.0.5</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -444,21 +444,17 @@
     <Compile Include="Cbs\V20170312\Models\DiskConfig.cs" />
     <Compile Include="Cbs\V20170312\Models\DiskOperationLog.cs" />
     <Compile Include="Cbs\V20170312\Models\Filter.cs" />
+    <Compile Include="Cbs\V20170312\Models\GetSnapOverviewRequest.cs" />
+    <Compile Include="Cbs\V20170312\Models\GetSnapOverviewResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\Image.cs" />
     <Compile Include="Cbs\V20170312\Models\InquiryPriceCreateDisksRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\InquiryPriceCreateDisksResponse.cs" />
-    <Compile Include="Cbs\V20170312\Models\InquiryPriceRenewDisksRequest.cs" />
-    <Compile Include="Cbs\V20170312\Models\InquiryPriceRenewDisksResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\InquiryPriceResizeDiskRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\InquiryPriceResizeDiskResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifyAutoSnapshotPolicyAttributeRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifyAutoSnapshotPolicyAttributeResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifyDiskAttributesRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifyDiskAttributesResponse.cs" />
-    <Compile Include="Cbs\V20170312\Models\ModifyDisksChargeTypeRequest.cs" />
-    <Compile Include="Cbs\V20170312\Models\ModifyDisksChargeTypeResponse.cs" />
-    <Compile Include="Cbs\V20170312\Models\ModifyDisksRenewFlagRequest.cs" />
-    <Compile Include="Cbs\V20170312\Models\ModifyDisksRenewFlagResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifySnapshotAttributeRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifySnapshotAttributeResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifySnapshotsSharePermissionRequest.cs" />
@@ -2754,6 +2750,7 @@
     <Compile Include="Tke\V20180525\Models\ClusterAdvancedSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterBasicSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterCIDRSettings.cs" />
+    <Compile Include="Tke\V20180525\Models\ClusterExtraArgs.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterNetworkSettings.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupResponse.cs" />
@@ -2808,6 +2805,7 @@
     <Compile Include="Tke\V20180525\Models\Instance.cs" />
     <Compile Include="Tke\V20180525\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="Tke\V20180525\Models\InstanceDataDiskMountSetting.cs" />
+    <Compile Include="Tke\V20180525\Models\InstanceExtraArgs.cs" />
     <Compile Include="Tke\V20180525\Models\Label.cs" />
     <Compile Include="Tke\V20180525\Models\LoginSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPRequest.cs" />

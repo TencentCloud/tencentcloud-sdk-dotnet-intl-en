@@ -286,7 +286,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// 
+        /// Internal parameter, which can be ignored
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RemainBandwidthDuration")]
         public string RemainBandwidthDuration{ get; set; }

@@ -67,7 +67,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+        /// Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -116,7 +116,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+        /// Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+        /// <br><li>Note: this parameter is `null` for postpaid instances.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
@@ -128,7 +129,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+        /// Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
@@ -196,19 +197,21 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// ID of a spread placement group.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("DisasterRecoverGroupId")]
         public string DisasterRecoverGroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// IPv6 address of the instance.
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("IPv6Addresses")]
-        public string IPv6Addresses{ get; set; }
+        public string[] IPv6Addresses{ get; set; }
 
         /// <summary>
-        /// 
+        /// CAM role name.
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
@@ -248,7 +251,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
             this.SetParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
-            this.SetParamSimple(map, prefix + "IPv6Addresses", this.IPv6Addresses);
+            this.SetParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         }
     }

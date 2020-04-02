@@ -204,6 +204,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
+        /// <summary>
+        /// Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +252,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         }
     }
 }

@@ -74,10 +74,17 @@ namespace TencentCloud.Cam.V20190116.Models
         public string RoleType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid period
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SessionDuration")]
         public ulong? SessionDuration{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DeletionTaskId")]
+        public string DeletionTaskId{ get; set; }
 
 
         /// <summary>
@@ -94,6 +101,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
             this.SetParamSimple(map, prefix + "RoleType", this.RoleType);
             this.SetParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
+            this.SetParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
         }
     }
 }

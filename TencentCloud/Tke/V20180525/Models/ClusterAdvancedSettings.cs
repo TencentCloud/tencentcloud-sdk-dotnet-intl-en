@@ -48,6 +48,24 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("NodeNameType")]
         public string NodeNameType{ get; set; }
 
+        /// <summary>
+        /// Cluster custom parameter
+        /// </summary>
+        [JsonProperty("ExtraArgs")]
+        public ClusterExtraArgs ExtraArgs{ get; set; }
+
+        /// <summary>
+        /// Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
+        /// </summary>
+        [JsonProperty("IsNonStaticIpMode")]
+        public bool? IsNonStaticIpMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AsEnabled", this.AsEnabled);
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "NodeNameType", this.NodeNameType);
+            this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
         }
     }
 }

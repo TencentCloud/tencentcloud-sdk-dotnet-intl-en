@@ -15,32 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDBInstancesResponse : AbstractModel
+    public class InstanceExtraArgs : AbstractModel
     {
         
         /// <summary>
-        /// Order name
+        /// Kubelet custom parameter
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
-
-        /// <summary>
-        /// Order name array
-        /// </summary>
-        [JsonProperty("DealNames")]
-        public string[] DealNames{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Kubelet")]
+        public string[] Kubelet{ get; set; }
 
 
         /// <summary>
@@ -48,9 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "Kubelet.", this.Kubelet);
         }
     }
 }

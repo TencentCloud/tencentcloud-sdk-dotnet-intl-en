@@ -55,6 +55,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Constraint")]
         public ParamConstraint Constraint{ get; set; }
 
+        /// <summary>
+        /// Whether a value has been set. false: no, true: yes
+        /// </summary>
+        [JsonProperty("HaveSetValue")]
+        public bool? HaveSetValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "SetValue", this.SetValue);
             this.SetParamSimple(map, prefix + "Default", this.Default);
             this.SetParamObj(map, prefix + "Constraint.", this.Constraint);
+            this.SetParamSimple(map, prefix + "HaveSetValue", this.HaveSetValue);
         }
     }
 }

@@ -25,8 +25,8 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Availability zone name. For example, ap-guangzhou-3.
-        /// Names of availability zones throughout the entire network:
+        /// Availability zone name, such as ap-guangzhou-3.
+        /// The following is a list of all availability zones:
         /// <li> ap-chongqing-1 </li>
         /// <li> ap-seoul-1 </li>
         /// <li> ap-chengdu-1 </li>
@@ -82,7 +82,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
+        /// Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
         /// </summary>
         [JsonProperty("ZoneState")]
         public string ZoneState{ get; set; }

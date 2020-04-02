@@ -15,42 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Cbs.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDBInstancesResponse : AbstractModel
+    public class GetSnapOverviewRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Order name
-        /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
-
-        /// <summary>
-        /// Order name array
-        /// </summary>
-        [JsonProperty("DealNames")]
-        public string[] DealNames{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

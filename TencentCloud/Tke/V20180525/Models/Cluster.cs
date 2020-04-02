@@ -96,6 +96,40 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Property")]
         public string Property{ get; set; }
 
+        /// <summary>
+        /// Number of master nodes currently in the cluster
+        /// </summary>
+        [JsonProperty("ClusterMaterNodeNum")]
+        public ulong? ClusterMaterNodeNum{ get; set; }
+
+        /// <summary>
+        /// ID of the image used by the cluster
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
+        /// <summary>
+        /// OsCustomizeType
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("OsCustomizeType")]
+        public string OsCustomizeType{ get; set; }
+
+        /// <summary>
+        /// Runtime environment of the cluster. Values can be `docker` or `containerd`.
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("ContainerRuntime")]
+        public string ContainerRuntime{ get; set; }
+
+        /// <summary>
+        /// Creation time
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +148,11 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
             this.SetParamSimple(map, prefix + "Property", this.Property);
+            this.SetParamSimple(map, prefix + "ClusterMaterNodeNum", this.ClusterMaterNodeNum);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         }
     }
 }

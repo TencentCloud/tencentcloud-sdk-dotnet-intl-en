@@ -49,7 +49,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? ConsoleLogin{ get; set; }
 
         /// <summary>
-        /// 
+        /// The maximum validity period of the temporary key for creating a role (range: 0-43200)
         /// </summary>
         [JsonProperty("SessionDuration")]
         public ulong? SessionDuration{ get; set; }

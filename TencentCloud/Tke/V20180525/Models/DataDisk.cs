@@ -24,12 +24,47 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DataDisk : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
+        /// <summary>
+        /// File system (ext3/ext4/xfs)
+        /// </summary>
+        [JsonProperty("FileSystem")]
+        public string FileSystem{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// Whether to automatically format and mount the disk
+        /// </summary>
+        [JsonProperty("AutoFormatAndMount")]
+        public bool? AutoFormatAndMount{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MountTarget")]
+        public string MountTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "FileSystem", this.FileSystem);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
+            this.SetParamSimple(map, prefix + "MountTarget", this.MountTarget);
         }
     }
 }

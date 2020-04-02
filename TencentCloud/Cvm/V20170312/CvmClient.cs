@@ -735,7 +735,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the list of model families that are available for the current user and in the current region.
+        /// This API is used to query a list of model families available to the current user in the current region.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceFamilyConfigsRequest"/></param>
         /// <returns><see cref="DescribeInstanceFamilyConfigsResponse"/></returns>
@@ -755,7 +755,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the list of model families that are available for the current user and in the current region.
+        /// This API is used to query a list of model families available to the current user in the current region.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceFamilyConfigsRequest"/></param>
         /// <returns><see cref="DescribeInstanceFamilyConfigsResponse"/></returns>

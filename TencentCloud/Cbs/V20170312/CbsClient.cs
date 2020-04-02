@@ -857,6 +857,46 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// This API is used to get snapshot overview information.
+        /// </summary>
+        /// <param name="req"><see cref="GetSnapOverviewRequest"/></param>
+        /// <returns><see cref="GetSnapOverviewResponse"/></returns>
+        public async Task<GetSnapOverviewResponse> GetSnapOverview(GetSnapOverviewRequest req)
+        {
+             JsonResponseModel<GetSnapOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSnapOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSnapOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get snapshot overview information.
+        /// </summary>
+        /// <param name="req"><see cref="GetSnapOverviewRequest"/></param>
+        /// <returns><see cref="GetSnapOverviewResponse"/></returns>
+        public GetSnapOverviewResponse GetSnapOverviewSync(GetSnapOverviewRequest req)
+        {
+             JsonResponseModel<GetSnapOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSnapOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSnapOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
         /// 
         /// * It supports inquiring the price for the creation of multiple cloud disks. The total price for the creation is returned.
@@ -892,52 +932,6 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "InquiryPriceCreateDisks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateDisksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the price of renewing one or more cloud disks.
-        /// 
-        /// * You can query the price for renewing cloud disks together with their bound instances. To do so, you need to specify `CurInstanceDeadline` in the [DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid) parameter, In this case, the API will query the price for renewing the cloud disk to the expiration time of the bound instance.
-        /// * You can specify different renewal lengths for multiple cloud disks in a single request. In such cases, the price returned will be the total price of renewing multiple cloud disks.
-        /// </summary>
-        /// <param name="req"><see cref="InquiryPriceRenewDisksRequest"/></param>
-        /// <returns><see cref="InquiryPriceRenewDisksResponse"/></returns>
-        public async Task<InquiryPriceRenewDisksResponse> InquiryPriceRenewDisks(InquiryPriceRenewDisksRequest req)
-        {
-             JsonResponseModel<InquiryPriceRenewDisksResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "InquiryPriceRenewDisks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewDisksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the price of renewing one or more cloud disks.
-        /// 
-        /// * You can query the price for renewing cloud disks together with their bound instances. To do so, you need to specify `CurInstanceDeadline` in the [DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid) parameter, In this case, the API will query the price for renewing the cloud disk to the expiration time of the bound instance.
-        /// * You can specify different renewal lengths for multiple cloud disks in a single request. In such cases, the price returned will be the total price of renewing multiple cloud disks.
-        /// </summary>
-        /// <param name="req"><see cref="InquiryPriceRenewDisksRequest"/></param>
-        /// <returns><see cref="InquiryPriceRenewDisksResponse"/></returns>
-        public InquiryPriceRenewDisksResponse InquiryPriceRenewDisksSync(InquiryPriceRenewDisksRequest req)
-        {
-             JsonResponseModel<InquiryPriceRenewDisksResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquiryPriceRenewDisks");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewDisksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1068,98 +1062,6 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDiskAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// API domain name: cbs.tencentcloudapi.com.
-        /// 
-        /// This API is used to change the billing mode of cloud disks.
-        /// 
-        /// You can only use this API to change the billing method from `POSTPAID_BY_HOUR` to `PREPAID`.
-        /// This API does not support non-elastic cloud disks. Please use `modifyinstanceschargetype` API to convert CVM instances and the bound non-elastic cloud disks. 
-        /// Default API request frequency limit: 10 times/second.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDisksChargeTypeRequest"/></param>
-        /// <returns><see cref="ModifyDisksChargeTypeResponse"/></returns>
-        public async Task<ModifyDisksChargeTypeResponse> ModifyDisksChargeType(ModifyDisksChargeTypeRequest req)
-        {
-             JsonResponseModel<ModifyDisksChargeTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDisksChargeType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksChargeTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// API domain name: cbs.tencentcloudapi.com.
-        /// 
-        /// This API is used to change the billing mode of cloud disks.
-        /// 
-        /// You can only use this API to change the billing method from `POSTPAID_BY_HOUR` to `PREPAID`.
-        /// This API does not support non-elastic cloud disks. Please use `modifyinstanceschargetype` API to convert CVM instances and the bound non-elastic cloud disks. 
-        /// Default API request frequency limit: 10 times/second.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDisksChargeTypeRequest"/></param>
-        /// <returns><see cref="ModifyDisksChargeTypeResponse"/></returns>
-        public ModifyDisksChargeTypeResponse ModifyDisksChargeTypeSync(ModifyDisksChargeTypeRequest req)
-        {
-             JsonResponseModel<ModifyDisksChargeTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDisksChargeType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksChargeTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (ModifyDisksRenewFlag) is used to modify the renewal flag of the cloud disk, which supports batch modification.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
-        /// <returns><see cref="ModifyDisksRenewFlagResponse"/></returns>
-        public async Task<ModifyDisksRenewFlagResponse> ModifyDisksRenewFlag(ModifyDisksRenewFlagRequest req)
-        {
-             JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDisksRenewFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksRenewFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (ModifyDisksRenewFlag) is used to modify the renewal flag of the cloud disk, which supports batch modification.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
-        /// <returns><see cref="ModifyDisksRenewFlagResponse"/></returns>
-        public ModifyDisksRenewFlagResponse ModifyDisksRenewFlagSync(ModifyDisksRenewFlagRequest req)
-        {
-             JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDisksRenewFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -67,7 +67,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public ExistedInstancesForNode[] ExistedInstancesForNode{ get; set; }
 
         /// <summary>
-        /// 
+        /// CVM type and the corresponding data disk mounting configuration information.
         /// </summary>
         [JsonProperty("InstanceDataDiskMountSettings")]
         public InstanceDataDiskMountSetting[] InstanceDataDiskMountSettings{ get; set; }

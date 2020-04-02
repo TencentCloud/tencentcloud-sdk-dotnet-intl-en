@@ -65,7 +65,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Type name. For example, if `Type` = table, it indicates a specific table name; if both `DbName` and `Type` are specific names, `Object` indicates a specific object name and cannot be `\*` or empty
+        /// Type name. For example, if `Type` is table, `Object` indicates a specific table name; if both `DbName` and `Type` are specific names, it indicates a specific object name and cannot be `\*` or empty
         /// </summary>
         [JsonProperty("Object")]
         public string Object{ get; set; }
