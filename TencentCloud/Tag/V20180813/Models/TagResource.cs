@@ -54,6 +54,13 @@ namespace TencentCloud.Tag.V20180813.Models
         [JsonProperty("TagValueMd5")]
         public string TagValueMd5{ get; set; }
 
+        /// <summary>
+        /// Resource type
+        /// Note: this field may return null, indicating that no valid values found.
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Tag.V20180813.Models
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "TagKeyMd5", this.TagKeyMd5);
             this.SetParamSimple(map, prefix + "TagValueMd5", this.TagValueMd5);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
         }
     }
 }

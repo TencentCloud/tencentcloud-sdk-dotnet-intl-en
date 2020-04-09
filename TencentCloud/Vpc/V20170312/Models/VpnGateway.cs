@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnGatewayName{ get; set; }
 
         /// <summary>
-        /// Gateway instance type: 'IPSEC' and 'SSL'.
+        /// Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -120,6 +120,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("VpnGatewayQuotaSet")]
         public VpnGatewayQuota[] VpnGatewayQuotaSet{ get; set; }
 
+        /// <summary>
+        /// Gateway instance version.
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// CCN instance ID when the value of Type is CCN.
+        /// </summary>
+        [JsonProperty("NetworkInstanceId")]
+        public string NetworkInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
         }
     }
 }

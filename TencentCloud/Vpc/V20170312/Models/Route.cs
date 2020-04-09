@@ -31,15 +31,15 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
-        /// The type of the next hop. Currently supported types include:
-        /// CVM: Public gateway-type CVM;
+        /// Type of the next hop. Currently supported types are:
+        /// CVM: CVM of the public gateway type;
         /// VPN: VPN gateway;
-        /// DIRECTCONNECT: Direct connect gateway;
-        /// PEERCONNECTION: Peering connection;
+        /// DIRECTCONNECT: direct connect gateway;
+        /// PEERCONNECTION: peering connection;
         /// SSLVPN: sslvpn gateway;
         /// NAT: NAT gateway; 
-        /// NORMAL_CVM: Normal CVM;
-        /// EIP: The public IP of the CVM;
+        /// NORMAL_CVM: normal CVM;
+        /// EIP: public IP address of the CVM;
         /// CCN: Cloud Connect Network.
         /// </summary>
         [JsonProperty("GatewayType")]
@@ -80,6 +80,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteType")]
         public string RouteType{ get; set; }
 
+        /// <summary>
+        /// Route table instance ID, such as rtb-azd4dt1c.
+        /// </summary>
+        [JsonProperty("RouteTableId")]
+        public string RouteTableId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteDescription", this.RouteDescription);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
+            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         }
     }
 }

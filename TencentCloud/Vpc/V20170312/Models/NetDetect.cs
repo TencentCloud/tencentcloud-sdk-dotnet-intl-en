@@ -73,7 +73,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] DetectSourceIp{ get; set; }
 
         /// <summary>
-        /// The type of the next hop. Currently supported types are:
+        /// Type of the next hop. Currently supported types are:
         /// VPN: VPN gateway;
         /// DIRECTCONNECT: direct connect gateway;
         /// PEERCONNECTION: peering connection;
@@ -84,7 +84,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NextHopType{ get; set; }
 
         /// <summary>
-        /// The next-hop destination gateway. The value is related to NextHopType.
+        /// Next-hop destination gateway. The value is related to NextHopType.
         /// If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
         /// If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
         /// If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.

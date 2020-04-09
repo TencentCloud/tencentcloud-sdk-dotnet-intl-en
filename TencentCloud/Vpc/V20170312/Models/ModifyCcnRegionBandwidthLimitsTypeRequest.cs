@@ -24,12 +24,26 @@ namespace TencentCloud.Vpc.V20170312.Models
     public class ModifyCcnRegionBandwidthLimitsTypeRequest : AbstractModel
     {
         
+        /// <summary>
+        /// CCN instance ID.
+        /// </summary>
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
+
+        /// <summary>
+        /// CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
+        /// </summary>
+        [JsonProperty("BandwidthLimitType")]
+        public string BandwidthLimitType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
+            this.SetParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
         }
     }
 }

@@ -323,7 +323,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? IsBlock{ get; set; }
 
         /// <summary>
-        /// 
+        /// Time blocked or unblocked
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsBlockTime")]
         public string IsBlockTime{ get; set; }

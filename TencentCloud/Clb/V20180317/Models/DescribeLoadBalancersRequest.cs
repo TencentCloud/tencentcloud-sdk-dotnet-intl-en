@@ -134,6 +134,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
+        /// <summary>
+        /// Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+        /// <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

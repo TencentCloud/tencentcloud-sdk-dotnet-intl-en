@@ -1147,6 +1147,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to list reserved instances the user has purchased.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
+        public async Task<DescribeReservedInstancesResponse> DescribeReservedInstances(DescribeReservedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list reserved instances the user has purchased.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
+        public DescribeReservedInstancesResponse DescribeReservedInstancesSync(DescribeReservedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the configurations of models in an availability zone.
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneInstanceConfigInfosRequest"/></param>

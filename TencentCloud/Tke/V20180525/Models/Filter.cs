@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
+        /// Filters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
+        /// Filter values.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

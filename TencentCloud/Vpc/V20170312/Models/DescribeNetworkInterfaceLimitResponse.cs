@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? EniQuantity{ get; set; }
 
         /// <summary>
-        /// The quota of IP addresses that can be allocated to each ENI.
+        /// Quota of IP addresses that can be allocated to each ENI.
         /// </summary>
         [JsonProperty("EniPrivateIpAddressQuantity")]
         public long? EniPrivateIpAddressQuantity{ get; set; }

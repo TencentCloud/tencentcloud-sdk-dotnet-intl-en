@@ -277,6 +277,52 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API (AssignPrivateIpAddresses) is used for the ENI to apply for private IPs.
+        /// * An ENI can only be bound with a limited number of IPs. For more information about resource limits, see<a href="/document/product/576/18527">ENI use limits</a>.
+        /// * You can specify the private IP you want to apply for. It cannot be the primary IP, which already exists and cannot be modified. The private IP must be in the same subnet as the ENI, and cannot be occupied.
+        /// * You can apply for more than one secondary private IP on the ENI. The API will return the specified number of secondary private IPs in the subnet IP range of the ENI.
+        /// </summary>
+        /// <param name="req"><see cref="AssignPrivateIpAddressesRequest"/></param>
+        /// <returns><see cref="AssignPrivateIpAddressesResponse"/></returns>
+        public async Task<AssignPrivateIpAddressesResponse> AssignPrivateIpAddresses(AssignPrivateIpAddressesRequest req)
+        {
+             JsonResponseModel<AssignPrivateIpAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignPrivateIpAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignPrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (AssignPrivateIpAddresses) is used for the ENI to apply for private IPs.
+        /// * An ENI can only be bound with a limited number of IPs. For more information about resource limits, see<a href="/document/product/576/18527">ENI use limits</a>.
+        /// * You can specify the private IP you want to apply for. It cannot be the primary IP, which already exists and cannot be modified. The private IP must be in the same subnet as the ENI, and cannot be occupied.
+        /// * You can apply for more than one secondary private IP on the ENI. The API will return the specified number of secondary private IPs in the subnet IP range of the ENI.
+        /// </summary>
+        /// <param name="req"><see cref="AssignPrivateIpAddressesRequest"/></param>
+        /// <returns><see cref="AssignPrivateIpAddressesResponse"/></returns>
+        public AssignPrivateIpAddressesResponse AssignPrivateIpAddressesSync(AssignPrivateIpAddressesRequest req)
+        {
+             JsonResponseModel<AssignPrivateIpAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssignPrivateIpAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignPrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (AssociateAddress) is used to bind an [Elastic IP](https://cloud.tencent.com/document/product/213/1941) (EIP for short) to the specified private IP of an instance or ENI.
         /// * Essentially, binding an EIP to an instance (CVM) means binding an EIP to the primary private IP of the primary ENI on an instance.
         /// * When you bind an EIP to the primary private IP of the primary ENI, the previously bound public IP is automatically unbound and released.
@@ -329,6 +375,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to associate a network ACL with subnets in a VPC instance.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateNetworkAclSubnetsRequest"/></param>
+        /// <returns><see cref="AssociateNetworkAclSubnetsResponse"/></returns>
+        public async Task<AssociateNetworkAclSubnetsResponse> AssociateNetworkAclSubnets(AssociateNetworkAclSubnetsRequest req)
+        {
+             JsonResponseModel<AssociateNetworkAclSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateNetworkAclSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNetworkAclSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to associate a network ACL with subnets in a VPC instance.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateNetworkAclSubnetsRequest"/></param>
+        /// <returns><see cref="AssociateNetworkAclSubnetsResponse"/></returns>
+        public AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnetsSync(AssociateNetworkAclSubnetsRequest req)
+        {
+             JsonResponseModel<AssociateNetworkAclSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateNetworkAclSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNetworkAclSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (AttachCcnInstances) is used to load a network instance to a CCN instance. Network instances include VPCs and Direct Connect gateways.<br />
         /// The number of network instances that each CCN can be associated with is limited. For more information, see the product documentation. If you need to associate more instances, please contact online customer service.
         /// </summary>
@@ -371,9 +457,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AttachClassicLinkVpc) is used to create a Classiclink between a VPC and a basic network device.
-        /// * The VPC and the basic network device must be in the same region.
-        /// * For the difference between VPCs and basic networks, see VPC product documentation-<a href="https://cloud.tencent.com/document/product/215/535#2.-.E7.A7.81.E6.9C.89.E7.BD.91.E7.BB.9C.E4.B8.8E.E5.9F.BA.E7.A1.80.E7.BD.91.E7.BB.9C">VPCs and basic networks</a>.
+        /// This API is used to create a Classiclink between a VPC instance and a basic network device.
+        /// * The VPC instance and the basic network device must be in the same region.
+        /// * For differences between VPC and basic networks, see <a href="https://cloud.tencent.com/document/product/215/30720">VPC and Basic Networks</a>.
         /// </summary>
         /// <param name="req"><see cref="AttachClassicLinkVpcRequest"/></param>
         /// <returns><see cref="AttachClassicLinkVpcResponse"/></returns>
@@ -393,9 +479,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AttachClassicLinkVpc) is used to create a Classiclink between a VPC and a basic network device.
-        /// * The VPC and the basic network device must be in the same region.
-        /// * For the difference between VPCs and basic networks, see VPC product documentation-<a href="https://cloud.tencent.com/document/product/215/535#2.-.E7.A7.81.E6.9C.89.E7.BD.91.E7.BB.9C.E4.B8.8E.E5.9F.BA.E7.A1.80.E7.BD.91.E7.BB.9C">VPCs and basic networks</a>.
+        /// This API is used to create a Classiclink between a VPC instance and a basic network device.
+        /// * The VPC instance and the basic network device must be in the same region.
+        /// * For differences between VPC and basic networks, see <a href="https://cloud.tencent.com/document/product/215/30720">VPC and Basic Networks</a>.
         /// </summary>
         /// <param name="req"><see cref="AttachClassicLinkVpcRequest"/></param>
         /// <returns><see cref="AttachClassicLinkVpcResponse"/></returns>
@@ -415,11 +501,11 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AttachNetworkInterface) is used to bind an ENI to a CVM.
-        /// * One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/215/6513">ENI use limits</a>.
+        /// This API is used to bind an ENI to a CVM.
+        /// * One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/576/18527">ENI Use Limits</a>.
         /// * An ENI can only be bound to one CVM at a time.
-        /// * Only CVMs in running or shutdown status can be bound to an ENI. For more information about CVM status, see <a href="https://cloud.tencent.com/document/api/213/9452#instance_state">Tencent CVM information</a>.
-        /// * An ENI can only be bound to a CVM in VPC, and the CVM must reside in the same availability zone as the subnet of the ENI.
+        /// * Only CVMs in the running or shutdown state can be bound to an ENI. For more information on CVM states, see <a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">Tencent CVM Information</a>.
+        /// * An ENI can only be bound to a CVM in a VPC instance, and the CVM must reside in the same availability zone as the subnet of the ENI.
         /// </summary>
         /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
         /// <returns><see cref="AttachNetworkInterfaceResponse"/></returns>
@@ -439,11 +525,11 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AttachNetworkInterface) is used to bind an ENI to a CVM.
-        /// * One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/215/6513">ENI use limits</a>.
+        /// This API is used to bind an ENI to a CVM.
+        /// * One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/576/18527">ENI Use Limits</a>.
         /// * An ENI can only be bound to one CVM at a time.
-        /// * Only CVMs in running or shutdown status can be bound to an ENI. For more information about CVM status, see <a href="https://cloud.tencent.com/document/api/213/9452#instance_state">Tencent CVM information</a>.
-        /// * An ENI can only be bound to a CVM in VPC, and the CVM must reside in the same availability zone as the subnet of the ENI.
+        /// * Only CVMs in the running or shutdown state can be bound to an ENI. For more information on CVM states, see <a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">Tencent CVM Information</a>.
+        /// * An ENI can only be bound to a CVM in a VPC instance, and the CVM must reside in the same availability zone as the subnet of the ENI.
         /// </summary>
         /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
         /// <returns><see cref="AttachNetworkInterfaceResponse"/></returns>
@@ -583,8 +669,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateCcn) is used to create a Cloud Connect Network (CCN).<br />
-        /// Each account can only create a limited number of CCN instances. For more information, see the product documentation. If you need to create more instances, please contact the online customer service.
+        /// This API is used to create a Cloud Connect Network (CCN).<br />
+        /// * You can bind a tag when creating a CCN instance. The tag list in the response indicates the tags that have been successfully added.
+        /// Each account can only create a limited number of CCN instances. For more information, see product documentation. To create more instances, contact the online customer service.
         /// </summary>
         /// <param name="req"><see cref="CreateCcnRequest"/></param>
         /// <returns><see cref="CreateCcnResponse"/></returns>
@@ -604,8 +691,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateCcn) is used to create a Cloud Connect Network (CCN).<br />
-        /// Each account can only create a limited number of CCN instances. For more information, see the product documentation. If you need to create more instances, please contact the online customer service.
+        /// This API is used to create a Cloud Connect Network (CCN).<br />
+        /// * You can bind a tag when creating a CCN instance. The tag list in the response indicates the tags that have been successfully added.
+        /// Each account can only create a limited number of CCN instances. For more information, see product documentation. To create more instances, contact the online customer service.
         /// </summary>
         /// <param name="req"><see cref="CreateCcnRequest"/></param>
         /// <returns><see cref="CreateCcnResponse"/></returns>
@@ -881,6 +969,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a <a href="https://cloud.tencent.com/document/product/215/20088">network ACL</a>.
+        /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkAclRequest"/></param>
+        /// <returns><see cref="CreateNetworkAclResponse"/></returns>
+        public async Task<CreateNetworkAclResponse> CreateNetworkAcl(CreateNetworkAclRequest req)
+        {
+             JsonResponseModel<CreateNetworkAclResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNetworkAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a <a href="https://cloud.tencent.com/document/product/215/20088">network ACL</a>.
+        /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkAclRequest"/></param>
+        /// <returns><see cref="CreateNetworkAclResponse"/></returns>
+        public CreateNetworkAclResponse CreateNetworkAclSync(CreateNetworkAclRequest req)
+        {
+             JsonResponseModel<CreateNetworkAclResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNetworkAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create one or more ENIs.
         /// * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be in the same subnet as the ENI and is not occupied.
         /// * When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
@@ -931,8 +1061,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateRouteTable) is used to create a route table.
-        /// * After the VPC has been created, the system will create a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route table to create more route tables to manage your routing policies.
+        /// This API is used to create a route table.
+        /// * After the VPC instance has been created, the system creates a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route tables to create more route tables to manage these routing policies.
+        /// * You can bind a tag when creating a route table. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateRouteTableRequest"/></param>
         /// <returns><see cref="CreateRouteTableResponse"/></returns>
@@ -952,8 +1083,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateRouteTable) is used to create a route table.
-        /// * After the VPC has been created, the system will create a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route table to create more route tables to manage your routing policies.
+        /// This API is used to create a route table.
+        /// * After the VPC instance has been created, the system creates a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route tables to create more route tables to manage these routing policies.
+        /// * You can bind a tag when creating a route table. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateRouteTableRequest"/></param>
         /// <returns><see cref="CreateRouteTableResponse"/></returns>
@@ -1015,9 +1147,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateSecurityGroup) is used to create security groups (SecurityGroup).
-        /// * <a href="https://cloud.tencent.com/document/product/213/500#2.-.E5.AE.89.E5.85.A8.E7.BB.84.E7.9A.84.E9.99.90.E5.88.B6">Security group limits</a> for each project in each region under each account.
-        /// * Both the inbound and outbound rules for a newly created security group are Deny All by default. You need to call CreateSecurityGroupPolicies to set the security group rules according to your needs.
+        /// This API is used to create a security group (SecurityGroup).
+        /// * Note the <a href="https://cloud.tencent.com/document/product/213/12453">maximum number of security groups</a> per project in each region under each account.
+        /// * Both the inbound and outbound rules for a newly created security group are "Deny All" by default. You need to call CreateSecurityGroupPolicies to set security group rules based on your needs.
+        /// * You can bind a tag when creating a security group. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupRequest"/></param>
         /// <returns><see cref="CreateSecurityGroupResponse"/></returns>
@@ -1037,9 +1170,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateSecurityGroup) is used to create security groups (SecurityGroup).
-        /// * <a href="https://cloud.tencent.com/document/product/213/500#2.-.E5.AE.89.E5.85.A8.E7.BB.84.E7.9A.84.E9.99.90.E5.88.B6">Security group limits</a> for each project in each region under each account.
-        /// * Both the inbound and outbound rules for a newly created security group are Deny All by default. You need to call CreateSecurityGroupPolicies to set the security group rules according to your needs.
+        /// This API is used to create a security group (SecurityGroup).
+        /// * Note the <a href="https://cloud.tencent.com/document/product/213/12453">maximum number of security groups</a> per project in each region under each account.
+        /// * Both the inbound and outbound rules for a newly created security group are "Deny All" by default. You need to call CreateSecurityGroupPolicies to set security group rules based on your needs.
+        /// * You can bind a tag when creating a security group. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupRequest"/></param>
         /// <returns><see cref="CreateSecurityGroupResponse"/></returns>
@@ -1199,12 +1333,13 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateSubnet) is used to create subnets.
-        /// * You must create a VPC before creating a subnet.
-        /// * After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
+        /// This API is used to create a subnet.
+        /// * You must create a VPC instance before creating a subnet.
+        /// * After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC instance has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
         /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses).
-        /// * IP address ranges of different subnets cannot overlap with each other within the same VPC.
+        /// * IP address ranges of different subnets cannot overlap with each other within the same VPC instance.
         /// * A subnet is automatically associated with the default route table once created.
+        /// * You can bind a tag when creating a subnet. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetRequest"/></param>
         /// <returns><see cref="CreateSubnetResponse"/></returns>
@@ -1224,12 +1359,13 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateSubnet) is used to create subnets.
-        /// * You must create a VPC before creating a subnet.
-        /// * After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
+        /// This API is used to create a subnet.
+        /// * You must create a VPC instance before creating a subnet.
+        /// * After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC instance has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
         /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses).
-        /// * IP address ranges of different subnets cannot overlap with each other within the same VPC.
+        /// * IP address ranges of different subnets cannot overlap with each other within the same VPC instance.
         /// * A subnet is automatically associated with the default route table once created.
+        /// * You can bind a tag when creating a subnet. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetRequest"/></param>
         /// <returns><see cref="CreateSubnetResponse"/></returns>
@@ -1249,12 +1385,13 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateSubnets) is used to create subnets in batches.
-        /// * You must create a VPC before creating a subnet.
+        /// This API is used to create subnets in batches.
+        /// * You must create a VPC instance before creating a subnet.
         /// * After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
         /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses).
-        /// * IP address ranges of different subnets cannot overlap with each other within the same VPC.
+        /// * IP address ranges of different subnets cannot overlap with each other within the same VPC instance.
         /// * A subnet is automatically associated with the default route table once created.
+        /// * You can bind a tag when creating a subnet. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetsRequest"/></param>
         /// <returns><see cref="CreateSubnetsResponse"/></returns>
@@ -1274,12 +1411,13 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateSubnets) is used to create subnets in batches.
-        /// * You must create a VPC before creating a subnet.
+        /// This API is used to create subnets in batches.
+        /// * You must create a VPC instance before creating a subnet.
         /// * After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
         /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses).
-        /// * IP address ranges of different subnets cannot overlap with each other within the same VPC.
+        /// * IP address ranges of different subnets cannot overlap with each other within the same VPC instance.
         /// * A subnet is automatically associated with the default route table once created.
+        /// * You can bind a tag when creating a subnet. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetsRequest"/></param>
         /// <returns><see cref="CreateSubnetsResponse"/></returns>
@@ -1299,9 +1437,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateVpc) is used to create a VPC.
-        /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, please see corresponding documents about VPC IP address ranges.
-        /// * The number of VPCs that can be created in a region is limited. For more information, please see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC use limits">VPC use limits</a>. To request more resources, please contact the online customer service.
+        /// This API is used to create a VPC instance.
+        /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, see the corresponding documents about VPC IP address ranges.
+        /// * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, contact the online customer service.
+        /// * You can bind a tag when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateVpcRequest"/></param>
         /// <returns><see cref="CreateVpcResponse"/></returns>
@@ -1321,9 +1460,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateVpc) is used to create a VPC.
-        /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, please see corresponding documents about VPC IP address ranges.
-        /// * The number of VPCs that can be created in a region is limited. For more information, please see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC use limits">VPC use limits</a>. To request more resources, please contact the online customer service.
+        /// This API is used to create a VPC instance.
+        /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, see the corresponding documents about VPC IP address ranges.
+        /// * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, contact the online customer service.
+        /// * You can bind a tag when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateVpcRequest"/></param>
         /// <returns><see cref="CreateVpcResponse"/></returns>
@@ -1742,6 +1882,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNetDetect");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetDetectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a network ACL.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkAclRequest"/></param>
+        /// <returns><see cref="DeleteNetworkAclResponse"/></returns>
+        public async Task<DeleteNetworkAclResponse> DeleteNetworkAcl(DeleteNetworkAclRequest req)
+        {
+             JsonResponseModel<DeleteNetworkAclResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNetworkAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a network ACL.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkAclRequest"/></param>
+        /// <returns><see cref="DeleteNetworkAclResponse"/></returns>
+        public DeleteNetworkAclResponse DeleteNetworkAclSync(DeleteNetworkAclRequest req)
+        {
+             JsonResponseModel<DeleteNetworkAclResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNetworkAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2855,7 +3035,47 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeNetworkInterfaceLimit) is used to query the ENI quota based on the CVM instance ID. It returns the ENI quota to which the CVM instance can be bound and the IP address quota that can be allocated to each ENI.
+        /// This API is used to query a list of network ACLs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkAclsRequest"/></param>
+        /// <returns><see cref="DescribeNetworkAclsResponse"/></returns>
+        public async Task<DescribeNetworkAclsResponse> DescribeNetworkAcls(DescribeNetworkAclsRequest req)
+        {
+             JsonResponseModel<DescribeNetworkAclsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetworkAcls");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkAclsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query a list of network ACLs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkAclsRequest"/></param>
+        /// <returns><see cref="DescribeNetworkAclsResponse"/></returns>
+        public DescribeNetworkAclsResponse DescribeNetworkAclsSync(DescribeNetworkAclsRequest req)
+        {
+             JsonResponseModel<DescribeNetworkAclsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNetworkAcls");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkAclsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the ENI quota based on the CVM instance ID. It returns the ENI quota to which the CVM instance can be bound and the IP address quota that can be allocated to each ENI.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkInterfaceLimitRequest"/></param>
         /// <returns><see cref="DescribeNetworkInterfaceLimitResponse"/></returns>
@@ -2875,7 +3095,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeNetworkInterfaceLimit) is used to query the ENI quota based on the CVM instance ID. It returns the ENI quota to which the CVM instance can be bound and the IP address quota that can be allocated to each ENI.
+        /// This API is used to query the ENI quota based on the CVM instance ID. It returns the ENI quota to which the CVM instance can be bound and the IP address quota that can be allocated to each ENI.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkInterfaceLimitRequest"/></param>
         /// <returns><see cref="DescribeNetworkInterfaceLimitResponse"/></returns>
@@ -2886,6 +3106,86 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNetworkInterfaceLimit");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkInterfaceLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeNetworkInterfaces) is used to query the ENI list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkInterfacesRequest"/></param>
+        /// <returns><see cref="DescribeNetworkInterfacesResponse"/></returns>
+        public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest req)
+        {
+             JsonResponseModel<DescribeNetworkInterfacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetworkInterfaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkInterfacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeNetworkInterfaces) is used to query the ENI list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkInterfacesRequest"/></param>
+        /// <returns><see cref="DescribeNetworkInterfacesResponse"/></returns>
+        public DescribeNetworkInterfacesResponse DescribeNetworkInterfacesSync(DescribeNetworkInterfacesRequest req)
+        {
+             JsonResponseModel<DescribeNetworkInterfacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNetworkInterfaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkInterfacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  This API (DescribeRouteTables) is used to query route tables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeRouteTablesResponse"/></returns>
+        public async Task<DescribeRouteTablesResponse> DescribeRouteTables(DescribeRouteTablesRequest req)
+        {
+             JsonResponseModel<DescribeRouteTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRouteTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  This API (DescribeRouteTables) is used to query route tables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeRouteTablesResponse"/></returns>
+        public DescribeRouteTablesResponse DescribeRouteTablesSync(DescribeRouteTablesRequest req)
+        {
+             JsonResponseModel<DescribeRouteTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRouteTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTablesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3629,6 +3929,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to disassociate a network ACL from subnets in a VPC instance.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateNetworkAclSubnetsRequest"/></param>
+        /// <returns><see cref="DisassociateNetworkAclSubnetsResponse"/></returns>
+        public async Task<DisassociateNetworkAclSubnetsResponse> DisassociateNetworkAclSubnets(DisassociateNetworkAclSubnetsRequest req)
+        {
+             JsonResponseModel<DisassociateNetworkAclSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateNetworkAclSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateNetworkAclSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disassociate a network ACL from subnets in a VPC instance.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateNetworkAclSubnetsRequest"/></param>
+        /// <returns><see cref="DisassociateNetworkAclSubnetsResponse"/></returns>
+        public DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnetsSync(DisassociateNetworkAclSubnetsRequest req)
+        {
+             JsonResponseModel<DisassociateNetworkAclSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateNetworkAclSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateNetworkAclSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DownloadCustomerGatewayConfiguration) is used to download a VPN tunnel configuration.
         /// </summary>
         /// <param name="req"><see cref="DownloadCustomerGatewayConfigurationRequest"/></param>
@@ -4121,7 +4461,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyCcnRegionBandwidthlimitsType) is used to modify the bandwidth limits policy of the postpaid Ccn instances.
+        /// This API is used to modify the bandwidth limit policy of a postpaid CCN instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyCcnRegionBandwidthLimitsTypeRequest"/></param>
         /// <returns><see cref="ModifyCcnRegionBandwidthLimitsTypeResponse"/></returns>
@@ -4141,7 +4481,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyCcnRegionBandwidthlimitsType) is used to modify the bandwidth limits policy of the postpaid Ccn instances.
+        /// This API is used to modify the bandwidth limit policy of a postpaid CCN instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyCcnRegionBandwidthLimitsTypeRequest"/></param>
         /// <returns><see cref="ModifyCcnRegionBandwidthLimitsTypeResponse"/></returns>
@@ -4352,6 +4692,86 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNetDetect");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetDetectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the attributes of a network ACL.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAclAttributeRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAclAttributeResponse"/></returns>
+        public async Task<ModifyNetworkAclAttributeResponse> ModifyNetworkAclAttribute(ModifyNetworkAclAttributeRequest req)
+        {
+             JsonResponseModel<ModifyNetworkAclAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNetworkAclAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the attributes of a network ACL.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAclAttributeRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAclAttributeResponse"/></returns>
+        public ModifyNetworkAclAttributeResponse ModifyNetworkAclAttributeSync(ModifyNetworkAclAttributeRequest req)
+        {
+             JsonResponseModel<ModifyNetworkAclAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNetworkAclAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAclEntriesRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAclEntriesResponse"/></returns>
+        public async Task<ModifyNetworkAclEntriesResponse> ModifyNetworkAclEntries(ModifyNetworkAclEntriesRequest req)
+        {
+             JsonResponseModel<ModifyNetworkAclEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNetworkAclEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAclEntriesRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAclEntriesResponse"/></returns>
+        public ModifyNetworkAclEntriesResponse ModifyNetworkAclEntriesSync(ModifyNetworkAclEntriesRequest req)
+        {
+             JsonResponseModel<ModifyNetworkAclEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNetworkAclEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

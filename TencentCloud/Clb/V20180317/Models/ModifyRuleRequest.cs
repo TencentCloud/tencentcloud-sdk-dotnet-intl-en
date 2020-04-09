@@ -68,10 +68,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
+        /// Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
+
+        /// <summary>
+        /// TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+        /// </summary>
+        [JsonProperty("TrpcCallee")]
+        public string TrpcCallee{ get; set; }
+
+        /// <summary>
+        /// TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+        /// </summary>
+        [JsonProperty("TrpcFunc")]
+        public string TrpcFunc{ get; set; }
 
 
         /// <summary>
@@ -87,6 +99,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
             this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
+            this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
+            this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         }
     }
 }

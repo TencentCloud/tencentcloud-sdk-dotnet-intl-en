@@ -37,10 +37,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GroupDescription{ get; set; }
 
         /// <summary>
-        /// The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+        /// Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

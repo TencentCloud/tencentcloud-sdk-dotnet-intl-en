@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Subnets")]
         public SubnetInput[] Subnets{ get; set; }
 
+        /// <summary>
+        /// Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArrayObj(map, prefix + "Subnets.", this.Subnets);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
