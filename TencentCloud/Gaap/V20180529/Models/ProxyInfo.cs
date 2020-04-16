@@ -174,6 +174,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("SupportSecurity")]
         public long? SupportSecurity{ get; set; }
 
+        /// <summary>
+        /// Billing mode. 0: bill by bandwidth; 1: bill by traffic
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("BillingType")]
+        public long? BillingType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,6 +209,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ForwardIP", this.ForwardIP);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
+            this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
         }
     }
 }

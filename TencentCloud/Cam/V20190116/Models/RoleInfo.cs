@@ -67,7 +67,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? ConsoleLogin{ get; set; }
 
         /// <summary>
-        /// User role. Valid values: user, system
+        /// User role. Valid values: `user`, `system`, `service_linked`
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RoleType")]
@@ -81,7 +81,8 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? SessionDuration{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task identifier for deleting a service-linked role 
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DeletionTaskId")]
         public string DeletionTaskId{ get; set; }

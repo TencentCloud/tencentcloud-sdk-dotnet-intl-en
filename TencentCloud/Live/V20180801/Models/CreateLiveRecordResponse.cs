@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Task ID, which uniquely identifies the recording task globally.
+        /// Task ID, which uniquely identifies a recording task globally.
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

@@ -108,6 +108,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DrZone")]
         public string[] DrZone{ get; set; }
 
+        /// <summary>
+        /// Whether cross-AZ read-only access is supported
+        /// </summary>
+        [JsonProperty("IsSupportRemoteRo")]
+        public bool? IsSupportRemoteRo{ get; set; }
+
+        /// <summary>
+        /// Information of supported cross-AZ read-only zone
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RemoteRoZone")]
+        public string[] RemoteRoZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +141,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "SellType.", this.SellType);
             this.SetParamObj(map, prefix + "ZoneConf.", this.ZoneConf);
             this.SetParamArraySimple(map, prefix + "DrZone.", this.DrZone);
+            this.SetParamSimple(map, prefix + "IsSupportRemoteRo", this.IsSupportRemoteRo);
+            this.SetParamArraySimple(map, prefix + "RemoteRoZone.", this.RemoteRoZone);
         }
     }
 }

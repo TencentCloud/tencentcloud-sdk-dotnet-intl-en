@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+        /// Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Recording end time, which is China standard time and should be URL-encoded (RFC3986). For example, the encoding of 2017-01-01 10:30:01 is 2017-01-01+10%3a30%3a01.
-        /// In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the Highlight parameter, the end time set should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time or left blank, the actual end time will be 30 minutes after the current time.
+        /// In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the `Highlight` parameter, the set end time should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time, or left empty, the actual end time will be 30 minutes after the current time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -82,7 +82,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? Highlight{ get; set; }
 
         /// <summary>
-        /// Mark for enabling A+B=C mixed stream recording.
+        /// Flag for enabling A+B=C mixed stream recording.
         /// 0: A+B=C mixed stream recording is not enabled **(default)**.
         /// 1: A+B=C mixed stream recording is enabled.
         /// In both scheduled and real-time video recording modes, this parameter is valid.
@@ -92,10 +92,10 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Recording stream parameter. The following parameters are supported currently:
-        /// record_interval: Recording interval in seconds. Value range: 1,800–7,200
-        /// storage_time: Recording file duration in seconds
-        /// eg. record_interval=3600&storage_time=2592000
-        /// Note: The parameter needs url encode.
+        /// record_interval: recording interval in seconds. Value range: 1800-7200.
+        /// storage_time: recording file storage duration in seconds.
+        /// Example: record_interval=3600&storage_time=2592000.
+        /// Note: the parameter needs to be URL-encoded.
         /// In both scheduled and real-time video recording modes, this parameter is valid.
         /// </summary>
         [JsonProperty("StreamParam")]

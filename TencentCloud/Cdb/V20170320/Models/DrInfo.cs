@@ -49,7 +49,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Instance synchronization status
+        /// Instance sync status. Possible returned values include:
+        /// 0 - disaster recovery not synced;
+        /// 1 - disaster recovery syncing;
+        /// 2 - disaster recovery synced successfully;
+        /// 3 - disaster recovery sync failed;
+        /// 4 - repairing disaster recovery sync;
         /// </summary>
         [JsonProperty("SyncStatus")]
         public long? SyncStatus{ get; set; }

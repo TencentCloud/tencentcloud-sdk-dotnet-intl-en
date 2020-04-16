@@ -31,19 +31,19 @@ namespace TencentCloud.Gme.V20180711.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Tencent Cloud project ID. Default value: 0, which means that the default project is used
+        /// Tencent Cloud project ID. Default value: 0, which means the default project
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
+        /// List of engines to be supported. All values are selected by default.
         /// </summary>
         [JsonProperty("EngineList")]
         public string[] EngineList{ get; set; }
 
         /// <summary>
-        /// List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+        /// Service region list. All values are selected by default.
         /// </summary>
         [JsonProperty("RegionList")]
         public string[] RegionList{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Your acceleration domain name.
+        /// Your push domain name.
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }

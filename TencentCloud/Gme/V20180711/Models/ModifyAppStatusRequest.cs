@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Application ID, which is generated and returned by the backend after application creation
+        /// Application ID, which is generated and returned by the backend after application creation.
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }

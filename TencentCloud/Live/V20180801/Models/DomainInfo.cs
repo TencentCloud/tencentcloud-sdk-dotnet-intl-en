@@ -93,7 +93,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string RentExpireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// 0: LVB,
+        /// 1: LVB on WeChat Mini Program.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsMiniProgramLive")]
         public long? IsMiniProgramLive{ get; set; }

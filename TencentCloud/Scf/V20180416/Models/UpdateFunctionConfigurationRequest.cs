@@ -103,7 +103,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string L5Enable{ get; set; }
 
         /// <summary>
-        /// List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
+        /// List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
         /// </summary>
         [JsonProperty("Layers")]
         public LayerVersionSimple[] Layers{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public DeadLetterConfig DeadLetterConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable Ons access. TRUE: enable; FALSE: not enable
         /// </summary>
         [JsonProperty("OnsEnable")]
         public string OnsEnable{ get; set; }

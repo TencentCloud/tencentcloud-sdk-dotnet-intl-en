@@ -230,7 +230,8 @@ namespace TencentCloud.Scf.V20180416.Models
         public PublicNetConfigOut PublicNetConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether Ons is enabled
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("OnsEnable")]
         public string OnsEnable{ get; set; }

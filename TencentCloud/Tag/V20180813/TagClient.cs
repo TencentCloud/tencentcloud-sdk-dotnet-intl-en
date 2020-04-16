@@ -253,6 +253,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// This API is used to get resource tags based on tag keys.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsByTagKeysRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsByTagKeysResponse"/></returns>
+        public async Task<DescribeResourceTagsByTagKeysResponse> DescribeResourceTagsByTagKeys(DescribeResourceTagsByTagKeysRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsByTagKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceTagsByTagKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsByTagKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get resource tags based on tag keys.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsByTagKeysRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsByTagKeysResponse"/></returns>
+        public DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeysSync(DescribeResourceTagsByTagKeysRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsByTagKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceTagsByTagKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsByTagKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query resources by tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByTagsRequest"/></param>

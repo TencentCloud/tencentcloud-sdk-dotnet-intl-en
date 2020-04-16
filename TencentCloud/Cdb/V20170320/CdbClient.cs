@@ -337,6 +337,62 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to create a pay-as-you-go TencentDB instance (which can be a master, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
+        /// 
+        /// This is an async API. You can also use the [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) API to query the instance details. If the `Status` value of an instance is 1 and `TaskStatus` is 0, the instance has been successfully delivered.
+        /// 
+        /// 1. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported instance specifications first and then use the [DescribeDBPrice](https://cloud.tencent.com/document/api/236/18566) API to query the prices of the supported instances;
+        /// 2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months;
+        /// 3. MySQL v5.5, v5.6, and v5.7 are supported;
+        /// 4. Master instances, read-only instances, and disaster recovery instances can be created;
+        /// 5. If `Port`, `ParamList`, or `Password` is set in the input parameters, the instance will be initialized.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceHourResponse"/></returns>
+        public async Task<CreateDBInstanceHourResponse> CreateDBInstanceHour(CreateDBInstanceHourRequest req)
+        {
+             JsonResponseModel<CreateDBInstanceHourResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDBInstanceHour");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceHourResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a pay-as-you-go TencentDB instance (which can be a master, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
+        /// 
+        /// This is an async API. You can also use the [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) API to query the instance details. If the `Status` value of an instance is 1 and `TaskStatus` is 0, the instance has been successfully delivered.
+        /// 
+        /// 1. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported instance specifications first and then use the [DescribeDBPrice](https://cloud.tencent.com/document/api/236/18566) API to query the prices of the supported instances;
+        /// 2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months;
+        /// 3. MySQL v5.5, v5.6, and v5.7 are supported;
+        /// 4. Master instances, read-only instances, and disaster recovery instances can be created;
+        /// 5. If `Port`, `ParamList`, or `Password` is set in the input parameters, the instance will be initialized.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceHourResponse"/></returns>
+        public CreateDBInstanceHourResponse CreateDBInstanceHourSync(CreateDBInstanceHourRequest req)
+        {
+             JsonResponseModel<CreateDBInstanceHourResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDBInstanceHour");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceHourResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a placement group for placing instances.
         /// </summary>
         /// <param name="req"><see cref="CreateDeployGroupRequest"/></param>
@@ -457,7 +513,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DeleteBackup) is used to delete a TencentDB instance backup.
+        /// This API is used to delete a database backup. It can only delete manually initiated backups.
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
         /// <returns><see cref="DeleteBackupResponse"/></returns>
@@ -477,7 +533,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DeleteBackup) is used to delete a TencentDB instance backup.
+        /// This API is used to delete a database backup. It can only delete manually initiated backups.
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
         /// <returns><see cref="DeleteBackupResponse"/></returns>
@@ -1625,6 +1681,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the details of instance error logs by search criteria. You can only query error logs within a month.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeErrorLogDataRequest"/></param>
+        /// <returns><see cref="DescribeErrorLogDataResponse"/></returns>
+        public async Task<DescribeErrorLogDataResponse> DescribeErrorLogData(DescribeErrorLogDataRequest req)
+        {
+             JsonResponseModel<DescribeErrorLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeErrorLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeErrorLogDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of instance error logs by search criteria. You can only query error logs within a month.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeErrorLogDataRequest"/></param>
+        /// <returns><see cref="DescribeErrorLogDataResponse"/></returns>
+        public DescribeErrorLogDataResponse DescribeErrorLogDataSync(DescribeErrorLogDataRequest req)
+        {
+             JsonResponseModel<DescribeErrorLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeErrorLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeErrorLogDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeInstanceParamRecords) is used to query the parameter modification records of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
@@ -1825,6 +1921,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the information of all RO groups of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoGroupsRequest"/></param>
+        /// <returns><see cref="DescribeRoGroupsResponse"/></returns>
+        public async Task<DescribeRoGroupsResponse> DescribeRoGroups(DescribeRoGroupsRequest req)
+        {
+             JsonResponseModel<DescribeRoGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of all RO groups of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoGroupsRequest"/></param>
+        /// <returns><see cref="DescribeRoGroupsResponse"/></returns>
+        public DescribeRoGroupsResponse DescribeRoGroupsSync(DescribeRoGroupsRequest req)
+        {
+             JsonResponseModel<DescribeRoGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeRollbackRangeTime) is used to query the time range available for instance rollback.
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackRangeTimeRequest"/></param>
@@ -1856,6 +1992,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRollbackRangeTime");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRollbackRangeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search for slow logs of an instance by criteria. You can only view slow logs within a month.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogDataRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogDataResponse"/></returns>
+        public async Task<DescribeSlowLogDataResponse> DescribeSlowLogData(DescribeSlowLogDataRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search for slow logs of an instance by criteria. You can only view slow logs within a month.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogDataRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogDataResponse"/></returns>
+        public DescribeSlowLogDataResponse DescribeSlowLogDataSync(DescribeSlowLogDataRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2096,6 +2272,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTimeWindow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of user-imported SQL files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadedFilesRequest"/></param>
+        /// <returns><see cref="DescribeUploadedFilesResponse"/></returns>
+        public async Task<DescribeUploadedFilesResponse> DescribeUploadedFiles(DescribeUploadedFilesRequest req)
+        {
+             JsonResponseModel<DescribeUploadedFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUploadedFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadedFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of user-imported SQL files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadedFilesRequest"/></param>
+        /// <returns><see cref="DescribeUploadedFilesResponse"/></returns>
+        public DescribeUploadedFilesResponse DescribeUploadedFilesSync(DescribeUploadedFilesRequest req)
+        {
+             JsonResponseModel<DescribeUploadedFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUploadedFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadedFilesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2963,6 +3179,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to deisolate an isolated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIsolatedDBInstancesRequest"/></param>
+        /// <returns><see cref="ReleaseIsolatedDBInstancesResponse"/></returns>
+        public async Task<ReleaseIsolatedDBInstancesResponse> ReleaseIsolatedDBInstances(ReleaseIsolatedDBInstancesRequest req)
+        {
+             JsonResponseModel<ReleaseIsolatedDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseIsolatedDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseIsolatedDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to deisolate an isolated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIsolatedDBInstancesRequest"/></param>
+        /// <returns><see cref="ReleaseIsolatedDBInstancesResponse"/></returns>
+        public ReleaseIsolatedDBInstancesResponse ReleaseIsolatedDBInstancesSync(ReleaseIsolatedDBInstancesRequest req)
+        {
+             JsonResponseModel<ReleaseIsolatedDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseIsolatedDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseIsolatedDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (RestartDBInstances) is used to restart TencentDB instances.
         /// 
         /// Note:
@@ -3122,6 +3378,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "SwitchForUpgrade");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchForUpgradeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade or downgrade a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
+        public async Task<UpgradeDBInstanceResponse> UpgradeDBInstance(UpgradeDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade or downgrade a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
+        public UpgradeDBInstanceResponse UpgradeDBInstanceSync(UpgradeDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -96,7 +96,8 @@ namespace TencentCloud.Cam.V20190116.Models
         public string[] DeactivedDetail{ get; set; }
 
         /// <summary>
-        /// 
+        /// The deletion task identifier used to check the deletion status of the service-linked role
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsServiceLinkedPolicy")]
         public ulong? IsServiceLinkedPolicy{ get; set; }

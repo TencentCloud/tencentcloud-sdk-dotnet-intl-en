@@ -271,6 +271,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
+        /// <summary>
+        /// AZ ID
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -317,6 +324,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

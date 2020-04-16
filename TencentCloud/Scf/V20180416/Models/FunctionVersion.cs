@@ -37,6 +37,20 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// The creation time
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("AddTime")]
+        public string AddTime{ get; set; }
+
+        /// <summary>
+        /// Update time
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ModTime")]
+        public string ModTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +59,8 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamSimple(map, prefix + "ModTime", this.ModTime);
         }
     }
 }

@@ -1613,46 +1613,6 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API (UpdatePolicy) is used to update a policy.
-        /// </summary>
-        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
-        /// <returns><see cref="UpdatePolicyResponse"/></returns>
-        public async Task<UpdatePolicyResponse> UpdatePolicy(UpdatePolicyRequest req)
-        {
-             JsonResponseModel<UpdatePolicyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdatePolicy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePolicyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (UpdatePolicy) is used to update a policy.
-        /// </summary>
-        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
-        /// <returns><see cref="UpdatePolicyResponse"/></returns>
-        public UpdatePolicyResponse UpdatePolicySync(UpdatePolicyRequest req)
-        {
-             JsonResponseModel<UpdatePolicyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdatePolicy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePolicyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (UpdateRoleDescription) is used to modify the description of a role.
         /// </summary>
         /// <param name="req"><see cref="UpdateRoleDescriptionRequest"/></param>

@@ -49,7 +49,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public OffsiteFlag OffsiteFlag{ get; set; }
 
         /// <summary>
-        /// If MFA requires top-up
+        /// Whether or not to reset MFA
         /// </summary>
         [JsonProperty("NeedResetMfa")]
         public ulong? NeedResetMfa{ get; set; }

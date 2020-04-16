@@ -54,6 +54,18 @@ namespace TencentCloud.Tag.V20180813.Models
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
 
+        /// <summary>
+        /// Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+        /// </summary>
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
+
+        /// <summary>
+        /// Whether to show project tag
+        /// </summary>
+        [JsonProperty("ShowProject")]
+        public ulong? ShowProject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Tag.V20180813.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamSimple(map, prefix + "ShowProject", this.ShowProject);
         }
     }
 }

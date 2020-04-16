@@ -43,7 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Statistical metric name list. It supports: ["InBandwidth", "OutBandwidth", "Concurrent", "InPackets", "OutPackets"]
+        /// Statistical metric name list. It supports:["InBandwidth", "OutBandwidth", "Concurrent", "InPackets", "OutPackets"]
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
@@ -51,8 +51,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// <summary>
         /// Monitoring granularity. It currently supports: 300, 3,600, and 86,400. Unit: seconds.
         /// Time range: ≤ 1 day, supported minimum granularity: 300 seconds;
-        /// Time range: ≤ 7 days, supported minimum granularity: 3,600 seconds;
-        /// Time range: > 7 days, supported minimum granularity: 86,400 seconds;
+        /// Time range：≤ 7 days, supported minimum granularity:3,600 seconds;
+        /// Time range: ＞7 days, supported minimum granularity:86,400 seconds;
         /// </summary>
         [JsonProperty("Granularity")]
         public ulong? Granularity{ get; set; }

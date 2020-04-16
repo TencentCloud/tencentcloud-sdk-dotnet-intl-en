@@ -4,9 +4,9 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.6</VersionPrefix>
+    <VersionPrefix>3.0.7</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
-    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet-intl-en/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
@@ -392,8 +392,6 @@
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\UpdatePolicyRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\UpdatePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleDescriptionRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleDescriptionResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateSAMLProviderRequest.cs" />
@@ -497,6 +495,8 @@
     <Compile Include="Cdb\V20170320\Models\CreateBackupResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateDBImportJobRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateDBImportJobResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateDBInstanceHourRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateDBInstanceHourResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateDeployGroupRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateDeployGroupResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateParamTemplateRequest.cs" />
@@ -565,6 +565,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeDeployGroupListResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDeviceMonitorInfoRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDeviceMonitorInfoResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeErrorLogDataRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeErrorLogDataResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeInstanceParamRecordsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeInstanceParamRecordsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeInstanceParamsRequest.cs" />
@@ -575,8 +577,12 @@
     <Compile Include="Cdb\V20170320\Models\DescribeParamTemplatesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackRangeTimeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackRangeTimeResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeSlowLogDataRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeSlowLogDataResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeSlowLogsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeSlowLogsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeSupportedPrivilegesRequest.cs" />
@@ -589,6 +595,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeTasksResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeTimeWindowResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeUploadedFilesRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeUploadedFilesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeviceCpuInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DeviceCpuRateInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DeviceDiskInfo.cs" />
@@ -597,6 +605,7 @@
     <Compile Include="Cdb\V20170320\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DrInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\ErrlogItem.cs" />
     <Compile Include="Cdb\V20170320\Models\ImportRecord.cs" />
     <Compile Include="Cdb\V20170320\Models\Inbound.cs" />
     <Compile Include="Cdb\V20170320\Models\InitDBInstancesRequest.cs" />
@@ -650,6 +659,9 @@
     <Compile Include="Cdb\V20170320\Models\Parameter.cs" />
     <Compile Include="Cdb\V20170320\Models\ParameterDetail.cs" />
     <Compile Include="Cdb\V20170320\Models\RegionSellConf.cs" />
+    <Compile Include="Cdb\V20170320\Models\ReleaseIsolatedDBInstancesRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ReleaseIsolatedDBInstancesResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ReleaseResult.cs" />
     <Compile Include="Cdb\V20170320\Models\RestartDBInstancesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\RestartDBInstancesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RoGroup.cs" />
@@ -669,6 +681,8 @@
     <Compile Include="Cdb\V20170320\Models\SlaveInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\SlaveInstanceInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\SlowLogInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\SlowLogItem.cs" />
+    <Compile Include="Cdb\V20170320\Models\SqlFileInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\StartBatchRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StartBatchRollbackResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopDBImportJobRequest.cs" />
@@ -683,6 +697,9 @@
     <Compile Include="Cdb\V20170320\Models\TaskDetail.cs" />
     <Compile Include="Cdb\V20170320\Models\UpgradeDBInstanceEngineVersionRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\UpgradeDBInstanceEngineVersionResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\UpgradeDBInstanceRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\UpgradeDBInstanceResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\UploadInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\ZoneConf.cs" />
     <Compile Include="Cdb\V20170320\Models\ZoneSellConf.cs" />
     <Compile Include="Cdn\V20180606\CdnClient.cs" />
@@ -1676,11 +1693,20 @@
     <Compile Include="Gme\V20180711\Models\CreateAppResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeScanResult.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeScanResultListRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeScanResultListResponse.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusRequest.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusResponse.cs" />
     <Compile Include="Gme\V20180711\Models\RealTimeSpeechStatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\RealtimeSpeechConf.cs" />
+    <Compile Include="Gme\V20180711\Models\ScanDetail.cs" />
+    <Compile Include="Gme\V20180711\Models\ScanPiece.cs" />
+    <Compile Include="Gme\V20180711\Models\ScanVoiceRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\ScanVoiceResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\ScanVoiceResult.cs" />
     <Compile Include="Gme\V20180711\Models\Tag.cs" />
+    <Compile Include="Gme\V20180711\Models\Task.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilterConf.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilterStatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceMessageConf.cs" />
@@ -2660,6 +2686,8 @@
     <Compile Include="Tag\V20180813\Models\DeleteTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByTagKeysRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByTagKeysResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagKeysRequest.cs" />
@@ -2670,6 +2698,7 @@
     <Compile Include="Tag\V20180813\Models\DescribeTagsResponse.cs" />
     <Compile Include="Tag\V20180813\Models\ModifyResourceTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\ModifyResourceTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\ResourceIdTag.cs" />
     <Compile Include="Tag\V20180813\Models\ResourceTag.cs" />
     <Compile Include="Tag\V20180813\Models\Tag.cs" />
     <Compile Include="Tag\V20180813\Models\TagFilter.cs" />

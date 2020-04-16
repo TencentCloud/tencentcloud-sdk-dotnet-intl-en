@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Parameter corresponding to the trigger. For a timer trigger, it should be a Linux cron expression; for a COS trigger, it should be a JSON string ({"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}}), where `event` is the triggered COS event, `Prefix` in the `filter` is the corresponding file prefix filter, and `Suffix` is the corresponding suffix filter, and the `filter` can be left blank if not needed; for other triggers, please see the description of the specific trigger.
+        /// For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
         /// </summary>
         [JsonProperty("TriggerDesc")]
         public string TriggerDesc{ get; set; }

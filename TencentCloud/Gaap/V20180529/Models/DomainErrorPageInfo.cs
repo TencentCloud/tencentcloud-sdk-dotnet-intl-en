@@ -76,6 +76,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Body")]
         public string Body{ get; set; }
 
+        /// <summary>
+        /// Rule status. 0: success
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +97,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArraySimple(map, prefix + "ClearHeaders.", this.ClearHeaders);
             this.SetParamArrayObj(map, prefix + "SetHeaders.", this.SetHeaders);
             this.SetParamSimple(map, prefix + "Body", this.Body);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }
