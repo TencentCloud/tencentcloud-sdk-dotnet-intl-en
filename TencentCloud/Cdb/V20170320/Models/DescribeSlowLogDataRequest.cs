@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// Client Host list.
+        /// Client `Host` list.
         /// </summary>
         [JsonProperty("UserHosts")]
         public string[] UserHosts{ get; set; }

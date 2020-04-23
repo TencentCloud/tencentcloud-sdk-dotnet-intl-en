@@ -67,6 +67,20 @@ namespace TencentCloud.Cam.V20190116.Models
         public string PolicyDocument{ get; set; }
 
         /// <summary>
+        /// Remarks
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PresetAlias")]
+        public string PresetAlias{ get; set; }
+
+        /// <summary>
+        /// Whether it is a service-linked policy
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsServiceLinkedRolePolicy")]
+        public ulong? IsServiceLinkedRolePolicy{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -84,6 +98,8 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "PresetAlias", this.PresetAlias);
+            this.SetParamSimple(map, prefix + "IsServiceLinkedRolePolicy", this.IsServiceLinkedRolePolicy);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

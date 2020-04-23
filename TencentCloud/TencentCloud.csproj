@@ -4,14 +4,14 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.7</VersionPrefix>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
-    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet-intl-en/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
     <PackageId>TencentCloudSDK</PackageId>
-    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet-intl-en</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
     <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
   </PropertyGroup>
@@ -364,6 +364,8 @@
     <Compile Include="Cam\V20190116\Models\ListAttachedRolePoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedUserPoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedUserPoliciesResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\ListCollaboratorsRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\ListCollaboratorsResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListEntitiesForPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListEntitiesForPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListGroupsForUserRequest.cs" />
@@ -378,20 +380,18 @@
     <Compile Include="Cam\V20190116\Models\ListUsersForGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\LoginActionFlag.cs" />
-    <Compile Include="Cam\V20190116\Models\OffsiteFlag.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\RoleInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SAMLProviderInfo.cs" />
-    <Compile Include="Cam\V20190116\Models\SetFlagRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\SetFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\StrategyInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountInfo.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateRoleConsoleLoginRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateRoleConsoleLoginResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleDescriptionRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleDescriptionResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateSAMLProviderRequest.cs" />
@@ -723,17 +723,25 @@
     <Compile Include="Cdn\V20180606\Models\CdnIp.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="Cdn\V20180606\Models\ClientCert.cs" />
+    <Compile Include="Cdn\V20180606\Models\ClsLogObject.cs" />
+    <Compile Include="Cdn\V20180606\Models\ClsSearchLogs.cs" />
     <Compile Include="Cdn\V20180606\Models\Compatibility.cs" />
     <Compile Include="Cdn\V20180606\Models\Compression.cs" />
     <Compile Include="Cdn\V20180606\Models\CompressionRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DeleteClsLogTopicRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DeleteClsLogTopicResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDomainLogsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDomainLogsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnIpRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnIpResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeCertDomainsRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeCertDomainsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsConfigRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsRequest.cs" />
@@ -755,11 +763,16 @@
     <Compile Include="Cdn\V20180606\Models\DetailDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableCachesRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableCachesResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DisableClsLogTopicRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DisableClsLogTopicResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DomainAreaConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainFilter.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainLog.cs" />
     <Compile Include="Cdn\V20180606\Models\DownstreamCapping.cs" />
     <Compile Include="Cdn\V20180606\Models\EnableCachesRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\EnableCachesResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\EnableClsLogTopicRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\EnableClsLogTopicResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ErrorPage.cs" />
     <Compile Include="Cdn\V20180606\Models\ErrorPageRule.cs" />
     <Compile Include="Cdn\V20180606\Models\FollowRedirect.cs" />
@@ -771,9 +784,16 @@
     <Compile Include="Cdn\V20180606\Models\IpFilter.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFreqLimit.cs" />
     <Compile Include="Cdn\V20180606\Models\Ipv6.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListClsLogTopicsRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListClsLogTopicsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListClsTopicDomainsRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListClsTopicDomainsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\LogSetInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\MainlandConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\ManageClsTopicDomainsRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ManageClsTopicDomainsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\MapInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAge.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAgeRule.cs" />
@@ -798,6 +818,8 @@
     <Compile Include="Cdn\V20180606\Models\ResourceOriginData.cs" />
     <Compile Include="Cdn\V20180606\Models\ResponseHeader.cs" />
     <Compile Include="Cdn\V20180606\Models\ResponseHeaderCache.cs" />
+    <Compile Include="Cdn\V20180606\Models\SearchClsLogRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\SearchClsLogResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\Seo.cs" />
     <Compile Include="Cdn\V20180606\Models\ServerCert.cs" />
     <Compile Include="Cdn\V20180606\Models\SimpleCache.cs" />
@@ -814,6 +836,7 @@
     <Compile Include="Cdn\V20180606\Models\TimestampData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopDetailData.cs" />
+    <Compile Include="Cdn\V20180606\Models\TopicInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdatePayTypeRequest.cs" />
@@ -1090,6 +1113,8 @@
     <Compile Include="Clb\V20180317\Models\RuleInput.cs" />
     <Compile Include="Clb\V20180317\Models\RuleOutput.cs" />
     <Compile Include="Clb\V20180317\Models\RuleTargets.cs" />
+    <Compile Include="Clb\V20180317\Models\SetLoadBalancerClsLogRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\SetLoadBalancerClsLogResponse.cs" />
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerSecurityGroupsRequest.cs" />
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerSecurityGroupsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\SetSecurityGroupForLoadbalancersRequest.cs" />
@@ -1941,6 +1966,79 @@
     <Compile Include="Live\V20180801\Models\UpdateLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\UpdateLiveWatermarkResponse.cs" />
     <Compile Include="Live\V20180801\Models\WatermarkInfo.cs" />
+    <Compile Include="Mariadb\V20170312\MariadbClient.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CloneAccountRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CloneAccountResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ConstraintRange.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CopyAccountPrivilegesRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CopyAccountPrivilegesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CreateAccountRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CreateAccountResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DBAccount.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DBBackupTimeConfig.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DBInstance.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DBParamValue.cs" />
+    <Compile Include="Mariadb\V20170312\Models\Database.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DeleteAccountRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DeleteAccountResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeAccountPrivilegesRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeAccountPrivilegesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeBackupTimeRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeBackupTimeResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBInstancesRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBLogFilesRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBLogFilesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBParametersRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBParametersResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBPerformanceDetailsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBPerformanceDetailsResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBPerformanceRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBPerformanceResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageDetailsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageDetailsResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeFlowRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeFlowResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\InitDBInstancesRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\InitDBInstancesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\LogFileInfo.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyAccountDescriptionRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyBackupTimeRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyBackupTimeResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBParametersRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBParametersResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyLogFileRetentionPeriodRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyLogFileRetentionPeriodResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\MonitorData.cs" />
+    <Compile Include="Mariadb\V20170312\Models\OpenDBExtranetAccessRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\OpenDBExtranetAccessResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ParamConstraint.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ParamDesc.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ParamModifyResult.cs" />
+    <Compile Include="Mariadb\V20170312\Models\PerformanceMonitorSet.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ResourceUsageMonitorSet.cs" />
+    <Compile Include="Mariadb\V20170312\Models\SlowLogData.cs" />
     <Compile Include="Mongodb\V20190725\MongodbClient.cs" />
     <Compile Include="Mongodb\V20190725\Models\AssignProjectRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\AssignProjectResponse.cs" />

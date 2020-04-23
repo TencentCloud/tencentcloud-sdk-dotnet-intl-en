@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Regular expression for matching database names, which complies with the rules at MySQL's official website
+        /// Regular expression for matching database names.
         /// </summary>
         [JsonProperty("DatabaseRegexp")]
         public string DatabaseRegexp{ get; set; }

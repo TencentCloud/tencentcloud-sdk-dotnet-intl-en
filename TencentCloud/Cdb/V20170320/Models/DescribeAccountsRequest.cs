@@ -42,6 +42,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// Regular expression for matching account names, which complies with the rules at MySQL official website.
+        /// </summary>
+        [JsonProperty("AccountRegexp")]
+        public string AccountRegexp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
         }
     }
 }

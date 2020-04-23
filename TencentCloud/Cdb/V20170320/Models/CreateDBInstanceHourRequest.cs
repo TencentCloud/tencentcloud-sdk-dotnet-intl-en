@@ -175,7 +175,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

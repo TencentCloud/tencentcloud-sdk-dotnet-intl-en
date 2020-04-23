@@ -155,7 +155,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public MasterInfo MasterInfo{ get; set; }
 
         /// <summary>
-        /// Instance type. Value range: HA (high availability edition), BASIC (basic edition)
+        /// Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

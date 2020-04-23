@@ -1173,6 +1173,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to get the collaborator list.
+        /// </summary>
+        /// <param name="req"><see cref="ListCollaboratorsRequest"/></param>
+        /// <returns><see cref="ListCollaboratorsResponse"/></returns>
+        public async Task<ListCollaboratorsResponse> ListCollaborators(ListCollaboratorsRequest req)
+        {
+             JsonResponseModel<ListCollaboratorsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListCollaborators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCollaboratorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the collaborator list.
+        /// </summary>
+        /// <param name="req"><see cref="ListCollaboratorsRequest"/></param>
+        /// <returns><see cref="ListCollaboratorsResponse"/></returns>
+        public ListCollaboratorsResponse ListCollaboratorsSync(ListCollaboratorsRequest req)
+        {
+             JsonResponseModel<ListCollaboratorsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListCollaborators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCollaboratorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ListEntitiesForPolicy) is used to query the list of entities associated with a policy.
         /// </summary>
         /// <param name="req"><see cref="ListEntitiesForPolicyRequest"/></param>
@@ -1493,46 +1533,6 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API is used to set account verification for login and sensitive operation protection.
-        /// </summary>
-        /// <param name="req"><see cref="SetFlagRequest"/></param>
-        /// <returns><see cref="SetFlagResponse"/></returns>
-        public async Task<SetFlagResponse> SetFlag(SetFlagRequest req)
-        {
-             JsonResponseModel<SetFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SetFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to set account verification for login and sensitive operation protection.
-        /// </summary>
-        /// <param name="req"><see cref="SetFlagRequest"/></param>
-        /// <returns><see cref="SetFlagResponse"/></returns>
-        public SetFlagResponse SetFlagSync(SetFlagRequest req)
-        {
-             JsonResponseModel<SetFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SetFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
         /// </summary>
         /// <param name="req"><see cref="UpdateAssumeRolePolicyRequest"/></param>
@@ -1604,6 +1604,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "UpdateGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a role’s login permissions.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRoleConsoleLoginRequest"/></param>
+        /// <returns><see cref="UpdateRoleConsoleLoginResponse"/></returns>
+        public async Task<UpdateRoleConsoleLoginResponse> UpdateRoleConsoleLogin(UpdateRoleConsoleLoginRequest req)
+        {
+             JsonResponseModel<UpdateRoleConsoleLoginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateRoleConsoleLogin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRoleConsoleLoginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a role’s login permissions.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRoleConsoleLoginRequest"/></param>
+        /// <returns><see cref="UpdateRoleConsoleLoginResponse"/></returns>
+        public UpdateRoleConsoleLoginResponse UpdateRoleConsoleLoginSync(UpdateRoleConsoleLoginRequest req)
+        {
+             JsonResponseModel<UpdateRoleConsoleLoginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateRoleConsoleLogin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRoleConsoleLoginResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -1987,6 +1987,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to add, delete, and update the CLS topic of a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="SetLoadBalancerClsLogRequest"/></param>
+        /// <returns><see cref="SetLoadBalancerClsLogResponse"/></returns>
+        public async Task<SetLoadBalancerClsLogResponse> SetLoadBalancerClsLog(SetLoadBalancerClsLogRequest req)
+        {
+             JsonResponseModel<SetLoadBalancerClsLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetLoadBalancerClsLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetLoadBalancerClsLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add, delete, and update the CLS topic of a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="SetLoadBalancerClsLogRequest"/></param>
+        /// <returns><see cref="SetLoadBalancerClsLogResponse"/></returns>
+        public SetLoadBalancerClsLogResponse SetLoadBalancerClsLogSync(SetLoadBalancerClsLogRequest req)
+        {
+             JsonResponseModel<SetLoadBalancerClsLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetLoadBalancerClsLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetLoadBalancerClsLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (SetLoadBalancerSecurityGroups) is used to bind/unbind security groups for a public network CLB instance. You can use the DescribeLoadBalancers API to query the security groups bound to a CLB instance. This API uses `set` semantics.
         /// During a binding operation, the input parameters need to be all security groups to be bound to the CLB instance (including those already bound ones and new ones).
         /// During an unbinding operation, the input parameters need to be all the security groups still bound to the CLB instance after the unbinding operation. To unbind all security groups, you can leave this parameter empty or pass in an empty array. Note: Private network CLB do not support binding security groups.

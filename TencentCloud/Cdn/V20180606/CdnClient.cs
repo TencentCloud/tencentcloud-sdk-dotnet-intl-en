@@ -93,6 +93,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to create a log topic. Note: up to 10 log topics can be created under one logset.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClsLogTopicRequest"/></param>
+        /// <returns><see cref="CreateClsLogTopicResponse"/></returns>
+        public async Task<CreateClsLogTopicResponse> CreateClsLogTopic(CreateClsLogTopicRequest req)
+        {
+             JsonResponseModel<CreateClsLogTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClsLogTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClsLogTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a log topic. Note: up to 10 log topics can be created under one logset.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClsLogTopicRequest"/></param>
+        /// <returns><see cref="CreateClsLogTopicResponse"/></returns>
+        public CreateClsLogTopicResponse CreateClsLogTopicSync(CreateClsLogTopicRequest req)
+        {
+             JsonResponseModel<CreateClsLogTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateClsLogTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClsLogTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a specified acceleration domain name.
         /// </summary>
         /// <param name="req"><see cref="DeleteCdnDomainRequest"/></param>
@@ -124,6 +164,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "DeleteCdnDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClsLogTopicRequest"/></param>
+        /// <returns><see cref="DeleteClsLogTopicResponse"/></returns>
+        public async Task<DeleteClsLogTopicResponse> DeleteClsLogTopic(DeleteClsLogTopicRequest req)
+        {
+             JsonResponseModel<DeleteClsLogTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClsLogTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClsLogTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClsLogTopicRequest"/></param>
+        /// <returns><see cref="DeleteClsLogTopicResponse"/></returns>
+        public DeleteClsLogTopicResponse DeleteClsLogTopicSync(DeleteClsLogTopicRequest req)
+        {
+             JsonResponseModel<DeleteClsLogTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteClsLogTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClsLogTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -262,6 +342,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCdnIp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertDomainsRequest"/></param>
+        /// <returns><see cref="DescribeCertDomainsResponse"/></returns>
+        public async Task<DescribeCertDomainsResponse> DescribeCertDomains(DescribeCertDomainsRequest req)
+        {
+             JsonResponseModel<DescribeCertDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCertDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertDomainsRequest"/></param>
+        /// <returns><see cref="DescribeCertDomainsResponse"/></returns>
+        public DescribeCertDomainsResponse DescribeCertDomainsSync(DescribeCertDomainsRequest req)
+        {
+             JsonResponseModel<DescribeCertDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCertDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -701,6 +821,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
+        /// </summary>
+        /// <param name="req"><see cref="DisableClsLogTopicRequest"/></param>
+        /// <returns><see cref="DisableClsLogTopicResponse"/></returns>
+        public async Task<DisableClsLogTopicResponse> DisableClsLogTopic(DisableClsLogTopicRequest req)
+        {
+             JsonResponseModel<DisableClsLogTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableClsLogTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableClsLogTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
+        /// </summary>
+        /// <param name="req"><see cref="DisableClsLogTopicRequest"/></param>
+        /// <returns><see cref="DisableClsLogTopicResponse"/></returns>
+        public DisableClsLogTopicResponse DisableClsLogTopicSync(DisableClsLogTopicRequest req)
+        {
+             JsonResponseModel<DisableClsLogTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableClsLogTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableClsLogTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (EnableCaches) is used to unblock manually blocked URLs. After a URL is successfully unblocked, it takes about 5 to 10 minutes to take effect across the entire network. (This API is during beta test and not fully available now.)
         /// </summary>
         /// <param name="req"><see cref="EnableCachesRequest"/></param>
@@ -741,6 +901,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
+        /// </summary>
+        /// <param name="req"><see cref="EnableClsLogTopicRequest"/></param>
+        /// <returns><see cref="EnableClsLogTopicResponse"/></returns>
+        public async Task<EnableClsLogTopicResponse> EnableClsLogTopic(EnableClsLogTopicRequest req)
+        {
+             JsonResponseModel<EnableClsLogTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableClsLogTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableClsLogTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
+        /// </summary>
+        /// <param name="req"><see cref="EnableClsLogTopicRequest"/></param>
+        /// <returns><see cref="EnableClsLogTopicResponse"/></returns>
+        public EnableClsLogTopicResponse EnableClsLogTopicSync(EnableClsLogTopicRequest req)
+        {
+             JsonResponseModel<EnableClsLogTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableClsLogTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableClsLogTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
         /// </summary>
         /// <param name="req"><see cref="GetDisableRecordsRequest"/></param>
@@ -772,6 +972,86 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "GetDisableRecords");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDisableRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to display the list of log topics. Note: a logset can contain up to 10 log topics.
+        /// </summary>
+        /// <param name="req"><see cref="ListClsLogTopicsRequest"/></param>
+        /// <returns><see cref="ListClsLogTopicsResponse"/></returns>
+        public async Task<ListClsLogTopicsResponse> ListClsLogTopics(ListClsLogTopicsRequest req)
+        {
+             JsonResponseModel<ListClsLogTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListClsLogTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListClsLogTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to display the list of log topics. Note: a logset can contain up to 10 log topics.
+        /// </summary>
+        /// <param name="req"><see cref="ListClsLogTopicsRequest"/></param>
+        /// <returns><see cref="ListClsLogTopicsResponse"/></returns>
+        public ListClsLogTopicsResponse ListClsLogTopicsSync(ListClsLogTopicsRequest req)
+        {
+             JsonResponseModel<ListClsLogTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListClsLogTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListClsLogTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of domain names bound to a log topic.
+        /// </summary>
+        /// <param name="req"><see cref="ListClsTopicDomainsRequest"/></param>
+        /// <returns><see cref="ListClsTopicDomainsResponse"/></returns>
+        public async Task<ListClsTopicDomainsResponse> ListClsTopicDomains(ListClsTopicDomainsRequest req)
+        {
+             JsonResponseModel<ListClsTopicDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListClsTopicDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListClsTopicDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of domain names bound to a log topic.
+        /// </summary>
+        /// <param name="req"><see cref="ListClsTopicDomainsRequest"/></param>
+        /// <returns><see cref="ListClsTopicDomainsResponse"/></returns>
+        public ListClsTopicDomainsResponse ListClsTopicDomainsSync(ListClsTopicDomainsRequest req)
+        {
+             JsonResponseModel<ListClsTopicDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListClsTopicDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListClsTopicDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -828,6 +1108,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "ListTopData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to manage the list of domain names bound to a log topic.
+        /// </summary>
+        /// <param name="req"><see cref="ManageClsTopicDomainsRequest"/></param>
+        /// <returns><see cref="ManageClsTopicDomainsResponse"/></returns>
+        public async Task<ManageClsTopicDomainsResponse> ManageClsTopicDomains(ManageClsTopicDomainsRequest req)
+        {
+             JsonResponseModel<ManageClsTopicDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManageClsTopicDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageClsTopicDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to manage the list of domain names bound to a log topic.
+        /// </summary>
+        /// <param name="req"><see cref="ManageClsTopicDomainsRequest"/></param>
+        /// <returns><see cref="ManageClsTopicDomainsResponse"/></returns>
+        public ManageClsTopicDomainsResponse ManageClsTopicDomainsSync(ManageClsTopicDomainsRequest req)
+        {
+             JsonResponseModel<ManageClsTopicDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManageClsTopicDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageClsTopicDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -956,6 +1276,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "PushUrlsCache");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PushUrlsCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search for CLS logs. Search filters can be set to today, 24 hours (one of the last 7 days), and the last 7 days.
+        /// </summary>
+        /// <param name="req"><see cref="SearchClsLogRequest"/></param>
+        /// <returns><see cref="SearchClsLogResponse"/></returns>
+        public async Task<SearchClsLogResponse> SearchClsLog(SearchClsLogRequest req)
+        {
+             JsonResponseModel<SearchClsLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchClsLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClsLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search for CLS logs. Search filters can be set to today, 24 hours (one of the last 7 days), and the last 7 days.
+        /// </summary>
+        /// <param name="req"><see cref="SearchClsLogRequest"/></param>
+        /// <returns><see cref="SearchClsLogResponse"/></returns>
+        public SearchClsLogResponse SearchClsLogSync(SearchClsLogRequest req)
+        {
+             JsonResponseModel<SearchClsLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchClsLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClsLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
