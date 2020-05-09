@@ -31,9 +31,9 @@ namespace TencentCloud.Sms.V20190711.Models
         public ulong? SignId{ get; set; }
 
         /// <summary>
-        /// Whether it is Global SMS. Valid values:
+        /// Whether it is Global SMS:
         /// 0: Mainland China SMS.
-        /// 1: Global SMS
+        /// 1: Global SMS.
         /// </summary>
         [JsonProperty("International")]
         public ulong? International{ get; set; }

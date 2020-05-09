@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamBeginNotifyUrl{ get; set; }
 
         /// <summary>
-        /// Stream ending callback URL.
+        /// Interruption callback URL.
         /// </summary>
         [JsonProperty("StreamEndNotifyUrl")]
         public string StreamEndNotifyUrl{ get; set; }
@@ -73,7 +73,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string PornCensorshipNotifyUrl{ get; set; }
 
         /// <summary>
-        /// Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
+        /// Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+        /// [Event Message Notification](/document/product/267/32744).
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }

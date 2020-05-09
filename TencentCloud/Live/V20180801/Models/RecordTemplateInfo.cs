@@ -55,7 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         public RecordParam HlsParam{ get; set; }
 
         /// <summary>
-        /// Mp4 recording parameter.
+        /// MP4 recording parameter.
         /// </summary>
         [JsonProperty("Mp4Param")]
         public RecordParam Mp4Param{ get; set; }
@@ -74,13 +74,13 @@ namespace TencentCloud.Live.V20180801.Models
         public long? IsDelayLive{ get; set; }
 
         /// <summary>
-        /// Custom HLS recording parameter.
+        /// Custom HLS recording parameter
         /// </summary>
         [JsonProperty("HlsSpecialParam")]
         public HlsSpecialParam HlsSpecialParam{ get; set; }
 
         /// <summary>
-        /// Mp3 recording parameter.
+        /// MP3 recording parameter.
         /// </summary>
         [JsonProperty("Mp3Param")]
         public RecordParam Mp3Param{ get; set; }

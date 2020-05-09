@@ -31,7 +31,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+        /// Push path, which is the same as the 
+        ///  `AppName` in push and playback addresses and is `live` by default.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
@@ -49,25 +50,25 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? DelayInterval{ get; set; }
 
         /// <summary>
-        /// Creation time in UTC format.
-        /// Note: Beijing time is 8 hours ahead of UTC.
-        /// Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
+        /// Creation time in UTC time.
+        /// Note: the difference between UTC time and Beijing time is 8 hours.
+        /// Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Expiration time in UTC format.
-        /// Note: Beijing time is 8 hours ahead of UTC.
-        /// Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
+        /// Expiration time in UTC time.
+        /// Note: the difference between UTC time and Beijing time is 8 hours.
+        /// Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Current status,
-        /// -1: Expired,
-        /// 1: Effective.
+        /// Current status:
+        /// -1: expired.
+        /// 1: in effect.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

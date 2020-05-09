@@ -67,13 +67,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Watermark width
+        /// Watermark width.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Watermark height
+        /// Watermark height.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

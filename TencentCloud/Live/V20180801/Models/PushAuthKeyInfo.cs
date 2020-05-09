@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string MasterAuthKey{ get; set; }
 
         /// <summary>
-        /// Backup authentication key.
+        /// Standby authentication key.
         /// </summary>
         [JsonProperty("BackupAuthKey")]
         public string BackupAuthKey{ get; set; }

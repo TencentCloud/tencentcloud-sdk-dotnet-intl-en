@@ -61,7 +61,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? Cooldown{ get; set; }
 
         /// <summary>
-        /// Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+        /// Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
         /// </summary>
         [JsonProperty("NotificationUserGroupIds")]
         public string[] NotificationUserGroupIds{ get; set; }

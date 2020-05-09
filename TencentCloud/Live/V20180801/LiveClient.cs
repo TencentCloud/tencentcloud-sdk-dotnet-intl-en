@@ -219,6 +219,88 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
+        /// </summary>
+        /// <param name="req"><see cref="CancelCommonMixStreamRequest"/></param>
+        /// <returns><see cref="CancelCommonMixStreamResponse"/></returns>
+        public async Task<CancelCommonMixStreamResponse> CancelCommonMixStream(CancelCommonMixStreamRequest req)
+        {
+             JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelCommonMixStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelCommonMixStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
+        /// </summary>
+        /// <param name="req"><see cref="CancelCommonMixStreamRequest"/></param>
+        /// <returns><see cref="CancelCommonMixStreamResponse"/></returns>
+        public CancelCommonMixStreamResponse CancelCommonMixStreamSync(CancelCommonMixStreamRequest req)
+        {
+             JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelCommonMixStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelCommonMixStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.cancel_mix_stream` API.
+        /// Note: currently, up to 16 streams can be mixed.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCommonMixStreamRequest"/></param>
+        /// <returns><see cref="CreateCommonMixStreamResponse"/></returns>
+        public async Task<CreateCommonMixStreamResponse> CreateCommonMixStream(CreateCommonMixStreamRequest req)
+        {
+             JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCommonMixStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCommonMixStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.cancel_mix_stream` API.
+        /// Note: currently, up to 16 streams can be mixed.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCommonMixStreamRequest"/></param>
+        /// <returns><see cref="CreateCommonMixStreamResponse"/></returns>
+        public CreateCommonMixStreamResponse CreateCommonMixStreamSync(CreateCommonMixStreamRequest req)
+        {
+             JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCommonMixStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCommonMixStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// To create a callback rule, you need to first call the [CreateLiveCallbackTemplate](/document/product/267/32637) API to create a callback template and bind the returned template ID to the domain name/path.
         /// <br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
         /// </summary>
@@ -261,8 +343,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API and bind the template ID to the domain name/path.
-        /// <br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+        /// This API is used to create a callback template. After a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API to bind the template ID to the domain name/path.
+        /// <br>Callback protocol document: [Event Message Notification](/document/product/267/32744).
         /// </summary>
         /// <param name="req"><see cref="CreateLiveCallbackTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveCallbackTemplateResponse"/></returns>
@@ -282,8 +364,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API and bind the template ID to the domain name/path.
-        /// <br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+        /// This API is used to create a callback template. After a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API to bind the template ID to the domain name/path.
+        /// <br>Callback protocol document: [Event Message Notification](/document/product/267/32744).
         /// </summary>
         /// <param name="req"><see cref="CreateLiveCallbackTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveCallbackTemplateResponse"/></returns>
@@ -495,8 +577,9 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// To create a screencapturing rule, you need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template and bind the returned template ID to the stream.
-        /// <br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+        /// This API is used to create a screencapturing rule. You need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template to bind the returned template ID to the stream.
+        /// <br>Screencapturing document: [LVB Screencapturing](/document/product/267/32737).
+        /// Note: only one screencapturing template can be associated with one domain name.
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSnapshotRuleRequest"/></param>
         /// <returns><see cref="CreateLiveSnapshotRuleResponse"/></returns>
@@ -516,8 +599,9 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// To create a screencapturing rule, you need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template and bind the returned template ID to the stream.
-        /// <br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+        /// This API is used to create a screencapturing rule. You need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template to bind the returned template ID to the stream.
+        /// <br>Screencapturing document: [LVB Screencapturing](/document/product/267/32737).
+        /// Note: only one screencapturing template can be associated with one domain name.
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSnapshotRuleRequest"/></param>
         /// <returns><see cref="CreateLiveSnapshotRuleResponse"/></returns>
@@ -1583,7 +1667,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to get the list of forbidden streams.
+        /// This API is used to get the forbidden stream list.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveForbidStreamListRequest"/></param>
         /// <returns><see cref="DescribeLiveForbidStreamListResponse"/></returns>
@@ -1603,7 +1687,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to get the list of forbidden streams.
+        /// This API is used to get the forbidden stream list.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveForbidStreamListRequest"/></param>
         /// <returns><see cref="DescribeLiveForbidStreamListResponse"/></returns>
@@ -1783,7 +1867,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to get the list of recording templates.
+        /// This API is used to get the recording template list.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveRecordTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveRecordTemplatesResponse"/></returns>
@@ -1803,7 +1887,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to get the list of recording templates.
+        /// This API is used to get the recording template list.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveRecordTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveRecordTemplatesResponse"/></returns>
@@ -1987,7 +2071,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to return the list of live streams.
+        /// This API is used to return the live stream list.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveStreamOnlineListRequest"/></param>
         /// <returns><see cref="DescribeLiveStreamOnlineListResponse"/></returns>
@@ -2007,7 +2091,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to return the list of live streams.
+        /// This API is used to return the live stream list.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveStreamOnlineListRequest"/></param>
         /// <returns><see cref="DescribeLiveStreamOnlineListResponse"/></returns>
@@ -2189,7 +2273,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to get the list of transcoding templates.
+        /// This API is used to get the transcoding template list.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeTemplatesResponse"/></returns>
@@ -2209,7 +2293,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to get the list of transcoding templates.
+        /// This API is used to get the transcoding template list.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeTemplatesResponse"/></returns>

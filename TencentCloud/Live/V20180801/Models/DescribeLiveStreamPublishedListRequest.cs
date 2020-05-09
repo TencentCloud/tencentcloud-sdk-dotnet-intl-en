@@ -48,7 +48,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
+        /// Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

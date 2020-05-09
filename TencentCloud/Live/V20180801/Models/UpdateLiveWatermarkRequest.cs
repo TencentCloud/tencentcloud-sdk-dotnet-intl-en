@@ -26,6 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Watermark ID.
+        /// Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
         /// </summary>
         [JsonProperty("WatermarkId")]
         public long? WatermarkId{ get; set; }
@@ -37,13 +38,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string PictureUrl{ get; set; }
 
         /// <summary>
-        /// Display position: X-axis offset.
+        /// Display position: X-axis offset. Default value: 0.
         /// </summary>
         [JsonProperty("XPosition")]
         public long? XPosition{ get; set; }
 
         /// <summary>
-        /// Display position: Y-axis offset.
+        /// Display position: Y-axis offset. Default value: 0.
         /// </summary>
         [JsonProperty("YPosition")]
         public long? YPosition{ get; set; }
@@ -55,13 +56,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string WatermarkName{ get; set; }
 
         /// <summary>
-        /// Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+        /// Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+        /// Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

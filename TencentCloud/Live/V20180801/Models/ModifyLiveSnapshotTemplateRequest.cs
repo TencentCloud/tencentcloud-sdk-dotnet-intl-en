@@ -64,13 +64,15 @@ namespace TencentCloud.Live.V20180801.Models
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Whether to enable porn detection. 0: no, 1: yes.
+        /// Whether to enable porn detection. Default value: 0.
+        /// 0: do not enable.
+        /// 1: enable.
         /// </summary>
         [JsonProperty("PornFlag")]
         public long? PornFlag{ get; set; }
 
         /// <summary>
-        /// COS `AppId`.
+        /// COS application ID.
         /// </summary>
         [JsonProperty("CosAppId")]
         public long? CosAppId{ get; set; }
@@ -86,6 +88,18 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         [JsonProperty("CosRegion")]
         public string CosRegion{ get; set; }
+
+        /// <summary>
+        /// COS bucket folder prefix.
+        /// </summary>
+        [JsonProperty("CosPrefix")]
+        public string CosPrefix{ get; set; }
+
+        /// <summary>
+        /// COS filename.
+        /// </summary>
+        [JsonProperty("CosFileName")]
+        public string CosFileName{ get; set; }
 
 
         /// <summary>
@@ -103,6 +117,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CosAppId", this.CosAppId);
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamSimple(map, prefix + "CosRegion", this.CosRegion);
+            this.SetParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+            this.SetParamSimple(map, prefix + "CosFileName", this.CosFileName);
         }
     }
 }

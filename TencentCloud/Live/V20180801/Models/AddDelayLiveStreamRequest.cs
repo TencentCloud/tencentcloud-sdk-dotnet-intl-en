@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+        /// Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

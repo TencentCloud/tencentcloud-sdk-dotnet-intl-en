@@ -25,8 +25,8 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Push time
-        /// In UTC format, for example: 2018-06-29T19:00:00Z.
+        /// Push time.
+        /// In UTC format, such as 2018-06-29T19:00:00Z.
         /// </summary>
         [JsonProperty("PublishTime")]
         public string PublishTime{ get; set; }

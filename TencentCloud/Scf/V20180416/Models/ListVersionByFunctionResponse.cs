@@ -38,6 +38,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public FunctionVersion[] Versions{ get; set; }
 
         /// <summary>
+        /// Total number of function versions
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -51,6 +58,7 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamArraySimple(map, prefix + "FunctionVersion.", this.FunctionVersion);
             this.SetParamArrayObj(map, prefix + "Versions.", this.Versions);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

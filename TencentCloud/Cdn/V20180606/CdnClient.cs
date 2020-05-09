@@ -739,6 +739,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to query the daily/weekly/monthly report data at domain name/project levels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportDataRequest"/></param>
+        /// <returns><see cref="DescribeReportDataResponse"/></returns>
+        public async Task<DescribeReportDataResponse> DescribeReportData(DescribeReportDataRequest req)
+        {
+             JsonResponseModel<DescribeReportDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReportData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReportDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the daily/weekly/monthly report data at domain name/project levels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportDataRequest"/></param>
+        /// <returns><see cref="DescribeReportDataResponse"/></returns>
+        public DescribeReportDataResponse DescribeReportDataSync(DescribeReportDataRequest req)
+        {
+             JsonResponseModel<DescribeReportDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReportData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReportDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
         /// It corresponds to the **Pornography Detection** page on the CDN Console.
         /// </summary>

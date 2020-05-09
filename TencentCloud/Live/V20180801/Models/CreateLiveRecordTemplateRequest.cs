@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Template name, which is a non-empty string.
+        /// Template name. Only letters, digits, underscores, and hyphens can be contained.
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -61,7 +61,8 @@ namespace TencentCloud.Live.V20180801.Models
         public RecordParam AacParam{ get; set; }
 
         /// <summary>
-        /// 0: LVB,
+        /// LVB type. Default value: 0.
+        /// 0: LVB.
         /// 1: LCB.
         /// </summary>
         [JsonProperty("IsDelayLive")]

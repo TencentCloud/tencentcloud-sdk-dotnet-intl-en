@@ -25,7 +25,9 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Whether it is an LCB template
+        /// Whether it is an LCB template. Default value: 0.
+        /// 0: LVB.
+        /// 1: LCB.
         /// </summary>
         [JsonProperty("IsDelayLive")]
         public long? IsDelayLive{ get; set; }

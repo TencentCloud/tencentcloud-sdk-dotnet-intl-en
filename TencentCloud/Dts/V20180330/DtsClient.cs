@@ -53,6 +53,46 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
+        /// This API is used to configure a data subscription, which can be called only for subscription instances in unconfigured status.
+        /// </summary>
+        /// <param name="req"><see cref="ActivateSubscribeRequest"/></param>
+        /// <returns><see cref="ActivateSubscribeResponse"/></returns>
+        public async Task<ActivateSubscribeResponse> ActivateSubscribe(ActivateSubscribeRequest req)
+        {
+             JsonResponseModel<ActivateSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ActivateSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure a data subscription, which can be called only for subscription instances in unconfigured status.
+        /// </summary>
+        /// <param name="req"><see cref="ActivateSubscribeRequest"/></param>
+        /// <returns><see cref="ActivateSubscribeResponse"/></returns>
+        public ActivateSubscribeResponse ActivateSubscribeSync(ActivateSubscribeRequest req)
+        {
+             JsonResponseModel<ActivateSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ActivateSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CompleteMigrateJob) is used to complete a data migration task.
         /// For tasks in incremental migration mode, you need to call this API before migration gets ready, so as to stop migrating incremental data.
         /// If the task status queried through the (DescribeMigrateJobs) API is ready (status=8), you can call this API to complete the migration task.
@@ -176,6 +216,46 @@ namespace TencentCloud.Dts.V20180330
              {
                  var strResp = this.InternalRequestSync(req, "CreateMigrateJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
+        /// <returns><see cref="CreateSubscribeResponse"/></returns>
+        public async Task<CreateSubscribeResponse> CreateSubscribe(CreateSubscribeRequest req)
+        {
+             JsonResponseModel<CreateSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
+        /// <returns><see cref="CreateSubscribeResponse"/></returns>
+        public CreateSubscribeResponse CreateSubscribeSync(CreateSubscribeRequest req)
+        {
+             JsonResponseModel<CreateSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSubscribeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -349,6 +429,46 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
+        /// This API is used to query the execution result of a task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public async Task<DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the execution result of a task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfoSync(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the check result and query check status and progress after a check is created. 
         /// If the check succeeds, you can call the StartMigrateJob API to start migration.
         /// If the check fails, the reason can be queried. Please modify the migration configuration or adjust relevant parameters of the source/target instances through the ModifyMigrateJob API based on the error message.
@@ -426,6 +546,126 @@ namespace TencentCloud.Dts.V20180330
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMigrateJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrateJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the purchasable subscription instance regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionConfRequest"/></param>
+        /// <returns><see cref="DescribeRegionConfResponse"/></returns>
+        public async Task<DescribeRegionConfResponse> DescribeRegionConf(DescribeRegionConfRequest req)
+        {
+             JsonResponseModel<DescribeRegionConfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegionConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the purchasable subscription instance regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionConfRequest"/></param>
+        /// <returns><see cref="DescribeRegionConfResponse"/></returns>
+        public DescribeRegionConfResponse DescribeRegionConfSync(DescribeRegionConfRequest req)
+        {
+             JsonResponseModel<DescribeRegionConfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRegionConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the subscription instance configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeConfRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeConfResponse"/></returns>
+        public async Task<DescribeSubscribeConfResponse> DescribeSubscribeConf(DescribeSubscribeConfRequest req)
+        {
+             JsonResponseModel<DescribeSubscribeConfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubscribeConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscribeConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the subscription instance configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeConfRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeConfResponse"/></returns>
+        public DescribeSubscribeConfResponse DescribeSubscribeConfSync(DescribeSubscribeConfRequest req)
+        {
+             JsonResponseModel<DescribeSubscribeConfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubscribeConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscribeConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the information list of data subscription instances. Pagination is enabled by default with 20 results returned each time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeSubscribesResponse"/></returns>
+        public async Task<DescribeSubscribesResponse> DescribeSubscribes(DescribeSubscribesRequest req)
+        {
+             JsonResponseModel<DescribeSubscribesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubscribes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscribesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the information list of data subscription instances. Pagination is enabled by default with 20 results returned each time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeSubscribesResponse"/></returns>
+        public DescribeSubscribesResponse DescribeSubscribesSync(DescribeSubscribesRequest req)
+        {
+             JsonResponseModel<DescribeSubscribesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubscribes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscribesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -525,6 +765,46 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
+        /// This API is used to isolate an hourly billed subscription instance. After this API is called, the instance will become unavailable and billing will stop for it.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
+        /// <returns><see cref="IsolateSubscribeResponse"/></returns>
+        public async Task<IsolateSubscribeResponse> IsolateSubscribe(IsolateSubscribeRequest req)
+        {
+             JsonResponseModel<IsolateSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate an hourly billed subscription instance. After this API is called, the instance will become unavailable and billing will stop for it.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
+        /// <returns><see cref="IsolateSubscribeResponse"/></returns>
+        public IsolateSubscribeResponse IsolateSubscribeSync(IsolateSubscribeRequest req)
+        {
+             JsonResponseModel<IsolateSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyMigrateJob) is used to modify a data migration task.
         /// If the status of a migration task is creating (status=1), check succeeded (status=4), check failed (status=5), or migration failed (status=10), this API can be called to modify the task, but the type of the source and target instances and the region of the target instance cannot be modified.
         /// 
@@ -571,6 +851,166 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
+        /// This API is used to modify the consumption time point of a data subscription channel.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeConsumeTimeRequest"/></param>
+        /// <returns><see cref="ModifySubscribeConsumeTimeResponse"/></returns>
+        public async Task<ModifySubscribeConsumeTimeResponse> ModifySubscribeConsumeTime(ModifySubscribeConsumeTimeRequest req)
+        {
+             JsonResponseModel<ModifySubscribeConsumeTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubscribeConsumeTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeConsumeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the consumption time point of a data subscription channel.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeConsumeTimeRequest"/></param>
+        /// <returns><see cref="ModifySubscribeConsumeTimeResponse"/></returns>
+        public ModifySubscribeConsumeTimeResponse ModifySubscribeConsumeTimeSync(ModifySubscribeConsumeTimeRequest req)
+        {
+             JsonResponseModel<ModifySubscribeConsumeTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySubscribeConsumeTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeConsumeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to rename a data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifySubscribeNameResponse"/></returns>
+        public async Task<ModifySubscribeNameResponse> ModifySubscribeName(ModifySubscribeNameRequest req)
+        {
+             JsonResponseModel<ModifySubscribeNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubscribeName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to rename a data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifySubscribeNameResponse"/></returns>
+        public ModifySubscribeNameResponse ModifySubscribeNameSync(ModifySubscribeNameRequest req)
+        {
+             JsonResponseModel<ModifySubscribeNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySubscribeName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the subscription rule of a data subscription channel.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeObjectsRequest"/></param>
+        /// <returns><see cref="ModifySubscribeObjectsResponse"/></returns>
+        public async Task<ModifySubscribeObjectsResponse> ModifySubscribeObjects(ModifySubscribeObjectsRequest req)
+        {
+             JsonResponseModel<ModifySubscribeObjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubscribeObjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeObjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the subscription rule of a data subscription channel.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeObjectsRequest"/></param>
+        /// <returns><see cref="ModifySubscribeObjectsResponse"/></returns>
+        public ModifySubscribeObjectsResponse ModifySubscribeObjectsSync(ModifySubscribeObjectsRequest req)
+        {
+             JsonResponseModel<ModifySubscribeObjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySubscribeObjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeObjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the IP and port number of a data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeVipVportRequest"/></param>
+        /// <returns><see cref="ModifySubscribeVipVportResponse"/></returns>
+        public async Task<ModifySubscribeVipVportResponse> ModifySubscribeVipVport(ModifySubscribeVipVportRequest req)
+        {
+             JsonResponseModel<ModifySubscribeVipVportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubscribeVipVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeVipVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the IP and port number of a data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeVipVportRequest"/></param>
+        /// <returns><see cref="ModifySubscribeVipVportResponse"/></returns>
+        public ModifySubscribeVipVportResponse ModifySubscribeVipVportSync(ModifySubscribeVipVportRequest req)
+        {
+             JsonResponseModel<ModifySubscribeVipVportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySubscribeVipVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeVipVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify a disaster recovery sync task. 
         /// If the status of a sync task is creating, created, check succeeded, or check failed, this API can be called to modify the task. 
         /// The information of the source and target instances cannot be modified, but the task name and the tables to be synced can.
@@ -606,6 +1046,86 @@ namespace TencentCloud.Dts.V20180330
              {
                  var strResp = this.InternalRequestSync(req, "ModifySyncJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to deactivate an isolated data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="OfflineIsolatedSubscribeRequest"/></param>
+        /// <returns><see cref="OfflineIsolatedSubscribeResponse"/></returns>
+        public async Task<OfflineIsolatedSubscribeResponse> OfflineIsolatedSubscribe(OfflineIsolatedSubscribeRequest req)
+        {
+             JsonResponseModel<OfflineIsolatedSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OfflineIsolatedSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OfflineIsolatedSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to deactivate an isolated data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="OfflineIsolatedSubscribeRequest"/></param>
+        /// <returns><see cref="OfflineIsolatedSubscribeResponse"/></returns>
+        public OfflineIsolatedSubscribeResponse OfflineIsolatedSubscribeSync(OfflineIsolatedSubscribeRequest req)
+        {
+             JsonResponseModel<OfflineIsolatedSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OfflineIsolatedSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OfflineIsolatedSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to reset a data subscription instance. Once reset, an activated instance can be bound to other database instances through the `ActivateSubscribe` API.
+        /// </summary>
+        /// <param name="req"><see cref="ResetSubscribeRequest"/></param>
+        /// <returns><see cref="ResetSubscribeResponse"/></returns>
+        public async Task<ResetSubscribeResponse> ResetSubscribe(ResetSubscribeRequest req)
+        {
+             JsonResponseModel<ResetSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to reset a data subscription instance. Once reset, an activated instance can be bound to other database instances through the `ActivateSubscribe` API.
+        /// </summary>
+        /// <param name="req"><see cref="ResetSubscribeRequest"/></param>
+        /// <returns><see cref="ResetSubscribeResponse"/></returns>
+        public ResetSubscribeResponse ResetSubscribeSync(ResetSubscribeRequest req)
+        {
+             JsonResponseModel<ResetSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetSubscribeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -44,16 +44,14 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Push start time.
-        /// In UTC format.
-        /// Example: 2019-01-07T12:00:00Z.
+        /// In UTC format, such as 2019-01-07T12:00:00Z.
         /// </summary>
         [JsonProperty("StreamStartTime")]
         public string StreamStartTime{ get; set; }
 
         /// <summary>
         /// Push end time.
-        /// In UTC format.
-        /// Example: 2019-01-07T15:00:00Z.
+        /// In UTC format, such as 2019-01-07T15:00:00Z.
         /// </summary>
         [JsonProperty("StreamEndTime")]
         public string StreamEndTime{ get; set; }

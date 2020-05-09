@@ -37,19 +37,21 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Screencapturing interval in seconds. Value range: 5–300s.
+        /// Screencapturing interval. Value range: 5–300s.
         /// </summary>
         [JsonProperty("SnapshotInterval")]
         public long? SnapshotInterval{ get; set; }
 
         /// <summary>
-        /// Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
+        /// Screenshot width. Value range: 0–3000. 
+        /// 0: original width and fit to the original ratio.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
+        /// Screenshot height. Value range: 0–2000.
+        /// 0: original height and fit to the original ratio.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
@@ -61,7 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? PornFlag{ get; set; }
 
         /// <summary>
-        /// COS `AppId`.
+        /// COS application ID.
         /// </summary>
         [JsonProperty("CosAppId")]
         public long? CosAppId{ get; set; }
@@ -79,10 +81,24 @@ namespace TencentCloud.Live.V20180801.Models
         public string CosRegion{ get; set; }
 
         /// <summary>
-        /// Template description
+        /// Template description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// COS bucket folder prefix.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CosPrefix")]
+        public string CosPrefix{ get; set; }
+
+        /// <summary>
+        /// COS filename.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CosFileName")]
+        public string CosFileName{ get; set; }
 
 
         /// <summary>
@@ -100,6 +116,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamSimple(map, prefix + "CosRegion", this.CosRegion);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+            this.SetParamSimple(map, prefix + "CosFileName", this.CosFileName);
         }
     }
 }

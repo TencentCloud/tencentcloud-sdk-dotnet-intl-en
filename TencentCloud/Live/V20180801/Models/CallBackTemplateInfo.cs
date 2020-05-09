@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamBeginNotifyUrl{ get; set; }
 
         /// <summary>
-        /// Stream ending callback URL.
+        /// Interruption callback URL.
         /// </summary>
         [JsonProperty("StreamEndNotifyUrl")]
         public string StreamEndNotifyUrl{ get; set; }

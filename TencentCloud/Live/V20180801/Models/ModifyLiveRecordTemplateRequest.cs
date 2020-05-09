@@ -55,7 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         public RecordParam HlsParam{ get; set; }
 
         /// <summary>
-        /// Mp4 recording parameter, which is set when Mp4 recording is enabled.
+        /// MP4 recording parameter, which is set when MP4 recording is enabled.
         /// </summary>
         [JsonProperty("Mp4Param")]
         public RecordParam Mp4Param{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Live.V20180801.Models
         public HlsSpecialParam HlsSpecialParam{ get; set; }
 
         /// <summary>
-        /// Mp3 recording parameter, which is set when Mp3 recording is enabled.
+        /// MP3 recording parameter, which is set when MP3 recording is enabled.
         /// </summary>
         [JsonProperty("Mp3Param")]
         public RecordParam Mp3Param{ get; set; }

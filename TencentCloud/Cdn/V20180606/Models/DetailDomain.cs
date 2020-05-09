@@ -317,6 +317,25 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AwsPrivateAccess")]
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// SCDN configuration
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecurityConfig")]
+        public SecurityConfig SecurityConfig{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ImageOptimization")]
+        public ImageOptimization ImageOptimization{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("UserAgentFilter")]
+        public UserAgentFilter UserAgentFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -363,6 +382,9 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Readonly", this.Readonly);
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
             this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+            this.SetParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
+            this.SetParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
+            this.SetParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
         }
     }
 }

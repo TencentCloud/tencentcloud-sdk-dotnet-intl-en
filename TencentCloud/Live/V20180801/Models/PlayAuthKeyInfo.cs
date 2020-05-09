@@ -31,7 +31,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Whether to enable. 0: disabled; 1: enabled.
+        /// Whether to enable:
+        /// 0: disable.
+        /// 1: enable.
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
@@ -49,7 +51,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? AuthDelta{ get; set; }
 
         /// <summary>
-        /// Authentication BackKey.
+        /// Authentication `BackKey`.
         /// </summary>
         [JsonProperty("AuthBackKey")]
         public string AuthBackKey{ get; set; }

@@ -25,14 +25,15 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Template name, which is a non-empty string.
+        /// Template name.
         /// Maximum length: 255 bytes.
+        /// Only letters, digits, underscores, and hyphens can be contained.
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// COS `AppId`.
+        /// COS application ID.
         /// </summary>
         [JsonProperty("CosAppId")]
         public long? CosAppId{ get; set; }
@@ -52,6 +53,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// Description.
         /// Maximum length: 1,024 bytes.
+        /// Only letters, digits, underscores, and hyphens can be contained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -81,6 +83,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PornFlag")]
         public long? PornFlag{ get; set; }
 
+        /// <summary>
+        /// COS bucket folder prefix.
+        /// </summary>
+        [JsonProperty("CosPrefix")]
+        public string CosPrefix{ get; set; }
+
+        /// <summary>
+        /// COS filename.
+        /// </summary>
+        [JsonProperty("CosFileName")]
+        public string CosFileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +110,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "PornFlag", this.PornFlag);
+            this.SetParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+            this.SetParamSimple(map, prefix + "CosFileName", this.CosFileName);
         }
     }
 }

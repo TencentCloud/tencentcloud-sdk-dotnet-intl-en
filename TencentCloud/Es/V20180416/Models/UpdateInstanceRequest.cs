@@ -138,6 +138,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaPrivateAccess")]
         public string KibanaPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// Enables or disables user authentication for ES Basic Edition v6.8 and above
+        /// </summary>
+        [JsonProperty("BasicSecurityType")]
+        public long? BasicSecurityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +168,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "EsPublicAcl.", this.EsPublicAcl);
             this.SetParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
             this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
+            this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         }
     }
 }

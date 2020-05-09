@@ -25,76 +25,85 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// LVB domain name
+        /// LVB domain name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Domain name type. 0: push, 1: playback
+        /// Domain name type:
+        /// 0: push.
+        /// 1: playback.
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// Domain name status. 0: disabled, 1: enabled.
+        /// Domain name status:
+        /// 0: deactivated.
+        /// 1: activated.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
+        /// Whether there is a CNAME record pointing to a fixed rule domain name:
+        /// 0: no.
+        /// 1: yes.
         /// </summary>
         [JsonProperty("BCName")]
         public ulong? BCName{ get; set; }
 
         /// <summary>
-        /// Domain name corresponding to the CNAME record
+        /// Domain name corresponding to CNAME record.
         /// </summary>
         [JsonProperty("TargetDomain")]
         public string TargetDomain{ get; set; }
 
         /// <summary>
         /// Playback region. This parameter is valid only if `Type` is 1.
-        /// 1: Mainland China, 2: global, 3: outside Mainland China.
+        /// 1: in Mainland China.
+        /// 2: global.
+        /// 3: outside Mainland China.
         /// </summary>
         [JsonProperty("PlayType")]
         public long? PlayType{ get; set; }
 
         /// <summary>
-        /// 0: LVB,
+        /// Whether it is LCB:
+        /// 0: LVB.
         /// 1: LCB.
         /// </summary>
         [JsonProperty("IsDelayLive")]
         public long? IsDelayLive{ get; set; }
 
         /// <summary>
-        /// Information of currently used CNAME record
+        /// Information of currently used CNAME record.
         /// </summary>
         [JsonProperty("CurrentCName")]
         public string CurrentCName{ get; set; }
 
         /// <summary>
-        /// Whether it is a leased domain name
+        /// Disused parameter, which can be ignored.
         /// </summary>
         [JsonProperty("RentTag")]
         public long? RentTag{ get; set; }
 
         /// <summary>
-        /// Expiration time of leased domain name
+        /// Disused parameter, which can be ignored.
         /// </summary>
         [JsonProperty("RentExpireTime")]
         public string RentExpireTime{ get; set; }
 
         /// <summary>
-        /// 0: LVB,
-        /// 1: LVB on WeChat Mini Program.
+        /// 0: LVB.
+        /// 1: LVB on Mini Program.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsMiniProgramLive")]

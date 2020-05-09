@@ -213,6 +213,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to create a white-box key. Up to 50 ones can be created.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="CreateWhiteBoxKeyResponse"/></returns>
+        public async Task<CreateWhiteBoxKeyResponse> CreateWhiteBoxKey(CreateWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a white-box key. Up to 50 ones can be created.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="CreateWhiteBoxKeyResponse"/></returns>
+        public CreateWhiteBoxKeyResponse CreateWhiteBoxKeySync(CreateWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to decrypt the ciphertext and obtain the plaintext data.
         /// </summary>
         /// <param name="req"><see cref="DecryptRequest"/></param>
@@ -293,6 +333,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to delete a white-box key. Note: only disabled white-box keys can be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DeleteWhiteBoxKeyResponse"/></returns>
+        public async Task<DeleteWhiteBoxKeyResponse> DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a white-box key. Note: only disabled white-box keys can be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DeleteWhiteBoxKeyResponse"/></returns>
+        public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKeySync(DeleteWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the attribute details of the CMK with a specified `KeyId`.
         /// </summary>
         /// <param name="req"><see cref="DescribeKeyRequest"/></param>
@@ -364,6 +444,166 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "DescribeKeys");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get a white-box decryption key.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxDecryptKeyRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxDecryptKeyResponse"/></returns>
+        public async Task<DescribeWhiteBoxDecryptKeyResponse> DescribeWhiteBoxDecryptKey(DescribeWhiteBoxDecryptKeyRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxDecryptKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get a white-box decryption key.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxDecryptKeyRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxDecryptKeyResponse"/></returns>
+        public DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKeySync(DescribeWhiteBoxDecryptKeyRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxDecryptKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to display white-box key information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxKeyResponse"/></returns>
+        public async Task<DescribeWhiteBoxKeyResponse> DescribeWhiteBoxKey(DescribeWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to display white-box key information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxKeyResponse"/></returns>
+        public DescribeWhiteBoxKeyResponse DescribeWhiteBoxKeySync(DescribeWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the white-box key list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxKeyDetailsRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxKeyDetailsResponse"/></returns>
+        public async Task<DescribeWhiteBoxKeyDetailsResponse> DescribeWhiteBoxKeyDetails(DescribeWhiteBoxKeyDetailsRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxKeyDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the white-box key list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxKeyDetailsRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxKeyDetailsResponse"/></returns>
+        public DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetailsSync(DescribeWhiteBoxKeyDetailsRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxKeyDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the white-box key service status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxServiceStatusRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxServiceStatusResponse"/></returns>
+        public async Task<DescribeWhiteBoxServiceStatusResponse> DescribeWhiteBoxServiceStatus(DescribeWhiteBoxServiceStatusRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxServiceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the white-box key service status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxServiceStatusRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxServiceStatusResponse"/></returns>
+        public DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatusSync(DescribeWhiteBoxServiceStatusRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxServiceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,6 +733,86 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to disable a white-box key.
+        /// </summary>
+        /// <param name="req"><see cref="DisableWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DisableWhiteBoxKeyResponse"/></returns>
+        public async Task<DisableWhiteBoxKeyResponse> DisableWhiteBoxKey(DisableWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable a white-box key.
+        /// </summary>
+        /// <param name="req"><see cref="DisableWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DisableWhiteBoxKeyResponse"/></returns>
+        public DisableWhiteBoxKeyResponse DisableWhiteBoxKeySync(DisableWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable white-box keys in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DisableWhiteBoxKeysRequest"/></param>
+        /// <returns><see cref="DisableWhiteBoxKeysResponse"/></returns>
+        public async Task<DisableWhiteBoxKeysResponse> DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req)
+        {
+             JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableWhiteBoxKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable white-box keys in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DisableWhiteBoxKeysRequest"/></param>
+        /// <returns><see cref="DisableWhiteBoxKeysResponse"/></returns>
+        public DisableWhiteBoxKeysResponse DisableWhiteBoxKeysSync(DisableWhiteBoxKeysRequest req)
+        {
+             JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableWhiteBoxKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Enable a specified CMK.
         /// </summary>
         /// <param name="req"><see cref="EnableKeyRequest"/></param>
@@ -613,6 +933,86 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to enable a white-box key.
+        /// </summary>
+        /// <param name="req"><see cref="EnableWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="EnableWhiteBoxKeyResponse"/></returns>
+        public async Task<EnableWhiteBoxKeyResponse> EnableWhiteBoxKey(EnableWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable a white-box key.
+        /// </summary>
+        /// <param name="req"><see cref="EnableWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="EnableWhiteBoxKeyResponse"/></returns>
+        public EnableWhiteBoxKeyResponse EnableWhiteBoxKeySync(EnableWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable white-box keys in batches.
+        /// </summary>
+        /// <param name="req"><see cref="EnableWhiteBoxKeysRequest"/></param>
+        /// <returns><see cref="EnableWhiteBoxKeysResponse"/></returns>
+        public async Task<EnableWhiteBoxKeysResponse> EnableWhiteBoxKeys(EnableWhiteBoxKeysRequest req)
+        {
+             JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableWhiteBoxKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable white-box keys in batches.
+        /// </summary>
+        /// <param name="req"><see cref="EnableWhiteBoxKeysRequest"/></param>
+        /// <returns><see cref="EnableWhiteBoxKeysResponse"/></returns>
+        public EnableWhiteBoxKeysResponse EnableWhiteBoxKeysSync(EnableWhiteBoxKeysRequest req)
+        {
+             JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableWhiteBoxKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to encrypt any data up to 4KB. It can be used to encrypt database passwords, RSA Key, or other small sensitive information. For application data encryption, use the DataKey generated by GenerateDataKey to perform local data encryption and decryption operations
         /// </summary>
         /// <param name="req"><see cref="EncryptRequest"/></param>
@@ -644,6 +1044,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "Encrypt");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to encrypt data with a white-box key.
+        /// </summary>
+        /// <param name="req"><see cref="EncryptByWhiteBoxRequest"/></param>
+        /// <returns><see cref="EncryptByWhiteBoxResponse"/></returns>
+        public async Task<EncryptByWhiteBoxResponse> EncryptByWhiteBox(EncryptByWhiteBoxRequest req)
+        {
+             JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EncryptByWhiteBox");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptByWhiteBoxResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to encrypt data with a white-box key.
+        /// </summary>
+        /// <param name="req"><see cref="EncryptByWhiteBoxRequest"/></param>
+        /// <returns><see cref="EncryptByWhiteBoxResponse"/></returns>
+        public EncryptByWhiteBoxResponse EncryptByWhiteBoxSync(EncryptByWhiteBoxRequest req)
+        {
+             JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EncryptByWhiteBox");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptByWhiteBoxResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

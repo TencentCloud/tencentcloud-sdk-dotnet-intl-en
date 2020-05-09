@@ -60,6 +60,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+        /// </summary>
+        [JsonProperty("RoutingKey")]
+        public string RoutingKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ClientContext", this.ClientContext);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "RoutingKey", this.RoutingKey);
         }
     }
 }

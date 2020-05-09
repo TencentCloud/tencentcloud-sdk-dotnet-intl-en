@@ -57,6 +57,19 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
+        /// <summary>
+        /// Local disk information
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LocalDiskInfo")]
+        public LocalDiskInfo LocalDiskInfo{ get; set; }
+
+        /// <summary>
+        /// Number of node disks
+        /// </summary>
+        [JsonProperty("DiskCount")]
+        public ulong? DiskCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +81,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
+            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
         }
     }
 }

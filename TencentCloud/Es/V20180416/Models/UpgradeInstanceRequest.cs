@@ -31,7 +31,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Target ES version
+        /// Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
         /// </summary>
         [JsonProperty("EsVersion")]
         public string EsVersion{ get; set; }

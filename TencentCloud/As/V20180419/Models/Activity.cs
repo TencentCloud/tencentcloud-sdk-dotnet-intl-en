@@ -103,6 +103,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("StatusMessageSimplified")]
         public string StatusMessageSimplified{ get; set; }
 
+        /// <summary>
+        /// Result of the lifecycle hook action in the scaling activity
+        /// </summary>
+        [JsonProperty("LifecycleActionResultSet")]
+        public LifecycleActionResultInfo[] LifecycleActionResultSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "ActivityRelatedInstanceSet.", this.ActivityRelatedInstanceSet);
             this.SetParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
+            this.SetParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
         }
     }
 }

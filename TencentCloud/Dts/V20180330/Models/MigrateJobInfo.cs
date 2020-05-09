@@ -114,6 +114,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("Detail")]
         public MigrateDetailInfo Detail{ get; set; }
 
+        /// <summary>
+        /// Prompt message for task error, which is not null or empty when an error occurs with the task
+        /// </summary>
+        [JsonProperty("ErrorInfo")]
+        public ErrorInfo[] ErrorInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Detail.", this.Detail);
+            this.SetParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
         }
     }
 }

@@ -61,7 +61,7 @@ namespace TencentCloud.As.V20180419.Models
         public MetricAlarm MetricAlarm{ get; set; }
 
         /// <summary>
-        /// Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+        /// Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
         /// If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
         /// </summary>
         [JsonProperty("NotificationUserGroupIds")]

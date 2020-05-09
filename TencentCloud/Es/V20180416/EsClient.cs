@@ -133,6 +133,86 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// This API is used to query the eligible ES cluster logs in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLogsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLogsResponse"/></returns>
+        public async Task<DescribeInstanceLogsResponse> DescribeInstanceLogs(DescribeInstanceLogsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the eligible ES cluster logs in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLogsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLogsResponse"/></returns>
+        public DescribeInstanceLogsResponse DescribeInstanceLogsSync(DescribeInstanceLogsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the operation history of an instance by specified criteria.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceOperationsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceOperationsResponse"/></returns>
+        public async Task<DescribeInstanceOperationsResponse> DescribeInstanceOperations(DescribeInstanceOperationsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceOperationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceOperations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceOperationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the operation history of an instance by specified criteria.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceOperationsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceOperationsResponse"/></returns>
+        public DescribeInstanceOperationsResponse DescribeInstanceOperationsSync(DescribeInstanceOperationsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceOperationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceOperations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceOperationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query all eligible instances in the current region under the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>

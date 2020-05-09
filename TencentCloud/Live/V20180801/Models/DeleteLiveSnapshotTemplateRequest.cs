@@ -26,6 +26,8 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Template ID.
+        /// 1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+        /// 2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

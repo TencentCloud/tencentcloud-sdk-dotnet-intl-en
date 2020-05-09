@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// Dedicated tunnel ID.
+        /// Dedicated tunnel ID
         /// </summary>
         [JsonProperty("DirectConnectTunnelId")]
         public string DirectConnectTunnelId{ get; set; }
@@ -37,16 +37,16 @@ namespace TencentCloud.Dc.V20180410.Models
         public string DirectConnectId{ get; set; }
 
         /// <summary>
-        /// Dedicated tunnel status.
-        /// AVAILABLE: Ready or connected.
-        /// PENDING: Applying.
-        /// ALLOCATING: Configuring.
-        /// ALLOCATED: Configured.
-        /// ALTERING: Modifying.
-        /// DELETING: Deleting.
-        /// DELETED: Deleted.
-        /// COMFIRMING: To be accepted.
-        /// REJECTED: Rejected.
+        /// Dedicated tunnel status
+        /// AVAILABLE: ready or connected
+        /// PENDING: applying
+        /// ALLOCATING: configuring
+        /// ALLOCATED: configured
+        /// ALTERING: modifying
+        /// DELETING: deleting
+        /// DELETED: deleted
+        /// CONFIRMING: to be accepted
+        /// REJECTED: rejected
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
@@ -58,7 +58,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string DirectConnectOwnerAccount{ get; set; }
 
         /// <summary>
-        /// Dedicated tunnel owner, i.e., developer account ID.
+        /// Dedicated tunnel owner, i.e., developer account ID
         /// </summary>
         [JsonProperty("OwnerAccount")]
         public string OwnerAccount{ get; set; }
@@ -107,7 +107,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public RouteFilterPrefix[] RouteFilterPrefixes{ get; set; }
 
         /// <summary>
-        /// VLAN of a dedicated tunnel.
+        /// Dedicated tunnel `Vlan`
         /// </summary>
         [JsonProperty("Vlan")]
         public long? Vlan{ get; set; }
@@ -125,25 +125,25 @@ namespace TencentCloud.Dc.V20180410.Models
         public string CustomerAddress{ get; set; }
 
         /// <summary>
-        /// Dedicated tunnel name.
+        /// Dedicated tunnel name
         /// </summary>
         [JsonProperty("DirectConnectTunnelName")]
         public string DirectConnectTunnelName{ get; set; }
 
         /// <summary>
-        /// Creation time of a dedicated tunnel.
+        /// Dedicated tunnel creation time
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Bandwidth value of a dedicated tunnel.
+        /// Dedicated tunnel bandwidth value
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Tag value of a dedicated tunnel.
+        /// Dedicated tunnel tag value
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
@@ -184,7 +184,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public long? BfdEnable{ get; set; }
 
         /// <summary>
-        /// Access point type of a dedicated tunnel.
+        /// Dedicated tunnel access point type
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AccessPointType")]
@@ -203,6 +203,13 @@ namespace TencentCloud.Dc.V20180410.Models
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
+
+        /// <summary>
+        /// TencentBackupAddress, i.e., Tencent-side standby IP address
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TencentBackupAddress")]
+        public string TencentBackupAddress{ get; set; }
 
 
         /// <summary>
@@ -237,6 +244,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
             this.SetParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
+            this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         }
     }
 }

@@ -26,6 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Template ID.
+        /// Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

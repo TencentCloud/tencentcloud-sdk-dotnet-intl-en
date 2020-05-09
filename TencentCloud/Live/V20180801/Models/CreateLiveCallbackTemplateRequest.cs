@@ -25,8 +25,9 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Template name, which is a non-empty string.
+        /// Template name.
         /// Maximum length: 255 bytes.
+        /// Only letters, digits, underscores, and hyphens can be contained.
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -34,47 +35,49 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// Description.
         /// Maximum length: 1,024 bytes.
+        /// Only letters, digits, underscores, and hyphens can be contained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// Stream starting callback URL,
-        /// Protocol-related document: [Event Message Notification](/document/product/267/32744).
+        /// Protocol document: [Event Message Notification](/document/product/267/32744).
         /// </summary>
         [JsonProperty("StreamBeginNotifyUrl")]
         public string StreamBeginNotifyUrl{ get; set; }
 
         /// <summary>
-        /// Stream ending callback URL,
-        /// Protocol-related document: [Event Message Notification](/document/product/267/32744).
+        /// Interruption callback URL,
+        /// Protocol document: [Event Message Notification](/document/product/267/32744).
         /// </summary>
         [JsonProperty("StreamEndNotifyUrl")]
         public string StreamEndNotifyUrl{ get; set; }
 
         /// <summary>
         /// Recording callback URL,
-        /// Protocol-related document: [Event Message Notification](/document/product/267/32744).
+        /// Protocol document: [Event Message Notification](/document/product/267/32744).
         /// </summary>
         [JsonProperty("RecordNotifyUrl")]
         public string RecordNotifyUrl{ get; set; }
 
         /// <summary>
         /// Screencapturing callback URL,
-        /// Protocol-related document: [Event Message Notification](/document/product/267/32744).
+        /// Protocol document: [Event Message Notification](/document/product/267/32744).
         /// </summary>
         [JsonProperty("SnapshotNotifyUrl")]
         public string SnapshotNotifyUrl{ get; set; }
 
         /// <summary>
         /// Porn detection callback URL,
-        /// Protocol-related document: [Event Message Notification](/document/product/267/32741).
+        /// Protocol document: [Event Message Notification](/document/product/267/32741).
         /// </summary>
         [JsonProperty("PornCensorshipNotifyUrl")]
         public string PornCensorshipNotifyUrl{ get; set; }
 
         /// <summary>
-        /// Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
+        /// Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+        /// [Event Message Notification](/document/product/267/32744).
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }
