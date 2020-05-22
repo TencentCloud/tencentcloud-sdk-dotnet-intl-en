@@ -25,19 +25,20 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Basic cost of connection (unit: CNY/day).
+        /// Basic price of connection in USD/day.
         /// </summary>
         [JsonProperty("ProxyDailyPrice")]
         public float? ProxyDailyPrice{ get; set; }
 
         /// <summary>
-        /// Connection bandwidth price gradient.
+        /// Tiered price of connection bandwidth.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BandwidthUnitPrice")]
         public BandwidthPriceGradient[] BandwidthUnitPrice{ get; set; }
 
         /// <summary>
-        /// Discounted basic cost of connection (unit: CNY/day).
+        /// Discounted basic price of connection in USD/day.
         /// </summary>
         [JsonProperty("DiscountProxyDailyPrice")]
         public float? DiscountProxyDailyPrice{ get; set; }
@@ -47,6 +48,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
+
+        /// <summary>
+        /// Connection traffic price in USD/GB.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FlowUnitPrice")]
+        public float? FlowUnitPrice{ get; set; }
+
+        /// <summary>
+        /// Discounted connection traffic price in USD/GB.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DiscountFlowUnitPrice")]
+        public float? DiscountFlowUnitPrice{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -64,6 +79,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "BandwidthUnitPrice.", this.BandwidthUnitPrice);
             this.SetParamSimple(map, prefix + "DiscountProxyDailyPrice", this.DiscountProxyDailyPrice);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamSimple(map, prefix + "FlowUnitPrice", this.FlowUnitPrice);
+            this.SetParamSimple(map, prefix + "DiscountFlowUnitPrice", this.DiscountFlowUnitPrice);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

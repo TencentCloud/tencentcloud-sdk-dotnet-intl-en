@@ -62,7 +62,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Listener status:
+        /// Listener status. Valid values:
         /// 0: running;
         /// 1: creating;
         /// 2: terminating;
@@ -79,7 +79,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
+        /// Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
         /// </summary>
         [JsonProperty("BindStatus")]
         public ulong? BindStatus{ get; set; }

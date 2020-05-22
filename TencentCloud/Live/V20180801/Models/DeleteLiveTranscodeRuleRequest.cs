@@ -26,28 +26,24 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Playback domain name.
-        /// For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-        /// Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
+        /// Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
         /// Stream name.
-        /// Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
         /// Template ID.
-        /// Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

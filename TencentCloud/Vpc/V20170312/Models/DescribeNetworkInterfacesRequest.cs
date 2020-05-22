@@ -40,18 +40,21 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
         /// <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
         /// <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
+        /// <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
+        /// <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
+        /// <li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Offset. The default value is 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of values to be returned. The default value is 20. Maximum is 100.
+        /// Number of returned results. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

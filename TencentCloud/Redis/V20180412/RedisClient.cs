@@ -653,7 +653,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the big key size distribution of an instance
+        /// This API is used to query the distribution of instance access duration.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTookDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTookDistResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the big key size distribution of an instance
+        /// This API is used to query the distribution of instance access duration.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTookDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTookDistResponse"/></returns>

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public NetworkInterface[] NetworkInterfaceSet{ get; set; }
 
         /// <summary>
-        /// The number of instances meeting the filter condition.
+        /// Number of eligible instances.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

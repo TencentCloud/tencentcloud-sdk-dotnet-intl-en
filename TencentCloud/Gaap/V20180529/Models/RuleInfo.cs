@@ -61,13 +61,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Health check identifier: 1 (enable), 0 (disable).
+        /// Whether health check is enabled. 1: enabled, 0: disabled
         /// </summary>
         [JsonProperty("HealthCheck")]
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
-        /// Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+        /// Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
         /// </summary>
         [JsonProperty("RuleStatus")]
         public ulong? RuleStatus{ get; set; }
@@ -85,7 +85,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         public BindRealServer[] RealServerSet{ get; set; }
 
         /// <summary>
-        /// Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+        /// Origin server service status. 0: exceptional, 1: normal
+        /// If health check is not enabled, this status will always be normal.
+        /// As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
         /// </summary>
         [JsonProperty("BindStatus")]
         public ulong? BindStatus{ get; set; }

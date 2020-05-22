@@ -1281,6 +1281,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the basic information of an instance (instance ID, instance name, and whether encryption is enabled).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceInfoRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceInfoResponse"/></returns>
+        public async Task<DescribeDBInstanceInfoResponse> DescribeDBInstanceInfo(DescribeDBInstanceInfoRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the basic information of an instance (instance ID, instance name, and whether encryption is enabled).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceInfoRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceInfoResponse"/></returns>
+        public DescribeDBInstanceInfoResponse DescribeDBInstanceInfoSync(DescribeDBInstanceInfoRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeDBInstanceRebootTime) is used to query the estimated time needed for a TencentDB instance to restart.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceRebootTimeRequest"/></param>
@@ -1992,6 +2032,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRollbackRangeTime");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRollbackRangeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a TencentDB instance rollback task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRollbackTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeRollbackTaskDetailResponse"/></returns>
+        public async Task<DescribeRollbackTaskDetailResponse> DescribeRollbackTaskDetail(DescribeRollbackTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeRollbackTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRollbackTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRollbackTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a TencentDB instance rollback task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRollbackTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeRollbackTaskDetailResponse"/></returns>
+        public DescribeRollbackTaskDetailResponse DescribeRollbackTaskDetailSync(DescribeRollbackTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeRollbackTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRollbackTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRollbackTaskDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

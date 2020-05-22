@@ -67,6 +67,19 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] SecurityPolicy{ get; set; }
 
         /// <summary>
+        /// Cluster Kubeconfig file
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Kubeconfig")]
+        public string Kubeconfig{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("JnsGwEndpoint")]
+        public string JnsGwEndpoint{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +98,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "PgwEndpoint", this.PgwEndpoint);
             this.SetParamArraySimple(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
+            this.SetParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
+            this.SetParamSimple(map, prefix + "JnsGwEndpoint", this.JnsGwEndpoint);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

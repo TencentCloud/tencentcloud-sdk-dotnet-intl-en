@@ -26,12 +26,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// Database name
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
         /// Table details
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Table")]
         public RollbackTableName[] Table{ get; set; }

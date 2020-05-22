@@ -83,13 +83,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? ApplicableForCLB{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of tags to be bound.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }

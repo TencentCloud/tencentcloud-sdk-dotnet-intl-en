@@ -46,7 +46,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Output width of input video image. Value range:
-        /// Pixel: [0,3000]
+        /// Pixel: [0,2000]
         /// Percentage: [0.01,0.99]
         /// If this parameter is left empty, the input stream width will be used by default.
         /// If percentage is used, the expected output is (percentage * background width).
@@ -56,7 +56,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Output height of input video image. Value range:
-        /// Pixel: [0,3000]
+        /// Pixel: [0,2000]
         /// Percentage: [0.01,0.99]
         /// If this parameter is left empty, the input stream height will be used by default.
         /// If percentage is used, the expected output is (percentage * background height).
@@ -66,7 +66,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// X-axis offset of input in output video image. Value range:
-        /// Pixel: [0,3000]
+        /// Pixel: [0,2000]
         /// Percentage: [0.01,0.99]
         /// If this parameter is left empty, 0 will be used by default.
         /// Horizontal offset from the top-left corner of main host background video image. 
@@ -77,7 +77,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Y-axis offset of input in output video image. Value range:
-        /// Pixel: [0,3000]
+        /// Pixel: [0,2000]
         /// Percentage: [0.01,0.99]
         /// If this parameter is left empty, 0 will be used by default.
         /// Vertical offset from the top-left corner of main host background video image. 

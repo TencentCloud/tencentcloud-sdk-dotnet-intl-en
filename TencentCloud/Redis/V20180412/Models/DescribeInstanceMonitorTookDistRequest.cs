@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Date{ get; set; }
 
         /// <summary>
-        /// Request type. 1: string type; 2: all types
+        /// Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
         /// </summary>
         [JsonProperty("SpanType")]
         public long? SpanType{ get; set; }

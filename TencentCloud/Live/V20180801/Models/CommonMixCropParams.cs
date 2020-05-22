@@ -25,25 +25,25 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Crop width. Value range: [0,3000].
+        /// Crop width. Value range: [0,2000].
         /// </summary>
         [JsonProperty("CropWidth")]
         public float? CropWidth{ get; set; }
 
         /// <summary>
-        /// Crop height. Value range: [0,3000].
+        /// Crop height. Value range: [0,2000].
         /// </summary>
         [JsonProperty("CropHeight")]
         public float? CropHeight{ get; set; }
 
         /// <summary>
-        /// Starting crop X coordinate. Value range: [0,3000].
+        /// Starting crop X coordinate. Value range: [0,2000].
         /// </summary>
         [JsonProperty("CropStartLocationX")]
         public float? CropStartLocationX{ get; set; }
 
         /// <summary>
-        /// Starting crop Y coordinate. Value range: [0,3000].
+        /// Starting crop Y coordinate. Value range: [0,2000].
         /// </summary>
         [JsonProperty("CropStartLocationY")]
         public float? CropStartLocationY{ get; set; }

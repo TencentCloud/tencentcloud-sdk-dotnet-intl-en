@@ -32,14 +32,14 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Connection status.
-        /// Where:
+        /// Valid values:
         /// RUNNING: running;
         /// CREATING: creating;
         /// DESTROYING: terminating;
         /// OPENING: enabling;
         /// CLOSING: disabling;
         /// CLOSED: disabled;
-        /// ADJUSTING: adjusting configuration
+        /// ADJUSTING: adjusting configuration;
         /// ISOLATING: isolating;
         /// ISOLATED: isolated;
         /// UNKNOWN: unknown status.

@@ -26,6 +26,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// TencentDB instance ID
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -44,12 +45,14 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// Information of the databases to be rolled back, which means rollback at the database level
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Databases")]
         public RollbackDBName[] Databases{ get; set; }
 
         /// <summary>
         /// Information of the tables to be rolled back, which means rollback at the table level
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tables")]
         public RollbackTables[] Tables{ get; set; }

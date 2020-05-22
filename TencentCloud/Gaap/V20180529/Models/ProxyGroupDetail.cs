@@ -47,7 +47,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 0: running normally;
         /// 1: creating;
         /// 4: terminating;
-        /// 11. Migrating.
+        /// 11: migrating;
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

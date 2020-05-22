@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// Protocol. Valid values: TCP, UDP, and ICMP.
+        /// Protocol. Valid values: TCP, UDP, ICMP, ALL.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Port (all, a single port, or a port range).
+        /// Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }

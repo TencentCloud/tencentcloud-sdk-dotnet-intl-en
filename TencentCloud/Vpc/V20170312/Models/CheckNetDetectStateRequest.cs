@@ -53,25 +53,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NextHopDestination{ get; set; }
 
         /// <summary>
-        /// The ID of a network detection instance, such as netd-12345678.
+        /// ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
         /// </summary>
         [JsonProperty("NetDetectId")]
         public string NetDetectId{ get; set; }
 
         /// <summary>
-        /// The `ID` of a `VPC` instance, such as `vpc-12345678`.
+        /// ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The ID of a subnet instance, such as subnet-12345678.
+        /// ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// The name of a network detection instance. The maximum length is 60 characters.
+        /// The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
         /// </summary>
         [JsonProperty("NetDetectName")]
         public string NetDetectName{ get; set; }

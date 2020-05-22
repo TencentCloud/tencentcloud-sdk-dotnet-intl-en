@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The ID of the CVM instance to be queried.
+        /// ID of a CVM instance or ENI to query
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

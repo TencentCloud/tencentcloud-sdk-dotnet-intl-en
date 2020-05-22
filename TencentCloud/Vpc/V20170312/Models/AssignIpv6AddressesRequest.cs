@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter.
+        /// A list of `IPv6` addresses. You can specify a maximum of 10 at one time. The quota is calculated together with that of `Ipv6AddressCount`, a required input parameter alternative to this one.
         /// </summary>
         [JsonProperty("Ipv6Addresses")]
         public Ipv6Address[] Ipv6Addresses{ get; set; }
 
         /// <summary>
-        /// The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter.
+        /// The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with that of `Ipv6Addresses`, a required input parameter alternative to this one.
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public ulong? Ipv6AddressCount{ get; set; }

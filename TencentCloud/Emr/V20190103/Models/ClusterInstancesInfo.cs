@@ -234,10 +234,25 @@ namespace TencentCloud.Emr.V20190103.Models
         public string HiveMetaDb{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster type: EMR, CLICKHOUSE, DRUID
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceClass")]
         public string ServiceClass{ get; set; }
+
+        /// <summary>
+        /// Alias serialization of all nodes in cluster
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AliasInfo")]
+        public string AliasInfo{ get; set; }
+
+        /// <summary>
+        /// Cluster version ID
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public long? ProductId{ get; set; }
 
 
         /// <summary>
@@ -272,6 +287,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "HiveMetaDb", this.HiveMetaDb);
             this.SetParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
+            this.SetParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

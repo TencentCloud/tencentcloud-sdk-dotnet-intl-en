@@ -66,6 +66,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("DefaultServer")]
         public bool? DefaultServer{ get; set; }
 
+        /// <summary>
+        /// A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+        /// </summary>
+        [JsonProperty("NewDefaultServerDomain")]
+        public string NewDefaultServerDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+            this.SetParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
         }
     }
 }

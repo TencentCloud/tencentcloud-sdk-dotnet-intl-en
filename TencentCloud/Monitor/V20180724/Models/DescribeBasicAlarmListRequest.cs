@@ -91,7 +91,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] InstanceGroupIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Filtering by metric names
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }

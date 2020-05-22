@@ -110,6 +110,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("ValidTo")]
         public ulong? ValidTo{ get; set; }
 
+        /// <summary>
+        /// Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
             this.SetParamSimple(map, prefix + "ValidTo", this.ValidTo);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

@@ -85,7 +85,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string DecryptKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

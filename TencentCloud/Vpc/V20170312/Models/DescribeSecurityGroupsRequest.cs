@@ -42,13 +42,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Offset.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }
 
         /// <summary>
-        /// The returned quantity.
+        /// Number of returned results. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }

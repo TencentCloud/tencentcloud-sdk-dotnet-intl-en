@@ -62,7 +62,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Listener status:
+        /// Listener status. Valid values:
         /// 0: running;
         /// 1: creating;
         /// 2: terminating;
@@ -73,10 +73,10 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? ListenerStatus{ get; set; }
 
         /// <summary>
-        /// Origin server access policy of listeners:
+        /// Origin server access policy of listener. Valid values:
         /// rr: round robin;
         /// wrr: weighted round robin;
-        /// lc: least connections.
+        /// lc: least connection.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -94,16 +94,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? DelayLoop{ get; set; }
 
         /// <summary>
-        /// Whether to enable the listener health check:
-        /// 0: disable;
-        /// 1: enable.
+        /// Whether health check is enabled for listener. Valid values:
+        /// 0: disabled;
+        /// 1: enabled
         /// </summary>
         [JsonProperty("HealthCheck")]
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
-        /// Status of the origin server bound to listeners:
-        /// 0: exception;
+        /// Status of origin server bound to listener. Valid values:
+        /// 0: exceptional;
         /// 1: normal.
         /// </summary>
         [JsonProperty("BindStatus")]

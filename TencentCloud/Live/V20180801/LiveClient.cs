@@ -1148,6 +1148,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// This API is used to delete a transcoding rule.
+        /// `DomainName+AppName+StreamName+TemplateId` uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. `TemplateId` is required. Even if other parameters are empty, you still need to pass in an empty string to make a strong match.
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveTranscodeRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveTranscodeRuleResponse"/></returns>
@@ -1168,6 +1169,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// This API is used to delete a transcoding rule.
+        /// `DomainName+AppName+StreamName+TemplateId` uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. `TemplateId` is required. Even if other parameters are empty, you still need to pass in an empty string to make a strong match.
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveTranscodeRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveTranscodeRuleResponse"/></returns>
@@ -1298,6 +1300,126 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveWatermarkRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveWatermarkRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the data of billable LVB bandwidth and traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
+        /// <returns><see cref="DescribeBillBandwidthAndFluxListResponse"/></returns>
+        public async Task<DescribeBillBandwidthAndFluxListResponse> DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req)
+        {
+             JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillBandwidthAndFluxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the data of billable LVB bandwidth and traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
+        /// <returns><see cref="DescribeBillBandwidthAndFluxListResponse"/></returns>
+        public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxListSync(DescribeBillBandwidthAndFluxListRequest req)
+        {
+             JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillBandwidthAndFluxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentRecordStreamNumRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentRecordStreamNumResponse"/></returns>
+        public async Task<DescribeConcurrentRecordStreamNumResponse> DescribeConcurrentRecordStreamNum(DescribeConcurrentRecordStreamNumRequest req)
+        {
+             JsonResponseModel<DescribeConcurrentRecordStreamNumResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConcurrentRecordStreamNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConcurrentRecordStreamNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentRecordStreamNumRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentRecordStreamNumResponse"/></returns>
+        public DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNumSync(DescribeConcurrentRecordStreamNumRequest req)
+        {
+             JsonResponseModel<DescribeConcurrentRecordStreamNumResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConcurrentRecordStreamNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConcurrentRecordStreamNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the downstream playback data by district and ISP.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupProIspPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeGroupProIspPlayInfoListResponse"/></returns>
+        public async Task<DescribeGroupProIspPlayInfoListResponse> DescribeGroupProIspPlayInfoList(DescribeGroupProIspPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeGroupProIspPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupProIspPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupProIspPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the downstream playback data by district and ISP.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupProIspPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeGroupProIspPlayInfoListResponse"/></returns>
+        public DescribeGroupProIspPlayInfoListResponse DescribeGroupProIspPlayInfoListSync(DescribeGroupProIspPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeGroupProIspPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupProIspPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupProIspPlayInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2424,6 +2546,126 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLiveWatermarks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveWatermarksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProIspPlaySumInfoListRequest"/></param>
+        /// <returns><see cref="DescribeProIspPlaySumInfoListResponse"/></returns>
+        public async Task<DescribeProIspPlaySumInfoListResponse> DescribeProIspPlaySumInfoList(DescribeProIspPlaySumInfoListRequest req)
+        {
+             JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProIspPlaySumInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProIspPlaySumInfoListRequest"/></param>
+        /// <returns><see cref="DescribeProIspPlaySumInfoListResponse"/></returns>
+        public DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoListSync(DescribeProIspPlaySumInfoListRequest req)
+        {
+             JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProIspPlaySumInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the playback data of each stream at the day level, including the total traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamDayPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStreamDayPlayInfoListResponse"/></returns>
+        public async Task<DescribeStreamDayPlayInfoListResponse> DescribeStreamDayPlayInfoList(DescribeStreamDayPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamDayPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamDayPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamDayPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the playback data of each stream at the day level, including the total traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamDayPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStreamDayPlayInfoListResponse"/></returns>
+        public DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoListSync(DescribeStreamDayPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamDayPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamDayPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamDayPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPushInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStreamPushInfoListResponse"/></returns>
+        public async Task<DescribeStreamPushInfoListResponse> DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamPushInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPushInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPushInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStreamPushInfoListResponse"/></returns>
+        public DescribeStreamPushInfoListResponse DescribeStreamPushInfoListSync(DescribeStreamPushInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamPushInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPushInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -54,6 +54,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+        /// </summary>
+        [JsonProperty("NewDefaultServerDomain")]
+        public string NewDefaultServerDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "LocationIds.", this.LocationIds);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
         }
     }
 }

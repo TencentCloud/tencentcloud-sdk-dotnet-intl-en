@@ -57,6 +57,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
+        /// <summary>
+        /// Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+        /// </summary>
+        [JsonProperty("BillingType")]
+        public long? BillingType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Concurrent", this.Concurrent);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
         }
     }
 }

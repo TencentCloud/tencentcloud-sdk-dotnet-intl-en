@@ -270,7 +270,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AutoFlag")]
         public long? AutoFlag{ get; set; }

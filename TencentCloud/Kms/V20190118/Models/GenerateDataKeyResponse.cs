@@ -31,13 +31,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
         /// </summary>
         [JsonProperty("Plaintext")]
         public string Plaintext{ get; set; }
 
         /// <summary>
-        /// Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
+        /// Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }

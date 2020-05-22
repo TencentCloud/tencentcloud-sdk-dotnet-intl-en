@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The async job ID
+        /// Async task ID. Either TaskId or DealName must be entered.
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// The billing order ID
+        /// Billing order No. Either TaskId or DealName must be entered.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

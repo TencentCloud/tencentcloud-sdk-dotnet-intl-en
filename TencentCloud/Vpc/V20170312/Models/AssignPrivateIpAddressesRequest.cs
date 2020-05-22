@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// The information of the specified private IPs. You can specify a maximum of 10 each time.
+        /// The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public PrivateIpAddressSpecification[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+        /// The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
         /// </summary>
         [JsonProperty("SecondaryPrivateIpAddressCount")]
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }

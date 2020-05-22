@@ -101,6 +101,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Number of disks
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DiskNum")]
+        public long? DiskNum{ get; set; }
+
+        /// <summary>
+        /// Number of local disks
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LocalDiskNum")]
+        public long? LocalDiskNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +132,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DiskCnt", this.DiskCnt);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
+            this.SetParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
         }
     }
 }

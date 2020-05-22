@@ -37,13 +37,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public long? StepNow{ get; set; }
 
         /// <summary>
-        /// Overall progress, such as:
+        /// Overall progress, such as "10"
         /// </summary>
         [JsonProperty("Progress")]
         public string Progress{ get; set; }
 
         /// <summary>
-        /// Progress of the current step, such as:
+        /// Progress of current step, such as "1"
         /// </summary>
         [JsonProperty("CurrentStepProgress")]
         public string CurrentStepProgress{ get; set; }

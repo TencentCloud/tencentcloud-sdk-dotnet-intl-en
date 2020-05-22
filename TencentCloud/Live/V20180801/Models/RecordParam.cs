@@ -26,23 +26,23 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Recording interval.
-        /// In seconds. Default value: 1800.
-        /// Value range: 300–7200.
-        /// This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+        /// In seconds. Default value: 1,800.
+        /// Value range: 300–7,200.
+        /// This parameter is not valid for HLS, and a file is generated from push start to push end when HLS is recorded.
         /// </summary>
         [JsonProperty("RecordInterval")]
         public long? RecordInterval{ get; set; }
 
         /// <summary>
-        /// Recording storage period.
-        /// In seconds. Value range: 0–93312000.
-        /// 0: permanent storage.
+        /// Recording storage duration.
+        /// In seconds. Value range: 0–93,312,000.
+        /// 0 represents permanent storage.
         /// </summary>
         [JsonProperty("StorageTime")]
         public long? StorageTime{ get; set; }
 
         /// <summary>
-        /// Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
+        /// Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
@@ -54,7 +54,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? VodSubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recording filename.
         /// </summary>
         [JsonProperty("VodFileName")]
         public string VodFileName{ get; set; }

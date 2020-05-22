@@ -36,6 +36,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceDeleteMode")]
         public string InstanceDeleteMode{ get; set; }
 
+        /// <summary>
+        /// Specifies the policy to deal with resources in the cluster when the cluster is deleted. It only supports CBS now. The default policy is to retain CBS disks.
+        /// </summary>
+        [JsonProperty("ResourceDeleteOptions")]
+        public ResourceDeleteOption[] ResourceDeleteOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "InstanceDeleteMode", this.InstanceDeleteMode);
+            this.SetParamArrayObj(map, prefix + "ResourceDeleteOptions.", this.ResourceDeleteOptions);
         }
     }
 }

@@ -68,6 +68,25 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// Node private IP
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LanIP")]
+        public string LanIP{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NodePoolId")]
+        public string NodePoolId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutoscalingGroupId")]
+        public string AutoscalingGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +100,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "DrainStatus", this.DrainStatus);
             this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "LanIP", this.LanIP);
+            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+            this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
         }
     }
 }

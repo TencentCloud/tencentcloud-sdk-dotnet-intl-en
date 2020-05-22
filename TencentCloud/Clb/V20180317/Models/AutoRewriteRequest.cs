@@ -31,13 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// HTTPS:443 listener ID
+        /// `HTTPS:443` listener ID
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Domain name to be redirected under an HTTPS:443 listener
+        /// The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

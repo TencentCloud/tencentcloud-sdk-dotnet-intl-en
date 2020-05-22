@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerId{ get; set; }
 
         /// <summary>
-        /// 0: not bound; 1: bound to rules or listeners.
+        /// 0: not bound, 1: bound to rule or listener.
         /// </summary>
         [JsonProperty("BindStatus")]
         public long? BindStatus{ get; set; }

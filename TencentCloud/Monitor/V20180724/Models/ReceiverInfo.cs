@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ReceiverType{ get; set; }
 
         /// <summary>
-        /// Id
+        /// ReceiverId
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

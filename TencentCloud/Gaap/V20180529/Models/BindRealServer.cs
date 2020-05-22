@@ -43,7 +43,11 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? RealServerWeight{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin server health check status. Valid values:
+        /// 0: normal;
+        /// 1: exceptional.
+        /// If health check is not enabled, this status will always be normal.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RealServerStatus")]
         public long? RealServerStatus{ get; set; }
