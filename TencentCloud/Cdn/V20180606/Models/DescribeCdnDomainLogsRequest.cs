@@ -43,7 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Offset for paged queries. Default value: 0 (the first page)
+        /// Offset for paginated queries. Default value: 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -64,6 +64,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// The type of log to be downloaded.
+        /// access: access logs
+        /// </summary>
+        [JsonProperty("LogType")]
+        public string LogType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +83,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "LogType", this.LogType);
         }
     }
 }

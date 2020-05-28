@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// API module name. The value for the current API is monitor.
+        /// API component name. The value for the current API is monitor.
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// Start time, which is the timestamp one day ago by default.
+        /// Start time, which is the timestamp one day prior by default.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }

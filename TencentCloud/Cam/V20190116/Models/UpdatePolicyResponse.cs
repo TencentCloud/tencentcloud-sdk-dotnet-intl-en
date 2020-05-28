@@ -25,6 +25,13 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
+        /// Policy ID
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public ulong? PolicyId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +43,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

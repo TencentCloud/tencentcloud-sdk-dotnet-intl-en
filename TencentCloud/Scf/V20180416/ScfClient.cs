@@ -105,6 +105,48 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to create an alias for a function version. You can use the alias to mark a specific function version such as DEV/RELEASE. You can also modify the version pointed to by the alias at any time.
+        /// An alias must point to a master version and can point to an additional version at the same time. If you specify an alias when invoking a function, the request will be sent to the versions pointed to by the alias. You can configure the ratio between the master version and additional version during request sending.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAliasRequest"/></param>
+        /// <returns><see cref="CreateAliasResponse"/></returns>
+        public async Task<CreateAliasResponse> CreateAlias(CreateAliasRequest req)
+        {
+             JsonResponseModel<CreateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an alias for a function version. You can use the alias to mark a specific function version such as DEV/RELEASE. You can also modify the version pointed to by the alias at any time.
+        /// An alias must point to a master version and can point to an additional version at the same time. If you specify an alias when invoking a function, the request will be sent to the versions pointed to by the alias. You can configure the ratio between the master version and additional version during request sending.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAliasRequest"/></param>
+        /// <returns><see cref="CreateAliasResponse"/></returns>
+        public CreateAliasResponse CreateAliasSync(CreateAliasRequest req)
+        {
+             JsonResponseModel<CreateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a function based on the input parameters.
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRequest"/></param>
@@ -225,6 +267,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to delete an alias of a function version.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAliasRequest"/></param>
+        /// <returns><see cref="DeleteAliasResponse"/></returns>
+        public async Task<DeleteAliasResponse> DeleteAlias(DeleteAliasRequest req)
+        {
+             JsonResponseModel<DeleteAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an alias of a function version.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAliasRequest"/></param>
+        /// <returns><see cref="DeleteAliasResponse"/></returns>
+        public DeleteAliasResponse DeleteAliasSync(DeleteAliasRequest req)
+        {
+             JsonResponseModel<DeleteAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a function based on the input parameters.
         /// </summary>
         /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
@@ -256,6 +338,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "DeleteFunction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a specified version of a specified layer. The deleted version cannot be associated with a function, but the deletion does not affect functions that are referencing this layer.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLayerVersionRequest"/></param>
+        /// <returns><see cref="DeleteLayerVersionResponse"/></returns>
+        public async Task<DeleteLayerVersionResponse> DeleteLayerVersion(DeleteLayerVersionRequest req)
+        {
+             JsonResponseModel<DeleteLayerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLayerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLayerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a specified version of a specified layer. The deleted version cannot be associated with a function, but the deletion does not affect functions that are referencing this layer.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLayerVersionRequest"/></param>
+        /// <returns><see cref="DeleteLayerVersionResponse"/></returns>
+        public DeleteLayerVersionResponse DeleteLayerVersionSync(DeleteLayerVersionRequest req)
+        {
+             JsonResponseModel<DeleteLayerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLayerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLayerVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -336,6 +458,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTrigger");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the alias details such as the name, description, version, and routing information.
+        /// </summary>
+        /// <param name="req"><see cref="GetAliasRequest"/></param>
+        /// <returns><see cref="GetAliasResponse"/></returns>
+        public async Task<GetAliasResponse> GetAlias(GetAliasRequest req)
+        {
+             JsonResponseModel<GetAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the alias details such as the name, description, version, and routing information.
+        /// </summary>
+        /// <param name="req"><see cref="GetAliasRequest"/></param>
+        /// <returns><see cref="GetAliasResponse"/></returns>
+        public GetAliasResponse GetAliasSync(GetAliasRequest req)
+        {
+             JsonResponseModel<GetAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAliasResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -465,6 +627,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to get the layer version details, including links used to download files in the layer.
+        /// </summary>
+        /// <param name="req"><see cref="GetLayerVersionRequest"/></param>
+        /// <returns><see cref="GetLayerVersionResponse"/></returns>
+        public async Task<GetLayerVersionResponse> GetLayerVersion(GetLayerVersionRequest req)
+        {
+             JsonResponseModel<GetLayerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetLayerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLayerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the layer version details, including links used to download files in the layer.
+        /// </summary>
+        /// <param name="req"><see cref="GetLayerVersionRequest"/></param>
+        /// <returns><see cref="GetLayerVersionResponse"/></returns>
+        public GetLayerVersionResponse GetLayerVersionSync(GetLayerVersionRequest req)
+        {
+             JsonResponseModel<GetLayerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetLayerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLayerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to run a function.
         /// </summary>
         /// <param name="req"><see cref="InvokeRequest"/></param>
@@ -496,6 +698,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "Invoke");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
+        /// </summary>
+        /// <param name="req"><see cref="ListAliasesRequest"/></param>
+        /// <returns><see cref="ListAliasesResponse"/></returns>
+        public async Task<ListAliasesResponse> ListAliases(ListAliasesRequest req)
+        {
+             JsonResponseModel<ListAliasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAliases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAliasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
+        /// </summary>
+        /// <param name="req"><see cref="ListAliasesRequest"/></param>
+        /// <returns><see cref="ListAliasesResponse"/></returns>
+        public ListAliasesResponse ListAliasesSync(ListAliasesRequest req)
+        {
+             JsonResponseModel<ListAliasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAliases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAliasesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -545,6 +787,86 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to get the information of all versions of a specified layer.
+        /// </summary>
+        /// <param name="req"><see cref="ListLayerVersionsRequest"/></param>
+        /// <returns><see cref="ListLayerVersionsResponse"/></returns>
+        public async Task<ListLayerVersionsResponse> ListLayerVersions(ListLayerVersionsRequest req)
+        {
+             JsonResponseModel<ListLayerVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListLayerVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLayerVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the information of all versions of a specified layer.
+        /// </summary>
+        /// <param name="req"><see cref="ListLayerVersionsRequest"/></param>
+        /// <returns><see cref="ListLayerVersionsResponse"/></returns>
+        public ListLayerVersionsResponse ListLayerVersionsSync(ListLayerVersionsRequest req)
+        {
+             JsonResponseModel<ListLayerVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListLayerVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLayerVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to return the list of all layers, including the information of the latest version of each layer. You can filter them by the compatible runtime.
+        /// </summary>
+        /// <param name="req"><see cref="ListLayersRequest"/></param>
+        /// <returns><see cref="ListLayersResponse"/></returns>
+        public async Task<ListLayersResponse> ListLayers(ListLayersRequest req)
+        {
+             JsonResponseModel<ListLayersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListLayers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLayersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to return the list of all layers, including the information of the latest version of each layer. You can filter them by the compatible runtime.
+        /// </summary>
+        /// <param name="req"><see cref="ListLayersRequest"/></param>
+        /// <returns><see cref="ListLayersResponse"/></returns>
+        public ListLayersResponse ListLayersSync(ListLayersRequest req)
+        {
+             JsonResponseModel<ListLayersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListLayers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLayersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to display a namespace list.
         /// </summary>
         /// <param name="req"><see cref="ListNamespacesRequest"/></param>
@@ -576,6 +898,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "ListNamespaces");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the function trigger list.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggersRequest"/></param>
+        /// <returns><see cref="ListTriggersResponse"/></returns>
+        public async Task<ListTriggersResponse> ListTriggers(ListTriggersRequest req)
+        {
+             JsonResponseModel<ListTriggersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTriggers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTriggersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the function trigger list.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggersRequest"/></param>
+        /// <returns><see cref="ListTriggersResponse"/></returns>
+        public ListTriggersResponse ListTriggersSync(ListTriggersRequest req)
+        {
+             JsonResponseModel<ListTriggersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTriggers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTriggersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -625,6 +987,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to create a version for a layer by using the given .zip file or COS object. Each time this API is called with the same layer name, a new version will be generated.
+        /// </summary>
+        /// <param name="req"><see cref="PublishLayerVersionRequest"/></param>
+        /// <returns><see cref="PublishLayerVersionResponse"/></returns>
+        public async Task<PublishLayerVersionResponse> PublishLayerVersion(PublishLayerVersionRequest req)
+        {
+             JsonResponseModel<PublishLayerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishLayerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishLayerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a version for a layer by using the given .zip file or COS object. Each time this API is called with the same layer name, a new version will be generated.
+        /// </summary>
+        /// <param name="req"><see cref="PublishLayerVersionRequest"/></param>
+        /// <returns><see cref="PublishLayerVersionResponse"/></returns>
+        public PublishLayerVersionResponse PublishLayerVersionSync(PublishLayerVersionRequest req)
+        {
+             JsonResponseModel<PublishLayerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishLayerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishLayerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used for users to release a new version of the function.
         /// </summary>
         /// <param name="req"><see cref="PublishVersionRequest"/></param>
@@ -656,6 +1058,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "PublishVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the configuration of an alias.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAliasRequest"/></param>
+        /// <returns><see cref="UpdateAliasResponse"/></returns>
+        public async Task<UpdateAliasResponse> UpdateAlias(UpdateAliasRequest req)
+        {
+             JsonResponseModel<UpdateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the configuration of an alias.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAliasRequest"/></param>
+        /// <returns><see cref="UpdateAliasResponse"/></returns>
+        public UpdateAliasResponse UpdateAliasSync(UpdateAliasRequest req)
+        {
+             JsonResponseModel<UpdateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAliasResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// API module name. It is fixed to monitor.
+        /// API component name. It is fixed to monitor.
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] RegionList{ get; set; }
 
         /// <summary>
-        /// Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
+        /// Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
         /// </summary>
         [JsonProperty("Type")]
         public string[] Type{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string TimeOrder{ get; set; }
 
         /// <summary>
-        /// Start time, which is the timestamp one day ago by default.
+        /// Start time, which is the timestamp one day prior by default.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }

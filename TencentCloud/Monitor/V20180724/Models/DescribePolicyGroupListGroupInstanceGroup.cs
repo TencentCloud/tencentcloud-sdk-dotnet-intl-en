@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// Uin that is last edited.
+        /// Uin that was last edited.
         /// </summary>
         [JsonProperty("LastEditUin")]
         public string LastEditUin{ get; set; }

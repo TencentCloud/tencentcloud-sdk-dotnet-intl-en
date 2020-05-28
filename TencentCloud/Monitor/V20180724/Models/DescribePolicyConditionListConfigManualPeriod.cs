@@ -32,7 +32,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Default{ get; set; }
 
         /// <summary>
-        /// Optional period in seconds.
+        /// Custom periods in seconds.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Keys")]

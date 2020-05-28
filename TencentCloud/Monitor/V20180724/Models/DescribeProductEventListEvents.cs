@@ -32,14 +32,14 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// Chinese event name.
+        /// Event name in Chinese.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("EventCName")]
         public string EventCName{ get; set; }
 
         /// <summary>
-        /// English event name.
+        /// Event name in English.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("EventEName")]
@@ -53,14 +53,14 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string EventName{ get; set; }
 
         /// <summary>
-        /// Chinese product name.
+        /// Product name in Chinese.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("ProductCName")]
         public string ProductCName{ get; set; }
 
         /// <summary>
-        /// English product name.
+        /// Product name in English.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("ProductEName")]

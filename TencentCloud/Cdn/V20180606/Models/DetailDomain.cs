@@ -325,13 +325,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         public SecurityConfig SecurityConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// `ImageOptimization` configuration
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageOptimization")]
         public ImageOptimization ImageOptimization{ get; set; }
 
         /// <summary>
-        /// 
+        /// `UA` blacklist/whitelist Configuration
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }

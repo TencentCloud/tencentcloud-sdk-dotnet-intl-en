@@ -49,13 +49,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// Uin that is last edited.
+        /// Uin that was last edited.
         /// </summary>
         [JsonProperty("LastEditUin")]
         public string LastEditUin{ get; set; }
 
         /// <summary>
-        /// Last update time.
+        /// Last modified time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// Whether the policy can be set as the default policy.
+        /// Whether the policy can be configured as the default policy.
         /// </summary>
         [JsonProperty("CanSetDefault")]
         public bool? CanSetDefault{ get; set; }
@@ -144,7 +144,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public DescribePolicyGroupListGroupInstanceGroup InstanceGroup{ get; set; }
 
         /// <summary>
-        /// The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+        /// The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("IsUnionRule")]

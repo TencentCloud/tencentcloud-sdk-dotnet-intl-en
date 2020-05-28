@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// Required. It is fixed to monitor.
+        /// Required. The value is fixed to monitor.
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// API module name. The value for the current API is monitor.
+        /// API component name. The value for the current API is monitor.
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// Start time, which is the timestamp one day earlier by default.
+        /// Start time, which is the timestamp one day prior by default.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string UpdateTimeOrder{ get; set; }
 
         /// <summary>
-        /// Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
+        /// Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
         /// </summary>
         [JsonProperty("OccurTimeOrder")]
         public string OccurTimeOrder{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] AccidentType{ get; set; }
 
         /// <summary>
-        /// Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
+        /// Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
         /// </summary>
         [JsonProperty("AccidentEvent")]
         public long?[] AccidentEvent{ get; set; }

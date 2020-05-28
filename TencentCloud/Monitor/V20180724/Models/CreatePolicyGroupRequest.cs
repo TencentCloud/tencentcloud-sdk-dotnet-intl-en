@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
+        /// Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
+        /// Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
         /// </summary>
         [JsonProperty("InsertTime")]
         public long? InsertTime{ get; set; }
 
         /// <summary>
-        /// Alarm threshold rule in the policy group.
+        /// Alarm threshold rules in the policy group.
         /// </summary>
         [JsonProperty("Conditions")]
         public CreatePolicyGroupCondition[] Conditions{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public CreatePolicyGroupEventCondition[] EventConditions{ get; set; }
 
         /// <summary>
-        /// Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
+        /// Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
         /// </summary>
         [JsonProperty("BackEndCall")]
         public long? BackEndCall{ get; set; }
 
         /// <summary>
-        /// The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
+        /// The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
         /// </summary>
         [JsonProperty("IsUnionRule")]
         public long? IsUnionRule{ get; set; }

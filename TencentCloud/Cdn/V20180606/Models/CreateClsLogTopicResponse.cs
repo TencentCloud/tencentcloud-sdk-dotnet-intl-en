@@ -25,6 +25,13 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
+        /// Topic ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

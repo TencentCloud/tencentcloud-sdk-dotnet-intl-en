@@ -39,7 +39,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string P10{ get; set; }
 
         /// <summary>
-        /// Data aggregation method in a period of 1 second.
+        /// Data aggregation method in a period of 1 minute.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("P60")]

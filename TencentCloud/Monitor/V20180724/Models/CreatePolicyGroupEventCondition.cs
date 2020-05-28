@@ -37,13 +37,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm will be triggered only once. The value >0 indicates that an alarm will be triggered at the interval of triggerTime.
+        /// Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public long? AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// If a metric is created based on a template, the RuleId of the metric in the template must be input.
+        /// If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

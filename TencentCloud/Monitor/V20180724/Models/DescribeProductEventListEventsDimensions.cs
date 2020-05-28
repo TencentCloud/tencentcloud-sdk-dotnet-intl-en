@@ -25,14 +25,14 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// English dimension name.
+        /// Dimension name in English.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Chinese dimension name.
+        /// Dimension name in Chinese.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Name")]

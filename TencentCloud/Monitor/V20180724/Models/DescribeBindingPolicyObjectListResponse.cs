@@ -44,7 +44,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? NoShieldedSum{ get; set; }
 
         /// <summary>
-        /// Bound instance group information. You do not need to set this parameter if no instance group is bound.
+        /// Bound instance group information. This parameter is not configured if no instance group is bound.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("InstanceGroup")]

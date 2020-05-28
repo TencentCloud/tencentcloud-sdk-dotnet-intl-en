@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// New recipient information. If this parameter is not set, all recipients will be deleted.
+        /// New recipient information. If this parameter is not configured, all recipients will be deleted.
         /// </summary>
         [JsonProperty("ReceiverInfos")]
         public ReceiverInfo[] ReceiverInfos{ get; set; }

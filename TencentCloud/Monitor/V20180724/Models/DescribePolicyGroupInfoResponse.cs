@@ -67,13 +67,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string LastEditUin{ get; set; }
 
         /// <summary>
-        /// Last update time.
+        /// Last edited time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Regions that support this policy.
+        /// Regions supported by this policy.
         /// </summary>
         [JsonProperty("Region")]
         public string[] Region{ get; set; }
@@ -120,7 +120,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public DescribePolicyGroupInfoConditionTpl ConditionsTemp{ get; set; }
 
         /// <summary>
-        /// Whether the policy can be set as the default policy.
+        /// Whether the policy can be configured as the default policy.
         /// </summary>
         [JsonProperty("CanSetDefault")]
         public bool? CanSetDefault{ get; set; }

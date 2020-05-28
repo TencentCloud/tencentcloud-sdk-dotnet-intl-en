@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Offset for paginated queries. Default value: 0 (the first page).
+        /// Offset for paginated queries. Default value: 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

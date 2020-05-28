@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string MetricShowName{ get; set; }
 
         /// <summary>
-        /// Data statistics period in seconds.
+        /// Data aggregation period in seconds.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

@@ -373,6 +373,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to add a policy version. After creating a policy version, you can easily change the policy by changing the policy version.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyVersionRequest"/></param>
+        /// <returns><see cref="CreatePolicyVersionResponse"/></returns>
+        public async Task<CreatePolicyVersionResponse> CreatePolicyVersion(CreatePolicyVersionRequest req)
+        {
+             JsonResponseModel<CreatePolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add a policy version. After creating a policy version, you can easily change the policy by changing the policy version.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyVersionRequest"/></param>
+        /// <returns><see cref="CreatePolicyVersionResponse"/></returns>
+        public CreatePolicyVersionResponse CreatePolicyVersionSync(CreatePolicyVersionRequest req)
+        {
+             JsonResponseModel<CreatePolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateRole) is used to create a role.
         /// </summary>
         /// <param name="req"><see cref="CreateRoleRequest"/></param>
@@ -444,6 +484,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "CreateSAMLProvider");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSAMLProviderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a service-linked role.
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceLinkedRoleRequest"/></param>
+        /// <returns><see cref="CreateServiceLinkedRoleResponse"/></returns>
+        public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRole(CreateServiceLinkedRoleRequest req)
+        {
+             JsonResponseModel<CreateServiceLinkedRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateServiceLinkedRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceLinkedRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a service-linked role.
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceLinkedRoleRequest"/></param>
+        /// <returns><see cref="CreateServiceLinkedRoleResponse"/></returns>
+        public CreateServiceLinkedRoleResponse CreateServiceLinkedRoleSync(CreateServiceLinkedRoleRequest req)
+        {
+             JsonResponseModel<CreateServiceLinkedRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateServiceLinkedRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceLinkedRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -533,6 +613,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to delete a policy version of a policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyVersionRequest"/></param>
+        /// <returns><see cref="DeletePolicyVersionResponse"/></returns>
+        public async Task<DeletePolicyVersionResponse> DeletePolicyVersion(DeletePolicyVersionRequest req)
+        {
+             JsonResponseModel<DeletePolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a policy version of a policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyVersionRequest"/></param>
+        /// <returns><see cref="DeletePolicyVersionResponse"/></returns>
+        public DeletePolicyVersionResponse DeletePolicyVersionSync(DeletePolicyVersionRequest req)
+        {
+             JsonResponseModel<DeletePolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DeleteRole) is used to delete a specified role.
         /// </summary>
         /// <param name="req"><see cref="DeleteRoleRequest"/></param>
@@ -604,6 +724,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSAMLProvider");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSAMLProviderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a service-linked role.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceLinkedRoleRequest"/></param>
+        /// <returns><see cref="DeleteServiceLinkedRoleResponse"/></returns>
+        public async Task<DeleteServiceLinkedRoleResponse> DeleteServiceLinkedRole(DeleteServiceLinkedRoleRequest req)
+        {
+             JsonResponseModel<DeleteServiceLinkedRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteServiceLinkedRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceLinkedRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a service-linked role.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceLinkedRoleRequest"/></param>
+        /// <returns><see cref="DeleteServiceLinkedRoleResponse"/></returns>
+        public DeleteServiceLinkedRoleResponse DeleteServiceLinkedRoleSync(DeleteServiceLinkedRoleRequest req)
+        {
+             JsonResponseModel<DeleteServiceLinkedRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteServiceLinkedRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceLinkedRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -933,6 +1093,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to query policy version details.
+        /// </summary>
+        /// <param name="req"><see cref="GetPolicyVersionRequest"/></param>
+        /// <returns><see cref="GetPolicyVersionResponse"/></returns>
+        public async Task<GetPolicyVersionResponse> GetPolicyVersion(GetPolicyVersionRequest req)
+        {
+             JsonResponseModel<GetPolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query policy version details.
+        /// </summary>
+        /// <param name="req"><see cref="GetPolicyVersionRequest"/></param>
+        /// <returns><see cref="GetPolicyVersionResponse"/></returns>
+        public GetPolicyVersionResponse GetPolicyVersionSync(GetPolicyVersionRequest req)
+        {
+             JsonResponseModel<GetPolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (GetRole) is used to get the details of a specified role.
         /// </summary>
         /// <param name="req"><see cref="GetRoleRequest"/></param>
@@ -1004,6 +1204,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "GetSAMLProvider");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSAMLProviderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the status of the service-linked role deletion based on the `TaskId`
+        /// </summary>
+        /// <param name="req"><see cref="GetServiceLinkedRoleDeletionStatusRequest"/></param>
+        /// <returns><see cref="GetServiceLinkedRoleDeletionStatusResponse"/></returns>
+        public async Task<GetServiceLinkedRoleDeletionStatusResponse> GetServiceLinkedRoleDeletionStatus(GetServiceLinkedRoleDeletionStatusRequest req)
+        {
+             JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetServiceLinkedRoleDeletionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the status of the service-linked role deletion based on the `TaskId`
+        /// </summary>
+        /// <param name="req"><see cref="GetServiceLinkedRoleDeletionStatusRequest"/></param>
+        /// <returns><see cref="GetServiceLinkedRoleDeletionStatusResponse"/></returns>
+        public GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatusSync(GetServiceLinkedRoleDeletionStatusRequest req)
+        {
+             JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetServiceLinkedRoleDeletionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1333,7 +1573,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API (ListPolicies) is used to query the list of policies.
+        /// This API is used to query the policy list.
         /// </summary>
         /// <param name="req"><see cref="ListPoliciesRequest"/></param>
         /// <returns><see cref="ListPoliciesResponse"/></returns>
@@ -1353,7 +1593,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API (ListPolicies) is used to query the list of policies.
+        /// This API is used to query the policy list.
         /// </summary>
         /// <param name="req"><see cref="ListPoliciesRequest"/></param>
         /// <returns><see cref="ListPoliciesResponse"/></returns>
@@ -1364,6 +1604,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "ListPolicies");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of policy versions.
+        /// </summary>
+        /// <param name="req"><see cref="ListPolicyVersionsRequest"/></param>
+        /// <returns><see cref="ListPolicyVersionsResponse"/></returns>
+        public async Task<ListPolicyVersionsResponse> ListPolicyVersions(ListPolicyVersionsRequest req)
+        {
+             JsonResponseModel<ListPolicyVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListPolicyVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPolicyVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of policy versions.
+        /// </summary>
+        /// <param name="req"><see cref="ListPolicyVersionsRequest"/></param>
+        /// <returns><see cref="ListPolicyVersionsResponse"/></returns>
+        public ListPolicyVersionsResponse ListPolicyVersionsSync(ListPolicyVersionsRequest req)
+        {
+             JsonResponseModel<ListPolicyVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListPolicyVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPolicyVersionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1533,6 +1813,86 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to set the operative policy version.
+        /// </summary>
+        /// <param name="req"><see cref="SetDefaultPolicyVersionRequest"/></param>
+        /// <returns><see cref="SetDefaultPolicyVersionResponse"/></returns>
+        public async Task<SetDefaultPolicyVersionResponse> SetDefaultPolicyVersion(SetDefaultPolicyVersionRequest req)
+        {
+             JsonResponseModel<SetDefaultPolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetDefaultPolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDefaultPolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set the operative policy version.
+        /// </summary>
+        /// <param name="req"><see cref="SetDefaultPolicyVersionRequest"/></param>
+        /// <returns><see cref="SetDefaultPolicyVersionResponse"/></returns>
+        public SetDefaultPolicyVersionResponse SetDefaultPolicyVersionSync(SetDefaultPolicyVersionRequest req)
+        {
+             JsonResponseModel<SetDefaultPolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetDefaultPolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDefaultPolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set account verification for login and sensitive operations for sub-users.
+        /// </summary>
+        /// <param name="req"><see cref="SetMfaFlagRequest"/></param>
+        /// <returns><see cref="SetMfaFlagResponse"/></returns>
+        public async Task<SetMfaFlagResponse> SetMfaFlag(SetMfaFlagRequest req)
+        {
+             JsonResponseModel<SetMfaFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetMfaFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetMfaFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set account verification for login and sensitive operations for sub-users.
+        /// </summary>
+        /// <param name="req"><see cref="SetMfaFlagRequest"/></param>
+        /// <returns><see cref="SetMfaFlagResponse"/></returns>
+        public SetMfaFlagResponse SetMfaFlagSync(SetMfaFlagRequest req)
+        {
+             JsonResponseModel<SetMfaFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetMfaFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetMfaFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
         /// </summary>
         /// <param name="req"><see cref="UpdateAssumeRolePolicyRequest"/></param>
@@ -1613,7 +1973,8 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API (UpdatePolicy) is used to update a policy.
+        /// This API is used to update a policy.
+        /// This API will update the default version of an existing policy instead of creating a new one. If no policy exists, a default version will be created.
         /// </summary>
         /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
         /// <returns><see cref="UpdatePolicyResponse"/></returns>
@@ -1633,7 +1994,8 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API (UpdatePolicy) is used to update a policy.
+        /// This API is used to update a policy.
+        /// This API will update the default version of an existing policy instead of creating a new one. If no policy exists, a default version will be created.
         /// </summary>
         /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
         /// <returns><see cref="UpdatePolicyResponse"/></returns>

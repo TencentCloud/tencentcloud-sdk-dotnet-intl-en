@@ -39,7 +39,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? UnConfigAlarmAmount{ get; set; }
 
         /// <summary>
-        /// Number of exceptional events.
+        /// Number of events with exceptions.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("UnNormalEventAmount")]

@@ -52,7 +52,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Offset for paged queries. Default value: 0 (the first page)
+        /// Offset for paginated queries. Default value: 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

@@ -43,19 +43,19 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
-        /// Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+        /// Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
         /// </summary>
         [JsonProperty("CalcType")]
         public long? CalcType{ get; set; }
 
         /// <summary>
-        /// Comparative value. This parameter may not be set if a metric has no requirement.
+        /// Comparative value. This parameter is optional if the metric has no requirement.
         /// </summary>
         [JsonProperty("CalcValue")]
         public float? CalcValue{ get; set; }
 
         /// <summary>
-        /// Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+        /// Data aggregation period in seconds. This parameter is optional if the metric has a default value.
         /// </summary>
         [JsonProperty("CalcPeriod")]
         public long? CalcPeriod{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? ContinuePeriod{ get; set; }
 
         /// <summary>
-        /// If a metric is created based on a template, the RuleId of the metric in the template must be input.
+        /// If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

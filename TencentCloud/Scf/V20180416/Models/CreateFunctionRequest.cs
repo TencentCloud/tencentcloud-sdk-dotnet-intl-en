@@ -49,13 +49,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
+        /// Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
         /// </summary>
         [JsonProperty("MemorySize")]
         public long? MemorySize{ get; set; }
 
         /// <summary>
-        /// The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+        /// Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public Environment Environment{ get; set; }
 
         /// <summary>
-        /// Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+        /// Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
@@ -126,6 +126,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("DeadLetterConfig")]
         public DeadLetterConfig DeadLetterConfig{ get; set; }
 
+        /// <summary>
+        /// Public network access configuration
+        /// </summary>
+        [JsonProperty("PublicNetConfig")]
+        public PublicNetConfigIn PublicNetConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "CodeSource", this.CodeSource);
             this.SetParamArrayObj(map, prefix + "Layers.", this.Layers);
             this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+            this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         }
     }
 }

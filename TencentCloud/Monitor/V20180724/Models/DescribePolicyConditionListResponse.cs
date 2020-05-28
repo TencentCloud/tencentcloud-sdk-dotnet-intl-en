@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// List of Alarm policy conditions.
+        /// List of alarm policy conditions.
         /// </summary>
         [JsonProperty("Conditions")]
         public DescribePolicyConditionListCondition[] Conditions{ get; set; }

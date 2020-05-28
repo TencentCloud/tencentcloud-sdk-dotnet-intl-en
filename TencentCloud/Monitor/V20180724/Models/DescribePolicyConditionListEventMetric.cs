@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public bool? NeedRecovered{ get; set; }
 
         /// <summary>
-        /// Event type, which is a reserved field. At present, it is fixed to 2.
+        /// Event type, which is a reserved field. Currently, it is fixed to 2.
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

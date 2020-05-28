@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+        /// Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
         /// </summary>
         [JsonProperty("NotifyWay")]
         public string[] NotifyWay{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Id{ get; set; }
 
         /// <summary>
-        /// Call alarm notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
+        /// Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
         /// </summary>
         [JsonProperty("SendFor")]
         public string[] SendFor{ get; set; }
 
         /// <summary>
-        /// Uid of the alarm call receiver.
+        /// Uid of the alarm call recipient.
         /// </summary>
         [JsonProperty("UidList")]
         public long?[] UidList{ get; set; }
@@ -73,19 +73,19 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? RoundNumber{ get; set; }
 
         /// <summary>
-        /// Person interval of alarm calls in seconds.
+        /// Alarm call intervals for individuals in seconds.
         /// </summary>
         [JsonProperty("PersonInterval")]
         public long? PersonInterval{ get; set; }
 
         /// <summary>
-        /// Round interval of alarm calls in seconds.
+        /// Intervals of alarm call rounds in seconds.
         /// </summary>
         [JsonProperty("RoundInterval")]
         public long? RoundInterval{ get; set; }
 
         /// <summary>
-        /// Notification method when an alarm is cleared. Valid value: SMS.
+        /// Notification method when an alarm is recovered. Valid value: SMS.
         /// </summary>
         [JsonProperty("RecoverNotify")]
         public string[] RecoverNotify{ get; set; }
