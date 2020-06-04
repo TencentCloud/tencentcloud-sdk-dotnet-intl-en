@@ -76,13 +76,15 @@ namespace TencentCloud.Tke.V20180525.Models
         public string LanIP{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource pool ID
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NodePoolId")]
         public string NodePoolId{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the auto-scaling group
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("AutoscalingGroupId")]
         public string AutoscalingGroupId{ get; set; }

@@ -26,18 +26,21 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// IDs of failed nodes
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("FailedInstanceIds")]
         public string[] FailedInstanceIds{ get; set; }
 
         /// <summary>
         /// IDs of successful nodes
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("SuccInstanceIds")]
         public string[] SuccInstanceIds{ get; set; }
 
         /// <summary>
         /// IDs of (successful or failed) nodes that timed out
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("TimeoutInstanceIds")]
         public string[] TimeoutInstanceIds{ get; set; }

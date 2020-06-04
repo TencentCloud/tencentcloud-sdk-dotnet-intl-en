@@ -28,6 +28,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Fields that can be sorted. Currently supports:
         /// `createTime`: domain name creation time.
         /// `certExpireTime`: certificate expiration time.
+        /// Default value: createTime.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

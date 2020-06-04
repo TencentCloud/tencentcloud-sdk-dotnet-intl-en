@@ -80,16 +80,6 @@ namespace TencentCloud.Tke.V20180525.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Instance’s billing mode. Value range:
-        /// PREPAID: Prepaid (Monthly Subscription)
-        /// POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-        /// CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("InstanceChargeType")]
-        public string InstanceChargeType{ get; set; }
-
-        /// <summary>
         /// Instance’s number of CPU cores. Unit: cores.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -117,6 +107,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// Auto scaling group ID
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("AutoscalingGroupId")]
+        public string AutoscalingGroupId{ get; set; }
+
+        /// <summary>
+        /// Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,11 +135,12 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         }
     }
 }

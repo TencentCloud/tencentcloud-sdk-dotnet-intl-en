@@ -333,6 +333,126 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
+        /// This API is used to query the channel alarm information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveChannelAlertsRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveChannelAlertsResponse"/></returns>
+        public async Task<DescribeMediaLiveChannelAlertsResponse> DescribeMediaLiveChannelAlerts(DescribeMediaLiveChannelAlertsRequest req)
+        {
+             JsonResponseModel<DescribeMediaLiveChannelAlertsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannelAlerts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelAlertsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the channel alarm information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveChannelAlertsRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveChannelAlertsResponse"/></returns>
+        public DescribeMediaLiveChannelAlertsResponse DescribeMediaLiveChannelAlertsSync(DescribeMediaLiveChannelAlertsRequest req)
+        {
+             JsonResponseModel<DescribeMediaLiveChannelAlertsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannelAlerts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelAlertsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the input statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveChannelInputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveChannelInputStatisticsResponse"/></returns>
+        public async Task<DescribeMediaLiveChannelInputStatisticsResponse> DescribeMediaLiveChannelInputStatistics(DescribeMediaLiveChannelInputStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannelInputStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the input statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveChannelInputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveChannelInputStatisticsResponse"/></returns>
+        public DescribeMediaLiveChannelInputStatisticsResponse DescribeMediaLiveChannelInputStatisticsSync(DescribeMediaLiveChannelInputStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannelInputStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the output statistics of a channel.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveChannelOutputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveChannelOutputStatisticsResponse"/></returns>
+        public async Task<DescribeMediaLiveChannelOutputStatisticsResponse> DescribeMediaLiveChannelOutputStatistics(DescribeMediaLiveChannelOutputStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannelOutputStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the output statistics of a channel.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveChannelOutputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveChannelOutputStatisticsResponse"/></returns>
+        public DescribeMediaLiveChannelOutputStatisticsResponse DescribeMediaLiveChannelOutputStatisticsSync(DescribeMediaLiveChannelOutputStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannelOutputStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the information of MediaLive channels in batches.
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaLiveChannelsRequest"/></param>

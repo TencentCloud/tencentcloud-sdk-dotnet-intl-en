@@ -62,6 +62,7 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// Cluster’s access policy group
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("SecurityPolicy")]
         public string[] SecurityPolicy{ get; set; }
@@ -74,7 +75,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Kubeconfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access address of the cluster JnsGw
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("JnsGwEndpoint")]
         public string JnsGwEndpoint{ get; set; }

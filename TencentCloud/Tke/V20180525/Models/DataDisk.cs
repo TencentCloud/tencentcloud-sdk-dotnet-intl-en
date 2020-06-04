@@ -25,31 +25,36 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 
+        /// Disk type
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// File system (ext3/ext4/xfs)
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("FileSystem")]
         public string FileSystem{ get; set; }
 
         /// <summary>
-        /// 
+        /// Disk size (G)
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Whether to automatically format and mount the disk
+        /// Whether the disk is auto-formatted and mounted
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("AutoFormatAndMount")]
         public bool? AutoFormatAndMount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Mounting directory
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("MountTarget")]
         public string MountTarget{ get; set; }

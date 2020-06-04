@@ -25,6 +25,27 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// IDs of deleted instances
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("SuccInstanceIds")]
+        public string[] SuccInstanceIds{ get; set; }
+
+        /// <summary>
+        /// IDs of instances failed to be deleted
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("FailedInstanceIds")]
+        public string[] FailedInstanceIds{ get; set; }
+
+        /// <summary>
+        /// IDs of instances that cannot be found
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("NotFoundInstanceIds")]
+        public string[] NotFoundInstanceIds{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +57,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
+            this.SetParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
+            this.SetParamArraySimple(map, prefix + "NotFoundInstanceIds.", this.NotFoundInstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
