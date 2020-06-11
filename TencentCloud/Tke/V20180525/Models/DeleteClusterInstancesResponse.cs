@@ -26,21 +26,18 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// IDs of deleted instances
-        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("SuccInstanceIds")]
         public string[] SuccInstanceIds{ get; set; }
 
         /// <summary>
         /// IDs of instances failed to be deleted
-        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("FailedInstanceIds")]
         public string[] FailedInstanceIds{ get; set; }
 
         /// <summary>
         /// IDs of instances that cannot be found
-        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("NotFoundInstanceIds")]
         public string[] NotFoundInstanceIds{ get; set; }

@@ -55,12 +55,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Listener status. Valid values:
+        /// Listener status:
         /// 0: running;
         /// 1: creating;
         /// 2: terminating;
         /// 3: adjusting origin server;
-        /// 4: adjusting configuration.
+        /// 4: modifying configuration.
         /// </summary>
         [JsonProperty("ListenerStatus")]
         public ulong? ListenerStatus{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ChargePrepaid HostChargePrepaid{ get; set; }
 
         /// <summary>
-        /// The billing method of an instance. Currently only `PREPAID` is supported.
+        /// Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
         /// </summary>
         [JsonProperty("HostChargeType")]
         public string HostChargeType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string HostType{ get; set; }
 
         /// <summary>
-        /// The quantity of CDH instances you want to purchase.
+        /// Quantity of CDH instances purchased. Default value: 1.
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }

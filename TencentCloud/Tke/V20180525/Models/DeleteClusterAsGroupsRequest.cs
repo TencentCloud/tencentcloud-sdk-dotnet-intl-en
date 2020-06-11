@@ -24,12 +24,33 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DeleteClusterAsGroupsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Cluster scaling group ID list
+        /// </summary>
+        [JsonProperty("AutoScalingGroupIds")]
+        public string[] AutoScalingGroupIds{ get; set; }
+
+        /// <summary>
+        /// Whether to keep nodes in the scaling group. Default to **false** (not keep)
+        /// </summary>
+        [JsonProperty("KeepInstance")]
+        public bool? KeepInstance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "AutoScalingGroupIds.", this.AutoScalingGroupIds);
+            this.SetParamSimple(map, prefix + "KeepInstance", this.KeepInstance);
         }
     }
 }

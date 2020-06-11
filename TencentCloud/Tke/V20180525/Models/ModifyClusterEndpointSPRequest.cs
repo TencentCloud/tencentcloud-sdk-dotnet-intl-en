@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class ModifyClusterEndpointSPRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Cluster ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Security policy opens single IP or CIDR block to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+        /// </summary>
+        [JsonProperty("SecurityPolicies")]
+        public string[] SecurityPolicies{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "SecurityPolicies.", this.SecurityPolicies);
         }
     }
 }

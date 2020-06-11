@@ -25,6 +25,18 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// Launch configuration ID
+        /// </summary>
+        [JsonProperty("LaunchConfigurationId")]
+        public string LaunchConfigurationId{ get; set; }
+
+        /// <summary>
+        /// Scaling group ID
+        /// </summary>
+        [JsonProperty("AutoScalingGroupId")]
+        public string AutoScalingGroupId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
+            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -53,11 +53,11 @@ namespace TencentCloud.Cvm.V20170312.Models
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Discount")]
-        public ulong? Discount{ get; set; }
+        public float? Discount{ get; set; }
 
         /// <summary>
         /// The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.

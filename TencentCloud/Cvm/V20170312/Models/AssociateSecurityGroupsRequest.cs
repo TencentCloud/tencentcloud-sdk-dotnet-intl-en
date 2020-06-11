@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
+        /// ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

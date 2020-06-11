@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// The ID of the instance used to create an image
+        /// Instance ID used to create an image.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Sysprep{ get; set; }
 
         /// <summary>
-        /// The ID of the data disk used to create an image
+        /// Specified data disk ID included in the full image created from the instance.
         /// </summary>
         [JsonProperty("DataDiskIds")]
         public string[] DataDiskIds{ get; set; }
 
         /// <summary>
-        /// The ID of the snapshot used to create an image. A system disk snapshot must be included.
+        /// Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
         /// </summary>
         [JsonProperty("SnapshotIds")]
         public string[] SnapshotIds{ get; set; }
 
         /// <summary>
-        /// Verifies the validity of the request without affecting the resources involved.
+        /// Success status of this request, without affecting the resources involved
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

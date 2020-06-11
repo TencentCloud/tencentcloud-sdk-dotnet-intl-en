@@ -25,6 +25,12 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// Request job’s FlowId
+        /// </summary>
+        [JsonProperty("RequestFlowId")]
+        public long? RequestFlowId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RequestFlowId", this.RequestFlowId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

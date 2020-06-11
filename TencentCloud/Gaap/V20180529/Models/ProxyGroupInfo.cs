@@ -58,11 +58,11 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Connection group status.
-        /// Valid values:
+        /// Where:
         /// 0: running;
         /// 1: creating;
         /// 4: terminating;
-        /// 11: migrating connection;
+        /// 11: connection migrating.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

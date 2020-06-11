@@ -74,17 +74,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? Concurrent{ get; set; }
 
         /// <summary>
-        /// Connection status. Valid values:
+        /// Connection status:
         /// RUNNING: running;
         /// CREATING: creating;
         /// DESTROYING: terminating;
         /// OPENING: enabling;
         /// CLOSING: disabling;
         /// CLOSED: disabled;
-        /// ADJUSTING: adjusting configuration;
-        /// ISOLATING: isolating;
-        /// ISOLATED: isolated;
-        /// CLONING: copying;
+        /// ADJUSTING: adjusting configuration
+        /// ISOLATING: isolating (it’s triggered when the account is in arrears);
+        /// ISOLATED: isolated (it’s triggered when the account is in arrears);
         /// UNKNOWN: unknown status.
         /// </summary>
         [JsonProperty("Status")]
