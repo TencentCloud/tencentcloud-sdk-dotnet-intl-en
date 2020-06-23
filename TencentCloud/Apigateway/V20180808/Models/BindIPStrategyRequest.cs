@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of the service of the IP policy to be bound.
+        /// Unique service ID of the IP policy to be bound.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string StrategyId{ get; set; }
 
         /// <summary>
-        /// Environment to be bound to IP policy
+        /// Environment to be bound to IP policy.
         /// </summary>
         [JsonProperty("EnvironmentName")]
         public string EnvironmentName{ get; set; }

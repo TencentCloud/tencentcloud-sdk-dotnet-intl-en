@@ -37,7 +37,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Release status. 1: released. 0: not released.
+        /// Release status. 1: published. 0: not published.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -93,6 +93,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to add bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// </summary>
+        /// <param name="req"><see cref="AddBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="AddBandwidthPackageResourcesResponse"/></returns>
+        public async Task<AddBandwidthPackageResourcesResponse> AddBandwidthPackageResources(AddBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<AddBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// </summary>
+        /// <param name="req"><see cref="AddBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="AddBandwidthPackageResourcesResponse"/></returns>
+        public AddBandwidthPackageResourcesResponse AddBandwidthPackageResourcesSync(AddBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<AddBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to apply for one or more [Elastic IP Addresses](https://cloud.tencent.com/document/product/213/1941) (EIPs for short).
         /// * An EIP is a static IP address that is dedicated for dynamic cloud computing. You can quickly re-map an EIP to another instance under your account to protect against instance failures.
         /// * Your EIP is associated with your Tencent Cloud account rather than an instance. It remains associated with your Tencent Cloud account until you choose to explicitly release it or your account is in arrears for more than 24 hours.
@@ -366,6 +406,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "AssociateAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (AssociateNatGatewayAddress) is used to bind a NAT gateway to an Elastic IP (EIP).
+        /// </summary>
+        /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
+        /// <returns><see cref="AssociateNatGatewayAddressResponse"/></returns>
+        public async Task<AssociateNatGatewayAddressResponse> AssociateNatGatewayAddress(AssociateNatGatewayAddressRequest req)
+        {
+             JsonResponseModel<AssociateNatGatewayAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateNatGatewayAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNatGatewayAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (AssociateNatGatewayAddress) is used to bind a NAT gateway to an Elastic IP (EIP).
+        /// </summary>
+        /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
+        /// <returns><see cref="AssociateNatGatewayAddressResponse"/></returns>
+        public AssociateNatGatewayAddressResponse AssociateNatGatewayAddressSync(AssociateNatGatewayAddressRequest req)
+        {
+             JsonResponseModel<AssociateNatGatewayAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateNatGatewayAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNatGatewayAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -795,6 +875,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to support the creation of [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// </summary>
+        /// <param name="req"><see cref="CreateBandwidthPackageRequest"/></param>
+        /// <returns><see cref="CreateBandwidthPackageResponse"/></returns>
+        public async Task<CreateBandwidthPackageResponse> CreateBandwidthPackage(CreateBandwidthPackageRequest req)
+        {
+             JsonResponseModel<CreateBandwidthPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBandwidthPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBandwidthPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to support the creation of [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// </summary>
+        /// <param name="req"><see cref="CreateBandwidthPackageRequest"/></param>
+        /// <returns><see cref="CreateBandwidthPackageResponse"/></returns>
+        public CreateBandwidthPackageResponse CreateBandwidthPackageSync(CreateBandwidthPackageRequest req)
+        {
+             JsonResponseModel<CreateBandwidthPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBandwidthPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBandwidthPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a Cloud Connect Network (CCN).<br />
         /// * You can bind a tag when creating a CCN instance. The tag list in the response indicates the tags that have been successfully added.
         /// Each account can only create a limited number of CCN instances. For more information, see product documentation. To create more instances, contact the online customer service.
@@ -935,6 +1055,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API (CreateDirectConnectGateway) is used to create a Direct Connect gateway.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDirectConnectGatewayRequest"/></param>
+        /// <returns><see cref="CreateDirectConnectGatewayResponse"/></returns>
+        public async Task<CreateDirectConnectGatewayResponse> CreateDirectConnectGateway(CreateDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<CreateDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (CreateDirectConnectGateway) is used to create a Direct Connect gateway.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDirectConnectGatewayRequest"/></param>
+        /// <returns><see cref="CreateDirectConnectGatewayResponse"/></returns>
+        public CreateDirectConnectGatewayResponse CreateDirectConnectGatewaySync(CreateDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<CreateDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateDirectConnectGatewayCcnRoutes) is used to create the CCN route (IDC IP range) of a Direct Connect gateway.
         /// </summary>
         /// <param name="req"><see cref="CreateDirectConnectGatewayCcnRoutesRequest"/></param>
@@ -966,6 +1126,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateDirectConnectGatewayCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (CreateFlowLog) is used to create flow logs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowLogRequest"/></param>
+        /// <returns><see cref="CreateFlowLogResponse"/></returns>
+        public async Task<CreateFlowLogResponse> CreateFlowLog(CreateFlowLogRequest req)
+        {
+             JsonResponseModel<CreateFlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (CreateFlowLog) is used to create flow logs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowLogRequest"/></param>
+        /// <returns><see cref="CreateFlowLogResponse"/></returns>
+        public CreateFlowLogResponse CreateFlowLogSync(CreateFlowLogRequest req)
+        {
+             JsonResponseModel<CreateFlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1361,15 +1561,19 @@ namespace TencentCloud.Vpc.V20170312
         /// <summary>
         /// This API is used to create security group policies (SecurityGroupPolicy).
         /// 
-        /// * The `Version` field indicates the version number of a security group policy, which will automatically increment by 1 every time you update the security policy, to prevent the expiration of the updated routing policies. If this field is left empty, any conflicts will be ignored.
-        /// * The value of the `Protocol` field can be TCP, UDP, ICMP, ICMPV6, GRE, or ALL.
-        /// * The `CidrBlock` field allows you to enter any string that conforms to the CIDR format. (More details) In a basic network, if a CidrBlock contains private IP addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
-        /// * The `Ipv6CidrBlock` field allows you to enter any string that conforms to the IPv6 CIDR format. (More details) In a basic network, if an Ipv6CidrBlock contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
-        /// * The SecurityGroupId field allows you to enter the IDs of security groups that are in the same project as the security group to be modified, including the ID of the security group itself, to represent private IP addresses of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.
-        /// * The Port field allows you to enter a single port number, or two port numbers separated by a minus sign to represent a port range, such as 80 or 8000-8010. The Port field is accepted only if the value of the Protocol field is TCP or UDP. In other words, if the value of the Protocol field is not TCP or UDP, Protocol and Port are exclusive and cannot be entered at the same time, otherwise an error will occur with the API.
-        /// * The Action field only allows you to enter ACCEPT or DROP.
-        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. Protocol + Port and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
-        /// * Only policies in one direction can be created in each request. If you need to specify the PolicyIndex parameter, the indexes of policies must be consistent.
+        /// For parameters of SecurityGroupPolicySet,
+        /// </ul>
+        /// <li>`Version`: the version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
+        /// <li>When creating the `Egress` and `Ingress` polices,<ul>
+        /// <li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
+        /// <li>*`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// <li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// <li>`SecurityGroupId`: ID of the security group. It can be in the same project as the security group to be modified, including the ID of the security group itself, to represent private IPs of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the group ID while being used to match network messages.</li>
+        /// <li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
+        /// <li>`Action`: only allows `ACCEPT` or `DROP`.</li>
+        /// <li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port`and `ServiceTemplate` are mutually exclusive.</li>
+        /// <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies.</li>
+        /// </ul></li></ul>
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupPoliciesRequest"/></param>
         /// <returns><see cref="CreateSecurityGroupPoliciesResponse"/></returns>
@@ -1391,15 +1595,19 @@ namespace TencentCloud.Vpc.V20170312
         /// <summary>
         /// This API is used to create security group policies (SecurityGroupPolicy).
         /// 
-        /// * The `Version` field indicates the version number of a security group policy, which will automatically increment by 1 every time you update the security policy, to prevent the expiration of the updated routing policies. If this field is left empty, any conflicts will be ignored.
-        /// * The value of the `Protocol` field can be TCP, UDP, ICMP, ICMPV6, GRE, or ALL.
-        /// * The `CidrBlock` field allows you to enter any string that conforms to the CIDR format. (More details) In a basic network, if a CidrBlock contains private IP addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
-        /// * The `Ipv6CidrBlock` field allows you to enter any string that conforms to the IPv6 CIDR format. (More details) In a basic network, if an Ipv6CidrBlock contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
-        /// * The SecurityGroupId field allows you to enter the IDs of security groups that are in the same project as the security group to be modified, including the ID of the security group itself, to represent private IP addresses of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.
-        /// * The Port field allows you to enter a single port number, or two port numbers separated by a minus sign to represent a port range, such as 80 or 8000-8010. The Port field is accepted only if the value of the Protocol field is TCP or UDP. In other words, if the value of the Protocol field is not TCP or UDP, Protocol and Port are exclusive and cannot be entered at the same time, otherwise an error will occur with the API.
-        /// * The Action field only allows you to enter ACCEPT or DROP.
-        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. Protocol + Port and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
-        /// * Only policies in one direction can be created in each request. If you need to specify the PolicyIndex parameter, the indexes of policies must be consistent.
+        /// For parameters of SecurityGroupPolicySet,
+        /// </ul>
+        /// <li>`Version`: the version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
+        /// <li>When creating the `Egress` and `Ingress` polices,<ul>
+        /// <li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
+        /// <li>*`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// <li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// <li>`SecurityGroupId`: ID of the security group. It can be in the same project as the security group to be modified, including the ID of the security group itself, to represent private IPs of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the group ID while being used to match network messages.</li>
+        /// <li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
+        /// <li>`Action`: only allows `ACCEPT` or `DROP`.</li>
+        /// <li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port`and `ServiceTemplate` are mutually exclusive.</li>
+        /// <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies.</li>
+        /// </ul></li></ul>
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupPoliciesRequest"/></param>
         /// <returns><see cref="CreateSecurityGroupPoliciesResponse"/></returns>
@@ -1915,6 +2123,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to support the deletion of shared bandwidth packages, including [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
+        /// <returns><see cref="DeleteBandwidthPackageResponse"/></returns>
+        public async Task<DeleteBandwidthPackageResponse> DeleteBandwidthPackage(DeleteBandwidthPackageRequest req)
+        {
+             JsonResponseModel<DeleteBandwidthPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBandwidthPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBandwidthPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to support the deletion of shared bandwidth packages, including [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
+        /// <returns><see cref="DeleteBandwidthPackageResponse"/></returns>
+        public DeleteBandwidthPackageResponse DeleteBandwidthPackageSync(DeleteBandwidthPackageRequest req)
+        {
+             JsonResponseModel<DeleteBandwidthPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBandwidthPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBandwidthPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DeleteCcn) is used to delete CCNs.
         /// * After deletion, the routes between all instances associated with the CCN will be deleted, and the network will be interrupted. Please confirm this operation in advance.
         /// * CCN deletion is an irreversible operation. Please proceed with caution.
@@ -1999,6 +2247,52 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API (DeleteDirectConnectGateway) is used to delete Direct Connect gateways.
+        /// <li>For a NAT gateway, NAT and ACL rules will be cleaned upon the deletion of a Direct Connect gateway.
+        /// <li>After the deletion of a Direct Connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
+        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDirectConnectGatewayRequest"/></param>
+        /// <returns><see cref="DeleteDirectConnectGatewayResponse"/></returns>
+        public async Task<DeleteDirectConnectGatewayResponse> DeleteDirectConnectGateway(DeleteDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<DeleteDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DeleteDirectConnectGateway) is used to delete Direct Connect gateways.
+        /// <li>For a NAT gateway, NAT and ACL rules will be cleaned upon the deletion of a Direct Connect gateway.
+        /// <li>After the deletion of a Direct Connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
+        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDirectConnectGatewayRequest"/></param>
+        /// <returns><see cref="DeleteDirectConnectGatewayResponse"/></returns>
+        public DeleteDirectConnectGatewayResponse DeleteDirectConnectGatewaySync(DeleteDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<DeleteDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DeleteDirectConnectGatewayCcnRoutes) is used to delete the CCN routes (IDC IP range) of a Direct Connect gateway.
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectGatewayCcnRoutesRequest"/></param>
@@ -2030,6 +2324,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDirectConnectGatewayCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DeleteFlowLog) is used to delete flow logs.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFlowLogRequest"/></param>
+        /// <returns><see cref="DeleteFlowLogResponse"/></returns>
+        public async Task<DeleteFlowLogResponse> DeleteFlowLog(DeleteFlowLogRequest req)
+        {
+             JsonResponseModel<DeleteFlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DeleteFlowLog) is used to delete flow logs.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFlowLogRequest"/></param>
+        /// <returns><see cref="DeleteFlowLogResponse"/></returns>
+        public DeleteFlowLogResponse DeleteFlowLogSync(DeleteFlowLogRequest req)
+        {
+             JsonResponseModel<DeleteFlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFlowLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2943,6 +3277,86 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the account’s maximum number of bandwidth packages and their usage in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageQuotaRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageQuotaResponse"/></returns>
+        public async Task<DescribeBandwidthPackageQuotaResponse> DescribeBandwidthPackageQuota(DescribeBandwidthPackageQuotaRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthPackageQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the account’s maximum number of bandwidth packages and their usage in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageQuotaRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageQuotaResponse"/></returns>
+        public DescribeBandwidthPackageQuotaResponse DescribeBandwidthPackageQuotaSync(DescribeBandwidthPackageQuotaRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBandwidthPackageQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query bandwidth package information, including the unique ID of the bandwidth package, the type, the billing mode, the name, and the resource information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackagesRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackagesResponse"/></returns>
+        public async Task<DescribeBandwidthPackagesResponse> DescribeBandwidthPackages(DescribeBandwidthPackagesRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query bandwidth package information, including the unique ID of the bandwidth package, the type, the billing mode, the name, and the resource information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackagesRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackagesResponse"/></returns>
+        public DescribeBandwidthPackagesResponse DescribeBandwidthPackagesSync(DescribeBandwidthPackagesRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBandwidthPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeCcnAttachedInstances) is used to query the network instances associated with the CCN instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeCcnAttachedInstancesRequest"/></param>
@@ -3214,6 +3628,126 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDirectConnectGatewayCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeDirectConnectGateways) is used to query Direct Connect gateways.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDirectConnectGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeDirectConnectGatewaysResponse"/></returns>
+        public async Task<DescribeDirectConnectGatewaysResponse> DescribeDirectConnectGateways(DescribeDirectConnectGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeDirectConnectGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDirectConnectGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeDirectConnectGateways) is used to query Direct Connect gateways.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDirectConnectGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeDirectConnectGatewaysResponse"/></returns>
+        public DescribeDirectConnectGatewaysResponse DescribeDirectConnectGatewaysSync(DescribeDirectConnectGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeDirectConnectGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDirectConnectGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeFlowLog) is used to query flow log instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowLogRequest"/></param>
+        /// <returns><see cref="DescribeFlowLogResponse"/></returns>
+        public async Task<DescribeFlowLogResponse> DescribeFlowLog(DescribeFlowLogRequest req)
+        {
+             JsonResponseModel<DescribeFlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeFlowLog) is used to query flow log instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowLogRequest"/></param>
+        /// <returns><see cref="DescribeFlowLogResponse"/></returns>
+        public DescribeFlowLogResponse DescribeFlowLogSync(DescribeFlowLogRequest req)
+        {
+             JsonResponseModel<DescribeFlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeFlowLogs) is used to query and obtain the flow log set.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeFlowLogsResponse"/></returns>
+        public async Task<DescribeFlowLogsResponse> DescribeFlowLogs(DescribeFlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeFlowLogs) is used to query and obtain the flow log set.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeFlowLogsResponse"/></returns>
+        public DescribeFlowLogsResponse DescribeFlowLogsSync(DescribeFlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5337,6 +5871,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify bandwidth package attributes, including the bandwidth package name, and so on.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBandwidthPackageAttributeRequest"/></param>
+        /// <returns><see cref="ModifyBandwidthPackageAttributeResponse"/></returns>
+        public async Task<ModifyBandwidthPackageAttributeResponse> ModifyBandwidthPackageAttribute(ModifyBandwidthPackageAttributeRequest req)
+        {
+             JsonResponseModel<ModifyBandwidthPackageAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBandwidthPackageAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBandwidthPackageAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify bandwidth package attributes, including the bandwidth package name, and so on.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBandwidthPackageAttributeRequest"/></param>
+        /// <returns><see cref="ModifyBandwidthPackageAttributeResponse"/></returns>
+        public ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttributeSync(ModifyBandwidthPackageAttributeRequest req)
+        {
+             JsonResponseModel<ModifyBandwidthPackageAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBandwidthPackageAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBandwidthPackageAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyCcnAttribute) is used to modify CCN attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyCcnAttributeRequest"/></param>
@@ -5448,6 +6022,86 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCustomerGatewayAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomerGatewayAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (ModifyDirectConnectGatewayAttribute) is used to modify the Direct Connect gateway attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDirectConnectGatewayAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDirectConnectGatewayAttributeResponse"/></returns>
+        public async Task<ModifyDirectConnectGatewayAttributeResponse> ModifyDirectConnectGatewayAttribute(ModifyDirectConnectGatewayAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDirectConnectGatewayAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (ModifyDirectConnectGatewayAttribute) is used to modify the Direct Connect gateway attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDirectConnectGatewayAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDirectConnectGatewayAttributeResponse"/></returns>
+        public ModifyDirectConnectGatewayAttributeResponse ModifyDirectConnectGatewayAttributeSync(ModifyDirectConnectGatewayAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDirectConnectGatewayAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (ModifyFlowLogAttribute) is used to modify flow log attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFlowLogAttributeRequest"/></param>
+        /// <returns><see cref="ModifyFlowLogAttributeResponse"/></returns>
+        public async Task<ModifyFlowLogAttributeResponse> ModifyFlowLogAttribute(ModifyFlowLogAttributeRequest req)
+        {
+             JsonResponseModel<ModifyFlowLogAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFlowLogAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFlowLogAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (ModifyFlowLogAttribute) is used to modify flow log attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFlowLogAttributeRequest"/></param>
+        /// <returns><see cref="ModifyFlowLogAttributeResponse"/></returns>
+        public ModifyFlowLogAttributeResponse ModifyFlowLogAttributeSync(ModifyFlowLogAttributeRequest req)
+        {
+             JsonResponseModel<ModifyFlowLogAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFlowLogAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFlowLogAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5937,17 +6591,22 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifySecurityGroupPolicies) is used to reset the egress and ingress policies (SecurityGroupPolicy) of a security group.
+        /// This API is used to reset the egress and ingress policies (SecurityGroupPolicy) of a security group.
         /// 
-        /// * This API deletes all the current egress and ingress policies, and then adds new Egress and Ingress policies. It does not support custom PolicyIndex indexes.
-        /// * If SecurityGroupPolicySet.Version is set to 0, all policies will be cleared, and Egress and Ingress will be ignored.
-        /// * The value of the Protocol field can be TCP, UDP, ICMP, ICMPV6, GRE, or ALL.
-        /// * The CidrBlock field allows you to enter any string that conforms to the CIDR format. (More details) In a basic network, if a CidrBlock contains private IP addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
-        /// * The Ipv6CidrBlock field allows you to enter any string that conforms to the IPv6 CIDR format. (More details) In a basic network, if an Ipv6CidrBlock contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
-        /// * The SecurityGroupId field allows you to enter the IDs of security groups that are in the same project as the security group to be modified, including the ID of the security group itself, to represent private IP addresses of all CVMs under the security group. If this field is used, this policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.
-        /// * The Port field allows you to enter a single port number, or two port numbers separated by a minus sign to represent a port range, such as 80 or 8000-8010. The Port field can be used only when the value of the Protocol field is TCP or UDP.
-        /// * The Action field only allows you to enter ACCEPT or DROP.
-        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. Protocol + Port and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
+        /// </ul>
+        /// <li>This API deletes all the existing egress and ingress policies, and then adds `Egress` and `Ingress policies`. It does not support custom indexes `PolicyIndex`.</li>
+        /// <li>For parameters of SecurityGroupPolicySet,<ul>
+        /// 	<li>If `SecurityGroupPolicySet.Version` is set to 0, all policies will be cleared, and `Egress` and `Ingress` will be ignored.</li>
+        /// 	<li>If `SecurityGroupPolicySet.Version` is not set to 0, add `Egress` and `Ingress` policies:<ul>
+        /// 		<li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
+        /// 		<li>`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// 		<li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// 		<li>`SecurityGroupId`: ID of the security group. It can be in the same project as the security group to be modified, including the ID of the security group itself, to represent private IPs of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.</li>
+        /// 		<li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`.</li>
+        /// 		<li>`Action`: only allows ACCEPT or DROP.</li>
+        /// 		<li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
+        /// </ul></li></ul></li>
+        /// </ul>
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityGroupPoliciesRequest"/></param>
         /// <returns><see cref="ModifySecurityGroupPoliciesResponse"/></returns>
@@ -5967,17 +6626,22 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifySecurityGroupPolicies) is used to reset the egress and ingress policies (SecurityGroupPolicy) of a security group.
+        /// This API is used to reset the egress and ingress policies (SecurityGroupPolicy) of a security group.
         /// 
-        /// * This API deletes all the current egress and ingress policies, and then adds new Egress and Ingress policies. It does not support custom PolicyIndex indexes.
-        /// * If SecurityGroupPolicySet.Version is set to 0, all policies will be cleared, and Egress and Ingress will be ignored.
-        /// * The value of the Protocol field can be TCP, UDP, ICMP, ICMPV6, GRE, or ALL.
-        /// * The CidrBlock field allows you to enter any string that conforms to the CIDR format. (More details) In a basic network, if a CidrBlock contains private IP addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
-        /// * The Ipv6CidrBlock field allows you to enter any string that conforms to the IPv6 CIDR format. (More details) In a basic network, if an Ipv6CidrBlock contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
-        /// * The SecurityGroupId field allows you to enter the IDs of security groups that are in the same project as the security group to be modified, including the ID of the security group itself, to represent private IP addresses of all CVMs under the security group. If this field is used, this policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.
-        /// * The Port field allows you to enter a single port number, or two port numbers separated by a minus sign to represent a port range, such as 80 or 8000-8010. The Port field can be used only when the value of the Protocol field is TCP or UDP.
-        /// * The Action field only allows you to enter ACCEPT or DROP.
-        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. Protocol + Port and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
+        /// </ul>
+        /// <li>This API deletes all the existing egress and ingress policies, and then adds `Egress` and `Ingress policies`. It does not support custom indexes `PolicyIndex`.</li>
+        /// <li>For parameters of SecurityGroupPolicySet,<ul>
+        /// 	<li>If `SecurityGroupPolicySet.Version` is set to 0, all policies will be cleared, and `Egress` and `Ingress` will be ignored.</li>
+        /// 	<li>If `SecurityGroupPolicySet.Version` is not set to 0, add `Egress` and `Ingress` policies:<ul>
+        /// 		<li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
+        /// 		<li>`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// 		<li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// 		<li>`SecurityGroupId`: ID of the security group. It can be in the same project as the security group to be modified, including the ID of the security group itself, to represent private IPs of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.</li>
+        /// 		<li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`.</li>
+        /// 		<li>`Action`: only allows ACCEPT or DROP.</li>
+        /// 		<li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
+        /// </ul></li></ul></li>
+        /// </ul>
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityGroupPoliciesRequest"/></param>
         /// <returns><see cref="ModifySecurityGroupPoliciesResponse"/></returns>
@@ -6352,6 +7016,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="RemoveBandwidthPackageResourcesResponse"/></returns>
+        public async Task<RemoveBandwidthPackageResourcesResponse> RemoveBandwidthPackageResources(RemoveBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<RemoveBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="RemoveBandwidthPackageResourcesResponse"/></returns>
+        public RemoveBandwidthPackageResourcesResponse RemoveBandwidthPackageResourcesSync(RemoveBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<RemoveBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveBandwidthPackageResourcesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

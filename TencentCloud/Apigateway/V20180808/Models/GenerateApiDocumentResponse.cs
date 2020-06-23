@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// API documentation and SDK link.
+        /// API document and SDK link.
         /// </summary>
         [JsonProperty("Result")]
         public DocumentSDK Result{ get; set; }

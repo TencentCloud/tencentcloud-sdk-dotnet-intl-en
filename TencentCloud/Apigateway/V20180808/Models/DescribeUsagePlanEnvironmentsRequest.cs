@@ -31,13 +31,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UsagePlanId{ get; set; }
 
         /// <summary>
-        /// Binding type. Valid values: API, SERVICE (default value).
+        /// Binding type. Valid values: API, SERVICE. Default value: SERVICE.
         /// </summary>
         [JsonProperty("BindType")]
         public string BindType{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 100.
+        /// Number of results to be returned. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

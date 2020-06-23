@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Release version ID.
+        /// Published version number.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VersionName")]

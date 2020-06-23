@@ -668,8 +668,8 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to demote a usage plan of a service in an environment to the API level.
-        /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to the service.
-        /// This operation will be denied if there are no APIs under a service.
+        ///  
+        /// This operation will be denied if there are no APIs under the service.
         /// This operation will also be denied if the current environment has not been published.
         /// </summary>
         /// <param name="req"><see cref="DemoteServiceUsagePlanRequest"/></param>
@@ -691,8 +691,8 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to demote a usage plan of a service in an environment to the API level.
-        /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to the service.
-        /// This operation will be denied if there are no APIs under a service.
+        ///  
+        /// This operation will be denied if there are no APIs under the service.
         /// This operation will also be denied if the current environment has not been published.
         /// </summary>
         /// <param name="req"><see cref="DemoteServiceUsagePlanRequest"/></param>
@@ -713,7 +713,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the detailed information of an API deployed in API Gateway.
+        /// This API is used to query the details of an API deployed in API Gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiRequest"/></param>
         /// <returns><see cref="DescribeApiResponse"/></returns>
@@ -733,7 +733,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the detailed information of an API deployed in API Gateway.
+        /// This API is used to query the details of an API deployed in API Gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiRequest"/></param>
         /// <returns><see cref="DescribeApiResponse"/></returns>
@@ -793,8 +793,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query key details.
-        /// After creating an API key, you can query its details using this API which will display its key.
+        /// This API is used to query the details of a key.
+        /// After creating an API key, you can query its details by using this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiKeyRequest"/></param>
         /// <returns><see cref="DescribeApiKeyResponse"/></returns>
@@ -814,8 +814,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query key details.
-        /// After creating an API key, you can query its details using this API which will display its key.
+        /// This API is used to query the details of a key.
+        /// After creating an API key, you can query its details by using this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiKeyRequest"/></param>
         /// <returns><see cref="DescribeApiKeyResponse"/></returns>
@@ -836,7 +836,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to query the details of API usage plans in a service.
-        /// To make authentication and throttling for a service takes effect, you need to bind usage plans to it. This API is used to query all usage plans bound to a service and APIs under it.
+        /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiUsagePlanRequest"/></param>
         /// <returns><see cref="DescribeApiUsagePlanResponse"/></returns>
@@ -857,7 +857,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to query the details of API usage plans in a service.
-        /// To make authentication and throttling for a service takes effect, you need to bind usage plans to it. This API is used to query all usage plans bound to a service and APIs under it.
+        /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiUsagePlanRequest"/></param>
         /// <returns><see cref="DescribeApiUsagePlanResponse"/></returns>
@@ -997,8 +997,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the release history of a service environment.
-        /// A service can only be used when it is published to an environment after creation. This API is used to query the release history of an environment under a service.
+        /// This API is used to query the release history in a service environment.
+        /// A service can only be used when it is published to an environment after creation. This API is used to query the release history in an environment under a service.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceEnvironmentReleaseHistoryRequest"/></param>
         /// <returns><see cref="DescribeServiceEnvironmentReleaseHistoryResponse"/></returns>
@@ -1018,8 +1018,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the release history of a service environment.
-        /// A service can only be used when it is published to an environment after creation. This API is used to query the release history of an environment under a service.
+        /// This API is used to query the release history in a service environment.
+        /// A service can only be used when it is published to an environment after creation. This API is used to query the release history in an environment under a service.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceEnvironmentReleaseHistoryRequest"/></param>
         /// <returns><see cref="DescribeServiceEnvironmentReleaseHistoryResponse"/></returns>
@@ -1039,7 +1039,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to display service throttling policies.
+        /// This API is used to display a service throttling policy.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceEnvironmentStrategyRequest"/></param>
         /// <returns><see cref="DescribeServiceEnvironmentStrategyResponse"/></returns>
@@ -1059,7 +1059,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to display service throttling policies.
+        /// This API is used to display a service throttling policy.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceEnvironmentStrategyRequest"/></param>
         /// <returns><see cref="DescribeServiceEnvironmentStrategyResponse"/></returns>
@@ -1122,7 +1122,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to query the path mappings of a custom domain name.
-        /// In API Gateway, you can bind a custom domain name to a service and map the paths for it. You can custom different path mappings to up to 3 environments under the service. This API is used to query the list of path mappings of a custom domain name bound to a service.
+        /// In API Gateway, you can bind a custom domain name to a service and map its paths. You can customize different path mappings to up to 3 environments under the service. This API is used to query the list of path mappings of a custom domain name bound to a service.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceSubDomainMappingsRequest"/></param>
         /// <returns><see cref="DescribeServiceSubDomainMappingsResponse"/></returns>
@@ -1143,7 +1143,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to query the path mappings of a custom domain name.
-        /// In API Gateway, you can bind a custom domain name to a service and map the paths for it. You can custom different path mappings to up to 3 environments under the service. This API is used to query the list of path mappings of a custom domain name bound to a service.
+        /// In API Gateway, you can bind a custom domain name to a service and map its paths. You can customize different path mappings to up to 3 environments under the service. This API is used to query the list of path mappings of a custom domain name bound to a service.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceSubDomainMappingsRequest"/></param>
         /// <returns><see cref="DescribeServiceSubDomainMappingsResponse"/></returns>
@@ -1206,7 +1206,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to query the details of usage plans in a service.
-        /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to the service.
+        /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceUsagePlanRequest"/></param>
         /// <returns><see cref="DescribeServiceUsagePlanResponse"/></returns>
@@ -1227,7 +1227,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to query the details of usage plans in a service.
-        /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to the service.
+        /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceUsagePlanRequest"/></param>
         /// <returns><see cref="DescribeServiceUsagePlanResponse"/></returns>
@@ -1371,7 +1371,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to disable an API key pair.
+        /// This API is used to disable an API key.
         /// </summary>
         /// <param name="req"><see cref="DisableApiKeyRequest"/></param>
         /// <returns><see cref="DisableApiKeyResponse"/></returns>
@@ -1391,7 +1391,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to disable an API key pair.
+        /// This API is used to disable an API key.
         /// </summary>
         /// <param name="req"><see cref="DisableApiKeyRequest"/></param>
         /// <returns><see cref="DisableApiKeyResponse"/></returns>
@@ -1411,7 +1411,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to enable a disabled API key pair.
+        /// This API is used to enable a disabled API key.
         /// </summary>
         /// <param name="req"><see cref="EnableApiKeyRequest"/></param>
         /// <returns><see cref="EnableApiKeyResponse"/></returns>
@@ -1431,7 +1431,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to enable a disabled API key pair.
+        /// This API is used to enable a disabled API key.
         /// </summary>
         /// <param name="req"><see cref="EnableApiKeyRequest"/></param>
         /// <returns><see cref="EnableApiKeyResponse"/></returns>
@@ -1451,7 +1451,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to automatically generate API documentation and SDKs. A document and an SDK will be generated for each environment under each service, respectively.
+        /// This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
         /// </summary>
         /// <param name="req"><see cref="GenerateApiDocumentRequest"/></param>
         /// <returns><see cref="GenerateApiDocumentResponse"/></returns>
@@ -1471,7 +1471,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to automatically generate API documentation and SDKs. A document and an SDK will be generated for each environment under each service, respectively.
+        /// This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
         /// </summary>
         /// <param name="req"><see cref="GenerateApiDocumentRequest"/></param>
         /// <returns><see cref="GenerateApiDocumentResponse"/></returns>
@@ -1571,7 +1571,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires full API parameters be passed in and is suitable for being used with the console).
+        /// This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires that full API parameters be passed in and is suitable for use in the console).
         /// </summary>
         /// <param name="req"><see cref="ModifyApiIncrementRequest"/></param>
         /// <returns><see cref="ModifyApiIncrementResponse"/></returns>
@@ -1591,7 +1591,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires full API parameters be passed in and is suitable for being used with the console).
+        /// This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires that full API parameters be passed in and is suitable for use in the console).
         /// </summary>
         /// <param name="req"><see cref="ModifyApiIncrementRequest"/></param>
         /// <returns><see cref="ModifyApiIncrementResponse"/></returns>
@@ -1651,7 +1651,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type all can be modified.
+        /// This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type can be modified.
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceRequest"/></param>
         /// <returns><see cref="ModifyServiceResponse"/></returns>
@@ -1671,7 +1671,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type all can be modified.
+        /// This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type can be modified.
         /// </summary>
         /// <param name="req"><see cref="ModifyServiceRequest"/></param>
         /// <returns><see cref="ModifyServiceResponse"/></returns>
@@ -1731,7 +1731,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to modify the path mapping in the custom domain name settings of the service. The path mapping rule can be modified before it is bound to the custom domain name.
+        /// This API is used to modify the path mapping in the custom domain name settings of a service. The path mapping rule can be modified before it is bound to the custom domain name.
         /// </summary>
         /// <param name="req"><see cref="ModifySubDomainRequest"/></param>
         /// <returns><see cref="ModifySubDomainResponse"/></returns>
@@ -1751,7 +1751,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to modify the path mapping in the custom domain name settings of the service. The path mapping rule can be modified before it is bound to the custom domain name.
+        /// This API is used to modify the path mapping in the custom domain name settings of a service. The path mapping rule can be modified before it is bound to the custom domain name.
         /// </summary>
         /// <param name="req"><see cref="ModifySubDomainRequest"/></param>
         /// <returns><see cref="ModifySubDomainResponse"/></returns>
@@ -1974,7 +1974,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to unbind a custom domain name.
-        /// After binding a custom domain name to a service using API Gateway, you can use this API to unbind it.
+        /// After binding a custom domain name to a service by using API Gateway, you can use this API to unbind it.
         /// </summary>
         /// <param name="req"><see cref="UnBindSubDomainRequest"/></param>
         /// <returns><see cref="UnBindSubDomainResponse"/></returns>
@@ -1995,7 +1995,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to unbind a custom domain name.
-        /// After binding a custom domain name to a service using API Gateway, you can use this API to unbind it.
+        /// After binding a custom domain name to a service by using API Gateway, you can use this API to unbind it.
         /// </summary>
         /// <param name="req"><see cref="UnBindSubDomainRequest"/></param>
         /// <returns><see cref="UnBindSubDomainResponse"/></returns>
@@ -2016,7 +2016,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to deactivate a service.
-        /// Only when a service is published to an environment can its APIs be called by callers. You can call this API to deactivate a service from the release environment. Once deactivated, the service cannot be called.
+        /// Only after a service is published to an environment can its APIs be called. You can call this API to deactivate a service in the release environment. Once deactivated, the service cannot be called.
         /// </summary>
         /// <param name="req"><see cref="UnReleaseServiceRequest"/></param>
         /// <returns><see cref="UnReleaseServiceResponse"/></returns>
@@ -2037,7 +2037,7 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to deactivate a service.
-        /// Only when a service is published to an environment can its APIs be called by callers. You can call this API to deactivate a service from the release environment. Once deactivated, the service cannot be called.
+        /// Only after a service is published to an environment can its APIs be called. You can call this API to deactivate a service in the release environment. Once deactivated, the service cannot be called.
         /// </summary>
         /// <param name="req"><see cref="UnReleaseServiceRequest"/></param>
         /// <returns><see cref="UnReleaseServiceResponse"/></returns>
@@ -2097,7 +2097,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to switch the running version published in an environment of a service to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+        /// This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
         /// <returns><see cref="UpdateServiceResponse"/></returns>
@@ -2117,7 +2117,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to switch the running version published in an environment of a service to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+        /// This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
         /// <returns><see cref="UpdateServiceResponse"/></returns>

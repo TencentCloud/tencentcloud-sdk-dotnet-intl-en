@@ -37,19 +37,19 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// Protocols supported by service. Valid values: http, https, http&https.
+        /// Protocol supported by service. Valid values: http, https, http&https.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: INNER, OUTER.
+        /// Network type. Valid values: OUTER, INNER.
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
+        /// Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
         /// </summary>
         [JsonProperty("IsDefaultMapping")]
         public bool? IsDefaultMapping{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string NetSubDomain{ get; set; }
 
         /// <summary>
-        /// Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
+        /// Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
+        /// Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
         /// </summary>
         [JsonProperty("PathMappingSet")]
         public PathMapping[] PathMappingSet{ get; set; }

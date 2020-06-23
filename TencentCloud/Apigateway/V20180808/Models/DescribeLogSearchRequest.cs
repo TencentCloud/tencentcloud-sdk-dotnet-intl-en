@@ -49,7 +49,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Number of logs returned at a time. Up to 100 logs can be returned at a time
+        /// Number of logs to be returned at a time. Maximum value: 100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -61,16 +61,22 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ConText{ get; set; }
 
         /// <summary>
-        /// Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
+        /// Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// Fuzzy search of logs by keyword
+        /// Fuzzy search for log by keyword
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LogQuerys")]
+        public LogQuery[] LogQuerys{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "ConText", this.ConText);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamArrayObj(map, prefix + "LogQuerys.", this.LogQuerys);
         }
     }
 }

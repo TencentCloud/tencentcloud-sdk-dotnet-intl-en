@@ -49,13 +49,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ExclusiveSetName{ get; set; }
 
         /// <summary>
-        /// Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+        /// Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
         /// </summary>
         [JsonProperty("NetTypes")]
         public string[] NetTypes{ get; set; }
 
         /// <summary>
-        /// IP version number. Valid values: IPv4 (default value), IPv6
+        /// IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
         /// </summary>
         [JsonProperty("IpVersion")]
         public string IpVersion{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of the service of the IP policy to be deleted.
+        /// Unique service ID of the IP policy to be deleted.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UsagePlanId{ get; set; }
 
         /// <summary>
-        /// Modified custom usage plan name.
+        /// Custom usage plan name after modification.
         /// </summary>
         [JsonProperty("UsagePlanName")]
         public string UsagePlanName{ get; set; }
 
         /// <summary>
-        /// Modified custom usage plan description.
+        /// Custom usage plan description after modification.
         /// </summary>
         [JsonProperty("UsagePlanDesc")]
         public string UsagePlanDesc{ get; set; }

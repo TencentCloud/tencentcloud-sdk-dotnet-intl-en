@@ -1258,5 +1258,45 @@ namespace TencentCloud.Dts.V20180330
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to promote a disaster recovery instance to a master instance, which will stop sync from the original master instance and end the master/slave relationship.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDrToMasterRequest"/></param>
+        /// <returns><see cref="SwitchDrToMasterResponse"/></returns>
+        public async Task<SwitchDrToMasterResponse> SwitchDrToMaster(SwitchDrToMasterRequest req)
+        {
+             JsonResponseModel<SwitchDrToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDrToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDrToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to promote a disaster recovery instance to a master instance, which will stop sync from the original master instance and end the master/slave relationship.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDrToMasterRequest"/></param>
+        /// <returns><see cref="SwitchDrToMasterResponse"/></returns>
+        public SwitchDrToMasterResponse SwitchDrToMasterSync(SwitchDrToMasterRequest req)
+        {
+             JsonResponseModel<SwitchDrToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDrToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDrToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

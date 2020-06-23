@@ -38,7 +38,6 @@ namespace TencentCloud.Mdl.V20200326.Models
 
         /// <summary>
         /// Video `Pid`, which is available only if the input is `rtp/udp`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }

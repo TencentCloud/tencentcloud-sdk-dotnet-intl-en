@@ -39,7 +39,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Msg{ get; set; }
 
         /// <summary>
-        /// Remarks of the custom response configuration error code.
+        /// Custom response configuration error code remarks.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Desc")]

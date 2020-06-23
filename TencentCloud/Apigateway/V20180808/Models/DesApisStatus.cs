@@ -79,7 +79,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// API type. Valid values (general API), TSF (microservice API).
+        /// API type. Valid values: NORMAL (general API), TSF (microservice API).
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApiType")]
@@ -93,7 +93,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Whether to enable debugging on purchase (reserved for the marketplace)
+        /// Whether to enable debugging after purchase (reserved field for the marketplace)
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDebugAfterCharge")]
@@ -107,21 +107,21 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string AuthType{ get; set; }
 
         /// <summary>
-        /// OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+        /// OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApiBusinessType")]
         public string ApiBusinessType{ get; set; }
 
         /// <summary>
-        /// Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+        /// Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AuthRelationApiId")]
         public string AuthRelationApiId{ get; set; }
 
         /// <summary>
-        /// OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+        /// OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OauthConfig")]

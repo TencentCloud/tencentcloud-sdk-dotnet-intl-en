@@ -40,7 +40,6 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// Video information array.
         /// For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
         /// For other inputs, the quantity is 1.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Video")]
         public VideoPipelineInputStatistics[] Video{ get; set; }
@@ -49,7 +48,6 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// Audio information array.
         /// For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
         /// For other inputs, the quantity is 1.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Audio")]
         public AudioPipelineInputStatistics[] Audio{ get; set; }

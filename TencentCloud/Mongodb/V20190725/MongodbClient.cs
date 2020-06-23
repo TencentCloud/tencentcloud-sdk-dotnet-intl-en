@@ -293,6 +293,86 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to get the slow log statistics of a database instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogPatternsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogPatternsResponse"/></returns>
+        public async Task<DescribeSlowLogPatternsResponse> DescribeSlowLogPatterns(DescribeSlowLogPatternsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogPatternsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogPatterns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogPatternsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the slow log statistics of a database instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogPatternsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogPatternsResponse"/></returns>
+        public DescribeSlowLogPatternsResponse DescribeSlowLogPatternsSync(DescribeSlowLogPatternsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogPatternsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogPatterns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogPatternsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the slow log information of a TencentDB instance. Only slow logs for the last 7 days can be queried.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public async Task<DescribeSlowLogsResponse> DescribeSlowLogs(DescribeSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the slow log information of a TencentDB instance. Only slow logs for the last 7 days can be queried.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public DescribeSlowLogsResponse DescribeSlowLogsSync(DescribeSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the purchasable instance specifications.
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecInfoRequest"/></param>
@@ -324,6 +404,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSpecInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to run the `FlushRouterConfig` command on all mongos instances.
+        /// </summary>
+        /// <param name="req"><see cref="FlushInstanceRouterConfigRequest"/></param>
+        /// <returns><see cref="FlushInstanceRouterConfigResponse"/></returns>
+        public async Task<FlushInstanceRouterConfigResponse> FlushInstanceRouterConfig(FlushInstanceRouterConfigRequest req)
+        {
+             JsonResponseModel<FlushInstanceRouterConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FlushInstanceRouterConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlushInstanceRouterConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to run the `FlushRouterConfig` command on all mongos instances.
+        /// </summary>
+        /// <param name="req"><see cref="FlushInstanceRouterConfigRequest"/></param>
+        /// <returns><see cref="FlushInstanceRouterConfigResponse"/></returns>
+        public FlushInstanceRouterConfigResponse FlushInstanceRouterConfigSync(FlushInstanceRouterConfigRequest req)
+        {
+             JsonResponseModel<FlushInstanceRouterConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FlushInstanceRouterConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlushInstanceRouterConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

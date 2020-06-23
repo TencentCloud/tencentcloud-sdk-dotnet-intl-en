@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Whether to enable load balancing.
+        /// Whether load balancing is enabled.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsLoadBalance")]
@@ -39,7 +39,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Method{ get; set; }
 
         /// <summary>
-        /// Whether to enable session persistence.
+        /// Whether session persistence is enabled.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SessionStickRequired")]

@@ -50,7 +50,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceDesc{ get; set; }
 
         /// <summary>
-        /// Protocols supported by service. Valid values: http, https, http&https.
+        /// Protocol supported by service. Valid values: http, https, http&https.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -74,25 +74,25 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ExclusiveSetName{ get; set; }
 
         /// <summary>
-        /// Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+        /// Network type list. INNER: private network access; OUTER: public network access.
         /// </summary>
         [JsonProperty("NetTypes")]
         public string[] NetTypes{ get; set; }
 
         /// <summary>
-        /// Private network access subdomain name.
+        /// Subdomain name for private network access.
         /// </summary>
         [JsonProperty("InternalSubDomain")]
         public string InternalSubDomain{ get; set; }
 
         /// <summary>
-        /// Public network access subdomain name.
+        /// Subdomain name for public network access.
         /// </summary>
         [JsonProperty("OuterSubDomain")]
         public string OuterSubDomain{ get; set; }
 
         /// <summary>
-        /// Port number for HTTP access over private network.
+        /// Service port number for HTTP access over private network.
         /// </summary>
         [JsonProperty("InnerHttpPort")]
         public long? InnerHttpPort{ get; set; }

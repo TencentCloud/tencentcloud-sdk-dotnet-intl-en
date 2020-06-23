@@ -32,7 +32,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of environments bound to service
+        /// List of environments bound to service.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnvironmentList")]

@@ -25,21 +25,21 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of API's service.
+        /// Unique service ID of API.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Name of API's service.
+        /// Service name of API.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// Description of API's service.
+        /// Service description of API.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceDesc")]
@@ -123,7 +123,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public OauthConfig OauthConfig{ get; set; }
 
         /// <summary>
-        /// Whether to enable debugging on purchase (reserved for the marketplace).
+        /// Whether to enable debugging after purchase (reserved field for the marketplace).
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDebugAfterCharge")]
@@ -144,14 +144,14 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ResponseType{ get; set; }
 
         /// <summary>
-        /// Successful response sample of custom response configuration.
+        /// Sample response for successful custom response configuration.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResponseSuccessExample")]
         public string ResponseSuccessExample{ get; set; }
 
         /// <summary>
-        /// Response failure sample of custom response configuration.
+        /// Sample response for failed custom response configuration.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResponseFailExample")]
@@ -165,7 +165,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public ErrorCodes[] ResponseErrorCodes{ get; set; }
 
         /// <summary>
-        /// Frontend request parameters.
+        /// Frontend request parameter.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RequestParameters")]
@@ -193,119 +193,119 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public ServiceConfig ServiceConfig{ get; set; }
 
         /// <summary>
-        /// API backend service parameters.
+        /// API backend service parameter.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceParameters")]
         public ServiceParameter[] ServiceParameters{ get; set; }
 
         /// <summary>
-        /// Constant parameters.
+        /// Constant parameter.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConstantParameters")]
         public ConstantParameter[] ConstantParameters{ get; set; }
 
         /// <summary>
-        /// Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+        /// Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceMockReturnMessage")]
         public string ServiceMockReturnMessage{ get; set; }
 
         /// <summary>
-        /// SCF function name. This parameter takes effect when the backend type is `SCF`.
+        /// SCF function name, which takes effect if the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceScfFunctionName")]
         public string ServiceScfFunctionName{ get; set; }
 
         /// <summary>
-        /// SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+        /// SCF function namespace, which takes effect if the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceScfFunctionNamespace")]
         public string ServiceScfFunctionNamespace{ get; set; }
 
         /// <summary>
-        /// SCF function version. This parameter takes effect when the backend type is `SCF`.
+        /// SCF function version, which takes effect if the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceScfFunctionQualifier")]
         public string ServiceScfFunctionQualifier{ get; set; }
 
         /// <summary>
-        /// Whether to enable integrated response.
+        /// Whether integrated response is enabled.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceScfIsIntegratedResponse")]
         public bool? ServiceScfIsIntegratedResponse{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+        /// SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketRegisterFunctionName")]
         public string ServiceWebsocketRegisterFunctionName{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketRegisterFunctionNamespace")]
         public string ServiceWebsocketRegisterFunctionNamespace{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketRegisterFunctionQualifier")]
         public string ServiceWebsocketRegisterFunctionQualifier{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketCleanupFunctionName")]
         public string ServiceWebsocketCleanupFunctionName{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketCleanupFunctionNamespace")]
         public string ServiceWebsocketCleanupFunctionNamespace{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketCleanupFunctionQualifier")]
         public string ServiceWebsocketCleanupFunctionQualifier{ get; set; }
 
         /// <summary>
-        /// WebSocket pushback address.
+        /// WebSocket callback address.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternalDomain")]
         public string InternalDomain{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketTransportFunctionName")]
         public string ServiceWebsocketTransportFunctionName{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketTransportFunctionNamespace")]
         public string ServiceWebsocketTransportFunctionNamespace{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceWebsocketTransportFunctionQualifier")]
@@ -319,21 +319,21 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public MicroService[] MicroServices{ get; set; }
 
         /// <summary>
-        /// Microservice detailed information.
+        /// Microservice details.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MicroServicesInfo")]
         public long?[] MicroServicesInfo{ get; set; }
 
         /// <summary>
-        /// Microservice load balancing configuration.
+        /// Load balancing configuration of microservice.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceTsfLoadBalanceConf")]
         public TsfLoadBalanceConfResp ServiceTsfLoadBalanceConf{ get; set; }
 
         /// <summary>
-        /// Microservice health check configuration.
+        /// Health check configuration of microservice.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceTsfHealthCheckConf")]

@@ -32,7 +32,6 @@ namespace TencentCloud.Mdl.V20200326.Models
 
         /// <summary>
         /// Output information of pipeline 1.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Pipeline1")]
         public PipelineOutputStatistics[] Pipeline1{ get; set; }

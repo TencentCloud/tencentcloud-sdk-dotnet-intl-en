@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of the service of API.
+        /// Unique service ID of API.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ApiId{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 100.
+        /// Number of results to be returned. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

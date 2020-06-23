@@ -25,13 +25,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of the service to be switch to.
+        /// Unique ID of the service to be switch.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+        /// Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
         /// </summary>
         [JsonProperty("EnvironmentName")]
         public string EnvironmentName{ get; set; }

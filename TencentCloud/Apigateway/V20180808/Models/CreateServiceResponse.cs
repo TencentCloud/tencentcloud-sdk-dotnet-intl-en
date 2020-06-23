@@ -49,7 +49,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string OuterSubDomain{ get; set; }
 
         /// <summary>
-        /// Default domain name of VPC private network
+        /// Default private network domain name of VPC
         /// </summary>
         [JsonProperty("InnerSubDomain")]
         public string InnerSubDomain{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+        /// Network type list. INNER: private network access; OUTER: public network access.
         /// </summary>
         [JsonProperty("NetTypes")]
         public string[] NetTypes{ get; set; }

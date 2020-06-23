@@ -37,7 +37,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string EnvironmentName{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 100.
+        /// Number of results to be returned. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

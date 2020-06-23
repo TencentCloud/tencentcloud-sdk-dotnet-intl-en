@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Whether to enable health check.
+        /// Whether health check is enabled.
         /// </summary>
         [JsonProperty("IsHealthCheck")]
         public bool? IsHealthCheck{ get; set; }

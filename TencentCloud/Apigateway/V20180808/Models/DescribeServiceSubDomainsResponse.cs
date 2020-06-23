@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Custom service domain names.
+        /// Custom service domain name query.
         /// </summary>
         [JsonProperty("Result")]
         public DomainSets Result{ get; set; }

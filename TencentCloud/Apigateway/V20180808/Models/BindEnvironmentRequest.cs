@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string[] UsagePlanIds{ get; set; }
 
         /// <summary>
-        /// Binding type. Valid values: API, SERVICE (default value).
+        /// Binding type. Valid values: API, SERVICE. Default value: SERVICE.
         /// </summary>
         [JsonProperty("BindType")]
         public string BindType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Unique API ID array. This parameter will be required when `bindType` is `API`.
+        /// Unique API ID array, which is required if `bindType` is `API`.
         /// </summary>
         [JsonProperty("ApiIds")]
         public string[] ApiIds{ get; set; }

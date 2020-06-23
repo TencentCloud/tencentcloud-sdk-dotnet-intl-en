@@ -25,13 +25,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// ID of the key to be updated.
+        /// ID of the key to be changed.
         /// </summary>
         [JsonProperty("AccessKeyId")]
         public string AccessKeyId{ get; set; }
 
         /// <summary>
-        /// Key to be updated, which is required when a custom key is updated. It can contain 10 to 50 letters, digits, and underscores.
+        /// Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
         /// </summary>
         [JsonProperty("AccessKeySecret")]
         public string AccessKeySecret{ get; set; }

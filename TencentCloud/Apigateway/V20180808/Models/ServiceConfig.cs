@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
+        /// Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
+        /// API backend service URL, which is required if `ServiceType` is `HTTP`.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
+        /// API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
+        /// API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }

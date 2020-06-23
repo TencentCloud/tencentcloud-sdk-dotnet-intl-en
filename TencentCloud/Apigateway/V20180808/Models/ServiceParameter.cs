@@ -25,49 +25,49 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+        /// API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+        /// Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }
 
         /// <summary>
-        /// Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+        /// Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RelevantRequestParameterPosition")]
         public string RelevantRequestParameterPosition{ get; set; }
 
         /// <summary>
-        /// Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+        /// Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RelevantRequestParameterName")]
         public string RelevantRequestParameterName{ get; set; }
 
         /// <summary>
-        /// API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+        /// Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+        /// API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RelevantRequestParameterDesc")]
         public string RelevantRequestParameterDesc{ get; set; }
 
         /// <summary>
-        /// API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+        /// API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RelevantRequestParameterType")]

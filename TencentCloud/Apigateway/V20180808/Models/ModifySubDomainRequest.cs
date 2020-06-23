@@ -31,31 +31,31 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Custom domain name for which the path mapping is to be modified.
+        /// Custom domain name whose path mapping is to be modified.
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
+        /// Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
         /// </summary>
         [JsonProperty("IsDefaultMapping")]
         public bool? IsDefaultMapping{ get; set; }
 
         /// <summary>
-        /// Certificate ID, which is required when the HTTPS protocol is included.
+        /// Certificate ID, which is required if the HTTPS protocol is included.
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Modified custom domain name protocol type. Valid values: http, https, http&https.
+        /// Custom domain name protocol type after modification. Valid values: http, https, http&https.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Modified path mapping list.
+        /// Path mapping list after modification.
         /// </summary>
         [JsonProperty("PathMappingSet")]
         public PathMapping[] PathMappingSet{ get; set; }

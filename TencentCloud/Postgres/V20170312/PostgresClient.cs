@@ -93,6 +93,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to create one or more TencentDB for PostgreSQL instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
+        public async Task<CreateDBInstancesResponse> CreateDBInstances(CreateDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create one or more TencentDB for PostgreSQL instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
+        public CreateDBInstancesResponse CreateDBInstancesSync(CreateDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the instance user list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBInstanceAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of one or more instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public async Task<DescribeDBInstancesResponse> DescribeDBInstances(DescribeDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of one or more instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public DescribeDBInstancesResponse DescribeDBInstancesSync(DescribeDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -804,6 +884,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "RestartDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade an instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
+        public async Task<UpgradeDBInstanceResponse> UpgradeDBInstance(UpgradeDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade an instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
+        public UpgradeDBInstanceResponse UpgradeDBInstanceSync(UpgradeDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

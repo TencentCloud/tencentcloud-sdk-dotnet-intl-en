@@ -206,13 +206,6 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("SortRule")]
         public long? SortRule{ get; set; }
 
-        /// <summary>
-        /// Distributed index information of table
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DbClusterInfoStruct")]
-        public string DbClusterInfoStruct{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -245,7 +238,6 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "ApiAccessId", this.ApiAccessId);
             this.SetParamSimple(map, prefix + "SortFieldNum", this.SortFieldNum);
             this.SetParamSimple(map, prefix + "SortRule", this.SortRule);
-            this.SetParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
         }
     }
 }

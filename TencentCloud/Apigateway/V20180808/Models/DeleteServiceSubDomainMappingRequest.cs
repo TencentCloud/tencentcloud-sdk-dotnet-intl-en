@@ -37,7 +37,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+        /// Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
         /// </summary>
         [JsonProperty("Environment")]
         public string Environment{ get; set; }

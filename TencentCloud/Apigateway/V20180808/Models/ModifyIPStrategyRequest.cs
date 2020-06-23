@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of the service of the policy to be modified.
+        /// Unique service ID of the policy to be modified.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }

@@ -2573,6 +2573,46 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// Get scheduling domain name list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchedulingDomainListRequest"/></param>
+        /// <returns><see cref="DescribeSchedulingDomainListResponse"/></returns>
+        public async Task<DescribeSchedulingDomainListResponse> DescribeSchedulingDomainList(DescribeSchedulingDomainListRequest req)
+        {
+             JsonResponseModel<DescribeSchedulingDomainListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSchedulingDomainList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSchedulingDomainListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Get scheduling domain name list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchedulingDomainListRequest"/></param>
+        /// <returns><see cref="DescribeSchedulingDomainListResponse"/></returns>
+        public DescribeSchedulingDomainListResponse DescribeSchedulingDomainListSync(DescribeSchedulingDomainListRequest req)
+        {
+             JsonResponseModel<DescribeSchedulingDomainListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSchedulingDomainList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSchedulingDomainListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the security statistics of the current month.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecIndexRequest"/></param>

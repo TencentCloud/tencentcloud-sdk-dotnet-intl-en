@@ -110,8 +110,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// OsCustomizeType
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Container image tag
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
@@ -129,6 +129,13 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// Whether Deletion Protection is enabled
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -153,6 +160,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

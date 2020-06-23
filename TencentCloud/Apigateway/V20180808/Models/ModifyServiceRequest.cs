@@ -31,25 +31,25 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Modified service name.
+        /// Service name after modification.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// Modified service description.
+        /// Service description after modification.
         /// </summary>
         [JsonProperty("ServiceDesc")]
         public string ServiceDesc{ get; set; }
 
         /// <summary>
-        /// Modified service frontend request type, such as `http`, `https`, and `http&https`.
+        /// Service frontend request type after modification, such as `http`, `https`, and `http&https`.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+        /// Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
         /// </summary>
         [JsonProperty("NetTypes")]
         public string[] NetTypes{ get; set; }

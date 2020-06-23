@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of API's service.
+        /// Unique service ID of API.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
@@ -85,25 +85,25 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public bool? EnableCORS{ get; set; }
 
         /// <summary>
-        /// Constant parameters.
+        /// Constant parameter.
         /// </summary>
         [JsonProperty("ConstantParameters")]
         public ConstantParameter[] ConstantParameters{ get; set; }
 
         /// <summary>
-        /// Frontend request parameters.
+        /// Frontend request parameter.
         /// </summary>
         [JsonProperty("RequestParameters")]
         public RequestParameter[] RequestParameters{ get; set; }
 
         /// <summary>
-        /// This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
+        /// This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
         /// </summary>
         [JsonProperty("ApiBusinessType")]
         public string ApiBusinessType{ get; set; }
 
         /// <summary>
-        /// Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+        /// Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
         /// </summary>
         [JsonProperty("ServiceMockReturnMessage")]
         public string ServiceMockReturnMessage{ get; set; }
@@ -115,13 +115,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public MicroServiceReq[] MicroServices{ get; set; }
 
         /// <summary>
-        /// Microservice load balancing configuration.
+        /// Load balancing configuration of microservice.
         /// </summary>
         [JsonProperty("ServiceTsfLoadBalanceConf")]
         public TsfLoadBalanceConfResp ServiceTsfLoadBalanceConf{ get; set; }
 
         /// <summary>
-        /// Microservice health check configuration.
+        /// Health check configuration of microservice.
         /// </summary>
         [JsonProperty("ServiceTsfHealthCheckConf")]
         public HealthCheckConf ServiceTsfHealthCheckConf{ get; set; }
@@ -145,91 +145,91 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public HealthCheckConf TargetServicesHealthCheckConf{ get; set; }
 
         /// <summary>
-        /// SCF function name. This parameter takes effect when the backend type is `SCF`.
+        /// SCF function name, which takes effect if the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceScfFunctionName")]
         public string ServiceScfFunctionName{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketRegisterFunctionName")]
         public string ServiceWebsocketRegisterFunctionName{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketCleanupFunctionName")]
         public string ServiceWebsocketCleanupFunctionName{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketTransportFunctionName")]
         public string ServiceWebsocketTransportFunctionName{ get; set; }
 
         /// <summary>
-        /// SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+        /// SCF function namespace, which takes effect if the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceScfFunctionNamespace")]
         public string ServiceScfFunctionNamespace{ get; set; }
 
         /// <summary>
-        /// SCF function version. This parameter takes effect when the backend type is `SCF`.
+        /// SCF function version, which takes effect if the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceScfFunctionQualifier")]
         public string ServiceScfFunctionQualifier{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketRegisterFunctionNamespace")]
         public string ServiceWebsocketRegisterFunctionNamespace{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketRegisterFunctionQualifier")]
         public string ServiceWebsocketRegisterFunctionQualifier{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketTransportFunctionNamespace")]
         public string ServiceWebsocketTransportFunctionNamespace{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketTransportFunctionQualifier")]
         public string ServiceWebsocketTransportFunctionQualifier{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketCleanupFunctionNamespace")]
         public string ServiceWebsocketCleanupFunctionNamespace{ get; set; }
 
         /// <summary>
-        /// SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+        /// SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceWebsocketCleanupFunctionQualifier")]
         public string ServiceWebsocketCleanupFunctionQualifier{ get; set; }
 
         /// <summary>
-        /// Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
+        /// Whether to enable response integration, which takes effect if the backend type is `SCF`.
         /// </summary>
         [JsonProperty("ServiceScfIsIntegratedResponse")]
         public bool? ServiceScfIsIntegratedResponse{ get; set; }
 
         /// <summary>
-        /// Billing after debugging starts (reserved for marketplace).
+        /// Billing after debugging starts (reserved field for marketplace).
         /// </summary>
         [JsonProperty("IsDebugAfterCharge")]
         public bool? IsDebugAfterCharge{ get; set; }
 
         /// <summary>
-        /// Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+        /// Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
         /// </summary>
         [JsonProperty("IsDeleteResponseErrorCodes")]
         public bool? IsDeleteResponseErrorCodes{ get; set; }
@@ -241,13 +241,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ResponseType{ get; set; }
 
         /// <summary>
-        /// Successful response sample of custom response configuration.
+        /// Sample response for successful custom response configuration.
         /// </summary>
         [JsonProperty("ResponseSuccessExample")]
         public string ResponseSuccessExample{ get; set; }
 
         /// <summary>
-        /// Response failure sample of custom response configuration.
+        /// Sample response for failed custom response configuration.
         /// </summary>
         [JsonProperty("ResponseFailExample")]
         public string ResponseFailExample{ get; set; }
@@ -259,19 +259,19 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public ServiceConfig ServiceConfig{ get; set; }
 
         /// <summary>
-        /// Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+        /// Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
         /// </summary>
         [JsonProperty("AuthRelationApiId")]
         public string AuthRelationApiId{ get; set; }
 
         /// <summary>
-        /// API backend service parameters.
+        /// API backend service parameter.
         /// </summary>
         [JsonProperty("ServiceParameters")]
         public ServiceParameter[] ServiceParameters{ get; set; }
 
         /// <summary>
-        /// OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
+        /// OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
         /// </summary>
         [JsonProperty("OauthConfig")]
         public OauthConfig OauthConfig{ get; set; }

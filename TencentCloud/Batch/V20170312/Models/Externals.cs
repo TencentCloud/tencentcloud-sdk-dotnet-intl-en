@@ -32,8 +32,8 @@ namespace TencentCloud.Batch.V20170312.Models
         public bool? ReleaseAddress{ get; set; }
 
         /// <summary>
-        /// Unsupported network types
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("UnsupportNetworks")]
         public string[] UnsupportNetworks{ get; set; }

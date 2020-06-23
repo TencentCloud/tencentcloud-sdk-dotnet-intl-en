@@ -25,13 +25,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Download link of generated file. Generated documents are stored in COS.
+        /// Download link of generated file. Generated documents will be stored in COS.
         /// </summary>
         [JsonProperty("DocumentURL")]
         public string DocumentURL{ get; set; }
 
         /// <summary>
-        /// Download link of generated SDK file. Generated SDKs are stored in COS.
+        /// Download link of generated SDK file. Generated SDK files will be stored in COS.
         /// </summary>
         [JsonProperty("SdkURL")]
         public string SdkURL{ get; set; }

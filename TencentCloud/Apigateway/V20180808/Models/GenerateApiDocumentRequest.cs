@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Environment of the service for which the SDK is to be created.
+        /// Environment of the service for which to create an SDK.
         /// </summary>
         [JsonProperty("GenEnvironment")]
         public string GenEnvironment{ get; set; }

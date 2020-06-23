@@ -33,7 +33,6 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// <summary>
         /// Alarm end time in UTC time.
         /// This time is available only after the alarm ends.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClearTime")]
         public string ClearTime{ get; set; }

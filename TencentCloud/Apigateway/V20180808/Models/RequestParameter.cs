@@ -37,7 +37,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Parameter location
+        /// Parameter position
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// Required
+        /// Whether it is required
         /// </summary>
         [JsonProperty("Required")]
         public bool? Required{ get; set; }

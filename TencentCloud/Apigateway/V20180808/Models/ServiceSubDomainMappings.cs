@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
+        /// Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
         /// </summary>
         [JsonProperty("IsDefaultMapping")]
         public bool? IsDefaultMapping{ get; set; }

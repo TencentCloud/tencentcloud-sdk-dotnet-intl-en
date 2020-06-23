@@ -1773,6 +1773,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to swap the VIPs of instances for instance disaster recovery switch in scenarios where cross-AZ disaster recovery is supported through DTS. After the VIPs of the source and target instances are swapped, the target instance can be written into and the DTS sync task between them will be disconnected.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchInstanceVipRequest"/></param>
+        /// <returns><see cref="SwitchInstanceVipResponse"/></returns>
+        public async Task<SwitchInstanceVipResponse> SwitchInstanceVip(SwitchInstanceVipRequest req)
+        {
+             JsonResponseModel<SwitchInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to swap the VIPs of instances for instance disaster recovery switch in scenarios where cross-AZ disaster recovery is supported through DTS. After the VIPs of the source and target instances are swapped, the target instance can be written into and the DTS sync task between them will be disconnected.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchInstanceVipRequest"/></param>
+        /// <returns><see cref="SwitchInstanceVipResponse"/></returns>
+        public SwitchInstanceVipResponse SwitchInstanceVipSync(SwitchInstanceVipRequest req)
+        {
+             JsonResponseModel<SwitchInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to upgrade an instance.
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>

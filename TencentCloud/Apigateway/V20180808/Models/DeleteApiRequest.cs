@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of API's service.
+        /// Unique service ID of API.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }

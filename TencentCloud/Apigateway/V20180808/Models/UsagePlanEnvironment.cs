@@ -60,7 +60,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Method{ get; set; }
 
         /// <summary>
-        /// Name of the bound environment.
+        /// Name of bound environment.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Environment")]
@@ -81,7 +81,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? MaxRequestNum{ get; set; }
 
         /// <summary>
-        /// Maximum requests per second.
+        /// Maximum number of requests per second.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxRequestNumPreSec")]

@@ -32,7 +32,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Environment status of the services bound to usage plan.
+        /// Environment status of services bound to usage plan.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnvironmentList")]

@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+        /// Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
         /// </summary>
         [JsonProperty("EnvironmentName")]
         public string EnvironmentName{ get; set; }

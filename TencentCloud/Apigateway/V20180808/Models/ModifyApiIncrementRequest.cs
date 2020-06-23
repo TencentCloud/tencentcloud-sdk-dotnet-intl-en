@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// Public key value to be modified of OAuth API
+        /// Public key value to be modified by OAuth API
         /// </summary>
         [JsonProperty("PublicKey")]
         public string PublicKey{ get; set; }

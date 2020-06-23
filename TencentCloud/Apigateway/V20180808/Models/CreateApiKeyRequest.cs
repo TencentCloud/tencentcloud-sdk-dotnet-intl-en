@@ -37,13 +37,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string AccessKeyType{ get; set; }
 
         /// <summary>
-        /// Custom key ID, which is required when `AccessKeyType` is `manual`. It can contain 5 to 50 letters, digits, and underscores.
+        /// Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
         /// </summary>
         [JsonProperty("AccessKeyId")]
         public string AccessKeyId{ get; set; }
 
         /// <summary>
-        /// Custom key, which is required when `AccessKeyType` is `manual`. It can contain 10 to 50 letters, digits, and underscores.
+        /// Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
         /// </summary>
         [JsonProperty("AccessKeySecret")]
         public string AccessKeySecret{ get; set; }

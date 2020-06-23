@@ -95,7 +95,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Whether to enable debugging on purchase.
+        /// Whether to enable debugging after purchase.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDebugAfterCharge")]
