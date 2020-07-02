@@ -24,12 +24,26 @@ namespace TencentCloud.Kms.V20190118.Models
     public class ScheduleKeyDeletionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Unique CMK ID
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// Schedule deletion time range. Value range: [7,30]
+        /// </summary>
+        [JsonProperty("PendingWindowInDays")]
+        public ulong? PendingWindowInDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "PendingWindowInDays", this.PendingWindowInDays);
         }
     }
 }

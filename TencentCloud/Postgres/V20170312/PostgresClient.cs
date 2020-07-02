@@ -413,6 +413,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to pull the list of databases.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public async Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pull the list of databases.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public DescribeDatabasesResponse DescribeDatabasesSync(DescribeDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get order information.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
@@ -573,6 +613,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to terminate the instance corresponding to a specified `DBInstanceId`.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
+        public async Task<DestroyDBInstanceResponse> DestroyDBInstance(DestroyDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate the instance corresponding to a specified `DBInstanceId`.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
+        public DestroyDBInstanceResponse DestroyDBInstanceSync(DestroyDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to initialize a TencentDB for PostgreSQL instance.
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
@@ -604,6 +684,86 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "InitDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the purchase price of one or multiple instances.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateDBInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateDBInstancesResponse"/></returns>
+        public async Task<InquiryPriceCreateDBInstancesResponse> InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceCreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the purchase price of one or multiple instances.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateDBInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateDBInstancesResponse"/></returns>
+        public InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstancesSync(InquiryPriceCreateDBInstancesRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceCreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewDBInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewDBInstanceResponse"/></returns>
+        public async Task<InquiryPriceRenewDBInstanceResponse> InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRenewDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewDBInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewDBInstanceResponse"/></returns>
+        public InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstanceSync(InquiryPriceRenewDBInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceRenewDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,6 +973,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to renew an instance.
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
+        public async Task<RenewInstanceResponse> RenewInstance(RenewInstanceRequest req)
+        {
+             JsonResponseModel<RenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to renew an instance.
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
+        public RenewInstanceResponse RenewInstanceSync(RenewInstanceRequest req)
+        {
+             JsonResponseModel<RenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to reset the account password of an instance.
         /// </summary>
         /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
@@ -884,6 +1084,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "RestartDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set auto-renewal.
+        /// </summary>
+        /// <param name="req"><see cref="SetAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="SetAutoRenewFlagResponse"/></returns>
+        public async Task<SetAutoRenewFlagResponse> SetAutoRenewFlag(SetAutoRenewFlagRequest req)
+        {
+             JsonResponseModel<SetAutoRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetAutoRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAutoRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set auto-renewal.
+        /// </summary>
+        /// <param name="req"><see cref="SetAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="SetAutoRenewFlagResponse"/></returns>
+        public SetAutoRenewFlagResponse SetAutoRenewFlagSync(SetAutoRenewFlagRequest req)
+        {
+             JsonResponseModel<SetAutoRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetAutoRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAutoRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

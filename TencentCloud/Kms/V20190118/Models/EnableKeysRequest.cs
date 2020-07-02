@@ -24,12 +24,19 @@ namespace TencentCloud.Kms.V20190118.Models
     public class EnableKeysRequest : AbstractModel
     {
         
+        /// <summary>
+        /// List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
+        /// </summary>
+        [JsonProperty("KeyIds")]
+        public string[] KeyIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         }
     }
 }

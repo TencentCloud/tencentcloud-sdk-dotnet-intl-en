@@ -25,6 +25,18 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
+        /// Globally unique CMK ID
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+        /// </summary>
+        [JsonProperty("Plaintext")]
+        public string Plaintext{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "Plaintext", this.Plaintext);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

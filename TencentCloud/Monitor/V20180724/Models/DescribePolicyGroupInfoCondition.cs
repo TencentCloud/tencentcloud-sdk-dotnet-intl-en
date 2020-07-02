@@ -61,31 +61,34 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+        /// Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
         /// </summary>
         [JsonProperty("AlarmNotifyPeriod")]
         public long? AlarmNotifyPeriod{ get; set; }
 
         /// <summary>
         /// Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("CalcType")]
         public long? CalcType{ get; set; }
 
         /// <summary>
         /// Threshold.
-        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("CalcValue")]
         public string CalcValue{ get; set; }
 
         /// <summary>
         /// Duration at which an alarm will be triggered in seconds.
-        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("ContinueTime")]
         public long? ContinueTime{ get; set; }
+
+        /// <summary>
+        /// Alarm metric name.
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
 
 
         /// <summary>
@@ -103,6 +106,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "CalcType", this.CalcType);
             this.SetParamSimple(map, prefix + "CalcValue", this.CalcValue);
             this.SetParamSimple(map, prefix + "ContinueTime", this.ContinueTime);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
         }
     }
 }

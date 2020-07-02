@@ -24,12 +24,40 @@ namespace TencentCloud.Kms.V20190118.Models
     public class ReEncryptRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Ciphertext to be re-encrypted
+        /// </summary>
+        [JsonProperty("CiphertextBlob")]
+        public string CiphertextBlob{ get; set; }
+
+        /// <summary>
+        /// CMK used for re-encryption. If this parameter is empty, the ciphertext will be re-encrypted by using the original CMK (as long as the key is not rotated, the ciphertext will not be refreshed)
+        /// </summary>
+        [JsonProperty("DestinationKeyId")]
+        public string DestinationKeyId{ get; set; }
+
+        /// <summary>
+        /// JSON string of the key-value pair used during ciphertext encryption by `CiphertextBlob`. If not used during encryption, this parameter will be empty
+        /// </summary>
+        [JsonProperty("SourceEncryptionContext")]
+        public string SourceEncryptionContext{ get; set; }
+
+        /// <summary>
+        /// JSON string of the key-value pair used during re-encryption. If this field is used, the same string should be entered when the returned new ciphertext is decrypted
+        /// </summary>
+        [JsonProperty("DestinationEncryptionContext")]
+        public string DestinationEncryptionContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
+            this.SetParamSimple(map, prefix + "DestinationKeyId", this.DestinationKeyId);
+            this.SetParamSimple(map, prefix + "SourceEncryptionContext", this.SourceEncryptionContext);
+            this.SetParamSimple(map, prefix + "DestinationEncryptionContext", this.DestinationEncryptionContext);
         }
     }
 }

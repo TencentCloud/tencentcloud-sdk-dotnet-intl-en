@@ -25,6 +25,18 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
+        /// Whether the KMS service has been activated. true: activated
+        /// </summary>
+        [JsonProperty("ServiceEnabled")]
+        public bool? ServiceEnabled{ get; set; }
+
+        /// <summary>
+        /// Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+        /// </summary>
+        [JsonProperty("InvalidType")]
+        public long? InvalidType{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
+            this.SetParamSimple(map, prefix + "InvalidType", this.InvalidType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

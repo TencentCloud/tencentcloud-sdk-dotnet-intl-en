@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
+        /// Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

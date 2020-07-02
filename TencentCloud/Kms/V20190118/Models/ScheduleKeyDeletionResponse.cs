@@ -25,6 +25,18 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
+        /// Schedule deletion execution time
+        /// </summary>
+        [JsonProperty("DeletionDate")]
+        public ulong? DeletionDate{ get; set; }
+
+        /// <summary>
+        /// Unique ID of the CMK scheduled for deletion
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

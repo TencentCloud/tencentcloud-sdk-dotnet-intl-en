@@ -213,6 +213,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// This API is used to query the tags associated with a resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsResponse"/></returns>
+        public async Task<DescribeResourceTagsResponse> DescribeResourceTags(DescribeResourceTagsRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the tags associated with a resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsResponse"/></returns>
+        public DescribeResourceTagsResponse DescribeResourceTagsSync(DescribeResourceTagsRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query tag key and value pairs for existing resources.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsByResourceIdsRequest"/></param>

@@ -773,6 +773,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to view route information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteRequest"/></param>
+        /// <returns><see cref="DescribeRouteResponse"/></returns>
+        public async Task<DescribeRouteResponse> DescribeRoute(DescribeRouteRequest req)
+        {
+             JsonResponseModel<DescribeRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to view route information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteRequest"/></param>
+        /// <returns><see cref="DescribeRouteResponse"/></returns>
+        public DescribeRouteResponse DescribeRouteSync(DescribeRouteRequest req)
+        {
+             JsonResponseModel<DescribeRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// API domain name: https://ckafka.tencentcloudapi.com
         /// This API is used to get the list of topics in a CKafka instance of a user.
         /// </summary>

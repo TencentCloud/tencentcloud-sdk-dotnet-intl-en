@@ -1293,6 +1293,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to list the access keys associated with a specified CAM user.
+        /// </summary>
+        /// <param name="req"><see cref="ListAccessKeysRequest"/></param>
+        /// <returns><see cref="ListAccessKeysResponse"/></returns>
+        public async Task<ListAccessKeysResponse> ListAccessKeys(ListAccessKeysRequest req)
+        {
+             JsonResponseModel<ListAccessKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAccessKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAccessKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list the access keys associated with a specified CAM user.
+        /// </summary>
+        /// <param name="req"><see cref="ListAccessKeysRequest"/></param>
+        /// <returns><see cref="ListAccessKeysResponse"/></returns>
+        public ListAccessKeysResponse ListAccessKeysSync(ListAccessKeysRequest req)
+        {
+             JsonResponseModel<ListAccessKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAccessKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAccessKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
         /// </summary>
         /// <param name="req"><see cref="ListAttachedGroupPoliciesRequest"/></param>

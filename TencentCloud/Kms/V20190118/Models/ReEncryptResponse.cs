@@ -25,6 +25,30 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
+        /// Re-encrypted ciphertext
+        /// </summary>
+        [JsonProperty("CiphertextBlob")]
+        public string CiphertextBlob{ get; set; }
+
+        /// <summary>
+        /// CMK used for re-encryption
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// CMK used by ciphertext before re-encryption
+        /// </summary>
+        [JsonProperty("SourceKeyId")]
+        public string SourceKeyId{ get; set; }
+
+        /// <summary>
+        /// `true` indicates that the ciphertext has been re-encrypted. When re-encryption is initiated by using the same CMK, as long as the CMK is not rotated, no actual re-encryption will be performed, and the original ciphertext will be returned
+        /// </summary>
+        [JsonProperty("ReEncrypted")]
+        public bool? ReEncrypted{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +60,10 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "SourceKeyId", this.SourceKeyId);
+            this.SetParamSimple(map, prefix + "ReEncrypted", this.ReEncrypted);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

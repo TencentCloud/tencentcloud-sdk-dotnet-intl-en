@@ -24,12 +24,19 @@ namespace TencentCloud.Kms.V20190118.Models
     public class DisableKeyRotationRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Unique CMK ID
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
         }
     }
 }

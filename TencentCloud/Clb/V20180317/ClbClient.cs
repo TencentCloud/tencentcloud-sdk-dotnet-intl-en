@@ -343,6 +343,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 针对SnatPro负载均衡，这个接口用于添加SnatIp，如果负载均衡没有开启SnatPro，添加SnatIp后会自动开启
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerSnatIpsRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerSnatIpsResponse"/></returns>
+        public async Task<CreateLoadBalancerSnatIpsResponse> CreateLoadBalancerSnatIps(CreateLoadBalancerSnatIpsRequest req)
+        {
+             JsonResponseModel<CreateLoadBalancerSnatIpsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLoadBalancerSnatIps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancerSnatIpsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 针对SnatPro负载均衡，这个接口用于添加SnatIp，如果负载均衡没有开启SnatPro，添加SnatIp后会自动开启
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerSnatIpsRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerSnatIpsResponse"/></returns>
+        public CreateLoadBalancerSnatIpsResponse CreateLoadBalancerSnatIpsSync(CreateLoadBalancerSnatIpsRequest req)
+        {
+             JsonResponseModel<CreateLoadBalancerSnatIpsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLoadBalancerSnatIps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancerSnatIpsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateRule) is used to create a forwarding rule under an existing layer-7 CLB listener, where real servers must be bound to the rule instead of the listener.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>
@@ -500,6 +540,88 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLoadBalancer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持删除负载均衡的多个监听器。
+        /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerListenersRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerListenersResponse"/></returns>
+        public async Task<DeleteLoadBalancerListenersResponse> DeleteLoadBalancerListeners(DeleteLoadBalancerListenersRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLoadBalancerListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口支持删除负载均衡的多个监听器。
+        /// 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerListenersRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerListenersResponse"/></returns>
+        public DeleteLoadBalancerListenersResponse DeleteLoadBalancerListenersSync(DeleteLoadBalancerListenersRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoadBalancerListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对于SnatPro的负载均衡，这个接口用于删除SnatIp
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerSnatIpsRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerSnatIpsResponse"/></returns>
+        public async Task<DeleteLoadBalancerSnatIpsResponse> DeleteLoadBalancerSnatIps(DeleteLoadBalancerSnatIpsRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerSnatIpsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLoadBalancerSnatIps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerSnatIpsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对于SnatPro的负载均衡，这个接口用于删除SnatIp
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerSnatIpsRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerSnatIpsResponse"/></returns>
+        public DeleteLoadBalancerSnatIpsResponse DeleteLoadBalancerSnatIpsSync(DeleteLoadBalancerSnatIpsRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerSnatIpsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoadBalancerSnatIps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerSnatIpsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -748,6 +870,86 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "DeregisterTargetsFromClassicalLB");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterTargetsFromClassicalLBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询一个负载均衡所封禁的IP列表（黑名单）。（接口灰度中，如需使用请提工单）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockIPListRequest"/></param>
+        /// <returns><see cref="DescribeBlockIPListResponse"/></returns>
+        public async Task<DescribeBlockIPListResponse> DescribeBlockIPList(DescribeBlockIPListRequest req)
+        {
+             JsonResponseModel<DescribeBlockIPListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBlockIPList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlockIPListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询一个负载均衡所封禁的IP列表（黑名单）。（接口灰度中，如需使用请提工单）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockIPListRequest"/></param>
+        /// <returns><see cref="DescribeBlockIPListResponse"/></returns>
+        public DescribeBlockIPListResponse DescribeBlockIPListSync(DescribeBlockIPListRequest req)
+        {
+             JsonResponseModel<DescribeBlockIPListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBlockIPList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlockIPListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据 ModifyBlockIPList 接口返回的异步任务的ID，查询封禁IP（黑名单）异步任务的执行状态。（接口灰度中，如需使用请提工单）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockIPTaskRequest"/></param>
+        /// <returns><see cref="DescribeBlockIPTaskResponse"/></returns>
+        public async Task<DescribeBlockIPTaskResponse> DescribeBlockIPTask(DescribeBlockIPTaskRequest req)
+        {
+             JsonResponseModel<DescribeBlockIPTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBlockIPTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlockIPTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据 ModifyBlockIPList 接口返回的异步任务的ID，查询封禁IP（黑名单）异步任务的执行状态。（接口灰度中，如需使用请提工单）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockIPTaskRequest"/></param>
+        /// <returns><see cref="DescribeBlockIPTaskResponse"/></returns>
+        public DescribeBlockIPTaskResponse DescribeBlockIPTaskSync(DescribeBlockIPTaskRequest req)
+        {
+             JsonResponseModel<DescribeBlockIPTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBlockIPTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlockIPTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1390,6 +1592,48 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "ManualRewrite");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改负载均衡的IP（client IP）封禁黑名单列表，一个转发规则最多支持封禁 2000000 个IP，及黑名单容量为 2000000。
+        /// （接口灰度中，如需使用请提工单）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlockIPListRequest"/></param>
+        /// <returns><see cref="ModifyBlockIPListResponse"/></returns>
+        public async Task<ModifyBlockIPListResponse> ModifyBlockIPList(ModifyBlockIPListRequest req)
+        {
+             JsonResponseModel<ModifyBlockIPListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBlockIPList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlockIPListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改负载均衡的IP（client IP）封禁黑名单列表，一个转发规则最多支持封禁 2000000 个IP，及黑名单容量为 2000000。
+        /// （接口灰度中，如需使用请提工单）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlockIPListRequest"/></param>
+        /// <returns><see cref="ModifyBlockIPListResponse"/></returns>
+        public ModifyBlockIPListResponse ModifyBlockIPListSync(ModifyBlockIPListRequest req)
+        {
+             JsonResponseModel<ModifyBlockIPListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBlockIPList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlockIPListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

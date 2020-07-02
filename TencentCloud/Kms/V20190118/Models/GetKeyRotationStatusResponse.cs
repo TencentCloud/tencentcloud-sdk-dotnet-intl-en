@@ -25,6 +25,12 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
+        /// Whether key rotation is enabled
+        /// </summary>
+        [JsonProperty("KeyRotationEnabled")]
+        public bool? KeyRotationEnabled{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

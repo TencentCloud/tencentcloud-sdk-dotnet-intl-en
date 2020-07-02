@@ -25,6 +25,54 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
+        /// Globally unique CMK ID
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// Alias that makes a key more recognizable and understandable
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
+        /// <summary>
+        /// Key creation time in UNIX timestamp format
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// CMK description
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// CMK status
+        /// </summary>
+        [JsonProperty("KeyState")]
+        public string KeyState{ get; set; }
+
+        /// <summary>
+        /// CMK usage
+        /// </summary>
+        [JsonProperty("KeyUsage")]
+        public string KeyUsage{ get; set; }
+
+        /// <summary>
+        /// Tag operation return code. 0: success; 1: internal error; 2: business processing error
+        /// </summary>
+        [JsonProperty("TagCode")]
+        public ulong? TagCode{ get; set; }
+
+        /// <summary>
+        /// Tag operation return information
+        /// </summary>
+        [JsonProperty("TagMsg")]
+        public string TagMsg{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +84,14 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "KeyState", this.KeyState);
+            this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
+            this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
+            this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
