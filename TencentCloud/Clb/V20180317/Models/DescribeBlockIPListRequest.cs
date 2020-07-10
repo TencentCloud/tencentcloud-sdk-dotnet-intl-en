@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID。
+        /// CLB instance ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 数据偏移量，默认为 0。
+        /// Data offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回IP的最大个数，默认为 100000。
+        /// Maximum number of IPs to be returned. Default value: 100,000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -42,6 +42,15 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// Input settings information.
+        /// One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+        /// This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+        /// Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
+        /// </summary>
+        [JsonProperty("InputSettings")]
+        public InputSettingInfo[] InputSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +60,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArrayObj(map, prefix + "InputSettings.", this.InputSettings);
         }
     }
 }

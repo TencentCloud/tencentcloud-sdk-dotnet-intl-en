@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The flow log instance set
+        /// The instance set of flow logs.
         /// </summary>
         [JsonProperty("FlowLog")]
         public FlowLog[] FlowLog{ get; set; }
 
         /// <summary>
-        /// The total number of flow logs
+        /// The total number of flow logs.
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }

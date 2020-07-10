@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The ID of the bandwidth package
+        /// The unique ID of the bandwidth package.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// The IDs of the bandwidth package (valid when the applied number is greater than 1)
+        /// The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
         /// </summary>
         [JsonProperty("BandwidthPackageIds")]
         public string[] BandwidthPackageIds{ get; set; }

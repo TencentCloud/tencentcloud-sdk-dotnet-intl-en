@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 返回的IP的数量
+        /// Number of returned IPs
         /// </summary>
         [JsonProperty("BlockedIPCount")]
         public ulong? BlockedIPCount{ get; set; }
 
         /// <summary>
-        /// 获取用户真实IP的字段
+        /// Field for getting real client IP
         /// </summary>
         [JsonProperty("ClientIPField")]
         public string ClientIPField{ get; set; }
 
         /// <summary>
-        /// 加入了12360黑名单的IP列表
+        /// List of IPs added to blacklist 12360
         /// </summary>
         [JsonProperty("BlockedIPList")]
         public BlockedIP[] BlockedIPList{ get; set; }

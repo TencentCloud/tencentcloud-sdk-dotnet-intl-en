@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 1 running，2 fail，6 succ
+        /// 1: running; 2: failed; 6: succeeded
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

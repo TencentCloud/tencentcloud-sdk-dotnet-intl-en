@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The unique ID of the bandwidth package
+        /// The unique ID of the bandwidth package.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+        /// The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+        /// The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// The name of the bandwidth package
+        /// The name of the bandwidth package.
         /// </summary>
         [JsonProperty("BandwidthPackageName")]
         public string BandwidthPackageName{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+        /// The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The resource information of the bandwidth package
+        /// The resource information of the bandwidth package.
         /// </summary>
         [JsonProperty("ResourceSet")]
         public Resource[] ResourceSet{ get; set; }
 
         /// <summary>
-        /// The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+        /// The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }

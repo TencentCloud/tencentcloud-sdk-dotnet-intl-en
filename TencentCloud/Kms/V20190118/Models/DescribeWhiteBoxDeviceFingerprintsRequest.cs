@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 白盒密钥ID
+        /// White-box key ID
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }

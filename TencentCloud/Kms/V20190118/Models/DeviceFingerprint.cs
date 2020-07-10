@@ -25,13 +25,14 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+        /// Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
         /// </summary>
         [JsonProperty("Identity")]
         public string Identity{ get; set; }
 
         /// <summary>
-        /// 描述信息，如：IP，设备名称等，最大1024字节
+        /// Description, such as IP and device name. Length limit: 1,024 bytes
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

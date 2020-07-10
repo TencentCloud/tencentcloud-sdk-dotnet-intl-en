@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+        /// The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }

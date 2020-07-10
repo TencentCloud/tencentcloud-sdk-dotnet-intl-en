@@ -25,37 +25,37 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The VPC ID or the unified ID. We recommend you use the unified ID
+        /// The VPC ID or the unified ID. We recommend you use the unified ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The name of the flow log instance
+        /// The name of the flow log instance.
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// The type of resources to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+        /// The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// The unique ID of the resource
+        /// The unique ID of the resource.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// The collection type of the flow log. ACCEPT|REJECT|ALL
+        /// The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
         /// </summary>
         [JsonProperty("TrafficType")]
         public string TrafficType{ get; set; }
 
         /// <summary>
-        /// The storage ID of the flow log
+        /// The storage ID of the flow log.
         /// </summary>
         [JsonProperty("CloudLogId")]
         public string CloudLogId{ get; set; }

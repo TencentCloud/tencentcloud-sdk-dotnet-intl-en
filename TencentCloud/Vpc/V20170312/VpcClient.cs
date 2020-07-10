@@ -93,7 +93,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to add bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// This API is used to add a bandwidth package resource including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
         /// </summary>
         /// <param name="req"><see cref="AddBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="AddBandwidthPackageResourcesResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to add bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// This API is used to add a bandwidth package resource including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
         /// </summary>
         /// <param name="req"><see cref="AddBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="AddBandwidthPackageResourcesResponse"/></returns>
@@ -415,7 +415,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AssociateNatGatewayAddress) is used to bind a NAT gateway to an Elastic IP (EIP).
+        /// This API is used to bind a NAT Gateway to an Elastic IP (EIP).
         /// </summary>
         /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
         /// <returns><see cref="AssociateNatGatewayAddressResponse"/></returns>
@@ -435,7 +435,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AssociateNatGatewayAddress) is used to bind a NAT gateway to an Elastic IP (EIP).
+        /// This API is used to bind a NAT Gateway to an Elastic IP (EIP).
         /// </summary>
         /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
         /// <returns><see cref="AssociateNatGatewayAddressResponse"/></returns>
@@ -835,6 +835,56 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to create an ENI and bind it to a CVM.
+        /// * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be idle and in the same subnet as the ENI.
+        /// * When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
+        /// * An ENI can only be bound to a limited number of IP addresses. For more information about resource limits, see <a href="/document/product/576/18527">ENI Use Limits</a>.
+        /// * You can bind an existing security group when creating an ENI.
+        /// * You can bind a tag when creating an ENI. The tag list in the response indicates the tags that have been successfully added.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndAttachNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="CreateAndAttachNetworkInterfaceResponse"/></returns>
+        public async Task<CreateAndAttachNetworkInterfaceResponse> CreateAndAttachNetworkInterface(CreateAndAttachNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<CreateAndAttachNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAndAttachNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAndAttachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an ENI and bind it to a CVM.
+        /// * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be idle and in the same subnet as the ENI.
+        /// * When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
+        /// * An ENI can only be bound to a limited number of IP addresses. For more information about resource limits, see <a href="/document/product/576/18527">ENI Use Limits</a>.
+        /// * You can bind an existing security group when creating an ENI.
+        /// * You can bind a tag when creating an ENI. The tag list in the response indicates the tags that have been successfully added.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndAttachNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="CreateAndAttachNetworkInterfaceResponse"/></returns>
+        public CreateAndAttachNetworkInterfaceResponse CreateAndAttachNetworkInterfaceSync(CreateAndAttachNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<CreateAndAttachNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAndAttachNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAndAttachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
         /// </summary>
         /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
@@ -875,7 +925,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to support the creation of [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// This API is used to create [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
         /// </summary>
         /// <param name="req"><see cref="CreateBandwidthPackageRequest"/></param>
         /// <returns><see cref="CreateBandwidthPackageResponse"/></returns>
@@ -895,7 +945,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to support the creation of [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// This API is used to create [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
         /// </summary>
         /// <param name="req"><see cref="CreateBandwidthPackageRequest"/></param>
         /// <returns><see cref="CreateBandwidthPackageResponse"/></returns>
@@ -1055,7 +1105,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateDirectConnectGateway) is used to create a Direct Connect gateway.
+        /// This API is used to create a direct connect gateway.
         /// </summary>
         /// <param name="req"><see cref="CreateDirectConnectGatewayRequest"/></param>
         /// <returns><see cref="CreateDirectConnectGatewayResponse"/></returns>
@@ -1075,7 +1125,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateDirectConnectGateway) is used to create a Direct Connect gateway.
+        /// This API is used to create a direct connect gateway.
         /// </summary>
         /// <param name="req"><see cref="CreateDirectConnectGatewayRequest"/></param>
         /// <returns><see cref="CreateDirectConnectGatewayResponse"/></returns>
@@ -1135,7 +1185,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateFlowLog) is used to create flow logs.
+        /// This API is used to create a flow log.
         /// </summary>
         /// <param name="req"><see cref="CreateFlowLogRequest"/></param>
         /// <returns><see cref="CreateFlowLogResponse"/></returns>
@@ -1155,7 +1205,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateFlowLog) is used to create flow logs.
+        /// This API is used to create a flow log.
         /// </summary>
         /// <param name="req"><see cref="CreateFlowLogRequest"/></param>
         /// <returns><see cref="CreateFlowLogResponse"/></returns>
@@ -2123,7 +2173,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to support the deletion of shared bandwidth packages, including [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
+        /// This API is used to delete bandwidth packages, including [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
         /// </summary>
         /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
         /// <returns><see cref="DeleteBandwidthPackageResponse"/></returns>
@@ -2143,7 +2193,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to support the deletion of shared bandwidth packages, including [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
+        /// This API is used to delete bandwidth packages, including [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
         /// </summary>
         /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
         /// <returns><see cref="DeleteBandwidthPackageResponse"/></returns>
@@ -2247,10 +2297,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteDirectConnectGateway) is used to delete Direct Connect gateways.
-        /// <li>For a NAT gateway, NAT and ACL rules will be cleaned upon the deletion of a Direct Connect gateway.
-        /// <li>After the deletion of a Direct Connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
-        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to delete a direct connect gateway.
+        /// <li>For a NAT gateway, NAT and ACL rules will be cleared upon the deletion of a direct connect gateway.
+        /// <li>After the deletion of a direct connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
+        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to poll the `QueryTask` API.
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectGatewayRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectGatewayResponse"/></returns>
@@ -2270,10 +2320,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteDirectConnectGateway) is used to delete Direct Connect gateways.
-        /// <li>For a NAT gateway, NAT and ACL rules will be cleaned upon the deletion of a Direct Connect gateway.
-        /// <li>After the deletion of a Direct Connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
-        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to delete a direct connect gateway.
+        /// <li>For a NAT gateway, NAT and ACL rules will be cleared upon the deletion of a direct connect gateway.
+        /// <li>After the deletion of a direct connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
+        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to poll the `QueryTask` API.
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectGatewayRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectGatewayResponse"/></returns>
@@ -2333,7 +2383,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteFlowLog) is used to delete flow logs.
+        /// This API is used to delete a flow log.
         /// </summary>
         /// <param name="req"><see cref="DeleteFlowLogRequest"/></param>
         /// <returns><see cref="DeleteFlowLogResponse"/></returns>
@@ -2353,7 +2403,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteFlowLog) is used to delete flow logs.
+        /// This API is used to delete a flow log.
         /// </summary>
         /// <param name="req"><see cref="DeleteFlowLogRequest"/></param>
         /// <returns><see cref="DeleteFlowLogResponse"/></returns>
@@ -3277,7 +3327,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the account’s maximum number of bandwidth packages and their usage in the current region.
+        /// This API is used to query the maximum and used number of bandwidth packages under the account in the current region.
         /// </summary>
         /// <param name="req"><see cref="DescribeBandwidthPackageQuotaRequest"/></param>
         /// <returns><see cref="DescribeBandwidthPackageQuotaResponse"/></returns>
@@ -3297,7 +3347,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the account’s maximum number of bandwidth packages and their usage in the current region.
+        /// This API is used to query the maximum and used number of bandwidth packages under the account in the current region.
         /// </summary>
         /// <param name="req"><see cref="DescribeBandwidthPackageQuotaRequest"/></param>
         /// <returns><see cref="DescribeBandwidthPackageQuotaResponse"/></returns>
@@ -3637,7 +3687,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeDirectConnectGateways) is used to query Direct Connect gateways.
+        /// This API is used to query direct connect gateways.
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectConnectGatewaysRequest"/></param>
         /// <returns><see cref="DescribeDirectConnectGatewaysResponse"/></returns>
@@ -3657,7 +3707,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeDirectConnectGateways) is used to query Direct Connect gateways.
+        /// This API is used to query direct connect gateways.
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectConnectGatewaysRequest"/></param>
         /// <returns><see cref="DescribeDirectConnectGatewaysResponse"/></returns>
@@ -3677,7 +3727,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeFlowLog) is used to query flow log instance information.
+        /// This API is used to query flow log instance information.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogRequest"/></param>
         /// <returns><see cref="DescribeFlowLogResponse"/></returns>
@@ -3697,7 +3747,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeFlowLog) is used to query flow log instance information.
+        /// This API is used to query flow log instance information.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogRequest"/></param>
         /// <returns><see cref="DescribeFlowLogResponse"/></returns>
@@ -3717,7 +3767,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeFlowLogs) is used to query and obtain the flow log set.
+        /// This API is used to query and obtain the flow log set.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogsRequest"/></param>
         /// <returns><see cref="DescribeFlowLogsResponse"/></returns>
@@ -3737,7 +3787,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeFlowLogs) is used to query and obtain the flow log set.
+        /// This API is used to query and obtain the flow log set.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogsRequest"/></param>
         /// <returns><see cref="DescribeFlowLogsResponse"/></returns>
@@ -5337,6 +5387,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the CCN bandwidth limits across regions. The monthly-subscribed CCN only supports the cross-region bandwidth limit, while the pay-as-you-go CCN supports both the cross-region and region egress bandwidth limit. Note: currently, this feature is in beta test. To use it, please [contact sales](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="GetCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns><see cref="GetCcnRegionBandwidthLimitsResponse"/></returns>
+        public async Task<GetCcnRegionBandwidthLimitsResponse> GetCcnRegionBandwidthLimits(GetCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<GetCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the CCN bandwidth limits across regions. The monthly-subscribed CCN only supports the cross-region bandwidth limit, while the pay-as-you-go CCN supports both the cross-region and region egress bandwidth limit. Note: currently, this feature is in beta test. To use it, please [contact sales](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="GetCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns><see cref="GetCcnRegionBandwidthLimitsResponse"/></returns>
+        public GetCcnRegionBandwidthLimitsResponse GetCcnRegionBandwidthLimitsSync(GetCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<GetCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (HaVipAssociateAddressIp) is used to bind an EIP to an HAVIP.<br />
         /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
         /// </summary>
@@ -5871,7 +5961,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify bandwidth package attributes, including the bandwidth package name, and so on.
+        /// This API is used to modify the attributes of a bandwidth package, including the bandwidth package name, and so on.
         /// </summary>
         /// <param name="req"><see cref="ModifyBandwidthPackageAttributeRequest"/></param>
         /// <returns><see cref="ModifyBandwidthPackageAttributeResponse"/></returns>
@@ -5891,7 +5981,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify bandwidth package attributes, including the bandwidth package name, and so on.
+        /// This API is used to modify the attributes of a bandwidth package, including the bandwidth package name, and so on.
         /// </summary>
         /// <param name="req"><see cref="ModifyBandwidthPackageAttributeRequest"/></param>
         /// <returns><see cref="ModifyBandwidthPackageAttributeResponse"/></returns>
@@ -6031,7 +6121,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyDirectConnectGatewayAttribute) is used to modify the Direct Connect gateway attributes.
+        /// This API is used to modify the attributes of a direct connect gateway.
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectGatewayAttributeRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectGatewayAttributeResponse"/></returns>
@@ -6051,7 +6141,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyDirectConnectGatewayAttribute) is used to modify the Direct Connect gateway attributes.
+        /// This API is used to modify the attributes of a direct connect gateway.
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectGatewayAttributeRequest"/></param>
         /// <returns><see cref="ModifyDirectConnectGatewayAttributeResponse"/></returns>
@@ -6071,7 +6161,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyFlowLogAttribute) is used to modify flow log attributes.
+        /// This API is used to modify the attributes of a flow log.
         /// </summary>
         /// <param name="req"><see cref="ModifyFlowLogAttributeRequest"/></param>
         /// <returns><see cref="ModifyFlowLogAttributeResponse"/></returns>
@@ -6091,7 +6181,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyFlowLogAttribute) is used to modify flow log attributes.
+        /// This API is used to modify the attributes of a flow log.
         /// </summary>
         /// <param name="req"><see cref="ModifyFlowLogAttributeRequest"/></param>
         /// <returns><see cref="ModifyFlowLogAttributeResponse"/></returns>
@@ -7025,7 +7115,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// This API is used to delete a bandwidth package resource, including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
         /// </summary>
         /// <param name="req"><see cref="RemoveBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="RemoveBandwidthPackageResourcesResponse"/></returns>
@@ -7045,7 +7135,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// This API is used to delete a bandwidth package resource, including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
         /// </summary>
         /// <param name="req"><see cref="RemoveBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="RemoveBandwidthPackageResourcesResponse"/></returns>

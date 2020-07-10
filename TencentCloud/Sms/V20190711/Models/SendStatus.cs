@@ -60,6 +60,12 @@ namespace TencentCloud.Sms.V20190711.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+        /// </summary>
+        [JsonProperty("IsoCode")]
+        public string IsoCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Sms.V20190711.Models
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "Code", this.Code);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "IsoCode", this.IsoCode);
         }
     }
 }

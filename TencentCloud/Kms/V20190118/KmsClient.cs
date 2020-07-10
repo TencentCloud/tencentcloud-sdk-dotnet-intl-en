@@ -493,7 +493,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 获取指定密钥的设备指纹列表
+        /// This API is used to get the device fingerprint list of a specified key.
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoxDeviceFingerprintsRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoxDeviceFingerprintsResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 获取指定密钥的设备指纹列表
+        /// This API is used to get the device fingerprint list of a specified key.
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoxDeviceFingerprintsRequest"/></param>
         /// <returns><see cref="DescribeWhiteBoxDeviceFingerprintsResponse"/></returns>
@@ -1535,7 +1535,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 覆盖指定密钥的设备指纹信息
+        /// This API is used to overwrite the device fingerprint information of a specified key.
         /// </summary>
         /// <param name="req"><see cref="OverwriteWhiteBoxDeviceFingerprintsRequest"/></param>
         /// <returns><see cref="OverwriteWhiteBoxDeviceFingerprintsResponse"/></returns>
@@ -1555,7 +1555,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 覆盖指定密钥的设备指纹信息
+        /// This API is used to overwrite the device fingerprint information of a specified key.
         /// </summary>
         /// <param name="req"><see cref="OverwriteWhiteBoxDeviceFingerprintsRequest"/></param>
         /// <returns><see cref="OverwriteWhiteBoxDeviceFingerprintsResponse"/></returns>

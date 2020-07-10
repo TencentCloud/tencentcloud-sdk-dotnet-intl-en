@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 设备指纹列表
+        /// Device fingerprint list
         /// </summary>
         [JsonProperty("DeviceFingerprints")]
         public DeviceFingerprint[] DeviceFingerprints{ get; set; }

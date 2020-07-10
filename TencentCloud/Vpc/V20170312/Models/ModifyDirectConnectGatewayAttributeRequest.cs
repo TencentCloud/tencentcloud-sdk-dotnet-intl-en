@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+        /// The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }
 
         /// <summary>
-        /// Direct connect gateway can be named freely, but the maximum length is 60 characters.
+        /// The direct connect gateway name. You can enter any name within 60 characters.
         /// </summary>
         [JsonProperty("DirectConnectGatewayName")]
         public string DirectConnectGatewayName{ get; set; }
 
         /// <summary>
-        /// CCN route learning type. Available values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). Modifying `CcnRouteType` is only possible if the Direct Connect is CCN-type and the BGP function is enabled.
+        /// The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
         /// </summary>
         [JsonProperty("CcnRouteType")]
         public string CcnRouteType{ get; set; }

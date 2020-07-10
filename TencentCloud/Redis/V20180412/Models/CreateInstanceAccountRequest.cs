@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+        /// Read/write policy. Valid values: r (read-only), rw (read/write).
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The data structure of the bandwidth package quota
+        /// The quota of the bandwidth package.
         /// </summary>
         [JsonProperty("QuotaSet")]
         public Quota[] QuotaSet{ get; set; }

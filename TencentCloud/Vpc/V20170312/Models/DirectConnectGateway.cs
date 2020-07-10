@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Direct Connect `ID`.
+        /// The direct connect gateway `ID`.
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }
 
         /// <summary>
-        /// Direct Connect gateway name.
+        /// The direct connect gateway name.
         /// </summary>
         [JsonProperty("DirectConnectGatewayName")]
         public string DirectConnectGatewayName{ get; set; }
 
         /// <summary>
-        /// The `ID` of the `VPC` instance associated with the Direct Connect gateway.
+        /// The `ID` of the `VPC` instance associated with the direct connect gateway.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -52,35 +52,35 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// The `ID` of the associated network instance:
-        /// <li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
-        /// <li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
+        /// <li>When the `NetworkType` is `VPC`, this value is the VPC instance `ID`</li>
+        /// <li>When the `NetworkType` is `CCN`, this value is the CCN instance `ID`</li>
         /// </summary>
         [JsonProperty("NetworkInstanceId")]
         public string NetworkInstanceId{ get; set; }
 
         /// <summary>
-        /// Gateway type:
+        /// The gateway type:
         /// <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-        /// <li>NAT - NAT type</li>
-        /// NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+        /// <li>NAT type</li>
+        /// The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }
 
         /// <summary>
-        /// Creation Time.
+        /// The creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Direct Connect gateway IP.
+        /// The direct connect gateway IP.
         /// </summary>
         [JsonProperty("DirectConnectGatewayIp")]
         public string DirectConnectGatewayIp{ get; set; }
 
         /// <summary>
-        /// The `ID` of the `CCN` instance associated with the Direct Connect gateway.
+        /// The `ID` of the `CCN` instance associated with the direct connect gateway.
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
@@ -94,13 +94,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CcnRouteType{ get; set; }
 
         /// <summary>
-        /// Whether BGP is enabled.
+        /// Whether the BGP is enabled.
         /// </summary>
         [JsonProperty("EnableBGP")]
         public bool? EnableBGP{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the `community` attribute of the BGP is enabled.
         /// </summary>
         [JsonProperty("EnableBGPCommunity")]
         public bool? EnableBGPCommunity{ get; set; }

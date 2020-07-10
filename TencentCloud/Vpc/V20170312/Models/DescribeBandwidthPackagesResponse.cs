@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The number of bandwidth packages meeting the condition
+        /// The number of eligible bandwidth packages.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The description of the bandwidth packages
+        /// The description of the bandwidth packages.
         /// </summary>
         [JsonProperty("BandwidthPackageSet")]
         public BandwidthPackage[] BandwidthPackageSet{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The number of objects meeting the condition.
+        /// The number of eligible objects.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The object array of the Direct Connect gateway.
+        /// The object array of the direct connect gateway.
         /// </summary>
         [JsonProperty("DirectConnectGatewaySet")]
         public DirectConnectGateway[] DirectConnectGatewaySet{ get; set; }

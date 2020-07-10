@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Direct Connect gateway object.
+        /// The object of the direct connect gateway.
         /// </summary>
         [JsonProperty("DirectConnectGateway")]
         public DirectConnectGateway DirectConnectGateway{ get; set; }

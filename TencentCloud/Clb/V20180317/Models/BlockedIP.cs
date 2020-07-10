@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 黑名单IP
+        /// Blacklisted IP
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// 加入黑名单的时间
+        /// Blacklisted time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// Expiration time
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

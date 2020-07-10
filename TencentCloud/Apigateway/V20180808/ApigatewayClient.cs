@@ -53,9 +53,9 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to bind a usage plan to a service environment.
+        /// This API is used to bind a usage plan to a service or API.
         /// After you publish a service to an environment, if the API requires authentication and can be called only when it is bound to a usage plan, you can use this API to bind a usage plan to the specified environment.
-        /// Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to demote it.
+        /// Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to degrade it.
         /// </summary>
         /// <param name="req"><see cref="BindEnvironmentRequest"/></param>
         /// <returns><see cref="BindEnvironmentResponse"/></returns>
@@ -75,9 +75,9 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to bind a usage plan to a service environment.
+        /// This API is used to bind a usage plan to a service or API.
         /// After you publish a service to an environment, if the API requires authentication and can be called only when it is bound to a usage plan, you can use this API to bind a usage plan to the specified environment.
-        /// Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to demote it.
+        /// Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to degrade it.
         /// </summary>
         /// <param name="req"><see cref="BindEnvironmentRequest"/></param>
         /// <returns><see cref="BindEnvironmentResponse"/></returns>
@@ -667,8 +667,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to demote a usage plan of a service in an environment to the API level.
-        ///  
+        /// This API is used to degrade a usage plan of a service in an environment to the API level.
         /// This operation will be denied if there are no APIs under the service.
         /// This operation will also be denied if the current environment has not been published.
         /// </summary>
@@ -690,8 +689,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to demote a usage plan of a service in an environment to the API level.
-        ///  
+        /// This API is used to degrade a usage plan of a service in an environment to the API level.
         /// This operation will be denied if there are no APIs under the service.
         /// This operation will also be denied if the current environment has not been published.
         /// </summary>
@@ -835,6 +833,48 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to query the list of keys.
+        /// If you have created multiple API key pairs, you can use this API to query the information of one or more keys. This API does not display the `secretKey`.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiKeysStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiKeysStatusResponse"/></returns>
+        public async Task<DescribeApiKeysStatusResponse> DescribeApiKeysStatus(DescribeApiKeysStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiKeysStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiKeysStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiKeysStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of keys.
+        /// If you have created multiple API key pairs, you can use this API to query the information of one or more keys. This API does not display the `secretKey`.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiKeysStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiKeysStatusResponse"/></returns>
+        public DescribeApiKeysStatusResponse DescribeApiKeysStatusSync(DescribeApiKeysStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiKeysStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiKeysStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiKeysStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of API usage plans in a service.
         /// To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
         /// </summary>
@@ -868,6 +908,166 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeApiUsagePlan");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiUsagePlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to view a certain API or the list of all APIs under a service and relevant information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApisStatusRequest"/></param>
+        /// <returns><see cref="DescribeApisStatusResponse"/></returns>
+        public async Task<DescribeApisStatusResponse> DescribeApisStatus(DescribeApisStatusRequest req)
+        {
+             JsonResponseModel<DescribeApisStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApisStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApisStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to view a certain API or the list of all APIs under a service and relevant information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApisStatusRequest"/></param>
+        /// <returns><see cref="DescribeApisStatusResponse"/></returns>
+        public DescribeApisStatusResponse DescribeApisStatusSync(DescribeApisStatusRequest req)
+        {
+             JsonResponseModel<DescribeApisStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApisStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApisStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query IP policy details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPStrategyRequest"/></param>
+        /// <returns><see cref="DescribeIPStrategyResponse"/></returns>
+        public async Task<DescribeIPStrategyResponse> DescribeIPStrategy(DescribeIPStrategyRequest req)
+        {
+             JsonResponseModel<DescribeIPStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIPStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query IP policy details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPStrategyRequest"/></param>
+        /// <returns><see cref="DescribeIPStrategyResponse"/></returns>
+        public DescribeIPStrategyResponse DescribeIPStrategySync(DescribeIPStrategyRequest req)
+        {
+             JsonResponseModel<DescribeIPStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIPStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of APIs to which an IP policy can be bound, i.e., the difference set between all APIs under the service and the APIs already bound to the policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPStrategyApisStatusRequest"/></param>
+        /// <returns><see cref="DescribeIPStrategyApisStatusResponse"/></returns>
+        public async Task<DescribeIPStrategyApisStatusResponse> DescribeIPStrategyApisStatus(DescribeIPStrategyApisStatusRequest req)
+        {
+             JsonResponseModel<DescribeIPStrategyApisStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIPStrategyApisStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStrategyApisStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of APIs to which an IP policy can be bound, i.e., the difference set between all APIs under the service and the APIs already bound to the policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPStrategyApisStatusRequest"/></param>
+        /// <returns><see cref="DescribeIPStrategyApisStatusResponse"/></returns>
+        public DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatusSync(DescribeIPStrategyApisStatusRequest req)
+        {
+             JsonResponseModel<DescribeIPStrategyApisStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIPStrategyApisStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStrategyApisStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of service IP policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPStrategysStatusRequest"/></param>
+        /// <returns><see cref="DescribeIPStrategysStatusResponse"/></returns>
+        public async Task<DescribeIPStrategysStatusResponse> DescribeIPStrategysStatus(DescribeIPStrategysStatusRequest req)
+        {
+             JsonResponseModel<DescribeIPStrategysStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIPStrategysStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStrategysStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of service IP policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPStrategysStatusRequest"/></param>
+        /// <returns><see cref="DescribeIPStrategysStatusResponse"/></returns>
+        public DescribeIPStrategysStatusResponse DescribeIPStrategysStatusSync(DescribeIPStrategysStatusRequest req)
+        {
+             JsonResponseModel<DescribeIPStrategysStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIPStrategysStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStrategysStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1247,6 +1447,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to query the list of one or more services and return relevant domain name, time, and other information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServicesStatusRequest"/></param>
+        /// <returns><see cref="DescribeServicesStatusResponse"/></returns>
+        public async Task<DescribeServicesStatusResponse> DescribeServicesStatus(DescribeServicesStatusRequest req)
+        {
+             JsonResponseModel<DescribeServicesStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServicesStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServicesStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of one or more services and return relevant domain name, time, and other information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServicesStatusRequest"/></param>
+        /// <returns><see cref="DescribeServicesStatusResponse"/></returns>
+        public DescribeServicesStatusResponse DescribeServicesStatusSync(DescribeServicesStatusRequest req)
+        {
+             JsonResponseModel<DescribeServicesStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServicesStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServicesStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of a usage plan, such as its name, QPS, creation time, and bound environment.
         /// </summary>
         /// <param name="req"><see cref="DescribeUsagePlanRequest"/></param>
@@ -1362,6 +1602,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUsagePlanSecretIds");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsagePlanSecretIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of usage plans.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsagePlansStatusRequest"/></param>
+        /// <returns><see cref="DescribeUsagePlansStatusResponse"/></returns>
+        public async Task<DescribeUsagePlansStatusResponse> DescribeUsagePlansStatus(DescribeUsagePlansStatusRequest req)
+        {
+             JsonResponseModel<DescribeUsagePlansStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUsagePlansStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsagePlansStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of usage plans.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsagePlansStatusRequest"/></param>
+        /// <returns><see cref="DescribeUsagePlansStatusResponse"/></returns>
+        public DescribeUsagePlansStatusResponse DescribeUsagePlansStatusSync(DescribeUsagePlansStatusRequest req)
+        {
+             JsonResponseModel<DescribeUsagePlansStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUsagePlansStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsagePlansStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

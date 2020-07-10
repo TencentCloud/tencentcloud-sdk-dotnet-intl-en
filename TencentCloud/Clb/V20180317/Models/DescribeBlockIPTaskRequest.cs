@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// ModifyBlockIPList 接口返回的异步任务的ID。
+        /// Async task ID returned by the `ModifyBlockIPList` API
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

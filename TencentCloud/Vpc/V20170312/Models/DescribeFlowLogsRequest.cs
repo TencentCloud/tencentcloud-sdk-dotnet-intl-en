@@ -25,76 +25,84 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The VPC ID or the unified ID. We recommend you use the unified ID
+        /// The VPC ID or the unified ID. We recommend you use the unified ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The unique ID of the flow log
+        /// The unique ID of the flow log.
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }
 
         /// <summary>
-        /// The name of the flow log instance
+        /// The name of the flow log instance.
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+        /// The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// The unique ID of the resource
+        /// The unique ID of the resource.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// The collection type of the flow log. ACCEPT|REJECT|ALL
+        /// The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
         /// </summary>
         [JsonProperty("TrafficType")]
         public string TrafficType{ get; set; }
 
         /// <summary>
-        /// The storage ID of the flow log
+        /// The storage ID of the flow log.
         /// </summary>
         [JsonProperty("CloudLogId")]
         public string CloudLogId{ get; set; }
 
         /// <summary>
-        /// Flow log storage ID status
+        /// The storage ID status of the flow log.
         /// </summary>
         [JsonProperty("CloudLogState")]
         public string CloudLogState{ get; set; }
 
         /// <summary>
-        /// Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
+        /// Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Ascending (asc) and descending (desc). The default value is desc.
+        /// In ascending (asc) or descending (desc) order. Default value: 'desc'.
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// Offset. The default value is 0.
+        /// The offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The number of rows per page. The default value is 10.
+        /// The number of rows per page. Default vaue: 10.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+        /// <li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+        /// <li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter Filters{ get; set; }
 
 
         /// <summary>
@@ -114,6 +122,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

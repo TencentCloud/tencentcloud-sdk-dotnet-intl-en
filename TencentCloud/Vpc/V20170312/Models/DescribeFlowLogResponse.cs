@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Flow log information
+        /// The flow log information.
         /// </summary>
         [JsonProperty("FlowLog")]
         public FlowLog[] FlowLog{ get; set; }

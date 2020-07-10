@@ -25,13 +25,13 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 白盒密钥ID
+        /// White-box key ID
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
+        /// Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
         /// </summary>
         [JsonProperty("DeviceFingerprints")]
         public DeviceFingerprint[] DeviceFingerprints{ get; set; }

@@ -79,6 +79,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
 
+        /// <summary>
+        /// Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
+        /// </summary>
+        [JsonProperty("TargetType")]
+        public string TargetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+            this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
         }
     }
 }

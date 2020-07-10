@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Exact search by `apiid` or `reqid`
+        /// Reserved field
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -67,13 +67,23 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// Fuzzy search for log by keyword
+        /// Reserved field
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
+        /// Search criterion. Valid values:
+        /// req_id: "="
+        /// api_id: "="
+        /// cip: "="
+        /// uip: ":"
+        /// err_msg: ":"
+        /// rsp_st: "=", "!=", ":", ">", "<"
+        /// req_t: ">=", "<="
         /// 
+        /// Note:
+        /// ":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
         /// </summary>
         [JsonProperty("LogQuerys")]
         public LogQuery[] LogQuerys{ get; set; }

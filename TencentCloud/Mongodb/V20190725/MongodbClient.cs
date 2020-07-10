@@ -93,6 +93,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceResponse"/></returns>
+        public async Task<CreateDBInstanceResponse> CreateDBInstance(CreateDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceResponse"/></returns>
+        public CreateDBInstanceResponse CreateDBInstanceSync(CreateDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a pay-as-you-go TencentDB for MongoDB instance.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBBackups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDealRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDealResponse"/></returns>
+        public async Task<DescribeDBInstanceDealResponse> DescribeDBInstanceDeal(DescribeDBInstanceDealRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceDealResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceDeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceDealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDealRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDealResponse"/></returns>
+        public DescribeDBInstanceDealResponse DescribeDBInstanceDealSync(DescribeDBInstanceDealRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceDealResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceDeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceDealResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -453,6 +533,126 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to query price of instance creation. The `region` parameter must be passed in this API, otherwise verification will fail. This API allows queries only for purchasable instance specifications.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDBInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDBInstancesResponse"/></returns>
+        public async Task<InquirePriceCreateDBInstancesResponse> InquirePriceCreateDBInstances(InquirePriceCreateDBInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query price of instance creation. The `region` parameter must be passed in this API, otherwise verification will fail. This API allows queries only for purchasable instance specifications.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDBInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDBInstancesResponse"/></returns>
+        public InquirePriceCreateDBInstancesResponse InquirePriceCreateDBInstancesSync(InquirePriceCreateDBInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query price of instance specification adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDBInstanceSpecRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDBInstanceSpecResponse"/></returns>
+        public async Task<InquirePriceModifyDBInstanceSpecResponse> InquirePriceModifyDBInstanceSpec(InquirePriceModifyDBInstanceSpecRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceModifyDBInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query price of instance specification adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDBInstanceSpecRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDBInstanceSpecResponse"/></returns>
+        public InquirePriceModifyDBInstanceSpecResponse InquirePriceModifyDBInstanceSpecSync(InquirePriceModifyDBInstanceSpecRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceModifyDBInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of a monthly subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewDBInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewDBInstancesResponse"/></returns>
+        public async Task<InquirePriceRenewDBInstancesResponse> InquirePriceRenewDBInstances(InquirePriceRenewDBInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenewDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of a monthly subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewDBInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewDBInstancesResponse"/></returns>
+        public InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstancesSync(InquirePriceRenewDBInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenewDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. An isolated instance is retained in the recycle bin and data can no longer be written to it. After it is isolated for a certain period of time, it will be completely deleted. For the retention period in the recycle bin, please see the terms of service for pay-as-you-go billing. Isolated pay-as-you-go instances cannot be recovered, so please proceed with caution.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
@@ -604,6 +804,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "RenameInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenameInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to renew a monthly subscription TencentDB instance. Only monthly subscription instances are supported, while pay-as-you-go instances do not need to be renewed.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDBInstancesRequest"/></param>
+        /// <returns><see cref="RenewDBInstancesResponse"/></returns>
+        public async Task<RenewDBInstancesResponse> RenewDBInstances(RenewDBInstancesRequest req)
+        {
+             JsonResponseModel<RenewDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to renew a monthly subscription TencentDB instance. Only monthly subscription instances are supported, while pay-as-you-go instances do not need to be renewed.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDBInstancesRequest"/></param>
+        /// <returns><see cref="RenewDBInstancesResponse"/></returns>
+        public RenewDBInstancesResponse RenewDBInstancesSync(RenewDBInstancesRequest req)
+        {
+             JsonResponseModel<RenewDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

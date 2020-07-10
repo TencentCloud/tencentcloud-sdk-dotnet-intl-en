@@ -25,31 +25,31 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ResourceId, such as 'eip-xxxx', 'lb-xxxx'
+        /// The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// The unique ID of the bandwidth package, such as 'bwp-xxxx'
+        /// The unique ID of the bandwidth package, such as 'bwp-xxxx'.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+        /// The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// The resource type, including 'Address', 'LoadBalance'
+        /// The resource type, including 'Address' and 'LoadBalance'.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

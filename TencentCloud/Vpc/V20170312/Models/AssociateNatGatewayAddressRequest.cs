@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+        /// The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
         /// </summary>
         [JsonProperty("AddressCount")]
         public ulong? AddressCount{ get; set; }
 
         /// <summary>
-        /// The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+        /// The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }

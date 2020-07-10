@@ -45,7 +45,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+        /// Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
         /// </summary>
         [JsonProperty("InputSettings")]
         public InputSettingInfo[] InputSettings{ get; set; }

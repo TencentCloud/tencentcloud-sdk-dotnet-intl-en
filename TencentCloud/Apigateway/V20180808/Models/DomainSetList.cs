@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Domain name resolution status. True: success; Flase: failure.
+        /// Domain name resolution status. True: success; False: failure.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

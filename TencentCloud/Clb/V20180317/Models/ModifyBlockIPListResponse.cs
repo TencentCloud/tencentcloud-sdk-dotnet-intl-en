@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 异步任务的ID
+        /// Async task ID
         /// </summary>
         [JsonProperty("JodId")]
         public string JodId{ get; set; }

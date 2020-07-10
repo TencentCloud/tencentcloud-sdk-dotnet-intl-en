@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡唯一Id，如lb-12345678
+        /// Unique CLB instance ID, such as lb-12345678
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 删除SnatIp地址数组
+        /// Array of the SNAT IP addresses to be deleted
         /// </summary>
         [JsonProperty("Ips")]
         public string[] Ips{ get; set; }

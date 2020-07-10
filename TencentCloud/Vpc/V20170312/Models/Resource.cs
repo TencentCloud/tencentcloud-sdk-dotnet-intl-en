@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// The bandwidth package ResourceId, such as `eip-xxxx`, `lb-xxxx`
+        /// The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Bandwidth package resource IP
+        /// The bandwidth package resource IP.
         /// </summary>
         [JsonProperty("AddressIp")]
         public string AddressIp{ get; set; }

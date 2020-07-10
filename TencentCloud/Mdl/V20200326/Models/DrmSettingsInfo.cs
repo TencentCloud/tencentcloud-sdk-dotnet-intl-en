@@ -25,18 +25,32 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-        /// Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
+        /// 
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// `ContentId` of DRM encryption, which will be automatically created if this parameter is left empty.
-        /// For more information on the custom creation method, please visit https://cloud.tencent.com/document/product/1000/40960
+        /// When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://cloud.tencent.com/document/product/1000/40960).
+        /// When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
         /// </summary>
         [JsonProperty("ContentId")]
         public string ContentId{ get; set; }
+
+        /// <summary>
+        /// Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
+        /// TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://cloud.tencent.com/solution/drm).
+        /// CustomDRMKeys refers to an encryption key customized by the user.
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public string Scheme{ get; set; }
+
+        /// <summary>
+        /// The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Keys")]
+        public DrmKey[] Keys{ get; set; }
 
 
         /// <summary>
@@ -46,6 +60,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         {
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "ContentId", this.ContentId);
+            this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
+            this.SetParamArrayObj(map, prefix + "Keys.", this.Keys);
         }
     }
 }

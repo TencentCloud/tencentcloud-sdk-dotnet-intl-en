@@ -45,7 +45,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }

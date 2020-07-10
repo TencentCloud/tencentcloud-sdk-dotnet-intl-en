@@ -25,43 +25,43 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例ID
+        /// CLB instance ID
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 操作类型，可取：
-        /// <li> add_customized_field（首次设置header，开启黑名单功能）</li>
-        /// <li> set_customized_field（修改header）</li>
-        /// <li> del_customized_field（删除header）</li>
-        /// <li> add_blocked（添加黑名单）</li>
-        /// <li> del_blocked（删除黑名单）</li>
-        /// <li> flush_blocked（清空黑名单）</li>
+        /// Operation type. Valid values:
+        /// <li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+        /// <li> set_customized_field (modifies header)</li>
+        /// <li> del_customized_field (deletes header)</li>
+        /// <li> add_blocked (adds IPs to blacklist)</li>
+        /// <li> del_blocked (deletes IPs from blacklist)</li>
+        /// <li> flush_blocked (clears blacklist)</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 客户端真实IP存放的header字段名
+        /// Header field that stores real client IPs
         /// </summary>
         [JsonProperty("ClientIPField")]
         public string ClientIPField{ get; set; }
 
         /// <summary>
-        /// 封禁IP列表，单次操作数组最大长度支持200000
+        /// List of blocked IPs. The array can contain up to 200,000 entries in one operation.
         /// </summary>
         [JsonProperty("BlockIPList")]
         public string[] BlockIPList{ get; set; }
 
         /// <summary>
-        /// 过期时间，单位秒，默认值3600
+        /// Expiration time in seconds. Default value: 3600
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
+        /// IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
         /// </summary>
         [JsonProperty("AddStrategy")]
         public string AddStrategy{ get; set; }

@@ -86,6 +86,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteTableId")]
         public string RouteTableId{ get; set; }
 
+        /// <summary>
+        /// Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+        /// </summary>
+        [JsonProperty("DestinationIpv6CidrBlock")]
+        public string DestinationIpv6CidrBlock{ get; set; }
+
+        /// <summary>
+        /// Unique routing policy ID.
+        /// </summary>
+        [JsonProperty("RouteItemId")]
+        public string RouteItemId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
             this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+            this.SetParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
+            this.SetParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
         }
     }
 }

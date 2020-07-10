@@ -25,16 +25,22 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The unique ID of the bandwidth package
+        /// The unique ID of the bandwidth package.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// The name of the bandwidth package
+        /// The name of the bandwidth package.
         /// </summary>
         [JsonProperty("BandwidthPackageName")]
         public string BandwidthPackageName{ get; set; }
+
+        /// <summary>
+        /// The billing mode of the bandwidth package.
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
         }
     }
 }
