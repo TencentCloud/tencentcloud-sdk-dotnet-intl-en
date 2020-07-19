@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// statistics list.
+        /// Statistics list.
         /// </summary>
         [JsonProperty("HttpCodeList")]
         public HttpCodeInfo[] HttpCodeList{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 任务ID，全局唯一标识录制任务。
+        /// Task ID, which uniquely identifies the recording task globally.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

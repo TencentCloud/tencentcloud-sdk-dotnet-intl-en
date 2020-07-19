@@ -25,31 +25,31 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
+        /// Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
+        /// End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
+        /// Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 推流域名（支持查询2019年11 月1日之后的域名维度数据）。
+        /// Push domain name (data at the domain name level after November 1, 2019 can be queried).
         /// </summary>
         [JsonProperty("PushDomains")]
         public string[] PushDomains{ get; set; }
 
         /// <summary>
-        /// 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
+        /// Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
         /// </summary>
         [JsonProperty("Granularity")]
         public string Granularity{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
+        /// Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

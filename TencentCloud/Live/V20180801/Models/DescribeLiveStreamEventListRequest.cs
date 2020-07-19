@@ -72,7 +72,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// Maximum value: 100.
         /// Value range: any integer between 1 and 100.
         /// Default value: 10.
-        /// Note: Currently, query for up to 10,000 entries is supported.
+        /// Note: currently, query for up to 10,000 entries is supported.
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

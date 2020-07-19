@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
+        /// UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// 数值。
+        /// Value.
         /// </summary>
         [JsonProperty("Num")]
         public ulong? Num{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string PushDomain{ get; set; }
 
         /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+        /// Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Page number.
+        /// Number of pages,
         /// Value range: [1,10000],
         /// Default value: 1.
         /// </summary>

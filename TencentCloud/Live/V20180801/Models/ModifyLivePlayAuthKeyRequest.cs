@@ -25,31 +25,35 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Domain name.
+        /// Playback domain name.
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
         /// Whether to enable. 0: disabled; 1: enabled.
+        /// If this parameter is left empty, the current value will not be modified.
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
         /// Authentication key.
+        /// If this parameter is left empty, the current value will not be modified.
         /// </summary>
         [JsonProperty("AuthKey")]
         public string AuthKey{ get; set; }
 
         /// <summary>
         /// Validity period in seconds.
+        /// If this parameter is left empty, the current value will not be modified.
         /// </summary>
         [JsonProperty("AuthDelta")]
         public ulong? AuthDelta{ get; set; }
 
         /// <summary>
-        /// Authentication backkey.
+        /// Backup authentication key.
+        /// If this parameter is left empty, the current value will not be modified.
         /// </summary>
         [JsonProperty("AuthBackKey")]
         public string AuthBackKey{ get; set; }

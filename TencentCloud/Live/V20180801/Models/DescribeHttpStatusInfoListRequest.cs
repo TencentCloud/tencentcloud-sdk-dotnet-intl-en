@@ -25,23 +25,23 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Start time (Beijing time).
-        /// In the format of yyyy-mm-dd HH:MM:SS.
-        /// StartTime cannot be more than 3 months ago.
+        /// Start time (Beijing time),
+        /// In the format of `yyyy-mm-dd HH:MM:SS`.
+        /// `StartTime` cannot be more than 3 months ago.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time (Beijing time).
-        /// In the format of yyyy-mm-dd HH:MM:SS.
-        /// Note: EndTime and StartTime only support querying data on the past day.
+        /// End time (Beijing time),
+        /// In the format of `yyyy-mm-dd HH:MM:SS`.
+        /// Note: `EndTime` and `StartTime` only support querying data for the last day.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// List of playback domain names.
+        /// Playback domain name list.
         /// </summary>
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }

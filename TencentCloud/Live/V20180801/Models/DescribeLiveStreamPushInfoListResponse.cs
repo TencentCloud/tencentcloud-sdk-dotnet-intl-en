@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Live stream statistics list
+        /// Live stream statistics list.
         /// </summary>
         [JsonProperty("DataInfoList")]
         public PushDataInfo[] DataInfoList{ get; set; }

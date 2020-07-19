@@ -25,43 +25,43 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 播放域名。
+        /// Playback domain name.
         /// </summary>
         [JsonProperty("PlayDomain")]
         public string PlayDomain{ get; set; }
 
         /// <summary>
-        /// 流id。
+        /// Stream ID.
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 播放码率，0表示原始码率。
+        /// Playback bitrate. 0 indicates the original bitrate.
         /// </summary>
         [JsonProperty("Rate")]
         public ulong? Rate{ get; set; }
 
         /// <summary>
-        /// 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
+        /// Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 带宽，单位是Mbps。
+        /// Bandwidth in Mbps.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public float? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
+        /// Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
         /// </summary>
         [JsonProperty("Online")]
         public ulong? Online{ get; set; }
 
         /// <summary>
-        /// 请求数。
+        /// Number of requests.
         /// </summary>
         [JsonProperty("Request")]
         public ulong? Request{ get; set; }

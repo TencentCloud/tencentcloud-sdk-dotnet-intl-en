@@ -25,14 +25,14 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// HTTP return code
+        /// HTTP return code.
         /// Example: "2xx", "3xx", "4xx", "5xx".
         /// </summary>
         [JsonProperty("HttpCode")]
         public string HttpCode{ get; set; }
 
         /// <summary>
-        /// Statistics. 0 will be added for time points when there is no data.
+        /// Statistics. 0 will be added for points in time when there is no data.
         /// </summary>
         [JsonProperty("ValueList")]
         public HttpCodeValue[] ValueList{ get; set; }

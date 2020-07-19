@@ -38,19 +38,20 @@ namespace TencentCloud.Live.V20180801.Models
         public string PictureUrl{ get; set; }
 
         /// <summary>
-        /// Display position: X-axis offset. Default value: 0.
+        /// Display position: X-axis offset in %. Default value: 0.
         /// </summary>
         [JsonProperty("XPosition")]
         public long? XPosition{ get; set; }
 
         /// <summary>
-        /// Display position: Y-axis offset. Default value: 0.
+        /// Display position: Y-axis offset in %. Default value: 0.
         /// </summary>
         [JsonProperty("YPosition")]
         public long? YPosition{ get; set; }
 
         /// <summary>
         /// Watermark name.
+        /// Up to 16 bytes.
         /// </summary>
         [JsonProperty("WatermarkName")]
         public string WatermarkName{ get; set; }

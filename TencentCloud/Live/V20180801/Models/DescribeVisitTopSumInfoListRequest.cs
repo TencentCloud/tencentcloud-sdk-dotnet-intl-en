@@ -25,33 +25,33 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Start time point in the format of yyyy-mm-dd HH:MM:SS.
+        /// Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time point in the format of yyyy-mm-dd HH:MM:SS
-        /// The time interval is (0, 4 hours]. Data in the past day can be queried.
+        /// End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+        /// The time span is (0,4 hours]. Data for the last day can be queried.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Bandwidth metric. Value range: "Domain", "StreamId".
+        /// Bandwidth metric. Valid values: "Domain", "StreamId".
         /// </summary>
         [JsonProperty("TopIndex")]
         public string TopIndex{ get; set; }
 
         /// <summary>
-        /// Playback domain name. If it is blank by default, the full data will be queried.
+        /// Playback domain name. If this parameter is left empty, full data will be queried by default.
         /// </summary>
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }
 
         /// <summary>
-        /// Page number.
-        /// Value range: [1,1000].
+        /// Page number,
+        /// Value range: [1,1000],
         /// Default value: 1.
         /// </summary>
         [JsonProperty("PageNum")]
@@ -65,7 +65,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+        /// Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
         /// </summary>
         [JsonProperty("OrderParam")]
         public string OrderParam{ get; set; }

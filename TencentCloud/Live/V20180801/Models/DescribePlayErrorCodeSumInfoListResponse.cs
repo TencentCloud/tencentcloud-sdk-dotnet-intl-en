@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalCode5xx{ get; set; }
 
         /// <summary>
-        /// Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
+        /// Total occurrences of each status code.
         /// </summary>
         [JsonProperty("TotalCodeList")]
         public PlayCodeTotalInfo[] TotalCodeList{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// Occurrences of 2xx status codes.
         /// </summary>
         [JsonProperty("TotalCode2xx")]
         public ulong? TotalCode2xx{ get; set; }
 
         /// <summary>
-        /// 
+        /// Occurrences of 3xx status codes.
         /// </summary>
         [JsonProperty("TotalCode3xx")]
         public ulong? TotalCode3xx{ get; set; }

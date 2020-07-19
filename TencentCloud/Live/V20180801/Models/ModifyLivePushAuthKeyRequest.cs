@@ -32,18 +32,21 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Whether to enable. 0: disabled; 1: enabled.
+        /// If this parameter is left empty, the current value will not be modified.
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
         /// Master authentication key.
+        /// If this parameter is left empty, the current value will not be modified.
         /// </summary>
         [JsonProperty("MasterAuthKey")]
         public string MasterAuthKey{ get; set; }
 
         /// <summary>
         /// Backup authentication key.
+        /// If this parameter is left empty, the current value will not be modified.
         /// </summary>
         [JsonProperty("BackupAuthKey")]
         public string BackupAuthKey{ get; set; }

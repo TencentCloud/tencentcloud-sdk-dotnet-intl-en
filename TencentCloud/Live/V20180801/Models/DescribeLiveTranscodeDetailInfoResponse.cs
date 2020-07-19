@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// List of statistics.
+        /// Statistics list.
         /// </summary>
         [JsonProperty("DataInfoList")]
         public TranscodeDetailInfo[] DataInfoList{ get; set; }

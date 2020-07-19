@@ -31,7 +31,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Average download speed in MB, which is the average download speed per minute.
+        /// Average download speed,
+        /// In MB/s.
+        /// Calculation formula: average download speed per minute.
         /// </summary>
         [JsonProperty("AvgFluxPerSecond")]
         public float? AvgFluxPerSecond{ get; set; }

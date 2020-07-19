@@ -25,14 +25,14 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Data time point.
+        /// Data point in time.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }

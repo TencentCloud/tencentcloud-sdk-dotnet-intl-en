@@ -25,8 +25,8 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Page number.
-        /// Value range: [1,1000].
+        /// Page number,
+        /// Value range: [1,1000],
         /// Default value: 1.
         /// </summary>
         [JsonProperty("PageNum")]
@@ -40,13 +40,13 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// Bandwidth metric. Value range: "Domain", "StreamId".
+        /// Bandwidth metric. Valid values: "Domain", "StreamId".
         /// </summary>
         [JsonProperty("TopIndex")]
         public string TopIndex{ get; set; }
 
         /// <summary>
-        /// Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+        /// Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
         /// </summary>
         [JsonProperty("OrderParam")]
         public string OrderParam{ get; set; }

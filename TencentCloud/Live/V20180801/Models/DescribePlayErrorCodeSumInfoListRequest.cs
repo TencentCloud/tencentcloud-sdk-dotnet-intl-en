@@ -25,56 +25,52 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Start time point (Beijing time).
-        /// In the format of yyyy-mm-dd HH:MM:SS.
+        /// Start point in time (Beijing time).
+        /// In the format of `yyyy-mm-dd HH:MM:SS`.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time point (Beijing time).
-        /// In the format of yyyy-mm-dd HH:MM:SS.
-        /// Note: EndTime and StartTime only support querying data on the past day.
+        /// End point in time (Beijing time).
+        /// In the format of `yyyy-mm-dd HH:MM:SS`.
+        /// Note: `EndTime` and `StartTime` only support querying data for the last day.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// List of playback domain names. If it is blank by default, the full data will be queried.
+        /// Playback domain name list. If this parameter is left empty, full data will be queried.
         /// </summary>
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }
 
         /// <summary>
-        /// Page number.
-        /// Value range: [1,1000],
-        /// Default value: 1.
+        /// Number of pages. Value range: [1,1000]. Default value: 1.
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// Number of entries per page,
-        /// Value range: [1,1000],
-        /// Default value: 20.
+        /// Number of entries per page. Value range: [1,1000]. Default value: 20.
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
         /// </summary>
         [JsonProperty("MainlandOrOversea")]
         public string MainlandOrOversea{ get; set; }
 
         /// <summary>
-        /// 
+        /// Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
         /// </summary>
         [JsonProperty("OutLanguage")]
         public string OutLanguage{ get; set; }

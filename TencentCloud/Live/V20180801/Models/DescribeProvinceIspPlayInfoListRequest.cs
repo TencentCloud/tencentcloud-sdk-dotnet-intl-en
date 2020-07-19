@@ -25,16 +25,16 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Start time point (Beijing time).
+        /// Start point in time (Beijing time).
         /// Example: 2019-02-21 10:00:00.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time point (Beijing time).
+        /// End point in time (Beijing time).
         /// Example: 2019-02-21 12:00:00.
-        /// Note: EndTime and StartTime only support querying data on the past day.
+        /// Note: `EndTime` and `StartTime` only support querying data for the last day.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -48,35 +48,35 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Statistical metric type:
-        /// "Bandwidth": Bandwidth
-        /// "FluxPerSecond": Average traffic
-        /// "Flux": Traffic
-        /// "Request": Number of requests
-        /// "Online": Number of concurrent connections
+        /// "Bandwidth": bandwidth
+        /// "FluxPerSecond": average traffic
+        /// "Flux": traffic
+        /// "Request": number of requests
+        /// "Online": number of concurrent connections
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
 
         /// <summary>
-        /// List of playback domain names.
+        /// Playback domain name list.
         /// </summary>
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }
 
         /// <summary>
-        /// An optional parameter, which is the list of the districts to be queried, such as Beijing
+        /// List of the districts to be queried, such as Beijing.
         /// </summary>
         [JsonProperty("ProvinceNames")]
         public string[] ProvinceNames{ get; set; }
 
         /// <summary>
-        /// An optional parameter, which is the list of the ISPs to be queried, such as China Mobile. If it is blank, the data of all ISPs will be queried.
+        /// List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
         /// </summary>
         [JsonProperty("IspNames")]
         public string[] IspNames{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
         /// </summary>
         [JsonProperty("MainlandOrOversea")]
         public string MainlandOrOversea{ get; set; }

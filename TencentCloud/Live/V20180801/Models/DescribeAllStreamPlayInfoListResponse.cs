@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 查询时间点，回传的输入参数中的查询时间。
+        /// Query point in time in the returned input parameters.
         /// </summary>
         [JsonProperty("QueryTime")]
         public string QueryTime{ get; set; }
 
         /// <summary>
-        /// 数据信息列表。
+        /// Data information list.
         /// </summary>
         [JsonProperty("DataInfoList")]
         public MonitorStreamPlayInfo[] DataInfoList{ get; set; }

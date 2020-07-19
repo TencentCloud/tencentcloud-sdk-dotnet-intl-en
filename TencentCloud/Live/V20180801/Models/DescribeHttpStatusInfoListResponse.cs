@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// List of playback status codes.
+        /// Playback status code list.
         /// </summary>
         [JsonProperty("DataInfoList")]
         public HttpStatusData[] DataInfoList{ get; set; }

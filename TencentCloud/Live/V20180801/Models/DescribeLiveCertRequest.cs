@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Certificate ID.
+        /// Certificate ID obtained through the `DescribeLiveCerts` API.
         /// </summary>
         [JsonProperty("CertId")]
         public long? CertId{ get; set; }

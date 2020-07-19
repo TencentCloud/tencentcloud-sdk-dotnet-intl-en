@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Data time point in the format of yyyy-mm-dd HH:MM:SS.
+        /// Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }

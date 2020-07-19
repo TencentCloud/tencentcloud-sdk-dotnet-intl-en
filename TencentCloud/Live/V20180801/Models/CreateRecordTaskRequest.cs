@@ -25,51 +25,51 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 流名称。
+        /// Stream name.
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 推流域名。
+        /// Push domain name.
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 推流路径。
+        /// Push path.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+        /// Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+        /// Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 推流类型，默认0。取值：
-        /// 0-直播推流。
-        /// 1-合成流，即 A+B=C 类型混流。
+        /// Push type. Default value: 0. Valid values:
+        /// 0: LVB push.
+        /// 1: mixed stream, i.e., A + B = C mixed stream.
         /// </summary>
         [JsonProperty("StreamType")]
         public ulong? StreamType{ get; set; }
 
         /// <summary>
-        /// 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+        /// Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
         /// </summary>
         [JsonProperty("TemplateId")]
         public ulong? TemplateId{ get; set; }
 
         /// <summary>
-        /// 扩展字段，默认空。
+        /// Extended field, which is empty by default.
         /// </summary>
         [JsonProperty("Extension")]
         public string Extension{ get; set; }

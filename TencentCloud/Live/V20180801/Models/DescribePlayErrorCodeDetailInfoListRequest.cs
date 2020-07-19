@@ -25,16 +25,16 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Start time (Beijing time).
-        /// In the format of yyyy-mm-dd HH:MM:SS.
+        /// Start time (Beijing time),
+        /// In the format of `yyyy-mm-dd HH:MM:SS`.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time (Beijing time).
-        /// In the format of yyyy-mm-dd HH:MM:SS.
-        /// Note: EndTime and StartTime only support querying data on the past day.
+        /// End time (Beijing time),
+        /// In the format of `yyyy-mm-dd HH:MM:SS`.
+        /// Note: `EndTime` and `StartTime` only support querying data for the last day.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -47,19 +47,19 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Granularity{ get; set; }
 
         /// <summary>
-        /// Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
+        /// Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
 
         /// <summary>
-        /// List of playback domain names.
+        /// Playback domain name list.
         /// </summary>
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
         /// </summary>
         [JsonProperty("MainlandOrOversea")]
         public string MainlandOrOversea{ get; set; }

@@ -31,33 +31,31 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// Start time (Beijing time),
-        /// In the format of yyyy-mm-dd HH:MM.
+        /// Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time (Beijing time).
-        /// In the format of yyyy-mm-dd HH:MM.
+        /// End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// Transcoding duration in minutes.
-        /// Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
+        /// Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// Encoding method, with modules,
+        /// Codec with modules,
         /// Example:
-        /// liveprocessor_H264: LVB transcoding-H264,
-        /// liveprocessor_H265: LVB transcoding-H265,
-        /// topspeed_H264 =》Ultra-fast HD-H264,
-        /// topspeed_H265 =》Ultra-fast HD-H265.
+        /// liveprocessor_H264: LVB transcoding - H264,
+        /// liveprocessor_H265: LVB transcoding - H265,
+        /// topspeed_H264: top speed codec - H264,
+        /// topspeed_H265: top speed codec - H265.
         /// </summary>
         [JsonProperty("ModuleCodec")]
         public string ModuleCodec{ get; set; }
@@ -69,7 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// Type. Value range: Transcode, MixStream, WaterMark.
+        /// Type. Valid values: Transcode, MixStream, WaterMark.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -79,6 +77,12 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         [JsonProperty("PushDomain")]
         public string PushDomain{ get; set; }
+
+        /// <summary>
+        /// Resolution.
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
 
 
         /// <summary>
@@ -94,6 +98,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "PushDomain", this.PushDomain);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
         }
     }
 }

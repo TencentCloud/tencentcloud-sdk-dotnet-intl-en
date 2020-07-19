@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Client IP in the format of dot-decimal notation.
+        /// Client IP in dotted-decimal notation.
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalRequest{ get; set; }
 
         /// <summary>
-        /// Total number of failing requests.
+        /// Total number of failed requests.
         /// </summary>
         [JsonProperty("TotalFailedRequest")]
         public ulong? TotalFailedRequest{ get; set; }
 
         /// <summary>
-        /// 
+        /// Country/region where the client is located.
         /// </summary>
         [JsonProperty("CountryArea")]
         public string CountryArea{ get; set; }

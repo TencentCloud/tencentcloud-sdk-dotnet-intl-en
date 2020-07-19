@@ -55,6 +55,24 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Recording filename.
+        /// Supported special placeholders include:
+        /// {StreamID}: stream ID
+        /// {StartYear}: start time - year
+        /// {StartMonth}: start time - month
+        /// {StartDay}: start time - day
+        /// {StartHour}: start time - hour
+        /// {StartMinute}: start time - minute
+        /// {StartSecond}: start time - second
+        /// {StartMillisecond}: start time - millisecond
+        /// {EndYear}: end time - year
+        /// {EndMonth}: end time - month
+        /// {EndDay}: end time - day
+        /// {EndHour}: end time - hour
+        /// {EndMinute}: end time - minute
+        /// {EndSecond}: end time - second
+        /// {EndMillisecond}: end time - millisecond
+        /// 
+        /// If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
         /// </summary>
         [JsonProperty("VodFileName")]
         public string VodFileName{ get; set; }

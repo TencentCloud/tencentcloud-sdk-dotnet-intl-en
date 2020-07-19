@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Status. 0: off, 1: on.
+        /// HTTPS status. 0: disabled, 1: enabled.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

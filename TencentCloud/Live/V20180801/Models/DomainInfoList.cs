@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Detailed information.
+        /// Details.
         /// </summary>
         [JsonProperty("DetailInfoList")]
         public DomainDetailInfo[] DetailInfoList{ get; set; }

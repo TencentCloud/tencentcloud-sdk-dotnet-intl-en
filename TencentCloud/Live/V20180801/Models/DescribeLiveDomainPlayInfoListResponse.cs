@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Data time in the format of yyyy-mm-dd HH:MM:SS.
+        /// Data time in the format of `yyyy-mm-dd HH:MM:SS`.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public float? TotalFlux{ get; set; }
 
         /// <summary>
-        /// TotalRequest.
+        /// Total number of requests.
         /// </summary>
         [JsonProperty("TotalRequest")]
         public ulong? TotalRequest{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalOnline{ get; set; }
 
         /// <summary>
-        /// Data by region name.
+        /// Data by domain name.
         /// </summary>
         [JsonProperty("DomainInfoList")]
         public DomainInfoList[] DomainInfoList{ get; set; }

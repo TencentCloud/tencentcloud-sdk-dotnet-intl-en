@@ -26,6 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// ID of stream mix session (from applying for stream mix to canceling stream mix).
+        /// This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
         /// </summary>
         [JsonProperty("MixStreamSessionId")]
         public string MixStreamSessionId{ get; set; }

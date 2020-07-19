@@ -25,22 +25,19 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Page number.
-        /// Value range: [1,1000].
-        /// Default value: 1.
+        /// Page number. Value range: [1,1000]. Default value: 1.
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Value range: [1,1000].
-        /// Default value: 20.
+        /// Number of entries per page. Value range: [1,1000]. Default value: 20.
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
+        /// Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
         /// </summary>
         [JsonProperty("OrderParam")]
         public string OrderParam{ get; set; }

@@ -25,13 +25,14 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
+        /// HTTP code. Valid values:
+        /// 400, 403, 404, 500, 502, 503, 504.
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// Total occurrences
+        /// Total occurrences.
         /// </summary>
         [JsonProperty("Num")]
         public ulong? Num{ get; set; }

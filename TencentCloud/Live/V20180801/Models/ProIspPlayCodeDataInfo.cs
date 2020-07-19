@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 
+        /// Country or region.
         /// </summary>
         [JsonProperty("CountryAreaName")]
         public string CountryAreaName{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string IspName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Occurrences of 2xx error codes.
         /// </summary>
         [JsonProperty("Code2xx")]
         public ulong? Code2xx{ get; set; }
 
         /// <summary>
-        /// 
+        /// Occurrences of 3xx error codes.
         /// </summary>
         [JsonProperty("Code3xx")]
         public ulong? Code3xx{ get; set; }

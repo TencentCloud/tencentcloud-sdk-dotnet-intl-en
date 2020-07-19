@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数据信息列表。
+        /// Data information list.
         /// </summary>
         [JsonProperty("DataInfoList")]
         public TimeValue[] DataInfoList{ get; set; }

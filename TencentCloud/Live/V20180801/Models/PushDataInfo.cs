@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string ClientIp{ get; set; }
 
         /// <summary>
-        /// Push receiving server IP.
+        /// IP of the server that receives the stream.
         /// </summary>
         [JsonProperty("ServerIp")]
         public string ServerIp{ get; set; }
@@ -85,14 +85,14 @@ namespace TencentCloud.Live.V20180801.Models
         public string BeginPushTime{ get; set; }
 
         /// <summary>
-        /// Audio encoding format.
+        /// Audio codec,
         /// Example: AAC.
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// Video encoding format.
+        /// Video codec,
         /// Example: H.264.
         /// </summary>
         [JsonProperty("Vcodec")]
@@ -105,10 +105,28 @@ namespace TencentCloud.Live.V20180801.Models
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sample rate.
         /// </summary>
         [JsonProperty("AsampleRate")]
         public ulong? AsampleRate{ get; set; }
+
+        /// <summary>
+        /// Audio bitrate in `metadata` in Kbps.
+        /// </summary>
+        [JsonProperty("MetaAudioSpeed")]
+        public ulong? MetaAudioSpeed{ get; set; }
+
+        /// <summary>
+        /// Video bitrate in `metadata` in Kbps.
+        /// </summary>
+        [JsonProperty("MetaVideoSpeed")]
+        public ulong? MetaVideoSpeed{ get; set; }
+
+        /// <summary>
+        /// Frame rate in `metadata`.
+        /// </summary>
+        [JsonProperty("MetaFps")]
+        public ulong? MetaFps{ get; set; }
 
 
         /// <summary>
@@ -130,6 +148,9 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Vcodec", this.Vcodec);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "AsampleRate", this.AsampleRate);
+            this.SetParamSimple(map, prefix + "MetaAudioSpeed", this.MetaAudioSpeed);
+            this.SetParamSimple(map, prefix + "MetaVideoSpeed", this.MetaVideoSpeed);
+            this.SetParamSimple(map, prefix + "MetaFps", this.MetaFps);
         }
     }
 }

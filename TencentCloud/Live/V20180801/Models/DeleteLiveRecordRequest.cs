@@ -31,8 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// Task ID, which uniquely identifies a recording task globally.
-        /// Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
+        /// Task ID returned by the `CreateLiveRecord` API.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

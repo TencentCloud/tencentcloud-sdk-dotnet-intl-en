@@ -25,37 +25,37 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+        /// Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
         /// The start time cannot be more than 30 days after the current time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+        /// End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
         /// The end time and start time must be on the same day.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Playback domain name.
-        /// If it is left blank, data of live streams of all playback domain names will be queried.
+        /// Playback domain name,
+        /// If this parameter is left empty, data of live streams of all playback domain names will be queried.
         /// </summary>
         [JsonProperty("PlayDomain")]
         public string PlayDomain{ get; set; }
 
         /// <summary>
         /// Stream name (exact match).
-        /// If it is left blank, the full playback data will be queried.
+        /// If this parameter is left empty, full playback data will be queried.
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-        /// If it is left blank, the full playback data will be queried.
-        /// Note: To query by AppName, you need to submit a ticket for application.
+        /// Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+        /// If this parameter is left empty, full playback data will be queried.
+        /// Note: to query by `AppName`, you need to submit a ticket for application.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

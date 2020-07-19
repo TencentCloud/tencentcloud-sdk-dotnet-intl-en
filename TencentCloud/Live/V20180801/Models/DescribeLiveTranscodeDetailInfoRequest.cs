@@ -38,8 +38,8 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Start time (Beijing time).
-        /// In the format of yyyymmdd.
-        /// Note: Only the detailed data for one of the past 30 days can be queried currently.
+        /// In the format of `yyyymmdd`.
+        /// Note: details for a specified day in the last month can be queried.
         /// </summary>
         [JsonProperty("DayTime")]
         public string DayTime{ get; set; }
@@ -52,20 +52,24 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Default value: 20
+        /// Number of entries per page. Default value: 20,
         /// Value range: [10,1000].
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 
+        /// Start day time (Beijing time),
+        /// In the format of `yyyymmdd`.
+        /// Note: details for the last month can be queried.
         /// </summary>
         [JsonProperty("StartDayTime")]
         public string StartDayTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// End day time (Beijing time),
+        /// In the format of `yyyymmdd`.
+        /// Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
         /// </summary>
         [JsonProperty("EndDayTime")]
         public string EndDayTime{ get; set; }
