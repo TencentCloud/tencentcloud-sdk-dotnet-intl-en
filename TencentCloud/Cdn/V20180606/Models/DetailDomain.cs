@@ -318,25 +318,29 @@ namespace TencentCloud.Cdn.V20180606.Models
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
         /// <summary>
-        /// SCDN configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SecurityConfig")]
         public SecurityConfig SecurityConfig{ get; set; }
 
         /// <summary>
-        /// `ImageOptimization` configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ImageOptimization")]
         public ImageOptimization ImageOptimization{ get; set; }
 
         /// <summary>
-        /// `UA` blacklist/whitelist Configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }
+
+        /// <summary>
+        /// Access control
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccessControl")]
+        public AccessControl AccessControl{ get; set; }
 
 
         /// <summary>
@@ -387,6 +391,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
             this.SetParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
             this.SetParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
+            this.SetParamObj(map, prefix + "AccessControl.", this.AccessControl);
         }
     }
 }

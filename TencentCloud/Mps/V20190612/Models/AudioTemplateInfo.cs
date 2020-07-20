@@ -35,9 +35,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>libmp3lame;</li>
         /// <li>ac3.</li>
         /// When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-        /// <li>libfdk_aac: More suitable for mp4;</li>
-        /// <li>libmp3lame: More suitable for flv;</li>
-        /// <li>mp2.</li>
+        /// <li>libfdk_aac: more suitable for mp4;</li>
+        /// <li>libmp3lame: more suitable for flv.</li>
         /// When the outer `Container` parameter is `hls`, the valid values include:
         /// <li>libfdk_aac;</li>
         /// <li>libmp3lame.</li>

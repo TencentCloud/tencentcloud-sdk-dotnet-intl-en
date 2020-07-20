@@ -93,6 +93,52 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// This API is used to apply for a connection.
+        /// When calling this API, please note that:
+        /// You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
+        /// If there is any connection in arrears under your account, you cannot apply for more connections.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDirectConnectRequest"/></param>
+        /// <returns><see cref="CreateDirectConnectResponse"/></returns>
+        public async Task<CreateDirectConnectResponse> CreateDirectConnect(CreateDirectConnectRequest req)
+        {
+             JsonResponseModel<CreateDirectConnectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDirectConnect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply for a connection.
+        /// When calling this API, please note that:
+        /// You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
+        /// If there is any connection in arrears under your account, you cannot apply for more connections.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDirectConnectRequest"/></param>
+        /// <returns><see cref="CreateDirectConnectResponse"/></returns>
+        public CreateDirectConnectResponse CreateDirectConnectSync(CreateDirectConnectRequest req)
+        {
+             JsonResponseModel<CreateDirectConnectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDirectConnect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a dedicated tunnel.
         /// </summary>
         /// <param name="req"><see cref="CreateDirectConnectTunnelRequest"/></param>
@@ -133,6 +179,48 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// This API is used to delete a connection.
+        /// Only connected connections can be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDirectConnectRequest"/></param>
+        /// <returns><see cref="DeleteDirectConnectResponse"/></returns>
+        public async Task<DeleteDirectConnectResponse> DeleteDirectConnect(DeleteDirectConnectRequest req)
+        {
+             JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDirectConnect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a connection.
+        /// Only connected connections can be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDirectConnectRequest"/></param>
+        /// <returns><see cref="DeleteDirectConnectResponse"/></returns>
+        public DeleteDirectConnectResponse DeleteDirectConnectSync(DeleteDirectConnectRequest req)
+        {
+             JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDirectConnect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a dedicated tunnel.
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectTunnelRequest"/></param>
@@ -164,6 +252,46 @@ namespace TencentCloud.Dc.V20180410
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDirectConnectTunnel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectTunnelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query connection access points.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPointsRequest"/></param>
+        /// <returns><see cref="DescribeAccessPointsResponse"/></returns>
+        public async Task<DescribeAccessPointsResponse> DescribeAccessPoints(DescribeAccessPointsRequest req)
+        {
+             JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccessPoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessPointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query connection access points.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPointsRequest"/></param>
+        /// <returns><see cref="DescribeAccessPointsResponse"/></returns>
+        public DescribeAccessPointsResponse DescribeAccessPointsSync(DescribeAccessPointsRequest req)
+        {
+             JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccessPoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessPointsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -244,6 +372,46 @@ namespace TencentCloud.Dc.V20180410
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDirectConnects");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify connection attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDirectConnectAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDirectConnectAttributeResponse"/></returns>
+        public async Task<ModifyDirectConnectAttributeResponse> ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDirectConnectAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify connection attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDirectConnectAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDirectConnectAttributeResponse"/></returns>
+        public ModifyDirectConnectAttributeResponse ModifyDirectConnectAttributeSync(ModifyDirectConnectAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDirectConnectAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

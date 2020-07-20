@@ -44,13 +44,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Queries the bandwidth package offset.
+        /// Offset of the query results
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Queries the limit on the number of bandwidth packages.
+        /// Max number of the bandwidth packages to be returned.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

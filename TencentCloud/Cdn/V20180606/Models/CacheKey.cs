@@ -32,6 +32,48 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }
 
+        /// <summary>
+        /// Whether caches are case insensitive
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IgnoreCase")]
+        public string IgnoreCase{ get; set; }
+
+        /// <summary>
+        /// Request parameter contained in `CacheKey`
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("QueryString")]
+        public QueryStringKey QueryString{ get; set; }
+
+        /// <summary>
+        /// Cookie contained in `CacheKey`
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Cookie")]
+        public CookieKey Cookie{ get; set; }
+
+        /// <summary>
+        /// Request header contained in `CacheKey`
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Header")]
+        public HeaderKey Header{ get; set; }
+
+        /// <summary>
+        /// Custom string contained in `CacheKey`
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CacheTag")]
+        public CacheTagKey CacheTag{ get; set; }
+
+        /// <summary>
+        /// Request protocol contained in `CacheKey`
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public SchemeKey Scheme{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -39,6 +81,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
+            this.SetParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
+            this.SetParamObj(map, prefix + "QueryString.", this.QueryString);
+            this.SetParamObj(map, prefix + "Cookie.", this.Cookie);
+            this.SetParamObj(map, prefix + "Header.", this.Header);
+            this.SetParamObj(map, prefix + "CacheTag.", this.CacheTag);
+            this.SetParamObj(map, prefix + "Scheme.", this.Scheme);
         }
     }
 }

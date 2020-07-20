@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// SubnetId
+        /// Subnet ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceName{ get; set; }
 
         /// <summary>
-        /// Instance status
+        /// Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
         /// </summary>
         [JsonProperty("DBInstanceStatus")]
         public string DBInstanceStatus{ get; set; }
@@ -168,6 +168,24 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AppId")]
+        public ulong? AppId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Uid")]
+        public ulong? Uid{ get; set; }
+
+        /// <summary>
+        /// Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+        /// </summary>
+        [JsonProperty("SupportIpv6")]
+        public ulong? SupportIpv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +216,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
+            this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
         }
     }
 }

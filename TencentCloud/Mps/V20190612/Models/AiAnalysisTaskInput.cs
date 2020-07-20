@@ -24,12 +24,19 @@ namespace TencentCloud.Mps.V20190612.Models
     public class AiAnalysisTaskInput : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }
 }

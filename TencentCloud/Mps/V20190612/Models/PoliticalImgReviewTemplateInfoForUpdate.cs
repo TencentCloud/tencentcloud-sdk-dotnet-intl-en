@@ -33,11 +33,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-        /// <li>violation_photo: Violating photo;</li>
-        /// <li>politician: Politically sensitive figure;</li>
-        /// <li>entertainment: Entertainment celebrity;</li>
-        /// <li>sport: Sports celebrity.</li>
+        /// Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+        /// <li>violation_photo: violating photo;</li>
+        /// <li>politician: sensitive figure;</li>
+        /// <li>entertainment: entertainment celebrity;</li>
+        /// <li>sport: sports figure;</li>
+        /// <li>entrepreneur: business figure;</li>
+        /// <li>scholar: educator;</li>
+        /// <li>celebrity: public-known figure;</li>
+        /// <li>military: military figure.</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }

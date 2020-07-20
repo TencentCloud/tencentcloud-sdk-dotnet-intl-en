@@ -30,6 +30,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
+        /// <summary>
+        /// Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+        /// </summary>
+        [JsonProperty("IsIpv6")]
+        public long? IsIpv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+            this.SetParamSimple(map, prefix + "IsIpv6", this.IsIpv6);
         }
     }
 }

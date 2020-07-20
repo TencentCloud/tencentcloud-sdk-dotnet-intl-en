@@ -37,19 +37,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
+        /// The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// The resource type, including 'Address' and 'LoadBalance'.
+        /// The resource type, including `Address` and `LoadBalance`.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
+        /// The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+        /// The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+        /// Type of flow logs to be collected. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
         /// </summary>
         [JsonProperty("TrafficType")]
         public string TrafficType{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// In ascending (asc) or descending (desc) order. Default value: 'desc'.
+        /// In ascending (`asc`) or descending (`desc`) order. Default value: 'desc'.
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The number of rows per page. Default vaue: 10.
+        /// The number of rows per page. Default value: 10.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

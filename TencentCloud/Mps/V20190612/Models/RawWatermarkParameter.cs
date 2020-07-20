@@ -24,12 +24,47 @@ namespace TencentCloud.Mps.V20190612.Models
     public class RawWatermarkParameter : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CoordinateOrigin")]
+        public string CoordinateOrigin{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("XPos")]
+        public string XPos{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("YPos")]
+        public string YPos{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ImageTemplate")]
+        public RawImageWatermarkInput ImageTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);
+            this.SetParamSimple(map, prefix + "XPos", this.XPos);
+            this.SetParamSimple(map, prefix + "YPos", this.YPos);
+            this.SetParamObj(map, prefix + "ImageTemplate.", this.ImageTemplate);
         }
     }
 }

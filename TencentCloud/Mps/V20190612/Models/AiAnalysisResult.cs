@@ -24,12 +24,47 @@ namespace TencentCloud.Mps.V20190612.Models
     public class AiAnalysisResult : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ClassificationTask")]
+        public AiAnalysisTaskClassificationResult ClassificationTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CoverTask")]
+        public AiAnalysisTaskCoverResult CoverTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TagTask")]
+        public AiAnalysisTaskTagResult TagTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FrameTagTask")]
+        public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "ClassificationTask.", this.ClassificationTask);
+            this.SetParamObj(map, prefix + "CoverTask.", this.CoverTask);
+            this.SetParamObj(map, prefix + "TagTask.", this.TagTask);
+            this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -211,6 +211,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AwsPrivateAccess")]
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// UA blacklist/whitelist Configuration
+        /// </summary>
+        [JsonProperty("UserAgentFilter")]
+        public UserAgentFilter UserAgentFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +253,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
             this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+            this.SetParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
         }
     }
 }

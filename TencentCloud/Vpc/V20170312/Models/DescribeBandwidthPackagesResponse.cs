@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The description of the bandwidth packages.
+        /// Detail information of the bandwidth package.
         /// </summary>
         [JsonProperty("BandwidthPackageSet")]
         public BandwidthPackage[] BandwidthPackageSet{ get; set; }

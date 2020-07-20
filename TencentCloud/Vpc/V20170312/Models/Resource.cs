@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The bandwidth package resource type, including 'Address', and 'LoadBalance'
+        /// The bandwidth package resource type, including `Address`, and `LoadBalance`
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
+        /// The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

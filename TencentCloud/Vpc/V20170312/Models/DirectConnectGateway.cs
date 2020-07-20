@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The direct connect gateway `ID`.
+        /// The direct connect gateway ID.
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DirectConnectGatewayName{ get; set; }
 
         /// <summary>
-        /// The `ID` of the `VPC` instance associated with the direct connect gateway.
+        /// The ID of the VPC instance associated with the direct connect gateway.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -51,9 +51,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// The `ID` of the associated network instance:
-        /// <li>When the `NetworkType` is `VPC`, this value is the VPC instance `ID`</li>
-        /// <li>When the `NetworkType` is `CCN`, this value is the CCN instance `ID`</li>
+        /// The ID of the associated network instance:
+        /// <li>When the `NetworkType` is `VPC`, this value is the VPC instance ID</li>
+        /// <li>When the `NetworkType` is `CCN`, this value is the CCN instance ID</li>
         /// </summary>
         [JsonProperty("NetworkInstanceId")]
         public string NetworkInstanceId{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DirectConnectGatewayIp{ get; set; }
 
         /// <summary>
-        /// The `ID` of the `CCN` instance associated with the direct connect gateway.
+        /// The ID of the CCN instance associated with the direct connect gateway.
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }

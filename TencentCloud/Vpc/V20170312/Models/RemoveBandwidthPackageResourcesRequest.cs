@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+        /// The unique ID of the bandwidth package, such as `bwp-xxxx`.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// The resource type. Valid values: 'Address' and 'LoadBalance'.
+        /// The resource type. Valid values: `Address` and `LoadBalance`.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
+        /// The resource IP, such as `eip-xxxx` and `lb-xxxx`.
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }

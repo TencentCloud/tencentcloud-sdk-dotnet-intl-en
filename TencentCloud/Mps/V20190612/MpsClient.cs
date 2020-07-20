@@ -53,6 +53,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to create a custom content analysis template. Up to 50 templates can be created.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAIAnalysisTemplateRequest"/></param>
+        /// <returns><see cref="CreateAIAnalysisTemplateResponse"/></returns>
+        public async Task<CreateAIAnalysisTemplateResponse> CreateAIAnalysisTemplate(CreateAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<CreateAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a custom content analysis template. Up to 50 templates can be created.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAIAnalysisTemplateRequest"/></param>
+        /// <returns><see cref="CreateAIAnalysisTemplateResponse"/></returns>
+        public CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplateSync(CreateAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<CreateAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a custom content recognition template. Up to 50 templates can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateAIRecognitionTemplateRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "CreateAIRecognitionTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create up to 100 adaptive bitrate streaming templates.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="CreateAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<CreateAdaptiveDynamicStreamingTemplateResponse> CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create up to 100 adaptive bitrate streaming templates.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="CreateAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -513,6 +593,50 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to delete a custom content analysis template.
+        /// 
+        /// Note: templates with an ID below 10000 are preset and cannot be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAIAnalysisTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAIAnalysisTemplateResponse"/></returns>
+        public async Task<DeleteAIAnalysisTemplateResponse> DeleteAIAnalysisTemplate(DeleteAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a custom content analysis template.
+        /// 
+        /// Note: templates with an ID below 10000 are preset and cannot be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAIAnalysisTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAIAnalysisTemplateResponse"/></returns>
+        public DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplateSync(DeleteAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a custom content recognition template.
         /// </summary>
         /// <param name="req"><see cref="DeleteAIRecognitionTemplateRequest"/></param>
@@ -544,6 +668,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DeleteAIRecognitionTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an adaptive bitrate streaming template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<DeleteAdaptiveDynamicStreamingTemplateResponse> DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an adaptive bitrate streaming template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplateSync(DeleteAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -953,6 +1117,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to get the list of content analysis templates based on unique template ID. The returned result includes all eligible custom and preset video content analysis templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisTemplatesResponse"/></returns>
+        public async Task<DescribeAIAnalysisTemplatesResponse> DescribeAIAnalysisTemplates(DescribeAIAnalysisTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAIAnalysisTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAIAnalysisTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIAnalysisTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of content analysis templates based on unique template ID. The returned result includes all eligible custom and preset video content analysis templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisTemplatesResponse"/></returns>
+        public DescribeAIAnalysisTemplatesResponse DescribeAIAnalysisTemplatesSync(DescribeAIAnalysisTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAIAnalysisTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAIAnalysisTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIAnalysisTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of content recognition templates based on unique template ID. The return result includes all eligible custom and preset content recognition templates.
         /// </summary>
         /// <param name="req"><see cref="DescribeAIRecognitionTemplatesRequest"/></param>
@@ -984,6 +1188,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAIRecognitionTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of adaptive bitrate streaming templates and supports paginated queries by filters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdaptiveDynamicStreamingTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAdaptiveDynamicStreamingTemplatesResponse"/></returns>
+        public async Task<DescribeAdaptiveDynamicStreamingTemplatesResponse> DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of adaptive bitrate streaming templates and supports paginated queries by filters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdaptiveDynamicStreamingTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAdaptiveDynamicStreamingTemplatesResponse"/></returns>
+        public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplatesSync(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAdaptiveDynamicStreamingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1104,6 +1348,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImageSpriteTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaMetaDataRequest"/></param>
+        /// <returns><see cref="DescribeMediaMetaDataResponse"/></returns>
+        public async Task<DescribeMediaMetaDataResponse> DescribeMediaMetaData(DescribeMediaMetaDataRequest req)
+        {
+             JsonResponseModel<DescribeMediaMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMediaMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaMetaDataRequest"/></param>
+        /// <returns><see cref="DescribeMediaMetaDataResponse"/></returns>
+        public DescribeMediaMetaDataResponse DescribeMediaMetaDataSync(DescribeMediaMetaDataRequest req)
+        {
+             JsonResponseModel<DescribeMediaMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMediaMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaMetaDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1517,6 +1801,54 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
+        /// 
+        /// 1. Clipping a file to generate a new video;
+        /// 2. Splicing multiple files to generate a new video;
+        /// 3. Clipping multiple files and then splicing the clips to generate a new video.
+        /// </summary>
+        /// <param name="req"><see cref="EditMediaRequest"/></param>
+        /// <returns><see cref="EditMediaResponse"/></returns>
+        public async Task<EditMediaResponse> EditMedia(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
+        /// 
+        /// 1. Clipping a file to generate a new video;
+        /// 2. Splicing multiple files to generate a new video;
+        /// 3. Clipping multiple files and then splicing the clips to generate a new video.
+        /// </summary>
+        /// <param name="req"><see cref="EditMediaRequest"/></param>
+        /// <returns><see cref="EditMediaResponse"/></returns>
+        public EditMediaResponse EditMediaSync(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to enable a workflow.
         /// </summary>
         /// <param name="req"><see cref="EnableWorkflowRequest"/></param>
@@ -1557,6 +1889,92 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to manage an initiated task.
+        /// > Note: currently, you can only terminate an ongoing live stream processing task.
+        /// </summary>
+        /// <param name="req"><see cref="ManageTaskRequest"/></param>
+        /// <returns><see cref="ManageTaskResponse"/></returns>
+        public async Task<ManageTaskResponse> ManageTask(ManageTaskRequest req)
+        {
+             JsonResponseModel<ManageTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManageTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to manage an initiated task.
+        /// > Note: currently, you can only terminate an ongoing live stream processing task.
+        /// </summary>
+        /// <param name="req"><see cref="ManageTaskRequest"/></param>
+        /// <returns><see cref="ManageTaskResponse"/></returns>
+        public ManageTaskResponse ManageTaskSync(ManageTaskRequest req)
+        {
+             JsonResponseModel<ManageTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManageTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a custom content analysis template.
+        /// 
+        /// Note: templates with an ID below 10000 are preset and cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAIAnalysisTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAIAnalysisTemplateResponse"/></returns>
+        public async Task<ModifyAIAnalysisTemplateResponse> ModifyAIAnalysisTemplate(ModifyAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a custom content analysis template.
+        /// 
+        /// Note: templates with an ID below 10000 are preset and cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAIAnalysisTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAIAnalysisTemplateResponse"/></returns>
+        public ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplateSync(ModifyAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify a custom content recognition template.
         /// </summary>
         /// <param name="req"><see cref="ModifyAIRecognitionTemplateRequest"/></param>
@@ -1588,6 +2006,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAIRecognitionTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an adaptive bitrate streaming template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<ModifyAdaptiveDynamicStreamingTemplateResponse> ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an adaptive bitrate streaming template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplateSync(ModifyAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

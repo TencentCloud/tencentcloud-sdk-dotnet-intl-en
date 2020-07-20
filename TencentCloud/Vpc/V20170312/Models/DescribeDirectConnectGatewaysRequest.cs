@@ -25,20 +25,20 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+        /// The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
         /// </summary>
         [JsonProperty("DirectConnectGatewayIds")]
         public string[] DirectConnectGatewayIds{ get; set; }
 
         /// <summary>
-        /// Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-        /// <li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+        /// Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+        /// <li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
         /// <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-        /// <li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+        /// <li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
         /// <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
         /// <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-        /// <li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-        /// <li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
+        /// <li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+        /// <li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The returned quantity.
+        /// Max number of results returned
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

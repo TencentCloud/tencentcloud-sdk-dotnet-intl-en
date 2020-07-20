@@ -213,6 +213,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to query billing data details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
+        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
+        public async Task<DescribeBillingDataResponse> DescribeBillingData(DescribeBillingDataRequest req)
+        {
+             JsonResponseModel<DescribeBillingDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillingData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query billing data details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
+        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
+        public DescribeBillingDataResponse DescribeBillingDataSync(DescribeBillingDataRequest req)
+        {
+             JsonResponseModel<DescribeBillingDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillingData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
         /// 
         /// + Traffic (in bytes)
@@ -471,6 +511,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to query the status of the edge servers and intermediate nodes on the domain name acceleration platform. Note: edge servers are not generally available. This API can only be used by whitelisted accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpStatusRequest"/></param>
+        /// <returns><see cref="DescribeIpStatusResponse"/></returns>
+        public async Task<DescribeIpStatusResponse> DescribeIpStatus(DescribeIpStatusRequest req)
+        {
+             JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the status of the edge servers and intermediate nodes on the domain name acceleration platform. Note: edge servers are not generally available. This API can only be used by whitelisted accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpStatusRequest"/></param>
+        /// <returns><see cref="DescribeIpStatusResponse"/></returns>
+        public DescribeIpStatusResponse DescribeIpStatusSync(DescribeIpStatusRequest req)
+        {
+             JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeIpVisit) is used to query the number of users who remain active for 5 minutes and the detailed number of daily active users.
         /// 
         /// + Number of users who remain active for 5 minutes: Collects deduplicated statistics based on client IP addresses in the log with the 5-minute granularity.
@@ -657,6 +737,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to query the purge usage quota and daily available usage for an account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePurgeQuotaRequest"/></param>
+        /// <returns><see cref="DescribePurgeQuotaResponse"/></returns>
+        public async Task<DescribePurgeQuotaResponse> DescribePurgeQuota(DescribePurgeQuotaRequest req)
+        {
+             JsonResponseModel<DescribePurgeQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePurgeQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePurgeQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the purge usage quota and daily available usage for an account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePurgeQuotaRequest"/></param>
+        /// <returns><see cref="DescribePurgeQuotaResponse"/></returns>
+        public DescribePurgeQuotaResponse DescribePurgeQuotaSync(DescribePurgeQuotaRequest req)
+        {
+             JsonResponseModel<DescribePurgeQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePurgeQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePurgeQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the record and progress of URL or directory purge tasks submitted via the `PurgePathCache` or `PurgeUrlsCache` APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeTasksRequest"/></param>
@@ -688,6 +808,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "DescribePurgeTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePurgeTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the prefetch quota and daily available usage.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePushQuotaRequest"/></param>
+        /// <returns><see cref="DescribePushQuotaResponse"/></returns>
+        public async Task<DescribePushQuotaResponse> DescribePushQuota(DescribePushQuotaRequest req)
+        {
+             JsonResponseModel<DescribePushQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePushQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePushQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the prefetch quota and daily available usage.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePushQuotaRequest"/></param>
+        /// <returns><see cref="DescribePushQuotaResponse"/></returns>
+        public DescribePushQuotaResponse DescribePushQuotaSync(DescribePushQuotaRequest req)
+        {
+             JsonResponseModel<DescribePushQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePushQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePushQuotaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

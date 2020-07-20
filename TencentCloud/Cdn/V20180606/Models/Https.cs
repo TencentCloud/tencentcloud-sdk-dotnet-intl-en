@@ -98,6 +98,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("SslStatus")]
         public string SslStatus{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Hsts")]
+        public Hsts Hsts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +118,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
             this.SetParamSimple(map, prefix + "Spdy", this.Spdy);
             this.SetParamSimple(map, prefix + "SslStatus", this.SslStatus);
+            this.SetParamObj(map, prefix + "Hsts.", this.Hsts);
         }
     }
 }

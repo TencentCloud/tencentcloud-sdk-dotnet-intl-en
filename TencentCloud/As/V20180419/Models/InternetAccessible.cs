@@ -45,6 +45,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("PublicIpAssigned")]
         public bool? PublicIpAssigned{ get; set; }
 
+        /// <summary>
+        /// Bandwidth package ID. You can obtain the parameter value from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("BandwidthPackageId")]
+        public string BandwidthPackageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
+            this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         }
     }
 }

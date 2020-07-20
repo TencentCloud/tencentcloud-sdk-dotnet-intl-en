@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The CCN outbound bandwidths in each region.
+        /// The outbound bandwidth limits of regions in a CCN instance.
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("CcnBandwidthSet")]

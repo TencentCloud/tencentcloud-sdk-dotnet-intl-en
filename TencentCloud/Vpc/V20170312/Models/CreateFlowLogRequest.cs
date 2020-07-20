@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+        /// Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
         /// </summary>
         [JsonProperty("TrafficType")]
         public string TrafficType{ get; set; }

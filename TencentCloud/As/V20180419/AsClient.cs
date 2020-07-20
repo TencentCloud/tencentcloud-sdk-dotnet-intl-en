@@ -177,6 +177,50 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API is used to create launch configurations and scaling groups from an instance.
+        /// 
+        /// Note: the pay-as-you-go instance in the scaling group that is created from a monthly-subscribed instance can be expanded.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoScalingGroupFromInstanceRequest"/></param>
+        /// <returns><see cref="CreateAutoScalingGroupFromInstanceResponse"/></returns>
+        public async Task<CreateAutoScalingGroupFromInstanceResponse> CreateAutoScalingGroupFromInstance(CreateAutoScalingGroupFromInstanceRequest req)
+        {
+             JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAutoScalingGroupFromInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create launch configurations and scaling groups from an instance.
+        /// 
+        /// Note: the pay-as-you-go instance in the scaling group that is created from a monthly-subscribed instance can be expanded.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoScalingGroupFromInstanceRequest"/></param>
+        /// <returns><see cref="CreateAutoScalingGroupFromInstanceResponse"/></returns>
+        public CreateAutoScalingGroupFromInstanceResponse CreateAutoScalingGroupFromInstanceSync(CreateAutoScalingGroupFromInstanceRequest req)
+        {
+             JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAutoScalingGroupFromInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateLaunchConfiguration) is used to create a launch configuration.
         /// 
         /// * A few fields of a launch configuration can be modified through `ModifyLaunchConfigurationAttributes`. To use a new launch configuration, it is recommended to create it from scratch.
@@ -1760,6 +1804,98 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "SetInstancesProtection");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetInstancesProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to launch CVM instances in the scaling group.
+        /// * After the instance is launched and in the `IN_SERVICE` status, the desired capacity increases, but the desired capacity cannot exceed the maximum value.
+        /// * This API supports batch operation. Up to 100 instances can be launched in each request.
+        /// </summary>
+        /// <param name="req"><see cref="StartAutoScalingInstancesRequest"/></param>
+        /// <returns><see cref="StartAutoScalingInstancesResponse"/></returns>
+        public async Task<StartAutoScalingInstancesResponse> StartAutoScalingInstances(StartAutoScalingInstancesRequest req)
+        {
+             JsonResponseModel<StartAutoScalingInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartAutoScalingInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartAutoScalingInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to launch CVM instances in the scaling group.
+        /// * After the instance is launched and in the `IN_SERVICE` status, the desired capacity increases, but the desired capacity cannot exceed the maximum value.
+        /// * This API supports batch operation. Up to 100 instances can be launched in each request.
+        /// </summary>
+        /// <param name="req"><see cref="StartAutoScalingInstancesRequest"/></param>
+        /// <returns><see cref="StartAutoScalingInstancesResponse"/></returns>
+        public StartAutoScalingInstancesResponse StartAutoScalingInstancesSync(StartAutoScalingInstancesRequest req)
+        {
+             JsonResponseModel<StartAutoScalingInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartAutoScalingInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartAutoScalingInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to shut down CVM instances in the scaling group.
+        /// * Use the `SOFT_FIRST` shutdown, which means the CVM will be forcibly shut down if the soft shutdown fails.
+        /// * Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
+        /// * To use the `STOP_CHARGING` shutdown, the instances you want to shut down must satisfy the conditions of [no charges when shut down](https://cloud.tencent.com/document/product/213/19918).
+        /// * This API supports batch operation. Up to 100 instances can be shut down in each request.
+        /// </summary>
+        /// <param name="req"><see cref="StopAutoScalingInstancesRequest"/></param>
+        /// <returns><see cref="StopAutoScalingInstancesResponse"/></returns>
+        public async Task<StopAutoScalingInstancesResponse> StopAutoScalingInstances(StopAutoScalingInstancesRequest req)
+        {
+             JsonResponseModel<StopAutoScalingInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopAutoScalingInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopAutoScalingInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to shut down CVM instances in the scaling group.
+        /// * Use the `SOFT_FIRST` shutdown, which means the CVM will be forcibly shut down if the soft shutdown fails.
+        /// * Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
+        /// * To use the `STOP_CHARGING` shutdown, the instances you want to shut down must satisfy the conditions of [no charges when shut down](https://cloud.tencent.com/document/product/213/19918).
+        /// * This API supports batch operation. Up to 100 instances can be shut down in each request.
+        /// </summary>
+        /// <param name="req"><see cref="StopAutoScalingInstancesRequest"/></param>
+        /// <returns><see cref="StopAutoScalingInstancesResponse"/></returns>
+        public StopAutoScalingInstancesResponse StopAutoScalingInstancesSync(StopAutoScalingInstancesRequest req)
+        {
+             JsonResponseModel<StopAutoScalingInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopAutoScalingInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopAutoScalingInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

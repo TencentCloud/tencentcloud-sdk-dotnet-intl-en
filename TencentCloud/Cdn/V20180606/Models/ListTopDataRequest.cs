@@ -25,19 +25,19 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Query start date. Example: 2018-09-09.
+        /// Query start time in the format of `yyyy-MM-dd HH:mm:ss`
         /// Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-        /// Data generated at or after 00:00:00 on the start date will be returned.
-        /// Only data from the last 90 days will be queried.
+        /// Data generated after or at 00:00:00 on the start date will be returned
+        /// Only data for the last 90 days can be queried
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Query end date. Example: 2018-09-10
+        /// Query end time in the format of `yyyy-MM-dd HH:mm:ss`
         /// Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-        /// Data generated before or at 23:59:59 on the end date will be returned.
-        /// EndTime must be greater than or equal to StartTime
+        /// Data generated before or at 23:59:59 on the end date will be returned
+        /// `EndTime` must be later than or equal to `StartTime`
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

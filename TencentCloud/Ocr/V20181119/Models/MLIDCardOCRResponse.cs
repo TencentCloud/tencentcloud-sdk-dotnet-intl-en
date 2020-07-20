@@ -50,8 +50,9 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// Alarm code
-        /// -9103 Alarm for photographed document
-        /// -9102 Alarm for photocopied document
+        /// -9103	Alarm for photographed document
+        /// -9102	Alarm for photocopied document
+        /// -9106       Alarm for covered card
         /// </summary>
         [JsonProperty("Warn")]
         public long?[] Warn{ get; set; }
@@ -77,6 +78,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
+        /// Certificate types
+        /// MyKad: Malaysian Identity Card
+        /// MyPR: Malaysia Permanent Resident Identity Card
+        /// MyTentera: Malaysian Armed Forces Identity Card
+        /// MyKAS: Malaysian Temporary Resident Identity Card
+        /// POLIS: Royal Malaysia Police Identity Card
+        /// IKAD: Malaysia Temporary Employment Visit Pass
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -95,6 +108,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "Warn.", this.Warn);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

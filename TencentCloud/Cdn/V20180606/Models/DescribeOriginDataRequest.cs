@@ -64,8 +64,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-        /// Please note that if domain names are specified, this parameter will be ignored.
+        /// Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+        /// If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+        /// If the domain name information is specified, the domain name will prevail
         /// </summary>
         [JsonProperty("Project")]
         public long? Project{ get; set; }

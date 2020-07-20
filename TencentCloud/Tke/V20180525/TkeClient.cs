@@ -613,6 +613,86 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// Cluster auto scaling configuration
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAsGroupOptionRequest"/></param>
+        /// <returns><see cref="DescribeClusterAsGroupOptionResponse"/></returns>
+        public async Task<DescribeClusterAsGroupOptionResponse> DescribeClusterAsGroupOption(DescribeClusterAsGroupOptionRequest req)
+        {
+             JsonResponseModel<DescribeClusterAsGroupOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterAsGroupOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAsGroupOptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Cluster auto scaling configuration
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAsGroupOptionRequest"/></param>
+        /// <returns><see cref="DescribeClusterAsGroupOptionResponse"/></returns>
+        public DescribeClusterAsGroupOptionResponse DescribeClusterAsGroupOptionSync(DescribeClusterAsGroupOptionRequest req)
+        {
+             JsonResponseModel<DescribeClusterAsGroupOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterAsGroupOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAsGroupOptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Cluster-associated scaling group list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAsGroupsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAsGroupsResponse"/></returns>
+        public async Task<DescribeClusterAsGroupsResponse> DescribeClusterAsGroups(DescribeClusterAsGroupsRequest req)
+        {
+             JsonResponseModel<DescribeClusterAsGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterAsGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAsGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Cluster-associated scaling group list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAsGroupsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAsGroupsResponse"/></returns>
+        public DescribeClusterAsGroupsResponse DescribeClusterAsGroupsSync(DescribeClusterAsGroupsRequest req)
+        {
+             JsonResponseModel<DescribeClusterAsGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterAsGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAsGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Query cluster access port status (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterEndpointStatusRequest"/></param>
@@ -1044,6 +1124,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRouteTableConflicts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTableConflictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modify cluster scaling group attributes
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAsGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifyClusterAsGroupAttributeResponse"/></returns>
+        public async Task<ModifyClusterAsGroupAttributeResponse> ModifyClusterAsGroupAttribute(ModifyClusterAsGroupAttributeRequest req)
+        {
+             JsonResponseModel<ModifyClusterAsGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterAsGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAsGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modify cluster scaling group attributes
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAsGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifyClusterAsGroupAttributeResponse"/></returns>
+        public ModifyClusterAsGroupAttributeResponse ModifyClusterAsGroupAttributeSync(ModifyClusterAsGroupAttributeRequest req)
+        {
+             JsonResponseModel<ModifyClusterAsGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterAsGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAsGroupAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

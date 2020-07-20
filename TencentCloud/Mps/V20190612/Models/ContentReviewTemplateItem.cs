@@ -64,6 +64,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
 
         /// <summary>
+        /// Control parameter of prohibited information detection. Prohibited information includes:
+        /// <li>Abusive;</li>
+        /// <li>Drug-related.</li>
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProhibitedConfigure")]
+        public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
+
+        /// <summary>
         /// Custom content audit control parameter.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -94,6 +103,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
             this.SetParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
             this.SetParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+            this.SetParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
             this.SetParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

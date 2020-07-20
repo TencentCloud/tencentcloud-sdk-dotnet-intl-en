@@ -39,7 +39,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
+        /// The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
         /// </summary>
         [JsonProperty("SortedBy")]
         public string SortedBy{ get; set; }

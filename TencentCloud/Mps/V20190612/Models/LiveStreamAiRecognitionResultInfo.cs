@@ -24,12 +24,19 @@ namespace TencentCloud.Mps.V20190612.Models
     public class LiveStreamAiRecognitionResultInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResultSet")]
+        public LiveStreamAiRecognitionResultItem[] ResultSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);
         }
     }
 }

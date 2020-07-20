@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? AddressCount{ get; set; }
 
         /// <summary>
-        /// The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+        /// Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// The EIP zone. This is passed in when EIP is automatically assigned.
+        /// The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

@@ -37,11 +37,11 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Content for each CacheType:
-        /// For `all`, enter an asterisk (*).
-        /// For `file`, enter the suffix, such as jpg, txt.
-        /// For `directory`, enter the path, such as /xxx/test/.
-        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-        /// For `index`, enter a backslash (/).
+        /// Enter `*` for `all`
+        /// Enter an extension for `file`, such as `jpg` or `txt`
+        /// Enter a path for `directory`, such as `/xxx/test`
+        /// Enter an absolute path for `path`, such as `/xxx/test.html`
+        /// Enter `/` for `index`
         /// </summary>
         [JsonProperty("CacheContents")]
         public string[] CacheContents{ get; set; }

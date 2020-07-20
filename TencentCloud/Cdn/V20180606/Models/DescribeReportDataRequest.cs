@@ -25,13 +25,13 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Query start time
+        /// Query start time in the format of `yyyy-MM-dd`
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time
+        /// Query end time in the format of `yyyy-MM-dd`
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -39,8 +39,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Report type
         /// daily: daily report
-        /// weekly: weekly report
-        /// monthly: monthly report
+        /// weekly: weekly report (Monday to Sunday)
+        /// monthly: monthly report (calendar month)
         /// </summary>
         [JsonProperty("ReportType")]
         public string ReportType{ get; set; }

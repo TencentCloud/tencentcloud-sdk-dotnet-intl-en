@@ -125,7 +125,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ZonesCheckPolicy{ get; set; }
 
         /// <summary>
-        /// List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
+        /// List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -141,6 +141,12 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MultiZoneSubnetPolicy")]
+        public string MultiZoneSubnetPolicy{ get; set; }
 
 
         /// <summary>
@@ -166,6 +172,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+            this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
         }
     }
 }

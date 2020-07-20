@@ -120,11 +120,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string DataSource{ get; set; }
 
         /// <summary>
-        /// Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-        /// `all`: All protocols
-        /// `ipv4`: IPv4
-        /// `ipv6`: IPv6
+        /// Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+        /// all: all protocols
+        /// ipv4: specifies to query IPv4 metrics
+        /// ipv6: specifies to query IPv6 metrics
         /// If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
+        /// Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }

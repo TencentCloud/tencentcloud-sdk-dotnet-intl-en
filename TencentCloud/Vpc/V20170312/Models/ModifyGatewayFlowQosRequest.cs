@@ -34,7 +34,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
+        /// Bandwidth limit value in Mbps. Valid values: >0: set the limit to the specified value. 0: block all traffic. -1: no bandwidth limit.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
