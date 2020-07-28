@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
+        /// ID of one or multiple connections to be operated; It's an old parameter, please switch to ProxyIds.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// ID of one or multiple connections to be operated; It’s a new parameter.
+        /// ID of one or multiple connections to be operated; It's a new parameter.
         /// </summary>
         [JsonProperty("ProxyIds")]
         public string[] ProxyIds{ get; set; }

@@ -33,23 +33,27 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Filter tag for politically sensitive information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+        /// Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
         /// <li>violation_photo: violating photo;</li>
-        /// <li>politician: politically sensitive figure;</li>
+        /// <li>politician: political figure;</li>
         /// <li>entertainment: entertainment celebrity;</li>
-        /// <li>sport: sports celebrity.</li>
+        /// <li>sport: sports figure;</li>
+        /// <li>entrepreneur: business figure;</li>
+        /// <li>scholar: educator;</li>
+        /// <li>celebrity: well-known figure;</li>
+        /// <li>military: military figure.</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }
 
         /// <summary>
-        /// Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0–100.
+        /// Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0–100.
+        /// Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

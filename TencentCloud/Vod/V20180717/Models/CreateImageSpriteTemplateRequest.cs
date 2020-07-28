@@ -59,6 +59,21 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
+        /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+        /// <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+        /// <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+        /// Default value: black.
+        /// </summary>
+        [JsonProperty("FillType")]
+        public string FillType{ get; set; }
+
+        /// <summary>
         /// Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
         /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
         /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
@@ -95,15 +110,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
-        /// <summary>
-        /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-        /// <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-        /// <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-        /// Default value: black.
-        /// </summary>
-        [JsonProperty("FillType")]
-        public string FillType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,11 +121,12 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "RowCount", this.RowCount);
             this.SetParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamSimple(map, prefix + "FillType", this.FillType);
         }
     }
 }

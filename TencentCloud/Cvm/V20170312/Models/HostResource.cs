@@ -60,6 +60,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DiskAvailable")]
         public ulong? DiskAvailable{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "MemAvailable", this.MemAvailable);
             this.SetParamSimple(map, prefix + "DiskTotal", this.DiskTotal);
             this.SetParamSimple(map, prefix + "DiskAvailable", this.DiskAvailable);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

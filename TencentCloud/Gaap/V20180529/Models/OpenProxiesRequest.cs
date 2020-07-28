@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// List of connection instance IDs; It’s an old parameter, please switch to ProxyIds.
+        /// List of connection instance IDs; It's an old parameter, please switch to ProxyIds.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// List of connection instance IDs; It’s a new parameter.
+        /// List of connection instance IDs; It's a new parameter.
         /// </summary>
         [JsonProperty("ProxyIds")]
         public string[] ProxyIds{ get; set; }

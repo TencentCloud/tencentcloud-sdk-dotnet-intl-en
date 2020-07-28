@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string PublicIpAddress{ get; set; }
 
         /// <summary>
-        /// EIP instance ID, such as `eip-11112222`。
+        /// EIP instance ID, such as `eip-11112222`.
         /// </summary>
         [JsonProperty("AddressId")]
         public string AddressId{ get; set; }

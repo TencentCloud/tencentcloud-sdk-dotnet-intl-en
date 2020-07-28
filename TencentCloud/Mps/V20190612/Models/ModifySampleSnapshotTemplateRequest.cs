@@ -49,6 +49,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResolutionAdaptive")]
+        public string ResolutionAdaptive{ get; set; }
+
+        /// <summary>
         /// Sampled screencapturing type. Valid values:
         /// <li>Percent: By percent.</li>
         /// <li>Time: By time interval.</li>
@@ -76,6 +82,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FillType")]
+        public string FillType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,10 +98,12 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "SampleType", this.SampleType);
             this.SetParamSimple(map, prefix + "SampleInterval", this.SampleInterval);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "FillType", this.FillType);
         }
     }
 }

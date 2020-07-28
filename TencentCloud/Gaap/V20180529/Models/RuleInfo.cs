@@ -93,7 +93,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? BindStatus{ get; set; }
 
         /// <summary>
-        /// The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+        /// The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ForwardHost")]

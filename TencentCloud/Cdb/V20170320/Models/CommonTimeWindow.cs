@@ -25,43 +25,43 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Time window on Monday in the format of 02:00–06:00
+        /// Time window on Monday in the format of 02:00-06:00
         /// </summary>
         [JsonProperty("Monday")]
         public string Monday{ get; set; }
 
         /// <summary>
-        /// Time window on Tuesday in the format of 02:00–06:00
+        /// Time window on Tuesday in the format of 02:00-06:00
         /// </summary>
         [JsonProperty("Tuesday")]
         public string Tuesday{ get; set; }
 
         /// <summary>
-        /// Time window on Wednesday in the format of 02:00–06:00
+        /// Time window on Wednesday in the format of 02:00-06:00
         /// </summary>
         [JsonProperty("Wednesday")]
         public string Wednesday{ get; set; }
 
         /// <summary>
-        /// Time window on Thursday in the format of 02:00–06:00
+        /// Time window on Thursday in the format of 02:00-06:00
         /// </summary>
         [JsonProperty("Thursday")]
         public string Thursday{ get; set; }
 
         /// <summary>
-        /// Time window on Friday in the format of 02:00–06:00
+        /// Time window on Friday in the format of 02:00-06:00
         /// </summary>
         [JsonProperty("Friday")]
         public string Friday{ get; set; }
 
         /// <summary>
-        /// Time window on Saturday in the format of 02:00–06:00
+        /// Time window on Saturday in the format of 02:00-06:00
         /// </summary>
         [JsonProperty("Saturday")]
         public string Saturday{ get; set; }
 
         /// <summary>
-        /// Time window on Sunday in the format of 02:00–06:00
+        /// Time window on Sunday in the format of 02:00-06:00
         /// </summary>
         [JsonProperty("Sunday")]
         public string Sunday{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Listener protocol
+        /// Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

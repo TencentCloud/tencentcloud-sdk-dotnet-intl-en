@@ -43,7 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string NewDomain{ get; set; }
 
         /// <summary>
-        /// Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+        /// Server SSL certificate ID. It's only applicable to the connections of version 3.0:
         /// If this field is not passed in, the original certificate will be used;
         /// If this field is passed in, and CertificateId=default, the listener certificate will be used;
         /// For other cases, the certificate specified by CertificateId will be used.
@@ -52,7 +52,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+        /// Client CA certificate ID. It's only applicable to the connections of version 3.0:
         /// If this field is not passed in, the original certificate will be used;
         /// If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
         /// For other cases, the certificate specified by ClientCertificateId will be used.

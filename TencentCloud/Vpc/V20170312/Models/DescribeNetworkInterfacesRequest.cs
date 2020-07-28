@@ -42,7 +42,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>address-ip - String - (Filter condition) Private IPv4 address.</li>
         /// <li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
         /// <li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-        /// <li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is ‘true’, filter only the primary ENI. If the value is ‘false’, filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+        /// <li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

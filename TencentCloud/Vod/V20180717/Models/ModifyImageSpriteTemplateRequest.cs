@@ -86,12 +86,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? ColumnCount{ get; set; }
 
         /// <summary>
-        /// ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
-        /// <summary>
         /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
         /// <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
         /// <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -99,6 +93,18 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
+        /// ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -115,8 +121,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SampleInterval", this.SampleInterval);
             this.SetParamSimple(map, prefix + "RowCount", this.RowCount);
             this.SetParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

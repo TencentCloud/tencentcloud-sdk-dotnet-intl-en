@@ -210,7 +210,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? Shareable{ get; set; }
 
         /// <summary>
-        /// For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk’s Instance IDs currently mounted to the CVM.
+        /// For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }

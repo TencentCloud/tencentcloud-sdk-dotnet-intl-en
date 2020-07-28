@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The VPC ID or the unified ID. We recommend you use the unified ID.
+        /// ID of the VPC instance
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The unique ID of the flow log collector.
+        /// The unique ID of the flow log.
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }
 
         /// <summary>
-        /// The name of the flow log collector.
+        /// The name of the flow log.
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// The description of the flow log collector.
+        /// The description of the flow log.
         /// </summary>
         [JsonProperty("FlowLogDescription")]
         public string FlowLogDescription{ get; set; }

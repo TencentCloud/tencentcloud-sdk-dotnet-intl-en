@@ -39,6 +39,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public WorkflowTask WorkflowTaskEvent{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EditMediaTaskEvent")]
+        public EditMediaTask EditMediaTaskEvent{ get; set; }
+
+        /// <summary>
         /// The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
         /// </summary>
         [JsonProperty("SessionId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamObj(map, prefix + "WorkflowTaskEvent.", this.WorkflowTaskEvent);
+            this.SetParamObj(map, prefix + "EditMediaTaskEvent.", this.EditMediaTaskEvent);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

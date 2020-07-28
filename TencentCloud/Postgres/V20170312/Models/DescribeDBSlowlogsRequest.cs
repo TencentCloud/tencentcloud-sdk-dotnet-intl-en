@@ -61,7 +61,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page. Value range: 1–100. Default value: 20.
+        /// Number of entries returned per page. Value range: 1-100. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

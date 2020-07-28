@@ -25,6 +25,12 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
+        /// Name of a time point screencapturing template. Length limit: 64 characters.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
         /// Image width in px. Value range: [128, 4,096].
         /// </summary>
         [JsonProperty("Width")]
@@ -37,10 +43,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Name of a time point screencapturing template. Length limit: 64 characters.
+        /// 
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ResolutionAdaptive")]
+        public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
         /// Image format. Valid values: jpg; png. Default value: jpg.
@@ -54,17 +60,25 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FillType")]
+        public string FillType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "FillType", this.FillType);
         }
     }
 }

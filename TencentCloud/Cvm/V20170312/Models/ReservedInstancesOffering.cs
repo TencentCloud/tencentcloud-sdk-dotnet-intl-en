@@ -32,14 +32,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-        /// Valid value: USD.
+        /// The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+        /// Value: USD.
         /// </summary>
         [JsonProperty("CurrencyCode")]
         public string CurrencyCode{ get; set; }
 
         /// <summary>
-        /// The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+        /// The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
         /// Unit: second
         /// </summary>
         [JsonProperty("Duration")]
@@ -53,14 +53,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         public float? FixedPrice{ get; set; }
 
         /// <summary>
-        /// The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-        /// Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
+        /// The instance model of the Reserved Instance, such as S3.MEDIUM4.
+        /// Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// The payment term of the Reserved Instance, such as All Upfront.
+        /// The payment term of the Reserved Instance, such as **All Upfront**.
         /// Valid value: All Upfront.
         /// </summary>
         [JsonProperty("OfferingType")]
@@ -73,7 +73,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ReservedInstancesOfferingId{ get; set; }
 
         /// <summary>
-        /// The platform description (operating system) of the Reserved Instance, such as linux.
+        /// The operating system of the Reserved Instance, such as **linux**.
         /// Valid value: linux.
         /// </summary>
         [JsonProperty("ProductDescription")]
@@ -81,7 +81,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// The hourly usage price of the Reserved Instance, such as 0.0.
-        /// Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+        /// Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
         /// Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
         /// </summary>
         [JsonProperty("UsagePrice")]

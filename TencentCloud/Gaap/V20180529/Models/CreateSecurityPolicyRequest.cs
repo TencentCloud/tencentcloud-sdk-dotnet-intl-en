@@ -25,16 +25,22 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
+        /// Default policy: ACCEPT or DROP
+        /// </summary>
+        [JsonProperty("DefaultAction")]
+        public string DefaultAction{ get; set; }
+
+        /// <summary>
         /// Acceleration connection ID
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Default policy: ACCEPT or DROP
+        /// Connection group ID
         /// </summary>
-        [JsonProperty("DefaultAction")]
-        public string DefaultAction{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
             this.SetParamSimple(map, prefix + "DefaultAction", this.DefaultAction);
+            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

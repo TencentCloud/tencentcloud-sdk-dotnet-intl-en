@@ -177,9 +177,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to create launch configurations and scaling groups from an instance.
+        /// This API is used to create launch configurations and scaling groups based on an instance.
         /// 
-        /// Note: the pay-as-you-go instance in the scaling group that is created from a monthly-subscribed instance can be expanded.
+        /// Note: for a scaling group that is created based on a monthly-subscribed instance, the instances added for scale-out are pay-as-you-go instance.
         /// </summary>
         /// <param name="req"><see cref="CreateAutoScalingGroupFromInstanceRequest"/></param>
         /// <returns><see cref="CreateAutoScalingGroupFromInstanceResponse"/></returns>
@@ -199,9 +199,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to create launch configurations and scaling groups from an instance.
+        /// This API is used to create launch configurations and scaling groups based on an instance.
         /// 
-        /// Note: the pay-as-you-go instance in the scaling group that is created from a monthly-subscribed instance can be expanded.
+        /// Note: for a scaling group that is created based on a monthly-subscribed instance, the instances added for scale-out are pay-as-you-go instance.
         /// </summary>
         /// <param name="req"><see cref="CreateAutoScalingGroupFromInstanceRequest"/></param>
         /// <returns><see cref="CreateAutoScalingGroupFromInstanceResponse"/></returns>
@@ -1813,9 +1813,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to launch CVM instances in the scaling group.
-        /// * After the instance is launched and in the `IN_SERVICE` status, the desired capacity increases, but the desired capacity cannot exceed the maximum value.
-        /// * This API supports batch operation. Up to 100 instances can be launched in each request.
+        /// This API is used to start up CVM instances in a scaling group.
+        /// * After startup, the instance will be in the `IN_SERVICE` status, which will increase the desired capacity. Please note that the desired capacity cannot exceed the maximum value.
+        /// * This API supports batch operation. Up to 100 instances can be started up in each request.
         /// </summary>
         /// <param name="req"><see cref="StartAutoScalingInstancesRequest"/></param>
         /// <returns><see cref="StartAutoScalingInstancesResponse"/></returns>
@@ -1835,9 +1835,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to launch CVM instances in the scaling group.
-        /// * After the instance is launched and in the `IN_SERVICE` status, the desired capacity increases, but the desired capacity cannot exceed the maximum value.
-        /// * This API supports batch operation. Up to 100 instances can be launched in each request.
+        /// This API is used to start up CVM instances in a scaling group.
+        /// * After startup, the instance will be in the `IN_SERVICE` status, which will increase the desired capacity. Please note that the desired capacity cannot exceed the maximum value.
+        /// * This API supports batch operation. Up to 100 instances can be started up in each request.
         /// </summary>
         /// <param name="req"><see cref="StartAutoScalingInstancesRequest"/></param>
         /// <returns><see cref="StartAutoScalingInstancesResponse"/></returns>
@@ -1857,7 +1857,7 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to shut down CVM instances in the scaling group.
+        /// This API is used to shut down CVM instances in a scaling group.
         /// * Use the `SOFT_FIRST` shutdown, which means the CVM will be forcibly shut down if the soft shutdown fails.
         /// * Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
         /// * To use the `STOP_CHARGING` shutdown, the instances you want to shut down must satisfy the conditions of [no charges when shut down](https://cloud.tencent.com/document/product/213/19918).
@@ -1881,7 +1881,7 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to shut down CVM instances in the scaling group.
+        /// This API is used to shut down CVM instances in a scaling group.
         /// * Use the `SOFT_FIRST` shutdown, which means the CVM will be forcibly shut down if the soft shutdown fails.
         /// * Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
         /// * To use the `STOP_CHARGING` shutdown, the instances you want to shut down must satisfy the conditions of [no charges when shut down](https://cloud.tencent.com/document/product/213/19918).

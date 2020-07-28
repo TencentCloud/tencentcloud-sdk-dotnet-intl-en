@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string ZoneState{ get; set; }
 
         /// <summary>
-        /// Whether the availability zone supports IPv6 address access
+        /// Whether the AZ supports IPv6 address access
         /// </summary>
         [JsonProperty("ZoneSupportIpv6")]
         public ulong? ZoneSupportIpv6{ get; set; }

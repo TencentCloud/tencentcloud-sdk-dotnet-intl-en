@@ -31,6 +31,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExtTimeOffsetSet")]
+        public string[] ExtTimeOffsetSet{ get; set; }
+
+        /// <summary>
         /// List of time points of screenshots in <font color=red>seconds</font>.
         /// </summary>
         [JsonProperty("TimeOffsetSet")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Mps.V20190612.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamArraySimple(map, prefix + "ExtTimeOffsetSet.", this.ExtTimeOffsetSet);
             this.SetParamArraySimple(map, prefix + "TimeOffsetSet.", this.TimeOffsetSet);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SegmentUrl{ get; set; }
 
         /// <summary>
-        /// Confidence of split segment. Value range: 0–100.
+        /// Confidence of split segment. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

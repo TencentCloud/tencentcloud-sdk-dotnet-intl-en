@@ -34,7 +34,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Mute{ get; set; }
 
         /// <summary>
-        /// Audio gain. Value range: 0–10.
+        /// Audio gain. Value range: 0-10.
         /// <li>If the value is greater than 1, the volume will be increased.</li>
         /// <li>If the value is smaller than 1, the volume will be decreased.</li>
         /// <li>0 and 1: no change.</li>

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The VPC ID or the unified ID. We recommend you use the unified ID.
+        /// ID of the VPC instance
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

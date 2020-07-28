@@ -45,7 +45,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <summary>
         /// The status of the NAT gateway.
         ///  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-        /// ‘FAILED’: Failed.
+        /// 'FAILED': Failed.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

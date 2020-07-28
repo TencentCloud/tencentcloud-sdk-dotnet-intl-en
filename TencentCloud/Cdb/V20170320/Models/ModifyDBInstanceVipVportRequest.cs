@@ -55,7 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+        /// Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
         /// </summary>
         [JsonProperty("ReleaseDuration")]
         public long? ReleaseDuration{ get; set; }

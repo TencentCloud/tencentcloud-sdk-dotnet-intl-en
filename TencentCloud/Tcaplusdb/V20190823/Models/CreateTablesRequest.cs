@@ -42,6 +42,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("SelectedTables")]
         public SelectedTableInfoNew[] SelectedTables{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public TagInfoUnit[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
             this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

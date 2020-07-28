@@ -21,26 +21,26 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAudioTrackTemplatesResponse : AbstractModel
+    public class PornConfigureInfoForUpdate : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible entries.
+        /// Control parameter of porn detection in video image.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("ImgReviewInfo")]
+        public PornImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// List of audio track template details.
+        /// Control parameter of porn detection in speech.
         /// </summary>
-        [JsonProperty("AudioTrackTemplateSet")]
-        public AudioTrackTemplateInfo[] AudioTrackTemplateSet{ get; set; }
+        [JsonProperty("AsrReviewInfo")]
+        public PornAsrReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Control parameter of porn detection in text.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("OcrReviewInfo")]
+        public PornOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
+            this.SetParamObj(map, prefix + "AsrReviewInfo.", this.AsrReviewInfo);
+            this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
         }
     }
 }

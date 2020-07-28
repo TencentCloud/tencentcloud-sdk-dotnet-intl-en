@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// Number of instances purchased at a time. Value range: 1–100.
+        /// Number of instances purchased at a time. Value range: 1-100.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }

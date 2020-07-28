@@ -101,6 +101,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
+        /// File type:
+        /// <li>Video: video file</li>
+        /// <li>Audio: audio file</li>
+        /// <li>Image: image file</li>
+        /// </summary>
+        [JsonProperty("Categories")]
+        public string[] Categories{ get; set; }
+
+        /// <summary>
         /// [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -123,6 +132,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

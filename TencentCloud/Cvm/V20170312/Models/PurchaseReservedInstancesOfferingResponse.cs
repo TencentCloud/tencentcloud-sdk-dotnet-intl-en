@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 
+        /// The ID of the Reserved Instance purchased.
         /// </summary>
         [JsonProperty("ReservedInstanceId")]
         public string ReservedInstanceId{ get; set; }

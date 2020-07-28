@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+        /// The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

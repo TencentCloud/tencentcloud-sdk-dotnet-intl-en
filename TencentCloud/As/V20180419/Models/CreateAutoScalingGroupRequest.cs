@@ -125,7 +125,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ZonesCheckPolicy{ get; set; }
 
         /// <summary>
-        /// List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+        /// List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

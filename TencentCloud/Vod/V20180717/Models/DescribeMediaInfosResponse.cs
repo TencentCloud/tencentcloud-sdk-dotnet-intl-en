@@ -26,14 +26,12 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Media file information list.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MediaInfoSet")]
         public MediaInfo[] MediaInfoSet{ get; set; }
 
         /// <summary>
         /// List of IDs of files that do not exist.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NotExistFileIdSet")]
         public string[] NotExistFileIdSet{ get; set; }

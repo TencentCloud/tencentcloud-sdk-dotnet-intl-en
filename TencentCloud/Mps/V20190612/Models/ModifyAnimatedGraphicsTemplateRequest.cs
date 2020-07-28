@@ -59,6 +59,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResolutionAdaptive")]
+        public string ResolutionAdaptive{ get; set; }
+
+        /// <summary>
         /// Animated image format. Valid values: gif, webp.
         /// </summary>
         [JsonProperty("Format")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
             this.SetParamSimple(map, prefix + "Quality", this.Quality);

@@ -31,7 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// The list of the CVM instances you want to launch.
+        /// The list of the CVM instances you want to start up.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

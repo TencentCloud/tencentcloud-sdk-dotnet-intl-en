@@ -73,7 +73,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+        /// The `host` carried in the request forwarded from the acceleration connection to the origin server.
         /// If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
         /// </summary>
         [JsonProperty("ForwardHost")]

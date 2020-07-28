@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Confidence of recognized opening credits. Value range: 0–100.
+        /// Confidence of recognized opening credits. Value range: 0-100.
         /// </summary>
         [JsonProperty("HeadConfidence")]
         public float? HeadConfidence{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? HeadTimeOffset{ get; set; }
 
         /// <summary>
-        /// Confidence of recognized closing credits. Value range: 0–100.
+        /// Confidence of recognized closing credits. Value range: 0-100.
         /// </summary>
         [JsonProperty("TailConfidence")]
         public float? TailConfidence{ get; set; }

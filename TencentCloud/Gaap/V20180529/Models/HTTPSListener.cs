@@ -43,7 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Listener protocol. The value is `HTTP`.
+        /// Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -92,10 +92,10 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ClientCertificateId{ get; set; }
 
         /// <summary>
-        /// Listener authentication method:
+        /// Listener authentication mode. Valid values:
         /// 0: one-way authentication;
         /// 1: mutual authentication.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AuthType")]
         public long? AuthType{ get; set; }

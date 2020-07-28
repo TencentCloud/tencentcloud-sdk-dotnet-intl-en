@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
+        /// Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
         /// </summary>
         [JsonProperty("RotateAngle")]
         public float? RotateAngle{ get; set; }

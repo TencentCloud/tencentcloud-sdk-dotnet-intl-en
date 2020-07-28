@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] SearchKeys{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page. Value range: 1–100
+        /// Number of entries returned per page. Value range: 1-100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

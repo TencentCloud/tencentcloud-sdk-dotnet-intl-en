@@ -107,6 +107,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +132,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }
 }

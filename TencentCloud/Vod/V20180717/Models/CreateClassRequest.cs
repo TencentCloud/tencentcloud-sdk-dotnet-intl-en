@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ParentId{ get; set; }
 
         /// <summary>
-        /// Category name. Length limit: 1–64 characters.
+        /// Category name. Length limit: 1-64 characters.
         /// </summary>
         [JsonProperty("ClassName")]
         public string ClassName{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// Task flow priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+        /// Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }

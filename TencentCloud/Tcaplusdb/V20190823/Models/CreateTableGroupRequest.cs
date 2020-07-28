@@ -42,6 +42,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("TableGroupId")]
         public string TableGroupId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public TagInfoUnit[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "TableGroupName", this.TableGroupName);
             this.SetParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

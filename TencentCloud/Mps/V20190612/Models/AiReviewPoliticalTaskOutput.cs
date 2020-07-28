@@ -44,7 +44,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// violation_photo:
         /// <li>violation_photo: violating photo.</li>
         /// Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-        /// <li>politician: politically sensitive figure.</li>
+        /// <li>politician: political figure.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

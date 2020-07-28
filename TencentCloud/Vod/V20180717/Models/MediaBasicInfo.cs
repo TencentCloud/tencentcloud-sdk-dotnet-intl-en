@@ -123,11 +123,24 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// Unique ID of LVB recording file
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Unique ID of an LVB recording file.
         /// </summary>
         [JsonProperty("Vid")]
         public string Vid{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
+        /// <summary>
+        /// File status. Valid values: Normal, Forbidden.
+        /// 
+        /// *Note: this field is not supported yet.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -150,6 +163,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
             this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

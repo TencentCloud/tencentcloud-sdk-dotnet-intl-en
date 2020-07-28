@@ -33,13 +33,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+        /// Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+        /// Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

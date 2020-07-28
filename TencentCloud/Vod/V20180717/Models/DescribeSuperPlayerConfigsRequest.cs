@@ -21,37 +21,37 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeVideoTrackTemplatesRequest : AbstractModel
+    public class DescribeSuperPlayerConfigsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Unique ID filter of templates. Array length limit: 100.
+        /// Player configuration name filter. Array length limit: 100.
         /// </summary>
-        [JsonProperty("Definitions")]
-        public ulong?[] Definitions{ get; set; }
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
 
         /// <summary>
-        /// Paged offset. Default value: 0.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// Number of entries to be returned. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Template type filter. Valid values:
-        /// <li>Preset: preset template;</li>
-        /// <li>Custom: custom template.</li>
+        /// Player configuration type filter. Valid values:
+        /// <li>Preset: preset configuration;</li>
+        /// <li>Custom: custom configuration.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+        /// [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);

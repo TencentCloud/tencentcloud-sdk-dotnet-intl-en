@@ -37,7 +37,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public Policy[] Policy{ get; set; }
 
         /// <summary>
-        /// The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+        /// The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyName")]
         public string AutoSnapshotPolicyName{ get; set; }

@@ -30,6 +30,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ReplaceMonitorUnhealthy")]
         public bool? ReplaceMonitorUnhealthy{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScalingMode")]
+        public string ScalingMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.As.V20180419.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
+            this.SetParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string OldPasswordExpireTime{ get; set; }
 
         /// <summary>
-        /// New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+        /// New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
         /// </summary>
         [JsonProperty("NewPassword")]
         public string NewPassword{ get; set; }

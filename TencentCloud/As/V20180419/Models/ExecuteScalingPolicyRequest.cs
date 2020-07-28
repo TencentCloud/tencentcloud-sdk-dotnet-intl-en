@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public bool? HonorCooldown{ get; set; }
 
         /// <summary>
-        /// Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+        /// Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
         /// </summary>
         [JsonProperty("TriggerSource")]
         public string TriggerSource{ get; set; }

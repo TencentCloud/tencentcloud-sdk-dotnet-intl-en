@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ExpireDays{ get; set; }
 
         /// <summary>
-        /// (This parameter will be disused. The `BackupTimeWindow` parameter is recommended.) Backup time range in the format of 02:00–06:00, with the start time and end time on the hour. Valid values: 00:00–12:00, 02:00–06:00, 06:00–10:00, 10:00–14:00, 14:00–18:00, 18:00–22:00, 22:00–02:00.
+        /// (This parameter will be disused. The `BackupTimeWindow` parameter is recommended.) Backup time range in the format of 02:00-06:00, with the start time and end time on the hour. Valid values: 00:00-12:00, 02:00-06:00, 06:00-10:00, 10:00-14:00, 14:00-18:00, 18:00-22:00, 22:00-02:00.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

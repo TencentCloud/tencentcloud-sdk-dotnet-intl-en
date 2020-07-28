@@ -25,6 +25,12 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
+        /// Video frame rate in Hz. Value range: [1, 30].
+        /// </summary>
+        [JsonProperty("Fps")]
+        public ulong? Fps{ get; set; }
+
+        /// <summary>
         /// Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
         /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
         /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
@@ -47,10 +53,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Video frame rate in Hz. Value range: [1, 30].
+        /// 
         /// </summary>
-        [JsonProperty("Fps")]
-        public ulong? Fps{ get; set; }
+        [JsonProperty("ResolutionAdaptive")]
+        public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
         /// Animated image format. Valid values: gif; webp. Default value: gif.
@@ -82,9 +88,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Fps", this.Fps);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
-            this.SetParamSimple(map, prefix + "Fps", this.Fps);
+            this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Quality", this.Quality);
             this.SetParamSimple(map, prefix + "Name", this.Name);

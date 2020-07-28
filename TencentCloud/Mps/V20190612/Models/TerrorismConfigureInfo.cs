@@ -31,6 +31,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ImgReviewInfo")]
         public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OcrReviewInfo")]
+        public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +44,7 @@ namespace TencentCloud.Mps.V20190612.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
+            this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
         }
     }
 }

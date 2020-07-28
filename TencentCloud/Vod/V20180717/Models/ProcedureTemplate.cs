@@ -39,6 +39,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
         /// Parameter of video processing task.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);

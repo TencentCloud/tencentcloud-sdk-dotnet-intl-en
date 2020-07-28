@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// The connection instance ID list cannot be enabled if it’s not disabled.
+        /// The connection instance ID list cannot be enabled if it's not disabled.
         /// </summary>
         [JsonProperty("InvalidStatusInstanceSet")]
         public string[] InvalidStatusInstanceSet{ get; set; }

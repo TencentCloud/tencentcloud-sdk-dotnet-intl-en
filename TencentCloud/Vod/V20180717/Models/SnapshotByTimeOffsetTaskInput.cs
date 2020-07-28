@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExtTimeOffsetSet")]
+        public string[] ExtTimeOffsetSet{ get; set; }
+
+        /// <summary>
         /// List of time points for screencapturing in <font color=red>milliseconds</font>.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamArraySimple(map, prefix + "ExtTimeOffsetSet.", this.ExtTimeOffsetSet);
             this.SetParamArraySimple(map, prefix + "TimeOffsetSet.", this.TimeOffsetSet);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         }

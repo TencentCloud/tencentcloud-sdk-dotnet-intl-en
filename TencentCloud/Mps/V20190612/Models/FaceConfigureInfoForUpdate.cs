@@ -33,7 +33,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+        /// Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }

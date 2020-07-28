@@ -21,21 +21,9 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeVideoTrackTemplatesResponse : AbstractModel
+    public class CreateWordSamplesResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Number of eligible entries.
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// List of video track template details.
-        /// </summary>
-        [JsonProperty("VideoTrackTemplateSet")]
-        public VideoTrackTemplateInfo[] VideoTrackTemplateSet{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -48,8 +36,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -37,31 +37,31 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Origin server region name. It’s an old parameter, please switch to RealServerRegion.
+        /// Origin server region name. It's an old parameter, please switch to RealServerRegion.
         /// </summary>
         [JsonProperty("DestRegion")]
         public string DestRegion{ get; set; }
 
         /// <summary>
-        /// Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
+        /// Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's an old parameter, please switch to Concurrent.
         /// </summary>
         [JsonProperty("Concurrency")]
         public long? Concurrency{ get; set; }
 
         /// <summary>
-        /// Origin server region name; It’s a new parameter.
+        /// Origin server region name; It's a new parameter.
         /// </summary>
         [JsonProperty("RealServerRegion")]
         public string RealServerRegion{ get; set; }
 
         /// <summary>
-        /// Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
+        /// Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter.
         /// </summary>
         [JsonProperty("Concurrent")]
         public long? Concurrent{ get; set; }
 
         /// <summary>
-        /// Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+        /// Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
         /// </summary>
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }

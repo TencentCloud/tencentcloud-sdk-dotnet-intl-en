@@ -172,6 +172,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("HostNameSettings")]
         public HostNameSettings HostNameSettings{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceNameSettings")]
+        public InstanceNameSettings InstanceNameSettings{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceChargePrepaid")]
+        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,6 +214,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "LastOperationInstanceTypesCheckPolicy", this.LastOperationInstanceTypesCheckPolicy);
             this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
+            this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
+            this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         }
     }
 }

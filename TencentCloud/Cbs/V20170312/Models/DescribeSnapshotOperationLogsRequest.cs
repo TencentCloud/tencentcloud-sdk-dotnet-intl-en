@@ -32,13 +32,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
+        /// The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+        /// The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

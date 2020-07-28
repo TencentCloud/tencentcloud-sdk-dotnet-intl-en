@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
+        /// ID(s) of the instance(s) to be disassociated,such as `ins-lesecurk`. You can specify multiple instances.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

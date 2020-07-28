@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Connection instance ID; It’s an old parameter, please switch to ProxyId.
+        /// Connection instance ID; It's an old parameter, please switch to ProxyId.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
@@ -82,8 +82,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// CLOSING: disabling;
         /// CLOSED: disabled;
         /// ADJUSTING: adjusting configuration
-        /// ISOLATING: isolating (it’s triggered when the account is in arrears);
-        /// ISOLATED: isolated (it’s triggered when the account is in arrears);
+        /// ISOLATING: isolating (it's triggered when the account is in arrears);
+        /// ISOLATED: isolated (it's triggered when the account is in arrears);
         /// UNKNOWN: unknown status.
         /// </summary>
         [JsonProperty("Status")]
@@ -108,7 +108,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Version{ get; set; }
 
         /// <summary>
-        /// Connection instance ID; It’s a new parameter.
+        /// Connection instance ID; It's a new parameter.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProxyId")]
@@ -175,11 +175,25 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? SupportSecurity{ get; set; }
 
         /// <summary>
-        /// Billing mode. 0: bill by bandwidth; 1: bill by traffic
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Billing mode. 0: bill-by-bandwidth; 1: bill-by-traffic.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }
+
+        /// <summary>
+        /// List of domain names associated with resolution record
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RelatedGlobalDomains")]
+        public string[] RelatedGlobalDomains{ get; set; }
+
+        /// <summary>
+        /// Configuration change time
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ModifyConfigTime")]
+        public ulong? ModifyConfigTime{ get; set; }
 
 
         /// <summary>
@@ -210,6 +224,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
+            this.SetParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
+            this.SetParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
         }
     }
 }

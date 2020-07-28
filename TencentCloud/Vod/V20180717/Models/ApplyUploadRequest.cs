@@ -80,6 +80,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
+        /// <summary>
         /// ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -100,6 +106,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

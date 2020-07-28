@@ -48,6 +48,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
 
+        /// <summary>
+        /// List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+        /// </summary>
+        [JsonProperty("AccessRegionSet")]
+        public AccessConfiguration[] AccessRegionSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
         }
     }
 }

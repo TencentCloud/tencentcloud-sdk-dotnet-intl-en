@@ -49,10 +49,22 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+        /// Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public TagInfoUnit[] ResourceTags{ get; set; }
+
+        /// <summary>
+        /// Whether to enable IPv6 address access for clusters
+        /// </summary>
+        [JsonProperty("Ipv6Enable")]
+        public long? Ipv6Enable{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
         }
     }
 }

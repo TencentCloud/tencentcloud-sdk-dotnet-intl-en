@@ -255,6 +255,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// This API is used to disable a connection group. Once disabled, the connection group will no longer generate traffic, but the basic connection configuration fees will still be incurred every day.
+        /// </summary>
+        /// <param name="req"><see cref="CloseProxyGroupRequest"/></param>
+        /// <returns><see cref="CloseProxyGroupResponse"/></returns>
+        public async Task<CloseProxyGroupResponse> CloseProxyGroup(CloseProxyGroupRequest req)
+        {
+             JsonResponseModel<CloseProxyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseProxyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseProxyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable a connection group. Once disabled, the connection group will no longer generate traffic, but the basic connection configuration fees will still be incurred every day.
+        /// </summary>
+        /// <param name="req"><see cref="CloseProxyGroupRequest"/></param>
+        /// <returns><see cref="CloseProxyGroupResponse"/></returns>
+        public CloseProxyGroupResponse CloseProxyGroupSync(CloseProxyGroupRequest req)
+        {
+             JsonResponseModel<CloseProxyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseProxyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseProxyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to disable security policies.
         /// </summary>
         /// <param name="req"><see cref="CloseSecurityPolicyRequest"/></param>
@@ -1417,6 +1457,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// This API is used to query the corresponding error response by a custom error ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainErrorPageInfoByIdsRequest"/></param>
+        /// <returns><see cref="DescribeDomainErrorPageInfoByIdsResponse"/></returns>
+        public async Task<DescribeDomainErrorPageInfoByIdsResponse> DescribeDomainErrorPageInfoByIds(DescribeDomainErrorPageInfoByIdsRequest req)
+        {
+             JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainErrorPageInfoByIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the corresponding error response by a custom error ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainErrorPageInfoByIdsRequest"/></param>
+        /// <returns><see cref="DescribeDomainErrorPageInfoByIdsResponse"/></returns>
+        public DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIdsSync(DescribeDomainErrorPageInfoByIdsRequest req)
+        {
+             JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainErrorPageInfoByIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This is an internal API. It is used to query the information of connections and connection groups from which the statistics can be derived.
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupAndStatisticsProxyRequest"/></param>
@@ -1977,7 +2057,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (DescribeRealServerStatistics) is used to query the statistics of an origin server’s health check results. Origin server status displayed as 1: normal, or 0: exceptional. The queried origin server must be bound to a listener or rule. The bound listener or rule ID must be specified when querying. This API supports displaying origin server status statistics for the past 1, 3, 6, 12, and 24 hours, with a granularity of 1 minute.
+        /// This API (DescribeRealServerStatistics) is used to query the statistics of an origin server's health check results. Origin server status displayed as 1: normal, or 0: exceptional. The queried origin server must be bound to a listener or rule. The bound listener or rule ID must be specified when querying. This API supports displaying origin server status statistics for the past 1, 3, 6, 12, and 24 hours, with a granularity of 1 minute.
         /// </summary>
         /// <param name="req"><see cref="DescribeRealServerStatisticsRequest"/></param>
         /// <returns><see cref="DescribeRealServerStatisticsResponse"/></returns>
@@ -1997,7 +2077,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (DescribeRealServerStatistics) is used to query the statistics of an origin server’s health check results. Origin server status displayed as 1: normal, or 0: exceptional. The queried origin server must be bound to a listener or rule. The bound listener or rule ID must be specified when querying. This API supports displaying origin server status statistics for the past 1, 3, 6, 12, and 24 hours, with a granularity of 1 minute.
+        /// This API (DescribeRealServerStatistics) is used to query the statistics of an origin server's health check results. Origin server status displayed as 1: normal, or 0: exceptional. The queried origin server must be bound to a listener or rule. The bound listener or rule ID must be specified when querying. This API supports displaying origin server status statistics for the past 1, 3, 6, 12, and 24 hours, with a granularity of 1 minute.
         /// </summary>
         /// <param name="req"><see cref="DescribeRealServerStatisticsRequest"/></param>
         /// <returns><see cref="DescribeRealServerStatisticsResponse"/></returns>
@@ -3170,6 +3250,46 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "OpenProxies");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProxiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable all connections in a connection group.
+        /// </summary>
+        /// <param name="req"><see cref="OpenProxyGroupRequest"/></param>
+        /// <returns><see cref="OpenProxyGroupResponse"/></returns>
+        public async Task<OpenProxyGroupResponse> OpenProxyGroup(OpenProxyGroupRequest req)
+        {
+             JsonResponseModel<OpenProxyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenProxyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProxyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable all connections in a connection group.
+        /// </summary>
+        /// <param name="req"><see cref="OpenProxyGroupRequest"/></param>
+        /// <returns><see cref="OpenProxyGroupResponse"/></returns>
+        public OpenProxyGroupResponse OpenProxyGroupSync(OpenProxyGroupRequest req)
+        {
+             JsonResponseModel<OpenProxyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenProxyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProxyGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

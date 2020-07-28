@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CcnDescription{ get; set; }
 
         /// <summary>
-        /// CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
+        /// CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }

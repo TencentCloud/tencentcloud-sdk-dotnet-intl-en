@@ -37,26 +37,26 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// Target bucket of an output file after transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+        /// Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// The relative or absolute output path of the manifest file after transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+        /// The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// The relative output path of the substream file after transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+        /// The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
         /// </summary>
         [JsonProperty("SubStreamObjectName")]
         public string SubStreamObjectName{ get; set; }
 
         /// <summary>
-        /// The relative output path of the segment file after transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+        /// The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
         /// </summary>
         [JsonProperty("SegmentObjectName")]
         public string SegmentObjectName{ get; set; }

@@ -133,7 +133,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to create up to 100 adaptive bitrate streaming templates.
+        /// This API is used to create an adaptive bitrate streaming template. Up up to 100 such templates can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateAdaptiveDynamicStreamingTemplateRequest"/></param>
         /// <returns><see cref="CreateAdaptiveDynamicStreamingTemplateResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to create up to 100 adaptive bitrate streaming templates.
+        /// This API is used to create an adaptive bitrate streaming template. Up up to 100 such templates can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateAdaptiveDynamicStreamingTemplateRequest"/></param>
         /// <returns><see cref="CreateAdaptiveDynamicStreamingTemplateResponse"/></returns>

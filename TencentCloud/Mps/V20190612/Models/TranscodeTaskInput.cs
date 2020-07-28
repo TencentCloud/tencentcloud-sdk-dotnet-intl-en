@@ -44,6 +44,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MosaicSet")]
+        public MosaicInput[] MosaicSet{ get; set; }
+
+        /// <summary>
         /// Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -78,6 +84,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+            this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);

@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// Connection ID
+        /// Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
@@ -75,6 +75,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolyClientCertificateIds")]
         public string[] PolyClientCertificateIds{ get; set; }
 
+        /// <summary>
+        /// Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
             this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

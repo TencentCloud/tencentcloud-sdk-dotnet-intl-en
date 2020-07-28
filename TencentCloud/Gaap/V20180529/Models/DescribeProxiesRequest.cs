@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+        /// Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -54,7 +54,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
+        /// Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
         /// </summary>
         [JsonProperty("ProxyIds")]
         public string[] ProxyIds{ get; set; }

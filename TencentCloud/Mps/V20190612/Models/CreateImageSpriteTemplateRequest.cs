@@ -25,18 +25,6 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Subimage width of an image sprite in px. Value range: [128, 4,096].
-        /// </summary>
-        [JsonProperty("Width")]
-        public ulong? Width{ get; set; }
-
-        /// <summary>
-        /// Subimage height of an image sprite in px. Value range: [128, 4,096].
-        /// </summary>
-        [JsonProperty("Height")]
-        public ulong? Height{ get; set; }
-
-        /// <summary>
         /// Sampling type. Valid values:
         /// <li>Percent: By percent.</li>
         /// <li>Time: By time interval.</li>
@@ -70,19 +58,52 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// Subimage width of an image sprite in px. Value range: [128, 4,096].
+        /// </summary>
+        [JsonProperty("Width")]
+        public ulong? Width{ get; set; }
+
+        /// <summary>
+        /// Subimage height of an image sprite in px. Value range: [128, 4,096].
+        /// </summary>
+        [JsonProperty("Height")]
+        public ulong? Height{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResolutionAdaptive")]
+        public string ResolutionAdaptive{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FillType")]
+        public string FillType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Width", this.Width);
-            this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "SampleType", this.SampleType);
             this.SetParamSimple(map, prefix + "SampleInterval", this.SampleInterval);
             this.SetParamSimple(map, prefix + "RowCount", this.RowCount);
             this.SetParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
+            this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }
 }

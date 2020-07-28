@@ -42,6 +42,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
 
+        /// <summary>
+        /// Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
+        /// </summary>
+        [JsonProperty("Ipv6Enable")]
+        public ulong? Ipv6Enable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamSimple(map, prefix + "RegionAbbr", this.RegionAbbr);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
         }
     }
 }

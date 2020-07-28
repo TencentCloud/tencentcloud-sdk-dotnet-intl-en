@@ -41,8 +41,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </li>`security-group-id` - String - Optional - Filter results by security group ID. Security group ID format: `sg-8jlk3f3r`.</li>
         /// </li>`instance-name` - String - Optional - Filter results by instance name.</li>
         /// </li>`instance-charge-type` - String - Optional - Filter results by instance billing method. `POSTPAID_BY_HOUR`: pay-as-you-go | `CDHPAID`: you are only billed for [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the [CDH](https://cloud.tencent.com/document/product/416) instances.</li>
-        /// </li>`private-ip-address` - String - Optional - Filter results by the private IP address of the instance’s primary ENI.</li>
-        /// </li>`public-ip-address` - String - Optional - Filter results by the public IP address of the instance’s primary ENI, including the IP addresses automatically assigned during the instance creation and the EIPs manually associated after the instance creation.</li>
+        /// </li>`private-ip-address` - String - Optional - Filter results by the private IP address of the instance's primary ENI.</li>
+        /// </li>`public-ip-address` - String - Optional - Filter results by the public IP address of the instance's primary ENI, including the IP addresses automatically assigned during the instance creation and the EIPs manually associated after the instance creation.</li>
         /// <li> `tag-key` - String - Optional - Filter results by tag key.</li>
         /// </li>`tag-value` - String - Optional - Filter results by tag value.</li>
         /// <li> `tag:tag-key` - String - Optional - Filter results by tag key-value pair. Replace `tag-key` with specific tag keys, as shown in example 2.</li>

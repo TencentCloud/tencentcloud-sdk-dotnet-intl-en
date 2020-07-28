@@ -21,37 +21,35 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAudioTrackTemplatesRequest : AbstractModel
+    public class DescribeTasksRequest : AbstractModel
     {
         
         /// <summary>
-        /// Unique ID filter of templates. Array length limit: 100.
+        /// Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
         /// </summary>
-        [JsonProperty("Definitions")]
-        public ulong?[] Definitions{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// Paged offset. Default value: 0.
+        /// Filter: file ID.
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// Number of entries to be returned. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Template type filter. Valid values:
-        /// <li>Preset: preset template;</li>
-        /// <li>Custom: custom template.</li>
+        /// Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("ScrollToken")]
+        public string ScrollToken{ get; set; }
 
         /// <summary>
-        /// ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+        /// [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -62,10 +60,10 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

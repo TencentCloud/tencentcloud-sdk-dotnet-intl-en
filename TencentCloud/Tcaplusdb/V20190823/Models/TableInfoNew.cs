@@ -81,7 +81,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string TableGroupName{ get; set; }
 
         /// <summary>
-        /// JSON string of table’s primary key field structure
+        /// JSON string of table's primary key field structure
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeyStruct")]
@@ -165,7 +165,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Table’s last modified time
+        /// Table's last modified time
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdatedTime")]
@@ -206,6 +206,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("SortRule")]
         public long? SortRule{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DbClusterInfoStruct")]
+        public string DbClusterInfoStruct{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +244,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "ApiAccessId", this.ApiAccessId);
             this.SetParamSimple(map, prefix + "SortFieldNum", this.SortFieldNum);
             this.SetParamSimple(map, prefix + "SortRule", this.SortRule);
+            this.SetParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
         }
     }
 }

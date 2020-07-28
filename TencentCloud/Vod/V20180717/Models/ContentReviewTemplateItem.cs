@@ -67,7 +67,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Control parameter of prohibited information detection. Prohibited information includes:
         /// <li>Abusive;</li>
         /// <li>Drug-related.</li>
-        /// Note: this parameter is not supported yet.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProhibitedConfigure")]

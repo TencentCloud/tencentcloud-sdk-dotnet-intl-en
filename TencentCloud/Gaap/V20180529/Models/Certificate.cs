@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Certificate name; It’s an old parameter, please switch to CertificateAlias.
+        /// Certificate name; It's an old parameter, please switch to CertificateAlias.
         /// </summary>
         [JsonProperty("CertificateName")]
         public string CertificateName{ get; set; }

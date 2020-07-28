@@ -67,6 +67,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public WorkflowTask WorkflowTask{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EditMediaTask")]
+        public EditMediaTask EditMediaTask{ get; set; }
+
+        /// <summary>
         /// Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -116,6 +122,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
+            this.SetParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
             this.SetParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

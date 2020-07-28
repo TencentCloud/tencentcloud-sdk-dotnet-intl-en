@@ -99,6 +99,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("PoliticalOcrTask")]
         public AiReviewTaskPoliticalOcrResult PoliticalOcrTask{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TerrorismOcrTask")]
+        public AiReviewTaskTerrorismOcrResult TerrorismOcrTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ProhibitedAsrTask")]
+        public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ProhibitedOcrTask")]
+        public AiReviewTaskProhibitedOcrResult ProhibitedOcrTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +133,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "PornOcrTask.", this.PornOcrTask);
             this.SetParamObj(map, prefix + "PoliticalAsrTask.", this.PoliticalAsrTask);
             this.SetParamObj(map, prefix + "PoliticalOcrTask.", this.PoliticalOcrTask);
+            this.SetParamObj(map, prefix + "TerrorismOcrTask.", this.TerrorismOcrTask);
+            this.SetParamObj(map, prefix + "ProhibitedAsrTask.", this.ProhibitedAsrTask);
+            this.SetParamObj(map, prefix + "ProhibitedOcrTask.", this.ProhibitedOcrTask);
         }
     }
 }

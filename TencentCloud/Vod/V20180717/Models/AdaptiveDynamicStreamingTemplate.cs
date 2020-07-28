@@ -51,12 +51,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Container type. Valid values:
-        /// <li>hls; </li>
-        /// <li>dash.</li>
+        /// Adaptive bitstream format. Valid value:
+        /// <li>HLS.</li>
         /// </summary>
-        [JsonProperty("PackageType")]
-        public string PackageType{ get; set; }
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
 
         /// <summary>
         /// DRM type. Valid values:
@@ -67,25 +66,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }
-
-        /// <summary>
-        /// List of video track templates.
-        /// </summary>
-        [JsonProperty("VideoTrackTemplateSet")]
-        public VideoTrackTemplateInfo[] VideoTrackTemplateSet{ get; set; }
-
-        /// <summary>
-        /// List of audio track templates.
-        /// </summary>
-        [JsonProperty("AudioTrackTemplateSet")]
-        public AudioTrackTemplateInfo[] AudioTrackTemplateSet{ get; set; }
-
-        /// <summary>
-        /// Adaptive bitstream format. Valid value:
-        /// <li>HLS.</li>
-        /// </summary>
-        [JsonProperty("Format")]
-        public string Format{ get; set; }
 
         /// <summary>
         /// Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
@@ -131,11 +111,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
-            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
-            this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
-            this.SetParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
-            this.SetParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
             this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);

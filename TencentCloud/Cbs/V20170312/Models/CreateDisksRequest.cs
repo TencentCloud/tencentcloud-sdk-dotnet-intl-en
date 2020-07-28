@@ -43,7 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// The displayed name of the cloud disk. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+        /// The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
         /// </summary>
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }

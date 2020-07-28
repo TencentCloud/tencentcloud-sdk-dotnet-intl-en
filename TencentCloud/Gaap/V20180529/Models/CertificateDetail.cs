@@ -78,7 +78,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// Common name of the certificate’s issuer.
+        /// Common name of the certificate's issuer.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IssuerCN")]

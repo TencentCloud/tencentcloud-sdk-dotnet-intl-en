@@ -79,6 +79,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Gop")]
+        public ulong? Gop{ get; set; }
+
+        /// <summary>
         /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
         /// <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
         /// <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -99,6 +105,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "Gop", this.Gop);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
         }
     }

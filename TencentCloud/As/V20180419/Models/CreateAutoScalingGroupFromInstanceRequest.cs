@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+        /// The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
         /// </summary>
         [JsonProperty("AutoScalingGroupName")]
         public string AutoScalingGroupName{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The maximum number of instances. Value range: 0-2000.
+        /// The minimum number of instances. Value range: 0 - 2000.
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
-        /// The minimum number of instances. Value range: 0-2000.
+        /// The maximum number of instances. Value range: 0 - 2000.
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

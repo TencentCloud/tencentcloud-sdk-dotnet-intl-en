@@ -42,6 +42,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("WaitSwitch")]
         public long? WaitSwitch{ get; set; }
 
+        /// <summary>
+        /// Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
+        /// </summary>
+        [JsonProperty("UpgradeSubversion")]
+        public long? UpgradeSubversion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+            this.SetParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
         }
     }
 }

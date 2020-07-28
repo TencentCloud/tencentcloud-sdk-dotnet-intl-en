@@ -1185,7 +1185,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a flow log collector.
+        /// This API is used to create a flow log.
         /// </summary>
         /// <param name="req"><see cref="CreateFlowLogRequest"/></param>
         /// <returns><see cref="CreateFlowLogResponse"/></returns>
@@ -1205,7 +1205,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a flow log collector.
+        /// This API is used to create a flow log.
         /// </summary>
         /// <param name="req"><see cref="CreateFlowLogRequest"/></param>
         /// <returns><see cref="CreateFlowLogResponse"/></returns>
@@ -1618,8 +1618,8 @@ namespace TencentCloud.Vpc.V20170312
         /// <li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
         /// <li>`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
         /// <li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// <li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
-        /// <li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
+        /// <li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually.</li>
+        /// <li>`Port`: a single port number such as 80, or a port range in the format of '8000-8010'. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
         /// <li>`Action`: only allows `ACCEPT` or `DROP`.</li>
         /// <li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
         /// <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies.</li>
@@ -1652,8 +1652,8 @@ namespace TencentCloud.Vpc.V20170312
         /// <li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
         /// <li>`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
         /// <li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// <li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
-        /// <li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
+        /// <li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually.</li>
+        /// <li>`Port`: a single port number such as 80, or a port range in the format of '8000-8010'. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
         /// <li>`Action`: only allows `ACCEPT` or `DROP`.</li>
         /// <li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
         /// <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies.</li>
@@ -1687,9 +1687,9 @@ namespace TencentCloud.Vpc.V20170312
         /// * `CidrBlock`:  A CIDR block in the correct format. In a basic network, if a CidrBlock contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
         /// * `Ipv6CidrBlock`: An IPv6 CIDR block in the correct format. In a basic network, if an Ipv6CidrBlock contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
         /// * `SecurityGroupId`: ID of the security group. It can be in the same project as the security group to be modified, including the ID of the security group itself, to represent private IP addresses of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.
-        /// * `Port`: A single port number, or a port range in the format of “8000-8010”. The Port field is accepted only if the value of the `Protocol` field is `TCP` or `UDP`. Otherwise Protocol and Port are mutually exclusive. 
+        /// * `Port`: A single port number, or a port range in the format of '8000-8010'. The Port field is accepted only if the value of the `Protocol` field is `TCP` or `UDP`. Otherwise Protocol and Port are mutually exclusive. 
         /// * `Action`: Values can be `ACCEPT` or `DROP`.
-        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. “Protocol + Port” and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
+        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. 'Protocol + Port' and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
         /// * Only policies in one direction can be created in each request. If you need to specify the `PolicyIndex` parameter, the indexes of policies must be consistent.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupWithPoliciesRequest"/></param>
@@ -1720,9 +1720,9 @@ namespace TencentCloud.Vpc.V20170312
         /// * `CidrBlock`:  A CIDR block in the correct format. In a basic network, if a CidrBlock contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
         /// * `Ipv6CidrBlock`: An IPv6 CIDR block in the correct format. In a basic network, if an Ipv6CidrBlock contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
         /// * `SecurityGroupId`: ID of the security group. It can be in the same project as the security group to be modified, including the ID of the security group itself, to represent private IP addresses of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.
-        /// * `Port`: A single port number, or a port range in the format of “8000-8010”. The Port field is accepted only if the value of the `Protocol` field is `TCP` or `UDP`. Otherwise Protocol and Port are mutually exclusive. 
+        /// * `Port`: A single port number, or a port range in the format of '8000-8010'. The Port field is accepted only if the value of the `Protocol` field is `TCP` or `UDP`. Otherwise Protocol and Port are mutually exclusive. 
         /// * `Action`: Values can be `ACCEPT` or `DROP`.
-        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. “Protocol + Port” and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
+        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. 'Protocol + Port' and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
         /// * Only policies in one direction can be created in each request. If you need to specify the `PolicyIndex` parameter, the indexes of policies must be consistent.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupWithPoliciesRequest"/></param>
@@ -2383,7 +2383,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a flow log collector.
+        /// This API is used to delete a flow log.
         /// </summary>
         /// <param name="req"><see cref="DeleteFlowLogRequest"/></param>
         /// <returns><see cref="DeleteFlowLogResponse"/></returns>
@@ -2403,7 +2403,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a flow log collector.
+        /// This API is used to delete a flow log.
         /// </summary>
         /// <param name="req"><see cref="DeleteFlowLogRequest"/></param>
         /// <returns><see cref="DeleteFlowLogResponse"/></returns>
@@ -3727,7 +3727,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the information of a flow log collector.
+        /// This API is used to query the information of a flow log.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogRequest"/></param>
         /// <returns><see cref="DescribeFlowLogResponse"/></returns>
@@ -3747,7 +3747,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the information of a flow log collector.
+        /// This API is used to query the information of a flow log.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogRequest"/></param>
         /// <returns><see cref="DescribeFlowLogResponse"/></returns>
@@ -3767,7 +3767,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query and obtain the flow log set.
+        /// This API is used to query all the flow logs of the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogsRequest"/></param>
         /// <returns><see cref="DescribeFlowLogsResponse"/></returns>
@@ -3787,7 +3787,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query and obtain the flow log set.
+        /// This API is used to query all the flow logs of the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowLogsRequest"/></param>
         /// <returns><see cref="DescribeFlowLogsResponse"/></returns>
@@ -5387,7 +5387,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the bandwidth caps of a CCN instance. Monthly-subscribed CCNs only support Inter-region Bandwidth Cap, while the pay-as-you-go CCNs support both the Inter-region Bandwidth Cap and Region Outbound Bandwidth Cap. 
+        /// This API is used to query the bandwidth limits of a CCN instance. Monthly-subscribed CCNs only support Inter-region Bandwidth Limits, while the pay-as-you-go CCNs support both the Inter-region Bandwidth Limits and Region Outbound Bandwidth Limits. 
         /// </summary>
         /// <param name="req"><see cref="GetCcnRegionBandwidthLimitsRequest"/></param>
         /// <returns><see cref="GetCcnRegionBandwidthLimitsResponse"/></returns>
@@ -5407,7 +5407,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the bandwidth caps of a CCN instance. Monthly-subscribed CCNs only support Inter-region Bandwidth Cap, while the pay-as-you-go CCNs support both the Inter-region Bandwidth Cap and Region Outbound Bandwidth Cap. 
+        /// This API is used to query the bandwidth limits of a CCN instance. Monthly-subscribed CCNs only support Inter-region Bandwidth Limits, while the pay-as-you-go CCNs support both the Inter-region Bandwidth Limits and Region Outbound Bandwidth Limits. 
         /// </summary>
         /// <param name="req"><see cref="GetCcnRegionBandwidthLimitsRequest"/></param>
         /// <returns><see cref="GetCcnRegionBandwidthLimitsResponse"/></returns>
@@ -6691,8 +6691,8 @@ namespace TencentCloud.Vpc.V20170312
         /// 		<li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
         /// 		<li>`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
         /// 		<li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// 		<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
-        /// 		<li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`.</li>
+        /// 		<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually.</li>
+        /// 		<li>`Port`: a single port number such as 80, or a port range in the format of '8000-8010'. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`.</li>
         /// 		<li>`Action`: only allows ACCEPT or DROP.</li>
         /// 		<li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
         /// </ul></li></ul></li>
@@ -6726,8 +6726,8 @@ namespace TencentCloud.Vpc.V20170312
         /// 		<li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
         /// 		<li>`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
         /// 		<li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// 		<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
-        /// 		<li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`.</li>
+        /// 		<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually.</li>
+        /// 		<li>`Port`: a single port number such as 80, or a port range in the format of '8000-8010'. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`.</li>
         /// 		<li>`Action`: only allows ACCEPT or DROP.</li>
         /// 		<li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
         /// </ul></li></ul></li>

@@ -130,6 +130,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MultiZoneSubnetPolicy")]
+        public string MultiZoneSubnetPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +158,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
             this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+            this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
         }
     }
 }

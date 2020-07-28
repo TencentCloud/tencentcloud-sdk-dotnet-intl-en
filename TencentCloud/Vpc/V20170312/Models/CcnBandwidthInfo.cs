@@ -25,10 +25,46 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 
+        /// The CCN ID that the bandwidth belongs to.
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
+
+        /// <summary>
+        /// The creation time of the instance.
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// The expiration time of the instance.
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public string ExpiredTime{ get; set; }
+
+        /// <summary>
+        /// The unique ID of the bandwidth instance.
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("RegionFlowControlId")]
+        public string RegionFlowControlId{ get; set; }
+
+        /// <summary>
+        /// The billing flag.
+        /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
+
+        /// <summary>
+        /// The information of bandwidth regions and bandwidth caps.
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("CcnRegionBandwidthLimit")]
+        public CcnRegionBandwidthLimit CcnRegionBandwidthLimit{ get; set; }
 
 
         /// <summary>
@@ -36,7 +72,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "RegionFlowControlId", this.RegionFlowControlId);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
         }
     }
 }

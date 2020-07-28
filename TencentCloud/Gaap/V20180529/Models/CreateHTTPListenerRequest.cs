@@ -37,10 +37,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Connection ID
+        /// Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
+
+        /// <summary>
+        /// Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

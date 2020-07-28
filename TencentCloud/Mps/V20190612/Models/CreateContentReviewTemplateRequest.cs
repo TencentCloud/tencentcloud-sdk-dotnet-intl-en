@@ -55,6 +55,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ProhibitedConfigure")]
+        public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
+
+        /// <summary>
         /// Custom content audit control parameter.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
             this.SetParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
             this.SetParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+            this.SetParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
             this.SetParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
         }
     }

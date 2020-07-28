@@ -72,7 +72,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? Encrypt{ get; set; }
 
         /// <summary>
-        /// ID of the custom CMK in the format of “UUID” or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+        /// ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
         /// 
         /// Currently, this parameter is only used in the `RunInstances` API.
         /// Note: this field may return null, indicating that no valid values can be obtained.

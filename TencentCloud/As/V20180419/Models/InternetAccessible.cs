@@ -46,7 +46,7 @@ namespace TencentCloud.As.V20180419.Models
         public bool? PublicIpAssigned{ get; set; }
 
         /// <summary>
-        /// Bandwidth package ID. You can obtain the parameter value from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
+        /// Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]

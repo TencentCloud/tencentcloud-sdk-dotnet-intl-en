@@ -36,6 +36,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ParamList")]
         public Parameter[] ParamList{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public long? TemplateId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("WaitSwitch")]
+        public long? WaitSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         }
     }
 }

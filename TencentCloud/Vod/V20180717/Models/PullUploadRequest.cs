@@ -25,8 +25,8 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-        /// For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+        /// URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+        /// For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
@@ -91,6 +91,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
+        /// <summary>
+        /// Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
+        /// </summary>
+        [JsonProperty("SourceContext")]
+        public string SourceContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
         }
     }
 }

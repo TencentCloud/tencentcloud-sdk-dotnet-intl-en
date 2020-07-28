@@ -43,6 +43,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public Canvas Canvas{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
         /// [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "Tracks.", this.Tracks);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamObj(map, prefix + "Canvas.", this.Canvas);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

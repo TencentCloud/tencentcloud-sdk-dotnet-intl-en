@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Number of instances. Value range: 1–100. Default value: 1.
+        /// Number of instances. Value range: 1-100. Default value: 1.
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Sets the root account password. Rule: the password can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+        /// Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
