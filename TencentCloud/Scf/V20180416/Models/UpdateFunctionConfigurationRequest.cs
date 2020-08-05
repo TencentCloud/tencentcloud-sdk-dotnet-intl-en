@@ -37,13 +37,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+        /// Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
         /// </summary>
         [JsonProperty("MemorySize")]
         public long? MemorySize{ get; set; }
 
         /// <summary>
-        /// Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+        /// Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("PublicNetConfig")]
         public PublicNetConfigIn PublicNetConfig{ get; set; }
 
+        /// <summary>
+        /// File system configuration input parameter, which is used for the function to bind the file system
+        /// </summary>
+        [JsonProperty("CfsConfig")]
+        public CfsConfig CfsConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "Layers.", this.Layers);
             this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
             this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
+            this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         }
     }
 }

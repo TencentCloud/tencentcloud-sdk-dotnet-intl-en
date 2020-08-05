@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Enablement switch
+        /// Whether to enable
         /// </summary>
         [JsonProperty("Enable")]
         public ulong? Enable{ get; set; }

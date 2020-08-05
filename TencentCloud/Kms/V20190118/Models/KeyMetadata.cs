@@ -104,7 +104,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Origin{ get; set; }
 
         /// <summary>
-        /// It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+        /// It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ValidTo")]

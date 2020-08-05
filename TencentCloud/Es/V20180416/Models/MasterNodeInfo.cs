@@ -25,43 +25,43 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Whether to enable the dedicated master node
+        /// Whether to enable the dedicated primary node
         /// </summary>
         [JsonProperty("EnableDedicatedMaster")]
         public bool? EnableDedicatedMaster{ get; set; }
 
         /// <summary>
-        /// Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+        /// Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
         /// </summary>
         [JsonProperty("MasterNodeType")]
         public string MasterNodeType{ get; set; }
 
         /// <summary>
-        /// Number of dedicated master nodes
+        /// Number of dedicated primary nodes
         /// </summary>
         [JsonProperty("MasterNodeNum")]
         public ulong? MasterNodeNum{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores of the dedicated master node
+        /// Number of CPU cores of the dedicated primary node
         /// </summary>
         [JsonProperty("MasterNodeCpuNum")]
         public ulong? MasterNodeCpuNum{ get; set; }
 
         /// <summary>
-        /// Memory size of the dedicated master node in GB
+        /// Memory size of the dedicated primary node in GB
         /// </summary>
         [JsonProperty("MasterNodeMemSize")]
         public ulong? MasterNodeMemSize{ get; set; }
 
         /// <summary>
-        /// Disk size of the dedicated master node in GB
+        /// Disk size of the dedicated primary node in GB
         /// </summary>
         [JsonProperty("MasterNodeDiskSize")]
         public ulong? MasterNodeDiskSize{ get; set; }
 
         /// <summary>
-        /// Disk type of the dedicated master node
+        /// Disk type of the dedicated primary node
         /// </summary>
         [JsonProperty("MasterNodeDiskType")]
         public string MasterNodeDiskType{ get; set; }

@@ -102,6 +102,42 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SecurityGroupList")]
+        public string[] SecurityGroupList{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Weekly")]
+        public long?[] Weekly{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Span")]
+        public long? Span{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HAType")]
+        public string HAType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MultiZones")]
+        public bool? MultiZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +157,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupList.", this.SecurityGroupList);
+            this.SetParamArraySimple(map, prefix + "Weekly.", this.Weekly);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Span", this.Span);
+            this.SetParamSimple(map, prefix + "HAType", this.HAType);
+            this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
         }
     }
 }

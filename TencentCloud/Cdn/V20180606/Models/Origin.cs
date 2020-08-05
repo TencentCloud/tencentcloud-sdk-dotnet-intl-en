@@ -33,7 +33,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] Origins{ get; set; }
 
         /// <summary>
-        /// Master origin server type
+        /// Primary origin server type
         /// The following types are supported for input parameters:
         /// domain: domain name type
         /// cos: COS origin
@@ -44,14 +44,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// image: Cloud Infinite origin
         /// ftp: legacy FTP origin, which is no longer maintained.
         /// When modifying `Origins`, you need to enter the corresponding OriginType.
-        /// The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
+        /// The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+        /// Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
         /// If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -95,7 +95,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string BackupOriginType{ get; set; }
 
         /// <summary>
-        /// Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
+        /// Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupServerName")]

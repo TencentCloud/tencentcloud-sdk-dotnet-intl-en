@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
+        /// Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to allowllisted users. To try it out, please contact your Tencent Cloud rep.
         /// </summary>
         [JsonProperty("Quality")]
         public string Quality{ get; set; }

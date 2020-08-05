@@ -25,25 +25,25 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Cluster’s account name
+        /// Cluster's account name
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Cluster’s password
+        /// Cluster's password
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Cluster’s access CA certificate
+        /// Cluster's access CA certificate
         /// </summary>
         [JsonProperty("CertificationAuthority")]
         public string CertificationAuthority{ get; set; }
 
         /// <summary>
-        /// Cluster’s access address
+        /// Cluster's access address
         /// </summary>
         [JsonProperty("ClusterExternalEndpoint")]
         public string ClusterExternalEndpoint{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Cluster’s endpoint address
+        /// Cluster's endpoint address
         /// </summary>
         [JsonProperty("PgwEndpoint")]
         public string PgwEndpoint{ get; set; }
 
         /// <summary>
-        /// Cluster’s access policy group
+        /// Cluster's access policy group
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("SecurityPolicy")]

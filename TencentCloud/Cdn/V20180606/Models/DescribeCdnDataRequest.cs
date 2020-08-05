@@ -114,7 +114,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Specifies the data source to be queried, which can be seen as the whitelist function.
+        /// Specifies the data source to be queried, which can be seen as the allowlist function.
         /// </summary>
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }
@@ -125,7 +125,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// ipv4: specifies to query IPv4 metrics
         /// ipv6: specifies to query IPv6 metrics
         /// If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-        /// Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+        /// Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }

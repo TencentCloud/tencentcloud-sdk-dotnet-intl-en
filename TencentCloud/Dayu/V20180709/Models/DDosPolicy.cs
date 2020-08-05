@@ -49,7 +49,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public DDoSPolicyPacketFilter[] PacketFilters{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist
+        /// IP blocklist/allowlist
         /// </summary>
         [JsonProperty("IpBlackWhiteLists")]
         public IpBlackWhite[] IpBlackWhiteLists{ get; set; }

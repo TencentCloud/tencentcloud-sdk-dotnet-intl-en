@@ -52,7 +52,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist configuration
+        /// IP blocklist/allowlist configuration
         /// </summary>
         [JsonProperty("IpFilter")]
         public IpFilter IpFilter{ get; set; }

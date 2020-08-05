@@ -43,6 +43,18 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TagCode")]
+        public ulong? TagCode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TagMsg")]
+        public string TagMsg{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "EncryptKey", this.EncryptKey);
             this.SetParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
+            this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

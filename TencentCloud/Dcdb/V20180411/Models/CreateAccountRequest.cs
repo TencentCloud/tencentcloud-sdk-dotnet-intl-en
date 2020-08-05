@@ -43,25 +43,25 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+        /// Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
+        /// Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// Account remarks, which can contain 0–256 letters, digits, and common symbols.
+        /// Account remarks, which can contain 0-256 letters, digits, and common symbols.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+        /// If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
         /// It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
         /// </summary>
         [JsonProperty("DelayThresh")]

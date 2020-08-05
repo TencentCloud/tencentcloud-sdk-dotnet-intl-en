@@ -97,7 +97,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Property{ get; set; }
 
         /// <summary>
-        /// Number of master nodes currently in the cluster
+        /// Number of primary nodes currently in the cluster
         /// </summary>
         [JsonProperty("ClusterMaterNodeNum")]
         public ulong? ClusterMaterNodeNum{ get; set; }

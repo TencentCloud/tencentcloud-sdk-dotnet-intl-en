@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only).
+        /// Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public ulong?[] InstanceTypes{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] InstanceNames{ get; set; }
 
         /// <summary>
-        /// Instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance <br>15 - pending upgrade and switch <br>16 - upgrade and switch in progress <br>17 - upgrade and switch completed
+        /// Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
         /// </summary>
         [JsonProperty("TaskStatus")]
         public ulong?[] TaskStatus{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a master instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+        /// Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
         /// </summary>
         [JsonProperty("WithDr")]
         public long? WithDr{ get; set; }
@@ -169,7 +169,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? WithRo{ get; set; }
 
         /// <summary>
-        /// Whether master instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+        /// Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
         /// </summary>
         [JsonProperty("WithMaster")]
         public long? WithMaster{ get; set; }

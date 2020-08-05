@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Information of slave server 1
+        /// Information of secondary server 1
         /// </summary>
         [JsonProperty("First")]
         public SlaveInstanceInfo First{ get; set; }
 
         /// <summary>
-        /// Information of slave server 2
+        /// Information of secondary server 2
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Second")]

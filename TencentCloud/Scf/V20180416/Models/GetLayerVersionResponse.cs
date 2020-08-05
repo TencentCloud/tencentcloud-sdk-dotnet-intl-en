@@ -31,13 +31,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public string[] CompatibleRuntimes{ get; set; }
 
         /// <summary>
-        /// SHA256 encoding of file on layer version
+        /// SHA256 encoding of version file on the layer
         /// </summary>
         [JsonProperty("CodeSha256")]
         public string CodeSha256{ get; set; }
 
         /// <summary>
-        /// Download address of file on layer version
+        /// Download address of version file on the layer
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }

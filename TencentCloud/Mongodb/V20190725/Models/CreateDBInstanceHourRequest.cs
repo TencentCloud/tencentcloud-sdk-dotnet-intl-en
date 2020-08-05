@@ -91,7 +91,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+        /// Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -107,6 +107,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Clone")]
+        public long? Clone{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Father")]
+        public string Father{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string[] SecurityGroup{ get; set; }
 
 
         /// <summary>
@@ -128,6 +146,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Clone", this.Clone);
+            this.SetParamSimple(map, prefix + "Father", this.Father);
+            this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         }
     }
 }

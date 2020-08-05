@@ -50,7 +50,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] UserAgents{ get; set; }
 
         /// <summary>
-        /// Blacklist or whitelist. Valid values: blacklist, whitelist
+        /// blocklist or allowlist. Valid values: blacklist, whitelist
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FilterType")]

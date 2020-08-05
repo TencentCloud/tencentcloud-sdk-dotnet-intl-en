@@ -54,7 +54,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
-        /// whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+        /// allowlist: indicates that all file types apart from the FileExtensions list are authenticated
         /// blacklist: indicates that only the file types in the FileExtensions list are authenticated
         /// </summary>
         [JsonProperty("FilterType")]

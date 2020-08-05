@@ -31,7 +31,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Login whitelist array
+        /// Login allowlist array
         /// </summary>
         [JsonProperty("LoginWhiteLists")]
         public LoginWhiteLists[] LoginWhiteLists{ get; set; }

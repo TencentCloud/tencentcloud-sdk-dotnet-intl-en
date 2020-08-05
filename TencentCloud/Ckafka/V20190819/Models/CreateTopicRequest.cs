@@ -49,13 +49,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ReplicaNum{ get; set; }
 
         /// <summary>
-        /// IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
+        /// IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
         /// </summary>
         [JsonProperty("EnableWhiteList")]
         public long? EnableWhiteList{ get; set; }
 
         /// <summary>
-        /// IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+        /// IP allowlist list for quota limit, which is required if `enableWhileList` is 1
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }

@@ -25,14 +25,14 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+        /// Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+        /// Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StreamName")]

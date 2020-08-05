@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// IP whitelist list
+        /// IP allowlist list
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }

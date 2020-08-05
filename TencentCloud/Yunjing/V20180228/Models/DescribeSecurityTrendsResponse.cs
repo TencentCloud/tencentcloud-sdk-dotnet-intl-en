@@ -55,6 +55,36 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public SecurityTrend[] BaseLines{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MaliciousRequests")]
+        public SecurityTrend[] MaliciousRequests{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HighRiskBashs")]
+        public SecurityTrend[] HighRiskBashs{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ReverseShells")]
+        public SecurityTrend[] ReverseShells{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PrivilegeEscalations")]
+        public SecurityTrend[] PrivilegeEscalations{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CyberAttacks")]
+        public SecurityTrend[] CyberAttacks{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +101,11 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamArrayObj(map, prefix + "BruteAttacks.", this.BruteAttacks);
             this.SetParamArrayObj(map, prefix + "Vuls.", this.Vuls);
             this.SetParamArrayObj(map, prefix + "BaseLines.", this.BaseLines);
+            this.SetParamArrayObj(map, prefix + "MaliciousRequests.", this.MaliciousRequests);
+            this.SetParamArrayObj(map, prefix + "HighRiskBashs.", this.HighRiskBashs);
+            this.SetParamArrayObj(map, prefix + "ReverseShells.", this.ReverseShells);
+            this.SetParamArrayObj(map, prefix + "PrivilegeEscalations.", this.PrivilegeEscalations);
+            this.SetParamArrayObj(map, prefix + "CyberAttacks.", this.CyberAttacks);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

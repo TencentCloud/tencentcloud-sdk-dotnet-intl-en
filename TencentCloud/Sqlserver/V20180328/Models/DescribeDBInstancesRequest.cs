@@ -34,7 +34,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// Instance status. Valid values:
         /// <li>1: applying</li>
         /// <li>2: running</li>
-        /// <li>3: running restrictedly (master/slave switching)</li>
+        /// <li>3: running restrictedly (primary/secondary switching)</li>
         /// <li>4: isolated</li>
         /// <li>5: repossessing</li>
         /// <li>6: repossessed</li>
@@ -55,7 +55,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results per page. Value range: 1–100. Default value: 100
+        /// Number of results per page. Value range: 1-100. Default value: 100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dayu.V20180709.Models
     {
         
         /// <summary>
-        /// Number of items in a page. Returned results are not paged if you enter “0”.
+        /// Number of items in a page. Returned results are not paged if you enter '0'.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

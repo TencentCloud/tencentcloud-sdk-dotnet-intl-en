@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string SwitchTime{ get; set; }
 
         /// <summary>
-        /// Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+        /// Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
         /// </summary>
         [JsonProperty("SwitchType")]
         public string SwitchType{ get; set; }

@@ -337,14 +337,14 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to create a pay-as-you-go TencentDB instance (which can be a master, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
+        /// This API is used to create a pay-as-you-go TencentDB instance (which can be a primary, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
         /// 
         /// This is an async API. You can also use the [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) API to query the instance details. If the `Status` value of an instance is 1 and `TaskStatus` is 0, the instance has been successfully delivered.
         /// 
         /// 1. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported instance specifications first and then use the [DescribeDBPrice](https://cloud.tencent.com/document/api/236/18566) API to query the prices of the supported instances;
         /// 2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months;
         /// 3. MySQL v5.5, v5.6, and v5.7 are supported;
-        /// 4. Master instances, read-only instances, and disaster recovery instances can be created;
+        /// 4. primary instances, read-only instances, and disaster recovery instances can be created;
         /// 5. If `Port`, `ParamList`, or `Password` is set in the input parameters, the instance will be initialized.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
@@ -365,14 +365,14 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to create a pay-as-you-go TencentDB instance (which can be a master, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
+        /// This API is used to create a pay-as-you-go TencentDB instance (which can be a primary, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
         /// 
         /// This is an async API. You can also use the [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) API to query the instance details. If the `Status` value of an instance is 1 and `TaskStatus` is 0, the instance has been successfully delivered.
         /// 
         /// 1. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported instance specifications first and then use the [DescribeDBPrice](https://cloud.tencent.com/document/api/236/18566) API to query the prices of the supported instances;
         /// 2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months;
         /// 3. MySQL v5.5, v5.6, and v5.7 are supported;
-        /// 4. Master instances, read-only instances, and disaster recovery instances can be created;
+        /// 4. primary instances, read-only instances, and disaster recovery instances can be created;
         /// 5. If `Port`, `ParamList`, or `Password` is set in the input parameters, the instance will be initialized.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceHourRequest"/></param>
@@ -1361,7 +1361,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeDBInstances) is used to query the list of TencentDB instances (which can be master, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, access address, and instance status.
+        /// This API (DescribeDBInstances) is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, access address, and instance status.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -1381,7 +1381,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeDBInstances) is used to query the list of TencentDB instances (which can be master, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, access address, and instance status.
+        /// This API (DescribeDBInstances) is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, access address, and instance status.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -1992,6 +1992,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRoGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the minimum specification of a read-only instance that can be purchased or upgraded to.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoMinScaleRequest"/></param>
+        /// <returns><see cref="DescribeRoMinScaleResponse"/></returns>
+        public async Task<DescribeRoMinScaleResponse> DescribeRoMinScale(DescribeRoMinScaleRequest req)
+        {
+             JsonResponseModel<DescribeRoMinScaleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoMinScale");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoMinScaleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the minimum specification of a read-only instance that can be purchased or upgraded to.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoMinScaleRequest"/></param>
+        /// <returns><see cref="DescribeRoMinScaleResponse"/></returns>
+        public DescribeRoMinScaleResponse DescribeRoMinScaleSync(DescribeRoMinScaleRequest req)
+        {
+             JsonResponseModel<DescribeRoMinScaleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoMinScale");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoMinScaleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3302,7 +3342,7 @@ namespace TencentCloud.Cdb.V20170320
         /// This API (RestartDBInstances) is used to restart TencentDB instances.
         /// 
         /// Note:
-        /// 1. This API only supports restarting master instances.
+        /// 1. This API only supports restarting primary instances.
         /// 2. The instance status must be normal, and no other async tasks are in progress.
         /// </summary>
         /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
@@ -3326,7 +3366,7 @@ namespace TencentCloud.Cdb.V20170320
         /// This API (RestartDBInstances) is used to restart TencentDB instances.
         /// 
         /// Note:
-        /// 1. This API only supports restarting master instances.
+        /// 1. This API only supports restarting primary instances.
         /// 2. The instance status must be normal, and no other async tasks are in progress.
         /// </summary>
         /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
@@ -3427,7 +3467,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (SwitchForUpgrade) is used to switch to a new instance. You can initiate this process when the master instance being upgraded is pending switch.
+        /// This API (SwitchForUpgrade) is used to switch to a new instance. You can initiate this process when the primary instance being upgraded is pending switch.
         /// </summary>
         /// <param name="req"><see cref="SwitchForUpgradeRequest"/></param>
         /// <returns><see cref="SwitchForUpgradeResponse"/></returns>
@@ -3447,7 +3487,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (SwitchForUpgrade) is used to switch to a new instance. You can initiate this process when the master instance being upgraded is pending switch.
+        /// This API (SwitchForUpgrade) is used to switch to a new instance. You can initiate this process when the primary instance being upgraded is pending switch.
         /// </summary>
         /// <param name="req"><see cref="SwitchForUpgradeRequest"/></param>
         /// <returns><see cref="SwitchForUpgradeResponse"/></returns>
@@ -3467,7 +3507,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to upgrade or downgrade a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+        /// This API is used to upgrade or downgrade a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
@@ -3487,7 +3527,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to upgrade or downgrade a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+        /// This API is used to upgrade or downgrade a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
@@ -3507,7 +3547,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (UpgradeDBInstanceEngineVersion) is used to upgrade the version of a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+        /// This API (UpgradeDBInstanceEngineVersion) is used to upgrade the version of a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceEngineVersionRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceEngineVersionResponse"/></returns>
@@ -3527,7 +3567,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (UpgradeDBInstanceEngineVersion) is used to upgrade the version of a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+        /// This API (UpgradeDBInstanceEngineVersion) is used to upgrade the version of a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceEngineVersionRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceEngineVersionResponse"/></returns>

@@ -31,19 +31,22 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Time{ get; set; }
 
         /// <summary>
-        /// Number of users in room
+        /// Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserNumber")]
         public ulong? UserNumber{ get; set; }
 
         /// <summary>
-        /// Number of times a room has been entered
+        /// Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserCount")]
         public ulong? UserCount{ get; set; }
 
         /// <summary>
-        /// Number of rooms.
+        /// Number of rooms under `sdkappid` on a day
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RoomNumbers")]
         public ulong? RoomNumbers{ get; set; }

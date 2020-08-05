@@ -67,7 +67,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned for a single request. Valid values: 1–100. Default value: 20
+        /// Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

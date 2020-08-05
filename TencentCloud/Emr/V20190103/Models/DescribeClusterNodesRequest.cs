@@ -56,6 +56,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HardwareResourceType")]
+        public string HardwareResourceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SearchFields")]
+        public SearchItem[] SearchFields{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +78,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+            this.SetParamArrayObj(map, prefix + "SearchFields.", this.SearchFields);
         }
     }
 }

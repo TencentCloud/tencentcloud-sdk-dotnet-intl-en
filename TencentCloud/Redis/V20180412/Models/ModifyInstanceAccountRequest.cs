@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+        /// Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }

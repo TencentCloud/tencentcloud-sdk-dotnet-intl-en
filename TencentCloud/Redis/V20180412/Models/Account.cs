@@ -53,7 +53,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Routing policy. master: master node; replication: slave node
+        /// Routing policy. master: master node; replication: secondary node
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]

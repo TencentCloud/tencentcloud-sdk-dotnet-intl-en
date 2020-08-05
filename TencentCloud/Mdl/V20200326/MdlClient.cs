@@ -413,6 +413,46 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
+        /// This API is used to query MediaLive channel logs, such as push event logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveChannelLogsRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveChannelLogsResponse"/></returns>
+        public async Task<DescribeMediaLiveChannelLogsResponse> DescribeMediaLiveChannelLogs(DescribeMediaLiveChannelLogsRequest req)
+        {
+             JsonResponseModel<DescribeMediaLiveChannelLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannelLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query MediaLive channel logs, such as push event logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveChannelLogsRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveChannelLogsResponse"/></returns>
+        public DescribeMediaLiveChannelLogsResponse DescribeMediaLiveChannelLogsSync(DescribeMediaLiveChannelLogsRequest req)
+        {
+             JsonResponseModel<DescribeMediaLiveChannelLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannelLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the output statistics of a channel.
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaLiveChannelOutputStatisticsRequest"/></param>

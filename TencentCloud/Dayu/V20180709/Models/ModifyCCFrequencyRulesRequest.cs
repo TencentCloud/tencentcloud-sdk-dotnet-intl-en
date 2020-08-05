@@ -49,7 +49,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Number of access requests. Value range: [1–10000]
+        /// Number of access requests. Value range: [1-10000]
         /// </summary>
         [JsonProperty("ReqNumber")]
         public ulong? ReqNumber{ get; set; }

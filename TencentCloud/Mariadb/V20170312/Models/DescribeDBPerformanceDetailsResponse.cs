@@ -38,7 +38,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public PerformanceMonitorSet Slave1{ get; set; }
 
         /// <summary>
-        /// Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+        /// Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Slave2")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Call ID (unique call ID): sdkappid_roomgString (room ID)_createTime (room creation time in UNIX timestamp in seconds). You can get the parameter value through the `DescribeRoomInformation` API which is used to query the room list.
+        /// Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://cloud.tencent.com/document/product/647/44050).
         /// </summary>
         [JsonProperty("CommId")]
         public string CommId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// User `sdkappid`
+        /// User `sdkappid`, such as 1400188366.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
@@ -56,19 +56,19 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// Metric to query. The user list will be returned if it is left empty; all metrics will be returned if its value is `all`.
-        /// appCpu: CPU utilization of application;
-        /// sysCpu: CPU utilization of system;
+        /// appCpu: CPU utilization of the application;
+        /// sysCpu: CPU utilization of the system;
         /// aBit: upstream/downstream audio bitrate;
         /// aBlock: audio lag duration;
-        /// vBit: upstream/downstream video bitrate;
-        /// vCapFps: video capturing frame rate;
-        /// vEncFps: video sending frame rate;
-        /// vDecFps: rendering frame rate;
-        /// vBlock: video lag duration;
+        /// bigvBit: upstream/downstream video bitrate;
+        /// bigvCapFps: frame rate for capturing videos;
+        /// bigvEncFps: frame rate for sending videos;
+        /// bigvDecFps: rendering frame rate;
+        /// bigvBlock: video lag duration;
         /// aLoss: upstream/downstream audio packet loss;
-        /// vLoss: upstream/downstream video packet loss;
-        /// vWidth: upstream/downstream resolution in width;
-        /// vHeight: upstream/downstream resolution in height.
+        /// bigvLoss: upstream/downstream video packet loss;
+        /// bigvWidth: upstream/downstream resolution in width;
+        /// bigvHeight: upstream/downstream resolution in height.
         /// </summary>
         [JsonProperty("DataType")]
         public string[] DataType{ get; set; }

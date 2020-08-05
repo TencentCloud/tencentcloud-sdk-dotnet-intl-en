@@ -109,7 +109,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// Number of nodes. 2: one master and one slave; 3: one master and two slaves
+        /// Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
         /// </summary>
         [JsonProperty("NodeCount")]
         public long? NodeCount{ get; set; }
@@ -159,7 +159,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string ShardMasterZone{ get; set; }
 
         /// <summary>
-        /// List of slave AZs of a shard
+        /// List of secondary AZs of a shard
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ShardSlaveZones")]

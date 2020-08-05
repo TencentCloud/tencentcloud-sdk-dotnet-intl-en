@@ -43,13 +43,13 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Method{ get; set; }
 
         /// <summary>
-        /// Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
+        /// Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Blacklisted/whitelisted IP array
+        /// Blocklisted/whitelisted IP array
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }

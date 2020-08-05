@@ -45,7 +45,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Object representing the sort criteria. The following objects are supported:
         /// url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-        /// path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+        /// path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
         /// district: sorts by district. Supported filters are `flux` and `request`
         /// isp: sorts by ISP. Supported filters are `flux` and `request`
         /// host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
@@ -88,7 +88,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Project{ get; set; }
 
         /// <summary>
-        /// Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+        /// Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
         /// If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
         /// </summary>
         [JsonProperty("Detail")]

@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Version of master instance database engine. Value range: 5.6, 5.7
+        /// Version of primary instance database engine. Value range: 5.6, 5.7
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }

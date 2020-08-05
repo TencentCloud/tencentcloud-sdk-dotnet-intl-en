@@ -43,7 +43,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+        /// New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

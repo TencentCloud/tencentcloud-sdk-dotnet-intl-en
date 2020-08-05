@@ -49,7 +49,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public bool? IsGlobal{ get; set; }
 
         /// <summary>
-        /// Server for which the whitelist takes effect
+        /// Server for which the allowlist takes effect
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
@@ -59,6 +59,18 @@ namespace TencentCloud.Yunjing.V20180228.Models
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
             this.SetParamSimple(map, prefix + "HostIp", this.HostIp);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

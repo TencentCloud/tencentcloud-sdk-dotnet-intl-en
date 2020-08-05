@@ -67,7 +67,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+        /// Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -216,6 +216,30 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsolateOperator")]
+        public string IsolateOperator{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SubFlag")]
+        public string SubFlag{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ROFlag")]
+        public string ROFlag{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HAFlag")]
+        public string HAFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +278,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "IsolateOperator", this.IsolateOperator);
+            this.SetParamSimple(map, prefix + "SubFlag", this.SubFlag);
+            this.SetParamSimple(map, prefix + "ROFlag", this.ROFlag);
+            this.SetParamSimple(map, prefix + "HAFlag", this.HAFlag);
         }
     }
 }

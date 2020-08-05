@@ -49,7 +49,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist configuration.
+        /// IP block/allowlist configuration.
         /// </summary>
         [JsonProperty("IpFilter")]
         public IpFilter IpFilter{ get; set; }

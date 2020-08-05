@@ -62,7 +62,7 @@ namespace TencentCloud.Scf.V20180416.Models
 
         /// <summary>
         /// * Qualifier:
-        /// Function version, i.e., alias
+        /// Function version, alias
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

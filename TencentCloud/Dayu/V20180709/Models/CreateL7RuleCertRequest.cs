@@ -31,7 +31,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Business{ get; set; }
 
         /// <summary>
-        /// Anti-DDoS instance ID
+        /// The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

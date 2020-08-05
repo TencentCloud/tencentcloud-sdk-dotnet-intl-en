@@ -73,6 +73,24 @@ namespace TencentCloud.Batch.V20170312.Models
         public string EnvType{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NextAction")]
+        public string NextAction{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AttachedComputeNodeCount")]
+        public ulong? AttachedComputeNodeCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +110,9 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "ComputeNodeMetrics.", this.ComputeNodeMetrics);
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
+            this.SetParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -66,6 +66,24 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("DesiredComputeNodeCount")]
         public ulong? DesiredComputeNodeCount{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NextAction")]
+        public string NextAction{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AttachedComputeNodeCount")]
+        public ulong? AttachedComputeNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "ComputeNodeMetrics.", this.ComputeNodeMetrics);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
+            this.SetParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
         }
     }
 }

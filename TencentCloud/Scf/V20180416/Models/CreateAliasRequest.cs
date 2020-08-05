@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+        /// Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Master version of alias
+        /// Master version pointed to by the alias
         /// </summary>
         [JsonProperty("FunctionVersion")]
         public string FunctionVersion{ get; set; }

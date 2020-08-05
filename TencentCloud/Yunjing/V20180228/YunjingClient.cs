@@ -53,7 +53,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// This API is used to add a whitelist rule.
+        /// This API is used to add a allowlist rule.
         /// </summary>
         /// <param name="req"><see cref="AddLoginWhiteListRequest"/></param>
         /// <returns><see cref="AddLoginWhiteListResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// This API is used to add a whitelist rule.
+        /// This API is used to add a allowlist rule.
         /// </summary>
         /// <param name="req"><see cref="AddLoginWhiteListRequest"/></param>
         /// <returns><see cref="AddLoginWhiteListResponse"/></returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// This API is used to delete a whitelist rule.
+        /// This API is used to delete a allowlist rule.
         /// </summary>
         /// <param name="req"><see cref="DeleteLoginWhiteListRequest"/></param>
         /// <returns><see cref="DeleteLoginWhiteListResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// This API is used to delete a whitelist rule.
+        /// This API is used to delete a allowlist rule.
         /// </summary>
         /// <param name="req"><see cref="DeleteLoginWhiteListRequest"/></param>
         /// <returns><see cref="DeleteLoginWhiteListResponse"/></returns>
@@ -1013,7 +1013,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// This API is used to get the list of login whitelist entries.
+        /// This API is used to get the list of login allowlist entries.
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginWhiteListRequest"/></param>
         /// <returns><see cref="DescribeLoginWhiteListResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// This API is used to get the list of login whitelist entries.
+        /// This API is used to get the list of login allowlist entries.
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginWhiteListRequest"/></param>
         /// <returns><see cref="DescribeLoginWhiteListResponse"/></returns>
@@ -2493,7 +2493,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// This API is used to edit a whitelist rule.
+        /// This API is used to edit a allowlist rule.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoginWhiteListRequest"/></param>
         /// <returns><see cref="ModifyLoginWhiteListResponse"/></returns>
@@ -2513,7 +2513,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// This API is used to edit a whitelist rule.
+        /// This API is used to edit a allowlist rule.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoginWhiteListRequest"/></param>
         /// <returns><see cref="ModifyLoginWhiteListResponse"/></returns>

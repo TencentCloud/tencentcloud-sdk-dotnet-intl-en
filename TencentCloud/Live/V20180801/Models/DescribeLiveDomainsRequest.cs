@@ -37,13 +37,13 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? DomainType{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Value range: 10–100. Default value: 10.
+        /// Number of entries per page. Value range: 10-100. Default value: 10.
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// Page number to get. Value range: 1–100000. Default value: 1.
+        /// Page number to get. Value range: 1-100000. Default value: 1.
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }

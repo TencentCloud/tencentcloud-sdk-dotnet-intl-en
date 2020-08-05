@@ -879,7 +879,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to query the list of blocked IPs (blacklist) of a CLB instance. (This API is in beta test. To use it, please submit a ticket.)
+        /// This API is used to query the list of blocked IPs (blocklist) of a CLB instance. (This API is in beta test. To use it, please submit a ticket.)
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockIPListRequest"/></param>
         /// <returns><see cref="DescribeBlockIPListResponse"/></returns>
@@ -899,7 +899,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to query the list of blocked IPs (blacklist) of a CLB instance. (This API is in beta test. To use it, please submit a ticket.)
+        /// This API is used to query the list of blocked IPs (blocklist) of a CLB instance. (This API is in beta test. To use it, please submit a ticket.)
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockIPListRequest"/></param>
         /// <returns><see cref="DescribeBlockIPListResponse"/></returns>
@@ -919,7 +919,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to query the execution status of an async IP blocking (blacklisting) task by the async task ID returned by the `ModifyBlockIPList` API. (This API is in beta test. To use it, please submit a ticket.)
+        /// This API is used to query the execution status of an async IP blocking (blocklisting) task by the async task ID returned by the `ModifyBlockIPList` API. (This API is in beta test. To use it, please submit a ticket.)
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockIPTaskRequest"/></param>
         /// <returns><see cref="DescribeBlockIPTaskResponse"/></returns>
@@ -939,7 +939,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to query the execution status of an async IP blocking (blacklisting) task by the async task ID returned by the `ModifyBlockIPList` API. (This API is in beta test. To use it, please submit a ticket.)
+        /// This API is used to query the execution status of an async IP blocking (blocklisting) task by the async task ID returned by the `ModifyBlockIPList` API. (This API is in beta test. To use it, please submit a ticket.)
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockIPTaskRequest"/></param>
         /// <returns><see cref="DescribeBlockIPTaskResponse"/></returns>
@@ -1601,7 +1601,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to modify the client IP blacklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blacklist can contain up to 2,000,000 entries.
+        /// This API is used to modify the client IP blocklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blocklist can contain up to 2,000,000 entries.
         /// (This API is in beta test. To use it, please submit a ticket.)
         /// </summary>
         /// <param name="req"><see cref="ModifyBlockIPListRequest"/></param>
@@ -1622,7 +1622,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to modify the client IP blacklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blacklist can contain up to 2,000,000 entries.
+        /// This API is used to modify the client IP blocklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blocklist can contain up to 2,000,000 entries.
         /// (This API is in beta test. To use it, please submit a ticket.)
         /// </summary>
         /// <param name="req"><see cref="ModifyBlockIPListRequest"/></param>

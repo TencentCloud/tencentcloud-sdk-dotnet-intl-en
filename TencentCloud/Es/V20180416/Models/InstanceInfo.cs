@@ -205,7 +205,7 @@ namespace TencentCloud.Es.V20180416.Models
         public EsDictionaryInfo IkConfig{ get; set; }
 
         /// <summary>
-        /// Dedicated master node configuration
+        /// Dedicated primary node configuration
         /// </summary>
         [JsonProperty("MasterNodeInfo")]
         public MasterNodeInfo MasterNodeInfo{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+        /// Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

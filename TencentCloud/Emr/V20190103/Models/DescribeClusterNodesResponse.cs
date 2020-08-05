@@ -45,6 +45,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] TagKeys{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HardwareResourceTypeList")]
+        public string[] HardwareResourceTypeList{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -59,6 +65,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
             this.SetParamArrayObj(map, prefix + "NodeList.", this.NodeList);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamArraySimple(map, prefix + "HardwareResourceTypeList.", this.HardwareResourceTypeList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

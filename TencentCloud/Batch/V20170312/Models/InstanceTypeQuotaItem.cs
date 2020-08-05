@@ -104,6 +104,48 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("SoldOutReason")]
         public string SoldOutReason{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceBandwidth")]
+        public float? InstanceBandwidth{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstancePps")]
+        public long? InstancePps{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StorageBlockAmount")]
+        public long? StorageBlockAmount{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
+        /// <summary>
+        /// Number of GPUs of the instance.
+        /// </summary>
+        [JsonProperty("Gpu")]
+        public long? Gpu{ get; set; }
+
+        /// <summary>
+        /// Number of FPGAs of the instance.
+        /// </summary>
+        [JsonProperty("Fpga")]
+        public long? Fpga{ get; set; }
+
+        /// <summary>
+        /// Descriptive information of the instance.
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +165,13 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Price.", this.Price);
             this.SetParamSimple(map, prefix + "SoldOutReason", this.SoldOutReason);
+            this.SetParamSimple(map, prefix + "InstanceBandwidth", this.InstanceBandwidth);
+            this.SetParamSimple(map, prefix + "InstancePps", this.InstancePps);
+            this.SetParamSimple(map, prefix + "StorageBlockAmount", this.StorageBlockAmount);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
+            this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
+            this.SetParamSimple(map, prefix + "Fpga", this.Fpga);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

@@ -133,6 +133,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// This API is used to query the overview of instance space usage during a specified time period, including disk usage growth (MB), available disk space (MB), total disk space (MB), and estimated number of available days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSpaceStatusRequest"/></param>
+        /// <returns><see cref="DescribeDBSpaceStatusResponse"/></returns>
+        public async Task<DescribeDBSpaceStatusResponse> DescribeDBSpaceStatus(DescribeDBSpaceStatusRequest req)
+        {
+             JsonResponseModel<DescribeDBSpaceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBSpaceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSpaceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the overview of instance space usage during a specified time period, including disk usage growth (MB), available disk space (MB), total disk space (MB), and estimated number of available days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSpaceStatusRequest"/></param>
+        /// <returns><see cref="DescribeDBSpaceStatusResponse"/></returns>
+        public DescribeDBSpaceStatusResponse DescribeDBSpaceStatusSync(DescribeDBSpaceStatusRequest req)
+        {
+             JsonResponseModel<DescribeDBSpaceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBSpaceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSpaceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the slow log statistics histogram.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogTimeSeriesStatsRequest"/></param>
@@ -204,6 +244,86 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSlowLogTopSqls");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogTopSqlsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the daily space data of top tables consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTableTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceTableTimeSeriesResponse"/></returns>
+        public async Task<DescribeTopSpaceTableTimeSeriesResponse> DescribeTopSpaceTableTimeSeries(DescribeTopSpaceTableTimeSeriesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopSpaceTableTimeSeries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the daily space data of top tables consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTableTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceTableTimeSeriesResponse"/></returns>
+        public DescribeTopSpaceTableTimeSeriesResponse DescribeTopSpaceTableTimeSeriesSync(DescribeTopSpaceTableTimeSeriesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopSpaceTableTimeSeries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query real-time space statistics of top tables of an instance. The return results are sorted by size by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTablesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceTablesResponse"/></returns>
+        public async Task<DescribeTopSpaceTablesResponse> DescribeTopSpaceTables(DescribeTopSpaceTablesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopSpaceTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query real-time space statistics of top tables of an instance. The return results are sorted by size by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTablesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceTablesResponse"/></returns>
+        public DescribeTopSpaceTablesResponse DescribeTopSpaceTablesSync(DescribeTopSpaceTablesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopSpaceTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTablesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

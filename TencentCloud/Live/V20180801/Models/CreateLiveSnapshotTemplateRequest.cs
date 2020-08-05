@@ -60,7 +60,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Screencapturing interval in seconds. Default value: 10s.
-        /// Value range: 5–600s.
+        /// Value range: 5-600s.
         /// </summary>
         [JsonProperty("SnapshotInterval")]
         public long? SnapshotInterval{ get; set; }

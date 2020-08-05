@@ -49,7 +49,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public MonitorData MemHitRate{ get; set; }
 
         /// <summary>
-        /// Master/slave delay
+        /// Primary/Secondary delay
         /// </summary>
         [JsonProperty("SlaveDelay")]
         public MonitorData SlaveDelay{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public MonitorData InsertTotal{ get; set; }
 
         /// <summary>
-        /// Whether master/slave switch occurred. 1: yes, 0: no
+        /// Whether primary/Secondary switch occurred. 1: yes, 0: no
         /// </summary>
         [JsonProperty("IsMasterSwitched")]
         public MonitorData IsMasterSwitched{ get; set; }

@@ -73,19 +73,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance ID, which is required and the same as the master instance ID when purchasing read-only or disaster recovery instances. Please use the [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) API to query the instance IDs.
+        /// Instance ID, which is required and the same as the primary instance ID when purchasing read-only or disaster recovery instances. Please use the [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) API to query the instance IDs.
         /// </summary>
         [JsonProperty("MasterInstanceId")]
         public string MasterInstanceId{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: master (master instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
+        /// Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// AZ information of the master instance, which is required for purchasing disaster recovery instances.
+        /// AZ information of the primary instance, which is required for purchasing disaster recovery instances.
         /// </summary>
         [JsonProperty("MasterRegion")]
         public string MasterRegion{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+        /// Sets the root account password. Rule: the password can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -109,25 +109,25 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ParamInfo[] ParamList{ get; set; }
 
         /// <summary>
-        /// Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+        /// Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// Multi-AZ. Valid value: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+        /// Multi-AZ. Valid value: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// AZ information of slave database 1, which is the `Zone` value by default. This parameter can be specified when purchasing master instances and is meaningless for read-only or disaster recovery instances.
+        /// AZ information of secondary database 1, which is the `Zone` value by default. This parameter can be specified when purchasing primary instances and is meaningless for read-only or disaster recovery instances.
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// AZ information of slave database 2, which is empty by default. This parameter can be specified when purchasing strong sync master instances and is meaningless for other types of instances.
+        /// AZ information of secondary database 2, which is empty by default. This parameter can be specified when purchasing strong sync primary instances and is meaningless for other types of instances.
         /// </summary>
         [JsonProperty("BackupZone")]
         public string BackupZone{ get; set; }

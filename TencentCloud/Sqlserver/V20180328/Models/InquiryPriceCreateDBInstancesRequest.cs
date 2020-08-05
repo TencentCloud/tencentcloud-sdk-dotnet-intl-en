@@ -49,13 +49,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Length of purchase in months. Value range: 1–48. Default value: 1
+        /// Length of purchase in months. Value range: 1-48. Default value: 1
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Number of instances purchased at a time. Value range: 1–100. Default value: 1
+        /// Number of instances purchased at a time. Value range: 1-100. Default value: 1
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
@@ -65,6 +65,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
 
 
         /// <summary>
@@ -79,6 +97,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Note{ get; set; }
 
         /// <summary>
-        /// IP whitelist switch. 1: enabled, 0: disabled.
+        /// IP allowlist switch. 1: enabled, 0: disabled.
         /// </summary>
         [JsonProperty("EnableWhiteList")]
         public long? EnableWhiteList{ get; set; }

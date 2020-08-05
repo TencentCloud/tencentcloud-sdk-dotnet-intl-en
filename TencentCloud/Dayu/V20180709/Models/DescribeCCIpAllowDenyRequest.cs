@@ -37,8 +37,8 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Blacklist or whitelist. Valid values: [white (whitelist), black (blacklist)]
-        /// Note: this array can only have one value. It cannot get the blacklist and whitelist at the same time
+        /// Blocklist or allowlist. Valid values: [white (allowlist), black (blocklist)]
+        /// Note: this array can only have one value. It cannot get the blocklist and allowlist at the same time
         /// </summary>
         [JsonProperty("Type")]
         public string[] Type{ get; set; }

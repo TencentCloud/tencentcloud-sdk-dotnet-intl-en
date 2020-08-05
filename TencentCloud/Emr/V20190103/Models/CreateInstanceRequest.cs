@@ -66,7 +66,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Instance name.
-        /// <li>Length limit: 6–36 characters.</li>
+        /// <li>Length limit: 6-36 characters.</li>
         /// <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
         /// </summary>
         [JsonProperty("InstanceName")]

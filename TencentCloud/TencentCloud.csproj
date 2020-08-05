@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.30</VersionPrefix>
+    <VersionPrefix>3.0.31</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -791,6 +791,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeRoMinScaleRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeRoMinScaleResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackRangeTimeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackRangeTimeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackTaskDetailRequest.cs" />
@@ -1847,10 +1849,15 @@
     <Compile Include="Dayu\V20180709\Models\ModifyL7RulesResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\ModifyNetReturnSwitchRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\ModifyNetReturnSwitchResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\ModifyNewDomainRulesRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\ModifyNewDomainRulesResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\ModifyNewL4RuleRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\ModifyNewL4RuleResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\ModifyResBindDDoSPolicyRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\ModifyResBindDDoSPolicyResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\ModifyResourceRenewFlagRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\ModifyResourceRenewFlagResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\NewL7RuleEntry.cs" />
     <Compile Include="Dayu\V20180709\Models\OrderBy.cs" />
     <Compile Include="Dayu\V20180709\Models\Paging.cs" />
     <Compile Include="Dayu\V20180709\Models\ProtocolPort.cs" />
@@ -1865,14 +1872,24 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagEventResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagHistoryRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagHistoryResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTimeSeriesStatsRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTimeSeriesStatsResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTopSqlsRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTopSqlsResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetric.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\MonitorMetric.cs" />
     <Compile Include="Dbbrain\V20191016\Models\MonitorMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\SlowLogTopSqlItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TimeSlice.cs" />
     <Compile Include="Dc\V20180410\DcClient.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
@@ -2079,6 +2096,7 @@
     <Compile Include="Ecdn\V20191012\Models\DomainLogs.cs" />
     <Compile Include="Ecdn\V20191012\Models\EcdnData.cs" />
     <Compile Include="Ecdn\V20191012\Models\ForceRedirect.cs" />
+    <Compile Include="Ecdn\V20191012\Models\Hsts.cs" />
     <Compile Include="Ecdn\V20191012\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Ecdn\V20191012\Models\Https.cs" />
     <Compile Include="Ecdn\V20191012\Models\IpFilter.cs" />
@@ -2128,11 +2146,13 @@
     <Compile Include="Emr\V20190103\Models\NodeHardwareInfo.cs" />
     <Compile Include="Emr\V20190103\Models\OutterResource.cs" />
     <Compile Include="Emr\V20190103\Models\Placement.cs" />
+    <Compile Include="Emr\V20190103\Models\PodSpec.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="Emr\V20190103\Models\PriceResource.cs" />
     <Compile Include="Emr\V20190103\Models\Resource.cs" />
     <Compile Include="Emr\V20190103\Models\ScaleOutInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\ScaleOutInstanceResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\SearchItem.cs" />
     <Compile Include="Emr\V20190103\Models\Tag.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateInstanceResponse.cs" />
@@ -2614,6 +2634,7 @@
     <Compile Include="Kms\V20190118\Models\ReEncryptResponse.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\Tag.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateAliasRequest.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateAliasResponse.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionRequest.cs" />
@@ -2963,6 +2984,8 @@
     <Compile Include="Mdl\V20200326\Models\DescribeMediaLiveChannelAlertsResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeMediaLiveChannelInputStatisticsRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeMediaLiveChannelInputStatisticsResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeMediaLiveChannelLogsRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeMediaLiveChannelLogsResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeMediaLiveChannelOutputStatisticsRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeMediaLiveChannelOutputStatisticsResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeMediaLiveChannelRequest.cs" />
@@ -2985,6 +3008,8 @@
     <Compile Include="Mdl\V20200326\Models\InputSecurityGroupInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\InputSettingInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\InputStatistics.cs" />
+    <Compile Include="Mdl\V20200326\Models\LogInfo.cs" />
+    <Compile Include="Mdl\V20200326\Models\LogMessageInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\MediaPackageSettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\ModifyMediaLiveChannelRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\ModifyMediaLiveChannelResponse.cs" />
@@ -2996,12 +3021,17 @@
     <Compile Include="Mdl\V20200326\Models\OutputInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\OutputsStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\PipelineInputStatistics.cs" />
+    <Compile Include="Mdl\V20200326\Models\PipelineLogInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\PipelineOutputStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\Scte35SettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\StartMediaLiveChannelRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\StartMediaLiveChannelResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\StopMediaLiveChannelRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\StopMediaLiveChannelResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\StreamAudioInfo.cs" />
+    <Compile Include="Mdl\V20200326\Models\StreamInfo.cs" />
+    <Compile Include="Mdl\V20200326\Models\StreamScte35Info.cs" />
+    <Compile Include="Mdl\V20200326\Models\StreamVideoInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\VideoPipelineInputStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\VideoTemplateInfo.cs" />
     <Compile Include="Mdp\V20200527\MdpClient.cs" />
@@ -3780,6 +3810,8 @@
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
+    <Compile Include="Scf\V20180416\Models\CfsConfig.cs" />
+    <Compile Include="Scf\V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
     <Compile Include="Scf\V20180416\Models\CopyFunctionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CopyFunctionResponse.cs" />
@@ -4173,6 +4205,42 @@
     <Compile Include="Tcaplusdb\V20190823\Models\TaskInfoNew.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesResponse.cs" />
+    <Compile Include="Tiw\V20190919\TiwClient.cs" />
+    <Compile Include="Tiw\V20190919\Models\Canvas.cs" />
+    <Compile Include="Tiw\V20190919\Models\Concat.cs" />
+    <Compile Include="Tiw\V20190919\Models\CreateTranscodeRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\CreateTranscodeResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\CustomLayout.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordCallbackRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeTranscodeRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeTranscodeResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\LayoutParams.cs" />
+    <Compile Include="Tiw\V20190919\Models\MixStream.cs" />
+    <Compile Include="Tiw\V20190919\Models\OmittedDuration.cs" />
+    <Compile Include="Tiw\V20190919\Models\PauseOnlineRecordRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\PauseOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\ResumeOnlineRecordRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\ResumeOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackKeyRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackKeyResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackKeyRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackKeyResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\StartOnlineRecordRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\StartOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\StopOnlineRecordRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\StopOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\StreamLayout.cs" />
+    <Compile Include="Tiw\V20190919\Models\VideoInfo.cs" />
+    <Compile Include="Tiw\V20190919\Models\Whiteboard.cs" />
     <Compile Include="Tke\V20180525\TkeClient.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
@@ -4268,8 +4336,16 @@
     <Compile Include="Tke\V20180525\Models\Tag.cs" />
     <Compile Include="Tke\V20180525\Models\TagSpecification.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
+    <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
+    <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeDetailEventRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeDetailEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
@@ -4282,12 +4358,22 @@
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\EncodeParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\EventList.cs" />
+    <Compile Include="Trtc\V20190722\Models\EventMessage.cs" />
+    <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
     <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\RoomState.cs" />
     <Compile Include="Trtc\V20190722\Models\ScaleInfomation.cs" />
+    <Compile Include="Trtc\V20190722\Models\SmallVideoLayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
     <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
     <Compile Include="Vod\V20180717\VodClient.cs" />

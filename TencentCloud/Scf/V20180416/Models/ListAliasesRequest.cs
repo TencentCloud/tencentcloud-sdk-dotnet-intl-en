@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// If this parameter is provided, only aliases associated with this function version will be returned
+        /// If this parameter is provided, only aliases associated with this function version will be returned.
         /// </summary>
         [JsonProperty("FunctionVersion")]
         public string FunctionVersion{ get; set; }

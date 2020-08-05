@@ -25,25 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Replication mode of slave database 2. Value range: async, semi-sync
+        /// Replication mode of secondary database 2. Value range: async, semi-sync
         /// </summary>
         [JsonProperty("ReplicationMode")]
         public string ReplicationMode{ get; set; }
 
         /// <summary>
-        /// Name of the AZ of slave database 2, such as ap-shanghai-1
+        /// Name of the AZ of secondary database 2, such as ap-shanghai-1
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Private IP address of slave database 2
+        /// Private IP address of secondary database 2
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Access port of slave database 2
+        /// Access port of secondary database 2
         /// </summary>
         [JsonProperty("Vport")]
         public ulong? Vport{ get; set; }

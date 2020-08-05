@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Operation{ get; set; }
 
         /// <summary>
-        /// Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW. Currently, CKafka supports `ALLOW` (equivalent to whitelist), and other fields will be used for future ACLs compatible with open-source Kafka
+        /// Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW. Currently, CKafka supports `ALLOW` (equivalent to allowlist), and other fields will be used for future ACLs compatible with open-source Kafka
         /// </summary>
         [JsonProperty("PermissionType")]
         public long? PermissionType{ get; set; }

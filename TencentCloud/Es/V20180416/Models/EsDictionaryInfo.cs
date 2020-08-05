@@ -36,6 +36,24 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Stopwords")]
         public DictInfo[] Stopwords{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("QQDict")]
+        public DictInfo[] QQDict{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Synonym")]
+        public DictInfo[] Synonym{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("UpdateType")]
+        public string UpdateType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Es.V20180416.Models
         {
             this.SetParamArrayObj(map, prefix + "MainDict.", this.MainDict);
             this.SetParamArrayObj(map, prefix + "Stopwords.", this.Stopwords);
+            this.SetParamArrayObj(map, prefix + "QQDict.", this.QQDict);
+            this.SetParamArrayObj(map, prefix + "Synonym.", this.Synonym);
+            this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
         }
     }
 }

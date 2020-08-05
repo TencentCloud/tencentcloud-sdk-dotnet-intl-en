@@ -25,35 +25,35 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Whether to enable scale-down
+        /// Whether to enable scale-in
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("IsScaleDownEnabled")]
         public bool? IsScaleDownEnabled{ get; set; }
 
         /// <summary>
-        /// Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+        /// The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Expander")]
         public string Expander{ get; set; }
 
         /// <summary>
-        /// Max concurrent scale-down volume
+        /// Max concurrent scale-in volume
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("MaxEmptyBulkDelete")]
         public long? MaxEmptyBulkDelete{ get; set; }
 
         /// <summary>
-        /// Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+        /// Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("ScaleDownDelay")]
         public long? ScaleDownDelay{ get; set; }
 
         /// <summary>
-        /// Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+        /// Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("ScaleDownUnneededTime")]
@@ -67,14 +67,14 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? ScaleDownUtilizationThreshold{ get; set; }
 
         /// <summary>
-        /// Whether to skip scale-down for nodes with local storage pods (default value: False)
+        /// During scale-in, ignore nodes with local storage pods (default value: False)
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("SkipNodesWithLocalStorage")]
         public bool? SkipNodesWithLocalStorage{ get; set; }
 
         /// <summary>
-        /// Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+        /// During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("SkipNodesWithSystemPods")]
@@ -102,7 +102,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? MaxTotalUnreadyPercentage{ get; set; }
 
         /// <summary>
-        /// Amount of time before unready nodes become eligible for scale-down
+        /// Amount of time before unready nodes become eligible for scale-in
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("ScaleDownUnreadyTime")]

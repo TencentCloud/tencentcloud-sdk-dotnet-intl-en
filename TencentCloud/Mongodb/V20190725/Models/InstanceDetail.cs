@@ -145,7 +145,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// Number of slave nodes of an instance
+        /// Number of secondary nodes of an instance
         /// </summary>
         [JsonProperty("SecondaryNum")]
         public ulong? SecondaryNum{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public DBInstanceInfo[] CloneInstances{ get; set; }
 
         /// <summary>
-        /// Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+        /// Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
         /// </summary>
         [JsonProperty("RelatedInstance")]
         public DBInstanceInfo RelatedInstance{ get; set; }

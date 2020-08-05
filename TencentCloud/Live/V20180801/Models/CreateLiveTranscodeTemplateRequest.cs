@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Video bitrate. Value range: 100–8,000.
+        /// Video bitrate. Value range: 100-8,000.
         /// Note: The bitrate must be a multiple of 100.
         /// </summary>
         [JsonProperty("VideoBitrate")]
@@ -51,7 +51,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// Audio bitrate. Value range: 0–500. Default value: 0.
+        /// Audio bitrate. Value range: 0-500. Default value: 0.
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
@@ -136,7 +136,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? AiTransCode{ get; set; }
 
         /// <summary>
-        /// `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+        /// `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }

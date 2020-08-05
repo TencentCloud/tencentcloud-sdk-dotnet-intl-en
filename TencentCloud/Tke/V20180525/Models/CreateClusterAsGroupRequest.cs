@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string AutoScalingGroupPara{ get; set; }
 
         /// <summary>
-        /// The pass-through parameters for launch configuration creation, in the format of a JSON string. For more information, see the [CreateLaunchConfiguration](https://cloud.tencent.com/document/api/377/20447) API. **ImageId** is not required as it is already included in the cluster dimension. **UserData** is not required as it’s set through the **UserScript**.
+        /// The pass-through parameters for launch configuration creation, in the format of a JSON string. For more information, see the [CreateLaunchConfiguration](https://cloud.tencent.com/document/api/377/20447) API. **ImageId** is not required as it is already included in the cluster dimension. **UserData** is not required as it's set through the **UserScript**.
         /// </summary>
         [JsonProperty("LaunchConfigurePara")]
         public string LaunchConfigurePara{ get; set; }

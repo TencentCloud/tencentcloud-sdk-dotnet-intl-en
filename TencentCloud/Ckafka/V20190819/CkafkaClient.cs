@@ -173,7 +173,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create a topic IP whitelist.
+        /// This API is used to create a topic IP allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateTopicIpWhiteListRequest"/></param>
         /// <returns><see cref="CreateTopicIpWhiteListResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create a topic IP whitelist.
+        /// This API is used to create a topic IP allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateTopicIpWhiteListRequest"/></param>
         /// <returns><see cref="CreateTopicIpWhiteListResponse"/></returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to delete a topic IP whitelist.
+        /// This API is used to delete a topic IP allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicIpWhiteListRequest"/></param>
         /// <returns><see cref="DeleteTopicIpWhiteListResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to delete a topic IP whitelist.
+        /// This API is used to delete a topic IP allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicIpWhiteListRequest"/></param>
         /// <returns><see cref="DeleteTopicIpWhiteListResponse"/></returns>

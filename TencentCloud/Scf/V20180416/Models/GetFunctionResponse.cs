@@ -237,6 +237,27 @@ namespace TencentCloud.Scf.V20180416.Models
         public string OnsEnable{ get; set; }
 
         /// <summary>
+        /// File system configuration parameter, which is used for the function to mount the file system
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CfsConfig")]
+        public CfsConfig CfsConfig{ get; set; }
+
+        /// <summary>
+        /// Function billing status
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AvailableStatus")]
+        public string AvailableStatus{ get; set; }
+
+        /// <summary>
+        /// Function version
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Qualifier")]
+        public string Qualifier{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -283,6 +304,9 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
             this.SetParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
+            this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
+            this.SetParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
+            this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

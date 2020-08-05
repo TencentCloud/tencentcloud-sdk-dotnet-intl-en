@@ -37,13 +37,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public Parameter[] ParamList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 
+        /// When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
         /// </summary>
         [JsonProperty("WaitSwitch")]
         public long? WaitSwitch{ get; set; }

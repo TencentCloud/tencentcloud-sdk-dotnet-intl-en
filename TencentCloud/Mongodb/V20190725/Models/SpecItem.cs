@@ -109,13 +109,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ClusterType{ get; set; }
 
         /// <summary>
-        /// Minimum number of slave nodes in a replica set
+        /// Minimum number of secondary nodes in a replica set
         /// </summary>
         [JsonProperty("MinNodeNum")]
         public ulong? MinNodeNum{ get; set; }
 
         /// <summary>
-        /// Maximum number of slave nodes in a replica set
+        /// Maximum number of secondary nodes in a replica set
         /// </summary>
         [JsonProperty("MaxNodeNum")]
         public ulong? MaxNodeNum{ get; set; }
@@ -133,13 +133,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? MaxReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// Minimum number of slave nodes in a shard
+        /// Minimum number of secondary nodes in a shard
         /// </summary>
         [JsonProperty("MinReplicateSetNodeNum")]
         public ulong? MinReplicateSetNodeNum{ get; set; }
 
         /// <summary>
-        /// Maximum number of slave nodes in a shard
+        /// Maximum number of secondary nodes in a shard
         /// </summary>
         [JsonProperty("MaxReplicateSetNodeNum")]
         public ulong? MaxReplicateSetNodeNum{ get; set; }

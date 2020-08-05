@@ -31,7 +31,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+        /// Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -43,25 +43,25 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+        /// Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+        /// Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// Account remarks, which can contain 0–256 letters, digits, and common symbols.
+        /// Account remarks, which can contain 0-256 letters, digits, and common symbols.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Determines whether the slave is unavailable based on the passed-in time
+        /// Determines whether the secondary is unavailable based on the passed-in time
         /// </summary>
         [JsonProperty("DelayThresh")]
         public long? DelayThresh{ get; set; }

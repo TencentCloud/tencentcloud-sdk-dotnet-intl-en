@@ -55,6 +55,12 @@ namespace TencentCloud.Sms.V20190711.Models
         [JsonProperty("SmsSdkAppid")]
         public string SmsSdkAppid{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EndDateTime")]
+        public ulong? EndDateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Sms.V20190711.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+            this.SetParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
         }
     }
 }

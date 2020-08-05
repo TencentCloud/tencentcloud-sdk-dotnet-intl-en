@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string RoGroupName{ get; set; }
 
         /// <summary>
-        /// Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the master instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+        /// Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
         /// </summary>
         [JsonProperty("RoOfflineDelay")]
         public long? RoOfflineDelay{ get; set; }

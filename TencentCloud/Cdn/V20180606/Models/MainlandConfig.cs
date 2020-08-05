@@ -95,7 +95,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Https Https{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist configuration.
+        /// IP blocklist/allowlist configuration.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IpFilter")]

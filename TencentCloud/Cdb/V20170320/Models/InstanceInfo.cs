@@ -68,7 +68,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// Information of a slave server
+        /// Information of a secondary server
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SlaveInfo")]
@@ -112,7 +112,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+        /// Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
@@ -142,13 +142,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+        /// Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// Details of a master instance
+        /// Details of a primary instance
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MasterInfo")]

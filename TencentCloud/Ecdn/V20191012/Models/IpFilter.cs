@@ -25,20 +25,20 @@ namespace TencentCloud.Ecdn.V20191012.Models
     {
         
         /// <summary>
-        /// IP blacklist/whitelist switch. Valid values: on, off.
+        /// IP blocklist/allowlist switch. Valid values: on, off.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+        /// IP blocklist/allowlist type. Valid values: whitelist, blacklist.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist list.
+        /// IP blocklist/allowlist list.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Filters")]

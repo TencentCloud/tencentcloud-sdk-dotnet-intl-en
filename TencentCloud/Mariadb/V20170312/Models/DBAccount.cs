@@ -55,13 +55,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+        /// Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+        /// This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DelayThresh")]

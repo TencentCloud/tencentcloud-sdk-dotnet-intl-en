@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+        /// Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Configuration information of the slave database.
+        /// Configuration information of the secondary database.
         /// </summary>
         [JsonProperty("SlaveConfig")]
         public SlaveConfig SlaveConfig{ get; set; }
 
         /// <summary>
-        /// Configuration information of slave database 2 of a strong sync instance.
+        /// Configuration information of secondary database 2 of a strong sync instance.
         /// </summary>
         [JsonProperty("BackupConfig")]
         public BackupConfig BackupConfig{ get; set; }

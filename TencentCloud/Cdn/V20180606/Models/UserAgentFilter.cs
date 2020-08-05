@@ -32,7 +32,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// UA blacklist/whitelist effect rule list
+        /// UA blocklist/allowlist effect rule list
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FilterRules")]

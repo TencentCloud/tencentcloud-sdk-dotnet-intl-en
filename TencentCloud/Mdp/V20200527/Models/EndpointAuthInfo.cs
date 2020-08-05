@@ -25,14 +25,14 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// The security group whitelist in CIDR format.
+        /// The security group allowlist in CIDR format.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WhiteIpList")]
         public string[] WhiteIpList{ get; set; }
 
         /// <summary>
-        /// The security group blacklist in CIDR format.
+        /// The security group blocklist in CIDR format.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BlackIpList")]

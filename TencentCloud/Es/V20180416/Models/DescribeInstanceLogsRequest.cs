@@ -32,7 +32,7 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// Log type. Default value: 1
-        /// <li>1: master log</li>
+        /// <li>1: primary log</li>
         /// <li>2: search slow log</li>
         /// <li>3: index slow log</li>
         /// <li>4: GC log</li>

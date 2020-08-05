@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+        /// Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

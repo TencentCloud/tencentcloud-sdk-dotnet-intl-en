@@ -270,11 +270,16 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AutoFlag")]
         public long? AutoFlag{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HardwareResourceType")]
+        public string HardwareResourceType{ get; set; }
 
 
         /// <summary>
@@ -318,6 +323,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Destroyable", this.Destroyable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
+            this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         }
     }
 }

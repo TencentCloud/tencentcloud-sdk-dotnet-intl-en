@@ -27,7 +27,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// Recording interval.
         /// In seconds. Default value: 1800.
-        /// Value range: 300–7200.
+        /// Value range: 300-7200.
         /// This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
         /// </summary>
         [JsonProperty("RecordInterval")]
@@ -35,7 +35,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Recording storage period.
-        /// In seconds. Value range: 0–93312000.
+        /// In seconds. Value range: 0-93312000.
         /// 0: permanent storage.
         /// </summary>
         [JsonProperty("StorageTime")]

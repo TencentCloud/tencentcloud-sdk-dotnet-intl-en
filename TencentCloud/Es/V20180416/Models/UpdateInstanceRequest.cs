@@ -38,7 +38,7 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Number of nodes (2–50)
+        /// Number of nodes (2-50)
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string EsConfig{ get; set; }
 
         /// <summary>
-        /// Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+        /// Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -77,21 +77,21 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Number of dedicated master nodes (only 3 and 5 are supported)
+        /// Number of dedicated primary nodes (only 3 and 5 are supported)
         /// </summary>
         [JsonProperty("MasterNodeNum")]
         public ulong? MasterNodeNum{ get; set; }
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+        /// Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
         /// </summary>
         [JsonProperty("MasterNodeType")]
         public string MasterNodeType{ get; set; }
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+        /// Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
         /// </summary>
         [JsonProperty("MasterNodeDiskSize")]
         public ulong? MasterNodeDiskSize{ get; set; }
@@ -150,6 +150,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaPrivatePort")]
         public ulong? KibanaPrivatePort{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScaleType")]
+        public long? ScaleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -176,6 +182,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
             this.SetParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
+            this.SetParamSimple(map, prefix + "ScaleType", this.ScaleType);
         }
     }
 }

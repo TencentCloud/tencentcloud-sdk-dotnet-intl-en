@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+        /// Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }

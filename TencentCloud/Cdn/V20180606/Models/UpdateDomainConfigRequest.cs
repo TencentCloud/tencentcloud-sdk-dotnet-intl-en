@@ -43,7 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist configuration
+        /// IP blocklist/allowlist configuration
         /// </summary>
         [JsonProperty("IpFilter")]
         public IpFilter IpFilter{ get; set; }
@@ -212,7 +212,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
         /// <summary>
-        /// UA blacklist/whitelist Configuration
+        /// UA blocklist/allowlist Configuration
         /// </summary>
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }

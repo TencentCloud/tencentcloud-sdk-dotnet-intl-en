@@ -39,7 +39,7 @@ namespace TencentCloud.Es.V20180416.Models
         /// <summary>
         /// Node type <li>hotData: hot data node</li>
         /// <li>warmData: warm data node</li>
-        /// <li>dedicatedMaster: dedicated master node</li>
+        /// <li>dedicatedMaster: dedicated primary node</li>
         /// Default value: hotData
         /// </summary>
         [JsonProperty("Type")]
@@ -70,6 +70,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DiskCount")]
         public ulong? DiskCount{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DiskEncrypt")]
+        public ulong? DiskEncrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
             this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
+            this.SetParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
         }
     }
 }

@@ -46,8 +46,8 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Referer configuration types
-        /// whitelist: whitelist
-        /// blacklist: blacklist
+        /// whitelist: allowlist
+        /// blacklist: blocklist
         /// </summary>
         [JsonProperty("RefererType")]
         public string RefererType{ get; set; }

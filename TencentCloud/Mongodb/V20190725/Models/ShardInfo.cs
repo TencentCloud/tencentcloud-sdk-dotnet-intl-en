@@ -61,7 +61,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? OplogSize{ get; set; }
 
         /// <summary>
-        /// Number of slave nodes of a shard
+        /// Number of secondary nodes of a shard
         /// </summary>
         [JsonProperty("SecondaryNum")]
         public ulong? SecondaryNum{ get; set; }

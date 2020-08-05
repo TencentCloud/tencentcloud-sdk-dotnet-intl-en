@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Audio name, which can contain 1–32 letters, digits, and underscores.
+        /// Audio name, which can contain 1-32 letters, digits, and underscores.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

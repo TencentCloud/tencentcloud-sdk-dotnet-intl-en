@@ -44,9 +44,9 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Forced cache
-        /// on: enabled
-        /// off: disabled
-        /// This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+        /// on: enable
+        /// off: disable
+        /// This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]

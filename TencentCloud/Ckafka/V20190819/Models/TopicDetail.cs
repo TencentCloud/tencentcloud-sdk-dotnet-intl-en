@@ -62,13 +62,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// Whether to enable IP authentication whitelist. true: yes, false: no
+        /// Whether to enable IP authentication allowlist. true: yes, false: no
         /// </summary>
         [JsonProperty("EnableWhiteList")]
         public bool? EnableWhiteList{ get; set; }
 
         /// <summary>
-        /// Number of IPs in IP whitelist
+        /// Number of IPs in IP allowlist
         /// </summary>
         [JsonProperty("IpWhiteListCount")]
         public long? IpWhiteListCount{ get; set; }

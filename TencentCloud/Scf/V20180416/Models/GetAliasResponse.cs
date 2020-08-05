@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Master version of alias
+        /// Master version pointed to by the alias
         /// </summary>
         [JsonProperty("FunctionVersion")]
         public string FunctionVersion{ get; set; }

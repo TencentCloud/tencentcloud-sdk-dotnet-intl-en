@@ -37,10 +37,10 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// Returned Blacklist/whitelist record,
+        /// Returned Blocklist/allowlist record,
         /// If "Key":"ip", "Value": IP;
         /// If "Key":"domain", "Value": domain name.
-        /// If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+        /// If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
         /// If "Key":"protocol", "Value": CC protection protocol (HTTP or HTTPS);
         /// </summary>
         [JsonProperty("RecordList")]

@@ -25,13 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Time
+        /// Time in the format of UNIX timestamp, such as 1590065877s.
         /// </summary>
         [JsonProperty("Time")]
         public ulong? Time{ get; set; }
 
         /// <summary>
-        /// Current time value in the format of UNIX timestamp
+        /// Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }

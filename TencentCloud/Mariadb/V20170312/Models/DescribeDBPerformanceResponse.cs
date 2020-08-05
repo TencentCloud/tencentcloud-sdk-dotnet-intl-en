@@ -73,13 +73,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public MonitorData ConnActive{ get; set; }
 
         /// <summary>
-        /// Whether master/slave switch occurred. 1: yes, 0: no
+        /// Whether primary/secondary switch occurred. 1: yes, 0: no
         /// </summary>
         [JsonProperty("IsMasterSwitched")]
         public MonitorData IsMasterSwitched{ get; set; }
 
         /// <summary>
-        /// Master/slave delay
+        /// primary/secondary delay
         /// </summary>
         [JsonProperty("SlaveDelay")]
         public MonitorData SlaveDelay{ get; set; }

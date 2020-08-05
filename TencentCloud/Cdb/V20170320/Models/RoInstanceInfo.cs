@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+        /// Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? HourFeeStatus{ get; set; }
 
         /// <summary>
-        /// RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+        /// RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }

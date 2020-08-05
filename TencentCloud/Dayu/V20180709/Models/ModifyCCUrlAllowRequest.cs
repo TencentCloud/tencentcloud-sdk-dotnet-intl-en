@@ -43,7 +43,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Method{ get; set; }
 
         /// <summary>
-        /// Blacklist/whitelist type. Valid value: [white (whitelist)]
+        /// Blocklist/allowlist type. Valid value: [white (allowlist)]
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

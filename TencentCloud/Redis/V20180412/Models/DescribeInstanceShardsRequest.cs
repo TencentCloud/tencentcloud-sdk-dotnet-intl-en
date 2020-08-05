@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether to filter out the slave node information
+        /// Whether to filter out the secondary node information
         /// </summary>
         [JsonProperty("FilterSlave")]
         public bool? FilterSlave{ get; set; }

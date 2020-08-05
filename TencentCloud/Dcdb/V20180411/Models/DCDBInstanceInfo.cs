@@ -151,7 +151,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public ShardInfo[] ShardDetail{ get; set; }
 
         /// <summary>
-        /// Number of nodes. 2: one master and one slave; 3: one master and two slaves
+        /// Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
         /// </summary>
         [JsonProperty("NodeCount")]
         public long? NodeCount{ get; set; }

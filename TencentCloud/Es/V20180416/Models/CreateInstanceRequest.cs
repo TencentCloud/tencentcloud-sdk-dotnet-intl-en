@@ -62,7 +62,7 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Number of nodes (2–50)
+        /// Number of nodes (2-50)
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
@@ -126,28 +126,28 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+        /// Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
         /// </summary>
         [JsonProperty("EnableDedicatedMaster")]
         public bool? EnableDedicatedMaster{ get; set; }
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+        /// Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
         /// </summary>
         [JsonProperty("MasterNodeNum")]
         public ulong? MasterNodeNum{ get; set; }
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+        /// Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
         /// </summary>
         [JsonProperty("MasterNodeType")]
         public string MasterNodeType{ get; set; }
 
         /// <summary>
         /// This parameter has been disused. Please use `NodeInfoList`
-        /// Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+        /// Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
         /// </summary>
         [JsonProperty("MasterNodeDiskSize")]
         public ulong? MasterNodeDiskSize{ get; set; }

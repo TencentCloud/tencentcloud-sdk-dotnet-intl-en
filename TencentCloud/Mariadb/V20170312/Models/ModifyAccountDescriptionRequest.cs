@@ -43,7 +43,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// New account remarks, which can contain 0–256 characters.
+        /// New account remarks, which can contain 0-256 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

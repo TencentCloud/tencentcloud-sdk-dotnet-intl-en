@@ -175,7 +175,7 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// This API is used to change the status of an application's master switch.
+        /// This API is used to change the status of an application's primary switch.
         /// </summary>
         /// <param name="req"><see cref="ModifyAppStatusRequest"/></param>
         /// <returns><see cref="ModifyAppStatusResponse"/></returns>
@@ -195,7 +195,7 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// This API is used to change the status of an application's master switch.
+        /// This API is used to change the status of an application's primary switch.
         /// </summary>
         /// <param name="req"><see cref="ModifyAppStatusRequest"/></param>
         /// <returns><see cref="ModifyAppStatusResponse"/></returns>
@@ -261,7 +261,7 @@ namespace TencentCloud.Gme.V20180711
         /// <p>ad: advertising</p>
         /// <p>terrorism: terrorism</p>
         /// <p>contraband: prohibited</p>
-        /// <p>customized: custom keyword library. This feature is only available to whitelisted users. To try it out, please <a href="https://cloud.tencent.com/apply/p/8809fjcik56">contact us</a>.</p>
+        /// <p>customized: custom keyword library. This feature is only available to allowlisted users. To try it out, please <a href="https://cloud.tencent.com/apply/p/8809fjcik56">contact us</a>.</p>
         /// </td>
         /// </tr>
         /// </tbody>
@@ -417,7 +417,7 @@ namespace TencentCloud.Gme.V20180711
         /// <p>ad: advertising</p>
         /// <p>terrorism: terrorism</p>
         /// <p>contraband: prohibited</p>
-        /// <p>customized: custom keyword library. This feature is only available to whitelisted users. To try it out, please <a href="https://cloud.tencent.com/apply/p/8809fjcik56">contact us</a>.</p>
+        /// <p>customized: custom keyword library. This feature is only available to allowlisted users. To try it out, please <a href="https://cloud.tencent.com/apply/p/8809fjcik56">contact us</a>.</p>
         /// </td>
         /// </tr>
         /// </tbody>

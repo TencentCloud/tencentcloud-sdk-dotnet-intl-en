@@ -31,7 +31,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string AudioSelectorName{ get; set; }
 
         /// <summary>
-        /// Audio transcoding template name, which can contain 1–20 letters and digits.
+        /// Audio transcoding template name, which can contain 1-20 letters and digits.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

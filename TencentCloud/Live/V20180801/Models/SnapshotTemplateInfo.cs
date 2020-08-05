@@ -37,20 +37,20 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Screencapturing interval. Value range: 5–300s.
+        /// Screencapturing interval. Value range: 5-300s.
         /// </summary>
         [JsonProperty("SnapshotInterval")]
         public long? SnapshotInterval{ get; set; }
 
         /// <summary>
-        /// Screenshot width. Value range: 0–3000. 
+        /// Screenshot width. Value range: 0-3000. 
         /// 0: original width and fit to the original ratio.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Screenshot height. Value range: 0–2000.
+        /// Screenshot height. Value range: 0-2000.
         /// 0: original height and fit to the original ratio.
         /// </summary>
         [JsonProperty("Height")]

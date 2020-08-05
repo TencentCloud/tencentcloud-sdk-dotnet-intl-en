@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Referer blacklist/whitelist configuration switch
+        /// Referer blocklist/allowlist configuration switch
         /// on: enabled
         /// off: disabled
         /// </summary>
@@ -33,7 +33,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Referer blacklist/whitelist configuration rule
+        /// Referer blocklist/allowlist configuration rule
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RefererRules")]

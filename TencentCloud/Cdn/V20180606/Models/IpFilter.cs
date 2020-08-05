@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// IP blacklist/whitelist configuration switch
+        /// IP blocklist/allowlist configuration switch
         /// on: enabled
         /// off: disabled
         /// </summary>
@@ -33,18 +33,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist type
-        /// whitelist: whitelist
-        /// blacklist: blacklist
+        /// IP blocklist/allowlist type
+        /// whitelist: allowlist
+        /// blacklist: blocklist
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist list
+        /// IP blocklist/allowlist list
         /// Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-        /// Up to 50 whitelists or blacklists can be entered
+        /// Up to 50 allowlists or blocklists can be entered
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Filters")]

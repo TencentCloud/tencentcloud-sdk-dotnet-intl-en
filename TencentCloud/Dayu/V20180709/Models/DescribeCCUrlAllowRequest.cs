@@ -37,7 +37,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+        /// Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
         /// Note: this array can only have one value which can only be `white`
         /// </summary>
         [JsonProperty("Type")]

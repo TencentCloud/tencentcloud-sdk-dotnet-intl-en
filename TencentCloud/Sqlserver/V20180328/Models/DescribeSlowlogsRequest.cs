@@ -43,7 +43,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Number of results per page. Value range: 1–100. Default value: 20
+        /// Number of results per page. Value range: 1-100. Default value: 20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

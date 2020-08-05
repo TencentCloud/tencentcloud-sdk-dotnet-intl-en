@@ -31,7 +31,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// List of whitelist entries. Quantity limit: [1,10].
+        /// List of allowlist entries. Quantity limit: [1,10].
         /// </summary>
         [JsonProperty("Whitelist")]
         public string[] Whitelist{ get; set; }

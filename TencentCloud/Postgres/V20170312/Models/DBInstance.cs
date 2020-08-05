@@ -97,13 +97,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceClass{ get; set; }
 
         /// <summary>
-        /// Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+        /// Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
         /// </summary>
         [JsonProperty("DBInstanceType")]
         public string DBInstanceType{ get; set; }
 
         /// <summary>
-        /// Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+        /// Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
         /// </summary>
         [JsonProperty("DBInstanceVersion")]
         public string DBInstanceVersion{ get; set; }

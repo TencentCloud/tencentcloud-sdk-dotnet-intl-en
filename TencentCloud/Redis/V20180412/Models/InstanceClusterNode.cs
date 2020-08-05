@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string RunId{ get; set; }
 
         /// <summary>
-        /// Cluster role. 0: master; 1: slave
+        /// Cluster role. 0: primary; 1: secondary
         /// </summary>
         [JsonProperty("Role")]
         public long? Role{ get; set; }

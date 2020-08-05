@@ -59,14 +59,14 @@ namespace TencentCloud.Tke.V20180525.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// List of private IPs of the instance’s primary ENI.
+        /// List of private IPs of the instance's primary ENI.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// List of public IPs of the instance’s primary ENI.
+        /// List of public IPs of the instance's primary ENI.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
@@ -80,14 +80,14 @@ namespace TencentCloud.Tke.V20180525.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Instance’s number of CPU cores. Unit: cores.
+        /// Instance's number of CPU cores. Unit: cores.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CPU")]
         public ulong? CPU{ get; set; }
 
         /// <summary>
-        /// Instance’s memory capacity. Unit: GB.
+        /// Instance's memory capacity. Unit: GB.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Memory")]

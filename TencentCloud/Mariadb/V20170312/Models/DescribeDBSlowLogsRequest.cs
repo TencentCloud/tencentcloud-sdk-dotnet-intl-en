@@ -73,7 +73,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Whether to query slow queries of the slave. 0: master, 1: slave
+        /// Whether to query slow queries of the secondary. 0: primary, 1: secondary
         /// </summary>
         [JsonProperty("Slave")]
         public long? Slave{ get; set; }

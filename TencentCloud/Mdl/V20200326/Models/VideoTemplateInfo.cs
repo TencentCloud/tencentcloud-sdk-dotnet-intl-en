@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Video transcoding template name, which can contain 1–20 letters and digits.
+        /// Video transcoding template name, which can contain 1-20 letters and digits.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

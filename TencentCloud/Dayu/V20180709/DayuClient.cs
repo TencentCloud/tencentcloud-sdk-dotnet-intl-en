@@ -1253,7 +1253,7 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// This API is used to get the CC IP blacklist/whitelist.
+        /// This API is used to get the CC IP blocklist/allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCIpAllowDenyRequest"/></param>
         /// <returns><see cref="DescribeCCIpAllowDenyResponse"/></returns>
@@ -1273,7 +1273,7 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// This API is used to get the CC IP blacklist/whitelist.
+        /// This API is used to get the CC IP blocklist/allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCIpAllowDenyRequest"/></param>
         /// <returns><see cref="DescribeCCIpAllowDenyResponse"/></returns>
@@ -1373,7 +1373,7 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// This API is used to get the CC URL whitelist.
+        /// This API is used to get the CC URL allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCUrlAllowRequest"/></param>
         /// <returns><see cref="DescribeCCUrlAllowResponse"/></returns>
@@ -1393,7 +1393,7 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// This API is used to get the CC URL whitelist.
+        /// This API is used to get the CC URL allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCUrlAllowRequest"/></param>
         /// <returns><see cref="DescribeCCUrlAllowResponse"/></returns>
@@ -3053,7 +3053,7 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// This API is used to add/remove a CC IP to/from the blacklist/whitelist.
+        /// This API is used to add/remove a CC IP to/from the blocklist/allowlist.
         /// </summary>
         /// <param name="req"><see cref="ModifyCCIpAllowDenyRequest"/></param>
         /// <returns><see cref="ModifyCCIpAllowDenyResponse"/></returns>
@@ -3073,7 +3073,7 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// This API is used to add/remove a CC IP to/from the blacklist/whitelist.
+        /// This API is used to add/remove a CC IP to/from the blocklist/allowlist.
         /// </summary>
         /// <param name="req"><see cref="ModifyCCIpAllowDenyRequest"/></param>
         /// <returns><see cref="ModifyCCIpAllowDenyResponse"/></returns>
@@ -3253,7 +3253,7 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// This API is used to add/remove a CC URL to/from the whitelist.
+        /// This API is used to add/remove a CC URL to/from the allowlist.
         /// </summary>
         /// <param name="req"><see cref="ModifyCCUrlAllowRequest"/></param>
         /// <returns><see cref="ModifyCCUrlAllowResponse"/></returns>
@@ -3273,7 +3273,7 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// This API is used to add/remove a CC URL to/from the whitelist.
+        /// This API is used to add/remove a CC URL to/from the allowlist.
         /// </summary>
         /// <param name="req"><see cref="ModifyCCUrlAllowRequest"/></param>
         /// <returns><see cref="ModifyCCUrlAllowResponse"/></returns>
@@ -3924,6 +3924,86 @@ namespace TencentCloud.Dayu.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNetReturnSwitch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetReturnSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewDomainRulesRequest"/></param>
+        /// <returns><see cref="ModifyNewDomainRulesResponse"/></returns>
+        public async Task<ModifyNewDomainRulesResponse> ModifyNewDomainRules(ModifyNewDomainRulesRequest req)
+        {
+             JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNewDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewDomainRulesRequest"/></param>
+        /// <returns><see cref="ModifyNewDomainRulesResponse"/></returns>
+        public ModifyNewDomainRulesResponse ModifyNewDomainRulesSync(ModifyNewDomainRulesRequest req)
+        {
+             JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNewDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify layer-4 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewL4RuleRequest"/></param>
+        /// <returns><see cref="ModifyNewL4RuleResponse"/></returns>
+        public async Task<ModifyNewL4RuleResponse> ModifyNewL4Rule(ModifyNewL4RuleRequest req)
+        {
+             JsonResponseModel<ModifyNewL4RuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNewL4Rule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewL4RuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify layer-4 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewL4RuleRequest"/></param>
+        /// <returns><see cref="ModifyNewL4RuleResponse"/></returns>
+        public ModifyNewL4RuleResponse ModifyNewL4RuleSync(ModifyNewL4RuleRequest req)
+        {
+             JsonResponseModel<ModifyNewL4RuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNewL4Rule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewL4RuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

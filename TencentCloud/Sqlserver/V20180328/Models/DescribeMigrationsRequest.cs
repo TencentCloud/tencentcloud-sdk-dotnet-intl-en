@@ -37,7 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string MigrateName{ get; set; }
 
         /// <summary>
-        /// Number of results per page. Value range: 1–100. Default value: 100
+        /// Number of results per page. Value range: 1-100. Default value: 100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -109,7 +109,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+        /// Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
         /// </summary>
         [JsonProperty("TypeVersion")]
         public long? TypeVersion{ get; set; }

@@ -59,9 +59,9 @@ namespace TencentCloud.Ecdn.V20191012.Models
         /// <summary>
         /// Time granularity, which can be:
         /// 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-        /// 2–3 days 15, 30, 60, 120, 240, 1440
-        /// 4–7 days 30, 60, 120, 240, 1440
-        /// 8–90 days	 60, 120, 240, 1440
+        /// 2-3 days 15, 30, 60, 120, 240, 1440
+        /// 4-7 days 30, 60, 120, 240, 1440
+        /// 8-90 days	 60, 120, 240, 1440
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }

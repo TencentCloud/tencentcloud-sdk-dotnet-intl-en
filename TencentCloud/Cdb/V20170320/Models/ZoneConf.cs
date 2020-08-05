@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long?[] DeployMode{ get; set; }
 
         /// <summary>
-        /// AZ where the master instance is located
+        /// AZ where the primary instance is located
         /// </summary>
         [JsonProperty("MasterZone")]
         public string[] MasterZone{ get; set; }

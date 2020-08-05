@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Result of deleting topic IP whitelist
+        /// Result of deleting topic IP allowlist
         /// </summary>
         [JsonProperty("Result")]
         public JgwOperateResponse Result{ get; set; }

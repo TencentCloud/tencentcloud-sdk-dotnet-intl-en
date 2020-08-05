@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// Routing policy. Enter `master` for master node or `replication` for slave node
+        /// Routing policy. Enter `master` for primary node or `replication` for secondary node
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }

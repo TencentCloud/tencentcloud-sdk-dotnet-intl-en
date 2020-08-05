@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Request job’s FlowId
+        /// Request job's FlowId
         /// </summary>
         [JsonProperty("RequestFlowId")]
         public long? RequestFlowId{ get; set; }

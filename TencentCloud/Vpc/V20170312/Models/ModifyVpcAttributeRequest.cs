@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EnableMulticast{ get; set; }
 
         /// <summary>
-        /// DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+        /// DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
         /// </summary>
         [JsonProperty("DnsServers")]
         public string[] DnsServers{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+        /// Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// List of whitelist entries. Up to 10 entries are allowed.
+        /// List of allowlist entries. Up to 10 entries are allowed.
         /// </summary>
         [JsonProperty("Whitelist")]
         public string[] Whitelist{ get; set; }

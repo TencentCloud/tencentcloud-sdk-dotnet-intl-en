@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ClientIPField{ get; set; }
 
         /// <summary>
-        /// List of IPs added to blacklist 12360
+        /// List of IPs added to blocklist 12360
         /// </summary>
         [JsonProperty("BlockedIPList")]
         public BlockedIP[] BlockedIPList{ get; set; }
