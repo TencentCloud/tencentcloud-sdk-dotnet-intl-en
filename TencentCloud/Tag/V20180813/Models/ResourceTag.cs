@@ -25,7 +25,7 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// The resource’s region.
+        /// The resource's region.
         /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ResourceRegion")]

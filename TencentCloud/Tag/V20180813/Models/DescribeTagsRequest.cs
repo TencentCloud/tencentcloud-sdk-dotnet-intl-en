@@ -25,13 +25,13 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+        /// Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+        /// Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+        /// Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }

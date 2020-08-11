@@ -133,6 +133,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to bind a key with a Tencent Cloud resource. If the key has been set to be expired automatically, the setting will be canceled to ensure that the key will not be invalid automatically. If the key and the resource has already been bound, the call will still be successful.
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudResourceRequest"/></param>
+        /// <returns><see cref="BindCloudResourceResponse"/></returns>
+        public async Task<BindCloudResourceResponse> BindCloudResource(BindCloudResourceRequest req)
+        {
+             JsonResponseModel<BindCloudResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindCloudResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindCloudResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a key with a Tencent Cloud resource. If the key has been set to be expired automatically, the setting will be canceled to ensure that the key will not be invalid automatically. If the key and the resource has already been bound, the call will still be successful.
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudResourceRequest"/></param>
+        /// <returns><see cref="BindCloudResourceResponse"/></returns>
+        public BindCloudResourceResponse BindCloudResourceSync(BindCloudResourceRequest req)
+        {
+             JsonResponseModel<BindCloudResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindCloudResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindCloudResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Cancel the scheduled deletion of CMK
         /// </summary>
         /// <param name="req"><see cref="CancelKeyDeletionRequest"/></param>
@@ -1646,6 +1686,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "ScheduleKeyDeletion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScheduleKeyDeletionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a key with a Tencent Cloud resource, indicating that the Tencent Cloud resource will not use the key any longer.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCloudResourceRequest"/></param>
+        /// <returns><see cref="UnbindCloudResourceResponse"/></returns>
+        public async Task<UnbindCloudResourceResponse> UnbindCloudResource(UnbindCloudResourceRequest req)
+        {
+             JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindCloudResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCloudResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a key with a Tencent Cloud resource, indicating that the Tencent Cloud resource will not use the key any longer.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCloudResourceRequest"/></param>
+        /// <returns><see cref="UnbindCloudResourceResponse"/></returns>
+        public UnbindCloudResourceResponse UnbindCloudResourceSync(UnbindCloudResourceRequest req)
+        {
+             JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindCloudResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCloudResourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

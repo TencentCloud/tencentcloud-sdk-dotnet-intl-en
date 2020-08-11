@@ -37,7 +37,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// Resource description in six-piece format.
+        /// [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }

@@ -261,8 +261,9 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.cancel_mix_stream` API.
+        /// This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.start_mix_stream_advanced` API.
         /// Note: currently, up to 16 streams can be mixed.
+        /// Best practice: https://cloud.tencent.com/document/product/267/45566
         /// </summary>
         /// <param name="req"><see cref="CreateCommonMixStreamRequest"/></param>
         /// <returns><see cref="CreateCommonMixStreamResponse"/></returns>
@@ -282,8 +283,9 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.cancel_mix_stream` API.
+        /// This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.start_mix_stream_advanced` API.
         /// Note: currently, up to 16 streams can be mixed.
+        /// Best practice: https://cloud.tencent.com/document/product/267/45566
         /// </summary>
         /// <param name="req"><see cref="CreateCommonMixStreamRequest"/></param>
         /// <returns><see cref="CreateCommonMixStreamResponse"/></returns>
@@ -1529,6 +1531,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to query the billable bandwidth of live stream relaying in the last 3 months. The query period is up to 31 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliverBandwidthListRequest"/></param>
+        /// <returns><see cref="DescribeDeliverBandwidthListResponse"/></returns>
+        public async Task<DescribeDeliverBandwidthListResponse> DescribeDeliverBandwidthList(DescribeDeliverBandwidthListRequest req)
+        {
+             JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeliverBandwidthList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliverBandwidthListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the billable bandwidth of live stream relaying in the last 3 months. The query period is up to 31 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliverBandwidthListRequest"/></param>
+        /// <returns><see cref="DescribeDeliverBandwidthListResponse"/></returns>
+        public DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthListSync(DescribeDeliverBandwidthListRequest req)
+        {
+             JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeliverBandwidthList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliverBandwidthListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the downstream playback data by district and ISP.
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupProIspPlayInfoListRequest"/></param>
@@ -2415,7 +2457,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to return the live stream list.
+        /// This API is used to return a list of live streams. It queries the information of live streams after they are pushed successfully.
+        /// Note: this API can query up to 20,000 streams. If you want to query more than 20,000 streams, please contact after-sales service.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveStreamOnlineListRequest"/></param>
         /// <returns><see cref="DescribeLiveStreamOnlineListResponse"/></returns>
@@ -2435,7 +2478,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to return the live stream list.
+        /// This API is used to return a list of live streams. It queries the information of live streams after they are pushed successfully.
+        /// Note: this API can query up to 20,000 streams. If you want to query more than 20,000 streams, please contact after-sales service.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveStreamOnlineListRequest"/></param>
         /// <returns><see cref="DescribeLiveStreamOnlineListResponse"/></returns>

@@ -473,6 +473,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to create a VIP exclusive to a TencentDB read-only instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoInstanceIpRequest"/></param>
+        /// <returns><see cref="CreateRoInstanceIpResponse"/></returns>
+        public async Task<CreateRoInstanceIpResponse> CreateRoInstanceIp(CreateRoInstanceIpRequest req)
+        {
+             JsonResponseModel<CreateRoInstanceIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRoInstanceIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoInstanceIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a VIP exclusive to a TencentDB read-only instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoInstanceIpRequest"/></param>
+        /// <returns><see cref="CreateRoInstanceIpResponse"/></returns>
+        public CreateRoInstanceIpResponse CreateRoInstanceIpSync(CreateRoInstanceIpRequest req)
+        {
+             JsonResponseModel<CreateRoInstanceIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRoInstanceIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoInstanceIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DeleteAccounts) is used to delete TencentDB accounts.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>

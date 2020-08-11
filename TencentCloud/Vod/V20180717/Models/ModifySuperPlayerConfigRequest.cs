@@ -63,13 +63,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public ResolutionNameInfo[] ResolutionNames{ get; set; }
 
         /// <summary>
-        /// 
+        /// Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scheme used for playback. Valid values:
+        /// <li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+        /// <li>HTTP;</li>
+        /// <li>HTTPS.</li>
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }

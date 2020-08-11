@@ -257,6 +257,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to create a CLB exclusive logset for storing CLB logs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClsLogSetRequest"/></param>
+        /// <returns><see cref="CreateClsLogSetResponse"/></returns>
+        public async Task<CreateClsLogSetResponse> CreateClsLogSet(CreateClsLogSetRequest req)
+        {
+             JsonResponseModel<CreateClsLogSetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClsLogSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClsLogSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a CLB exclusive logset for storing CLB logs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClsLogSetRequest"/></param>
+        /// <returns><see cref="CreateClsLogSetResponse"/></returns>
+        public CreateClsLogSetResponse CreateClsLogSetSync(CreateClsLogSetRequest req)
+        {
+             JsonResponseModel<CreateClsLogSetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateClsLogSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClsLogSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a listener for a CLB instance.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
@@ -456,6 +496,46 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "CreateTargetGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTargetGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a topic with the full-text index and key-value index enabled by default. The creation will fail if there is no CLB exclusive logset.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTopicRequest"/></param>
+        /// <returns><see cref="CreateTopicResponse"/></returns>
+        public async Task<CreateTopicResponse> CreateTopic(CreateTopicRequest req)
+        {
+             JsonResponseModel<CreateTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a topic with the full-text index and key-value index enabled by default. The creation will fail if there is no CLB exclusive logset.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTopicRequest"/></param>
+        /// <returns><see cref="CreateTopicResponse"/></returns>
+        public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
+        {
+             JsonResponseModel<CreateTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1110,6 +1190,46 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClassicalLBTargets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the CLB exclusive logset of a user.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
+        /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
+        public async Task<DescribeClsLogSetResponse> DescribeClsLogSet(DescribeClsLogSetRequest req)
+        {
+             JsonResponseModel<DescribeClsLogSetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClsLogSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClsLogSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the CLB exclusive logset of a user.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
+        /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
+        public DescribeClsLogSetResponse DescribeClsLogSetSync(DescribeClsLogSetRequest req)
+        {
+             JsonResponseModel<DescribeClsLogSetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClsLogSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClsLogSetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

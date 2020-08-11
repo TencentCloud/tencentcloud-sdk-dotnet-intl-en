@@ -1093,6 +1093,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceWindowResponse"/></returns>
+        public async Task<DescribeMaintenanceWindowResponse> DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req)
+        {
+             JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMaintenanceWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaintenanceWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceWindowResponse"/></returns>
+        public DescribeMaintenanceWindowResponse DescribeMaintenanceWindowSync(DescribeMaintenanceWindowRequest req)
+        {
+             JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMaintenanceWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaintenanceWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the allowlist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
         /// </summary>
         /// <param name="req"><see cref="DescribeProductInfoRequest"/></param>
@@ -1813,6 +1853,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to modify instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business. Note: if the compatible version upgrade or architecture upgrade task has been initiated for an instance, its maintenance window cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceWindowResponse"/></returns>
+        public async Task<ModifyMaintenanceWindowResponse> ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req)
+        {
+             JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMaintenanceWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMaintenanceWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business. Note: if the compatible version upgrade or architecture upgrade task has been initiated for an instance, its maintenance window cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceWindowResponse"/></returns>
+        public ModifyMaintenanceWindowResponse ModifyMaintenanceWindowSync(ModifyMaintenanceWindowRequest req)
+        {
+             JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMaintenanceWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMaintenanceWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the network configuration of an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkConfigRequest"/></param>
@@ -2084,6 +2164,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "UpgradeInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade compatible instance version (for example, from Redis 2.8 to 4.0), or upgrade instance architecture (for example, from standard architecture to cluster architecture).
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>
+        public async Task<UpgradeInstanceVersionResponse> UpgradeInstanceVersion(UpgradeInstanceVersionRequest req)
+        {
+             JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeInstanceVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade compatible instance version (for example, from Redis 2.8 to 4.0), or upgrade instance architecture (for example, from standard architecture to cluster architecture).
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>
+        public UpgradeInstanceVersionResponse UpgradeInstanceVersionSync(UpgradeInstanceVersionRequest req)
+        {
+             JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeInstanceVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

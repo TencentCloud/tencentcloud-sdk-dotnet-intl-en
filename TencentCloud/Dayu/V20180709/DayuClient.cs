@@ -653,6 +653,46 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// This API is used to batch upload Layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL7RulesUploadRequest"/></param>
+        /// <returns><see cref="CreateNewL7RulesUploadResponse"/></returns>
+        public async Task<CreateNewL7RulesUploadResponse> CreateNewL7RulesUpload(CreateNewL7RulesUploadRequest req)
+        {
+             JsonResponseModel<CreateNewL7RulesUploadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNewL7RulesUpload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL7RulesUploadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch upload Layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL7RulesUploadRequest"/></param>
+        /// <returns><see cref="CreateNewL7RulesUploadResponse"/></returns>
+        public CreateNewL7RulesUploadResponse CreateNewL7RulesUploadSync(CreateNewL7RulesUploadRequest req)
+        {
+             JsonResponseModel<CreateNewL7RulesUploadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNewL7RulesUpload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL7RulesUploadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unblock an IP.
         /// </summary>
         /// <param name="req"><see cref="CreateUnblockIpRequest"/></param>

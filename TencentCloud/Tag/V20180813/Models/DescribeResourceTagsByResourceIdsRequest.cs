@@ -43,7 +43,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// The resource’s region.
+        /// The resource's region.
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }

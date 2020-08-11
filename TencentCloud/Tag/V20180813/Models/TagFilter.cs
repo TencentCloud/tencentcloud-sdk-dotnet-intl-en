@@ -31,7 +31,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Tag value array. “**OR**” relation if multiple values.
+        /// Tag value array. '**OR**' relation if multiple values.
         /// </summary>
         [JsonProperty("TagValue")]
         public string[] TagValue{ get; set; }

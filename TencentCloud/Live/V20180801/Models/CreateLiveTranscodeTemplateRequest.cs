@@ -64,6 +64,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Width. Default value: 0.
+        /// Value range: [0-3000].
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -82,6 +83,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Height. Default value: 0.
+        /// Value range: [0-3000].
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

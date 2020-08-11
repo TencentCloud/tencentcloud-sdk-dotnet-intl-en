@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
+        /// Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
+        /// Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
+        /// Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
+        /// Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public ulong? ReplicateSetNum{ get; set; }
@@ -121,25 +121,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public ulong? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Primary instance ID. It is required for read-only and disaster recovery instances.
         /// </summary>
         [JsonProperty("Father")]
         public string Father{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security group.
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }

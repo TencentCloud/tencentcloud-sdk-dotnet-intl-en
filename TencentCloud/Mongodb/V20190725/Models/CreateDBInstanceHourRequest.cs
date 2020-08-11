@@ -109,19 +109,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Parent instance ID. It is required if the `Clone` is 3 or 4.
         /// </summary>
         [JsonProperty("Father")]
         public string Father{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security group.
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }

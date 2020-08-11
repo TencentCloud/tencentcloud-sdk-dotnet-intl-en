@@ -31,7 +31,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string DetectedText{ get; set; }
 
         /// <summary>
-        /// Confidence. Value range: 0–100
+        /// Confidence. Value range: 0-100
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }

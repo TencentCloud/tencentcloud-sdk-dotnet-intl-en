@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.34</VersionPrefix>
+    <VersionPrefix>3.0.35</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -711,6 +711,8 @@
     <Compile Include="Cdb\V20170320\Models\CreateDeployGroupResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateParamTemplateRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateParamTemplateResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateRoInstanceIpRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateRoInstanceIpResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DBSwitchInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabaseNameInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabasePrivilege.cs" />
@@ -1263,6 +1265,8 @@
     <Compile Include="Clb\V20180317\Models\ClassicalTarget.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTargetInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ClusterItem.cs" />
+    <Compile Include="Clb\V20180317\Models\CreateClsLogSetRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\CreateClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateListenerRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateLoadBalancerRequest.cs" />
@@ -1273,6 +1277,8 @@
     <Compile Include="Clb\V20180317\Models\CreateRuleResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateTargetGroupRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateTargetGroupResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\CreateTopicRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\CreateTopicResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteListenerRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteLoadBalancerListenersRequest.cs" />
@@ -1305,6 +1311,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBTargetsRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBTargetsResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeClsLogSetRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
@@ -1666,6 +1674,8 @@
     <Compile Include="Dayu\V20180709\Models\CreateL7RulesUploadResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateNetReturnRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateNetReturnResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\CreateNewL7RulesUploadRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\CreateNewL7RulesUploadResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateUnblockIpRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateUnblockIpResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DDoSAlarmThreshold.cs" />
@@ -2555,6 +2565,8 @@
     <Compile Include="Kms\V20190118\Models\AsymmetricRsaDecryptResponse.cs" />
     <Compile Include="Kms\V20190118\Models\AsymmetricSm2DecryptRequest.cs" />
     <Compile Include="Kms\V20190118\Models\AsymmetricSm2DecryptResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\BindCloudResourceRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\BindCloudResourceResponse.cs" />
     <Compile Include="Kms\V20190118\Models\CancelKeyDeletionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\CancelKeyDeletionResponse.cs" />
     <Compile Include="Kms\V20190118\Models\CreateKeyRequest.cs" />
@@ -2635,6 +2647,8 @@
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionResponse.cs" />
     <Compile Include="Kms\V20190118\Models\Tag.cs" />
+    <Compile Include="Kms\V20190118\Models\UnbindCloudResourceRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\UnbindCloudResourceResponse.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateAliasRequest.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateAliasResponse.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionRequest.cs" />
@@ -2647,6 +2661,7 @@
     <Compile Include="Live\V20180801\Models\AddLiveDomainResponse.cs" />
     <Compile Include="Live\V20180801\Models\AddLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\AddLiveWatermarkResponse.cs" />
+    <Compile Include="Live\V20180801\Models\BandwidthInfo.cs" />
     <Compile Include="Live\V20180801\Models\BillDataInfo.cs" />
     <Compile Include="Live\V20180801\Models\BindLiveDomainCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\BindLiveDomainCertResponse.cs" />
@@ -2725,6 +2740,8 @@
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeConcurrentRecordStreamNumRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeConcurrentRecordStreamNumResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeDeliverBandwidthListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeDeliverBandwidthListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeGroupProIspPlayInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeGroupProIspPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeHttpStatusInfoListRequest.cs" />
@@ -3550,6 +3567,8 @@
     <Compile Include="Ocr\V20181119\Models\Coord.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralBasicOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralBasicOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\HKIDCardOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\HKIDCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\ItemCoord.cs" />
     <Compile Include="Ocr\V20181119\Models\MLIDCardOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\MLIDCardOCRResponse.cs" />
@@ -3730,6 +3749,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeInstanceShardsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupRequest.cs" />
@@ -3781,6 +3802,8 @@
     <Compile Include="Redis\V20180412\Models\ModifyInstanceParamsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyMaintenanceWindowRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyMaintenanceWindowResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigResponse.cs" />
     <Compile Include="Redis\V20180412\Models\Outbound.cs" />
@@ -3806,6 +3829,8 @@
     <Compile Include="Redis\V20180412\Models\TradeDealDetail.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\UpgradeInstanceVersionRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\UpgradeInstanceVersionResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ZoneCapacityConf.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
@@ -4090,6 +4115,8 @@
     <Compile Include="Tag\V20180813\TagClient.cs" />
     <Compile Include="Tag\V20180813\Models\AddResourceTagRequest.cs" />
     <Compile Include="Tag\V20180813\Models\AddResourceTagResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\AttachResourcesTagRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\AttachResourcesTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\CreateTagRequest.cs" />
     <Compile Include="Tag\V20180813\Models\CreateTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DeleteResourceTagRequest.cs" />
@@ -4098,20 +4125,32 @@
     <Compile Include="Tag\V20180813\Models\DeleteTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsSeqRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsSeqResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByTagKeysRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByTagKeysResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsUnionRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsUnionResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagKeysRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagKeysResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagValuesRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagValuesResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagValuesSeqRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagValuesSeqResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagsSeqRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagsSeqResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DetachResourcesTagRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DetachResourcesTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\ModifyResourceTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\ModifyResourceTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\ModifyResourcesTagValueRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\ModifyResourcesTagValueResponse.cs" />
     <Compile Include="Tag\V20180813\Models\ResourceIdTag.cs" />
     <Compile Include="Tag\V20180813\Models\ResourceTag.cs" />
     <Compile Include="Tag\V20180813\Models\Tag.cs" />

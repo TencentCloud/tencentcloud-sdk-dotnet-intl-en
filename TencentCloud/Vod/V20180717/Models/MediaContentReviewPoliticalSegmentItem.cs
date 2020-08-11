@@ -67,7 +67,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>bureau_politician: ministry leader;</li>
         /// <li>county_politician: county/city leader;</li>
         /// <li>rural_politician: town leader;</li>
-        /// <li>sensitive_politician: politically sensitive figure.</li>
+        /// <li>sensitive_politician: politically sensitive figure;</li>
+        /// <li>foreign_politician: head of a foreign country/government.</li>
         /// entertainment:
         /// <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
         /// sport:
@@ -77,7 +78,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// scholar:
         /// <li>sensitive_scholar: sensitive educator.</li>
         /// celebrity:
-        /// <li>sensitive_celebrity: sensitive well-known figure.</li>
+        /// <li>sensitive_celebrity: sensitive well-known figure;</li>
+        /// <li>historical_celebrity: well-known historical figures.</li>
         /// military:
         /// <li>sensitive_military: militarily sensitive figure.</li>
         /// </summary>

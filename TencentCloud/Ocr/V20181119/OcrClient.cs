@@ -253,6 +253,48 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. It can check for card authenticity and crop the identity photo.
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+        /// </summary>
+        /// <param name="req"><see cref="HKIDCardOCRRequest"/></param>
+        /// <returns><see cref="HKIDCardOCRResponse"/></returns>
+        public async Task<HKIDCardOCRResponse> HKIDCardOCR(HKIDCardOCRRequest req)
+        {
+             JsonResponseModel<HKIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "HKIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HKIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. It can check for card authenticity and crop the identity photo.
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+        /// </summary>
+        /// <param name="req"><see cref="HKIDCardOCRRequest"/></param>
+        /// <returns><see cref="HKIDCardOCRResponse"/></returns>
+        public HKIDCardOCRResponse HKIDCardOCRSync(HKIDCardOCRRequest req)
+        {
+             JsonResponseModel<HKIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "HKIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HKIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to recognize a Malaysian identity card. Recognizable fields include identity card number, name, gender, and address. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
         /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
         /// </summary>

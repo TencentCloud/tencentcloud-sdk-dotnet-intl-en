@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
-        /// For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+        /// For more information about supported extensions, please see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
@@ -56,7 +56,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Specifies upload region. This is only applicable to users that have special requirements for the upload region (currently, only Beijing, Shanghai, and Chongqing regions are supported).
+        /// Specifies upload region. This is only applicable to users that have special requirements for the upload region:
+        /// <li>If it is left empty, the upload region is your [default region](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4);</li>
+        /// <li>If it is specified, please make sure that the upload region has been [enabled for storage](https://cloud.tencent.com/document/product/266/14059?from=11329#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
@@ -92,7 +94,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
+        /// Source context, which is used to pass through the user request information. The [upload callback](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) API will return the value of this field. It can contain up to 250 characters.
         /// </summary>
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
