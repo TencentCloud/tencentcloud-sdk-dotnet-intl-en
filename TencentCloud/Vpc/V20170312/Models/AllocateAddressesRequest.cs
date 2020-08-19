@@ -41,7 +41,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// The EIP billing method.
-        /// <ul style="margin:0"><li>For a user who has activated bandwidth billing by IP allowlist, possible values are:<ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://cloud.tencent.com/document/product/684/15255) (The bandwidth sharing allowlist must be activated additionally.)</li>
+        /// <ul style="margin:0"><li>For a user who has activated bandwidth billing by IP allowlist, possible values are:<ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://intl.cloud.tencent.com/document/product/684/15255?from_cn_redirect=1) (The bandwidth sharing allowlist must be activated additionally.)</li>
         /// <li>BANDWIDTH_POSTPAID_BY_HOUR: bandwidth postpaid by hour</li>
         /// <li>TRAFFIC_POSTPAID_BY_HOUR: traffic postpaid by hour</li></ul>Default: TRAFFIC_POSTPAID_BY_HOUR</li>.
         /// <li>For users who do not use bill-by-bandwidth billing mode, InternetChargeType is consistent with that of the instance bound to the EIP. Therefore, it is unnecessary to pass in this parameter.</li></ul>
@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// The EIP type. Default: EIP.
-        /// <ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://cloud.tencent.com/document/product/644).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+        /// <ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }

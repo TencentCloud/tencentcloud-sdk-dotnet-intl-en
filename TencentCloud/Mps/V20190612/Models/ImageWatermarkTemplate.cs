@@ -40,8 +40,8 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Watermark height. % and px formats are supported:
-        /// <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
-        /// <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px;</li>
+        /// <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
+        /// <li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels.</li>
         /// `0px` means that `Height` will be proportionally scaled according to the video width.
         /// </summary>
         [JsonProperty("Height")]

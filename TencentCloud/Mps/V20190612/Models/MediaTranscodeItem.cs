@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Path{ get; set; }
 
         /// <summary>
-        /// Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+        /// Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

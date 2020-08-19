@@ -32,11 +32,12 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
-        /// <li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
-        /// <li>havip-name - String - `HAVIP` name.</li>
-        /// <li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
-        /// <li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
-        /// <li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+        /// li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li>
+        /// <li>havip-name - String - HAVIP name.</li>
+        /// <li>vpc-id - String - VPC ID of the HAVIP.</li>
+        /// <li>subnet-id - String - Subnet ID of the HAVIP.</li>
+        /// <li>vip - String - Virtual IP address of the HAVIP.</li>
+        /// <li>address-ip - String - Bound EIP.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

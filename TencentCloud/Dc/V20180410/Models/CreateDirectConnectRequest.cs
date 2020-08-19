@@ -44,12 +44,6 @@ namespace TencentCloud.Dc.V20180410.Models
         public string LineOperator{ get; set; }
 
         /// <summary>
-        /// Local IDC location.
-        /// </summary>
-        [JsonProperty("Location")]
-        public string Location{ get; set; }
-
-        /// <summary>
         /// Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
         /// </summary>
         [JsonProperty("PortType")]
@@ -60,6 +54,12 @@ namespace TencentCloud.Dc.V20180410.Models
         /// </summary>
         [JsonProperty("CircuitCode")]
         public string CircuitCode{ get; set; }
+
+        /// <summary>
+        /// Local IDC location.
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
 
         /// <summary>
         /// Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
@@ -121,6 +121,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("FaultReportContactNumber")]
         public string FaultReportContactNumber{ get; set; }
 
+        /// <summary>
+        /// Whether the connection applicant has signed the service agreement. Default value: true.
+        /// </summary>
+        [JsonProperty("SignLaw")]
+        public bool? SignLaw{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,9 +136,9 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "DirectConnectName", this.DirectConnectName);
             this.SetParamSimple(map, prefix + "AccessPointId", this.AccessPointId);
             this.SetParamSimple(map, prefix + "LineOperator", this.LineOperator);
-            this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "PortType", this.PortType);
             this.SetParamSimple(map, prefix + "CircuitCode", this.CircuitCode);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "RedundantDirectConnectId", this.RedundantDirectConnectId);
             this.SetParamSimple(map, prefix + "Vlan", this.Vlan);
@@ -143,6 +149,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
             this.SetParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+            this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
         }
     }
 }

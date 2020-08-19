@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? JoinTs{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the user exits the room. If the user is still in the room, the current time will be returned
         /// </summary>
         [JsonProperty("LeaveTs")]
         public ulong? LeaveTs{ get; set; }

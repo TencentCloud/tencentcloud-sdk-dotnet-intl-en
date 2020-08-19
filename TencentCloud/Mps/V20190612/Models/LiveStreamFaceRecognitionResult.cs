@@ -56,7 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Confidence of recognized segment. Value range: 0-100.
+        /// Confidence of recognized segment. Value range: 0–100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

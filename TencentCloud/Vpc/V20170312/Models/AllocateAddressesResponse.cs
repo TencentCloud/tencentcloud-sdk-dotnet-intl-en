@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] AddressSet{ get; set; }
 
         /// <summary>
-        /// The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+        /// The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

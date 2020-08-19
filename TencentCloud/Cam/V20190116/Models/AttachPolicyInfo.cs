@@ -65,7 +65,8 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 
+        /// Root account of the operator associating the policy
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OperateOwnerUin")]
         public string OperateOwnerUin{ get; set; }

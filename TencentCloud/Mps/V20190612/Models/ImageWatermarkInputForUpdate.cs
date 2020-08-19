@@ -32,17 +32,17 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Watermark width. % and px formats are supported:
-        /// <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
-        /// <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
+        /// <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width. For example, `10%` means that `Width` is 10% of the video width;</li>
+        /// <li>If the string ends in px, the `Width` of the watermark will be in pixels. For example, `100px` means that `Width` is 100 pixels. Value range: [8, 4096].</li>
         /// </summary>
         [JsonProperty("Width")]
         public string Width{ get; set; }
 
         /// <summary>
         /// Watermark height. % and px formats are supported:
-        /// <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
-        /// <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
-        /// `0px` means that `Height` will be proportionally scaled according to the video width.
+        /// <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
+        /// <li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels. Value range: 0 or [8, 4096].</li>
+        /// Default value: 0px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }

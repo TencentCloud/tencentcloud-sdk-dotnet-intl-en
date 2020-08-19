@@ -1053,6 +1053,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to modify the backup policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupStrategyRequest"/></param>
+        /// <returns><see cref="ModifyBackupStrategyResponse"/></returns>
+        public async Task<ModifyBackupStrategyResponse> ModifyBackupStrategy(ModifyBackupStrategyRequest req)
+        {
+             JsonResponseModel<ModifyBackupStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the backup policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupStrategyRequest"/></param>
+        /// <returns><see cref="ModifyBackupStrategyResponse"/></returns>
+        public ModifyBackupStrategyResponse ModifyBackupStrategySync(ModifyBackupStrategyRequest req)
+        {
+             JsonResponseModel<ModifyBackupStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to rename an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>

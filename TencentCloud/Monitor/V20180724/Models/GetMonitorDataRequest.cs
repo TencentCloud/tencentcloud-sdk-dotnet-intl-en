@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Namespace. Each Tencent Cloud product has a namespace
+        /// Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
+        /// Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

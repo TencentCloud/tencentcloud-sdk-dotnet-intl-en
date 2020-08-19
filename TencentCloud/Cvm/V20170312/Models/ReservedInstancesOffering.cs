@@ -26,7 +26,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-        /// Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+        /// Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -54,7 +54,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// The instance model of the Reserved Instance, such as S3.MEDIUM4.
-        /// Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+        /// Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

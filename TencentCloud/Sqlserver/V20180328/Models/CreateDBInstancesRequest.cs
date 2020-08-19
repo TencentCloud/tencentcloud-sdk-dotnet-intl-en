@@ -103,37 +103,37 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security group list, which contains security group IDs in the format of sg-xxx.
         /// </summary>
         [JsonProperty("SecurityGroupList")]
         public string[] SecurityGroupList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
         /// </summary>
         [JsonProperty("Weekly")]
         public long?[] Weekly{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of the maintenance window, which specifies the start time of daily maintenance.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of the maintenance window, which specifies the maintenance duration in hours.
         /// </summary>
         [JsonProperty("Span")]
         public long? Span{ get; set; }
 
         /// <summary>
-        /// 
+        /// The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
         /// </summary>
         [JsonProperty("HAType")]
         public string HAType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to deploy across availability zones. Default value: false.
         /// </summary>
         [JsonProperty("MultiZones")]
         public bool? MultiZones{ get; set; }

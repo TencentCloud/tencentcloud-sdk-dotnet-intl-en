@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceDesc{ get; set; }
 
         /// <summary>
-        /// Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+        /// Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
         /// </summary>
         [JsonProperty("ExclusiveSetName")]
         public string ExclusiveSetName{ get; set; }

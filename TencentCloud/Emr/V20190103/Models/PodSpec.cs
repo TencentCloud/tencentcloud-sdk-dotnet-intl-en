@@ -25,37 +25,37 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 
+        /// Identifier of external resource provider, such as "cls-a1cd23fa".
         /// </summary>
         [JsonProperty("ResourceProviderIdentifier")]
         public string ResourceProviderIdentifier{ get; set; }
 
         /// <summary>
-        /// 
+        /// Type of external resource provider, such as "tke". Currently, only "tke" is supported.
         /// </summary>
         [JsonProperty("ResourceProviderType")]
         public string ResourceProviderType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Purpose of the resource, i.e., node type, which currently can only be "TASK".
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// Memory size in GB.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
         /// </summary>
         [JsonProperty("DataVolumes")]
         public string[] DataVolumes{ get; set; }

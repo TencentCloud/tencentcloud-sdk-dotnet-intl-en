@@ -45,7 +45,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource type list
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HardwareResourceTypeList")]
         public string[] HardwareResourceTypeList{ get; set; }

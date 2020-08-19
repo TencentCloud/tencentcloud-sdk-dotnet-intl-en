@@ -144,7 +144,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public DescribePolicyGroupListGroupInstanceGroup InstanceGroup{ get; set; }
 
         /// <summary>
-        /// The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
+        /// The 'AND' or 'OR' rule. The value 0 indicates the 'OR' rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the 'AND' rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("IsUnionRule")]

@@ -126,7 +126,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public bool? CanSetDefault{ get; set; }
 
         /// <summary>
-        /// Whether the “AND” rule is used.
+        /// Whether the 'AND' rule is used.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("IsUnionRule")]

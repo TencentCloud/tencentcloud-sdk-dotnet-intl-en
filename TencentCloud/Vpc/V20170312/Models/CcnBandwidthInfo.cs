@@ -60,7 +60,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// The information of bandwidth regions and bandwidth caps.
+        /// The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("CcnRegionBandwidthLimit")]

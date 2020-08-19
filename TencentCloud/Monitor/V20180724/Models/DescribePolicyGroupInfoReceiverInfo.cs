@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] ReceiverUserList{ get; set; }
 
         /// <summary>
-        /// Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
+        /// Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }

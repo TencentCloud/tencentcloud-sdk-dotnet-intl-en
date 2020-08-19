@@ -43,7 +43,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 
+        /// The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

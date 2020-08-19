@@ -25,25 +25,25 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// On-Cloud MixTranscoding layout template ID. 0: floating template (default value); 1: 9-grid template; 2: screen sharing template
+        /// On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
         /// </summary>
         [JsonProperty("Template")]
         public ulong? Template{ get; set; }
 
         /// <summary>
-        /// ID of the user in the big image on the left, which takes effect in the screen sharing template
+        /// ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
         /// </summary>
         [JsonProperty("MainVideoUserId")]
         public string MainVideoUserId{ get; set; }
 
         /// <summary>
-        /// Stream type of the big image on the left, which takes effect in the screen sharing template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter
+        /// Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
         /// </summary>
         [JsonProperty("MainVideoStreamType")]
         public ulong? MainVideoStreamType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Layout parameter of the small image, which takes effect in a picture-in-picture template.
         /// </summary>
         [JsonProperty("SmallVideoLayoutParams")]
         public SmallVideoLayoutParams SmallVideoLayoutParams{ get; set; }

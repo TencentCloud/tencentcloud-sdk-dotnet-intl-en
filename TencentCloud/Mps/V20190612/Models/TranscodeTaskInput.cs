@@ -57,7 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Path to a master output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
+        /// Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.39</VersionPrefix>
+    <VersionPrefix>3.0.40</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -520,12 +520,16 @@
     <Compile Include="Cam\V20190116\Models\DeletePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyVersionRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyVersionResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteRolePermissionsBoundaryRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteRolePermissionsBoundaryResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteRoleRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteServiceLinkedRoleRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteServiceLinkedRoleResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteUserPermissionsBoundaryRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteUserPermissionsBoundaryResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListRequest.cs" />
@@ -584,6 +588,10 @@
     <Compile Include="Cam\V20190116\Models\LoginActionMfaFlag.cs" />
     <Compile Include="Cam\V20190116\Models\PolicyVersionDetail.cs" />
     <Compile Include="Cam\V20190116\Models\PolicyVersionItem.cs" />
+    <Compile Include="Cam\V20190116\Models\PutRolePermissionsBoundaryRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\PutRolePermissionsBoundaryResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\PutUserPermissionsBoundaryRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\PutUserPermissionsBoundaryResponse.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\RoleInfo.cs" />
@@ -2201,6 +2209,8 @@
     <Compile Include="Es\V20180416\Models\TaskDetail.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\UpdatePluginsRequest.cs" />
+    <Compile Include="Es\V20180416\Models\UpdatePluginsResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpgradeLicenseRequest.cs" />
@@ -3082,12 +3092,16 @@
     <Compile Include="Mongodb\V20190725\Models\BackupFile.cs" />
     <Compile Include="Mongodb\V20190725\Models\BackupInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\ClientConnection.cs" />
+    <Compile Include="Mongodb\V20190725\Models\CreateBackupDBInstanceRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\CreateBackupDBInstanceResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceHourRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceHourResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DBInstanceInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\DBInstancePrice.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeAsyncRequestInfoRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeBackupAccessRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeBackupAccessResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeClientConnectionsRequest.cs" />
@@ -3124,6 +3138,8 @@
     <Compile Include="Mongodb\V20190725\Models\RenameInstanceResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\RenewDBInstancesRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\RenewDBInstancesResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\ResetDBInstancePasswordRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\ResetDBInstancePasswordResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\ShardInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\SlowLogPattern.cs" />
     <Compile Include="Mongodb\V20190725\Models\SpecItem.cs" />
@@ -4040,6 +4056,8 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountPrivilegeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyBackupStrategyRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyBackupStrategyResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceProjectRequest.cs" />

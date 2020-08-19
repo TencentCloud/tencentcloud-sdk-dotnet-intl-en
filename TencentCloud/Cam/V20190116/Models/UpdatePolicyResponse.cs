@@ -25,8 +25,8 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// Policy ID
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Policy ID, which will be returned only if the input parameter is `PolicyName`
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }

@@ -47,7 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Start time in the creation time range.
         /// <li>After or at the start time.</li>
-        /// <li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+        /// <li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// End time in the creation time range.
         /// <li>Before the end time.</li>
-        /// <li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+        /// <li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
+        /// Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
+        /// [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
@@ -110,7 +110,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Categories{ get; set; }
 
         /// <summary>
-        /// [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+        /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

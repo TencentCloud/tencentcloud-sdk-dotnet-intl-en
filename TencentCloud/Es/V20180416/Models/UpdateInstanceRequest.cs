@@ -151,7 +151,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? KibanaPrivatePort{ get; set; }
 
         /// <summary>
-        /// 
+        /// 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
         /// </summary>
         [JsonProperty("ScaleType")]
         public long? ScaleType{ get; set; }

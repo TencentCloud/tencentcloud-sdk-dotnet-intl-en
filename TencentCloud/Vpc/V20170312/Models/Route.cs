@@ -53,7 +53,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// The ID of the routing policy.
+        /// Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
         /// </summary>
         [JsonProperty("RouteId")]
         public ulong? RouteId{ get; set; }

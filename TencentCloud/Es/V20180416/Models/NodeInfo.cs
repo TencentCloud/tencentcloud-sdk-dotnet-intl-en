@@ -71,7 +71,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? DiskCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to encrypt node disk. 0: no (default); 1: yes.
         /// </summary>
         [JsonProperty("DiskEncrypt")]
         public ulong? DiskEncrypt{ get; set; }

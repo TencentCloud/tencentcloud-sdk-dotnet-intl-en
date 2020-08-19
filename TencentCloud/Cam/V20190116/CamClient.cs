@@ -693,6 +693,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to delete a role permission boundary.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRolePermissionsBoundaryRequest"/></param>
+        /// <returns><see cref="DeleteRolePermissionsBoundaryResponse"/></returns>
+        public async Task<DeleteRolePermissionsBoundaryResponse> DeleteRolePermissionsBoundary(DeleteRolePermissionsBoundaryRequest req)
+        {
+             JsonResponseModel<DeleteRolePermissionsBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRolePermissionsBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRolePermissionsBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a role permission boundary.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRolePermissionsBoundaryRequest"/></param>
+        /// <returns><see cref="DeleteRolePermissionsBoundaryResponse"/></returns>
+        public DeleteRolePermissionsBoundaryResponse DeleteRolePermissionsBoundarySync(DeleteRolePermissionsBoundaryRequest req)
+        {
+             JsonResponseModel<DeleteRolePermissionsBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRolePermissionsBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRolePermissionsBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a SAML identity provider.
         /// </summary>
         /// <param name="req"><see cref="DeleteSAMLProviderRequest"/></param>
@@ -804,6 +844,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DeleteUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a user permission boundary.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserPermissionsBoundaryRequest"/></param>
+        /// <returns><see cref="DeleteUserPermissionsBoundaryResponse"/></returns>
+        public async Task<DeleteUserPermissionsBoundaryResponse> DeleteUserPermissionsBoundary(DeleteUserPermissionsBoundaryRequest req)
+        {
+             JsonResponseModel<DeleteUserPermissionsBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUserPermissionsBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserPermissionsBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a user permission boundary.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserPermissionsBoundaryRequest"/></param>
+        /// <returns><see cref="DeleteUserPermissionsBoundaryResponse"/></returns>
+        public DeleteUserPermissionsBoundaryResponse DeleteUserPermissionsBoundarySync(DeleteUserPermissionsBoundaryRequest req)
+        {
+             JsonResponseModel<DeleteUserPermissionsBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUserPermissionsBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserPermissionsBoundaryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1813,6 +1893,86 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to set a role permission boundary.
+        /// </summary>
+        /// <param name="req"><see cref="PutRolePermissionsBoundaryRequest"/></param>
+        /// <returns><see cref="PutRolePermissionsBoundaryResponse"/></returns>
+        public async Task<PutRolePermissionsBoundaryResponse> PutRolePermissionsBoundary(PutRolePermissionsBoundaryRequest req)
+        {
+             JsonResponseModel<PutRolePermissionsBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutRolePermissionsBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutRolePermissionsBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set a role permission boundary.
+        /// </summary>
+        /// <param name="req"><see cref="PutRolePermissionsBoundaryRequest"/></param>
+        /// <returns><see cref="PutRolePermissionsBoundaryResponse"/></returns>
+        public PutRolePermissionsBoundaryResponse PutRolePermissionsBoundarySync(PutRolePermissionsBoundaryRequest req)
+        {
+             JsonResponseModel<PutRolePermissionsBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutRolePermissionsBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutRolePermissionsBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set a user permission boundary.
+        /// </summary>
+        /// <param name="req"><see cref="PutUserPermissionsBoundaryRequest"/></param>
+        /// <returns><see cref="PutUserPermissionsBoundaryResponse"/></returns>
+        public async Task<PutUserPermissionsBoundaryResponse> PutUserPermissionsBoundary(PutUserPermissionsBoundaryRequest req)
+        {
+             JsonResponseModel<PutUserPermissionsBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutUserPermissionsBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutUserPermissionsBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set a user permission boundary.
+        /// </summary>
+        /// <param name="req"><see cref="PutUserPermissionsBoundaryRequest"/></param>
+        /// <returns><see cref="PutUserPermissionsBoundaryResponse"/></returns>
+        public PutUserPermissionsBoundaryResponse PutUserPermissionsBoundarySync(PutUserPermissionsBoundaryRequest req)
+        {
+             JsonResponseModel<PutUserPermissionsBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutUserPermissionsBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutUserPermissionsBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete users from a user group.
         /// </summary>
         /// <param name="req"><see cref="RemoveUserFromGroupRequest"/></param>
@@ -2055,7 +2215,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API is used to modify a role’s login permissions.
+        /// This API is used to modify a role's login permissions.
         /// </summary>
         /// <param name="req"><see cref="UpdateRoleConsoleLoginRequest"/></param>
         /// <returns><see cref="UpdateRoleConsoleLoginResponse"/></returns>
@@ -2075,7 +2235,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API is used to modify a role’s login permissions.
+        /// This API is used to modify a role's login permissions.
         /// </summary>
         /// <param name="req"><see cref="UpdateRoleConsoleLoginRequest"/></param>
         /// <returns><see cref="UpdateRoleConsoleLoginResponse"/></returns>

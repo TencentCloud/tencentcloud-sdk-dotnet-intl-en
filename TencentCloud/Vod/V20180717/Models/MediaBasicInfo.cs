@@ -39,21 +39,21 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+        /// Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpireTime")]
@@ -109,7 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaSourceData SourceInfo{ get; set; }
 
         /// <summary>
-        /// Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+        /// Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StorageRegion")]

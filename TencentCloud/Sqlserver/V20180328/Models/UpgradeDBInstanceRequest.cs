@@ -55,7 +55,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// The number of CUP cores after the instance is upgraded.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

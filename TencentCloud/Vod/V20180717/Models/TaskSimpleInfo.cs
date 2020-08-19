@@ -46,19 +46,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
+        /// Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+        /// End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

@@ -54,7 +54,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// * This API is used to apply for uploading a media file (and cover file) to VOD and obtain the metadata of file storage (including upload path and upload signature) for subsequent use by the uploading API.
-        /// * For the detailed upload process, please see [Overview of Upload from Client](/document/product/266/9759).
+        /// * For the detailed upload process, please see [Overview of Upload from Client](https://intl.cloud.tencent.com/document/product/266/9759?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ApplyUploadRequest"/></param>
         /// <returns><see cref="ApplyUploadResponse"/></returns>
@@ -75,7 +75,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// * This API is used to apply for uploading a media file (and cover file) to VOD and obtain the metadata of file storage (including upload path and upload signature) for subsequent use by the uploading API.
-        /// * For the detailed upload process, please see [Overview of Upload from Client](/document/product/266/9759).
+        /// * For the detailed upload process, please see [Overview of Upload from Client](https://intl.cloud.tencent.com/document/product/266/9759?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ApplyUploadRequest"/></param>
         /// <returns><see cref="ApplyUploadResponse"/></returns>
@@ -185,7 +185,7 @@ namespace TencentCloud.Vod.V20180717
         /// <summary>
         /// * After the `PullEvents` API is called to get an event, this API must be called to confirm that the message has been received;
         /// * After the event handler is obtained, the validity period of waiting for confirmation is 30 seconds. If the wait exceeds 30 seconds, a parameter error will be reported (4000);
-        /// * For more information, please see the [reliable callback](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) of event notification.
+        /// * For more information, please see the [reliable callback](https://intl.cloud.tencent.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) of event notification.
         /// </summary>
         /// <param name="req"><see cref="ConfirmEventsRequest"/></param>
         /// <returns><see cref="ConfirmEventsResponse"/></returns>
@@ -207,7 +207,7 @@ namespace TencentCloud.Vod.V20180717
         /// <summary>
         /// * After the `PullEvents` API is called to get an event, this API must be called to confirm that the message has been received;
         /// * After the event handler is obtained, the validity period of waiting for confirmation is 30 seconds. If the wait exceeds 30 seconds, a parameter error will be reported (4000);
-        /// * For more information, please see the [reliable callback](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) of event notification.
+        /// * For more information, please see the [reliable callback](https://intl.cloud.tencent.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) of event notification.
         /// </summary>
         /// <param name="req"><see cref="ConfirmEventsRequest"/></param>
         /// <returns><see cref="ConfirmEventsResponse"/></returns>
@@ -388,7 +388,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// * This API is used to categorize media assets for management;
-        /// * It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](/document/product/266/31762) API.
+        /// * It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](https://intl.cloud.tencent.com/document/product/266/31762?from_cn_redirect=1) API.
         /// * There can be up to 4 levels of categories.
         /// * One category can have up to 500 subcategories under it.
         /// </summary>
@@ -411,7 +411,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// * This API is used to categorize media assets for management;
-        /// * It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](/document/product/266/31762) API.
+        /// * It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](https://intl.cloud.tencent.com/document/product/266/31762?from_cn_redirect=1) API.
         /// * There can be up to 4 levels of categories.
         /// * One category can have up to 500 subcategories under it.
         /// </summary>
@@ -1038,7 +1038,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// * A category can be deleted only if it has no subcategories and associated media files;
-        /// * Otherwise, [delete the media files](/document/product/266/31764) and subcategories first before deleting the category.
+        /// * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
         /// </summary>
         /// <param name="req"><see cref="DeleteClassRequest"/></param>
         /// <returns><see cref="DeleteClassResponse"/></returns>
@@ -1059,7 +1059,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// * A category can be deleted only if it has no subcategories and associated media files;
-        /// * Otherwise, [delete the media files](/document/product/266/31764) and subcategories first before deleting the category.
+        /// * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
         /// </summary>
         /// <param name="req"><see cref="DeleteClassRequest"/></param>
         /// <returns><see cref="DeleteClassResponse"/></returns>
@@ -1523,7 +1523,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to get the list of video content analysis templates based on unique template ID. The returned result includes all eligible custom and [preset video content analysis templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF).
+        /// This API is used to get the list of video content analysis templates based on unique template ID. The returned result includes all eligible custom and [preset video content analysis templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeAIAnalysisTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAIAnalysisTemplatesResponse"/></returns>
@@ -1543,7 +1543,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to get the list of video content analysis templates based on unique template ID. The returned result includes all eligible custom and [preset video content analysis templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF).
+        /// This API is used to get the list of video content analysis templates based on unique template ID. The returned result includes all eligible custom and [preset video content analysis templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeAIAnalysisTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAIAnalysisTemplatesResponse"/></returns>
@@ -1563,7 +1563,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to get the list of video content recognition templates based on unique template ID. The return result includes all eligible custom and [preset video content recognition templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF).
+        /// This API is used to get the list of video content recognition templates based on unique template ID. The return result includes all eligible custom and [preset video content recognition templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeAIRecognitionTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAIRecognitionTemplatesResponse"/></returns>
@@ -1583,7 +1583,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to get the list of video content recognition templates based on unique template ID. The return result includes all eligible custom and [preset video content recognition templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF).
+        /// This API is used to get the list of video content recognition templates based on unique template ID. The return result includes all eligible custom and [preset video content recognition templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeAIRecognitionTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAIRecognitionTemplatesResponse"/></returns>
@@ -1771,7 +1771,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to get the list of video content audit templates based on unique template ID. The return result includes all eligible custom and [preset video content audit templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF).
+        /// This API is used to get the list of video content audit templates based on unique template ID. The return result includes all eligible custom and [preset video content audit templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
         /// <returns><see cref="DescribeContentReviewTemplatesResponse"/></returns>
@@ -1791,7 +1791,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to get the list of video content audit templates based on unique template ID. The return result includes all eligible custom and [preset video content audit templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF).
+        /// This API is used to get the list of video content audit templates based on unique template ID. The return result includes all eligible custom and [preset video content audit templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
         /// <returns><see cref="DescribeContentReviewTemplatesResponse"/></returns>
@@ -2415,7 +2415,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+        /// This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeTranscodeTemplatesResponse"/></returns>
@@ -2435,7 +2435,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+        /// This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeTranscodeTemplatesResponse"/></returns>
@@ -2684,7 +2684,7 @@ namespace TencentCloud.Vod.V20180717
         /// - Temporary clipping: in this mode, the clipped video is part of the LVB recording file with no `FileId`, which is suitable for **temporarily sharing** highlights;
         /// 
         /// Note:
-        /// - The live clipping feature can be used only when [time shifting](https://cloud.tencent.com/document/product/267/32742) has been enabled for the target live stream.
+        /// - The live clipping feature can be used only when [time shifting](https://intl.cloud.tencent.com/document/product/267/32742?from_cn_redirect=1) has been enabled for the target live stream.
         /// - Live clipping is performed based on the m3u8 file generated by LVB recording, so its minimum clipping granularity is one ts segment rather than at or below the second level.
         /// 
         /// 
@@ -2727,7 +2727,7 @@ namespace TencentCloud.Vod.V20180717
         /// - Temporary clipping: in this mode, the clipped video is part of the LVB recording file with no `FileId`, which is suitable for **temporarily sharing** highlights;
         /// 
         /// Note:
-        /// - The live clipping feature can be used only when [time shifting](https://cloud.tencent.com/document/product/267/32742) has been enabled for the target live stream.
+        /// - The live clipping feature can be used only when [time shifting](https://intl.cloud.tencent.com/document/product/267/32742?from_cn_redirect=1) has been enabled for the target live stream.
         /// - Live clipping is performed based on the m3u8 file generated by LVB recording, so its minimum clipping granularity is one ts segment rather than at or below the second level.
         /// 
         /// 
@@ -3645,10 +3645,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// * This API is used to get event notifications from the business server through [reliable callback](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83);
+        /// * This API is used to get event notifications from the business server through [reliable callback](https://intl.cloud.tencent.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83);
         /// * The API is in long polling mode, i.e., if there is an unconsumed event on the server, it will be immediately returned to the requester; otherwise, the backend will suspend the request until a new event is generated;
         /// * The request can be suspended for 5 seconds at most. It is recommended that the requester set the timeout period to 10 seconds.
-        /// * If the API returns an event, the caller must call the [ConfirmEvents](https://cloud.tencent.com/document/product/266/33434) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed; otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
+        /// * If the API returns an event, the caller must call the [ConfirmEvents](https://intl.cloud.tencent.com/document/product/266/33434?from_cn_redirect=1) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed; otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
         /// </summary>
         /// <param name="req"><see cref="PullEventsRequest"/></param>
         /// <returns><see cref="PullEventsResponse"/></returns>
@@ -3668,10 +3668,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// * This API is used to get event notifications from the business server through [reliable callback](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83);
+        /// * This API is used to get event notifications from the business server through [reliable callback](https://intl.cloud.tencent.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83);
         /// * The API is in long polling mode, i.e., if there is an unconsumed event on the server, it will be immediately returned to the requester; otherwise, the backend will suspend the request until a new event is generated;
         /// * The request can be suspended for 5 seconds at most. It is recommended that the requester set the timeout period to 10 seconds.
-        /// * If the API returns an event, the caller must call the [ConfirmEvents](https://cloud.tencent.com/document/product/266/33434) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed; otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
+        /// * If the API returns an event, the caller must call the [ConfirmEvents](https://intl.cloud.tencent.com/document/product/266/33434?from_cn_redirect=1) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed; otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
         /// </summary>
         /// <param name="req"><see cref="PullEventsRequest"/></param>
         /// <returns><see cref="PullEventsResponse"/></returns>

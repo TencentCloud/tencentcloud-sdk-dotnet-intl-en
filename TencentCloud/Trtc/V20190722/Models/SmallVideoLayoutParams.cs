@@ -25,37 +25,37 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 
+        /// ID of the user in the small image.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Stream type of the small image. 0: camera; 1: screen sharing. If a web user's stream is displayed in the small image, enter 0 for this parameter.
         /// </summary>
         [JsonProperty("StreamType")]
         public ulong? StreamType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output width of the small image in pixels. If this parameter is left empty, 0 will be used by default.
         /// </summary>
         [JsonProperty("ImageWidth")]
         public ulong? ImageWidth{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output height of the small image in pixels. If this parameter is left empty, 0 will be used by default.
         /// </summary>
         [JsonProperty("ImageHeight")]
         public ulong? ImageHeight{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output X-axis offset of the small image in pixels. The sum of `LocationX` and `ImageWidth` cannot exceed the total width of the output mixed stream. If this parameter is left empty, 0 will be used by default.
         /// </summary>
         [JsonProperty("LocationX")]
         public ulong? LocationX{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output Y-axis offset of the small image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the output mixed stream. If this parameter is left empty, 0 will be used by default.
         /// </summary>
         [JsonProperty("LocationY")]
         public ulong? LocationY{ get; set; }

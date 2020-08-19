@@ -58,7 +58,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+        /// Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
         /// violation_photo:
         /// <li>violation_photo: violating photo.</li>
         /// politician:
@@ -106,7 +106,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? PicUrlExpireTimeStamp{ get; set; }
 
         /// <summary>
-        /// Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

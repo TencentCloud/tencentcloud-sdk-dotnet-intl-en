@@ -37,13 +37,13 @@ namespace TencentCloud.Organization.V20181225.Models
         public ulong? HostUin{ get; set; }
 
         /// <summary>
-        /// Creator’s name
+        /// Creator's name
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// Creator’s email address
+        /// Creator's email address
         /// </summary>
         [JsonProperty("Mail")]
         public string Mail{ get; set; }

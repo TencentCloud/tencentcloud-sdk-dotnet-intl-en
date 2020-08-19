@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+        /// End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] DomainNames{ get; set; }
 
         /// <summary>
-        /// ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+        /// ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
         /// </summary>
         [JsonProperty("SubAppId")]

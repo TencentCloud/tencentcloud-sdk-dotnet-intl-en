@@ -93,6 +93,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to create instance backups.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateBackupDBInstanceResponse"/></returns>
+        public async Task<CreateBackupDBInstanceResponse> CreateBackupDBInstance(CreateBackupDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateBackupDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackupDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create instance backups.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateBackupDBInstanceResponse"/></returns>
+        public CreateBackupDBInstanceResponse CreateBackupDBInstanceSync(CreateBackupDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateBackupDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackupDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "CreateDBInstanceHour");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceHourResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query async task status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public async Task<DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query async task status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfoSync(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -844,6 +924,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "RenewDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance password.
+        /// </summary>
+        /// <param name="req"><see cref="ResetDBInstancePasswordRequest"/></param>
+        /// <returns><see cref="ResetDBInstancePasswordResponse"/></returns>
+        public async Task<ResetDBInstancePasswordResponse> ResetDBInstancePassword(ResetDBInstancePasswordRequest req)
+        {
+             JsonResponseModel<ResetDBInstancePasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetDBInstancePassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDBInstancePasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance password.
+        /// </summary>
+        /// <param name="req"><see cref="ResetDBInstancePasswordRequest"/></param>
+        /// <returns><see cref="ResetDBInstancePasswordResponse"/></returns>
+        public ResetDBInstancePasswordResponse ResetDBInstancePasswordSync(ResetDBInstancePasswordRequest req)
+        {
+             JsonResponseModel<ResetDBInstancePasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetDBInstancePassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDBInstancePasswordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

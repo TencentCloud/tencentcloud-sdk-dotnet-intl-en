@@ -32,14 +32,14 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// The type of the reserved instance. For example, S3.MEDIUM4.
-        /// Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+        /// Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-        /// Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+        /// Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

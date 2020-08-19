@@ -103,10 +103,16 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ConditionTempGroupId{ get; set; }
 
         /// <summary>
-        /// Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+        /// Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
         /// </summary>
         [JsonProperty("ReceiverType")]
         public string ReceiverType{ get; set; }
+
+        /// <summary>
+        /// Filter conditions. Whether the alarm policy has been enabled or disabled
+        /// </summary>
+        [JsonProperty("IsOpen")]
+        public bool? IsOpen{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Dimensions", this.Dimensions);
             this.SetParamSimple(map, prefix + "ConditionTempGroupId", this.ConditionTempGroupId);
             this.SetParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
+            this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
         }
     }
 }

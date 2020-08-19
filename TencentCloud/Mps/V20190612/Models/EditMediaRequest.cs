@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }
 
         /// <summary>
-        /// Task priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+        /// Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }

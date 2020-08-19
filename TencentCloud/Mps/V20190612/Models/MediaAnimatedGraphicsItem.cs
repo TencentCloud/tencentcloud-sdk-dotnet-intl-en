@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Path{ get; set; }
 
         /// <summary>
-        /// ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+        /// ID of an animated image generating template. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

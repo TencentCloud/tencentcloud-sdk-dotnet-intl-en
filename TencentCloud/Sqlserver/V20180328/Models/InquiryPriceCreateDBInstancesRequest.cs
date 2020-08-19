@@ -67,19 +67,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// The number of CPU cores of the instance you want to purchase.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }

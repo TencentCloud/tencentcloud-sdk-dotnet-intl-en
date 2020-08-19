@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string State{ get; set; }
 
         /// <summary>
-        /// The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
+        /// The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }

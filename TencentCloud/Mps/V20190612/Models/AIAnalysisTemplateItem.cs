@@ -67,13 +67,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public FrameTagConfigureInfo FrameTagConfigure{ get; set; }
 
         /// <summary>
-        /// Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+        /// Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+        /// Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

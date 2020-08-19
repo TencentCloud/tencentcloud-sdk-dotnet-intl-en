@@ -217,25 +217,29 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance isolation.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolateOperator")]
         public string IsolateOperator{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubFlag")]
         public string SubFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ROFlag")]
         public string ROFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HAFlag")]
         public string HAFlag{ get; set; }

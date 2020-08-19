@@ -37,6 +37,13 @@ namespace TencentCloud.Dc.V20180410.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
+        /// Whether all connections under the account have the service agreement signed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("AllSignLaw")]
+        public bool? AllSignLaw{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Dc.V20180410.Models
         {
             this.SetParamArrayObj(map, prefix + "DirectConnectSet.", this.DirectConnectSet);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "AllSignLaw", this.AllSignLaw);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

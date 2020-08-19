@@ -25,31 +25,40 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Switch of face recognition task. Valid values:
+        /// <li>ON: enables intelligent face recognition task;</li>
+        /// <li>OFF: disables intelligent face recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// 
+        /// Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
+        /// <li>entertainment: entertainment celebrity;</li>
+        /// <li>sport: sports celebrity;</li>
+        /// <li>politician: politically sensitive figure.</li>
         /// </summary>
         [JsonProperty("DefaultLibraryLabelSet")]
         public string[] DefaultLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
+        /// There can be up to 10 tags, each with a length limit of 16 characters.
         /// </summary>
         [JsonProperty("UserDefineLibraryLabelSet")]
         public string[] UserDefineLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Figure library. Valid values:
+        /// <li>Default: default figure library;</li>
+        /// <li>UserDefine: custom figure library.</li>
+        /// <li>All: both default and custom figure libraries will be used.</li>
         /// </summary>
         [JsonProperty("FaceLibrary")]
         public string FaceLibrary{ get; set; }

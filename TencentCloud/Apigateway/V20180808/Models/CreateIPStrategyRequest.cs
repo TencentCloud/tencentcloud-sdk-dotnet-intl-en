@@ -37,7 +37,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string StrategyName{ get; set; }
 
         /// <summary>
-        /// Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+        /// Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
         /// </summary>
         [JsonProperty("StrategyType")]
         public string StrategyType{ get; set; }

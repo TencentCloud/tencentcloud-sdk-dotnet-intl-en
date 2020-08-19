@@ -114,13 +114,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specified information such as pod specification and source for expansion with pod resources
         /// </summary>
         [JsonProperty("PodSpec")]
         public PodSpec PodSpec{ get; set; }

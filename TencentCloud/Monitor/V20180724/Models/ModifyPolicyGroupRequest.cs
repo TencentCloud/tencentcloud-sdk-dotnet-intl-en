@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
+        /// The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
         /// </summary>
         [JsonProperty("IsUnionRule")]
         public long? IsUnionRule{ get; set; }

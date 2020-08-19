@@ -493,9 +493,9 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to get the monitoring data of a Tencent Cloud product by passing in the product's namespace, object dimension description, and monitoring metric.
-        /// API call rate limit: 20 calls/sec, 1,200 calls/min.
-        /// If you need to call a lot of metrics and objects, there may be cases where the call fails due to the rate limit. It is recommended to spread the call requests as much as possible over time.
+        /// This API is used to get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
+        /// API call rate limit: 20 calls/second (1,200 calls/minute). A single request can obtain the data of up to 10 instances and up to 1,440 data points.
+        /// This API may fail due to the rate limit if you need to call a lot of metrics and objects. We recommended that you spread the call requests over time.
         /// </summary>
         /// <param name="req"><see cref="GetMonitorDataRequest"/></param>
         /// <returns><see cref="GetMonitorDataResponse"/></returns>
@@ -515,9 +515,9 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to get the monitoring data of a Tencent Cloud product by passing in the product's namespace, object dimension description, and monitoring metric.
-        /// API call rate limit: 20 calls/sec, 1,200 calls/min.
-        /// If you need to call a lot of metrics and objects, there may be cases where the call fails due to the rate limit. It is recommended to spread the call requests as much as possible over time.
+        /// This API is used to get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
+        /// API call rate limit: 20 calls/second (1,200 calls/minute). A single request can obtain the data of up to 10 instances and up to 1,440 data points.
+        /// This API may fail due to the rate limit if you need to call a lot of metrics and objects. We recommended that you spread the call requests over time.
         /// </summary>
         /// <param name="req"><see cref="GetMonitorDataRequest"/></param>
         /// <returns><see cref="GetMonitorDataResponse"/></returns>

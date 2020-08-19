@@ -25,13 +25,13 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// Policy ID
+        /// Policy ID. Either `PolicyId` or `PolicyName` must be entered
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// Policy Name
+        /// Policy name. Either `PolicyName` or `PolicyId` must be entered
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+        /// Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("PolicyDocument")]
         public string PolicyDocument{ get; set; }

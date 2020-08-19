@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
+        /// [Instance status](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) list.
         /// </summary>
         [JsonProperty("InstanceStatusSet")]
         public InstanceStatus[] InstanceStatusSet{ get; set; }

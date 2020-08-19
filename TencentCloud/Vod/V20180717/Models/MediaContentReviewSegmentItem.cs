@@ -71,7 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? PicUrlExpireTimeStamp{ get; set; }
 
         /// <summary>
-        /// Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

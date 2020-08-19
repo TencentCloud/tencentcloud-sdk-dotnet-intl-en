@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description. Length limit: 256 bytes.
+        /// Template description. Length limit: 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

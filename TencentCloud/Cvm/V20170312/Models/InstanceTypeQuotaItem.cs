@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+        /// Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) billing plan. Applicable to `CDH` only, not the instances on the host.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

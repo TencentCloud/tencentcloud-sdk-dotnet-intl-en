@@ -68,7 +68,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ModifiedTime{ get; set; }
 
         /// <summary>
-        /// Self-deployed cluster name.
+        /// Dedicated cluster name.
         /// </summary>
         [JsonProperty("ExclusiveSetName")]
         public string ExclusiveSetName{ get; set; }
@@ -151,6 +151,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? SetId{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -182,6 +188,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "SetId", this.SetId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -43,13 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] UsageSet{ get; set; }
 
         /// <summary>
-        /// Creation time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

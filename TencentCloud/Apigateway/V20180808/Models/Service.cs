@@ -129,6 +129,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("TradeIsolateStatus")]
         public long? TradeIsolateStatus{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +156,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "InnerHttpPort", this.InnerHttpPort);
             this.SetParamSimple(map, prefix + "InnerSubDomain", this.InnerSubDomain);
             this.SetParamSimple(map, prefix + "TradeIsolateStatus", this.TradeIsolateStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

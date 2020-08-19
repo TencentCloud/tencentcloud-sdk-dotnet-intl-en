@@ -43,13 +43,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// Sub-user’s key ID
+        /// Sub-user's key ID
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
-        /// Sub-user’s secret key
+        /// Sub-user's secret key
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

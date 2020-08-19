@@ -42,7 +42,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/34187#PoliticalImgReviewTemplateInfo?from_cn_redirect=1) and this parameter is as follows:
+        /// Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
         /// violation_photo:
         /// <li>violation_photo: violating photo.</li>
         /// Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):

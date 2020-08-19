@@ -203,11 +203,17 @@ namespace TencentCloud.Dc.V20180410.Models
         public string ChargeState{ get; set; }
 
         /// <summary>
-        /// Connection activation time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
+
+        /// <summary>
+        /// Whether the connection has the service agreement signed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("SignLaw")]
+        public bool? SignLaw{ get; set; }
 
 
         /// <summary>
@@ -242,6 +248,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "IdcCity", this.IdcCity);
             this.SetParamSimple(map, prefix + "ChargeState", this.ChargeState);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
         }
     }
 }

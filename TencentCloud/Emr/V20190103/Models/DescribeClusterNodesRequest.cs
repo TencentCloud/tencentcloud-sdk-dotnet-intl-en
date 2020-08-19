@@ -57,13 +57,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource type. Valid values: all, host, pod. Default value: all
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Searchable field
         /// </summary>
         [JsonProperty("SearchFields")]
         public SearchItem[] SearchFields{ get; set; }

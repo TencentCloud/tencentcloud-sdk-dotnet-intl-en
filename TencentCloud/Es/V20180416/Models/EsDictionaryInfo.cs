@@ -37,19 +37,19 @@ namespace TencentCloud.Es.V20180416.Models
         public DictInfo[] Stopwords{ get; set; }
 
         /// <summary>
-        /// 
+        /// QQ dictionary list
         /// </summary>
         [JsonProperty("QQDict")]
         public DictInfo[] QQDict{ get; set; }
 
         /// <summary>
-        /// 
+        /// Synonym dictionary list
         /// </summary>
         [JsonProperty("Synonym")]
         public DictInfo[] Synonym{ get; set; }
 
         /// <summary>
-        /// 
+        /// Update dictionary type
         /// </summary>
         [JsonProperty("UpdateType")]
         public string UpdateType{ get; set; }

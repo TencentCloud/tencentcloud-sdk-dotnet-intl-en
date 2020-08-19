@@ -276,7 +276,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? AutoFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource type. Valid values: host, pod
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }

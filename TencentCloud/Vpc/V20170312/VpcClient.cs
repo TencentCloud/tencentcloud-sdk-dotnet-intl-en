@@ -93,7 +93,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to add resources to a bandwidth package, including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// This API is used to add resources to a bandwidth package, including [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), [Cloud Load Balancer](https://intl.cloud.tencent.com/document/product/214/517?from_cn_redirect=1), and so on.
         /// </summary>
         /// <param name="req"><see cref="AddBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="AddBandwidthPackageResourcesResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to add resources to a bandwidth package, including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// This API is used to add resources to a bandwidth package, including [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), [Cloud Load Balancer](https://intl.cloud.tencent.com/document/product/214/517?from_cn_redirect=1), and so on.
         /// </summary>
         /// <param name="req"><see cref="AddBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="AddBandwidthPackageResourcesResponse"/></returns>
@@ -133,10 +133,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to apply for one or more [Elastic IP Addresses](https://cloud.tencent.com/document/product/213/1941) (EIPs for short).
+        /// This API is used to apply for one or more [Elastic IP Addresses](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIPs for short).
         /// * An EIP is a static IP address that is dedicated for dynamic cloud computing. You can quickly re-map an EIP to another instance under your account to protect against instance failures.
         /// * Your EIP is associated with your Tencent Cloud account rather than an instance. It remains associated with your Tencent Cloud account until you choose to explicitly release it or your account is in arrears for more than 24 hours.
-        /// * The maximum number of EIPs that can be applied for a Tencent Cloud account in each region is restricted. For more information, see [EIP Product Introduction](https://cloud.tencent.com/document/product/213/5733). You can get the quota information through the DescribeAddressQuota API.
+        /// * The maximum number of EIPs that can be applied for a Tencent Cloud account in each region is restricted. For more information, see [EIP Product Introduction](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1). You can get the quota information through the DescribeAddressQuota API.
         /// </summary>
         /// <param name="req"><see cref="AllocateAddressesRequest"/></param>
         /// <returns><see cref="AllocateAddressesResponse"/></returns>
@@ -156,10 +156,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to apply for one or more [Elastic IP Addresses](https://cloud.tencent.com/document/product/213/1941) (EIPs for short).
+        /// This API is used to apply for one or more [Elastic IP Addresses](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIPs for short).
         /// * An EIP is a static IP address that is dedicated for dynamic cloud computing. You can quickly re-map an EIP to another instance under your account to protect against instance failures.
         /// * Your EIP is associated with your Tencent Cloud account rather than an instance. It remains associated with your Tencent Cloud account until you choose to explicitly release it or your account is in arrears for more than 24 hours.
-        /// * The maximum number of EIPs that can be applied for a Tencent Cloud account in each region is restricted. For more information, see [EIP Product Introduction](https://cloud.tencent.com/document/product/213/5733). You can get the quota information through the DescribeAddressQuota API.
+        /// * The maximum number of EIPs that can be applied for a Tencent Cloud account in each region is restricted. For more information, see [EIP Product Introduction](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1). You can get the quota information through the DescribeAddressQuota API.
         /// </summary>
         /// <param name="req"><see cref="AllocateAddressesRequest"/></param>
         /// <returns><see cref="AllocateAddressesResponse"/></returns>
@@ -230,7 +230,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to assign IPv6 ranges.
-        /// * To use this API, you must already have a VPC instance. If you do not have a VPC instance yet, use the <a href="https://cloud.tencent.com/document/api/215/15774" title="CreateVpc" target="_blank">CreateVpc</a> API to create one.
+        /// * To use this API, you must already have a VPC instance. If you do not have a VPC instance yet, use the <a href="https://intl.cloud.tencent.com/document/api/215/15774?from_cn_redirect=1" title="CreateVpc" target="_blank">CreateVpc</a> API to create one.
         /// * Each VPC can apply for only one IPv6 range.
         /// </summary>
         /// <param name="req"><see cref="AssignIpv6CidrBlockRequest"/></param>
@@ -252,7 +252,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to assign IPv6 ranges.
-        /// * To use this API, you must already have a VPC instance. If you do not have a VPC instance yet, use the <a href="https://cloud.tencent.com/document/api/215/15774" title="CreateVpc" target="_blank">CreateVpc</a> API to create one.
+        /// * To use this API, you must already have a VPC instance. If you do not have a VPC instance yet, use the <a href="https://intl.cloud.tencent.com/document/api/215/15774?from_cn_redirect=1" title="CreateVpc" target="_blank">CreateVpc</a> API to create one.
         /// * Each VPC can apply for only one IPv6 range.
         /// </summary>
         /// <param name="req"><see cref="AssignIpv6CidrBlockRequest"/></param>
@@ -363,11 +363,11 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AssociateAddress) is used to bind an [Elastic IP](https://cloud.tencent.com/document/product/213/1941) (EIP for short) to the specified private IP of an instance or ENI.
+        /// This API (AssociateAddress) is used to bind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short) to the specified private IP of an instance or ENI.
         /// * Essentially, binding an EIP to an instance (CVM) means binding an EIP to the primary private IP of the primary ENI on an instance.
         /// * When you bind an EIP to the primary private IP of the primary ENI, the previously bound public IP is automatically unbound and released.
         /// * To bind the EIP to the private IP of the specified ENI (not the primary private IP of the primary ENI), you must unbind the EIP before you can bind a new one.
-        /// * To bind the EIP to a NAT gateway, use the API [EipBindNatGateway](https://cloud.tencent.com/document/product/215/4093)
+        /// * To bind the EIP to a NAT gateway, use the API [EipBindNatGateway](https://intl.cloud.tencent.com/document/product/215/4093?from_cn_redirect=1)
         /// * EIP that is in arrears or blocked cannot be bound.
         /// * Only EIP in the UNBIND status can be bound.
         /// </summary>
@@ -389,11 +389,11 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AssociateAddress) is used to bind an [Elastic IP](https://cloud.tencent.com/document/product/213/1941) (EIP for short) to the specified private IP of an instance or ENI.
+        /// This API (AssociateAddress) is used to bind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short) to the specified private IP of an instance or ENI.
         /// * Essentially, binding an EIP to an instance (CVM) means binding an EIP to the primary private IP of the primary ENI on an instance.
         /// * When you bind an EIP to the primary private IP of the primary ENI, the previously bound public IP is automatically unbound and released.
         /// * To bind the EIP to the private IP of the specified ENI (not the primary private IP of the primary ENI), you must unbind the EIP before you can bind a new one.
-        /// * To bind the EIP to a NAT gateway, use the API [EipBindNatGateway](https://cloud.tencent.com/document/product/215/4093)
+        /// * To bind the EIP to a NAT gateway, use the API [EipBindNatGateway](https://intl.cloud.tencent.com/document/product/215/4093?from_cn_redirect=1)
         /// * EIP that is in arrears or blocked cannot be bound.
         /// * Only EIP in the UNBIND status can be bound.
         /// </summary>
@@ -579,7 +579,7 @@ namespace TencentCloud.Vpc.V20170312
         /// <summary>
         /// This API is used to create a Classiclink between a VPC instance and a basic network device.
         /// * The VPC instance and the basic network device must be in the same region.
-        /// * For differences between VPC and basic networks, see <a href="https://cloud.tencent.com/document/product/215/30720">VPC and Basic Networks</a>.
+        /// * For differences between VPC and basic networks, see <a href="https://intl.cloud.tencent.com/document/product/215/30720?from_cn_redirect=1">VPC and Basic Networks</a>.
         /// </summary>
         /// <param name="req"><see cref="AttachClassicLinkVpcRequest"/></param>
         /// <returns><see cref="AttachClassicLinkVpcResponse"/></returns>
@@ -601,7 +601,7 @@ namespace TencentCloud.Vpc.V20170312
         /// <summary>
         /// This API is used to create a Classiclink between a VPC instance and a basic network device.
         /// * The VPC instance and the basic network device must be in the same region.
-        /// * For differences between VPC and basic networks, see <a href="https://cloud.tencent.com/document/product/215/30720">VPC and Basic Networks</a>.
+        /// * For differences between VPC and basic networks, see <a href="https://intl.cloud.tencent.com/document/product/215/30720?from_cn_redirect=1">VPC and Basic Networks</a>.
         /// </summary>
         /// <param name="req"><see cref="AttachClassicLinkVpcRequest"/></param>
         /// <returns><see cref="AttachClassicLinkVpcResponse"/></returns>
@@ -622,9 +622,9 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to bind an ENI to a CVM.
-        /// * One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/576/18527">ENI Use Limits</a>.
+        /// * One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
         /// * An ENI can only be bound to one CVM at a time.
-        /// * Only CVMs in the running or shutdown state can be bound to an ENI. For more information on CVM states, see <a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">Tencent CVM Information</a>.
+        /// * Only CVMs in the running or shutdown state can be bound to an ENI. For more information on CVM states, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">Tencent CVM Information</a>.
         /// * An ENI can only be bound to a CVM in a VPC instance, and the CVM must reside in the same availability zone as the subnet of the ENI.
         /// </summary>
         /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
@@ -646,9 +646,9 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to bind an ENI to a CVM.
-        /// * One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/576/18527">ENI Use Limits</a>.
+        /// * One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
         /// * An ENI can only be bound to one CVM at a time.
-        /// * Only CVMs in the running or shutdown state can be bound to an ENI. For more information on CVM states, see <a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">Tencent CVM Information</a>.
+        /// * Only CVMs in the running or shutdown state can be bound to an ENI. For more information on CVM states, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">Tencent CVM Information</a>.
         /// * An ENI can only be bound to a CVM in a VPC instance, and the CVM must reside in the same availability zone as the subnet of the ENI.
         /// </summary>
         /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
@@ -925,7 +925,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// This API is used to create [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
         /// </summary>
         /// <param name="req"><see cref="CreateBandwidthPackageRequest"/></param>
         /// <returns><see cref="CreateBandwidthPackageResponse"/></returns>
@@ -945,7 +945,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// This API is used to create [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
         /// </summary>
         /// <param name="req"><see cref="CreateBandwidthPackageRequest"/></param>
         /// <returns><see cref="CreateBandwidthPackageResponse"/></returns>
@@ -1385,7 +1385,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a <a href="https://cloud.tencent.com/document/product/215/20088">network ACL</a>.
+        /// This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
         /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkAclRequest"/></param>
@@ -1406,7 +1406,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a <a href="https://cloud.tencent.com/document/product/215/20088">network ACL</a>.
+        /// This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
         /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkAclRequest"/></param>
@@ -1564,7 +1564,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to create a security group (SecurityGroup).
-        /// * Note the <a href="https://cloud.tencent.com/document/product/213/12453">maximum number of security groups</a> per project in each region under each account.
+        /// * Note the <a href="https://intl.cloud.tencent.com/document/product/213/12453?from_cn_redirect=1">maximum number of security groups</a> per project in each region under each account.
         /// * Both the inbound and outbound rules for a newly created security group are "Deny All" by default. You need to call CreateSecurityGroupPolicies to set security group rules based on your needs.
         /// * You can bind a tag when creating a security group. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
@@ -1587,7 +1587,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to create a security group (SecurityGroup).
-        /// * Note the <a href="https://cloud.tencent.com/document/product/213/12453">maximum number of security groups</a> per project in each region under each account.
+        /// * Note the <a href="https://intl.cloud.tencent.com/document/product/213/12453?from_cn_redirect=1">maximum number of security groups</a> per project in each region under each account.
         /// * Both the inbound and outbound rules for a newly created security group are "Deny All" by default. You need to call CreateSecurityGroupPolicies to set security group rules based on your needs.
         /// * You can bind a tag when creating a security group. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
@@ -1678,7 +1678,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API (CreateSecurityGroupWithPolicies) is used to create security groups, and add security group policies.
-        /// * Note the<a href="https://cloud.tencent.com/document/product/213/12453">maximum number of security groups</a>per project in each region under each account.
+        /// * Note the<a href="https://intl.cloud.tencent.com/document/product/213/12453?from_cn_redirect=1">maximum number of security groups</a>per project in each region under each account.
         /// * Both the inbound and outbound policies for a newly created security group are Deny All by default. You need to call CreateSecurityGroupPolicies to set security group policies according to your needs.
         /// 
         /// Description:
@@ -1711,7 +1711,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API (CreateSecurityGroupWithPolicies) is used to create security groups, and add security group policies.
-        /// * Note the<a href="https://cloud.tencent.com/document/product/213/12453">maximum number of security groups</a>per project in each region under each account.
+        /// * Note the<a href="https://intl.cloud.tencent.com/document/product/213/12453?from_cn_redirect=1">maximum number of security groups</a>per project in each region under each account.
         /// * Both the inbound and outbound policies for a newly created security group are Deny All by default. You need to call CreateSecurityGroupPolicies to set security group policies according to your needs.
         /// 
         /// Description:
@@ -2173,7 +2173,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete bandwidth packages, including [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
+        /// This API is used to delete bandwidth packages, including [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
         /// </summary>
         /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
         /// <returns><see cref="DeleteBandwidthPackageResponse"/></returns>
@@ -2193,7 +2193,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete bandwidth packages, including [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
+        /// This API is used to delete bandwidth packages, including [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
         /// </summary>
         /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
         /// <returns><see cref="DeleteBandwidthPackageResponse"/></returns>
@@ -3125,7 +3125,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeAddressQuota) is used to query the quota information of your [Elastic IP](https://cloud.tencent.com/document/product/213/1941) (EIP) in the current region. For more information, see [EIP product introduction](https://cloud.tencent.com/document/product/213/5733).
+        /// This API (DescribeAddressQuota) is used to query the quota information of your [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP) in the current region. For more information, see [EIP product introduction](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressQuotaRequest"/></param>
         /// <returns><see cref="DescribeAddressQuotaResponse"/></returns>
@@ -3145,7 +3145,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeAddressQuota) is used to query the quota information of your [Elastic IP](https://cloud.tencent.com/document/product/213/1941) (EIP) in the current region. For more information, see [EIP product introduction](https://cloud.tencent.com/document/product/213/5733).
+        /// This API (DescribeAddressQuota) is used to query the quota information of your [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP) in the current region. For more information, see [EIP product introduction](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressQuotaRequest"/></param>
         /// <returns><see cref="DescribeAddressQuotaResponse"/></returns>
@@ -3245,7 +3245,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeAddresses) is used to query the information of one or multiple [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+        /// This API (DescribeAddresses) is used to query the information of one or multiple [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
         /// * If the parameter is empty, a number (as specified by the `Limit`, the default value is 20) of EIPs will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressesRequest"/></param>
@@ -3266,7 +3266,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeAddresses) is used to query the information of one or multiple [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+        /// This API (DescribeAddresses) is used to query the information of one or multiple [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
         /// * If the parameter is empty, a number (as specified by the `Limit`, the default value is 20) of EIPs will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressesRequest"/></param>
@@ -5097,9 +5097,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DisassociateAddress) is used to unbind [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+        /// This API (DisassociateAddress) is used to unbind [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
         /// * The unbinding of EIPs from CVM instances and ENIs is supported.
-        /// * The unbinding of EIPs from NATs is not supported. For information about how to unbind an EIP from a NAT, see [EipUnBindNatGateway](https://cloud.tencent.com/document/product/215/4092).
+        /// * The unbinding of EIPs from NATs is not supported. For information about how to unbind an EIP from a NAT, see [EipUnBindNatGateway](https://intl.cloud.tencent.com/document/product/215/4092?from_cn_redirect=1).
         /// * You can only unbind EIPs in BIND or BIND_ENI status.
         /// * Blocked EIPs cannot be unbound.
         /// </summary>
@@ -5121,9 +5121,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DisassociateAddress) is used to unbind [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+        /// This API (DisassociateAddress) is used to unbind [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
         /// * The unbinding of EIPs from CVM instances and ENIs is supported.
-        /// * The unbinding of EIPs from NATs is not supported. For information about how to unbind an EIP from a NAT, see [EipUnBindNatGateway](https://cloud.tencent.com/document/product/215/4092).
+        /// * The unbinding of EIPs from NATs is not supported. For information about how to unbind an EIP from a NAT, see [EipUnBindNatGateway](https://intl.cloud.tencent.com/document/product/215/4092?from_cn_redirect=1).
         /// * You can only unbind EIPs in BIND or BIND_ENI status.
         /// * Blocked EIPs cannot be unbound.
         /// </summary>
@@ -5717,7 +5717,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAddressAttribute) is used to modify the name of an [Elastic IP](https://cloud.tencent.com/document/product/213/1941).
+        /// This API (ModifyAddressAttribute) is used to modify the name of an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressAttributeResponse"/></returns>
@@ -5737,7 +5737,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAddressAttribute) is used to modify the name of an [Elastic IP](https://cloud.tencent.com/document/product/213/1941).
+        /// This API (ModifyAddressAttribute) is used to modify the name of an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressAttributeRequest"/></param>
         /// <returns><see cref="ModifyAddressAttributeResponse"/></returns>
@@ -5881,7 +5881,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://cloud.tencent.com/document/product/213/1941) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
+        /// This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressesBandwidthRequest"/></param>
         /// <returns><see cref="ModifyAddressesBandwidthResponse"/></returns>
@@ -5901,7 +5901,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://cloud.tencent.com/document/product/213/1941) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
+        /// This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressesBandwidthRequest"/></param>
         /// <returns><see cref="ModifyAddressesBandwidthResponse"/></returns>
@@ -7071,7 +7071,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ReleaseAddresses) is used to release one or multiple [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+        /// This API (ReleaseAddresses) is used to release one or multiple [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
         /// * This operation is irreversible. Once you release an EIP, the IP address associated with the EIP no longer belongs to you.
         /// * Only EIPs in UNBIND status can be released.
         /// </summary>
@@ -7093,7 +7093,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ReleaseAddresses) is used to release one or multiple [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+        /// This API (ReleaseAddresses) is used to release one or multiple [Elastic IPs](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1).
         /// * This operation is irreversible. Once you release an EIP, the IP address associated with the EIP no longer belongs to you.
         /// * Only EIPs in UNBIND status can be released.
         /// </summary>
@@ -7115,7 +7115,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a bandwidth package resource, including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// This API is used to delete a bandwidth package resource, including [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), [Cloud Load Balancer](https://intl.cloud.tencent.com/document/product/214/517?from_cn_redirect=1), and so on.
         /// </summary>
         /// <param name="req"><see cref="RemoveBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="RemoveBandwidthPackageResourcesResponse"/></returns>
@@ -7135,7 +7135,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a bandwidth package resource, including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+        /// This API is used to delete a bandwidth package resource, including [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), [Cloud Load Balancer](https://intl.cloud.tencent.com/document/product/214/517?from_cn_redirect=1), and so on.
         /// </summary>
         /// <param name="req"><see cref="RemoveBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="RemoveBandwidthPackageResourcesResponse"/></returns>
@@ -7601,8 +7601,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (TransformAddress) is used to switch common public IPs into [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
-        /// * The platform limits the number of times that a user can unbind an EIP and reassign public IPs in each region per day. For more information, see [EIP product introduction](/document/product/213/1941)). The preceding quota can be obtained through the [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) API.
+        /// This API (TransformAddress) is used to switch common public IPs into [Elastic IPs](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1?from_cn_redirect=1).
+        /// * The platform limits the number of times that a user can unbind an EIP and reassign public IPs in each region per day. For more information, see [EIP product introduction](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1)). The preceding quota can be obtained through the [DescribeAddressQuota](https://intl.cloud.tencent.com/document/api/213/1378?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="TransformAddressRequest"/></param>
         /// <returns><see cref="TransformAddressResponse"/></returns>
@@ -7622,8 +7622,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (TransformAddress) is used to switch common public IPs into [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
-        /// * The platform limits the number of times that a user can unbind an EIP and reassign public IPs in each region per day. For more information, see [EIP product introduction](/document/product/213/1941)). The preceding quota can be obtained through the [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) API.
+        /// This API (TransformAddress) is used to switch common public IPs into [Elastic IPs](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1?from_cn_redirect=1).
+        /// * The platform limits the number of times that a user can unbind an EIP and reassign public IPs in each region per day. For more information, see [EIP product introduction](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1)). The preceding quota can be obtained through the [DescribeAddressQuota](https://intl.cloud.tencent.com/document/api/213/1378?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="TransformAddressRequest"/></param>
         /// <returns><see cref="TransformAddressResponse"/></returns>

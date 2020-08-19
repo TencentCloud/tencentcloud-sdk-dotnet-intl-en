@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+        /// Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
         /// </summary>
         [JsonProperty("ProductName")]
         public string[] ProductName{ get; set; }

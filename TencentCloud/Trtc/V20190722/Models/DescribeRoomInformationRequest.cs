@@ -49,13 +49,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// Page index. If it is left empty, 10 entries will be returned by default.
+        /// Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
         /// </summary>
         [JsonProperty("PageNumber")]
         public string PageNumber{ get; set; }
 
         /// <summary>
-        /// Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+        /// Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
         /// </summary>
         [JsonProperty("PageSize")]
         public string PageSize{ get; set; }

@@ -81,13 +81,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? DisableHigherVideoResolution{ get; set; }
 
         /// <summary>
-        /// Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+        /// Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

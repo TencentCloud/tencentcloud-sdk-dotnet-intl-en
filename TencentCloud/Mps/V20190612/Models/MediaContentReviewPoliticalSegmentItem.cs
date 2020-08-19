@@ -58,7 +58,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+        /// Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
         /// violation_photo:
         /// <li>violation_photo: violating photo.</li>
         /// politician:
@@ -68,6 +68,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>county_politician: county/city leader;</li>
         /// <li>rural_politician: town leader;</li>
         /// <li>sensitive_politician: politically sensitive figure.</li>
+        /// <li>foreign_politician: head of a foreign country/government.</li>
         /// entertainment:
         /// <li>sensitive_entertainment: sensitive entertainment celebrity.</li>
         /// sport:
@@ -77,7 +78,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// scholar:
         /// <li>sensitive_scholar: sensitive educator.</li>
         /// celebrity:
-        /// <li>sensitive_celebrity: sensitive well-known figure.</li>
+        /// <li>sensitive_celebrity: sensitive well-known figure;</li>
+        /// <li>historical_celebrity: well-known historical figure.</li>
         /// military:
         /// <li>sensitive_military: militarily sensitive figure.</li>
         /// </summary>
@@ -98,7 +100,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// Expiration time of a suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }
