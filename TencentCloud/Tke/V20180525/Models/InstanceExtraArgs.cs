@@ -25,8 +25,8 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Kubelet custom parameter
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Kubelet")]
         public string[] Kubelet{ get; set; }

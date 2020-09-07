@@ -169,13 +169,15 @@ namespace TencentCloud.As.V20180419.Models
         public ServiceSettings ServiceSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// The number of IPv6 addresses that an instance has.
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// The policy applied when there are multiple availability zones/subnets
+        /// <br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+        /// <br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
         /// </summary>
         [JsonProperty("MultiZoneSubnetPolicy")]
         public string MultiZoneSubnetPolicy{ get; set; }

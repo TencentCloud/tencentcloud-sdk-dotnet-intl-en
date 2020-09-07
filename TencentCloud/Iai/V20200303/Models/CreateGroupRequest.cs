@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Group name, which is modifiable, must be unique, and can contain 1–60 characters.
+        /// Group name, which is modifiable, must be unique, and can contain 1-60 characters.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
@@ -39,7 +39,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// <summary>
         /// Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
         /// Up to 5 ones can be created. 
-        /// Each custom description field can contain 1–30 characters. 
+        /// Each custom description field can contain 1-30 characters. 
         /// The custom description field must be unique in the group. 
         /// Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
         /// then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
@@ -49,7 +49,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public string[] GroupExDescriptions{ get; set; }
 
         /// <summary>
-        /// Group remarks, which can contain 0–40 characters.
+        /// Group remarks, which can contain 0-40 characters.
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

@@ -40,13 +40,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Statistics type. Valid values: Province, Isp, CountryOrArea.
+        /// Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
 
         /// <summary>
-        /// If this parameter is left empty, full data will be queried.
+        /// Playback domain name list. If it is left empty, it refers to all playback domain names.
         /// </summary>
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }

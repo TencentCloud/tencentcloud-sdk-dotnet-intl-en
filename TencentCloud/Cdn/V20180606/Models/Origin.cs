@@ -33,7 +33,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] Origins{ get; set; }
 
         /// <summary>
-        /// Primary origin server type
+        /// Master origin server type
         /// The following types are supported for input parameters:
         /// domain: domain name type
         /// cos: COS origin
@@ -44,14 +44,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// image: Cloud Infinite origin
         /// ftp: legacy FTP origin, which is no longer maintained.
         /// When modifying `Origins`, you need to enter the corresponding OriginType.
-        /// The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+        /// The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+        /// Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
         /// If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -95,18 +95,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string BackupOriginType{ get; set; }
 
         /// <summary>
-        /// Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
+        /// Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupServerName")]
         public string BackupServerName{ get; set; }
-
-        /// <summary>
-        /// Origin-pull path
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("BasePath")]
-        public string BasePath{ get; set; }
 
 
         /// <summary>
@@ -122,7 +115,6 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
             this.SetParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
             this.SetParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
-            this.SetParamSimple(map, prefix + "BasePath", this.BasePath);
         }
     }
 }

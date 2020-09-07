@@ -53,9 +53,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
-        /// If this parameter is left empty, full playback data will be queried.
-        /// Note: to query by `AppName`, you need to submit a ticket for application.
+        /// Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+        /// If it is left empty, the full playback data will be queried.
+        /// Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

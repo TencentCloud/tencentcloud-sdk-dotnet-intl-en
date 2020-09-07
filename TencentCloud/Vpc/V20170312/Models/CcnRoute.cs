@@ -78,6 +78,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InstanceUin")]
         public string InstanceUin{ get; set; }
 
+        /// <summary>
+        /// Additional status of the route
+        /// </summary>
+        [JsonProperty("ExtraState")]
+        public string ExtraState{ get; set; }
+
+        /// <summary>
+        /// Whether it is a dynamic route
+        /// </summary>
+        [JsonProperty("IsBgp")]
+        public bool? IsBgp{ get; set; }
+
+        /// <summary>
+        /// Route priority
+        /// </summary>
+        [JsonProperty("RoutePriority")]
+        public ulong? RoutePriority{ get; set; }
+
+        /// <summary>
+        /// Next hop port name (associated instance’s port name)
+        /// </summary>
+        [JsonProperty("InstanceExtraName")]
+        public string InstanceExtraName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +117,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
+            this.SetParamSimple(map, prefix + "ExtraState", this.ExtraState);
+            this.SetParamSimple(map, prefix + "IsBgp", this.IsBgp);
+            this.SetParamSimple(map, prefix + "RoutePriority", this.RoutePriority);
+            this.SetParamSimple(map, prefix + "InstanceExtraName", this.InstanceExtraName);
         }
     }
 }

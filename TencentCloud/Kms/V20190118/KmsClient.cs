@@ -53,6 +53,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+        /// </summary>
+        /// <param name="req"><see cref="ArchiveKeyRequest"/></param>
+        /// <returns><see cref="ArchiveKeyResponse"/></returns>
+        public async Task<ArchiveKeyResponse> ArchiveKey(ArchiveKeyRequest req)
+        {
+             JsonResponseModel<ArchiveKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ArchiveKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ArchiveKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+        /// </summary>
+        /// <param name="req"><see cref="ArchiveKeyRequest"/></param>
+        /// <returns><see cref="ArchiveKeyResponse"/></returns>
+        public ArchiveKeyResponse ArchiveKeySync(ArchiveKeyRequest req)
+        {
+             JsonResponseModel<ArchiveKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ArchiveKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ArchiveKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to decrypt data with the specified private key that is encrypted with RSA asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption.
         /// </summary>
         /// <param name="req"><see cref="AsymmetricRsaDecryptRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "BindCloudResource");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindCloudResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unarchive keys. If a key is unarchived, its status will be `Enabled`.
+        /// </summary>
+        /// <param name="req"><see cref="CancelKeyArchiveRequest"/></param>
+        /// <returns><see cref="CancelKeyArchiveResponse"/></returns>
+        public async Task<CancelKeyArchiveResponse> CancelKeyArchive(CancelKeyArchiveRequest req)
+        {
+             JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelKeyArchive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyArchiveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unarchive keys. If a key is unarchived, its status will be `Enabled`.
+        /// </summary>
+        /// <param name="req"><see cref="CancelKeyArchiveRequest"/></param>
+        /// <returns><see cref="CancelKeyArchiveResponse"/></returns>
+        public CancelKeyArchiveResponse CancelKeyArchiveSync(CancelKeyArchiveRequest req)
+        {
+             JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelKeyArchive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyArchiveResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1364,6 +1444,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "GetPublicKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPublicKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of supported regions.
+        /// </summary>
+        /// <param name="req"><see cref="GetRegionsRequest"/></param>
+        /// <returns><see cref="GetRegionsResponse"/></returns>
+        public async Task<GetRegionsResponse> GetRegions(GetRegionsRequest req)
+        {
+             JsonResponseModel<GetRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of supported regions.
+        /// </summary>
+        /// <param name="req"><see cref="GetRegionsRequest"/></param>
+        /// <returns><see cref="GetRegionsResponse"/></returns>
+        public GetRegionsResponse GetRegionsSync(GetRegionsRequest req)
+        {
+             JsonResponseModel<GetRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

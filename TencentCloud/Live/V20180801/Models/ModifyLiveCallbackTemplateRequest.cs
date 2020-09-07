@@ -74,7 +74,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-        /// [Event Message Notification](/document/product/267/32744).
+        /// [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }

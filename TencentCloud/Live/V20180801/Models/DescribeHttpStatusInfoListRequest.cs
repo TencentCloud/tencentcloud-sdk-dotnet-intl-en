@@ -25,17 +25,16 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Start time (Beijing time),
-        /// In the format of `yyyy-mm-dd HH:MM:SS`.
-        /// `StartTime` cannot be more than 3 months ago.
+        /// Start time (Beijing time).
+        /// Format: yyyy-mm-dd HH:MM:SS.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time (Beijing time),
-        /// In the format of `yyyy-mm-dd HH:MM:SS`.
-        /// Note: `EndTime` and `StartTime` only support querying data for the last day.
+        /// End time (Beijing time).
+        /// Format: yyyy-mm-dd HH:MM:SS.
+        /// Note: data in the last 3 months can be queried and the query period is up to 1 day.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

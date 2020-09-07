@@ -40,6 +40,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// COS bucket name.
+        /// Note: the value of `CosBucket` cannot contain `-[appid]`.
         /// </summary>
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }
@@ -60,7 +61,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Screencapturing interval in seconds. Default value: 10s.
-        /// Value range: 5-600s.
+        /// Value range: 5-300s.
         /// </summary>
         [JsonProperty("SnapshotInterval")]
         public long? SnapshotInterval{ get; set; }
@@ -84,13 +85,19 @@ namespace TencentCloud.Live.V20180801.Models
         public long? PornFlag{ get; set; }
 
         /// <summary>
-        /// COS bucket folder prefix.
+        /// COS Bucket folder prefix.
+        /// If no value is entered, the default value
+        /// `/{Year}-{Month}-{Day}`
+        /// will be used.
         /// </summary>
         [JsonProperty("CosPrefix")]
         public string CosPrefix{ get; set; }
 
         /// <summary>
         /// COS filename.
+        /// If no value is entered, the default value 
+        /// `{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+        /// will be used.
         /// </summary>
         [JsonProperty("CosFileName")]
         public string CosFileName{ get; set; }

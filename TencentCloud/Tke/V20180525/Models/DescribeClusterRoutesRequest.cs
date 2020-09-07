@@ -30,6 +30,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RouteTableName")]
         public string RouteTableName{ get; set; }
 
+        /// <summary>
+        /// Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

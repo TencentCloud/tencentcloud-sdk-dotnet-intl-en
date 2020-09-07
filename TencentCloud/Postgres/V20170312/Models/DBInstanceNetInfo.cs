@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Address{ get; set; }
 
         /// <summary>
-        /// IP address
+        /// Ip
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
+        /// Network type. 1: inner (private network address), 2: public (public network address)
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }

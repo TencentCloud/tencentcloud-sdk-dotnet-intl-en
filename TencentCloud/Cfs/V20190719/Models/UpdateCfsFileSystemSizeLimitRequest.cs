@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+        /// File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
         /// </summary>
         [JsonProperty("FsLimit")]
         public ulong? FsLimit{ get; set; }

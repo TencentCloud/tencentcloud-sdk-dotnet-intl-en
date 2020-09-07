@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
+        /// Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Permission group description, which can contain 1–255 characters
+        /// Permission group description, which can contain 1-255 characters
         /// </summary>
         [JsonProperty("DescInfo")]
         public string DescInfo{ get; set; }

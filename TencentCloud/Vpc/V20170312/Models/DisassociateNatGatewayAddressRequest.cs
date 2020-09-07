@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// The array of EIPs bound to the NAT gateway.
+        /// Array of the EIPs to be unbound from the NAT gateway.
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }

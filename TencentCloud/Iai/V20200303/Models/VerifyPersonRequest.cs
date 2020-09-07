@@ -26,6 +26,7 @@ namespace TencentCloud.Iai.V20200303.Models
         
         /// <summary>
         /// Base64-encoded data of image.
+        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
         /// If there are multiple faces in the image, only the face with the largest size will be selected.
         /// .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
         /// </summary>
@@ -33,7 +34,9 @@ namespace TencentCloud.Iai.V20200303.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// Image URL. Either the `Url` or `Image` of the image must be provided; if both are provided, only `Url` will be used. 
+        /// Image URL 
+        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+        ///  Either `Url` or `Image` of the image must be provided; if both are provided, only `Url` will be used. 
         /// You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
         /// The download speed and stability of non-Tencent Cloud URLs may be low.
         /// If there are multiple faces in the image, only the face with the largest size will be selected.

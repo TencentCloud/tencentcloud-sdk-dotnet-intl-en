@@ -415,6 +415,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to bind a direct connect gateway with a NAT gateway,  and direct its default route to the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDirectConnectGatewayNatGatewayRequest"/></param>
+        /// <returns><see cref="AssociateDirectConnectGatewayNatGatewayResponse"/></returns>
+        public async Task<AssociateDirectConnectGatewayNatGatewayResponse> AssociateDirectConnectGatewayNatGateway(AssociateDirectConnectGatewayNatGatewayRequest req)
+        {
+             JsonResponseModel<AssociateDirectConnectGatewayNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateDirectConnectGatewayNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateDirectConnectGatewayNatGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a direct connect gateway with a NAT gateway,  and direct its default route to the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDirectConnectGatewayNatGatewayRequest"/></param>
+        /// <returns><see cref="AssociateDirectConnectGatewayNatGatewayResponse"/></returns>
+        public AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGatewaySync(AssociateDirectConnectGatewayNatGatewayRequest req)
+        {
+             JsonResponseModel<AssociateDirectConnectGatewayNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateDirectConnectGatewayNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateDirectConnectGatewayNatGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to bind an EIP to NAT Gateway.
         /// </summary>
         /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
@@ -5136,6 +5176,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DisassociateAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a direct connect gateway from a NAT Gateway. After unbinding, the direct connect gateway cannot access internet through the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateDirectConnectGatewayNatGatewayRequest"/></param>
+        /// <returns><see cref="DisassociateDirectConnectGatewayNatGatewayResponse"/></returns>
+        public async Task<DisassociateDirectConnectGatewayNatGatewayResponse> DisassociateDirectConnectGatewayNatGateway(DisassociateDirectConnectGatewayNatGatewayRequest req)
+        {
+             JsonResponseModel<DisassociateDirectConnectGatewayNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateDirectConnectGatewayNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateDirectConnectGatewayNatGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a direct connect gateway from a NAT Gateway. After unbinding, the direct connect gateway cannot access internet through the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateDirectConnectGatewayNatGatewayRequest"/></param>
+        /// <returns><see cref="DisassociateDirectConnectGatewayNatGatewayResponse"/></returns>
+        public DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGatewaySync(DisassociateDirectConnectGatewayNatGatewayRequest req)
+        {
+             JsonResponseModel<DisassociateDirectConnectGatewayNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateDirectConnectGatewayNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateDirectConnectGatewayNatGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

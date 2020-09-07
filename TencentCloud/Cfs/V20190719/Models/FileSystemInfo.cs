@@ -85,7 +85,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// Prepaid storage pack bound to a file system (not supported currently)
+        /// Prepaid storage pack bound with the file system
         /// </summary>
         [JsonProperty("StorageResourcePkg")]
         public string StorageResourcePkg{ get; set; }
@@ -126,6 +126,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
+        /// <summary>
+        /// The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+        /// </summary>
+        [JsonProperty("BandwidthLimit")]
+        public float? BandwidthLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
         }
     }
 }

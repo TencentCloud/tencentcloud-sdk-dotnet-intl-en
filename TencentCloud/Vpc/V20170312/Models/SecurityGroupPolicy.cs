@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Security group policy index number.
+        /// The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
         /// </summary>
         [JsonProperty("PolicyIndex")]
         public long? PolicyIndex{ get; set; }
 
         /// <summary>
-        /// Protocol. Values: TCP, UDP, ICMP
+        /// Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

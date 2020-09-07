@@ -133,7 +133,10 @@ namespace TencentCloud.Live.V20180801.Models
         public long? FpsToOrig{ get; set; }
 
         /// <summary>
-        /// `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+        /// Bitrate compression ratio of top speed codec video.
+        /// Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+        /// 
+        /// Value range: 0.0-0.5.
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }

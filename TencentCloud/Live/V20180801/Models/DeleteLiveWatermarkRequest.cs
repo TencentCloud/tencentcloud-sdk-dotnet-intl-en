@@ -26,7 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Watermark ID.
-        /// Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+        /// Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
         /// Watermark ID returned by the `DescribeLiveWatermarks` API.
         /// </summary>
         [JsonProperty("WatermarkId")]

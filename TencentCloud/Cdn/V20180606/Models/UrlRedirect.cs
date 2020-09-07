@@ -15,32 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetCheckSimilarPersonJobIdListResponse : AbstractModel
+    public class UrlRedirect : AbstractModel
     {
         
         /// <summary>
-        /// List of duplicate person check task information.
+        /// URL redirect configuration switch
+        /// on: enabled
+        /// off: disabled
         /// </summary>
-        [JsonProperty("JobIdInfos")]
-        public JobIdInfo[] JobIdInfos{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// Total number of duplicate check tasks.
+        /// URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("JobIdNum")]
-        public ulong? JobIdNum{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("PathRules")]
+        public UrlRedirectRule[] PathRules{ get; set; }
 
 
         /// <summary>
@@ -48,9 +45,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "JobIdInfos.", this.JobIdInfos);
-            this.SetParamSimple(map, prefix + "JobIdNum", this.JobIdNum);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArrayObj(map, prefix + "PathRules.", this.PathRules);
         }
     }
 }

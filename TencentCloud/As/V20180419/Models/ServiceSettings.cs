@@ -31,7 +31,10 @@ namespace TencentCloud.As.V20180419.Models
         public bool? ReplaceMonitorUnhealthy{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid values: 
+        /// CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
+        /// WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
+        /// Default value: CLASSIC_SCALING
         /// </summary>
         [JsonProperty("ScalingMode")]
         public string ScalingMode{ get; set; }

@@ -26,8 +26,8 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Template ID.
-        /// 1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
-        /// 2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
+        /// 1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API call.
+        /// 2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](https://intl.cloud.tencent.com/document/product/267/32632?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

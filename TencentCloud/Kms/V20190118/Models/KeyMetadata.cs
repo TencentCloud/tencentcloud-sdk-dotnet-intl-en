@@ -49,7 +49,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+        /// CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }

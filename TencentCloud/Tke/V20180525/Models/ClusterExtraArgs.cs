@@ -25,8 +25,8 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// kube-apiserver custom parameter
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("KubeAPIServer")]
         public string[] KubeAPIServer{ get; set; }

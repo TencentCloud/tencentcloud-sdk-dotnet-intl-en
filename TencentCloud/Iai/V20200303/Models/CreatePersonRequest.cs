@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// ID of the group to add to.
+        /// ID of the group to join, which is the `GroupId` in the `CreateGroup` API
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Person name, which can contain 1–60 characters and is modifiable and repeatable.
+        /// Person name, which can contain 1-60 characters and is modifiable and repeatable.
         /// </summary>
         [JsonProperty("PersonName")]
         public string PersonName{ get; set; }
@@ -49,13 +49,14 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
+        /// Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
         /// </summary>
         [JsonProperty("PersonExDescriptionInfos")]
         public PersonExDescriptionInfo[] PersonExDescriptionInfos{ get; set; }
 
         /// <summary>
         /// Base64-encoded image data, which cannot exceed 5 MB.
+        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
         /// .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
         /// </summary>
         [JsonProperty("Image")]
@@ -63,6 +64,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
         /// Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
         /// You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
         /// The download speed and stability of non-Tencent Cloud URLs may be low.

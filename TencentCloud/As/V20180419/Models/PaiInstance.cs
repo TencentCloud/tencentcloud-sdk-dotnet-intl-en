@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL of the PAI management page
         /// </summary>
         [JsonProperty("PaiMateUrl")]
         public string PaiMateUrl{ get; set; }

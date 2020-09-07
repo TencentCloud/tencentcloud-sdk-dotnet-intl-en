@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://cloud.tencent.com/document/product/213/15730) API.
+        /// Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("RunInstancePara")]
         public string RunInstancePara{ get; set; }

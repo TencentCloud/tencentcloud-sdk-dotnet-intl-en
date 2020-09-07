@@ -295,14 +295,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public string IPv6Mode{ get; set; }
 
         /// <summary>
-        /// Whether to enable SnatPro
+        /// Whether to enable SnatPro.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }
 
         /// <summary>
-        /// SnatIp list after SnatPro load balancing is enabled
+        /// `SnatIp` list after SnatPro load balancing is enabled.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnatIps")]
@@ -330,11 +330,24 @@ namespace TencentCloud.Clb.V20180317.Models
         public string IsBlockTime{ get; set; }
 
         /// <summary>
-        /// Whether the IP type is the local BGP
-        /// Note: this field may return null, indicating that no valid values can be obtained
+        /// 
         /// </summary>
         [JsonProperty("LocalBgp")]
         public bool? LocalBgp{ get; set; }
+
+        /// <summary>
+        /// Dedicated layer-7 tag.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterTag")]
+        public string ClusterTag{ get; set; }
+
+        /// <summary>
+        /// If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MixIpTarget")]
+        public bool? MixIpTarget{ get; set; }
 
 
         /// <summary>
@@ -387,6 +400,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "IsBlock", this.IsBlock);
             this.SetParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
             this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+            this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+            this.SetParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
         }
     }
 }

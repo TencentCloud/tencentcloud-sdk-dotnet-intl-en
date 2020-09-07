@@ -373,6 +373,46 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to query clients on which this file system is mounted. To do so, the client needs to have the CFS monitoring plugin installed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfsFileSystemClientsRequest"/></param>
+        /// <returns><see cref="DescribeCfsFileSystemClientsResponse"/></returns>
+        public async Task<DescribeCfsFileSystemClientsResponse> DescribeCfsFileSystemClients(DescribeCfsFileSystemClientsRequest req)
+        {
+             JsonResponseModel<DescribeCfsFileSystemClientsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCfsFileSystemClients");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfsFileSystemClientsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query clients on which this file system is mounted. To do so, the client needs to have the CFS monitoring plugin installed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfsFileSystemClientsRequest"/></param>
+        /// <returns><see cref="DescribeCfsFileSystemClientsResponse"/></returns>
+        public DescribeCfsFileSystemClientsResponse DescribeCfsFileSystemClientsSync(DescribeCfsFileSystemClientsRequest req)
+        {
+             JsonResponseModel<DescribeCfsFileSystemClientsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCfsFileSystemClients");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfsFileSystemClientsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query file systems.
         /// </summary>
         /// <param name="req"><see cref="DescribeCfsFileSystemsRequest"/></param>

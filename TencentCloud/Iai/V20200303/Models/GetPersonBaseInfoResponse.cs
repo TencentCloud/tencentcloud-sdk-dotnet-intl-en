@@ -31,7 +31,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public string PersonName{ get; set; }
 
         /// <summary>
-        /// Person gender
+        /// Person gender. 0: empty; 1: male; 2: female
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }

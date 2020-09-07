@@ -61,7 +61,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Channel{ get; set; }
 
         /// <summary>
-        /// Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
+        /// Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

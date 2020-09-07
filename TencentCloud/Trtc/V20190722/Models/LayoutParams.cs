@@ -48,6 +48,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("SmallVideoLayoutParams")]
         public SmallVideoLayoutParams SmallVideoLayoutParams{ get; set; }
 
+        /// <summary>
+        /// You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
+        /// </summary>
+        [JsonProperty("MainVideoRightAlign")]
+        public ulong? MainVideoRightAlign{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "MainVideoUserId", this.MainVideoUserId);
             this.SetParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
             this.SetParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
+            this.SetParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
         }
     }
 }

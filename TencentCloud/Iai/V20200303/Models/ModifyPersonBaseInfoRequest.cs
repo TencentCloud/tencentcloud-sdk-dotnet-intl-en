@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Person ID
+        /// Person ID, which is the `PersonId` in the `CreatePerson` API
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public string PersonName{ get; set; }
 
         /// <summary>
-        /// Gender of the person to be modified
+        /// Gender of the person to be modified. 1: male; 2: female
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }

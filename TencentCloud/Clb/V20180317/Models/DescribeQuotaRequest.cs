@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckSimilarPersonResponse : AbstractModel
+    public class DescribeQuotaRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Duplicate check task ID, which is used to query and get the progress and result of the task.
-        /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -105,6 +105,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
+        /// <summary>
+        /// A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +130,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

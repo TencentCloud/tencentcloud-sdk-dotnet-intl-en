@@ -85,6 +85,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
+        /// <summary>
+        /// Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+        /// </summary>
+        [JsonProperty("SessionType")]
+        public string SessionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
+            this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only.
+        /// Filters by CMK status. 0: all CMKs; 1: CMKs in `Enabled` status only; 2: CMKs in `Disabled` status only; 3: CMKs in `PendingDelete` status only (i.e., keys with schedule deletion enabled); 4: CMKs in `PendingImport` status only; 5: CMKs in `Archived` status only.
         /// </summary>
         [JsonProperty("KeyState")]
         public ulong? KeyState{ get; set; }
@@ -72,6 +72,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }
 
+        /// <summary>
+        /// Tag filter condition
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "SearchKeyAlias", this.SearchKeyAlias);
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
             this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

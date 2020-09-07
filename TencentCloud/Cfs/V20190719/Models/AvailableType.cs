@@ -31,10 +31,16 @@ namespace TencentCloud.Cfs.V20190719.Models
         public AvailableProtoStatus[] Protocols{ get; set; }
 
         /// <summary>
-        /// Storage class. Valid values: SD (standard), HP (high-performance)
+        /// Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
+
+        /// <summary>
+        /// Indicates whether prepaid is supported. `true`: yes; `false`: no
+        /// </summary>
+        [JsonProperty("Prepayment")]
+        public bool? Prepayment{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         {
             this.SetParamArrayObj(map, prefix + "Protocols.", this.Protocols);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Prepayment", this.Prepayment);
         }
     }
 }

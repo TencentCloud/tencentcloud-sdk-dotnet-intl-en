@@ -25,27 +25,31 @@ namespace TencentCloud.Tiw.V20190919.Models
     {
         
         /// <summary>
-        /// Stream layout configuration
+        /// 
         /// </summary>
         [JsonProperty("LayoutParams")]
         public LayoutParams LayoutParams{ get; set; }
 
         /// <summary>
-        /// Video stream ID
-        /// Description of possible stream ID values:
-        /// 1. tic_record_user: the current picture is used to display the whiteboard video stream.
-        /// 2. tic_substream: the current picture is used to display the auxiliary video stream.
-        /// 3. Specific user ID: the current picture is used to display the video stream of a specific user.
-        /// 4. Left empty: the current picture is vacant for new video stream.
+        /// 
         /// </summary>
         [JsonProperty("InputStreamId")]
         public string InputStreamId{ get; set; }
 
         /// <summary>
-        /// Background color, which is black by default. Its format is RGB, for example, "#FF0000" for the red color.
+        /// 
         /// </summary>
         [JsonProperty("BackgroundColor")]
         public string BackgroundColor{ get; set; }
+
+        /// <summary>
+        /// Video filling mode.
+        /// 
+        /// 0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
+        /// 1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
+        /// </summary>
+        [JsonProperty("FillMode")]
+        public long? FillMode{ get; set; }
 
 
         /// <summary>
@@ -56,6 +60,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
             this.SetParamSimple(map, prefix + "InputStreamId", this.InputStreamId);
             this.SetParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
+            this.SetParamSimple(map, prefix + "FillMode", this.FillMode);
         }
     }
 }

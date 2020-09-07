@@ -15,29 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckSimilarPersonRequest : AbstractModel
+    public class DescribeQuotaResponse : AbstractModel
     {
         
         /// <summary>
-        /// List of groups to be checked. 
-        /// There can be up to 2 million persons in one group and up to 10 groups.
+        /// Quota list
         /// </summary>
-        [JsonProperty("GroupIds")]
-        public string[] GroupIds{ get; set; }
+        [JsonProperty("QuotaSet")]
+        public Quota[] QuotaSet{ get; set; }
 
         /// <summary>
-        /// Control over the strictness of duplicate person check.
-        /// 1: archive sorting with high strictness, which can eliminate more duplicate identities but leads to higher false elimination rate for non-duplicate identities.
-        /// 2: archive sorting with low strictness, which leads to lower false elimination rate for non-duplicate identities and lower elimination rate for duplicate identities.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("UniquePersonControl")]
-        public long? UniquePersonControl{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +42,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
-            this.SetParamSimple(map, prefix + "UniquePersonControl", this.UniquePersonControl);
+            this.SetParamArrayObj(map, prefix + "QuotaSet.", this.QuotaSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

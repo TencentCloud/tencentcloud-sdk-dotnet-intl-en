@@ -93,7 +93,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// IP blocklist/allowlist configuration
+        /// IP blacklist/whitelist configuration
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IpFilter")]
@@ -336,11 +336,33 @@ namespace TencentCloud.Cdn.V20180606.Models
         public UserAgentFilter UserAgentFilter{ get; set; }
 
         /// <summary>
-        /// Access control
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AccessControl")]
         public AccessControl AccessControl{ get; set; }
+
+        /// <summary>
+        /// Whether to support advanced configuration items
+        /// on: supported
+        /// off: not supported
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Advance")]
+        public string Advance{ get; set; }
+
+        /// <summary>
+        /// URL redirect configuration
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UrlRedirect")]
+        public UrlRedirect UrlRedirect{ get; set; }
+
+        /// <summary>
+        /// Access port configuration
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccessPort")]
+        public long?[] AccessPort{ get; set; }
 
 
         /// <summary>
@@ -392,6 +414,9 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
             this.SetParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
             this.SetParamObj(map, prefix + "AccessControl.", this.AccessControl);
+            this.SetParamSimple(map, prefix + "Advance", this.Advance);
+            this.SetParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
+            this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
         }
     }
 }

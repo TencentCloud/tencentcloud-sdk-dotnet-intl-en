@@ -61,12 +61,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string VideoId{ get; set; }
 
         /// <summary>
-        /// Video stream type 
-        /// - 0: camera video 
-        /// - 1: screen-sharing video
-        /// - 2: whiteboard video 
-        /// - 3: mixed stream video
-        /// - 4: audio-only (mp3)
+        /// Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
         /// </summary>
         [JsonProperty("VideoType")]
         public long? VideoType{ get; set; }
@@ -76,6 +71,18 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
+
+        /// <summary>
+        /// Width of the video resolution.
+        /// </summary>
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
+
+        /// <summary>
+        /// Height of the video resolution.
+        /// </summary>
+        [JsonProperty("Height")]
+        public long? Height{ get; set; }
 
 
         /// <summary>
@@ -91,6 +98,8 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "VideoId", this.VideoId);
             this.SetParamSimple(map, prefix + "VideoType", this.VideoType);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
         }
     }
 }

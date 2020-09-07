@@ -37,7 +37,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? Age{ get; set; }
 
         /// <summary>
-        /// Expression. Value range: [0 (normal)–50 (smile)–100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+        /// Expression. Value range: [0 (normal)-50 (smile)-100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// </summary>
         [JsonProperty("Expression")]
         public long? Expression{ get; set; }
@@ -70,7 +70,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? Roll{ get; set; }
 
         /// <summary>
-        /// Beauty. Value range: [0–100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+        /// Beauty. Value range: [0-100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// </summary>
         [JsonProperty("Beauty")]
         public long? Beauty{ get; set; }

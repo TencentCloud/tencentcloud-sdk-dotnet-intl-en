@@ -25,7 +25,8 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// HLS timeout period.
+        /// Timeout period for restarting an interrupted HLS push.
+        /// Value range: [0, 1,800].
         /// </summary>
         [JsonProperty("FlowContinueDuration")]
         public ulong? FlowContinueDuration{ get; set; }

@@ -53,6 +53,46 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
+        /// This API is used to locate facial features (i.e., facial keypoints) in the requested image to get the accurate facial information. It can return the information of up to 888 keypoints so as to precisely locate the facial features and contour.
+        /// </summary>
+        /// <param name="req"><see cref="AnalyzeDenseLandmarksRequest"/></param>
+        /// <returns><see cref="AnalyzeDenseLandmarksResponse"/></returns>
+        public async Task<AnalyzeDenseLandmarksResponse> AnalyzeDenseLandmarks(AnalyzeDenseLandmarksRequest req)
+        {
+             JsonResponseModel<AnalyzeDenseLandmarksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AnalyzeDenseLandmarks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AnalyzeDenseLandmarksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to locate facial features (i.e., facial keypoints) in the requested image to get the accurate facial information. It can return the information of up to 888 keypoints so as to precisely locate the facial features and contour.
+        /// </summary>
+        /// <param name="req"><see cref="AnalyzeDenseLandmarksRequest"/></param>
+        /// <returns><see cref="AnalyzeDenseLandmarksResponse"/></returns>
+        public AnalyzeDenseLandmarksResponse AnalyzeDenseLandmarksSync(AnalyzeDenseLandmarksRequest req)
+        {
+             JsonResponseModel<AnalyzeDenseLandmarksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AnalyzeDenseLandmarks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AnalyzeDenseLandmarksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to perform facial feature localization (aka facial keypoint localization) on a given image and calculate 90 facial keypoints that make up the contour of the face, including eyebrows (8 points on the left and 8 on the right), eyes (8 points on the left and 8 on the right), nose (13 points), mouth (22 points), face contour (21 points), and eyeballs or pupils (2 points).
         /// 
         /// >     
@@ -99,69 +139,9 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
-        /// This API is used to check a specified group for suspected duplicate persons and list their information.
-        /// 
-        /// You can use this API to check for duplicate persons in one group so as to avoid situations where the same person has multiple roles in the group. You can also use it to check for duplicate persons across multiple groups to see whether the same person exists in multiple groups at the same time.
-        /// 
-        /// Duplicate check across algorithm model versions is not supported. Currently, this feature is available only to groups with algorithm model v3.0.
-        /// 
-        /// >     
-        /// - If you perform a duplicate check on the same group again, you need to wait for the last operation to complete, that is, when the `GroupIds` entered in the two requests are the same, if the first request is not completed, the second request will fail.
-        /// 
-        /// >     
-        /// - The status of the group on which the duplicate check is to be performed is that when the duplicate check task really starts, that is, after you initiate the duplicate check request; if your duplicate check task needs to queue up, any addition or deletion operation performed on the group during the queuing will affect the duplicate check result. Tencent Cloud will use the group status when the duplicate check task actually starts. After the task starts, any operation on the group will not affect the task execution; however, you are still recommended not to add/delete persons or faces to/from the group after the task starts.
-        /// </summary>
-        /// <param name="req"><see cref="CheckSimilarPersonRequest"/></param>
-        /// <returns><see cref="CheckSimilarPersonResponse"/></returns>
-        public async Task<CheckSimilarPersonResponse> CheckSimilarPerson(CheckSimilarPersonRequest req)
-        {
-             JsonResponseModel<CheckSimilarPersonResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CheckSimilarPerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSimilarPersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to check a specified group for suspected duplicate persons and list their information.
-        /// 
-        /// You can use this API to check for duplicate persons in one group so as to avoid situations where the same person has multiple roles in the group. You can also use it to check for duplicate persons across multiple groups to see whether the same person exists in multiple groups at the same time.
-        /// 
-        /// Duplicate check across algorithm model versions is not supported. Currently, this feature is available only to groups with algorithm model v3.0.
-        /// 
-        /// >     
-        /// - If you perform a duplicate check on the same group again, you need to wait for the last operation to complete, that is, when the `GroupIds` entered in the two requests are the same, if the first request is not completed, the second request will fail.
-        /// 
-        /// >     
-        /// - The status of the group on which the duplicate check is to be performed is that when the duplicate check task really starts, that is, after you initiate the duplicate check request; if your duplicate check task needs to queue up, any addition or deletion operation performed on the group during the queuing will affect the duplicate check result. Tencent Cloud will use the group status when the duplicate check task actually starts. After the task starts, any operation on the group will not affect the task execution; however, you are still recommended not to add/delete persons or faces to/from the group after the task starts.
-        /// </summary>
-        /// <param name="req"><see cref="CheckSimilarPersonRequest"/></param>
-        /// <returns><see cref="CheckSimilarPersonResponse"/></returns>
-        public CheckSimilarPersonResponse CheckSimilarPersonSync(CheckSimilarPersonRequest req)
-        {
-             JsonResponseModel<CheckSimilarPersonResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CheckSimilarPerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSimilarPersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to calculate the similarity of faces in two images and return the face similarity score.
         /// 
-        /// If you need to judge "whether the person in the image is someone specified" in scenarios such as face login, i.e., checking whether the person in a given image is someone with a known identity, you are recommended to use the [VerifyFace](https://cloud.tencent.com/document/product/867/32806) or [VerifyPerson](https://cloud.tencent.com/document/product/867/38879) API.
+        /// If you need to judge "whether the person in the image is someone specified" in scenarios such as face login, i.e., checking whether the person in a given image is someone with a known identity, you are recommended to use the [VerifyFace](https://intl.cloud.tencent.com/document/product/867/44983?from_cn_redirect=1) or [VerifyPerson](https://intl.cloud.tencent.com/document/product/867/44982?from_cn_redirect=1) API.
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -186,7 +166,7 @@ namespace TencentCloud.Iai.V20200303
         /// <summary>
         /// This API is used to calculate the similarity of faces in two images and return the face similarity score.
         /// 
-        /// If you need to judge "whether the person in the image is someone specified" in scenarios such as face login, i.e., checking whether the person in a given image is someone with a known identity, you are recommended to use the [VerifyFace](https://cloud.tencent.com/document/product/867/32806) or [VerifyPerson](https://cloud.tencent.com/document/product/867/38879) API.
+        /// If you need to judge "whether the person in the image is someone specified" in scenarios such as face login, i.e., checking whether the person in a given image is someone with a known identity, you are recommended to use the [VerifyFace](https://intl.cloud.tencent.com/document/product/867/44983?from_cn_redirect=1) or [VerifyPerson](https://intl.cloud.tencent.com/document/product/867/44982?from_cn_redirect=1) API.
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -560,13 +540,13 @@ namespace TencentCloud.Iai.V20200303
         ///  
         /// The face quality information is mainly used to evaluate the quality of the input face image. When using the Face Recognition service, you are recommended to evaluate the quality of the input face image first to improve the effects of subsequent processing. Application scenarios of this feature include:
         /// 
-        /// 1). [Creating](https://cloud.tencent.com/document/product/867/32793)/[Adding](https://cloud.tencent.com/document/product/867/32795) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
+        /// 1). [Creating](https://intl.cloud.tencent.com/document/product/867/45014?from_cn_redirect=1)/[Adding](https://intl.cloud.tencent.com/document/product/867/45016?from_cn_redirect=1) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
         /// 
-        /// 2). [Face search](https://cloud.tencent.com/document/product/867/32798): this is to ensure the quality of the input image to quickly find the corresponding person.
+        /// 2). [Face search](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1): this is to ensure the quality of the input image to quickly find the corresponding person.
         /// 
-        /// 3). [Face verification](https://cloud.tencent.com/document/product/867/32806): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
+        /// 3). [Face verification](https://intl.cloud.tencent.com/document/product/867/44983?from_cn_redirect=1): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
         /// 
-        /// 4). [Face fusion](https://cloud.tencent.com/product/facefusion): this is to ensure the quality of the uploaded face images to improve the fusion effect.
+        /// 4). Face fusion: this is to ensure the quality of the uploaded face images to improve the fusion effect.
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -595,13 +575,13 @@ namespace TencentCloud.Iai.V20200303
         ///  
         /// The face quality information is mainly used to evaluate the quality of the input face image. When using the Face Recognition service, you are recommended to evaluate the quality of the input face image first to improve the effects of subsequent processing. Application scenarios of this feature include:
         /// 
-        /// 1). [Creating](https://cloud.tencent.com/document/product/867/32793)/[Adding](https://cloud.tencent.com/document/product/867/32795) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
+        /// 1). [Creating](https://intl.cloud.tencent.com/document/product/867/45014?from_cn_redirect=1)/[Adding](https://intl.cloud.tencent.com/document/product/867/45016?from_cn_redirect=1) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
         /// 
-        /// 2). [Face search](https://cloud.tencent.com/document/product/867/32798): this is to ensure the quality of the input image to quickly find the corresponding person.
+        /// 2). [Face search](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1): this is to ensure the quality of the input image to quickly find the corresponding person.
         /// 
-        /// 3). [Face verification](https://cloud.tencent.com/document/product/867/32806): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
+        /// 3). [Face verification](https://intl.cloud.tencent.com/document/product/867/44983?from_cn_redirect=1): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
         /// 
-        /// 4). [Face fusion](https://cloud.tencent.com/product/facefusion): this is to ensure the quality of the uploaded face images to improve the fusion effect.
+        /// 4). Face fusion: this is to ensure the quality of the uploaded face images to improve the fusion effect.
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -625,9 +605,89 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
+        /// This API is used to detect the position, attributes, and quality information of a face in the given image. The position information includes (x, y, w, h); the face attributes include gender, age, expression, beauty, glass, hair, mask, and pose (pitch, roll, yaw); and the face quality information includes the overall quality score, sharpness, brightness, and completeness.
+        /// 
+        ///  
+        /// The face quality information is mainly used to evaluate the quality of the input face image. When using the Face Recognition service, you are recommended to evaluate the quality of the input face image first to improve the effects of subsequent processing. Application scenarios of this feature include:
+        /// 
+        /// 1). [Creating](https://intl.cloud.tencent.com/document/product/867/32793?from_cn_redirect=1)/[Adding](https://intl.cloud.tencent.com/document/product/867/32795?from_cn_redirect=1) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
+        /// 
+        /// 2). [Face search](https://intl.cloud.tencent.com/document/product/867/32798?from_cn_redirect=1): this is to ensure the quality of the input image to quickly find the corresponding person.
+        /// 
+        /// 3). [Face verification](https://intl.cloud.tencent.com/document/product/867/32806?from_cn_redirect=1): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
+        /// 
+        /// 4). [Face fusion](https://intl.cloud.tencent.com/product/facefusion?from_cn_redirect=1): this is to ensure the quality of the uploaded face images to improve the fusion effect.
+        /// 
+        /// >     
+        /// - This API is an upgrade of [DetectFace](https://intl.cloud.tencent.com/document/product/867/44989?from_cn_redirect=1) in the following terms:
+        /// 1. This API can specify the face attributes that need to be computed and returned, which avoids ineffective computation and reduces the time consumption.
+        /// 2. This API supports more detailed attribute items and will continue providing new features in the future.
+        /// Please use this API to satisfy your corresponding face detection and attribute analysis needs.
+        /// 
+        /// >     
+        /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
+        /// </summary>
+        /// <param name="req"><see cref="DetectFaceAttributesRequest"/></param>
+        /// <returns><see cref="DetectFaceAttributesResponse"/></returns>
+        public async Task<DetectFaceAttributesResponse> DetectFaceAttributes(DetectFaceAttributesRequest req)
+        {
+             JsonResponseModel<DetectFaceAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectFaceAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectFaceAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to detect the position, attributes, and quality information of a face in the given image. The position information includes (x, y, w, h); the face attributes include gender, age, expression, beauty, glass, hair, mask, and pose (pitch, roll, yaw); and the face quality information includes the overall quality score, sharpness, brightness, and completeness.
+        /// 
+        ///  
+        /// The face quality information is mainly used to evaluate the quality of the input face image. When using the Face Recognition service, you are recommended to evaluate the quality of the input face image first to improve the effects of subsequent processing. Application scenarios of this feature include:
+        /// 
+        /// 1). [Creating](https://intl.cloud.tencent.com/document/product/867/32793?from_cn_redirect=1)/[Adding](https://intl.cloud.tencent.com/document/product/867/32795?from_cn_redirect=1) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
+        /// 
+        /// 2). [Face search](https://intl.cloud.tencent.com/document/product/867/32798?from_cn_redirect=1): this is to ensure the quality of the input image to quickly find the corresponding person.
+        /// 
+        /// 3). [Face verification](https://intl.cloud.tencent.com/document/product/867/32806?from_cn_redirect=1): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
+        /// 
+        /// 4). [Face fusion](https://intl.cloud.tencent.com/product/facefusion?from_cn_redirect=1): this is to ensure the quality of the uploaded face images to improve the fusion effect.
+        /// 
+        /// >     
+        /// - This API is an upgrade of [DetectFace](https://intl.cloud.tencent.com/document/product/867/44989?from_cn_redirect=1) in the following terms:
+        /// 1. This API can specify the face attributes that need to be computed and returned, which avoids ineffective computation and reduces the time consumption.
+        /// 2. This API supports more detailed attribute items and will continue providing new features in the future.
+        /// Please use this API to satisfy your corresponding face detection and attribute analysis needs.
+        /// 
+        /// >     
+        /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
+        /// </summary>
+        /// <param name="req"><see cref="DetectFaceAttributesRequest"/></param>
+        /// <returns><see cref="DetectFaceAttributesResponse"/></returns>
+        public DetectFaceAttributesResponse DetectFaceAttributesSync(DetectFaceAttributesRequest req)
+        {
+             JsonResponseModel<DetectFaceAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectFaceAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectFaceAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to detect the liveness of a user with a user-uploaded image. Its difference from video-based liveness detection lies in that the user does not need to speak, shake their head, or wink for detection.
         /// 
-        /// Image-based liveness detection is suitable for scenarios where the image is a selfie or the requirement for attack defense is not high. If you have a higher security requirement for liveness detection, please use [Faceid](https://cloud.tencent.com/product/faceid).
+        /// Image-based liveness detection is suitable for scenarios where the image is a selfie or the requirement for attack defense is not high. If you have a higher security requirement for liveness detection, please use [Faceid](https://intl.cloud.tencent.com/product/faceid?from_cn_redirect=1).
         /// 
         /// >     
         /// - The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless. This API is suitable for selfie scenarios, and the score returned in other scenarios will be meaningless.
@@ -655,7 +715,7 @@ namespace TencentCloud.Iai.V20200303
         /// <summary>
         /// This API is used to detect the liveness of a user with a user-uploaded image. Its difference from video-based liveness detection lies in that the user does not need to speak, shake their head, or wink for detection.
         /// 
-        /// Image-based liveness detection is suitable for scenarios where the image is a selfie or the requirement for attack defense is not high. If you have a higher security requirement for liveness detection, please use [Faceid](https://cloud.tencent.com/product/faceid).
+        /// Image-based liveness detection is suitable for scenarios where the image is a selfie or the requirement for attack defense is not high. If you have a higher security requirement for liveness detection, please use [Faceid](https://intl.cloud.tencent.com/product/faceid?from_cn_redirect=1).
         /// 
         /// >     
         /// - The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless. This API is suitable for selfie scenarios, and the score returned in other scenarios will be meaningless.
@@ -672,98 +732,6 @@ namespace TencentCloud.Iai.V20200303
              {
                  var strResp = this.InternalRequestSync(req, "DetectLiveFace");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectLiveFaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the estimated duration of a duplicate person check task.
-        /// 
-        /// If the `EndTimestamp` meets your expectations, please initiate the duplicate person check request as soon as possible; otherwise, the task may take more time.
-        /// 
-        /// If the estimated duration is more than 5 hours, the duplicate person check feature cannot be used.
-        /// </summary>
-        /// <param name="req"><see cref="EstimateCheckSimilarPersonCostTimeRequest"/></param>
-        /// <returns><see cref="EstimateCheckSimilarPersonCostTimeResponse"/></returns>
-        public async Task<EstimateCheckSimilarPersonCostTimeResponse> EstimateCheckSimilarPersonCostTime(EstimateCheckSimilarPersonCostTimeRequest req)
-        {
-             JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EstimateCheckSimilarPersonCostTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the estimated duration of a duplicate person check task.
-        /// 
-        /// If the `EndTimestamp` meets your expectations, please initiate the duplicate person check request as soon as possible; otherwise, the task may take more time.
-        /// 
-        /// If the estimated duration is more than 5 hours, the duplicate person check feature cannot be used.
-        /// </summary>
-        /// <param name="req"><see cref="EstimateCheckSimilarPersonCostTimeRequest"/></param>
-        /// <returns><see cref="EstimateCheckSimilarPersonCostTimeResponse"/></returns>
-        public EstimateCheckSimilarPersonCostTimeResponse EstimateCheckSimilarPersonCostTimeSync(EstimateCheckSimilarPersonCostTimeRequest req)
-        {
-             JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EstimateCheckSimilarPersonCostTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of duplicate person check tasks and sort them in reverse order by task creation time (i.e., the newest one is at the top)
-        /// 
-        /// Only data in the past year is retained.
-        /// </summary>
-        /// <param name="req"><see cref="GetCheckSimilarPersonJobIdListRequest"/></param>
-        /// <returns><see cref="GetCheckSimilarPersonJobIdListResponse"/></returns>
-        public async Task<GetCheckSimilarPersonJobIdListResponse> GetCheckSimilarPersonJobIdList(GetCheckSimilarPersonJobIdListRequest req)
-        {
-             JsonResponseModel<GetCheckSimilarPersonJobIdListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetCheckSimilarPersonJobIdList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCheckSimilarPersonJobIdListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of duplicate person check tasks and sort them in reverse order by task creation time (i.e., the newest one is at the top)
-        /// 
-        /// Only data in the past year is retained.
-        /// </summary>
-        /// <param name="req"><see cref="GetCheckSimilarPersonJobIdListRequest"/></param>
-        /// <returns><see cref="GetCheckSimilarPersonJobIdListResponse"/></returns>
-        public GetCheckSimilarPersonJobIdListResponse GetCheckSimilarPersonJobIdListSync(GetCheckSimilarPersonJobIdListRequest req)
-        {
-             JsonResponseModel<GetCheckSimilarPersonJobIdListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetCheckSimilarPersonJobIdList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCheckSimilarPersonJobIdListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1013,46 +981,6 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
-        /// This API is used to get the result of the `CheckSimilarPerson` API.
-        /// </summary>
-        /// <param name="req"><see cref="GetSimilarPersonResultRequest"/></param>
-        /// <returns><see cref="GetSimilarPersonResultResponse"/></returns>
-        public async Task<GetSimilarPersonResultResponse> GetSimilarPersonResult(GetSimilarPersonResultRequest req)
-        {
-             JsonResponseModel<GetSimilarPersonResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetSimilarPersonResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSimilarPersonResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the result of the `CheckSimilarPerson` API.
-        /// </summary>
-        /// <param name="req"><see cref="GetSimilarPersonResultRequest"/></param>
-        /// <returns><see cref="GetSimilarPersonResultResponse"/></returns>
-        public GetSimilarPersonResultResponse GetSimilarPersonResultSync(GetSimilarPersonResultRequest req)
-        {
-             JsonResponseModel<GetSimilarPersonResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetSimilarPersonResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSimilarPersonResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to modify the name, tag, and custom description field of a group.
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupRequest"/></param>
@@ -1179,10 +1107,10 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
         /// 
-        /// This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://cloud.tencent.com/document/product/867/38881) and [SearchPersonsReturnsByGroup](https://cloud.tencent.com/document/product/867/38880) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
+        /// This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://intl.cloud.tencent.com/document/product/867/44992?from_cn_redirect=1) and [SearchPersonsReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44991?from_cn_redirect=1) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
         /// 
         /// 
-        /// This API should be used together with the [CreateGroup API](https://cloud.tencent.com/document/product/867/32794).
+        /// This API should be used together with the [CreateGroup API](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -1211,10 +1139,10 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
         /// 
-        /// This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://cloud.tencent.com/document/product/867/38881) and [SearchPersonsReturnsByGroup](https://cloud.tencent.com/document/product/867/38880) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
+        /// This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://intl.cloud.tencent.com/document/product/867/44992?from_cn_redirect=1) and [SearchPersonsReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44991?from_cn_redirect=1) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
         /// 
         /// 
-        /// This API should be used together with the [CreateGroup API](https://cloud.tencent.com/document/product/867/32794).
+        /// This API should be used together with the [CreateGroup API](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -1243,9 +1171,9 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
         /// 
-        /// This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://cloud.tencent.com/document/product/867/38881) and [SearchPersonsReturnsByGroup](https://cloud.tencent.com/document/product/867/38880) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
+        /// This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://intl.cloud.tencent.com/document/product/867/44992?from_cn_redirect=1) and [SearchPersonsReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44991?from_cn_redirect=1) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
         /// 
-        /// This API should be used together with the [CreateGroup API](https://cloud.tencent.com/document/product/867/32794).
+        /// This API should be used together with the [CreateGroup API](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -1275,9 +1203,9 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
         /// 
-        /// This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://cloud.tencent.com/document/product/867/38881) and [SearchPersonsReturnsByGroup](https://cloud.tencent.com/document/product/867/38880) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
+        /// This API recognizes each face of a person as an independent one. By contrast, the [SearchPersons](https://intl.cloud.tencent.com/document/product/867/44992?from_cn_redirect=1) and [SearchPersonsReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44991?from_cn_redirect=1) APIs fuse the features of all faces of a person; for example, if a person has 4 faces, they will fuse the features of the 4 faces and generate the summarized facial features of the person to make the search more accurate.
         /// 
-        /// This API should be used together with the [CreateGroup API](https://cloud.tencent.com/document/product/867/32794).
+        /// This API should be used together with the [CreateGroup API](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -1307,7 +1235,7 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
         /// 
-        /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://cloud.tencent.com/document/product/867/32798) and [SearchFacesReturnsByGroup](https://cloud.tencent.com/document/product/867/38882) APIs recognize each face of a person as an independent one for search.
+        /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1) and [SearchFacesReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44993?from_cn_redirect=1) APIs recognize each face of a person as an independent one for search.
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -1337,7 +1265,7 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
         /// 
-        /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://cloud.tencent.com/document/product/867/32798) and [SearchFacesReturnsByGroup](https://cloud.tencent.com/document/product/867/38882) APIs recognize each face of a person as an independent one for search.
+        /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1) and [SearchFacesReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44993?from_cn_redirect=1) APIs recognize each face of a person as an independent one for search.
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -1367,7 +1295,7 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
         /// 
-        /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://cloud.tencent.com/document/product/867/32798) and [SearchFacesReturnsByGroup](https://cloud.tencent.com/document/product/867/38882) APIs recognize each face of a person as an independent one for search.
+        /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1) and [SearchFacesReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44993?from_cn_redirect=1) APIs recognize each face of a person as an independent one for search.
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
         /// - This feature is available only to groups whose algorithm model version (`FaceModelVersion`) is 3.0.
@@ -1396,7 +1324,7 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// The maximum number of faces in a group that can be searched for at a time is subject to the group's algorithm model version (`FaceModelVersion`), which is 1 million for v2.0 or 3 million for v3.0.
         /// 
-        /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://cloud.tencent.com/document/product/867/32798) and [SearchFacesReturnsByGroup](https://cloud.tencent.com/document/product/867/38882) APIs recognize each face of a person as an independent one for search.
+        /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person search (i.e., judging whether the face image to be recognized is of a specified person) more accurate. By contrast, the [SearchFaces](https://intl.cloud.tencent.com/document/product/867/44994?from_cn_redirect=1) and [SearchFacesReturnsByGroup](https://intl.cloud.tencent.com/document/product/867/44993?from_cn_redirect=1) APIs recognize each face of a person as an independent one for search.
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
         /// - This feature is available only to groups whose algorithm model version (`FaceModelVersion`) is 3.0.
@@ -1419,11 +1347,11 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
-        /// This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://cloud.tencent.com/document/product/867/32794). 
+        /// This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1). 
         /// 
-        /// Unlike the [CompareFace](https://cloud.tencent.com/document/product/867/32802) API that is used to judge the similarity between two faces, this API is used to judge "whether the person in the image is someone specified" whose information is stored in a group. This "someone" may have multiple face images.
+        /// Unlike the [CompareFace](https://intl.cloud.tencent.com/document/product/867/44987?from_cn_redirect=1) API that is used to judge the similarity between two faces, this API is used to judge "whether the person in the image is someone specified" whose information is stored in a group. This "someone" may have multiple face images.
         /// 
-        /// This API recognizes each face of a person as an independent one. By contrast, the [VerifyPerson](https://cloud.tencent.com/document/product/867/38879) API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
+        /// This API recognizes each face of a person as an independent one. By contrast, the [VerifyPerson](https://intl.cloud.tencent.com/document/product/867/44982?from_cn_redirect=1) API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -1446,11 +1374,11 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
-        /// This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://cloud.tencent.com/document/product/867/32794). 
+        /// This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1). 
         /// 
-        /// Unlike the [CompareFace](https://cloud.tencent.com/document/product/867/32802) API that is used to judge the similarity between two faces, this API is used to judge "whether the person in the image is someone specified" whose information is stored in a group. This "someone" may have multiple face images.
+        /// Unlike the [CompareFace](https://intl.cloud.tencent.com/document/product/867/44987?from_cn_redirect=1) API that is used to judge the similarity between two faces, this API is used to judge "whether the person in the image is someone specified" whose information is stored in a group. This "someone" may have multiple face images.
         /// 
-        /// This API recognizes each face of a person as an independent one. By contrast, the [VerifyPerson](https://cloud.tencent.com/document/product/867/38879) API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
+        /// This API recognizes each face of a person as an independent one. By contrast, the [VerifyPerson](https://intl.cloud.tencent.com/document/product/867/44982?from_cn_redirect=1) API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
@@ -1473,7 +1401,7 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
-        /// This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://cloud.tencent.com/document/product/867/32794).
+        /// This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
         /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
         /// 
         ///  Unlike the `CompareFace` API that is used to judge the similarity between two faces, this API is used to judge "whether the person in the image is someone specified" whose information is stored in a group. This "someone" may have multiple face images.
@@ -1501,7 +1429,7 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
-        /// This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://cloud.tencent.com/document/product/867/32794).
+        /// This API is used to judge whether a person in an image corresponds to a given `PersonId`. For more information on `PersonId`, please see [CreateGroup](https://intl.cloud.tencent.com/document/product/867/45015?from_cn_redirect=1).
         /// This API fuses the features of all faces of a person; for example, if a person has 4 faces, it will fuse the features of the 4 faces and generate the summarized facial features of the person to make the person verification (i.e., judging whether the face image to be recognized is of a specified person) more accurate.
         /// 
         ///  Unlike the `CompareFace` API that is used to judge the similarity between two faces, this API is used to judge "whether the person in the image is someone specified" whose information is stored in a group. This "someone" may have multiple face images.

@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// SubnetId
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceName{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+        /// Instance status
         /// </summary>
         [JsonProperty("DBInstanceStatus")]
         public string DBInstanceStatus{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceClass{ get; set; }
 
         /// <summary>
-        /// Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+        /// Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
         /// </summary>
         [JsonProperty("DBInstanceType")]
         public string DBInstanceType{ get; set; }
 
         /// <summary>
-        /// Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+        /// Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
         /// </summary>
         [JsonProperty("DBInstanceVersion")]
         public string DBInstanceVersion{ get; set; }
@@ -181,10 +181,17 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Uid{ get; set; }
 
         /// <summary>
-        /// Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+        /// 
         /// </summary>
         [JsonProperty("SupportIpv6")]
         public ulong? SupportIpv6{ get; set; }
+
+        /// <summary>
+        /// The information of tags associated with instances.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
 
 
         /// <summary>
@@ -219,6 +226,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

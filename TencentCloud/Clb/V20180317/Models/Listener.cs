@@ -119,6 +119,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetGroup")]
         public BasicTargetGroupInfo TargetGroup{ get; set; }
 
+        /// <summary>
+        /// Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SessionType")]
+        public string SessionType{ get; set; }
+
+        /// <summary>
+        /// Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KeepaliveEnable")]
+        public long? KeepaliveEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +153,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
             this.SetParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
+            this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
+            this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         }
     }
 }

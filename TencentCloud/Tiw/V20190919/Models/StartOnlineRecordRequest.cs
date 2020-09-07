@@ -50,7 +50,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string RecordUserSig{ get; set; }
 
         /// <summary>
-        /// IM group ID of the whiteboard. By default, it is the same as the room ID.
+        /// (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -90,6 +90,12 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("AudioFileNeeded")]
         public bool? AudioFileNeeded{ get; set; }
 
+        /// <summary>
+        /// A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+        /// </summary>
+        [JsonProperty("RecordControl")]
+        public RecordControl RecordControl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +112,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamObj(map, prefix + "MixStream.", this.MixStream);
             this.SetParamArraySimple(map, prefix + "Extras.", this.Extras);
             this.SetParamSimple(map, prefix + "AudioFileNeeded", this.AudioFileNeeded);
+            this.SetParamObj(map, prefix + "RecordControl.", this.RecordControl);
         }
     }
 }

@@ -1199,7 +1199,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to obtain the CLB exclusive logset of a user.
+        /// This API is used to get the CLB dedicated logset.
         /// </summary>
         /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
         /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
@@ -1219,7 +1219,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to obtain the CLB exclusive logset of a user.
+        /// This API is used to get the CLB dedicated logset.
         /// </summary>
         /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
         /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
@@ -1350,6 +1350,86 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLoadBalancers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query CLB instance details, including listener, rules, and target real servers.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancersDetailRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancersDetailResponse"/></returns>
+        public async Task<DescribeLoadBalancersDetailResponse> DescribeLoadBalancersDetail(DescribeLoadBalancersDetailRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancersDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancersDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query CLB instance details, including listener, rules, and target real servers.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancersDetailRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancersDetailResponse"/></returns>
+        public DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetailSync(DescribeLoadBalancersDetailRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancersDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancersDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query various quotas in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotaRequest"/></param>
+        /// <returns><see cref="DescribeQuotaResponse"/></returns>
+        public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest req)
+        {
+             JsonResponseModel<DescribeQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query various quotas in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotaRequest"/></param>
+        /// <returns><see cref="DescribeQuotaResponse"/></returns>
+        public DescribeQuotaResponse DescribeQuotaSync(DescribeQuotaRequest req)
+        {
+             JsonResponseModel<DescribeQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

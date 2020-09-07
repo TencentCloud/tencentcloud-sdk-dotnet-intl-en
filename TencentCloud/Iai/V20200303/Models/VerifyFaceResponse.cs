@@ -41,7 +41,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public bool? IsMatch{ get; set; }
 
         /// <summary>
-        /// Algorithm model version used for face recognition.
+        /// Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("FaceModelVersion")]
         public string FaceModelVersion{ get; set; }

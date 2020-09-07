@@ -42,45 +42,52 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Stream starting callback URL,
-        /// Protocol document: [Event Message Notification](/document/product/267/32744).
+        /// Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("StreamBeginNotifyUrl")]
         public string StreamBeginNotifyUrl{ get; set; }
 
         /// <summary>
         /// Interruption callback URL,
-        /// Protocol document: [Event Message Notification](/document/product/267/32744).
+        /// Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("StreamEndNotifyUrl")]
         public string StreamEndNotifyUrl{ get; set; }
 
         /// <summary>
         /// Recording callback URL,
-        /// Protocol document: [Event Message Notification](/document/product/267/32744).
+        /// Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("RecordNotifyUrl")]
         public string RecordNotifyUrl{ get; set; }
 
         /// <summary>
         /// Screencapturing callback URL,
-        /// Protocol document: [Event Message Notification](/document/product/267/32744).
+        /// Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SnapshotNotifyUrl")]
         public string SnapshotNotifyUrl{ get; set; }
 
         /// <summary>
         /// Porn detection callback URL,
-        /// Protocol document: [Event Message Notification](/document/product/267/32741).
+        /// Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("PornCensorshipNotifyUrl")]
         public string PornCensorshipNotifyUrl{ get; set; }
 
         /// <summary>
         /// Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-        /// [Event Message Notification](/document/product/267/32744).
+        /// [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }
+
+        /// <summary>
+        /// Stream mixing callback URL,
+        /// Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("StreamMixNotifyUrl")]
+        public string StreamMixNotifyUrl{ get; set; }
 
 
         /// <summary>
@@ -96,6 +103,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
             this.SetParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
             this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
         }
     }
 }

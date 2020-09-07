@@ -31,7 +31,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Authentication key of the document transcoding callback. It is a string of up to 64 characters. If it is specified as null, the existing callback authentication key is deleted.
+        /// Authentication key for the document transcoding callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information about callback authentication, please [see here](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }

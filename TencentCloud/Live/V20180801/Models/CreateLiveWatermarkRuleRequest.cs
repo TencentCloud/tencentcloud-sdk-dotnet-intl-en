@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+        /// Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

@@ -31,7 +31,8 @@ namespace TencentCloud.Live.V20180801.Models
         public long? UseMixCropCenter{ get; set; }
 
         /// <summary>
-        /// 
+        /// Value range: [0,1].
+        /// If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
         /// </summary>
         [JsonProperty("AllowCopy")]
         public long? AllowCopy{ get; set; }

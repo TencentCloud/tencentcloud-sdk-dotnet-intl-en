@@ -31,7 +31,8 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Callback address for the document transcoding progress. If it is specified as null, the set callback address is deleted. The callback address only supports the HTTP or HTTPS protocol, and therefore the callback address must start with http:// or https://.
+        /// Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
+        /// For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Callback")]
         public string Callback{ get; set; }

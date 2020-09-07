@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string UserPermission{ get; set; }
 
         /// <summary>
-        /// Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+        /// Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }

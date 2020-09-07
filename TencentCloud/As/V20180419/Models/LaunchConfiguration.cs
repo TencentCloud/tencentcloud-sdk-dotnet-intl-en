@@ -173,13 +173,13 @@ namespace TencentCloud.As.V20180419.Models
         public HostNameSettings HostNameSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Settings of CVM instance names.
         /// </summary>
         [JsonProperty("InstanceNameSettings")]
         public InstanceNameSettings InstanceNameSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }

@@ -25,70 +25,77 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Globally unique white-box key ID
+        /// 
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Unique alias that makes a key more recognizable and understandable. This parameter should be 1 to 60 letters, digits, `-`, and `_`; it must begin with a letter or digit and cannot be left empty.
+        /// 
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// 
         /// </summary>
         [JsonProperty("CreatorUin")]
         public ulong? CreatorUin{ get; set; }
 
         /// <summary>
-        /// Key description information
+        /// 
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Key creation time in Unix timestamp
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// White-box key status. Valid values: Enabled, Disabled
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// 
         /// </summary>
         [JsonProperty("OwnerUin")]
         public ulong? OwnerUin{ get; set; }
 
         /// <summary>
-        /// Key algorithm type
+        /// 
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }
 
         /// <summary>
-        /// Base64-encoded white-box encryption key
+        /// 
         /// </summary>
         [JsonProperty("EncryptKey")]
         public string EncryptKey{ get; set; }
 
         /// <summary>
-        /// Base64-encoded white-box decryption key
+        /// 
         /// </summary>
         [JsonProperty("DecryptKey")]
         public string DecryptKey{ get; set; }
 
         /// <summary>
-        /// Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+        /// 
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// Whether there is a device fingerprint bound to the current key
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeviceFingerprintBind")]
+        public bool? DeviceFingerprintBind{ get; set; }
 
 
         /// <summary>
@@ -107,6 +114,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "EncryptKey", this.EncryptKey);
             this.SetParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "DeviceFingerprintBind", this.DeviceFingerprintBind);
         }
     }
 }

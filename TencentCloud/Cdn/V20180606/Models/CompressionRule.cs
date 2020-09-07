@@ -57,7 +57,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// File compression algorithm
         /// gzip: specifies Gzip compression
-        /// brotli: this can be enabled when the Gzip compression is specified
+        /// brotli: specifies Brotli compression
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Algorithms")]

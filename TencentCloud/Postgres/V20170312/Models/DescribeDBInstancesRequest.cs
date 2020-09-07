@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Filter. Valid values: db-instance-id, db-instance-name
+        /// Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

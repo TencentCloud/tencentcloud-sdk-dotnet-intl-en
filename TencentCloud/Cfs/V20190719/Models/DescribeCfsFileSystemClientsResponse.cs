@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Cfs.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EstimateCheckSimilarPersonCostTimeResponse : AbstractModel
+    public class DescribeCfsFileSystemClientsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Estimated duration of duplicate person check task in minutes.
+        /// Client list
         /// </summary>
-        [JsonProperty("EstimatedTimeCost")]
-        public ulong? EstimatedTimeCost{ get; set; }
+        [JsonProperty("ClientList")]
+        public FileSystemClient[] ClientList{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +42,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EstimatedTimeCost", this.EstimatedTimeCost);
+            this.SetParamArrayObj(map, prefix + "ClientList.", this.ClientList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

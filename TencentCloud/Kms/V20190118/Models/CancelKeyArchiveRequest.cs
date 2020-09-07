@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EstimateCheckSimilarPersonCostTimeRequest : AbstractModel
+    public class CancelKeyArchiveRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of groups to be checked. 
-        /// There can be up to 2 million persons in one group and up to 10 groups.
+        /// Unique CMK ID
         /// </summary>
-        [JsonProperty("GroupIds")]
-        public string[] GroupIds{ get; set; }
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
 
 
         /// <summary>
@@ -37,7 +36,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
         }
     }
 }

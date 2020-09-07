@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string NodeRole{ get; set; }
 
         /// <summary>
-        /// Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://cloud.tencent.com/document/product/213/15730). Pass any parameter other than common parameters. ImageId will be replaced with the image corresponding to the TKE cluster operating system.
+        /// Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1). Pass any parameter other than common parameters. ImageId will be replaced with the image corresponding to the TKE cluster operating system.
         /// </summary>
         [JsonProperty("RunInstancesPara")]
         public string[] RunInstancesPara{ get; set; }

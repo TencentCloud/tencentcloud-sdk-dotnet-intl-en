@@ -41,6 +41,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// Base64-encoded image data, which cannot exceed 5 MB.
+        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
         /// .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
         /// </summary>
         [JsonProperty("Image")]
@@ -48,6 +49,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
         /// Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
         /// You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
         /// The download speed and stability of non-Tencent Cloud URLs may be low.

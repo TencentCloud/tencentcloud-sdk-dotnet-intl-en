@@ -31,26 +31,27 @@ namespace TencentCloud.As.V20180419.Models
         public string[] AutoScalingGroupIds{ get; set; }
 
         /// <summary>
-        /// Filter.
+        /// Filters.
         /// <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
         /// <li> auto-scaling-group-name - String - Required: No - (Filter) Filter by auto scaling group name.</li>
+        /// <li> vague-auto-scaling-group-name - String - Required: No - (Filter) Fuzzy search by auto scaling group name.</li>
         /// <li> launch-configuration-id - String - Required: No - (Filter) Filter by launch configuration ID.</li>
         /// <li> tag-key - String - Required: No - (Filter) Filter by tag key.</li>
         /// <li> tag-value - String - Required: No - (Filter) Filter by tag value.</li>
-        /// <li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 2</li>
-        /// The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingGroupIds` and `Filters` at the same time.
+        /// <li> tag:tag-key - String - Required: No - (Filter) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key. For more information, see example 2.</li>
+        /// The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `AutoScalingGroupIds` and `Filters` at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+        /// Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://cloud.tencent.com/document/api/213/15688).
+        /// Offset. Default value: 0. For more information on `Offset`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

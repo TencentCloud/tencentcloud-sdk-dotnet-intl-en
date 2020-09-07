@@ -46,7 +46,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string TopIndex{ get; set; }
 
         /// <summary>
-        /// Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+        /// Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
         /// </summary>
         [JsonProperty("OrderParam")]
         public string OrderParam{ get; set; }
