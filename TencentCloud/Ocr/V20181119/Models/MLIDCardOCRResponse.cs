@@ -90,6 +90,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// Date of birth (currently, this field is only supported for IKAD)
+        /// </summary>
+        [JsonProperty("Birthday")]
+        public string Birthday{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -109,6 +115,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

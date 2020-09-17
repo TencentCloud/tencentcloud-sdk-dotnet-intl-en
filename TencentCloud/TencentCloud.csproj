@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.57</VersionPrefix>
+    <VersionPrefix>3.0.58</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1164,6 +1164,7 @@
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupTopic.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreatePartitionRequest.cs" />
@@ -1212,6 +1213,12 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByOffsetRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByOffsetResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByTimestampRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByTimestampResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Filter.cs" />
     <Compile Include="Ckafka\V20190819\Models\Group.cs" />
     <Compile Include="Ckafka\V20190819\Models\GroupInfoMember.cs" />
@@ -2160,6 +2167,7 @@
     <Compile Include="Emr\V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\EmrProductConfigOutter.cs" />
+    <Compile Include="Emr\V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceRenewInstanceRequest.cs" />
@@ -2174,8 +2182,10 @@
     <Compile Include="Emr\V20190103\Models\NewResourceSpec.cs" />
     <Compile Include="Emr\V20190103\Models\NodeHardwareInfo.cs" />
     <Compile Include="Emr\V20190103\Models\OutterResource.cs" />
+    <Compile Include="Emr\V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\Placement.cs" />
     <Compile Include="Emr\V20190103\Models\PodSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\PodVolume.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="Emr\V20190103\Models\PriceResource.cs" />
     <Compile Include="Emr\V20190103\Models\Resource.cs" />
@@ -3604,6 +3614,8 @@
     <Compile Include="Ocr\V20181119\Models\BankCardOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\BankCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\Coord.cs" />
+    <Compile Include="Ocr\V20181119\Models\GeneralAccurateOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralBasicOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralBasicOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\HKIDCardOCRRequest.cs" />
@@ -3613,7 +3625,10 @@
     <Compile Include="Ocr\V20181119\Models\MLIDCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\MLIDPassportOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\MLIDPassportOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\TableOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\TableOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TextDetection.cs" />
+    <Compile Include="Ocr\V20181119\Models\TextTable.cs" />
     <Compile Include="Organization\V20181225\OrganizationClient.cs" />
     <Compile Include="Organization\V20181225\Models\AcceptOrganizationInvitationRequest.cs" />
     <Compile Include="Organization\V20181225\Models\AcceptOrganizationInvitationResponse.cs" />
@@ -4574,6 +4589,7 @@
     <Compile Include="Vod\V20180717\Models\AudioTransform.cs" />
     <Compile Include="Vod\V20180717\Models\AudioVolumeParam.cs" />
     <Compile Include="Vod\V20180717\Models\Canvas.cs" />
+    <Compile Include="Vod\V20180717\Models\CdnLogInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ClipFileInfo2017.cs" />
@@ -4672,6 +4688,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeCDNUsageDataRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeCDNUsageDataResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeCdnLogsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeCdnLogsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
@@ -4913,6 +4931,7 @@
     <Compile Include="Vod\V20180717\Models\TerrorismOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TextWatermarkTemplateInput.cs" />
     <Compile Include="Vod\V20180717\Models\TextWatermarkTemplateInputForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\TimeRange.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodePlayInfo2017.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTaskInput.cs" />
@@ -4977,6 +4996,8 @@
     <Compile Include="Vpc\V20170312\Models\AttachClassicLinkVpcResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AttachNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AttachNetworkInterfaceResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\AuditCrossBorderComplianceRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\AuditCrossBorderComplianceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\BandwidthPackage.cs" />
     <Compile Include="Vpc\V20170312\Models\CCN.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnAttachedInstance.cs" />
@@ -5049,6 +5070,7 @@
     <Compile Include="Vpc\V20170312\Models\CreateVpnConnectionResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CrossBorderCompliance.cs" />
     <Compile Include="Vpc\V20170312\Models\CustomerGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\CustomerGatewayVendor.cs" />
     <Compile Include="Vpc\V20170312\Models\CvmInstance.cs" />
@@ -5127,6 +5149,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeCcnsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeClassicLinkInstancesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeClassicLinkInstancesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeCrossBorderComplianceRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeCrossBorderComplianceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeCustomerGatewayVendorsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeCustomerGatewayVendorsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeCustomerGatewaysRequest.cs" />
@@ -5543,6 +5567,7 @@
     <Compile Include="Yunjing\V20180228\Models\ProcessStatistics.cs" />
     <Compile Include="Yunjing\V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\RecoverMalwaresResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\RegionInfo.cs" />
     <Compile Include="Yunjing\V20180228\Models\RescanImpactedHostRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\RescanImpactedHostResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\SecurityDynamic.cs" />

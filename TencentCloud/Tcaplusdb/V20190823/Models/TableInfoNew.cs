@@ -207,7 +207,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public long? SortRule{ get; set; }
 
         /// <summary>
-        /// 
+        /// Distributed index information of table
         /// </summary>
         [JsonProperty("DbClusterInfoStruct")]
         public string DbClusterInfoStruct{ get; set; }

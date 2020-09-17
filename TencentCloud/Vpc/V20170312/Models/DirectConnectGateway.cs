@@ -100,7 +100,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? EnableBGP{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable BGP's `community` attribute. Valid values: enable, disable
         /// </summary>
         [JsonProperty("EnableBGPCommunity")]
         public bool? EnableBGPCommunity{ get; set; }

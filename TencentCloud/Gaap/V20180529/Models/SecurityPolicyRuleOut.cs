@@ -63,7 +63,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security policy ID
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

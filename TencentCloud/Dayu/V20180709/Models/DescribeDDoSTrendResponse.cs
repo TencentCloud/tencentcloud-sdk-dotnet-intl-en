@@ -68,7 +68,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Value array
+        /// Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
         /// </summary>
         [JsonProperty("Data")]
         public ulong?[] Data{ get; set; }

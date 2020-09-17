@@ -133,7 +133,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string CCLevel{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
         /// </summary>
         [JsonProperty("HttpsToHttpEnable")]
         public ulong? HttpsToHttpEnable{ get; set; }

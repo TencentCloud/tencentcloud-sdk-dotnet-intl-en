@@ -186,6 +186,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
+        /// <summary>
+        /// Type.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Features")]
+        public string[] Features{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -218,6 +231,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "MaxGroupNum", this.MaxGroupNum);
             this.SetParamSimple(map, prefix + "Cvm", this.Cvm);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArraySimple(map, prefix + "Features.", this.Features);
         }
     }
 }

@@ -175,7 +175,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string OriginSerialId{ get; set; }
 
         /// <summary>
-        /// Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
+        /// Number of nodes. 2: one master and one slave, 3: one master and two slaves
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }

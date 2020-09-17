@@ -150,6 +150,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("TypeList")]
         public long?[] TypeList{ get; set; }
 
+        /// <summary>
+        /// Internal parameter, which can be ignored
+        /// </summary>
+        [JsonProperty("MonitorVersion")]
+        public string MonitorVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
             this.SetParamArraySimple(map, prefix + "TypeList.", this.TypeList);
+            this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
         }
     }
 }

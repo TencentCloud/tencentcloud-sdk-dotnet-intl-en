@@ -102,7 +102,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? BasicIspCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// This optional field must be specified when HTTPS protocol is used.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

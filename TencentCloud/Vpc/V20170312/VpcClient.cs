@@ -709,6 +709,50 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used by the service provider to perform a compliance audit.
+        /// * To call this API, the service provider needs to prove identity and provide `APPID` to audit the compliance review forms received.
+        /// * The review form can be changed between the `APPROVED` and `DENY` status.
+        /// </summary>
+        /// <param name="req"><see cref="AuditCrossBorderComplianceRequest"/></param>
+        /// <returns><see cref="AuditCrossBorderComplianceResponse"/></returns>
+        public async Task<AuditCrossBorderComplianceResponse> AuditCrossBorderCompliance(AuditCrossBorderComplianceRequest req)
+        {
+             JsonResponseModel<AuditCrossBorderComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AuditCrossBorderCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuditCrossBorderComplianceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used by the service provider to perform a compliance audit.
+        /// * To call this API, the service provider needs to prove identity and provide `APPID` to audit the compliance review forms received.
+        /// * The review form can be changed between the `APPROVED` and `DENY` status.
+        /// </summary>
+        /// <param name="req"><see cref="AuditCrossBorderComplianceRequest"/></param>
+        /// <returns><see cref="AuditCrossBorderComplianceResponse"/></returns>
+        public AuditCrossBorderComplianceResponse AuditCrossBorderComplianceSync(AuditCrossBorderComplianceRequest req)
+        {
+             JsonResponseModel<AuditCrossBorderComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AuditCrossBorderCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuditCrossBorderComplianceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CheckAssistantCidr) is used to check overlapping of a secondary CIDR block with inventory routing, peering connection (opposite VPC CIDR block), and any other resources. If an overlap is present, the overlapped resources are returned. (To use this API that is in Beta, please submit a ticket.)
         /// * Check whether the secondary CIDR block overlaps with a primary or secondary CIDR block of the current VPC.
         /// * Check whether the secondary CIDR block overlaps with the routing destination of the current VPC.
@@ -3598,6 +3642,48 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClassicLinkInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicLinkInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the compliance review form created.
+        /// The service provider can query all review forms created by any `APPID` under the service. Other users can only query their own review forms.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderComplianceRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderComplianceResponse"/></returns>
+        public async Task<DescribeCrossBorderComplianceResponse> DescribeCrossBorderCompliance(DescribeCrossBorderComplianceRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCrossBorderCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderComplianceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the compliance review form created.
+        /// The service provider can query all review forms created by any `APPID` under the service. Other users can only query their own review forms.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderComplianceRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderComplianceResponse"/></returns>
+        public DescribeCrossBorderComplianceResponse DescribeCrossBorderComplianceSync(DescribeCrossBorderComplianceRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCrossBorderCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderComplianceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

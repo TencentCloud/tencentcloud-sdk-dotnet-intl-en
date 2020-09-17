@@ -61,7 +61,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string SnapshotState{ get; set; }
 
         /// <summary>
-        /// Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](/document/product/362/15650) to modify this field.
+        /// Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }

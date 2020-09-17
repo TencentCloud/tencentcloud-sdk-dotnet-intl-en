@@ -54,7 +54,11 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security event level.
+        /// <li>RISK: severe</li>
+        /// <li>HIGH: high</li>
+        /// <li>NORMAL: medium</li>
+        /// <li>LOW: low</li>
         /// </summary>
         [JsonProperty("SecurityLevel")]
         public string SecurityLevel{ get; set; }

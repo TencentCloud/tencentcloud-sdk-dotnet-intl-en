@@ -25,7 +25,8 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 
+        /// Value range: [0,1]. 
+        /// If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
         /// </summary>
         [JsonProperty("UseMixCropCenter")]
         public long? UseMixCropCenter{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag ID
         /// </summary>
         [JsonProperty("TagId")]
         public ulong? TagId{ get; set; }

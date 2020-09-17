@@ -55,31 +55,31 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public SecurityTrend[] BaseLines{ get; set; }
 
         /// <summary>
-        /// 
+        /// Statistics array of malicious requests.
         /// </summary>
         [JsonProperty("MaliciousRequests")]
         public SecurityTrend[] MaliciousRequests{ get; set; }
 
         /// <summary>
-        /// 
+        /// Statistics array of high-risk commands.
         /// </summary>
         [JsonProperty("HighRiskBashs")]
         public SecurityTrend[] HighRiskBashs{ get; set; }
 
         /// <summary>
-        /// 
+        /// Statistics array of reverse shells.
         /// </summary>
         [JsonProperty("ReverseShells")]
         public SecurityTrend[] ReverseShells{ get; set; }
 
         /// <summary>
-        /// 
+        /// Statistics array of local privilege escalations.
         /// </summary>
         [JsonProperty("PrivilegeEscalations")]
         public SecurityTrend[] PrivilegeEscalations{ get; set; }
 
         /// <summary>
-        /// 
+        /// Statistics array of network attacks.
         /// </summary>
         [JsonProperty("CyberAttacks")]
         public SecurityTrend[] CyberAttacks{ get; set; }

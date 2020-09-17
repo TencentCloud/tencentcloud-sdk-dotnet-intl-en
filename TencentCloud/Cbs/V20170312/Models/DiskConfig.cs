@@ -61,7 +61,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? MinDiskSize{ get; set; }
 
         /// <summary>
-        /// The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+        /// The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+        /// Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("InstanceFamily")]

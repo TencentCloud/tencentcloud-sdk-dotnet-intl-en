@@ -211,7 +211,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Oracle{ get; set; }
 
         /// <summary>
-        /// 
+        /// ElasticSearch Service.
         /// </summary>
         [JsonProperty("ElasticSearch")]
         public ulong? ElasticSearch{ get; set; }

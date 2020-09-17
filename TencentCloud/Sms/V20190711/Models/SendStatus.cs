@@ -37,7 +37,7 @@ namespace TencentCloud.Sms.V20190711.Models
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// Number of billable SMS messages. For billing rules, please see [Billing Policy](https://cloud.tencent.com/document/product/382/36135).
+        /// Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Fee")]
         public ulong? Fee{ get; set; }

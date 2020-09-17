@@ -43,7 +43,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string TableGroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Table group tag list
         /// </summary>
         [JsonProperty("ResourceTags")]
         public TagInfoUnit[] ResourceTags{ get; set; }

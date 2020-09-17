@@ -203,7 +203,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string ChargeState{ get; set; }
 
         /// <summary>
-        /// 
+        /// Connection activation time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

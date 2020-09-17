@@ -55,10 +55,22 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+        /// Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
         /// </summary>
         [JsonProperty("DataVolumes")]
         public string[] DataVolumes{ get; set; }
+
+        /// <summary>
+        /// EKS cluster - CPU type. Valid values: "intel", "amd"
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
+        /// <summary>
+        /// Pod node data directory mounting information.
+        /// </summary>
+        [JsonProperty("PodVolumes")]
+        public PodVolume[] PodVolumes{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamArraySimple(map, prefix + "DataVolumes.", this.DataVolumes);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
+            this.SetParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
         }
     }
 }

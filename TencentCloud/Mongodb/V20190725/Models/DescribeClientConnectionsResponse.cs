@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ClientConnection[] Clients{ get; set; }
 
         /// <summary>
-        /// 
+        /// The total number of records that meet the query condition, which can be used for paginated queries.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

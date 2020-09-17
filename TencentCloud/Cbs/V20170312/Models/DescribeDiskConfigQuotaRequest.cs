@@ -31,7 +31,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string InquiryType{ get; set; }
 
         /// <summary>
-        /// Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+        /// Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskUsage{ get; set; }
 
         /// <summary>
-        /// Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+        /// Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("InstanceFamilies")]
         public string[] InstanceFamilies{ get; set; }

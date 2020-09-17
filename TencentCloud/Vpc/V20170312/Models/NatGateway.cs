@@ -93,13 +93,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 
+        /// IDs of direct connect gateway associated.
         /// </summary>
         [JsonProperty("DirectConnectGatewayIds")]
         public string[] DirectConnectGatewayIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

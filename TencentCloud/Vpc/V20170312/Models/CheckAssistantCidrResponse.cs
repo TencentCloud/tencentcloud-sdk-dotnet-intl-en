@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 
+        /// Array of conflict resources.
         /// </summary>
         [JsonProperty("ConflictSourceSet")]
         public ConflictSource[] ConflictSourceSet{ get; set; }

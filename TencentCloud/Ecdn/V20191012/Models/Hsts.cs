@@ -25,19 +25,19 @@ namespace TencentCloud.Ecdn.V20191012.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to enable. Valid values: on, off.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// `MaxAge` value.
         /// </summary>
         [JsonProperty("MaxAge")]
         public long? MaxAge{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to include subdomain names. Valid values: on, off.
         /// </summary>
         [JsonProperty("IncludeSubDomains")]
         public string IncludeSubDomains{ get; set; }

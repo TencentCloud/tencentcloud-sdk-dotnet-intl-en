@@ -330,7 +330,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string IsBlockTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the IP type is the local BGP
         /// </summary>
         [JsonProperty("LocalBgp")]
         public bool? LocalBgp{ get; set; }

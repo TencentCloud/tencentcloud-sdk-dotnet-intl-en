@@ -56,7 +56,7 @@ namespace TencentCloud.Sms.V20190711.Models
         public string SmsSdkAppid{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pull end time in UNIX timestamp accurate to seconds.
         /// </summary>
         [JsonProperty("EndDateTime")]
         public ulong? EndDateTime{ get; set; }

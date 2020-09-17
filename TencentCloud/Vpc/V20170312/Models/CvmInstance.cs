@@ -73,7 +73,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance type.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

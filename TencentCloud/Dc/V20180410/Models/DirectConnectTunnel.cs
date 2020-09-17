@@ -205,7 +205,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup IP address on the Tencent side.
         /// </summary>
         [JsonProperty("TencentBackupAddress")]
         public string TencentBackupAddress{ get; set; }

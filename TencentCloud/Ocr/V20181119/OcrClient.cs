@@ -54,6 +54,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to detect and recognize key fields such as the card number, bank information, and expiration date on mainstream bank cards in Mainland China.
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="BankCardOCRRequest"/></param>
         /// <returns><see cref="BankCardOCRResponse"/></returns>
@@ -74,6 +76,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to detect and recognize key fields such as the card number, bank information, and expiration date on mainstream bank cards in Mainland China.
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="BankCardOCRRequest"/></param>
         /// <returns><see cref="BankCardOCRResponse"/></returns>
@@ -93,67 +97,65 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This API is used to detect and recognize characters in an image in the following 19 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, and Thai. Mixed characters in English and each supported language can be recognized together.
+        /// This API is used to detect and recognize characters in an image. It can recognize Chinese, English, Chinese-English, digits, and special symbols and return the text box positions and characters.
+        /// 
+        /// It is suitable for scenarios with a lot of characters in complex layouts and requiring high recognition accuracy, such as examination papers, online images, signboards, and legal documents.
+        /// 
+        /// Strengths: compared with general print recognition, it provides higher-precision character recognition services. Its accuracy and recall rate are higher in difficult scenarios such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text.
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="GeneralAccurateOCRRequest"/></param>
+        /// <returns><see cref="GeneralAccurateOCRResponse"/></returns>
+        public async Task<GeneralAccurateOCRResponse> GeneralAccurateOCR(GeneralAccurateOCRRequest req)
+        {
+             JsonResponseModel<GeneralAccurateOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GeneralAccurateOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneralAccurateOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to detect and recognize characters in an image. It can recognize Chinese, English, Chinese-English, digits, and special symbols and return the text box positions and characters.
+        /// 
+        /// It is suitable for scenarios with a lot of characters in complex layouts and requiring high recognition accuracy, such as examination papers, online images, signboards, and legal documents.
+        /// 
+        /// Strengths: compared with general print recognition, it provides higher-precision character recognition services. Its accuracy and recall rate are higher in difficult scenarios such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text.
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="GeneralAccurateOCRRequest"/></param>
+        /// <returns><see cref="GeneralAccurateOCRResponse"/></returns>
+        public GeneralAccurateOCRResponse GeneralAccurateOCRSync(GeneralAccurateOCRRequest req)
+        {
+             JsonResponseModel<GeneralAccurateOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GeneralAccurateOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneralAccurateOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to detect and recognize characters in an image in the following 20 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, and Arabic. Mixed characters in English and each supported language can be recognized together.
         /// 
         /// It can recognize printed text in paper documents, online images, ads, signboards, menus, video titles, profile photos, etc.
         /// 
-        /// Product strengths: it can automatically recognize the text language, return the text box coordinate information, and automatically rotate tilted text to the upright direction.
+        /// Strengths: it can automatically recognize the text language, return the text box coordinate information, and automatically rotate tilted text to the upright direction.
         /// 
-        /// The differences between different editions of general print recognition are as detailed below:
-        /// <table style="width:715px">
-        ///       <thead>
-        ///         <tr>
-        ///           <th style="width:150px"></th>
-        ///           <th style="width:200px">**(Recommended)** General Print Recognition</th>
-        ///           <th ><a href="https://cloud.tencent.com/document/product/866/34937">**(Recommended)** General Print Recognition (High-Precision)</a></th>
-        ///           <th><a href="https://cloud.tencent.com/document/product/866/37831">General Print Recognition (Simplified)</a></th>
-        ///         </tr>
-        ///       </thead>
-        ///       <tbody>
-        ///         <tr>
-        ///           <td>Use case</td>
-        ///           <td>It is suitable for recognition of printed text in all general scenarios</td>
-        ///           <td>It is suitable for content with high recognition difficulty such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text</td>
-        ///           <td>It is suitable for fast text recognition, which compromises the accuracy and recall rate but is more cost-effective</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Recognition accuracy rate</td>
-        ///           <td>96%</td>
-        ///           <td>99%</td>
-        ///           <td>91%</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Price</td>
-        ///           <td>Medium</td>
-        ///           <td>High</td>
-        ///           <td>Low</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Supported languages</td>
-        ///           <td>Chinese, English, Chinese-English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, and Thai</td>
-        ///           <td>Chinese, English, and Chinese-English</td>
-        ///           <td>Chinese, English, and Chinese-English</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Automatic language detection</td>
-        ///           <td>Supported</td>
-        ///           <td>Supported</td>
-        ///           <td>Supported</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Return of text line coordinates</td>
-        ///           <td>Supported</td>
-        ///           <td>Supported</td>
-        ///           <td>Supported</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Automatic rotation correction</td>
-        ///           <td>Rotation recognition is supported, and the angle information can be returned</td>
-        ///           <td>Rotation recognition is supported, but no angle information can be returned</td>
-        ///           <td>Rotation recognition is supported, and the angle information can be returned</td>
-        ///         </tr>
-        ///       </tbody>
-        ///     </table>
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="GeneralBasicOCRRequest"/></param>
         /// <returns><see cref="GeneralBasicOCRResponse"/></returns>
@@ -173,67 +175,13 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This API is used to detect and recognize characters in an image in the following 19 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, and Thai. Mixed characters in English and each supported language can be recognized together.
+        /// This API is used to detect and recognize characters in an image in the following 20 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, and Arabic. Mixed characters in English and each supported language can be recognized together.
         /// 
         /// It can recognize printed text in paper documents, online images, ads, signboards, menus, video titles, profile photos, etc.
         /// 
-        /// Product strengths: it can automatically recognize the text language, return the text box coordinate information, and automatically rotate tilted text to the upright direction.
+        /// Strengths: it can automatically recognize the text language, return the text box coordinate information, and automatically rotate tilted text to the upright direction.
         /// 
-        /// The differences between different editions of general print recognition are as detailed below:
-        /// <table style="width:715px">
-        ///       <thead>
-        ///         <tr>
-        ///           <th style="width:150px"></th>
-        ///           <th style="width:200px">**(Recommended)** General Print Recognition</th>
-        ///           <th ><a href="https://cloud.tencent.com/document/product/866/34937">**(Recommended)** General Print Recognition (High-Precision)</a></th>
-        ///           <th><a href="https://cloud.tencent.com/document/product/866/37831">General Print Recognition (Simplified)</a></th>
-        ///         </tr>
-        ///       </thead>
-        ///       <tbody>
-        ///         <tr>
-        ///           <td>Use case</td>
-        ///           <td>It is suitable for recognition of printed text in all general scenarios</td>
-        ///           <td>It is suitable for content with high recognition difficulty such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text</td>
-        ///           <td>It is suitable for fast text recognition, which compromises the accuracy and recall rate but is more cost-effective</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Recognition accuracy rate</td>
-        ///           <td>96%</td>
-        ///           <td>99%</td>
-        ///           <td>91%</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Price</td>
-        ///           <td>Medium</td>
-        ///           <td>High</td>
-        ///           <td>Low</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Supported languages</td>
-        ///           <td>Chinese, English, Chinese-English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, and Thai</td>
-        ///           <td>Chinese, English, and Chinese-English</td>
-        ///           <td>Chinese, English, and Chinese-English</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Automatic language detection</td>
-        ///           <td>Supported</td>
-        ///           <td>Supported</td>
-        ///           <td>Supported</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Return of text line coordinates</td>
-        ///           <td>Supported</td>
-        ///           <td>Supported</td>
-        ///           <td>Supported</td>
-        ///         </tr>
-        ///         <tr>
-        ///           <td>Automatic rotation correction</td>
-        ///           <td>Rotation recognition is supported, and the angle information can be returned</td>
-        ///           <td>Rotation recognition is supported, but no angle information can be returned</td>
-        ///           <td>Rotation recognition is supported, and the angle information can be returned</td>
-        ///         </tr>
-        ///       </tbody>
-        ///     </table>
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="GeneralBasicOCRRequest"/></param>
         /// <returns><see cref="GeneralBasicOCRResponse"/></returns>
@@ -254,7 +202,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. It can check for card authenticity and crop the identity photo.
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="HKIDCardOCRRequest"/></param>
         /// <returns><see cref="HKIDCardOCRResponse"/></returns>
@@ -275,7 +224,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. It can check for card authenticity and crop the identity photo.
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="HKIDCardOCRRequest"/></param>
         /// <returns><see cref="HKIDCardOCRResponse"/></returns>
@@ -296,7 +246,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to recognize a Malaysian identity card. Recognizable fields include identity card number, name, gender, and address. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="MLIDCardOCRRequest"/></param>
         /// <returns><see cref="MLIDCardOCRResponse"/></returns>
@@ -317,7 +268,8 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to recognize a Malaysian identity card. Recognizable fields include identity card number, name, gender, and address. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="MLIDCardOCRRequest"/></param>
         /// <returns><see cref="MLIDCardOCRResponse"/></returns>
@@ -337,8 +289,9 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This API is used to recognize a passport issued outside Mainland China. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for spoofed or photocopied documents.
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+        /// This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="MLIDPassportOCRRequest"/></param>
         /// <returns><see cref="MLIDPassportOCRResponse"/></returns>
@@ -358,8 +311,9 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This API is used to recognize a passport issued outside Mainland China. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for spoofed or photocopied documents.
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://cloud.tencent.com/about/connect).
+        /// This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="MLIDPassportOCRRequest"/></param>
         /// <returns><see cref="MLIDPassportOCRResponse"/></returns>
@@ -370,6 +324,50 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "MLIDPassportOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDPassportOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="TableOCRRequest"/></param>
+        /// <returns><see cref="TableOCRResponse"/></returns>
+        public async Task<TableOCRResponse> TableOCR(TableOCRRequest req)
+        {
+             JsonResponseModel<TableOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TableOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TableOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="TableOCRRequest"/></param>
+        /// <returns><see cref="TableOCRResponse"/></returns>
+        public TableOCRResponse TableOCRSync(TableOCRRequest req)
+        {
+             JsonResponseModel<TableOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TableOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TableOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -61,13 +61,13 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 
+        /// Start time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// End time
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

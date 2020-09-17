@@ -103,28 +103,37 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public MachineTag[] Tag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of baseline risks.
         /// </summary>
         [JsonProperty("BaselineNum")]
         public long? BaselineNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of network risks.
         /// </summary>
         [JsonProperty("CyberAttackNum")]
         public long? CyberAttackNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// Risk status.
+        /// <li>SAFE: safe</li>
+        /// <li>RISK: at risk</li>
+        /// <li>UNKNOWN: unknown</li>
         /// </summary>
         [JsonProperty("SecurityStatus")]
         public string SecurityStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of intrusions
         /// </summary>
         [JsonProperty("InvasionNum")]
         public long? InvasionNum{ get; set; }
+
+        /// <summary>
+        /// Region information
+        /// </summary>
+        [JsonProperty("RegionInfo")]
+        public RegionInfo RegionInfo{ get; set; }
 
 
         /// <summary>
@@ -148,6 +157,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "CyberAttackNum", this.CyberAttackNum);
             this.SetParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
             this.SetParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
+            this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
         }
     }
 }

@@ -53,7 +53,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// Node type
+        /// Node type. 0: common node; 1: master node;
+        /// 2: core node; 3: task node
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Flag")]
@@ -270,7 +271,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
         /// </summary>
         [JsonProperty("AutoFlag")]
         public long? AutoFlag{ get; set; }

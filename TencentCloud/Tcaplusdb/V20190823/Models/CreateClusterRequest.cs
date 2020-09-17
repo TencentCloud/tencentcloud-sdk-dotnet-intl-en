@@ -55,7 +55,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster tag list
         /// </summary>
         [JsonProperty("ResourceTags")]
         public TagInfoUnit[] ResourceTags{ get; set; }

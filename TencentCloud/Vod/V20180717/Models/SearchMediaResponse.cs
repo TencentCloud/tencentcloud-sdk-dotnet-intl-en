@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of media file information, only including the basic information (BasicInfo).
+        /// Media file information list.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MediaInfoSet")]

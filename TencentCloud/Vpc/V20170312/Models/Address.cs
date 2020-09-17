@@ -114,6 +114,26 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InternetServiceProvider")]
         public string InternetServiceProvider{ get; set; }
 
+        /// <summary>
+        /// Whether the EIP is in a local BGP.
+        /// </summary>
+        [JsonProperty("LocalBgp")]
+        public bool? LocalBgp{ get; set; }
+
+        /// <summary>
+        /// Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("InternetChargeType")]
+        public string InternetChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +155,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
             this.SetParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
             this.SetParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+            this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         }
     }
 }

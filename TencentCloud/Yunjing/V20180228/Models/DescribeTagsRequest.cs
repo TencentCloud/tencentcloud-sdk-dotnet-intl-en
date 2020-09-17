@@ -25,13 +25,15 @@ namespace TencentCloud.Yunjing.V20180228.Models
     {
         
         /// <summary>
-        /// 
+        /// CVM instance type.
+        /// <li>CVM: CVM</li>
+        /// <li>BM: CPM</li>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Server region, such as `ap-guangzhou` and `ap-shanghai`
         /// </summary>
         [JsonProperty("MachineRegion")]
         public string MachineRegion{ get; set; }
