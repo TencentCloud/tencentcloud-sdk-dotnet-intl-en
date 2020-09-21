@@ -31,7 +31,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// The list of screenshot time points. “s” and “%” formats are supported:
+        /// <li>When a time point string ends with “s”, its unit is second. For example, “3.5 s” means the 3.5th second of the video;</li>
+        /// <li>When a time point string ends with “%”, it is marked with corresponding percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
         /// </summary>
         [JsonProperty("ExtTimeOffsetSet")]
         public string[] ExtTimeOffsetSet{ get; set; }

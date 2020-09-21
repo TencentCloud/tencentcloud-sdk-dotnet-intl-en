@@ -129,7 +129,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Vid{ get; set; }
 
         /// <summary>
-        /// 
+        /// File type:
+        /// <li>Video: video file</li>
+        /// <li>Audio: audio file</li>
+        /// <li>Image: image file</li>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }

@@ -25,13 +25,14 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
+        /// Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://cloud.tencent.com/document/product/1000/40960).
+        /// When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://intl.cloud.tencent.com/document/product/1000/40960?from_cn_redirect=1).
         /// When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
         /// </summary>
         [JsonProperty("ContentId")]
@@ -39,7 +40,7 @@ namespace TencentCloud.Mdl.V20200326.Models
 
         /// <summary>
         /// Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
-        /// TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://cloud.tencent.com/solution/drm).
+        /// TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://intl.cloud.tencent.com/solution/drm?from_cn_redirect=1).
         /// CustomDRMKeys refers to an encryption key customized by the user.
         /// </summary>
         [JsonProperty("Scheme")]

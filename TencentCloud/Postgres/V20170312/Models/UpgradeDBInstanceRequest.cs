@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Activity ID
         /// </summary>
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }

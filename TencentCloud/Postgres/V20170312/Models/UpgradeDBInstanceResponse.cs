@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DealName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Bill ID of frozen fees
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }

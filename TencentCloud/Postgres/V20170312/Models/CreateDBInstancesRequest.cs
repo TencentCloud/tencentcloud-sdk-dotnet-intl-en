@@ -103,7 +103,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Activity ID
         /// </summary>
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }

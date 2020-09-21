@@ -31,8 +31,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ReservedInstancesId{ get; set; }
 
         /// <summary>
-        /// The type of the reserved instance. For example, S3.MEDIUM4.
-        /// Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
+        /// Reserved instance specification, such as `S3.MEDIUM4`.
+        /// Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -97,6 +97,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("OfferingType")]
         public string OfferingType{ get; set; }
 
+        /// <summary>
+        /// Reserved instance type, such as `S3`.
+        /// Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+        /// </summary>
+        [JsonProperty("InstanceFamily")]
+        public string InstanceFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "CurrencyCode", this.CurrencyCode);
             this.SetParamSimple(map, prefix + "OfferingType", this.OfferingType);
+            this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
         }
     }
 }

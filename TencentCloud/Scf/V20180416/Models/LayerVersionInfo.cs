@@ -64,11 +64,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string LayerName{ get; set; }
 
         /// <summary>
-        /// The status of the layer version. Values can be: 
-        /// `Active`: normal
-        /// `Publishing`: publishing
-        /// `PublishFailed`: failed to publish
-        /// `Deleted`: deleted
+        /// Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

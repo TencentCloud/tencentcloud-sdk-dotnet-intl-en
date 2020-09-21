@@ -43,13 +43,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 
+        /// In ascending or descending order
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

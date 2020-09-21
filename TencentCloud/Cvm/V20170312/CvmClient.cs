@@ -1189,6 +1189,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
+        public async Task<DescribeReservedInstancesConfigInfosResponse> DescribeReservedInstancesConfigInfos(DescribeReservedInstancesConfigInfosRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesConfigInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReservedInstancesConfigInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesConfigInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
+        public DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfosSync(DescribeReservedInstancesConfigInfosRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesConfigInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReservedInstancesConfigInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesConfigInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to describe Reserved Instance offerings that are available for purchase.
         /// </summary>
         /// <param name="req"><see cref="DescribeReservedInstancesOfferingsRequest"/></param>
@@ -1220,6 +1260,46 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeReservedInstancesOfferings");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesOfferingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query spot instances that are available for purchase.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpotTypeConfigRequest"/></param>
+        /// <returns><see cref="DescribeSpotTypeConfigResponse"/></returns>
+        public async Task<DescribeSpotTypeConfigResponse> DescribeSpotTypeConfig(DescribeSpotTypeConfigRequest req)
+        {
+             JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSpotTypeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpotTypeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query spot instances that are available for purchase.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpotTypeConfigRequest"/></param>
+        /// <returns><see cref="DescribeSpotTypeConfigResponse"/></returns>
+        public DescribeSpotTypeConfigResponse DescribeSpotTypeConfigSync(DescribeSpotTypeConfigRequest req)
+        {
+             JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSpotTypeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpotTypeConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1478,6 +1558,46 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ImportKeyPair");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportKeyPairResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of reserved instances. It only supports querying purchasable reserved instance offerings. Currently, RIs are only offered to beta users.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePricePurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="InquirePricePurchaseReservedInstancesOfferingResponse"/></returns>
+        public async Task<InquirePricePurchaseReservedInstancesOfferingResponse> InquirePricePurchaseReservedInstancesOffering(InquirePricePurchaseReservedInstancesOfferingRequest req)
+        {
+             JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePricePurchaseReservedInstancesOffering");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of reserved instances. It only supports querying purchasable reserved instance offerings. Currently, RIs are only offered to beta users.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePricePurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="InquirePricePurchaseReservedInstancesOfferingResponse"/></returns>
+        public InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOfferingSync(InquirePricePurchaseReservedInstancesOfferingRequest req)
+        {
+             JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePricePurchaseReservedInstancesOffering");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

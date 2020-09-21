@@ -85,13 +85,14 @@ namespace TencentCloud.Batch.V20170312.Models
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// 
+        /// Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+        /// USER_ATTACHED: instance resources added by users to the compute environment.
         /// </summary>
         [JsonProperty("ResourceOrigin")]
         public string ResourceOrigin{ get; set; }

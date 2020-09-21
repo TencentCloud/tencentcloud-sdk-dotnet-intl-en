@@ -933,6 +933,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to query the security settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
+        /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
+        public async Task<DescribeSafeAuthFlagResponse> DescribeSafeAuthFlag(DescribeSafeAuthFlagRequest req)
+        {
+             JsonResponseModel<DescribeSafeAuthFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSafeAuthFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
+        /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
+        public DescribeSafeAuthFlagResponse DescribeSafeAuthFlagSync(DescribeSafeAuthFlagRequest req)
+        {
+             JsonResponseModel<DescribeSafeAuthFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSafeAuthFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DetachGroupPolicy) is used to unassociate a policy and a user group.
         /// </summary>
         /// <param name="req"><see cref="DetachGroupPolicyRequest"/></param>

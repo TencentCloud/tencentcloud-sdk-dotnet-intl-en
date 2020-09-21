@@ -105,25 +105,25 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string SoldOutReason{ get; set; }
 
         /// <summary>
-        /// 
+        /// Private network bandwidth, in Gbps.
         /// </summary>
         [JsonProperty("InstanceBandwidth")]
         public float? InstanceBandwidth{ get; set; }
 
         /// <summary>
-        /// 
+        /// The max packet sending and receiving capability (in 10k PPS).
         /// </summary>
         [JsonProperty("InstancePps")]
         public long? InstancePps{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of local storage blocks.
         /// </summary>
         [JsonProperty("StorageBlockAmount")]
         public long? StorageBlockAmount{ get; set; }
 
         /// <summary>
-        /// 
+        /// CPU type.
         /// </summary>
         [JsonProperty("CpuType")]
         public string CpuType{ get; set; }

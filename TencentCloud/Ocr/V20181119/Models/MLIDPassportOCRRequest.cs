@@ -31,7 +31,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// Whether to return an image. Default value: false
+        /// Whether to return an image. Default value: false.
         /// </summary>
         [JsonProperty("RetImage")]
         public bool? RetImage{ get; set; }

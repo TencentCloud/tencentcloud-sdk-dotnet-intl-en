@@ -90,7 +90,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Date of birth (currently, this field is only supported for IKAD)
+        /// Date of birth (currently, this field is only supported for IKAD).
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }

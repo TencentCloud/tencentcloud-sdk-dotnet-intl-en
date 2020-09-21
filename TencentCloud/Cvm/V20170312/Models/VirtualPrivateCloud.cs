@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 
+        /// VPC ID in the format of `vpc-xxx`. To obtain valid VPC IDs, you can log in to the [console](https://console.cloud.tencent.com/vpc/vpc?rid=1) or call the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API and look for the `unVpcId` fields in the response. If you specify `DEFAULT` for both `VpcId` and `SubnetId` when creating an instance, the default VPC will be used.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of IPv6 addresses randomly generated for the ENI.
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public ulong? Ipv6AddressCount{ get; set; }

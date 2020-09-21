@@ -25,13 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Frame-specific tag name.
+        /// 
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// Confidence of intelligently generated frame-specific tag between 0 and 100.
+        /// 
+        /// </summary>
+        [JsonProperty("CategorySet")]
+        public string[] CategorySet{ get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamArraySimple(map, prefix + "CategorySet.", this.CategorySet);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
         }
     }

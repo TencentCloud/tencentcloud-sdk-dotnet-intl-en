@@ -35,7 +35,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// URL address of image.
         /// The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-        /// We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+        /// We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }

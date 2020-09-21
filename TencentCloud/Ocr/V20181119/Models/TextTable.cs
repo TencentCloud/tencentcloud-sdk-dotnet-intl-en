@@ -25,25 +25,25 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Column index of the top-left corner of the cell
+        /// Column index of the top-left corner of the cell.
         /// </summary>
         [JsonProperty("ColTl")]
         public long? ColTl{ get; set; }
 
         /// <summary>
-        /// Row index of the top-left corner of the cell
+        /// Row index of the top-left corner of the cell.
         /// </summary>
         [JsonProperty("RowTl")]
         public long? RowTl{ get; set; }
 
         /// <summary>
-        /// Column index of the bottom-right corner of the cell
+        /// Column index of the bottom-right corner of the cell.
         /// </summary>
         [JsonProperty("ColBr")]
         public long? ColBr{ get; set; }
 
         /// <summary>
-        /// Row index of the bottom-right corner of the cell
+        /// Row index of the bottom-right corner of the cell.
         /// </summary>
         [JsonProperty("RowBr")]
         public long? RowBr{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// Text line coordinates, which are represented as 4 vertex coordinates
+        /// Text line coordinates, which are represented as 4 vertex coordinates.
         /// </summary>
         [JsonProperty("Polygon")]
         public Coord[] Polygon{ get; set; }

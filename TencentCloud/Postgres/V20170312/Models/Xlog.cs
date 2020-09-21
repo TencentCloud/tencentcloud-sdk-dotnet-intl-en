@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string ExternalAddr{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup file size
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

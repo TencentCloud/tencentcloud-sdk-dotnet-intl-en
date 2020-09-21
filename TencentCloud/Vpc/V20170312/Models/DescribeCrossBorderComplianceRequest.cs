@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceProvider{ get; set; }
 
         /// <summary>
-        /// (Exact match) ID of compliance review form.
+        /// (Exact match) ID of compliance review request.
         /// </summary>
         [JsonProperty("ComplianceId")]
         public ulong? ComplianceId{ get; set; }

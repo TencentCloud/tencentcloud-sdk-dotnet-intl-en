@@ -99,7 +99,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string SslStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// HSTS configuration
         /// </summary>
         [JsonProperty("Hsts")]
         public Hsts Hsts{ get; set; }

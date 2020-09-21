@@ -61,21 +61,21 @@ namespace TencentCloud.Scf.V20180416.Models
         public string RemoteMountDir{ get; set; }
 
         /// <summary>
-        /// File system IP
+        /// File system IP, which is not required when you configure CFS.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IpAddress")]
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// VPC ID of file system
+        /// VPC ID of file system, which is not required when you configure CFS.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MountVpcId")]
         public string MountVpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID of file system
+        /// VPC subnet ID of file system, which is not required when you configure CFS.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MountSubnetId")]

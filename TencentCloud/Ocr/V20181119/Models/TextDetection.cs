@@ -25,19 +25,19 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Recognized text line content
+        /// Recognized text line content.
         /// </summary>
         [JsonProperty("DetectedText")]
         public string DetectedText{ get; set; }
 
         /// <summary>
-        /// Confidence. Value range: 0-100
+        /// Confidence. Value range: 0–100.
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// Text line coordinates, which are represented as 4 vertex coordinates
+        /// Text line coordinates, which are represented as 4 vertex coordinates.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Polygon")]
@@ -51,7 +51,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
-        /// Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+        /// Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
         /// </summary>
         [JsonProperty("ItemPolygon")]
         public ItemCoord ItemPolygon{ get; set; }

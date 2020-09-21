@@ -169,19 +169,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// User `AppId`
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance `Uid`
         /// </summary>
         [JsonProperty("Uid")]
         public ulong? Uid{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
         /// </summary>
         [JsonProperty("SupportIpv6")]
         public ulong? SupportIpv6{ get; set; }

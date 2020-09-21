@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceProvider{ get; set; }
 
         /// <summary>
-        /// ID of compliance review form.
+        /// ID of compliance review request.
         /// </summary>
         [JsonProperty("ComplianceId")]
         public ulong? ComplianceId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string IssuingAuthority{ get; set; }
 
         /// <summary>
-        /// Business License.
+        /// Business license.
         /// </summary>
         [JsonProperty("BusinessLicense")]
         public string BusinessLicense{ get; set; }

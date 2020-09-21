@@ -67,19 +67,19 @@ namespace TencentCloud.Batch.V20170312.Models
         public ulong? DesiredComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Next action
         /// </summary>
         [JsonProperty("NextAction")]
         public string NextAction{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of compute nodes added to the compute environment by the user
         /// </summary>
         [JsonProperty("AttachedComputeNodeCount")]
         public ulong? AttachedComputeNodeCount{ get; set; }

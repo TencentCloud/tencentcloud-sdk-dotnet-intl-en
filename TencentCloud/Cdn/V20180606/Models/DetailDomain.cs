@@ -318,25 +318,25 @@ namespace TencentCloud.Cdn.V20180606.Models
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
         /// <summary>
-        /// 
+        /// SCDN configuration
         /// </summary>
         [JsonProperty("SecurityConfig")]
         public SecurityConfig SecurityConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image Optimization configuration
         /// </summary>
         [JsonProperty("ImageOptimization")]
         public ImageOptimization ImageOptimization{ get; set; }
 
         /// <summary>
-        /// 
+        /// `UA` blocklist/allowlist configuration
         /// </summary>
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access control
         /// </summary>
         [JsonProperty("AccessControl")]
         public AccessControl AccessControl{ get; set; }
@@ -363,6 +363,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("AccessPort")]
         public long?[] AccessPort{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Tag")]
+        public Tag[] Tag{ get; set; }
 
 
         /// <summary>
@@ -417,6 +423,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Advance", this.Advance);
             this.SetParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
             this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
         }
     }
 }

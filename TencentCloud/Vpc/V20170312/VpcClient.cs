@@ -710,8 +710,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used by the service provider to perform a compliance audit.
-        /// * To call this API, the service provider needs to prove identity and provide `APPID` to audit the compliance review forms received.
-        /// * The review form can be changed between the `APPROVED` and `DENY` status.
+        /// * This API is only provided for service providers to audit compliance review requests received. Tencent Cloud will verify the identity of the service provider by the `APPID`. 
+        /// * The status of the review request can be changed between `APPROVED` and `DENY`.
         /// </summary>
         /// <param name="req"><see cref="AuditCrossBorderComplianceRequest"/></param>
         /// <returns><see cref="AuditCrossBorderComplianceResponse"/></returns>
@@ -732,8 +732,8 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used by the service provider to perform a compliance audit.
-        /// * To call this API, the service provider needs to prove identity and provide `APPID` to audit the compliance review forms received.
-        /// * The review form can be changed between the `APPROVED` and `DENY` status.
+        /// * This API is only provided for service providers to audit compliance review requests received. Tencent Cloud will verify the identity of the service provider by the `APPID`. 
+        /// * The status of the review request can be changed between `APPROVED` and `DENY`.
         /// </summary>
         /// <param name="req"><see cref="AuditCrossBorderComplianceRequest"/></param>
         /// <returns><see cref="AuditCrossBorderComplianceResponse"/></returns>
@@ -3651,8 +3651,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the compliance review form created.
-        /// The service provider can query all review forms created by any `APPID` under the service. Other users can only query their own review forms.
+        /// This API is used to query the compliance review requests created by the user. 
+        /// A service provider can query all review requests created by any `APPID` under its account. Other users can only query their own review requests.
         /// </summary>
         /// <param name="req"><see cref="DescribeCrossBorderComplianceRequest"/></param>
         /// <returns><see cref="DescribeCrossBorderComplianceResponse"/></returns>
@@ -3672,8 +3672,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the compliance review form created.
-        /// The service provider can query all review forms created by any `APPID` under the service. Other users can only query their own review forms.
+        /// This API is used to query the compliance review requests created by the user. 
+        /// A service provider can query all review requests created by any `APPID` under its account. Other users can only query their own review requests.
         /// </summary>
         /// <param name="req"><see cref="DescribeCrossBorderComplianceRequest"/></param>
         /// <returns><see cref="DescribeCrossBorderComplianceResponse"/></returns>

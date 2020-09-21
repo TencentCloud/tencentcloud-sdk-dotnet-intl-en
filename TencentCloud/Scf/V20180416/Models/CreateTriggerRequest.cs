@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
+        /// For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("TriggerDesc")]
         public string TriggerDesc{ get; set; }

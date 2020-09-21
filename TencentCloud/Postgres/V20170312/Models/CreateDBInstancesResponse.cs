@@ -31,13 +31,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// 
+        /// Bill ID of frozen fees
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }

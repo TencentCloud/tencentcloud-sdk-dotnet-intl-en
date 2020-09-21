@@ -61,7 +61,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? DiskAvailable{ get; set; }
 
         /// <summary>
-        /// 
+        /// CDH instance disk type.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

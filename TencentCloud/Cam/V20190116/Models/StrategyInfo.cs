@@ -76,7 +76,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
         /// </summary>
         [JsonProperty("IsAttached")]
         public ulong? IsAttached{ get; set; }

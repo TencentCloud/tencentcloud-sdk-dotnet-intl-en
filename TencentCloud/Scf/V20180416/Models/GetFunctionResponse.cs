@@ -145,7 +145,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string InstallDependency{ get; set; }
 
         /// <summary>
-        /// Function status
+        /// Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -244,7 +244,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public CfsConfig CfsConfig{ get; set; }
 
         /// <summary>
-        /// Function billing status
+        /// Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AvailableStatus")]
@@ -256,6 +256,12 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
+
+        /// <summary>
+        /// Timeout period for function initialization
+        /// </summary>
+        [JsonProperty("InitTimeout")]
+        public long? InitTimeout{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -307,6 +313,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
             this.SetParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
+            this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

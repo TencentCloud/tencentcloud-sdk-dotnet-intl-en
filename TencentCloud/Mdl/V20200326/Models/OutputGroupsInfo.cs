@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -38,31 +38,32 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output information.
+        /// Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
         /// </summary>
         [JsonProperty("Outputs")]
         public OutputInfo[] Outputs{ get; set; }
 
         /// <summary>
-        /// 
+        /// Relay destination address. Quantity limit: [1,2].
         /// </summary>
         [JsonProperty("Destinations")]
         public DestinationInfo[] Destinations{ get; set; }
 
         /// <summary>
-        /// 
+        /// HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
         /// </summary>
         [JsonProperty("HlsRemuxSettings")]
         public HlsRemuxSettingsInfo HlsRemuxSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
         /// </summary>
         [JsonProperty("DashRemuxSettings")]
         public DashRemuxSettingsInfo DashRemuxSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// DRM configuration information.
         /// </summary>
         [JsonProperty("DrmSettings")]
         public DrmSettingsInfo DrmSettings{ get; set; }

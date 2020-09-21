@@ -49,7 +49,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? MaxSize{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
         /// </summary>
         [JsonProperty("Required")]
         public string Required{ get; set; }

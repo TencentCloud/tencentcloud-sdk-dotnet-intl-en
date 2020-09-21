@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// List of compliance review forms.
+        /// List of compliance review requests.
         /// </summary>
         [JsonProperty("CrossBorderComplianceSet")]
         public CrossBorderCompliance[] CrossBorderComplianceSet{ get; set; }
 
         /// <summary>
-        /// Total number of compliance review forms.
+        /// Total number of compliance review requests.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

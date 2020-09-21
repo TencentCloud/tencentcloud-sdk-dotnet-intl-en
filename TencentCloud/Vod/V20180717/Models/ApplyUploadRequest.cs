@@ -80,7 +80,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reserved field for special purposes.
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

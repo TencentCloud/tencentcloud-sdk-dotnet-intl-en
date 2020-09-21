@@ -25,13 +25,13 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// X-coordinate of top-left point
+        /// X-coordinate of top-left point.
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// Y-coordinate of top-left point
+        /// Y-coordinate of top-left point.
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }

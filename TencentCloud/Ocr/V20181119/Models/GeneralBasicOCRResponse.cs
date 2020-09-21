@@ -37,13 +37,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Language{ get; set; }
 
         /// <summary>
-        /// Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
+        /// Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>.
         /// </summary>
         [JsonProperty("Angel")]
         public float? Angel{ get; set; }
 
         /// <summary>
-        /// Total number of PDF pages to be returned if the image is a PDF. Default value: 0
+        /// Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
         /// </summary>
         [JsonProperty("PdfPageSize")]
         public long? PdfPageSize{ get; set; }

@@ -172,25 +172,25 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string StopChargingMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Globally unique ID of the instance.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 
+        /// Last operation of the instance, such as StopInstances or ResetInstance.
         /// </summary>
         [JsonProperty("LatestOperation")]
         public string LatestOperation{ get; set; }
 
         /// <summary>
-        /// 
+        /// The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unique request ID for the last operation of the instance.
         /// </summary>
         [JsonProperty("LatestOperationRequestId")]
         public string LatestOperationRequestId{ get; set; }

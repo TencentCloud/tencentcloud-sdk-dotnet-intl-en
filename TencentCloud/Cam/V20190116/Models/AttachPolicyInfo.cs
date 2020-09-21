@@ -59,7 +59,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Policy remarks
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -72,13 +72,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public string OperateOwnerUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
         /// </summary>
         [JsonProperty("OperateUinType")]
         public ulong? OperateUinType{ get; set; }

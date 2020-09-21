@@ -49,7 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] HostIps{ get; set; }
 
         /// <summary>
-        /// 
+        /// The ID of the CDH to which the instance belongs, only used as an output parameter.
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
