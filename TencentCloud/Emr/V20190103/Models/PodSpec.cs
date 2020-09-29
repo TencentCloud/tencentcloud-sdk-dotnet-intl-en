@@ -55,7 +55,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+        /// Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
         /// </summary>
         [JsonProperty("DataVolumes")]
         public string[] DataVolumes{ get; set; }

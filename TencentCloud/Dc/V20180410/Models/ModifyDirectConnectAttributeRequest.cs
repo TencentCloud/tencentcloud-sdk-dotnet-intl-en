@@ -37,7 +37,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string DirectConnectName{ get; set; }
 
         /// <summary>
-        /// Circuit code of connection, which is provided by the ISP or connection provider.
+        /// Circuit code of a connection, which is provided by the ISP or connection provider.
         /// </summary>
         [JsonProperty("CircuitCode")]
         public string CircuitCode{ get; set; }

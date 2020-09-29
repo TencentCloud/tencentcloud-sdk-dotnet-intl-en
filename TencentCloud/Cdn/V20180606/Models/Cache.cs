@@ -38,6 +38,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AdvancedCache")]
         public AdvancedCache AdvancedCache{ get; set; }
 
+        /// <summary>
+        /// Advanced path cache configuration
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("RuleCache")]
+        public RuleCache[] RuleCache{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
             this.SetParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
+            this.SetParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
         }
     }
 }

@@ -43,13 +43,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+        /// The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+        /// The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TemplateId{ get; set; }
 
         /// <summary>
-        /// Extended field, which is empty by default.
+        /// Extension field which is not defined now. It is empty by default.
         /// </summary>
         [JsonProperty("Extension")]
         public string Extension{ get; set; }

@@ -73,6 +73,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("DataType")]
         public string[] DataType{ get; set; }
 
+        /// <summary>
+        /// Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public string PageNumber{ get; set; }
+
+        /// <summary>
+        /// Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public string PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +97,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

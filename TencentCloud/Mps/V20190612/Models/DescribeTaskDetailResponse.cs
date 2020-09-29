@@ -67,7 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public WorkflowTask WorkflowTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
         /// </summary>
         [JsonProperty("EditMediaTask")]
         public EditMediaTask EditMediaTask{ get; set; }

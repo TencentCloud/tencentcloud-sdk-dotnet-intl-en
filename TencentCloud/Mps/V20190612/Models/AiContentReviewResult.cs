@@ -39,13 +39,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sample rate, which indicates the number of video frames captured per second for audit
         /// </summary>
         [JsonProperty("SampleRate")]
         public float? SampleRate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audited video duration in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
@@ -100,19 +100,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiReviewTaskPoliticalOcrResult PoliticalOcrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
         /// </summary>
         [JsonProperty("TerrorismOcrTask")]
         public AiReviewTaskTerrorismOcrResult TerrorismOcrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
         /// </summary>
         [JsonProperty("ProhibitedAsrTask")]
         public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
         /// </summary>
         [JsonProperty("ProhibitedOcrTask")]
         public AiReviewTaskProhibitedOcrResult ProhibitedOcrTask{ get; set; }

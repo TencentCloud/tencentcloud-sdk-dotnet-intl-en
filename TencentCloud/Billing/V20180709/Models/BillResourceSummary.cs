@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
+        /// Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
@@ -194,16 +194,34 @@ namespace TencentCloud.Billing.V20180709.Models
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// Resource owner UIN; “-” is returned if no value is obtained
+        /// Resource owner UIN; '-' is returned if no value is obtained
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// Operator UIN; “-” is returned if no value is obtained
+        /// Operator UIN; '-' is returned if no value is obtained
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BusinessCode")]
+        public string BusinessCode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public long? RegionId{ get; set; }
 
 
         /// <summary>
@@ -241,6 +259,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
+            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

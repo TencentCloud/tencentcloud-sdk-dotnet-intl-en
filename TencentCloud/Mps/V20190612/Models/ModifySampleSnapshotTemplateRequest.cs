@@ -49,7 +49,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resolution adaption. Valid values:
+        /// <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+        /// <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+        /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
@@ -83,7 +86,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+        /// <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+        /// <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+        /// <li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+        /// <li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+        /// Default value: black.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }

@@ -38,6 +38,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DiskNum")]
+        public long? DiskNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
         }
     }
 }

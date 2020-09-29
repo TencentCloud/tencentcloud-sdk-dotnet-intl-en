@@ -61,7 +61,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video content analysis task parameter.
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }

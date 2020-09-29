@@ -57,7 +57,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resolution adaption. Valid values:
+        /// <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+        /// <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+        /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
@@ -108,7 +111,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string FillType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template description.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

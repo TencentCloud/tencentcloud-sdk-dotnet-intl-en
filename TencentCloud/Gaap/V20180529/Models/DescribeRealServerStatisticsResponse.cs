@@ -25,10 +25,16 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Origin server status statistics
+        /// Origin server status statistics of specified listener
         /// </summary>
         [JsonProperty("StatisticsData")]
         public StatisticsDataInfo[] StatisticsData{ get; set; }
+
+        /// <summary>
+        /// Status statistics of multiple origin servers
+        /// </summary>
+        [JsonProperty("RsStatisticsData")]
+        public MetricStatisticsInfo[] RsStatisticsData{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,6 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "StatisticsData.", this.StatisticsData);
+            this.SetParamArrayObj(map, prefix + "RsStatisticsData.", this.RsStatisticsData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

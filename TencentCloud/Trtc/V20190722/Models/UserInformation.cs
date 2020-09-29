@@ -25,19 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 
+        /// Room ID
         /// </summary>
         [JsonProperty("RoomStr")]
         public string RoomStr{ get; set; }
 
         /// <summary>
-        /// 
+        /// User ID
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the user enters the room
         /// </summary>
         [JsonProperty("JoinTs")]
         public ulong? JoinTs{ get; set; }
@@ -49,25 +49,25 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? LeaveTs{ get; set; }
 
         /// <summary>
-        /// 
+        /// Device type
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// SDK version number
         /// </summary>
         [JsonProperty("SdkVersion")]
         public string SdkVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Client IP
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// Determine whether a user has left the room
         /// </summary>
         [JsonProperty("Finished")]
         public bool? Finished{ get; set; }

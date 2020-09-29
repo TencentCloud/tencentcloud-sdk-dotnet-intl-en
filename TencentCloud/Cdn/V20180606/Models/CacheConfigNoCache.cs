@@ -15,27 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TerrorismConfigureInfo : AbstractModel
+    public class CacheConfigNoCache : AbstractModel
     {
         
         /// <summary>
-        /// Control parameter of a terrorism information detection in image task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// No cache configuration switch
+        /// on: enable
+        /// off: disable
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("ImgReviewInfo")]
-        public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// Control parameter of terrorism information detection in text task.
+        /// Always forwards to the origin server for verification
+        /// on: enable
+        /// off: disable
+        /// This is disabled by default.
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("OcrReviewInfo")]
-        public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }
+        [JsonProperty("Revalidate")]
+        public string Revalidate{ get; set; }
 
 
         /// <summary>
@@ -43,8 +49,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
-            this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Revalidate", this.Revalidate);
         }
     }
 }

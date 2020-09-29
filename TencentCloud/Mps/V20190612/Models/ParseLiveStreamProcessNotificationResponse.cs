@@ -53,7 +53,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamAiReviewResultInfo AiReviewResultInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
         /// </summary>
         [JsonProperty("AiRecognitionResultInfo")]
         public LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo{ get; set; }

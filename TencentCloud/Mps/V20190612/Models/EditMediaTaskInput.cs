@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Information of input video file.
         /// </summary>
         [JsonProperty("FileInfoSet")]
         public EditMediaFileInfo[] FileInfoSet{ get; set; }

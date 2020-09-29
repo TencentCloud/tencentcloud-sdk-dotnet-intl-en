@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Control parameter of prohibited information detection in speech.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public ProhibitedAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Control parameter of prohibited information detection in text.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public ProhibitedOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

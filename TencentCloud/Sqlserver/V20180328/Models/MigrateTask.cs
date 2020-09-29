@@ -73,7 +73,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+        /// Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Frame-specific tag name.
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] CategorySet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Confidence of intelligently generated frame-specific tag between 0 and 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

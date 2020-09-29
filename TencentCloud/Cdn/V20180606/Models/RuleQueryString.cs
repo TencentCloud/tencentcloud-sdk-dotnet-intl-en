@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FetchMessageByOffsetResponse : AbstractModel
+    public class RuleQueryString : AbstractModel
     {
         
         /// <summary>
-        /// Returned results.
+        /// Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("Result")]
-        public ConsumerRecord Result{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// `includeCustom` will retain partial query strings
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
+        /// <summary>
+        /// Array of included/excluded query strings (separated by ';')
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

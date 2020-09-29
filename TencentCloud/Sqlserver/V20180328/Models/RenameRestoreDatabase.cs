@@ -15,27 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TerrorismConfigureInfo : AbstractModel
+    public class RenameRestoreDatabase : AbstractModel
     {
         
         /// <summary>
-        /// Control parameter of a terrorism information detection in image task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database name. If the `OldName` database does not exist, a failure will be returned.
+        /// It can be left empty in offline migration tasks.
         /// </summary>
-        [JsonProperty("ImgReviewInfo")]
-        public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
+        [JsonProperty("OldName")]
+        public string OldName{ get; set; }
 
         /// <summary>
-        /// Control parameter of terrorism information detection in text task.
+        /// New database name. If this parameter is left empty, the restored database will be renamed in the default format. If this parameter is left empty in offline migration tasks, the restored database will be named `OldName`. `OldName` and `NewName` cannot be both empty.
         /// </summary>
-        [JsonProperty("OcrReviewInfo")]
-        public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }
+        [JsonProperty("NewName")]
+        public string NewName{ get; set; }
 
 
         /// <summary>
@@ -43,8 +43,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
-            this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
+            this.SetParamSimple(map, prefix + "OldName", this.OldName);
+            this.SetParamSimple(map, prefix + "NewName", this.NewName);
         }
     }
 }

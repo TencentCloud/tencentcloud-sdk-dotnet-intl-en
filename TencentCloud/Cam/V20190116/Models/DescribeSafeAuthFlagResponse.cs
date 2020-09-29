@@ -37,7 +37,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public LoginActionFlag ActionFlag{ get; set; }
 
         /// <summary>
-        /// Unusual login location protection settings
+        /// Suspicious login location protection settings
         /// </summary>
         [JsonProperty("OffsiteFlag")]
         public OffsiteFlag OffsiteFlag{ get; set; }

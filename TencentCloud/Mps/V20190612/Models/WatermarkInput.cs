@@ -31,7 +31,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom watermark parameter, which is valid if `Definition` is 0.
+        /// This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawWatermarkParameter RawParameter{ get; set; }

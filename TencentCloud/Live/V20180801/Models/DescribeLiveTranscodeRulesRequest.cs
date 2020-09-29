@@ -24,12 +24,26 @@ namespace TencentCloud.Live.V20180801.Models
     public class DescribeLiveTranscodeRulesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TemplateIds")]
+        public long?[] TemplateIds{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DomainNames")]
+        public string[] DomainNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
+            this.SetParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
         }
     }
 }

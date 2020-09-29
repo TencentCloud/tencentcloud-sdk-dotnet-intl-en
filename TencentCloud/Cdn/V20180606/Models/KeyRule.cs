@@ -21,65 +21,60 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CacheKey : AbstractModel
+    public class KeyRule : AbstractModel
     {
         
+        /// <summary>
+        /// Content for each CacheType:
+        /// For `file`, enter the suffix, such as jpg, txt.
+        /// For `directory`, enter the path, such as /xxx/test/.
+        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+        /// For `index`, enter a backslash (/).
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("RulePaths")]
+        public string[] RulePaths{ get; set; }
+
+        /// <summary>
+        /// Rule types:
+        /// `file`: effective for specified file suffixes
+        /// `directory`: effective for specified paths
+        /// `path`: effective for specified absolute paths
+        /// `index`: home page
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
         /// <summary>
         /// Whether to enable full-path cache
         /// on: enable full-path cache (i.e., disable parameter filter)
         /// off: disable full-path cache (i.e., enable parameter filter)
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }
 
         /// <summary>
         /// Whether caches are case insensitive
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("IgnoreCase")]
         public string IgnoreCase{ get; set; }
 
         /// <summary>
         /// Request parameter contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("QueryString")]
-        public QueryStringKey QueryString{ get; set; }
-
-        /// <summary>
-        /// Cookie contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Cookie")]
-        public CookieKey Cookie{ get; set; }
-
-        /// <summary>
-        /// Request header contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Header")]
-        public HeaderKey Header{ get; set; }
-
-        /// <summary>
-        /// Custom string contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("CacheTag")]
-        public CacheTagKey CacheTag{ get; set; }
-
-        /// <summary>
-        /// Request protocol contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Scheme")]
-        public SchemeKey Scheme{ get; set; }
-
-        /// <summary>
-        /// Path-based cache key configuration
         /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("KeyRules")]
-        public KeyRule[] KeyRules{ get; set; }
+        [JsonProperty("QueryString")]
+        public RuleQueryString QueryString{ get; set; }
+
+        /// <summary>
+        /// Path cache key tag, the value "user" is passed.
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("RuleTag")]
+        public string RuleTag{ get; set; }
 
 
         /// <summary>
@@ -87,14 +82,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
             this.SetParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
             this.SetParamObj(map, prefix + "QueryString.", this.QueryString);
-            this.SetParamObj(map, prefix + "Cookie.", this.Cookie);
-            this.SetParamObj(map, prefix + "Header.", this.Header);
-            this.SetParamObj(map, prefix + "CacheTag.", this.CacheTag);
-            this.SetParamObj(map, prefix + "Scheme.", this.Scheme);
-            this.SetParamArrayObj(map, prefix + "KeyRules.", this.KeyRules);
+            this.SetParamSimple(map, prefix + "RuleTag", this.RuleTag);
         }
     }
 }

@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FetchMessageListByOffsetResponse : AbstractModel
+    public class RuleCacheConfig : AbstractModel
     {
         
         /// <summary>
-        /// Returned results.
+        /// Cache configuration
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("Result")]
-        public ConsumerRecord[] Result{ get; set; }
+        [JsonProperty("Cache")]
+        public CacheConfigCache Cache{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// No cache configuration
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("NoCache")]
+        public CacheConfigNoCache NoCache{ get; set; }
+
+        /// <summary>
+        /// Follows the origin server configuration
+        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("FollowOrigin")]
+        public CacheConfigFollowOrigin FollowOrigin{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "Cache.", this.Cache);
+            this.SetParamObj(map, prefix + "NoCache.", this.NoCache);
+            this.SetParamObj(map, prefix + "FollowOrigin.", this.FollowOrigin);
         }
     }
 }

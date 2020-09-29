@@ -79,7 +79,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Frame interval between I keyframes. Value range: 0 and [1,100000].
+        /// If this parameter is 0 or left empty, the system will automatically set the GOP length.
         /// </summary>
         [JsonProperty("Gop")]
         public ulong? Gop{ get; set; }

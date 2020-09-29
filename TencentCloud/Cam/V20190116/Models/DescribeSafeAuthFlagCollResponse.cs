@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FetchMessageByOffsetRequest : AbstractModel
+    public class DescribeSafeAuthFlagCollResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Login protection settings
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("LoginFlag")]
+        public LoginActionFlag LoginFlag{ get; set; }
 
         /// <summary>
-        /// Topic name.
+        /// Sensitive operation protection settings
         /// </summary>
-        [JsonProperty("Topic")]
-        public string Topic{ get; set; }
+        [JsonProperty("ActionFlag")]
+        public LoginActionFlag ActionFlag{ get; set; }
 
         /// <summary>
-        /// Partition ID.
+        /// Suspicious login location protection settings
         /// </summary>
-        [JsonProperty("Partition")]
-        public long? Partition{ get; set; }
+        [JsonProperty("OffsiteFlag")]
+        public OffsiteFlag OffsiteFlag{ get; set; }
 
         /// <summary>
-        /// Offset information.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Topic", this.Topic);
-            this.SetParamSimple(map, prefix + "Partition", this.Partition);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
+            this.SetParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
+            this.SetParamObj(map, prefix + "OffsiteFlag.", this.OffsiteFlag);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -31,7 +31,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom video transcoding parameter, which is valid if `Definition` is 0.
+        /// This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawTranscodeParameter RawParameter{ get; set; }
@@ -44,7 +45,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of blurs. Up to 10 ones can be supported.
         /// </summary>
         [JsonProperty("MosaicSet")]
         public MosaicInput[] MosaicSet{ get; set; }

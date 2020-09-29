@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Content recognition result list.
         /// </summary>
         [JsonProperty("ResultSet")]
         public LiveStreamAiRecognitionResultItem[] ResultSet{ get; set; }

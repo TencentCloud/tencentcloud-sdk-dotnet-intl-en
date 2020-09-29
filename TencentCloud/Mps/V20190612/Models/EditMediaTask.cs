@@ -25,37 +25,41 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status. Valid values:
+        /// <li>PROCESSING: processing;</li>
+        /// <li>FINISH: completed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code
+        /// <li>0: success;</li>
+        /// <li>Other values: failure.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input of video editing task.
         /// </summary>
         [JsonProperty("Input")]
         public EditMediaTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of video editing task.
         /// </summary>
         [JsonProperty("Output")]
         public EditMediaTaskOutput Output{ get; set; }

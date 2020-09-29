@@ -42,6 +42,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+        /// </summary>
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
             this.SetParamArraySimple(map, prefix + "DBNames.", this.DBNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
         }
     }
 }

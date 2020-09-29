@@ -48,6 +48,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
+        /// <summary>
+        /// ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+        /// </summary>
+        [JsonProperty("TargetInstanceId")]
+        public string TargetInstanceId{ get; set; }
+
+        /// <summary>
+        /// Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+        /// </summary>
+        [JsonProperty("RenameRestore")]
+        public RenameRestoreDatabase[] RenameRestore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
+            this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
         }
     }
 }

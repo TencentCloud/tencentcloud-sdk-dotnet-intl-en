@@ -61,7 +61,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public PoliticalConfigureInfoForUpdate PoliticalConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Control parameter of prohibited information detection. Prohibited information includes:
+        /// <li>Abusive;</li>
+        /// <li>Drug-related.</li>
+        /// Note: this parameter is not supported yet.
         /// </summary>
         [JsonProperty("ProhibitedConfigure")]
         public ProhibitedConfigureInfoForUpdate ProhibitedConfigure{ get; set; }

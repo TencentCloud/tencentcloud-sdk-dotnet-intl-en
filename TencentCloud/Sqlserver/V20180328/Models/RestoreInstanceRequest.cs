@@ -36,6 +36,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
 
+        /// <summary>
+        /// ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+        /// </summary>
+        [JsonProperty("TargetInstanceId")]
+        public string TargetInstanceId{ get; set; }
+
+        /// <summary>
+        /// Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+        /// </summary>
+        [JsonProperty("RenameRestore")]
+        public RenameRestoreDatabase[] RenameRestore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
+            this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
         }
     }
 }

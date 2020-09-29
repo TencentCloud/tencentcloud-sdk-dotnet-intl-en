@@ -121,19 +121,19 @@ namespace TencentCloud.Billing.V20180709.Models
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Component type/code (optional)
         /// </summary>
         [JsonProperty("ItemCode")]
         public string ItemCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Component name/code (optional)
         /// </summary>
         [JsonProperty("ComponentCode")]
         public string ComponentCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Contract price
         /// </summary>
         [JsonProperty("ContractPrice")]
         public string ContractPrice{ get; set; }

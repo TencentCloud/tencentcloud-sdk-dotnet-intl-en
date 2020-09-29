@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Control parameter of terrorism information detection in text task.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

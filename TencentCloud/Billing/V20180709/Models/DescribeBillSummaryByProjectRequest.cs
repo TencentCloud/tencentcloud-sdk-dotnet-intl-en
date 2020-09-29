@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Queries bill data user’s UIN
+        /// Queries bill data user's UIN
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }

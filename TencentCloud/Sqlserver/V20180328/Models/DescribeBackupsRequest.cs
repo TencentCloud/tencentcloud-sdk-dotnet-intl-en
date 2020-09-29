@@ -54,6 +54,30 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// Filter by backup name. If this parameter is left empty, backup name will not be used in filtering.
+        /// </summary>
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
+
+        /// <summary>
+        /// Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
+        /// </summary>
+        [JsonProperty("Strategy")]
+        public long? Strategy{ get; set; }
+
+        /// <summary>
+        /// Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+        /// </summary>
+        [JsonProperty("BackupWay")]
+        public long? BackupWay{ get; set; }
+
+        /// <summary>
+        /// Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
+        /// </summary>
+        [JsonProperty("BackupId")]
+        public ulong? BackupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +89,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
+            this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
+            this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
         }
     }
 }

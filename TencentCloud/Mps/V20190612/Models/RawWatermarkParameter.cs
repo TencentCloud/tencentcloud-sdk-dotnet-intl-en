@@ -25,31 +25,40 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Watermark type. Valid values:
+        /// <li>image: image watermark.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin position, which currently can only be:
+        /// <li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text.</li>
+        /// Default value: TopLeft.
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }
 
         /// <summary>
-        /// 
+        /// The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
+        /// <li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
+        /// <li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
+        /// Default value: 0 px.
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
+        /// <li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
+        /// <li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
+        /// Default value: 0 px.
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image watermark template. This field is required when `Type` is `image` and is invalid when `Type` is `text`.
         /// </summary>
         [JsonProperty("ImageTemplate")]
         public RawImageWatermarkInput ImageTemplate{ get; set; }

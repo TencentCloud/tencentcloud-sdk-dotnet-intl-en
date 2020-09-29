@@ -31,7 +31,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of screenshot time points in the format of `s` or `%`:
+        /// <li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
+        /// <li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
         /// </summary>
         [JsonProperty("ExtTimeOffsetSet")]
         public string[] ExtTimeOffsetSet{ get; set; }

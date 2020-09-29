@@ -36,6 +36,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("BandwidthUnitPrice")]
         public float? BandwidthUnitPrice{ get; set; }
 
+        /// <summary>
+        /// Discounted bandwidth price in CNY/Mbps/day.
+        /// </summary>
+        [JsonProperty("DiscountBandwidthUnitPrice")]
+        public float? DiscountBandwidthUnitPrice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         {
             this.SetParamArraySimple(map, prefix + "BandwidthRange.", this.BandwidthRange);
             this.SetParamSimple(map, prefix + "BandwidthUnitPrice", this.BandwidthUnitPrice);
+            this.SetParamSimple(map, prefix + "DiscountBandwidthUnitPrice", this.DiscountBandwidthUnitPrice);
         }
     }
 }

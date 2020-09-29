@@ -194,7 +194,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }

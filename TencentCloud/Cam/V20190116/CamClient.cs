@@ -933,7 +933,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API is used to query the security settings.
+        /// This API is used to query security settings.
         /// </summary>
         /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
         /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API is used to query the security settings.
+        /// This API is used to query security settings.
         /// </summary>
         /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
         /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
@@ -964,6 +964,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSafeAuthFlag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query security settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeAuthFlagCollRequest"/></param>
+        /// <returns><see cref="DescribeSafeAuthFlagCollResponse"/></returns>
+        public async Task<DescribeSafeAuthFlagCollResponse> DescribeSafeAuthFlagColl(DescribeSafeAuthFlagCollRequest req)
+        {
+             JsonResponseModel<DescribeSafeAuthFlagCollResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSafeAuthFlagColl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagCollResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query security settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeAuthFlagCollRequest"/></param>
+        /// <returns><see cref="DescribeSafeAuthFlagCollResponse"/></returns>
+        public DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagCollSync(DescribeSafeAuthFlagCollRequest req)
+        {
+             JsonResponseModel<DescribeSafeAuthFlagCollResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSafeAuthFlagColl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagCollResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,31 +25,34 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Task status. Valid values: PROCESSING, SUCCESS, FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. 0: success; other values: failure.
+        /// <li>40000: invalid input parameter. Please check it;</li>
+        /// <li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+        /// <li>70000: internal service error. Please try again.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input of OCR-based prohibited information detection in text task in content audit
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewProhibitedOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of OCR-based prohibited information detection in text task in content audit
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewProhibitedOcrTaskOutput Output{ get; set; }

@@ -15,27 +15,22 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TerrorismConfigureInfo : AbstractModel
+    public class CacheConfigFollowOrigin : AbstractModel
     {
         
         /// <summary>
-        /// Control parameter of a terrorism information detection in image task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Follow origin server switch configuration
+        /// on: enable
+        /// off: disable
         /// </summary>
-        [JsonProperty("ImgReviewInfo")]
-        public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
-
-        /// <summary>
-        /// Control parameter of terrorism information detection in text task.
-        /// </summary>
-        [JsonProperty("OcrReviewInfo")]
-        public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -43,8 +38,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
-            this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

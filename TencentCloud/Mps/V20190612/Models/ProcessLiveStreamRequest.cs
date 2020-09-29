@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Type parameter of video content recognition task.
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }

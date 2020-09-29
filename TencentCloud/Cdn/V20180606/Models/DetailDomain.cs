@@ -365,7 +365,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long?[] AccessPort{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag configuration
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }

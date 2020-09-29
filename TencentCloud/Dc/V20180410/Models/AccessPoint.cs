@@ -31,7 +31,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string AccessPointName{ get; set; }
 
         /// <summary>
-        /// Unique ID of access point.
+        /// Unique access point ID.
         /// </summary>
         [JsonProperty("AccessPointId")]
         public string AccessPointId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Dc.V20180410.Models
         public string Location{ get; set; }
 
         /// <summary>
-        /// Supported ISP list of access pint.
+        /// List of ISPs supported by access point.
         /// </summary>
         [JsonProperty("LineOperator")]
         public string[] LineOperator{ get; set; }
 
         /// <summary>
-        /// Region ID where the access point resides.
+        /// ID of the region that manages the access point.
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }

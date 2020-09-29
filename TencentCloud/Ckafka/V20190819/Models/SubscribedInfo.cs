@@ -44,6 +44,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("PartitionOffset")]
         public PartitionOffset[] PartitionOffset{ get; set; }
 
+        /// <summary>
+        /// ID of the subscribed topic. 
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamArraySimple(map, prefix + "Partition.", this.Partition);
             this.SetParamArrayObj(map, prefix + "PartitionOffset.", this.PartitionOffset);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
         }
     }
 }

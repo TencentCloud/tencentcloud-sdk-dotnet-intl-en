@@ -204,6 +204,7 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// Connection activation time.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

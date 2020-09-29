@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Task ID, which uniquely identifies the recording task globally.
+        /// `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

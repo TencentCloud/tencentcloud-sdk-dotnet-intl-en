@@ -25,31 +25,36 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Task type. Valid values:
+        /// <li>Classification: intelligent categorization</li>
+        /// <li>Cover: intelligent cover generating</li>
+        /// <li>Tag: intelligent tagging</li>
+        /// <li>FrameTag: intelligent frame-specific tagging</li>
+        /// <li>Highlight: intelligent highlight generating</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
         /// </summary>
         [JsonProperty("ClassificationTask")]
         public AiAnalysisTaskClassificationResult ClassificationTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
         /// </summary>
         [JsonProperty("CoverTask")]
         public AiAnalysisTaskCoverResult CoverTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
         /// </summary>
         [JsonProperty("TagTask")]
         public AiAnalysisTaskTagResult TagTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
         /// </summary>
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }

@@ -115,13 +115,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public BillDetailComponent[] ComponentSet{ get; set; }
 
         /// <summary>
-        /// Payer’s UIN
+        /// Payer's UIN
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// User’s UIN
+        /// User's UIN
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
@@ -140,22 +140,28 @@ namespace TencentCloud.Billing.V20180709.Models
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Product name/code (optional)
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subproduct name/code (optional)
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transaction type/code (optional)
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public string RegionId{ get; set; }
 
 
         /// <summary>
@@ -185,6 +191,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

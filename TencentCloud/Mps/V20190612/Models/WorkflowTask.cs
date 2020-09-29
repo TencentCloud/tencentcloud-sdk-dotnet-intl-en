@@ -77,7 +77,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Execution status and result of video content analysis task.
         /// </summary>
         [JsonProperty("AiAnalysisResultSet")]
         public AiAnalysisResult[] AiAnalysisResultSet{ get; set; }
