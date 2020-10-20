@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 
+        /// New description of up to 1,024 bytes in length
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

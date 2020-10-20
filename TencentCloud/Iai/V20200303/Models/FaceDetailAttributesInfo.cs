@@ -40,7 +40,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-        /// The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+        /// The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
         /// If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// </summary>
         [JsonProperty("Emotion")]
@@ -114,7 +114,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// Nose information. 
-        /// The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+        /// The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
         /// If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// </summary>
         [JsonProperty("Nose")]

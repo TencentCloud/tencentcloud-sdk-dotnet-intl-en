@@ -61,19 +61,19 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 
+        /// Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
         /// </summary>
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable the node’s default security group (default: `No`, Aphla feature)
         /// </summary>
         [JsonProperty("NeedWorkSecurityGroup")]
         public bool? NeedWorkSecurityGroup{ get; set; }

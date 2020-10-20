@@ -91,6 +91,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
 
+        /// <summary>
+        /// Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+        /// </summary>
+        [JsonProperty("KeepaliveEnable")]
+        public long? KeepaliveEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
+            this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Horizontal coordinate of the top-left corner of face frame.
+        /// X-coordinate of the top-left vertex of the face frame.
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// Vertical coordinate of the top-left corner of face frame.
+        /// Y-coordinate of the top-left vertex of the face frame.
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }
@@ -49,85 +49,85 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? Height{ get; set; }
 
         /// <summary>
-        /// XX points that describe the left eye.
+        /// XX points that outline the left eye.
         /// </summary>
         [JsonProperty("LeftEye")]
         public Point[] LeftEye{ get; set; }
 
         /// <summary>
-        /// XX points that describe the right eye.
+        /// XX points that outline the right eye.
         /// </summary>
         [JsonProperty("RightEye")]
         public Point[] RightEye{ get; set; }
 
         /// <summary>
-        /// XX points that describe the left eyebrow.
+        /// XX points that outline the left eyebrow.
         /// </summary>
         [JsonProperty("LeftEyeBrow")]
         public Point[] LeftEyeBrow{ get; set; }
 
         /// <summary>
-        /// XX points that describe the right eyebrow.
+        /// XX points that outline the right eyebrow.
         /// </summary>
         [JsonProperty("RightEyeBrow")]
         public Point[] RightEyeBrow{ get; set; }
 
         /// <summary>
-        /// XX points that describe the outer contour of the mouth, which are returned from left anticlockwise.
+        /// XX points that outline the outer contour of the mouth, which are returned from left anticlockwise.
         /// </summary>
         [JsonProperty("MouthOutside")]
         public Point[] MouthOutside{ get; set; }
 
         /// <summary>
-        /// XX points that describe the inner contour of the mouth, which are returned from left anticlockwise.
+        /// XX points that outline the inner contour of the mouth, which are returned from left anticlockwise.
         /// </summary>
         [JsonProperty("MouthInside")]
         public Point[] MouthInside{ get; set; }
 
         /// <summary>
-        /// XX points that describe the nose.
+        /// XX points that outline the nose.
         /// </summary>
         [JsonProperty("Nose")]
         public Point[] Nose{ get; set; }
 
         /// <summary>
-        /// XX points that describe the left pupil.
+        /// XX points that outline the left pupil.
         /// </summary>
         [JsonProperty("LeftPupil")]
         public Point[] LeftPupil{ get; set; }
 
         /// <summary>
-        /// XX points that describe the right pupil.
+        /// XX points that outline the right pupil.
         /// </summary>
         [JsonProperty("RightPupil")]
         public Point[] RightPupil{ get; set; }
 
         /// <summary>
-        /// XX points that describe the midline.
+        /// XX points that outline the midline.
         /// </summary>
         [JsonProperty("CentralAxis")]
         public Point[] CentralAxis{ get; set; }
 
         /// <summary>
-        /// XX points that describe the chin.
+        /// XX points that outline the chin.
         /// </summary>
         [JsonProperty("Chin")]
         public Point[] Chin{ get; set; }
 
         /// <summary>
-        /// XX points that describe the left eye bag.
+        /// XX points that outline the left eye bag.
         /// </summary>
         [JsonProperty("LeftEyeBags")]
         public Point[] LeftEyeBags{ get; set; }
 
         /// <summary>
-        /// XX points that describe the right eye bag.
+        /// XX points that outline the right eye bag.
         /// </summary>
         [JsonProperty("RightEyeBags")]
         public Point[] RightEyeBags{ get; set; }
 
         /// <summary>
-        /// XX points that describe the forehead.
+        /// XX points that outline the forehead.
         /// </summary>
         [JsonProperty("Forehead")]
         public Point[] Forehead{ get; set; }

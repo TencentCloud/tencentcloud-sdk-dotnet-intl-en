@@ -59,8 +59,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Video bitrate in Kbps. Value range: 100-8,000.
-        /// Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+        /// Video bitrate. Value range: 0–8,000 Kbps.
+        /// If the value is 0, the original bitrate will be retained.
+        /// Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
@@ -120,19 +121,25 @@ namespace TencentCloud.Live.V20180801.Models
         public string Profile{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
+        /// Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("BitrateToOrig")]
         public long? BitrateToOrig{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
+        /// Whether to use the original height when the set height is higher than the original height.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("HeightToOrig")]
         public long? HeightToOrig{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
+        /// Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("FpsToOrig")]
         public long? FpsToOrig{ get; set; }

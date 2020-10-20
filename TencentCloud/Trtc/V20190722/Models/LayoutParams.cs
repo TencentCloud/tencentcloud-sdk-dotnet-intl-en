@@ -55,7 +55,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MainVideoRightAlign{ get; set; }
 
         /// <summary>
-        /// 
+        /// A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
         /// </summary>
         [JsonProperty("MixVideoUids")]
         public string[] MixVideoUids{ get; set; }

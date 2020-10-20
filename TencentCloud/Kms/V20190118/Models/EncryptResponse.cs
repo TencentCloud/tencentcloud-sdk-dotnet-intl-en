@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string CiphertextBlob{ get; set; }
 
         /// <summary>
-        /// 
+        /// Globally unique ID of the CMK used for encryption
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }

@@ -34,7 +34,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// Video frame rate in Hz. Value range: [0, 60].
+        /// Video frame rate in Hz. Value range: [0, 100].
         /// If the value is 0, the frame rate will be the same as that of the source video.
         /// </summary>
         [JsonProperty("Fps")]

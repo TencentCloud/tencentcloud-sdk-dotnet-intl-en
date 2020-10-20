@@ -79,19 +79,19 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag description list.
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster status (Running, Creating, or Abnormal)
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
         /// </summary>
         [JsonProperty("Property")]
         public string Property{ get; set; }

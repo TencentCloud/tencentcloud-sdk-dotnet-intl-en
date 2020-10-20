@@ -352,6 +352,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SecurityType")]
         public ulong? SecurityType{ get; set; }
 
+        /// <summary>
+        /// Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public long? SceneType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -410,6 +417,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
             this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
         }
     }
 }

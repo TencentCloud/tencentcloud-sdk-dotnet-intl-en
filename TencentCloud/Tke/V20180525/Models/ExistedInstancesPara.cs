@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }

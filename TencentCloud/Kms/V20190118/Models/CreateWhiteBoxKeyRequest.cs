@@ -43,7 +43,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag list
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

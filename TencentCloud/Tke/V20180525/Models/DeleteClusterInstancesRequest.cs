@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string InstanceDeleteMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
         /// </summary>
         [JsonProperty("ForceDelete")]
         public bool? ForceDelete{ get; set; }

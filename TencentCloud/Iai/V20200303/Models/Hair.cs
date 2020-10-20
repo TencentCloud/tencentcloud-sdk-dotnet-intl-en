@@ -26,7 +26,7 @@ namespace TencentCloud.Iai.V20200303.Models
         
         /// <summary>
         /// Hair length information.
-        /// The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+        /// The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
         /// </summary>
         [JsonProperty("Length")]
         public AttributeItem Length{ get; set; }

@@ -25,81 +25,100 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Video encoding format:
-        /// h264/h265.
+        /// Codec: h264/h265/origin. Default value: h264.
+        /// 
+        /// origin: keep the original codec.
         /// </summary>
         [JsonProperty("Vcodec")]
         public string Vcodec{ get; set; }
 
         /// <summary>
-        /// Video bitrate. Value range: 100-8000 Kbps.
+        /// Video bitrate. Value range: 0–8,000 Kbps.
+        /// If the value is 0, the original bitrate will be retained.
+        /// Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// Audio codec. Valid values: aac, mp3.
+        /// Audio codec: aac. Default value: aac.
+        /// Note: This parameter will not take effect for now and will be supported soon.
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// Audio bitrate. Value range: 0-500 Kbps.
+        /// Audio bitrate. Value range: 0–500 Kbps.
+        /// 0 by default.
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// Width. Value range: 0-3000.
+        /// Width. Default value: 0.
+        /// Value range: [0-3,000].
+        /// The value must be a multiple of 2. The original width is 0.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Height. Value range: 0-3000.
+        /// Height. Default value: 0.
+        /// Value range: [0-3,000].
+        /// The value must be a multiple of 2. The original width is 0.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Frame rate. Value range: 0-200 FPS.
+        /// Frame rate. Default value: 0.
+        /// Range: 0-60 Fps.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// Keyframe interval. Value range: 1-50s.
+        /// Keyframe interval, unit: second.
+        /// Original interval by default
+        /// Range: 2-6
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
 
         /// <summary>
-        /// Rotation angle. Valid values: 0, 90, 180, 270.
+        /// Rotation angle. Default value: 0.
+        /// Value range: 0, 90, 180, 270
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
 
         /// <summary>
-        /// Encoding quality. Valid values:
-        /// baseline, main, high.
+        /// Encoding quality:
+        /// baseline/main/high. Default value: baseline.
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original bitrate. 0: no; 1: yes.
+        /// Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("BitrateToOrig")]
         public long? BitrateToOrig{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original height. 0: no; 1: yes.
+        /// Whether to use the original height when the set height is higher than the original height.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("HeightToOrig")]
         public long? HeightToOrig{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original frame rate. 0: no; 1: yes.
+        /// Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("FpsToOrig")]
         public long? FpsToOrig{ get; set; }
@@ -141,10 +160,20 @@ namespace TencentCloud.Live.V20180801.Models
         public long? AiTransCode{ get; set; }
 
         /// <summary>
-        /// `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+        /// Bitrate compression ratio of top speed code video.
+        /// Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+        /// 
+        /// Value range: 0.0-0.5.
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }
+
+        /// <summary>
+        /// Whether to take the shorter side as height. 0: no, 1: yes. Default value: 0.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("ShortEdgeAsHeight")]
+        public long? ShortEdgeAsHeight{ get; set; }
 
 
         /// <summary>
@@ -172,6 +201,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
             this.SetParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
+            this.SetParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
         }
     }
 }

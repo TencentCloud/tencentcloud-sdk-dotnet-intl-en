@@ -44,7 +44,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+        /// Configuration item (JSON string)
         /// </summary>
         [JsonProperty("EsConfig")]
         public string EsConfig{ get; set; }
@@ -156,6 +156,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ScaleType")]
         public long? ScaleType{ get; set; }
 
+        /// <summary>
+        /// Multi-AZ deployment
+        /// </summary>
+        [JsonProperty("MultiZoneInfo")]
+        public ZoneDetail[] MultiZoneInfo{ get; set; }
+
+        /// <summary>
+        /// Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public long? SceneType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +195,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
             this.SetParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
             this.SetParamSimple(map, prefix + "ScaleType", this.ScaleType);
+            this.SetParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
         }
     }
 }

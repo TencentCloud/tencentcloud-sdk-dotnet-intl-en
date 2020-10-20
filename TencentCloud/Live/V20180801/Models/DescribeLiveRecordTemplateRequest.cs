@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Template ID obtained through the `DescribeRecordTemplates` API.
+        /// Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

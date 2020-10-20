@@ -54,6 +54,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("BasicSecurityType")]
         public ulong? BasicSecurityType{ get; set; }
 
+        /// <summary>
+        /// Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+        /// </summary>
+        [JsonProperty("UpgradeMode")]
+        public string UpgradeMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CheckOnly", this.CheckOnly);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+            this.SetParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
         }
     }
 }

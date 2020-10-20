@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }

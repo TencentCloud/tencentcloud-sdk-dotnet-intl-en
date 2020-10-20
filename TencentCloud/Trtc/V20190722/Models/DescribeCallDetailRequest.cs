@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// User `sdkappid`, such as 1400188366.
+        /// User `SDKAppID`, such as 1400188366.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string PageNumber{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+        /// Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
         /// </summary>
         [JsonProperty("PageSize")]
         public string PageSize{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.73</VersionPrefix>
+    <VersionPrefix>3.0.74</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2041,6 +2041,11 @@
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\TableColumn.cs" />
+    <Compile Include="Dms\V20200819\DmsClient.cs" />
+    <Compile Include="Dms\V20200819\Models\SendEmailRequest.cs" />
+    <Compile Include="Dms\V20200819\Models\SendEmailResponse.cs" />
+    <Compile Include="Dms\V20200819\Models\SendTemplatedEmailRequest.cs" />
+    <Compile Include="Dms\V20200819\Models\SendTemplatedEmailResponse.cs" />
     <Compile Include="Dts\V20180330\DtsClient.cs" />
     <Compile Include="Dts\V20180330\Models\ActivateSubscribeRequest.cs" />
     <Compile Include="Dts\V20180330\Models\ActivateSubscribeResponse.cs" />
@@ -2243,6 +2248,8 @@
     <Compile Include="Es\V20180416\Models\OperationDetail.cs" />
     <Compile Include="Es\V20180416\Models\RestartInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\RestartInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\RestartNodesRequest.cs" />
+    <Compile Include="Es\V20180416\Models\RestartNodesResponse.cs" />
     <Compile Include="Es\V20180416\Models\SubTaskDetail.cs" />
     <Compile Include="Es\V20180416\Models\TagInfo.cs" />
     <Compile Include="Es\V20180416\Models\TaskDetail.cs" />
@@ -2557,6 +2564,8 @@
     <Compile Include="Iai\V20200303\Models\DetectFaceAttributesResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectLiveFaceAccurateRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectLiveFaceAccurateResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\Eye.cs" />
@@ -2723,6 +2732,8 @@
     <Compile Include="Live\V20180801\Models\AddLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\AddLiveWatermarkResponse.cs" />
     <Compile Include="Live\V20180801\Models\BandwidthInfo.cs" />
+    <Compile Include="Live\V20180801\Models\BillAreaInfo.cs" />
+    <Compile Include="Live\V20180801\Models\BillCountryInfo.cs" />
     <Compile Include="Live\V20180801\Models\BillDataInfo.cs" />
     <Compile Include="Live\V20180801\Models\BindLiveDomainCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\BindLiveDomainCertResponse.cs" />
@@ -2797,6 +2808,8 @@
     <Compile Include="Live\V20180801\Models\DeleteRecordTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeAllStreamPlayInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeAllStreamPlayInfoListResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeAreaBillBandwidthAndFluxListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeAreaBillBandwidthAndFluxListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeConcurrentRecordStreamNumRequest.cs" />
@@ -3471,6 +3484,8 @@
     <Compile Include="Mps\V20190612\Models\EditMediaTaskOutput.cs" />
     <Compile Include="Mps\V20190612\Models\EnableWorkflowRequest.cs" />
     <Compile Include="Mps\V20190612\Models\EnableWorkflowResponse.cs" />
+    <Compile Include="Mps\V20190612\Models\ExecuteFunctionRequest.cs" />
+    <Compile Include="Mps\V20190612\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="Mps\V20190612\Models\FaceConfigureInfo.cs" />
     <Compile Include="Mps\V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\FrameTagConfigureInfo.cs" />
@@ -3979,6 +3994,7 @@
     <Compile Include="Scf\V20180416\Models\PublishVersionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\Result.cs" />
     <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
+    <Compile Include="Scf\V20180416\Models\StatusReason.cs" />
     <Compile Include="Scf\V20180416\Models\Tag.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerInfo.cs" />
@@ -4408,6 +4424,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterEndpointVipStatusResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterKubeconfigResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRouteTablesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRouteTablesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRoutesRequest.cs" />
@@ -4428,6 +4446,7 @@
     <Compile Include="Tke\V20180525\Models\ExistedInstance.cs" />
     <Compile Include="Tke\V20180525\Models\ExistedInstancesForNode.cs" />
     <Compile Include="Tke\V20180525\Models\ExistedInstancesPara.cs" />
+    <Compile Include="Tke\V20180525\Models\ExtensionAddon.cs" />
     <Compile Include="Tke\V20180525\Models\Filter.cs" />
     <Compile Include="Tke\V20180525\Models\ImageInstance.cs" />
     <Compile Include="Tke\V20180525\Models\Instance.cs" />
@@ -5158,6 +5177,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeAssistantCidrResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageQuotaRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageQuotaResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageResourcesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageResourcesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackagesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackagesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeCcnAttachedInstancesRequest.cs" />

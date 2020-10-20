@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string CiphertextBlob{ get; set; }
 
         /// <summary>
-        /// 
+        /// JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
         /// </summary>
         [JsonProperty("EncryptionContext")]
         public string EncryptionContext{ get; set; }

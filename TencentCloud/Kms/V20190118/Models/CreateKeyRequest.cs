@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 
+        /// CMK description of up to 1,024 bytes in length
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag list
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

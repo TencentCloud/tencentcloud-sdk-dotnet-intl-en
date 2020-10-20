@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageName{ get; set; }
 
         /// <summary>
-        /// The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+        /// The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
         /// </summary>
         [JsonProperty("BandwidthPackageCount")]
         public ulong? BandwidthPackageCount{ get; set; }

@@ -34,8 +34,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Video bitrate in Kbps. Value range: 100-8,000.
-        /// Note: the transcoding template requires that bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+        /// Video bitrate. Value range: 0–8,000 Kbps.
+        /// If the value is 0, the original bitrate will be retained.
+        /// Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
@@ -98,14 +99,15 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Frame rate. Default value: 0.
-        /// Value range: 0-60
+        /// Range: 0-60 Fps.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// Keyframe interval in seconds. Default value: original interval
-        /// Value range: 2-6
+        /// Keyframe interval, unit: second.
+        /// Original interval by default
+        /// Range: 2-6
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
@@ -125,19 +127,25 @@ namespace TencentCloud.Live.V20180801.Models
         public string Profile{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
+        /// Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("BitrateToOrig")]
         public long? BitrateToOrig{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
+        /// Whether to use the original height when the set height is higher than the original height.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("HeightToOrig")]
         public long? HeightToOrig{ get; set; }
 
         /// <summary>
-        /// Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
+        /// Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+        /// 0: no, 1: yes
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("FpsToOrig")]
         public long? FpsToOrig{ get; set; }

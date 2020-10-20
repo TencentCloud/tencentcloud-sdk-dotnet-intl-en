@@ -26,7 +26,7 @@ namespace TencentCloud.Iai.V20200303.Models
         
         /// <summary>
         /// Whether the mouth is open.
-        /// The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+        /// The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
         /// </summary>
         [JsonProperty("MouthOpen")]
         public AttributeItem MouthOpen{ get; set; }

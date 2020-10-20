@@ -39,6 +39,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Layer")]
         public string Layer{ get; set; }
 
+        /// <summary>
+        /// Region to be queried.
+        /// mainland: domestic nodes
+        /// overseas: overseas nodes
+        /// global: global nodes
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +56,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Layer", this.Layer);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

@@ -25,67 +25,67 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 
+        /// Globally unique white-box key ID
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 
+        /// Creator
         /// </summary>
         [JsonProperty("CreatorUin")]
         public ulong? CreatorUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key description information
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key creation time in Unix timestamp
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// White-box key status. Valid values: Enabled, Disabled
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Creator
         /// </summary>
         [JsonProperty("OwnerUin")]
         public ulong? OwnerUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key algorithm type
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }
 
         /// <summary>
-        /// 
+        /// Base64-encoded white-box encryption key
         /// </summary>
         [JsonProperty("EncryptKey")]
         public string EncryptKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Base64-encoded white-box decryption key
         /// </summary>
         [JsonProperty("DecryptKey")]
         public string DecryptKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource ID in the format of `creatorUin/$creatorUin/$keyId`
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 
+        /// Name in map list
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Value in map list
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

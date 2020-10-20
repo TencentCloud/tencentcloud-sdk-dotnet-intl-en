@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// The monthly bandwidth start time
+        /// (Disused) The start time of the monthly bandwidth subscription
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The monthly bandwidth end time
+        /// (Disused) The end time of the monthly bandwidth subscription
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

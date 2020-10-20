@@ -39,7 +39,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of disks
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskNum")]
         public long? DiskNum{ get; set; }

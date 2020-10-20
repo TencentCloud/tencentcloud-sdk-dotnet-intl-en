@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 
+        /// Globally unique CMK ID
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? NumberOfBytes{ get; set; }
 
         /// <summary>
-        /// 
+        /// JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
         /// </summary>
         [JsonProperty("EncryptionContext")]
         public string EncryptionContext{ get; set; }

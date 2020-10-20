@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 
+        /// This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
         /// </summary>
         [JsonProperty("Role")]
         public ulong? Role{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sorts by CMK creation time. 0: descending; 1: ascending
         /// </summary>
         [JsonProperty("OrderType")]
         public ulong? OrderType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? KeyState{ get; set; }
 
         /// <summary>
-        /// 
+        /// Performs a fuzzy query by `KeyId` or `Alias`
         /// </summary>
         [JsonProperty("SearchKeyAlias")]
         public string SearchKeyAlias{ get; set; }

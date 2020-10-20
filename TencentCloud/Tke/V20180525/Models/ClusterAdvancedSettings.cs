@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ContainerRuntime{ get; set; }
 
         /// <summary>
-        /// 
+        /// NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
         /// </summary>
         [JsonProperty("NodeNameType")]
         public string NodeNameType{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? IsNonStaticIpMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether to enable cluster deletion protection.
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster network proxy model
         /// </summary>
         [JsonProperty("KubeProxyMode")]
         public string KubeProxyMode{ get; set; }

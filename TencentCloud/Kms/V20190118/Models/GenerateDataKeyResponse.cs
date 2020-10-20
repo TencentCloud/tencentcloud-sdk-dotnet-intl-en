@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 
+        /// Globally unique CMK ID
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }

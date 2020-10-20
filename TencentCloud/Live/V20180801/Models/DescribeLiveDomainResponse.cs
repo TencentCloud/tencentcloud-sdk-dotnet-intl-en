@@ -26,6 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Domain name information.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("DomainInfo")]
         public DomainInfo DomainInfo{ get; set; }

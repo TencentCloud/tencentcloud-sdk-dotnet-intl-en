@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Availability zone name, such as ap-guangzhou-3.
+        /// Availability zone name, such as `ap-guangzhou-3`.
         /// The following is a list of all availability zones:
         /// <li> ap-chongqing-1 </li>
         /// <li> ap-seoul-1 </li>
@@ -57,6 +57,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> ap-beijing-2 </li>
         /// <li> ap-beijing-3 </li>
         /// <li> ap-beijing-4 </li>
+        /// <li> ap-beijing-5 </li>
         /// <li> na-siliconvalley-1 </li>
         /// <li> na-siliconvalley-2 </li>
         /// <li> eu-frankfurt-1 </li>

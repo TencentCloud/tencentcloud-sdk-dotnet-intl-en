@@ -49,19 +49,19 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? WithinTime{ get; set; }
 
         /// <summary>
-        /// Statistics start time, such as 2020-08-19 00:00:00
+        /// Statistics start time, such as `2020-08-19 00:00:00`
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Statistics end time, such as 2020-08-19 23:59:59
+        /// Statistics end time, such as `2020-08-19 23:59:59`
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+        /// Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
         /// </summary>
         [JsonProperty("Granularity")]
         public ulong? Granularity{ get; set; }

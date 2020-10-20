@@ -264,6 +264,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public long? InitTimeout{ get; set; }
 
         /// <summary>
+        /// Cause of function failure
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StatusReasons")]
+        public StatusReason[] StatusReasons{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -314,6 +321,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+            this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

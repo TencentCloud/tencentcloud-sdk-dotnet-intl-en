@@ -3451,6 +3451,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query resources in a bandwidth package based on the unique package ID. You can filter the result by specifying conditions and paginate the query results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageResourcesResponse"/></returns>
+        public async Task<DescribeBandwidthPackageResourcesResponse> DescribeBandwidthPackageResources(DescribeBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query resources in a bandwidth package based on the unique package ID. You can filter the result by specifying conditions and paginate the query results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageResourcesResponse"/></returns>
+        public DescribeBandwidthPackageResourcesResponse DescribeBandwidthPackageResourcesSync(DescribeBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query bandwidth package information, including the unique ID of the bandwidth package, the type, the billing mode, the name, and the resource information.
         /// </summary>
         /// <param name="req"><see cref="DescribeBandwidthPackagesRequest"/></param>
@@ -6047,7 +6087,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
+        /// This API is used to adjust the bandwidth of [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), including EIP billed on a pay-as-you-go, monthly subscription, and bandwidth package basis.
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressesBandwidthRequest"/></param>
         /// <returns><see cref="ModifyAddressesBandwidthResponse"/></returns>
@@ -6067,7 +6107,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
+        /// This API is used to adjust the bandwidth of [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), including EIP billed on a pay-as-you-go, monthly subscription, and bandwidth package basis.
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressesBandwidthRequest"/></param>
         /// <returns><see cref="ModifyAddressesBandwidthResponse"/></returns>

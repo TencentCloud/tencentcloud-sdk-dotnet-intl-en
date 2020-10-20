@@ -194,6 +194,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("BasicSecurityType")]
         public ulong? BasicSecurityType{ get; set; }
 
+        /// <summary>
+        /// Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public long? SceneType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +233,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
         }
     }
 }

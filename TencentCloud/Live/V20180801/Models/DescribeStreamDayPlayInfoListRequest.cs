@@ -25,8 +25,8 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Date in the format of `YYYY-mm-dd`.
-        /// Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+        /// Date in the format of YYYY-mm-dd
+        /// Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
         /// </summary>
         [JsonProperty("DayTime")]
         public string DayTime{ get; set; }

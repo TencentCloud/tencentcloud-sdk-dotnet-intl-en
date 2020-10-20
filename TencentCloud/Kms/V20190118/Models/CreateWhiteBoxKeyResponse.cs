@@ -43,13 +43,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag operation return code. 0: success; 1: internal error; 2: business processing error
         /// </summary>
         [JsonProperty("TagCode")]
         public ulong? TagCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag operation return message
         /// </summary>
         [JsonProperty("TagMsg")]
         public string TagMsg{ get; set; }

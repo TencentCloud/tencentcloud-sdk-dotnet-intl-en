@@ -37,10 +37,16 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+        /// Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }
+
+        /// <summary>
+        /// Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public string Deadline{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

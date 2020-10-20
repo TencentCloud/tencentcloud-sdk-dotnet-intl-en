@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 
+        /// An array of template IDs to be filtered.
         /// </summary>
         [JsonProperty("TemplateIds")]
         public long?[] TemplateIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// An array of domain names to be filtered.
         /// </summary>
         [JsonProperty("DomainNames")]
         public string[] DomainNames{ get; set; }

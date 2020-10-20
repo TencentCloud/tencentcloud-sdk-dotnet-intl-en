@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Position of detected face frame.
+        /// Position of the detected face frame.
         /// </summary>
         [JsonProperty("FaceRect")]
         public FaceRect FaceRect{ get; set; }
@@ -34,8 +34,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
         /// emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
         /// hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-        /// nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-        /// If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+        /// nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+        /// If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
         /// </summary>
         [JsonProperty("FaceDetailAttributesInfo")]
         public FaceDetailAttributesInfo FaceDetailAttributesInfo{ get; set; }

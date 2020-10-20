@@ -53,6 +53,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
+        /// <summary>
+        /// Timestamp settings
+        /// dec: decimal
+        /// hex: hexadecimal
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("TimeFormat")]
+        public string TimeFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +72,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
             this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
+            this.SetParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
         }
     }
 }

@@ -26,7 +26,8 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("MountTarget")]
         public string MountTarget{ get; set; }
@@ -59,8 +60,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// Data disk information
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }

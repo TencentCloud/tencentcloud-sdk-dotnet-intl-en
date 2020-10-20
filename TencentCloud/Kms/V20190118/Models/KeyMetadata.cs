@@ -25,25 +25,25 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 
+        /// Globally unique CMK ID
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Alias that makes a key more recognizable and understandable
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key creation time
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// CMK description
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -67,31 +67,31 @@ namespace TencentCloud.Kms.V20190118.Models
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Creator
         /// </summary>
         [JsonProperty("CreatorUin")]
         public ulong? CreatorUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether key rotation is enabled
         /// </summary>
         [JsonProperty("KeyRotationEnabled")]
         public bool? KeyRotationEnabled{ get; set; }
 
         /// <summary>
-        /// 
+        /// CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// 
+        /// Time of next rotation if key rotation is enabled
         /// </summary>
         [JsonProperty("NextRotateTime")]
         public ulong? NextRotateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scheduled deletion time
         /// </summary>
         [JsonProperty("DeletionDate")]
         public ulong? DeletionDate{ get; set; }

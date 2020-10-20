@@ -73,6 +73,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
 
+        /// <summary>
+        /// Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+        /// </summary>
+        [JsonProperty("KeepaliveEnable")]
+        public long? KeepaliveEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+            this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         }
     }
 }

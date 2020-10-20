@@ -79,7 +79,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+        /// The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

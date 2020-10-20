@@ -26,14 +26,14 @@ namespace TencentCloud.Iai.V20200303.Models
         
         /// <summary>
         /// Whether glasses are worn.
-        /// The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+        /// The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
         /// </summary>
         [JsonProperty("Glass")]
         public AttributeItem Glass{ get; set; }
 
         /// <summary>
         /// Whether the eyes are open.
-        /// The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+        /// The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
         /// </summary>
         [JsonProperty("EyeOpen")]
         public AttributeItem EyeOpen{ get; set; }

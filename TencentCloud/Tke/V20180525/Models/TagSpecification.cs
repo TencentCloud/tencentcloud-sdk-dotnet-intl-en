@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 
+        /// The type of resource that the tag is bound to. The type currently supported is `cluster`.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of tag pairs
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

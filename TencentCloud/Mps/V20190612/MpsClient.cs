@@ -1889,6 +1889,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is only used in unique custom development scenarios. Unless requested by Media Processing Service customer service, please do not call it.
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
+        /// <returns><see cref="ExecuteFunctionResponse"/></returns>
+        public async Task<ExecuteFunctionResponse> ExecuteFunction(ExecuteFunctionRequest req)
+        {
+             JsonResponseModel<ExecuteFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExecuteFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is only used in unique custom development scenarios. Unless requested by Media Processing Service customer service, please do not call it.
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
+        /// <returns><see cref="ExecuteFunctionResponse"/></returns>
+        public ExecuteFunctionResponse ExecuteFunctionSync(ExecuteFunctionRequest req)
+        {
+             JsonResponseModel<ExecuteFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExecuteFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to manage an initiated task.
         /// > Note: currently, you can only terminate an ongoing live stream processing task.
         /// </summary>

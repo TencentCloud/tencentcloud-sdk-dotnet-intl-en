@@ -162,6 +162,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
+        /// CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
+        /// </summary>
+        [JsonProperty("CamRoleName")]
+        public string CamRoleName{ get; set; }
+
+        /// <summary>
         /// HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance.
         /// </summary>
         [JsonProperty("HpcClusterId")]
@@ -195,6 +201,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         }
     }
