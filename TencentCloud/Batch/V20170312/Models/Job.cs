@@ -72,6 +72,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("StateIfCreateCvmFailed")]
         public string StateIfCreateCvmFailed{ get; set; }
 
+        /// <summary>
+        /// Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "TaskExecutionDependOn", this.TaskExecutionDependOn);
             this.SetParamSimple(map, prefix + "StateIfCreateCvmFailed", this.StateIfCreateCvmFailed);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

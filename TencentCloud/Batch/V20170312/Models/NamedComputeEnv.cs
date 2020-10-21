@@ -96,6 +96,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("ResourceMaxRetryCount")]
         public long? ResourceMaxRetryCount{ get; set; }
 
+        /// <summary>
+        /// Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
             this.SetParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -31,8 +31,12 @@ namespace TencentCloud.Batch.V20170312.Models
         public string[] TaskTemplateIds{ get; set; }
 
         /// <summary>
-        /// Filter
-        /// <li> task-template-name - String - Required: No - (Filter) Filter by task template name.</li>
+        /// Filter.
+        /// <li> `task-template-name` - String - Optional - Filter by task template name.</li>
+        /// <li> `tag-key` - String - Optional - Filter by tag key.</li>
+        /// <li> `tag-value` - String - Optional - Filter by tag value.</li>
+        /// <li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+        /// It cannot be specified together with the `TaskTemplateIds` parameter.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

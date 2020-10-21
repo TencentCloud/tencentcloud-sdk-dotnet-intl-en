@@ -88,13 +88,26 @@ namespace TencentCloud.Batch.V20170312.Models
         /// Task instance statistical metrics
         /// </summary>
         [JsonProperty("TaskInstanceMetrics")]
-        public TaskInstanceView TaskInstanceMetrics{ get; set; }
+        public TaskInstanceMetrics TaskInstanceMetrics{ get; set; }
 
         /// <summary>
         /// Instance failure reason
         /// </summary>
         [JsonProperty("StateReason")]
         public string StateReason{ get; set; }
+
+        /// <summary>
+        /// Tag list bound to the job.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NextAction")]
+        public string NextAction{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -120,6 +133,8 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "TaskMetrics.", this.TaskMetrics);
             this.SetParamObj(map, prefix + "TaskInstanceMetrics.", this.TaskInstanceMetrics);
             this.SetParamSimple(map, prefix + "StateReason", this.StateReason);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

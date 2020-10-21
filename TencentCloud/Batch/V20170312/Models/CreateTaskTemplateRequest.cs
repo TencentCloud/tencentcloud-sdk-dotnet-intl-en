@@ -42,6 +42,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("TaskTemplateDescription")]
         public string TaskTemplateDescription{ get; set; }
 
+        /// <summary>
+        /// Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "TaskTemplateName", this.TaskTemplateName);
             this.SetParamObj(map, prefix + "TaskTemplateInfo.", this.TaskTemplateInfo);
             this.SetParamSimple(map, prefix + "TaskTemplateDescription", this.TaskTemplateDescription);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

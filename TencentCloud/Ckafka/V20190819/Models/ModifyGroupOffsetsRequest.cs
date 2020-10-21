@@ -66,6 +66,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+        /// </summary>
+        [JsonProperty("Partitions")]
+        public long?[] Partitions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Shift", this.Shift);
             this.SetParamSimple(map, prefix + "ShiftTimestamp", this.ShiftTimestamp);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArraySimple(map, prefix + "Partitions.", this.Partitions);
         }
     }
 }

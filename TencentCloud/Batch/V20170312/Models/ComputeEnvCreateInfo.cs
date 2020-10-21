@@ -90,6 +90,13 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("DesiredComputeNodeCount")]
         public ulong? DesiredComputeNodeCount{ get; set; }
 
+        /// <summary>
+        /// Tag list of the compute environment.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +113,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Authentications.", this.Authentications);
             this.SetParamArrayObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

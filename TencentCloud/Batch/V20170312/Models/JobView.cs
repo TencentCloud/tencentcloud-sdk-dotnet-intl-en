@@ -74,6 +74,13 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("TaskMetrics")]
         public TaskMetrics TaskMetrics{ get; set; }
 
+        /// <summary>
+        /// Tag list bound to the job.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +95,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamObj(map, prefix + "TaskMetrics.", this.TaskMetrics);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
