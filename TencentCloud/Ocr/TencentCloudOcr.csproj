@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudOcrSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20181119\OcrClient.cs" />
+    <Compile Include="V20181119\Models\BankCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\BankCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\Coord.cs" />
+    <Compile Include="V20181119\Models\GeneralAccurateOCRRequest.cs" />
+    <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />
+    <Compile Include="V20181119\Models\GeneralBasicOCRResponse.cs" />
+    <Compile Include="V20181119\Models\HKIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\HKIDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ItemCoord.cs" />
+    <Compile Include="V20181119\Models\MLIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\MLIDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MLIDPassportOCRRequest.cs" />
+    <Compile Include="V20181119\Models\MLIDPassportOCRResponse.cs" />
+    <Compile Include="V20181119\Models\TableOCRRequest.cs" />
+    <Compile Include="V20181119\Models\TableOCRResponse.cs" />
+    <Compile Include="V20181119\Models\TextDetection.cs" />
+    <Compile Include="V20181119\Models\TextTable.cs" />
+  </ItemGroup>
+</Project>

@@ -351,6 +351,46 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
+        /// This API is used to query the detailed node information of the acceleration platform to which the domain name is connected.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpStatusRequest"/></param>
+        /// <returns><see cref="DescribeIpStatusResponse"/></returns>
+        public async Task<DescribeIpStatusResponse> DescribeIpStatus(DescribeIpStatusRequest req)
+        {
+             JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the detailed node information of the acceleration platform to which the domain name is connected.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpStatusRequest"/></param>
+        /// <returns><see cref="DescribeIpStatusResponse"/></returns>
+        public DescribeIpStatusResponse DescribeIpStatusSync(DescribeIpStatusRequest req)
+        {
+             JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the usage quota of the purge API.
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeQuotaRequest"/></param>
@@ -431,7 +471,7 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
-        /// This API is used to batch purge cache directories. One purge task ID will be returned for each submission.
+        /// This API is used to purge cache directories in batches. One purge task ID will be returned for each submission.
         /// </summary>
         /// <param name="req"><see cref="PurgePathCacheRequest"/></param>
         /// <returns><see cref="PurgePathCacheResponse"/></returns>
@@ -451,7 +491,7 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
-        /// This API is used to batch purge cache directories. One purge task ID will be returned for each submission.
+        /// This API is used to purge cache directories in batches. One purge task ID will be returned for each submission.
         /// </summary>
         /// <param name="req"><see cref="PurgePathCacheRequest"/></param>
         /// <returns><see cref="PurgePathCacheResponse"/></returns>

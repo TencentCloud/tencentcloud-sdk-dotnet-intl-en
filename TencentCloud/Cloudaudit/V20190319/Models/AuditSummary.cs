@@ -31,7 +31,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string AuditName{ get; set; }
 
         /// <summary>
-        /// Tracking set status. Value range: 1 (enabled), 0 (disabled)
+        /// Tracking set status. Valid values: 1: enabled, 0: disabled
         /// </summary>
         [JsonProperty("AuditStatus")]
         public long? AuditStatus{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AuditName", this.AuditName);
             this.SetParamSimple(map, prefix + "AuditStatus", this.AuditStatus);

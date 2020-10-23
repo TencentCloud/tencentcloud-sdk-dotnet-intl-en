@@ -31,7 +31,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string AuditName{ get; set; }
 
         /// <summary>
-        /// Tracking set status. Value range: 1 (enabled), 0 (disabled).
+        /// Tracking set status. Valid values: 1: enabled, 0: disabled.
         /// </summary>
         [JsonProperty("AuditStatus")]
         public long? AuditStatus{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string CmqQueueName{ get; set; }
 
         /// <summary>
-        /// Region where the queue is located.
+        /// Queue region.
         /// </summary>
         [JsonProperty("CmqRegion")]
         public string CmqRegion{ get; set; }
@@ -55,16 +55,40 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// Region where the COS bucket is located.
+        /// COS bucket region.
         /// </summary>
         [JsonProperty("CosRegion")]
         public string CosRegion{ get; set; }
 
         /// <summary>
-        /// Whether to enable CMQ message notification. 1: yes; 0: no.
+        /// Whether to enable CMQ message notification. Valid values: 1: yes; 0: no.
         /// </summary>
         [JsonProperty("IsEnableCmqNotify")]
         public long? IsEnableCmqNotify{ get; set; }
+
+        /// <summary>
+        /// Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+        /// </summary>
+        [JsonProperty("IsEnableKmsEncry")]
+        public long? IsEnableKmsEncry{ get; set; }
+
+        /// <summary>
+        /// Globally unique CMK ID.
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// CMK alias.
+        /// </summary>
+        [JsonProperty("KmsAlias")]
+        public string KmsAlias{ get; set; }
+
+        /// <summary>
+        /// KMS region.
+        /// </summary>
+        [JsonProperty("KmsRegion")]
+        public string KmsRegion{ get; set; }
 
         /// <summary>
         /// Log prefix.
@@ -73,13 +97,13 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string LogFilePrefix{ get; set; }
 
         /// <summary>
-        /// Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write)
+        /// Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write)
         /// </summary>
         [JsonProperty("ReadWriteAttribute")]
         public long? ReadWriteAttribute{ get; set; }
 
         /// <summary>
-        /// Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+        /// Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -88,7 +112,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AuditName", this.AuditName);
             this.SetParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
@@ -97,6 +121,10 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
             this.SetParamSimple(map, prefix + "CosRegion", this.CosRegion);
             this.SetParamSimple(map, prefix + "IsEnableCmqNotify", this.IsEnableCmqNotify);
+            this.SetParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KmsAlias", this.KmsAlias);
+            this.SetParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
             this.SetParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
             this.SetParamSimple(map, prefix + "ReadWriteAttribute", this.ReadWriteAttribute);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

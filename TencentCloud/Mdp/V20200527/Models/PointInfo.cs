@@ -41,7 +41,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Inputs.", this.Inputs);
             this.SetParamArrayObj(map, prefix + "Endpoints.", this.Endpoints);

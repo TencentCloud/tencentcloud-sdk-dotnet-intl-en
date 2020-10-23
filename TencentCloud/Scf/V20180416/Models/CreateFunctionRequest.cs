@@ -144,11 +144,17 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("InitTimeout")]
         public long? InitTimeout{ get; set; }
 
+        /// <summary>
+        /// Tag parameter of the function. It is an array of key-value pairs.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
             this.SetParamObj(map, prefix + "Code.", this.Code);
@@ -170,6 +176,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -91,7 +91,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+        /// This field is disused.
         /// </summary>
         [JsonProperty("SearchContext")]
         public LogSearchContext SearchContext{ get; set; }
@@ -100,7 +100,7 @@ namespace TencentCloud.Scf.V20180416.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

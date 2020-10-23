@@ -25,25 +25,25 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Original upfront price, in USD.
+        /// Original upfront payment, in USD.
         /// </summary>
         [JsonProperty("OriginalFixedPrice")]
         public float? OriginalFixedPrice{ get; set; }
 
         /// <summary>
-        /// Discounted upfront price, in USD.
+        /// Discounted upfront payment, in USD.
         /// </summary>
         [JsonProperty("DiscountFixedPrice")]
         public float? DiscountFixedPrice{ get; set; }
 
         /// <summary>
-        /// Original usage price, in USD/hr.
+        /// Original subsequent unit price, in USD/hr.
         /// </summary>
         [JsonProperty("OriginalUsagePrice")]
         public float? OriginalUsagePrice{ get; set; }
 
         /// <summary>
-        /// Discounted usage price, in USD/hr.
+        /// Discounted subsequent unit price, in USD/hr.
         /// </summary>
         [JsonProperty("DiscountUsagePrice")]
         public float? DiscountUsagePrice{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "OriginalFixedPrice", this.OriginalFixedPrice);
             this.SetParamSimple(map, prefix + "DiscountFixedPrice", this.DiscountFixedPrice);

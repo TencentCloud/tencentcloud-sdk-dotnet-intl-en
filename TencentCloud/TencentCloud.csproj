@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.76</VersionPrefix>
+    <VersionPrefix>3.0.77</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -26,13 +26,11 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="Pathoschild.Http.FluentClient" Version="3.2.0" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="Pathoschild.Http.FluentClient" Version="3.2.0" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup>
@@ -2144,6 +2142,8 @@
     <Compile Include="Ecdn\V20191012\Models\DescribeEcdnDomainStatisticsResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribeEcdnStatisticsRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribeEcdnStatisticsResponse.cs" />
+    <Compile Include="Ecdn\V20191012\Models\DescribeIpStatusRequest.cs" />
+    <Compile Include="Ecdn\V20191012\Models\DescribeIpStatusResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribePurgeQuotaRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribePurgeQuotaResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribePurgeTasksRequest.cs" />
@@ -2161,6 +2161,7 @@
     <Compile Include="Ecdn\V20191012\Models\Https.cs" />
     <Compile Include="Ecdn\V20191012\Models\IpFilter.cs" />
     <Compile Include="Ecdn\V20191012\Models\IpFreqLimit.cs" />
+    <Compile Include="Ecdn\V20191012\Models\IpStatus.cs" />
     <Compile Include="Ecdn\V20191012\Models\Origin.cs" />
     <Compile Include="Ecdn\V20191012\Models\PurgePathCacheRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\PurgePathCacheResponse.cs" />
@@ -4376,6 +4377,8 @@
     <Compile Include="Tiw\V20190919\Models\VideoInfo.cs" />
     <Compile Include="Tiw\V20190919\Models\Whiteboard.cs" />
     <Compile Include="Tke\V20180525\TkeClient.cs" />
+    <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
@@ -5038,6 +5041,7 @@
     <Compile Include="Vpc\V20170312\Models\AuditCrossBorderComplianceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AuditCrossBorderComplianceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\BandwidthPackage.cs" />
+    <Compile Include="Vpc\V20170312\Models\BandwidthPackageBillBandwidth.cs" />
     <Compile Include="Vpc\V20170312\Models\CCN.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnAttachedInstance.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnBandwidthInfo.cs" />
@@ -5176,6 +5180,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeAddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAssistantCidrRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAssistantCidrResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageBillUsageRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageBillUsageResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageQuotaRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageQuotaResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageResourcesRequest.cs" />

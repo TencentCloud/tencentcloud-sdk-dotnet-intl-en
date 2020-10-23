@@ -49,7 +49,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "WhiteIpList.", this.WhiteIpList);
             this.SetParamArraySimple(map, prefix + "BlackIpList.", this.BlackIpList);

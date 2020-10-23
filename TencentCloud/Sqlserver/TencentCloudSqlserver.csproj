@@ -1,0 +1,135 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSqlserverSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180328\SqlserverClient.cs" />
+    <Compile Include="V20180328\Models\AccountCreateInfo.cs" />
+    <Compile Include="V20180328\Models\AccountDetail.cs" />
+    <Compile Include="V20180328\Models\AccountPassword.cs" />
+    <Compile Include="V20180328\Models\AccountPrivilege.cs" />
+    <Compile Include="V20180328\Models\AccountPrivilegeModifyInfo.cs" />
+    <Compile Include="V20180328\Models\AccountRemark.cs" />
+    <Compile Include="V20180328\Models\Backup.cs" />
+    <Compile Include="V20180328\Models\CreateAccountRequest.cs" />
+    <Compile Include="V20180328\Models\CreateAccountResponse.cs" />
+    <Compile Include="V20180328\Models\CreateBackupRequest.cs" />
+    <Compile Include="V20180328\Models\CreateBackupResponse.cs" />
+    <Compile Include="V20180328\Models\CreateDBInstancesRequest.cs" />
+    <Compile Include="V20180328\Models\CreateDBInstancesResponse.cs" />
+    <Compile Include="V20180328\Models\CreateDBRequest.cs" />
+    <Compile Include="V20180328\Models\CreateDBResponse.cs" />
+    <Compile Include="V20180328\Models\CreateMigrationRequest.cs" />
+    <Compile Include="V20180328\Models\CreateMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\DBCreateInfo.cs" />
+    <Compile Include="V20180328\Models\DBDetail.cs" />
+    <Compile Include="V20180328\Models\DBInstance.cs" />
+    <Compile Include="V20180328\Models\DBPrivilege.cs" />
+    <Compile Include="V20180328\Models\DBPrivilegeModifyInfo.cs" />
+    <Compile Include="V20180328\Models\DBRemark.cs" />
+    <Compile Include="V20180328\Models\DbRollbackTimeInfo.cs" />
+    <Compile Include="V20180328\Models\DealInfo.cs" />
+    <Compile Include="V20180328\Models\DeleteAccountRequest.cs" />
+    <Compile Include="V20180328\Models\DeleteAccountResponse.cs" />
+    <Compile Include="V20180328\Models\DeleteDBRequest.cs" />
+    <Compile Include="V20180328\Models\DeleteDBResponse.cs" />
+    <Compile Include="V20180328\Models\DeleteMigrationRequest.cs" />
+    <Compile Include="V20180328\Models\DeleteMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeBackupsRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeBackupsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeDBInstancesRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeDBsRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeDBsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeFlowStatusRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeFlowStatusResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeMigrationDetailRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeMigrationDetailResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeMigrationsRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeMigrationsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeOrdersRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeProductConfigRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeProductConfigResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeRollbackTimeRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeRollbackTimeResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeSlowlogsRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeSlowlogsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeZonesRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20180328\Models\InquiryPriceCreateDBInstancesRequest.cs" />
+    <Compile Include="V20180328\Models\InquiryPriceCreateDBInstancesResponse.cs" />
+    <Compile Include="V20180328\Models\InquiryPriceUpgradeDBInstanceRequest.cs" />
+    <Compile Include="V20180328\Models\InquiryPriceUpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20180328\Models\InstanceDBDetail.cs" />
+    <Compile Include="V20180328\Models\MigrateDB.cs" />
+    <Compile Include="V20180328\Models\MigrateDetail.cs" />
+    <Compile Include="V20180328\Models\MigrateSource.cs" />
+    <Compile Include="V20180328\Models\MigrateTarget.cs" />
+    <Compile Include="V20180328\Models\MigrateTask.cs" />
+    <Compile Include="V20180328\Models\ModifyAccountPrivilegeRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyAccountPrivilegeResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyAccountRemarkRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyBackupStrategyRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyBackupStrategyResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyDBInstanceNameRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyDBInstanceProjectRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyDBInstanceProjectResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyDBNameRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyDBNameResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyDBRemarkRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyDBRemarkResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyMigrationRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\RegionInfo.cs" />
+    <Compile Include="V20180328\Models\RenameRestoreDatabase.cs" />
+    <Compile Include="V20180328\Models\ResetAccountPasswordRequest.cs" />
+    <Compile Include="V20180328\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="V20180328\Models\RestartDBInstanceRequest.cs" />
+    <Compile Include="V20180328\Models\RestartDBInstanceResponse.cs" />
+    <Compile Include="V20180328\Models\RestoreInstanceRequest.cs" />
+    <Compile Include="V20180328\Models\RestoreInstanceResponse.cs" />
+    <Compile Include="V20180328\Models\RollbackInstanceRequest.cs" />
+    <Compile Include="V20180328\Models\RollbackInstanceResponse.cs" />
+    <Compile Include="V20180328\Models\RunMigrationRequest.cs" />
+    <Compile Include="V20180328\Models\RunMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\SlowlogInfo.cs" />
+    <Compile Include="V20180328\Models\SpecInfo.cs" />
+    <Compile Include="V20180328\Models\TerminateDBInstanceRequest.cs" />
+    <Compile Include="V20180328\Models\TerminateDBInstanceResponse.cs" />
+    <Compile Include="V20180328\Models\UpgradeDBInstanceRequest.cs" />
+    <Compile Include="V20180328\Models\UpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20180328\Models\ZoneInfo.cs" />
+  </ItemGroup>
+</Project>

@@ -31,10 +31,10 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public CacheRule[] CacheRules{ get; set; }
 
         /// <summary>
-        /// Whether to follow origin server's `Cache-Control: max-age` configuration
-        /// on: enable.
-        /// off: disable.
-        /// After this feature is enabled, resources that do not match the `CacheRules` rule will be cached on nodes according to the `max-age` value returned by the origin server, while resources that match the `CacheRules` rule will be cached on nodes according to the cache expiration time set in `CacheRules`.
+        /// Whether to follow the `Cache-Control: max-age` configuration on the origin server (this feature is only available to users on the allowlist).
+        /// on: enable
+        /// off: disable
+        /// If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FollowOrigin")]
@@ -44,7 +44,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "CacheRules.", this.CacheRules);
             this.SetParamSimple(map, prefix + "FollowOrigin", this.FollowOrigin);

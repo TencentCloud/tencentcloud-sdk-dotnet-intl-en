@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public FunctionLog[] Data{ get; set; }
 
         /// <summary>
-        /// Parameter on the log service page
+        /// This field is disused.
         /// </summary>
         [JsonProperty("SearchContext")]
         public LogSearchContext SearchContext{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Scf.V20180416.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);

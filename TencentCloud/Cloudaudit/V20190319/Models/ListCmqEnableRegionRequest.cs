@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// Website type. zh: Mainland China (default); en: outside Mainland China.
+        /// Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
         /// </summary>
         [JsonProperty("WebsiteType")]
         public string WebsiteType{ get; set; }
@@ -34,7 +34,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "WebsiteType", this.WebsiteType);
         }

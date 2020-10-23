@@ -1,0 +1,110 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{87BF3C79-D8D0-3C22-AE2A-DEE7C02ABAD4}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudMdlSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200326\MdlClient.cs" />
+    <Compile Include="V20200326\Models\AttachedInputInfo.cs" />
+    <Compile Include="V20200326\Models\AudioPidSelectionInfo.cs" />
+    <Compile Include="V20200326\Models\AudioPipelineInputStatistics.cs" />
+    <Compile Include="V20200326\Models\AudioSelectorInfo.cs" />
+    <Compile Include="V20200326\Models\AudioTemplateInfo.cs" />
+    <Compile Include="V20200326\Models\ChannelAlertInfos.cs" />
+    <Compile Include="V20200326\Models\ChannelInfo.cs" />
+    <Compile Include="V20200326\Models\ChannelInputStatistics.cs" />
+    <Compile Include="V20200326\Models\ChannelOutputsStatistics.cs" />
+    <Compile Include="V20200326\Models\ChannelPipelineAlerts.cs" />
+    <Compile Include="V20200326\Models\CreateMediaLiveChannelRequest.cs" />
+    <Compile Include="V20200326\Models\CreateMediaLiveChannelResponse.cs" />
+    <Compile Include="V20200326\Models\CreateMediaLiveInputRequest.cs" />
+    <Compile Include="V20200326\Models\CreateMediaLiveInputResponse.cs" />
+    <Compile Include="V20200326\Models\CreateMediaLiveInputSecurityGroupRequest.cs" />
+    <Compile Include="V20200326\Models\CreateMediaLiveInputSecurityGroupResponse.cs" />
+    <Compile Include="V20200326\Models\DashRemuxSettingsInfo.cs" />
+    <Compile Include="V20200326\Models\DeleteMediaLiveChannelRequest.cs" />
+    <Compile Include="V20200326\Models\DeleteMediaLiveChannelResponse.cs" />
+    <Compile Include="V20200326\Models\DeleteMediaLiveInputRequest.cs" />
+    <Compile Include="V20200326\Models\DeleteMediaLiveInputResponse.cs" />
+    <Compile Include="V20200326\Models\DeleteMediaLiveInputSecurityGroupRequest.cs" />
+    <Compile Include="V20200326\Models\DeleteMediaLiveInputSecurityGroupResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelAlertsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelAlertsResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelInputStatisticsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelInputStatisticsResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelLogsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelLogsResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelOutputStatisticsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelOutputStatisticsResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveChannelsResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveInputRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveInputResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveInputSecurityGroupRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveInputSecurityGroupResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveInputSecurityGroupsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveInputSecurityGroupsResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveInputsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveInputsResponse.cs" />
+    <Compile Include="V20200326\Models\DestinationInfo.cs" />
+    <Compile Include="V20200326\Models\DrmKey.cs" />
+    <Compile Include="V20200326\Models\DrmSettingsInfo.cs" />
+    <Compile Include="V20200326\Models\HlsRemuxSettingsInfo.cs" />
+    <Compile Include="V20200326\Models\InputInfo.cs" />
+    <Compile Include="V20200326\Models\InputSecurityGroupInfo.cs" />
+    <Compile Include="V20200326\Models\InputSettingInfo.cs" />
+    <Compile Include="V20200326\Models\InputStatistics.cs" />
+    <Compile Include="V20200326\Models\LogInfo.cs" />
+    <Compile Include="V20200326\Models\LogMessageInfo.cs" />
+    <Compile Include="V20200326\Models\MediaPackageSettingsInfo.cs" />
+    <Compile Include="V20200326\Models\ModifyMediaLiveChannelRequest.cs" />
+    <Compile Include="V20200326\Models\ModifyMediaLiveChannelResponse.cs" />
+    <Compile Include="V20200326\Models\ModifyMediaLiveInputRequest.cs" />
+    <Compile Include="V20200326\Models\ModifyMediaLiveInputResponse.cs" />
+    <Compile Include="V20200326\Models\ModifyMediaLiveInputSecurityGroupRequest.cs" />
+    <Compile Include="V20200326\Models\ModifyMediaLiveInputSecurityGroupResponse.cs" />
+    <Compile Include="V20200326\Models\OutputGroupsInfo.cs" />
+    <Compile Include="V20200326\Models\OutputInfo.cs" />
+    <Compile Include="V20200326\Models\OutputsStatistics.cs" />
+    <Compile Include="V20200326\Models\PipelineInputStatistics.cs" />
+    <Compile Include="V20200326\Models\PipelineLogInfo.cs" />
+    <Compile Include="V20200326\Models\PipelineOutputStatistics.cs" />
+    <Compile Include="V20200326\Models\Scte35SettingsInfo.cs" />
+    <Compile Include="V20200326\Models\StartMediaLiveChannelRequest.cs" />
+    <Compile Include="V20200326\Models\StartMediaLiveChannelResponse.cs" />
+    <Compile Include="V20200326\Models\StopMediaLiveChannelRequest.cs" />
+    <Compile Include="V20200326\Models\StopMediaLiveChannelResponse.cs" />
+    <Compile Include="V20200326\Models\StreamAudioInfo.cs" />
+    <Compile Include="V20200326\Models\StreamInfo.cs" />
+    <Compile Include="V20200326\Models\StreamScte35Info.cs" />
+    <Compile Include="V20200326\Models\StreamVideoInfo.cs" />
+    <Compile Include="V20200326\Models\VideoPipelineInputStatistics.cs" />
+    <Compile Include="V20200326\Models\VideoTemplateInfo.cs" />
+  </ItemGroup>
+</Project>

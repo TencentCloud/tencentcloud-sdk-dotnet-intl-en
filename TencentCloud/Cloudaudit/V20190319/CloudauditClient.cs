@@ -53,7 +53,11 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to create a tracking set.
+        /// Parameter requirements:
+        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
+        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRequest"/></param>
         /// <returns><see cref="CreateAuditResponse"/></returns>
@@ -73,7 +77,11 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to create a tracking set.
+        /// Parameter requirements:
+        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
+        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRequest"/></param>
         /// <returns><see cref="CreateAuditResponse"/></returns>
@@ -173,7 +181,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the value range of AttributeKey.
+        /// This API is used to query the valid values range of `AttributeKey`.
         /// </summary>
         /// <param name="req"><see cref="GetAttributeKeyRequest"/></param>
         /// <returns><see cref="GetAttributeKeyResponse"/></returns>
@@ -193,7 +201,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the value range of AttributeKey.
+        /// This API is used to query the valid values range of `AttributeKey`.
         /// </summary>
         /// <param name="req"><see cref="GetAttributeKeyRequest"/></param>
         /// <returns><see cref="GetAttributeKeyResponse"/></returns>
@@ -213,7 +221,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the maximum number of tracking sets that can be created.
+        /// This API is used to query the number of tracking sets that can be created.
         /// </summary>
         /// <param name="req"><see cref="InquireAuditCreditRequest"/></param>
         /// <returns><see cref="InquireAuditCreditResponse"/></returns>
@@ -233,7 +241,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the maximum number of tracking sets that can be created.
+        /// This API is used to query the number of tracking sets that can be created.
         /// </summary>
         /// <param name="req"><see cref="InquireAuditCreditRequest"/></param>
         /// <returns><see cref="InquireAuditCreditResponse"/></returns>
@@ -293,7 +301,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the CloudAudit-enabled CMQ AZs.
+        /// This API is used to query CloudAudit-enabled CMQ AZs.
         /// </summary>
         /// <param name="req"><see cref="ListCmqEnableRegionRequest"/></param>
         /// <returns><see cref="ListCmqEnableRegionResponse"/></returns>
@@ -313,7 +321,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the CloudAudit-enabled CMQ AZs.
+        /// This API is used to query CloudAudit-enabled CMQ AZs.
         /// </summary>
         /// <param name="req"><see cref="ListCmqEnableRegionRequest"/></param>
         /// <returns><see cref="ListCmqEnableRegionResponse"/></returns>
@@ -333,7 +341,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the CloudAudit-enabled COS AZs.
+        /// This API is used to query CloudAudit-enabled COS AZs.
         /// </summary>
         /// <param name="req"><see cref="ListCosEnableRegionRequest"/></param>
         /// <returns><see cref="ListCosEnableRegionResponse"/></returns>
@@ -353,7 +361,7 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the CloudAudit-enabled COS AZs.
+        /// This API is used to query CloudAudit-enabled COS AZs.
         /// </summary>
         /// <param name="req"><see cref="ListCosEnableRegionRequest"/></param>
         /// <returns><see cref="ListCosEnableRegionResponse"/></returns>
@@ -494,9 +502,10 @@ namespace TencentCloud.Cloudaudit.V20190319
 
         /// <summary>
         /// Parameter requirements:
-        /// 1. If the value of IsCreateNewBucket exists, cosRegion and cosBucketName are required.
-        /// 2. If the value of IsEnableCmqNotify is 1, IsCreateNewQueue, CmqRegion, and CmqQueueName are required.
-        /// 3. If the value of IsEnableCmqNotify is 0, IsCreateNewQueue, CmqRegion, and CmqQueueName cannot be passed in.
+        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
+        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
         /// </summary>
         /// <param name="req"><see cref="UpdateAuditRequest"/></param>
         /// <returns><see cref="UpdateAuditResponse"/></returns>
@@ -517,9 +526,10 @@ namespace TencentCloud.Cloudaudit.V20190319
 
         /// <summary>
         /// Parameter requirements:
-        /// 1. If the value of IsCreateNewBucket exists, cosRegion and cosBucketName are required.
-        /// 2. If the value of IsEnableCmqNotify is 1, IsCreateNewQueue, CmqRegion, and CmqQueueName are required.
-        /// 3. If the value of IsEnableCmqNotify is 0, IsCreateNewQueue, CmqRegion, and CmqQueueName cannot be passed in.
+        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
+        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
         /// </summary>
         /// <param name="req"><see cref="UpdateAuditRequest"/></param>
         /// <returns><see cref="UpdateAuditResponse"/></returns>

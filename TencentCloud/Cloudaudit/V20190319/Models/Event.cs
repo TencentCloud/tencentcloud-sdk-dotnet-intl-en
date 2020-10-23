@@ -61,7 +61,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string EventName{ get; set; }
 
         /// <summary>
-        /// Description of event name
+        /// Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
         /// </summary>
         [JsonProperty("EventNameCn")]
         public string EventNameCn{ get; set; }
@@ -91,7 +91,13 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string RequestID{ get; set; }
 
         /// <summary>
-        /// Description of resource type
+        /// Resource region
+        /// </summary>
+        [JsonProperty("ResourceRegion")]
+        public string ResourceRegion{ get; set; }
+
+        /// <summary>
+        /// Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
         /// </summary>
         [JsonProperty("ResourceTypeCn")]
         public string ResourceTypeCn{ get; set; }
@@ -118,7 +124,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Resources.", this.Resources);
             this.SetParamSimple(map, prefix + "AccountID", this.AccountID);
@@ -131,6 +137,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "EventSource", this.EventSource);
             this.SetParamSimple(map, prefix + "EventTime", this.EventTime);
             this.SetParamSimple(map, prefix + "RequestID", this.RequestID);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "ResourceTypeCn", this.ResourceTypeCn);
             this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
             this.SetParamSimple(map, prefix + "SourceIPAddress", this.SourceIPAddress);

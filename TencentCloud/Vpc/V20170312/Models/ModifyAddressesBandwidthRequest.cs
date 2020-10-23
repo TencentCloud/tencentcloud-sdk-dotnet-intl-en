@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The unique ID of the EIP, such as 'eip-xxxx'.
+        /// List of EIP IDs, such as “eip-xxxx”.
         /// </summary>
         [JsonProperty("AddressIds")]
         public string[] AddressIds{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "AddressIds.", this.AddressIds);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);

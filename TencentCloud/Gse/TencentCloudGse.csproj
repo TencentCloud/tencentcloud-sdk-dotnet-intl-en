@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{D9E9460D-61B2-3328-83C0-53F617E11D0C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudGseSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20191112\GseClient.cs" />
+    <Compile Include="V20191112\Models\CreateGameServerSessionRequest.cs" />
+    <Compile Include="V20191112\Models\CreateGameServerSessionResponse.cs" />
+    <Compile Include="V20191112\Models\Credentials.cs" />
+    <Compile Include="V20191112\Models\DescribeGameServerSessionDetailsRequest.cs" />
+    <Compile Include="V20191112\Models\DescribeGameServerSessionDetailsResponse.cs" />
+    <Compile Include="V20191112\Models\DescribeGameServerSessionPlacementRequest.cs" />
+    <Compile Include="V20191112\Models\DescribeGameServerSessionPlacementResponse.cs" />
+    <Compile Include="V20191112\Models\DescribeGameServerSessionsRequest.cs" />
+    <Compile Include="V20191112\Models\DescribeGameServerSessionsResponse.cs" />
+    <Compile Include="V20191112\Models\DescribePlayerSessionsRequest.cs" />
+    <Compile Include="V20191112\Models\DescribePlayerSessionsResponse.cs" />
+    <Compile Include="V20191112\Models\DesiredPlayerSession.cs" />
+    <Compile Include="V20191112\Models\GameProperty.cs" />
+    <Compile Include="V20191112\Models\GameServerSession.cs" />
+    <Compile Include="V20191112\Models\GameServerSessionDetail.cs" />
+    <Compile Include="V20191112\Models\GameServerSessionPlacement.cs" />
+    <Compile Include="V20191112\Models\GetGameServerSessionLogUrlRequest.cs" />
+    <Compile Include="V20191112\Models\GetGameServerSessionLogUrlResponse.cs" />
+    <Compile Include="V20191112\Models\GetInstanceAccessRequest.cs" />
+    <Compile Include="V20191112\Models\GetInstanceAccessResponse.cs" />
+    <Compile Include="V20191112\Models\InstanceAccess.cs" />
+    <Compile Include="V20191112\Models\JoinGameServerSessionRequest.cs" />
+    <Compile Include="V20191112\Models\JoinGameServerSessionResponse.cs" />
+    <Compile Include="V20191112\Models\PlacedPlayerSession.cs" />
+    <Compile Include="V20191112\Models\PlayerLatency.cs" />
+    <Compile Include="V20191112\Models\PlayerSession.cs" />
+    <Compile Include="V20191112\Models\SearchGameServerSessionsRequest.cs" />
+    <Compile Include="V20191112\Models\SearchGameServerSessionsResponse.cs" />
+    <Compile Include="V20191112\Models\StartGameServerSessionPlacementRequest.cs" />
+    <Compile Include="V20191112\Models\StartGameServerSessionPlacementResponse.cs" />
+    <Compile Include="V20191112\Models\StopGameServerSessionPlacementRequest.cs" />
+    <Compile Include="V20191112\Models\StopGameServerSessionPlacementResponse.cs" />
+    <Compile Include="V20191112\Models\UpdateGameServerSessionRequest.cs" />
+    <Compile Include="V20191112\Models\UpdateGameServerSessionResponse.cs" />
+  </ItemGroup>
+</Project>

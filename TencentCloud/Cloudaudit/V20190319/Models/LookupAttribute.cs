@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+        /// Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
         /// </summary>
         [JsonProperty("AttributeKey")]
         public string AttributeKey{ get; set; }
@@ -40,7 +40,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AttributeKey", this.AttributeKey);
             this.SetParamSimple(map, prefix + "AttributeValue", this.AttributeValue);

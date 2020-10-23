@@ -32,12 +32,14 @@ namespace TencentCloud.Ecdn.V20191012.Models
 
         /// <summary>
         /// `MaxAge` value.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxAge")]
         public long? MaxAge{ get; set; }
 
         /// <summary>
         /// Whether to include subdomain names. Valid values: on, off.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IncludeSubDomains")]
         public string IncludeSubDomains{ get; set; }
@@ -46,7 +48,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "MaxAge", this.MaxAge);

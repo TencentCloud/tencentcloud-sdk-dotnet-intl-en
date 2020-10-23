@@ -31,13 +31,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string OfferingType{ get; set; }
 
         /// <summary>
-        /// Total upfront price, in USD.
+        /// Upfront payment, in USD.
         /// </summary>
         [JsonProperty("FixedPrice")]
         public float? FixedPrice{ get; set; }
 
         /// <summary>
-        /// Total usage price, in USD/hr.
+        /// Subsequent unit price, in USD/hr.
         /// </summary>
         [JsonProperty("UsagePrice")]
         public float? UsagePrice{ get; set; }
@@ -72,7 +72,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "OfferingType", this.OfferingType);
             this.SetParamSimple(map, prefix + "FixedPrice", this.FixedPrice);

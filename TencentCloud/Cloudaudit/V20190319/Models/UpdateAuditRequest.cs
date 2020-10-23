@@ -31,55 +31,73 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string AuditName{ get; set; }
 
         /// <summary>
-        /// Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of IsEnableCmqNotify is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+        /// Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of `IsEnableCmqNotify` is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
         /// </summary>
         [JsonProperty("CmqQueueName")]
         public string CmqQueueName{ get; set; }
 
         /// <summary>
-        /// Region where the queue is located. Supported CMQ regions can be queried using the ListCmqEnableRegion API. This field is required if the value of IsEnableCmqNotify is 1.
+        /// Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
         /// </summary>
         [JsonProperty("CmqRegion")]
         public string CmqRegion{ get; set; }
 
         /// <summary>
-        /// User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
+        /// User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Please enter the name with caution so as to avoid log delivery failure and consequent data loss.
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// COS region. Supported regions can be queried using the ListCosEnableRegion API.
+        /// COS region. Supported regions can be queried through the `ListCosEnableRegion` API.
         /// </summary>
         [JsonProperty("CosRegion")]
         public string CosRegion{ get; set; }
 
         /// <summary>
-        /// Whether to create a COS bucket. 1: yes; 0: no.
+        /// Whether to create a COS bucket. Valid values: 1: yes; 0: no.
         /// </summary>
         [JsonProperty("IsCreateNewBucket")]
         public long? IsCreateNewBucket{ get; set; }
 
         /// <summary>
-        /// Whether to create a queue. 1: yes; 0: no. This field is required if the value of IsEnableCmqNotify is 1.
+        /// Whether to create a queue. Valid values: 1: yes; 0: no. This field is required if the value of `IsEnableCmqNotify` is 1.
         /// </summary>
         [JsonProperty("IsCreateNewQueue")]
         public long? IsCreateNewQueue{ get; set; }
 
         /// <summary>
-        /// Whether to enable CMQ message notification. 1: yes; 0: no. Only CMQ queue service is currently supported. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
+        /// Whether to enable CMQ message notification. Valid values: 1: yes; 0: no. Currently, only CMQ is supported for message queue services. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
         /// </summary>
         [JsonProperty("IsEnableCmqNotify")]
         public long? IsEnableCmqNotify{ get; set; }
 
         /// <summary>
-        /// Prefix of a log file, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
+        /// Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+        /// </summary>
+        [JsonProperty("IsEnableKmsEncry")]
+        public long? IsEnableKmsEncry{ get; set; }
+
+        /// <summary>
+        /// Globally unique ID of the CMK. This value is required if it is not a newly created KMS element. It can be obtained via the `ListKeyAliasByRegion` API. CloudAudit will not verify the validity of the `KeyId`. Please enter it with caution to avoid consequent data loss.
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// KMS region. Currently supported regions can be obtained via the `ListKmsEnableRegion` API. This must be the same as the COS region.
+        /// </summary>
+        [JsonProperty("KmsRegion")]
+        public string KmsRegion{ get; set; }
+
+        /// <summary>
+        /// Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
         /// </summary>
         [JsonProperty("LogFilePrefix")]
         public string LogFilePrefix{ get; set; }
 
         /// <summary>
-        /// Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write).
+        /// Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write).
         /// </summary>
         [JsonProperty("ReadWriteAttribute")]
         public long? ReadWriteAttribute{ get; set; }
@@ -88,7 +106,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AuditName", this.AuditName);
             this.SetParamSimple(map, prefix + "CmqQueueName", this.CmqQueueName);
@@ -98,6 +116,9 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "IsCreateNewBucket", this.IsCreateNewBucket);
             this.SetParamSimple(map, prefix + "IsCreateNewQueue", this.IsCreateNewQueue);
             this.SetParamSimple(map, prefix + "IsEnableCmqNotify", this.IsEnableCmqNotify);
+            this.SetParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
             this.SetParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
             this.SetParamSimple(map, prefix + "ReadWriteAttribute", this.ReadWriteAttribute);
         }

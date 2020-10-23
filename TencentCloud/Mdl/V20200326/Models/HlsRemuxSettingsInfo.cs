@@ -52,7 +52,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SegmentDuration", this.SegmentDuration);
             this.SetParamSimple(map, prefix + "SegmentNumber", this.SegmentNumber);

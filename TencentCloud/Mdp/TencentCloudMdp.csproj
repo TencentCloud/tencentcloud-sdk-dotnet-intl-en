@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudMdpSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200527\MdpClient.cs" />
+    <Compile Include="V20200527\Models\ChannelInfo.cs" />
+    <Compile Include="V20200527\Models\CreateMediaPackageChannelEndpointRequest.cs" />
+    <Compile Include="V20200527\Models\CreateMediaPackageChannelEndpointResponse.cs" />
+    <Compile Include="V20200527\Models\CreateMediaPackageChannelRequest.cs" />
+    <Compile Include="V20200527\Models\CreateMediaPackageChannelResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteMediaPackageChannelEndpointsRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteMediaPackageChannelEndpointsResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteMediaPackageChannelsRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteMediaPackageChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeMediaPackageChannelRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeMediaPackageChannelResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeMediaPackageChannelsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeMediaPackageChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\EndpointAuthInfo.cs" />
+    <Compile Include="V20200527\Models\EndpointInfo.cs" />
+    <Compile Include="V20200527\Models\InputAuthInfo.cs" />
+    <Compile Include="V20200527\Models\InputInfo.cs" />
+    <Compile Include="V20200527\Models\ModifyMediaPackageChannelEndpointRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyMediaPackageChannelEndpointResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyMediaPackageChannelInputAuthInfoRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyMediaPackageChannelInputAuthInfoResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyMediaPackageChannelRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyMediaPackageChannelResponse.cs" />
+    <Compile Include="V20200527\Models\PointInfo.cs" />
+  </ItemGroup>
+</Project>

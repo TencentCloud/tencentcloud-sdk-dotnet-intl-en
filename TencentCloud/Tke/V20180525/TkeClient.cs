@@ -53,6 +53,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API can be called to acquire the ClusterRole tke:admin. By setting a CAM policy, you can grant permission of this API to a sub-account that has higher permission in CAM. In this way, this sub-account can call this API directly to acquire the admin role of a Kubernetes cluster.
+        /// </summary>
+        /// <param name="req"><see cref="AcquireClusterAdminRoleRequest"/></param>
+        /// <returns><see cref="AcquireClusterAdminRoleResponse"/></returns>
+        public async Task<AcquireClusterAdminRoleResponse> AcquireClusterAdminRole(AcquireClusterAdminRoleRequest req)
+        {
+             JsonResponseModel<AcquireClusterAdminRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AcquireClusterAdminRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcquireClusterAdminRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API can be called to acquire the ClusterRole tke:admin. By setting a CAM policy, you can grant permission of this API to a sub-account that has higher permission in CAM. In this way, this sub-account can call this API directly to acquire the admin role of a Kubernetes cluster.
+        /// </summary>
+        /// <param name="req"><see cref="AcquireClusterAdminRoleRequest"/></param>
+        /// <returns><see cref="AcquireClusterAdminRoleResponse"/></returns>
+        public AcquireClusterAdminRoleResponse AcquireClusterAdminRoleSync(AcquireClusterAdminRoleRequest req)
+        {
+             JsonResponseModel<AcquireClusterAdminRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AcquireClusterAdminRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcquireClusterAdminRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add one or more existing instances to a cluster.
         /// </summary>
         /// <param name="req"><see cref="AddExistedInstancesRequest"/></param>

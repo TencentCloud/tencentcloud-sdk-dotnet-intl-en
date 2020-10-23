@@ -61,7 +61,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? StorageBlock{ get; set; }
 
         /// <summary>
-        /// Number of ENIs.
+        /// Number of NICs.
         /// </summary>
         [JsonProperty("NetworkCard")]
         public ulong? NetworkCard{ get; set; }
@@ -112,7 +112,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);

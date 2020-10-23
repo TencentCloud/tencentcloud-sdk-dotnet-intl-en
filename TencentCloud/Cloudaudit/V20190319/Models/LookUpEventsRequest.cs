@@ -43,10 +43,16 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public LookupAttribute[] LookupAttributes{ get; set; }
 
         /// <summary>
-        /// Maximum number of logs that can be returned
+        /// Maximum number of logs to be returned
         /// </summary>
         [JsonProperty("MaxResults")]
         public long? MaxResults{ get; set; }
+
+        /// <summary>
+        /// CloudAudit mode. Valid values: standard, quick. Default value: standard
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
 
         /// <summary>
         /// Credential for viewing more logs
@@ -58,12 +64,13 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
         }
     }

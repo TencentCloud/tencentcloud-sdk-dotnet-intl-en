@@ -31,7 +31,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public CosRegionInfo[] EnableRegions{ get; set; }
 
         /// <summary>
-        /// Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+        /// Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -40,7 +40,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "EnableRegions.", this.EnableRegions);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

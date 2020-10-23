@@ -81,7 +81,8 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public string SslStatus{ get; set; }
 
         /// <summary>
-        /// Hsts configuration.
+        /// HSTS configuration
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Hsts")]
         public Hsts Hsts{ get; set; }
@@ -90,7 +91,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "Http2", this.Http2);

@@ -66,11 +66,17 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Enable")]
         public string Enable{ get; set; }
 
+        /// <summary>
+        /// Custom argument, supporting only the timer trigger.
+        /// </summary>
+        [JsonProperty("CustomArgument")]
+        public string CustomArgument{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
             this.SetParamSimple(map, prefix + "TriggerName", this.TriggerName);
@@ -79,6 +85,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
         }
     }
 }
