@@ -106,10 +106,28 @@ namespace TencentCloud.Clb.V20180317.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
+        /// <summary>
+        /// Exclusive cluster information.
+        /// </summary>
+        [JsonProperty("ExclusiveCluster")]
+        public ExclusiveCluster ExclusiveCluster{ get; set; }
+
+        /// <summary>
         /// A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
+
+        /// <summary>
+        /// Tag for the STGW exclusive cluster.
+        /// </summary>
+        [JsonProperty("ClusterTag")]
+        public string ClusterTag{ get; set; }
 
 
         /// <summary>
@@ -130,7 +148,10 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         }
     }
 }
