@@ -261,6 +261,76 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
+        /// <summary>
+        /// IPv6 flag for an instance
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Ipv6Flag")]
+        public ulong? Ipv6Flag{ get; set; }
+
+        /// <summary>
+        /// Private network IPv6 address
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Vipv6")]
+        public string Vipv6{ get; set; }
+
+        /// <summary>
+        /// Public network IPv6 address
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WanVipv6")]
+        public string WanVipv6{ get; set; }
+
+        /// <summary>
+        /// Public network IPv6 port
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WanPortIpv6")]
+        public ulong? WanPortIpv6{ get; set; }
+
+        /// <summary>
+        /// Public network IPv6 status
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WanStatusIpv6")]
+        public ulong? WanStatusIpv6{ get; set; }
+
+        /// <summary>
+        /// Database engine
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DbEngine")]
+        public string DbEngine{ get; set; }
+
+        /// <summary>
+        /// Database version
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DbVersion")]
+        public string DbVersion{ get; set; }
+
+        /// <summary>
+        /// DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DcnFlag")]
+        public long? DcnFlag{ get; set; }
+
+        /// <summary>
+        /// DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DcnStatus")]
+        public long? DcnStatus{ get; set; }
+
+        /// <summary>
+        /// The number of DCN disaster recovery instances
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DcnDstNum")]
+        public long? DcnDstNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -306,6 +376,16 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Machine", this.Machine);
             this.SetParamSimple(map, prefix + "IsEncryptSupported", this.IsEncryptSupported);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+            this.SetParamSimple(map, prefix + "Vipv6", this.Vipv6);
+            this.SetParamSimple(map, prefix + "WanVipv6", this.WanVipv6);
+            this.SetParamSimple(map, prefix + "WanPortIpv6", this.WanPortIpv6);
+            this.SetParamSimple(map, prefix + "WanStatusIpv6", this.WanStatusIpv6);
+            this.SetParamSimple(map, prefix + "DbEngine", this.DbEngine);
+            this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
+            this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+            this.SetParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
+            this.SetParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
         }
     }
 }

@@ -21,22 +21,14 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IpFilter : AbstractModel
+    public class IpFilterPathRule : AbstractModel
     {
         
         /// <summary>
-        /// IP blocklist/allowlist configuration switch
-        /// on: enabled
-        /// off: disabled
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
         /// IP blocklist/allowlist type
-        /// whitelist: allowlist
-        /// blacklist: blocklist
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `whitelist`: allowlist IPs
+        /// `blacklist`: blocklist IPs
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
@@ -44,18 +36,33 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// IP blocklist/allowlist list
         /// Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-        /// Up to 50 allowlists or blocklists can be entered
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Up to 50 allowlists or blocklists can be entered.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }
 
         /// <summary>
-        /// IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+        /// Rule types:
+        /// `all`: effective for all files
+        /// `file`: effective for specified file suffixes
+        /// `directory`: effective for specified paths
+        /// `path`: effective for specified absolute paths
         /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("FilterRules")]
-        public IpFilterPathRule[] FilterRules{ get; set; }
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// Content for each RuleType:
+        /// For `all`, enter an asterisk (*).
+        /// For `file`, enter the suffix, such as jpg, txt.
+        /// For `directory`, enter the path, such as /xxx/test/.
+        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("RulePaths")]
+        public string[] RulePaths{ get; set; }
 
 
         /// <summary>
@@ -63,10 +70,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
-            this.SetParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
         }
     }
 }

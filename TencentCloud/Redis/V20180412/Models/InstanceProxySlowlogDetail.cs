@@ -21,26 +21,38 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeInstanceVersionRequest : AbstractModel
+    public class InstanceProxySlowlogDetail : AbstractModel
     {
         
         /// <summary>
-        /// The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+        /// Slow query duration
         /// </summary>
-        [JsonProperty("TargetInstanceType")]
-        public string TargetInstanceType{ get; set; }
+        [JsonProperty("Duration")]
+        public long? Duration{ get; set; }
 
         /// <summary>
-        /// Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+        /// Client address
         /// </summary>
-        [JsonProperty("SwitchOption")]
-        public long? SwitchOption{ get; set; }
+        [JsonProperty("Client")]
+        public string Client{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Command
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
+
+        /// <summary>
+        /// Command line details
+        /// </summary>
+        [JsonProperty("CommandLine")]
+        public string CommandLine{ get; set; }
+
+        /// <summary>
+        /// Execution duration
+        /// </summary>
+        [JsonProperty("ExecuteTime")]
+        public string ExecuteTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetInstanceType", this.TargetInstanceType);
-            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "Client", this.Client);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamSimple(map, prefix + "CommandLine", this.CommandLine);
+            this.SetParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
         }
     }
 }

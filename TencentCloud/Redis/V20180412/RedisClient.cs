@@ -53,7 +53,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to associate security groups with specified instances.
+        /// This API is used to associate a security group with instances in batches.
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
         /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to associate security groups with specified instances.
+        /// This API is used to associate a security group with instances in batches.
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
         /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
@@ -213,7 +213,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to create a Redis instance.
+        /// This API is used to create Redis instances.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to create a Redis instance.
+        /// This API is used to create Redis instances.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -893,6 +893,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query instance node information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
+        public async Task<DescribeInstanceNodeInfoResponse> DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query instance node information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
+        public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfoSync(DescribeInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of parameter modifications.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
@@ -1244,6 +1284,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProjectSecurityGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query proxy slow logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxySlowLogRequest"/></param>
+        /// <returns><see cref="DescribeProxySlowLogResponse"/></returns>
+        public async Task<DescribeProxySlowLogResponse> DescribeProxySlowLog(DescribeProxySlowLogRequest req)
+        {
+             JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProxySlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxySlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query proxy slow logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxySlowLogRequest"/></param>
+        /// <returns><see cref="DescribeProxySlowLogResponse"/></returns>
+        public DescribeProxySlowLogResponse DescribeProxySlowLogSync(DescribeProxySlowLogRequest req)
+        {
+             JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProxySlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxySlowLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

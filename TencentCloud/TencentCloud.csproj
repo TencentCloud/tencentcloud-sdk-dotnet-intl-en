@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.82</VersionPrefix>
+    <VersionPrefix>3.0.83</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1037,9 +1037,11 @@
     <Compile Include="Cdn\V20180606\Models\HeaderKey.cs" />
     <Compile Include="Cdn\V20180606\Models\Hsts.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderPathRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\HttpHeaderRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Https.cs" />
     <Compile Include="Cdn\V20180606\Models\ImageOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFilter.cs" />
+    <Compile Include="Cdn\V20180606\Models\IpFilterPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFreqLimit.cs" />
     <Compile Include="Cdn\V20180606\Models\IpStatus.cs" />
     <Compile Include="Cdn\V20180606\Models\Ipv6.cs" />
@@ -1061,6 +1063,7 @@
     <Compile Include="Cdn\V20180606\Models\OriginPullOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullTimeout.cs" />
     <Compile Include="Cdn\V20180606\Models\OverseaConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\PathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgePathCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgePathCacheResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgeTask.cs" />
@@ -3855,6 +3858,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeInstanceMonitorTopNCmdResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceMonitorTopNCmdTookRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceMonitorTopNCmdTookResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceParamRecordsRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceParamRecordsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceParamsRequest.cs" />
@@ -3873,6 +3878,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeProxySlowLogRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeProxySlowLogResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeSlowLogRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeSlowLogResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeTaskInfoRequest.cs" />
@@ -3899,6 +3906,7 @@
     <Compile Include="Redis\V20180412\Models\InstanceNode.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceParam.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceParamHistory.cs" />
+    <Compile Include="Redis\V20180412\Models\InstanceProxySlowlogDetail.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceSecurityGroupDetail.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceSet.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceSlowlogDetail.cs" />
@@ -3924,7 +3932,9 @@
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigResponse.cs" />
     <Compile Include="Redis\V20180412\Models\Outbound.cs" />
     <Compile Include="Redis\V20180412\Models\ProductConf.cs" />
+    <Compile Include="Redis\V20180412\Models\ProxyNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RedisBackupSet.cs" />
+    <Compile Include="Redis\V20180412\Models\RedisNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RegionConf.cs" />
     <Compile Include="Redis\V20180412\Models\RenewInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\RenewInstanceResponse.cs" />
@@ -3942,6 +3952,7 @@
     <Compile Include="Redis\V20180412\Models\SwitchInstanceVipRequest.cs" />
     <Compile Include="Redis\V20180412\Models\SwitchInstanceVipResponse.cs" />
     <Compile Include="Redis\V20180412\Models\TaskInfoDetail.cs" />
+    <Compile Include="Redis\V20180412\Models\TendisNodes.cs" />
     <Compile Include="Redis\V20180412\Models\TradeDealDetail.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceResponse.cs" />
@@ -4224,6 +4235,41 @@
     <Compile Include="Ssl\V20191205\Models\SubmittedData.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadCertificateResponse.cs" />
+    <Compile Include="Ssm\V20190923\SsmClient.cs" />
+    <Compile Include="Ssm\V20190923\Models\CreateSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\CreateSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\DeleteSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\DeleteSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\DeleteSecretVersionRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\DeleteSecretVersionResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\DisableSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\DisableSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\EnableSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\EnableSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetRegionsRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetRegionsResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetSecretValueRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetSecretValueResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetServiceStatusRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetServiceStatusResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\ListSecretVersionIdsRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\ListSecretVersionIdsResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\ListSecretsRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\ListSecretsResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\PutSecretValueRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\PutSecretValueResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\RestoreSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\RestoreSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\SecretMetadata.cs" />
+    <Compile Include="Ssm\V20190923\Models\Tag.cs" />
+    <Compile Include="Ssm\V20190923\Models\TagFilter.cs" />
+    <Compile Include="Ssm\V20190923\Models\UpdateDescriptionRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\UpdateDescriptionResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\UpdateSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\UpdateSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\VersionInfo.cs" />
     <Compile Include="Sts\V20180813\StsClient.cs" />
     <Compile Include="Sts\V20180813\Models\AssumeRoleRequest.cs" />
     <Compile Include="Sts\V20180813\Models\AssumeRoleResponse.cs" />

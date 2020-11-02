@@ -109,7 +109,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? SizeUsed{ get; set; }
 
         /// <summary>
-        /// Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
+        /// Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Engine{ get; set; }
 
         /// <summary>
-        /// Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+        /// Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }

@@ -93,6 +93,8 @@
     <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdTookRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdTookResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceParamRecordsRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceParamRecordsResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceParamsRequest.cs" />
@@ -111,6 +113,8 @@
     <Compile Include="V20180412\Models\DescribeProjectSecurityGroupResponse.cs" />
     <Compile Include="V20180412\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeProxySlowLogRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeProxySlowLogResponse.cs" />
     <Compile Include="V20180412\Models\DescribeSlowLogRequest.cs" />
     <Compile Include="V20180412\Models\DescribeSlowLogResponse.cs" />
     <Compile Include="V20180412\Models\DescribeTaskInfoRequest.cs" />
@@ -137,6 +141,7 @@
     <Compile Include="V20180412\Models\InstanceNode.cs" />
     <Compile Include="V20180412\Models\InstanceParam.cs" />
     <Compile Include="V20180412\Models\InstanceParamHistory.cs" />
+    <Compile Include="V20180412\Models\InstanceProxySlowlogDetail.cs" />
     <Compile Include="V20180412\Models\InstanceSecurityGroupDetail.cs" />
     <Compile Include="V20180412\Models\InstanceSet.cs" />
     <Compile Include="V20180412\Models\InstanceSlowlogDetail.cs" />
@@ -162,7 +167,9 @@
     <Compile Include="V20180412\Models\ModifyNetworkConfigResponse.cs" />
     <Compile Include="V20180412\Models\Outbound.cs" />
     <Compile Include="V20180412\Models\ProductConf.cs" />
+    <Compile Include="V20180412\Models\ProxyNodes.cs" />
     <Compile Include="V20180412\Models\RedisBackupSet.cs" />
+    <Compile Include="V20180412\Models\RedisNodes.cs" />
     <Compile Include="V20180412\Models\RegionConf.cs" />
     <Compile Include="V20180412\Models\RenewInstanceRequest.cs" />
     <Compile Include="V20180412\Models\RenewInstanceResponse.cs" />
@@ -180,6 +187,7 @@
     <Compile Include="V20180412\Models\SwitchInstanceVipRequest.cs" />
     <Compile Include="V20180412\Models\SwitchInstanceVipResponse.cs" />
     <Compile Include="V20180412\Models\TaskInfoDetail.cs" />
+    <Compile Include="V20180412\Models\TendisNodes.cs" />
     <Compile Include="V20180412\Models\TradeDealDetail.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceResponse.cs" />

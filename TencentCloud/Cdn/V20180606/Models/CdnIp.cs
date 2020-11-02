@@ -60,6 +60,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// City where the node resides
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("City")]
+        public string City{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +78,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamArrayObj(map, prefix + "History.", this.History);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "City", this.City);
         }
     }
 }

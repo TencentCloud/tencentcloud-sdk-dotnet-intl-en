@@ -351,8 +351,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the CDN IP ownership.
-        /// (Note: the request rate limit of this API is subject to the limit in CDN, which is 200 calls/10 minutes).
+        /// This API is used to query CDN IP ownership.
+        /// (Note: the request rate limit of this API is subject to the limit in CDN, which is 200 calls/10 minutes).  
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
         /// <returns><see cref="DescribeCdnIpResponse"/></returns>
@@ -372,8 +372,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the CDN IP ownership.
-        /// (Note: the request rate limit of this API is subject to the limit in CDN, which is 200 calls/10 minutes).
+        /// This API is used to query CDN IP ownership.
+        /// (Note: the request rate limit of this API is subject to the limit in CDN, which is 200 calls/10 minutes).  
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
         /// <returns><see cref="DescribeCdnIpResponse"/></returns>

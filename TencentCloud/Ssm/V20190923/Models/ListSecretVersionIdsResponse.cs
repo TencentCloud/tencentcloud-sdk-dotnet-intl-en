@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Ssm.V20190923.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeInstanceVersionRequest : AbstractModel
+    public class ListSecretVersionIdsResponse : AbstractModel
     {
         
         /// <summary>
-        /// The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+        /// Name of the Secret.
         /// </summary>
-        [JsonProperty("TargetInstanceType")]
-        public string TargetInstanceType{ get; set; }
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
 
         /// <summary>
-        /// Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+        /// `VersionId` list.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
-        [JsonProperty("SwitchOption")]
-        public long? SwitchOption{ get; set; }
+        [JsonProperty("Versions")]
+        public VersionInfo[] Versions{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetInstanceType", this.TargetInstanceType);
-            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamArrayObj(map, prefix + "Versions.", this.Versions);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

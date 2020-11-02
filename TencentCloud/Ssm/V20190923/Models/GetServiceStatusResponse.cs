@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Ssm.V20190923.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeInstanceVersionRequest : AbstractModel
+    public class GetServiceStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+        /// `true`: The service is activated; `false`: The service is not activated.
         /// </summary>
-        [JsonProperty("TargetInstanceType")]
-        public string TargetInstanceType{ get; set; }
+        [JsonProperty("ServiceEnabled")]
+        public bool? ServiceEnabled{ get; set; }
 
         /// <summary>
-        /// Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+        /// Invalid service type. `0`: not purchased; `1`: normal; `2`: suspended due to arrears; `3`: resource released
         /// </summary>
-        [JsonProperty("SwitchOption")]
-        public long? SwitchOption{ get; set; }
+        [JsonProperty("InvalidType")]
+        public long? InvalidType{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetInstanceType", this.TargetInstanceType);
-            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
+            this.SetParamSimple(map, prefix + "InvalidType", this.InvalidType);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

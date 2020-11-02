@@ -101,6 +101,19 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("BackupServerName")]
         public string BackupServerName{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BasePath")]
+        public string BasePath{ get; set; }
+
+        /// <summary>
+        /// Path-based origin-pull configuration rules
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("PathRules")]
+        public PathRule[] PathRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +128,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
             this.SetParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
             this.SetParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
+            this.SetParamSimple(map, prefix + "BasePath", this.BasePath);
+            this.SetParamArrayObj(map, prefix + "PathRules.", this.PathRules);
         }
     }
 }

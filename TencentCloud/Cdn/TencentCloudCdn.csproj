@@ -142,9 +142,11 @@
     <Compile Include="V20180606\Models\HeaderKey.cs" />
     <Compile Include="V20180606\Models\Hsts.cs" />
     <Compile Include="V20180606\Models\HttpHeaderPathRule.cs" />
+    <Compile Include="V20180606\Models\HttpHeaderRule.cs" />
     <Compile Include="V20180606\Models\Https.cs" />
     <Compile Include="V20180606\Models\ImageOptimization.cs" />
     <Compile Include="V20180606\Models\IpFilter.cs" />
+    <Compile Include="V20180606\Models\IpFilterPathRule.cs" />
     <Compile Include="V20180606\Models\IpFreqLimit.cs" />
     <Compile Include="V20180606\Models\IpStatus.cs" />
     <Compile Include="V20180606\Models\Ipv6.cs" />
@@ -166,6 +168,7 @@
     <Compile Include="V20180606\Models\OriginPullOptimization.cs" />
     <Compile Include="V20180606\Models\OriginPullTimeout.cs" />
     <Compile Include="V20180606\Models\OverseaConfig.cs" />
+    <Compile Include="V20180606\Models\PathRule.cs" />
     <Compile Include="V20180606\Models\PurgePathCacheRequest.cs" />
     <Compile Include="V20180606\Models\PurgePathCacheResponse.cs" />
     <Compile Include="V20180606\Models\PurgeTask.cs" />

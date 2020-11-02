@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Ssm.V20190923.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeInstanceVersionRequest : AbstractModel
+    public class Tag : AbstractModel
     {
         
         /// <summary>
-        /// The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+        /// Tag key
         /// </summary>
-        [JsonProperty("TargetInstanceType")]
-        public string TargetInstanceType{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+        /// Tag value
         /// </summary>
-        [JsonProperty("SwitchOption")]
-        public long? SwitchOption{ get; set; }
-
-        /// <summary>
-        /// Instance ID
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetInstanceType", this.TargetInstanceType);
-            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

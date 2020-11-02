@@ -15,33 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Ssm.V20190923.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDCDBShardsResponse : AbstractModel
+    public class CreateSecretResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible shards
+        /// Name of the new Secret.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
 
         /// <summary>
-        /// Shard information list
+        /// ID of the new Secret version.
         /// </summary>
-        [JsonProperty("Shards")]
-        public DCDBShardInfo[] Shards{ get; set; }
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
 
         /// <summary>
-        /// Disaster recovery flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Return code of tag operation. `0`: success; `1`: internal error; `2`: business processing error
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
-        [JsonProperty("DcnFlag")]
-        public long? DcnFlag{ get; set; }
+        [JsonProperty("TagCode")]
+        public ulong? TagCode{ get; set; }
+
+        /// <summary>
+        /// Return message of tag operation.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("TagMsg")]
+        public string TagMsg{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -55,9 +62,10 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Shards.", this.Shards);
-            this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
+            this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Ssm.V20190923.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBSecurityGroupsRequest : AbstractModel
+    public class EnableSecretRequest : AbstractModel
     {
         
         /// <summary>
-        /// Database engine name. For this API, its value is `redis`.
+        /// Name of the Secret to be enabled.
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
-
-        /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
         }
     }
 }

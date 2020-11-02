@@ -114,6 +114,18 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("ExclusterIds")]
         public string[] ExclusterIds{ get; set; }
 
+        /// <summary>
+        /// Tag key used in queries
+        /// </summary>
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
+
+        /// <summary>
+        /// Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+        /// </summary>
+        [JsonProperty("FilterInstanceType")]
+        public string FilterInstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
             this.SetParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
         }
     }
 }

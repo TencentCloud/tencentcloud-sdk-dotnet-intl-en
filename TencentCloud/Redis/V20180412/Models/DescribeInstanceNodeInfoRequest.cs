@@ -21,26 +21,26 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeInstanceVersionRequest : AbstractModel
+    public class DescribeInstanceNodeInfoRequest : AbstractModel
     {
         
-        /// <summary>
-        /// The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-        /// </summary>
-        [JsonProperty("TargetInstanceType")]
-        public string TargetInstanceType{ get; set; }
-
-        /// <summary>
-        /// Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
-        /// </summary>
-        [JsonProperty("SwitchOption")]
-        public long? SwitchOption{ get; set; }
-
         /// <summary>
         /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// List size
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// The offset
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetInstanceType", this.TargetInstanceType);
-            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

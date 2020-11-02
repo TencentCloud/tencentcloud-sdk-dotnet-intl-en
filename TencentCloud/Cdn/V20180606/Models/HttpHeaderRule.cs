@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeInstanceVersionRequest : AbstractModel
+    public class HttpHeaderRule : AbstractModel
     {
         
         /// <summary>
-        /// The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+        /// HTTP header setting method. Valid values: `add` (add header), `set` (set header) or `del` (delete header).
         /// </summary>
-        [JsonProperty("TargetInstanceType")]
-        public string TargetInstanceType{ get; set; }
+        [JsonProperty("HeaderMode")]
+        public string HeaderMode{ get; set; }
 
         /// <summary>
-        /// Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+        /// HTTP header name
         /// </summary>
-        [JsonProperty("SwitchOption")]
-        public long? SwitchOption{ get; set; }
+        [JsonProperty("HeaderName")]
+        public string HeaderName{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// HTTP header value
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("HeaderValue")]
+        public string HeaderValue{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetInstanceType", this.TargetInstanceType);
-            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "HeaderMode", this.HeaderMode);
+            this.SetParamSimple(map, prefix + "HeaderName", this.HeaderName);
+            this.SetParamSimple(map, prefix + "HeaderValue", this.HeaderValue);
         }
     }
 }

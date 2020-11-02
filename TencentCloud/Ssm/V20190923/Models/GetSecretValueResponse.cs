@@ -15,33 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Ssm.V20190923.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDCDBShardsResponse : AbstractModel
+    public class GetSecretValueResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible shards
+        /// Name of the Secret.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
 
         /// <summary>
-        /// Shard information list
+        /// ID of the Secret version.
         /// </summary>
-        [JsonProperty("Shards")]
-        public DCDBShardInfo[] Shards{ get; set; }
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
 
         /// <summary>
-        /// Disaster recovery flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// If the `SecretBinary` field in the request body is specified in the `CreateSecret` call, this field is returned and base64-encoded. The caller needs to perform base64 decoding to obtain the original data. Either `SecretBinary` or `SecretString` will be returned.
         /// </summary>
-        [JsonProperty("DcnFlag")]
-        public long? DcnFlag{ get; set; }
+        [JsonProperty("SecretBinary")]
+        public string SecretBinary{ get; set; }
+
+        /// <summary>
+        /// If the `SecretString` field in the request body is specified in the `CreateSecret` call, this field is returned. Either `SecretBinary` or `SecretString` will be returned.
+        /// </summary>
+        [JsonProperty("SecretString")]
+        public string SecretString{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -55,9 +60,10 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Shards.", this.Shards);
-            this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
+            this.SetParamSimple(map, prefix + "SecretString", this.SecretString);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
