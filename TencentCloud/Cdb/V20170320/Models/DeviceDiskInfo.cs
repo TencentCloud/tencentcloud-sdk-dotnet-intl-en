@@ -48,6 +48,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Write")]
         public long?[] Write{ get; set; }
 
+        /// <summary>
+        /// Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+        /// </summary>
+        [JsonProperty("CapacityRatio")]
+        public long?[] CapacityRatio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "IoWaitTime.", this.IoWaitTime);
             this.SetParamArraySimple(map, prefix + "Read.", this.Read);
             this.SetParamArraySimple(map, prefix + "Write.", this.Write);
+            this.SetParamArraySimple(map, prefix + "CapacityRatio.", this.CapacityRatio);
         }
     }
 }

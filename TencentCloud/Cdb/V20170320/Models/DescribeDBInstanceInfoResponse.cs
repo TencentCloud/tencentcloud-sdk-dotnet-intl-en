@@ -57,6 +57,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string KeyRegion{ get; set; }
 
         /// <summary>
+        /// The default region of the KMS service currently used by the TencentDB backend service.
+        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("DefaultKmsRegion")]
+        public string DefaultKmsRegion{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +80,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
+            this.SetParamSimple(map, prefix + "DefaultKmsRegion", this.DefaultKmsRegion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

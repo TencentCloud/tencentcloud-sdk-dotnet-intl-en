@@ -58,6 +58,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// "KILLED" - terminated;
         /// "REMOVED" - deleted;
         /// "PAUSED" - paused.
+        /// "WAITING" - waiting (which can be canceled)
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }

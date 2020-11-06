@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.84</VersionPrefix>
+    <VersionPrefix>3.0.85</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3057,6 +3057,54 @@
     <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResourceUsageMonitorSet.cs" />
     <Compile Include="Mariadb\V20170312\Models\SlowLogData.cs" />
+    <Compile Include="Mdc\V20200828\MdcClient.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateInput.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateInputRTPSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateInputSRTSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateMediaConnectFlowRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateMediaConnectFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateMediaConnectOutputRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateMediaConnectOutputResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutput.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputRTMPSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputRTPSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputRTPSettingsDestinations.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputRtmpSettingsDestinations.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputSrtSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputSrtSettingsDestinations.cs" />
+    <Compile Include="Mdc\V20200828\Models\DeleteMediaConnectFlowRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DeleteMediaConnectFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DeleteMediaConnectOutputRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DeleteMediaConnectOutputResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeFlow.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeInput.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeInputRTPSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeInputSRTSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeMediaConnectFlowRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeMediaConnectFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeMediaConnectFlowsRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeMediaConnectFlowsResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeOutput.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeOutputRTMPSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeOutputRTPSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeOutputSRTSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\InputAddress.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyInput.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyMediaConnectFlowRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyMediaConnectFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyMediaConnectInputRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyMediaConnectInputResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyMediaConnectOutputRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyMediaConnectOutputResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyOutput.cs" />
+    <Compile Include="Mdc\V20200828\Models\OutputAddress.cs" />
+    <Compile Include="Mdc\V20200828\Models\RTMPAddressDestination.cs" />
+    <Compile Include="Mdc\V20200828\Models\RTPAddressDestination.cs" />
+    <Compile Include="Mdc\V20200828\Models\SRTAddressDestination.cs" />
+    <Compile Include="Mdc\V20200828\Models\StartMediaConnectFlowRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\StartMediaConnectFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\StopMediaConnectFlowRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\StopMediaConnectFlowResponse.cs" />
     <Compile Include="Mdl\V20200326\MdlClient.cs" />
     <Compile Include="Mdl\V20200326\Models\AttachedInputInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\AudioPidSelectionInfo.cs" />

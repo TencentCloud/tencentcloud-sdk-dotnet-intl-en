@@ -1,0 +1,96 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{468070DF-0A9C-33D2-AFC7-D2A39B59B45C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Mdc</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200828\MdcClient.cs" />
+    <Compile Include="V20200828\Models\CreateInput.cs" />
+    <Compile Include="V20200828\Models\CreateInputRTPSettings.cs" />
+    <Compile Include="V20200828\Models\CreateInputSRTSettings.cs" />
+    <Compile Include="V20200828\Models\CreateMediaConnectFlowRequest.cs" />
+    <Compile Include="V20200828\Models\CreateMediaConnectFlowResponse.cs" />
+    <Compile Include="V20200828\Models\CreateMediaConnectOutputRequest.cs" />
+    <Compile Include="V20200828\Models\CreateMediaConnectOutputResponse.cs" />
+    <Compile Include="V20200828\Models\CreateOutput.cs" />
+    <Compile Include="V20200828\Models\CreateOutputRTMPSettings.cs" />
+    <Compile Include="V20200828\Models\CreateOutputRTPSettings.cs" />
+    <Compile Include="V20200828\Models\CreateOutputRTPSettingsDestinations.cs" />
+    <Compile Include="V20200828\Models\CreateOutputRtmpSettingsDestinations.cs" />
+    <Compile Include="V20200828\Models\CreateOutputSrtSettings.cs" />
+    <Compile Include="V20200828\Models\CreateOutputSrtSettingsDestinations.cs" />
+    <Compile Include="V20200828\Models\DeleteMediaConnectFlowRequest.cs" />
+    <Compile Include="V20200828\Models\DeleteMediaConnectFlowResponse.cs" />
+    <Compile Include="V20200828\Models\DeleteMediaConnectOutputRequest.cs" />
+    <Compile Include="V20200828\Models\DeleteMediaConnectOutputResponse.cs" />
+    <Compile Include="V20200828\Models\DescribeFlow.cs" />
+    <Compile Include="V20200828\Models\DescribeInput.cs" />
+    <Compile Include="V20200828\Models\DescribeInputRTPSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeInputSRTSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeMediaConnectFlowRequest.cs" />
+    <Compile Include="V20200828\Models\DescribeMediaConnectFlowResponse.cs" />
+    <Compile Include="V20200828\Models\DescribeMediaConnectFlowsRequest.cs" />
+    <Compile Include="V20200828\Models\DescribeMediaConnectFlowsResponse.cs" />
+    <Compile Include="V20200828\Models\DescribeOutput.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputRTMPSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputRTPSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputSRTSettings.cs" />
+    <Compile Include="V20200828\Models\InputAddress.cs" />
+    <Compile Include="V20200828\Models\ModifyInput.cs" />
+    <Compile Include="V20200828\Models\ModifyMediaConnectFlowRequest.cs" />
+    <Compile Include="V20200828\Models\ModifyMediaConnectFlowResponse.cs" />
+    <Compile Include="V20200828\Models\ModifyMediaConnectInputRequest.cs" />
+    <Compile Include="V20200828\Models\ModifyMediaConnectInputResponse.cs" />
+    <Compile Include="V20200828\Models\ModifyMediaConnectOutputRequest.cs" />
+    <Compile Include="V20200828\Models\ModifyMediaConnectOutputResponse.cs" />
+    <Compile Include="V20200828\Models\ModifyOutput.cs" />
+    <Compile Include="V20200828\Models\OutputAddress.cs" />
+    <Compile Include="V20200828\Models\RTMPAddressDestination.cs" />
+    <Compile Include="V20200828\Models\RTPAddressDestination.cs" />
+    <Compile Include="V20200828\Models\SRTAddressDestination.cs" />
+    <Compile Include="V20200828\Models\StartMediaConnectFlowRequest.cs" />
+    <Compile Include="V20200828\Models\StartMediaConnectFlowResponse.cs" />
+    <Compile Include="V20200828\Models\StopMediaConnectFlowRequest.cs" />
+    <Compile Include="V20200828\Models\StopMediaConnectFlowResponse.cs" />
+  </ItemGroup>
+</Project>
