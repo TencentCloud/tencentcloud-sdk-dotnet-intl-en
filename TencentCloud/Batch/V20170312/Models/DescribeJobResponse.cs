@@ -104,7 +104,8 @@ namespace TencentCloud.Batch.V20170312.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Next action
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("NextAction")]
         public string NextAction{ get; set; }
