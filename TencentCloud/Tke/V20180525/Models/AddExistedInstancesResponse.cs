@@ -46,6 +46,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] TimeoutInstanceIds{ get; set; }
 
         /// <summary>
+        /// Causes of the failure to add a node to a cluster
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("FailedReasons")]
+        public string[] FailedReasons{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +67,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
             this.SetParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
             this.SetParamArraySimple(map, prefix + "TimeoutInstanceIds.", this.TimeoutInstanceIds);
+            this.SetParamArraySimple(map, prefix + "FailedReasons.", this.FailedReasons);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

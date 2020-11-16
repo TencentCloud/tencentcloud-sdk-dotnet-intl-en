@@ -206,6 +206,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("MetaDBInfo")]
         public CustomMetaInfo MetaDBInfo{ get; set; }
 
+        /// <summary>
+        /// Custom application role.
+        /// </summary>
+        [JsonProperty("ApplicationRole")]
+        public string ApplicationRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +244,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
             this.SetParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
             this.SetParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
+            this.SetParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
         }
     }
 }

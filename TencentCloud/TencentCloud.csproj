@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.87</VersionPrefix>
+    <VersionPrefix>3.0.88</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4501,7 +4501,10 @@
     <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
+    <Compile Include="Tke\V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="Tke\V20180525\Models\Cluster.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterAdvancedSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterAsGroup.cs" />
@@ -4519,6 +4522,10 @@
     <Compile Include="Tke\V20180525\Models\CreateClusterEndpointVipResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterNodePoolFromExistingAsgRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterNodePoolFromExistingAsgResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteTableRequest.cs" />
@@ -4532,6 +4539,8 @@
     <Compile Include="Tke\V20180525\Models\DeleteClusterEndpointVipResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeleteClusterNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeleteClusterNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterRouteRequest.cs" />
@@ -4550,6 +4559,10 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterKubeconfigResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolDetailRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolDetailResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRouteTablesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRouteTablesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRoutesRequest.cs" />
@@ -4579,13 +4592,20 @@
     <Compile Include="Tke\V20180525\Models\InstanceExtraArgs.cs" />
     <Compile Include="Tke\V20180525\Models\Label.cs" />
     <Compile Include="Tke\V20180525\Models\LoginSettings.cs" />
+    <Compile Include="Tke\V20180525\Models\ManuallyAdded.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\NodeCountSummary.cs" />
+    <Compile Include="Tke\V20180525\Models\NodePool.cs" />
     <Compile Include="Tke\V20180525\Models\RegionInstance.cs" />
+    <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ResourceDeleteOption.cs" />
     <Compile Include="Tke\V20180525\Models\RouteInfo.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableConflict.cs" />
@@ -4595,6 +4615,7 @@
     <Compile Include="Tke\V20180525\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\Tag.cs" />
     <Compile Include="Tke\V20180525\Models\TagSpecification.cs" />
+    <Compile Include="Tke\V20180525\Models\Taint.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />

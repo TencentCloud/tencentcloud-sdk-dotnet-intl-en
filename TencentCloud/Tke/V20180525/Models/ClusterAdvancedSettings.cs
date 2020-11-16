@@ -96,6 +96,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("AuditLogTopicId")]
         public string AuditLogTopicId{ get; set; }
 
+        /// <summary>
+        /// Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+        /// </summary>
+        [JsonProperty("VpcCniType")]
+        public string VpcCniType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AuditEnabled", this.AuditEnabled);
             this.SetParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
             this.SetParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
+            this.SetParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
         }
     }
 }
