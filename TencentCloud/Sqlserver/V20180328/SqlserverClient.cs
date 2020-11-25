@@ -1293,6 +1293,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to manually repossess a deactivated SQL Server instance.
+        /// </summary>
+        /// <param name="req"><see cref="RecycleDBInstanceRequest"/></param>
+        /// <returns><see cref="RecycleDBInstanceResponse"/></returns>
+        public async Task<RecycleDBInstanceResponse> RecycleDBInstance(RecycleDBInstanceRequest req)
+        {
+             JsonResponseModel<RecycleDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecycleDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecycleDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to manually repossess a deactivated SQL Server instance.
+        /// </summary>
+        /// <param name="req"><see cref="RecycleDBInstanceRequest"/></param>
+        /// <returns><see cref="RecycleDBInstanceResponse"/></returns>
+        public RecycleDBInstanceResponse RecycleDBInstanceSync(RecycleDBInstanceRequest req)
+        {
+             JsonResponseModel<RecycleDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecycleDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecycleDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to reset the account password of an instance.
         /// </summary>
         /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>

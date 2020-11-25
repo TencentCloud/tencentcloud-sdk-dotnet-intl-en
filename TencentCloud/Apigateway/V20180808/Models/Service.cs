@@ -130,7 +130,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? TradeIsolateStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tags bound to a service.
+        /// Note: this field may return null, indicating that no valid values found.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

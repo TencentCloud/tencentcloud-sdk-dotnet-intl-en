@@ -21,14 +21,20 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSubAppIdsRequest : AbstractModel
+    public class ResourceTag : AbstractModel
     {
         
         /// <summary>
-        /// Tag information. You can query the list of subapplications with specified tags.
+        /// Tag key.
         /// </summary>
-        [JsonProperty("Tags")]
-        public ResourceTag[] Tags{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
+
+        /// <summary>
+        /// Tag value.
+        /// </summary>
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

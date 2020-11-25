@@ -25,16 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task type
-        /// <li>Transcode: transcoding</li>
-        /// <li>Snapshot: screencapturing</li>
+        /// Task type.
+        /// <li> Transcoding: basic transcoding</li>
+        /// <li> Transcoding-TESHD: TESHD transcoding</li>
+        /// <li> Editing: Video editing</li>
+        /// <li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+        /// <li> ContentAudit: content audit</li>
+        /// <li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Task statistics overview.
-        /// <li>Transcode: usage in seconds</li>
+        /// Task statistics overview (usage unit: second).
         /// </summary>
         [JsonProperty("Summary")]
         public TaskStatDataItem[] Summary{ get; set; }

@@ -145,7 +145,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Instance high availability status. 1: dual-server high-availability, 2: single-server
+        /// High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
         /// </summary>
         [JsonProperty("Model")]
         public long? Model{ get; set; }

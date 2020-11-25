@@ -93,7 +93,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to create a log topic. Note: up to 10 log topics can be created under one logset.
+        /// This API is used to create a log topic. Up to 10 log topics can be created under one logset.
         /// </summary>
         /// <param name="req"><see cref="CreateClsLogTopicRequest"/></param>
         /// <returns><see cref="CreateClsLogTopicResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to create a log topic. Note: up to 10 log topics can be created under one logset.
+        /// This API is used to create a log topic. Up to 10 log topics can be created under one logset.
         /// </summary>
         /// <param name="req"><see cref="CreateClsLogTopicRequest"/></param>
         /// <returns><see cref="CreateClsLogTopicResponse"/></returns>

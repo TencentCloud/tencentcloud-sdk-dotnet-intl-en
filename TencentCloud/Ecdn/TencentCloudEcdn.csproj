@@ -98,8 +98,10 @@
     <Compile Include="V20191012\Models\StartEcdnDomainResponse.cs" />
     <Compile Include="V20191012\Models\StopEcdnDomainRequest.cs" />
     <Compile Include="V20191012\Models\StopEcdnDomainResponse.cs" />
+    <Compile Include="V20191012\Models\Tag.cs" />
     <Compile Include="V20191012\Models\TimestampData.cs" />
     <Compile Include="V20191012\Models\UpdateDomainConfigRequest.cs" />
     <Compile Include="V20191012\Models\UpdateDomainConfigResponse.cs" />
+    <Compile Include="V20191012\Models\WebSocket.cs" />
   </ItemGroup>
 </Project>

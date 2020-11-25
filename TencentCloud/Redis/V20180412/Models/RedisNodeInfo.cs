@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSubAppIdsRequest : AbstractModel
+    public class RedisNodeInfo : AbstractModel
     {
         
         /// <summary>
-        /// Tag information. You can query the list of subapplications with specified tags.
+        /// 
         /// </summary>
-        [JsonProperty("Tags")]
-        public ResourceTag[] Tags{ get; set; }
+        [JsonProperty("NodeType")]
+        public long? NodeType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public ulong? ZoneId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NodeId")]
+        public long? NodeId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
         }
     }
 }

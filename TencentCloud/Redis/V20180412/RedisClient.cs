@@ -373,6 +373,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query information of the Redis instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
+        public async Task<DescribeCommonDBInstancesResponse> DescribeCommonDBInstances(DescribeCommonDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCommonDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCommonDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query information of the Redis instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
+        public DescribeCommonDBInstancesResponse DescribeCommonDBInstancesSync(DescribeCommonDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCommonDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCommonDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the security group details of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>

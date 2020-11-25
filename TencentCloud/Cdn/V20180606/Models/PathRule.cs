@@ -32,14 +32,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Regex{ get; set; }
 
         /// <summary>
-        /// URL path
+        /// The matched URL path
         /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Origin-pull server when the path matches.
+        /// Origin-pull server when the path matches. COS source with private read/write is not supported.
         /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Origin")]

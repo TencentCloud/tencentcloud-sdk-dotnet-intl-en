@@ -31,13 +31,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time.
+        /// Start time, such as "2019-09-10 12:13:14".
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time.
+        /// End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -66,6 +66,18 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// Database name array.
+        /// </summary>
+        [JsonProperty("SchemaList")]
+        public SchemaItem[] SchemaList{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "SchemaList.", this.SchemaList);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

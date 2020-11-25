@@ -63,9 +63,10 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Audio channel system. Valid values:
-        /// <li>1: mono</li>
-        /// <li>2: dual</li>
-        /// <li>6: stereo</li>
+        /// <li>1: Mono-channel</li>
+        /// <li>2: Dual-channel</li>
+        /// <li>6: Stereo</li>
+        /// You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// API frontend parameter position, such as `head`. Valid values: head, query, path.
+        /// Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }

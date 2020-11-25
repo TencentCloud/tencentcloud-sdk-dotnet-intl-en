@@ -31,16 +31,22 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time.
+        /// Start time, such as "2019-09-10 12:13:14".
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time.
+        /// End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

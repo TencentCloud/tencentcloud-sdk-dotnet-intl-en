@@ -55,7 +55,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string InnerSubDomain{ get; set; }
 
         /// <summary>
-        /// Service creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+        /// Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

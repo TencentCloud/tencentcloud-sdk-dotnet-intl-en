@@ -31,6 +31,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public TableSpaceData[] TopSpaceTables{ get; set; }
 
         /// <summary>
+        /// Timestamp (in seconds) identifying when the tablespace data is collected.
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public long? Timestamp{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "TopSpaceTables.", this.TopSpaceTables);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

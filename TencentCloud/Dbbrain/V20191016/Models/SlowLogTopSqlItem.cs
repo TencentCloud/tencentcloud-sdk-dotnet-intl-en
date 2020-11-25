@@ -115,7 +115,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string SqlText{ get; set; }
 
         /// <summary>
-        /// Schema
+        /// Database name
         /// </summary>
         [JsonProperty("Schema")]
         public string Schema{ get; set; }

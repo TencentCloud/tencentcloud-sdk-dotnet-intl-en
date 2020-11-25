@@ -64,6 +64,7 @@
     <Compile Include="V20191016\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="V20191016\Models\MonitorMetric.cs" />
     <Compile Include="V20191016\Models\MonitorMetricSeriesData.cs" />
+    <Compile Include="V20191016\Models\SchemaItem.cs" />
     <Compile Include="V20191016\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="V20191016\Models\TableSpaceData.cs" />
     <Compile Include="V20191016\Models\TableSpaceTimeSeries.cs" />

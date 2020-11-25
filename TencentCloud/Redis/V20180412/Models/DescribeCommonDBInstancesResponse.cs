@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSubAppIdsRequest : AbstractModel
+    public class DescribeCommonDBInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Tag information. You can query the list of subapplications with specified tags.
+        /// Instance quantity
         /// </summary>
-        [JsonProperty("Tags")]
-        public ResourceTag[] Tags{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// Instance information
+        /// </summary>
+        [JsonProperty("InstanceDetails")]
+        public RedisCommonInstanceList[] InstanceDetails{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "InstanceDetails.", this.InstanceDetails);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

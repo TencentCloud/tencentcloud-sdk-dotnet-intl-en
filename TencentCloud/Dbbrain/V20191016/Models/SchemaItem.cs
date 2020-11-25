@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSubAppIdsRequest : AbstractModel
+    public class SchemaItem : AbstractModel
     {
         
         /// <summary>
-        /// Tag information. You can query the list of subapplications with specified tags.
+        /// Database name
         /// </summary>
-        [JsonProperty("Tags")]
-        public ResourceTag[] Tags{ get; set; }
+        [JsonProperty("Schema")]
+        public string Schema{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Schema", this.Schema);
         }
     }
 }

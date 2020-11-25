@@ -43,16 +43,22 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
+        /// Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// End date. It can be as early as 6 days before the current date, and defaults to the current date.
+        /// End date. It can be as early as 29 days before the current date, and defaults to the current date.
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
             this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
             this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

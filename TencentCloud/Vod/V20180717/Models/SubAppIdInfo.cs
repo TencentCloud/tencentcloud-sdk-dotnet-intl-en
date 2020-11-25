@@ -49,9 +49,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Subapplication status. Valid values:
+        /// Subapplication status. Valid strings include:
         /// <li>On: enabled;</li>
         /// <li>Off: disabled.</li>
+        /// <li>Destroying: terminating. </li>
+        /// <li>Destroyed: terminated. </li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
