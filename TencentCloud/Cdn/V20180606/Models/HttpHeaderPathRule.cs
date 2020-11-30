@@ -25,11 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// HTTP header setting method
-        /// add: add header. If a header exists, then there will be a duplicated header.
-        /// set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-        /// del: delete header
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// HTTP header setting methods
+        /// `add`: add header. If a header already exists, then there will be a duplicated header.
+        /// `del`: delete header.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HeaderMode")]
         public string HeaderMode{ get; set; }

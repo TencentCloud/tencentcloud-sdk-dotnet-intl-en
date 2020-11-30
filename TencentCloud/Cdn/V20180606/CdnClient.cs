@@ -1444,8 +1444,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// This API is used to cache specified URL resources to CDN nodes. You can specify acceleration regions for the prefetch.
-        /// By default, a maximum of 1,000 URLs can be prefetched per day either within or outside Mainland China, and up to 20 tasks can be submitted at a time.
-        /// This API is in beta test and not fully available yet. Please stay tuned.
+        /// By default, a maximum of 1000 URLs can be prefetched per day either within or outside Chinese mainland, and up to 20 tasks can be submitted at a time.
         /// </summary>
         /// <param name="req"><see cref="PushUrlsCacheRequest"/></param>
         /// <returns><see cref="PushUrlsCacheResponse"/></returns>
@@ -1466,8 +1465,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// This API is used to cache specified URL resources to CDN nodes. You can specify acceleration regions for the prefetch.
-        /// By default, a maximum of 1,000 URLs can be prefetched per day either within or outside Mainland China, and up to 20 tasks can be submitted at a time.
-        /// This API is in beta test and not fully available yet. Please stay tuned.
+        /// By default, a maximum of 1000 URLs can be prefetched per day either within or outside Chinese mainland, and up to 20 tasks can be submitted at a time.
         /// </summary>
         /// <param name="req"><see cref="PushUrlsCacheRequest"/></param>
         /// <returns><see cref="PushUrlsCacheResponse"/></returns>
