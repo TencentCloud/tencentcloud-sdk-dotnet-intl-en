@@ -15,33 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDCDBShardsResponse : AbstractModel
+    public class CreateServerlessDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible shards
+        /// Instance ID, such as "postgres-xxxxx". The value must be globally unique.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// Shard information list
-        /// </summary>
-        [JsonProperty("Shards")]
-        public DCDBShardInfo[] Shards{ get; set; }
-
-        /// <summary>
-        /// DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DcnFlag")]
-        public long? DcnFlag{ get; set; }
+        [JsonProperty("DBInstanceId")]
+        public string DBInstanceId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -55,9 +42,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Shards.", this.Shards);
-            this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

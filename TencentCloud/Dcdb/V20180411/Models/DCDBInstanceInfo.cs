@@ -260,7 +260,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// IPv6 flag for an instance
+        /// Indicates whether the instance uses IPv6
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Ipv6Flag")]
@@ -295,7 +295,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public ulong? WanStatusIpv6{ get; set; }
 
         /// <summary>
-        /// DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+        /// DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DcnFlag")]

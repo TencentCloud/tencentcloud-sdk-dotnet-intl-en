@@ -133,6 +133,86 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateServerlessDBInstanceResponse"/></returns>
+        public async Task<CreateServerlessDBInstanceResponse> CreateServerlessDBInstance(CreateServerlessDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateServerlessDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateServerlessDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServerlessDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateServerlessDBInstanceResponse"/></returns>
+        public CreateServerlessDBInstanceResponse CreateServerlessDBInstanceSync(CreateServerlessDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateServerlessDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateServerlessDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServerlessDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a PostgreSQL for Serverless instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
+        /// <returns><see cref="DeleteServerlessDBInstanceResponse"/></returns>
+        public async Task<DeleteServerlessDBInstanceResponse> DeleteServerlessDBInstance(DeleteServerlessDBInstanceRequest req)
+        {
+             JsonResponseModel<DeleteServerlessDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteServerlessDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServerlessDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a PostgreSQL for Serverless instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
+        /// <returns><see cref="DeleteServerlessDBInstanceResponse"/></returns>
+        public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstanceSync(DeleteServerlessDBInstanceRequest req)
+        {
+             JsonResponseModel<DeleteServerlessDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteServerlessDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServerlessDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the instance user list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
@@ -564,6 +644,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of one or more PostgreSQL for Serverless instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeServerlessDBInstancesResponse"/></returns>
+        public async Task<DescribeServerlessDBInstancesResponse> DescribeServerlessDBInstances(DescribeServerlessDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeServerlessDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServerlessDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerlessDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of one or more PostgreSQL for Serverless instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeServerlessDBInstancesResponse"/></returns>
+        public DescribeServerlessDBInstancesResponse DescribeServerlessDBInstancesSync(DescribeServerlessDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeServerlessDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServerlessDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerlessDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -193,6 +193,27 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
+        /// <summary>
+        /// Primary instance information, which is returned only when the instance is read-only
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MasterDBInstanceId")]
+        public string MasterDBInstanceId{ get; set; }
+
+        /// <summary>
+        /// Number of read-only instances
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReadOnlyInstanceNum")]
+        public long? ReadOnlyInstanceNum{ get; set; }
+
+        /// <summary>
+        /// The status of a instance in a read-only group
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StatusInReadonlyGroup")]
+        public string StatusInReadonlyGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +248,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
+            this.SetParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
+            this.SetParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
         }
     }
 }

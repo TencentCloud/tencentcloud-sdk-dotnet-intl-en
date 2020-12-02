@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.99</VersionPrefix>
+    <VersionPrefix>3.0.100</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3794,9 +3794,13 @@
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateDBInstancesResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateServerlessDBInstanceRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateServerlessDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DBBackup.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstance.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstanceNetInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeAccountsRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBBackupsRequest.cs" />
@@ -3819,6 +3823,8 @@
     <Compile Include="Postgres\V20170312\Models\DescribeProductConfigResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeServerlessDBInstancesRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeServerlessDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeZonesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeZonesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DestroyDBInstanceRequest.cs" />
@@ -3850,6 +3856,9 @@
     <Compile Include="Postgres\V20170312\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\RestartDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\RestartDBInstanceResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ServerlessDBAccount.cs" />
+    <Compile Include="Postgres\V20170312\Models\ServerlessDBInstance.cs" />
+    <Compile Include="Postgres\V20170312\Models\ServerlessDBInstanceNetInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\SetAutoRenewFlagRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\SetAutoRenewFlagResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\SlowlogDetail.cs" />

@@ -50,9 +50,13 @@
     <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\CreateDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\CreateDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\CreateServerlessDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\CreateServerlessDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\DBBackup.cs" />
     <Compile Include="V20170312\Models\DBInstance.cs" />
     <Compile Include="V20170312\Models\DBInstanceNetInfo.cs" />
+    <Compile Include="V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteServerlessDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBBackupsRequest.cs" />
@@ -75,6 +79,8 @@
     <Compile Include="V20170312\Models\DescribeProductConfigResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeServerlessDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeServerlessDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20170312\Models\DestroyDBInstanceRequest.cs" />
@@ -106,6 +112,9 @@
     <Compile Include="V20170312\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20170312\Models\RestartDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\RestartDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ServerlessDBAccount.cs" />
+    <Compile Include="V20170312\Models\ServerlessDBInstance.cs" />
+    <Compile Include="V20170312\Models\ServerlessDBInstanceNetInfo.cs" />
     <Compile Include="V20170312\Models\SetAutoRenewFlagRequest.cs" />
     <Compile Include="V20170312\Models\SetAutoRenewFlagResponse.cs" />
     <Compile Include="V20170312\Models\SlowlogDetail.cs" />
