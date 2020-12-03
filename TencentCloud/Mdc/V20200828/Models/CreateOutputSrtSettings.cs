@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Push destination address. Please configure 1–2 addresses.
+        /// Push destination address. Please configure one or two addresses.
         /// </summary>
         [JsonProperty("Destinations")]
         public CreateOutputSrtSettingsDestinations[] Destinations{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// Receipt latency of SRT push.
+        /// Receive latency of SRT push.
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }

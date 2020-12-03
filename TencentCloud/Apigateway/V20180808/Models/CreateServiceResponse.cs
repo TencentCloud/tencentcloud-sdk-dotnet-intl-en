@@ -43,13 +43,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceDesc{ get; set; }
 
         /// <summary>
-        /// Default public network domain name.
+        /// Default public domain name.
         /// </summary>
         [JsonProperty("OuterSubDomain")]
         public string OuterSubDomain{ get; set; }
 
         /// <summary>
-        /// Default private network domain name of VPC
+        /// Default VPC domain name.
         /// </summary>
         [JsonProperty("InnerSubDomain")]
         public string InnerSubDomain{ get; set; }

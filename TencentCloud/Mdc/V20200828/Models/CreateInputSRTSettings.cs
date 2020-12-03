@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
+        /// Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// Receipt latency in ms. Default value: 120. Value range: [0, 3000].
+        /// Receive latency in ms. Default value: 120. Value range: [0, 3000].
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string Passphrase{ get; set; }
 
         /// <summary>
-        /// Key length. Default value: 0. Valid values: [0|16|24|32].
+        /// Key length. Default value: 0. Valid values: 0, 16, 24, 32.
         /// </summary>
         [JsonProperty("PbKeyLen")]
         public long? PbKeyLen{ get; set; }

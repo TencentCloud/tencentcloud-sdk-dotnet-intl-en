@@ -73,7 +73,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? DeletionProtection{ get; set; }
 
         /// <summary>
-        /// Cluster network proxy model
+        /// Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+        /// `iptables`: do not set IPVS and KubeProxyMode.
+        /// `ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+        /// `ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+        /// The following conditions are required to use ipvs-bpf network mode:
+        /// 1. The cluster version must be v1.14 or later.
+        /// 2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
         /// </summary>
         [JsonProperty("KubeProxyMode")]
         public string KubeProxyMode{ get; set; }
@@ -102,6 +108,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("VpcCniType")]
         public string VpcCniType{ get; set; }
 
+        /// <summary>
+        /// Runtime version
+        /// </summary>
+        [JsonProperty("RuntimeVersion")]
+        public string RuntimeVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
             this.SetParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
             this.SetParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
+            this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         }
     }
 }

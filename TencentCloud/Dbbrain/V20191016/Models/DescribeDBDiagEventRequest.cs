@@ -36,6 +36,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
+        /// <summary>
+        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

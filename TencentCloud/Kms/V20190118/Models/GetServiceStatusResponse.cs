@@ -37,6 +37,33 @@ namespace TencentCloud.Kms.V20190118.Models
         public long? InvalidType{ get; set; }
 
         /// <summary>
+        /// 0: Basic Edition, 1: Ultimate Edition
+        /// </summary>
+        [JsonProperty("UserLevel")]
+        public ulong? UserLevel{ get; set; }
+
+        /// <summary>
+        /// Ultimate Edition expiration time
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProExpireTime")]
+        public ulong? ProExpireTime{ get; set; }
+
+        /// <summary>
+        /// Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProRenewFlag")]
+        public ulong? ProRenewFlag{ get; set; }
+
+        /// <summary>
+        /// Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProResourceId")]
+        public string ProResourceId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +77,10 @@ namespace TencentCloud.Kms.V20190118.Models
         {
             this.SetParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
             this.SetParamSimple(map, prefix + "InvalidType", this.InvalidType);
+            this.SetParamSimple(map, prefix + "UserLevel", this.UserLevel);
+            this.SetParamSimple(map, prefix + "ProExpireTime", this.ProExpireTime);
+            this.SetParamSimple(map, prefix + "ProRenewFlag", this.ProRenewFlag);
+            this.SetParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

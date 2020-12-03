@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Input name, which can contain 1–32 letters, digits, and underscores.
+        /// Input name, which can contain 1 to 32 letters, digits, and underscores.
         /// </summary>
         [JsonProperty("InputName")]
         public string InputName{ get; set; }
 
         /// <summary>
-        /// Input protocol. Valid values: [SRT|RTP].
+        /// Input protocol. Valid values: SRT, RTP.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

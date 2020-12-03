@@ -31,7 +31,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// Output configuration of flow.
+        /// Output configuration of a flow.
         /// </summary>
         [JsonProperty("Output")]
         public CreateOutput Output{ get; set; }

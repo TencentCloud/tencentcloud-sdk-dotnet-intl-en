@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public TableSpaceData[] TopSpaceTables{ get; set; }
 
         /// <summary>
-        /// Timestamp (in seconds) identifying when the tablespace data is collected.
+        /// Timestamp (in seconds) of tablespace data collect points
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }

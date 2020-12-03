@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Push destination address. 1–2 addresses can be entered.
+        /// Push destination address. You can enter one or two addresses.
         /// </summary>
         [JsonProperty("Destinations")]
         public CreateOutputRTPSettingsDestinations Destinations{ get; set; }

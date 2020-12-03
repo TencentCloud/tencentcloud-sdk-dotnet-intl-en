@@ -46,7 +46,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// Receipt latency.
+        /// Receive latency.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RecvLatency")]

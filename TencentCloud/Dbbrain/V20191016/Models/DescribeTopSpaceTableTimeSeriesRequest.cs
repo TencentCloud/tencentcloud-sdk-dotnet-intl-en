@@ -55,7 +55,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

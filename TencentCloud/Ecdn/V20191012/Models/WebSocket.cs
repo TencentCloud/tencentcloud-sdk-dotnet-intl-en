@@ -25,13 +25,14 @@ namespace TencentCloud.Ecdn.V20191012.Models
     {
         
         /// <summary>
-        /// 
+        /// WebSocket configuration switch, which can be `on` or `off`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sets timeout period in seconds. Maximum value: 65
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }

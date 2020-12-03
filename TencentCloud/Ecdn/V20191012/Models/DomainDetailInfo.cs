@@ -150,14 +150,15 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public string Readonly{ get; set; }
 
         /// <summary>
-        /// Domain name tag.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Domain name tag
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// 
+        /// WebSocket configuration.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }

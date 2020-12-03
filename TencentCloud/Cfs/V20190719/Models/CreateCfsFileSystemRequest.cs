@@ -84,6 +84,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("ResourceTags")]
         public TagInfo[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "MountIP", this.MountIP);
             this.SetParamSimple(map, prefix + "FsName", this.FsName);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

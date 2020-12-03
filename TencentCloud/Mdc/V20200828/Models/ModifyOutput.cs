@@ -43,7 +43,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Output push protocol. Valid values: SRT|RTMP.
+        /// Output push protocol. Valid values: SRT, RTMP.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

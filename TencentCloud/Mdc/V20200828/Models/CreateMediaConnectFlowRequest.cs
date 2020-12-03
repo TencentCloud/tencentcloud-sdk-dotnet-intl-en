@@ -31,7 +31,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
+        /// Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
         /// </summary>
         [JsonProperty("MaxBandwidth")]
         public long? MaxBandwidth{ get; set; }

@@ -97,7 +97,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// 
+        /// WebSocket configuration.
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }

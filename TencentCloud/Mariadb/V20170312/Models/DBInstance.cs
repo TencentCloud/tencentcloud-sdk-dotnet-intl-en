@@ -262,7 +262,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// IPv6 flag for an instance
+        /// Indicates whether the instance uses IPv6
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Ipv6Flag")]
@@ -311,7 +311,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+        /// DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DcnFlag")]
