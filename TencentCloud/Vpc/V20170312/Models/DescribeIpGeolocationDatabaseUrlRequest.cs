@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceNodeInfoRequest : AbstractModel
+    public class DescribeIpGeolocationDatabaseUrlRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// List size
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// The offset value
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

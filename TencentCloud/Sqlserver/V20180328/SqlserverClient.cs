@@ -1293,7 +1293,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to manually repossess a deactivated SQL Server instance.
+        /// This API is used to return a deactivated SQL Server instance.
         /// </summary>
         /// <param name="req"><see cref="RecycleDBInstanceRequest"/></param>
         /// <returns><see cref="RecycleDBInstanceResponse"/></returns>
@@ -1313,7 +1313,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to manually repossess a deactivated SQL Server instance.
+        /// This API is used to return a deactivated SQL Server instance.
         /// </summary>
         /// <param name="req"><see cref="RecycleDBInstanceRequest"/></param>
         /// <returns><see cref="RecycleDBInstanceResponse"/></returns>
@@ -1533,7 +1533,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to manually terminate a pay-as-you-go instance.
+        /// This API is used to isolate an instance to move it into a recycle bin.
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstanceRequest"/></param>
         /// <returns><see cref="TerminateDBInstanceResponse"/></returns>
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to manually terminate a pay-as-you-go instance.
+        /// This API is used to isolate an instance to move it into a recycle bin.
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstanceRequest"/></param>
         /// <returns><see cref="TerminateDBInstanceResponse"/></returns>

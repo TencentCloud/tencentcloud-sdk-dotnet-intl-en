@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.102</VersionPrefix>
+    <VersionPrefix>3.0.103</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4523,6 +4523,8 @@
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="Tke\V20180525\Models\AutoscalingAdded.cs" />
+    <Compile Include="Tke\V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CheckInstancesUpgradeAbleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\Cluster.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterAdvancedSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterAsGroup.cs" />
@@ -4634,6 +4636,10 @@
     <Compile Include="Tke\V20180525\Models\Tag.cs" />
     <Compile Include="Tke\V20180525\Models\TagSpecification.cs" />
     <Compile Include="Tke\V20180525\Models\Taint.cs" />
+    <Compile Include="Tke\V20180525\Models\UpgradeAbleInstancesItem.cs" />
+    <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\UpgradeNodeResetParam.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />
@@ -5376,6 +5382,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeGatewayFlowQosResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeHaVipsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeHaVipsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationDatabaseUrlRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationDatabaseUrlResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaysRequest.cs" />

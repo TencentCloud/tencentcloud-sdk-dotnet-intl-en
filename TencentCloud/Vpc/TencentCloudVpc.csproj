@@ -262,6 +262,8 @@
     <Compile Include="V20170312\Models\DescribeGatewayFlowQosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeHaVipsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeHaVipsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeIpGeolocationDatabaseUrlRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeIpGeolocationDatabaseUrlResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaysRequest.cs" />

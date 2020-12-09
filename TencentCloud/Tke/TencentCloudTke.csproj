@@ -53,6 +53,8 @@
     <Compile Include="V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="V20180525\Models\AutoscalingAdded.cs" />
+    <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />
+    <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleResponse.cs" />
     <Compile Include="V20180525\Models\Cluster.cs" />
     <Compile Include="V20180525\Models\ClusterAdvancedSettings.cs" />
     <Compile Include="V20180525\Models\ClusterAsGroup.cs" />
@@ -164,5 +166,9 @@
     <Compile Include="V20180525\Models\Tag.cs" />
     <Compile Include="V20180525\Models\TagSpecification.cs" />
     <Compile Include="V20180525\Models\Taint.cs" />
+    <Compile Include="V20180525\Models\UpgradeAbleInstancesItem.cs" />
+    <Compile Include="V20180525\Models\UpgradeClusterInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\UpgradeNodeResetParam.cs" />
   </ItemGroup>
 </Project>

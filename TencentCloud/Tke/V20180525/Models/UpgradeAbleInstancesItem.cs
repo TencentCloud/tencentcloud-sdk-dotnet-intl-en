@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceNodeInfoRequest : AbstractModel
+    public class UpgradeAbleInstancesItem : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Node ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List size
+        /// The current version of the node
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
         /// <summary>
-        /// The offset value
+        /// The latest minor version of the current version
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("LatestVersion")]
+        public string LatestVersion{ get; set; }
 
 
         /// <summary>
@@ -49,8 +50,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
         }
     }
 }

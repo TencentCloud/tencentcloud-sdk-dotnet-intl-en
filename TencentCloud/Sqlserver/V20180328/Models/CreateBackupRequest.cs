@@ -43,7 +43,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+        /// Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }

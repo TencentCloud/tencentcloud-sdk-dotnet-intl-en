@@ -43,13 +43,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? OutPkg{ get; set; }
 
         /// <summary>
-        /// Inbound bandwidth, unit: `Byte`.
+        /// Inbound traffic, in Byte.
         /// </summary>
         [JsonProperty("InTraffic")]
         public ulong? InTraffic{ get; set; }
 
         /// <summary>
-        /// Outbound bandwidth, unit: `Byte`.
+        /// Outbound traffic, in Byte.
         /// </summary>
         [JsonProperty("OutTraffic")]
         public ulong? OutTraffic{ get; set; }

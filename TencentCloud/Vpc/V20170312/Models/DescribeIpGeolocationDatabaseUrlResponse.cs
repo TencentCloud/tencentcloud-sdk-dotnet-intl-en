@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceNodeInfoRequest : AbstractModel
+    public class DescribeIpGeolocationDatabaseUrlResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Download link of the IP location database.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("DownLoadUrl")]
+        public string DownLoadUrl{ get; set; }
 
         /// <summary>
-        /// List size
+        /// Link expiration time in UTC format following the ISO8601 standard.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("ExpiredAt")]
+        public string ExpiredAt{ get; set; }
 
         /// <summary>
-        /// The offset value
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "DownLoadUrl", this.DownLoadUrl);
+            this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

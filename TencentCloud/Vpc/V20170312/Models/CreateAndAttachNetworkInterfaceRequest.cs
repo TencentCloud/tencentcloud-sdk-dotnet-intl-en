@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// The CVM instance ID.
+        /// CVM instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

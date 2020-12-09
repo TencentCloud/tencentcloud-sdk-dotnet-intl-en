@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? CPU{ get; set; }
 
         /// <summary>
-        /// Instance's memory capacity. Unit: GB.
+        /// Instance’s memory capacity. Unit: GB.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }

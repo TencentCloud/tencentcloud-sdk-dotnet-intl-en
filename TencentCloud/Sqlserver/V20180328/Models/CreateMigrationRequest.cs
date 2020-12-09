@@ -61,7 +61,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public MigrateDB[] MigrateDBSet{ get; set; }
 
         /// <summary>
-        /// Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+        /// Restore and rename the databases listed in `ReNameRestoreDatabase`. If this parameter is left empty, all restored databases will be renamed in the default format. This parameter takes effect only when `SourceType=5`.
         /// </summary>
         [JsonProperty("RenameRestore")]
         public RenameRestoreDatabase[] RenameRestore{ get; set; }

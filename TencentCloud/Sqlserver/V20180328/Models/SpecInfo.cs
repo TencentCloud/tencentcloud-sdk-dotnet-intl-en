@@ -109,6 +109,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("PayModeStatus")]
         public string PayModeStatus{ get; set; }
 
+        /// <summary>
+        /// Instance type. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// Whether multi-AZ deployment is supported. Valid values: MultiZones (only multi-AZ deployment is supported), SameZones (only single-AZ deployment is supported), ALL (both deployments are supported)
+        /// </summary>
+        [JsonProperty("MultiZonesStatus")]
+        public string MultiZonesStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +141,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamArraySimple(map, prefix + "PostPid.", this.PostPid);
             this.SetParamSimple(map, prefix + "PayModeStatus", this.PayModeStatus);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "MultiZonesStatus", this.MultiZonesStatus);
         }
     }
 }

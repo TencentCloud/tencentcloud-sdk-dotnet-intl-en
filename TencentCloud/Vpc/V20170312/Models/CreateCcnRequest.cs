@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// The bandwidth limit type. OUTER_REGION_LIMIT: regional outbound limit. INTER_REGION_LIMIT: inter-regional limit. Default: OUTER_REGION_LIMIT.
+        /// The bandwidth limit type. Valid values: OUTER_REGION_LIMIT: region outbound bandwidth limit; INTER_REGION_LIMIT: inter-region bandwidth limit. Default value: OUTER_REGION_LIMIT. Monthly-subscribed CCN instances only support inter-region bandwidth limit, while pay-as-you-go CCN instances support the both bandwidth limit types.
         /// </summary>
         [JsonProperty("BandwidthLimitType")]
         public string BandwidthLimitType{ get; set; }
