@@ -26,20 +26,22 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Rule types:
-        /// `all`: effective for all files
-        /// `file`: effective for specified file suffixes
-        /// `directory`: effective for specified paths
-        /// `path`: effective for specified absolute paths
+        /// `all`: effective for all files.
+        /// `file`: effective for specified file suffixes.
+        /// `directory`: effective for specified paths.
+        /// `path`: effective for specified absolute paths.
+        /// `index`: effective for specified homepages.
         /// </summary>
         [JsonProperty("MaxAgeType")]
         public string MaxAgeType{ get; set; }
 
         /// <summary>
-        /// Content for each MaxAgeType:
-        /// For `all`, enter an asterisk (*).
-        /// For `file`, enter the suffix, such as jpg, txt.
-        /// For `directory`, enter the path, such as /xxx/test/.
-        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+        /// Content for each `MaxAgeType`:
+        /// For `all`, enter a wildcard `*`.
+        /// For `file`, enter the suffix, e.g., `jpg` or `txt`.
+        /// For `directory`, enter the path, e.g., `/xxx/test/`.
+        /// For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+        /// For `index`, enter a forward slash `/`.
         /// </summary>
         [JsonProperty("MaxAgeContents")]
         public string[] MaxAgeContents{ get; set; }
@@ -50,6 +52,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("MaxAgeTime")]
         public long? MaxAgeTime{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FollowOrigin")]
+        public string FollowOrigin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +67,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "MaxAgeType", this.MaxAgeType);
             this.SetParamArraySimple(map, prefix + "MaxAgeContents.", this.MaxAgeContents);
             this.SetParamSimple(map, prefix + "MaxAgeTime", this.MaxAgeTime);
+            this.SetParamSimple(map, prefix + "FollowOrigin", this.FollowOrigin);
         }
     }
 }

@@ -25,25 +25,27 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Content for each CacheType:
-        /// For `all`, enter an asterisk (*).
-        /// For `file`, enter the suffix, such as jpg, txt.
-        /// For `directory`, enter the path, such as /xxx/test/.
-        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-        /// For `index`, enter a backslash (/).
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Content for each `CacheType`:
+        /// For `all`, enter a wildcard `*`.
+        /// For `file`, enter the suffix, e.g., `jpg` or `txt`.
+        /// For `directory`, enter the path, e.g., `/xxx/test/`.
+        /// For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+        /// For `index`, enter a forward slash `/`.
+        /// For `default`, enter `no max-age`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
 
         /// <summary>
         /// Rule types:
-        /// `all`: effective for all files
-        /// `file`: effective for specified file suffixes
-        /// `directory`: effective for specified paths
-        /// `path`: effective for specified absolute paths
-        /// `index`: home page
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// `all`: effective for all files.
+        /// `file`: effective for specified file suffixes.
+        /// `directory`: effective for specified paths.
+        /// `path`: effective for specified absolute paths.
+        /// `index`: homepage.
+        /// `default`: effective when the origin server does not have the `max-age` value.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }

@@ -262,8 +262,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// IPv6 configuration (in beta)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// IPv6 origin-pull configuration (in beta)
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
@@ -371,6 +371,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
+        /// <summary>
+        /// Timestamp hotlink protection advanced configuration (allowlist feature)
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AdvancedAuthentication")]
+        public AdvancedAuthentication AdvancedAuthentication{ get; set; }
+
+        /// <summary>
+        /// Origin-pull authentication advanced configuration (allowlist feature)
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OriginAuthentication")]
+        public OriginAuthentication OriginAuthentication{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -425,6 +439,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
             this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
+            this.SetParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
         }
     }
 }

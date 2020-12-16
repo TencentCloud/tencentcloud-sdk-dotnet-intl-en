@@ -49,6 +49,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BestFrameList")]
+        public string[] BestFrameList{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Sim", this.Sim);
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArraySimple(map, prefix + "BestFrameList.", this.BestFrameList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

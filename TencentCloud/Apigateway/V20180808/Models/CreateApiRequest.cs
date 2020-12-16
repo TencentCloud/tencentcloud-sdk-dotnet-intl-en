@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+        /// API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? ServiceTimeout{ get; set; }
 
         /// <summary>
-        /// API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+        /// API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

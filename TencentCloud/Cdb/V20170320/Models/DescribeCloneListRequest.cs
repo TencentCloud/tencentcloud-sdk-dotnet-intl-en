@@ -21,44 +21,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeErrorLogDataRequest : AbstractModel
+    public class DescribeCloneListRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID.
+        /// ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start timestamp.
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
-
-        /// <summary>
-        /// End timestamp.
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
-
-        /// <summary>
-        /// List of keywords to match. Up to 15 keywords are supported.
-        /// </summary>
-        [JsonProperty("KeyWords")]
-        public string[] KeyWords{ get; set; }
-
-        /// <summary>
-        /// The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// Offset. Default value: 0.
+        /// Paginated query offset
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// The number of results per page in paginated queries
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -67,11 +49,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamArraySimple(map, prefix + "KeyWords.", this.KeyWords);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

@@ -70,6 +70,8 @@
     <Compile Include="V20180416\Models\OperationDetail.cs" />
     <Compile Include="V20180416\Models\RestartInstanceRequest.cs" />
     <Compile Include="V20180416\Models\RestartInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\RestartKibanaRequest.cs" />
+    <Compile Include="V20180416\Models\RestartKibanaResponse.cs" />
     <Compile Include="V20180416\Models\RestartNodesRequest.cs" />
     <Compile Include="V20180416\Models\RestartNodesResponse.cs" />
     <Compile Include="V20180416\Models\SubTaskDetail.cs" />

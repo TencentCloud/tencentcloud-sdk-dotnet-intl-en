@@ -31,16 +31,22 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? RedirectStatusCode{ get; set; }
 
         /// <summary>
-        /// Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
+        /// URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// Target URL, which must begin with `/` and can contain up to 1,024 characters.
+        /// Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RedirectHost")]
+        public string RedirectHost{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "RedirectStatusCode", this.RedirectStatusCode);
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+            this.SetParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
         }
     }
 }

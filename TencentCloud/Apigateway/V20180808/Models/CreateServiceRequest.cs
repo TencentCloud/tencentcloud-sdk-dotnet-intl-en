@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+        /// Custom service name.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }

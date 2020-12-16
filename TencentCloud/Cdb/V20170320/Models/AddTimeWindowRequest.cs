@@ -31,43 +31,43 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
+        /// Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
         /// </summary>
         [JsonProperty("Monday")]
         public string[] Monday{ get; set; }
 
         /// <summary>
-        /// Maintenance time window on Tuesday
+        /// Maintenance window on Tuesday. At least one time window is required in a week.
         /// </summary>
         [JsonProperty("Tuesday")]
         public string[] Tuesday{ get; set; }
 
         /// <summary>
-        /// Maintenance time window on Wednesday
+        /// Maintenance window on Wednesday. At least one time window is required in a week.
         /// </summary>
         [JsonProperty("Wednesday")]
         public string[] Wednesday{ get; set; }
 
         /// <summary>
-        /// Maintenance time window on Thursday
+        /// Maintenance window on Thursday. At least one time window is required in a week.
         /// </summary>
         [JsonProperty("Thursday")]
         public string[] Thursday{ get; set; }
 
         /// <summary>
-        /// Maintenance time window on Friday
+        /// Maintenance window on Friday. At least one time window is required in a week.
         /// </summary>
         [JsonProperty("Friday")]
         public string[] Friday{ get; set; }
 
         /// <summary>
-        /// Maintenance time window on Saturday
+        /// Maintenance window on Saturday. At least one time window is required in a week.
         /// </summary>
         [JsonProperty("Saturday")]
         public string[] Saturday{ get; set; }
 
         /// <summary>
-        /// Maintenance time window on Sunday
+        /// Maintenance window on Sunday. At least one time window is required in a week.
         /// </summary>
         [JsonProperty("Sunday")]
         public string[] Sunday{ get; set; }

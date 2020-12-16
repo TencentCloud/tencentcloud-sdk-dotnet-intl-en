@@ -393,6 +393,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to query the IP information of CDN intermediate nodes. Note: the relevant allowlist needs to be enabled for this API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
+        /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
+        public async Task<DescribeCdnOriginIpResponse> DescribeCdnOriginIp(DescribeCdnOriginIpRequest req)
+        {
+             JsonResponseModel<DescribeCdnOriginIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCdnOriginIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnOriginIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the IP information of CDN intermediate nodes. Note: the relevant allowlist needs to be enabled for this API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
+        /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
+        public DescribeCdnOriginIpResponse DescribeCdnOriginIpSync(DescribeCdnOriginIpRequest req)
+        {
+             JsonResponseModel<DescribeCdnOriginIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCdnOriginIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnOriginIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertDomainsRequest"/></param>

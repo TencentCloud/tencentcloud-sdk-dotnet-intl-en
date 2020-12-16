@@ -293,6 +293,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to create a clone of a specific instance, and roll back the clone by using a physical backup file of the instance or roll back the clone to a point in time.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloneInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloneInstanceResponse"/></returns>
+        public async Task<CreateCloneInstanceResponse> CreateCloneInstance(CreateCloneInstanceRequest req)
+        {
+             JsonResponseModel<CreateCloneInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloneInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloneInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a clone of a specific instance, and roll back the clone by using a physical backup file of the instance or roll back the clone to a point in time.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloneInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloneInstanceResponse"/></returns>
+        public CreateCloneInstanceResponse CreateCloneInstanceSync(CreateCloneInstanceRequest req)
+        {
+             JsonResponseModel<CreateCloneInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloneInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloneInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateDBImportJob) is used to create a data import task for a TencentDB instance.
         /// 
         /// Note that the files for a data import task must be uploaded to Tencent Cloud in advance. You need to do so in the console.
@@ -1152,6 +1192,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBinlogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBinlogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the clone task list of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloneListRequest"/></param>
+        /// <returns><see cref="DescribeCloneListResponse"/></returns>
+        public async Task<DescribeCloneListResponse> DescribeCloneList(DescribeCloneListRequest req)
+        {
+             JsonResponseModel<DescribeCloneListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloneList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloneListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the clone task list of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloneListRequest"/></param>
+        /// <returns><see cref="DescribeCloneListResponse"/></returns>
+        public DescribeCloneListResponse DescribeCloneListSync(DescribeCloneListRequest req)
+        {
+             JsonResponseModel<DescribeCloneListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloneList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloneListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3498,6 +3578,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "StopDBImportJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDBImportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to cancel a rollback task in progress, and returns an async task ID. You can use the `DescribeAsyncRequestInfo` API to query the result of cancellation.
+        /// </summary>
+        /// <param name="req"><see cref="StopRollbackRequest"/></param>
+        /// <returns><see cref="StopRollbackResponse"/></returns>
+        public async Task<StopRollbackResponse> StopRollback(StopRollbackRequest req)
+        {
+             JsonResponseModel<StopRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to cancel a rollback task in progress, and returns an async task ID. You can use the `DescribeAsyncRequestInfo` API to query the result of cancellation.
+        /// </summary>
+        /// <param name="req"><see cref="StopRollbackRequest"/></param>
+        /// <returns><see cref="StopRollbackResponse"/></returns>
+        public StopRollbackResponse StopRollbackSync(StopRollbackRequest req)
+        {
+             JsonResponseModel<StopRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRollbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

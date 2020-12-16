@@ -79,7 +79,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned at a time. Maximum value: 400.
+        /// The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

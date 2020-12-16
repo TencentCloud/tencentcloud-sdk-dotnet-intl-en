@@ -293,6 +293,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// This API is used to restart Kibana. 
+        /// </summary>
+        /// <param name="req"><see cref="RestartKibanaRequest"/></param>
+        /// <returns><see cref="RestartKibanaResponse"/></returns>
+        public async Task<RestartKibanaResponse> RestartKibana(RestartKibanaRequest req)
+        {
+             JsonResponseModel<RestartKibanaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartKibana");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartKibanaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to restart Kibana. 
+        /// </summary>
+        /// <param name="req"><see cref="RestartKibanaRequest"/></param>
+        /// <returns><see cref="RestartKibanaResponse"/></returns>
+        public RestartKibanaResponse RestartKibanaSync(RestartKibanaRequest req)
+        {
+             JsonResponseModel<RestartKibanaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartKibana");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartKibanaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to restart cluster nodes.
         /// </summary>
         /// <param name="req"><see cref="RestartNodesRequest"/></param>
