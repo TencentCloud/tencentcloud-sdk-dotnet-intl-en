@@ -26,7 +26,8 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// Listening port of a real server
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: this parameter is required when binding a CVM or ENI.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
@@ -39,9 +40,9 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-        /// Note: Either InstanceId or EniIp must be passed in.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+        /// Note: either `InstanceId` or `EniIp` must be passed in.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -53,8 +54,9 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
+        /// Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }

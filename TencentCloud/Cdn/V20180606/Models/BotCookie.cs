@@ -21,33 +21,46 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UrlRedirectRule : AbstractModel
+    public class BotCookie : AbstractModel
     {
         
         /// <summary>
-        /// Redirect status code. Valid values: 301, 302
+        /// Valid values: `on` and `off`.
         /// </summary>
-        [JsonProperty("RedirectStatusCode")]
-        public long? RedirectStatusCode{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+        /// Rule type, which can only be `all` currently.
         /// </summary>
-        [JsonProperty("Pattern")]
-        public string Pattern{ get; set; }
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
 
         /// <summary>
-        /// Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+        /// Rule value. Valid value: `*`.
+        /// </summary>
+        [JsonProperty("RuleValue")]
+        public string[] RuleValue{ get; set; }
+
+        /// <summary>
+        /// Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
+        /// <summary>
+        /// Redirection target page
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }
 
         /// <summary>
-        /// Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+        /// Update time
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RedirectHost")]
-        public string RedirectHost{ get; set; }
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -55,10 +68,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RedirectStatusCode", this.RedirectStatusCode);
-            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArraySimple(map, prefix + "RuleValue.", this.RuleValue);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
-            this.SetParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

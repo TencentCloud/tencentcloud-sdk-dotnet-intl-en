@@ -106,10 +106,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Applies for CLB instances for a specified VIP
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BandwidthPackageId")]
+        public string BandwidthPackageId{ get; set; }
 
         /// <summary>
         /// Exclusive cluster information.
@@ -122,6 +128,18 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
+
+        /// <summary>
+        /// Whether Binding IPs of other VPCs feature switch
+        /// </summary>
+        [JsonProperty("SnatPro")]
+        public bool? SnatPro{ get; set; }
+
+        /// <summary>
+        /// Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+        /// </summary>
+        [JsonProperty("SnatIps")]
+        public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
         /// Tag for the STGW exclusive cluster.
@@ -149,8 +167,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
+            this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         }
     }

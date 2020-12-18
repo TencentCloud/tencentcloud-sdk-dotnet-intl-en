@@ -211,8 +211,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// CLB instance billing mode
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
@@ -349,6 +349,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("MixIpTarget")]
         public bool? MixIpTarget{ get; set; }
 
+        /// <summary>
+        /// Availability zone of a VPC-based private network CLB instance
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -402,6 +409,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
             this.SetParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

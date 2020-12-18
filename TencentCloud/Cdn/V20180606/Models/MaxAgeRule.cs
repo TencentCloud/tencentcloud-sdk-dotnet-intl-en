@@ -38,22 +38,25 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Content for each `MaxAgeType`:
         /// For `all`, enter a wildcard `*`.
-        /// For `file`, enter the suffix, e.g., `jpg` or `txt`.
-        /// For `directory`, enter the path, e.g., `/xxx/test/`.
-        /// For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+        /// For `file`, enter a suffix, e.g., `jpg` or `txt`.
+        /// For `directory`, enter a path, e.g., `/xxx/test/`.
+        /// For `path`, enter an absolute path, e.g., `/xxx/test.html`.
         /// For `index`, enter a forward slash `/`.
+        /// Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
         /// </summary>
         [JsonProperty("MaxAgeContents")]
         public string[] MaxAgeContents{ get; set; }
 
         /// <summary>
         /// MaxAge time (in seconds)
+        /// Note: the value `0` means not to cache.
         /// </summary>
         [JsonProperty("MaxAgeTime")]
         public long? MaxAgeTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public string FollowOrigin{ get; set; }

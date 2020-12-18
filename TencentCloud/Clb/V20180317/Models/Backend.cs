@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Real server type. Value range: CVM, ENI (coming soon)
+        /// Real server type. Valid values: CVM, ENI.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

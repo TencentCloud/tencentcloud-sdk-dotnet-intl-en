@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.105</VersionPrefix>
+    <VersionPrefix>3.0.106</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -885,6 +885,10 @@
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoGroupInfoRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoGroupInfoResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyRoReplicationDelayRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyRoReplicationDelayResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyRoTypeRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyRoTypeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\OfflineIsolatedInstancesRequest.cs" />
@@ -927,8 +931,12 @@
     <Compile Include="Cdb\V20170320\Models\SqlFileInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\StartBatchRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StartBatchRollbackResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\StartDelayReplicationRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\StartDelayReplicationResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopDBImportJobRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StopDBImportJobResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\StopDelayReplicationRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\StopDelayReplicationResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchForUpgradeRequest.cs" />
@@ -967,6 +975,8 @@
     <Compile Include="Cdn\V20180606\Models\AuthenticationTypeD.cs" />
     <Compile Include="Cdn\V20180606\Models\AwsPrivateAccess.cs" />
     <Compile Include="Cdn\V20180606\Models\BandwidthAlert.cs" />
+    <Compile Include="Cdn\V20180606\Models\BotCookie.cs" />
+    <Compile Include="Cdn\V20180606\Models\BotJavaScript.cs" />
     <Compile Include="Cdn\V20180606\Models\BriefDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\Cache.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheConfigCache.cs" />
@@ -1108,6 +1118,16 @@
     <Compile Include="Cdn\V20180606\Models\RuleCache.cs" />
     <Compile Include="Cdn\V20180606\Models\RuleCacheConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\RuleQueryString.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnAclConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnAclGroup.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnAclRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnBotConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnCCRules.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnDdosConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnErrorPage.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnWafConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnWafRule.cs" />
     <Compile Include="Cdn\V20180606\Models\SchemeKey.cs" />
     <Compile Include="Cdn\V20180606\Models\SearchClsLogRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\SearchClsLogResponse.cs" />
@@ -1135,6 +1155,8 @@
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdatePayTypeRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdatePayTypeResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\UpdateScdnDomainRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\UpdateScdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\UrlRecord.cs" />
     <Compile Include="Cdn\V20180606\Models\UrlRedirect.cs" />
     <Compile Include="Cdn\V20180606\Models\UrlRedirectRule.cs" />
@@ -1461,37 +1483,27 @@
     <Compile Include="Clb\V20180317\Models\TargetRegionInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ZoneInfo.cs" />
     <Compile Include="Cloudaudit\V20190319\CloudauditClient.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\AttributeKeyDetail.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\AuditSummary.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\CmqRegionInfo.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\CosRegionInfo.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\Event.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\InquireAuditCreditRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\InquireAuditCreditResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\ListAuditsRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\ListAuditsResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\ListCmqEnableRegionRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\ListCmqEnableRegionResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\ListCosEnableRegionRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\ListCosEnableRegionResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\LookupAttribute.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\Resource.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\StartLoggingRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\StartLoggingResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\StopLoggingRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\StopLoggingResponse.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\UpdateAuditRequest.cs" />
-    <Compile Include="Cloudaudit\V20190319\Models\UpdateAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ConfigurationItems.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateRecorderRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateRecorderResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteRecorderRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteRecorderResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeDiscoveredResourceRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeDiscoveredResourceResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeRecorderRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeRecorderResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\GetConfigurationItemsRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\GetConfigurationItemsResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListDiscoveredResourcesRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListDiscoveredResourcesResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListSupportResourceTypesRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListSupportResourceTypesResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\RecordResourceType.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\RelatedEvent.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\Resources.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\SupportResourceType.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\UpdateRecorderRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\UpdateRecorderResponse.cs" />
     <Compile Include="Cmq\V20190304\CmqClient.cs" />
     <Compile Include="Cmq\V20190304\Models\ClearQueueRequest.cs" />
     <Compile Include="Cmq\V20190304\Models\ClearQueueResponse.cs" />

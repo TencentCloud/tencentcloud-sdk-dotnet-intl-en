@@ -53,21 +53,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// Parameter requirements:
-        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
-        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
+        /// This API is used to create resource recorders to detect and record resource configuration changes.
         /// </summary>
-        /// <param name="req"><see cref="CreateAuditRequest"/></param>
-        /// <returns><see cref="CreateAuditResponse"/></returns>
-        public async Task<CreateAuditResponse> CreateAudit(CreateAuditRequest req)
+        /// <param name="req"><see cref="CreateRecorderRequest"/></param>
+        /// <returns><see cref="CreateRecorderResponse"/></returns>
+        public async Task<CreateRecorderResponse> CreateRecorder(CreateRecorderRequest req)
         {
-             JsonResponseModel<CreateAuditResponse> rsp = null;
+             JsonResponseModel<CreateRecorderResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateAudit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateRecorder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecorderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -77,21 +73,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// Parameter requirements:
-        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
-        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
+        /// This API is used to create resource recorders to detect and record resource configuration changes.
         /// </summary>
-        /// <param name="req"><see cref="CreateAuditRequest"/></param>
-        /// <returns><see cref="CreateAuditResponse"/></returns>
-        public CreateAuditResponse CreateAuditSync(CreateAuditRequest req)
+        /// <param name="req"><see cref="CreateRecorderRequest"/></param>
+        /// <returns><see cref="CreateRecorderResponse"/></returns>
+        public CreateRecorderResponse CreateRecorderSync(CreateRecorderRequest req)
         {
-             JsonResponseModel<CreateAuditResponse> rsp = null;
+             JsonResponseModel<CreateRecorderResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateAudit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateRecorder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecorderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -101,17 +93,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to delete a tracking set.
+        /// This API is used to delete resource recorders. After deletion, resource configuration changes will not be recorded.
         /// </summary>
-        /// <param name="req"><see cref="DeleteAuditRequest"/></param>
-        /// <returns><see cref="DeleteAuditResponse"/></returns>
-        public async Task<DeleteAuditResponse> DeleteAudit(DeleteAuditRequest req)
+        /// <param name="req"><see cref="DeleteRecorderRequest"/></param>
+        /// <returns><see cref="DeleteRecorderResponse"/></returns>
+        public async Task<DeleteRecorderResponse> DeleteRecorder(DeleteRecorderRequest req)
         {
-             JsonResponseModel<DeleteAuditResponse> rsp = null;
+             JsonResponseModel<DeleteRecorderResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteAudit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteRecorder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecorderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -121,17 +113,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to delete a tracking set.
+        /// This API is used to delete resource recorders. After deletion, resource configuration changes will not be recorded.
         /// </summary>
-        /// <param name="req"><see cref="DeleteAuditRequest"/></param>
-        /// <returns><see cref="DeleteAuditResponse"/></returns>
-        public DeleteAuditResponse DeleteAuditSync(DeleteAuditRequest req)
+        /// <param name="req"><see cref="DeleteRecorderRequest"/></param>
+        /// <returns><see cref="DeleteRecorderResponse"/></returns>
+        public DeleteRecorderResponse DeleteRecorderSync(DeleteRecorderRequest req)
         {
-             JsonResponseModel<DeleteAuditResponse> rsp = null;
+             JsonResponseModel<DeleteRecorderResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteAudit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteRecorder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecorderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -141,17 +133,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the details of a tracking set.
+        /// This API is used to view the basic information of discovered resources.
         /// </summary>
-        /// <param name="req"><see cref="DescribeAuditRequest"/></param>
-        /// <returns><see cref="DescribeAuditResponse"/></returns>
-        public async Task<DescribeAuditResponse> DescribeAudit(DescribeAuditRequest req)
+        /// <param name="req"><see cref="DescribeDiscoveredResourceRequest"/></param>
+        /// <returns><see cref="DescribeDiscoveredResourceResponse"/></returns>
+        public async Task<DescribeDiscoveredResourceResponse> DescribeDiscoveredResource(DescribeDiscoveredResourceRequest req)
         {
-             JsonResponseModel<DescribeAuditResponse> rsp = null;
+             JsonResponseModel<DescribeDiscoveredResourceResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeAudit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeDiscoveredResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiscoveredResourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -161,17 +153,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the details of a tracking set.
+        /// This API is used to view the basic information of discovered resources.
         /// </summary>
-        /// <param name="req"><see cref="DescribeAuditRequest"/></param>
-        /// <returns><see cref="DescribeAuditResponse"/></returns>
-        public DescribeAuditResponse DescribeAuditSync(DescribeAuditRequest req)
+        /// <param name="req"><see cref="DescribeDiscoveredResourceRequest"/></param>
+        /// <returns><see cref="DescribeDiscoveredResourceResponse"/></returns>
+        public DescribeDiscoveredResourceResponse DescribeDiscoveredResourceSync(DescribeDiscoveredResourceRequest req)
         {
-             JsonResponseModel<DescribeAuditResponse> rsp = null;
+             JsonResponseModel<DescribeDiscoveredResourceResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeAudit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeDiscoveredResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiscoveredResourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -181,17 +173,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the valid values range of `AttributeKey`.
+        /// This API is used to display current configurations and status of a recorder.
         /// </summary>
-        /// <param name="req"><see cref="GetAttributeKeyRequest"/></param>
-        /// <returns><see cref="GetAttributeKeyResponse"/></returns>
-        public async Task<GetAttributeKeyResponse> GetAttributeKey(GetAttributeKeyRequest req)
+        /// <param name="req"><see cref="DescribeRecorderRequest"/></param>
+        /// <returns><see cref="DescribeRecorderResponse"/></returns>
+        public async Task<DescribeRecorderResponse> DescribeRecorder(DescribeRecorderRequest req)
         {
-             JsonResponseModel<GetAttributeKeyResponse> rsp = null;
+             JsonResponseModel<DescribeRecorderResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "GetAttributeKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttributeKeyResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeRecorder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecorderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -201,17 +193,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the valid values range of `AttributeKey`.
+        /// This API is used to display current configurations and status of a recorder.
         /// </summary>
-        /// <param name="req"><see cref="GetAttributeKeyRequest"/></param>
-        /// <returns><see cref="GetAttributeKeyResponse"/></returns>
-        public GetAttributeKeyResponse GetAttributeKeySync(GetAttributeKeyRequest req)
+        /// <param name="req"><see cref="DescribeRecorderRequest"/></param>
+        /// <returns><see cref="DescribeRecorderResponse"/></returns>
+        public DescribeRecorderResponse DescribeRecorderSync(DescribeRecorderRequest req)
         {
-             JsonResponseModel<GetAttributeKeyResponse> rsp = null;
+             JsonResponseModel<DescribeRecorderResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "GetAttributeKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttributeKeyResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeRecorder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecorderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -221,17 +213,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the number of tracking sets that can be created.
+        /// This API is used to get the list of resource configuration items and display resource configuration changes in chronological order.
         /// </summary>
-        /// <param name="req"><see cref="InquireAuditCreditRequest"/></param>
-        /// <returns><see cref="InquireAuditCreditResponse"/></returns>
-        public async Task<InquireAuditCreditResponse> InquireAuditCredit(InquireAuditCreditRequest req)
+        /// <param name="req"><see cref="GetConfigurationItemsRequest"/></param>
+        /// <returns><see cref="GetConfigurationItemsResponse"/></returns>
+        public async Task<GetConfigurationItemsResponse> GetConfigurationItems(GetConfigurationItemsRequest req)
         {
-             JsonResponseModel<InquireAuditCreditResponse> rsp = null;
+             JsonResponseModel<GetConfigurationItemsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "InquireAuditCredit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireAuditCreditResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "GetConfigurationItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetConfigurationItemsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -241,17 +233,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the number of tracking sets that can be created.
+        /// This API is used to get the list of resource configuration items and display resource configuration changes in chronological order.
         /// </summary>
-        /// <param name="req"><see cref="InquireAuditCreditRequest"/></param>
-        /// <returns><see cref="InquireAuditCreditResponse"/></returns>
-        public InquireAuditCreditResponse InquireAuditCreditSync(InquireAuditCreditRequest req)
+        /// <param name="req"><see cref="GetConfigurationItemsRequest"/></param>
+        /// <returns><see cref="GetConfigurationItemsResponse"/></returns>
+        public GetConfigurationItemsResponse GetConfigurationItemsSync(GetConfigurationItemsRequest req)
         {
-             JsonResponseModel<InquireAuditCreditResponse> rsp = null;
+             JsonResponseModel<GetConfigurationItemsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "InquireAuditCredit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireAuditCreditResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "GetConfigurationItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetConfigurationItemsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -261,17 +253,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the summary of tracking sets.
+        /// This API is used to view the list of discovered resources.
         /// </summary>
-        /// <param name="req"><see cref="ListAuditsRequest"/></param>
-        /// <returns><see cref="ListAuditsResponse"/></returns>
-        public async Task<ListAuditsResponse> ListAudits(ListAuditsRequest req)
+        /// <param name="req"><see cref="ListDiscoveredResourcesRequest"/></param>
+        /// <returns><see cref="ListDiscoveredResourcesResponse"/></returns>
+        public async Task<ListDiscoveredResourcesResponse> ListDiscoveredResources(ListDiscoveredResourcesRequest req)
         {
-             JsonResponseModel<ListAuditsResponse> rsp = null;
+             JsonResponseModel<ListDiscoveredResourcesResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ListAudits");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAuditsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ListDiscoveredResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListDiscoveredResourcesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -281,17 +273,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query the summary of tracking sets.
+        /// This API is used to view the list of discovered resources.
         /// </summary>
-        /// <param name="req"><see cref="ListAuditsRequest"/></param>
-        /// <returns><see cref="ListAuditsResponse"/></returns>
-        public ListAuditsResponse ListAuditsSync(ListAuditsRequest req)
+        /// <param name="req"><see cref="ListDiscoveredResourcesRequest"/></param>
+        /// <returns><see cref="ListDiscoveredResourcesResponse"/></returns>
+        public ListDiscoveredResourcesResponse ListDiscoveredResourcesSync(ListDiscoveredResourcesRequest req)
         {
-             JsonResponseModel<ListAuditsResponse> rsp = null;
+             JsonResponseModel<ListDiscoveredResourcesResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ListAudits");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAuditsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ListDiscoveredResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListDiscoveredResourcesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -301,17 +293,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query CloudAudit-enabled CMQ AZs.
+        /// This API is used to query the list of all CFA supported resource types.
         /// </summary>
-        /// <param name="req"><see cref="ListCmqEnableRegionRequest"/></param>
-        /// <returns><see cref="ListCmqEnableRegionResponse"/></returns>
-        public async Task<ListCmqEnableRegionResponse> ListCmqEnableRegion(ListCmqEnableRegionRequest req)
+        /// <param name="req"><see cref="ListSupportResourceTypesRequest"/></param>
+        /// <returns><see cref="ListSupportResourceTypesResponse"/></returns>
+        public async Task<ListSupportResourceTypesResponse> ListSupportResourceTypes(ListSupportResourceTypesRequest req)
         {
-             JsonResponseModel<ListCmqEnableRegionResponse> rsp = null;
+             JsonResponseModel<ListSupportResourceTypesResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ListCmqEnableRegion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCmqEnableRegionResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ListSupportResourceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSupportResourceTypesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -321,17 +313,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query CloudAudit-enabled CMQ AZs.
+        /// This API is used to query the list of all CFA supported resource types.
         /// </summary>
-        /// <param name="req"><see cref="ListCmqEnableRegionRequest"/></param>
-        /// <returns><see cref="ListCmqEnableRegionResponse"/></returns>
-        public ListCmqEnableRegionResponse ListCmqEnableRegionSync(ListCmqEnableRegionRequest req)
+        /// <param name="req"><see cref="ListSupportResourceTypesRequest"/></param>
+        /// <returns><see cref="ListSupportResourceTypesResponse"/></returns>
+        public ListSupportResourceTypesResponse ListSupportResourceTypesSync(ListSupportResourceTypesRequest req)
         {
-             JsonResponseModel<ListCmqEnableRegionResponse> rsp = null;
+             JsonResponseModel<ListSupportResourceTypesResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ListCmqEnableRegion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCmqEnableRegionResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ListSupportResourceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSupportResourceTypesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -341,17 +333,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query CloudAudit-enabled COS AZs.
+        /// This API is used to modify the resources to monitor, recorder name, and other recorder configurations.
         /// </summary>
-        /// <param name="req"><see cref="ListCosEnableRegionRequest"/></param>
-        /// <returns><see cref="ListCosEnableRegionResponse"/></returns>
-        public async Task<ListCosEnableRegionResponse> ListCosEnableRegion(ListCosEnableRegionRequest req)
+        /// <param name="req"><see cref="UpdateRecorderRequest"/></param>
+        /// <returns><see cref="UpdateRecorderResponse"/></returns>
+        public async Task<UpdateRecorderResponse> UpdateRecorder(UpdateRecorderRequest req)
         {
-             JsonResponseModel<ListCosEnableRegionResponse> rsp = null;
+             JsonResponseModel<UpdateRecorderResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ListCosEnableRegion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCosEnableRegionResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "UpdateRecorder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRecorderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -361,185 +353,17 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// This API is used to query CloudAudit-enabled COS AZs.
+        /// This API is used to modify the resources to monitor, recorder name, and other recorder configurations.
         /// </summary>
-        /// <param name="req"><see cref="ListCosEnableRegionRequest"/></param>
-        /// <returns><see cref="ListCosEnableRegionResponse"/></returns>
-        public ListCosEnableRegionResponse ListCosEnableRegionSync(ListCosEnableRegionRequest req)
+        /// <param name="req"><see cref="UpdateRecorderRequest"/></param>
+        /// <returns><see cref="UpdateRecorderResponse"/></returns>
+        public UpdateRecorderResponse UpdateRecorderSync(UpdateRecorderRequest req)
         {
-             JsonResponseModel<ListCosEnableRegionResponse> rsp = null;
+             JsonResponseModel<UpdateRecorderResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ListCosEnableRegion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCosEnableRegionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to search for operation logs to help query relevant operation information.
-        /// </summary>
-        /// <param name="req"><see cref="LookUpEventsRequest"/></param>
-        /// <returns><see cref="LookUpEventsResponse"/></returns>
-        public async Task<LookUpEventsResponse> LookUpEvents(LookUpEventsRequest req)
-        {
-             JsonResponseModel<LookUpEventsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "LookUpEvents");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LookUpEventsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to search for operation logs to help query relevant operation information.
-        /// </summary>
-        /// <param name="req"><see cref="LookUpEventsRequest"/></param>
-        /// <returns><see cref="LookUpEventsResponse"/></returns>
-        public LookUpEventsResponse LookUpEventsSync(LookUpEventsRequest req)
-        {
-             JsonResponseModel<LookUpEventsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "LookUpEvents");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LookUpEventsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to enable a tracking set.
-        /// </summary>
-        /// <param name="req"><see cref="StartLoggingRequest"/></param>
-        /// <returns><see cref="StartLoggingResponse"/></returns>
-        public async Task<StartLoggingResponse> StartLogging(StartLoggingRequest req)
-        {
-             JsonResponseModel<StartLoggingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartLogging");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartLoggingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to enable a tracking set.
-        /// </summary>
-        /// <param name="req"><see cref="StartLoggingRequest"/></param>
-        /// <returns><see cref="StartLoggingResponse"/></returns>
-        public StartLoggingResponse StartLoggingSync(StartLoggingRequest req)
-        {
-             JsonResponseModel<StartLoggingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartLogging");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartLoggingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to disable a tracking set.
-        /// </summary>
-        /// <param name="req"><see cref="StopLoggingRequest"/></param>
-        /// <returns><see cref="StopLoggingResponse"/></returns>
-        public async Task<StopLoggingResponse> StopLogging(StopLoggingRequest req)
-        {
-             JsonResponseModel<StopLoggingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StopLogging");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLoggingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to disable a tracking set.
-        /// </summary>
-        /// <param name="req"><see cref="StopLoggingRequest"/></param>
-        /// <returns><see cref="StopLoggingResponse"/></returns>
-        public StopLoggingResponse StopLoggingSync(StopLoggingRequest req)
-        {
-             JsonResponseModel<StopLoggingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StopLogging");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLoggingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// Parameter requirements:
-        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
-        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
-        /// </summary>
-        /// <param name="req"><see cref="UpdateAuditRequest"/></param>
-        /// <returns><see cref="UpdateAuditResponse"/></returns>
-        public async Task<UpdateAuditResponse> UpdateAudit(UpdateAuditRequest req)
-        {
-             JsonResponseModel<UpdateAuditResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateAudit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAuditResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// Parameter requirements:
-        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
-        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
-        /// </summary>
-        /// <param name="req"><see cref="UpdateAuditRequest"/></param>
-        /// <returns><see cref="UpdateAuditResponse"/></returns>
-        public UpdateAuditResponse UpdateAuditSync(UpdateAuditRequest req)
-        {
-             JsonResponseModel<UpdateAuditResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateAudit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAuditResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "UpdateRecorder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRecorderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

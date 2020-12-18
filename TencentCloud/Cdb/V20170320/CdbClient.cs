@@ -3247,6 +3247,86 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to modify the replication delay of a delayed RO replica.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoReplicationDelayRequest"/></param>
+        /// <returns><see cref="ModifyRoReplicationDelayResponse"/></returns>
+        public async Task<ModifyRoReplicationDelayResponse> ModifyRoReplicationDelay(ModifyRoReplicationDelayRequest req)
+        {
+             JsonResponseModel<ModifyRoReplicationDelayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoReplicationDelay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoReplicationDelayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the replication delay of a delayed RO replica.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoReplicationDelayRequest"/></param>
+        /// <returns><see cref="ModifyRoReplicationDelayResponse"/></returns>
+        public ModifyRoReplicationDelayResponse ModifyRoReplicationDelaySync(ModifyRoReplicationDelayRequest req)
+        {
+             JsonResponseModel<ModifyRoReplicationDelayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoReplicationDelay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoReplicationDelayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to change a general RO replica to delayed RO replica.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoTypeRequest"/></param>
+        /// <returns><see cref="ModifyRoTypeResponse"/></returns>
+        public async Task<ModifyRoTypeResponse> ModifyRoType(ModifyRoTypeRequest req)
+        {
+             JsonResponseModel<ModifyRoTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to change a general RO replica to delayed RO replica.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoTypeRequest"/></param>
+        /// <returns><see cref="ModifyRoTypeResponse"/></returns>
+        public ModifyRoTypeResponse ModifyRoTypeSync(ModifyRoTypeRequest req)
+        {
+             JsonResponseModel<ModifyRoTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyTimeWindow) is used to update the maintenance time window of a TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyTimeWindowRequest"/></param>
@@ -3547,6 +3627,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to start delayed replication on a delayed RO replica.
+        /// </summary>
+        /// <param name="req"><see cref="StartDelayReplicationRequest"/></param>
+        /// <returns><see cref="StartDelayReplicationResponse"/></returns>
+        public async Task<StartDelayReplicationResponse> StartDelayReplication(StartDelayReplicationRequest req)
+        {
+             JsonResponseModel<StartDelayReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartDelayReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDelayReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start delayed replication on a delayed RO replica.
+        /// </summary>
+        /// <param name="req"><see cref="StartDelayReplicationRequest"/></param>
+        /// <returns><see cref="StartDelayReplicationResponse"/></returns>
+        public StartDelayReplicationResponse StartDelayReplicationSync(StartDelayReplicationRequest req)
+        {
+             JsonResponseModel<StartDelayReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartDelayReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDelayReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (StopDBImportJob) is used to stop a data import task.
         /// </summary>
         /// <param name="req"><see cref="StopDBImportJobRequest"/></param>
@@ -3578,6 +3698,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "StopDBImportJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDBImportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop delayed replication on a delayed RO replica.
+        /// </summary>
+        /// <param name="req"><see cref="StopDelayReplicationRequest"/></param>
+        /// <returns><see cref="StopDelayReplicationResponse"/></returns>
+        public async Task<StopDelayReplicationResponse> StopDelayReplication(StopDelayReplicationRequest req)
+        {
+             JsonResponseModel<StopDelayReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopDelayReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDelayReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop delayed replication on a delayed RO replica.
+        /// </summary>
+        /// <param name="req"><see cref="StopDelayReplicationRequest"/></param>
+        /// <returns><see cref="StopDelayReplicationResponse"/></returns>
+        public StopDelayReplicationResponse StopDelayReplicationSync(StopDelayReplicationRequest req)
+        {
+             JsonResponseModel<StopDelayReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopDelayReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDelayReplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

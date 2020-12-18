@@ -1728,5 +1728,45 @@ namespace TencentCloud.Cdn.V20180606
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to modify security configurations of SCDN acceleration domain names.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateScdnDomainRequest"/></param>
+        /// <returns><see cref="UpdateScdnDomainResponse"/></returns>
+        public async Task<UpdateScdnDomainResponse> UpdateScdnDomain(UpdateScdnDomainRequest req)
+        {
+             JsonResponseModel<UpdateScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify security configurations of SCDN acceleration domain names.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateScdnDomainRequest"/></param>
+        /// <returns><see cref="UpdateScdnDomainResponse"/></returns>
+        public UpdateScdnDomainResponse UpdateScdnDomainSync(UpdateScdnDomainRequest req)
+        {
+             JsonResponseModel<UpdateScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

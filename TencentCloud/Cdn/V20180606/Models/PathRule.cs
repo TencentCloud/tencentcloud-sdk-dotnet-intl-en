@@ -25,14 +25,16 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether regex match is used.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Whether to enable wildcard match (`*`).
+        /// false: disable
+        /// true: enable
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Regex")]
         public bool? Regex{ get; set; }
 
         /// <summary>
-        /// Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+        /// Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Path")]
@@ -53,14 +55,17 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string ServerName{ get; set; }
 
         /// <summary>
-        /// Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+        /// Origin server region. Valid values: `CN` and `OV`.
+        /// CN: the Chinese mainland
+        /// OV: outside the Chinese mainland
+        /// Default value: `CN`.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginArea")]
         public string OriginArea{ get; set; }
 
         /// <summary>
-        /// Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+        /// Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ForwardUri")]
