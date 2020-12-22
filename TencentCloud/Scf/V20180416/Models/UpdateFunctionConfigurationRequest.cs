@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+        /// Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+        /// It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
         /// </summary>
         [JsonProperty("Publish")]
         public string Publish{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public PublicNetConfigIn PublicNetConfig{ get; set; }
 
         /// <summary>
-        /// File system configuration input parameter, which is used for the function to bind the file system
+        /// File system configuration input parameter, which is used for the function to bind the CFS file system
         /// </summary>
         [JsonProperty("CfsConfig")]
         public CfsConfig CfsConfig{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
+        /// On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
         /// </summary>
         [JsonProperty("Template")]
         public ulong? Template{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MixVideoUids")]
         public string[] MixVideoUids{ get; set; }
 
+        /// <summary>
+        /// Valid in custom template, used to specify the video image position of a user in mixed streams.
+        /// </summary>
+        [JsonProperty("PresetLayoutConfig")]
+        public PresetLayoutConfig[] PresetLayoutConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
             this.SetParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
             this.SetParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
+            this.SetParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
         }
     }
 }

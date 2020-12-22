@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class DescribeIpGeolocationInfosRequest : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("AddressIps")]
+        public string[] AddressIps{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
-
-        /// <summary>
-        /// ID of the master or replica node, which is not required when creating an instance
-        /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("Fields")]
+        public IpField Fields{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamArraySimple(map, prefix + "AddressIps.", this.AddressIps);
+            this.SetParamObj(map, prefix + "Fields.", this.Fields);
         }
     }
 }

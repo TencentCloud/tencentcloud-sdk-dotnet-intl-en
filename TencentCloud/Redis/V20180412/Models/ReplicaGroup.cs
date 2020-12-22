@@ -21,26 +21,38 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class ReplicaGroup : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// Node group ID
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Node group name
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
+        /// Node availability zone ID, such as ap-guangzhou-1
         /// </summary>
         [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node, which is not required when creating an instance
+        /// Node group type. Valid values: `master` (master node group), `replica` (replica node group)
         /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
+        /// The list of nodes in a node group
+        /// </summary>
+        [JsonProperty("RedisNodes")]
+        public RedisNode[] RedisNodes{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamArrayObj(map, prefix + "RedisNodes.", this.RedisNodes);
         }
     }
 }

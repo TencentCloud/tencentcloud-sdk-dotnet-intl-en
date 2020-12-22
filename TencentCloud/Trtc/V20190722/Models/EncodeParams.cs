@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
+        /// Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
         /// </summary>
         [JsonProperty("AudioSampleRate")]
         public ulong? AudioSampleRate{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// Number of output stream audio sound channels for On-Cloud MixTranscoding. Value range: [1, 2].
+        /// Number of sound channels of output stream for On-Cloud MixTranscoding. Valid values: 1, 2. 1 represents mono-channel, and 2 represents dual-channel.
         /// </summary>
         [JsonProperty("AudioChannels")]
         public ulong? AudioChannels{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// Output stream frame rate for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [6, 12, 15, 24, 30, 48, 60]. If the frame rate lies outside the valid value range, it will be automatically modified to a value within the range.
+        /// Output stream frame rate for On-Cloud MixTranscoding in FPS. This parameter is required for audio/video outputs. Value range: [1, 60].
         /// </summary>
         [JsonProperty("VideoFramerate")]
         public ulong? VideoFramerate{ get; set; }

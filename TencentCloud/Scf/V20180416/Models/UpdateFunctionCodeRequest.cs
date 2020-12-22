@@ -85,7 +85,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public Code Code{ get; set; }
 
         /// <summary>
-        /// Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+        /// Code source. Valid values: ZipFile, Cos, Inline
         /// </summary>
         [JsonProperty("CodeSource")]
         public string CodeSource{ get; set; }

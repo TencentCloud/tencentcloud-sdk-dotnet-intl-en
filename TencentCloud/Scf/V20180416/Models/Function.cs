@@ -61,7 +61,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Function status
+        /// Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -90,6 +90,26 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// Cause of function failure
+        /// </summary>
+        [JsonProperty("StatusReasons")]
+        public StatusReason[] StatusReasons{ get; set; }
+
+        /// <summary>
+        /// Sum of provisioned concurrence memory for all function versions
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TotalProvisionedConcurrencyMem")]
+        public ulong? TotalProvisionedConcurrencyMem{ get; set; }
+
+        /// <summary>
+        /// Reserved memory for function concurrence
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReservedConcurrencyMem")]
+        public ulong? ReservedConcurrencyMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +127,9 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
+            this.SetParamSimple(map, prefix + "TotalProvisionedConcurrencyMem", this.TotalProvisionedConcurrencyMem);
+            this.SetParamSimple(map, prefix + "ReservedConcurrencyMem", this.ReservedConcurrencyMem);
         }
     }
 }

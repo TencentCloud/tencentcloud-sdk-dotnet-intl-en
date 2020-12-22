@@ -264,6 +264,8 @@
     <Compile Include="V20170312\Models\DescribeHaVipsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeIpGeolocationDatabaseUrlRequest.cs" />
     <Compile Include="V20170312\Models\DescribeIpGeolocationDatabaseUrlResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeIpGeolocationInfosRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeIpGeolocationInfosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaysRequest.cs" />
@@ -355,6 +357,8 @@
     <Compile Include="V20170312\Models\HaVipDisassociateAddressIpResponse.cs" />
     <Compile Include="V20170312\Models\IKEOptionsSpecification.cs" />
     <Compile Include="V20170312\Models\IPSECOptionsSpecification.cs" />
+    <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayRequest.cs" />
+    <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateVpnGatewayRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewVpnGatewayRequest.cs" />
@@ -363,6 +367,8 @@
     <Compile Include="V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse.cs" />
     <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20170312\Models\InstanceStatistic.cs" />
+    <Compile Include="V20170312\Models\IpField.cs" />
+    <Compile Include="V20170312\Models\IpGeolocationInfo.cs" />
     <Compile Include="V20170312\Models\Ipv6Address.cs" />
     <Compile Include="V20170312\Models\Ipv6SubnetCidrBlock.cs" />
     <Compile Include="V20170312\Models\ItemPrice.cs" />

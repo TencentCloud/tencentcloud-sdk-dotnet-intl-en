@@ -1133,6 +1133,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query Redis node information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
+        public async Task<DescribeInstanceZoneInfoResponse> DescribeInstanceZoneInfo(DescribeInstanceZoneInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceZoneInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceZoneInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceZoneInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query Redis node information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
+        public DescribeInstanceZoneInfoResponse DescribeInstanceZoneInfoSync(DescribeInstanceZoneInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceZoneInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceZoneInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceZoneInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of Redis instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>

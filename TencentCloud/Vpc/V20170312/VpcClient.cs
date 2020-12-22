@@ -4177,6 +4177,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the IP addresses, including their geographical locations and networks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpGeolocationInfosRequest"/></param>
+        /// <returns><see cref="DescribeIpGeolocationInfosResponse"/></returns>
+        public async Task<DescribeIpGeolocationInfosResponse> DescribeIpGeolocationInfos(DescribeIpGeolocationInfosRequest req)
+        {
+             JsonResponseModel<DescribeIpGeolocationInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpGeolocationInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpGeolocationInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the IP addresses, including their geographical locations and networks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpGeolocationInfosRequest"/></param>
+        /// <returns><see cref="DescribeIpGeolocationInfosResponse"/></returns>
+        public DescribeIpGeolocationInfosResponse DescribeIpGeolocationInfosSync(DescribeIpGeolocationInfosRequest req)
+        {
+             JsonResponseModel<DescribeIpGeolocationInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpGeolocationInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpGeolocationInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest"/></param>
@@ -5788,6 +5828,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "HaVipDisassociateAddressIp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<HaVipDisassociateAddressIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of creating a direct connect gateway.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDirectConnectGatewayRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDirectConnectGatewayResponse"/></returns>
+        public async Task<InquirePriceCreateDirectConnectGatewayResponse> InquirePriceCreateDirectConnectGateway(InquirePriceCreateDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreateDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of creating a direct connect gateway.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDirectConnectGatewayRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDirectConnectGatewayResponse"/></returns>
+        public InquirePriceCreateDirectConnectGatewayResponse InquirePriceCreateDirectConnectGatewaySync(InquirePriceCreateDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreateDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

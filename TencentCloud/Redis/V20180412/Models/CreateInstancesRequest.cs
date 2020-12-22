@@ -135,10 +135,16 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// 
+        /// Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
+
+        /// <summary>
+        /// The tag bound with the instance to be purchased
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
 
 
         /// <summary>
@@ -165,6 +171,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
             this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

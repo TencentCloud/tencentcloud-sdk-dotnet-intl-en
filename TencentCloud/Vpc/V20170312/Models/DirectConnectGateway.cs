@@ -112,6 +112,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
+        /// <summary>
+        /// Whether the direct connect gateway supports the VXLAN architecture.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VXLANSupport")]
+        public bool?[] VXLANSupport{ get; set; }
+
+        /// <summary>
+        /// CCN route publishing mode. Valid values: `standard` and `exquisite`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ModeType")]
+        public string ModeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +145,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
             this.SetParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
             this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+            this.SetParamArraySimple(map, prefix + "VXLANSupport.", this.VXLANSupport);
+            this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
         }
     }
 }

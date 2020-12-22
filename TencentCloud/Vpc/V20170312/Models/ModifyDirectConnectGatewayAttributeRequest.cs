@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CcnRouteType")]
         public string CcnRouteType{ get; set; }
 
+        /// <summary>
+        /// CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+        /// </summary>
+        [JsonProperty("ModeType")]
+        public string ModeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
             this.SetParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
             this.SetParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
+            this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
         }
     }
 }

@@ -72,6 +72,24 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("AvailableStatus")]
         public string AvailableStatus{ get; set; }
 
+        /// <summary>
+        /// Minimum resource ID of trigger
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// Trigger-Function binding status
+        /// </summary>
+        [JsonProperty("BindStatus")]
+        public string BindStatus{ get; set; }
+
+        /// <summary>
+        /// Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+        /// </summary>
+        [JsonProperty("TriggerAttribute")]
+        public string TriggerAttribute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
             this.SetParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
+            this.SetParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
         }
     }
 }

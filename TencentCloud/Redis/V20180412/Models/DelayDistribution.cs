@@ -25,13 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Distribution ladder
+        /// Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+        /// [0ms,1ms]: 1;
+        /// [1ms,5ms]: 5;
+        /// [5ms,10ms]: 10;
+        /// [10ms,50ms]: 50;
+        /// [50ms,200ms]: 200;
+        /// [200ms,∞]: -1.
         /// </summary>
         [JsonProperty("Ladder")]
         public long? Ladder{ get; set; }
 
         /// <summary>
-        /// Size
+        /// The number of commands whose delay falls within the current delay range
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

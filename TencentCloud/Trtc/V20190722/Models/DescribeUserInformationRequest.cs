@@ -21,14 +21,14 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRoomInformationRequest : AbstractModel
+    public class DescribeUserInformationRequest : AbstractModel
     {
         
         /// <summary>
-        /// User `sdkappid`
+        /// Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        [JsonProperty("CommId")]
+        public string CommId{ get; set; }
 
         /// <summary>
         /// Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
@@ -37,25 +37,31 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time in the format of local UNIX timestamp, such as 1588031999s.
+        /// Query end time in the format of UNIX timestamp (e.g. 1588031999s).
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// Room ID of uint type
+        /// User `SDKAppID` (e.g. 1400188366).
         /// </summary>
-        [JsonProperty("RoomId")]
-        public string RoomId{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
+        /// The array of user IDs for query. You can enter up to 6 user IDs. If it is left empty, data of 6 users will be returned.
+        /// </summary>
+        [JsonProperty("UserIds")]
+        public string[] UserIds{ get; set; }
+
+        /// <summary>
+        /// Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned.
         /// </summary>
         [JsonProperty("PageNumber")]
         public string PageNumber{ get; set; }
 
         /// <summary>
-        /// Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
+        /// Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned. `PageSize` is up to 100.
         /// </summary>
         [JsonProperty("PageSize")]
         public string PageSize{ get; set; }
@@ -66,10 +72,11 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "CommId", this.CommId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }

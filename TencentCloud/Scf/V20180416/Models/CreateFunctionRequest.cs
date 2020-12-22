@@ -31,13 +31,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
+        /// Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
         /// </summary>
         [JsonProperty("Code")]
         public Code Code{ get; set; }
 
         /// <summary>
-        /// Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+        /// Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
         /// </summary>
         [JsonProperty("Handler")]
         public string Handler{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public Environment Environment{ get; set; }
 
         /// <summary>
-        /// Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+        /// Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+        /// Code source. Valid values: ZipFile, Cos, Demo
         /// </summary>
         [JsonProperty("CodeSource")]
         public string CodeSource{ get; set; }

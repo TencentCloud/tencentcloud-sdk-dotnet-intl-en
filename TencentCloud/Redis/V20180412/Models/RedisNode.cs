@@ -21,26 +21,32 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class RedisNode : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// The number of keys on a node
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("Keys")]
+        public long? Keys{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Distribution of node slots
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
+        [JsonProperty("Slot")]
+        public string Slot{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node, which is not required when creating an instance
+        /// Node ID
         /// </summary>
         [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        public string NodeId{ get; set; }
+
+        /// <summary>
+        /// Node status
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Keys", this.Keys);
+            this.SetParamSimple(map, prefix + "Slot", this.Slot);
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }
