@@ -121,6 +121,8 @@
     <Compile Include="V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeLoadBalancerTrafficRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeLoadBalancerTrafficResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersDetailRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersDetailResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersRequest.cs" />
@@ -155,6 +157,7 @@
     <Compile Include="V20180317\Models\LoadBalancer.cs" />
     <Compile Include="V20180317\Models\LoadBalancerDetail.cs" />
     <Compile Include="V20180317\Models\LoadBalancerHealth.cs" />
+    <Compile Include="V20180317\Models\LoadBalancerTraffic.cs" />
     <Compile Include="V20180317\Models\ManualRewriteRequest.cs" />
     <Compile Include="V20180317\Models\ManualRewriteResponse.cs" />
     <Compile Include="V20180317\Models\ModifyBlockIPListRequest.cs" />

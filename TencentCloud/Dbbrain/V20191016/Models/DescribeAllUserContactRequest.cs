@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class DescribeAllUserContactRequest : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// An array of contact name. Fuzzy search is supported.
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
-
-        /// <summary>
-        /// ID of the master or replica node, which is not required upon creation of the instance
-        /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
         }
     }
 }

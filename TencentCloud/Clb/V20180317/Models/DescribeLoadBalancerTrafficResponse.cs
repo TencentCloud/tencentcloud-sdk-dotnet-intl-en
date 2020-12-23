@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class DescribeLoadBalancerTrafficResponse : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// Information of CLB instances descendingly sorted by outbound bandwidth
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("LoadBalancerTraffic")]
+        public LoadBalancerTraffic[] LoadBalancerTraffic{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
-
-        /// <summary>
-        /// ID of the master or replica node, which is not required upon creation of the instance
-        /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamArrayObj(map, prefix + "LoadBalancerTraffic.", this.LoadBalancerTraffic);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

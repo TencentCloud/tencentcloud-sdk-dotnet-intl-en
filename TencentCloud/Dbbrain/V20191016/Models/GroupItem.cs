@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class GroupItem : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// Group ID.
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Group name.
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node, which is not required upon creation of the instance
+        /// Number of group members.
         /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("MemberCount")]
+        public long? MemberCount{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "MemberCount", this.MemberCount);
         }
     }
 }

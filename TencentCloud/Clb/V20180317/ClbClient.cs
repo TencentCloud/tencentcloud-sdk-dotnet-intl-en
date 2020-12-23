@@ -1319,6 +1319,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to query CLB instances with high traffic and return the top 10 results. For queries using a sub-account, only the result CLB instances authorized to the sub-account will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerTrafficRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerTrafficResponse"/></returns>
+        public async Task<DescribeLoadBalancerTrafficResponse> DescribeLoadBalancerTraffic(DescribeLoadBalancerTrafficRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancerTrafficResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancerTraffic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerTrafficResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query CLB instances with high traffic and return the top 10 results. For queries using a sub-account, only the result CLB instances authorized to the sub-account will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerTrafficRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerTrafficResponse"/></returns>
+        public DescribeLoadBalancerTrafficResponse DescribeLoadBalancerTrafficSync(DescribeLoadBalancerTrafficRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancerTrafficResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancerTraffic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerTrafficResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of CLB instances in a region.
         /// </summary>
         /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>

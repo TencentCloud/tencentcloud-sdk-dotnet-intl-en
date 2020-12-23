@@ -21,35 +21,38 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RuleHealth : AbstractModel
+    public class LoadBalancerTraffic : AbstractModel
     {
         
         /// <summary>
-        /// Forwarding rule ID
+        /// CLB instance ID
         /// </summary>
-        [JsonProperty("LocationId")]
-        public string LocationId{ get; set; }
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Domain name of the forwarding rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CLB instance name
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("LoadBalancerName")]
+        public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// Forwarding rule Url
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CLB instance region
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// Health status of the real server bound to this rule
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// CLB instance VIP
         /// </summary>
-        [JsonProperty("Targets")]
-        public TargetHealth[] Targets{ get; set; }
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
+        /// <summary>
+        /// Maximum outbound bandwidth in Mbps
+        /// </summary>
+        [JsonProperty("OutBandwidth")]
+        public float? OutBandwidth{ get; set; }
 
 
         /// <summary>
@@ -57,10 +60,11 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "OutBandwidth", this.OutBandwidth);
         }
     }
 }

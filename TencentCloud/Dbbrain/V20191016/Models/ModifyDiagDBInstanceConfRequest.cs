@@ -15,41 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RuleHealth : AbstractModel
+    public class ModifyDiagDBInstanceConfRequest : AbstractModel
     {
         
         /// <summary>
-        /// Forwarding rule ID
+        /// Inspection switch.
         /// </summary>
-        [JsonProperty("LocationId")]
-        public string LocationId{ get; set; }
+        [JsonProperty("InstanceConfs")]
+        public InstanceConfs InstanceConfs{ get; set; }
 
         /// <summary>
-        /// Domain name of the forwarding rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The effective instance region. If the value is "All", it means it is effective for the whole region.
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("Regions")]
+        public string Regions{ get; set; }
 
         /// <summary>
-        /// Forwarding rule Url
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
         /// <summary>
-        /// Health status of the real server bound to this rule
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specify the instance ID that needs to modify the inspection status.
         /// </summary>
-        [JsonProperty("Targets")]
-        public TargetHealth[] Targets{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -57,10 +54,10 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamObj(map, prefix + "InstanceConfs.", this.InstanceConfs);
+            this.SetParamSimple(map, prefix + "Regions", this.Regions);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

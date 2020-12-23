@@ -38,8 +38,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Forward{ get; set; }
 
         /// <summary>
-        /// CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-        /// Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+        /// CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+        /// Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
@@ -112,7 +112,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 
+        /// Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
