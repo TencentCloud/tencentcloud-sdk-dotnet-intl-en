@@ -83,12 +83,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. The following fill types are supported:
-        /// <li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-        /// <li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-        /// <li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-        /// <li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
-        /// Default value: black.
+        /// Fill type, the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+        /// <li>stretch: stretches the video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+        /// <li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+        /// <li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+        /// <li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+        /// Default value: black
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
@@ -96,10 +96,16 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Video Constant Rate Factor (CRF). Value range: 1-51.
         /// If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-        /// We don’t recommend specifying this parameter if you have no special requirements.
+        /// We don’t recommend specifying this parameter unless you have special requirements.
         /// </summary>
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Gop")]
+        public ulong? Gop{ get; set; }
 
 
         /// <summary>
@@ -115,6 +121,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
+            this.SetParamSimple(map, prefix + "Gop", this.Gop);
         }
     }
 }

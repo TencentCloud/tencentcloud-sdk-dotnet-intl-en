@@ -31,11 +31,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Subapplication status. Valid strings include:
-        /// <li>On: to enable the subapplication.</li>
-        /// <li>Off: to disable the subapplication.</li>
-        /// <li>Destroyed: to terminate the subapplication. </li>
-        /// You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
+        /// Subapplication status. Valid values:
+        /// <li>On: enabled</li>
+        /// <li>Off: disabled</li>
+        /// <li>Destroyed: terminated</li>
+        /// You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

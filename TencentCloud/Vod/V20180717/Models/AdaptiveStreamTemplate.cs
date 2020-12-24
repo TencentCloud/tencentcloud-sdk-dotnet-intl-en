@@ -46,8 +46,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Whether to remove a video stream. Valid values:
-        /// <li>0: no,</li>
-        /// <li>1: yes.</li>
+        /// <li>0: no</li>
+        /// <li>1: yes</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }

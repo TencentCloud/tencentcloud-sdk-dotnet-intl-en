@@ -38,8 +38,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Forward{ get; set; }
 
         /// <summary>
-        /// CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-        /// Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+        /// CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+        /// Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }

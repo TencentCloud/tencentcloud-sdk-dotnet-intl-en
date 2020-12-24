@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// This API is used to query video processing task types. The following types are supported now:
-        /// <li> Transcoding: Basic transcoding</li>
-        /// <li> Transcoding-TESHD: TESHD transcoding</li>
-        /// <li> Editing: Video editing</li>
-        /// <li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-        /// <li> ContentAudit: content audit</li>
-        /// <li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+        /// This API is used to query video processing task types. Valid values:
+        /// <li>Transcoding: basic transcoding</li>
+        /// <li>Transcoding-TESHD: TESHD transcoding</li>
+        /// <li>Editing: video editing</li>
+        /// <li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+        /// <li>ContentAudit: content moderation</li>
+        /// <li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

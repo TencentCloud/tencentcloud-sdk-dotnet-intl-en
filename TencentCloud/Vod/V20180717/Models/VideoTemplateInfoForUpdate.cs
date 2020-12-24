@@ -73,21 +73,27 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-        /// <li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-        /// <li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-        /// <li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-        /// <li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
+        /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+        /// <li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+        /// <li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+        /// <li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+        /// <li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
         /// <summary>
         /// Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-        /// We don’t recommend specifying this parameter if you have no special requirements.
+        /// We don’t recommend specifying this parameter unless you have special requirements.
         /// </summary>
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Gop")]
+        public ulong? Gop{ get; set; }
 
 
         /// <summary>
@@ -103,6 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
+            this.SetParamSimple(map, prefix + "Gop", this.Gop);
         }
     }
 }

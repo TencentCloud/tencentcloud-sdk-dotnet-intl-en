@@ -25,6 +25,18 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
         /// Tag information. You can query the list of subapplications with specified tags.
         /// </summary>
         [JsonProperty("Tags")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

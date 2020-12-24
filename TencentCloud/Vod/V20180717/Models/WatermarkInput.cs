@@ -31,14 +31,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+        /// Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
         /// VOD does not support adding text watermarks on screenshots.
         /// </summary>
         [JsonProperty("TextContent")]
         public string TextContent{ get; set; }
 
         /// <summary>
-        /// SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+        /// SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
         /// VOD does not support adding SVG watermarks on screenshots.
         /// </summary>
         [JsonProperty("SvgContent")]

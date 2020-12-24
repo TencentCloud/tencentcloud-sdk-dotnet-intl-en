@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+        /// This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
