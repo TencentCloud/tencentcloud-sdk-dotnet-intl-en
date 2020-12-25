@@ -85,7 +85,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public GameProperty[] GameProperties{ get; set; }
 
         /// <summary>
-        /// Maximum number of players
+        /// The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
         /// </summary>
         [JsonProperty("MaximumPlayerSessionCount")]
         public ulong? MaximumPlayerSessionCount{ get; set; }

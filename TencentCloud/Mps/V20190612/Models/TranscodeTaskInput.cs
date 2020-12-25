@@ -38,6 +38,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public RawTranscodeParameter RawParameter{ get; set; }
 
         /// <summary>
+        /// Video transcoding custom parameter, which is valid when `Definition` is not 0.
+        /// When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+        /// This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("OverrideParameter")]
+        public OverrideTranscodeParameter OverrideParameter{ get; set; }
+
+        /// <summary>
         /// List of up to 10 image or text watermarks.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -84,6 +93,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
+            this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

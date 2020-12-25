@@ -373,6 +373,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// This API is used to join game server sessions in batch.
+        /// </summary>
+        /// <param name="req"><see cref="JoinGameServerSessionBatchRequest"/></param>
+        /// <returns><see cref="JoinGameServerSessionBatchResponse"/></returns>
+        public async Task<JoinGameServerSessionBatchResponse> JoinGameServerSessionBatch(JoinGameServerSessionBatchRequest req)
+        {
+             JsonResponseModel<JoinGameServerSessionBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "JoinGameServerSessionBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<JoinGameServerSessionBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to join game server sessions in batch.
+        /// </summary>
+        /// <param name="req"><see cref="JoinGameServerSessionBatchRequest"/></param>
+        /// <returns><see cref="JoinGameServerSessionBatchResponse"/></returns>
+        public JoinGameServerSessionBatchResponse JoinGameServerSessionBatchSync(JoinGameServerSessionBatchRequest req)
+        {
+             JsonResponseModel<JoinGameServerSessionBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "JoinGameServerSessionBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<JoinGameServerSessionBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to search in the list of game server sessions.
         /// </summary>
         /// <param name="req"><see cref="SearchGameServerSessionsRequest"/></param>

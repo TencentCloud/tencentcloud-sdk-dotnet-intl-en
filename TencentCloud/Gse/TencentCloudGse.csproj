@@ -66,9 +66,12 @@
     <Compile Include="V20191112\Models\GetInstanceAccessRequest.cs" />
     <Compile Include="V20191112\Models\GetInstanceAccessResponse.cs" />
     <Compile Include="V20191112\Models\InstanceAccess.cs" />
+    <Compile Include="V20191112\Models\JoinGameServerSessionBatchRequest.cs" />
+    <Compile Include="V20191112\Models\JoinGameServerSessionBatchResponse.cs" />
     <Compile Include="V20191112\Models\JoinGameServerSessionRequest.cs" />
     <Compile Include="V20191112\Models\JoinGameServerSessionResponse.cs" />
     <Compile Include="V20191112\Models\PlacedPlayerSession.cs" />
+    <Compile Include="V20191112\Models\PlayerDataMap.cs" />
     <Compile Include="V20191112\Models\PlayerLatency.cs" />
     <Compile Include="V20191112\Models\PlayerSession.cs" />
     <Compile Include="V20191112\Models\SearchGameServerSessionsRequest.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// Game server session ID
+        /// Game server session ID. It should contain 1 to 48 ASCII characters.
         /// </summary>
         [JsonProperty("GameServerSessionId")]
         public string GameServerSessionId{ get; set; }

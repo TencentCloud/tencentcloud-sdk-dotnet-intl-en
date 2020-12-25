@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// Unique ID of starting game server session placement
+        /// The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
         /// </summary>
         [JsonProperty("PlacementId")]
         public string PlacementId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string GameServerSessionQueueName{ get; set; }
 
         /// <summary>
-        /// Maximum number of concurrent players allowed by the game server to connect to the game session
+        /// The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
         /// </summary>
         [JsonProperty("MaximumPlayerSessionCount")]
         public ulong? MaximumPlayerSessionCount{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Gse.V20191112.Models
         public GameProperty[] GameProperties{ get; set; }
 
         /// <summary>
-        /// Game server session data
+        /// Data of game server sessions. Up to 4096 ASCII characters are allowed.
         /// </summary>
         [JsonProperty("GameServerSessionData")]
         public string GameServerSessionData{ get; set; }
 
         /// <summary>
-        /// Game server session name
+        /// Name of game server sessions. Up to 4096 ASCII characters are allowed.
         /// </summary>
         [JsonProperty("GameServerSessionName")]
         public string GameServerSessionName{ get; set; }

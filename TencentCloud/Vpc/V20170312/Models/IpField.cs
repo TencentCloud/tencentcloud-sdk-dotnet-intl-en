@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Country/region field
+        /// Country/region of the IP
         /// </summary>
         [JsonProperty("Country")]
         public bool? Country{ get; set; }
 
         /// <summary>
-        /// Province/municipality field
+        /// Province/municipality/state of the IP
         /// </summary>
         [JsonProperty("Province")]
         public bool? Province{ get; set; }
 
         /// <summary>
-        /// City field
+        /// City of the IP
         /// </summary>
         [JsonProperty("City")]
         public bool? City{ get; set; }
 
         /// <summary>
-        /// Urban area field
+        /// City district of the IP
         /// </summary>
         [JsonProperty("Region")]
         public bool? Region{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? AsName{ get; set; }
 
         /// <summary>
-        /// AS ID
+        /// Backbone AS ID
         /// </summary>
         [JsonProperty("AsId")]
         public bool? AsId{ get; set; }

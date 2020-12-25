@@ -21,22 +21,15 @@ namespace TencentCloud.Gse.V20191112.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGameServerSessionsResponse : AbstractModel
+    public class JoinGameServerSessionBatchResponse : AbstractModel
     {
         
         /// <summary>
-        /// Game server session list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("GameServerSessions")]
-        public GameServerSession[] GameServerSessions{ get; set; }
-
-        /// <summary>
-        /// Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+        /// Player session list. Up to 25 sessions.
         /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
+        [JsonProperty("PlayerSessions")]
+        public PlayerSession[] PlayerSessions{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -50,8 +43,7 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GameServerSessions.", this.GameServerSessions);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
+            this.SetParamArrayObj(map, prefix + "PlayerSessions.", this.PlayerSessions);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

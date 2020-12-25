@@ -44,7 +44,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// Game server session ID
+        /// Game server session ID. It should contain 1 to 256 ASCII characters.
         /// </summary>
         [JsonProperty("GameServerSessionId")]
         public string GameServerSessionId{ get; set; }
@@ -56,15 +56,15 @@ namespace TencentCloud.Gse.V20191112.Models
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// Player information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Player custom data. Up to 2048 ASCII characters are allowed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("PlayerData")]
         public string PlayerData{ get; set; }
 
         /// <summary>
-        /// Player ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Player ID. Up to 1024 ASCII characters are allowed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("PlayerId")]
         public string PlayerId{ get; set; }
@@ -76,13 +76,13 @@ namespace TencentCloud.Gse.V20191112.Models
         public string PlayerSessionId{ get; set; }
 
         /// <summary>
-        /// Port number
+        /// Port number. It should be a value between 1 to 60000.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Player session status
+        /// Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

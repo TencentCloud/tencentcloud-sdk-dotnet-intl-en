@@ -31,14 +31,14 @@ namespace TencentCloud.Gse.V20191112.Models
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// Creator ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Creator ID. Up to 1024 ASCII characters are allowed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("CreatorId")]
         public string CreatorId{ get; set; }
 
         /// <summary>
-        /// Current number of players
+        /// The current number of players, which cannot be less than 0.
         /// </summary>
         [JsonProperty("CurrentPlayerSessionCount")]
         public ulong? CurrentPlayerSessionCount{ get; set; }
@@ -57,21 +57,21 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// Game attributes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Game attributes. Up to 16 groups of attributes are allowed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("GameProperties")]
         public GameProperty[] GameProperties{ get; set; }
 
         /// <summary>
-        /// Game server session attribute details
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("GameServerSessionData")]
         public string GameServerSessionData{ get; set; }
 
         /// <summary>
-        /// Game server session ID
+        /// Game server session ID. It should contain 1 to 48 ASCII characters.
         /// </summary>
         [JsonProperty("GameServerSessionId")]
         public string GameServerSessionId{ get; set; }
@@ -83,40 +83,40 @@ namespace TencentCloud.Gse.V20191112.Models
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// Battle progress details
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Battle progress details. Up to 400,000 ASCII characters are allowed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("MatchmakerData")]
         public string MatchmakerData{ get; set; }
 
         /// <summary>
-        /// Maximum number of players
+        /// The maximum number of players, which cannot be less than 0.
         /// </summary>
         [JsonProperty("MaximumPlayerSessionCount")]
         public ulong? MaximumPlayerSessionCount{ get; set; }
 
         /// <summary>
-        /// Game server session name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The name of game server session. Up to 1024 ASCII characters are allowed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Player session creation policy
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("PlayerSessionCreationPolicy")]
         public string PlayerSessionCreationPolicy{ get; set; }
 
         /// <summary>
-        /// Port number
+        /// Port number. It should be a value between 1 to 60000.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Game server session status
+        /// Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -136,8 +136,8 @@ namespace TencentCloud.Gse.V20191112.Models
         public string TerminationTime{ get; set; }
 
         /// <summary>
-        /// Instance type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Instance type. Up to 128 ASCII characters are allowed.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -164,8 +164,8 @@ namespace TencentCloud.Gse.V20191112.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// Session availability status, i.e., whether it is blocked
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("AvailabilityStatus")]
         public string AvailabilityStatus{ get; set; }

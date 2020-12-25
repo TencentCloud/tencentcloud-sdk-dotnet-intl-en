@@ -87,12 +87,22 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-        /// <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-        /// <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+        /// <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+        /// <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+        /// <li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
+        /// <li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
         /// Default value: black.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
+
+        /// <summary>
+        /// The control factor of video constant bitrate. Value range: [1, 51]
+        /// If this parameter is specified, CRF (a bitrate control method) will be used for transcoding. (Video bitrate will no longer take effect.)
+        /// It is not recommended to specify this parameter if there are no special requirements.
+        /// </summary>
+        [JsonProperty("Vcrf")]
+        public ulong? Vcrf{ get; set; }
 
 
         /// <summary>
@@ -108,6 +118,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
         }
     }
 }

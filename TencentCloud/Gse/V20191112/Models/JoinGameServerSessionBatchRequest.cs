@@ -21,28 +21,26 @@ namespace TencentCloud.Gse.V20191112.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGameServerSessionsResponse : AbstractModel
+    public class JoinGameServerSessionBatchRequest : AbstractModel
     {
         
         /// <summary>
-        /// Game server session list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Game server session ID. It should contain 1 to 256 ASCII characters.
         /// </summary>
-        [JsonProperty("GameServerSessions")]
-        public GameServerSession[] GameServerSessions{ get; set; }
+        [JsonProperty("GameServerSessionId")]
+        public string GameServerSessionId{ get; set; }
 
         /// <summary>
-        /// Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Player ID list. At least 1 ID and up to 25 IDs.
         /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
+        [JsonProperty("PlayerIds")]
+        public string[] PlayerIds{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Player custom data
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("PlayerDataMap")]
+        public PlayerDataMap PlayerDataMap{ get; set; }
 
 
         /// <summary>
@@ -50,9 +48,9 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GameServerSessions.", this.GameServerSessions);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "GameServerSessionId", this.GameServerSessionId);
+            this.SetParamArraySimple(map, prefix + "PlayerIds.", this.PlayerIds);
+            this.SetParamObj(map, prefix + "PlayerDataMap.", this.PlayerDataMap);
         }
     }
 }

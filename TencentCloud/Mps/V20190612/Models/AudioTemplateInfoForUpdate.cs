@@ -66,6 +66,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>1: Mono</li>
         /// <li>2: Dual</li>
         /// <li>6: Stereo</li>
+        /// When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }

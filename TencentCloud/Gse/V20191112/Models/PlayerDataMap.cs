@@ -21,28 +21,20 @@ namespace TencentCloud.Gse.V20191112.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGameServerSessionsResponse : AbstractModel
+    public class PlayerDataMap : AbstractModel
     {
         
         /// <summary>
-        /// Game server session list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The key of player custom data. It should contain 1 to 1024 ASCII characters.
         /// </summary>
-        [JsonProperty("GameServerSessions")]
-        public GameServerSession[] GameServerSessions{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// The value of player custom data. It should contain 1 to 2048 ASCII characters.
         /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GameServerSessions.", this.GameServerSessions);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

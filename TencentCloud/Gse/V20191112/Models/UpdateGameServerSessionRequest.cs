@@ -25,31 +25,31 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// Game server session ID
+        /// Game server session ID. It should contain 1 to 256 ASCII characters.
         /// </summary>
         [JsonProperty("GameServerSessionId")]
         public string GameServerSessionId{ get; set; }
 
         /// <summary>
-        /// Maximum number of players
+        /// The maximum number of players, which cannot be less than 0.
         /// </summary>
         [JsonProperty("MaximumPlayerSessionCount")]
         public ulong? MaximumPlayerSessionCount{ get; set; }
 
         /// <summary>
-        /// Game server session name
+        /// Name of the game server session. It should contain 1 to 1024 ASCII characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+        /// Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
         /// </summary>
         [JsonProperty("PlayerSessionCreationPolicy")]
         public string PlayerSessionCreationPolicy{ get; set; }
 
         /// <summary>
-        /// Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+        /// Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
         /// </summary>
         [JsonProperty("ProtectionPolicy")]
         public string ProtectionPolicy{ get; set; }

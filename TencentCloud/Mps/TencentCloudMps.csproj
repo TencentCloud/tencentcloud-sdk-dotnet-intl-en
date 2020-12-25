@@ -326,6 +326,7 @@
     <Compile Include="V20190612\Models\OcrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\OcrWordsConfigureInfo.cs" />
     <Compile Include="V20190612\Models\OcrWordsConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\OverrideTranscodeParameter.cs" />
     <Compile Include="V20190612\Models\ParseLiveStreamProcessNotificationRequest.cs" />
     <Compile Include="V20190612\Models\ParseLiveStreamProcessNotificationResponse.cs" />
     <Compile Include="V20190612\Models\ParseNotificationRequest.cs" />
@@ -384,6 +385,7 @@
     <Compile Include="V20190612\Models\TextWatermarkTemplateInputForUpdate.cs" />
     <Compile Include="V20190612\Models\TranscodeTaskInput.cs" />
     <Compile Include="V20190612\Models\TranscodeTemplate.cs" />
+    <Compile Include="V20190612\Models\UrlInputInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\UserDefineConfigureInfo.cs" />

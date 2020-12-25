@@ -25,55 +25,55 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// Maximum number of players
+        /// The maximum number of players, which cannot be less than 0.
         /// </summary>
         [JsonProperty("MaximumPlayerSessionCount")]
         public ulong? MaximumPlayerSessionCount{ get; set; }
 
         /// <summary>
-        /// Alias ID
+        /// Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
         /// </summary>
         [JsonProperty("AliasId")]
         public string AliasId{ get; set; }
 
         /// <summary>
-        /// Creator ID
+        /// Creator ID. Up to 1024 ASCII characters are allowed.
         /// </summary>
         [JsonProperty("CreatorId")]
         public string CreatorId{ get; set; }
 
         /// <summary>
-        /// Fleet ID
+        /// Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// Game attributes
+        /// Game attributes. Up to 16 groups of attributes are allowed.
         /// </summary>
         [JsonProperty("GameProperties")]
         public GameProperty[] GameProperties{ get; set; }
 
         /// <summary>
-        /// Game server session attribute details
+        /// The attribute details of game server session. Up to 4096 ASCII characters are allowed.
         /// </summary>
         [JsonProperty("GameServerSessionData")]
         public string GameServerSessionData{ get; set; }
 
         /// <summary>
-        /// Custom ID of game server session
+        /// The custom ID of game server session. Up to 4096 ASCII characters are allowed.
         /// </summary>
         [JsonProperty("GameServerSessionId")]
         public string GameServerSessionId{ get; set; }
 
         /// <summary>
-        /// Idempotency token
+        /// Idempotency token. Up to 48 ASCII characters are allowed.
         /// </summary>
         [JsonProperty("IdempotencyToken")]
         public string IdempotencyToken{ get; set; }
 
         /// <summary>
-        /// Game server session name
+        /// The name of game server session. Up to 1024 ASCII characters are allowed.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

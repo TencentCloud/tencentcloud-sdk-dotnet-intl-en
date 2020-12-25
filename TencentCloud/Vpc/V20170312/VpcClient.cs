@@ -4177,7 +4177,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the IP addresses, including their geographical locations and networks.
+        /// This API is used to query the information of IP addresses, including their geographical locations and networks.
         /// </summary>
         /// <param name="req"><see cref="DescribeIpGeolocationInfosRequest"/></param>
         /// <returns><see cref="DescribeIpGeolocationInfosResponse"/></returns>
@@ -4197,7 +4197,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the IP addresses, including their geographical locations and networks.
+        /// This API is used to query the information of IP addresses, including their geographical locations and networks.
         /// </summary>
         /// <param name="req"><see cref="DescribeIpGeolocationInfosRequest"/></param>
         /// <returns><see cref="DescribeIpGeolocationInfosResponse"/></returns>

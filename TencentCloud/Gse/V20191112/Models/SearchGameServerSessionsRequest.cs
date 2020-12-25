@@ -43,7 +43,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset, which is used for querying the next page
+        /// Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
@@ -60,6 +60,32 @@ namespace TencentCloud.Gse.V20191112.Models
         /// 
         /// Expressions in `String` type support = and <> for judgment
         /// Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+        /// 
+        /// Example:
+        /// If FilterExpression takes the value:
+        /// playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+        /// It means searching for game sessions that have at least two players and have player sessions available.
+        /// If FilterExpression takes the value:
+        /// gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+        /// 
+        /// it means
+        /// searching for game sessions that meets the following game server session attributes
+        /// {
+        ///     "GameProperties":[
+        ///         {
+        ///             "Key":"K1",
+        ///             "Value":"V1"
+        ///         },
+        ///         {
+        ///             "Key":"K2",
+        ///             "Value":"V2"
+        ///         },
+        ///         {
+        ///             "Key":"K3",
+        ///             "Value":"V3"
+        ///         }
+        ///     ]
+        /// }
         /// </summary>
         [JsonProperty("FilterExpression")]
         public string FilterExpression{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.110</VersionPrefix>
+    <VersionPrefix>3.0.111</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2585,9 +2585,12 @@
     <Compile Include="Gse\V20191112\Models\GetInstanceAccessRequest.cs" />
     <Compile Include="Gse\V20191112\Models\GetInstanceAccessResponse.cs" />
     <Compile Include="Gse\V20191112\Models\InstanceAccess.cs" />
+    <Compile Include="Gse\V20191112\Models\JoinGameServerSessionBatchRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\JoinGameServerSessionBatchResponse.cs" />
     <Compile Include="Gse\V20191112\Models\JoinGameServerSessionRequest.cs" />
     <Compile Include="Gse\V20191112\Models\JoinGameServerSessionResponse.cs" />
     <Compile Include="Gse\V20191112\Models\PlacedPlayerSession.cs" />
+    <Compile Include="Gse\V20191112\Models\PlayerDataMap.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerLatency.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerSession.cs" />
     <Compile Include="Gse\V20191112\Models\SearchGameServerSessionsRequest.cs" />
@@ -3682,6 +3685,7 @@
     <Compile Include="Mps\V20190612\Models\OcrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\OcrWordsConfigureInfo.cs" />
     <Compile Include="Mps\V20190612\Models\OcrWordsConfigureInfoForUpdate.cs" />
+    <Compile Include="Mps\V20190612\Models\OverrideTranscodeParameter.cs" />
     <Compile Include="Mps\V20190612\Models\ParseLiveStreamProcessNotificationRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ParseLiveStreamProcessNotificationResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ParseNotificationRequest.cs" />
@@ -3740,6 +3744,7 @@
     <Compile Include="Mps\V20190612\Models\TextWatermarkTemplateInputForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\TranscodeTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\TranscodeTemplate.cs" />
+    <Compile Include="Mps\V20190612\Models\UrlInputInfo.cs" />
     <Compile Include="Mps\V20190612\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="Mps\V20190612\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\UserDefineConfigureInfo.cs" />

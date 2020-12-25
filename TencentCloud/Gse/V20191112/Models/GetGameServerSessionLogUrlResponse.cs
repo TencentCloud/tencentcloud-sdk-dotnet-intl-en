@@ -25,8 +25,8 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// Log download URL
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Log download URL. It should contain 1 to 1024 ASCII characters.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("PreSignedUrl")]
         public string PreSignedUrl{ get; set; }

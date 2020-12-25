@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video processing object type. Only COS is supported currently.
+        /// The type of video processing input object. COS and URL objects are supported.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -36,6 +36,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("CosInputInfo")]
         public CosInputInfo CosInputInfo{ get; set; }
 
+        /// <summary>
+        /// This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("UrlInputInfo")]
+        public UrlInputInfo UrlInputInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
+            this.SetParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
         }
     }
 }

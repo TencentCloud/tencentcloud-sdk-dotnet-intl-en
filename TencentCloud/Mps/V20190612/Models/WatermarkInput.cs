@@ -33,18 +33,21 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Custom watermark parameter, which is valid if `Definition` is 0.
         /// This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+        /// Custom watermark parameter is not available for screenshot.
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawWatermarkParameter RawParameter{ get; set; }
 
         /// <summary>
         /// Text content of up to 100 characters. This field is required only when the watermark type is text.
+        /// Text watermark is not available for screenshot.
         /// </summary>
         [JsonProperty("TextContent")]
         public string TextContent{ get; set; }
 
         /// <summary>
         /// SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+        /// SVG watermark is not available for screenshot.
         /// </summary>
         [JsonProperty("SvgContent")]
         public string SvgContent{ get; set; }
