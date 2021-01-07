@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.116</VersionPrefix>
+    <VersionPrefix>3.0.117</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4109,6 +4109,10 @@
     <Compile Include="Scf\V20180416\Models\DeleteLayerVersionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteNamespaceRequest.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteNamespaceResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\DeleteProvisionedConcurrencyConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\DeleteProvisionedConcurrencyConfigResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\DeleteReservedConcurrencyConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\DeleteReservedConcurrencyConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteTriggerRequest.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteTriggerResponse.cs" />
     <Compile Include="Scf\V20180416\Models\EipConfigIn.cs" />
@@ -4129,6 +4133,10 @@
     <Compile Include="Scf\V20180416\Models\GetFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetLayerVersionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetLayerVersionResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\GetProvisionedConcurrencyConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\GetProvisionedConcurrencyConfigResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\GetReservedConcurrencyConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\GetReservedConcurrencyConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\InvokeRequest.cs" />
     <Compile Include="Scf\V20180416\Models\InvokeResponse.cs" />
     <Compile Include="Scf\V20180416\Models\LayerVersionInfo.cs" />
@@ -4156,6 +4164,12 @@
     <Compile Include="Scf\V20180416\Models\PublishLayerVersionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\PublishVersionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\PublishVersionResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\PutProvisionedConcurrencyConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\PutProvisionedConcurrencyConfigResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\PutReservedConcurrencyConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\PutReservedConcurrencyConfigResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\PutTotalConcurrencyConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\PutTotalConcurrencyConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\Result.cs" />
     <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
     <Compile Include="Scf\V20180416\Models\StatusReason.cs" />
@@ -4172,6 +4186,7 @@
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceResponse.cs" />
     <Compile Include="Scf\V20180416\Models\Variable.cs" />
     <Compile Include="Scf\V20180416\Models\VersionMatch.cs" />
+    <Compile Include="Scf\V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
     <Compile Include="Scf\V20180416\Models\VersionWeight.cs" />
     <Compile Include="Scf\V20180416\Models\VpcConfig.cs" />
     <Compile Include="Sms\V20190711\SmsClient.cs" />
@@ -4676,6 +4691,8 @@
     <Compile Include="Tke\V20180525\Models\ManuallyAdded.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupAttributeResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupOptionAttributeRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupOptionAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
@@ -4684,6 +4701,7 @@
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="Tke\V20180525\Models\NodePool.cs" />
+    <Compile Include="Tke\V20180525\Models\NodePoolOption.cs" />
     <Compile Include="Tke\V20180525\Models\RegionInstance.cs" />
     <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />

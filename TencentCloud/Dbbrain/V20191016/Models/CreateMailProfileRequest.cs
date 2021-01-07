@@ -25,19 +25,19 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
-        /// The content of email configuration.
+        /// Email configurations
         /// </summary>
         [JsonProperty("ProfileInfo")]
         public ProfileInfo ProfileInfo{ get; set; }
 
         /// <summary>
-        /// Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
+        /// Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
         /// </summary>
         [JsonProperty("ProfileLevel")]
         public string ProfileLevel{ get; set; }
 
         /// <summary>
-        /// Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+        /// Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
         /// </summary>
         [JsonProperty("ProfileName")]
         public string ProfileName{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// Instance ID bound to the configuration, which is set when the configuration level is "Instance".
+        /// Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
         /// </summary>
         [JsonProperty("BindInstanceIds")]
         public string[] BindInstanceIds{ get; set; }

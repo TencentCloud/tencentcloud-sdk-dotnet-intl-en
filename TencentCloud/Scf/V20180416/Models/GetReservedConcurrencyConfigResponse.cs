@@ -15,20 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20191016.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class GetReservedConcurrencyConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Reserved concurrency memory of function.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("ReservedMem")]
+        public ulong? ReservedMem{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+            this.SetParamSimple(map, prefix + "ReservedMem", this.ReservedMem);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

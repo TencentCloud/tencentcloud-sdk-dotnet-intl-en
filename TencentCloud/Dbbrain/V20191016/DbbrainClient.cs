@@ -53,7 +53,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// This API is used to create a health report and select whether to send an email.
+        /// This API is used to create a health report and send it via email as configured.
         /// </summary>
         /// <param name="req"><see cref="CreateDBDiagReportTaskRequest"/></param>
         /// <returns><see cref="CreateDBDiagReportTaskResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// This API is used to create a health report and select whether to send an email.
+        /// This API is used to create a health report and send it via email as configured.
         /// </summary>
         /// <param name="req"><see cref="CreateDBDiagReportTaskRequest"/></param>
         /// <returns><see cref="CreateDBDiagReportTaskResponse"/></returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// This API is used to create the email configuration. The input parameter “ProfileType” represents the type of the email configuration. Valid values: “dbScan_mail_configuration” (email configuration of database inspection report) and “scheduler_mail_configuration” (email configuration of scheduled task report).
+        /// This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email configuration of scheduled task report).
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
         /// <returns><see cref="CreateMailProfileResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// This API is used to create the email configuration. The input parameter “ProfileType” represents the type of the email configuration. Valid values: “dbScan_mail_configuration” (email configuration of database inspection report) and “scheduler_mail_configuration” (email configuration of scheduled task report).
+        /// This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email configuration of scheduled task report).
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
         /// <returns><see cref="CreateMailProfileResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// This API is used to modify instance inspection switch.
+        /// This API is used to enable/disable instance inspection.
         /// </summary>
         /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>
         /// <returns><see cref="ModifyDiagDBInstanceConfResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// This API is used to modify instance inspection switch.
+        /// This API is used to enable/disable instance inspection.
         /// </summary>
         /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>
         /// <returns><see cref="ModifyDiagDBInstanceConfResponse"/></returns>

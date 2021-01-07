@@ -43,13 +43,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string[] HealthStatus{ get; set; }
 
         /// <summary>
-        /// Contact ID. The contact/contact group cannot be empty.
+        /// Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
         /// </summary>
         [JsonProperty("ContactPerson")]
         public long?[] ContactPerson{ get; set; }
 
         /// <summary>
-        /// Contact group ID. The contact/contact group cannot be empty.
+        /// Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
         /// </summary>
         [JsonProperty("ContactGroup")]
         public long?[] ContactGroup{ get; set; }

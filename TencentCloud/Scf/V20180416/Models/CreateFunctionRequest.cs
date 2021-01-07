@@ -67,7 +67,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public Environment Environment{ get; set; }
 
         /// <summary>
-        /// Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
+        /// Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, Php5, Php7, Go1, Java8, CustomRuntime. Default value: Python2.7
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }

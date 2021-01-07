@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
-        /// Inspection switch.
+        /// Whether to enable inspection
         /// </summary>
         [JsonProperty("InstanceConfs")]
         public InstanceConfs InstanceConfs{ get; set; }
 
         /// <summary>
-        /// The effective instance region. If the value is "All", it means it is effective for the whole region.
+        /// Target regions of the request. If the value is `All`, it is applied to all regions.
         /// </summary>
         [JsonProperty("Regions")]
         public string Regions{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// Specify the instance ID that needs to modify the inspection status.
+        /// ID of the instance to modify.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

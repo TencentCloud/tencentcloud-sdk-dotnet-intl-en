@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20191016.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ContactItem : AbstractModel
+    public class GetProvisionedConcurrencyConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// Contact ID.
+        /// Unallocated provisioned concurrency amount of function.
         /// </summary>
-        [JsonProperty("Id")]
-        public long? Id{ get; set; }
+        [JsonProperty("UnallocatedConcurrencyNum")]
+        public ulong? UnallocatedConcurrencyNum{ get; set; }
 
         /// <summary>
-        /// Contact name.
+        /// Allocated provisioned concurrency amount of function.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Allocated")]
+        public VersionProvisionedConcurrencyInfo[] Allocated{ get; set; }
 
         /// <summary>
-        /// The email address of the contact.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Mail")]
-        public string Mail{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Mail", this.Mail);
+            this.SetParamSimple(map, prefix + "UnallocatedConcurrencyNum", this.UnallocatedConcurrencyNum);
+            this.SetParamArrayObj(map, prefix + "Allocated.", this.Allocated);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

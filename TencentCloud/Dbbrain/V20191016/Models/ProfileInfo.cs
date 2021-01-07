@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
-        /// Language, such as “zh”.
+        /// Language of the email, such as `en`.
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }

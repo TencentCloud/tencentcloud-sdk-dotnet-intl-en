@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20191016.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class DeleteProvisionedConcurrencyConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Name of the function for which to delete the provisioned concurrency
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("FunctionName")]
+        public string FunctionName{ get; set; }
+
+        /// <summary>
+        /// Function version number
+        /// </summary>
+        [JsonProperty("Qualifier")]
+        public string Qualifier{ get; set; }
+
+        /// <summary>
+        /// Function namespace. Default value: default
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
         }
     }
 }

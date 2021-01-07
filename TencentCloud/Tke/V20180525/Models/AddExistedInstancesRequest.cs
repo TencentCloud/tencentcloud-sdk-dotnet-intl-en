@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Instance list
+        /// Instance list. Spot instance is not supported.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
+        /// <summary>
+        /// Node pool options
+        /// </summary>
+        [JsonProperty("NodePool")]
+        public NodePoolOption NodePool{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamObj(map, prefix + "NodePool.", this.NodePool);
         }
     }
 }

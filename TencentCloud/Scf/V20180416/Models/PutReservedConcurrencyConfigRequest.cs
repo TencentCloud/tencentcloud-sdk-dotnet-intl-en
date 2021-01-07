@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20191016.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ContactItem : AbstractModel
+    public class PutReservedConcurrencyConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Contact ID.
+        /// Name of the function for which to set the provisioned concurrency
         /// </summary>
-        [JsonProperty("Id")]
-        public long? Id{ get; set; }
+        [JsonProperty("FunctionName")]
+        public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Contact name.
+        /// Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ReservedConcurrencyMem")]
+        public ulong? ReservedConcurrencyMem{ get; set; }
 
         /// <summary>
-        /// The email address of the contact.
+        /// Function namespace. Default value: default
         /// </summary>
-        [JsonProperty("Mail")]
-        public string Mail{ get; set; }
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Mail", this.Mail);
+            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "ReservedConcurrencyMem", this.ReservedConcurrencyMem);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
         }
     }
 }

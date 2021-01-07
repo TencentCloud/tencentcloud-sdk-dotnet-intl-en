@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20191016.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class ModifyClusterAsGroupOptionAttributeRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Cluster auto scaling attributes
+        /// </summary>
+        [JsonProperty("ClusterAsGroupOption")]
+        public ClusterAsGroupOption ClusterAsGroupOption{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamObj(map, prefix + "ClusterAsGroupOption.", this.ClusterAsGroupOption);
         }
     }
 }

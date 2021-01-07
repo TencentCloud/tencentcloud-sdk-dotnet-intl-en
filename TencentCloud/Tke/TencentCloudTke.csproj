@@ -145,6 +145,8 @@
     <Compile Include="V20180525\Models\ManuallyAdded.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterAsGroupOptionAttributeRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterAsGroupOptionAttributeResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAttributeRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAttributeResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
@@ -153,6 +155,7 @@
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="V20180525\Models\NodePool.cs" />
+    <Compile Include="V20180525\Models\NodePoolOption.cs" />
     <Compile Include="V20180525\Models\RegionInstance.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />

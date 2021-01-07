@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20191016.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class PutTotalConcurrencyConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("TotalConcurrencyMem")]
+        public ulong? TotalConcurrencyMem{ get; set; }
+
+        /// <summary>
+        /// Namespace. Default value: default
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+            this.SetParamSimple(map, prefix + "TotalConcurrencyMem", this.TotalConcurrencyMem);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
         }
     }
 }

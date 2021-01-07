@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20191016.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class NodePoolOption : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Whether to add to the node pool.
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("AddToNodePool")]
+        public bool? AddToNodePool{ get; set; }
+
+        /// <summary>
+        /// Node pool ID
+        /// </summary>
+        [JsonProperty("NodePoolId")]
+        public string NodePoolId{ get; set; }
+
+        /// <summary>
+        /// Whether to inherit the node pool configuration.
+        /// </summary>
+        [JsonProperty("InheritConfigurationFromNodePool")]
+        public bool? InheritConfigurationFromNodePool{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+            this.SetParamSimple(map, prefix + "AddToNodePool", this.AddToNodePool);
+            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+            this.SetParamSimple(map, prefix + "InheritConfigurationFromNodePool", this.InheritConfigurationFromNodePool);
         }
     }
 }
