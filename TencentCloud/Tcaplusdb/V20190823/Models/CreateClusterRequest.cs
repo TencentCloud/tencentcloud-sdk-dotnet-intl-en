@@ -66,6 +66,24 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("Ipv6Enable")]
         public long? Ipv6Enable{ get; set; }
 
+        /// <summary>
+        /// Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+        /// </summary>
+        [JsonProperty("ServerList")]
+        public MachineInfo[] ServerList{ get; set; }
+
+        /// <summary>
+        /// Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+        /// </summary>
+        [JsonProperty("ProxyList")]
+        public MachineInfo[] ProxyList{ get; set; }
+
+        /// <summary>
+        /// Cluster type. Valid values: `1` (standard), `2` (dedicated)
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public long? ClusterType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+            this.SetParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+            this.SetParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

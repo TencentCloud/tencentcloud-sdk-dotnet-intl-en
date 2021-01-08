@@ -105,6 +105,27 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DesiredNodesNum")]
         public long? DesiredNodesNum{ get; set; }
 
+        /// <summary>
+        /// The operating system of the node pool
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("NodePoolOs")]
+        public string NodePoolOs{ get; set; }
+
+        /// <summary>
+        /// Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("OsCustomizeType")]
+        public string OsCustomizeType{ get; set; }
+
+        /// <summary>
+        /// Image ID
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +145,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);
             this.SetParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
             this.SetParamSimple(map, prefix + "DesiredNodesNum", this.DesiredNodesNum);
+            this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
+            this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
         }
     }
 }

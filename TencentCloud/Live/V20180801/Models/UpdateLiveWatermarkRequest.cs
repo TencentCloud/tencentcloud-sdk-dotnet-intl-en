@@ -33,6 +33,8 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Watermark image URL.
+        /// Unallowed characters in the URL:
+        ///  ;(){}$>`#"\'|
         /// </summary>
         [JsonProperty("PictureUrl")]
         public string PictureUrl{ get; set; }

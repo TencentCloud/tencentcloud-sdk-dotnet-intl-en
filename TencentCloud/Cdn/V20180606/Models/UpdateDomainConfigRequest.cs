@@ -247,6 +247,24 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OriginAuthentication")]
         public OriginAuthentication OriginAuthentication{ get; set; }
 
+        /// <summary>
+        /// IPv6 access configuration
+        /// </summary>
+        [JsonProperty("Ipv6Access")]
+        public Ipv6Access Ipv6Access{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OfflineCache")]
+        public OfflineCache OfflineCache{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OriginCombine")]
+        public OriginCombine OriginCombine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -289,6 +307,9 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
             this.SetParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
             this.SetParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
+            this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+            this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+            this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
         }
     }
 }

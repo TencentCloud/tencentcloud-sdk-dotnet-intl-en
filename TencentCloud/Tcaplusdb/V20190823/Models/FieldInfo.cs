@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Tcaplusdb.V20190823.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateRecordTaskResponse : AbstractModel
+    public class FieldInfo : AbstractModel
     {
         
         /// <summary>
-        /// A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+        /// Table field name
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("FieldName")]
+        public string FieldName{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Whether it is a primary key field
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("IsPrimaryKey")]
+        public string IsPrimaryKey{ get; set; }
+
+        /// <summary>
+        /// Field type
+        /// </summary>
+        [JsonProperty("FieldType")]
+        public string FieldType{ get; set; }
+
+        /// <summary>
+        /// Field length
+        /// </summary>
+        [JsonProperty("FieldSize")]
+        public long? FieldSize{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
+            this.SetParamSimple(map, prefix + "IsPrimaryKey", this.IsPrimaryKey);
+            this.SetParamSimple(map, prefix + "FieldType", this.FieldType);
+            this.SetParamSimple(map, prefix + "FieldSize", this.FieldSize);
         }
     }
 }

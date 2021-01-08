@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.117</VersionPrefix>
+    <VersionPrefix>3.0.118</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -960,6 +960,7 @@
     <Compile Include="Cdn\V20180606\Models\AddCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\AddCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvanceCacheRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvanceConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthentication.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeA.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeB.cs" />
@@ -1071,6 +1072,7 @@
     <Compile Include="Cdn\V20180606\Models\IpFreqLimit.cs" />
     <Compile Include="Cdn\V20180606\Models\IpStatus.cs" />
     <Compile Include="Cdn\V20180606\Models\Ipv6.cs" />
+    <Compile Include="Cdn\V20180606\Models\Ipv6Access.cs" />
     <Compile Include="Cdn\V20180606\Models\KeyRule.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsLogTopicsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsLogTopicsResponse.cs" />
@@ -1085,13 +1087,16 @@
     <Compile Include="Cdn\V20180606\Models\MapInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAge.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAgeRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\OfflineCache.cs" />
     <Compile Include="Cdn\V20180606\Models\Origin.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginAuthentication.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginAuthenticationTypeA.cs" />
+    <Compile Include="Cdn\V20180606\Models\OriginCombine.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginIp.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullTimeout.cs" />
     <Compile Include="Cdn\V20180606\Models\OverseaConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\PathBasedOriginRule.cs" />
     <Compile Include="Cdn\V20180606\Models\PathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgePathCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgePathCacheResponse.cs" />
@@ -4488,6 +4493,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteIdlFilesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableIndexRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableIndexResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTablesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeClusterTagsRequest.cs" />
@@ -4496,6 +4503,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeClustersResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeIdlFileInfosRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeIdlFileInfosResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeMachineRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeMachineResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableGroupTagsRequest.cs" />
@@ -4513,9 +4522,13 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeUinInWhitelistRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeUinInWhitelistResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ErrorInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\FieldInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\Filter.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\IdlFileInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\IdlFileInfoWithoutContent.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\MachineInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterMachineRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterMachineResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterNameRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterNameResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterPasswordRequest.cs" />
@@ -4535,12 +4548,20 @@
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTablesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ParsedTableInfoNew.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\PoolInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ProxyDetailInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ProxyMachineInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\RecoverRecycleTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\RecoverRecycleTablesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\RegionInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\RollbackTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\RollbackTablesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\SelectedTableInfoNew.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SelectedTableWithField.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ServerDetailInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ServerMachineInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SetTableIndexRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SetTableIndexResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableGroupInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableInfoNew.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableResultNew.cs" />

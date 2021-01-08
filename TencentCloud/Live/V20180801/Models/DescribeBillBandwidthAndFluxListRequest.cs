@@ -63,7 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Granularity{ get; set; }
 
         /// <summary>
-        /// Service name. Valid values: LVB, LEB. Default value: LVB.
+        /// Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }

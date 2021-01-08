@@ -413,6 +413,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// This API is used to delete the global index from a table.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableIndexRequest"/></param>
+        /// <returns><see cref="DeleteTableIndexResponse"/></returns>
+        public async Task<DeleteTableIndexResponse> DeleteTableIndex(DeleteTableIndexRequest req)
+        {
+             JsonResponseModel<DeleteTableIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTableIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTableIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the global index from a table.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableIndexRequest"/></param>
+        /// <returns><see cref="DeleteTableIndexResponse"/></returns>
+        public DeleteTableIndexResponse DeleteTableIndexSync(DeleteTableIndexRequest req)
+        {
+             JsonResponseModel<DeleteTableIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTableIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTableIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to drop a specified table. Calling this API for the first time means to move the table to the recycle bin, while calling it again means to drop the table completely from the recycle bin.
         /// </summary>
         /// <param name="req"><see cref="DeleteTablesRequest"/></param>
@@ -564,6 +604,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIdlFileInfos");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdlFileInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the available machines in a dedicated cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineRequest"/></param>
+        /// <returns><see cref="DescribeMachineResponse"/></returns>
+        public async Task<DescribeMachineResponse> DescribeMachine(DescribeMachineRequest req)
+        {
+             JsonResponseModel<DescribeMachineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMachine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the available machines in a dedicated cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineRequest"/></param>
+        /// <returns><see cref="DescribeMachineResponse"/></returns>
+        public DescribeMachineResponse DescribeMachineSync(DescribeMachineRequest req)
+        {
+             JsonResponseModel<DescribeMachineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMachine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -884,6 +964,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUinInWhitelist");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUinInWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the machines of a dedicated cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
+        /// <returns><see cref="ModifyClusterMachineResponse"/></returns>
+        public async Task<ModifyClusterMachineResponse> ModifyClusterMachine(ModifyClusterMachineRequest req)
+        {
+             JsonResponseModel<ModifyClusterMachineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterMachine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterMachineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the machines of a dedicated cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
+        /// <returns><see cref="ModifyClusterMachineResponse"/></returns>
+        public ModifyClusterMachineResponse ModifyClusterMachineSync(ModifyClusterMachineRequest req)
+        {
+             JsonResponseModel<ModifyClusterMachineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterMachine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterMachineResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1324,6 +1444,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "RollbackTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a global index for a table.
+        /// </summary>
+        /// <param name="req"><see cref="SetTableIndexRequest"/></param>
+        /// <returns><see cref="SetTableIndexResponse"/></returns>
+        public async Task<SetTableIndexResponse> SetTableIndex(SetTableIndexRequest req)
+        {
+             JsonResponseModel<SetTableIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetTableIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTableIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a global index for a table.
+        /// </summary>
+        /// <param name="req"><see cref="SetTableIndexRequest"/></param>
+        /// <returns><see cref="SetTableIndexResponse"/></returns>
+        public SetTableIndexResponse SetTableIndexSync(SetTableIndexRequest req)
+        {
+             JsonResponseModel<SetTableIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetTableIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTableIndexResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

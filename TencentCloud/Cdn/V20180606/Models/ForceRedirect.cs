@@ -50,6 +50,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RedirectStatusCode")]
         public long? RedirectStatusCode{ get; set; }
 
+        /// <summary>
+        /// Whether to return the added header in forced redirection.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CarryHeaders")]
+        public string CarryHeaders{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +66,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "RedirectType", this.RedirectType);
             this.SetParamSimple(map, prefix + "RedirectStatusCode", this.RedirectStatusCode);
+            this.SetParamSimple(map, prefix + "CarryHeaders", this.CarryHeaders);
         }
     }
 }

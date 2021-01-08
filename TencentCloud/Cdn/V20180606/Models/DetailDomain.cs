@@ -385,6 +385,32 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OriginAuthentication")]
         public OriginAuthentication OriginAuthentication{ get; set; }
 
+        /// <summary>
+        /// IPv6 access configuration
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Ipv6Access")]
+        public Ipv6Access Ipv6Access{ get; set; }
+
+        /// <summary>
+        /// Advanced configuration set
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AdvanceSet")]
+        public AdvanceConfig[] AdvanceSet{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OfflineCache")]
+        public OfflineCache OfflineCache{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OriginCombine")]
+        public OriginCombine OriginCombine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -441,6 +467,10 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
             this.SetParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
+            this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+            this.SetParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
+            this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+            this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
         }
     }
 }

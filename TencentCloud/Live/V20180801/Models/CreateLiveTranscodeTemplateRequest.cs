@@ -34,15 +34,14 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Video bitrate. Value range: 0–8,000 Kbps.
-        /// If the value is 0, the original bitrate will be retained.
-        /// Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+        /// Video bitrate in Kbps. Value range: 100-8000.
+        /// Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// Audio codec: acc by default.
+        /// Audio codec. Default value: aac.
         /// Note: this parameter is unsupported now.
         /// </summary>
         [JsonProperty("Acodec")]
@@ -56,7 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// Video codec: `h264/h265/origin`. Default value: `h264`.
+        /// Video codec. Valid values: h264 (default), h265, origin
         /// 
         /// origin: original codec as the output codec
         /// </summary>
@@ -71,8 +70,8 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Width. Default value: 0.
-        /// Value range: 0-3,000
-        /// It must be a multiple of 2. The original width is 0
+        /// Value range: 0-3000
+        /// It must be a multiple of 2. The original width is 0.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -91,23 +90,22 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Height. Default value: 0.
-        /// Value range: 0-3,000
-        /// It must be a multiple of 2. The original height is 0
+        /// Value range: 0-3000
+        /// It must be a multiple of 2. The original height is 0.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
         /// Frame rate. Default value: 0.
-        /// Range: 0-60 Fps.
+        /// Value range: 0-60
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// Keyframe interval, unit: second.
-        /// Original interval by default
-        /// Range: 2-6
+        /// Keyframe interval in seconds. Default value: original interval
+        /// Value range: 2-6
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
@@ -166,7 +164,7 @@ namespace TencentCloud.Live.V20180801.Models
         public float? AdaptBitratePercent{ get; set; }
 
         /// <summary>
-        /// This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+        /// Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
         /// </summary>
         [JsonProperty("ShortEdgeAsHeight")]
         public long? ShortEdgeAsHeight{ get; set; }

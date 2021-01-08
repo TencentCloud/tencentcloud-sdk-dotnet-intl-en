@@ -26,6 +26,8 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// Watermark image URL.
+        /// Unallowed characters in the URL:
+        ///  ;(){}$>`#"\'|
         /// </summary>
         [JsonProperty("PictureUrl")]
         public string PictureUrl{ get; set; }
@@ -56,7 +58,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+        /// Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

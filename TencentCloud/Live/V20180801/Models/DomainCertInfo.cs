@@ -80,6 +80,21 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// List of domain names in the certificate.
+        /// ["*.x.com"] for example.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CertDomains")]
+        public string[] CertDomains{ get; set; }
+
+        /// <summary>
+        /// Tencent Cloud SSL certificate ID.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CloudCertId")]
+        public string CloudCertId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +110,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CertExpireTime", this.CertExpireTime);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "CertDomains.", this.CertDomains);
+            this.SetParamSimple(map, prefix + "CloudCertId", this.CloudCertId);
         }
     }
 }

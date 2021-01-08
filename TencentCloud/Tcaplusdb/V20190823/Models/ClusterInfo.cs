@@ -116,6 +116,55 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("ApiAccessIpv6")]
         public string ApiAccessIpv6{ get; set; }
 
+        /// <summary>
+        /// Cluster type
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public long? ClusterType{ get; set; }
+
+        /// <summary>
+        /// Cluster status
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterStatus")]
+        public long? ClusterStatus{ get; set; }
+
+        /// <summary>
+        /// Read CU
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReadCapacityUnit")]
+        public long? ReadCapacityUnit{ get; set; }
+
+        /// <summary>
+        /// Write CU
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WriteCapacityUnit")]
+        public long? WriteCapacityUnit{ get; set; }
+
+        /// <summary>
+        /// Disk capacity
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DiskVolume")]
+        public long? DiskVolume{ get; set; }
+
+        /// <summary>
+        /// Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ServerList")]
+        public ServerDetailInfo[] ServerList{ get; set; }
+
+        /// <summary>
+        /// Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProxyList")]
+        public ProxyDetailInfo[] ProxyList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +186,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "ApiAccessPort", this.ApiAccessPort);
             this.SetParamSimple(map, prefix + "OldPasswordExpireTime", this.OldPasswordExpireTime);
             this.SetParamSimple(map, prefix + "ApiAccessIpv6", this.ApiAccessIpv6);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "ReadCapacityUnit", this.ReadCapacityUnit);
+            this.SetParamSimple(map, prefix + "WriteCapacityUnit", this.WriteCapacityUnit);
+            this.SetParamSimple(map, prefix + "DiskVolume", this.DiskVolume);
+            this.SetParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+            this.SetParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
         }
     }
 }

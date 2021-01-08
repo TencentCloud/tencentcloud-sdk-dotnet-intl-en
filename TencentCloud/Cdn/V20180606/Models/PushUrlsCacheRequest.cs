@@ -53,6 +53,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Layer")]
         public string Layer{ get; set; }
 
+        /// <summary>
+        /// Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+        /// Notes:
+        /// 1. This feature requires that the M3U8 index file can be directly requested and obtained.
+        /// 2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+        /// 3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+        /// </summary>
+        [JsonProperty("ParseM3U8")]
+        public bool? ParseM3U8{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +73,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "UserAgent", this.UserAgent);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Layer", this.Layer);
+            this.SetParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
         }
     }
 }
