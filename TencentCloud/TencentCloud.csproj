@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.118</VersionPrefix>
+    <VersionPrefix>3.0.119</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2078,8 +2078,6 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabaseTableResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesResponse.cs" />
-    <Compile Include="Dcdb\V20180411\Models\DescribeProjectsRequest.cs" />
-    <Compile Include="Dcdb\V20180411\Models\DescribeProjectsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesRequest.cs" />
@@ -2098,7 +2096,6 @@
     <Compile Include="Dcdb\V20180411\Models\ParamConstraint.cs" />
     <Compile Include="Dcdb\V20180411\Models\ParamDesc.cs" />
     <Compile Include="Dcdb\V20180411\Models\ParamModifyResult.cs" />
-    <Compile Include="Dcdb\V20180411\Models\Project.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardInfo.cs" />
