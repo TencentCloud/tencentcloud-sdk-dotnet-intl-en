@@ -400,7 +400,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public AdvanceConfig[] AdvanceSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Offline cache
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OfflineCache")]
         public OfflineCache OfflineCache{ get; set; }

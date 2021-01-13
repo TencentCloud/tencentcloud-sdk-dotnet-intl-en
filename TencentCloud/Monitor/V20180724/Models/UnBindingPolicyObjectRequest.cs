@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// List of unique IDs of object instances to be deleted.
+        /// List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
         /// </summary>
         [JsonProperty("UniqueId")]
         public string[] UniqueId{ get; set; }

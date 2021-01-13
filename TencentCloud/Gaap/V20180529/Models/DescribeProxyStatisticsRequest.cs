@@ -43,7 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets); PacketLoss (packet loss rate); Latency (latency).
+        /// Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }

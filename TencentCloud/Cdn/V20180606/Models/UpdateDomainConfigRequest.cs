@@ -254,7 +254,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Ipv6Access Ipv6Access{ get; set; }
 
         /// <summary>
-        /// 
+        /// Offline cache
         /// </summary>
         [JsonProperty("OfflineCache")]
         public OfflineCache OfflineCache{ get; set; }

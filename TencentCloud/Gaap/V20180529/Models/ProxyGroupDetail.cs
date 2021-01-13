@@ -108,6 +108,27 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
 
+        /// <summary>
+        /// Security policy ID. This field exists if security policies are set.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
+
+        /// <summary>
+        /// Connection group version
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientIPMethod")]
+        public long?[] ClientIPMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +148,9 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "IsOldGroup", this.IsOldGroup);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         }
     }
 }

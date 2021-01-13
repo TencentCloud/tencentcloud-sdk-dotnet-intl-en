@@ -122,6 +122,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
+        /// <summary>
+        /// Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientIPMethod")]
+        public ulong? ClientIPMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
         }
     }
 }

@@ -115,7 +115,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public PathRule[] PathRules{ get; set; }
 
         /// <summary>
-        /// 
+        /// Path-based origin-pull configurations
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PathBasedOrigin")]
         public PathBasedOriginRule[] PathBasedOrigin{ get; set; }

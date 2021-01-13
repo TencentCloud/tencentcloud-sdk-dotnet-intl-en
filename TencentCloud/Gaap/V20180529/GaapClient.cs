@@ -2097,7 +2097,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (DescribeRealServers) is used to query origin server information. It can query all origin server information by project names, and supports fuzzy query by specified IPs or domain names.
+        /// This API is used to query origin server information. It can query all origin servers under the specified project name, and supports fuzzy query by specified IPs or domain names.
         /// </summary>
         /// <param name="req"><see cref="DescribeRealServersRequest"/></param>
         /// <returns><see cref="DescribeRealServersResponse"/></returns>
@@ -2117,7 +2117,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (DescribeRealServers) is used to query origin server information. It can query all origin server information by project names, and supports fuzzy query by specified IPs or domain names.
+        /// This API is used to query origin server information. It can query all origin servers under the specified project name, and supports fuzzy query by specified IPs or domain names.
         /// </summary>
         /// <param name="req"><see cref="DescribeRealServersRequest"/></param>
         /// <returns><see cref="DescribeRealServersResponse"/></returns>
@@ -2657,7 +2657,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (ModifyCertificateAttributes) is used to modify certificates, including identification name and certificate content.
+        /// This API is used to modify certificate name and content.
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateAttributesRequest"/></param>
         /// <returns><see cref="ModifyCertificateAttributesResponse"/></returns>
@@ -2677,7 +2677,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (ModifyCertificateAttributes) is used to modify certificates, including identification name and certificate content.
+        /// This API is used to modify certificate name and content.
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateAttributesRequest"/></param>
         /// <returns><see cref="ModifyCertificateAttributesResponse"/></returns>

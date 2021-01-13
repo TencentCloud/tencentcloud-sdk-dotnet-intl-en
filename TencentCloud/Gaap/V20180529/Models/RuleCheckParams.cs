@@ -61,6 +61,27 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// Origin server failure check frequency
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FailedCountInter")]
+        public ulong? FailedCountInter{ get; set; }
+
+        /// <summary>
+        /// Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FailedThreshold")]
+        public ulong? FailedThreshold{ get; set; }
+
+        /// <summary>
+        /// Time of a request is blocked after the origin server health check threshold is exceeded.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BlockInter")]
+        public ulong? BlockInter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +94,9 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamArraySimple(map, prefix + "StatusCode.", this.StatusCode);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
+            this.SetParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
+            this.SetParamSimple(map, prefix + "BlockInter", this.BlockInter);
         }
     }
 }

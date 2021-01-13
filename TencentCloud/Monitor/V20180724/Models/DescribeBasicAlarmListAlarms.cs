@@ -45,15 +45,15 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// Alarm status ID.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Alarm status.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AlarmStatus")]
         public string AlarmStatus{ get; set; }

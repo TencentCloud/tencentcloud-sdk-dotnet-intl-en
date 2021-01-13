@@ -154,6 +154,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolyRealServerCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyRealServerCertificateAliasInfo{ get; set; }
 
+        /// <summary>
+        /// Domain name status.
+        /// 0: running;
+        /// 1: changing;
+        /// 2: deleting.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DomainStatus")]
+        public ulong? DomainStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +188,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
             this.SetParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
             this.SetParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
+            this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
         }
     }
 }

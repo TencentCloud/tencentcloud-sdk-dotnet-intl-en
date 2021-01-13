@@ -93,6 +93,86 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to create a notification template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
+        /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
+        public async Task<CreateAlarmNoticeResponse> CreateAlarmNotice(CreateAlarmNoticeRequest req)
+        {
+             JsonResponseModel<CreateAlarmNoticeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAlarmNotice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlarmNoticeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a notification template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
+        /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
+        public CreateAlarmNoticeResponse CreateAlarmNoticeSync(CreateAlarmNoticeRequest req)
+        {
+             JsonResponseModel<CreateAlarmNoticeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAlarmNotice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlarmNoticeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmPolicyRequest"/></param>
+        /// <returns><see cref="CreateAlarmPolicyResponse"/></returns>
+        public async Task<CreateAlarmPolicyResponse> CreateAlarmPolicy(CreateAlarmPolicyRequest req)
+        {
+             JsonResponseModel<CreateAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlarmPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmPolicyRequest"/></param>
+        /// <returns><see cref="CreateAlarmPolicyResponse"/></returns>
+        public CreateAlarmPolicyResponse CreateAlarmPolicySync(CreateAlarmPolicyRequest req)
+        {
+             JsonResponseModel<CreateAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlarmPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add a policy group.
         /// </summary>
         /// <param name="req"><see cref="CreatePolicyGroupRequest"/></param>
@@ -124,6 +204,86 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "CreatePolicyGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePolicyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete alarm notification templates.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmNoticesRequest"/></param>
+        /// <returns><see cref="DeleteAlarmNoticesResponse"/></returns>
+        public async Task<DeleteAlarmNoticesResponse> DeleteAlarmNotices(DeleteAlarmNoticesRequest req)
+        {
+             JsonResponseModel<DeleteAlarmNoticesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAlarmNotices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAlarmNoticesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete alarm notification templates.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmNoticesRequest"/></param>
+        /// <returns><see cref="DeleteAlarmNoticesResponse"/></returns>
+        public DeleteAlarmNoticesResponse DeleteAlarmNoticesSync(DeleteAlarmNoticesRequest req)
+        {
+             JsonResponseModel<DeleteAlarmNoticesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAlarmNotices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAlarmNoticesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAlarmPolicyResponse"/></returns>
+        public async Task<DeleteAlarmPolicyResponse> DeleteAlarmPolicy(DeleteAlarmPolicyRequest req)
+        {
+             JsonResponseModel<DeleteAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAlarmPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAlarmPolicyResponse"/></returns>
+        public DeleteAlarmPolicyResponse DeleteAlarmPolicySync(DeleteAlarmPolicyRequest req)
+        {
+             JsonResponseModel<DeleteAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAlarmPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -204,6 +364,366 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAccidentEventList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccidentEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of alarm events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmEventsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmEventsResponse"/></returns>
+        public async Task<DescribeAlarmEventsResponse> DescribeAlarmEvents(DescribeAlarmEventsRequest req)
+        {
+             JsonResponseModel<DescribeAlarmEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of alarm events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmEventsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmEventsResponse"/></returns>
+        public DescribeAlarmEventsResponse DescribeAlarmEventsSync(DescribeAlarmEventsRequest req)
+        {
+             JsonResponseModel<DescribeAlarmEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the alarm records.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmHistoriesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmHistoriesResponse"/></returns>
+        public async Task<DescribeAlarmHistoriesResponse> DescribeAlarmHistories(DescribeAlarmHistoriesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmHistoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmHistories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmHistoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the alarm records.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmHistoriesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmHistoriesResponse"/></returns>
+        public DescribeAlarmHistoriesResponse DescribeAlarmHistoriesSync(DescribeAlarmHistoriesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmHistoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmHistories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmHistoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of alarm metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmMetricsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmMetricsResponse"/></returns>
+        public async Task<DescribeAlarmMetricsResponse> DescribeAlarmMetrics(DescribeAlarmMetricsRequest req)
+        {
+             JsonResponseModel<DescribeAlarmMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of alarm metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmMetricsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmMetricsResponse"/></returns>
+        public DescribeAlarmMetricsResponse DescribeAlarmMetricsSync(DescribeAlarmMetricsRequest req)
+        {
+             JsonResponseModel<DescribeAlarmMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a single notification template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticeRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticeResponse"/></returns>
+        public async Task<DescribeAlarmNoticeResponse> DescribeAlarmNotice(DescribeAlarmNoticeRequest req)
+        {
+             JsonResponseModel<DescribeAlarmNoticeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmNotice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmNoticeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a single notification template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticeRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticeResponse"/></returns>
+        public DescribeAlarmNoticeResponse DescribeAlarmNoticeSync(DescribeAlarmNoticeRequest req)
+        {
+             JsonResponseModel<DescribeAlarmNoticeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmNotice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmNoticeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get all the callback URLs of an alarm notification template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticeCallbacksRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticeCallbacksResponse"/></returns>
+        public async Task<DescribeAlarmNoticeCallbacksResponse> DescribeAlarmNoticeCallbacks(DescribeAlarmNoticeCallbacksRequest req)
+        {
+             JsonResponseModel<DescribeAlarmNoticeCallbacksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmNoticeCallbacks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmNoticeCallbacksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get all the callback URLs of an alarm notification template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticeCallbacksRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticeCallbacksResponse"/></returns>
+        public DescribeAlarmNoticeCallbacksResponse DescribeAlarmNoticeCallbacksSync(DescribeAlarmNoticeCallbacksRequest req)
+        {
+             JsonResponseModel<DescribeAlarmNoticeCallbacksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmNoticeCallbacks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmNoticeCallbacksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of notification templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticesResponse"/></returns>
+        public async Task<DescribeAlarmNoticesResponse> DescribeAlarmNotices(DescribeAlarmNoticesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmNoticesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmNotices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmNoticesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of notification templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticesResponse"/></returns>
+        public DescribeAlarmNoticesResponse DescribeAlarmNoticesSync(DescribeAlarmNoticesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmNoticesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmNotices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmNoticesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of alarm policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmPoliciesResponse"/></returns>
+        public async Task<DescribeAlarmPoliciesResponse> DescribeAlarmPolicies(DescribeAlarmPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of alarm policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmPoliciesResponse"/></returns>
+        public DescribeAlarmPoliciesResponse DescribeAlarmPoliciesSync(DescribeAlarmPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of a single alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmPolicyRequest"/></param>
+        /// <returns><see cref="DescribeAlarmPolicyResponse"/></returns>
+        public async Task<DescribeAlarmPolicyResponse> DescribeAlarmPolicy(DescribeAlarmPolicyRequest req)
+        {
+             JsonResponseModel<DescribeAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of a single alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmPolicyRequest"/></param>
+        /// <returns><see cref="DescribeAlarmPolicyResponse"/></returns>
+        public DescribeAlarmPolicyResponse DescribeAlarmPolicySync(DescribeAlarmPolicyRequest req)
+        {
+             JsonResponseModel<DescribeAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all namespaces.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeAllNamespacesResponse"/></returns>
+        public async Task<DescribeAllNamespacesResponse> DescribeAllNamespaces(DescribeAllNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeAllNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all namespaces.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeAllNamespacesResponse"/></returns>
+        public DescribeAllNamespacesResponse DescribeAllNamespacesSync(DescribeAllNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeAllNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllNamespacesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -324,6 +844,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBindingPolicyObjectList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list all the monitor types supported by CM.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>
+        /// <returns><see cref="DescribeMonitorTypesResponse"/></returns>
+        public async Task<DescribeMonitorTypesResponse> DescribeMonitorTypes(DescribeMonitorTypesRequest req)
+        {
+             JsonResponseModel<DescribeMonitorTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMonitorTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonitorTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list all the monitor types supported by CM.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>
+        /// <returns><see cref="DescribeMonitorTypesResponse"/></returns>
+        public DescribeMonitorTypesResponse DescribeMonitorTypesSync(DescribeMonitorTypesRequest req)
+        {
+             JsonResponseModel<DescribeMonitorTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMonitorTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonitorTypesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -537,6 +1097,246 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to edit an alarm notification template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmNoticeRequest"/></param>
+        /// <returns><see cref="ModifyAlarmNoticeResponse"/></returns>
+        public async Task<ModifyAlarmNoticeResponse> ModifyAlarmNotice(ModifyAlarmNoticeRequest req)
+        {
+             JsonResponseModel<ModifyAlarmNoticeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAlarmNotice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmNoticeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to edit an alarm notification template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmNoticeRequest"/></param>
+        /// <returns><see cref="ModifyAlarmNoticeResponse"/></returns>
+        public ModifyAlarmNoticeResponse ModifyAlarmNoticeSync(ModifyAlarmNoticeRequest req)
+        {
+             JsonResponseModel<ModifyAlarmNoticeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAlarmNotice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmNoticeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to edit the trigger condition of an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyConditionRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyConditionResponse"/></returns>
+        public async Task<ModifyAlarmPolicyConditionResponse> ModifyAlarmPolicyCondition(ModifyAlarmPolicyConditionRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyConditionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAlarmPolicyCondition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyConditionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to edit the trigger condition of an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyConditionRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyConditionResponse"/></returns>
+        public ModifyAlarmPolicyConditionResponse ModifyAlarmPolicyConditionSync(ModifyAlarmPolicyConditionRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyConditionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAlarmPolicyCondition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyConditionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to edit the basic information of a v2.0 alarm policy, including policy name and remarks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyInfoRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyInfoResponse"/></returns>
+        public async Task<ModifyAlarmPolicyInfoResponse> ModifyAlarmPolicyInfo(ModifyAlarmPolicyInfoRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAlarmPolicyInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to edit the basic information of a v2.0 alarm policy, including policy name and remarks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyInfoRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyInfoResponse"/></returns>
+        public ModifyAlarmPolicyInfoResponse ModifyAlarmPolicyInfoSync(ModifyAlarmPolicyInfoRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAlarmPolicyInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the alarm notification template bound to an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyNoticeRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyNoticeResponse"/></returns>
+        public async Task<ModifyAlarmPolicyNoticeResponse> ModifyAlarmPolicyNotice(ModifyAlarmPolicyNoticeRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyNoticeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAlarmPolicyNotice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyNoticeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the alarm notification template bound to an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyNoticeRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyNoticeResponse"/></returns>
+        public ModifyAlarmPolicyNoticeResponse ModifyAlarmPolicyNoticeSync(ModifyAlarmPolicyNoticeRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyNoticeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAlarmPolicyNotice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyNoticeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable/disable an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyStatusRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyStatusResponse"/></returns>
+        public async Task<ModifyAlarmPolicyStatusResponse> ModifyAlarmPolicyStatus(ModifyAlarmPolicyStatusRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAlarmPolicyStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable/disable an alarm policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyStatusRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyStatusResponse"/></returns>
+        public ModifyAlarmPolicyStatusResponse ModifyAlarmPolicyStatusSync(ModifyAlarmPolicyStatusRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAlarmPolicyStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the task triggered by an alarm policy. The `TriggerTasks` field contains the list of triggered tasks. If an empty array is passed in for `TriggerTasks`, it indicates to unbind all the triggered tasks from this policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyTasksRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyTasksResponse"/></returns>
+        public async Task<ModifyAlarmPolicyTasksResponse> ModifyAlarmPolicyTasks(ModifyAlarmPolicyTasksRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAlarmPolicyTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the task triggered by an alarm policy. The `TriggerTasks` field contains the list of triggered tasks. If an empty array is passed in for `TriggerTasks`, it indicates to unbind all the triggered tasks from this policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmPolicyTasksRequest"/></param>
+        /// <returns><see cref="ModifyAlarmPolicyTasksResponse"/></returns>
+        public ModifyAlarmPolicyTasksResponse ModifyAlarmPolicyTasksSync(ModifyAlarmPolicyTasksRequest req)
+        {
+             JsonResponseModel<ModifyAlarmPolicyTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAlarmPolicyTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAlarmPolicyTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify alarm recipients.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmReceiversRequest"/></param>
@@ -700,6 +1500,48 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "SendCustomAlarmMsg");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendCustomAlarmMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set an alarm policy as the default policy in the current policy type under the current project.
+        /// Alarm policies in the same type under the project will be set as non-default.
+        /// </summary>
+        /// <param name="req"><see cref="SetDefaultAlarmPolicyRequest"/></param>
+        /// <returns><see cref="SetDefaultAlarmPolicyResponse"/></returns>
+        public async Task<SetDefaultAlarmPolicyResponse> SetDefaultAlarmPolicy(SetDefaultAlarmPolicyRequest req)
+        {
+             JsonResponseModel<SetDefaultAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetDefaultAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDefaultAlarmPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set an alarm policy as the default policy in the current policy type under the current project.
+        /// Alarm policies in the same type under the project will be set as non-default.
+        /// </summary>
+        /// <param name="req"><see cref="SetDefaultAlarmPolicyRequest"/></param>
+        /// <returns><see cref="SetDefaultAlarmPolicyResponse"/></returns>
+        public SetDefaultAlarmPolicyResponse SetDefaultAlarmPolicySync(SetDefaultAlarmPolicyRequest req)
+        {
+             JsonResponseModel<SetDefaultAlarmPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetDefaultAlarmPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDefaultAlarmPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

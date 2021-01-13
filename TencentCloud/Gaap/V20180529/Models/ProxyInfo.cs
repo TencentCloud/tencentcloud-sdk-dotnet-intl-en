@@ -196,11 +196,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? ModifyConfigTime{ get; set; }
 
         /// <summary>
-        /// Connection type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Connection type. 104: SILVER connection.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProxyType")]
         public ulong? ProxyType{ get; set; }
+
+        /// <summary>
+        /// Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientIPMethod")]
+        public long?[] ClientIPMethod{ get; set; }
 
 
         /// <summary>
@@ -234,6 +241,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
             this.SetParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
+            this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         }
     }
 }

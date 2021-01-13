@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to enable offline cache. Valid values: `on` and `off`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
