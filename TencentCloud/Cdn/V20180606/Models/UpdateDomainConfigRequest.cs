@@ -260,7 +260,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// 
+        /// Merging pull requests
         /// </summary>
         [JsonProperty("OriginCombine")]
         public OriginCombine OriginCombine{ get; set; }

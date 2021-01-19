@@ -25,17 +25,17 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Horizontal coordinate of the top-left corner of face frame. 
+        /// Horizontal coordinate of the top-left vertex of face frame. 
         /// The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-        /// If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+        /// If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// Vertical coordinate of the top-left corner of face frame. 
+        /// Vertical coordinate of the top-left vertex of face frame. 
         /// The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-        /// If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+        /// If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.123</VersionPrefix>
+    <VersionPrefix>3.0.124</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1615,8 +1615,6 @@
     <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesOfferingsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesResponse.cs" />
-    <Compile Include="Cvm\V20170312\Models\DescribeSpotTypeConfigRequest.cs" />
-    <Compile Include="Cvm\V20170312\Models\DescribeSpotTypeConfigResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeZoneInstanceConfigInfosResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeZonesRequest.cs" />
@@ -2302,6 +2300,8 @@
     <Compile Include="Es\V20180416\Models\EsAcl.cs" />
     <Compile Include="Es\V20180416\Models\EsDictionaryInfo.cs" />
     <Compile Include="Es\V20180416\Models\EsPublicAcl.cs" />
+    <Compile Include="Es\V20180416\Models\GetRequestTargetNodeTypesRequest.cs" />
+    <Compile Include="Es\V20180416\Models\GetRequestTargetNodeTypesResponse.cs" />
     <Compile Include="Es\V20180416\Models\InstanceInfo.cs" />
     <Compile Include="Es\V20180416\Models\InstanceLog.cs" />
     <Compile Include="Es\V20180416\Models\KeyValue.cs" />
@@ -2323,6 +2323,8 @@
     <Compile Include="Es\V20180416\Models\UpdateInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpdatePluginsRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdatePluginsResponse.cs" />
+    <Compile Include="Es\V20180416\Models\UpdateRequestTargetNodeTypesRequest.cs" />
+    <Compile Include="Es\V20180416\Models\UpdateRequestTargetNodeTypesResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpgradeLicenseRequest.cs" />
@@ -2604,11 +2606,8 @@
     <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionResponse.cs" />
     <Compile Include="Iai\V20200303\IaiClient.cs" />
-    <Compile Include="Iai\V20200303\Models\AnalyzeDenseLandmarksRequest.cs" />
-    <Compile Include="Iai\V20200303\Models\AnalyzeDenseLandmarksResponse.cs" />
     <Compile Include="Iai\V20200303\Models\AnalyzeFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\AnalyzeFaceResponse.cs" />
-    <Compile Include="Iai\V20200303\Models\AttributeItem.cs" />
     <Compile Include="Iai\V20200303\Models\Candidate.cs" />
     <Compile Include="Iai\V20200303\Models\CompareFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\CompareFaceResponse.cs" />
@@ -2628,20 +2627,11 @@
     <Compile Include="Iai\V20200303\Models\DeletePersonFromGroupResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DeletePersonRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DeletePersonResponse.cs" />
-    <Compile Include="Iai\V20200303\Models\DenseFaceShape.cs" />
-    <Compile Include="Iai\V20200303\Models\DetectFaceAttributesRequest.cs" />
-    <Compile Include="Iai\V20200303\Models\DetectFaceAttributesResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceResponse.cs" />
-    <Compile Include="Iai\V20200303\Models\DetectLiveFaceAccurateRequest.cs" />
-    <Compile Include="Iai\V20200303\Models\DetectLiveFaceAccurateResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceResponse.cs" />
-    <Compile Include="Iai\V20200303\Models\Eye.cs" />
-    <Compile Include="Iai\V20200303\Models\Eyebrow.cs" />
     <Compile Include="Iai\V20200303\Models\FaceAttributesInfo.cs" />
-    <Compile Include="Iai\V20200303\Models\FaceDetailAttributesInfo.cs" />
-    <Compile Include="Iai\V20200303\Models\FaceDetailInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceHairAttributesInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceQualityCompleteness.cs" />
@@ -2663,16 +2653,12 @@
     <Compile Include="Iai\V20200303\Models\GroupCandidate.cs" />
     <Compile Include="Iai\V20200303\Models\GroupExDescriptionInfo.cs" />
     <Compile Include="Iai\V20200303\Models\GroupInfo.cs" />
-    <Compile Include="Iai\V20200303\Models\Hair.cs" />
-    <Compile Include="Iai\V20200303\Models\Hat.cs" />
-    <Compile Include="Iai\V20200303\Models\HeadPose.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyGroupRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyGroupResponse.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonBaseInfoRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonBaseInfoResponse.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonGroupInfoRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonGroupInfoResponse.cs" />
-    <Compile Include="Iai\V20200303\Models\Mouth.cs" />
     <Compile Include="Iai\V20200303\Models\PersonExDescriptionInfo.cs" />
     <Compile Include="Iai\V20200303\Models\PersonGroupInfo.cs" />
     <Compile Include="Iai\V20200303\Models\PersonInfo.cs" />
@@ -4250,6 +4236,51 @@
     <Compile Include="Scf\V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
     <Compile Include="Scf\V20180416\Models\VersionWeight.cs" />
     <Compile Include="Scf\V20180416\Models\VpcConfig.cs" />
+    <Compile Include="Ses\V20201002\SesClient.cs" />
+    <Compile Include="Ses\V20201002\Models\Attachment.cs" />
+    <Compile Include="Ses\V20201002\Models\BlackEmailAddress.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailAddressRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailAddressResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailIdentityRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DNSAttributes.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteBlackListRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteBlackListResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailAddressRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailAddressResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailIdentityRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\EmailIdentity.cs" />
+    <Compile Include="Ses\V20201002\Models\EmailSender.cs" />
+    <Compile Include="Ses\V20201002\Models\GetEmailIdentityRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\GetEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\GetEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\GetEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\GetStatisticsReportRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\GetStatisticsReportResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListBlackEmailAddressRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListBlackEmailAddressResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailAddressRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailAddressResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailIdentitiesRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailIdentitiesResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailTemplatesRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailTemplatesResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\SendEmailRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\SendEmailResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\Simple.cs" />
+    <Compile Include="Ses\V20201002\Models\Template.cs" />
+    <Compile Include="Ses\V20201002\Models\TemplateContent.cs" />
+    <Compile Include="Ses\V20201002\Models\TemplatesMetadata.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailIdentityRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\Volume.cs" />
     <Compile Include="Sms\V20190711\SmsClient.cs" />
     <Compile Include="Sms\V20190711\Models\AddSignStatus.cs" />
     <Compile Include="Sms\V20190711\Models\AddSmsSignRequest.cs" />

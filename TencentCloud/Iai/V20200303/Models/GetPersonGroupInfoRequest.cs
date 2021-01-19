@@ -25,19 +25,19 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Person ID, which is the `PersonId` in the `CreatePerson` API
+        /// Person ID, which is the `PersonId` in the `CreatePerson` API.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// Starting number. Default value: 0
+        /// Starting number. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 10. Maximum value: 100
+        /// Number of returned results. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

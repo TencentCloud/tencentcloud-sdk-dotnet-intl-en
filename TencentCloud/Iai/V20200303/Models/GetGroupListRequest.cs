@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Starting number. Default value: 0
+        /// Starting number. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 10. Maximum value: 1000
+        /// Number of returned results. Default value: 10. Maximum value: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

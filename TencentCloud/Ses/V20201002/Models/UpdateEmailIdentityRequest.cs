@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AttributeItem : AbstractModel
+    public class UpdateEmailIdentityRequest : AbstractModel
     {
         
         /// <summary>
-        /// Attribute value
+        /// Domain to be verified.
         /// </summary>
-        [JsonProperty("Type")]
-        public long? Type{ get; set; }
-
-        /// <summary>
-        /// Probability of recognizing `Type`, which indicates the probability of correct recognition. Value range: [0,1].
-        /// </summary>
-        [JsonProperty("Probability")]
-        public float? Probability{ get; set; }
+        [JsonProperty("EmailIdentity")]
+        public string EmailIdentity{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Probability", this.Probability);
+            this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
         }
     }
 }

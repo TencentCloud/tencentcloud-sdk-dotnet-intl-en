@@ -407,7 +407,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// 
+        /// Merging pull requests
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginCombine")]
         public OriginCombine OriginCombine{ get; set; }

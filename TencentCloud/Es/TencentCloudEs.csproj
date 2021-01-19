@@ -60,6 +60,8 @@
     <Compile Include="V20180416\Models\EsAcl.cs" />
     <Compile Include="V20180416\Models\EsDictionaryInfo.cs" />
     <Compile Include="V20180416\Models\EsPublicAcl.cs" />
+    <Compile Include="V20180416\Models\GetRequestTargetNodeTypesRequest.cs" />
+    <Compile Include="V20180416\Models\GetRequestTargetNodeTypesResponse.cs" />
     <Compile Include="V20180416\Models\InstanceInfo.cs" />
     <Compile Include="V20180416\Models\InstanceLog.cs" />
     <Compile Include="V20180416\Models\KeyValue.cs" />
@@ -81,6 +83,8 @@
     <Compile Include="V20180416\Models\UpdateInstanceResponse.cs" />
     <Compile Include="V20180416\Models\UpdatePluginsRequest.cs" />
     <Compile Include="V20180416\Models\UpdatePluginsResponse.cs" />
+    <Compile Include="V20180416\Models\UpdateRequestTargetNodeTypesRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateRequestTargetNodeTypesResponse.cs" />
     <Compile Include="V20180416\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20180416\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="V20180416\Models\UpgradeLicenseRequest.cs" />

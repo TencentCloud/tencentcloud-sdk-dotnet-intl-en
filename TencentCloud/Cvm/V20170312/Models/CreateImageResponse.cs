@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Image ID
+        /// Image ID.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("ImageId")]

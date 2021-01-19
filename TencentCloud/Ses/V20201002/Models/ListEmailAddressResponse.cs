@@ -15,35 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Eyebrow : AbstractModel
+    public class ListEmailAddressResponse : AbstractModel
     {
         
         /// <summary>
-        /// Eyebrow thickness.
-        /// The `Type` values of the `AttributeItem` include: 0: light; 1: thick.
+        /// Details of sender addresses.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("EyebrowDensity")]
-        public AttributeItem EyebrowDensity{ get; set; }
+        [JsonProperty("EmailSenders")]
+        public EmailSender[] EmailSenders{ get; set; }
 
         /// <summary>
-        /// Eyebrow curve.
-        /// The `Type` values of the `AttributeItem` include: 0: flat; 1: curved.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("EyebrowCurve")]
-        public AttributeItem EyebrowCurve{ get; set; }
-
-        /// <summary>
-        /// Eyebrow length.
-        /// The `Type` values of the `AttributeItem` include: 0: short; 1: long.
-        /// </summary>
-        [JsonProperty("EyebrowLength")]
-        public AttributeItem EyebrowLength{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +43,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "EyebrowDensity.", this.EyebrowDensity);
-            this.SetParamObj(map, prefix + "EyebrowCurve.", this.EyebrowCurve);
-            this.SetParamObj(map, prefix + "EyebrowLength.", this.EyebrowLength);
+            this.SetParamArrayObj(map, prefix + "EmailSenders.", this.EmailSenders);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

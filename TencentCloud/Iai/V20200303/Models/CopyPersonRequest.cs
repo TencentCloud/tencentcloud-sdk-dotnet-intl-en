@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Person ID, which is the `PersonId` in the `CreatePerson` API
+        /// Person ID, which is the `PersonId` in the `CreatePerson` API.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Horizontal coordinate of the top-left corner of face frame.
+        /// Horizontal coordinate of the top-left vertex of the face frame.
         /// The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
         /// If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
         /// </summary>
@@ -33,7 +33,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? X{ get; set; }
 
         /// <summary>
-        /// Vertical coordinate of the top-left corner of face frame. 
+        /// Vertical coordinate of the top-left vertex of the face frame. 
         /// The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
         /// If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
         /// </summary>
@@ -41,7 +41,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? Y{ get; set; }
 
         /// <summary>
-        /// Face frame width. 
+        /// Face frame width.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -53,13 +53,15 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
+        /// Face attributes, including gender, age, expression, 
+        /// beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
         /// </summary>
         [JsonProperty("FaceAttributesInfo")]
         public FaceAttributesInfo FaceAttributesInfo{ get; set; }
 
         /// <summary>
-        /// Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
+        /// Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FaceQualityInfo")]
         public FaceQualityInfo FaceQualityInfo{ get; set; }

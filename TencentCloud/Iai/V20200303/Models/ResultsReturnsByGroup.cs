@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Position of detected face frame.
+        /// Position of detected face frame
         /// </summary>
         [JsonProperty("FaceRect")]
         public FaceRect FaceRect{ get; set; }

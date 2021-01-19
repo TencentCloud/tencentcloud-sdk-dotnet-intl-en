@@ -217,6 +217,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
+        /// <summary>
+        /// Cloud Attached Connection Service ID
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CloudAttachId")]
+        public string CloudAttachId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -252,6 +259,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
+            this.SetParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
         }
     }
 }

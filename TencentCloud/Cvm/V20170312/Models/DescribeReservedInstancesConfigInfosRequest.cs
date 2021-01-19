@@ -42,7 +42,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// Type: Integer
         /// Unit: second
         /// Required: no
-        /// Valid values: 31536000 (1 year), 94608000 (3 years)
+        /// Valid value: 31536000 (1 year)
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

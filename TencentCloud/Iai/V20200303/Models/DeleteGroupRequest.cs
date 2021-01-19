@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Group ID, which is the `GroupId` in the `CreateGroup` API
+        /// Group ID, which is the `GroupId` in the `CreateGroup` API.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Recognized text. For more information, please click the link on the left.
+        /// Recognized text. For more information, please click the link on the left
         /// </summary>
         [JsonProperty("TextDetections")]
         public TextTable[] TextDetections{ get; set; }

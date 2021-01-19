@@ -104,8 +104,6 @@
     <Compile Include="V20170312\Models\DescribeReservedInstancesOfferingsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeReservedInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeReservedInstancesResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeSpotTypeConfigRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeSpotTypeConfigResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
     <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZonesRequest.cs" />

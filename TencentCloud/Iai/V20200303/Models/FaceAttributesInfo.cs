@@ -37,53 +37,53 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? Age{ get; set; }
 
         /// <summary>
-        /// Expression. Value range: [0 (normal)-50 (smile)-100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+        /// Expression. Value range: [0 (normal)–50 (smile)–100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// </summary>
         [JsonProperty("Expression")]
         public long? Expression{ get; set; }
 
         /// <summary>
-        /// Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+        /// Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// </summary>
         [JsonProperty("Glass")]
         public bool? Glass{ get; set; }
 
         /// <summary>
         /// Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-        /// You are recommended to select images in the [-10,10] range for adding faces.
+        /// We recommend selecting images in the [-10,10] range for adding faces.
         /// </summary>
         [JsonProperty("Pitch")]
         public long? Pitch{ get; set; }
 
         /// <summary>
         /// Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-        /// You are recommended to select images in the [-10,10] range for adding faces.
+        /// We recommend selecting images in the [-10,10] range for adding faces.
         /// </summary>
         [JsonProperty("Yaw")]
         public long? Yaw{ get; set; }
 
         /// <summary>
         /// Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-        /// You are recommended to select images in the [-20,20] range for adding faces.
+        /// We recommend selecting images in the [-20,20] range for adding faces.
         /// </summary>
         [JsonProperty("Roll")]
         public long? Roll{ get; set; }
 
         /// <summary>
-        /// Beauty. Value range: [0-100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+        /// Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// </summary>
         [JsonProperty("Beauty")]
         public long? Beauty{ get; set; }
 
         /// <summary>
-        /// Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+        /// Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Hat")]
         public bool? Hat{ get; set; }
 
         /// <summary>
-        /// Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+        /// Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Mask")]
@@ -97,7 +97,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public FaceHairAttributesInfo Hair{ get; set; }
 
         /// <summary>
-        /// Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+        /// Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EyeOpen")]

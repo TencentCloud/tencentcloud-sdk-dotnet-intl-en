@@ -33,7 +33,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// Minimum height and width of face in px.
-        /// Default value: 34. You are recommended to keep it at or above 34.
+        /// Default value: 34. We recommend keeping it at or above 34.
         /// Faces below the `MinFaceSize` value will not be detected.
         /// </summary>
         [JsonProperty("MinFaceSize")]
@@ -41,19 +41,19 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// Base64-encoded image data, which cannot exceed 5 MB.
-        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-        /// .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+        /// The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+        /// PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
         /// Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+        /// The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
         /// Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-        /// You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+        /// We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
         /// The download speed and stability of non-Tencent Cloud URLs may be low.
-        /// .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+        /// PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// Whether the face attribute information (FaceAttributesInfo) needs to be returned. 0: no; 1: yes. Default value: 0. 
         /// If the value is not 1, it will be deemed as no need to return, and `FaceAttributesInfo` is meaningless in this case.  
         /// The face attribute information of up to 5 largest faces in the image will be returned, and `FaceAttributesInfo` of the 6th and rest faces is meaningless.  
-        /// Extracting face attribute information is quite time-consuming. If face attribute information is not required, you are recommended to disable this feature to speed up face detection.
+        /// Extracting face attribute information is quite time-consuming. If face attribute information is not required, we recommend disabling this feature to speed up face detection.
         /// </summary>
         [JsonProperty("NeedFaceAttributes")]
         public ulong? NeedFaceAttributes{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// Whether to enable quality detection. 0: no; 1: yes. Default value: 0. 
         /// If the value is not 1, it will be deemed not to perform quality detection.
         /// The face quality score information of up to 30 largest faces in the image will be returned, and `FaceQualityInfo` of the 31st and rest faces is meaningless.  
-        /// You are recommended to enable this feature for the face adding operation.
+        /// We recommend enabling this feature for the face adding operation.
         /// </summary>
         [JsonProperty("NeedQualityDetection")]
         public ulong? NeedQualityDetection{ get; set; }

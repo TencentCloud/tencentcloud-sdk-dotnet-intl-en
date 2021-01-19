@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Hat : AbstractModel
+    public class DeleteBlackListRequest : AbstractModel
     {
         
         /// <summary>
-        /// Hat wearing status information.
-        /// The `Type` values of the `AttributeItem` include: 0: no hat; 1: general hat; 2: helmet; 3: security guard hat.
+        /// List of email addresses to be unblocklisted. Enter at least one address.
         /// </summary>
-        [JsonProperty("Style")]
-        public AttributeItem Style{ get; set; }
-
-        /// <summary>
-        /// Hat color.
-        /// The `Type` values of the `AttributeItem` include: 0: no hat; 1: red; 2: yellow; 3: blue; 4: black; 5: gray; 6: mixed colors.
-        /// </summary>
-        [JsonProperty("Color")]
-        public AttributeItem Color{ get; set; }
+        [JsonProperty("EmailAddressList")]
+        public string[] EmailAddressList{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Style.", this.Style);
-            this.SetParamObj(map, prefix + "Color.", this.Color);
+            this.SetParamArraySimple(map, prefix + "EmailAddressList.", this.EmailAddressList);
         }
     }
 }

@@ -43,19 +43,19 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Number of GPU cores.
+        /// Number of GPUs.
         /// </summary>
         [JsonProperty("Gpu")]
         public ulong? Gpu{ get; set; }
 
         /// <summary>
-        /// Number of FPGA cores.
+        /// Number of FPGAs.
         /// </summary>
         [JsonProperty("Fpga")]
         public ulong? Fpga{ get; set; }
 
         /// <summary>
-        /// Number of storage blocks.
+        /// Number of local storage blocks.
         /// </summary>
         [JsonProperty("StorageBlock")]
         public ulong? StorageBlock{ get; set; }

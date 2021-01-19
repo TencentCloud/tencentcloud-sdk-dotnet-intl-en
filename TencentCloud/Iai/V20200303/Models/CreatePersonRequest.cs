@@ -25,19 +25,19 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// ID of the group to join, which is the `GroupId` in the `CreateGroup` API
+        /// ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Person name, which can contain 1-60 characters and is modifiable and repeatable.
+        /// Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
         /// </summary>
         [JsonProperty("PersonName")]
         public string PersonName{ get; set; }
 
         /// <summary>
-        /// Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+        /// Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
@@ -49,26 +49,26 @@ namespace TencentCloud.Iai.V20200303.Models
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
+        /// Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
         /// </summary>
         [JsonProperty("PersonExDescriptionInfos")]
         public PersonExDescriptionInfo[] PersonExDescriptionInfos{ get; set; }
 
         /// <summary>
         /// Base64-encoded image data, which cannot exceed 5 MB.
-        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-        /// .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+        /// The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+        /// PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
         /// Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-        /// The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+        /// The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
         /// Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-        /// You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+        /// We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
         /// The download speed and stability of non-Tencent Cloud URLs may be low.
-        /// .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+        /// PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -92,9 +92,9 @@ namespace TencentCloud.Iai.V20200303.Models
         /// Image quality control. 
         /// 0: no control. 
         /// 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-        /// 2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-        /// 3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-        /// 4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+        /// 2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+        /// 3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+        /// 4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
         /// Default value: 0. 
         /// If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
         /// </summary>

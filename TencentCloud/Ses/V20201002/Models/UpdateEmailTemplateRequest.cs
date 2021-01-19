@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HeadPose : AbstractModel
+    public class UpdateEmailTemplateRequest : AbstractModel
     {
         
         /// <summary>
-        /// Pitch. Value range: [-30,30].
+        /// Template content.
         /// </summary>
-        [JsonProperty("Pitch")]
-        public long? Pitch{ get; set; }
+        [JsonProperty("TemplateContent")]
+        public TemplateContent TemplateContent{ get; set; }
 
         /// <summary>
-        /// Yaw. Value range: [-30,30].
+        /// Template ID.
         /// </summary>
-        [JsonProperty("Yaw")]
-        public long? Yaw{ get; set; }
+        [JsonProperty("TemplateID")]
+        public ulong? TemplateID{ get; set; }
 
         /// <summary>
-        /// Roll. Value range: [-180,180].
+        /// Template name.
         /// </summary>
-        [JsonProperty("Roll")]
-        public long? Roll{ get; set; }
+        [JsonProperty("TemplateName")]
+        public string TemplateName{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Pitch", this.Pitch);
-            this.SetParamSimple(map, prefix + "Yaw", this.Yaw);
-            this.SetParamSimple(map, prefix + "Roll", this.Roll);
+            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
+            this.SetParamSimple(map, prefix + "TemplateID", this.TemplateID);
+            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
         }
     }
 }

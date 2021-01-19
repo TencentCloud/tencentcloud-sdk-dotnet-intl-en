@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Hair : AbstractModel
+    public class GetEmailTemplateResponse : AbstractModel
     {
         
         /// <summary>
-        /// Hair length information.
-        /// The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+        /// Template content.
         /// </summary>
-        [JsonProperty("Length")]
-        public AttributeItem Length{ get; set; }
+        [JsonProperty("TemplateContent")]
+        public TemplateContent TemplateContent{ get; set; }
 
         /// <summary>
-        /// Bang information.
-        /// The `Type` values of the `AttributeItem` include: 0: no bang; 1: bang detected.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Bang")]
-        public AttributeItem Bang{ get; set; }
-
-        /// <summary>
-        /// Hair color information.
-        /// The `Type` values of the `AttributeItem` include: 0: black; 1: golden; 2: brown; 3: gray.
-        /// </summary>
-        [JsonProperty("Color")]
-        public AttributeItem Color{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Length.", this.Length);
-            this.SetParamObj(map, prefix + "Bang.", this.Bang);
-            this.SetParamObj(map, prefix + "Color.", this.Color);
+            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

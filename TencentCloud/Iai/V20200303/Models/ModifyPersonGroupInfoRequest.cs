@@ -25,19 +25,19 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Group ID, which is the `GroupId` in the `CreateGroup` API
+        /// Group ID, which is the `GroupId` in the `CreateGroup` API.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Person ID, which is the `PersonId` in the `CreatePerson` API
+        /// Person ID, which is the `PersonId` in the `CreatePerson` API.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// Custom description field of the person to be modified, which is a `key-value`
+        /// Custom description field of the person to be modified, which is a `key-value` pair.
         /// </summary>
         [JsonProperty("PersonExDescriptionInfos")]
         public PersonExDescriptionInfo[] PersonExDescriptionInfos{ get; set; }

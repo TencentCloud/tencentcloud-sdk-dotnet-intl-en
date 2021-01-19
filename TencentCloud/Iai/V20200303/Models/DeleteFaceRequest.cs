@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Person ID, which is the `PersonId` in the `CreatePerson` API
+        /// Person ID, which is the `PersonId` in the `CreatePerson` API.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
+        /// List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
         /// </summary>
         [JsonProperty("FaceIds")]
         public string[] FaceIds{ get; set; }

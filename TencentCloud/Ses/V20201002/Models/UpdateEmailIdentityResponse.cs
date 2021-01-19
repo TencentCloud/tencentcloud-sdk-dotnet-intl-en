@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AnalyzeDenseLandmarksResponse : AbstractModel
+    public class UpdateEmailIdentityResponse : AbstractModel
     {
         
         /// <summary>
-        /// Width of requested image.
+        /// Verification type. The value is fixed to `DOMAIN`.
         /// </summary>
-        [JsonProperty("ImageWidth")]
-        public long? ImageWidth{ get; set; }
+        [JsonProperty("IdentityType")]
+        public string IdentityType{ get; set; }
 
         /// <summary>
-        /// Height of requested image.
+        /// Verification passed or not.
         /// </summary>
-        [JsonProperty("ImageHeight")]
-        public long? ImageHeight{ get; set; }
+        [JsonProperty("VerifiedForSendingStatus")]
+        public bool? VerifiedForSendingStatus{ get; set; }
 
         /// <summary>
-        /// Specific information of dense facial keypoints.
+        /// DNS information that needs to be configured.
         /// </summary>
-        [JsonProperty("DenseFaceShapeSet")]
-        public DenseFaceShape[] DenseFaceShapeSet{ get; set; }
-
-        /// <summary>
-        /// Algorithm model version used by the Face Recognition service. You can enter only `3.0` for this API.
-        /// </summary>
-        [JsonProperty("FaceModelVersion")]
-        public string FaceModelVersion{ get; set; }
+        [JsonProperty("Attributes")]
+        public DNSAttributes[] Attributes{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -60,10 +54,9 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
-            this.SetParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
-            this.SetParamArrayObj(map, prefix + "DenseFaceShapeSet.", this.DenseFaceShapeSet);
-            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
+            this.SetParamSimple(map, prefix + "VerifiedForSendingStatus", this.VerifiedForSendingStatus);
+            this.SetParamArrayObj(map, prefix + "Attributes.", this.Attributes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

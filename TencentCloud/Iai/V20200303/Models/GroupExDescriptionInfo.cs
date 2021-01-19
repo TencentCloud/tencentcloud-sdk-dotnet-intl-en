@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Custom group description field index, whose value starts from 0
+        /// Custom group description field index, whose value starts from 0.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupExDescriptionIndex")]

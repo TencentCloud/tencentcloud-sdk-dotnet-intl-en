@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSpotTypeConfigRequest : AbstractModel
+    public class ListEmailIdentitiesRequest : AbstractModel
     {
         
 

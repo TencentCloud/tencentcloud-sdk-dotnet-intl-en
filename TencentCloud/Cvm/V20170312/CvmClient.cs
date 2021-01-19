@@ -1269,46 +1269,6 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to query spot instances that are available for purchase.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSpotTypeConfigRequest"/></param>
-        /// <returns><see cref="DescribeSpotTypeConfigResponse"/></returns>
-        public async Task<DescribeSpotTypeConfigResponse> DescribeSpotTypeConfig(DescribeSpotTypeConfigRequest req)
-        {
-             JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSpotTypeConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpotTypeConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query spot instances that are available for purchase.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSpotTypeConfigRequest"/></param>
-        /// <returns><see cref="DescribeSpotTypeConfigResponse"/></returns>
-        public DescribeSpotTypeConfigResponse DescribeSpotTypeConfigSync(DescribeSpotTypeConfigRequest req)
-        {
-             JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSpotTypeConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpotTypeConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the configurations of models in an availability zone.
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneInstanceConfigInfosRequest"/></param>

@@ -31,7 +31,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Most matching candidates recognized.
+        /// Most matching candidate recognized
         /// </summary>
         [JsonProperty("Candidates")]
         public Candidate[] Candidates{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Group ID, which is the `GroupId` in the `CreateGroup` API
+        /// Group ID, which is the `GroupId` in the `CreateGroup` API.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Custom description field of the group to be modified, which is a `key-value`
+        /// Custom description field of the group to be modified, which is a `key-value` pair.
         /// </summary>
         [JsonProperty("GroupExDescriptionInfos")]
         public GroupExDescriptionInfo[] GroupExDescriptionInfos{ get; set; }

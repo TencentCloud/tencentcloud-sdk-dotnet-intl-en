@@ -53,8 +53,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Discount. For example, 20.0 indicates 80% off.
+        /// Note: this field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
@@ -94,6 +94,78 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("UnitPriceDiscountThirdStep")]
         public float? UnitPriceDiscountThirdStep{ get; set; }
 
+        /// <summary>
+        /// Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("OriginalPriceThreeYear")]
+        public float? OriginalPriceThreeYear{ get; set; }
+
+        /// <summary>
+        /// Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DiscountPriceThreeYear")]
+        public float? DiscountPriceThreeYear{ get; set; }
+
+        /// <summary>
+        /// Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DiscountThreeYear")]
+        public float? DiscountThreeYear{ get; set; }
+
+        /// <summary>
+        /// Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("OriginalPriceFiveYear")]
+        public float? OriginalPriceFiveYear{ get; set; }
+
+        /// <summary>
+        /// Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DiscountPriceFiveYear")]
+        public float? DiscountPriceFiveYear{ get; set; }
+
+        /// <summary>
+        /// Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DiscountFiveYear")]
+        public float? DiscountFiveYear{ get; set; }
+
+        /// <summary>
+        /// Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("OriginalPriceOneYear")]
+        public float? OriginalPriceOneYear{ get; set; }
+
+        /// <summary>
+        /// Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DiscountPriceOneYear")]
+        public float? DiscountPriceOneYear{ get; set; }
+
+        /// <summary>
+        /// Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DiscountOneYear")]
+        public float? DiscountOneYear{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +182,15 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "UnitPriceDiscountSecondStep", this.UnitPriceDiscountSecondStep);
             this.SetParamSimple(map, prefix + "UnitPriceThirdStep", this.UnitPriceThirdStep);
             this.SetParamSimple(map, prefix + "UnitPriceDiscountThirdStep", this.UnitPriceDiscountThirdStep);
+            this.SetParamSimple(map, prefix + "OriginalPriceThreeYear", this.OriginalPriceThreeYear);
+            this.SetParamSimple(map, prefix + "DiscountPriceThreeYear", this.DiscountPriceThreeYear);
+            this.SetParamSimple(map, prefix + "DiscountThreeYear", this.DiscountThreeYear);
+            this.SetParamSimple(map, prefix + "OriginalPriceFiveYear", this.OriginalPriceFiveYear);
+            this.SetParamSimple(map, prefix + "DiscountPriceFiveYear", this.DiscountPriceFiveYear);
+            this.SetParamSimple(map, prefix + "DiscountFiveYear", this.DiscountFiveYear);
+            this.SetParamSimple(map, prefix + "OriginalPriceOneYear", this.OriginalPriceOneYear);
+            this.SetParamSimple(map, prefix + "DiscountPriceOneYear", this.DiscountPriceOneYear);
+            this.SetParamSimple(map, prefix + "DiscountOneYear", this.DiscountOneYear);
         }
     }
 }

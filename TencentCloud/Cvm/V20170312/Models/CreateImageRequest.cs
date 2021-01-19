@@ -49,7 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ForcePoweroff{ get; set; }
 
         /// <summary>
-        /// Whether to enable Sysprep when creating a Windows image
+        /// Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
         /// </summary>
         [JsonProperty("Sysprep")]
         public string Sysprep{ get; set; }

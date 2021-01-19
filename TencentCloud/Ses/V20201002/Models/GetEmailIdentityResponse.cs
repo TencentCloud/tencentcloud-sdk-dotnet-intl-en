@@ -15,15 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSpotTypeConfigResponse : AbstractModel
+    public class GetEmailIdentityResponse : AbstractModel
     {
         
+        /// <summary>
+        /// Verification type. The value is fixed to `DOMAIN`.
+        /// </summary>
+        [JsonProperty("IdentityType")]
+        public string IdentityType{ get; set; }
+
+        /// <summary>
+        /// Verification passed or not.
+        /// </summary>
+        [JsonProperty("VerifiedForSendingStatus")]
+        public bool? VerifiedForSendingStatus{ get; set; }
+
+        /// <summary>
+        /// DNS configuration details.
+        /// </summary>
+        [JsonProperty("Attributes")]
+        public DNSAttributes[] Attributes{ get; set; }
+
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -36,6 +54,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
+            this.SetParamSimple(map, prefix + "VerifiedForSendingStatus", this.VerifiedForSendingStatus);
+            this.SetParamArrayObj(map, prefix + "Attributes.", this.Attributes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

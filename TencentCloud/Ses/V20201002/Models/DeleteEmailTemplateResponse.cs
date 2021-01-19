@@ -15,27 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectLiveFaceAccurateResponse : AbstractModel
+    public class DeleteEmailTemplateResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
-        /// </summary>
-        [JsonProperty("Score")]
-        public float? Score{ get; set; }
-
-        /// <summary>
-        /// Algorithm model version used for face recognition.
-        /// </summary>
-        [JsonProperty("FaceModelVersion")]
-        public string FaceModelVersion{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -48,8 +36,6 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Score", this.Score);
-            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

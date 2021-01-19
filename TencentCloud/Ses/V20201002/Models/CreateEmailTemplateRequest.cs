@@ -15,21 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Mouth : AbstractModel
+    public class CreateEmailTemplateRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether the mouth is open.
-        /// The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+        /// Template name.
         /// </summary>
-        [JsonProperty("MouthOpen")]
-        public AttributeItem MouthOpen{ get; set; }
+        [JsonProperty("TemplateName")]
+        public string TemplateName{ get; set; }
+
+        /// <summary>
+        /// Template content.
+        /// </summary>
+        [JsonProperty("TemplateContent")]
+        public TemplateContent TemplateContent{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "MouthOpen.", this.MouthOpen);
+            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
+            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
         }
     }
 }
