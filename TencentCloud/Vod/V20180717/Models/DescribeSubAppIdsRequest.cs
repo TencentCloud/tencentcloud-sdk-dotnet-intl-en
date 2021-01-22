@@ -25,16 +25,10 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Subapplication name.
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
         /// Tag information. You can query the list of subapplications with specified tags.
@@ -42,15 +36,28 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Tags")]
         public ResourceTag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Page number offset from the beginning of paginated queries. Default value: 0.
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

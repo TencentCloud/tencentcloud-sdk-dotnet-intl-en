@@ -37,6 +37,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
+        /// Unique ID of a video clip for persistent storage.
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

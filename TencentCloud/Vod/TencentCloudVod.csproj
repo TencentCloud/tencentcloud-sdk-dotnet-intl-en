@@ -256,12 +256,16 @@
     <Compile Include="V20180717\Models\DescribeAllClassResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeCDNStatDetailsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeCDNStatDetailsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCDNUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCDNUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCdnLogsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCdnLogsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
@@ -331,6 +335,8 @@
     <Compile Include="V20180717\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipResponse.cs" />
+    <Compile Include="V20180717\Models\ManageTaskRequest.cs" />
+    <Compile Include="V20180717\Models\ManageTaskResponse.cs" />
     <Compile Include="V20180717\Models\MediaAdaptiveDynamicStreamingInfo.cs" />
     <Compile Include="V20180717\Models\MediaAiAnalysisClassificationItem.cs" />
     <Compile Include="V20180717\Models\MediaAiAnalysisCoverItem.cs" />
@@ -425,6 +431,7 @@
     <Compile Include="V20180717\Models\OutputVideoStream.cs" />
     <Compile Include="V20180717\Models\ParseStreamingManifestRequest.cs" />
     <Compile Include="V20180717\Models\ParseStreamingManifestResponse.cs" />
+    <Compile Include="V20180717\Models\PlayStatFileInfo.cs" />
     <Compile Include="V20180717\Models\PlayerConfig.cs" />
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
@@ -481,8 +488,13 @@
     <Compile Include="V20180717\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="V20180717\Models\SortBy.cs" />
     <Compile Include="V20180717\Models\SpecificationDataItem.cs" />
+    <Compile Include="V20180717\Models\SplitMediaOutputConfig.cs" />
+    <Compile Include="V20180717\Models\SplitMediaTask.cs" />
+    <Compile Include="V20180717\Models\SplitMediaTaskInput.cs" />
+    <Compile Include="V20180717\Models\SplitMediaTaskSegmentInfo.cs" />
     <Compile Include="V20180717\Models\StatDataItem.cs" />
     <Compile Include="V20180717\Models\StickerTrackItem.cs" />
+    <Compile Include="V20180717\Models\StorageStatData.cs" />
     <Compile Include="V20180717\Models\SubAppIdInfo.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInput.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInputForUpdate.cs" />
@@ -490,6 +502,7 @@
     <Compile Include="V20180717\Models\TEHDConfigForUpdate.cs" />
     <Compile Include="V20180717\Models\TagConfigureInfo.cs" />
     <Compile Include="V20180717\Models\TagConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\TaskOutputMediaInfo.cs" />
     <Compile Include="V20180717\Models\TaskSimpleInfo.cs" />
     <Compile Include="V20180717\Models\TaskStatData.cs" />
     <Compile Include="V20180717\Models\TaskStatDataItem.cs" />

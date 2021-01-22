@@ -102,7 +102,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Vcrf{ get; set; }
 
         /// <summary>
-        /// 
+        /// I-frame interval in frames. Valid values: 0 and 1-100000.
+        /// When this parameter is set to 0 or left empty, `Gop` will be automatically set.
         /// </summary>
         [JsonProperty("Gop")]
         public ulong? Gop{ get; set; }

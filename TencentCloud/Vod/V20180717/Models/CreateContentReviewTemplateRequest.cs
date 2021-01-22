@@ -25,39 +25,39 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch controlling whether to add audit result to review list (for human review).
-        /// <li>ON: yes;</li>
-        /// <li>OFF: no.</li>
+        /// Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+        /// <li>ON: yes</li>
+        /// <li>OFF: no</li>
         /// </summary>
         [JsonProperty("ReviewWallSwitch")]
         public string ReviewWallSwitch{ get; set; }
 
         /// <summary>
-        /// Content audit template name. Length limit: 64 characters.
+        /// Name of an intelligent content recognition template. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of content audit template. Length limit: 256 characters.
+        /// Description of an intelligent content recognition template. Length limit: 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Control parameter of porn detection.
+        /// Control parameter for porn information.
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of terrorism information detection.
+        /// Control parameter for terrorism information.
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of politically sensitive information detection.
+        /// Control parameter for politically sensitive information.
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of custom content audit.
+        /// Control parameter for custom intelligent content recognition.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }

@@ -26,19 +26,20 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>Procedure: video processing task;</li>
-        /// <li>EditMedia: video editing task;</li>
-        /// <li>WechatPublish: release on WeChat task;</li>
-        /// <li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
-        /// <li>ComposeMedia: media file composing task;</li>
-        /// <li>PullUpload: media file pulling for upload task.</li>
+        /// <li>Procedure: video processing task</li>
+        /// <li>EditMedia: video editing task</li>
+        /// <li>SplitMedia: video splitting task</li>
+        /// <li>ComposeMedia: media file producing task</li>
+        /// <li>WechatPublish: WeChat publishing task</li>
+        /// <li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
+        /// <li>PullUpload: pulling media files for upload</li>
         /// 
-        /// Task types compatible with v2017:
-        /// <li>Transcode: transcoding task;</li>
+        /// Support v2017 task types:
+        /// <li>Transcode: transcoding task</li>
         /// <li>SnapshotByTimeOffset: screencapturing task</li>
-        /// <li>Concat: video splicing task;</li>
-        /// <li>Clip: video clipping task;</li>
-        /// <li>ImageSprites: image sprite generating task.</li>
+        /// <li>Concat: video splicing task</li>
+        /// <li>Clip: video clipping task</li>
+        /// <li>ImageSprites: image sprite generating task</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -99,6 +100,20 @@ namespace TencentCloud.Vod.V20180717.Models
         public ComposeMediaTask ComposeMediaTask{ get; set; }
 
         /// <summary>
+        /// Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SplitMediaTask")]
+        public SplitMediaTask SplitMediaTask{ get; set; }
+
+        /// <summary>
+        /// Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WechatMiniProgramPublishTask")]
+        public WechatMiniProgramPublishTask WechatMiniProgramPublishTask{ get; set; }
+
+        /// <summary>
         /// Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -111,13 +126,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public TranscodeTask2017 TranscodeTask{ get; set; }
-
-        /// <summary>
-        /// Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("SnapshotByTimeOffsetTask")]
-        public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
         /// Video splicing task information. This field has a value only when `TaskType` is `Concat`.
@@ -141,11 +149,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+        /// Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("WechatMiniProgramPublishTask")]
-        public WechatMiniProgramPublishTask WechatMiniProgramPublishTask{ get; set; }
+        [JsonProperty("SnapshotByTimeOffsetTask")]
+        public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -168,13 +176,14 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
             this.SetParamObj(map, prefix + "WechatPublishTask.", this.WechatPublishTask);
             this.SetParamObj(map, prefix + "ComposeMediaTask.", this.ComposeMediaTask);
+            this.SetParamObj(map, prefix + "SplitMediaTask.", this.SplitMediaTask);
+            this.SetParamObj(map, prefix + "WechatMiniProgramPublishTask.", this.WechatMiniProgramPublishTask);
             this.SetParamObj(map, prefix + "PullUploadTask.", this.PullUploadTask);
             this.SetParamObj(map, prefix + "TranscodeTask.", this.TranscodeTask);
-            this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
             this.SetParamObj(map, prefix + "ConcatTask.", this.ConcatTask);
             this.SetParamObj(map, prefix + "ClipTask.", this.ClipTask);
             this.SetParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
-            this.SetParamObj(map, prefix + "WechatMiniProgramPublishTask.", this.WechatMiniProgramPublishTask);
+            this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -83,14 +83,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FillType{ get; set; }
 
         /// <summary>
-        /// Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+        /// Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
         /// We don’t recommend specifying this parameter unless you have special requirements.
         /// </summary>
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
 
         /// <summary>
-        /// 
+        /// I-frame interval in frames. Valid values: 0 and 1-100000.
+        /// When this parameter is set to 0 or left empty, `Gop` will be automatically set.
         /// </summary>
         [JsonProperty("Gop")]
         public ulong? Gop{ get; set; }

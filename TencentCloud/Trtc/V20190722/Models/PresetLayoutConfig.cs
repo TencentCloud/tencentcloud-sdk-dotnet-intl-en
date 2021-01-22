@@ -67,10 +67,22 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? ZOrder{ get; set; }
 
         /// <summary>
-        /// Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
+        /// Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
         /// </summary>
         [JsonProperty("RenderMode")]
         public ulong? RenderMode{ get; set; }
+
+        /// <summary>
+        /// Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+        /// </summary>
+        [JsonProperty("MixInputType")]
+        public ulong? MixInputType{ get; set; }
+
+        /// <summary>
+        /// Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+        /// </summary>
+        [JsonProperty("PlaceImageId")]
+        public ulong? PlaceImageId{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "LocationY", this.LocationY);
             this.SetParamSimple(map, prefix + "ZOrder", this.ZOrder);
             this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
+            this.SetParamSimple(map, prefix + "MixInputType", this.MixInputType);
+            this.SetParamSimple(map, prefix + "PlaceImageId", this.PlaceImageId);
         }
     }
 }

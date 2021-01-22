@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// Room ID of uint type
+        /// Room ID in string type
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }

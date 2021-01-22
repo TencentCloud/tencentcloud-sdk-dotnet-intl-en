@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of content audit template.
+        /// Unique ID of an intelligent content recognition template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Content audit template name. Length limit: 64 characters.
+        /// Name of an intelligent content recognition template. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of content audit template. Length limit: 256 characters.
+        /// Description of an intelligent content recognition template. Length limit: 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Control parameter of porn detection.
-        /// </summary>
-        [JsonProperty("PornConfigure")]
-        public PornConfigureInfoForUpdate PornConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameter of terrorism information detection.
+        /// Control parameter for terrorism information.
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfoForUpdate TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of politically sensitive information detection.
+        /// Control parameter for porn information.
+        /// </summary>
+        [JsonProperty("PornConfigure")]
+        public PornConfigureInfoForUpdate PornConfigure{ get; set; }
+
+        /// <summary>
+        /// Control parameter for politically sensitive information.
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfoForUpdate PoliticalConfigure{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProhibitedConfigureInfoForUpdate ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of custom content audit.
+        /// Control parameter for custom intelligent content recognition tasks.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfoForUpdate UserDefineConfigure{ get; set; }
@@ -81,9 +81,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// Switch controlling whether to add audit result to review list (for human review).
-        /// <li>ON: yes;</li>
-        /// <li>OFF: no.</li>
+        /// Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+        /// <li>ON: yes</li>
+        /// <li>OFF: no</li>
         /// </summary>
         [JsonProperty("ReviewWallSwitch")]
         public string ReviewWallSwitch{ get; set; }
@@ -103,8 +103,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
-            this.SetParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
             this.SetParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
+            this.SetParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
             this.SetParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
             this.SetParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
             this.SetParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);

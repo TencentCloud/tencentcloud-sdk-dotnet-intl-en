@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
+        /// Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }

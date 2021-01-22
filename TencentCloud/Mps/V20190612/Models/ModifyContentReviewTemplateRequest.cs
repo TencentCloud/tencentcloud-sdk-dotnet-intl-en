@@ -25,37 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of a content audit template.
+        /// Unique ID of an intelligent content recognition template
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Name of a content audit template. Length limit: 64 characters.
+        /// Name of an intelligent content recognition template. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of a content audit template. Length limit: 256 characters.
+        /// Description of an intelligent content recognition template. Length limit: 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Porn information detection control parameter.
+        /// Control parameter for offensive content
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfoForUpdate PornConfigure{ get; set; }
 
         /// <summary>
-        /// Terrorism information detection control parameter.
+        /// Control parameter for insecure content
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfoForUpdate TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Politically sensitive information detection control parameter.
+        /// Control parameter for inappropriate content
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfoForUpdate PoliticalConfigure{ get; set; }
@@ -70,7 +70,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ProhibitedConfigureInfoForUpdate ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// Custom content audit control parameter.
+        /// Control parameter for custom intelligent content recognition
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfoForUpdate UserDefineConfigure{ get; set; }

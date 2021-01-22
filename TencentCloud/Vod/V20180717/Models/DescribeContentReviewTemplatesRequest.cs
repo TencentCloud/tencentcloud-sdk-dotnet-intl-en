@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID filter of content audit templates. Array length limit: 100.
+        /// Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

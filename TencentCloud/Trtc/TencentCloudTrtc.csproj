@@ -75,6 +75,7 @@
     <Compile Include="V20190722\Models\LayoutParams.cs" />
     <Compile Include="V20190722\Models\OutputParams.cs" />
     <Compile Include="V20190722\Models\PresetLayoutConfig.cs" />
+    <Compile Include="V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="V20190722\Models\QualityData.cs" />
     <Compile Include="V20190722\Models\RealtimeData.cs" />
     <Compile Include="V20190722\Models\RemoveUserRequest.cs" />

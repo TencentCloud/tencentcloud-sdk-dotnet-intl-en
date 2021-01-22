@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of a content audit template.
+        /// Unique ID of an intelligent content recognition template
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

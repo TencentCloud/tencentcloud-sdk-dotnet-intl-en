@@ -25,30 +25,30 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Pulled figure type. Valid values:
-        /// <li>UserDefine: custom figure library;</li>
-        /// <li>Default: default figure library.</li>
+        /// Type of samples to pull. Valid values:
+        /// <li>UserDefine: custom sample library</li>
+        /// <li>Default: default sample library</li>
         /// 
-        /// Default value: UserDefine (the custom figure library will be pulled.)
-        /// Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+        /// Default value: UserDefine. Samples in the custom sample library will be pulled.
+        /// Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Figure ID. Array length limit: 100.
+        /// IDs of samples. Array length limit: 100.
         /// </summary>
         [JsonProperty("PersonIds")]
         public string[] PersonIds{ get; set; }
 
         /// <summary>
-        /// Figure name. Array length limit: 20.
+        /// Names of samples. Array length limit: 20.
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// Figure tag. Array length limit: 20.
+        /// Tags of a sample. Array length limit: 20.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

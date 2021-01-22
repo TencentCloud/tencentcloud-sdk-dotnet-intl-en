@@ -54,6 +54,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("LayoutParams")]
         public LayoutParams LayoutParams{ get; set; }
 
+        /// <summary>
+        /// Relayed push parameters of a non-Tencent Cloud CDN
+        /// </summary>
+        [JsonProperty("PublishCdnParams")]
+        public PublishCdnParams PublishCdnParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "OutputParams.", this.OutputParams);
             this.SetParamObj(map, prefix + "EncodeParams.", this.EncodeParams);
             this.SetParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
+            this.SetParamObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
         }
     }
 }

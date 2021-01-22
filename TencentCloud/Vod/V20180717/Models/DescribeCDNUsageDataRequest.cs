@@ -46,11 +46,10 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Time granularity of usage data in minutes. Valid values:
-        /// <li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-        /// <li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-        /// <li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-        /// Default value: 1440. Data at the 1-day granularity will be returned.
-        /// When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+        /// <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+        /// <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+        /// <li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+        /// Default value: 1440. Data at 1-day granularity will be returned.
         /// </summary>
         [JsonProperty("DataInterval")]
         public ulong? DataInterval{ get; set; }

@@ -60,6 +60,24 @@ namespace TencentCloud.Mps.V20190612.Models
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
+        /// Start time offset of a transcoded video, in seconds.
+        /// <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+        /// </summary>
+        [JsonProperty("StartTimeOffset")]
+        public float? StartTimeOffset{ get; set; }
+
+        /// <summary>
+        /// End time offset of a transcoded video, in seconds.
+        /// <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+        /// </summary>
+        [JsonProperty("EndTimeOffset")]
+        public float? EndTimeOffset{ get; set; }
+
+        /// <summary>
         /// Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -96,6 +114,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+            this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);

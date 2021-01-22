@@ -43,6 +43,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
+        /// Whether to store the video clip persistently. 0: no (default), 1: yes.
+        /// </summary>
+        [JsonProperty("IsPersistence")]
+        public long? IsPersistence{ get; set; }
+
+        /// <summary>
         /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

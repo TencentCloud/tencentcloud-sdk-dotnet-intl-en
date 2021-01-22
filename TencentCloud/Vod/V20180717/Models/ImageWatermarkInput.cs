@@ -48,6 +48,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Height")]
         public string Height{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RepeatType")]
+        public string RepeatType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ImageContent", this.ImageContent);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "RepeatType", this.RepeatType);
         }
     }
 }

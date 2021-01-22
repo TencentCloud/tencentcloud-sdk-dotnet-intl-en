@@ -66,6 +66,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("PresetLayoutConfig")]
         public PresetLayoutConfig[] PresetLayoutConfig{ get; set; }
 
+        /// <summary>
+        /// Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+        /// </summary>
+        [JsonProperty("PlaceHolderMode")]
+        public ulong? PlaceHolderMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
             this.SetParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
             this.SetParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
+            this.SetParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
         }
     }
 }

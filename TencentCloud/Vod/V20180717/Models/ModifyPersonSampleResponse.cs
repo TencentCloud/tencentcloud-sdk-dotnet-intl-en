@@ -25,13 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Figure information.
+        /// Information of a sample.
         /// </summary>
         [JsonProperty("Person")]
         public AiSamplePerson Person{ get; set; }
 
         /// <summary>
-        /// Face information failed to be processed.
+        /// Information of samples that failed the verification by facial feature positioning.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FailFaceInfoSet")]
         public AiSampleFailFaceInfo[] FailFaceInfoSet{ get; set; }

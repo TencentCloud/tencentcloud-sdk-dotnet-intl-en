@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Figure ID.
+        /// ID of a sample.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
@@ -43,16 +43,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Figure use case. Valid values:
-        /// 1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-        /// 2. Review: it is used for content audit and equivalent to `Review.Face`.
-        /// 3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
+        /// Sample usage. Valid values:
+        /// 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+        /// 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+        /// 3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
         /// </summary>
         [JsonProperty("Usages")]
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// Face operation information.
+        /// Information of operations on facial features.
         /// </summary>
         [JsonProperty("FaceOperationInfo")]
         public AiSampleFaceOperation FaceOperationInfo{ get; set; }

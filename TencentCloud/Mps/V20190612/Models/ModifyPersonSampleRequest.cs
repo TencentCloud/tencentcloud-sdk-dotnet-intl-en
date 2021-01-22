@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Figure ID.
+        /// Material ID
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
@@ -43,16 +43,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Figure sample use case. Valid values:
-        /// 1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-        /// 2. Review: It is used for content audit, equivalent to `Review.Face`.
-        /// 3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
+        /// Material use case. Valid values:
+        /// 1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+        /// 2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+        /// 3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
         /// </summary>
         [JsonProperty("Usages")]
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// Face operation information.
+        /// Facial feature operation information
         /// </summary>
         [JsonProperty("FaceOperationInfo")]
         public AiSampleFaceOperation FaceOperationInfo{ get; set; }

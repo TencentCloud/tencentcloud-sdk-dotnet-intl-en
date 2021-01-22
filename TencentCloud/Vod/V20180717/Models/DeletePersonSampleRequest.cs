@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Figure ID.
+        /// ID of a sample.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }

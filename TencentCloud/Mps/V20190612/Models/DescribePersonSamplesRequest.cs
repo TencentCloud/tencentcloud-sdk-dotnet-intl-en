@@ -25,30 +25,30 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Pulled figure type. Valid values:
-        /// <li>UserDefine: Custom figure library;</li>
-        /// <li>Default: Default figure library.</li>
+        /// Type of the material pulled. Valid values:
+        /// <li>UserDefine: custom material library;</li>
+        /// <li>Default: default material library.</li>
         /// 
-        /// Default value: UserDefine (the custom figure library will be pulled.)
-        /// Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+        /// Default value: UserDefine (the materials of the custom material library are pulled.)
+        /// Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Figure ID. Array length limit: 100.
+        /// Material ID. Array length limit: 100.
         /// </summary>
         [JsonProperty("PersonIds")]
         public string[] PersonIds{ get; set; }
 
         /// <summary>
-        /// Figure name. Array length limit: 20.
+        /// Material name. Array length limit: 20.
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// Figure tag. Array length limit: 20.
+        /// Material tag. Array length limit: 20.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.126</VersionPrefix>
+    <VersionPrefix>3.0.127</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4858,6 +4858,7 @@
     <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
     <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
     <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
+    <Compile Include="Trtc\V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
     <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
@@ -5083,12 +5084,16 @@
     <Compile Include="Vod\V20180717\Models\DescribeAllClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeCDNStatDetailsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeCDNStatDetailsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeCDNUsageDataRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeCDNUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeCdnLogsRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeCdnLogsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
@@ -5158,6 +5163,8 @@
     <Compile Include="Vod\V20180717\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ManageTaskRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ManageTaskResponse.cs" />
     <Compile Include="Vod\V20180717\Models\MediaAdaptiveDynamicStreamingInfo.cs" />
     <Compile Include="Vod\V20180717\Models\MediaAiAnalysisClassificationItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaAiAnalysisCoverItem.cs" />
@@ -5252,6 +5259,7 @@
     <Compile Include="Vod\V20180717\Models\OutputVideoStream.cs" />
     <Compile Include="Vod\V20180717\Models\ParseStreamingManifestRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ParseStreamingManifestResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\PlayStatFileInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PlayerConfig.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalAsrReviewTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
@@ -5308,8 +5316,13 @@
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SortBy.cs" />
     <Compile Include="Vod\V20180717\Models\SpecificationDataItem.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaOutputConfig.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaTask.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaTaskSegmentInfo.cs" />
     <Compile Include="Vod\V20180717\Models\StatDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\StickerTrackItem.cs" />
+    <Compile Include="Vod\V20180717\Models\StorageStatData.cs" />
     <Compile Include="Vod\V20180717\Models\SubAppIdInfo.cs" />
     <Compile Include="Vod\V20180717\Models\SvgWatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\SvgWatermarkInputForUpdate.cs" />
@@ -5317,6 +5330,7 @@
     <Compile Include="Vod\V20180717\Models\TEHDConfigForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\TaskOutputMediaInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TaskSimpleInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TaskStatData.cs" />
     <Compile Include="Vod\V20180717\Models\TaskStatDataItem.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Total number of returned data entries.
+        /// Total number of data entries displayed on the current page
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
