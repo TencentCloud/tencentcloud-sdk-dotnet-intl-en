@@ -331,6 +331,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("DcnDstNum")]
         public long? DcnDstNum{ get; set; }
 
+        /// <summary>
+        /// Instance type. Valid values: `1` (dedicated primary instance), `2` (primary instance), `3` (disaster recovery instance), and `4` (dedicated disaster recovery instance).
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -386,6 +393,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
             this.SetParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
             this.SetParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

@@ -1307,7 +1307,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to modify the account concurrency limit quota.
+        /// This API is used to modify the account concurrency quota.
         /// </summary>
         /// <param name="req"><see cref="PutTotalConcurrencyConfigRequest"/></param>
         /// <returns><see cref="PutTotalConcurrencyConfigResponse"/></returns>
@@ -1327,7 +1327,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to modify the account concurrency limit quota.
+        /// This API is used to modify the account concurrency quota.
         /// </summary>
         /// <param name="req"><see cref="PutTotalConcurrencyConfigRequest"/></param>
         /// <returns><see cref="PutTotalConcurrencyConfigResponse"/></returns>

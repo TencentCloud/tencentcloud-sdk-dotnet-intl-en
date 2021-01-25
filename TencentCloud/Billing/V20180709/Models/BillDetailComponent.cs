@@ -121,13 +121,15 @@ namespace TencentCloud.Billing.V20180709.Models
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Component type/code (optional)
+        /// Component type code
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ItemCode")]
         public string ItemCode{ get; set; }
 
         /// <summary>
-        /// Component name/code (optional)
+        /// Component code
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ComponentCode")]
         public string ComponentCode{ get; set; }

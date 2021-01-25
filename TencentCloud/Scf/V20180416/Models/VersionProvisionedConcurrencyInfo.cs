@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public ulong? AvailableProvisionedConcurrencyNum{ get; set; }
 
         /// <summary>
-        /// Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
+        /// Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

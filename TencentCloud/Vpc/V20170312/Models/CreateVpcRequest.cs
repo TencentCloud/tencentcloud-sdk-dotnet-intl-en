@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+        /// VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EnableMulticast{ get; set; }
 
         /// <summary>
-        /// The DNS address. A maximum of 4 addresses is supported.
+        /// DNS address. A maximum of 4 addresses is supported.
         /// </summary>
         [JsonProperty("DnsServers")]
         public string[] DnsServers{ get; set; }
 
         /// <summary>
-        /// Domain name
+        /// Domain name of DHCP
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+        /// Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

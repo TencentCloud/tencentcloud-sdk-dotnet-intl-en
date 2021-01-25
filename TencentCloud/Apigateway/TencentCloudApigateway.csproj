@@ -55,6 +55,7 @@
     <Compile Include="V20180808\Models\ApiUsagePlan.cs" />
     <Compile Include="V20180808\Models\ApiUsagePlanSet.cs" />
     <Compile Include="V20180808\Models\ApisStatus.cs" />
+    <Compile Include="V20180808\Models\Base64EncodedTriggerRule.cs" />
     <Compile Include="V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="V20180808\Models\BindEnvironmentResponse.cs" />
     <Compile Include="V20180808\Models\BindIPStrategyRequest.cs" />

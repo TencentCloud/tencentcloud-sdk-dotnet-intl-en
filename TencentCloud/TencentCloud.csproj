@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.127</VersionPrefix>
+    <VersionPrefix>3.0.128</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,7 @@
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlan.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlanSet.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApisStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\Base64EncodedTriggerRule.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindIPStrategyRequest.cs" />
@@ -2036,6 +2037,8 @@
     <Compile Include="Dc\V20180410\Models\RouteFilterPrefix.cs" />
     <Compile Include="Dc\V20180410\Models\Tag.cs" />
     <Compile Include="Dcdb\V20180411\DcdbClient.cs" />
+    <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloseDBExtranetAccessRequest.cs" />
@@ -2064,6 +2067,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDBLogFilesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBParametersRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBParametersResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstancesRequest.cs" />
@@ -2076,6 +2081,10 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabaseTableResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesRequest.cs" />
@@ -2083,6 +2092,8 @@
     <Compile Include="Dcdb\V20180411\Models\LogFileInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBParametersRequest.cs" />
@@ -2096,6 +2107,8 @@
     <Compile Include="Dcdb\V20180411\Models\ParamModifyResult.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\SecurityGroup.cs" />
+    <Compile Include="Dcdb\V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\TableColumn.cs" />
     <Compile Include="Dms\V20200819\DmsClient.cs" />
@@ -3030,6 +3043,8 @@
     <Compile Include="Live\V20180801\Models\UpdateLiveWatermarkResponse.cs" />
     <Compile Include="Live\V20180801\Models\WatermarkInfo.cs" />
     <Compile Include="Mariadb\V20170312\MariadbClient.cs" />
+    <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
@@ -3066,6 +3081,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageDetailsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesRequest.cs" />
@@ -3074,6 +3091,10 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\InitDBInstancesRequest.cs" />
@@ -3085,6 +3106,8 @@
     <Compile Include="Mariadb\V20170312\Models\ModifyBackupTimeResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBParametersRequest.cs" />
@@ -3101,6 +3124,8 @@
     <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResourceUsageMonitorSet.cs" />
+    <Compile Include="Mariadb\V20170312\Models\SecurityGroup.cs" />
+    <Compile Include="Mariadb\V20170312\Models\SecurityGroupBound.cs" />
     <Compile Include="Mariadb\V20170312\Models\SlowLogData.cs" />
     <Compile Include="Mdc\V20200828\MdcClient.cs" />
     <Compile Include="Mdc\V20200828\Models\CreateInput.cs" />
@@ -5423,6 +5448,8 @@
     <Compile Include="Vpc\V20170312\Models\CheckNetDetectStateRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CheckNetDetectStateResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ClassicLinkInstance.cs" />
+    <Compile Include="Vpc\V20170312\Models\CloneSecurityGroupRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CloneSecurityGroupResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ConflictItem.cs" />
     <Compile Include="Vpc\V20170312\Models\ConflictSource.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateAddressTemplateGroupRequest.cs" />

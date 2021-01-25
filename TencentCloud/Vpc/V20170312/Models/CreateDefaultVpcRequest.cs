@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+        /// The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

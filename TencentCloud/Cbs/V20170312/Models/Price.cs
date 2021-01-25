@@ -59,6 +59,34 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }
 
+        /// <summary>
+        /// Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OriginalPriceHigh")]
+        public string OriginalPriceHigh{ get; set; }
+
+        /// <summary>
+        /// Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DiscountPriceHigh")]
+        public string DiscountPriceHigh{ get; set; }
+
+        /// <summary>
+        /// Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UnitPriceHigh")]
+        public string UnitPriceHigh{ get; set; }
+
+        /// <summary>
+        /// Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UnitPriceDiscountHigh")]
+        public string UnitPriceDiscountHigh{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +98,10 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
             this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
             this.SetParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
+            this.SetParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
+            this.SetParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
+            this.SetParamSimple(map, prefix + "UnitPriceHigh", this.UnitPriceHigh);
+            this.SetParamSimple(map, prefix + "UnitPriceDiscountHigh", this.UnitPriceDiscountHigh);
         }
     }
 }

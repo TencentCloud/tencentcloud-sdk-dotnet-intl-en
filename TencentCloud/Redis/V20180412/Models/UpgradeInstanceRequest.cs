@@ -48,6 +48,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("RedisReplicasNum")]
         public ulong? RedisReplicasNum{ get; set; }
 
+        /// <summary>
+        /// The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+        /// </summary>
+        [JsonProperty("NodeSet")]
+        public RedisNodeInfo[] NodeSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
             this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
+            this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
         }
     }
 }

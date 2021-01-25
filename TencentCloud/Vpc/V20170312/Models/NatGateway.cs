@@ -110,6 +110,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// The list of the security groups bound to the NAT Gateway
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecurityGroupSet")]
+        public string[] SecurityGroupSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +137,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+        /// Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
         /// </summary>
         [JsonProperty("SnapshotState")]
         public string SnapshotState{ get; set; }
@@ -132,6 +132,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ShareReference")]
         public ulong? ShareReference{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TimeStartShare")]
+        public string TimeStartShare{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "ImageCount", this.ImageCount);
             this.SetParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
             this.SetParamSimple(map, prefix + "ShareReference", this.ShareReference);
+            this.SetParamSimple(map, prefix + "TimeStartShare", this.TimeStartShare);
         }
     }
 }

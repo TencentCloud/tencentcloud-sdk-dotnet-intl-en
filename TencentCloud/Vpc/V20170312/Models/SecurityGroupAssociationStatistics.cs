@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? CVM{ get; set; }
 
         /// <summary>
-        /// Number of database instances.
+        /// Number of TencentDB for MySQL instances
         /// </summary>
         [JsonProperty("CDB")]
         public ulong? CDB{ get; set; }

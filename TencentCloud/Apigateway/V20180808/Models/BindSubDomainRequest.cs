@@ -72,6 +72,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("PathMappingSet")]
         public PathMapping[] PathMappingSet{ get; set; }
 
+        /// <summary>
+        /// Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+        /// </summary>
+        [JsonProperty("IsForcedHttps")]
+        public bool? IsForcedHttps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "NetSubDomain", this.NetSubDomain);
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamArrayObj(map, prefix + "PathMappingSet.", this.PathMappingSet);
+            this.SetParamSimple(map, prefix + "IsForcedHttps", this.IsForcedHttps);
         }
     }
 }

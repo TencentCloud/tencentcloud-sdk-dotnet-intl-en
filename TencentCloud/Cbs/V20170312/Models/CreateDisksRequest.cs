@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
+        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -96,6 +96,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("Shareable")]
         public bool? Shareable{ get; set; }
 
+        /// <summary>
+        /// Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

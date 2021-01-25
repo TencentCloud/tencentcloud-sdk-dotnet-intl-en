@@ -99,6 +99,8 @@
     <Compile Include="V20170312\Models\CheckNetDetectStateRequest.cs" />
     <Compile Include="V20170312\Models\CheckNetDetectStateResponse.cs" />
     <Compile Include="V20170312\Models\ClassicLinkInstance.cs" />
+    <Compile Include="V20170312\Models\CloneSecurityGroupRequest.cs" />
+    <Compile Include="V20170312\Models\CloneSecurityGroupResponse.cs" />
     <Compile Include="V20170312\Models\ConflictItem.cs" />
     <Compile Include="V20170312\Models\ConflictSource.cs" />
     <Compile Include="V20170312\Models\CreateAddressTemplateGroupRequest.cs" />

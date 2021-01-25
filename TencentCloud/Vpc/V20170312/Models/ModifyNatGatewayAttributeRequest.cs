@@ -42,6 +42,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
+        /// <summary>
+        /// Whether to modify the security group bound to the NAT Gateway
+        /// </summary>
+        [JsonProperty("ModifySecurityGroup")]
+        public bool? ModifySecurityGroup{ get; set; }
+
+        /// <summary>
+        /// The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
             this.SetParamSimple(map, prefix + "NatGatewayName", this.NatGatewayName);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "ModifySecurityGroup", this.ModifySecurityGroup);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

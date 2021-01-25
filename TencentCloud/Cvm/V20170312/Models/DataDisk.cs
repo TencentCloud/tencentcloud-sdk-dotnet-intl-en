@@ -81,7 +81,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cloud disk performance, in MB/s
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public long? ThroughputPerformance{ get; set; }

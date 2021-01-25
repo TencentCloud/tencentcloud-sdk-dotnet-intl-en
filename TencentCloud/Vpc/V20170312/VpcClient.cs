@@ -839,6 +839,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a security group with the same rule configurations as an existing security group. The cloning only copies the security group and its rules, but not the security group tags.
+        /// </summary>
+        /// <param name="req"><see cref="CloneSecurityGroupRequest"/></param>
+        /// <returns><see cref="CloneSecurityGroupResponse"/></returns>
+        public async Task<CloneSecurityGroupResponse> CloneSecurityGroup(CloneSecurityGroupRequest req)
+        {
+             JsonResponseModel<CloneSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a security group with the same rule configurations as an existing security group. The cloning only copies the security group and its rules, but not the security group tags.
+        /// </summary>
+        /// <param name="req"><see cref="CloneSecurityGroupRequest"/></param>
+        /// <returns><see cref="CloneSecurityGroupResponse"/></returns>
+        public CloneSecurityGroupResponse CloneSecurityGroupSync(CloneSecurityGroupRequest req)
+        {
+             JsonResponseModel<CloneSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateAddressTemplate) is used to create an IP address template.
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateRequest"/></param>
@@ -2012,9 +2052,9 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to create a VPC instance.
-        /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, see the corresponding documents about VPC IP address ranges.
-        /// * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, contact the online customer service.
-        /// * You can bind a tag when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
+        /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information on how to plan VPC IP ranges, see [Network Planning](https://intl.cloud.tencent.com/document/product/215/30313?from_cn_redirect=1).
+        /// * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537?from_cn_redirect=1" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// * You can bind tags when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateVpcRequest"/></param>
         /// <returns><see cref="CreateVpcResponse"/></returns>
@@ -2035,9 +2075,9 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to create a VPC instance.
-        /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, see the corresponding documents about VPC IP address ranges.
-        /// * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, contact the online customer service.
-        /// * You can bind a tag when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
+        /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information on how to plan VPC IP ranges, see [Network Planning](https://intl.cloud.tencent.com/document/product/215/30313?from_cn_redirect=1).
+        /// * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537?from_cn_redirect=1" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// * You can bind tags when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
         /// </summary>
         /// <param name="req"><see cref="CreateVpcRequest"/></param>
         /// <returns><see cref="CreateVpcResponse"/></returns>
@@ -4013,8 +4053,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeGatewayFlowMonitorDetail) is used to query the monitoring details of the gateway traffic.
-        /// * Only querying of a single gateway instance is supported. That is, only one of the `VpnId`, `DirectConnectGatewayId`, `PeeringConnectionId`, or `NatId` input parameters is supported, and one must be used.
+        /// This API is used to query the traffic monitoring details of the gateway.
+        /// * You can only use this API to query a single gateway instance, which means you must pass in only one of `VpnId`, `DirectConnectGatewayId`, `PeeringConnectionId`, or `NatId`.
         /// * If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring has been enabled in the corresponding gateway details page in the console.
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewayFlowMonitorDetailRequest"/></param>
@@ -4035,8 +4075,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeGatewayFlowMonitorDetail) is used to query the monitoring details of the gateway traffic.
-        /// * Only querying of a single gateway instance is supported. That is, only one of the `VpnId`, `DirectConnectGatewayId`, `PeeringConnectionId`, or `NatId` input parameters is supported, and one must be used.
+        /// This API is used to query the traffic monitoring details of the gateway.
+        /// * You can only use this API to query a single gateway instance, which means you must pass in only one of `VpnId`, `DirectConnectGatewayId`, `PeeringConnectionId`, or `NatId`.
         /// * If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring has been enabled in the corresponding gateway details page in the console.
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewayFlowMonitorDetailRequest"/></param>

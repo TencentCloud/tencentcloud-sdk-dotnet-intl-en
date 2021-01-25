@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public ulong? VersionProvisionedConcurrencyNum{ get; set; }
 
         /// <summary>
-        /// Function namespace. Default value: default
+        /// Function namespace. Default value: `default`
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

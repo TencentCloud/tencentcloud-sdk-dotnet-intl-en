@@ -53,8 +53,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Discount. For example, 20.0 indicates 80% off.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }

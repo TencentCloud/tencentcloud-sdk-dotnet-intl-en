@@ -53,6 +53,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to associate security groups with Tencent Cloud resources in batches.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public async Task<AssociateSecurityGroupsResponse> AssociateSecurityGroups(AssociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to associate security groups with Tencent Cloud resources in batches.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public AssociateSecurityGroupsResponse AssociateSecurityGroupsSync(AssociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to clone an instance account.
         /// </summary>
         /// <param name="req"><see cref="CloneAccountRequest"/></param>
@@ -659,6 +699,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the security group details of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public async Task<DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security group details of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroupsSync(DescribeDBSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the slow query log list.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowLogsRequest"/></param>
@@ -810,6 +890,86 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLogFileRetentionPeriod");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security group details of a project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
+        public async Task<DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProjectSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security group details of a project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
+        public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroupsSync(DescribeProjectSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProjectSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unassociate security groups from instances in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public async Task<DisassociateSecurityGroupsResponse> DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unassociate security groups from instances in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public DisassociateSecurityGroupsResponse DisassociateSecurityGroupsSync(DisassociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1014,6 +1174,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstanceName");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the security groups associated with TencentDB.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public async Task<ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the security groups associated with TencentDB.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroupsSync(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

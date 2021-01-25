@@ -360,6 +360,24 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Environments")]
         public string[] Environments{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsBase64Encoded")]
+        public bool? IsBase64Encoded{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsBase64Trigger")]
+        public bool? IsBase64Trigger{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Base64EncodedTriggerRules")]
+        public Base64EncodedTriggerRule[] Base64EncodedTriggerRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -414,6 +432,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "EnableCORS", this.EnableCORS);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArraySimple(map, prefix + "Environments.", this.Environments);
+            this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+            this.SetParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
+            this.SetParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
         }
     }
 }

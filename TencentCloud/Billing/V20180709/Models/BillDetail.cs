@@ -140,13 +140,15 @@ namespace TencentCloud.Billing.V20180709.Models
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Product name/code (optional)
+        /// Product code
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// Subproduct name/code (optional)
+        /// Subproduct code
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
@@ -162,6 +164,12 @@ namespace TencentCloud.Billing.V20180709.Models
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
+
+        /// <summary>
+        /// Project ID: ID of the project to which the resource belongs
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
 
 
         /// <summary>
@@ -192,6 +200,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

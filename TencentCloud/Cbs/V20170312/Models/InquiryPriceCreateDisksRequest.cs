@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Type of cloud hard disk. Value range: <br><li>Ordinary cloud disk: CLOUD_BASIC <br><li>Premium cloud storage: CLOUD_PREMIUM <br><li>SSD cloud disk: CLOUD_SSD.
+        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
             this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20170312\MariadbClient.cs" />
+    <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="V20170312\Models\CloneAccountResponse.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
@@ -81,6 +83,8 @@
     <Compile Include="V20170312\Models\DescribeDBResourceUsageDetailsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBResourceUsageRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBResourceUsageResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
@@ -89,6 +93,10 @@
     <Compile Include="V20170312\Models\DescribeFlowResponse.cs" />
     <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
     <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
@@ -100,6 +108,8 @@
     <Compile Include="V20170312\Models\ModifyBackupTimeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBParametersRequest.cs" />
@@ -116,6 +126,8 @@
     <Compile Include="V20170312\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20170312\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20170312\Models\ResourceUsageMonitorSet.cs" />
+    <Compile Include="V20170312\Models\SecurityGroup.cs" />
+    <Compile Include="V20170312\Models\SecurityGroupBound.cs" />
     <Compile Include="V20170312\Models\SlowLogData.cs" />
   </ItemGroup>
 </Project>

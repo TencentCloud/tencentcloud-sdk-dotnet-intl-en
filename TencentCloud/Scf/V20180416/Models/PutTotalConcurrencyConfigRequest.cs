@@ -31,7 +31,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public ulong? TotalConcurrencyMem{ get; set; }
 
         /// <summary>
-        /// Namespace. Default value: default
+        /// Namespace. Default value: `default`
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
