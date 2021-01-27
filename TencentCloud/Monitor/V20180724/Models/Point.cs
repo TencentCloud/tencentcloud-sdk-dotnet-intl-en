@@ -21,26 +21,21 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnBindingAllPolicyObjectRequest : AbstractModel
+    public class Point : AbstractModel
     {
         
         /// <summary>
-        /// The value is fixed to monitor.
+        /// Time point when this monitoring data point is generated
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("Timestamp")]
+        public ulong? Timestamp{ get; set; }
 
         /// <summary>
-        /// Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+        /// Monitoring data point value
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
-
-        /// <summary>
-        /// Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("Value")]
+        public float? Value{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

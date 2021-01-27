@@ -137,6 +137,8 @@
     <Compile Include="V20180724\Models\DescribeProductEventListOverView.cs" />
     <Compile Include="V20180724\Models\DescribeProductEventListRequest.cs" />
     <Compile Include="V20180724\Models\DescribeProductEventListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeStatisticDataRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeStatisticDataResponse.cs" />
     <Compile Include="V20180724\Models\Dimension.cs" />
     <Compile Include="V20180724\Models\DimensionsDesc.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataRequest.cs" />
@@ -146,9 +148,12 @@
     <Compile Include="V20180724\Models\InstanceGroups.cs" />
     <Compile Include="V20180724\Models\Metric.cs" />
     <Compile Include="V20180724\Models\MetricConfig.cs" />
+    <Compile Include="V20180724\Models\MetricData.cs" />
+    <Compile Include="V20180724\Models\MetricDataPoint.cs" />
     <Compile Include="V20180724\Models\MetricDatum.cs" />
     <Compile Include="V20180724\Models\MetricObjectMeaning.cs" />
     <Compile Include="V20180724\Models\MetricSet.cs" />
+    <Compile Include="V20180724\Models\MidQueryCondition.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmNoticeRequest.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmPolicyConditionRequest.cs" />
@@ -169,6 +174,7 @@
     <Compile Include="V20180724\Models\ModifyPolicyGroupResponse.cs" />
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="V20180724\Models\PeriodsSt.cs" />
+    <Compile Include="V20180724\Models\Point.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataResponse.cs" />
     <Compile Include="V20180724\Models\ReceiverInfo.cs" />

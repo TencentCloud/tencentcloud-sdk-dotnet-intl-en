@@ -79,7 +79,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MixInputType{ get; set; }
 
         /// <summary>
-        /// Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+        /// ID of the placeholder image. If the placeholding feature is enabled, and a user for whom an image position is reserved is not sending video data, the position will show the placeholder image. The ID is generated after the placeholder image is uploaded in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
         /// </summary>
         [JsonProperty("PlaceImageId")]
         public ulong? PlaceImageId{ get; set; }

@@ -1053,6 +1053,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to query monitoring data by dimension conditions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStatisticDataRequest"/></param>
+        /// <returns><see cref="DescribeStatisticDataResponse"/></returns>
+        public async Task<DescribeStatisticDataResponse> DescribeStatisticData(DescribeStatisticDataRequest req)
+        {
+             JsonResponseModel<DescribeStatisticDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStatisticData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStatisticDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query monitoring data by dimension conditions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStatisticDataRequest"/></param>
+        /// <returns><see cref="DescribeStatisticDataResponse"/></returns>
+        public DescribeStatisticDataResponse DescribeStatisticDataSync(DescribeStatisticDataRequest req)
+        {
+             JsonResponseModel<DescribeStatisticDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStatisticData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStatisticDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
         /// API call rate limit: 20 calls/second (1,200 calls/minute). A single request can obtain the data of up to 10 instances and up to 1,440 data points.
         /// This API may fail due to the rate limit if you need to call a lot of metrics and objects. We recommended that you spread the call requests over time.

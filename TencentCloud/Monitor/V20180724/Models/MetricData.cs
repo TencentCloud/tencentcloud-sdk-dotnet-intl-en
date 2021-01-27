@@ -21,26 +21,20 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnBindingAllPolicyObjectRequest : AbstractModel
+    public class MetricData : AbstractModel
     {
         
         /// <summary>
-        /// The value is fixed to monitor.
+        /// Metric name
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
 
         /// <summary>
-        /// Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+        /// Monitoring data point
         /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
-
-        /// <summary>
-        /// Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("Points")]
+        public MetricDataPoint[] Points{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamArrayObj(map, prefix + "Points.", this.Points);
         }
     }
 }

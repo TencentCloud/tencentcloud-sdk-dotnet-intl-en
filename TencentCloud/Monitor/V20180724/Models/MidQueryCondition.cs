@@ -21,26 +21,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnBindingAllPolicyObjectRequest : AbstractModel
+    public class MidQueryCondition : AbstractModel
     {
         
         /// <summary>
-        /// The value is fixed to monitor.
+        /// Dimension
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+        /// Operator. Valid values: eq (equal to), ne (not equal to), in
         /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+        /// Dimension value. If `Operator` is `eq` or `ne`, only the first element will be used
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("Value")]
+        public string[] Value{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamArraySimple(map, prefix + "Value.", this.Value);
         }
     }
 }

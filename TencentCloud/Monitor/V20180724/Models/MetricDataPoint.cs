@@ -21,38 +21,20 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BindingPolicyObjectRequest : AbstractModel
+    public class MetricDataPoint : AbstractModel
     {
         
         /// <summary>
-        /// Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
-
-        /// <summary>
-        /// Required. The value is fixed to monitor.
-        /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
-
-        /// <summary>
-        /// Instance group ID.
-        /// </summary>
-        [JsonProperty("InstanceGroupId")]
-        public long? InstanceGroupId{ get; set; }
-
-        /// <summary>
-        /// Dimensions of an object to be bound.
+        /// Combination of instance object dimensions
         /// </summary>
         [JsonProperty("Dimensions")]
-        public BindingPolicyObjectDimension[] Dimensions{ get; set; }
+        public Dimension[] Dimensions{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+        /// Data point list
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("Values")]
+        public Point[] Values{ get; set; }
 
 
         /// <summary>
@@ -60,11 +42,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamArrayObj(map, prefix + "Values.", this.Values);
         }
     }
 }

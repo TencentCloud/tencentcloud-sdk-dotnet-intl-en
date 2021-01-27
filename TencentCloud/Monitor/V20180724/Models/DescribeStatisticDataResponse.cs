@@ -21,38 +21,38 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BindingPolicyObjectRequest : AbstractModel
+    public class DescribeStatisticDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+        /// Statistical period
         /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Required. The value is fixed to monitor.
+        /// Start time
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// Instance group ID.
+        /// End time
         /// </summary>
-        [JsonProperty("InstanceGroupId")]
-        public long? InstanceGroupId{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// Dimensions of an object to be bound.
+        /// Monitoring data
         /// </summary>
-        [JsonProperty("Dimensions")]
-        public BindingPolicyObjectDimension[] Dimensions{ get; set; }
+        [JsonProperty("Data")]
+        public MetricData[] Data{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
-            this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
