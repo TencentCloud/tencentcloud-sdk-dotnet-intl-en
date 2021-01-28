@@ -93,6 +93,46 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// This API is used to apply for an internet tunnel’s CIDR block.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyInternetAddressRequest"/></param>
+        /// <returns><see cref="ApplyInternetAddressResponse"/></returns>
+        public async Task<ApplyInternetAddressResponse> ApplyInternetAddress(ApplyInternetAddressRequest req)
+        {
+             JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply for an internet tunnel’s CIDR block.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyInternetAddressRequest"/></param>
+        /// <returns><see cref="ApplyInternetAddressResponse"/></returns>
+        public ApplyInternetAddressResponse ApplyInternetAddressSync(ApplyInternetAddressRequest req)
+        {
+             JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to apply for a connection.
         /// When calling this API, please note that:
         /// You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
@@ -381,6 +421,206 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// This API is used to obtain the public IP address of an internet tunnel.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressResponse"/></returns>
+        public async Task<DescribeInternetAddressResponse> DescribeInternetAddress(DescribeInternetAddressRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the public IP address of an internet tunnel.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressResponse"/></returns>
+        public DescribeInternetAddressResponse DescribeInternetAddressSync(DescribeInternetAddressRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the public IP quota of internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressQuotaRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressQuotaResponse"/></returns>
+        public async Task<DescribeInternetAddressQuotaResponse> DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInternetAddressQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the public IP quota of internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressQuotaRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressQuotaResponse"/></returns>
+        public DescribeInternetAddressQuotaResponse DescribeInternetAddressQuotaSync(DescribeInternetAddressQuotaRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddressQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the public IP address assignment statistics of internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressStatisticsResponse"/></returns>
+        public async Task<DescribeInternetAddressStatisticsResponse> DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInternetAddressStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the public IP address assignment statistics of internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressStatisticsResponse"/></returns>
+        public DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatisticsSync(DescribeInternetAddressStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddressStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable a public IP address of internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="DisableInternetAddressRequest"/></param>
+        /// <returns><see cref="DisableInternetAddressResponse"/></returns>
+        public async Task<DisableInternetAddressResponse> DisableInternetAddress(DisableInternetAddressRequest req)
+        {
+             JsonResponseModel<DisableInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable a public IP address of internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="DisableInternetAddressRequest"/></param>
+        /// <returns><see cref="DisableInternetAddressResponse"/></returns>
+        public DisableInternetAddressResponse DisableInternetAddressSync(DisableInternetAddressRequest req)
+        {
+             JsonResponseModel<DisableInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable a public IP address for internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="EnableInternetAddressRequest"/></param>
+        /// <returns><see cref="EnableInternetAddressResponse"/></returns>
+        public async Task<EnableInternetAddressResponse> EnableInternetAddress(EnableInternetAddressRequest req)
+        {
+             JsonResponseModel<EnableInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable a public IP address for internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="EnableInternetAddressRequest"/></param>
+        /// <returns><see cref="EnableInternetAddressResponse"/></returns>
+        public EnableInternetAddressResponse EnableInternetAddressSync(EnableInternetAddressRequest req)
+        {
+             JsonResponseModel<EnableInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify connection attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectAttributeRequest"/></param>
@@ -492,6 +732,46 @@ namespace TencentCloud.Dc.V20180410
              {
                  var strResp = this.InternalRequestSync(req, "RejectDirectConnectTunnel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RejectDirectConnectTunnelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to release an IP address of internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseInternetAddressRequest"/></param>
+        /// <returns><see cref="ReleaseInternetAddressResponse"/></returns>
+        public async Task<ReleaseInternetAddressResponse> ReleaseInternetAddress(ReleaseInternetAddressRequest req)
+        {
+             JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to release an IP address of internet tunnels.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseInternetAddressRequest"/></param>
+        /// <returns><see cref="ReleaseInternetAddressResponse"/></returns>
+        public ReleaseInternetAddressResponse ReleaseInternetAddressSync(ReleaseInternetAddressRequest req)
+        {
+             JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseInternetAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

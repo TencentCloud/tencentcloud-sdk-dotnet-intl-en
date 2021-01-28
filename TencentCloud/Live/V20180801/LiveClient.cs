@@ -3309,6 +3309,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to query the number of LVB upstream channels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>
+        /// <returns><see cref="DescribeUploadStreamNumsResponse"/></returns>
+        public async Task<DescribeUploadStreamNumsResponse> DescribeUploadStreamNums(DescribeUploadStreamNumsRequest req)
+        {
+             JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUploadStreamNums");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadStreamNumsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of LVB upstream channels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>
+        /// <returns><see cref="DescribeUploadStreamNumsResponse"/></returns>
+        public DescribeUploadStreamNumsResponse DescribeUploadStreamNumsSync(DescribeUploadStreamNumsRequest req)
+        {
+             JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUploadStreamNums");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadStreamNumsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the information of the top n domain names or stream IDs in a certain period of time (top 1,000 is supported currently).
         /// </summary>
         /// <param name="req"><see cref="DescribeVisitTopSumInfoListRequest"/></param>

@@ -68,6 +68,8 @@
     <Compile Include="V20201002\Models\GetEmailIdentityResponse.cs" />
     <Compile Include="V20201002\Models\GetEmailTemplateRequest.cs" />
     <Compile Include="V20201002\Models\GetEmailTemplateResponse.cs" />
+    <Compile Include="V20201002\Models\GetSendEmailStatusRequest.cs" />
+    <Compile Include="V20201002\Models\GetSendEmailStatusResponse.cs" />
     <Compile Include="V20201002\Models\GetStatisticsReportRequest.cs" />
     <Compile Include="V20201002\Models\GetStatisticsReportResponse.cs" />
     <Compile Include="V20201002\Models\ListBlackEmailAddressRequest.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="V20201002\Models\ListEmailTemplatesResponse.cs" />
     <Compile Include="V20201002\Models\SendEmailRequest.cs" />
     <Compile Include="V20201002\Models\SendEmailResponse.cs" />
+    <Compile Include="V20201002\Models\SendEmailStatus.cs" />
     <Compile Include="V20201002\Models\Simple.cs" />
     <Compile Include="V20201002\Models\Template.cs" />
     <Compile Include="V20201002\Models\TemplateContent.cs" />

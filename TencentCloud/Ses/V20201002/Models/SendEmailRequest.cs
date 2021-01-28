@@ -33,7 +33,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// Recipient address.
+        /// Recipient email addresses. You can send an email to up to 50 recipients at a time.
         /// </summary>
         [JsonProperty("Destination")]
         public string[] Destination{ get; set; }

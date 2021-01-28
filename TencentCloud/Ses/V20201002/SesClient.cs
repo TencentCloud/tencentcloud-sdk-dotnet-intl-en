@@ -415,6 +415,46 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// This API is used to get email sending status. Only data within 90 days can be queried.
+        /// </summary>
+        /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
+        /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
+        public async Task<GetSendEmailStatusResponse> GetSendEmailStatus(GetSendEmailStatusRequest req)
+        {
+             JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSendEmailStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSendEmailStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get email sending status. Only data within 90 days can be queried.
+        /// </summary>
+        /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
+        /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
+        public GetSendEmailStatusResponse GetSendEmailStatusSync(GetSendEmailStatusRequest req)
+        {
+             JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSendEmailStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSendEmailStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on. The maximum time span is 14 days.
         /// </summary>
         /// <param name="req"><see cref="GetStatisticsReportRequest"/></param>

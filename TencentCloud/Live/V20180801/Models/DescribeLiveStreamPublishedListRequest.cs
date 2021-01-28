@@ -63,7 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// Number of entries per page.
         /// Maximum value: 100.
-        /// Value range: any integer between 1 and 100.
+        /// Valid values: integers between 10 and 100.
         /// Default value: 10.
         /// </summary>
         [JsonProperty("PageSize")]

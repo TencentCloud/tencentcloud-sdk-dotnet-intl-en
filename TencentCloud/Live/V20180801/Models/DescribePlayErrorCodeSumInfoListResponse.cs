@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Information of 4xx or 5xx error codes by district and ISP.
+        /// Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
         /// </summary>
         [JsonProperty("ProIspInfoList")]
         public ProIspPlayCodeDataInfo[] ProIspInfoList{ get; set; }

@@ -25,10 +25,8 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Base64-encoded value of image.
-        /// Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-        /// Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-        /// Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+        /// Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+        /// Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
@@ -44,31 +42,31 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
         /// </summary>
         [JsonProperty("RetBorderCutImage")]
         public bool? RetBorderCutImage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to return the card number image data after slicing. Default value: `false`
         /// </summary>
         [JsonProperty("RetCardNoImage")]
         public bool? RetCardNoImage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
         /// </summary>
         [JsonProperty("EnableCopyCheck")]
         public bool? EnableCopyCheck{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
         /// </summary>
         [JsonProperty("EnableReshootCheck")]
         public bool? EnableReshootCheck{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
         /// </summary>
         [JsonProperty("EnableBorderCheck")]
         public bool? EnableBorderCheck{ get; set; }

@@ -15,20 +15,36 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Dc.V20180410.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAllStreamPlayInfoListRequest : AbstractModel
+    public class ApplyInternetAddressRequest : AbstractModel
     {
         
         /// <summary>
-        /// Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
+        /// Mask length of a CIDR block
         /// </summary>
-        [JsonProperty("QueryTime")]
-        public string QueryTime{ get; set; }
+        [JsonProperty("MaskLen")]
+        public long? MaskLen{ get; set; }
+
+        /// <summary>
+        /// Address type. Valid values: 0: BGP
+        /// 1: China Telecom
+        /// 2: China Mobile
+        /// 3: China Unicom
+        /// </summary>
+        [JsonProperty("AddrType")]
+        public long? AddrType{ get; set; }
+
+        /// <summary>
+        /// Address protocol. Valid values: 0: IPv4
+        /// 1: IPv6
+        /// </summary>
+        [JsonProperty("AddrProto")]
+        public long? AddrProto{ get; set; }
 
 
         /// <summary>
@@ -36,7 +52,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "QueryTime", this.QueryTime);
+            this.SetParamSimple(map, prefix + "MaskLen", this.MaskLen);
+            this.SetParamSimple(map, prefix + "AddrType", this.AddrType);
+            this.SetParamSimple(map, prefix + "AddrProto", this.AddrProto);
         }
     }
 }

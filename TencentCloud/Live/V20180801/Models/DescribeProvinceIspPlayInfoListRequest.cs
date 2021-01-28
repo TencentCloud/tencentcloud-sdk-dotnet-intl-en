@@ -81,6 +81,14 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("MainlandOrOversea")]
         public string MainlandOrOversea{ get; set; }
 
+        /// <summary>
+        /// IP type:
+        /// "Ipv6": IPv6 data
+        /// Data of all IPs will be returned if this parameter is left empty.
+        /// </summary>
+        [JsonProperty("IpType")]
+        public string IpType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +103,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamArraySimple(map, prefix + "ProvinceNames.", this.ProvinceNames);
             this.SetParamArraySimple(map, prefix + "IspNames.", this.IspNames);
             this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+            this.SetParamSimple(map, prefix + "IpType", this.IpType);
         }
     }
 }

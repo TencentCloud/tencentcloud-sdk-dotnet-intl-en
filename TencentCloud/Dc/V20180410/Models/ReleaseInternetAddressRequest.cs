@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Dc.V20180410.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAllStreamPlayInfoListRequest : AbstractModel
+    public class ReleaseInternetAddressRequest : AbstractModel
     {
         
         /// <summary>
-        /// Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
+        /// ID of the internet tunnel’s public IP address
         /// </summary>
-        [JsonProperty("QueryTime")]
-        public string QueryTime{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "QueryTime", this.QueryTime);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

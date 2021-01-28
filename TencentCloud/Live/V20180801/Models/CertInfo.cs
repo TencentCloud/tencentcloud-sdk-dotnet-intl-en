@@ -55,9 +55,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string HttpsCrt{ get; set; }
 
         /// <summary>
-        /// Certificate type:
-        /// 0: Tencent Cloud-hosted certificate.
-        /// 1: user-added certificate.
+        /// Certificate type.
+        /// 0: User-added certificate.
+        /// 1: Tencent Cloud-hosted certificate.
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }

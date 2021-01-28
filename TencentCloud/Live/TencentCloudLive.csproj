@@ -220,6 +220,8 @@
     <Compile Include="V20180801\Models\DescribeStreamPushInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeTopClientIpSumInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeTopClientIpSumInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeUploadStreamNumsRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeUploadStreamNumsResponse.cs" />
     <Compile Include="V20180801\Models\DescribeVisitTopSumInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeVisitTopSumInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DomainCertInfo.cs" />
