@@ -21,26 +21,14 @@ namespace TencentCloud.Kms.V20190118.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListAlgorithmsResponse : AbstractModel
+    public class SignByAsymmetricKeyResponse : AbstractModel
     {
         
         /// <summary>
-        /// Symmetric encryption algorithms supported in this region
+        /// Base64-encoded signature
         /// </summary>
-        [JsonProperty("SymmetricAlgorithms")]
-        public AlgorithmInfo[] SymmetricAlgorithms{ get; set; }
-
-        /// <summary>
-        /// Asymmetric encryption algorithms supported in this region
-        /// </summary>
-        [JsonProperty("AsymmetricAlgorithms")]
-        public AlgorithmInfo[] AsymmetricAlgorithms{ get; set; }
-
-        /// <summary>
-        /// Asymmetric signature verification algorithms supported in the current region
-        /// </summary>
-        [JsonProperty("AsymmetricSignVerifyAlgorithms")]
-        public AlgorithmInfo[] AsymmetricSignVerifyAlgorithms{ get; set; }
+        [JsonProperty("Signature")]
+        public string Signature{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,9 +42,7 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SymmetricAlgorithms.", this.SymmetricAlgorithms);
-            this.SetParamArrayObj(map, prefix + "AsymmetricAlgorithms.", this.AsymmetricAlgorithms);
-            this.SetParamArrayObj(map, prefix + "AsymmetricSignVerifyAlgorithms.", this.AsymmetricSignVerifyAlgorithms);
+            this.SetParamSimple(map, prefix + "Signature", this.Signature);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

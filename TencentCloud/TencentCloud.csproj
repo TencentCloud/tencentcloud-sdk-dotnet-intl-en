@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.131</VersionPrefix>
+    <VersionPrefix>3.0.132</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2799,6 +2799,8 @@
     <Compile Include="Kms\V20190118\Models\ReEncryptResponse.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\SignByAsymmetricKeyRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\SignByAsymmetricKeyResponse.cs" />
     <Compile Include="Kms\V20190118\Models\Tag.cs" />
     <Compile Include="Kms\V20190118\Models\TagFilter.cs" />
     <Compile Include="Kms\V20190118\Models\UnbindCloudResourceRequest.cs" />
@@ -2807,6 +2809,8 @@
     <Compile Include="Kms\V20190118\Models\UpdateAliasResponse.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\VerifyByAsymmetricKeyRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\VerifyByAsymmetricKeyResponse.cs" />
     <Compile Include="Kms\V20190118\Models\WhiteboxKeyInfo.cs" />
     <Compile Include="Live\V20180801\LiveClient.cs" />
     <Compile Include="Live\V20180801\Models\AddDelayLiveStreamRequest.cs" />

@@ -1815,6 +1815,48 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to generate a signature with an asymmetric key.
+        /// Note: only the keys with `KeyUsage= ASYMMETRIC_SIGN_VERIFY_SM2` can be used for signature generation.
+        /// </summary>
+        /// <param name="req"><see cref="SignByAsymmetricKeyRequest"/></param>
+        /// <returns><see cref="SignByAsymmetricKeyResponse"/></returns>
+        public async Task<SignByAsymmetricKeyResponse> SignByAsymmetricKey(SignByAsymmetricKeyRequest req)
+        {
+             JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SignByAsymmetricKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignByAsymmetricKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to generate a signature with an asymmetric key.
+        /// Note: only the keys with `KeyUsage= ASYMMETRIC_SIGN_VERIFY_SM2` can be used for signature generation.
+        /// </summary>
+        /// <param name="req"><see cref="SignByAsymmetricKeyRequest"/></param>
+        /// <returns><see cref="SignByAsymmetricKeyResponse"/></returns>
+        public SignByAsymmetricKeyResponse SignByAsymmetricKeySync(SignByAsymmetricKeyRequest req)
+        {
+             JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SignByAsymmetricKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignByAsymmetricKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unbind a key with a Tencent Cloud resource, indicating that the Tencent Cloud resource will not use the key any longer.
         /// </summary>
         /// <param name="req"><see cref="UnbindCloudResourceRequest"/></param>
@@ -1926,6 +1968,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "UpdateKeyDescription");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateKeyDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify a signature with an asymmetric key.
+        /// </summary>
+        /// <param name="req"><see cref="VerifyByAsymmetricKeyRequest"/></param>
+        /// <returns><see cref="VerifyByAsymmetricKeyResponse"/></returns>
+        public async Task<VerifyByAsymmetricKeyResponse> VerifyByAsymmetricKey(VerifyByAsymmetricKeyRequest req)
+        {
+             JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyByAsymmetricKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyByAsymmetricKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify a signature with an asymmetric key.
+        /// </summary>
+        /// <param name="req"><see cref="VerifyByAsymmetricKeyRequest"/></param>
+        /// <returns><see cref="VerifyByAsymmetricKeyResponse"/></returns>
+        public VerifyByAsymmetricKeyResponse VerifyByAsymmetricKeySync(VerifyByAsymmetricKeyRequest req)
+        {
+             JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyByAsymmetricKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyByAsymmetricKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

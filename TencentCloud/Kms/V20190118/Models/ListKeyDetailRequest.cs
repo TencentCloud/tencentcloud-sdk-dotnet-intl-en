@@ -67,7 +67,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Origin{ get; set; }
 
         /// <summary>
-        /// Filter by `KeyUsage` of CMKs. Valid values: `ALL` (filter all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`.
+        /// Filter by the `KeyUsage` field of CMKs. Valid values: `ALL` (filtering all CMKs), `ENCRYPT_DECRYPT` (it will be used when the parameter is left empty), `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, and `ASYMMETRIC_SIGN_VERIFY_SM2`.
         /// </summary>
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }

@@ -137,6 +137,8 @@
     <Compile Include="V20190118\Models\ReEncryptResponse.cs" />
     <Compile Include="V20190118\Models\ScheduleKeyDeletionRequest.cs" />
     <Compile Include="V20190118\Models\ScheduleKeyDeletionResponse.cs" />
+    <Compile Include="V20190118\Models\SignByAsymmetricKeyRequest.cs" />
+    <Compile Include="V20190118\Models\SignByAsymmetricKeyResponse.cs" />
     <Compile Include="V20190118\Models\Tag.cs" />
     <Compile Include="V20190118\Models\TagFilter.cs" />
     <Compile Include="V20190118\Models\UnbindCloudResourceRequest.cs" />
@@ -145,6 +147,8 @@
     <Compile Include="V20190118\Models\UpdateAliasResponse.cs" />
     <Compile Include="V20190118\Models\UpdateKeyDescriptionRequest.cs" />
     <Compile Include="V20190118\Models\UpdateKeyDescriptionResponse.cs" />
+    <Compile Include="V20190118\Models\VerifyByAsymmetricKeyRequest.cs" />
+    <Compile Include="V20190118\Models\VerifyByAsymmetricKeyResponse.cs" />
     <Compile Include="V20190118\Models\WhiteboxKeyInfo.cs" />
   </ItemGroup>
 </Project>
