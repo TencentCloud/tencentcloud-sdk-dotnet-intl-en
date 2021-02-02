@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Name of an intelligent content recognition template. Length limit: 64 characters.
+        /// Name of an intelligent content recognition template. Length limit: 64 characters
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of an intelligent content recognition template. Length limit: 256 characters.
+        /// Description of an intelligent content recognition template. Length limit: 256 characters
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Control parameter for offensive content
+        /// Control parameter for porn information
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for insecure content
+        /// Control parameter for terrorism information
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for inappropriate content
+        /// Control parameter for politically sensitive information
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for custom intelligent content recognition
+        /// Control parameter for custom intelligent content recognition tasks
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }

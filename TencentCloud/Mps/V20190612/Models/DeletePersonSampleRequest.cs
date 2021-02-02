@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Material ID
+        /// Image ID
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }

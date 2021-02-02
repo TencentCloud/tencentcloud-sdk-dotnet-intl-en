@@ -25,37 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Name of a material. Length limit: 20 characters.
+        /// Name of an image. Length limit: 20 characters
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Material use case. Valid values:
-        /// 1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-        /// 2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-        /// 3. All: all of the above, equivalent to 1 and 2 combined
+        /// Image usage. Valid values:
+        /// 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+        /// 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+        /// 3. All: equivalent to 1+2
         /// </summary>
         [JsonProperty("Usages")]
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// Material description. Length limit: 1,024 characters.
+        /// Image description. Length limit: 1,024 characters
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+        /// [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
         /// Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
         /// </summary>
         [JsonProperty("FaceContents")]
         public string[] FaceContents{ get; set; }
 
         /// <summary>
-        /// Material tag
-        /// <li>Array length limit: 20 tags;</li>
-        /// <li>Tag length limit: 128 characters.</li>
+        /// Image tag
+        /// <li>Array length limit: 20 tags</li>
+        /// <li>Tag length limit: 128 characters</li>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

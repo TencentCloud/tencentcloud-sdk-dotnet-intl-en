@@ -25,30 +25,30 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Type of the material pulled. Valid values:
-        /// <li>UserDefine: custom material library;</li>
-        /// <li>Default: default material library.</li>
+        /// Type of images to pull. Valid values:
+        /// <li>UserDefine: custom image library</li>
+        /// <li>Default: default image library</li>
         /// 
-        /// Default value: UserDefine (the materials of the custom material library are pulled.)
-        /// Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
+        /// Default value: UserDefine. Samples in the custom image library will be pulled.
+        /// Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Material ID. Array length limit: 100.
+        /// Image ID. Array length limit: 100
         /// </summary>
         [JsonProperty("PersonIds")]
         public string[] PersonIds{ get; set; }
 
         /// <summary>
-        /// Material name. Array length limit: 20.
+        /// Image name. Array length limit: 20
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// Material tag. Array length limit: 20.
+        /// Image tag. Array length limit: 20
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

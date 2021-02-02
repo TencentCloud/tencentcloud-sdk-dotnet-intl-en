@@ -37,7 +37,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+        /// Error code. 0: success; other values: failure.
+        /// <li>40000: invalid input parameter. Please check it;</li>
+        /// <li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+        /// <li>70000: internal service error. Please try again.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }

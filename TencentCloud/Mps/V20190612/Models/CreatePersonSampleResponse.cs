@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Material information
+        /// Image information
         /// </summary>
         [JsonProperty("Person")]
         public AiSamplePerson Person{ get; set; }
 
         /// <summary>
-        /// Positioning information of facial features processed unsuccessfully
+        /// Information of images that failed the verification by facial feature positioning
         /// </summary>
         [JsonProperty("FailFaceInfoSet")]
         public AiSampleFailFaceInfo[] FailFaceInfoSet{ get; set; }
