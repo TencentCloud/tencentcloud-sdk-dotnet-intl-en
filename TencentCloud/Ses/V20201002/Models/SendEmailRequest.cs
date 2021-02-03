@@ -33,7 +33,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// Recipient email addresses. You can send an email to up to 50 recipients at a time.
+        /// Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
         /// </summary>
         [JsonProperty("Destination")]
         public string[] Destination{ get; set; }
@@ -45,7 +45,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string Subject{ get; set; }
 
         /// <summary>
-        /// Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+        /// Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// 
+        /// Email attachments
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }

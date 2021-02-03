@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Email template to be deleted.
+        /// Template ID
         /// </summary>
         [JsonProperty("TemplateID")]
         public ulong? TemplateID{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Unique ID generated when receiving the message.
+        /// Unique ID generated when receiving the message
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }

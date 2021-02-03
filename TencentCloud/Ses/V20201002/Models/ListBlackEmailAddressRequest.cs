@@ -25,13 +25,13 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Start date.
+        /// Start date in the format of `YYYY-MM-DD`
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// End date.
+        /// End date in the format of `YYYY-MM-DD`
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Common parameter. It must be used with `Limit`.
+        /// Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 
+        /// Attachment name, which cannot exceed 255 characters. Some attachment types are not supported. For details, see [Attachment Types](https://intl.cloud.tencent.com/document/product/1288/51951?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Attachment content after base64 encoding. A single attachment cannot exceed 5 MB. Note: Tencent Cloud APIs require that a request packet should not exceed 10 MB. If you are sending multiple attachments, the total size of these attachments cannot exceed 10 MB.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

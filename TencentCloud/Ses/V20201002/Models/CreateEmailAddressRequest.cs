@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Your sender address. You can create up to 10 sender addresses for each domain.
+        /// Your sender address. (You can create up to 10 sender addresses for each domain.)
         /// </summary>
         [JsonProperty("EmailAddress")]
         public string EmailAddress{ get; set; }
