@@ -55,9 +55,9 @@ namespace TencentCloud.Live.V20180801.Models
         public long? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// Video codec. Valid values: h264, h265, origin (default).
+        /// Video codec. Valid values: h264, h265, origin (default)
         /// 
-        /// origin: original codec as the output codec.
+        /// origin: original codec as the output codec
         /// </summary>
         [JsonProperty("Vcodec")]
         public string Vcodec{ get; set; }

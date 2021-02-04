@@ -361,19 +361,22 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string[] Environments{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsBase64Encoded")]
         public bool? IsBase64Encoded{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsBase64Trigger")]
         public bool? IsBase64Trigger{ get; set; }
 
         /// <summary>
-        /// 
+        /// Header trigger rules. The number of rules cannot exceed 10.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Base64EncodedTriggerRules")]
         public Base64EncodedTriggerRule[] Base64EncodedTriggerRules{ get; set; }

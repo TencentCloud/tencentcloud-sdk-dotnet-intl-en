@@ -295,7 +295,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UserType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
         /// </summary>
         [JsonProperty("IsBase64Encoded")]
         public bool? IsBase64Encoded{ get; set; }

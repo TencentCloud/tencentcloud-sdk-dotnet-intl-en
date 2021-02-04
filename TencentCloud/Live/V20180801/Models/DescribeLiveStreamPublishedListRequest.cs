@@ -62,9 +62,9 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Number of entries per page.
-        /// Maximum value: 100.
-        /// Valid values: integers between 10 and 100.
-        /// Default value: 10.
+        /// Maximum value: 100
+        /// Valid values: integers between 10 and 100
+        /// Default value: 10
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

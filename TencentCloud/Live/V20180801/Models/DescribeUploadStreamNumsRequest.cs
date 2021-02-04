@@ -44,9 +44,9 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Time granularity of the data. Valid values:
-        /// 5: 5-minute granularity (the query period is up to 1 day).
-        /// 1440: 1-day granularity (the query period is up to 1 month).
-        /// Default value: 5.
+        /// 5: 5-minute granularity (the query period is up to 1 day)
+        /// 1440: 1-day granularity (the query period is up to 1 month)
+        /// Default value: 5
         /// </summary>
         [JsonProperty("Granularity")]
         public ulong? Granularity{ get; set; }

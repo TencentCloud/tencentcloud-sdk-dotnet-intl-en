@@ -25,13 +25,20 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 
+        /// Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
+        /// Array of header values that can trigger the encoding. Each element in the array can be up to 40 characters, including digits, letters, and special characters (`.`, `+`, `*`, `-`, `/`, and `_`). 
         /// 
+        /// For example, [
+        ///     "application/x-vpeg005",
+        ///     "application/xhtml+xml",
+        ///     "application/vnd.ms-project",
+        ///     "application/vnd.rn-rn_music_package"
+        /// ] are valid.
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }
