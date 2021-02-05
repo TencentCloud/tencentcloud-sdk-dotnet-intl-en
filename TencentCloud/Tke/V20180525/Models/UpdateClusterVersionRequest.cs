@@ -21,32 +21,32 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateClusterInstancesRequest : AbstractModel
+    public class UpdateClusterVersionRequest : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotence of requests for adding cluster nodes, you need to add the ClientToken field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
+        /// The version that needs to upgrade to
         /// </summary>
-        [JsonProperty("RunInstancePara")]
-        public string RunInstancePara{ get; set; }
+        [JsonProperty("DstVersion")]
+        public string DstVersion{ get; set; }
 
         /// <summary>
-        /// Additional parameter to be set for the instance
+        /// The maximum tolerable number of unavailable pods
         /// </summary>
-        [JsonProperty("InstanceAdvancedSettings")]
-        public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
+        [JsonProperty("MaxNotReadyPercent")]
+        public float? MaxNotReadyPercent{ get; set; }
 
         /// <summary>
-        /// Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+        /// Whether to skip the precheck
         /// </summary>
-        [JsonProperty("SkipValidateOptions")]
-        public string[] SkipValidateOptions{ get; set; }
+        [JsonProperty("SkipPreCheck")]
+        public bool? SkipPreCheck{ get; set; }
 
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "RunInstancePara", this.RunInstancePara);
-            this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
-            this.SetParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
+            this.SetParamSimple(map, prefix + "DstVersion", this.DstVersion);
+            this.SetParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
+            this.SetParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
         }
     }
 }

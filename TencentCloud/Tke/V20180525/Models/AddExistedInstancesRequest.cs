@@ -55,22 +55,28 @@ namespace TencentCloud.Tke.V20180525.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
-        /// </summary>
-        [JsonProperty("SecurityGroupIds")]
-        public string[] SecurityGroupIds{ get; set; }
-
-        /// <summary>
         /// When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
+        /// Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
         /// Node pool options
         /// </summary>
         [JsonProperty("NodePool")]
         public NodePoolOption NodePool{ get; set; }
+
+        /// <summary>
+        /// Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+        /// </summary>
+        [JsonProperty("SkipValidateOptions")]
+        public string[] SkipValidateOptions{ get; set; }
 
 
         /// <summary>
@@ -83,9 +89,10 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
-            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamObj(map, prefix + "NodePool.", this.NodePool);
+            this.SetParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
         }
     }
 }

@@ -72,6 +72,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
+        /// <summary>
+        /// Operating system of the node pool
+        /// </summary>
+        [JsonProperty("NodePoolOs")]
+        public string NodePoolOs{ get; set; }
+
+        /// <summary>
+        /// Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+        /// </summary>
+        [JsonProperty("OsCustomizeType")]
+        public string OsCustomizeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
+            this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
+            this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         }
     }
 }
