@@ -55,7 +55,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// Password of the private key.
+        /// Private key password (optional)
         /// </summary>
         [JsonProperty("KeyPassword")]
         public string KeyPassword{ get; set; }
@@ -115,19 +115,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// Certificate verification method.
+        /// Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
 
         /// <summary>
-        /// Last name of the admin.
+        /// First name of the administrator
         /// </summary>
         [JsonProperty("AdminFirstName")]
         public string AdminFirstName{ get; set; }
 
         /// <summary>
-        /// First name of the admin.
+        /// Last name of the administrator
         /// </summary>
         [JsonProperty("AdminLastName")]
         public string AdminLastName{ get; set; }
@@ -151,13 +151,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string AdminPosition{ get; set; }
 
         /// <summary>
-        /// Last name of the contact.
+        /// First name of the contact
         /// </summary>
         [JsonProperty("ContactFirstName")]
         public string ContactFirstName{ get; set; }
 
         /// <summary>
-        /// First name of the contact.
+        /// Last name of the contact
         /// </summary>
         [JsonProperty("ContactLastName")]
         public string ContactLastName{ get; set; }

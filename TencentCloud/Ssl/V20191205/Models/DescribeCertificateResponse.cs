@@ -60,8 +60,8 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Name of the certificate issuer.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Name of the certificate issuer
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProductZhName")]
         public string ProductZhName{ get; set; }
@@ -242,6 +242,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? Deployable{ get; set; }
 
         /// <summary>
+        /// List of tags
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -284,6 +291,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "RenewAble", this.RenewAble);
             this.SetParamObj(map, prefix + "SubmittedData.", this.SubmittedData);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

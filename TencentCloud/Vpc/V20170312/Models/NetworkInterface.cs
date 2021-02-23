@@ -126,6 +126,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EniType")]
         public ulong? EniType{ get; set; }
 
+        /// <summary>
+        /// Type of the resource bound with an ENI. Valid values: cvm, eks.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +155,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "EniType", this.EniType);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
         }
     }
 }

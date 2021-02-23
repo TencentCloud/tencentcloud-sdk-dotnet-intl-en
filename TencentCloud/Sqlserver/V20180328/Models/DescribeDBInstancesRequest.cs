@@ -84,6 +84,42 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// The list of instance private IPs, such as 172.1.0.12
+        /// </summary>
+        [JsonProperty("VipSet")]
+        public string[] VipSet{ get; set; }
+
+        /// <summary>
+        /// The list of instance names used for fuzzy match
+        /// </summary>
+        [JsonProperty("InstanceNameSet")]
+        public string[] InstanceNameSet{ get; set; }
+
+        /// <summary>
+        /// The list of instance version numbers, such as 2008R2, 2012SP3
+        /// </summary>
+        [JsonProperty("VersionSet")]
+        public string[] VersionSet{ get; set; }
+
+        /// <summary>
+        /// Instance availability zone, such as ap-guangzhou-2
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// The list of instance tags
+        /// </summary>
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
+
+        /// <summary>
+        /// Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+        /// </summary>
+        [JsonProperty("SearchKey")]
+        public string SearchKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +134,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamArraySimple(map, prefix + "VipSet.", this.VipSet);
+            this.SetParamArraySimple(map, prefix + "InstanceNameSet.", this.InstanceNameSet);
+            this.SetParamArraySimple(map, prefix + "VersionSet.", this.VersionSet);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
         }
     }
 }

@@ -1681,7 +1681,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeDatabases) is used to query the information of databases of a TencentDB instance.
+        /// This API is used to query the information of databases in a TencentDB instance which must be a source or disaster recovery instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
         /// <returns><see cref="DescribeDatabasesResponse"/></returns>
@@ -1701,7 +1701,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeDatabases) is used to query the information of databases of a TencentDB instance.
+        /// This API is used to query the information of databases in a TencentDB instance which must be a source or disaster recovery instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
         /// <returns><see cref="DescribeDatabasesResponse"/></returns>
@@ -2361,7 +2361,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeTables) is used to query the database tables of a TencentDB instance.
+        /// This API is used to query the information of database tables in a TencentDB instance. It only supports source or disaster recovery instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeTablesRequest"/></param>
         /// <returns><see cref="DescribeTablesResponse"/></returns>
@@ -2381,7 +2381,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeTables) is used to query the database tables of a TencentDB instance.
+        /// This API is used to query the information of database tables in a TencentDB instance. It only supports source or disaster recovery instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeTablesRequest"/></param>
         /// <returns><see cref="DescribeTablesResponse"/></returns>
@@ -3778,6 +3778,86 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "StopRollback");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for source-to-replica switch.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceMasterSlaveRequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceMasterSlaveResponse"/></returns>
+        public async Task<SwitchDBInstanceMasterSlaveResponse> SwitchDBInstanceMasterSlave(SwitchDBInstanceMasterSlaveRequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceMasterSlaveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDBInstanceMasterSlave");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceMasterSlaveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for source-to-replica switch.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceMasterSlaveRequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceMasterSlaveResponse"/></returns>
+        public SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlaveSync(SwitchDBInstanceMasterSlaveRequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceMasterSlaveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDBInstanceMasterSlave");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceMasterSlaveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to promote a disaster recovery instance to source instance. The request parameter `Region` must be the region of the disaster recovery instance.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDrInstanceToMasterRequest"/></param>
+        /// <returns><see cref="SwitchDrInstanceToMasterResponse"/></returns>
+        public async Task<SwitchDrInstanceToMasterResponse> SwitchDrInstanceToMaster(SwitchDrInstanceToMasterRequest req)
+        {
+             JsonResponseModel<SwitchDrInstanceToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDrInstanceToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDrInstanceToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to promote a disaster recovery instance to source instance. The request parameter `Region` must be the region of the disaster recovery instance.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDrInstanceToMasterRequest"/></param>
+        /// <returns><see cref="SwitchDrInstanceToMasterResponse"/></returns>
+        public SwitchDrInstanceToMasterResponse SwitchDrInstanceToMasterSync(SwitchDrInstanceToMasterRequest req)
+        {
+             JsonResponseModel<SwitchDrInstanceToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDrInstanceToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDrInstanceToMasterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

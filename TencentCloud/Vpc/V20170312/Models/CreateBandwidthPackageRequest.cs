@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+        /// The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? BandwidthPackageCount{ get; set; }
 
         /// <summary>
-        /// The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+        /// The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
         /// </summary>
         [JsonProperty("InternetMaxBandwidth")]
         public long? InternetMaxBandwidth{ get; set; }

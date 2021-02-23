@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+        /// VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -78,6 +78,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Whether the tunnel health check is supported.
+        /// </summary>
+        [JsonProperty("EnableHealthCheck")]
+        public bool? EnableHealthCheck{ get; set; }
+
+        /// <summary>
+        /// Local IP address for the health check
+        /// </summary>
+        [JsonProperty("HealthCheckLocalIp")]
+        public string HealthCheckLocalIp{ get; set; }
+
+        /// <summary>
+        /// Peer IP address for the health check
+        /// </summary>
+        [JsonProperty("HealthCheckRemoteIp")]
+        public string HealthCheckRemoteIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
             this.SetParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+            this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+            this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
         }
     }
 }

@@ -138,6 +138,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("MultiZones")]
         public bool? MultiZones{ get; set; }
 
+        /// <summary>
+        /// Tags associated with the instances to be created
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Span", this.Span);
             this.SetParamSimple(map, prefix + "HAType", this.HAType);
             this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

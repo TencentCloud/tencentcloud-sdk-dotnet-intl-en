@@ -31,13 +31,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Start time of animated image in video in seconds.
+        /// Start time offset of an animated image in the video, in seconds.
+        /// <li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+        /// <li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+        /// <li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time of animated image in video in seconds.
+        /// End time offset of an animated image in the video, in seconds.
+        /// <li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+        /// <li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+        /// <li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

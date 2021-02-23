@@ -78,6 +78,7 @@
     <Compile Include="V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\SubmittedData.cs" />
+    <Compile Include="V20191205\Models\Tags.cs" />
     <Compile Include="V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="V20191205\Models\UploadCertificateResponse.cs" />
   </ItemGroup>

@@ -244,6 +244,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("HAFlag")]
         public string HAFlag{ get; set; }
 
+        /// <summary>
+        /// The list of tags associated with the instance
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +293,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "SubFlag", this.SubFlag);
             this.SetParamSimple(map, prefix + "ROFlag", this.ROFlag);
             this.SetParamSimple(map, prefix + "HAFlag", this.HAFlag);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

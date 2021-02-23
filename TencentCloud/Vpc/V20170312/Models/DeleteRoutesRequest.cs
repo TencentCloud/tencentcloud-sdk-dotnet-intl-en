@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// Routing policy object.
+        /// Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
         /// </summary>
         [JsonProperty("Routes")]
         public Route[] Routes{ get; set; }

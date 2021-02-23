@@ -78,6 +78,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupId")]
         public ulong? BackupId{ get; set; }
 
+        /// <summary>
+        /// Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+        /// </summary>
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
             this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         }
     }
 }

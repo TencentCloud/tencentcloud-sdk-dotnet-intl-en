@@ -60,6 +60,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+        /// </summary>
+        [JsonProperty("InstType")]
+        public string InstType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "KeyWords.", this.KeyWords);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "InstType", this.InstType);
         }
     }
 }

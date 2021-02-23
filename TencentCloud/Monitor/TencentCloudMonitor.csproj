@@ -182,6 +182,7 @@
     <Compile Include="V20180724\Models\SendCustomAlarmMsgResponse.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\TagInstance.cs" />
     <Compile Include="V20180724\Models\URLNotice.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />

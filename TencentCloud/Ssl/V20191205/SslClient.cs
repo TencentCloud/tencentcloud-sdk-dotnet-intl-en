@@ -533,7 +533,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to submit certificate information.
+        /// This API is used to submit certificate information. You can call this API to submit the information of a certificate for several times. However, please make sure the submitted information is complete.
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
         /// <returns><see cref="SubmitCertificateInformationResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to submit certificate information.
+        /// This API is used to submit certificate information. You can call this API to submit the information of a certificate for several times. However, please make sure the submitted information is complete.
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
         /// <returns><see cref="SubmitCertificateInformationResponse"/></returns>

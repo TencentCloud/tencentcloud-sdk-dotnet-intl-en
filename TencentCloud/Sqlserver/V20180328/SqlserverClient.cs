@@ -53,6 +53,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to clone and rename databases of an instance. The clones are still in the instance from which they are cloned.
+        /// </summary>
+        /// <param name="req"><see cref="CloneDBRequest"/></param>
+        /// <returns><see cref="CloneDBResponse"/></returns>
+        public async Task<CloneDBResponse> CloneDB(CloneDBRequest req)
+        {
+             JsonResponseModel<CloneDBResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneDB");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneDBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to clone and rename databases of an instance. The clones are still in the instance from which they are cloned.
+        /// </summary>
+        /// <param name="req"><see cref="CloneDBRequest"/></param>
+        /// <returns><see cref="CloneDBResponse"/></returns>
+        public CloneDBResponse CloneDBSync(CloneDBRequest req)
+        {
+             JsonResponseModel<CloneDBResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneDB");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneDBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an instance account.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
@@ -1124,6 +1164,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstanceName");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to switch a running instance from a VPC to another.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNetworkResponse"/></returns>
+        public async Task<ModifyDBInstanceNetworkResponse> ModifyDBInstanceNetwork(ModifyDBInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to switch a running instance from a VPC to another.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNetworkResponse"/></returns>
+        public ModifyDBInstanceNetworkResponse ModifyDBInstanceNetworkSync(ModifyDBInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNetworkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

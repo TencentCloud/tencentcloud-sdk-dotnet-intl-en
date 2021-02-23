@@ -46,10 +46,13 @@
   <ItemGroup>
     <Compile Include="V20180711\GmeClient.cs" />
     <Compile Include="V20180711\Models\AppStatisticsItem.cs" />
+    <Compile Include="V20180711\Models\ApplicationDataStatistics.cs" />
     <Compile Include="V20180711\Models\CreateAppRequest.cs" />
     <Compile Include="V20180711\Models\CreateAppResponse.cs" />
     <Compile Include="V20180711\Models\DescribeAppStatisticsRequest.cs" />
     <Compile Include="V20180711\Models\DescribeAppStatisticsResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeApplicationDataRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeApplicationDataResponse.cs" />
     <Compile Include="V20180711\Models\DescribeScanResult.cs" />
     <Compile Include="V20180711\Models\DescribeScanResultListRequest.cs" />
     <Compile Include="V20180711\Models\DescribeScanResultListResponse.cs" />
@@ -62,6 +65,7 @@
     <Compile Include="V20180711\Models\ScanVoiceRequest.cs" />
     <Compile Include="V20180711\Models\ScanVoiceResponse.cs" />
     <Compile Include="V20180711\Models\ScanVoiceResult.cs" />
+    <Compile Include="V20180711\Models\StatisticsItem.cs" />
     <Compile Include="V20180711\Models\Tag.cs" />
     <Compile Include="V20180711\Models\Task.cs" />
     <Compile Include="V20180711\Models\VoiceFilterConf.cs" />

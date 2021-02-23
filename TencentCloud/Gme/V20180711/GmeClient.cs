@@ -133,6 +133,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// This API (DescribeApplicationData) is used to query usage data details within 90 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationDataRequest"/></param>
+        /// <returns><see cref="DescribeApplicationDataResponse"/></returns>
+        public async Task<DescribeApplicationDataResponse> DescribeApplicationData(DescribeApplicationDataRequest req)
+        {
+             JsonResponseModel<DescribeApplicationDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeApplicationData) is used to query usage data details within 90 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationDataRequest"/></param>
+        /// <returns><see cref="DescribeApplicationDataResponse"/></returns>
+        public DescribeApplicationDataResponse DescribeApplicationDataSync(DescribeApplicationDataRequest req)
+        {
+             JsonResponseModel<DescribeApplicationDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the speech detection result. Up to 100 tasks can be added in the task query list.
         /// <p style="color:red">If the `Callback` field is not set when a speech detection task is submitted, this API will be needed to get the detection result.</p>
         /// </summary>

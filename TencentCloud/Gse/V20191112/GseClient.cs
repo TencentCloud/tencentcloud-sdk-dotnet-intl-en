@@ -53,6 +53,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// This API is used to replicate server fleet.
+        /// </summary>
+        /// <param name="req"><see cref="CopyFleetRequest"/></param>
+        /// <returns><see cref="CopyFleetResponse"/></returns>
+        public async Task<CopyFleetResponse> CopyFleet(CopyFleetRequest req)
+        {
+             JsonResponseModel<CopyFleetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CopyFleet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyFleetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to replicate server fleet.
+        /// </summary>
+        /// <param name="req"><see cref="CopyFleetRequest"/></param>
+        /// <returns><see cref="CopyFleetResponse"/></returns>
+        public CopyFleetResponse CopyFleetSync(CopyFleetRequest req)
+        {
+             JsonResponseModel<CopyFleetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CopyFleet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyFleetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a game server session.
         /// </summary>
         /// <param name="req"><see cref="CreateGameServerSessionRequest"/></param>
@@ -524,6 +564,86 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "StopGameServerSessionPlacement");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopGameServerSessionPlacementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (UpdateBucketAccelerateOpt) is used to enable COS global acceleration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateBucketAccelerateOptRequest"/></param>
+        /// <returns><see cref="UpdateBucketAccelerateOptResponse"/></returns>
+        public async Task<UpdateBucketAccelerateOptResponse> UpdateBucketAccelerateOpt(UpdateBucketAccelerateOptRequest req)
+        {
+             JsonResponseModel<UpdateBucketAccelerateOptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateBucketAccelerateOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateBucketAccelerateOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (UpdateBucketAccelerateOpt) is used to enable COS global acceleration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateBucketAccelerateOptRequest"/></param>
+        /// <returns><see cref="UpdateBucketAccelerateOptResponse"/></returns>
+        public UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOptSync(UpdateBucketAccelerateOptRequest req)
+        {
+             JsonResponseModel<UpdateBucketAccelerateOptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateBucketAccelerateOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateBucketAccelerateOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (UpdateBucketCORSOpt) is used to configure CORS for COS.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateBucketCORSOptRequest"/></param>
+        /// <returns><see cref="UpdateBucketCORSOptResponse"/></returns>
+        public async Task<UpdateBucketCORSOptResponse> UpdateBucketCORSOpt(UpdateBucketCORSOptRequest req)
+        {
+             JsonResponseModel<UpdateBucketCORSOptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateBucketCORSOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateBucketCORSOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (UpdateBucketCORSOpt) is used to configure CORS for COS.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateBucketCORSOptRequest"/></param>
+        /// <returns><see cref="UpdateBucketCORSOptResponse"/></returns>
+        public UpdateBucketCORSOptResponse UpdateBucketCORSOptSync(UpdateBucketCORSOptRequest req)
+        {
+             JsonResponseModel<UpdateBucketCORSOptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateBucketCORSOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateBucketCORSOptResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

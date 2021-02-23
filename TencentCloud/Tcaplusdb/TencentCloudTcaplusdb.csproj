@@ -92,6 +92,10 @@
     <Compile Include="V20190823\Models\DescribeTasksResponse.cs" />
     <Compile Include="V20190823\Models\DescribeUinInWhitelistRequest.cs" />
     <Compile Include="V20190823\Models\DescribeUinInWhitelistResponse.cs" />
+    <Compile Include="V20190823\Models\DisableRestProxyRequest.cs" />
+    <Compile Include="V20190823\Models\DisableRestProxyResponse.cs" />
+    <Compile Include="V20190823\Models\EnableRestProxyRequest.cs" />
+    <Compile Include="V20190823\Models\EnableRestProxyResponse.cs" />
     <Compile Include="V20190823\Models\ErrorInfo.cs" />
     <Compile Include="V20190823\Models\FieldInfo.cs" />
     <Compile Include="V20190823\Models\Filter.cs" />

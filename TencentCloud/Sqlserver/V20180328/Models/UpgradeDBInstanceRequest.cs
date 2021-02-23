@@ -60,6 +60,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
+        /// <summary>
+        /// Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+        /// </summary>
+        [JsonProperty("DBVersion")]
+        public string DBVersion{ get; set; }
+
+        /// <summary>
+        /// Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+        /// </summary>
+        [JsonProperty("HAType")]
+        public string HAType{ get; set; }
+
+        /// <summary>
+        /// Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+        /// </summary>
+        [JsonProperty("MultiZones")]
+        public string MultiZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
+            this.SetParamSimple(map, prefix + "HAType", this.HAType);
+            this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
         }
     }
 }

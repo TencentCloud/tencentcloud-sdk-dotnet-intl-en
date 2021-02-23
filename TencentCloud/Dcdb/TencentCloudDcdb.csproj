@@ -91,6 +91,8 @@
     <Compile Include="V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeProjectsRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeProjectsResponse.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\GrantAccountPrivilegesRequest.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="V20180411\Models\ParamConstraint.cs" />
     <Compile Include="V20180411\Models\ParamDesc.cs" />
     <Compile Include="V20180411\Models\ParamModifyResult.cs" />
+    <Compile Include="V20180411\Models\Project.cs" />
     <Compile Include="V20180411\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20180411\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20180411\Models\SecurityGroup.cs" />

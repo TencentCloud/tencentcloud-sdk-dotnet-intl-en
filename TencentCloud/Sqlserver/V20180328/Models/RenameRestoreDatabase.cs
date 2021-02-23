@@ -32,7 +32,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string OldName{ get; set; }
 
         /// <summary>
-        /// New database name. If this parameter is left empty, the restored database will be renamed in the default format. If this parameter is left empty in offline migration tasks, the restored database will be named `OldName`. `OldName` and `NewName` cannot be both empty.
+        /// New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
         /// </summary>
         [JsonProperty("NewName")]
         public string NewName{ get; set; }

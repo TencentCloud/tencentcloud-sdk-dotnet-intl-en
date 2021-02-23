@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// TrustAsia order ID
+        /// Order number at the certificate authority
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+        /// Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload; `13`: pending information submission for the free certificate.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

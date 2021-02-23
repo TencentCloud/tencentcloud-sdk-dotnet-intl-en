@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public SecurityGroupPolicySet SecurityGroupPolicySet{ get; set; }
 
         /// <summary>
-        /// Whether security group sorting is supported. True indicates that security group sorting is supported. If SortPolicys does not exist or is set to False, the security group policy can be modified.
+        /// Whether the security group rule is sorted. Default value: False. If it is set to `True`, security group rules will be strictly sorted according to the sequence specified in the `SecurityGroupPolicySet` parameter. Manual entry may cause omission, so we recommend sorting security group rules in the console.
         /// </summary>
         [JsonProperty("SortPolicys")]
         public bool? SortPolicys{ get; set; }

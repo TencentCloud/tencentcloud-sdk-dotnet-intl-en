@@ -48,7 +48,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repeat type of an animated watermark. Valid values:
+        /// <li>once: no longer appears after watermark playback ends.</li>
+        /// <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+        /// <li>repeat (default): repeats the playback until the video ends.</li>
         /// </summary>
         [JsonProperty("RepeatType")]
         public string RepeatType{ get; set; }

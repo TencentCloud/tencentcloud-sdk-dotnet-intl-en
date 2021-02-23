@@ -52,6 +52,8 @@
     <Compile Include="V20180328\Models\AccountPrivilegeModifyInfo.cs" />
     <Compile Include="V20180328\Models\AccountRemark.cs" />
     <Compile Include="V20180328\Models\Backup.cs" />
+    <Compile Include="V20180328\Models\CloneDBRequest.cs" />
+    <Compile Include="V20180328\Models\CloneDBResponse.cs" />
     <Compile Include="V20180328\Models\CreateAccountRequest.cs" />
     <Compile Include="V20180328\Models\CreateAccountResponse.cs" />
     <Compile Include="V20180328\Models\CreateBackupRequest.cs" />
@@ -120,6 +122,8 @@
     <Compile Include="V20180328\Models\ModifyBackupStrategyResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyDBInstanceNetworkRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyDBInstanceNetworkResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceProjectRequest.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceProjectResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBNameRequest.cs" />
@@ -134,6 +138,7 @@
     <Compile Include="V20180328\Models\RenameRestoreDatabase.cs" />
     <Compile Include="V20180328\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20180328\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="V20180328\Models\ResourceTag.cs" />
     <Compile Include="V20180328\Models\RestartDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\RestartDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\RestoreInstanceRequest.cs" />

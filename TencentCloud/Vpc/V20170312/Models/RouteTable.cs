@@ -72,6 +72,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// Whether the local route is published to CCN.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LocalCidrForCcn")]
+        public CidrForCcn[] LocalCidrForCcn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Main", this.Main);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamArrayObj(map, prefix + "LocalCidrForCcn.", this.LocalCidrForCcn);
         }
     }
 }

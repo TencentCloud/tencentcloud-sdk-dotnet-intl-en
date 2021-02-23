@@ -51,6 +51,7 @@
     <Compile Include="V20180410\Models\ApplyInternetAddressRequest.cs" />
     <Compile Include="V20180410\Models\ApplyInternetAddressResponse.cs" />
     <Compile Include="V20180410\Models\BgpPeer.cs" />
+    <Compile Include="V20180410\Models\Coordinate.cs" />
     <Compile Include="V20180410\Models\CreateDirectConnectRequest.cs" />
     <Compile Include="V20180410\Models\CreateDirectConnectResponse.cs" />
     <Compile Include="V20180410\Models\CreateDirectConnectTunnelRequest.cs" />

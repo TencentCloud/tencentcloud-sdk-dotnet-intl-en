@@ -284,6 +284,10 @@
     <Compile Include="V20170320\Models\StopDelayReplicationResponse.cs" />
     <Compile Include="V20170320\Models\StopRollbackRequest.cs" />
     <Compile Include="V20170320\Models\StopRollbackResponse.cs" />
+    <Compile Include="V20170320\Models\SwitchDBInstanceMasterSlaveRequest.cs" />
+    <Compile Include="V20170320\Models\SwitchDBInstanceMasterSlaveResponse.cs" />
+    <Compile Include="V20170320\Models\SwitchDrInstanceToMasterRequest.cs" />
+    <Compile Include="V20170320\Models\SwitchDrInstanceToMasterResponse.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeRequest.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeResponse.cs" />
     <Compile Include="V20170320\Models\TableNameInfo.cs" />

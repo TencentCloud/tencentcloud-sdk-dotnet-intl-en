@@ -1469,6 +1469,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a SNAT rule for the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="CreateNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public async Task<CreateNatGatewaySourceIpTranslationNatRuleResponse> CreateNatGatewaySourceIpTranslationNatRule(CreateNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a SNAT rule for the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="CreateNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public CreateNatGatewaySourceIpTranslationNatRuleResponse CreateNatGatewaySourceIpTranslationNatRuleSync(CreateNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a network detection instance.
         /// </summary>
         /// <param name="req"><see cref="CreateNetDetectRequest"/></param>
@@ -2662,6 +2702,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNatGatewayDestinationIpPortTranslationNatRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a SNAT forwarding rule of the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="DeleteNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public async Task<DeleteNatGatewaySourceIpTranslationNatRuleResponse> DeleteNatGatewaySourceIpTranslationNatRule(DeleteNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a SNAT forwarding rule of the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="DeleteNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRuleSync(DeleteNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4288,6 +4368,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNatGatewayDestinationIpPortTranslationNatRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the object arrays of SNAT forwarding rules of the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewaySourceIpTranslationNatRulesRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewaySourceIpTranslationNatRulesResponse"/></returns>
+        public async Task<DescribeNatGatewaySourceIpTranslationNatRulesResponse> DescribeNatGatewaySourceIpTranslationNatRules(DescribeNatGatewaySourceIpTranslationNatRulesRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatGatewaySourceIpTranslationNatRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the object arrays of SNAT forwarding rules of the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewaySourceIpTranslationNatRulesRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewaySourceIpTranslationNatRulesResponse"/></returns>
+        public DescribeNatGatewaySourceIpTranslationNatRulesResponse DescribeNatGatewaySourceIpTranslationNatRulesSync(DescribeNatGatewaySourceIpTranslationNatRulesRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNatGatewaySourceIpTranslationNatRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6807,6 +6927,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify a SNAT forwarding rule of the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="ModifyNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public async Task<ModifyNatGatewaySourceIpTranslationNatRuleResponse> ModifyNatGatewaySourceIpTranslationNatRule(ModifyNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a SNAT forwarding rule of the NAT Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="ModifyNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public ModifyNatGatewaySourceIpTranslationNatRuleResponse ModifyNatGatewaySourceIpTranslationNatRuleSync(ModifyNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyNetDetect) is used to modify network detection parameters.
         /// </summary>
         /// <param name="req"><see cref="ModifyNetDetectRequest"/></param>
@@ -7428,6 +7588,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyVpnGatewayCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
+        /// </summary>
+        /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
+        /// <returns><see cref="NotifyRoutesResponse"/></returns>
+        public async Task<NotifyRoutesResponse> NotifyRoutes(NotifyRoutesRequest req)
+        {
+             JsonResponseModel<NotifyRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "NotifyRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<NotifyRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
+        /// </summary>
+        /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
+        /// <returns><see cref="NotifyRoutesResponse"/></returns>
+        public NotifyRoutesResponse NotifyRoutesSync(NotifyRoutesRequest req)
+        {
+             JsonResponseModel<NotifyRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "NotifyRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<NotifyRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -8208,6 +8408,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "UnassignPrivateIpAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnassignPrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
+        /// </summary>
+        /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
+        /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>
+        public async Task<WithdrawNotifyRoutesResponse> WithdrawNotifyRoutes(WithdrawNotifyRoutesRequest req)
+        {
+             JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "WithdrawNotifyRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WithdrawNotifyRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
+        /// </summary>
+        /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
+        /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>
+        public WithdrawNotifyRoutesResponse WithdrawNotifyRoutesSync(WithdrawNotifyRoutesRequest req)
+        {
+             JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "WithdrawNotifyRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WithdrawNotifyRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

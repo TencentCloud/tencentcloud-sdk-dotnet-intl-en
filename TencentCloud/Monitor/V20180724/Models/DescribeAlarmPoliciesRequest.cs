@@ -120,6 +120,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Enable")]
         public long?[] Enable{ get; set; }
 
+        /// <summary>
+        /// Indicates whether the notification rule is configured. 1: not configured; 0: configured
+        /// </summary>
+        [JsonProperty("NotBindingNoticeRule")]
+        public long? NotBindingNoticeRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
             this.SetParamArraySimple(map, prefix + "RuleTypes.", this.RuleTypes);
             this.SetParamArraySimple(map, prefix + "Enable.", this.Enable);
+            this.SetParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
         }
     }
 }

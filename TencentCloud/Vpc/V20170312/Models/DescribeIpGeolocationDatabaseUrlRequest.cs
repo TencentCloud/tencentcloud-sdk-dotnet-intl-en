@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
+        /// Protocol type for an IP location database. Valid value: `ipv4`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

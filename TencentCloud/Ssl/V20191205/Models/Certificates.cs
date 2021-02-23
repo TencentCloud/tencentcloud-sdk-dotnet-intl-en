@@ -227,6 +227,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Deployable")]
         public bool? Deployable{ get; set; }
 
+        /// <summary>
+        /// List of tags
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +269,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamObj(map, prefix + "ProjectInfo.", this.ProjectInfo);
             this.SetParamArraySimple(map, prefix + "BoundResource.", this.BoundResource);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

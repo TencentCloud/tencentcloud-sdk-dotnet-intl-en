@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+        /// Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
         /// </summary>
         [JsonProperty("ValidType")]
         public string ValidType{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CsrkeyPassword")]
         public string CsrkeyPassword{ get; set; }
 
+        /// <summary>
+        /// Reissue reason
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CsrType", this.CsrType);
             this.SetParamSimple(map, prefix + "CsrContent", this.CsrContent);
             this.SetParamSimple(map, prefix + "CsrkeyPassword", this.CsrkeyPassword);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

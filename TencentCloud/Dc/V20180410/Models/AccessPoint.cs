@@ -67,6 +67,20 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("AvailablePortType")]
         public string[] AvailablePortType{ get; set; }
 
+        /// <summary>
+        /// Latitude and longitude of the access point
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Coordinate")]
+        public Coordinate Coordinate{ get; set; }
+
+        /// <summary>
+        /// City where the access point is located
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("City")]
+        public string City{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +94,8 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamArraySimple(map, prefix + "LineOperator.", this.LineOperator);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamArraySimple(map, prefix + "AvailablePortType.", this.AvailablePortType);
+            this.SetParamObj(map, prefix + "Coordinate.", this.Coordinate);
+            this.SetParamSimple(map, prefix + "City", this.City);
         }
     }
 }

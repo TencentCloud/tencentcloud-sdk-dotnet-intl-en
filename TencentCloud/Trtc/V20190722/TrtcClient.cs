@@ -93,7 +93,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query exception occurrences under a specified `SDKAppID` and return the exception ID and possible causes. It queries data in last 5 days, and the query period is up to 1 hour which can start and end on different days. For more information about exceptions, please see the exception ID mapping table: https://intl.cloud.tencent.com/document/product/647/37906
+        /// This API is used to query exception occurrences under a specified `SDKAppID` and return the exception IDs and possible causes. It queries data in last 15 days, and the query period is up to 1 hour, which can start and end on different days. For more information about exceptions, please see the exception event ID mapping table: https://intl.cloud.tencent.com/document/product/647/37906.
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalEventRequest"/></param>
         /// <returns><see cref="DescribeAbnormalEventResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query exception occurrences under a specified `SDKAppID` and return the exception ID and possible causes. It queries data in last 5 days, and the query period is up to 1 hour which can start and end on different days. For more information about exceptions, please see the exception ID mapping table: https://intl.cloud.tencent.com/document/product/647/37906
+        /// This API is used to query exception occurrences under a specified `SDKAppID` and return the exception IDs and possible causes. It queries data in last 15 days, and the query period is up to 1 hour, which can start and end on different days. For more information about exceptions, please see the exception event ID mapping table: https://intl.cloud.tencent.com/document/product/647/37906.
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalEventRequest"/></param>
         /// <returns><see cref="DescribeAbnormalEventResponse"/></returns>
@@ -499,6 +499,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// This API is used to remove all users from a room and close the room. It works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
+        /// </summary>
+        /// <param name="req"><see cref="DismissRoomByStrRoomIdRequest"/></param>
+        /// <returns><see cref="DismissRoomByStrRoomIdResponse"/></returns>
+        public async Task<DismissRoomByStrRoomIdResponse> DismissRoomByStrRoomId(DismissRoomByStrRoomIdRequest req)
+        {
+             JsonResponseModel<DismissRoomByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DismissRoomByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove all users from a room and close the room. It works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
+        /// </summary>
+        /// <param name="req"><see cref="DismissRoomByStrRoomIdRequest"/></param>
+        /// <returns><see cref="DismissRoomByStrRoomIdResponse"/></returns>
+        public DismissRoomByStrRoomIdResponse DismissRoomByStrRoomIdSync(DismissRoomByStrRoomIdRequest req)
+        {
+             JsonResponseModel<DismissRoomByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DismissRoomByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to remove a user from a room. It is applicable to scenarios where the anchor, room owner, or admin wants to kick out a user. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
         /// </summary>
         /// <param name="req"><see cref="RemoveUserRequest"/></param>
@@ -530,6 +570,46 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "RemoveUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove a user from a room. It allows the anchor, room owner, or admin to kick out a user, and works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserByStrRoomIdRequest"/></param>
+        /// <returns><see cref="RemoveUserByStrRoomIdResponse"/></returns>
+        public async Task<RemoveUserByStrRoomIdResponse> RemoveUserByStrRoomId(RemoveUserByStrRoomIdRequest req)
+        {
+             JsonResponseModel<RemoveUserByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveUserByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove a user from a room. It allows the anchor, room owner, or admin to kick out a user, and works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserByStrRoomIdRequest"/></param>
+        /// <returns><see cref="RemoveUserByStrRoomIdResponse"/></returns>
+        public RemoveUserByStrRoomIdResponse RemoveUserByStrRoomIdSync(RemoveUserByStrRoomIdRequest req)
+        {
+             JsonResponseModel<RemoveUserByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveUserByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserByStrRoomIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -613,6 +693,80 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// This API is used to enable On-Cloud MixTranscoding and specify the position of each channel of image in stream mixing.
+        /// 
+        /// There may be multiple channels of audio/video streams in a TRTC room. You can call this API to request the Tencent Cloud server to mix multiple channels of video images and audio into one channel and specify the position of each image so as to produce only one channel of audio/video stream for recording and live streaming.
+        /// 
+        /// You can use this API to perform the following operations:
+        /// - Set image and audio quality parameters of the mixed stream, including video resolution, bitrate, frame rate, and audio quality.
+        /// - Set the layout, i.e., the position of each channel of image. You only need to set it once when enabling On-Cloud MixTranscoding, and the layout engine will automatically arrange images as configured.
+        /// - Set the names of recording files for future playback.
+        /// - Set the stream ID for CDN live streaming.
+        /// 
+        /// Currently, On-Cloud MixTranscoding supports the following layout templates:
+        /// - Floating: the entire screen is covered by the video image of the first user who enters the room, and the images of other users are displayed as small images in horizontal rows in the bottom-left corner in room entry sequence. The screen can accommodate up to 4 rows of 4 small images, which float over the big image. Up to 1 big image and 15 small images can be displayed. A user sending audio only will still occupy an image spot.
+        /// - Grid: the images of all users split the screen evenly. The more the users, the smaller the image dimensions. Up to 16 images can be displayed. A user sending audio only will still occupy an image spot.
+        /// - Screen sharing: this template is designed for video conferencing and online classes. The shared screen (or camera image of the anchor) is always displayed as the big image, which occupies the left half of the screen, and the images of other users occupy the right half in up to 2 columns of a maximum of 8 small images each. Up to 1 big image and 15 small images can be displayed. If the aspect ratio of upstream images does not match that of output images, the big image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
+        /// - Picture-in-picture: this template mixes the big and small images or big image of a user with the audio of other users. The small image floats over the big image. You can specify the user whose big and small images are displayed and the position of the small image.
+        /// - Custom: you can use custom templates to specify the image positions of users in mixed streams or preset image positions. If users are assigned to preset positions, the layout engine will reserve the positions for the users; if not, users will occupy the positions in room entry sequence. Once all preset positions are occupied, TRTC will stop mixing the audio and images of other users. If the placeholding feature is enabled for a custom template (`PlaceHolderMode` in `LayoutParams` is set to 1), but a user for whom a place is reserved is not sending video data, the position will show the corresponding placeholder image (`PlaceImageId`).
+        /// 
+        /// Note: only applications created on and after January 9, 2020 can call this API directly. Those created before use the stream mixing service of CSS by default. If you want to switch to MCU On-Cloud MixTranscoding, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// </summary>
+        /// <param name="req"><see cref="StartMCUMixTranscodeByStrRoomIdRequest"/></param>
+        /// <returns><see cref="StartMCUMixTranscodeByStrRoomIdResponse"/></returns>
+        public async Task<StartMCUMixTranscodeByStrRoomIdResponse> StartMCUMixTranscodeByStrRoomId(StartMCUMixTranscodeByStrRoomIdRequest req)
+        {
+             JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartMCUMixTranscodeByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable On-Cloud MixTranscoding and specify the position of each channel of image in stream mixing.
+        /// 
+        /// There may be multiple channels of audio/video streams in a TRTC room. You can call this API to request the Tencent Cloud server to mix multiple channels of video images and audio into one channel and specify the position of each image so as to produce only one channel of audio/video stream for recording and live streaming.
+        /// 
+        /// You can use this API to perform the following operations:
+        /// - Set image and audio quality parameters of the mixed stream, including video resolution, bitrate, frame rate, and audio quality.
+        /// - Set the layout, i.e., the position of each channel of image. You only need to set it once when enabling On-Cloud MixTranscoding, and the layout engine will automatically arrange images as configured.
+        /// - Set the names of recording files for future playback.
+        /// - Set the stream ID for CDN live streaming.
+        /// 
+        /// Currently, On-Cloud MixTranscoding supports the following layout templates:
+        /// - Floating: the entire screen is covered by the video image of the first user who enters the room, and the images of other users are displayed as small images in horizontal rows in the bottom-left corner in room entry sequence. The screen can accommodate up to 4 rows of 4 small images, which float over the big image. Up to 1 big image and 15 small images can be displayed. A user sending audio only will still occupy an image spot.
+        /// - Grid: the images of all users split the screen evenly. The more the users, the smaller the image dimensions. Up to 16 images can be displayed. A user sending audio only will still occupy an image spot.
+        /// - Screen sharing: this template is designed for video conferencing and online classes. The shared screen (or camera image of the anchor) is always displayed as the big image, which occupies the left half of the screen, and the images of other users occupy the right half in up to 2 columns of a maximum of 8 small images each. Up to 1 big image and 15 small images can be displayed. If the aspect ratio of upstream images does not match that of output images, the big image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
+        /// - Picture-in-picture: this template mixes the big and small images or big image of a user with the audio of other users. The small image floats over the big image. You can specify the user whose big and small images are displayed and the position of the small image.
+        /// - Custom: you can use custom templates to specify the image positions of users in mixed streams or preset image positions. If users are assigned to preset positions, the layout engine will reserve the positions for the users; if not, users will occupy the positions in room entry sequence. Once all preset positions are occupied, TRTC will stop mixing the audio and images of other users. If the placeholding feature is enabled for a custom template (`PlaceHolderMode` in `LayoutParams` is set to 1), but a user for whom a place is reserved is not sending video data, the position will show the corresponding placeholder image (`PlaceImageId`).
+        /// 
+        /// Note: only applications created on and after January 9, 2020 can call this API directly. Those created before use the stream mixing service of CSS by default. If you want to switch to MCU On-Cloud MixTranscoding, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// </summary>
+        /// <param name="req"><see cref="StartMCUMixTranscodeByStrRoomIdRequest"/></param>
+        /// <returns><see cref="StartMCUMixTranscodeByStrRoomIdResponse"/></returns>
+        public StartMCUMixTranscodeByStrRoomIdResponse StartMCUMixTranscodeByStrRoomIdSync(StartMCUMixTranscodeByStrRoomIdRequest req)
+        {
+             JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartMCUMixTranscodeByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to end On-Cloud MixTranscoding.
         /// </summary>
         /// <param name="req"><see cref="StopMCUMixTranscodeRequest"/></param>
@@ -644,6 +798,46 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "StopMCUMixTranscode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMCUMixTranscodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop On-Cloud MixTranscoding.
+        /// </summary>
+        /// <param name="req"><see cref="StopMCUMixTranscodeByStrRoomIdRequest"/></param>
+        /// <returns><see cref="StopMCUMixTranscodeByStrRoomIdResponse"/></returns>
+        public async Task<StopMCUMixTranscodeByStrRoomIdResponse> StopMCUMixTranscodeByStrRoomId(StopMCUMixTranscodeByStrRoomIdRequest req)
+        {
+             JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopMCUMixTranscodeByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop On-Cloud MixTranscoding.
+        /// </summary>
+        /// <param name="req"><see cref="StopMCUMixTranscodeByStrRoomIdRequest"/></param>
+        /// <returns><see cref="StopMCUMixTranscodeByStrRoomIdResponse"/></returns>
+        public StopMCUMixTranscodeByStrRoomIdResponse StopMCUMixTranscodeByStrRoomIdSync(StopMCUMixTranscodeByStrRoomIdRequest req)
+        {
+             JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopMCUMixTranscodeByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

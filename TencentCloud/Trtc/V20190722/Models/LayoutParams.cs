@@ -72,6 +72,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("PlaceHolderMode")]
         public ulong? PlaceHolderMode{ get; set; }
 
+        /// <summary>
+        /// Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+        /// </summary>
+        [JsonProperty("PureAudioHoldPlaceMode")]
+        public ulong? PureAudioHoldPlaceMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
             this.SetParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
             this.SetParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
+            this.SetParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
         }
     }
 }

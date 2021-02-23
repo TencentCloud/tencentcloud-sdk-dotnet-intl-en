@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20191112\GseClient.cs" />
+    <Compile Include="V20191112\Models\CopyFleetRequest.cs" />
+    <Compile Include="V20191112\Models\CopyFleetResponse.cs" />
     <Compile Include="V20191112\Models\CreateGameServerSessionRequest.cs" />
     <Compile Include="V20191112\Models\CreateGameServerSessionResponse.cs" />
     <Compile Include="V20191112\Models\Credentials.cs" />
@@ -57,6 +59,8 @@
     <Compile Include="V20191112\Models\DescribePlayerSessionsRequest.cs" />
     <Compile Include="V20191112\Models\DescribePlayerSessionsResponse.cs" />
     <Compile Include="V20191112\Models\DesiredPlayerSession.cs" />
+    <Compile Include="V20191112\Models\DiskInfo.cs" />
+    <Compile Include="V20191112\Models\FleetAttributes.cs" />
     <Compile Include="V20191112\Models\GameProperty.cs" />
     <Compile Include="V20191112\Models\GameServerSession.cs" />
     <Compile Include="V20191112\Models\GameServerSessionDetail.cs" />
@@ -65,6 +69,7 @@
     <Compile Include="V20191112\Models\GetGameServerSessionLogUrlResponse.cs" />
     <Compile Include="V20191112\Models\GetInstanceAccessRequest.cs" />
     <Compile Include="V20191112\Models\GetInstanceAccessResponse.cs" />
+    <Compile Include="V20191112\Models\InboundPermission.cs" />
     <Compile Include="V20191112\Models\InstanceAccess.cs" />
     <Compile Include="V20191112\Models\JoinGameServerSessionBatchRequest.cs" />
     <Compile Include="V20191112\Models\JoinGameServerSessionBatchResponse.cs" />
@@ -74,12 +79,20 @@
     <Compile Include="V20191112\Models\PlayerDataMap.cs" />
     <Compile Include="V20191112\Models\PlayerLatency.cs" />
     <Compile Include="V20191112\Models\PlayerSession.cs" />
+    <Compile Include="V20191112\Models\ResourceCreationLimitPolicy.cs" />
+    <Compile Include="V20191112\Models\RuntimeConfiguration.cs" />
     <Compile Include="V20191112\Models\SearchGameServerSessionsRequest.cs" />
     <Compile Include="V20191112\Models\SearchGameServerSessionsResponse.cs" />
+    <Compile Include="V20191112\Models\ServerProcesse.cs" />
     <Compile Include="V20191112\Models\StartGameServerSessionPlacementRequest.cs" />
     <Compile Include="V20191112\Models\StartGameServerSessionPlacementResponse.cs" />
     <Compile Include="V20191112\Models\StopGameServerSessionPlacementRequest.cs" />
     <Compile Include="V20191112\Models\StopGameServerSessionPlacementResponse.cs" />
+    <Compile Include="V20191112\Models\Tag.cs" />
+    <Compile Include="V20191112\Models\UpdateBucketAccelerateOptRequest.cs" />
+    <Compile Include="V20191112\Models\UpdateBucketAccelerateOptResponse.cs" />
+    <Compile Include="V20191112\Models\UpdateBucketCORSOptRequest.cs" />
+    <Compile Include="V20191112\Models\UpdateBucketCORSOptResponse.cs" />
     <Compile Include="V20191112\Models\UpdateGameServerSessionRequest.cs" />
     <Compile Include="V20191112\Models\UpdateGameServerSessionResponse.cs" />
   </ItemGroup>

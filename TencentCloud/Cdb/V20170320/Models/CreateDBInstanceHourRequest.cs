@@ -127,7 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// AZ information of secondary database 2, which is empty by default. This parameter can be specified when purchasing strong sync primary instances and is meaningless for other types of instances.
+        /// Availability zone information of replica 2, which is left empty by default. Specify this parameter when purchasing a source instance in the one-source-two-replica architecture.
         /// </summary>
         [JsonProperty("BackupZone")]
         public string BackupZone{ get; set; }

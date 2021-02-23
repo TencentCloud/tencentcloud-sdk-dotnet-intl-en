@@ -779,6 +779,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to query the project list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public async Task<DescribeProjectsResponse> DescribeProjects(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the project list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public DescribeProjectsResponse DescribeProjectsSync(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unassociate security groups from instances in batches.
         /// </summary>
         /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>

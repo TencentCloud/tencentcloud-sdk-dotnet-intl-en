@@ -114,6 +114,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IPSECOptionsSpecification")]
         public IPSECOptionsSpecification IPSECOptionsSpecification{ get; set; }
 
+        /// <summary>
+        /// Whether the health check is supported.
+        /// </summary>
+        [JsonProperty("EnableHealthCheck")]
+        public bool? EnableHealthCheck{ get; set; }
+
+        /// <summary>
+        /// Local IP address for the health check
+        /// </summary>
+        [JsonProperty("HealthCheckLocalIp")]
+        public string HealthCheckLocalIp{ get; set; }
+
+        /// <summary>
+        /// Peer IP address for the health check
+        /// </summary>
+        [JsonProperty("HealthCheckRemoteIp")]
+        public string HealthCheckRemoteIp{ get; set; }
+
+        /// <summary>
+        /// Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+        /// </summary>
+        [JsonProperty("HealthCheckStatus")]
+        public string HealthCheckStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +159,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "SecurityPolicyDatabaseSet.", this.SecurityPolicyDatabaseSet);
             this.SetParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
             this.SetParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
+            this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+            this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+            this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+            this.SetParamSimple(map, prefix + "HealthCheckStatus", this.HealthCheckStatus);
         }
     }
 }

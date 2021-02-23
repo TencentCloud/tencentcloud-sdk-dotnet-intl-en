@@ -973,6 +973,86 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// This API is used to disable the RESTful API.
+        /// </summary>
+        /// <param name="req"><see cref="DisableRestProxyRequest"/></param>
+        /// <returns><see cref="DisableRestProxyResponse"/></returns>
+        public async Task<DisableRestProxyResponse> DisableRestProxy(DisableRestProxyRequest req)
+        {
+             JsonResponseModel<DisableRestProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableRestProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRestProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable the RESTful API.
+        /// </summary>
+        /// <param name="req"><see cref="DisableRestProxyRequest"/></param>
+        /// <returns><see cref="DisableRestProxyResponse"/></returns>
+        public DisableRestProxyResponse DisableRestProxySync(DisableRestProxyRequest req)
+        {
+             JsonResponseModel<DisableRestProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableRestProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRestProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the RESTful API.
+        /// </summary>
+        /// <param name="req"><see cref="EnableRestProxyRequest"/></param>
+        /// <returns><see cref="EnableRestProxyResponse"/></returns>
+        public async Task<EnableRestProxyResponse> EnableRestProxy(EnableRestProxyRequest req)
+        {
+             JsonResponseModel<EnableRestProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableRestProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableRestProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the RESTful API.
+        /// </summary>
+        /// <param name="req"><see cref="EnableRestProxyRequest"/></param>
+        /// <returns><see cref="EnableRestProxyResponse"/></returns>
+        public EnableRestProxyResponse EnableRestProxySync(EnableRestProxyRequest req)
+        {
+             JsonResponseModel<EnableRestProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableRestProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableRestProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the machines of a dedicated cluster.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
