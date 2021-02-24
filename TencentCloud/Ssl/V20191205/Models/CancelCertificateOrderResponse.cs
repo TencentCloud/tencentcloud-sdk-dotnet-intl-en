@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// ID of the certificate whose order has been successfully cancelled.
+        /// ID of the certificate whose order has been successfully cancelled
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }

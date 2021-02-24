@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+        /// Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
         /// </summary>
         [JsonProperty("DvAuthMethod")]
         public string DvAuthMethod{ get; set; }
 
         /// <summary>
-        /// Domain name.
+        /// Domain name
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Email address.
+        /// Email address
         /// </summary>
         [JsonProperty("ContactEmail")]
         public string ContactEmail{ get; set; }
 
         /// <summary>
-        /// Mobile number.
+        /// Mobile number
         /// </summary>
         [JsonProperty("ContactPhone")]
         public string ContactPhone{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CsrKeyParameter{ get; set; }
 
         /// <summary>
-        /// CSR encryption password.
+        /// CSR encryption password
         /// </summary>
         [JsonProperty("CsrKeyPassword")]
         public string CsrKeyPassword{ get; set; }
 
         /// <summary>
-        /// Alias.
+        /// Alias
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
+        /// ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
         /// </summary>
         [JsonProperty("CertificateIdList")]
         public string[] CertificateIdList{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

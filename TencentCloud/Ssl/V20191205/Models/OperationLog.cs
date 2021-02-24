@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Action performed on logs.
+        /// Action performed on logs
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Time when the action is performed.
+        /// Time when the action is performed
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }

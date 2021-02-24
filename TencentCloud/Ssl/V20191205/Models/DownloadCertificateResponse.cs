@@ -32,7 +32,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// MIME type. application/zip: ZIP file.
+        /// MIME type. `application/zip`: ZIP file
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContentType")]

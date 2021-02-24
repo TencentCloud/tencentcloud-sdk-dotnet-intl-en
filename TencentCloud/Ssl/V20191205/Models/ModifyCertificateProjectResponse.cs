@@ -25,14 +25,14 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// List of certificates whose projects were modified successfully.
+        /// List of certificates whose projects were modified successfully
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SuccessCertificates")]
         public string[] SuccessCertificates{ get; set; }
 
         /// <summary>
-        /// List of certificates whose projects failed to be modified.
+        /// List of certificates whose projects failed to be modified
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FailCertificates")]

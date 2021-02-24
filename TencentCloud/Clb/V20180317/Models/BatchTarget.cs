@@ -37,19 +37,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// CVM instance ID
+        /// CVM instance ID. Indicating binding the primary IP of the primary ENI.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ENI IP
+        /// ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }
 
         /// <summary>
-        /// Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+        /// CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

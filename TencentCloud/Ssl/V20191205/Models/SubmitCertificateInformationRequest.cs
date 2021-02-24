@@ -25,157 +25,157 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Certificate ID.
+        /// Certificate ID
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// CSR generation mode. Online: generated online; parse: uploaded manually.
+        /// CSR generation mode. `online`: generated online; `parse`: uploaded manually
         /// </summary>
         [JsonProperty("CsrType")]
         public string CsrType{ get; set; }
 
         /// <summary>
-        /// Uploaded CSR content.
+        /// Uploaded CSR content
         /// </summary>
         [JsonProperty("CsrContent")]
         public string CsrContent{ get; set; }
 
         /// <summary>
-        /// Domain name bound with the certificate.
+        /// Domain name bound with the certificate
         /// </summary>
         [JsonProperty("CertificateDomain")]
         public string CertificateDomain{ get; set; }
 
         /// <summary>
-        /// Uploaded domain name array (can be uploaded for a multi-domain certificate).
+        /// Uploaded domain name array (can be uploaded for a multi-domain certificate)
         /// </summary>
         [JsonProperty("DomainList")]
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// Private key password (optional)
+        /// Password of the private key
         /// </summary>
         [JsonProperty("KeyPassword")]
         public string KeyPassword{ get; set; }
 
         /// <summary>
-        /// Organization name.
+        /// Organization name
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// Division name.
+        /// Division name
         /// </summary>
         [JsonProperty("OrganizationDivision")]
         public string OrganizationDivision{ get; set; }
 
         /// <summary>
-        /// Detailed address of the organization.
+        /// Detailed address of the organization
         /// </summary>
         [JsonProperty("OrganizationAddress")]
         public string OrganizationAddress{ get; set; }
 
         /// <summary>
-        /// Country where the organization is located. For example, CN (China).
+        /// Country where the organization is located, for example, CN (China)
         /// </summary>
         [JsonProperty("OrganizationCountry")]
         public string OrganizationCountry{ get; set; }
 
         /// <summary>
-        /// City where the organization is located.
+        /// City where the organization is located
         /// </summary>
         [JsonProperty("OrganizationCity")]
         public string OrganizationCity{ get; set; }
 
         /// <summary>
-        /// Province where the organization is located.
+        /// Province where the organization is located
         /// </summary>
         [JsonProperty("OrganizationRegion")]
         public string OrganizationRegion{ get; set; }
 
         /// <summary>
-        /// Postal code of the organization.
+        /// Postal code of the organization
         /// </summary>
         [JsonProperty("PostalCode")]
         public string PostalCode{ get; set; }
 
         /// <summary>
-        /// Area code of the fixed-line phone number of the organization.
+        /// Area code of the fixed-line phone number of the organization
         /// </summary>
         [JsonProperty("PhoneAreaCode")]
         public string PhoneAreaCode{ get; set; }
 
         /// <summary>
-        /// Fixed-line phone number of the organization.
+        /// Fixed-line phone number of the organization
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+        /// Certificate validation method
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
 
         /// <summary>
-        /// First name of the administrator
+        /// Last name of the administrator
         /// </summary>
         [JsonProperty("AdminFirstName")]
         public string AdminFirstName{ get; set; }
 
         /// <summary>
-        /// Last name of the administrator
+        /// First name of the administrator
         /// </summary>
         [JsonProperty("AdminLastName")]
         public string AdminLastName{ get; set; }
 
         /// <summary>
-        /// Mobile number of the admin.
+        /// Mobile number of the administrator
         /// </summary>
         [JsonProperty("AdminPhoneNum")]
         public string AdminPhoneNum{ get; set; }
 
         /// <summary>
-        /// Email of the admin.
+        /// Email of the administrator
         /// </summary>
         [JsonProperty("AdminEmail")]
         public string AdminEmail{ get; set; }
 
         /// <summary>
-        /// Position of the admin.
+        /// Position of the administrator
         /// </summary>
         [JsonProperty("AdminPosition")]
         public string AdminPosition{ get; set; }
 
         /// <summary>
-        /// First name of the contact
+        /// Last name of the contact
         /// </summary>
         [JsonProperty("ContactFirstName")]
         public string ContactFirstName{ get; set; }
 
         /// <summary>
-        /// Last name of the contact
+        /// First name of the contact
         /// </summary>
         [JsonProperty("ContactLastName")]
         public string ContactLastName{ get; set; }
 
         /// <summary>
-        /// Email of the contact.
+        /// Email of the contact
         /// </summary>
         [JsonProperty("ContactEmail")]
         public string ContactEmail{ get; set; }
 
         /// <summary>
-        /// Mobile number of the contact.
+        /// Mobile number of the contact
         /// </summary>
         [JsonProperty("ContactNumber")]
         public string ContactNumber{ get; set; }
 
         /// <summary>
-        /// Position of the contact.
+        /// Position of the contact
         /// </summary>
         [JsonProperty("ContactPosition")]
         public string ContactPosition{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// ID of the successfully modified certificate.
+        /// ID of the successfully modified certificate
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }

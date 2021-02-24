@@ -26,8 +26,8 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Source of media material for sticker segment, which can be:
-        /// <li>VOD media file ID;</li>
-        /// <li>Download URL of other media files.</li>
+        /// <li>ID of VOD media files</li>
+        /// <li>Download URL of other media files</li>
         /// Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
         /// </summary>
         [JsonProperty("SourceMedia")]

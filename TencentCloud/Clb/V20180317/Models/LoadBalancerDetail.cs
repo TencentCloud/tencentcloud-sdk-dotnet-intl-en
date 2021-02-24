@@ -234,6 +234,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Isolation")]
         public ulong? Isolation{ get; set; }
 
+        /// <summary>
+        /// List of the security groups bound to the CLB instance.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string[] SecurityGroup{ get; set; }
+
+        /// <summary>
+        /// Whether the CLB instance is billed by IP.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public ulong? LoadBalancerPassToTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +284,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetPort", this.TargetPort);
             this.SetParamSimple(map, prefix + "TargetWeight", this.TargetWeight);
             this.SetParamSimple(map, prefix + "Isolation", this.Isolation);
+            this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         }
     }
 }

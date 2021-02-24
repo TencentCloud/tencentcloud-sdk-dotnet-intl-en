@@ -40,6 +40,27 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetLocationId")]
         public string TargetLocationId{ get; set; }
 
+        /// <summary>
+        /// Redirection status code
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RewriteCode")]
+        public long? RewriteCode{ get; set; }
+
+        /// <summary>
+        /// Whether the matched URL is carried in redirection.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TakeUrl")]
+        public bool? TakeUrl{ get; set; }
+
+        /// <summary>
+        /// Redirection type. Manual: manual redirection; Auto: automatic redirection.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RewriteType")]
+        public string RewriteType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +69,9 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "TargetListenerId", this.TargetListenerId);
             this.SetParamSimple(map, prefix + "TargetLocationId", this.TargetLocationId);
+            this.SetParamSimple(map, prefix + "RewriteCode", this.RewriteCode);
+            this.SetParamSimple(map, prefix + "TakeUrl", this.TakeUrl);
+            this.SetParamSimple(map, prefix + "RewriteType", this.RewriteType);
         }
     }
 }

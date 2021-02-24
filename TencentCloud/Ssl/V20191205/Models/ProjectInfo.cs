@@ -25,42 +25,42 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Project name.
+        /// Project name
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// UIN of the project creator.
+        /// UIN of the project creator
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectCreatorUin")]
         public ulong? ProjectCreatorUin{ get; set; }
 
         /// <summary>
-        /// Project creation time.
+        /// Project creation time
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectCreateTime")]
         public string ProjectCreateTime{ get; set; }
 
         /// <summary>
-        /// Brief project information.
+        /// Brief project information
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectResume")]
         public string ProjectResume{ get; set; }
 
         /// <summary>
-        /// User UIN.
+        /// User UIN
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OwnerUin")]
         public ulong? OwnerUin{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectId")]

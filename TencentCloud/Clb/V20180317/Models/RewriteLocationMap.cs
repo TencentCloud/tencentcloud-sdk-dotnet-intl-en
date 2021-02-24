@@ -36,6 +36,24 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetLocationId")]
         public string TargetLocationId{ get; set; }
 
+        /// <summary>
+        /// Redirection status code. Valid values: 301, 302, and 307.
+        /// </summary>
+        [JsonProperty("RewriteCode")]
+        public long? RewriteCode{ get; set; }
+
+        /// <summary>
+        /// Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+        /// </summary>
+        [JsonProperty("TakeUrl")]
+        public bool? TakeUrl{ get; set; }
+
+        /// <summary>
+        /// Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+        /// </summary>
+        [JsonProperty("SourceDomain")]
+        public string SourceDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "SourceLocationId", this.SourceLocationId);
             this.SetParamSimple(map, prefix + "TargetLocationId", this.TargetLocationId);
+            this.SetParamSimple(map, prefix + "RewriteCode", this.RewriteCode);
+            this.SetParamSimple(map, prefix + "TakeUrl", this.TakeUrl);
+            this.SetParamSimple(map, prefix + "SourceDomain", this.SourceDomain);
         }
     }
 }

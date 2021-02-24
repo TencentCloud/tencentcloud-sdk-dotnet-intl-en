@@ -25,175 +25,175 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// CSR type. Online: CSR generated online; parse: CSR pasted.
+        /// CSR type. `online`: CSR generated online; `parse`: CSR pasted
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CsrType")]
         public string CsrType{ get; set; }
 
         /// <summary>
-        /// CSR content.
+        /// CSR content
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CsrContent")]
         public string CsrContent{ get; set; }
 
         /// <summary>
-        /// Domain name information.
+        /// Domain name information
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertificateDomain")]
         public string CertificateDomain{ get; set; }
 
         /// <summary>
-        /// DNS information.
+        /// DNS information
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DomainList")]
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// Password of the private key.
+        /// Password of the private key
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeyPassword")]
         public string KeyPassword{ get; set; }
 
         /// <summary>
-        /// Enterprise or unit name.
+        /// Enterprise or unit name
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// Division.
+        /// Division
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrganizationDivision")]
         public string OrganizationDivision{ get; set; }
 
         /// <summary>
-        /// Address.
+        /// Address
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrganizationAddress")]
         public string OrganizationAddress{ get; set; }
 
         /// <summary>
-        /// Country.
+        /// Country
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrganizationCountry")]
         public string OrganizationCountry{ get; set; }
 
         /// <summary>
-        /// City.
+        /// City
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrganizationCity")]
         public string OrganizationCity{ get; set; }
 
         /// <summary>
-        /// Province.
+        /// Province
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrganizationRegion")]
         public string OrganizationRegion{ get; set; }
 
         /// <summary>
-        /// Postal code.
+        /// Postal code
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PostalCode")]
         public string PostalCode{ get; set; }
 
         /// <summary>
-        /// Area code of the fixed-line phone number.
+        /// Area code of the fixed-line phone number
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PhoneAreaCode")]
         public string PhoneAreaCode{ get; set; }
 
         /// <summary>
-        /// Fixed-line phone number.
+        /// Fixed-line phone number
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// First name of the admin.
+        /// First name of the administrator
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdminFirstName")]
         public string AdminFirstName{ get; set; }
 
         /// <summary>
-        /// Last name of the admin.
+        /// Last name of the administrator
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdminLastName")]
         public string AdminLastName{ get; set; }
 
         /// <summary>
-        /// Phone number of the admin.
+        /// Phone number of the administrator
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdminPhoneNum")]
         public string AdminPhoneNum{ get; set; }
 
         /// <summary>
-        /// Email of the admin.
+        /// Email of the administrator
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdminEmail")]
         public string AdminEmail{ get; set; }
 
         /// <summary>
-        /// Position of the admin.
+        /// Position of the administrator
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdminPosition")]
         public string AdminPosition{ get; set; }
 
         /// <summary>
-        /// First name of the contact.
+        /// First name of the contact
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContactFirstName")]
         public string ContactFirstName{ get; set; }
 
         /// <summary>
-        /// Last name of the contact.
+        /// Last name of the contact
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContactLastName")]
         public string ContactLastName{ get; set; }
 
         /// <summary>
-        /// Phone number of the contact.
+        /// Phone number of the contact
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContactNumber")]
         public string ContactNumber{ get; set; }
 
         /// <summary>
-        /// Email of the contact.
+        /// Email of the contact
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContactEmail")]
         public string ContactEmail{ get; set; }
 
         /// <summary>
-        /// Position of the contact.
+        /// Position of the contact
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContactPosition")]
         public string ContactPosition{ get; set; }
 
         /// <summary>
-        /// Verification type.
+        /// Validation type
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VerifyType")]

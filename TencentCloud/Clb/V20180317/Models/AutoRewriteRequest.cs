@@ -42,6 +42,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
+        /// <summary>
+        /// Redirection status code. Valid values: 301, 302, and 307.
+        /// </summary>
+        [JsonProperty("RewriteCodes")]
+        public long?[] RewriteCodes{ get; set; }
+
+        /// <summary>
+        /// Whether the matched URL is carried in redirection.
+        /// </summary>
+        [JsonProperty("TakeUrls")]
+        public bool?[] TakeUrls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamArraySimple(map, prefix + "RewriteCodes.", this.RewriteCodes);
+            this.SetParamArraySimple(map, prefix + "TakeUrls.", this.TakeUrls);
         }
     }
 }

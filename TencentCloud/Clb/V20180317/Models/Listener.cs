@@ -127,11 +127,18 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SessionType{ get; set; }
 
         /// <summary>
-        /// Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }
+
+        /// <summary>
+        /// Only the NAT64 CLB TCP listeners are supported.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Toa")]
+        public bool? Toa{ get; set; }
 
 
         /// <summary>
@@ -155,6 +162,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+            this.SetParamSimple(map, prefix + "Toa", this.Toa);
         }
     }
 }

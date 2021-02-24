@@ -213,7 +213,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to obtain certificate information.
+        /// This API is used to get certificate information.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateRequest"/></param>
         /// <returns><see cref="DescribeCertificateResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to obtain certificate information.
+        /// This API is used to get certificate information.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateRequest"/></param>
         /// <returns><see cref="DescribeCertificateResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to obtain certificate details.
+        /// This API is used to get certificate details.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateDetailRequest"/></param>
         /// <returns><see cref="DescribeCertificateDetailResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to obtain certificate details.
+        /// This API is used to get certificate details.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateDetailRequest"/></param>
         /// <returns><see cref="DescribeCertificateDetailResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to obtain certificate operation logs in the current account.
+        /// This API is used to get certificate operation logs in the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateOperateLogsRequest"/></param>
         /// <returns><see cref="DescribeCertificateOperateLogsResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to obtain certificate operation logs in the current account.
+        /// This API is used to get certificate operation logs in the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateOperateLogsRequest"/></param>
         /// <returns><see cref="DescribeCertificateOperateLogsResponse"/></returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to obtain the certificate list.
+        /// This API is used to get the certificate list.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificatesRequest"/></param>
         /// <returns><see cref="DescribeCertificatesResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to obtain the certificate list.
+        /// This API is used to get the certificate list.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificatesRequest"/></param>
         /// <returns><see cref="DescribeCertificatesResponse"/></returns>
@@ -413,7 +413,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to modify certificate alias by inputting the certificate ID and new alias.
+        /// This API is used to modify a certificate alias by passing in the certificate ID and new alias.
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateAliasRequest"/></param>
         /// <returns><see cref="ModifyCertificateAliasResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to modify certificate alias by inputting the certificate ID and new alias.
+        /// This API is used to modify a certificate alias by passing in the certificate ID and new alias.
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateAliasRequest"/></param>
         /// <returns><see cref="ModifyCertificateAliasResponse"/></returns>
@@ -533,7 +533,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to submit certificate information. You can call this API to submit the information of a certificate for several times. However, please make sure the submitted information is complete.
+        /// This API is used to submit certificate information.
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
         /// <returns><see cref="SubmitCertificateInformationResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to submit certificate information. You can call this API to submit the information of a certificate for several times. However, please make sure the submitted information is complete.
+        /// This API is used to submit certificate information.
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
         /// <returns><see cref="SubmitCertificateInformationResponse"/></returns>

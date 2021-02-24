@@ -25,35 +25,35 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Number of domain names which can be associated with the certificate.
+        /// Number of domain names which can be associated with the certificate
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DomainNumber")]
         public string DomainNumber{ get; set; }
 
         /// <summary>
-        /// Original certificate ID.
+        /// Original certificate ID
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginCertificateId")]
         public string OriginCertificateId{ get; set; }
 
         /// <summary>
-        /// Original ID of the new certificate.
+        /// Original ID of the new certificate
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReplacedBy")]
         public string ReplacedBy{ get; set; }
 
         /// <summary>
-        /// New ID of the new certificate.
+        /// New ID of the new certificate
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReplacedFor")]
         public string ReplacedFor{ get; set; }
 
         /// <summary>
-        /// Certificate ID of the new order.
+        /// Certificate ID of the new order
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RenewOrder")]

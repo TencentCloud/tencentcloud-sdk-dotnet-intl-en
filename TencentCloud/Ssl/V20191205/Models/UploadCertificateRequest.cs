@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Certificate content
+        /// Public key of the certificate
         /// </summary>
         [JsonProperty("CertificatePublicKey")]
         public string CertificatePublicKey{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
+        /// Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }
 
         /// <summary>
-        /// Alias.
+        /// Alias
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

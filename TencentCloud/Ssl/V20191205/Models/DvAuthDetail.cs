@@ -25,42 +25,42 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// DV authentication key.
+        /// DV authentication key
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthKey")]
         public string DvAuthKey{ get; set; }
 
         /// <summary>
-        /// DV authentication value.
+        /// DV authentication value
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthValue")]
         public string DvAuthValue{ get; set; }
 
         /// <summary>
-        /// Domain name of the DV authentication value.
+        /// Domain name of the DV authentication value
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthDomain")]
         public string DvAuthDomain{ get; set; }
 
         /// <summary>
-        /// Path of the DV authentication value.
+        /// Path of the DV authentication value
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthPath")]
         public string DvAuthPath{ get; set; }
 
         /// <summary>
-        /// DV authentication sub-domain name.
+        /// DV authentication sub-domain name
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthKeySubDomain")]
         public string DvAuthKeySubDomain{ get; set; }
 
         /// <summary>
-        /// DV authentication information.
+        /// DV authentication information
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuths")]

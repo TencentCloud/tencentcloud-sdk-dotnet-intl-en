@@ -25,231 +25,231 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// User UIN.
+        /// User UIN
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+        /// Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// Certificate type. CA: client certificate; SVR: server certificate.
+        /// Certificate type. `CA`: client certificate; `SVR`: server certificate
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }
 
         /// <summary>
-        /// Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain; `25` WoTrus DV; `26`: WoTrus DV multi-domain; `27`: WoTrus DV wildcard; `28`: WoTrus OV; `29`: WoTrus OV multi-domain; `30`: WoTrus OV wildcard; `31`: WoTrus EV; `32`: WoTrus EV multi-domain; `33`: DNSPod Chinese Cryptographic DV; `34`: DNSPod Chinese Cryptographic DV multi-domain; `35`: DNSPod Chinese Cryptographic DV wildcard; `37`: DNSPod Chinese Cryptographic OV; `38`: DNSPod Chinese Cryptographic OV multi-domain; `39`: DNSPod Chinese Cryptographic OV wildcard: `40`: DNSPod Chinese Cryptographic EV; `41`: DNSPod Chinese Cryptographic EV multi-domain; `42`: TrustAsia DV wildcard multi-domain.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Issuer.
+        /// Issuer
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProductZhName")]
         public string ProductZhName{ get; set; }
 
         /// <summary>
-        /// Domain name.
+        /// Domain name
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Alias.
+        /// Alias
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload; `13`: pending information submission for the free certificate.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Status information.
+        /// Status information
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusMsg")]
         public string StatusMsg{ get; set; }
 
         /// <summary>
-        /// Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+        /// Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
 
         /// <summary>
-        /// Vulnerability scanning status.
+        /// Vulnerability scanning status
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulnerabilityStatus")]
         public string VulnerabilityStatus{ get; set; }
 
         /// <summary>
-        /// Time when the certificate takes effect.
+        /// Time when the certificate takes effect
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertBeginTime")]
         public string CertBeginTime{ get; set; }
 
         /// <summary>
-        /// Time when the certificate expires.
+        /// Time when the certificate expires
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertEndTime")]
         public string CertEndTime{ get; set; }
 
         /// <summary>
-        /// Validity period of the certificate (unit: month).
+        /// Validity period of the certificate, in months
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ValidityPeriod")]
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// Application time.
+        /// Application time
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// Order ID.
+        /// Order ID
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// Extended information of the certificate.
+        /// Extended information of the certificate
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertificateExtra")]
         public CertificateExtra CertificateExtra{ get; set; }
 
         /// <summary>
-        /// Private key of the certificate.
+        /// Private key of the certificate
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertificatePrivateKey")]
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// Certificate public key (i.e., certificate content)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Public key of the certificate
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertificatePublicKey")]
         public string CertificatePublicKey{ get; set; }
 
         /// <summary>
-        /// DV authentication information.
+        /// DV authentication information
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthDetail")]
         public DvAuthDetail DvAuthDetail{ get; set; }
 
         /// <summary>
-        /// Vulnerability scanning assessment report.
+        /// Vulnerability scanning assessment report
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulnerabilityReport")]
         public string VulnerabilityReport{ get; set; }
 
         /// <summary>
-        /// Certificate ID.
+        /// Certificate ID
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Certificate type name.
+        /// Certificate type name
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// Status description.
+        /// Status description
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusName")]
         public string StatusName{ get; set; }
 
         /// <summary>
-        /// Domain names associated with the certificate (including the primary domain name).
+        /// Domain names associated with the certificate (including the primary domain name)
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubjectAltName")]
         public string[] SubjectAltName{ get; set; }
 
         /// <summary>
-        /// Whether the customer is a VIP customer.
+        /// Whether the customer is a VIP customer
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsVip")]
         public bool? IsVip{ get; set; }
 
         /// <summary>
-        /// Whether the certificate is a wildcard certificate.
+        /// Whether the certificate is a wildcard certificate
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsWildcard")]
         public bool? IsWildcard{ get; set; }
 
         /// <summary>
-        /// Whether the certificate is a DV certificate.
+        /// Whether the certificate is a DV certificate
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDv")]
         public bool? IsDv{ get; set; }
 
         /// <summary>
-        /// Whether the vulnerability scanning feature is enabled.
+        /// Whether the vulnerability scanning feature is enabled
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsVulnerability")]
         public bool? IsVulnerability{ get; set; }
 
         /// <summary>
-        /// Submitted data.
+        /// Submitted data
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubmittedData")]
         public SubmittedData SubmittedData{ get; set; }
 
         /// <summary>
-        /// Whether the certificate can be reissued.
+        /// Whether the certificate can be reissued
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RenewAble")]
         public bool? RenewAble{ get; set; }
 
         /// <summary>
-        /// Whether the certificate can be deployed.
+        /// Whether the certificate can be deployed
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Deployable")]

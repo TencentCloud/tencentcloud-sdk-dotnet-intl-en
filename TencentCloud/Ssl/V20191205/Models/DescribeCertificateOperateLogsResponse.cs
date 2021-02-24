@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Total number of logs that meet query conditions.
+        /// Total number of logs that meet query conditions
         /// </summary>
         [JsonProperty("AllTotal")]
         public ulong? AllTotal{ get; set; }
 
         /// <summary>
-        /// Number of logs returned for this request.
+        /// Number of logs returned for this request
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Certificate operation log list.
+        /// Certificate operation log list
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OperateLogs")]

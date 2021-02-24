@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Pagination offset, starting from 0.
+        /// Pagination offset, starting from 0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -37,37 +37,37 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
+        /// Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// Certificate type. CA: client certificate; SVR: server certificate.
+        /// Certificate type. `CA`: client certificate; `SVR`: server certificate
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Sorting by expiration time. DESC: descending; ASC: ascending.
+        /// Sorting by expiration time. `DESC`: descending; `ASC`: ascending
         /// </summary>
         [JsonProperty("ExpirationSort")]
         public string ExpirationSort{ get; set; }
 
         /// <summary>
-        /// Certificate status.
+        /// Certificate status
         /// </summary>
         [JsonProperty("CertificateStatus")]
         public ulong?[] CertificateStatus{ get; set; }
 
         /// <summary>
-        /// Whether the certificate can be deployed. 1: yes; 0: no.
+        /// Whether the certificate can be deployed. `1`: yes; `0`: no
         /// </summary>
         [JsonProperty("Deployable")]
         public ulong? Deployable{ get; set; }
