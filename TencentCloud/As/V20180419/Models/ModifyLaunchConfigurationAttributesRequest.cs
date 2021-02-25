@@ -37,8 +37,8 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// List of instance types. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
-        /// The launch configuration uses InstanceType to indicate one single instance type and InstanceTypes to indicate multiple instance types. After InstanceTypes is successfully specified for the launch configuration, the original InstanceType will be automatically invalidated.
+        /// List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
+        /// The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
@@ -66,6 +66,42 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// Security group to which the instance belongs. This parameter can be obtained from the `SecurityGroupId` field in the response of the [`DescribeSecurityGroups`](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+        /// At least one security group is required for this parameter. The security group specified is sequential.
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// Information of the public network bandwidth configuration.
+        /// To modify it or even its subfield, you should specify all the subfields again.
+        /// </summary>
+        [JsonProperty("InternetAccessible")]
+        public InternetAccessible InternetAccessible{ get; set; }
+
+        /// <summary>
+        /// Instance billing mode. Valid values:
+        /// <br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+        /// <br><li>SPOTPAID: spot instance
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceChargePrepaid")]
+        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
+
+        /// <summary>
+        /// Market-related options for instances, such as parameters related to spot instances.
+        /// This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
+        /// To modify it or even its subfield, you should specify all the subfields again.
+        /// </summary>
+        [JsonProperty("InstanceMarketOptions")]
+        public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +114,11 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
             this.SetParamSimple(map, prefix + "LaunchConfigurationName", this.LaunchConfigurationName);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         }
     }
 }

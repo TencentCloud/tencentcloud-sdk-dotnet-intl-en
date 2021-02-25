@@ -61,9 +61,9 @@ namespace TencentCloud.As.V20180419.Models
         public EnhancedService EnhancedService{ get; set; }
 
         /// <summary>
-        /// Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-        /// <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-        /// <br><li>SPOTPAID: Bidding
+        /// Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+        /// <br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+        /// <br><li>SPOTPAID: spot instance
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

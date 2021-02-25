@@ -55,7 +55,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// Additional information sent by AS to the notification target. The default value is ''
+        /// Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }
