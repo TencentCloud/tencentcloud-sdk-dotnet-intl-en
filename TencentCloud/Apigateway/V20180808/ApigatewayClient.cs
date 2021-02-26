@@ -711,7 +711,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the details of an API deployed in API Gateway.
+        /// This API (`DescribeApi`) is used to query the details of the APIs users manage via Tencent Cloud API Gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiRequest"/></param>
         /// <returns><see cref="DescribeApiResponse"/></returns>
@@ -731,7 +731,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the details of an API deployed in API Gateway.
+        /// This API (`DescribeApi`) is used to query the details of the APIs users manage via Tencent Cloud API Gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiRequest"/></param>
         /// <returns><see cref="DescribeApiResponse"/></returns>
