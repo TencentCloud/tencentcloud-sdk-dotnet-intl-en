@@ -48,6 +48,8 @@
     <Compile Include="V20170312\Models\AccountInfo.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
+    <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\CreateDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\CreateDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\CreateServerlessDBInstanceRequest.cs" />
@@ -104,6 +106,8 @@
     <Compile Include="V20170312\Models\NormalQueryItem.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
+    <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\PgDeal.cs" />
     <Compile Include="V20170312\Models\RegionInfo.cs" />
     <Compile Include="V20170312\Models\RenewInstanceRequest.cs" />

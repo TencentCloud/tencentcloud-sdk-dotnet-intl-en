@@ -93,6 +93,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to disable public network access for a PostgreSQL for Serverless instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
+        public async Task<CloseServerlessDBExtranetAccessResponse> CloseServerlessDBExtranetAccess(CloseServerlessDBExtranetAccessRequest req)
+        {
+             JsonResponseModel<CloseServerlessDBExtranetAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseServerlessDBExtranetAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseServerlessDBExtranetAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable public network access for a PostgreSQL for Serverless instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
+        public CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccessSync(CloseServerlessDBExtranetAccessRequest req)
+        {
+             JsonResponseModel<CloseServerlessDBExtranetAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseServerlessDBExtranetAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseServerlessDBExtranetAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create one or more TencentDB for PostgreSQL instances.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
@@ -1084,6 +1124,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "OpenDBExtranetAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenDBExtranetAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable public network access for a PostgreSQL for Serverless instance.
+        /// </summary>
+        /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
+        public async Task<OpenServerlessDBExtranetAccessResponse> OpenServerlessDBExtranetAccess(OpenServerlessDBExtranetAccessRequest req)
+        {
+             JsonResponseModel<OpenServerlessDBExtranetAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenServerlessDBExtranetAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenServerlessDBExtranetAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable public network access for a PostgreSQL for Serverless instance.
+        /// </summary>
+        /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
+        public OpenServerlessDBExtranetAccessResponse OpenServerlessDBExtranetAccessSync(OpenServerlessDBExtranetAccessRequest req)
+        {
+             JsonResponseModel<OpenServerlessDBExtranetAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenServerlessDBExtranetAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenServerlessDBExtranetAccessResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
