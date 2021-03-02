@@ -21,35 +21,35 @@ namespace TencentCloud.Postgres.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBInstancesRequest : AbstractModel
+    public class DescribeReadOnlyGroupsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
+        /// Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page. Default value: 10.
+        /// The number of results per page. Default value: 10.
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Data offset which starts from 0
+        /// Specify which page is displayed. Default value: 1 (the first page).
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+        /// Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// In ascending or descending order
+        /// Sorting order. Valid values: `desc`, `asc`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
@@ -61,8 +61,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }

@@ -48,6 +48,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("RegionState")]
         public string RegionState{ get; set; }
 
+        /// <summary>
+        /// Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SupportInternational")]
+        public ulong? SupportInternational{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "RegionState", this.RegionState);
+            this.SetParamSimple(map, prefix + "SupportInternational", this.SupportInternational);
         }
     }
 }

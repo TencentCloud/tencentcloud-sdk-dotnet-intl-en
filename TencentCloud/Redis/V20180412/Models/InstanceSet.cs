@@ -306,6 +306,34 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
+        /// <summary>
+        /// The minimum value of the range of maximum connections to the client
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientLimitMin")]
+        public long? ClientLimitMin{ get; set; }
+
+        /// <summary>
+        /// The maximum value of the range of maximum connections to the client
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientLimitMax")]
+        public long? ClientLimitMax{ get; set; }
+
+        /// <summary>
+        /// Instance node details
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NodeSet")]
+        public RedisNodeInfo[] NodeSet{ get; set; }
+
+        /// <summary>
+        /// Region where the instance is deployed
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -357,6 +385,10 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
+            this.SetParamSimple(map, prefix + "ClientLimitMin", this.ClientLimitMin);
+            this.SetParamSimple(map, prefix + "ClientLimitMax", this.ClientLimitMax);
+            this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

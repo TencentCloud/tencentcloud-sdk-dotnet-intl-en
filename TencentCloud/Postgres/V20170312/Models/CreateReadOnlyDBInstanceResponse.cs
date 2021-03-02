@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstancesResponse : AbstractModel
+    public class CreateReadOnlyDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Transaction ID
+        /// Order number list. Each instance corresponds to an order number.
         /// </summary>
-        [JsonProperty("DealId")]
-        public string DealId{ get; set; }
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Bill ID of frozen fees
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("BillId")]
+        public string BillId{ get; set; }
+
+        /// <summary>
+        /// ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+        /// </summary>
+        [JsonProperty("DBInstanceIdSet")]
+        public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +54,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DealId", this.DealId);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "BillId", this.BillId);
+            this.SetParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

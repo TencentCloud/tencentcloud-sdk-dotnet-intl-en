@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.142</VersionPrefix>
+    <VersionPrefix>3.0.143</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3972,17 +3972,25 @@
     <Compile Include="Organization\V20181225\Models\UpdateOrganizationNodeResponse.cs" />
     <Compile Include="Postgres\V20170312\PostgresClient.cs" />
     <Compile Include="Postgres\V20170312\Models\AccountInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateDBInstancesResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyDBInstanceRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyDBInstanceResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateServerlessDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateServerlessDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DBBackup.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstance.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstanceNetInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeAccountsRequest.cs" />
@@ -4005,6 +4013,8 @@
     <Compile Include="Postgres\V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeProductConfigRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeProductConfigResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeReadOnlyGroupsRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeReadOnlyGroupsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeServerlessDBInstancesRequest.cs" />
@@ -4027,15 +4037,24 @@
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\NormalQueryItem.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\PgDeal.cs" />
+    <Compile Include="Postgres\V20170312\Models\ReadOnlyGroup.cs" />
+    <Compile Include="Postgres\V20170312\Models\RebalanceReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\RebalanceReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\RegionInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\RemoveDBInstanceFromReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\RemoveDBInstanceFromReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\RenewInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\RenewInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ResetAccountPasswordRequest.cs" />
