@@ -90,6 +90,18 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
+        /// <summary>
+        /// Tag filtering condition
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
+        /// <summary>
+        /// Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+        /// </summary>
+        [JsonProperty("SubscribeVersion")]
+        public string SubscribeVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
         }
     }
 }

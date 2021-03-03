@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.143</VersionPrefix>
+    <VersionPrefix>3.0.144</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2218,6 +2218,8 @@
     <Compile Include="Dts\V20180330\Models\SyncJobInfo.cs" />
     <Compile Include="Dts\V20180330\Models\SyncOption.cs" />
     <Compile Include="Dts\V20180330\Models\SyncStepDetailInfo.cs" />
+    <Compile Include="Dts\V20180330\Models\TagFilter.cs" />
+    <Compile Include="Dts\V20180330\Models\TagItem.cs" />
     <Compile Include="Ecdn\V20191012\EcdnClient.cs" />
     <Compile Include="Ecdn\V20191012\Models\AddEcdnDomainRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\AddEcdnDomainResponse.cs" />
@@ -4236,6 +4238,7 @@
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
+    <Compile Include="Scf\V20180416\Models\AsyncEvent.cs" />
     <Compile Include="Scf\V20180416\Models\CfsConfig.cs" />
     <Compile Include="Scf\V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
@@ -4292,6 +4295,8 @@
     <Compile Include="Scf\V20180416\Models\LayerVersionSimple.cs" />
     <Compile Include="Scf\V20180416\Models\ListAliasesRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListAliasesResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\ListAsyncEventsRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\ListAsyncEventsResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListFunctionsRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListFunctionsResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListLayerVersionsRequest.cs" />
@@ -4323,6 +4328,9 @@
     <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
     <Compile Include="Scf\V20180416\Models\StatusReason.cs" />
     <Compile Include="Scf\V20180416\Models\Tag.cs" />
+    <Compile Include="Scf\V20180416\Models\TerminateAsyncEventRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\TerminateAsyncEventResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\TimeInterval.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerInfo.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateAliasRequest.cs" />

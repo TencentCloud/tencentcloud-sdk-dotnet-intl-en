@@ -122,5 +122,7 @@
     <Compile Include="V20180330\Models\SyncJobInfo.cs" />
     <Compile Include="V20180330\Models\SyncOption.cs" />
     <Compile Include="V20180330\Models\SyncStepDetailInfo.cs" />
+    <Compile Include="V20180330\Models\TagFilter.cs" />
+    <Compile Include="V20180330\Models\TagItem.cs" />
   </ItemGroup>
 </Project>

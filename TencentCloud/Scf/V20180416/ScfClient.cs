@@ -907,6 +907,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to pull the list of async function events.
+        /// </summary>
+        /// <param name="req"><see cref="ListAsyncEventsRequest"/></param>
+        /// <returns><see cref="ListAsyncEventsResponse"/></returns>
+        public async Task<ListAsyncEventsResponse> ListAsyncEvents(ListAsyncEventsRequest req)
+        {
+             JsonResponseModel<ListAsyncEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAsyncEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAsyncEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pull the list of async function events.
+        /// </summary>
+        /// <param name="req"><see cref="ListAsyncEventsRequest"/></param>
+        /// <returns><see cref="ListAsyncEventsResponse"/></returns>
+        public ListAsyncEventsResponse ListAsyncEventsSync(ListAsyncEventsRequest req)
+        {
+             JsonResponseModel<ListAsyncEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAsyncEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAsyncEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to return relevant function information based on the input query parameters.
         /// </summary>
         /// <param name="req"><see cref="ListFunctionsRequest"/></param>
@@ -1338,6 +1378,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "PutTotalConcurrencyConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutTotalConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate a running async function event.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateAsyncEventRequest"/></param>
+        /// <returns><see cref="TerminateAsyncEventResponse"/></returns>
+        public async Task<TerminateAsyncEventResponse> TerminateAsyncEvent(TerminateAsyncEventRequest req)
+        {
+             JsonResponseModel<TerminateAsyncEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateAsyncEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateAsyncEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate a running async function event.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateAsyncEventRequest"/></param>
+        /// <returns><see cref="TerminateAsyncEventResponse"/></returns>
+        public TerminateAsyncEventResponse TerminateAsyncEventSync(TerminateAsyncEventRequest req)
+        {
+             JsonResponseModel<TerminateAsyncEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateAsyncEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateAsyncEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

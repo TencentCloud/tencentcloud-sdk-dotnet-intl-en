@@ -25,7 +25,9 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Function name
+        /// Function name.
+        /// - To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583?from_cn_redirect=1) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
+        /// - After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }

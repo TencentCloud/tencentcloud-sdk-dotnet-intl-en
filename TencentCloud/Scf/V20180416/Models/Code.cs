@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// COS bucket name
+        /// Object bucket name (enter the custom part of the bucket name without `-appid`)
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }

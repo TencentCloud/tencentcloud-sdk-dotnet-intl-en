@@ -169,6 +169,20 @@ namespace TencentCloud.Dts.V20180330.Models
         public string Region{ get; set; }
 
         /// <summary>
+        /// Tags of the subscription
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItem[] Tags{ get; set; }
+
+        /// <summary>
+        /// Whether auto-renewal is enabled. 0: do not enable, 1: enable
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -204,6 +218,8 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamArrayObj(map, prefix + "SubscribeObjects.", this.SubscribeObjects);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

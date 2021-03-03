@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+        /// Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
