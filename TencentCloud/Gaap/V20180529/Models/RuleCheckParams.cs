@@ -69,14 +69,14 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? FailedCountInter{ get; set; }
 
         /// <summary>
-        /// Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+        /// Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FailedThreshold")]
         public ulong? FailedThreshold{ get; set; }
 
         /// <summary>
-        /// Time of a request is blocked after the origin server health check threshold is exceeded.
+        /// Duration to block requests targeting the origin server after a failed health check
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BlockInter")]

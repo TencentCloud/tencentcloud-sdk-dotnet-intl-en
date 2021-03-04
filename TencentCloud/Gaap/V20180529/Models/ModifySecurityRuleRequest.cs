@@ -42,6 +42,34 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
+        /// <summary>
+        /// Security rule action
+        /// </summary>
+        [JsonProperty("RuleAction")]
+        public string RuleAction{ get; set; }
+
+        /// <summary>
+        /// A CIDR IP address associated with the rule
+        /// </summary>
+        [JsonProperty("SourceCidr")]
+        public string SourceCidr{ get; set; }
+
+        /// <summary>
+        /// Protocol type
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// Port range. Valid values:
+        /// A single port: 80
+        /// Multiple ports: 80 and 443
+        /// Consecutive ports: 3306-20000
+        /// All ports: ALL
+        /// </summary>
+        [JsonProperty("DestPortRange")]
+        public string DestPortRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +79,10 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "RuleAction", this.RuleAction);
+            this.SetParamSimple(map, prefix + "SourceCidr", this.SourceCidr);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "DestPortRange", this.DestPortRange);
         }
     }
 }
