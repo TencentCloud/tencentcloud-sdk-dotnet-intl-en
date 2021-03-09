@@ -55,7 +55,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
+        /// Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
         /// </summary>
         [JsonProperty("BindInstanceIds")]
         public string[] BindInstanceIds{ get; set; }

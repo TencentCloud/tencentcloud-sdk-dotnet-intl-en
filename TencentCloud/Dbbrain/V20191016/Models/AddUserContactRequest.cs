@@ -21,20 +21,26 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class AddUserContactRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Contact name, which needs to be unique and can contain 2-60 characters, supporting uppercase and lowercase letters, numbers, and underline “_”. It cannot start with “_”.
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Whether to enable instance overview. Valid values: Yes/No.
+        /// Email address, which can contain uppercase and lowercase letters, numbers, and underline “_”, and cannot start with “_”.
         /// </summary>
-        [JsonProperty("OverviewDisplay")]
-        public string OverviewDisplay{ get; set; }
+        [JsonProperty("ContactInfo")]
+        public string ContactInfo{ get; set; }
+
+        /// <summary>
+        /// Service type, which is fixed to “mysql”.
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
-            this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ContactInfo", this.ContactInfo);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

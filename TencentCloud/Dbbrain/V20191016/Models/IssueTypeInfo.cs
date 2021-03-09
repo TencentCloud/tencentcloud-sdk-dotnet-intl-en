@@ -21,20 +21,26 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class IssueTypeInfo : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Metric categories: AVAILABILITY, MAINTAINABILITY, PERFORMANCE, and RELIABILITY
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("IssueType")]
+        public string IssueType{ get; set; }
 
         /// <summary>
-        /// Whether to enable instance overview. Valid values: Yes/No.
+        /// Exception
         /// </summary>
-        [JsonProperty("OverviewDisplay")]
-        public string OverviewDisplay{ get; set; }
+        [JsonProperty("Events")]
+        public EventInfo[] Events{ get; set; }
+
+        /// <summary>
+        /// Total number of the exceptions
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
-            this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
+            this.SetParamSimple(map, prefix + "IssueType", this.IssueType);
+            this.SetParamArrayObj(map, prefix + "Events.", this.Events);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
         }
     }
 }

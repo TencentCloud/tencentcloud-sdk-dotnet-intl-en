@@ -53,6 +53,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// This API is used to add the contact name and email.. The return value is the successfully added contact ID. Select Guangzhou for Region.
+        /// </summary>
+        /// <param name="req"><see cref="AddUserContactRequest"/></param>
+        /// <returns><see cref="AddUserContactResponse"/></returns>
+        public async Task<AddUserContactResponse> AddUserContact(AddUserContactRequest req)
+        {
+             JsonResponseModel<AddUserContactResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddUserContact");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUserContactResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add the contact name and email.. The return value is the successfully added contact ID. Select Guangzhou for Region.
+        /// </summary>
+        /// <param name="req"><see cref="AddUserContactRequest"/></param>
+        /// <returns><see cref="AddUserContactResponse"/></returns>
+        public AddUserContactResponse AddUserContactSync(AddUserContactRequest req)
+        {
+             JsonResponseModel<AddUserContactResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddUserContact");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUserContactResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a health report and send it via email as configured.
         /// </summary>
         /// <param name="req"><see cref="CreateDBDiagReportTaskRequest"/></param>
@@ -93,7 +133,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email configuration of scheduled task report).
+        /// This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email sending configuration of regularly generated health report). Select Guangzhou for Region, regardless of the region where the instance belongs.
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
         /// <returns><see cref="CreateMailProfileResponse"/></returns>
@@ -113,7 +153,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email configuration of scheduled task report).
+        /// This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email sending configuration of regularly generated health report). Select Guangzhou for Region, regardless of the region where the instance belongs.
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
         /// <returns><see cref="CreateMailProfileResponse"/></returns>
@@ -124,6 +164,46 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "CreateMailProfile");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create the regular generation time of the health reports and the regular email sending configuration. Pass in the regular generation time of the health reports as a parameter (Monday to Sunday) to set the regular generation time of the health reports, and save the corresponding regular email sending configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSchedulerMailProfileRequest"/></param>
+        /// <returns><see cref="CreateSchedulerMailProfileResponse"/></returns>
+        public async Task<CreateSchedulerMailProfileResponse> CreateSchedulerMailProfile(CreateSchedulerMailProfileRequest req)
+        {
+             JsonResponseModel<CreateSchedulerMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSchedulerMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSchedulerMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create the regular generation time of the health reports and the regular email sending configuration. Pass in the regular generation time of the health reports as a parameter (Monday to Sunday) to set the regular generation time of the health reports, and save the corresponding regular email sending configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSchedulerMailProfileRequest"/></param>
+        /// <returns><see cref="CreateSchedulerMailProfileResponse"/></returns>
+        public CreateSchedulerMailProfileResponse CreateSchedulerMailProfileSync(CreateSchedulerMailProfileRequest req)
+        {
+             JsonResponseModel<CreateSchedulerMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSchedulerMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSchedulerMailProfileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -324,6 +404,126 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBSpaceStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSpaceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the instance information list. Select Guangzhou for Region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiagDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDiagDBInstancesResponse"/></returns>
+        public async Task<DescribeDiagDBInstancesResponse> DescribeDiagDBInstances(DescribeDiagDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDiagDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiagDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiagDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the instance information list. Select Guangzhou for Region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiagDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDiagDBInstancesResponse"/></returns>
+        public DescribeDiagDBInstancesResponse DescribeDiagDBInstancesSync(DescribeDiagDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDiagDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiagDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiagDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the health score and deduction for exceptions in the specified time period (30 minutes) based on the instance ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthScoreRequest"/></param>
+        /// <returns><see cref="DescribeHealthScoreResponse"/></returns>
+        public async Task<DescribeHealthScoreResponse> DescribeHealthScore(DescribeHealthScoreRequest req)
+        {
+             JsonResponseModel<DescribeHealthScoreResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHealthScore");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHealthScoreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the health score and deduction for exceptions in the specified time period (30 minutes) based on the instance ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthScoreRequest"/></param>
+        /// <returns><see cref="DescribeHealthScoreResponse"/></returns>
+        public DescribeHealthScoreResponse DescribeHealthScoreSync(DescribeHealthScoreRequest req)
+        {
+             JsonResponseModel<DescribeHealthScoreResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHealthScore");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHealthScoreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the email sending configurations, including the email configuration for database inspection and the email sending configuration for regularly generated health reports. Select Guangzhou for Region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMailProfileRequest"/></param>
+        /// <returns><see cref="DescribeMailProfileResponse"/></returns>
+        public async Task<DescribeMailProfileResponse> DescribeMailProfile(DescribeMailProfileRequest req)
+        {
+             JsonResponseModel<DescribeMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the email sending configurations, including the email configuration for database inspection and the email sending configuration for regularly generated health reports. Select Guangzhou for Region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMailProfileRequest"/></param>
+        /// <returns><see cref="DescribeMailProfileResponse"/></returns>
+        public DescribeMailProfileResponse DescribeMailProfileSync(DescribeMailProfileRequest req)
+        {
+             JsonResponseModel<DescribeMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMailProfileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

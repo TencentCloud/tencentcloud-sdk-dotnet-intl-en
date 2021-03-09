@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.147</VersionPrefix>
+    <VersionPrefix>3.0.148</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1971,11 +1971,15 @@
     <Compile Include="Dayu\V20180709\Models\WaterPrintKey.cs" />
     <Compile Include="Dayu\V20180709\Models\WaterPrintPolicy.cs" />
     <Compile Include="Dbbrain\V20191016\DbbrainClient.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\AddUserContactRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\AddUserContactResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\ContactItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportTaskRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\CreateSchedulerMailProfileRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeAllUserContactRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeAllUserGroupRequest.cs" />
@@ -1986,6 +1990,12 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagHistoryResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeDiagDBInstancesRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeDiagDBInstancesResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeHealthScoreRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeHealthScoreResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeMailProfileRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTimeSeriesStatsRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTimeSeriesStatsResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTopSqlsRequest.cs" />
@@ -1995,8 +2005,12 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\EventInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\GroupItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\HealthScoreInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\InstanceConfs.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\InstanceInfo.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\IssueTypeInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\MailConfiguration.cs" />
     <Compile Include="Dbbrain\V20191016\Models\ModifyDiagDBInstanceConfRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\ModifyDiagDBInstanceConfResponse.cs" />
@@ -2010,6 +2024,7 @@
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TimeSlice.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\UserProfile.cs" />
     <Compile Include="Dc\V20180410\DcClient.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />

@@ -45,11 +45,15 @@
 
   <ItemGroup>
     <Compile Include="V20191016\DbbrainClient.cs" />
+    <Compile Include="V20191016\Models\AddUserContactRequest.cs" />
+    <Compile Include="V20191016\Models\AddUserContactResponse.cs" />
     <Compile Include="V20191016\Models\ContactItem.cs" />
     <Compile Include="V20191016\Models\CreateDBDiagReportTaskRequest.cs" />
     <Compile Include="V20191016\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="V20191016\Models\CreateMailProfileRequest.cs" />
     <Compile Include="V20191016\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="V20191016\Models\CreateSchedulerMailProfileRequest.cs" />
+    <Compile Include="V20191016\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="V20191016\Models\DescribeAllUserContactRequest.cs" />
     <Compile Include="V20191016\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="V20191016\Models\DescribeAllUserGroupRequest.cs" />
@@ -60,6 +64,12 @@
     <Compile Include="V20191016\Models\DescribeDBDiagHistoryResponse.cs" />
     <Compile Include="V20191016\Models\DescribeDBSpaceStatusRequest.cs" />
     <Compile Include="V20191016\Models\DescribeDBSpaceStatusResponse.cs" />
+    <Compile Include="V20191016\Models\DescribeDiagDBInstancesRequest.cs" />
+    <Compile Include="V20191016\Models\DescribeDiagDBInstancesResponse.cs" />
+    <Compile Include="V20191016\Models\DescribeHealthScoreRequest.cs" />
+    <Compile Include="V20191016\Models\DescribeHealthScoreResponse.cs" />
+    <Compile Include="V20191016\Models\DescribeMailProfileRequest.cs" />
+    <Compile Include="V20191016\Models\DescribeMailProfileResponse.cs" />
     <Compile Include="V20191016\Models\DescribeSlowLogTimeSeriesStatsRequest.cs" />
     <Compile Include="V20191016\Models\DescribeSlowLogTimeSeriesStatsResponse.cs" />
     <Compile Include="V20191016\Models\DescribeSlowLogTopSqlsRequest.cs" />
@@ -69,8 +79,12 @@
     <Compile Include="V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
     <Compile Include="V20191016\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="V20191016\Models\EventInfo.cs" />
     <Compile Include="V20191016\Models\GroupItem.cs" />
+    <Compile Include="V20191016\Models\HealthScoreInfo.cs" />
     <Compile Include="V20191016\Models\InstanceConfs.cs" />
+    <Compile Include="V20191016\Models\InstanceInfo.cs" />
+    <Compile Include="V20191016\Models\IssueTypeInfo.cs" />
     <Compile Include="V20191016\Models\MailConfiguration.cs" />
     <Compile Include="V20191016\Models\ModifyDiagDBInstanceConfRequest.cs" />
     <Compile Include="V20191016\Models\ModifyDiagDBInstanceConfResponse.cs" />
@@ -84,5 +98,6 @@
     <Compile Include="V20191016\Models\TableSpaceData.cs" />
     <Compile Include="V20191016\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="V20191016\Models\TimeSlice.cs" />
+    <Compile Include="V20191016\Models\UserProfile.cs" />
   </ItemGroup>
 </Project>

@@ -21,20 +21,32 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class DescribeDiagDBInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Total Number of Instances
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Whether to enable instance overview. Valid values: Yes/No.
+        /// Status of all instance inspection. 0: all instance inspection enabled, 1: all instance inspection disabled
         /// </summary>
-        [JsonProperty("OverviewDisplay")]
-        public string OverviewDisplay{ get; set; }
+        [JsonProperty("DbScanStatus")]
+        public long? DbScanStatus{ get; set; }
+
+        /// <summary>
+        /// Instance related information
+        /// </summary>
+        [JsonProperty("Items")]
+        public InstanceInfo[] Items{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
-            this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "DbScanStatus", this.DbScanStatus);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

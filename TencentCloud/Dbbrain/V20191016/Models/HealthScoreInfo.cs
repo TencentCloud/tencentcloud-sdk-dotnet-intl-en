@@ -21,20 +21,32 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceConfs : AbstractModel
+    public class HealthScoreInfo : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable database inspection. Valid values: Yes/No.
+        /// Exception details
         /// </summary>
-        [JsonProperty("DailyInspection")]
-        public string DailyInspection{ get; set; }
+        [JsonProperty("IssueTypes")]
+        public IssueTypeInfo[] IssueTypes{ get; set; }
 
         /// <summary>
-        /// Whether to enable instance overview. Valid values: Yes/No.
+        /// Total number of the exceptions
         /// </summary>
-        [JsonProperty("OverviewDisplay")]
-        public string OverviewDisplay{ get; set; }
+        [JsonProperty("EventsTotalCount")]
+        public long? EventsTotalCount{ get; set; }
+
+        /// <summary>
+        /// Health score
+        /// </summary>
+        [JsonProperty("HealthScore")]
+        public long? HealthScore{ get; set; }
+
+        /// <summary>
+        /// Health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
+        /// </summary>
+        [JsonProperty("HealthLevel")]
+        public string HealthLevel{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
-            this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
+            this.SetParamArrayObj(map, prefix + "IssueTypes.", this.IssueTypes);
+            this.SetParamSimple(map, prefix + "EventsTotalCount", this.EventsTotalCount);
+            this.SetParamSimple(map, prefix + "HealthScore", this.HealthScore);
+            this.SetParamSimple(map, prefix + "HealthLevel", this.HealthLevel);
         }
     }
 }

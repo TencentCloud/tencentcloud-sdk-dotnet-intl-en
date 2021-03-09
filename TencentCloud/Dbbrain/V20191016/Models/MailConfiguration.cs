@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public long? SendMail{ get; set; }
 
         /// <summary>
-        /// Region configuration, such as "ap-guangzhou", "ap-shanghai".
+        /// Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
         /// </summary>
         [JsonProperty("Region")]
         public string[] Region{ get; set; }
