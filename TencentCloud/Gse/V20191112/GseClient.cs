@@ -133,6 +133,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// This API (DeleteTimerScalingPolicy) is used to delete a scheduled scaling policy of a fleet.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTimerScalingPolicyRequest"/></param>
+        /// <returns><see cref="DeleteTimerScalingPolicyResponse"/></returns>
+        public async Task<DeleteTimerScalingPolicyResponse> DeleteTimerScalingPolicy(DeleteTimerScalingPolicyRequest req)
+        {
+             JsonResponseModel<DeleteTimerScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTimerScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTimerScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DeleteTimerScalingPolicy) is used to delete a scheduled scaling policy of a fleet.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTimerScalingPolicyRequest"/></param>
+        /// <returns><see cref="DeleteTimerScalingPolicyResponse"/></returns>
+        public DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicySync(DeleteTimerScalingPolicyRequest req)
+        {
+             JsonResponseModel<DeleteTimerScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTimerScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTimerScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of game server session details.
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionDetailsRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "DescribePlayerSessions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlayerSessionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeTimerScalingPolicies) is used to query the scheduled scaling policies of a fleet. You can query the policies by `fleetID` or the fleet name. The returned results are paged. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimerScalingPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeTimerScalingPoliciesResponse"/></returns>
+        public async Task<DescribeTimerScalingPoliciesResponse> DescribeTimerScalingPolicies(DescribeTimerScalingPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeTimerScalingPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimerScalingPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimerScalingPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeTimerScalingPolicies) is used to query the scheduled scaling policies of a fleet. You can query the policies by `fleetID` or the fleet name. The returned results are paged. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimerScalingPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeTimerScalingPoliciesResponse"/></returns>
+        public DescribeTimerScalingPoliciesResponse DescribeTimerScalingPoliciesSync(DescribeTimerScalingPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeTimerScalingPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimerScalingPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimerScalingPoliciesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -453,6 +533,50 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// This API (PutTimerScalingPolicy) is used to create or update a scheduled scaling policy for a fleet.
+        /// 
+        /// If the field `timerID` is filled in, the specified policy will be updated, and if `timerID` is left empty, a new policy will be created.
+        /// </summary>
+        /// <param name="req"><see cref="PutTimerScalingPolicyRequest"/></param>
+        /// <returns><see cref="PutTimerScalingPolicyResponse"/></returns>
+        public async Task<PutTimerScalingPolicyResponse> PutTimerScalingPolicy(PutTimerScalingPolicyRequest req)
+        {
+             JsonResponseModel<PutTimerScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutTimerScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutTimerScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (PutTimerScalingPolicy) is used to create or update a scheduled scaling policy for a fleet.
+        /// 
+        /// If the field `timerID` is filled in, the specified policy will be updated, and if `timerID` is left empty, a new policy will be created.
+        /// </summary>
+        /// <param name="req"><see cref="PutTimerScalingPolicyRequest"/></param>
+        /// <returns><see cref="PutTimerScalingPolicyResponse"/></returns>
+        public PutTimerScalingPolicyResponse PutTimerScalingPolicySync(PutTimerScalingPolicyRequest req)
+        {
+             JsonResponseModel<PutTimerScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutTimerScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutTimerScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to search in the list of game server sessions.
         /// </summary>
         /// <param name="req"><see cref="SearchGameServerSessionsRequest"/></param>
@@ -484,6 +608,50 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "SearchGameServerSessions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchGameServerSessionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (SetServerReserved) is used to mark the exceptional instances as retained for troubleshooting.
+        /// 
+        /// `ReserveValue`: specifies whether to retain the instance. Valid values: `0` (do not retain), `1` (retain). Default value: `0`.
+        /// </summary>
+        /// <param name="req"><see cref="SetServerReservedRequest"/></param>
+        /// <returns><see cref="SetServerReservedResponse"/></returns>
+        public async Task<SetServerReservedResponse> SetServerReserved(SetServerReservedRequest req)
+        {
+             JsonResponseModel<SetServerReservedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetServerReserved");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetServerReservedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (SetServerReserved) is used to mark the exceptional instances as retained for troubleshooting.
+        /// 
+        /// `ReserveValue`: specifies whether to retain the instance. Valid values: `0` (do not retain), `1` (retain). Default value: `0`.
+        /// </summary>
+        /// <param name="req"><see cref="SetServerReservedRequest"/></param>
+        /// <returns><see cref="SetServerReservedResponse"/></returns>
+        public SetServerReservedResponse SetServerReservedSync(SetServerReservedRequest req)
+        {
+             JsonResponseModel<SetServerReservedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetServerReserved");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetServerReservedResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

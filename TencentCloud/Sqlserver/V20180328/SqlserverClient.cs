@@ -173,6 +173,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to create a backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupMigrationRequest"/></param>
+        /// <returns><see cref="CreateBackupMigrationResponse"/></returns>
+        public async Task<CreateBackupMigrationResponse> CreateBackupMigration(CreateBackupMigrationRequest req)
+        {
+             JsonResponseModel<CreateBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupMigrationRequest"/></param>
+        /// <returns><see cref="CreateBackupMigrationResponse"/></returns>
+        public CreateBackupMigrationResponse CreateBackupMigrationSync(CreateBackupMigrationRequest req)
+        {
+             JsonResponseModel<CreateBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a database.
         /// </summary>
         /// <param name="req"><see cref="CreateDBRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "CreateDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="CreateIncrementalMigrationResponse"/></returns>
+        public async Task<CreateIncrementalMigrationResponse> CreateIncrementalMigration(CreateIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<CreateIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="CreateIncrementalMigrationResponse"/></returns>
+        public CreateIncrementalMigrationResponse CreateIncrementalMigrationSync(CreateIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<CreateIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,6 +413,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to delete a backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupMigrationRequest"/></param>
+        /// <returns><see cref="DeleteBackupMigrationResponse"/></returns>
+        public async Task<DeleteBackupMigrationResponse> DeleteBackupMigration(DeleteBackupMigrationRequest req)
+        {
+             JsonResponseModel<DeleteBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupMigrationRequest"/></param>
+        /// <returns><see cref="DeleteBackupMigrationResponse"/></returns>
+        public DeleteBackupMigrationResponse DeleteBackupMigrationSync(DeleteBackupMigrationRequest req)
+        {
+             JsonResponseModel<DeleteBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to drop a database.
         /// </summary>
         /// <param name="req"><see cref="DeleteDBRequest"/></param>
@@ -364,6 +484,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDB");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="DeleteIncrementalMigrationResponse"/></returns>
+        public async Task<DeleteIncrementalMigrationResponse> DeleteIncrementalMigration(DeleteIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<DeleteIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="DeleteIncrementalMigrationResponse"/></returns>
+        public DeleteIncrementalMigrationResponse DeleteIncrementalMigrationSync(DeleteIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<DeleteIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -453,6 +613,126 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the commands of creating backups canonically.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupCommandRequest"/></param>
+        /// <returns><see cref="DescribeBackupCommandResponse"/></returns>
+        public async Task<DescribeBackupCommandResponse> DescribeBackupCommand(DescribeBackupCommandRequest req)
+        {
+             JsonResponseModel<DescribeBackupCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the commands of creating backups canonically.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupCommandRequest"/></param>
+        /// <returns><see cref="DescribeBackupCommandResponse"/></returns>
+        public DescribeBackupCommandResponse DescribeBackupCommandSync(DescribeBackupCommandRequest req)
+        {
+             JsonResponseModel<DescribeBackupCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupMigrationRequest"/></param>
+        /// <returns><see cref="DescribeBackupMigrationResponse"/></returns>
+        public async Task<DescribeBackupMigrationResponse> DescribeBackupMigration(DescribeBackupMigrationRequest req)
+        {
+             JsonResponseModel<DescribeBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupMigrationRequest"/></param>
+        /// <returns><see cref="DescribeBackupMigrationResponse"/></returns>
+        public DescribeBackupMigrationResponse DescribeBackupMigrationSync(DescribeBackupMigrationRequest req)
+        {
+             JsonResponseModel<DescribeBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the size of uploaded backup files. It is valid if the backup file type is `COS_UPLOAD` (the file is stored in COS).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupUploadSizeRequest"/></param>
+        /// <returns><see cref="DescribeBackupUploadSizeResponse"/></returns>
+        public async Task<DescribeBackupUploadSizeResponse> DescribeBackupUploadSize(DescribeBackupUploadSizeRequest req)
+        {
+             JsonResponseModel<DescribeBackupUploadSizeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupUploadSize");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupUploadSizeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the size of uploaded backup files. It is valid if the backup file type is `COS_UPLOAD` (the file is stored in COS).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupUploadSizeRequest"/></param>
+        /// <returns><see cref="DescribeBackupUploadSizeResponse"/></returns>
+        public DescribeBackupUploadSizeResponse DescribeBackupUploadSizeSync(DescribeBackupUploadSizeRequest req)
+        {
+             JsonResponseModel<DescribeBackupUploadSizeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupUploadSize");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupUploadSizeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of backups.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupsRequest"/></param>
@@ -484,6 +764,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the database character sets supported by an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
+        /// <returns><see cref="DescribeDBCharsetsResponse"/></returns>
+        public async Task<DescribeDBCharsetsResponse> DescribeDBCharsets(DescribeDBCharsetsRequest req)
+        {
+             JsonResponseModel<DescribeDBCharsetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBCharsets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBCharsetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the database character sets supported by an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
+        /// <returns><see cref="DescribeDBCharsetsResponse"/></returns>
+        public DescribeDBCharsetsResponse DescribeDBCharsetsSync(DescribeDBCharsetsRequest req)
+        {
+             JsonResponseModel<DescribeDBCharsetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBCharsets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBCharsetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -604,6 +924,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlowStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="DescribeIncrementalMigrationResponse"/></returns>
+        public async Task<DescribeIncrementalMigrationResponse> DescribeIncrementalMigration(DescribeIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<DescribeIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="DescribeIncrementalMigrationResponse"/></returns>
+        public DescribeIncrementalMigrationResponse DescribeIncrementalMigrationSync(DescribeIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<DescribeIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -893,6 +1253,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query a backup upload permission.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadBackupInfoRequest"/></param>
+        /// <returns><see cref="DescribeUploadBackupInfoResponse"/></returns>
+        public async Task<DescribeUploadBackupInfoResponse> DescribeUploadBackupInfo(DescribeUploadBackupInfoRequest req)
+        {
+             JsonResponseModel<DescribeUploadBackupInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUploadBackupInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadBackupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query a backup upload permission.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadBackupInfoRequest"/></param>
+        /// <returns><see cref="DescribeUploadBackupInfoResponse"/></returns>
+        public DescribeUploadBackupInfoResponse DescribeUploadBackupInfoSync(DescribeUploadBackupInfoRequest req)
+        {
+             JsonResponseModel<DescribeUploadBackupInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUploadBackupInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadBackupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query currently purchasable AZs.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
@@ -1084,6 +1484,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountRemark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupMigrationRequest"/></param>
+        /// <returns><see cref="ModifyBackupMigrationResponse"/></returns>
+        public async Task<ModifyBackupMigrationResponse> ModifyBackupMigration(ModifyBackupMigrationRequest req)
+        {
+             JsonResponseModel<ModifyBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupMigrationRequest"/></param>
+        /// <returns><see cref="ModifyBackupMigrationResponse"/></returns>
+        public ModifyBackupMigrationResponse ModifyBackupMigrationSync(ModifyBackupMigrationRequest req)
+        {
+             JsonResponseModel<ModifyBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1324,6 +1764,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBRemark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="ModifyIncrementalMigrationResponse"/></returns>
+        public async Task<ModifyIncrementalMigrationResponse> ModifyIncrementalMigration(ModifyIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<ModifyIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="ModifyIncrementalMigrationResponse"/></returns>
+        public ModifyIncrementalMigrationResponse ModifyIncrementalMigrationSync(ModifyIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<ModifyIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1604,6 +2084,86 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "RunMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="StartBackupMigrationRequest"/></param>
+        /// <returns><see cref="StartBackupMigrationResponse"/></returns>
+        public async Task<StartBackupMigrationResponse> StartBackupMigration(StartBackupMigrationRequest req)
+        {
+             JsonResponseModel<StartBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="StartBackupMigrationRequest"/></param>
+        /// <returns><see cref="StartBackupMigrationResponse"/></returns>
+        public StartBackupMigrationResponse StartBackupMigrationSync(StartBackupMigrationRequest req)
+        {
+             JsonResponseModel<StartBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="StartIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="StartIncrementalMigrationResponse"/></returns>
+        public async Task<StartIncrementalMigrationResponse> StartIncrementalMigration(StartIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<StartIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start an incremental backup import task.
+        /// </summary>
+        /// <param name="req"><see cref="StartIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="StartIncrementalMigrationResponse"/></returns>
+        public StartIncrementalMigrationResponse StartIncrementalMigrationSync(StartIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<StartIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
