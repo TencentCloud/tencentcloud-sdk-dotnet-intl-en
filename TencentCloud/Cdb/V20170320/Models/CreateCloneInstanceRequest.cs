@@ -116,10 +116,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupZone{ get; set; }
 
         /// <summary>
-        /// Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
+        /// Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+        /// </summary>
+        [JsonProperty("InstanceNodes")]
+        public long? InstanceNodes{ get; set; }
 
 
         /// <summary>
@@ -143,6 +149,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
             this.SetParamSimple(map, prefix + "BackupZone", this.BackupZone);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         }
     }
 }

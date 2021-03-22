@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// MySQL version. Valid values: 5.5, 5.6, 5.7. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
+        /// MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -175,7 +175,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
+        /// Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -191,6 +191,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public long?[] AlarmPolicyList{ get; set; }
+
+        /// <summary>
+        /// The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
+        /// </summary>
+        [JsonProperty("InstanceNodes")]
+        public long? InstanceNodes{ get; set; }
+
+        /// <summary>
+        /// The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
+        /// <summary>
+        /// Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
+        /// </summary>
+        [JsonProperty("AutoSyncFlag")]
+        public long? AutoSyncFlag{ get; set; }
 
 
         /// <summary>
@@ -226,6 +244,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
+            this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
         }
     }
 }

@@ -26,6 +26,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// Security group object.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecurityGroupSet")]
         public SecurityGroup[] SecurityGroupSet{ get; set; }

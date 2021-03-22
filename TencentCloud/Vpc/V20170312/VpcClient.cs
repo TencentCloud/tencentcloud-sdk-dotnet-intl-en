@@ -3731,6 +3731,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the outbound bandwidth caps of all regions connected with a CCN instance. The API only returns regions included in the associated network instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns><see cref="DescribeCcnRegionBandwidthLimitsResponse"/></returns>
+        public async Task<DescribeCcnRegionBandwidthLimitsResponse> DescribeCcnRegionBandwidthLimits(DescribeCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the outbound bandwidth caps of all regions connected with a CCN instance. The API only returns regions included in the associated network instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns><see cref="DescribeCcnRegionBandwidthLimitsResponse"/></returns>
+        public DescribeCcnRegionBandwidthLimitsResponse DescribeCcnRegionBandwidthLimitsSync(DescribeCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeCcnRoutes) is used to query routes that have been added to a CCN.
         /// </summary>
         /// <param name="req"><see cref="DescribeCcnRoutesRequest"/></param>

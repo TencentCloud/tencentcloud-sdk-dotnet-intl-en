@@ -243,6 +243,8 @@
     <Compile Include="V20170312\Models\DescribeBandwidthPackagesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnAttachedInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCcnAttachedInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnRegionBandwidthLimitsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCcnsRequest.cs" />

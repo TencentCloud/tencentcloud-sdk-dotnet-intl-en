@@ -278,6 +278,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
+        /// <summary>
+        /// The number of nodes
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceNodes")]
+        public long? InstanceNodes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -325,6 +332,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         }
     }
 }

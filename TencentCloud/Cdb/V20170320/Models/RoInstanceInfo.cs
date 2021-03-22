@@ -145,7 +145,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+        /// Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }

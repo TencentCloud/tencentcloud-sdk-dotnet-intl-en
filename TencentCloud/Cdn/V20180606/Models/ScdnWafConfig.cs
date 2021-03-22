@@ -58,6 +58,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Rules")]
         public ScdnWafRule[] Rules{ get; set; }
 
+        /// <summary>
+        /// WAF rule level. Valid values: 100, 200, and 300.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Level")]
+        public long? Level{ get; set; }
+
+        /// <summary>
+        /// WAF sub-rule switch
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubRuleSwitch")]
+        public WafSubRuleStatus[] SubRuleSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +83,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
             this.SetParamSimple(map, prefix + "WebShellSwitch", this.WebShellSwitch);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamArrayObj(map, prefix + "SubRuleSwitch.", this.SubRuleSwitch);
         }
     }
 }

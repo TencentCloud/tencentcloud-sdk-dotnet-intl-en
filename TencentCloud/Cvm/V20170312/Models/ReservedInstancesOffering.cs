@@ -54,7 +54,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// The instance model of the Reserved Instance, such as S3.MEDIUM4.
-        /// Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+        /// Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

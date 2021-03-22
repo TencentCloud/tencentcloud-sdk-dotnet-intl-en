@@ -43,11 +43,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string IgnoreCacheControl{ get; set; }
 
         /// <summary>
-        /// Ignore the Set-Cookie header of an origin server
-        /// on: enabled
-        /// off: disabled
-        /// This is disabled by default
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+        /// on: Enable; do not cache the header and body.
+        /// off: Disable; follow the custom cache rules of cache nodes.
+        /// It is disabled by default.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IgnoreSetCookie")]
         public string IgnoreSetCookie{ get; set; }

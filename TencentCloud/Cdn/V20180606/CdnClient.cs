@@ -133,6 +133,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to recreate a failed event log task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
+        /// <returns><see cref="CreateScdnFailedLogTaskResponse"/></returns>
+        public async Task<CreateScdnFailedLogTaskResponse> CreateScdnFailedLogTask(CreateScdnFailedLogTaskRequest req)
+        {
+             JsonResponseModel<CreateScdnFailedLogTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateScdnFailedLogTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScdnFailedLogTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recreate a failed event log task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
+        /// <returns><see cref="CreateScdnFailedLogTaskResponse"/></returns>
+        public CreateScdnFailedLogTaskResponse CreateScdnFailedLogTaskSync(CreateScdnFailedLogTaskRequest req)
+        {
+             JsonResponseModel<CreateScdnFailedLogTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateScdnFailedLogTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScdnFailedLogTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a specified acceleration domain name.
         /// </summary>
         /// <param name="req"><see cref="DeleteCdnDomainRequest"/></param>
@@ -393,7 +433,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the IP information of CDN intermediate nodes. Note: the relevant allowlist needs to be enabled for this API.
+        /// This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon. Please call `DescribeIpStatus` instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -413,7 +453,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the IP information of CDN intermediate nodes. Note: the relevant allowlist needs to be enabled for this API.
+        /// This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon. Please call `DescribeIpStatus` instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -1023,7 +1063,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API (DisableCaches) is used to block access to a specific URL on CDN. After a URL is blocked, error 403 will be returned for all access requests to it. (This API is during beta test and not fully available now.)
+        /// This API is used to block access to a specific URL on CDN. After a URL is blocked, a 403 error will be returned for the arrived access requests initiated from the Chinese mainland. This API is in beta and not fully available now.
         /// </summary>
         /// <param name="req"><see cref="DisableCachesRequest"/></param>
         /// <returns><see cref="DisableCachesResponse"/></returns>
@@ -1043,7 +1083,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API (DisableCaches) is used to block access to a specific URL on CDN. After a URL is blocked, error 403 will be returned for all access requests to it. (This API is during beta test and not fully available now.)
+        /// This API is used to block access to a specific URL on CDN. After a URL is blocked, a 403 error will be returned for the arrived access requests initiated from the Chinese mainland. This API is in beta and not fully available now.
         /// </summary>
         /// <param name="req"><see cref="DisableCachesRequest"/></param>
         /// <returns><see cref="DisableCachesResponse"/></returns>

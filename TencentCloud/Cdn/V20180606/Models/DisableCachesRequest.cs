@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// List of URLs to be blocked
+        /// List of URLs to be blocked (URLs must contain `http://` or `https://`).
         /// Up to 100 entries can be submitted at a time and 3,000 entries per day.
         /// </summary>
         [JsonProperty("Urls")]

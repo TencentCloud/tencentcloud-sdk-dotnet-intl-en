@@ -114,6 +114,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
+        /// <summary>
+        /// Indicates whether to enable the custom mode for the node’s pod CIDR range
+        /// </summary>
+        [JsonProperty("EnableCustomizedPodCIDR")]
+        public bool? EnableCustomizedPodCIDR{ get; set; }
+
+        /// <summary>
+        /// The basic number of Pods in custom mode
+        /// </summary>
+        [JsonProperty("BasePodNumber")]
+        public long? BasePodNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +146,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
             this.SetParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+            this.SetParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
+            this.SetParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
         }
     }
 }

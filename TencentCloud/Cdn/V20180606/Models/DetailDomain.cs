@@ -413,6 +413,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OriginCombine")]
         public OriginCombine OriginCombine{ get; set; }
 
+        /// <summary>
+        /// POST request configuration item
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PostMaxSize")]
+        public PostSize PostMaxSize{ get; set; }
+
+        /// <summary>
+        /// QUIC configuration
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Quic")]
+        public Quic Quic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -473,6 +487,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
             this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
             this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+            this.SetParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
+            this.SetParamObj(map, prefix + "Quic.", this.Quic);
         }
     }
 }

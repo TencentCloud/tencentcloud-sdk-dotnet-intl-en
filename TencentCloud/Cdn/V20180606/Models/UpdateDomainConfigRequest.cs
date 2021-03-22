@@ -265,6 +265,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OriginCombine")]
         public OriginCombine OriginCombine{ get; set; }
 
+        /// <summary>
+        /// QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+        /// </summary>
+        [JsonProperty("Quic")]
+        public Quic Quic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +316,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
             this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
             this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+            this.SetParamObj(map, prefix + "Quic.", this.Quic);
         }
     }
 }
