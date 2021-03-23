@@ -133,7 +133,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? ShareReference{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the snapshot sharing starts
         /// </summary>
         [JsonProperty("TimeStartShare")]
         public string TimeStartShare{ get; set; }

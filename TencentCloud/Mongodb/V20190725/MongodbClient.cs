@@ -333,7 +333,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the list of instance backups. Currently, only backups in the last 7 days can be queried.
+        /// This API is used to query the list of instance backups. Currently, only backups created in the last seven days can be queried.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the list of instance backups. Currently, only backups in the last 7 days can be queried.
+        /// This API is used to query the list of instance backups. Currently, only backups created in the last seven days can be queried.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>

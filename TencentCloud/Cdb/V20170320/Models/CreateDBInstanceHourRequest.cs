@@ -127,7 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// Availability zone information of replica 2, which is left empty by default. Specify this parameter when purchasing a source instance in the one-source-two-replica architecture.
+        /// The availability zone information of Replica 2, which is left empty by default. Specify this parameter when purchasing a source instance in the one-source-two-replica architecture.
         /// </summary>
         [JsonProperty("BackupZone")]
         public string BackupZone{ get; set; }

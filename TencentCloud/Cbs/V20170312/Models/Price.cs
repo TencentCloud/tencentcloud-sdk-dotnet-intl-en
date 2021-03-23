@@ -25,22 +25,22 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Original price of the advanced payment for a prepaid cloud disk (in CNY).
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Original price of a monthly-subscribed cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Discounted price of a monthly-subscribed cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Original unit price of a postpaid cloud disk (in CNY).
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Original unit price of a pay-as-you-go cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
@@ -53,35 +53,35 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string ChargeUnit{ get; set; }
 
         /// <summary>
-        /// Postpaid cloud disk discount price. Unit: CNY.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Discount unit price of a pay-as-you-go cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
-        /// Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+        /// Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginalPriceHigh")]
         public string OriginalPriceHigh{ get; set; }
 
         /// <summary>
-        /// Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+        /// Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiscountPriceHigh")]
         public string DiscountPriceHigh{ get; set; }
 
         /// <summary>
-        /// Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+        /// Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UnitPriceHigh")]
         public string UnitPriceHigh{ get; set; }
 
         /// <summary>
-        /// Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+        /// Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UnitPriceDiscountHigh")]

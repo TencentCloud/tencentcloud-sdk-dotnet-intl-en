@@ -74,7 +74,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] BackupFiles{ get; set; }
 
         /// <summary>
-        /// Migration task status,
+        /// Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+        /// Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
+        /// <summary>
+        /// Tag information
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -79,7 +79,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskState{ get; set; }
 
         /// <summary>
-        /// Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -233,6 +233,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("BackupDisk")]
         public bool? BackupDisk{ get; set; }
 
+        /// <summary>
+        /// Extra performance for a cloud disk, in MB/sec.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -272,6 +279,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
             this.SetParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
             this.SetParamSimple(map, prefix + "BackupDisk", this.BackupDisk);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }
