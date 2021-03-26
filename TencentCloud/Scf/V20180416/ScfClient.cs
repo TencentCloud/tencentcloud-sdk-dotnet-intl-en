@@ -547,6 +547,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to get the account information.
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountRequest"/></param>
+        /// <returns><see cref="GetAccountResponse"/></returns>
+        public async Task<GetAccountResponse> GetAccount(GetAccountRequest req)
+        {
+             JsonResponseModel<GetAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the account information.
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountRequest"/></param>
+        /// <returns><see cref="GetAccountResponse"/></returns>
+        public GetAccountResponse GetAccountSync(GetAccountRequest req)
+        {
+             JsonResponseModel<GetAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the alias details such as the name, description, version, and routing information.
         /// </summary>
         /// <param name="req"><see cref="GetAliasRequest"/></param>

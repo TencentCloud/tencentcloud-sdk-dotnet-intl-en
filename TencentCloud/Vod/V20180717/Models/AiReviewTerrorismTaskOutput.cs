@@ -42,16 +42,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tag of detected terrorism information in a video. Valid values:
-        /// <li>guns: weapons and guns.</li>
-        /// <li>crowd: crowd.</li>
-        /// <li>police: police force.</li>
-        /// <li>bloody: bloody scenes.</li>
-        /// <li>banners: terrorism flags.</li>
-        /// <li>militant: militants.</li>
-        /// <li>explosion: explosions and fires.</li>
-        /// <li>terrorists: terrorists.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Tag of the detected terrorism information in a video. Valid values:
+        /// <li>`guns`: weapons and guns</li>
+        /// <li>`crowd`: crowds</li>
+        /// <li>`police`: police forces</li>
+        /// <li>`bloody`: bloody images</li>
+        /// <li>`banners`: terrorism flags</li>
+        /// <li>`militant`: militants</li>
+        /// <li>`explosion`: explosions and fires</li>
+        /// <li>`terrorists`: terrorists</li>
+        /// <li>`scenario`: terrorism images</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

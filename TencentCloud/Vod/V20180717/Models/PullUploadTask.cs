@@ -67,6 +67,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaBasicInfo MediaBasicInfo{ get; set; }
 
         /// <summary>
+        /// Metadata of a source video
+        /// </summary>
+        [JsonProperty("MetaData")]
+        public MediaMetaData MetaData{ get; set; }
+
+        /// <summary>
         /// Playback address generated after pull for upload is completed.
         /// </summary>
         [JsonProperty("FileUrl")]
@@ -102,6 +108,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamObj(map, prefix + "MediaBasicInfo.", this.MediaBasicInfo);
+            this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
             this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);

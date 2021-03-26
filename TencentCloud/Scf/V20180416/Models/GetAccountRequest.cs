@@ -15,37 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TimeRange : AbstractModel
+    public class GetAccountRequest : AbstractModel
     {
         
-        /// <summary>
-        /// <li>After or at this time (start time).</li>
-        /// <li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-        /// </summary>
-        [JsonProperty("After")]
-        public string After{ get; set; }
-
-        /// <summary>
-        /// <li>Earlier than this time (end time).</li>
-        /// <li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-        /// </summary>
-        [JsonProperty("Before")]
-        public string Before{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "After", this.After);
-            this.SetParamSimple(map, prefix + "Before", this.Before);
         }
     }
 }

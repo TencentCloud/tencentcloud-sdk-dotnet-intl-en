@@ -33,15 +33,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-        /// <li>guns: weapons and guns;</li>
-        /// <li>crowd: crowd;</li>
-        /// <li>bloody: bloody scenes;</li>
-        /// <li>police: police force;</li>
-        /// <li>banners: terrorism flags;</li>
-        /// <li>militant: militants;</li>
-        /// <li>explosion: explosions and fires;</li>
-        /// <li>terrorists: terrorists.</li>
+        /// Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+        /// <li>`guns`: weapons and guns</li>
+        /// <li>`crowd`: crowds</li>
+        /// <li>`bloody`: bloody images</li>
+        /// <li>`police`: police forces</li>
+        /// <li>`banners`: terrorism flags</li>
+        /// <li>`militant`: militants</li>
+        /// <li>`explosion`: explosions and fires</li>
+        /// <li>`terrorists`: terrorists</li>
+        /// <li>`scenario`: terrorism images</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }
