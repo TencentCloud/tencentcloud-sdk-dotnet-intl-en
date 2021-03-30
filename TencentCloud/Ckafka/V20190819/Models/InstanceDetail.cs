@@ -159,6 +159,41 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
+        /// <summary>
+        /// CKafka instance type
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// Disk type
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
+        /// <summary>
+        /// Maximum number of topics for the current instance
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxTopicNumber")]
+        public long? MaxTopicNumber{ get; set; }
+
+        /// <summary>
+        /// Maximum number of partitions for the current instance
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxPartitionNumber")]
+        public long? MaxPartitionNumber{ get; set; }
+
+        /// <summary>
+        /// Time of scheduled upgrade
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RebalanceTime")]
+        public string RebalanceTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +222,11 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "Cvm", this.Cvm);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "MaxTopicNumber", this.MaxTopicNumber);
+            this.SetParamSimple(map, prefix + "MaxPartitionNumber", this.MaxPartitionNumber);
+            this.SetParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
         }
     }
 }

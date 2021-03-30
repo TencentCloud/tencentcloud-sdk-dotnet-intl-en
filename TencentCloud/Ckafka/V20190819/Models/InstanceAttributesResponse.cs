@@ -180,8 +180,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? MaxGroupNum{ get; set; }
 
         /// <summary>
-        /// Sale type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Offering type. `0`: Standard Edition; `1`: Professional Edition
+        /// Note: this field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
@@ -199,6 +199,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
+
+        /// <summary>
+        /// Dynamic message retention policy
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RetentionTimeConfig")]
+        public DynamicRetentionTime RetentionTimeConfig{ get; set; }
 
 
         /// <summary>
@@ -234,6 +241,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Cvm", this.Cvm);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamArraySimple(map, prefix + "Features.", this.Features);
+            this.SetParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
         }
     }
 }

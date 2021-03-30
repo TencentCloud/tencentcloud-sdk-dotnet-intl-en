@@ -99,6 +99,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Config")]
         public Config Config{ get; set; }
 
+        /// <summary>
+        /// Message retention time configuration (for recording the latest retention time)
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RetentionTimeConfig")]
+        public TopicRetentionTimeConfigRsp RetentionTimeConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +124,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ForwardStatus", this.ForwardStatus);
             this.SetParamSimple(map, prefix + "ForwardInterval", this.ForwardInterval);
             this.SetParamObj(map, prefix + "Config.", this.Config);
+            this.SetParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
         }
     }
 }
