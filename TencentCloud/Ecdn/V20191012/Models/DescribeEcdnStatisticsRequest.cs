@@ -38,20 +38,13 @@ namespace TencentCloud.Ecdn.V20191012.Models
 
         /// <summary>
         /// Specifies the query metric, which can be:
-        /// flux: traffic in bytes
-        /// bandwidth: bandwidth in bps
+        /// flux: traffic (in bytes)
+        /// bandwidth: bandwidth (in bps)
         /// request: number of requests
-        /// delay: response time in ms
         /// 2xx: returns the number of 2xx status codes or details of status codes starting with 2
         /// 3xx: returns the number of 3xx status codes or details of status codes starting with 3
         /// 4xx: returns the number of 4xx status codes or details of status codes starting with 4
         /// 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-        /// static_request: number of static requests
-        /// static_flux: static traffic in bytes
-        /// static_bandwidth: static bandwidth in bps
-        /// dynamic_request: number of dynamic requests
-        /// dynamic_flux: dynamic traffic in bytes
-        /// dynamic_bandwidth: dynamic bandwidth in bps
         /// </summary>
         [JsonProperty("Metrics")]
         public string[] Metrics{ get; set; }
@@ -81,6 +74,16 @@ namespace TencentCloud.Ecdn.V20191012.Models
         [JsonProperty("Projects")]
         public long?[] Projects{ get; set; }
 
+        /// <summary>
+        /// Statistical areas:
+        /// mainland: Chinese mainland
+        /// oversea: outside the Chinese mainland
+        /// global: global
+        /// Default value: global
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +96,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamArraySimple(map, prefix + "Projects.", this.Projects);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

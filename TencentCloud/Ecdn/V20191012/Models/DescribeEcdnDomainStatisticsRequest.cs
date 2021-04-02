@@ -39,16 +39,10 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Statistical metric name. flux: traffic in bytes
-        /// bandwidth: bandwidth in bps
+        /// Statistical metric names:
+        /// flux: traffic (in bytes)
+        /// bandwidth: bandwidth (in bps)
         /// request: number of requests
-        /// delay: response time in ms
-        /// static_request: number of static requests
-        /// static_flux: static traffic in bytes
-        /// static_bandwidth: static bandwidth in bps
-        /// dynamic_request: number of dynamic requests
-        /// dynamic_flux: dynamic traffic in bytes
-        /// dynamic_bandwidth: dynamic bandwidth in bps
         /// </summary>
         [JsonProperty("Metrics")]
         public string[] Metrics{ get; set; }
@@ -78,6 +72,16 @@ namespace TencentCloud.Ecdn.V20191012.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// Statistical areas:
+        /// mainland: Chinese mainland
+        /// oversea: outside the Chinese mainland
+        /// global: global
+        /// Default value: global
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +95,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
             this.SetParamArraySimple(map, prefix + "Projects.", this.Projects);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

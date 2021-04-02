@@ -707,6 +707,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
+        /// </summary>
+        /// <param name="req"><see cref="GetFunctionEventInvokeConfigRequest"/></param>
+        /// <returns><see cref="GetFunctionEventInvokeConfigResponse"/></returns>
+        public async Task<GetFunctionEventInvokeConfigResponse> GetFunctionEventInvokeConfig(GetFunctionEventInvokeConfigRequest req)
+        {
+             JsonResponseModel<GetFunctionEventInvokeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetFunctionEventInvokeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
+        /// </summary>
+        /// <param name="req"><see cref="GetFunctionEventInvokeConfigRequest"/></param>
+        /// <returns><see cref="GetFunctionEventInvokeConfigResponse"/></returns>
+        public GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfigSync(GetFunctionEventInvokeConfigRequest req)
+        {
+             JsonResponseModel<GetFunctionEventInvokeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetFunctionEventInvokeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to return function running logs according to the specified log query criteria.
         /// </summary>
         /// <param name="req"><see cref="GetFunctionLogsRequest"/></param>
@@ -1578,6 +1618,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "UpdateFunctionConfiguration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionEventInvokeConfigRequest"/></param>
+        /// <returns><see cref="UpdateFunctionEventInvokeConfigResponse"/></returns>
+        public async Task<UpdateFunctionEventInvokeConfigResponse> UpdateFunctionEventInvokeConfig(UpdateFunctionEventInvokeConfigRequest req)
+        {
+             JsonResponseModel<UpdateFunctionEventInvokeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateFunctionEventInvokeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionEventInvokeConfigRequest"/></param>
+        /// <returns><see cref="UpdateFunctionEventInvokeConfigResponse"/></returns>
+        public UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfigSync(UpdateFunctionEventInvokeConfigRequest req)
+        {
+             JsonResponseModel<UpdateFunctionEventInvokeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateFunctionEventInvokeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

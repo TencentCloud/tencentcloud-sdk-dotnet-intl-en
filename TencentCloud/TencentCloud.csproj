@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.161</VersionPrefix>
+    <VersionPrefix>3.0.162</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2632,6 +2632,23 @@
     <Compile Include="Gme\V20180711\Models\VoiceFilterStatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceMessageConf.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceMessageStatisticsItem.cs" />
+    <Compile Include="Gpm\V20200820\GpmClient.cs" />
+    <Compile Include="Gpm\V20200820\Models\AttributeMap.cs" />
+    <Compile Include="Gpm\V20200820\Models\CancelMatchingRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\CancelMatchingResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchingProgressRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchingProgressResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeTokenRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeTokenResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\MTicket.cs" />
+    <Compile Include="Gpm\V20200820\Models\MatchAttribute.cs" />
+    <Compile Include="Gpm\V20200820\Models\MatchTicket.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyTokenRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyTokenResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\Player.cs" />
+    <Compile Include="Gpm\V20200820\Models\RegionLatency.cs" />
+    <Compile Include="Gpm\V20200820\Models\StartMatchingRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\StartMatchingResponse.cs" />
     <Compile Include="Gse\V20191112\GseClient.cs" />
     <Compile Include="Gse\V20191112\Models\CopyFleetRequest.cs" />
     <Compile Include="Gse\V20191112\Models\CopyFleetResponse.cs" />
@@ -4274,6 +4291,7 @@
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
     <Compile Include="Scf\V20180416\Models\AsyncEvent.cs" />
+    <Compile Include="Scf\V20180416\Models\AsyncTriggerConfig.cs" />
     <Compile Include="Scf\V20180416\Models\CfsConfig.cs" />
     <Compile Include="Scf\V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
@@ -4316,6 +4334,8 @@
     <Compile Include="Scf\V20180416\Models\GetAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionAddressRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionAddressResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\GetFunctionEventInvokeConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\GetFunctionEventInvokeConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionLogsRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionLogsResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionRequest.cs" />
@@ -4365,6 +4385,7 @@
     <Compile Include="Scf\V20180416\Models\PutTotalConcurrencyConfigRequest.cs" />
     <Compile Include="Scf\V20180416\Models\PutTotalConcurrencyConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\Result.cs" />
+    <Compile Include="Scf\V20180416\Models\RetryConfig.cs" />
     <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
     <Compile Include="Scf\V20180416\Models\StatusReason.cs" />
     <Compile Include="Scf\V20180416\Models\Tag.cs" />
@@ -4380,6 +4401,8 @@
     <Compile Include="Scf\V20180416\Models\UpdateFunctionCodeResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionConfigurationRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionConfigurationResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\UpdateFunctionEventInvokeConfigRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\UpdateFunctionEventInvokeConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UsageInfo.cs" />
