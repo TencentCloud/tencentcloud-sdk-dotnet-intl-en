@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.164</VersionPrefix>
+    <VersionPrefix>3.0.165</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2636,19 +2636,51 @@
     <Compile Include="Gpm\V20200820\Models\AttributeMap.cs" />
     <Compile Include="Gpm\V20200820\Models\CancelMatchingRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\CancelMatchingResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\CreateMatchRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\CreateMatchResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\CreateRuleRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\CreateRuleResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DeleteMatchRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DeleteMatchResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DeleteRuleRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DeleteRuleResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeDataRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeDataResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchCodesRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchCodesResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchesRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchesResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\DescribeMatchingProgressRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\DescribeMatchingProgressResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeRuleRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeRuleResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeRulesRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeRulesResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\DescribeTokenRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\DescribeTokenResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\MTicket.cs" />
     <Compile Include="Gpm\V20200820\Models\MatchAttribute.cs" />
+    <Compile Include="Gpm\V20200820\Models\MatchCodeAttr.cs" />
+    <Compile Include="Gpm\V20200820\Models\MatchInfo.cs" />
     <Compile Include="Gpm\V20200820\Models\MatchTicket.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyMatchRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyMatchResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyRuleRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyRuleResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\ModifyTokenRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\ModifyTokenResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\Player.cs" />
     <Compile Include="Gpm\V20200820\Models\RegionLatency.cs" />
+    <Compile Include="Gpm\V20200820\Models\ReportOverviewData.cs" />
+    <Compile Include="Gpm\V20200820\Models\ReportTrendData.cs" />
+    <Compile Include="Gpm\V20200820\Models\RuleBriefInfo.cs" />
+    <Compile Include="Gpm\V20200820\Models\RuleInfo.cs" />
     <Compile Include="Gpm\V20200820\Models\StartMatchingRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\StartMatchingResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\StringKV.cs" />
+    <Compile Include="Gpm\V20200820\Models\Tag.cs" />
     <Compile Include="Gse\V20191112\GseClient.cs" />
     <Compile Include="Gse\V20191112\Models\CopyFleetRequest.cs" />
     <Compile Include="Gse\V20191112\Models\CopyFleetResponse.cs" />

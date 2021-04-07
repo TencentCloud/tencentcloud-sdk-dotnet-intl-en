@@ -25,22 +25,23 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The route table instance ID, such as `rtb-azd4dt1c`.
-        /// </summary>
-        [JsonProperty("RouteTableIds")]
-        public string[] RouteTableIds{ get; set; }
-
-        /// <summary>
-        /// Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
+        /// Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
         /// <li>route-table-id - String - (Filter condition) Route table instance ID.</li>
         /// <li>route-table-name - String - (Filter condition) Route table name.</li>
         /// <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
         /// <li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-        /// <li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-        /// <li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+        /// <li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+        /// <li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+        /// <li>is-need-router-info - String - (Filter condition) Whether to obtain routing policies. It defaults to `false`. To obtain routing policies, change the parameter value to `true`.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// The route table instance ID, such as `rtb-azd4dt1c`.
+        /// </summary>
+        [JsonProperty("RouteTableIds")]
+        public string[] RouteTableIds{ get; set; }
 
         /// <summary>
         /// Offset.
@@ -60,8 +61,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
