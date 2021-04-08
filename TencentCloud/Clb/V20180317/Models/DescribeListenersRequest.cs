@@ -37,13 +37,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ListenerIds{ get; set; }
 
         /// <summary>
-        /// Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
+        /// Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Port of the listener to be queried
+        /// Port of the listeners to be queried
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

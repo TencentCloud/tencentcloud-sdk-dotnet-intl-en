@@ -31,13 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Specifies for which ports to create listeners. Each port corresponds to a new listener
+        /// Specifies for which ports to create listeners. Each port corresponds to a new listener.
         /// </summary>
         [JsonProperty("Ports")]
         public long?[] Ports{ get; set; }
 
         /// <summary>
-        /// Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+        /// Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ListenerNames{ get; set; }
 
         /// <summary>
-        /// Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+        /// Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SessionType{ get; set; }
 
         /// <summary>
-        /// Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+        /// Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }

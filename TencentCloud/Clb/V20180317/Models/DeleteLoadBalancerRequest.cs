@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Array of IDs of the CLB instances to be deleted. Array length limit: 20
+        /// Array of IDs of the CLB instances to be deleted. Array length limit: 20.
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

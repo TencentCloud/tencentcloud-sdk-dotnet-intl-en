@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+        /// Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
         /// </summary>
         [JsonProperty("RewriteSet")]
         public RuleOutput[] RewriteSet{ get; set; }

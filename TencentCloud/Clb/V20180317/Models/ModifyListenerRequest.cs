@@ -49,13 +49,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
+        /// Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+        /// Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SniSwitch{ get; set; }
 
         /// <summary>
-        /// Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+        /// Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }

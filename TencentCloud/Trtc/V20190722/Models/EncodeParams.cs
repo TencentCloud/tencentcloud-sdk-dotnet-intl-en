@@ -25,13 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
+        /// Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
         /// </summary>
         [JsonProperty("AudioSampleRate")]
         public ulong? AudioSampleRate{ get; set; }
 
         /// <summary>
-        /// Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
+        /// Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public ulong? AudioBitrate{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? VideoHeight{ get; set; }
 
         /// <summary>
-        /// Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
+        /// Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public ulong? VideoBitrate{ get; set; }
@@ -73,7 +73,14 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? VideoGop{ get; set; }
 
         /// <summary>
-        /// Output stream background color for On-Cloud MixTranscoding.
+        /// Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+        /// Red: 0xff0000, whose decimal number is 16724736
+        /// Yellow: 0xffff00, whose decimal number is 16776960
+        /// Green: 0x33cc00, whose decimal number is 3394560
+        /// Blue: 0x0066ff, whose decimal number is 26367
+        /// Black: 0x000000, whose decimal number is 0
+        /// White: 0xFFFFFF, whose decimal number is 16777215
+        /// Grey: 0x999999, whose decimal number is 10066329
         /// </summary>
         [JsonProperty("BackgroundColor")]
         public ulong? BackgroundColor{ get; set; }
@@ -83,6 +90,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         [JsonProperty("BackgroundImageId")]
         public ulong? BackgroundImageId{ get; set; }
+
+        /// <summary>
+        /// Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+        /// </summary>
+        [JsonProperty("AudioCodec")]
+        public ulong? AudioCodec{ get; set; }
 
 
         /// <summary>
@@ -100,6 +113,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "VideoGop", this.VideoGop);
             this.SetParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
             this.SetParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
+            this.SetParamSimple(map, prefix + "AudioCodec", this.AudioCodec);
         }
     }
 }

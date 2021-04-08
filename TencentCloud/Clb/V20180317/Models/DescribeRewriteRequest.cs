@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] SourceListenerIds{ get; set; }
 
         /// <summary>
-        /// Array of CLB forwarding rules
+        /// Array of CLB forwarding rule IDs
         /// </summary>
         [JsonProperty("SourceLocationIds")]
         public string[] SourceLocationIds{ get; set; }

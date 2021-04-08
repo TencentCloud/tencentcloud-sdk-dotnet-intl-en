@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Starting offset of the CLB instance list returned. Default value: 0
+        /// Starting offset of the CLB instance list returned. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

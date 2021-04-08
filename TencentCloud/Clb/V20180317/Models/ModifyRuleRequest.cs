@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+        /// New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -68,19 +68,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+        /// Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
 
         /// <summary>
-        /// TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+        /// TRPC callee server route, which is required when `ForwardType` is "TRPC".
         /// </summary>
         [JsonProperty("TrpcCallee")]
         public string TrpcCallee{ get; set; }
 
         /// <summary>
-        /// TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+        /// TRPC calling service API, which is required when `ForwardType` is "TRPC".
         /// </summary>
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }

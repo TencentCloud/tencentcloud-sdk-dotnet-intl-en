@@ -37,19 +37,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ListenerIds{ get; set; }
 
         /// <summary>
-        /// CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+        /// CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// CLB listening port. Value range: [1-65535]
+        /// CLB listening port. Value range: 1 - 65535.
         /// </summary>
         [JsonProperty("ListenerPort")]
         public long? ListenerPort{ get; set; }
 
         /// <summary>
-        /// Listener status. Value range: 0 (creating), 1 (running)
+        /// Listener status. Valid values: 0 (creating) and 1 (running).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

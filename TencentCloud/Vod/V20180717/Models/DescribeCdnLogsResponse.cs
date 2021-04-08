@@ -25,11 +25,11 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Log download list for CDN nodes in Mainland China.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total number of log download links
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("DomesticCdnLogs")]
-        public CdnLogInfo[] DomesticCdnLogs{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
@@ -37,6 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("OverseaCdnLogs")]
         public CdnLogInfo[] OverseaCdnLogs{ get; set; }
+
+        /// <summary>
+        /// Log download list for CDN nodes in Mainland China.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DomesticCdnLogs")]
+        public CdnLogInfo[] DomesticCdnLogs{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -50,8 +57,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "DomesticCdnLogs.", this.DomesticCdnLogs);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "OverseaCdnLogs.", this.OverseaCdnLogs);
+            this.SetParamArrayObj(map, prefix + "DomesticCdnLogs.", this.DomesticCdnLogs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -383,7 +383,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to add a SNAT IP for a SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
+        /// This API is used to add an SNAT IP for an SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerSnatIpsResponse"/></returns>
@@ -403,7 +403,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to add a SNAT IP for a SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
+        /// This API is used to add an SNAT IP for an SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerSnatIpsResponse"/></returns>
@@ -671,7 +671,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to delete a SNAT IP for a SnatPro CLB instance.
+        /// This API is used to delete the SNAT IP for an SnatPro CLB instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerSnatIpsResponse"/></returns>
@@ -691,7 +691,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to delete a SNAT IP for a SnatPro CLB instance.
+        /// This API is used to delete the SNAT IP for an SnatPro CLB instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerSnatIpsResponse"/></returns>
@@ -834,7 +834,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to unbind a server from a target group.
-        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
         /// <param name="req"><see cref="DeregisterTargetGroupInstancesRequest"/></param>
         /// <returns><see cref="DeregisterTargetGroupInstancesResponse"/></returns>
@@ -855,7 +855,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to unbind a server from a target group.
-        /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+        /// This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
         /// <param name="req"><see cref="DeregisterTargetGroupInstancesRequest"/></param>
         /// <returns><see cref="DeregisterTargetGroupInstancesResponse"/></returns>
@@ -917,8 +917,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DeregisterTargetsFromClassicalLB) is used to unbind real servers from a classic load balancer.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// This API is used to unbind a CLB real server. This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
         /// <param name="req"><see cref="DeregisterTargetsFromClassicalLBRequest"/></param>
         /// <returns><see cref="DeregisterTargetsFromClassicalLBResponse"/></returns>
@@ -938,8 +937,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DeregisterTargetsFromClassicalLB) is used to unbind real servers from a classic load balancer.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// This API is used to unbind a CLB real server. This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
         /// <param name="req"><see cref="DeregisterTargetsFromClassicalLBRequest"/></param>
         /// <returns><see cref="DeregisterTargetsFromClassicalLBResponse"/></returns>
@@ -1039,7 +1037,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DescribeClassicalLBByInstanceId) is used to get the list of classic CLB IDs through the real server instance ID.
+        /// This API is used to get the list of classic CLB instance IDs through a real server ID.
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicalLBByInstanceIdRequest"/></param>
         /// <returns><see cref="DescribeClassicalLBByInstanceIdResponse"/></returns>
@@ -1059,7 +1057,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DescribeClassicalLBByInstanceId) is used to get the list of classic CLB IDs through the real server instance ID.
+        /// This API is used to get the list of classic CLB instance IDs through a real server ID.
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicalLBByInstanceIdRequest"/></param>
         /// <returns><see cref="DescribeClassicalLBByInstanceIdResponse"/></returns>
@@ -1159,7 +1157,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DescribeClassicalLBTargets) is used to get the real servers bound to a classic CLB.
+        /// This API is used to get the real servers bound to a classic CLB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicalLBTargetsRequest"/></param>
         /// <returns><see cref="DescribeClassicalLBTargetsResponse"/></returns>
@@ -1179,7 +1177,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DescribeClassicalLBTargets) is used to get the real servers bound to a classic CLB.
+        /// This API is used to get the real servers bound to a classic CLB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeClassicalLBTargetsRequest"/></param>
         /// <returns><see cref="DescribeClassicalLBTargetsResponse"/></returns>
@@ -1199,7 +1197,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to get the CLB dedicated logset.
+        /// This API is used to get the CLB exclusive logset.
         /// </summary>
         /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
         /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
@@ -1219,7 +1217,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to get the CLB dedicated logset.
+        /// This API is used to get the CLB exclusive logset.
         /// </summary>
         /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
         /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
@@ -2383,8 +2381,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (RegisterTargetsWithClassicalLB) is used to bind real servers to a classic CLB.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// This API is used to bind a real server with a classic CLB instance. This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
         /// <param name="req"><see cref="RegisterTargetsWithClassicalLBRequest"/></param>
         /// <returns><see cref="RegisterTargetsWithClassicalLBResponse"/></returns>
@@ -2404,8 +2401,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (RegisterTargetsWithClassicalLB) is used to bind real servers to a classic CLB.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// This API is used to bind a real server with a classic CLB instance. This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
         /// </summary>
         /// <param name="req"><see cref="RegisterTargetsWithClassicalLBRequest"/></param>
         /// <returns><see cref="RegisterTargetsWithClassicalLBResponse"/></returns>

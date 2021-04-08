@@ -89,6 +89,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EniId")]
         public string EniId{ get; set; }
 
+        /// <summary>
+        /// AZ ID of the real server
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public ulong? ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +112,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
             this.SetParamSimple(map, prefix + "EniId", this.EniId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

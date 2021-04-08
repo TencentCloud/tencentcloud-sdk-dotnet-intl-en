@@ -37,25 +37,25 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+        /// Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// Target rule domain name. This parameter does not take effect if LocationId is specified
+        /// Target rule domain name. This parameter does not take effect if LocationId is specified.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Target rule URL. This parameter does not take effect if LocationId is specified
+        /// Target rule URL. This parameter does not take effect if LocationId is specified.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// List of real servers for which to modify the weight
+        /// List of real servers for which to modify the weights
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }

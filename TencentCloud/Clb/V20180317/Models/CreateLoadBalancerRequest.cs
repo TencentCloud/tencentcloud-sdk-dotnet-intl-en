@@ -32,7 +32,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+        /// CLB instance type. Valid value: 1 (generic CLB instance).
         /// </summary>
         [JsonProperty("Forward")]
         public long? Forward{ get; set; }
@@ -82,7 +82,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string MasterZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+        /// Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -118,7 +118,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// Exclusive cluster information.
+        /// Dedicated cluster information
         /// </summary>
         [JsonProperty("ExclusiveCluster")]
         public ExclusiveCluster ExclusiveCluster{ get; set; }
@@ -146,6 +146,13 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("ClusterTag")]
         public string ClusterTag{ get; set; }
+
+        /// <summary>
+        /// Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+        /// Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+        /// </summary>
+        [JsonProperty("SlaveZoneId")]
+        public string SlaveZoneId{ get; set; }
 
         /// <summary>
         /// Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
@@ -179,6 +186,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+            this.SetParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         }
     }

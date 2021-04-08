@@ -26,7 +26,7 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// Information of CLB instances sorted by outbound bandwidth from highest to lowest
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancerTraffic")]
         public LoadBalancerTraffic[] LoadBalancerTraffic{ get; set; }

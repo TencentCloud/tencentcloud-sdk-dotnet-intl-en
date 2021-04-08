@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Unbound targets
+        /// Unbinding targets
         /// </summary>
         [JsonProperty("Targets")]
         public BatchTarget[] Targets{ get; set; }

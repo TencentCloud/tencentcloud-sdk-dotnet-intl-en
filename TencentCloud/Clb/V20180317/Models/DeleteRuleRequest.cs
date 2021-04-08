@@ -43,13 +43,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LocationIds{ get; set; }
 
         /// <summary>
-        /// Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+        /// Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+        /// Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

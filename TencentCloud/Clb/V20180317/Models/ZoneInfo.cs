@@ -45,6 +45,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
+        /// <summary>
+        /// AZ region, e.g., ap-guangzhou.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ZoneRegion")]
+        public string ZoneRegion{ get; set; }
+
+        /// <summary>
+        /// Whether the AZ is the `LocalZone`, e.g., false.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LocalZone")]
+        public bool? LocalZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +68,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
+            this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
         }
     }
 }

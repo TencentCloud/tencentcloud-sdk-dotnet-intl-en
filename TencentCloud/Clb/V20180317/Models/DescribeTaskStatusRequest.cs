@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Request ID, i.e., the RequestId parameter returned by the API
+        /// Request ID, i.e., the RequestId parameter returned by the API.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Unique CLB instance ID, such as lb-12345678
+        /// Unique ID of a CLB instance, e.g., lb-12345678.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }

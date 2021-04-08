@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? PureAudioStream{ get; set; }
 
         /// <summary>
-        /// Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
+        /// Prefix of custom recording file names. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }

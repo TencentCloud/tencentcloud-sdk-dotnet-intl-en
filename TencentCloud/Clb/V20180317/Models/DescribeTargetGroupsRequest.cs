@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] TargetGroupIds{ get; set; }
 
         /// <summary>
-        /// Limit of the number of displayed results. Default value: 20
+        /// Limit of the number of displayed results. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+        /// Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
