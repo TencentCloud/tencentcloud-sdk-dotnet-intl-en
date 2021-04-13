@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20191112\GseClient.cs" />
+    <Compile Include="V20191112\Models\CcnInfo.cs" />
     <Compile Include="V20191112\Models\CopyFleetRequest.cs" />
     <Compile Include="V20191112\Models\CopyFleetResponse.cs" />
     <Compile Include="V20191112\Models\CreateGameServerSessionRequest.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="V20191112\Models\PlayerSession.cs" />
     <Compile Include="V20191112\Models\PutTimerScalingPolicyRequest.cs" />
     <Compile Include="V20191112\Models\PutTimerScalingPolicyResponse.cs" />
+    <Compile Include="V20191112\Models\RelatedCcnInfo.cs" />
     <Compile Include="V20191112\Models\ResourceCreationLimitPolicy.cs" />
     <Compile Include="V20191112\Models\RuntimeConfiguration.cs" />
     <Compile Include="V20191112\Models\SearchGameServerSessionsRequest.cs" />

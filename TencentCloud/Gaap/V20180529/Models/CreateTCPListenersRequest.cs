@@ -90,6 +90,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ClientIPMethod")]
         public long? ClientIPMethod{ get; set; }
 
+        /// <summary>
+        /// Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+        /// </summary>
+        [JsonProperty("FailoverSwitch")]
+        public long? FailoverSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
             this.SetParamArraySimple(map, prefix + "RealServerPorts.", this.RealServerPorts);
             this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
+            this.SetParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
         }
     }
 }

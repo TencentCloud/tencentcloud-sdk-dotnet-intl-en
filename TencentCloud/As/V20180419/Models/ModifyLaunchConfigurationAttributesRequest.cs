@@ -102,6 +102,26 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
+        /// <summary>
+        /// Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+        /// <br><li>ORIGINAL: uses the configured cloud disk type
+        /// <br><li>AUTOMATIC: automatically chooses an available cloud disk type
+        /// </summary>
+        [JsonProperty("DiskTypePolicy")]
+        public string DiskTypePolicy{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SystemDisk")]
+        public SystemDisk SystemDisk{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +139,9 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+            this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
+            this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         }
     }
 }

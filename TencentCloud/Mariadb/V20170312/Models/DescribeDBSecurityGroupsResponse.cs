@@ -31,6 +31,20 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public SecurityGroup[] Groups{ get; set; }
 
         /// <summary>
+        /// Instance VIP
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VIP")]
+        public string VIP{ get; set; }
+
+        /// <summary>
+        /// Instance port
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VPort")]
+        public long? VPort{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +57,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
+            this.SetParamSimple(map, prefix + "VIP", this.VIP);
+            this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

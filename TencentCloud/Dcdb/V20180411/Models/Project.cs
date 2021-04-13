@@ -31,7 +31,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// The `uin` of the resource owner (root account)
+        /// The UIN of the resource owner (root account)
         /// </summary>
         [JsonProperty("OwnerUin")]
         public long? OwnerUin{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Creator `uin`
+        /// Creator UIN
         /// </summary>
         [JsonProperty("CreatorUin")]
         public long? CreatorUin{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string SrcPlat{ get; set; }
 
         /// <summary>
-        /// Source `AppId`
+        /// Source APPID
         /// </summary>
         [JsonProperty("SrcAppId")]
         public long? SrcAppId{ get; set; }
 
         /// <summary>
-        /// Project status. 0: normal; -1: disabled; 3: default project.
+        /// Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Whether it is the default project. 1: yes; 0: no.
+        /// Whether it is the default project. Valid values: `1` (yes), `0` (no).
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }

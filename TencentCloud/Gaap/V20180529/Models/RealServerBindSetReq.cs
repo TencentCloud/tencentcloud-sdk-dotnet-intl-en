@@ -48,6 +48,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("RealServerWeight")]
         public ulong? RealServerWeight{ get; set; }
 
+        /// <summary>
+        /// Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+        /// </summary>
+        [JsonProperty("RealServerFailoverRole")]
+        public string RealServerFailoverRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerPort", this.RealServerPort);
             this.SetParamSimple(map, prefix + "RealServerIP", this.RealServerIP);
             this.SetParamSimple(map, prefix + "RealServerWeight", this.RealServerWeight);
+            this.SetParamSimple(map, prefix + "RealServerFailoverRole", this.RealServerFailoverRole);
         }
     }
 }

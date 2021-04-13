@@ -103,7 +103,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string SelectedScalingType{ get; set; }
 
         /// <summary>
-        /// Whether to select CCN. Valid values: CCN_SELECTED, CCN_UNSELECTED. Default value: CCN_UNSELECTED.
+        /// Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
         /// </summary>
         [JsonProperty("SelectedCcnType")]
         public string SelectedCcnType{ get; set; }
@@ -132,6 +132,12 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("SelectedTimerType")]
         public string SelectedTimerType{ get; set; }
 
+        /// <summary>
+        /// CCN information, including the corresponding CCN account and ID.
+        /// </summary>
+        [JsonProperty("CcnInfos")]
+        public CcnInfo[] CcnInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
             this.SetParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
             this.SetParamSimple(map, prefix + "SelectedTimerType", this.SelectedTimerType);
+            this.SetParamArrayObj(map, prefix + "CcnInfos.", this.CcnInfos);
         }
     }
 }

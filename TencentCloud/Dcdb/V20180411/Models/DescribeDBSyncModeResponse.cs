@@ -37,6 +37,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? IsModifying{ get; set; }
 
         /// <summary>
+        /// Current sync mode. Valid values: `0` (async), `1` (sync).
+        /// </summary>
+        [JsonProperty("CurrentSyncMode")]
+        public long? CurrentSyncMode{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         {
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
             this.SetParamSimple(map, prefix + "IsModifying", this.IsModifying);
+            this.SetParamSimple(map, prefix + "CurrentSyncMode", this.CurrentSyncMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
