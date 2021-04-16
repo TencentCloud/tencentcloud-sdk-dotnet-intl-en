@@ -279,8 +279,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// The number of nodes
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Number of nodes
         /// </summary>
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }

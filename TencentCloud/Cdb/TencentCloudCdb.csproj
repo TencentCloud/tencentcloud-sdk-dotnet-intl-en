@@ -82,6 +82,7 @@
     <Compile Include="V20170320\Models\DBSwitchInfo.cs" />
     <Compile Include="V20170320\Models\DatabaseNameInfo.cs" />
     <Compile Include="V20170320\Models\DatabasePrivilege.cs" />
+    <Compile Include="V20170320\Models\DatabasesWithCharacterLists.cs" />
     <Compile Include="V20170320\Models\DeleteAccountsRequest.cs" />
     <Compile Include="V20170320\Models\DeleteAccountsResponse.cs" />
     <Compile Include="V20170320\Models\DeleteBackupRequest.cs" />

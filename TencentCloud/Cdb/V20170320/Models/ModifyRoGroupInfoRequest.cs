@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RoWeightValue[] RoWeightValues{ get; set; }
 
         /// <summary>
-        /// Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
+        /// Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
         /// </summary>
         [JsonProperty("IsBalanceRoLoad")]
         public long? IsBalanceRoLoad{ get; set; }

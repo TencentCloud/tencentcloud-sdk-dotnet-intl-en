@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Parameter template description
+        /// Database engine version specified in the parameter template
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("Items")]
         public ParameterDetail[] Items{ get; set; }
+
+        /// <summary>
+        /// Parameter template description
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -71,6 +77,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

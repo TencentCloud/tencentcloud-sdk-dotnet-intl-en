@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProjectSecurityGroupsResponse : AbstractModel
+    public class DynamicPodSpec : AbstractModel
     {
         
         /// <summary>
-        /// Security group details.
+        /// Minimum number of CPU cores
         /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
+        [JsonProperty("RequestCpu")]
+        public float? RequestCpu{ get; set; }
 
         /// <summary>
-        /// Number of security group rules
+        /// Maximum number of CPU cores
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("LimitCpu")]
+        public float? LimitCpu{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Minimum memory in MB
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RequestMemory")]
+        public float? RequestMemory{ get; set; }
+
+        /// <summary>
+        /// Maximum memory in MB
+        /// </summary>
+        [JsonProperty("LimitMemory")]
+        public float? LimitMemory{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RequestCpu", this.RequestCpu);
+            this.SetParamSimple(map, prefix + "LimitCpu", this.LimitCpu);
+            this.SetParamSimple(map, prefix + "RequestMemory", this.RequestMemory);
+            this.SetParamSimple(map, prefix + "LimitMemory", this.LimitMemory);
         }
     }
 }

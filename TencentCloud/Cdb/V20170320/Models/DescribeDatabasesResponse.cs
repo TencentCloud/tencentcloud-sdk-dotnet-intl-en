@@ -37,6 +37,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] Items{ get; set; }
 
         /// <summary>
+        /// Database name and character set
+        /// </summary>
+        [JsonProperty("DatabaseList")]
+        public DatabasesWithCharacterLists[] DatabaseList{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArraySimple(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "DatabaseList.", this.DatabaseList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

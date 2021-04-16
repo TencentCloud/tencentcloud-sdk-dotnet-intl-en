@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Device type
+        /// (Disused) Device type
         /// </summary>
         [JsonProperty("Device")]
         public string Device{ get; set; }
 
         /// <summary>
-        /// Purchasable specification description
+        /// (Disused) Purchasable specification description 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Instance type
+        /// (Disused) Instance type 
         /// </summary>
         [JsonProperty("CdbType")]
         public string CdbType{ get; set; }
@@ -97,16 +97,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Info{ get; set; }
 
         /// <summary>
-        /// Status value
+        /// Status. Value `0` indicates that this specification is purchasable.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Tag value
+        /// (Disused) Tag value
         /// </summary>
         [JsonProperty("Tag")]
         public long? Tag{ get; set; }
+
+        /// <summary>
+        /// Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeviceTypeName")]
+        public string DeviceTypeName{ get; set; }
 
 
         /// <summary>
@@ -128,6 +142,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Info", this.Info);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "DeviceTypeName", this.DeviceTypeName);
         }
     }
 }

@@ -85,7 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public TagInfo[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
+        /// The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

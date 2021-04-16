@@ -143,6 +143,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("YarnNodeLabel")]
         public string YarnNodeLabel{ get; set; }
 
+        /// <summary>
+        /// Custom pod permission and parameter
+        /// </summary>
+        [JsonProperty("PodParameter")]
+        public PodParameter PodParameter{ get; set; }
+
+        /// <summary>
+        /// Number of master nodes to be added
+        /// </summary>
+        [JsonProperty("MasterCount")]
+        public ulong? MasterCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +180,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ClickHouseClusterName", this.ClickHouseClusterName);
             this.SetParamSimple(map, prefix + "ClickHouseClusterType", this.ClickHouseClusterType);
             this.SetParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+            this.SetParamObj(map, prefix + "PodParameter.", this.PodParameter);
+            this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.169</VersionPrefix>
+    <VersionPrefix>3.0.170</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -738,6 +738,7 @@
     <Compile Include="Cdb\V20170320\Models\DBSwitchInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabaseNameInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabasePrivilege.cs" />
+    <Compile Include="Cdb\V20170320\Models\DatabasesWithCharacterLists.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteAccountsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteAccountsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteBackupRequest.cs" />
@@ -2312,6 +2313,7 @@
     <Compile Include="Emr\V20190103\Models\DescribeClusterNodesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\DynamicPodSpec.cs" />
     <Compile Include="Emr\V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="Emr\V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
@@ -2330,6 +2332,7 @@
     <Compile Include="Emr\V20190103\Models\OutterResource.cs" />
     <Compile Include="Emr\V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\Placement.cs" />
+    <Compile Include="Emr\V20190103\Models\PodParameter.cs" />
     <Compile Include="Emr\V20190103\Models\PodSpec.cs" />
     <Compile Include="Emr\V20190103\Models\PodVolume.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />

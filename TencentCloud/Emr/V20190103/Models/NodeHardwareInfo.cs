@@ -283,6 +283,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
+        /// <summary>
+        /// Whether floating specification is used. `1`: yes; `0`: no
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsDynamicSpec")]
+        public long? IsDynamicSpec{ get; set; }
+
+        /// <summary>
+        /// Floating specification in JSON string
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DynamicPodSpec")]
+        public string DynamicPodSpec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +340,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+            this.SetParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
+            this.SetParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
         }
     }
 }
