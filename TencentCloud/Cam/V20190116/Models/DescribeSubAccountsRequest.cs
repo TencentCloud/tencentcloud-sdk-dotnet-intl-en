@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnBindingAllPolicyObjectRequest : AbstractModel
+    public class DescribeSubAccountsRequest : AbstractModel
     {
         
         /// <summary>
-        /// The value is fixed to monitor.
+        /// List of sub-user UINs. Up to 50 UINs are supported.
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
-
-        /// <summary>
-        /// Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
-
-        /// <summary>
-        /// Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("FilterSubAccountUin")]
+        public ulong?[] FilterSubAccountUin{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamArraySimple(map, prefix + "FilterSubAccountUin.", this.FilterSubAccountUin);
         }
     }
 }

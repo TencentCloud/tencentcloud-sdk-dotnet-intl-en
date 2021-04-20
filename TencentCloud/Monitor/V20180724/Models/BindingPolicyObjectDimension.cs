@@ -37,7 +37,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Dimensions.
+        /// Instance dimension information in the following format:
+        /// {"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+        /// [Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }

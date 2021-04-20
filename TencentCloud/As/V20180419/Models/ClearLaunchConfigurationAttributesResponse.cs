@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnBindingAllPolicyObjectRequest : AbstractModel
+    public class ClearLaunchConfigurationAttributesResponse : AbstractModel
     {
         
         /// <summary>
-        /// The value is fixed to monitor.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
-
-        /// <summary>
-        /// Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
-
-        /// <summary>
-        /// Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

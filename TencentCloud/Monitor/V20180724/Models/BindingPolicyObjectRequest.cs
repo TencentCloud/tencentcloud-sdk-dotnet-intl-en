@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+        /// Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public BindingPolicyObjectDimension[] Dimensions{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+        /// Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

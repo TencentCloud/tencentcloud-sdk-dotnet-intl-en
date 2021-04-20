@@ -55,25 +55,36 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] MonitorTypes{ get; set; }
 
         /// <summary>
-        /// Filter by namespace
+        /// Filter by namespace. For the values of different policy types, please see:
+        /// [Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("Namespaces")]
         public string[] Namespaces{ get; set; }
 
         /// <summary>
-        /// Alarm object list
+        /// Alarm object list. The outer array corresponds to multiple instances.
+        /// Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+        /// [
+        /// 	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+        /// 	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+        /// 	...
+        /// ]
+        /// For the samples for different Tencent Cloud services, please see:
+        /// [Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// Search by recipient
+        /// Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+        /// [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("ReceiverUids")]
         public long?[] ReceiverUids{ get; set; }
 
         /// <summary>
-        /// Search by recipient group
+        /// Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+        /// [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("ReceiverGroups")]
         public long?[] ReceiverGroups{ get; set; }
@@ -85,7 +96,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] PolicyType{ get; set; }
 
         /// <summary>
-        /// Sort by field
+        /// Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
@@ -97,13 +108,15 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// Project ID array
+        /// ID array of the policy project, which can be viewed on the following page:
+        /// [Project Management](https://console.cloud.tencent.com/project)
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// Alarm notification ID list
+        /// ID list of the notification template, which can be obtained by querying the notification template list.
+        /// [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
@@ -115,13 +128,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] RuleTypes{ get; set; }
 
         /// <summary>
-        /// Status. Valid values: 1 (enabled), 0 (disabled)
+        /// Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
         /// </summary>
         [JsonProperty("Enable")]
         public long?[] Enable{ get; set; }
 
         /// <summary>
-        /// Indicates whether the notification rule is configured. 1: not configured; 0: configured
+        /// If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
         /// </summary>
         [JsonProperty("NotBindingNoticeRule")]
         public long? NotBindingNoticeRule{ get; set; }

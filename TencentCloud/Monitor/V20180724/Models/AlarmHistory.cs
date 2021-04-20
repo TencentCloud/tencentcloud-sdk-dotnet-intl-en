@@ -127,7 +127,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] NoticeWays{ get; set; }
 
         /// <summary>
-        /// Compatible Alarm 1.0 policy group ID
+        /// Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }
@@ -155,6 +155,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         [JsonProperty("PolicyExists")]
         public long? PolicyExists{ get; set; }
+
+        /// <summary>
+        /// Metric information
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MetricsInfo")]
+        public AlarmHistoryMetric[] MetricsInfo{ get; set; }
 
 
         /// <summary>
@@ -184,6 +191,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
+            this.SetParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
         }
     }
 }

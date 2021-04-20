@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+        /// Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
@@ -61,25 +61,31 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
+        /// Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Metric trigger condition
+        /// ID of trigger condition template. This parameter can be left empty.
+        /// </summary>
+        [JsonProperty("ConditionTemplateId")]
+        public long? ConditionTemplateId{ get; set; }
+
+        /// <summary>
+        /// Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Condition")]
         public AlarmPolicyCondition Condition{ get; set; }
 
         /// <summary>
-        /// Event trigger condition
+        /// Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("EventCondition")]
         public AlarmPolicyEventCondition EventCondition{ get; set; }
 
         /// <summary>
-        /// List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
+        /// List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
@@ -103,6 +109,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
             this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamObj(map, prefix + "EventCondition.", this.EventCondition);
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);

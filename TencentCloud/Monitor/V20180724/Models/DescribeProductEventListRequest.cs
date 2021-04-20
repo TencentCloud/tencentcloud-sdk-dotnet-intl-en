@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] EventName{ get; set; }
 
         /// <summary>
-        /// Affected object, such as ins-19708ino.
+        /// Affected object, such as "ins-19708ino"
         /// </summary>
         [JsonProperty("InstanceId")]
         public string[] InstanceId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public DescribeProductEventListDimensions[] Dimensions{ get; set; }
 
         /// <summary>
-        /// Filter by region, such as by gz.
+        /// Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("RegionList")]
         public string[] RegionList{ get; set; }

@@ -93,6 +93,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API is used to clear specific attributes of the launch configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ClearLaunchConfigurationAttributesRequest"/></param>
+        /// <returns><see cref="ClearLaunchConfigurationAttributesResponse"/></returns>
+        public async Task<ClearLaunchConfigurationAttributesResponse> ClearLaunchConfigurationAttributes(ClearLaunchConfigurationAttributesRequest req)
+        {
+             JsonResponseModel<ClearLaunchConfigurationAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ClearLaunchConfigurationAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearLaunchConfigurationAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to clear specific attributes of the launch configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ClearLaunchConfigurationAttributesRequest"/></param>
+        /// <returns><see cref="ClearLaunchConfigurationAttributesResponse"/></returns>
+        public ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributesSync(ClearLaunchConfigurationAttributesRequest req)
+        {
+             JsonResponseModel<ClearLaunchConfigurationAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ClearLaunchConfigurationAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearLaunchConfigurationAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CompleteLifecycleAction) is used to complete a lifecycle action.
         /// 
         /// * The result ("CONTINUE" or "ABANDON") of a specific lifecycle hook can be specified by calling this API. If this API is not called at all, the lifecycle hook will be processed based on the "DefaultResult" after timeout.

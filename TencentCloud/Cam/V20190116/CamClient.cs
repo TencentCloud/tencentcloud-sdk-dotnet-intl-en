@@ -1013,6 +1013,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to query sub-users through the sub-user UIN list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubAccountsRequest"/></param>
+        /// <returns><see cref="DescribeSubAccountsResponse"/></returns>
+        public async Task<DescribeSubAccountsResponse> DescribeSubAccounts(DescribeSubAccountsRequest req)
+        {
+             JsonResponseModel<DescribeSubAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query sub-users through the sub-user UIN list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubAccountsRequest"/></param>
+        /// <returns><see cref="DescribeSubAccountsResponse"/></returns>
+        public DescribeSubAccountsResponse DescribeSubAccountsSync(DescribeSubAccountsRequest req)
+        {
+             JsonResponseModel<DescribeSubAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DetachGroupPolicy) is used to unassociate a policy and a user group.
         /// </summary>
         /// <param name="req"><see cref="DetachGroupPolicyRequest"/></param>

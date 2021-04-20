@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnBindingAllPolicyObjectRequest : AbstractModel
+    public class ClearLaunchConfigurationAttributesRequest : AbstractModel
     {
         
         /// <summary>
-        /// The value is fixed to monitor.
+        /// Launch configuration ID
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("LaunchConfigurationId")]
+        public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
+        /// Whether to clear data disk information. This parameter is optional and the default value is `false`.
+        /// Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
         /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
-
-        /// <summary>
-        /// Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("ClearDataDisks")]
+        public bool? ClearDataDisks{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
+            this.SetParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
         }
     }
 }

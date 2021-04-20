@@ -111,13 +111,13 @@ namespace TencentCloud.As.V20180419.Models
         public string DiskTypePolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance system disk configurations
         /// </summary>
         [JsonProperty("SystemDisk")]
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }

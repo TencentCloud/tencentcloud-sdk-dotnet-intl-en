@@ -25,15 +25,15 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Metric name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// Statistical period in seconds
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
@@ -47,31 +47,32 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// le = less than or equal to
         /// lt = less than
         /// ne = not equal to
-        /// day_increase = daily increase
-        /// day_decrease = daily decrease
-        /// day_wave = daily fluctuation
-        /// week_increase = weekly increase
-        /// week_decrease = weekly decrease
-        /// week_wave = weekly fluctuation
-        /// cycle_increase = periodical increase
-        /// cycle_decrease = periodical decrease
-        /// cycle_wave = periodical fluctuation
+        /// day_increase = day-on-day increase
+        /// day_decrease = day-on-day decrease
+        /// day_wave = day-on-day fluctuation
+        /// week_increase = week-on-week increase
+        /// week_decrease = week-on-week decrease
+        /// week_wave = week-on-week fluctuation
+        /// cycle_increase = cyclical increase
+        /// cycle_decrease = cyclical decrease
+        /// cycle_wave = cyclical fluctuation
         /// re = regex match
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// Threshold
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("ContinuePeriod")]
         public long? ContinuePeriod{ get; set; }
@@ -112,8 +113,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Unit{ get; set; }
 
         /// <summary>
-        /// Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.171</VersionPrefix>
+    <VersionPrefix>3.0.172</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -234,6 +234,8 @@
     <Compile Include="As\V20180419\Models\AutoScalingGroup.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingGroupAbstract.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingNotification.cs" />
+    <Compile Include="As\V20180419\Models\ClearLaunchConfigurationAttributesRequest.cs" />
+    <Compile Include="As\V20180419\Models\ClearLaunchConfigurationAttributesResponse.cs" />
     <Compile Include="As\V20180419\Models\CompleteLifecycleActionRequest.cs" />
     <Compile Include="As\V20180419\Models\CompleteLifecycleActionResponse.cs" />
     <Compile Include="As\V20180419\Models\CreateAutoScalingGroupFromInstanceRequest.cs" />
@@ -543,6 +545,8 @@
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagCollResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeSubAccountsRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeSubAccountsResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachRolePolicyRequest.cs" />
@@ -613,6 +617,7 @@
     <Compile Include="Cam\V20190116\Models\SetMfaFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\StrategyInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountInfo.cs" />
+    <Compile Include="Cam\V20190116\Models\SubAccountUser.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
@@ -3478,6 +3483,7 @@
     <Compile Include="Monitor\V20180724\MonitorClient.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmEvent.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmHistory.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmHistoryMetric.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmNotice.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmPolicy.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmPolicyCondition.cs" />

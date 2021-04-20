@@ -47,6 +47,7 @@
     <Compile Include="V20180724\MonitorClient.cs" />
     <Compile Include="V20180724\Models\AlarmEvent.cs" />
     <Compile Include="V20180724\Models\AlarmHistory.cs" />
+    <Compile Include="V20180724\Models\AlarmHistoryMetric.cs" />
     <Compile Include="V20180724\Models\AlarmNotice.cs" />
     <Compile Include="V20180724\Models\AlarmPolicy.cs" />
     <Compile Include="V20180724\Models\AlarmPolicyCondition.cs" />

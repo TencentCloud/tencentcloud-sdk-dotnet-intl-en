@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// Policy ID for instance/instance group binding and unbinding APIs (BindingPolicyObject, UnBindingAllPolicyObject, UnBindingPolicyObject)
+        /// Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }

@@ -52,6 +52,8 @@
     <Compile Include="V20180419\Models\AutoScalingGroup.cs" />
     <Compile Include="V20180419\Models\AutoScalingGroupAbstract.cs" />
     <Compile Include="V20180419\Models\AutoScalingNotification.cs" />
+    <Compile Include="V20180419\Models\ClearLaunchConfigurationAttributesRequest.cs" />
+    <Compile Include="V20180419\Models\ClearLaunchConfigurationAttributesResponse.cs" />
     <Compile Include="V20180419\Models\CompleteLifecycleActionRequest.cs" />
     <Compile Include="V20180419\Models\CompleteLifecycleActionResponse.cs" />
     <Compile Include="V20180419\Models\CreateAutoScalingGroupFromInstanceRequest.cs" />

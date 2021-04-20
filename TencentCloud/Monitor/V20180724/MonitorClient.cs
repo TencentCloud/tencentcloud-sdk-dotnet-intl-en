@@ -733,7 +733,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to get the details of basic metrics.
+        /// This API is used to get the attributes of basic metrics.
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseMetricsRequest"/></param>
         /// <returns><see cref="DescribeBaseMetricsResponse"/></returns>
@@ -753,7 +753,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to get the details of basic metrics.
+        /// This API is used to get the attributes of basic metrics.
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseMetricsRequest"/></param>
         /// <returns><see cref="DescribeBaseMetricsResponse"/></returns>
@@ -1177,7 +1177,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to edit the trigger condition of an alarm policy.
+        /// This API is used to modify the trigger condition of an alarm policy.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyConditionRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyConditionResponse"/></returns>
@@ -1197,7 +1197,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to edit the trigger condition of an alarm policy.
+        /// This API is used to modify the trigger condition of an alarm policy.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyConditionRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyConditionResponse"/></returns>

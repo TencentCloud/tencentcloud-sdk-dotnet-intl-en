@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+        /// Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] UniqueId{ get; set; }
 
         /// <summary>
-        /// Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
+        /// Instance group ID. The `UniqueId` parameter is invalid if object instances are deleted by instance group.
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+        /// Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

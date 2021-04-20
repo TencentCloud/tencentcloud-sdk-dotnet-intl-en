@@ -49,13 +49,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// Start time, which is the timestamp exactly one day ago
+        /// Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// End time, which is the current timestamp by default
+        /// End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

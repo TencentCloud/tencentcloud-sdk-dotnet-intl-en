@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnBindingAllPolicyObjectRequest : AbstractModel
+    public class DescribeSubAccountsResponse : AbstractModel
     {
         
         /// <summary>
-        /// The value is fixed to monitor.
+        /// Sub-user list
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("SubAccounts")]
+        public SubAccountUser[] SubAccounts{ get; set; }
 
         /// <summary>
-        /// Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("GroupId")]
-        public long? GroupId{ get; set; }
-
-        /// <summary>
-        /// Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamArrayObj(map, prefix + "SubAccounts.", this.SubAccounts);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

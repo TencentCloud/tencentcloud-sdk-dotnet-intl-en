@@ -21,38 +21,38 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAlarmPolicyConditionRequest : AbstractModel
+    public class AlarmHistoryMetric : AbstractModel
     {
         
         /// <summary>
-        /// Module name, which is fixed at "monitor"
+        /// Namespace used to query data by Tencent Cloud service monitoring type
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("QceNamespace")]
+        public string QceNamespace{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID
+        /// Metric name
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
 
         /// <summary>
-        /// ID of trigger condition template. This parameter can be left empty.
+        /// Statistical period
         /// </summary>
-        [JsonProperty("ConditionTemplateId")]
-        public long? ConditionTemplateId{ get; set; }
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
 
         /// <summary>
-        /// Metric trigger condition
+        /// Value triggering alarm
         /// </summary>
-        [JsonProperty("Condition")]
-        public AlarmPolicyCondition Condition{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
         /// <summary>
-        /// Event trigger condition
+        /// Metric display name
         /// </summary>
-        [JsonProperty("EventCondition")]
-        public AlarmPolicyEventCondition EventCondition{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
-            this.SetParamObj(map, prefix + "Condition.", this.Condition);
-            this.SetParamObj(map, prefix + "EventCondition.", this.EventCondition);
+            this.SetParamSimple(map, prefix + "QceNamespace", this.QceNamespace);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }
