@@ -116,6 +116,8 @@
     <Compile Include="V20180709\Models\DescribeBasicCCThresholdResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBasicDeviceThresholdRequest.cs" />
     <Compile Include="V20180709\Models\DescribeBasicDeviceThresholdResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBizHttpStatusRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBizHttpStatusResponse.cs" />
     <Compile Include="V20180709\Models\DescribeCCAlarmThresholdRequest.cs" />
     <Compile Include="V20180709\Models\DescribeCCAlarmThresholdResponse.cs" />
     <Compile Include="V20180709\Models\DescribeCCEvListRequest.cs" />
@@ -204,6 +206,7 @@
     <Compile Include="V20180709\Models\DescribleL7RulesResponse.cs" />
     <Compile Include="V20180709\Models\DescribleRegionCountRequest.cs" />
     <Compile Include="V20180709\Models\DescribleRegionCountResponse.cs" />
+    <Compile Include="V20180709\Models\HttpStatusMap.cs" />
     <Compile Include="V20180709\Models\IpBlackWhite.cs" />
     <Compile Include="V20180709\Models\IpBlockData.cs" />
     <Compile Include="V20180709\Models\IpUnBlockData.cs" />

@@ -55,7 +55,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+        /// IP query list, which is optional. Resources will be queried by IP if the list is not empty.
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }

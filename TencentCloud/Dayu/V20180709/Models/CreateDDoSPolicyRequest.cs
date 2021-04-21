@@ -49,7 +49,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public DDoSPolicyPortLimit[] PortLimits{ get; set; }
 
         /// <summary>
-        /// IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
+        /// Request source IP blocklist/allowlist, which should be an empty array if there are no blocked or allowed IPs.
         /// </summary>
         [JsonProperty("IpAllowDenys")]
         public IpBlackWhite[] IpAllowDenys{ get; set; }

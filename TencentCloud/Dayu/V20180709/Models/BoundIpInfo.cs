@@ -25,13 +25,13 @@ namespace TencentCloud.Dayu.V20180709.Models
     {
         
         /// <summary>
-        /// IP
+        /// IP address
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Bound product type. Valid values: [public (CVM), bm (BM), eni (ENI), vpngw (VPN Gateway), natgw (NAT Gateway), waf (WAF), fpc (finance product), gaap (GAAP), other (hosted IP)]
+        /// Category of product that can be bound. Valid values: public (CVM and CLB), bm (BM), eni (ENI), vpngw (VPN gateway), natgw (NAT gateway), waf (WAF), fpc (financial products), gaap (GAAP), and other (Hosted IP).
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }

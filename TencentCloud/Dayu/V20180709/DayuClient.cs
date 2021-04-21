@@ -1173,6 +1173,46 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// This API is used to get the statistics on the status codes of business traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizHttpStatusRequest"/></param>
+        /// <returns><see cref="DescribeBizHttpStatusResponse"/></returns>
+        public async Task<DescribeBizHttpStatusResponse> DescribeBizHttpStatus(DescribeBizHttpStatusRequest req)
+        {
+             JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBizHttpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizHttpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the statistics on the status codes of business traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizHttpStatusRequest"/></param>
+        /// <returns><see cref="DescribeBizHttpStatusResponse"/></returns>
+        public DescribeBizHttpStatusResponse DescribeBizHttpStatusSync(DescribeBizHttpStatusRequest req)
+        {
+             JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBizHttpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizHttpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the alarm notification threshold set for CC attacks in Anti-DDoS Pro, Anti-DDoS Advanced, Anti-DDoS Ultimate, and Chess Shield.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCAlarmThresholdRequest"/></param>
