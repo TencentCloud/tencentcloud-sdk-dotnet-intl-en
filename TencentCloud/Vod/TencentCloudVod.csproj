@@ -153,6 +153,8 @@
     <Compile Include="V20180717\Models\AsrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AsrWordsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\AsrWordsConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\AttachMediaSubtitlesRequest.cs" />
+    <Compile Include="V20180717\Models\AttachMediaSubtitlesResponse.cs" />
     <Compile Include="V20180717\Models\AudioTemplateInfo.cs" />
     <Compile Include="V20180717\Models\AudioTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AudioTrackItem.cs" />
@@ -380,6 +382,8 @@
     <Compile Include="V20180717\Models\MediaSnapshotByTimeOffsetItem.cs" />
     <Compile Include="V20180717\Models\MediaSnapshotByTimePicInfoItem.cs" />
     <Compile Include="V20180717\Models\MediaSourceData.cs" />
+    <Compile Include="V20180717\Models\MediaSubtitleInput.cs" />
+    <Compile Include="V20180717\Models\MediaSubtitleItem.cs" />
     <Compile Include="V20180717\Models\MediaTrack.cs" />
     <Compile Include="V20180717\Models\MediaTrackItem.cs" />
     <Compile Include="V20180717\Models\MediaTranscodeInfo.cs" />

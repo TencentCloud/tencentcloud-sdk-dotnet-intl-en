@@ -21,22 +21,9 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMediaInfoResponse : AbstractModel
+    public class AttachMediaSubtitlesResponse : AbstractModel
     {
         
-        /// <summary>
-        /// URL of new video cover.
-        /// * Note: this returned value is valid only if the request carries `CoverData`.*
-        /// </summary>
-        [JsonProperty("CoverUrl")]
-        public string CoverUrl{ get; set; }
-
-        /// <summary>
-        /// Added subtitle information
-        /// </summary>
-        [JsonProperty("AddedSubtitleSet")]
-        public MediaSubtitleItem[] AddedSubtitleSet{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -49,8 +36,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
-            this.SetParamArrayObj(map, prefix + "AddedSubtitleSet.", this.AddedSubtitleSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

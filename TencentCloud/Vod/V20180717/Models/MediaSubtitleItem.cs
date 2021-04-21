@@ -21,27 +21,38 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMediaInfoResponse : AbstractModel
+    public class MediaSubtitleItem : AbstractModel
     {
         
         /// <summary>
-        /// URL of new video cover.
-        /// * Note: this returned value is valid only if the request carries `CoverData`.*
+        /// 
         /// </summary>
-        [JsonProperty("CoverUrl")]
-        public string CoverUrl{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// Added subtitle information
+        /// 
         /// </summary>
-        [JsonProperty("AddedSubtitleSet")]
-        public MediaSubtitleItem[] AddedSubtitleSet{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// 
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Language")]
+        public string Language{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -49,9 +60,11 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
-            this.SetParamArrayObj(map, prefix + "AddedSubtitleSet.", this.AddedSubtitleSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Language", this.Language);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

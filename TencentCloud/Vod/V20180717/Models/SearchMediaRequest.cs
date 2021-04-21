@@ -147,6 +147,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Filters{ get; set; }
 
         /// <summary>
+        /// Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+        /// <li>Length limit for a single region: 20 characters</li>
+        /// <li>Array length limit: 20</li>
+        /// </summary>
+        [JsonProperty("StorageRegions")]
+        public string[] StorageRegions{ get; set; }
+
+        /// <summary>
         /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -221,6 +229,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);

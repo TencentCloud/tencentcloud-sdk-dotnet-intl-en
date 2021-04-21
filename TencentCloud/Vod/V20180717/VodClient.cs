@@ -95,6 +95,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to associate/disassociate subtitles with/from a media file of a specific adaptive bitrate streaming template ID.
+        /// </summary>
+        /// <param name="req"><see cref="AttachMediaSubtitlesRequest"/></param>
+        /// <returns><see cref="AttachMediaSubtitlesResponse"/></returns>
+        public async Task<AttachMediaSubtitlesResponse> AttachMediaSubtitles(AttachMediaSubtitlesRequest req)
+        {
+             JsonResponseModel<AttachMediaSubtitlesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachMediaSubtitles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachMediaSubtitlesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to associate/disassociate subtitles with/from a media file of a specific adaptive bitrate streaming template ID.
+        /// </summary>
+        /// <param name="req"><see cref="AttachMediaSubtitlesRequest"/></param>
+        /// <returns><see cref="AttachMediaSubtitlesResponse"/></returns>
+        public AttachMediaSubtitlesResponse AttachMediaSubtitlesSync(AttachMediaSubtitlesRequest req)
+        {
+             JsonResponseModel<AttachMediaSubtitlesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachMediaSubtitles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachMediaSubtitlesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to confirm the result of uploading a media file (and cover file) to VOD, store the media information, and return the playback address and ID of the file.
         /// </summary>
         /// <param name="req"><see cref="CommitUploadRequest"/></param>
@@ -3235,7 +3275,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, and video cover.
+        /// This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.
         /// </summary>
         /// <param name="req"><see cref="ModifyMediaInfoRequest"/></param>
         /// <returns><see cref="ModifyMediaInfoResponse"/></returns>
@@ -3255,7 +3295,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, and video cover.
+        /// This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.
         /// </summary>
         /// <param name="req"><see cref="ModifyMediaInfoRequest"/></param>
         /// <returns><see cref="ModifyMediaInfoResponse"/></returns>

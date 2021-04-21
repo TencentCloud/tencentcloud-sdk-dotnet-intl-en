@@ -37,12 +37,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
-        /// </summary>
-        [JsonProperty("ResourceName")]
-        public string ResourceName{ get; set; }
-
-        /// <summary>
         /// ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS
         /// </summary>
         [JsonProperty("Operation")]
@@ -55,13 +49,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? PermissionType{ get; set; }
 
         /// <summary>
+        /// Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
+        /// </summary>
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
+
+        /// <summary>
         /// The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// User list. The default value is `*`, which means that any user can access. The current user can only be one included in the user list
+        /// The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
         /// </summary>
         [JsonProperty("Principal")]
         public string Principal{ get; set; }
@@ -74,9 +74,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
-            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "PermissionType", this.PermissionType);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Principal", this.Principal);
         }

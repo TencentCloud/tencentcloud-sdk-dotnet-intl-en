@@ -214,6 +214,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("StatusInReadonlyGroup")]
         public string StatusInReadonlyGroup{ get; set; }
 
+        /// <summary>
+        /// Elimination time
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OfflineTime")]
+        public string OfflineTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -251,6 +258,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
             this.SetParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
             this.SetParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
+            this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         }
     }
 }

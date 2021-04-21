@@ -99,6 +99,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClearTags{ get; set; }
 
         /// <summary>
+        /// Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+        /// </summary>
+        [JsonProperty("AddSubtitles")]
+        public MediaSubtitleInput[] AddSubtitles{ get; set; }
+
+        /// <summary>
+        /// Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+        /// </summary>
+        [JsonProperty("DeleteSubtitleIds")]
+        public string[] DeleteSubtitleIds{ get; set; }
+
+        /// <summary>
+        /// The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+        /// `ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+        /// </summary>
+        [JsonProperty("ClearSubtitles")]
+        public long? ClearSubtitles{ get; set; }
+
+        /// <summary>
         /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -122,6 +141,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "AddTags.", this.AddTags);
             this.SetParamArraySimple(map, prefix + "DeleteTags.", this.DeleteTags);
             this.SetParamSimple(map, prefix + "ClearTags", this.ClearTags);
+            this.SetParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
+            this.SetParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
+            this.SetParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
