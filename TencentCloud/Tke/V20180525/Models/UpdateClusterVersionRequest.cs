@@ -37,6 +37,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public string DstVersion{ get; set; }
 
         /// <summary>
+        /// Cluster custom parameter
+        /// </summary>
+        [JsonProperty("ExtraArgs")]
+        public ClusterExtraArgs ExtraArgs{ get; set; }
+
+        /// <summary>
         /// The maximum tolerable number of unavailable pods
         /// </summary>
         [JsonProperty("MaxNotReadyPercent")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "DstVersion", this.DstVersion);
+            this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
             this.SetParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
             this.SetParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
         }

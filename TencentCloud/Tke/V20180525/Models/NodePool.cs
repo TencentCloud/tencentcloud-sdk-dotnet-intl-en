@@ -126,6 +126,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
+        /// <summary>
+        /// This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("DesiredPodNum")]
+        public long? DesiredPodNum{ get; set; }
+
+        /// <summary>
+        /// Custom script
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("UserScript")]
+        public string UserScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +162,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "DesiredPodNum", this.DesiredPodNum);
+            this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
         }
     }
 }

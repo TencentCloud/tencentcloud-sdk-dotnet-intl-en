@@ -363,6 +363,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("NfvInfo")]
         public string NfvInfo{ get; set; }
 
+        /// <summary>
+        /// Health check logset ID of CLB CLS
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HealthLogSetId")]
+        public string HealthLogSetId{ get; set; }
+
+        /// <summary>
+        /// Health check log topic ID of CLB CLS
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HealthLogTopicId")]
+        public string HealthLogTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -418,6 +432,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
+            this.SetParamSimple(map, prefix + "HealthLogSetId", this.HealthLogSetId);
+            this.SetParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
         }
     }
 }

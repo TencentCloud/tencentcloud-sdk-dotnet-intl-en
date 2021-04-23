@@ -31,6 +31,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LogsetId{ get; set; }
 
         /// <summary>
+        /// Health check logset ID
+        /// </summary>
+        [JsonProperty("HealthLogsetId")]
+        public string HealthLogsetId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
+            this.SetParamSimple(map, prefix + "HealthLogsetId", this.HealthLogsetId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

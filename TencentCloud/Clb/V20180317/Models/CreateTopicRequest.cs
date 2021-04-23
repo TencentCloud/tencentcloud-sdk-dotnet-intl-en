@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("PartitionCount")]
         public ulong? PartitionCount{ get; set; }
 
+        /// <summary>
+        /// Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+        /// </summary>
+        [JsonProperty("TopicType")]
+        public string TopicType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
+            this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
         }
     }
 }

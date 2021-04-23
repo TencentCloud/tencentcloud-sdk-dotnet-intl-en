@@ -42,6 +42,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
+        /// <summary>
+        /// Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+        /// </summary>
+        [JsonProperty("LogType")]
+        public string LogType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "LogType", this.LogType);
         }
     }
 }
