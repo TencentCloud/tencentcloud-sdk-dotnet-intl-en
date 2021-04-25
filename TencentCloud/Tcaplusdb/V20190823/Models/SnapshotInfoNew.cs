@@ -21,14 +21,32 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMachineRequest : AbstractModel
+    public class SnapshotInfoNew : AbstractModel
     {
         
         /// <summary>
-        /// If this parameter is not `0`, machines supporting IPv6 will be queried.
+        /// The ID of the table group where the table resides
         /// </summary>
-        [JsonProperty("Ipv6Enable")]
-        public long? Ipv6Enable{ get; set; }
+        [JsonProperty("TableGroupId")]
+        public string TableGroupId{ get; set; }
+
+        /// <summary>
+        /// Table name
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
+        /// <summary>
+        /// Snapshot name
+        /// </summary>
+        [JsonProperty("SnapshotName")]
+        public string SnapshotName{ get; set; }
+
+        /// <summary>
+        /// Snapshot expiration time
+        /// </summary>
+        [JsonProperty("SnapshotDeadTime")]
+        public string SnapshotDeadTime{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+            this.SetParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
+            this.SetParamSimple(map, prefix + "SnapshotDeadTime", this.SnapshotDeadTime);
         }
     }
 }

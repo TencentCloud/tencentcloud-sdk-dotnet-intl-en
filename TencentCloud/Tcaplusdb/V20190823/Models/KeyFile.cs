@@ -21,14 +21,32 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMachineRequest : AbstractModel
+    public class KeyFile : AbstractModel
     {
         
         /// <summary>
-        /// If this parameter is not `0`, machines supporting IPv6 will be queried.
+        /// Key file name
         /// </summary>
-        [JsonProperty("Ipv6Enable")]
-        public long? Ipv6Enable{ get; set; }
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
+        /// <summary>
+        /// Key file extension
+        /// </summary>
+        [JsonProperty("FileExtType")]
+        public string FileExtType{ get; set; }
+
+        /// <summary>
+        /// Key file content
+        /// </summary>
+        [JsonProperty("FileContent")]
+        public string FileContent{ get; set; }
+
+        /// <summary>
+        /// Key file size
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public long? FileSize{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "FileExtType", this.FileExtType);
+            this.SetParamSimple(map, prefix + "FileContent", this.FileContent);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
         }
     }
 }

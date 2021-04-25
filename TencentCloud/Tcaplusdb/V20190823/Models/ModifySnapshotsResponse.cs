@@ -21,14 +21,26 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMachineRequest : AbstractModel
+    public class ModifySnapshotsResponse : AbstractModel
     {
         
         /// <summary>
-        /// If this parameter is not `0`, machines supporting IPv6 will be queried.
+        /// The number of snapshots modified in batches
         /// </summary>
-        [JsonProperty("Ipv6Enable")]
-        public long? Ipv6Enable{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// The result list of snapshots modified in batches
+        /// </summary>
+        [JsonProperty("TableResults")]
+        public SnapshotResult[] TableResults{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "TableResults.", this.TableResults);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

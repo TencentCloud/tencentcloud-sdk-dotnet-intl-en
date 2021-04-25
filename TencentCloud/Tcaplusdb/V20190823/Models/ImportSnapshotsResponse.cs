@@ -21,14 +21,21 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMachineRequest : AbstractModel
+    public class ImportSnapshotsResponse : AbstractModel
     {
         
         /// <summary>
-        /// If this parameter is not `0`, machines supporting IPv6 will be queried.
+        /// `TaskId` is in the format of `AppInstanceId-taskId`, used to identify tasks of different clusters.
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Ipv6Enable")]
-        public long? Ipv6Enable{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

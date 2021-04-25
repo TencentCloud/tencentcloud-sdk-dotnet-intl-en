@@ -21,14 +21,20 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMachineRequest : AbstractModel
+    public class ModifySnapshotsRequest : AbstractModel
     {
         
         /// <summary>
-        /// If this parameter is not `0`, machines supporting IPv6 will be queried.
+        /// The ID of the cluster where the table resides
         /// </summary>
-        [JsonProperty("Ipv6Enable")]
-        public long? Ipv6Enable{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Snapshot list
+        /// </summary>
+        [JsonProperty("SelectedTables")]
+        public SnapshotInfoNew[] SelectedTables{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
         }
     }
 }
