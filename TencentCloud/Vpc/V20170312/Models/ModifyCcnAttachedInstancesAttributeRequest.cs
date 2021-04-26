@@ -21,32 +21,20 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSubnetsRequest : AbstractModel
+    public class ModifyCcnAttachedInstancesAttributeRequest : AbstractModel
     {
         
         /// <summary>
-        /// The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
+        /// CCN instance ID in the format of `ccn-f49l6u0z`
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
 
         /// <summary>
-        /// The subnet object list.
+        /// List of associated network instances
         /// </summary>
-        [JsonProperty("Subnets")]
-        public SubnetInput[] Subnets{ get; set; }
-
-        /// <summary>
-        /// Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
-
-        /// <summary>
-        /// ID of the CDC instance to which the subnets will be created
-        /// </summary>
-        [JsonProperty("CdcId")]
-        public string CdcId{ get; set; }
+        [JsonProperty("Instances")]
+        public CcnInstance[] Instances{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamArrayObj(map, prefix + "Subnets.", this.Subnets);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
+            this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
         }
     }
 }

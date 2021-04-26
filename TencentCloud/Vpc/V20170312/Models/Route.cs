@@ -31,16 +31,17 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
-        /// Type of the next hop. Currently supported types are:
-        /// CVM: CVM of the public gateway type;
+        /// Type of the next hop. Valid values:
+        /// CVM: public gateway CVM;
         /// VPN: VPN gateway;
         /// DIRECTCONNECT: direct connect gateway;
         /// PEERCONNECTION: peering connection;
-        /// SSLVPN: sslvpn gateway;
-        /// NAT: NAT gateway; 
+        /// SSLVPN: SSL VPN gateway;
+        /// NAT: NAT Gateway; 
         /// NORMAL_CVM: normal CVM;
         /// EIP: public IP address of the CVM;
-        /// CCN: Cloud Connect Network.
+        /// CCN: Cloud Connect Network;
+        /// LOCAL_GATEWAY: local gateway.
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }

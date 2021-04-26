@@ -133,6 +133,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
+        /// <summary>
+        /// ID of the CDC instance associated with the ENI
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +163,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "EniType", this.EniType);
             this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

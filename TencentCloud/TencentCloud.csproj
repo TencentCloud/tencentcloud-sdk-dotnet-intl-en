@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.176</VersionPrefix>
+    <VersionPrefix>3.0.177</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -26,12 +26,12 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -6030,6 +6030,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyAssistantCidrResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyBandwidthPackageAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyBandwidthPackageAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyCcnAttachedInstancesAttributeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyCcnAttachedInstancesAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCcnAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCcnAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeRequest.cs" />

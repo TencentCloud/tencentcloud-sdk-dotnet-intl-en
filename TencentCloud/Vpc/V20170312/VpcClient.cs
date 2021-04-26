@@ -6567,6 +6567,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify CCN-associated instance attributes. Currently, only the `description` can be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnAttachedInstancesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCcnAttachedInstancesAttributeResponse"/></returns>
+        public async Task<ModifyCcnAttachedInstancesAttributeResponse> ModifyCcnAttachedInstancesAttribute(ModifyCcnAttachedInstancesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCcnAttachedInstancesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify CCN-associated instance attributes. Currently, only the `description` can be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnAttachedInstancesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCcnAttachedInstancesAttributeResponse"/></returns>
+        public ModifyCcnAttachedInstancesAttributeResponse ModifyCcnAttachedInstancesAttributeSync(ModifyCcnAttachedInstancesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCcnAttachedInstancesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyCcnAttribute) is used to modify CCN attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyCcnAttributeRequest"/></param>

@@ -27,12 +27,12 @@
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
   
   <ItemGroup>
@@ -401,6 +401,8 @@
     <Compile Include="V20170312\Models\ModifyAssistantCidrResponse.cs" />
     <Compile Include="V20170312\Models\ModifyBandwidthPackageAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyBandwidthPackageAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyCcnAttachedInstancesAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyCcnAttachedInstancesAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCcnAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyCcnAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeRequest.cs" />

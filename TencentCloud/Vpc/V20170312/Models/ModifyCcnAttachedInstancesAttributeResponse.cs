@@ -21,21 +21,9 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReplaceRoutesResponse : AbstractModel
+    public class ModifyCcnAttachedInstancesAttributeResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Old routing policy
-        /// </summary>
-        [JsonProperty("OldRouteSet")]
-        public Route[] OldRouteSet{ get; set; }
-
-        /// <summary>
-        /// New routing policy
-        /// </summary>
-        [JsonProperty("NewRouteSet")]
-        public Route[] NewRouteSet{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -48,8 +36,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "OldRouteSet.", this.OldRouteSet);
-            this.SetParamArrayObj(map, prefix + "NewRouteSet.", this.NewRouteSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
