@@ -21,14 +21,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DestroyDBInstanceRequest : AbstractModel
+    public class IsolateDBInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// The ID of the instance to be eliminated
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("DBInstanceId")]
-        public string DBInstanceId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

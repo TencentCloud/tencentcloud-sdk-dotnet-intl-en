@@ -973,7 +973,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to terminate a pay-as-you-go instance by specifying the `DBInstanceId` parameter.
+        /// This API is used to eliminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an eliminated instance will be deleted and cannot be recovered.
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to terminate a pay-as-you-go instance by specifying the `DBInstanceId` parameter.
+        /// This API is used to eliminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an eliminated instance will be deleted and cannot be recovered.
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -1004,6 +1004,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DestroyDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove one or more instances from isolation.
+        /// </summary>
+        /// <param name="req"><see cref="DisIsolateDBInstancesRequest"/></param>
+        /// <returns><see cref="DisIsolateDBInstancesResponse"/></returns>
+        public async Task<DisIsolateDBInstancesResponse> DisIsolateDBInstances(DisIsolateDBInstancesRequest req)
+        {
+             JsonResponseModel<DisIsolateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisIsolateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisIsolateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove one or more instances from isolation.
+        /// </summary>
+        /// <param name="req"><see cref="DisIsolateDBInstancesRequest"/></param>
+        /// <returns><see cref="DisIsolateDBInstancesResponse"/></returns>
+        public DisIsolateDBInstancesResponse DisIsolateDBInstancesSync(DisIsolateDBInstancesRequest req)
+        {
+             JsonResponseModel<DisIsolateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisIsolateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisIsolateDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1164,6 +1204,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "InquiryPriceUpgradeDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate one or more instances.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDBInstancesRequest"/></param>
+        /// <returns><see cref="IsolateDBInstancesResponse"/></returns>
+        public async Task<IsolateDBInstancesResponse> IsolateDBInstances(IsolateDBInstancesRequest req)
+        {
+             JsonResponseModel<IsolateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate one or more instances.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDBInstancesRequest"/></param>
+        /// <returns><see cref="IsolateDBInstancesResponse"/></returns>
+        public IsolateDBInstancesResponse IsolateDBInstancesSync(IsolateDBInstancesRequest req)
+        {
+             JsonResponseModel<IsolateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
