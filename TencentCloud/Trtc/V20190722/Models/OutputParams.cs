@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
+        /// Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
         /// </summary>
         [JsonProperty("RecordAudioOnly")]
         public ulong? RecordAudioOnly{ get; set; }

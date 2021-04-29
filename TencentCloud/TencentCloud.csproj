@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.179</VersionPrefix>
+    <VersionPrefix>3.0.180</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5127,8 +5127,12 @@
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreatePictureRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreatePictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DeletePictureRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DeletePictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
@@ -5137,6 +5141,8 @@
     <Compile Include="Trtc\V20190722\Models\DescribeDetailEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribePictureRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribePictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityRequest.cs" />
@@ -5155,7 +5161,10 @@
     <Compile Include="Trtc\V20190722\Models\EventList.cs" />
     <Compile Include="Trtc\V20190722\Models\EventMessage.cs" />
     <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\ModifyPictureRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\ModifyPictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\PictureInfo.cs" />
     <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="Trtc\V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
@@ -5761,6 +5770,8 @@
     <Compile Include="Vpc\V20170312\Models\CreateFlowLogResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateHaVipRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateHaVipResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateLocalGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayRequest.cs" />
@@ -5791,6 +5802,12 @@
     <Compile Include="Vpc\V20170312\Models\CreateSubnetResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateSubnetsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateSubnetsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointServiceRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointServiceResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpcRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpcResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnConnectionRequest.cs" />
@@ -5822,6 +5839,8 @@
     <Compile Include="Vpc\V20170312\Models\DeleteFlowLogResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteHaVipRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteHaVipResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteLocalGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayRequest.cs" />
@@ -5848,6 +5867,12 @@
     <Compile Include="Vpc\V20170312\Models\DeleteServiceTemplateResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteSubnetRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteSubnetResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointServiceRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointServiceResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpcRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpcResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpnConnectionRequest.cs" />
@@ -5908,6 +5933,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationDatabaseUrlResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationInfosRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationInfosResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeLocalGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesRequest.cs" />
@@ -5942,6 +5969,12 @@
     <Compile Include="Vpc\V20170312\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeTaskResultResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointServiceRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointServiceResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcInstancesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcInstancesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcIpv6AddressesRequest.cs" />
@@ -5981,12 +6014,18 @@
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkAclSubnetsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateVpcEndPointSecurityGroupsRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateVpcEndPointSecurityGroupsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DownloadCustomerGatewayConfigurationRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableCcnRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableGatewayFlowMonitorRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableGatewayFlowMonitorResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\EnableVpcEndPointConnectRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\EnableVpcEndPointConnectResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\EndPoint.cs" />
+    <Compile Include="Vpc\V20170312\Models\EndPointService.cs" />
     <Compile Include="Vpc\V20170312\Models\Filter.cs" />
     <Compile Include="Vpc\V20170312\Models\FilterObject.cs" />
     <Compile Include="Vpc\V20170312\Models\FlowLog.cs" />
@@ -6016,6 +6055,7 @@
     <Compile Include="Vpc\V20170312\Models\Ipv6Address.cs" />
     <Compile Include="Vpc\V20170312\Models\Ipv6SubnetCidrBlock.cs" />
     <Compile Include="Vpc\V20170312\Models\ItemPrice.cs" />
+    <Compile Include="Vpc\V20170312\Models\LocalGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\MigrateNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\MigrateNetworkInterfaceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\MigratePrivateIpAddressRequest.cs" />
@@ -6052,6 +6092,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyHaVipAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyIpv6AddressesAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyIpv6AddressesAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyLocalGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
@@ -6082,6 +6124,12 @@
     <Compile Include="Vpc\V20170312\Models\ModifySubnetAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpcAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpcAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointAttributeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointServiceAttributeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointServiceAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnConnectionAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnConnectionAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayAttributeRequest.cs" />
@@ -6161,6 +6209,7 @@
     <Compile Include="Vpc\V20170312\Models\UnassignPrivateIpAddressesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\UnassignPrivateIpAddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\Vpc.cs" />
+    <Compile Include="Vpc\V20170312\Models\VpcEndPointServiceUser.cs" />
     <Compile Include="Vpc\V20170312\Models\VpcIpv6Address.cs" />
     <Compile Include="Vpc\V20170312\Models\VpcPrivateIpAddress.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnConnection.cs" />

@@ -32,16 +32,17 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// Each request can have up to 10 `Filters` and 5 `Filter.Values`. `AddressIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
-        /// <li> `address-id` - String - Required: No - (Filter condition) Filter by the unique EIP ID in the format of `eip-11112222`.</li>
-        /// <li> `address-name` - String - Required: No - (Filter condition) Filter by EIP name. Fuzzy filtering is not supported. </li>
-        /// <li> `address-ip` - String - Required: No - (Filter condition) Filter by the IP address of EIP.</li>
-        /// <li> address-status - String - Required: no - (Filter condition) Filter by the EIP state. Possible EIP states are: 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.</li>
-        /// <li> `instance-id` - String - Required: No - (Filter condition) Filter by the ID of the instance bound to the EIP in the format of `ins-11112222`.</li>
-        /// <li> `private-ip-address` - String - Required: No - (Filter condition) Filter by the private IP bound to the EIP.</li>
-        /// <li> `network-interface-id` - String - Required: No - (Filter condition) Filter by the ID of the ENI bound to the EIP in the format of `eni-11112222`.</li>
-        /// <li> `is-arrears` - String - Required: No - (Filter condition) Filter by whether the EIP is overdue. (TRUE: The EIP is overdue | FALSE: The EIP billing status is normal)</li>
-        /// <li> `address-type` - String - Required: No - (Filter condition) Filter by the IP type. Optional values: 'EIP'，'AnycastEIP'，'HighQualityEIP'</li>
-        /// <li> `address-isp` - String - Required: No - (Filter condition) Filter by the ISP type. Optional values: 'BGP'，'CMCC'，'CUCC', 'CTCC'</li>
+        /// <li> address-id - String - Required: No - (Filter condition) Filter by the unique EIP ID in the format of `eip-11112222`.</li>
+        /// <li> address-name - String - Required: No - (Filter condition) Filter by the EIP name. Fuzzy filtering is not supported.</li>
+        /// <li> address-ip - String - Required: No - (Filter condition) Filter by EIP.</li>
+        /// <li> address-status - String - Required: No - (Filter condition) Filter by the EIP state. Valid values: `CREATING`, `BINDING`, `BIND`, `UNBINDING`, `UNBIND`, `OFFLINING`, and `BIND_ENI`.</li>
+        /// <li> instance-id - String - Required: No - (Filter condition) Filter by the ID of the instance bound to the EIP in the format of `ins-11112222`.</li>
+        /// <li> private-ip-address - String - Required: No - (Filter condition) Filter by the private IP address bound to the EIP.</li>
+        /// <li> network-interface-id - String - Required: No - (Filter condition) Filter by the ID of the ENI bound to the EIP in the format of `eni-11112222`.</li>
+        /// <li> is-arrears - String - Required: No - (Filter condition) Whether the EIP is overdue (TRUE: the EIP is overdue | FALSE: the billing status of the EIP is normal).</li>
+        /// <li> address-type - String - Required: No - (Filter condition) Filter by the IP type. Valid values: `EIP`, `AnycastEIP`, and `HighQualityEIP`.</li>
+        /// <li> address-isp - String - Required: No - (Filter condition) Filter by the ISP type. Valid values: `BGP`, `CMCC`, `CUCC`, and `CTCC`.</li>
+        /// <li> dedicated-cluster-id - String - Required: No - (Filter condition) Filter by the unique CDC ID in the format of `cluster-11112222`.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

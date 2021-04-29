@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterInstanceId{ get; set; }
 
         /// <summary>
-        /// Status
+        /// The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
         /// </summary>
         [JsonProperty("LifeState")]
         public string LifeState{ get; set; }
