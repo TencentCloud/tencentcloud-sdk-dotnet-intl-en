@@ -373,7 +373,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query information of the Redis instance list.
+        /// (Disused) Queries the list of instances
         /// </summary>
         /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query information of the Redis instance list.
+        /// (Disused) Queries the list of instances
         /// </summary>
         /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
@@ -2364,6 +2364,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "UpgradeInstanceVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade an instance to support multi-AZ deployment.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>
+        /// <returns><see cref="UpgradeVersionToMultiAvailabilityZonesResponse"/></returns>
+        public async Task<UpgradeVersionToMultiAvailabilityZonesResponse> UpgradeVersionToMultiAvailabilityZones(UpgradeVersionToMultiAvailabilityZonesRequest req)
+        {
+             JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeVersionToMultiAvailabilityZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade an instance to support multi-AZ deployment.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>
+        /// <returns><see cref="UpgradeVersionToMultiAvailabilityZonesResponse"/></returns>
+        public UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZonesSync(UpgradeVersionToMultiAvailabilityZonesRequest req)
+        {
+             JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeVersionToMultiAvailabilityZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
