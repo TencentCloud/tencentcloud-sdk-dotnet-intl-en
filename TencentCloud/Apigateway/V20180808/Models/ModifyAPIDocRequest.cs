@@ -15,49 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Apigateway.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MediaSubtitleItem : AbstractModel
+    public class ModifyAPIDocRequest : AbstractModel
     {
         
         /// <summary>
-        /// Unique subtitle ID
+        /// API document ID
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("ApiDocId")]
+        public string ApiDocId{ get; set; }
 
         /// <summary>
-        /// Subtitle name
+        /// API document name
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ApiDocName")]
+        public string ApiDocName{ get; set; }
 
         /// <summary>
-        /// Subtitle language. Common values:
-        /// <li>`cn`: Chinese</li>
-        /// <li>`ja`: Japanese</li>
-        /// <li>`en-US`: English</li>
-        /// For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+        /// Service name
         /// </summary>
-        [JsonProperty("Language")]
-        public string Language{ get; set; }
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Subtitle format. Valid value:
-        /// <li>vtt</li>
+        /// Environment name
         /// </summary>
-        [JsonProperty("Format")]
-        public string Format{ get; set; }
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
 
         /// <summary>
-        /// Subtitle URL
+        /// List of APIs for which to generate documents
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("ApiIds")]
+        public string[] ApiIds{ get; set; }
 
 
         /// <summary>
@@ -65,11 +60,11 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Language", this.Language);
-            this.SetParamSimple(map, prefix + "Format", this.Format);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "ApiDocId", this.ApiDocId);
+            this.SetParamSimple(map, prefix + "ApiDocName", this.ApiDocName);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
         }
     }
 }

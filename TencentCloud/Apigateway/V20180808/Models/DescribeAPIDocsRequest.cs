@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cbs.V20170312.Models
+namespace TencentCloud.Apigateway.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetachDisksRequest : AbstractModel
+    public class DescribeAPIDocsRequest : AbstractModel
     {
         
         /// <summary>
-        /// IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+        /// Number of results to be returned. Default value: 20. Maximum value: 100.
         /// </summary>
-        [JsonProperty("DiskIds")]
-        public string[] DiskIds{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+        /// Offset. Default value: 0.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

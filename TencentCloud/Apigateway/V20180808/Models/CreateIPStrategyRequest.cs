@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string StrategyType{ get; set; }
 
         /// <summary>
-        /// Policy details.
+        /// Policy details. Multiple IPs are separated with \n.
         /// </summary>
         [JsonProperty("StrategyData")]
         public string StrategyData{ get; set; }

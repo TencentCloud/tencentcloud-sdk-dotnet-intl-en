@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB instance ID.
+        /// CLB instance ID
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
@@ -123,13 +123,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Security group ID, such as sg-m1cc9123
+        /// Security group ID, e.g., `sg-m1cc****`.
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
 
         /// <summary>
-        /// Master AZ, such as "100001" (Guangzhou Zone 1)
+        /// Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }

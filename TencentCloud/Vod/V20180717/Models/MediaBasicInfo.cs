@@ -109,8 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaSourceData SourceInfo{ get; set; }
 
         /// <summary>
-        /// Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
@@ -145,6 +144,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StorageClass")]
+        public string StorageClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +173,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StorageClass", this.StorageClass);
         }
     }
 }

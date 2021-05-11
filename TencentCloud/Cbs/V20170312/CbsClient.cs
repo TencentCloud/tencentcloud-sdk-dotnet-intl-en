@@ -101,10 +101,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (AttachDisks) is used to mount cloud disks.
+        /// This API is used to mount one or more cloud disks.
         ///  
-        /// * Batch operations are supported. Multiple cloud disks can be mounted to a CVM. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
-        /// * This API is an asynchronous API. If the request for mounting the cloud disk successfully returns results, the operation of mounting cloud disk has been initiated at the background. You can use the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) to query the cloud disk status. If the status changes from "ATTACHING" to "ATTACHED", the cloud disk is mounted.
+        /// * Batch operation is supported. You can mount multiple cloud disks to one CVM in a single request. If any of these cloud disks cannot be mounted, the operation fails and a specific error code returns.
+        /// * This is an async API. A successful request indicates that the mounting is initiated. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. If the status changes from `ATTACHING` to `ATTACHED`, the mounting is successful.
         /// </summary>
         /// <param name="req"><see cref="AttachDisksRequest"/></param>
         /// <returns><see cref="AttachDisksResponse"/></returns>
@@ -124,10 +124,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (AttachDisks) is used to mount cloud disks.
+        /// This API is used to mount one or more cloud disks.
         ///  
-        /// * Batch operations are supported. Multiple cloud disks can be mounted to a CVM. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
-        /// * This API is an asynchronous API. If the request for mounting the cloud disk successfully returns results, the operation of mounting cloud disk has been initiated at the background. You can use the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) to query the cloud disk status. If the status changes from "ATTACHING" to "ATTACHED", the cloud disk is mounted.
+        /// * Batch operation is supported. You can mount multiple cloud disks to one CVM in a single request. If any of these cloud disks cannot be mounted, the operation fails and a specific error code returns.
+        /// * This is an async API. A successful request indicates that the mounting is initiated. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. If the status changes from `ATTACHING` to `ATTACHED`, the mounting is successful.
         /// </summary>
         /// <param name="req"><see cref="AttachDisksRequest"/></param>
         /// <returns><see cref="AttachDisksResponse"/></returns>
@@ -811,10 +811,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (DetachDisks) is used to unmount cloud disks.
+        /// This API is used to unmount one or more cloud disks.
         /// 
-        /// * Batch operations are supported. Multiple cloud disks mounted to the same CVM can be unmounted in batch. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
-        /// * This API is an asynchronous API. When the request successfully returns results, the cloud disk is not unmounted from the CVM immediately. You can use the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) to query the cloud disk status. If the status changes from "ATTACHED" to "UNATTACHED", the cloud disk is unmounted.
+        /// * Batch operation is supported. You can unmount multiple cloud disks from the same CVM in a single request. If any of these cloud disks cannot be unmounted, the operation fails and a specific error code returns.
+        /// * This is an async API. A successful request does not mean that the cloud disks have been unmounted successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. When the status changes from `ATTACHED` to `UNATTACHED`, the unmounting is successful.
         /// </summary>
         /// <param name="req"><see cref="DetachDisksRequest"/></param>
         /// <returns><see cref="DetachDisksResponse"/></returns>
@@ -834,10 +834,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (DetachDisks) is used to unmount cloud disks.
+        /// This API is used to unmount one or more cloud disks.
         /// 
-        /// * Batch operations are supported. Multiple cloud disks mounted to the same CVM can be unmounted in batch. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
-        /// * This API is an asynchronous API. When the request successfully returns results, the cloud disk is not unmounted from the CVM immediately. You can use the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) to query the cloud disk status. If the status changes from "ATTACHED" to "UNATTACHED", the cloud disk is unmounted.
+        /// * Batch operation is supported. You can unmount multiple cloud disks from the same CVM in a single request. If any of these cloud disks cannot be unmounted, the operation fails and a specific error code returns.
+        /// * This is an async API. A successful request does not mean that the cloud disks have been unmounted successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. When the status changes from `ATTACHED` to `UNATTACHED`, the unmounting is successful.
         /// </summary>
         /// <param name="req"><see cref="DetachDisksRequest"/></param>
         /// <returns><see cref="DetachDisksResponse"/></returns>
@@ -888,6 +888,46 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "GetSnapOverview");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSnapOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price for adjusting the cloud disk’s extra performance.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDiskExtraPerformanceRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDiskExtraPerformanceResponse"/></returns>
+        public async Task<InquirePriceModifyDiskExtraPerformanceResponse> InquirePriceModifyDiskExtraPerformance(InquirePriceModifyDiskExtraPerformanceRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceModifyDiskExtraPerformance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price for adjusting the cloud disk’s extra performance.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDiskExtraPerformanceRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDiskExtraPerformanceResponse"/></returns>
+        public InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformanceSync(InquirePriceModifyDiskExtraPerformanceRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceModifyDiskExtraPerformance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1062,6 +1102,50 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDiskAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to adjust the cloud disk’s extra performance.
+        /// 
+        /// * Currently, only Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD) support extra performance adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiskExtraPerformanceRequest"/></param>
+        /// <returns><see cref="ModifyDiskExtraPerformanceResponse"/></returns>
+        public async Task<ModifyDiskExtraPerformanceResponse> ModifyDiskExtraPerformance(ModifyDiskExtraPerformanceRequest req)
+        {
+             JsonResponseModel<ModifyDiskExtraPerformanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDiskExtraPerformance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskExtraPerformanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to adjust the cloud disk’s extra performance.
+        /// 
+        /// * Currently, only Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD) support extra performance adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiskExtraPerformanceRequest"/></param>
+        /// <returns><see cref="ModifyDiskExtraPerformanceResponse"/></returns>
+        public ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformanceSync(ModifyDiskExtraPerformanceRequest req)
+        {
+             JsonResponseModel<ModifyDiskExtraPerformanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDiskExtraPerformance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskExtraPerformanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

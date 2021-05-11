@@ -36,6 +36,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Quota")]
         public long? Quota{ get; set; }
 
+        /// <summary>
+        /// Maximum quota value
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxQuota")]
+        public long? MaxQuota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         {
             this.SetParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
             this.SetParamSimple(map, prefix + "Quota", this.Quota);
+            this.SetParamSimple(map, prefix + "MaxQuota", this.MaxQuota);
         }
     }
 }

@@ -228,7 +228,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? SnapshotSize{ get; set; }
 
         /// <summary>
-        /// Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+        /// Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
         /// </summary>
         [JsonProperty("BackupDisk")]
         public bool? BackupDisk{ get; set; }

@@ -91,6 +91,8 @@
     <Compile Include="V20170312\Models\GetSnapOverviewRequest.cs" />
     <Compile Include="V20170312\Models\GetSnapOverviewResponse.cs" />
     <Compile Include="V20170312\Models\Image.cs" />
+    <Compile Include="V20170312\Models\InquirePriceModifyDiskExtraPerformanceRequest.cs" />
+    <Compile Include="V20170312\Models\InquirePriceModifyDiskExtraPerformanceResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateDisksRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateDisksResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResizeDiskRequest.cs" />
@@ -99,6 +101,8 @@
     <Compile Include="V20170312\Models\ModifyAutoSnapshotPolicyAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDiskAttributesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDiskAttributesResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDiskExtraPerformanceRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDiskExtraPerformanceResponse.cs" />
     <Compile Include="V20170312\Models\ModifySnapshotAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifySnapshotAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifySnapshotsSharePermissionRequest.cs" />

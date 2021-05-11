@@ -216,6 +216,34 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
+        /// <summary>
+        /// Whether the connection is an edge zone.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("LocalZone")]
+        public bool? LocalZone{ get; set; }
+
+        /// <summary>
+        /// Number of dedicated tunnels with disabled VLAN in the connection
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VlanZeroDirectConnectTunnelCount")]
+        public ulong? VlanZeroDirectConnectTunnelCount{ get; set; }
+
+        /// <summary>
+        /// Number of dedicated tunnels with enabled VLAN in the connection
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OtherVlanDirectConnectTunnelCount")]
+        public ulong? OtherVlanDirectConnectTunnelCount{ get; set; }
+
+        /// <summary>
+        /// Minimum bandwidth of the connection
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MinBandwidth")]
+        public ulong? MinBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -250,6 +278,10 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "ChargeState", this.ChargeState);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
+            this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
+            this.SetParamSimple(map, prefix + "VlanZeroDirectConnectTunnelCount", this.VlanZeroDirectConnectTunnelCount);
+            this.SetParamSimple(map, prefix + "OtherVlanDirectConnectTunnelCount", this.OtherVlanDirectConnectTunnelCount);
+            this.SetParamSimple(map, prefix + "MinBandwidth", this.MinBandwidth);
         }
     }
 }

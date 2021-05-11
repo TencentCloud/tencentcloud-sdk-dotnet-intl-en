@@ -37,6 +37,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
+        /// <summary>
+        /// List of subtitle IDs (maximum: 10)
+        /// </summary>
+        [JsonProperty("SubtitleSet")]
+        public string[] SubtitleSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+            this.SetParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
         }
     }
 }

@@ -21,20 +21,20 @@ namespace TencentCloud.Cbs.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetachDisksRequest : AbstractModel
+    public class InquirePriceModifyDiskExtraPerformanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+        /// Cloud disk ID, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
         /// </summary>
-        [JsonProperty("DiskIds")]
-        public string[] DiskIds{ get; set; }
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
         /// <summary>
-        /// Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+        /// The extra throughput to purchase, in MB/s
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

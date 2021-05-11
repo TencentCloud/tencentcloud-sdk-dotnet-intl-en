@@ -15,33 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterEndpointStatusResponse : AbstractModel
+    public class RefererAuthPolicy : AbstractModel
     {
         
         /// <summary>
-        /// Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+        /// [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) status. Valid values:
+        /// <li>Enabled</li>
+        /// <li>Disabled</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Details of the error occurred while opening the access port
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Referer authentication method. Valid values:
+        /// <li>`Black`: blocklist</li>
+        /// <li>`White`: allowlist</li>
         /// </summary>
-        [JsonProperty("ErrorMsg")]
-        public string ErrorMsg{ get; set; }
+        [JsonProperty("AuthType")]
+        public string AuthType{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// List for referer authentication
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Referers")]
+        public string[] Referers{ get; set; }
+
+        /// <summary>
+        /// Whether to allow requests with empty referer to access this domain name. Valid values:
+        /// <li>Yes</li>
+        /// <li>No</li>
+        /// </summary>
+        [JsonProperty("BlankRefererAllowed")]
+        public string BlankRefererAllowed{ get; set; }
 
 
         /// <summary>
@@ -50,8 +61,9 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
+            this.SetParamArraySimple(map, prefix + "Referers.", this.Referers);
+            this.SetParamSimple(map, prefix + "BlankRefererAllowed", this.BlankRefererAllowed);
         }
     }
 }

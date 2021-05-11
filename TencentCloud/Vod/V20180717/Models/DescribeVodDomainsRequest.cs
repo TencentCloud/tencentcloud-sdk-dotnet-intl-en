@@ -15,32 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeServicesStatusRequest : AbstractModel
+    public class DescribeVodDomainsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Number of results to be returned. Default value: 20. Maximum value: 100.
+        /// List of domain names. If this parameter is left empty, all domain names will be listed.
+        /// <li>Maximum number of domain names listed: 20</li>
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
+
+        /// <summary>
+        /// Maximum results to return for pulling paginated queries. Default value: 20
         /// </summary>
         [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// Page number offset from the beginning of paginated queries. Default value: 0
         /// </summary>
         [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
+        /// VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +55,10 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

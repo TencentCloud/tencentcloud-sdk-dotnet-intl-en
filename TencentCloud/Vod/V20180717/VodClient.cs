@@ -2643,6 +2643,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to query the list of VOD domain names.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVodDomainsRequest"/></param>
+        /// <returns><see cref="DescribeVodDomainsResponse"/></returns>
+        public async Task<DescribeVodDomainsResponse> DescribeVodDomains(DescribeVodDomainsRequest req)
+        {
+             JsonResponseModel<DescribeVodDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVodDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVodDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of VOD domain names.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVodDomainsRequest"/></param>
+        /// <returns><see cref="DescribeVodDomainsResponse"/></returns>
+        public DescribeVodDomainsResponse DescribeVodDomainsSync(DescribeVodDomainsRequest req)
+        {
+             JsonResponseModel<DescribeVodDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVodDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVodDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query custom watermarking templates and supports paged queries by filters.
         /// </summary>
         /// <param name="req"><see cref="DescribeWatermarkTemplatesRequest"/></param>

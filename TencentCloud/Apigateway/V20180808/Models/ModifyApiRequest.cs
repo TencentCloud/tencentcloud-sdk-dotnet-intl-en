@@ -67,7 +67,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ApiType{ get; set; }
 
         /// <summary>
-        /// API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+        /// API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }

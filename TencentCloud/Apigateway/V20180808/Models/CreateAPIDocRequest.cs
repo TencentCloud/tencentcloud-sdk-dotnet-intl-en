@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cbs.V20170312.Models
+namespace TencentCloud.Apigateway.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetachDisksRequest : AbstractModel
+    public class CreateAPIDocRequest : AbstractModel
     {
         
         /// <summary>
-        /// IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+        /// API document name
         /// </summary>
-        [JsonProperty("DiskIds")]
-        public string[] DiskIds{ get; set; }
+        [JsonProperty("ApiDocName")]
+        public string ApiDocName{ get; set; }
 
         /// <summary>
-        /// Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+        /// Service name
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
+
+        /// <summary>
+        /// Environment name
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
+        /// <summary>
+        /// List of APIs for which to generate documents
+        /// </summary>
+        [JsonProperty("ApiIds")]
+        public string[] ApiIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ApiDocName", this.ApiDocName);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
         }
     }
 }

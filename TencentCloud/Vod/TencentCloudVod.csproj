@@ -47,6 +47,7 @@
     <Compile Include="V20180717\VodClient.cs" />
     <Compile Include="V20180717\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20180717\Models\AIRecognitionTemplateItem.cs" />
+    <Compile Include="V20180717\Models\AccelerateAreaInfo.cs" />
     <Compile Include="V20180717\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="V20180717\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="V20180717\Models\AdaptiveDynamicStreamingTemplate.cs" />
@@ -298,10 +299,14 @@
     <Compile Include="V20180717\Models\DescribeTasksResponse.cs" />
     <Compile Include="V20180717\Models\DescribeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeTranscodeTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeVodDomainsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeVodDomainsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeWatermarkTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeWatermarkTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeWordSamplesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeWordSamplesResponse.cs" />
+    <Compile Include="V20180717\Models\DomainDetailInfo.cs" />
+    <Compile Include="V20180717\Models\DomainHTTPSConfig.cs" />
     <Compile Include="V20180717\Models\DrmStreamingsInfo.cs" />
     <Compile Include="V20180717\Models\DrmStreamingsInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\EditMediaFileInfo.cs" />
@@ -382,6 +387,7 @@
     <Compile Include="V20180717\Models\MediaSnapshotByTimeOffsetItem.cs" />
     <Compile Include="V20180717\Models\MediaSnapshotByTimePicInfoItem.cs" />
     <Compile Include="V20180717\Models\MediaSourceData.cs" />
+    <Compile Include="V20180717\Models\MediaSubtitleInfo.cs" />
     <Compile Include="V20180717\Models\MediaSubtitleInput.cs" />
     <Compile Include="V20180717\Models\MediaSubtitleItem.cs" />
     <Compile Include="V20180717\Models\MediaTrack.cs" />
@@ -474,6 +480,7 @@
     <Compile Include="V20180717\Models\PullUploadTask.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheResponse.cs" />
+    <Compile Include="V20180717\Models\RefererAuthPolicy.cs" />
     <Compile Include="V20180717\Models\ResetProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ResolutionNameInfo.cs" />
@@ -525,6 +532,7 @@
     <Compile Include="V20180717\Models\TranscodeTaskInput.cs" />
     <Compile Include="V20180717\Models\TranscodeTemplate.cs" />
     <Compile Include="V20180717\Models\TransitionOpertion.cs" />
+    <Compile Include="V20180717\Models\UrlSignatureAuthPolicy.cs" />
     <Compile Include="V20180717\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\UserDefineConfigureInfo.cs" />
