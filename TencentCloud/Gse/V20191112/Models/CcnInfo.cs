@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// CCN account
+        /// Account of the CCN instance owner
         /// </summary>
         [JsonProperty("AccountId")]
         public string AccountId{ get; set; }

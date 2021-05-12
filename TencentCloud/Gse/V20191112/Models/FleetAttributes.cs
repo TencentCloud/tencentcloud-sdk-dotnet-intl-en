@@ -155,11 +155,17 @@ namespace TencentCloud.Gse.V20191112.Models
         public DiskInfo SystemDiskInfo{ get; set; }
 
         /// <summary>
-        /// CCN information
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// CCN instance information
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("RelatedCcnInfos")]
         public RelatedCcnInfo[] RelatedCcnInfos{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InternetMaxBandwidthOut")]
+        public long? InternetMaxBandwidthOut{ get; set; }
 
 
         /// <summary>
@@ -187,6 +193,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
             this.SetParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
             this.SetParamArrayObj(map, prefix + "RelatedCcnInfos.", this.RelatedCcnInfos);
+            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         }
     }
 }

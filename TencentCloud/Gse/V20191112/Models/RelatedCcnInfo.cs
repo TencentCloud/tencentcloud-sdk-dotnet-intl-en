@@ -25,19 +25,19 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// CCN account
+        /// Account of the CCN instance owner
         /// </summary>
         [JsonProperty("AccountId")]
         public string AccountId{ get; set; }
 
         /// <summary>
-        /// CCN ID
+        /// CCN instance ID
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// Status of associated CCN
+        /// Status of associated CCN instance
         /// </summary>
         [JsonProperty("AttachType")]
         public string AttachType{ get; set; }

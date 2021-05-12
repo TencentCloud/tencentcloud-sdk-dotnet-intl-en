@@ -103,7 +103,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string SelectedScalingType{ get; set; }
 
         /// <summary>
-        /// Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
+        /// Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
         /// </summary>
         [JsonProperty("SelectedCcnType")]
         public string SelectedCcnType{ get; set; }
@@ -133,10 +133,16 @@ namespace TencentCloud.Gse.V20191112.Models
         public string SelectedTimerType{ get; set; }
 
         /// <summary>
-        /// CCN information, including the corresponding CCN account and ID.
+        /// Information of the CCN instance, including the owner account and the instance ID.
         /// </summary>
         [JsonProperty("CcnInfos")]
         public CcnInfo[] CcnInfos{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InternetMaxBandwidthOut")]
+        public long? InternetMaxBandwidthOut{ get; set; }
 
 
         /// <summary>
@@ -163,6 +169,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
             this.SetParamSimple(map, prefix + "SelectedTimerType", this.SelectedTimerType);
             this.SetParamArrayObj(map, prefix + "CcnInfos.", this.CcnInfos);
+            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         }
     }
 }
