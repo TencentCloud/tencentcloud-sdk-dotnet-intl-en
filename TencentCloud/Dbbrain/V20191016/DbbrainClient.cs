@@ -133,6 +133,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// This API is used to create a URL for a health report.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBDiagReportUrlRequest"/></param>
+        /// <returns><see cref="CreateDBDiagReportUrlResponse"/></returns>
+        public async Task<CreateDBDiagReportUrlResponse> CreateDBDiagReportUrl(CreateDBDiagReportUrlRequest req)
+        {
+             JsonResponseModel<CreateDBDiagReportUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDBDiagReportUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBDiagReportUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a URL for a health report.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBDiagReportUrlRequest"/></param>
+        /// <returns><see cref="CreateDBDiagReportUrlResponse"/></returns>
+        public CreateDBDiagReportUrlResponse CreateDBDiagReportUrlSync(CreateDBDiagReportUrlRequest req)
+        {
+             JsonResponseModel<CreateDBDiagReportUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDBDiagReportUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBDiagReportUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email sending configuration of regularly generated health report). Select Guangzhou for Region, regardless of the region where the instance belongs.
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
@@ -364,6 +404,46 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBDiagHistory");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of health report generation tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagReportTasksRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagReportTasksResponse"/></returns>
+        public async Task<DescribeDBDiagReportTasksResponse> DescribeDBDiagReportTasks(DescribeDBDiagReportTasksRequest req)
+        {
+             JsonResponseModel<DescribeDBDiagReportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBDiagReportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagReportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of health report generation tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagReportTasksRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagReportTasksResponse"/></returns>
+        public DescribeDBDiagReportTasksResponse DescribeDBDiagReportTasksSync(DescribeDBDiagReportTasksRequest req)
+        {
+             JsonResponseModel<DescribeDBDiagReportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBDiagReportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagReportTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -613,6 +693,126 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// This API is used to obtain the statistical distribution chart of slow log source addresses.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogUserHostStatsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogUserHostStatsResponse"/></returns>
+        public async Task<DescribeSlowLogUserHostStatsResponse> DescribeSlowLogUserHostStats(DescribeSlowLogUserHostStatsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogUserHostStatsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogUserHostStats");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogUserHostStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the statistical distribution chart of slow log source addresses.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogUserHostStatsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogUserHostStatsResponse"/></returns>
+        public DescribeSlowLogUserHostStatsResponse DescribeSlowLogUserHostStatsSync(DescribeSlowLogUserHostStatsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogUserHostStatsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogUserHostStats");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogUserHostStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the daily space data of top databases consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceSchemaTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceSchemaTimeSeriesResponse"/></returns>
+        public async Task<DescribeTopSpaceSchemaTimeSeriesResponse> DescribeTopSpaceSchemaTimeSeries(DescribeTopSpaceSchemaTimeSeriesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopSpaceSchemaTimeSeries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the daily space data of top databases consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceSchemaTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceSchemaTimeSeriesResponse"/></returns>
+        public DescribeTopSpaceSchemaTimeSeriesResponse DescribeTopSpaceSchemaTimeSeriesSync(DescribeTopSpaceSchemaTimeSeriesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopSpaceSchemaTimeSeries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query real-time space statistics of top databases. The return results are sorted by size by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceSchemasRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceSchemasResponse"/></returns>
+        public async Task<DescribeTopSpaceSchemasResponse> DescribeTopSpaceSchemas(DescribeTopSpaceSchemasRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceSchemasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopSpaceSchemas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceSchemasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query real-time space statistics of top databases. The return results are sorted by size by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceSchemasRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceSchemasResponse"/></returns>
+        public DescribeTopSpaceSchemasResponse DescribeTopSpaceSchemasSync(DescribeTopSpaceSchemasRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceSchemasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopSpaceSchemas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceSchemasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the daily space data of top tables consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopSpaceTableTimeSeriesRequest"/></param>
@@ -684,6 +884,46 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTopSpaceTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain SQL statement optimization suggestions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSqlAdviceRequest"/></param>
+        /// <returns><see cref="DescribeUserSqlAdviceResponse"/></returns>
+        public async Task<DescribeUserSqlAdviceResponse> DescribeUserSqlAdvice(DescribeUserSqlAdviceRequest req)
+        {
+             JsonResponseModel<DescribeUserSqlAdviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserSqlAdvice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserSqlAdviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain SQL statement optimization suggestions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSqlAdviceRequest"/></param>
+        /// <returns><see cref="DescribeUserSqlAdviceResponse"/></returns>
+        public DescribeUserSqlAdviceResponse DescribeUserSqlAdviceSync(DescribeUserSqlAdviceRequest req)
+        {
+             JsonResponseModel<DescribeUserSqlAdviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserSqlAdvice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserSqlAdviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

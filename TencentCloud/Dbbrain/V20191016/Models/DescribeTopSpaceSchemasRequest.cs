@@ -21,7 +21,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTopSpaceTablesRequest : AbstractModel
+    public class DescribeTopSpaceSchemasRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,13 +31,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of returned top tables. Maximum value: 100. Default value: 20.
+        /// Number of returned top databases. Maximum value: 100. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`.
+        /// Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }

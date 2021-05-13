@@ -21,7 +21,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTopSpaceTablesRequest : AbstractModel
+    public class DescribeSlowLogUserHostStatsRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,19 +31,19 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of returned top tables. Maximum value: 100. Default value: 20.
+        /// Start time of the time range in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`.
+        /// End time of the time range in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14.
         /// </summary>
-        [JsonProperty("SortBy")]
-        public string SortBy{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
@@ -55,8 +55,8 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }

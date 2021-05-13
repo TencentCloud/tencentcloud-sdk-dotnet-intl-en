@@ -49,6 +49,21 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
+        /// <summary>
+        /// Valid values:
+        /// Mainland: query data for Mainland China,
+        /// Oversea: query data for regions outside Mainland China,
+        /// Default: query data for all regions.
+        /// </summary>
+        [JsonProperty("MainlandOrOversea")]
+        public string MainlandOrOversea{ get; set; }
+
+        /// <summary>
+        /// Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +74,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
         }
     }
 }

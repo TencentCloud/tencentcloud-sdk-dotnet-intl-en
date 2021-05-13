@@ -175,6 +175,8 @@
     <Compile Include="V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180525\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
+    <Compile Include="V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
     <Compile Include="V20180525\Models\Tag.cs" />
     <Compile Include="V20180525\Models\TagSpecification.cs" />
     <Compile Include="V20180525\Models\Taint.cs" />

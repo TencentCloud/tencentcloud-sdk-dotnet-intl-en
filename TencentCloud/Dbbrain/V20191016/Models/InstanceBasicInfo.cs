@@ -21,7 +21,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTopSpaceTablesRequest : AbstractModel
+    public class InstanceBasicInfo : AbstractModel
     {
         
         /// <summary>
@@ -31,22 +31,34 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of returned top tables. Maximum value: 100. Default value: 20.
+        /// Instance name.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`.
+        /// Private IP of the instance.
         /// </summary>
-        [JsonProperty("SortBy")]
-        public string SortBy{ get; set; }
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
 
         /// <summary>
-        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+        /// Private network port of the instance.
+        /// </summary>
+        [JsonProperty("Vport")]
+        public long? Vport{ get; set; }
+
+        /// <summary>
+        /// Instance product.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
+
+        /// <summary>
+        /// Instance engine version.
+        /// </summary>
+        [JsonProperty("EngineVersion")]
+        public string EngineVersion{ get; set; }
 
 
         /// <summary>
@@ -55,9 +67,11 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         }
     }
 }

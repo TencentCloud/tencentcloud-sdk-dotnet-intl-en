@@ -1813,6 +1813,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to enable removal protection for the nodes automatically created by the scaling group in a node pool.
+        /// </summary>
+        /// <param name="req"><see cref="SetNodePoolNodeProtectionRequest"/></param>
+        /// <returns><see cref="SetNodePoolNodeProtectionResponse"/></returns>
+        public async Task<SetNodePoolNodeProtectionResponse> SetNodePoolNodeProtection(SetNodePoolNodeProtectionRequest req)
+        {
+             JsonResponseModel<SetNodePoolNodeProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetNodePoolNodeProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetNodePoolNodeProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable removal protection for the nodes automatically created by the scaling group in a node pool.
+        /// </summary>
+        /// <param name="req"><see cref="SetNodePoolNodeProtectionRequest"/></param>
+        /// <returns><see cref="SetNodePoolNodeProtectionResponse"/></returns>
+        public SetNodePoolNodeProtectionResponse SetNodePoolNodeProtectionSync(SetNodePoolNodeProtectionRequest req)
+        {
+             JsonResponseModel<SetNodePoolNodeProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetNodePoolNodeProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetNodePoolNodeProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to upgrade the master component of the cluster to the specified version.
         /// </summary>
         /// <param name="req"><see cref="UpdateClusterVersionRequest"/></param>

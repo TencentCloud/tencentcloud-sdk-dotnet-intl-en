@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ApiDocStatus{ get; set; }
 
         /// <summary>
-        /// Number of API documents
+        /// Number of APIs with API documents
         /// </summary>
         [JsonProperty("ApiCount")]
         public long? ApiCount{ get; set; }

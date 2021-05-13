@@ -21,7 +21,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTopSpaceTablesRequest : AbstractModel
+    public class DescribeTopSpaceSchemaTimeSeriesRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,16 +31,28 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of returned top tables. Maximum value: 100. Default value: 20.
+        /// Number of returned top databases. Maximum value: 100. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`.
+        /// Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
+
+        /// <summary>
+        /// Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
+        /// </summary>
+        [JsonProperty("StartDate")]
+        public string StartDate{ get; set; }
+
+        /// <summary>
+        /// End date. It can be as early as 29 days before the current date, and defaults to the current date.
+        /// </summary>
+        [JsonProperty("EndDate")]
+        public string EndDate{ get; set; }
 
         /// <summary>
         /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
@@ -57,6 +69,8 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
+            this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
+            this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
             this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }

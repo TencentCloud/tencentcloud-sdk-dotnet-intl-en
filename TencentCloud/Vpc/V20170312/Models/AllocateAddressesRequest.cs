@@ -68,8 +68,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         public AddressChargePrepaid AddressChargePrepaid{ get; set; }
 
         /// <summary>
-        /// The EIP type. Default: EIP.
-        /// <ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+        /// The EIP type. Default: `EIP`.
+        /// <ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+        /// <ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
@@ -102,6 +103,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
+        /// <summary>
+        /// EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+        /// </summary>
+        [JsonProperty("AddressName")]
+        public string AddressName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+            this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
         }
     }
 }

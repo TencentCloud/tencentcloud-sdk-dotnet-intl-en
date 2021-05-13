@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAllStreamPlayInfoListRequest : AbstractModel
+    public class DescribeSlowLogUserHostStatsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
+        /// Total number of source addresses.
         /// </summary>
-        [JsonProperty("QueryTime")]
-        public string QueryTime{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Playback domain name list. If this parameter is left empty, full data will be queried.
+        /// Detailed list of the proportion of slow logs from each source address.
         /// </summary>
-        [JsonProperty("PlayDomains")]
-        public string[] PlayDomains{ get; set; }
+        [JsonProperty("Items")]
+        public SlowLogHost[] Items{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "QueryTime", this.QueryTime);
-            this.SetParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

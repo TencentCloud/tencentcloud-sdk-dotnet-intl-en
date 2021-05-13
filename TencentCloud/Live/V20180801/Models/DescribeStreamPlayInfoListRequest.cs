@@ -60,7 +60,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }

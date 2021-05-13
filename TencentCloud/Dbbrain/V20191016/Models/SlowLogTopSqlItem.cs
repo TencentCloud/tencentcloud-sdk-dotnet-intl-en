@@ -144,6 +144,30 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("RowsSentRatio")]
         public float? RowsSentRatio{ get; set; }
 
+        /// <summary>
+        /// Average execution time
+        /// </summary>
+        [JsonProperty("QueryTimeAvg")]
+        public float? QueryTimeAvg{ get; set; }
+
+        /// <summary>
+        /// Average number of rows returned
+        /// </summary>
+        [JsonProperty("RowsSentAvg")]
+        public float? RowsSentAvg{ get; set; }
+
+        /// <summary>
+        /// Average lock wait time
+        /// </summary>
+        [JsonProperty("LockTimeAvg")]
+        public float? LockTimeAvg{ get; set; }
+
+        /// <summary>
+        /// Average number of rows scanned
+        /// </summary>
+        [JsonProperty("RowsExaminedAvg")]
+        public float? RowsExaminedAvg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +194,10 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "LockTimeRatio", this.LockTimeRatio);
             this.SetParamSimple(map, prefix + "RowsExaminedRatio", this.RowsExaminedRatio);
             this.SetParamSimple(map, prefix + "RowsSentRatio", this.RowsSentRatio);
+            this.SetParamSimple(map, prefix + "QueryTimeAvg", this.QueryTimeAvg);
+            this.SetParamSimple(map, prefix + "RowsSentAvg", this.RowsSentAvg);
+            this.SetParamSimple(map, prefix + "LockTimeAvg", this.LockTimeAvg);
+            this.SetParamSimple(map, prefix + "RowsExaminedAvg", this.RowsExaminedAvg);
         }
     }
 }

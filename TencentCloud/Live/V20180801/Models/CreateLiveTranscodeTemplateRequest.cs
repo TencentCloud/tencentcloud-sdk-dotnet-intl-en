@@ -69,18 +69,18 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// Whether to keep the video. 0: no; 1: yes. Default value: 1.
+        /// </summary>
+        [JsonProperty("NeedVideo")]
+        public long? NeedVideo{ get; set; }
+
+        /// <summary>
         /// Width. Default value: 0.
         /// Value range: 0-3000
         /// It must be a multiple of 2. The original width is 0.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
-
-        /// <summary>
-        /// Whether to keep the video. 0: no; 1: yes. Default value: 1.
-        /// </summary>
-        [JsonProperty("NeedVideo")]
-        public long? NeedVideo{ get; set; }
 
         /// <summary>
         /// Whether to keep the audio. 0: no; 1: yes. Default value: 1.
@@ -90,8 +90,8 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Height. Default value: 0.
-        /// Value range: 0-3000
-        /// It must be a multiple of 2. The original height is 0.
+        /// Value range: [0,3000]
+        /// The value must be a multiple of 2, and 0 is the original height.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
@@ -181,8 +181,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
             this.SetParamSimple(map, prefix + "Vcodec", this.Vcodec);
             this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "NeedVideo", this.NeedVideo);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "NeedAudio", this.NeedAudio);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);

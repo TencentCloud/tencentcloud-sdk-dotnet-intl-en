@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of returned top tables. Default value: 20. Maximum value: 20.
+        /// Number of returned top tables. Maximum value: 100. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
