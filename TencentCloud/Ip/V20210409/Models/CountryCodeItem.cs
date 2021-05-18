@@ -25,13 +25,13 @@ namespace TencentCloud.Ip.V20210409.Models
     {
         
         /// <summary>
-        /// Country English Name
+        /// Country/region name in English
         /// </summary>
         [JsonProperty("EnName")]
         public string EnName{ get; set; }
 
         /// <summary>
-        /// Country Chinese Name
+        /// Country/region name in Chinese
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ip.V20210409.Models
         public string IOS3{ get; set; }
 
         /// <summary>
-        /// Phone Code
+        /// Phone code
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

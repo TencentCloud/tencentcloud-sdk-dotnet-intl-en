@@ -25,7 +25,7 @@ namespace TencentCloud.Ip.V20210409.Models
     {
         
         /// <summary>
-        /// List of Country Codes
+        /// List of country/region codes
         /// </summary>
         [JsonProperty("Data")]
         public CountryCodeItem[] Data{ get; set; }

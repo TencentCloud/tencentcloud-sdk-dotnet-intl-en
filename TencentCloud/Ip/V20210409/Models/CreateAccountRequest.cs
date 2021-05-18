@@ -25,53 +25,53 @@ namespace TencentCloud.Ip.V20210409.Models
     {
         
         /// <summary>
-        /// The account type identification of the newly created customer. The value of this interface is: business
+        /// Account type of a new customer. Valid value: `business`.
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
 
         /// <summary>
-        /// Registered email address. The caller needs to ensure the validity and correctness of the email address.
-        /// The email format must be met. For example: account@qq.com
+        /// Registered email address, which should be valid and correct.
+        /// For example, account@qq.com.
         /// </summary>
         [JsonProperty("Mail")]
         public string Mail{ get; set; }
 
         /// <summary>
-        /// Account password.
-        /// Length limit: [8,20].
-        /// It must also contain numbers, letters and special symbols (!@#$%^&*() and other non-spaces)
+        /// Account password
+        /// Length limit: 8-20 characters
+        /// A password must contain numbers, letters, and special symbols [!@#$%^&*()]. Spaces are not allowed.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Reconfirm the password. It must be the same as the Password value
+        /// Confirm the password. It must be the same as the `Password` field.
         /// </summary>
         [JsonProperty("ConfirmPassword")]
         public string ConfirmPassword{ get; set; }
 
         /// <summary>
-        /// Customer's mobile phone number. The caller is required to ensure the validity and correctness of the mobile phone number.
-        /// Length limit: [1,32]. Global mobile phone numbers are supported. For example, 18888888888
+        /// Customer mobile number, which should be valid and correct.
+        /// A global mobile number within 1-32 digits is allowed, such as 18888888888.
         /// </summary>
         [JsonProperty("PhoneNum")]
         public string PhoneNum{ get; set; }
 
         /// <summary>
-        /// The country code of the customer. For the value, please refer to the GetCountryCodes interface GetCountryCodes. Such as 86
+        /// Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
         /// </summary>
         [JsonProperty("CountryCode")]
         public string CountryCode{ get; set; }
 
         /// <summary>
-        /// Customer's IOS2 standard country code. Refer to the GetCountryCodes interface for obtaining country codes. It needs to correspond to the CountryCode value. Such as CN
+        /// ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Extension field, default is empty
+        /// Expanded field, which is left empty by default.
         /// </summary>
         [JsonProperty("Extended")]
         public string Extended{ get; set; }

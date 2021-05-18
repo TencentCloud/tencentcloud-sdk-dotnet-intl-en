@@ -25,7 +25,7 @@ namespace TencentCloud.Ip.V20210409.Models
     {
         
         /// <summary>
-        /// The uin of the account
+        /// Account UIN
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
