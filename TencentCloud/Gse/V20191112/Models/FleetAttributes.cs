@@ -162,7 +162,8 @@ namespace TencentCloud.Gse.V20191112.Models
         public RelatedCcnInfo[] RelatedCcnInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
