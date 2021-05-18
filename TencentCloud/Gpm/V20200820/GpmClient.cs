@@ -732,5 +732,45 @@ namespace TencentCloud.Gpm.V20200820
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to send a match backfill request, for which a MatchTicket will be searched to start a new match.
+        /// </summary>
+        /// <param name="req"><see cref="StartMatchingBackfillRequest"/></param>
+        /// <returns><see cref="StartMatchingBackfillResponse"/></returns>
+        public async Task<StartMatchingBackfillResponse> StartMatchingBackfill(StartMatchingBackfillRequest req)
+        {
+             JsonResponseModel<StartMatchingBackfillResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartMatchingBackfill");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMatchingBackfillResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to send a match backfill request, for which a MatchTicket will be searched to start a new match.
+        /// </summary>
+        /// <param name="req"><see cref="StartMatchingBackfillRequest"/></param>
+        /// <returns><see cref="StartMatchingBackfillResponse"/></returns>
+        public StartMatchingBackfillResponse StartMatchingBackfillSync(StartMatchingBackfillRequest req)
+        {
+             JsonResponseModel<StartMatchingBackfillResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartMatchingBackfill");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMatchingBackfillResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -89,6 +89,8 @@
     <Compile Include="V20200820\Models\ReportTrendData.cs" />
     <Compile Include="V20200820\Models\RuleBriefInfo.cs" />
     <Compile Include="V20200820\Models\RuleInfo.cs" />
+    <Compile Include="V20200820\Models\StartMatchingBackfillRequest.cs" />
+    <Compile Include="V20200820\Models\StartMatchingBackfillResponse.cs" />
     <Compile Include="V20200820\Models\StartMatchingRequest.cs" />
     <Compile Include="V20200820\Models\StartMatchingResponse.cs" />
     <Compile Include="V20200820\Models\StringKV.cs" />

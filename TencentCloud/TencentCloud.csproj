@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.191</VersionPrefix>
+    <VersionPrefix>3.0.192</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2132,6 +2132,7 @@
     <Compile Include="Dcdb\V20180411\DcdbClient.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\BriefNodeInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloseDBExtranetAccessRequest.cs" />
@@ -2164,6 +2165,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstanceNodeInfoRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstanceNodeInfoResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstancesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstancesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBShardsRequest.cs" />
@@ -2729,6 +2732,8 @@
     <Compile Include="Gpm\V20200820\Models\ReportTrendData.cs" />
     <Compile Include="Gpm\V20200820\Models\RuleBriefInfo.cs" />
     <Compile Include="Gpm\V20200820\Models\RuleInfo.cs" />
+    <Compile Include="Gpm\V20200820\Models\StartMatchingBackfillRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\StartMatchingBackfillResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\StartMatchingRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\StartMatchingResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\StringKV.cs" />
@@ -2871,6 +2876,12 @@
     <Compile Include="Iai\V20200303\Models\VerifyFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyPersonRequest.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyPersonResponse.cs" />
+    <Compile Include="Ip\V20210409\IpClient.cs" />
+    <Compile Include="Ip\V20210409\Models\CountryCodeItem.cs" />
+    <Compile Include="Ip\V20210409\Models\CreateAccountRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\CreateAccountResponse.cs" />
+    <Compile Include="Ip\V20210409\Models\GetCountryCodesRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\GetCountryCodesResponse.cs" />
     <Compile Include="Kms\V20190118\KmsClient.cs" />
     <Compile Include="Kms\V20190118\Models\AlgorithmInfo.cs" />
     <Compile Include="Kms\V20190118\Models\ArchiveKeyRequest.cs" />
@@ -3276,6 +3287,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
@@ -3302,6 +3315,7 @@
     <Compile Include="Mariadb\V20170312\Models\ModifyLogFileRetentionPeriodRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyLogFileRetentionPeriodResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\MonitorData.cs" />
+    <Compile Include="Mariadb\V20170312\Models\NodeInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\OpenDBExtranetAccessResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ParamConstraint.cs" />

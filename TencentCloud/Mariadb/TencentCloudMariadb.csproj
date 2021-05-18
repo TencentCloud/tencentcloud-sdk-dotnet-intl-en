@@ -91,6 +91,8 @@
     <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20170312\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
     <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
@@ -117,6 +119,7 @@
     <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodRequest.cs" />
     <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20170312\Models\MonitorData.cs" />
+    <Compile Include="V20170312\Models\NodeInfo.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\ParamConstraint.cs" />

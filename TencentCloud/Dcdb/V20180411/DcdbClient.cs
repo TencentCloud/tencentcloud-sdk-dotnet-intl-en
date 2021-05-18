@@ -537,6 +537,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to query the information of instance nodes.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstanceNodeInfoResponse"/></returns>
+        public async Task<DescribeDCDBInstanceNodeInfoResponse> DescribeDCDBInstanceNodeInfo(DescribeDCDBInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDCDBInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of instance nodes.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstanceNodeInfoResponse"/></returns>
+        public DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfoSync(DescribeDCDBInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDCDBInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of TencentDB instances. It supports filtering instances by project ID, instance ID, private network address, and instance name.
         /// If no filter is specified, 10 instances will be returned by default. Up to 100 instances can be returned for a single request.
         /// </summary>

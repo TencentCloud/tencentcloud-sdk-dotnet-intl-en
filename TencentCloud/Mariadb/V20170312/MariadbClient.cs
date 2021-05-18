@@ -859,6 +859,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the information of primary and replica nodes of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
+        public async Task<DescribeInstanceNodeInfoResponse> DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of primary and replica nodes of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
+        public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfoSync(DescribeInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to view the configured number of days for retention of database backup logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
