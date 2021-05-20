@@ -213,7 +213,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
-        /// This API is used to create one or more table snapshots at specific points in time in the past.
+        /// This API is used to create one or more table snapshots at a specified past time point.
         /// </summary>
         /// <param name="req"><see cref="CreateSnapshotsRequest"/></param>
         /// <returns><see cref="CreateSnapshotsResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
-        /// This API is used to create one or more table snapshots at specific points in time in the past.
+        /// This API is used to create one or more table snapshots at a specified past time point.
         /// </summary>
         /// <param name="req"><see cref="CreateSnapshotsRequest"/></param>
         /// <returns><see cref="CreateSnapshotsResponse"/></returns>

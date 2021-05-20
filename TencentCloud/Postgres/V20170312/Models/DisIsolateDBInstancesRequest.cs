@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
+        /// The valid period (in months) of the monthly-subscribed instance when removing it from isolation
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

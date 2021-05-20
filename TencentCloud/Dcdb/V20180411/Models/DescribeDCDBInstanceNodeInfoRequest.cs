@@ -31,7 +31,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
+        /// The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
