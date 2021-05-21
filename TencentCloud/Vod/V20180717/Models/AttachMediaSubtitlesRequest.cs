@@ -50,6 +50,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SubtitleIds")]
         public string[] SubtitleIds{ get; set; }
 
+        /// <summary>
+        /// VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
             this.SetParamArraySimple(map, prefix + "SubtitleIds.", this.SubtitleIds);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

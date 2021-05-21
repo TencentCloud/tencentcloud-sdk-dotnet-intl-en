@@ -184,6 +184,14 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
+        /// <summary>
+        /// Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+        /// <br><li>ORIGINAL: uses the configured cloud disk type
+        /// <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+        /// </summary>
+        [JsonProperty("DiskTypePolicy")]
+        public string DiskTypePolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -216,6 +224,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
             this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
         }
     }
 }

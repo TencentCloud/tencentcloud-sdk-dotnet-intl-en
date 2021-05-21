@@ -31,6 +31,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// Video ID
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
+        /// <summary>
         /// Task type. Valid values:
         /// <li>Procedure: video processing task;</li>
         /// <li>EditMedia: video editing task</li>
@@ -82,6 +94,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);

@@ -145,7 +145,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage class of a media file:
+        /// <li>STANDARD</li>
+        /// <li>STANDARD_IA</li>
         /// </summary>
         [JsonProperty("StorageClass")]
         public string StorageClass{ get; set; }

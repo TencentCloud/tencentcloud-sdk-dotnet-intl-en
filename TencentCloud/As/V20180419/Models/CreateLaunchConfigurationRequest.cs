@@ -142,7 +142,8 @@ namespace TencentCloud.As.V20180419.Models
         public HostNameSettings HostNameSettings{ get; set; }
 
         /// <summary>
-        /// Settings of CVM instance names.
+        /// Settings of CVM instance names
+        /// If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
         /// </summary>
         [JsonProperty("InstanceNameSettings")]
         public InstanceNameSettings InstanceNameSettings{ get; set; }

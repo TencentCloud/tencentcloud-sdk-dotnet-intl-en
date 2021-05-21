@@ -37,6 +37,26 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
+        /// Filter: task creation time.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public TimeRange CreateTime{ get; set; }
+
+        /// <summary>
+        /// Filter: task end time.
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public TimeRange FinishTime{ get; set; }
+
+        /// <summary>
+        /// Sort field. Valid values:
+        /// <li> CreateTime: task creation time</li>
+        /// <li>FinishTime: task end time</li>
+        /// </summary>
+        [JsonProperty("Sort")]
+        public SortBy Sort{ get; set; }
+
+        /// <summary>
         /// Number of entries to be returned. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
@@ -62,6 +82,9 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
+            this.SetParamObj(map, prefix + "FinishTime.", this.FinishTime);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);

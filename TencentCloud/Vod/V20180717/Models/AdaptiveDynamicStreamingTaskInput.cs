@@ -38,7 +38,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// List of subtitle IDs (maximum: 10)
+        /// List of subtitle IDs (maximum: 16)
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public string[] SubtitleSet{ get; set; }
