@@ -49,6 +49,7 @@
     <Compile Include="V20190819\Models\AclResponse.cs" />
     <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
+    <Compile Include="V20190819\Models\ClusterInfo.cs" />
     <Compile Include="V20190819\Models\Config.cs" />
     <Compile Include="V20190819\Models\ConsumerGroup.cs" />
     <Compile Include="V20190819\Models\ConsumerGroupResponse.cs" />
@@ -76,6 +77,8 @@
     <Compile Include="V20190819\Models\DescribeACLResponse.cs" />
     <Compile Include="V20190819\Models\DescribeAppInfoRequest.cs" />
     <Compile Include="V20190819\Models\DescribeAppInfoResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeCkafkaZoneRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeCkafkaZoneResponse.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupRequest.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupResponse.cs" />
     <Compile Include="V20190819\Models\DescribeGroup.cs" />
@@ -91,6 +94,8 @@
     <Compile Include="V20190819\Models\DescribeInstancesDetailResponse.cs" />
     <Compile Include="V20190819\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190819\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeRegionRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeRegionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeRouteRequest.cs" />
     <Compile Include="V20190819\Models\DescribeRouteResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicAttributesRequest.cs" />
@@ -130,6 +135,8 @@
     <Compile Include="V20190819\Models\OperateResponseData.cs" />
     <Compile Include="V20190819\Models\Partition.cs" />
     <Compile Include="V20190819\Models\PartitionOffset.cs" />
+    <Compile Include="V20190819\Models\Price.cs" />
+    <Compile Include="V20190819\Models\Region.cs" />
     <Compile Include="V20190819\Models\Route.cs" />
     <Compile Include="V20190819\Models\RouteResponse.cs" />
     <Compile Include="V20190819\Models\SubscribedInfo.cs" />
@@ -144,5 +151,7 @@
     <Compile Include="V20190819\Models\User.cs" />
     <Compile Include="V20190819\Models\UserResponse.cs" />
     <Compile Include="V20190819\Models\VipEntity.cs" />
+    <Compile Include="V20190819\Models\ZoneInfo.cs" />
+    <Compile Include="V20190819\Models\ZoneResponse.cs" />
   </ItemGroup>
 </Project>
