@@ -126,6 +126,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ModeType")]
         public string ModeType{ get; set; }
 
+        /// <summary>
+        /// Whether the direct connect gateway is for an edge zone.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LocalZone")]
+        public bool? LocalZone{ get; set; }
+
+        /// <summary>
+        /// Availability zone where the direct connect gateway resides.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +161,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
             this.SetParamArraySimple(map, prefix + "VXLANSupport.", this.VXLANSupport);
             this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
+            this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+        /// Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
         /// </summary>
         [JsonProperty("PropoEncryAlgorithm")]
         public string PropoEncryAlgorithm{ get; set; }
 
         /// <summary>
-        /// Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+        /// Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
         /// </summary>
         [JsonProperty("PropoAuthenAlgorithm")]
         public string PropoAuthenAlgorithm{ get; set; }

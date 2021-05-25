@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Vpc instance ID, e.g. vpc-f1xjkw1b.
+        /// VPC instance ID, such as `vpc-bq4bzxpj`.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Pcx{ get; set; }
 
         /// <summary>
-        /// The total number of used IP addresses.
+        /// Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
         /// </summary>
         [JsonProperty("Ip")]
         public ulong? Ip{ get; set; }
