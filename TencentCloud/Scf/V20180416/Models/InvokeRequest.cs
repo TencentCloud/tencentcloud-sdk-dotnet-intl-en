@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string InvocationType{ get; set; }
 
         /// <summary>
-        /// Version number of the triggered function
+        /// Version number or name of the triggered function
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string ClientContext{ get; set; }
 
         /// <summary>
-        /// If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+        /// If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

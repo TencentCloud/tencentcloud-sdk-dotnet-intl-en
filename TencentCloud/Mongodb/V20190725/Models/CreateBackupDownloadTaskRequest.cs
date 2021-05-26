@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePictureRequest : AbstractModel
+    public class CreateBackupDownloadTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Image ID. If it is left empty, the IDs of all images under the application are returned.
+        /// The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
         /// </summary>
-        [JsonProperty("PictureId")]
-        public ulong? PictureId{ get; set; }
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
 
         /// <summary>
-        /// Number of records per page. `10` is used if it is left empty.
+        /// The list of shards whose backups will be downloaded
         /// </summary>
-        [JsonProperty("PageSize")]
-        public ulong? PageSize{ get; set; }
-
-        /// <summary>
-        /// Page number. `1` is used if it is left empty.
-        /// </summary>
-        [JsonProperty("PageNo")]
-        public ulong? PageNo{ get; set; }
+        [JsonProperty("BackupSets")]
+        public ReplicaSetInfo[] BackupSets{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "PictureId", this.PictureId);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamArrayObj(map, prefix + "BackupSets.", this.BackupSets);
         }
     }
 }

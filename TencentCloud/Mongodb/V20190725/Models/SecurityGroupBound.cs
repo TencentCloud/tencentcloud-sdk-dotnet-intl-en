@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePictureRequest : AbstractModel
+    public class SecurityGroupBound : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// Policy. Valid values: `ACCEPT`, `DROP`
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
 
         /// <summary>
-        /// Image ID. If it is left empty, the IDs of all images under the application are returned.
+        /// IP range
         /// </summary>
-        [JsonProperty("PictureId")]
-        public ulong? PictureId{ get; set; }
+        [JsonProperty("CidrIp")]
+        public string CidrIp{ get; set; }
 
         /// <summary>
-        /// Number of records per page. `10` is used if it is left empty.
+        /// Port range
         /// </summary>
-        [JsonProperty("PageSize")]
-        public ulong? PageSize{ get; set; }
+        [JsonProperty("PortRange")]
+        public string PortRange{ get; set; }
 
         /// <summary>
-        /// Page number. `1` is used if it is left empty.
+        /// Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
         /// </summary>
-        [JsonProperty("PageNo")]
-        public ulong? PageNo{ get; set; }
+        [JsonProperty("IpProtocol")]
+        public string IpProtocol{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "PictureId", this.PictureId);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "CidrIp", this.CidrIp);
+            this.SetParamSimple(map, prefix + "PortRange", this.PortRange);
+            this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         }
     }
 }

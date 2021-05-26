@@ -49,7 +49,7 @@ namespace TencentCloud.As.V20180419.Models
         public string DefaultResult{ get; set; }
 
         /// <summary>
-        /// The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
+        /// The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
         /// </summary>
         [JsonProperty("HeartbeatTimeout")]
         public long? HeartbeatTimeout{ get; set; }

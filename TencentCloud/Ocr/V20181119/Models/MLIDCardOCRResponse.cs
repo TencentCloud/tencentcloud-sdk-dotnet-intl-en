@@ -78,13 +78,14 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
-        /// Certificate types
-        /// MyKad: Malaysian Identity Card
-        /// MyPR: Malaysia Permanent Resident Identity Card
-        /// MyTentera: Malaysian Armed Forces Identity Card
-        /// MyKAS: Malaysian Temporary Resident Identity Card
-        /// POLIS: Royal Malaysia Police Identity Card
-        /// IKAD: Malaysia Temporary Employment Visit Pass
+        /// Certificate type
+        /// MyKad  ID card
+        /// MyPR    Permanent resident card
+        /// MyTentera   Military identity card
+        /// MyKAS    Temporary ID card
+        /// POLIS  Police card
+        /// IKAD   Work permit
+        /// MyKid   Kid card
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

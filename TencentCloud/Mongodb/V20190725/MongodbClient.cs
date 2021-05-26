@@ -133,6 +133,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to create a backup download task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateBackupDownloadTaskResponse"/></returns>
+        public async Task<CreateBackupDownloadTaskResponse> CreateBackupDownloadTask(CreateBackupDownloadTaskRequest req)
+        {
+             JsonResponseModel<CreateBackupDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackupDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a backup download task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateBackupDownloadTaskResponse"/></returns>
+        public CreateBackupDownloadTaskResponse CreateBackupDownloadTaskSync(CreateBackupDownloadTaskRequest req)
+        {
+             JsonResponseModel<CreateBackupDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackupDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
@@ -253,7 +293,11 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to get the permission to download a backup file. The specific backup file information can be obtained through the DescribeDBBackups API.
+        /// 备份下载功能已调整，此接口即将下线
+        /// 
+        /// TencentDB will soon stop supporting this API, as the backup download feature has been modified.
+        /// 
+        /// This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupAccessRequest"/></param>
         /// <returns><see cref="DescribeBackupAccessResponse"/></returns>
@@ -273,7 +317,11 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to get the permission to download a backup file. The specific backup file information can be obtained through the DescribeDBBackups API.
+        /// 备份下载功能已调整，此接口即将下线
+        /// 
+        /// TencentDB will soon stop supporting this API, as the backup download feature has been modified.
+        /// 
+        /// This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupAccessRequest"/></param>
         /// <returns><see cref="DescribeBackupAccessResponse"/></returns>
@@ -284,6 +332,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query backup download task information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadTaskResponse"/></returns>
+        public async Task<DescribeBackupDownloadTaskResponse> DescribeBackupDownloadTask(DescribeBackupDownloadTaskRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query backup download task information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadTaskResponse"/></returns>
+        public DescribeBackupDownloadTaskResponse DescribeBackupDownloadTaskSync(DescribeBackupDownloadTaskRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -444,6 +532,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security groups associated with an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
+        public async Task<DescribeSecurityGroupResponse> DescribeSecurityGroup(DescribeSecurityGroupRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security groups associated with an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
+        public DescribeSecurityGroupResponse DescribeSecurityGroupSync(DescribeSecurityGroupRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

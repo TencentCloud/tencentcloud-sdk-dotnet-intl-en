@@ -185,7 +185,7 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+        /// Specifies how to select the cloud disk type. 
         /// <br><li>ORIGINAL: uses the configured cloud disk type
         /// <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
         /// </summary>

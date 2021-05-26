@@ -47,11 +47,15 @@
     <Compile Include="V20190725\MongodbClient.cs" />
     <Compile Include="V20190725\Models\AssignProjectRequest.cs" />
     <Compile Include="V20190725\Models\AssignProjectResponse.cs" />
+    <Compile Include="V20190725\Models\BackupDownloadTask.cs" />
+    <Compile Include="V20190725\Models\BackupDownloadTaskStatus.cs" />
     <Compile Include="V20190725\Models\BackupFile.cs" />
     <Compile Include="V20190725\Models\BackupInfo.cs" />
     <Compile Include="V20190725\Models\ClientConnection.cs" />
     <Compile Include="V20190725\Models\CreateBackupDBInstanceRequest.cs" />
     <Compile Include="V20190725\Models\CreateBackupDBInstanceResponse.cs" />
+    <Compile Include="V20190725\Models\CreateBackupDownloadTaskRequest.cs" />
+    <Compile Include="V20190725\Models\CreateBackupDownloadTaskResponse.cs" />
     <Compile Include="V20190725\Models\CreateDBInstanceHourRequest.cs" />
     <Compile Include="V20190725\Models\CreateDBInstanceHourResponse.cs" />
     <Compile Include="V20190725\Models\CreateDBInstanceRequest.cs" />
@@ -62,6 +66,8 @@
     <Compile Include="V20190725\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="V20190725\Models\DescribeBackupAccessRequest.cs" />
     <Compile Include="V20190725\Models\DescribeBackupAccessResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeBackupDownloadTaskRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeBackupDownloadTaskResponse.cs" />
     <Compile Include="V20190725\Models\DescribeClientConnectionsRequest.cs" />
     <Compile Include="V20190725\Models\DescribeClientConnectionsResponse.cs" />
     <Compile Include="V20190725\Models\DescribeDBBackupsRequest.cs" />
@@ -70,6 +76,8 @@
     <Compile Include="V20190725\Models\DescribeDBInstanceDealResponse.cs" />
     <Compile Include="V20190725\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="V20190725\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeSecurityGroupRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeSecurityGroupResponse.cs" />
     <Compile Include="V20190725\Models\DescribeSlowLogPatternsRequest.cs" />
     <Compile Include="V20190725\Models\DescribeSlowLogPatternsResponse.cs" />
     <Compile Include="V20190725\Models\DescribeSlowLogsRequest.cs" />
@@ -96,8 +104,11 @@
     <Compile Include="V20190725\Models\RenameInstanceResponse.cs" />
     <Compile Include="V20190725\Models\RenewDBInstancesRequest.cs" />
     <Compile Include="V20190725\Models\RenewDBInstancesResponse.cs" />
+    <Compile Include="V20190725\Models\ReplicaSetInfo.cs" />
     <Compile Include="V20190725\Models\ResetDBInstancePasswordRequest.cs" />
     <Compile Include="V20190725\Models\ResetDBInstancePasswordResponse.cs" />
+    <Compile Include="V20190725\Models\SecurityGroup.cs" />
+    <Compile Include="V20190725\Models\SecurityGroupBound.cs" />
     <Compile Include="V20190725\Models\ShardInfo.cs" />
     <Compile Include="V20190725\Models\SlowLogPattern.cs" />
     <Compile Include="V20190725\Models\SpecItem.cs" />

@@ -61,7 +61,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? LocationY{ get; set; }
 
         /// <summary>
-        /// Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
+        /// Output order of the image. `0` is used if it is left empty.
         /// </summary>
         [JsonProperty("ZOrder")]
         public ulong? ZOrder{ get; set; }

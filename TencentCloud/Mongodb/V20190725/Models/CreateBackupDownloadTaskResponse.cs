@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePictureRequest : AbstractModel
+    public class CreateBackupDownloadTaskResponse : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// Download task status
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("Tasks")]
+        public BackupDownloadTaskStatus[] Tasks{ get; set; }
 
         /// <summary>
-        /// Image ID. If it is left empty, the IDs of all images under the application are returned.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("PictureId")]
-        public ulong? PictureId{ get; set; }
-
-        /// <summary>
-        /// Number of records per page. `10` is used if it is left empty.
-        /// </summary>
-        [JsonProperty("PageSize")]
-        public ulong? PageSize{ get; set; }
-
-        /// <summary>
-        /// Page number. `1` is used if it is left empty.
-        /// </summary>
-        [JsonProperty("PageNo")]
-        public ulong? PageNo{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "PictureId", this.PictureId);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

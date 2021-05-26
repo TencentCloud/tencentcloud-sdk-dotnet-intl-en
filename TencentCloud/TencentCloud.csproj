@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.200</VersionPrefix>
+    <VersionPrefix>3.0.201</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3491,11 +3491,15 @@
     <Compile Include="Mongodb\V20190725\MongodbClient.cs" />
     <Compile Include="Mongodb\V20190725\Models\AssignProjectRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\AssignProjectResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\BackupDownloadTask.cs" />
+    <Compile Include="Mongodb\V20190725\Models\BackupDownloadTaskStatus.cs" />
     <Compile Include="Mongodb\V20190725\Models\BackupFile.cs" />
     <Compile Include="Mongodb\V20190725\Models\BackupInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\ClientConnection.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateBackupDBInstanceRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateBackupDBInstanceResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\CreateBackupDownloadTaskRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\CreateBackupDownloadTaskResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceHourRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceHourResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceRequest.cs" />
@@ -3506,6 +3510,8 @@
     <Compile Include="Mongodb\V20190725\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeBackupAccessRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeBackupAccessResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeBackupDownloadTaskRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeBackupDownloadTaskResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeClientConnectionsRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeClientConnectionsResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBBackupsRequest.cs" />
@@ -3514,6 +3520,8 @@
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstanceDealResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeSecurityGroupRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeSecurityGroupResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogPatternsRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogPatternsResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogsRequest.cs" />
@@ -3540,8 +3548,11 @@
     <Compile Include="Mongodb\V20190725\Models\RenameInstanceResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\RenewDBInstancesRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\RenewDBInstancesResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\ReplicaSetInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\ResetDBInstancePasswordRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\ResetDBInstancePasswordResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\SecurityGroup.cs" />
+    <Compile Include="Mongodb\V20190725\Models\SecurityGroupBound.cs" />
     <Compile Include="Mongodb\V20190725\Models\ShardInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\SlowLogPattern.cs" />
     <Compile Include="Mongodb\V20190725\Models\SpecItem.cs" />

@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string CosObjectName{ get; set; }
 
         /// <summary>
-        /// It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
+        /// This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
         /// </summary>
         [JsonProperty("ZipFile")]
         public string ZipFile{ get; set; }

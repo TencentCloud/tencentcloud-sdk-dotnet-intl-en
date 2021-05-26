@@ -387,7 +387,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to create a namespace based on the input parameters.
+        /// This API is used to delete the specific namespace according to the parameters passed in.
         /// </summary>
         /// <param name="req"><see cref="DeleteNamespaceRequest"/></param>
         /// <returns><see cref="DeleteNamespaceResponse"/></returns>
@@ -407,7 +407,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to create a namespace based on the input parameters.
+        /// This API is used to delete the specific namespace according to the parameters passed in.
         /// </summary>
         /// <param name="req"><see cref="DeleteNamespaceRequest"/></param>
         /// <returns><see cref="DeleteNamespaceResponse"/></returns>

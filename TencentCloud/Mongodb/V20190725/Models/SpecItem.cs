@@ -37,7 +37,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+        /// Computing resource specification in terms of CPU core
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }

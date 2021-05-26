@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePictureRequest : AbstractModel
+    public class BackupDownloadTaskStatus : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// Shard name
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("ReplicaSetId")]
+        public string ReplicaSetId{ get; set; }
 
         /// <summary>
-        /// Image ID. If it is left empty, the IDs of all images under the application are returned.
+        /// Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
         /// </summary>
-        [JsonProperty("PictureId")]
-        public ulong? PictureId{ get; set; }
-
-        /// <summary>
-        /// Number of records per page. `10` is used if it is left empty.
-        /// </summary>
-        [JsonProperty("PageSize")]
-        public ulong? PageSize{ get; set; }
-
-        /// <summary>
-        /// Page number. `1` is used if it is left empty.
-        /// </summary>
-        [JsonProperty("PageNo")]
-        public ulong? PageNo{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "PictureId", this.PictureId);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
+            this.SetParamSimple(map, prefix + "ReplicaSetId", this.ReplicaSetId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }
