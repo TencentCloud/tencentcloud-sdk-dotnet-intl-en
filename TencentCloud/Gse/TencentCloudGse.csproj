@@ -59,6 +59,8 @@
     <Compile Include="V20191112\Models\DescribeGameServerSessionPlacementResponse.cs" />
     <Compile Include="V20191112\Models\DescribeGameServerSessionsRequest.cs" />
     <Compile Include="V20191112\Models\DescribeGameServerSessionsResponse.cs" />
+    <Compile Include="V20191112\Models\DescribeInstanceTypesRequest.cs" />
+    <Compile Include="V20191112\Models\DescribeInstanceTypesResponse.cs" />
     <Compile Include="V20191112\Models\DescribePlayerSessionsRequest.cs" />
     <Compile Include="V20191112\Models\DescribePlayerSessionsResponse.cs" />
     <Compile Include="V20191112\Models\DescribeTimerScalingPoliciesRequest.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="V20191112\Models\GetInstanceAccessResponse.cs" />
     <Compile Include="V20191112\Models\InboundPermission.cs" />
     <Compile Include="V20191112\Models\InstanceAccess.cs" />
+    <Compile Include="V20191112\Models\InstanceTypeInfo.cs" />
     <Compile Include="V20191112\Models\JoinGameServerSessionBatchRequest.cs" />
     <Compile Include="V20191112\Models\JoinGameServerSessionBatchResponse.cs" />
     <Compile Include="V20191112\Models\JoinGameServerSessionRequest.cs" />

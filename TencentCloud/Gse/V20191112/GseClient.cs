@@ -293,6 +293,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// This API is used to obtain the list of CVM types in the specified region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTypesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTypesResponse"/></returns>
+        public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypes(DescribeInstanceTypesRequest req)
+        {
+             JsonResponseModel<DescribeInstanceTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of CVM types in the specified region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTypesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTypesResponse"/></returns>
+        public DescribeInstanceTypesResponse DescribeInstanceTypesSync(DescribeInstanceTypesRequest req)
+        {
+             JsonResponseModel<DescribeInstanceTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of player sessions.
         /// </summary>
         /// <param name="req"><see cref="DescribePlayerSessionsRequest"/></param>

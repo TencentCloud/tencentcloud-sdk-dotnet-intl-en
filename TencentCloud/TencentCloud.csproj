@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.201</VersionPrefix>
+    <VersionPrefix>3.0.202</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2762,6 +2762,8 @@
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionPlacementResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeInstanceTypesRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeInstanceTypesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribePlayerSessionsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribePlayerSessionsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeTimerScalingPoliciesRequest.cs" />
@@ -2779,6 +2781,7 @@
     <Compile Include="Gse\V20191112\Models\GetInstanceAccessResponse.cs" />
     <Compile Include="Gse\V20191112\Models\InboundPermission.cs" />
     <Compile Include="Gse\V20191112\Models\InstanceAccess.cs" />
+    <Compile Include="Gse\V20191112\Models\InstanceTypeInfo.cs" />
     <Compile Include="Gse\V20191112\Models\JoinGameServerSessionBatchRequest.cs" />
     <Compile Include="Gse\V20191112\Models\JoinGameServerSessionBatchResponse.cs" />
     <Compile Include="Gse\V20191112\Models\JoinGameServerSessionRequest.cs" />
@@ -5022,6 +5025,47 @@
     <Compile Include="Tcaplusdb\V20190823\Models\TaskInfoNew.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesResponse.cs" />
+    <Compile Include="Tem\V20201221\TemClient.cs" />
+    <Compile Include="Tem\V20201221\Models\CosToken.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateCosTokenV2Request.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateCosTokenV2Response.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateNamespaceRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateResourceRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateResourceResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateServiceV2Request.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateServiceV2Response.cs" />
+    <Compile Include="Tem\V20201221\Models\DeleteIngressRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\DeleteIngressResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\DeployServiceV2Request.cs" />
+    <Compile Include="Tem\V20201221\Models\DeployServiceV2Response.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeIngressRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeIngressResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeIngressesRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeIngressesResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeNamespacesRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeRunPodPage.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeServiceRunPodListV2Request.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeServiceRunPodListV2Response.cs" />
+    <Compile Include="Tem\V20201221\Models\EsInfo.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressInfo.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressRule.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressRuleBackend.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressRulePath.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressRuleValue.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressTls.cs" />
+    <Compile Include="Tem\V20201221\Models\LogOutputConf.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyIngressRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyIngressResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyNamespaceRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyNamespaceResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\NamespacePage.cs" />
+    <Compile Include="Tem\V20201221\Models\Pair.cs" />
+    <Compile Include="Tem\V20201221\Models\RunVersionPod.cs" />
+    <Compile Include="Tem\V20201221\Models\StorageConf.cs" />
+    <Compile Include="Tem\V20201221\Models\StorageMountConf.cs" />
+    <Compile Include="Tem\V20201221\Models\TemNamespaceInfo.cs" />
     <Compile Include="Tiw\V20190919\TiwClient.cs" />
     <Compile Include="Tiw\V20190919\Models\Canvas.cs" />
     <Compile Include="Tiw\V20190919\Models\Concat.cs" />
