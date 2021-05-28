@@ -44,6 +44,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20210111\SmsClient.cs" />
+    <Compile Include="V20210111\Models\SmsPackagesStatistics.cs" />
+    <Compile Include="V20210111\Models\SmsPackagesStatisticsRequest.cs" />
+    <Compile Include="V20210111\Models\SmsPackagesStatisticsResponse.cs" />
     <Compile Include="V20190711\SmsClient.cs" />
     <Compile Include="V20190711\Models\AddSignStatus.cs" />
     <Compile Include="V20190711\Models\AddSmsSignRequest.cs" />
