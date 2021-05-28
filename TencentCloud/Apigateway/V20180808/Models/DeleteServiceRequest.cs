@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+        /// A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
         /// </summary>
         [JsonProperty("SkipVerification")]
         public long? SkipVerification{ get; set; }

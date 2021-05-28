@@ -55,7 +55,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Task progress in terms of percentage
+        /// Task progress in percentage
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }

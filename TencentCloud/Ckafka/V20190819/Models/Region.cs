@@ -50,7 +50,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string RegionCode{ get; set; }
 
         /// <summary>
-        /// Region code (V3)
+        /// Region code (v3)
         /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegionCodeV3")]
@@ -64,14 +64,14 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Support{ get; set; }
 
         /// <summary>
-        /// Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+        /// Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
         /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Ipv6")]
         public long? Ipv6{ get; set; }
 
         /// <summary>
-        /// Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+        /// Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
         /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MultiZone")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The entity of query result complex objects
+        /// Returned results for the query
         /// </summary>
         [JsonProperty("Result")]
         public ZoneResponse Result{ get; set; }

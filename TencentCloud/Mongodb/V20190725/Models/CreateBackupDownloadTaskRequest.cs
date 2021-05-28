@@ -37,7 +37,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// The list of shards whose backups will be downloaded
+        /// The list of shards with backups to be downloaded
         /// </summary>
         [JsonProperty("BackupSets")]
         public ReplicaSetInfo[] BackupSets{ get; set; }

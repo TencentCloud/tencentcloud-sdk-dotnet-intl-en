@@ -493,7 +493,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to view the availability zone (AZ) list of Ckafka.
+        /// This API is used to view the AZ list of Ckafka.
         /// </summary>
         /// <param name="req"><see cref="DescribeCkafkaZoneRequest"/></param>
         /// <returns><see cref="DescribeCkafkaZoneResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to view the availability zone (AZ) list of Ckafka.
+        /// This API is used to view the AZ list of Ckafka.
         /// </summary>
         /// <param name="req"><see cref="DescribeCkafkaZoneRequest"/></param>
         /// <returns><see cref="DescribeCkafkaZoneResponse"/></returns>
@@ -813,7 +813,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to enumerate regions, only including Guangzhou.
+        /// This API is used to enumerate regions, and can be called only in Guangzhou.
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionRequest"/></param>
         /// <returns><see cref="DescribeRegionResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to enumerate regions, only including Guangzhou.
+        /// This API is used to enumerate regions, and can be called only in Guangzhou.
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionRequest"/></param>
         /// <returns><see cref="DescribeRegionResponse"/></returns>

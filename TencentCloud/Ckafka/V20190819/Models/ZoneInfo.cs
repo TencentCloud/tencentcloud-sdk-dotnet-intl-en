@@ -31,19 +31,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Whether it is an internal App.
+        /// Whether it is an internal application.
         /// </summary>
         [JsonProperty("IsInternalApp")]
         public long? IsInternalApp{ get; set; }
 
         /// <summary>
-        /// app id
+        /// Application ID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Identifier
+        /// Flag
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ZoneStatus{ get; set; }
 
         /// <summary>
-        /// Extra identifier
+        /// Extra flag
         /// </summary>
         [JsonProperty("Exflag")]
         public string Exflag{ get; set; }

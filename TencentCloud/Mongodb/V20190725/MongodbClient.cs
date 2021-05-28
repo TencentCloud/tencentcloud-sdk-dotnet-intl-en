@@ -295,7 +295,7 @@ namespace TencentCloud.Mongodb.V20190725
         /// <summary>
         /// 备份下载功能已调整，此接口即将下线
         /// 
-        /// TencentDB will soon stop supporting this API, as the backup download feature has been modified.
+        /// TencentDB will soon stop supporting this API as the backup download feature has been modified.
         /// 
         /// This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
         /// </summary>
@@ -319,7 +319,7 @@ namespace TencentCloud.Mongodb.V20190725
         /// <summary>
         /// 备份下载功能已调整，此接口即将下线
         /// 
-        /// TencentDB will soon stop supporting this API, as the backup download feature has been modified.
+        /// TencentDB will soon stop supporting this API as the backup download feature has been modified.
         /// 
         /// This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
         /// </summary>

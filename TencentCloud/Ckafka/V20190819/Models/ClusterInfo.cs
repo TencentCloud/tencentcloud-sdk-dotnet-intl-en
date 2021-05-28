@@ -65,14 +65,14 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? AvailableBandWidth{ get; set; }
 
         /// <summary>
-        /// The AZ which the cluster belongs to
+        /// The AZ where the cluster resides
         /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+        /// The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
         /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneIds")]

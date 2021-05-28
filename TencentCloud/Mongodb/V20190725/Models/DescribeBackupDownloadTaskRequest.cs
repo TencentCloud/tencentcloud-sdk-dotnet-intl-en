@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The name of a backup file whose download tasks will be queried
+        /// The name of a backup file with download tasks to be queried
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
