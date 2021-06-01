@@ -140,6 +140,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Toa")]
         public bool? Toa{ get; set; }
 
+        /// <summary>
+        /// Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeregisterTargetRst")]
+        public bool? DeregisterTargetRst{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +170,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "Toa", this.Toa);
+            this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         }
     }
 }
