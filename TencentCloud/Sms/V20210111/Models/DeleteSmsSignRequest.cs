@@ -21,20 +21,14 @@ namespace TencentCloud.Sms.V20210111.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmsPackagesStatisticsResponse : AbstractModel
+    public class DeleteSmsSignRequest : AbstractModel
     {
         
         /// <summary>
-        /// Delivery statistics response packet body.
+        /// ID of the signature to be deleted.
         /// </summary>
-        [JsonProperty("SmsPackagesStatisticsSet")]
-        public SmsPackagesStatistics[] SmsPackagesStatisticsSet{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SignId")]
+        public ulong? SignId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Sms.V20210111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SmsPackagesStatisticsSet.", this.SmsPackagesStatisticsSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SignId", this.SignId);
         }
     }
 }

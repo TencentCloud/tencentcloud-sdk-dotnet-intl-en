@@ -21,9 +21,22 @@ namespace TencentCloud.Sms.V20210111.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmsPackagesStatisticsRequest : AbstractModel
+    public class CallbackStatusStatisticsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
+
+        /// <summary>
+        /// End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
+        /// Note: `EndTime` must be after `BeginTime`, and the difference should not exceed 32 days.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
         /// <summary>
         /// The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
         /// </summary>
@@ -31,30 +44,18 @@ namespace TencentCloud.Sms.V20210111.Models
         public string SmsSdkAppId{ get; set; }
 
         /// <summary>
-        /// Upper limit (number of packages to be pulled)
+        /// Upper limit.
+        /// Note: this parameter is currently fixed at 0.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
         /// Offset.
+        /// Note: this parameter is currently fixed at 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
-        /// Note: the creation time of a pulled package should not be earlier than the start time.
-        /// </summary>
-        [JsonProperty("BeginTime")]
-        public string BeginTime{ get; set; }
-
-        /// <summary>
-        /// End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-        /// Note: `EndTime` must be later than `BeginTime`. The creation time of a pulled package should not be later than the end time.
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -62,11 +63,11 @@ namespace TencentCloud.Sms.V20210111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SmsSdkAppId", this.SmsSdkAppId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }
