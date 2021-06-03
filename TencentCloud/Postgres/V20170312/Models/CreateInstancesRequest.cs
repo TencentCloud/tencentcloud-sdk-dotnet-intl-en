@@ -21,7 +21,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDBInstancesRequest : AbstractModel
+    public class CreateInstancesRequest : AbstractModel
     {
         
         /// <summary>
@@ -37,85 +37,103 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// Instance capacity size in GB.
+        /// Instance storage capacity in GB
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// Number of instances purchased at a time. Value range: 1-100.
+        /// The number of instances purchased at a time. Value range: 1-10.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+        /// Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+        /// Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Instance character set. Valid values: `UTF8`, `LATIN1`.
+        /// </summary>
+        [JsonProperty("Charset")]
+        public string Charset{ get; set; }
+
+        /// <summary>
+        /// Instance root account name
+        /// </summary>
+        [JsonProperty("AdminName")]
+        public string AdminName{ get; set; }
+
+        /// <summary>
+        /// Instance root account password
+        /// </summary>
+        [JsonProperty("AdminPassword")]
+        public string AdminPassword{ get; set; }
+
+        /// <summary>
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Instance billing type.
+        /// Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Whether to automatically use vouchers. 1: yes, 0: no. Default value: no.
+        /// Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public ulong? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Voucher ID list (only one voucher can be specified currently).
+        /// Voucher ID list. Currently, you can specify only one voucher.
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// VPC ID.
+        /// VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID.
+        /// ID of a subnet in the VPC specified by `VpcId`
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Renewal flag. 0: normal renewal (default), 1: auto-renewal.
+        /// Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Activity ID
+        /// Campaign ID
         /// </summary>
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }
 
         /// <summary>
-        /// Instance name (which will be supported in the future)
+        /// Instance name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
+        /// Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
         /// </summary>
         [JsonProperty("NeedSupportIpv6")]
         public ulong? NeedSupportIpv6{ get; set; }
@@ -127,7 +145,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// Security group ID
+        /// Security group IDs
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
@@ -144,6 +162,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "Charset", this.Charset);
+            this.SetParamSimple(map, prefix + "AdminName", this.AdminName);
+            this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);

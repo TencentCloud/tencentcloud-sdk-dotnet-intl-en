@@ -21,32 +21,32 @@ namespace TencentCloud.Postgres.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DisIsolateDBInstancesRequest : AbstractModel
+    public class CreateInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Resource ID list
+        /// Order number list. Each instance corresponds to an order number.
+        /// </summary>
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
+
+        /// <summary>
+        /// Bill ID of frozen fees
+        /// </summary>
+        [JsonProperty("BillId")]
+        public string BillId{ get; set; }
+
+        /// <summary>
+        /// ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Period")]
-        public long? Period{ get; set; }
-
-        /// <summary>
-        /// Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
-        /// </summary>
-        [JsonProperty("AutoVoucher")]
-        public bool? AutoVoucher{ get; set; }
-
-        /// <summary>
-        /// Voucher ID list
-        /// </summary>
-        [JsonProperty("VoucherIds")]
-        public string[] VoucherIds{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "BillId", this.BillId);
             this.SetParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
-            this.SetParamSimple(map, prefix + "Period", this.Period);
-            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
-            this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
