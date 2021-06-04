@@ -21,44 +21,20 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AccountInfo : AbstractModel
+    public class ModifyAccountMaxUserConnectionsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Account remarks
+        /// List of TencentDB accounts
         /// </summary>
-        [JsonProperty("Notes")]
-        public string Notes{ get; set; }
+        [JsonProperty("Accounts")]
+        public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// Account domain name
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
-
-        /// <summary>
-        /// Account name
-        /// </summary>
-        [JsonProperty("User")]
-        public string User{ get; set; }
-
-        /// <summary>
-        /// Account information modification time
-        /// </summary>
-        [JsonProperty("ModifyTime")]
-        public string ModifyTime{ get; set; }
-
-        /// <summary>
-        /// Password modification time
-        /// </summary>
-        [JsonProperty("ModifyPasswordTime")]
-        public string ModifyPasswordTime{ get; set; }
-
-        /// <summary>
-        /// This parameter is no longer supported.
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// The maximum number of instance connections supported by an account
@@ -72,12 +48,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Notes", this.Notes);
-            this.SetParamSimple(map, prefix + "Host", this.Host);
-            this.SetParamSimple(map, prefix + "User", this.User);
-            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
-            this.SetParamSimple(map, prefix + "ModifyPasswordTime", this.ModifyPasswordTime);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }
     }

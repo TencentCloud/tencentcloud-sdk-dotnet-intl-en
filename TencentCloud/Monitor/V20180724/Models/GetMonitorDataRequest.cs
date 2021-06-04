@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Metric name, such as `CPUUsage`. For more information on the metrics of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The corresponding metric name is the `MetricName`
+        /// Metric name, such as `CPUUsage`. Only one monitoring metric can be pulled at a time. For more information on the metrics of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The corresponding metric name is `MetricName`.
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

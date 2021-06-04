@@ -62,29 +62,23 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] Namespaces{ get; set; }
 
         /// <summary>
-        /// Alarm object list. The outer array corresponds to multiple instances.
-        /// Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
-        /// [
-        /// 	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-        /// 	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-        /// 	...
-        /// ]
-        /// For the samples for different Tencent Cloud services, please see:
-        /// [Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+        /// The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
+        /// `[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+        /// You can also refer to the “Example 2” below.
+        /// 
+        /// For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
-        /// [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
+        /// Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
         /// </summary>
         [JsonProperty("ReceiverUids")]
         public long?[] ReceiverUids{ get; set; }
 
         /// <summary>
-        /// Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
-        /// [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
+        /// Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
         /// </summary>
         [JsonProperty("ReceiverGroups")]
         public long?[] ReceiverGroups{ get; set; }
@@ -116,7 +110,7 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// ID list of the notification template, which can be obtained by querying the notification template list.
-        /// [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+        /// It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }

@@ -205,6 +205,8 @@
     <Compile Include="V20170320\Models\MasterInfo.cs" />
     <Compile Include="V20170320\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20170320\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyAccountMaxUserConnectionsRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyAccountMaxUserConnectionsResponse.cs" />
     <Compile Include="V20170320\Models\ModifyAccountPasswordRequest.cs" />
     <Compile Include="V20170320\Models\ModifyAccountPasswordResponse.cs" />
     <Compile Include="V20170320\Models\ModifyAccountPrivilegesRequest.cs" />
@@ -294,6 +296,7 @@
     <Compile Include="V20170320\Models\TableNameInfo.cs" />
     <Compile Include="V20170320\Models\TablePrivilege.cs" />
     <Compile Include="V20170320\Models\TagInfo.cs" />
+    <Compile Include="V20170320\Models\TagInfoItem.cs" />
     <Compile Include="V20170320\Models\TagInfoUnit.cs" />
     <Compile Include="V20170320\Models\TagsInfoOfInstance.cs" />
     <Compile Include="V20170320\Models\TaskDetail.cs" />

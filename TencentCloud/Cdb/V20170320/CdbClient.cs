@@ -213,7 +213,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (CreateAccounts) is used to create TencentDB accounts. The new account names, domain names, and passwords need to be specified, and account remarks can also be added.
+        /// This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (CreateAccounts) is used to create TencentDB accounts. The new account names, domain names, and passwords need to be specified, and account remarks can also be added.
+        /// This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -2712,6 +2712,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountDescription");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the maximum connections of one or more TencentDB instance accounts.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountMaxUserConnectionsRequest"/></param>
+        /// <returns><see cref="ModifyAccountMaxUserConnectionsResponse"/></returns>
+        public async Task<ModifyAccountMaxUserConnectionsResponse> ModifyAccountMaxUserConnections(ModifyAccountMaxUserConnectionsRequest req)
+        {
+             JsonResponseModel<ModifyAccountMaxUserConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountMaxUserConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountMaxUserConnectionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the maximum connections of one or more TencentDB instance accounts.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountMaxUserConnectionsRequest"/></param>
+        /// <returns><see cref="ModifyAccountMaxUserConnectionsResponse"/></returns>
+        public ModifyAccountMaxUserConnectionsResponse ModifyAccountMaxUserConnectionsSync(ModifyAccountMaxUserConnectionsRequest req)
+        {
+             JsonResponseModel<ModifyAccountMaxUserConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountMaxUserConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountMaxUserConnectionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

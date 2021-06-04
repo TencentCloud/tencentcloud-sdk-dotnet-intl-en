@@ -21,26 +21,14 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAccountsResponse : AbstractModel
+    public class ModifyAccountMaxUserConnectionsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible accounts.
+        /// Async task request ID, which can be used to query the execution result of an async task
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// Details of eligible accounts.
-        /// </summary>
-        [JsonProperty("Items")]
-        public AccountInfo[] Items{ get; set; }
-
-        /// <summary>
-        /// The maximum number of instance connections (set by the MySQL parameter `max_connections`)
-        /// </summary>
-        [JsonProperty("MaxUserConnections")]
-        public long? MaxUserConnections{ get; set; }
+        [JsonProperty("AsyncRequestId")]
+        public string AsyncRequestId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,9 +42,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

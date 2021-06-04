@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.208</VersionPrefix>
+    <VersionPrefix>3.0.209</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -887,6 +887,8 @@
     <Compile Include="Cdb\V20170320\Models\MasterInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyAccountMaxUserConnectionsRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyAccountMaxUserConnectionsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPasswordRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPasswordResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPrivilegesRequest.cs" />
@@ -976,6 +978,7 @@
     <Compile Include="Cdb\V20170320\Models\TableNameInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\TablePrivilege.cs" />
     <Compile Include="Cdb\V20170320\Models\TagInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\TagInfoItem.cs" />
     <Compile Include="Cdb\V20170320\Models\TagInfoUnit.cs" />
     <Compile Include="Cdb\V20170320\Models\TagsInfoOfInstance.cs" />
     <Compile Include="Cdb\V20170320\Models\TaskDetail.cs" />
