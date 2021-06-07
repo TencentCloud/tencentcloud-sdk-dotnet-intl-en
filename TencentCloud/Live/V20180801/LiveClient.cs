@@ -2059,6 +2059,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to query referer allowlist/blocklist configuration of a live streaming domain name.
+        /// Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainRefererRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainRefererResponse"/></returns>
+        public async Task<DescribeLiveDomainRefererResponse> DescribeLiveDomainReferer(DescribeLiveDomainRefererRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainReferer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainRefererResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query referer allowlist/blocklist configuration of a live streaming domain name.
+        /// Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainRefererRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainRefererResponse"/></returns>
+        public DescribeLiveDomainRefererResponse DescribeLiveDomainRefererSync(DescribeLiveDomainRefererRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveDomainReferer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainRefererResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query domain names by domain name status and type.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveDomainsRequest"/></param>
@@ -3662,6 +3704,48 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLiveDomainCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure referer allowlist/blocklist of a live streaming domain name.
+        /// Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveDomainRefererRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainRefererResponse"/></returns>
+        public async Task<ModifyLiveDomainRefererResponse> ModifyLiveDomainReferer(ModifyLiveDomainRefererRequest req)
+        {
+             JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveDomainReferer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainRefererResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure referer allowlist/blocklist of a live streaming domain name.
+        /// Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveDomainRefererRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainRefererResponse"/></returns>
+        public ModifyLiveDomainRefererResponse ModifyLiveDomainRefererSync(ModifyLiveDomainRefererRequest req)
+        {
+             JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveDomainReferer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainRefererResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

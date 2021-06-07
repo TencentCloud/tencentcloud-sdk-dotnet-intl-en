@@ -156,6 +156,8 @@
     <Compile Include="V20180801\Models\DescribeLiveDomainCertResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainPlayInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainPlayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainRefererRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainRefererResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainsRequest.cs" />
@@ -249,6 +251,8 @@
     <Compile Include="V20180801\Models\ModifyLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainCertRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainCertResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveDomainRefererRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveDomainRefererResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayDomainRequest.cs" />
@@ -275,6 +279,7 @@
     <Compile Include="V20180801\Models\PushQualityData.cs" />
     <Compile Include="V20180801\Models\RecordParam.cs" />
     <Compile Include="V20180801\Models\RecordTemplateInfo.cs" />
+    <Compile Include="V20180801\Models\RefererAuthConfig.cs" />
     <Compile Include="V20180801\Models\ResumeDelayLiveStreamRequest.cs" />
     <Compile Include="V20180801\Models\ResumeDelayLiveStreamResponse.cs" />
     <Compile Include="V20180801\Models\ResumeLiveStreamRequest.cs" />

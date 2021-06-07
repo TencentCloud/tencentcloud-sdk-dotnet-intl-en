@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.209</VersionPrefix>
+    <VersionPrefix>3.0.210</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3115,6 +3115,8 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainPlayInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainPlayInfoListResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveDomainRefererRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveDomainRefererResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainsRequest.cs" />
@@ -3208,6 +3210,8 @@
     <Compile Include="Live\V20180801\Models\ModifyLiveCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLiveDomainCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLiveDomainCertResponse.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLiveDomainRefererRequest.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLiveDomainRefererResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePlayAuthKeyRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePlayDomainRequest.cs" />
@@ -3234,6 +3238,7 @@
     <Compile Include="Live\V20180801\Models\PushQualityData.cs" />
     <Compile Include="Live\V20180801\Models\RecordParam.cs" />
     <Compile Include="Live\V20180801\Models\RecordTemplateInfo.cs" />
+    <Compile Include="Live\V20180801\Models\RefererAuthConfig.cs" />
     <Compile Include="Live\V20180801\Models\ResumeDelayLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\ResumeDelayLiveStreamResponse.cs" />
     <Compile Include="Live\V20180801\Models\ResumeLiveStreamRequest.cs" />
@@ -4957,11 +4962,15 @@
     <Compile Include="Tag\V20180813\Models\UpdateResourceTagValueRequest.cs" />
     <Compile Include="Tag\V20180813\Models\UpdateResourceTagValueResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\TcaplusdbClient.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\Application.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ApplyResult.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ApplyStatus.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ClearTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ClearTablesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ClusterInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CompareIdlFilesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CompareIdlFilesResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\CompareTablesInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CreateBackupRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CreateBackupResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CreateClusterRequest.cs" />
@@ -4984,6 +4993,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableIndexResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTablesResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeApplicationsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeApplicationsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeClusterTagsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeClusterTagsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeClustersRequest.cs" />
@@ -5023,6 +5034,12 @@
     <Compile Include="Tcaplusdb\V20190823\Models\ImportSnapshotsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\KeyFile.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\MachineInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\MergeTableResult.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\MergeTablesDataRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\MergeTablesDataResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\MergeTablesInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyCensorshipRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyCensorshipResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterMachineRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterMachineResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterNameRequest.cs" />
@@ -5072,6 +5089,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\TagsInfoOfTable.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TagsInfoOfTableGroup.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TaskInfoNew.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\UpdateApplyRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\UpdateApplyResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesResponse.cs" />
     <Compile Include="Tem\V20201221\TemClient.cs" />
@@ -5645,6 +5664,7 @@
     <Compile Include="Vod\V20180717\Models\FrameTagConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\HeadTailConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\HeadTailConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\HeadTailTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightSegmentItem.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />

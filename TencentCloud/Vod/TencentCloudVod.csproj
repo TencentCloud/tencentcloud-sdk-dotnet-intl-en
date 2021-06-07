@@ -331,6 +331,7 @@
     <Compile Include="V20180717\Models\FrameTagConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\HeadTailConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HeadTailConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\HeadTailTaskInput.cs" />
     <Compile Include="V20180717\Models\HighlightSegmentItem.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />

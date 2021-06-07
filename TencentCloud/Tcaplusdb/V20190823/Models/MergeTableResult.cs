@@ -21,28 +21,35 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateBackupResponse : AbstractModel
+    public class MergeTableResult : AbstractModel
     {
         
         /// <summary>
-        /// List of backup creation task IDs
+        /// Task ID
         /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TaskIds")]
-        public string[] TaskIds{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// List of backup creation application IDs
+        /// If table merging is successful, `null` will be returned
         /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ApplicationIds")]
-        public string[] ApplicationIds{ get; set; }
+        [JsonProperty("Error")]
+        public ErrorInfo Error{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Comparison results of tables
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Table")]
+        public CompareTablesInfo Table{ get; set; }
+
+        /// <summary>
+        /// Application ID
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +57,10 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
-            this.SetParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamObj(map, prefix + "Error.", this.Error);
+            this.SetParamObj(map, prefix + "Table.", this.Table);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

@@ -21,26 +21,20 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class MergeTablesDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// Filter field name
+        /// Table merging results
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Results")]
+        public MergeTableResult[] Results{ get; set; }
 
         /// <summary>
-        /// Filter field value
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
-
-        /// <summary>
-        /// Filter field value
-        /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamArrayObj(map, prefix + "Results.", this.Results);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

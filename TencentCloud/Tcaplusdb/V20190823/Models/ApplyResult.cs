@@ -21,28 +21,41 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateBackupResponse : AbstractModel
+    public class ApplyResult : AbstractModel
     {
         
         /// <summary>
-        /// List of backup creation task IDs
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Application ID
         /// </summary>
-        [JsonProperty("TaskIds")]
-        public string[] TaskIds{ get; set; }
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// List of backup creation application IDs
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Application type
         /// </summary>
-        [JsonProperty("ApplicationIds")]
-        public string[] ApplicationIds{ get; set; }
+        [JsonProperty("ApplicationType")]
+        public long? ApplicationType{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Status. Valid values: `0` (pending approval), `1` (application approved and task submitted), `2` (rejected)
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ApplicationStatus")]
+        public long? ApplicationStatus{ get; set; }
+
+        /// <summary>
+        /// ID of the submitted task
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// Error information
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Error")]
+        public ErrorInfo Error{ get; set; }
 
 
         /// <summary>
@@ -50,9 +63,11 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
-            this.SetParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamSimple(map, prefix + "ApplicationStatus", this.ApplicationStatus);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamObj(map, prefix + "Error.", this.Error);
         }
     }
 }

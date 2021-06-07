@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcaplusdb.V20190823.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class HeadTailTaskInput : AbstractModel
     {
         
         /// <summary>
-        /// Filter field name
+        /// Video opening/closing credits configuration template ID
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Filter field value
-        /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
-
-        /// <summary>
-        /// Filter field value
-        /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }
 }

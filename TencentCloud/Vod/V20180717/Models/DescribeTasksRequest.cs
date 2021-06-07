@@ -49,9 +49,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public TimeRange FinishTime{ get; set; }
 
         /// <summary>
+        /// (Not supported now)
         /// Sort field. Valid values:
-        /// <li> CreateTime: task creation time</li>
-        /// <li>FinishTime: task end time</li>
+        /// <li>`CreateTime`: task creation time</li>
+        /// <li>`FinishTime`: task end time</li>
         /// </summary>
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }

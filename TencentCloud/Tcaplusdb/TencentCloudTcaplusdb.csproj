@@ -45,11 +45,15 @@
 
   <ItemGroup>
     <Compile Include="V20190823\TcaplusdbClient.cs" />
+    <Compile Include="V20190823\Models\Application.cs" />
+    <Compile Include="V20190823\Models\ApplyResult.cs" />
+    <Compile Include="V20190823\Models\ApplyStatus.cs" />
     <Compile Include="V20190823\Models\ClearTablesRequest.cs" />
     <Compile Include="V20190823\Models\ClearTablesResponse.cs" />
     <Compile Include="V20190823\Models\ClusterInfo.cs" />
     <Compile Include="V20190823\Models\CompareIdlFilesRequest.cs" />
     <Compile Include="V20190823\Models\CompareIdlFilesResponse.cs" />
+    <Compile Include="V20190823\Models\CompareTablesInfo.cs" />
     <Compile Include="V20190823\Models\CreateBackupRequest.cs" />
     <Compile Include="V20190823\Models\CreateBackupResponse.cs" />
     <Compile Include="V20190823\Models\CreateClusterRequest.cs" />
@@ -72,6 +76,8 @@
     <Compile Include="V20190823\Models\DeleteTableIndexResponse.cs" />
     <Compile Include="V20190823\Models\DeleteTablesRequest.cs" />
     <Compile Include="V20190823\Models\DeleteTablesResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeApplicationsRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeApplicationsResponse.cs" />
     <Compile Include="V20190823\Models\DescribeClusterTagsRequest.cs" />
     <Compile Include="V20190823\Models\DescribeClusterTagsResponse.cs" />
     <Compile Include="V20190823\Models\DescribeClustersRequest.cs" />
@@ -111,6 +117,12 @@
     <Compile Include="V20190823\Models\ImportSnapshotsResponse.cs" />
     <Compile Include="V20190823\Models\KeyFile.cs" />
     <Compile Include="V20190823\Models\MachineInfo.cs" />
+    <Compile Include="V20190823\Models\MergeTableResult.cs" />
+    <Compile Include="V20190823\Models\MergeTablesDataRequest.cs" />
+    <Compile Include="V20190823\Models\MergeTablesDataResponse.cs" />
+    <Compile Include="V20190823\Models\MergeTablesInfo.cs" />
+    <Compile Include="V20190823\Models\ModifyCensorshipRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyCensorshipResponse.cs" />
     <Compile Include="V20190823\Models\ModifyClusterMachineRequest.cs" />
     <Compile Include="V20190823\Models\ModifyClusterMachineResponse.cs" />
     <Compile Include="V20190823\Models\ModifyClusterNameRequest.cs" />
@@ -160,6 +172,8 @@
     <Compile Include="V20190823\Models\TagsInfoOfTable.cs" />
     <Compile Include="V20190823\Models\TagsInfoOfTableGroup.cs" />
     <Compile Include="V20190823\Models\TaskInfoNew.cs" />
+    <Compile Include="V20190823\Models\UpdateApplyRequest.cs" />
+    <Compile Include="V20190823\Models\UpdateApplyResponse.cs" />
     <Compile Include="V20190823\Models\VerifyIdlFilesRequest.cs" />
     <Compile Include="V20190823\Models\VerifyIdlFilesResponse.cs" />
   </ItemGroup>

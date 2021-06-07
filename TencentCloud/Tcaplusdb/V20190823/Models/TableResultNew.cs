@@ -80,6 +80,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
 
+        /// <summary>
+        /// Cluster operation application ID
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
             this.SetParamObj(map, prefix + "Error.", this.Error);
             this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

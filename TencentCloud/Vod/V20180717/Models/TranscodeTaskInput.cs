@@ -44,6 +44,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
+        /// List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+        /// </summary>
+        [JsonProperty("HeadTailSet")]
+        public HeadTailTaskInput[] HeadTailSet{ get; set; }
+
+        /// <summary>
         /// Start time offset of a transcoded video, in seconds.
         /// <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
         /// <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
@@ -70,6 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+            this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         }

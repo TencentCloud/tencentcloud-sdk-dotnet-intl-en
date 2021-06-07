@@ -21,26 +21,26 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class ModifyCensorshipRequest : AbstractModel
     {
         
         /// <summary>
-        /// Filter field name
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Filter field value
+        /// Whether to enable the operation approval feature for this cluster. Valid values: `0` (disable), `1` (enable)
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Censorship")]
+        public long? Censorship{ get; set; }
 
         /// <summary>
-        /// Filter field value
+        /// Approver UIN list
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("Uins")]
+        public string[] Uins{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Censorship", this.Censorship);
+            this.SetParamArraySimple(map, prefix + "Uins.", this.Uins);
         }
     }
 }

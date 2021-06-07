@@ -21,26 +21,20 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class MergeTablesInfo : AbstractModel
     {
         
         /// <summary>
-        /// Filter field name
+        /// Information of tables to be merged
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("MergeTables")]
+        public CompareTablesInfo MergeTables{ get; set; }
 
         /// <summary>
-        /// Filter field value
+        /// Whether to check indexes
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
-
-        /// <summary>
-        /// Filter field value
-        /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("CheckIndex")]
+        public bool? CheckIndex{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamObj(map, prefix + "MergeTables.", this.MergeTables);
+            this.SetParamSimple(map, prefix + "CheckIndex", this.CheckIndex);
         }
     }
 }

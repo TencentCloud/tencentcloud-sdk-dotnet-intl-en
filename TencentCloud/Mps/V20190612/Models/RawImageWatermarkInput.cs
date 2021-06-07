@@ -48,6 +48,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Height")]
         public string Height{ get; set; }
 
+        /// <summary>
+        /// Repeat type of an animated watermark. Valid values:
+        /// <li>`once`: no longer appears after watermark playback ends.</li>
+        /// <li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+        /// <li>`repeat` (default): repeats the playback until the video ends.</li>
+        /// </summary>
+        [JsonProperty("RepeatType")]
+        public string RepeatType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +66,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "ImageContent.", this.ImageContent);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "RepeatType", this.RepeatType);
         }
     }
 }
