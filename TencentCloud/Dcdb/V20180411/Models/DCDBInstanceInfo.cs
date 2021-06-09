@@ -79,7 +79,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// Status
+        /// Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

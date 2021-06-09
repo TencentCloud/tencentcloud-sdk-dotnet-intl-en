@@ -66,6 +66,7 @@
     <Compile Include="V20180411\Models\DatabaseProcedure.cs" />
     <Compile Include="V20180411\Models\DatabaseTable.cs" />
     <Compile Include="V20180411\Models\DatabaseView.cs" />
+    <Compile Include="V20180411\Models\DcnDetailItem.cs" />
     <Compile Include="V20180411\Models\DeleteAccountRequest.cs" />
     <Compile Include="V20180411\Models\DeleteAccountResponse.cs" />
     <Compile Include="V20180411\Models\DescribeAccountPrivilegesRequest.cs" />
@@ -92,6 +93,8 @@
     <Compile Include="V20180411\Models\DescribeDatabaseTableResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeDcnDetailRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeDcnDetailResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectsRequest.cs" />

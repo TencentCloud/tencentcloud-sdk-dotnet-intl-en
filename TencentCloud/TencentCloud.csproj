@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.211</VersionPrefix>
+    <VersionPrefix>3.0.212</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2163,6 +2163,7 @@
     <Compile Include="Dcdb\V20180411\Models\DatabaseProcedure.cs" />
     <Compile Include="Dcdb\V20180411\Models\DatabaseTable.cs" />
     <Compile Include="Dcdb\V20180411\Models\DatabaseView.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DcnDetailItem.cs" />
     <Compile Include="Dcdb\V20180411\Models\DeleteAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DeleteAccountResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeAccountPrivilegesRequest.cs" />
@@ -2189,6 +2190,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabaseTableResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectsRequest.cs" />

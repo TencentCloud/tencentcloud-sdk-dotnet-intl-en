@@ -140,6 +140,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
+        /// <summary>
+        /// ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AttachType")]
+        public ulong? AttachType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +171,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EniType", this.EniType);
             this.SetParamSimple(map, prefix + "Business", this.Business);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "AttachType", this.AttachType);
         }
     }
 }

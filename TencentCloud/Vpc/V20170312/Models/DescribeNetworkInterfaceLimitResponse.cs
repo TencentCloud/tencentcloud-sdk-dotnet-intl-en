@@ -25,16 +25,30 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ENI quota
+        /// Quota of ENIs mounted to a CVM instance in a standard way
         /// </summary>
         [JsonProperty("EniQuantity")]
         public long? EniQuantity{ get; set; }
 
         /// <summary>
-        /// Quota of IP addresses that can be allocated to each ENI.
+        /// Quota of IP addresses that can be allocated to each standard-mounted ENI
         /// </summary>
         [JsonProperty("EniPrivateIpAddressQuantity")]
         public long? EniPrivateIpAddressQuantity{ get; set; }
+
+        /// <summary>
+        /// Quota of ENIs mounted to a CVM instance as an extension
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtendEniQuantity")]
+        public long? ExtendEniQuantity{ get; set; }
+
+        /// <summary>
+        /// Quota of IP addresses that can be allocated to each extension-mounted ENI.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtendEniPrivateIpAddressQuantity")]
+        public long? ExtendEniPrivateIpAddressQuantity{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -50,6 +64,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "EniQuantity", this.EniQuantity);
             this.SetParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
+            this.SetParamSimple(map, prefix + "ExtendEniQuantity", this.ExtendEniQuantity);
+            this.SetParamSimple(map, prefix + "ExtendEniPrivateIpAddressQuantity", this.ExtendEniPrivateIpAddressQuantity);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

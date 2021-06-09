@@ -134,6 +134,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
+        /// <summary>
+        /// List of tags associated with the EIP
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

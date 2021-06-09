@@ -49,25 +49,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string IpProtocol{ get; set; }
 
         /// <summary>
-        /// 
+        /// All the addresses that the security group ID represents
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 
+        /// All the addresses that the address group ID represents
         /// </summary>
         [JsonProperty("AddressModule")]
         public string AddressModule{ get; set; }
 
         /// <summary>
-        /// 
+        /// All the protocols and ports that the service group ID represents
         /// </summary>
         [JsonProperty("ServiceModule")]
         public string ServiceModule{ get; set; }
 
         /// <summary>
-        /// 
+        /// Description
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }

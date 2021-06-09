@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AttachNetworkInterfaceRequest : AbstractModel
+    public class DescribeDcnDetailRequest : AbstractModel
     {
         
         /// <summary>
-        /// The ID of the ENI instance, such as `eni-m6dyj72l`.
-        /// </summary>
-        [JsonProperty("NetworkInterfaceId")]
-        public string NetworkInterfaceId{ get; set; }
-
-        /// <summary>
-        /// The ID of the CVM instance, such as `ins-r8hr2upy`.
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
-        /// </summary>
-        [JsonProperty("AttachType")]
-        public ulong? AttachType{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "AttachType", this.AttachType);
         }
     }
 }
