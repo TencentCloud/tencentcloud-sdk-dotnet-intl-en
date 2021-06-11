@@ -819,6 +819,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the disaster recovery details of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDcnDetailRequest"/></param>
+        /// <returns><see cref="DescribeDcnDetailResponse"/></returns>
+        public async Task<DescribeDcnDetailResponse> DescribeDcnDetail(DescribeDcnDetailRequest req)
+        {
+             JsonResponseModel<DescribeDcnDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDcnDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDcnDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the disaster recovery details of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDcnDetailRequest"/></param>
+        /// <returns><see cref="DescribeDcnDetailResponse"/></returns>
+        public DescribeDcnDetailResponse DescribeDcnDetailSync(DescribeDcnDetailRequest req)
+        {
+             JsonResponseModel<DescribeDcnDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDcnDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDcnDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query flow status.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowRequest"/></param>

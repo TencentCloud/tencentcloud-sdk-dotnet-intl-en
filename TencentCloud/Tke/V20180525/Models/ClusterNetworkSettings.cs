@@ -66,6 +66,27 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Cni")]
         public bool? Cni{ get; set; }
 
+        /// <summary>
+        /// The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("KubeProxyMode")]
+        public string KubeProxyMode{ get; set; }
+
+        /// <summary>
+        /// The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ServiceCIDR")]
+        public string ServiceCIDR{ get; set; }
+
+        /// <summary>
+        /// The container subnet associated with the cluster
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Subnets")]
+        public string[] Subnets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +100,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Ipvs", this.Ipvs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Cni", this.Cni);
+            this.SetParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
+            this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
+            this.SetParamArraySimple(map, prefix + "Subnets.", this.Subnets);
         }
     }
 }

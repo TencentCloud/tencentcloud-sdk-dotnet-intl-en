@@ -126,6 +126,18 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("FilterInstanceType")]
         public string FilterInstanceType{ get; set; }
 
+        /// <summary>
+        /// Use this filter to include instances in specific statuses
+        /// </summary>
+        [JsonProperty("Status")]
+        public long?[] Status{ get; set; }
+
+        /// <summary>
+        /// Use this filter to exclude instances in specific statuses
+        /// </summary>
+        [JsonProperty("ExcludeStatus")]
+        public long?[] ExcludeStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
             this.SetParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
+            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamArraySimple(map, prefix + "ExcludeStatus.", this.ExcludeStatus);
         }
     }
 }

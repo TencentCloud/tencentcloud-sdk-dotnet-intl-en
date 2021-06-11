@@ -173,6 +173,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to add subnets in the container network for a VPC-CNI cluster.
+        /// </summary>
+        /// <param name="req"><see cref="AddVpcCniSubnetsRequest"/></param>
+        /// <returns><see cref="AddVpcCniSubnetsResponse"/></returns>
+        public async Task<AddVpcCniSubnetsResponse> AddVpcCniSubnets(AddVpcCniSubnetsRequest req)
+        {
+             JsonResponseModel<AddVpcCniSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddVpcCniSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddVpcCniSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add subnets in the container network for a VPC-CNI cluster.
+        /// </summary>
+        /// <param name="req"><see cref="AddVpcCniSubnetsRequest"/></param>
+        /// <returns><see cref="AddVpcCniSubnetsResponse"/></returns>
+        public AddVpcCniSubnetsResponse AddVpcCniSubnetsSync(AddVpcCniSubnetsRequest req)
+        {
+             JsonResponseModel<AddVpcCniSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddVpcCniSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddVpcCniSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to check which nodes can be upgraded in the given node list. 
         /// </summary>
         /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>

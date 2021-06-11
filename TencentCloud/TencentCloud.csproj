@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.213</VersionPrefix>
+    <VersionPrefix>3.0.214</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3280,6 +3280,7 @@
     <Compile Include="Mariadb\V20170312\Models\DBInstance.cs" />
     <Compile Include="Mariadb\V20170312\Models\DBParamValue.cs" />
     <Compile Include="Mariadb\V20170312\Models\Database.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DcnDetailItem.cs" />
     <Compile Include="Mariadb\V20170312\Models\DeleteAccountRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DeleteAccountResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeAccountPrivilegesRequest.cs" />
@@ -3308,6 +3309,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDcnDetailRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDcnDetailResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeInstanceNodeInfoRequest.cs" />
@@ -5182,6 +5185,8 @@
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\AddVpcCniSubnetsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\AddVpcCniSubnetsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="Tke\V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="Tke\V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />
