@@ -79,13 +79,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// DCN flag. Valid values: `1` (primary), `2` (replica)
+        /// DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
         /// </summary>
         [JsonProperty("DcnFlag")]
         public long? DcnFlag{ get; set; }
 
         /// <summary>
-        /// DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
+        /// DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
         /// </summary>
         [JsonProperty("DcnStatus")]
         public long? DcnStatus{ get; set; }
