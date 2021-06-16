@@ -106,5 +106,6 @@
     <Compile Include="V20190722\Models\StopMCUMixTranscodeResponse.cs" />
     <Compile Include="V20190722\Models\TimeValue.cs" />
     <Compile Include="V20190722\Models\UserInformation.cs" />
+    <Compile Include="V20190722\Models\WaterMarkParams.cs" />
   </ItemGroup>
 </Project>

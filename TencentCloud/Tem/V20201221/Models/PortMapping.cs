@@ -21,26 +21,26 @@ namespace TencentCloud.Tem.V20201221.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IngressTls : AbstractModel
+    public class PortMapping : AbstractModel
     {
         
         /// <summary>
-        /// Host array. An empty array indicates the default certificate for all domain names.
+        /// Port.
         /// </summary>
-        [JsonProperty("Hosts")]
-        public string[] Hosts{ get; set; }
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
 
         /// <summary>
-        /// Secret name. If a certificate is used, this field is left empty.
+        /// Mapped port.
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
+        [JsonProperty("TargetPort")]
+        public long? TargetPort{ get; set; }
 
         /// <summary>
-        /// SSL Certificate Id
+        /// TCP/UDP protocol stack.
         /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "TargetPort", this.TargetPort);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

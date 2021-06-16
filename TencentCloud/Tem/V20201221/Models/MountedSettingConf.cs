@@ -21,26 +21,26 @@ namespace TencentCloud.Tem.V20201221.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IngressTls : AbstractModel
+    public class MountedSettingConf : AbstractModel
     {
         
         /// <summary>
-        /// Host array. An empty array indicates the default certificate for all domain names.
+        /// 
         /// </summary>
-        [JsonProperty("Hosts")]
-        public string[] Hosts{ get; set; }
+        [JsonProperty("ConfigDataName")]
+        public string ConfigDataName{ get; set; }
 
         /// <summary>
-        /// Secret name. If a certificate is used, this field is left empty.
+        /// 
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
+        [JsonProperty("MountedPath")]
+        public string MountedPath{ get; set; }
 
         /// <summary>
-        /// SSL Certificate Id
+        /// 
         /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
+        [JsonProperty("Data")]
+        public Pair[] Data{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
+            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
+            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
         }
     }
 }

@@ -49,10 +49,24 @@ namespace TencentCloud.Tem.V20201221.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Pod IP
+        /// Pod IP.
         /// </summary>
         [JsonProperty("PodIp")]
         public string PodIp{ get; set; }
+
+        /// <summary>
+        /// Availability zone.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// Deployed version.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DeployVersion")]
+        public string DeployVersion{ get; set; }
 
 
         /// <summary>
@@ -65,6 +79,8 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "PodIp", this.PodIp);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
         }
     }
 }

@@ -21,50 +21,50 @@ namespace TencentCloud.Tem.V20201221.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateNamespaceRequest : AbstractModel
+    public class RestartServiceRunPodRequest : AbstractModel
     {
         
         /// <summary>
-        /// Namespace name
+        /// Environment ID.
         /// </summary>
-        [JsonProperty("NamespaceName")]
-        public string NamespaceName{ get; set; }
+        [JsonProperty("NamespaceId")]
+        public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// VPC name
+        /// Service ID.
         /// </summary>
-        [JsonProperty("Vpc")]
-        public string Vpc{ get; set; }
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Subnet list
+        /// Pod name.
         /// </summary>
-        [JsonProperty("SubnetIds")]
-        public string[] SubnetIds{ get; set; }
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
 
         /// <summary>
-        /// Namespace description
+        /// Number of items per page.
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// K8s version
+        /// Page number.
         /// </summary>
-        [JsonProperty("K8sVersion")]
-        public string K8sVersion{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// Pod status.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// Source channel.
         /// </summary>
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// Whether to enable the TSW service.
-        /// </summary>
-        [JsonProperty("EnableTswTraceService")]
-        public bool? EnableTswTraceService{ get; set; }
 
 
         /// <summary>
@@ -72,13 +72,13 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
-            this.SetParamSimple(map, prefix + "Vpc", this.Vpc);
-            this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
         }
     }
 }

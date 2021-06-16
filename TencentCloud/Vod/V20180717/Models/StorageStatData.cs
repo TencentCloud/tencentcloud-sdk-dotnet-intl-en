@@ -50,6 +50,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("StandardStorage")]
         public ulong? StandardStorage{ get; set; }
 
+        /// <summary>
+        /// Current ARCHIVE storage usage in bytes
+        /// </summary>
+        [JsonProperty("ArchiveStorage")]
+        public ulong? ArchiveStorage{ get; set; }
+
+        /// <summary>
+        /// Current DEEP ARCHIVE storage usage in bytes
+        /// </summary>
+        [JsonProperty("DeepArchiveStorage")]
+        public ulong? DeepArchiveStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +72,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
             this.SetParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
             this.SetParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+            this.SetParamSimple(map, prefix + "ArchiveStorage", this.ArchiveStorage);
+            this.SetParamSimple(map, prefix + "DeepArchiveStorage", this.DeepArchiveStorage);
         }
     }
 }

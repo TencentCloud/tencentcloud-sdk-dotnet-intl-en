@@ -21,26 +21,26 @@ namespace TencentCloud.Tem.V20201221.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IngressTls : AbstractModel
+    public class ModifyServiceInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// Host array. An empty array indicates the default certificate for all domain names.
+        /// Service ID.
         /// </summary>
-        [JsonProperty("Hosts")]
-        public string[] Hosts{ get; set; }
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Secret name. If a certificate is used, this field is left empty.
+        /// Description.
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
-        /// SSL Certificate Id
+        /// Source channel.
         /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         }
     }
 }

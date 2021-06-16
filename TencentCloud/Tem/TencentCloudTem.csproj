@@ -64,9 +64,12 @@
     <Compile Include="V20201221\Models\DescribeIngressesResponse.cs" />
     <Compile Include="V20201221\Models\DescribeNamespacesRequest.cs" />
     <Compile Include="V20201221\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="V20201221\Models\DescribeRelatedIngressesRequest.cs" />
+    <Compile Include="V20201221\Models\DescribeRelatedIngressesResponse.cs" />
     <Compile Include="V20201221\Models\DescribeRunPodPage.cs" />
     <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Request.cs" />
     <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Response.cs" />
+    <Compile Include="V20201221\Models\EksService.cs" />
     <Compile Include="V20201221\Models\EsInfo.cs" />
     <Compile Include="V20201221\Models\IngressInfo.cs" />
     <Compile Include="V20201221\Models\IngressRule.cs" />
@@ -79,8 +82,14 @@
     <Compile Include="V20201221\Models\ModifyIngressResponse.cs" />
     <Compile Include="V20201221\Models\ModifyNamespaceRequest.cs" />
     <Compile Include="V20201221\Models\ModifyNamespaceResponse.cs" />
+    <Compile Include="V20201221\Models\ModifyServiceInfoRequest.cs" />
+    <Compile Include="V20201221\Models\ModifyServiceInfoResponse.cs" />
+    <Compile Include="V20201221\Models\MountedSettingConf.cs" />
     <Compile Include="V20201221\Models\NamespacePage.cs" />
     <Compile Include="V20201221\Models\Pair.cs" />
+    <Compile Include="V20201221\Models\PortMapping.cs" />
+    <Compile Include="V20201221\Models\RestartServiceRunPodRequest.cs" />
+    <Compile Include="V20201221\Models\RestartServiceRunPodResponse.cs" />
     <Compile Include="V20201221\Models\RunVersionPod.cs" />
     <Compile Include="V20201221\Models\StorageConf.cs" />
     <Compile Include="V20201221\Models\StorageMountConf.cs" />

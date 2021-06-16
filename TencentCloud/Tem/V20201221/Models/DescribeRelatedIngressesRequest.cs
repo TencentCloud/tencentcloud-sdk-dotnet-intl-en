@@ -21,26 +21,32 @@ namespace TencentCloud.Tem.V20201221.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IngressTls : AbstractModel
+    public class DescribeRelatedIngressesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Host array. An empty array indicates the default certificate for all domain names.
+        /// Environment ID.
         /// </summary>
-        [JsonProperty("Hosts")]
-        public string[] Hosts{ get; set; }
+        [JsonProperty("NamespaceId")]
+        public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// Secret name. If a certificate is used, this field is left empty.
+        /// EKS namespace.
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
+        [JsonProperty("EksNamespace")]
+        public string EksNamespace{ get; set; }
 
         /// <summary>
-        /// SSL Certificate Id
+        /// Source channel.
         /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
+
+        /// <summary>
+        /// Service ID.
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+            this.SetParamSimple(map, prefix + "EksNamespace", this.EksNamespace);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
         }
     }
 }

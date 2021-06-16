@@ -174,6 +174,30 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("ImageArgs")]
         public string[] ImageArgs{ get; set; }
 
+        /// <summary>
+        /// Service port mapping.
+        /// </summary>
+        [JsonProperty("PortMappings")]
+        public PortMapping[] PortMappings{ get; set; }
+
+        /// <summary>
+        /// Whether to add the registry’s default configurations.
+        /// </summary>
+        [JsonProperty("UseRegistryDefaultConfig")]
+        public bool? UseRegistryDefaultConfig{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SettingConfs")]
+        public MountedSettingConf[] SettingConfs{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EksService")]
+        public EksService EksService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +228,10 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ImageCommand", this.ImageCommand);
             this.SetParamArraySimple(map, prefix + "ImageArgs.", this.ImageArgs);
+            this.SetParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
+            this.SetParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
+            this.SetParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
+            this.SetParamObj(map, prefix + "EksService.", this.EksService);
         }
     }
 }

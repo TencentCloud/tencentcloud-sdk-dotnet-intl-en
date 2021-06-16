@@ -83,6 +83,19 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
+        /// <summary>
+        /// Creation time.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
+        /// </summary>
+        [JsonProperty("Mixed")]
+        public bool? Mixed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +111,8 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamArrayObj(map, prefix + "Tls.", this.Tls);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Mixed", this.Mixed);
         }
     }
 }

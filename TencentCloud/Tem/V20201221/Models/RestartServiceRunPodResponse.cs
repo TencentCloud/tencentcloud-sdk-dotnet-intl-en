@@ -21,26 +21,21 @@ namespace TencentCloud.Tem.V20201221.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IngressTls : AbstractModel
+    public class RestartServiceRunPodResponse : AbstractModel
     {
         
         /// <summary>
-        /// Host array. An empty array indicates the default certificate for all domain names.
+        /// Returned results.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("Hosts")]
-        public string[] Hosts{ get; set; }
+        [JsonProperty("Result")]
+        public bool? Result{ get; set; }
 
         /// <summary>
-        /// Secret name. If a certificate is used, this field is left empty.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
-
-        /// <summary>
-        /// SSL Certificate Id
-        /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
