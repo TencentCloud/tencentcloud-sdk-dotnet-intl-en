@@ -153,6 +153,10 @@
     <Compile Include="V20180419\Models\RemoveInstancesResponse.cs" />
     <Compile Include="V20180419\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180419\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180419\Models\ScaleInInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\ScaleInInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\ScaleOutInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\ScaleOutInstancesResponse.cs" />
     <Compile Include="V20180419\Models\ScalingPolicy.cs" />
     <Compile Include="V20180419\Models\ScheduledAction.cs" />
     <Compile Include="V20180419\Models\ServiceSettings.cs" />

@@ -1274,9 +1274,7 @@ namespace TencentCloud.As.V20180419
         /// This API is used to remove CVM instances from a scaling group. Instances removed via this API will not be terminated.
         /// * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
         /// * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
-        /// 
-        /// The CVM will be associated from the CLB instance (if any).
-        ///  
+        /// * This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
         /// </summary>
         /// <param name="req"><see cref="DetachInstancesRequest"/></param>
         /// <returns><see cref="DetachInstancesResponse"/></returns>
@@ -1299,9 +1297,7 @@ namespace TencentCloud.As.V20180419
         /// This API is used to remove CVM instances from a scaling group. Instances removed via this API will not be terminated.
         /// * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
         /// * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
-        /// 
-        /// The CVM will be associated from the CLB instance (if any).
-        ///  
+        /// * This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
         /// </summary>
         /// <param name="req"><see cref="DetachInstancesRequest"/></param>
         /// <returns><see cref="DetachInstancesResponse"/></returns>
@@ -1784,9 +1780,7 @@ namespace TencentCloud.As.V20180419
         /// This API is used to delete CVM instances from a scaling group. Instances that are automatically created through AS will be terminated, while those manually added to the scaling group will be removed and retained.
         /// * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
         /// * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
-        /// 
-        /// This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
-        ///  
+        /// * This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
         /// </summary>
         /// <param name="req"><see cref="RemoveInstancesRequest"/></param>
         /// <returns><see cref="RemoveInstancesResponse"/></returns>
@@ -1809,9 +1803,7 @@ namespace TencentCloud.As.V20180419
         /// This API is used to delete CVM instances from a scaling group. Instances that are automatically created through AS will be terminated, while those manually added to the scaling group will be removed and retained.
         /// * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
         /// * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
-        /// 
-        /// This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
-        ///  
+        /// * This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
         /// </summary>
         /// <param name="req"><see cref="RemoveInstancesRequest"/></param>
         /// <returns><see cref="RemoveInstancesResponse"/></returns>
@@ -1822,6 +1814,102 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "RemoveInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to reduce the specified number of instances from the scaling group, which returns the scaling activity ID `ActivityId`.
+        /// * The scaling group is not active.
+        /// * The scale-in instances will be selected according to the `TerminationPolicies` policy as described in [Reducing Capacity](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
+        /// * Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
+        /// * The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
+        /// * If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
+        /// </summary>
+        /// <param name="req"><see cref="ScaleInInstancesRequest"/></param>
+        /// <returns><see cref="ScaleInInstancesResponse"/></returns>
+        public async Task<ScaleInInstancesResponse> ScaleInInstances(ScaleInInstancesRequest req)
+        {
+             JsonResponseModel<ScaleInInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleInInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleInInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to reduce the specified number of instances from the scaling group, which returns the scaling activity ID `ActivityId`.
+        /// * The scaling group is not active.
+        /// * The scale-in instances will be selected according to the `TerminationPolicies` policy as described in [Reducing Capacity](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
+        /// * Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
+        /// * The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
+        /// * If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
+        /// </summary>
+        /// <param name="req"><see cref="ScaleInInstancesRequest"/></param>
+        /// <returns><see cref="ScaleInInstancesResponse"/></returns>
+        public ScaleInInstancesResponse ScaleInInstancesSync(ScaleInInstancesRequest req)
+        {
+             JsonResponseModel<ScaleInInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleInInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleInInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
+        /// * The scaling group is not active.
+        /// * The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
+        /// * If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutInstancesRequest"/></param>
+        /// <returns><see cref="ScaleOutInstancesResponse"/></returns>
+        public async Task<ScaleOutInstancesResponse> ScaleOutInstances(ScaleOutInstancesRequest req)
+        {
+             JsonResponseModel<ScaleOutInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleOutInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
+        /// * The scaling group is not active.
+        /// * The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
+        /// * If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutInstancesRequest"/></param>
+        /// <returns><see cref="ScaleOutInstancesResponse"/></returns>
+        public ScaleOutInstancesResponse ScaleOutInstancesSync(ScaleOutInstancesRequest req)
+        {
+             JsonResponseModel<ScaleOutInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleOutInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
