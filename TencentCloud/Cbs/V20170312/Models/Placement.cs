@@ -31,10 +31,24 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
+        /// Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("CageId")]
+        public string CageId{ get; set; }
+
+        /// <summary>
         /// ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
+
+        /// <summary>
+        /// Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("CdcName")]
+        public string CdcName{ get; set; }
 
         /// <summary>
         /// ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
@@ -44,18 +58,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Dedicated cluster ID
         /// </summary>
-        [JsonProperty("CageId")]
-        public string CageId{ get; set; }
-
-        /// <summary>
-        /// Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
-        /// Note: This field may return null, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("CdcName")]
-        public string CdcName{ get; set; }
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
 
 
         /// <summary>
@@ -64,10 +70,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "CdcName", this.CdcName);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

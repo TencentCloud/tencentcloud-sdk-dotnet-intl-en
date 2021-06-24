@@ -67,6 +67,8 @@
     <Compile Include="V20191112\Models\DescribeTimerScalingPoliciesResponse.cs" />
     <Compile Include="V20191112\Models\DesiredPlayerSession.cs" />
     <Compile Include="V20191112\Models\DiskInfo.cs" />
+    <Compile Include="V20191112\Models\EndGameServerSessionAndProcessRequest.cs" />
+    <Compile Include="V20191112\Models\EndGameServerSessionAndProcessResponse.cs" />
     <Compile Include="V20191112\Models\FleetAttributes.cs" />
     <Compile Include="V20191112\Models\GameProperty.cs" />
     <Compile Include="V20191112\Models\GameServerSession.cs" />

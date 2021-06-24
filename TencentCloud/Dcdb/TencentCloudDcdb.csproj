@@ -95,10 +95,16 @@
     <Compile Include="V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeFlowRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeFlowResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="V20180411\Models\DestroyDCDBInstanceRequest.cs" />
+    <Compile Include="V20180411\Models\DestroyDCDBInstanceResponse.cs" />
+    <Compile Include="V20180411\Models\DestroyHourDCDBInstanceRequest.cs" />
+    <Compile Include="V20180411\Models\DestroyHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\GrantAccountPrivilegesRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.222</VersionPrefix>
+    <VersionPrefix>3.0.223</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2265,10 +2265,16 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeFlowRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeFlowResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DestroyDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DestroyDCDBInstanceResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DestroyHourDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DestroyHourDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesRequest.cs" />
@@ -2849,6 +2855,8 @@
     <Compile Include="Gse\V20191112\Models\DescribeTimerScalingPoliciesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DesiredPlayerSession.cs" />
     <Compile Include="Gse\V20191112\Models\DiskInfo.cs" />
+    <Compile Include="Gse\V20191112\Models\EndGameServerSessionAndProcessRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\EndGameServerSessionAndProcessResponse.cs" />
     <Compile Include="Gse\V20191112\Models\FleetAttributes.cs" />
     <Compile Include="Gse\V20191112\Models\GameProperty.cs" />
     <Compile Include="Gse\V20191112\Models\GameServerSession.cs" />

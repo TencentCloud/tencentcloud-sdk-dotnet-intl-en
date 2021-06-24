@@ -413,6 +413,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// This API is used to terminate the game server session and the corresponding process, which is applicable to time-limited protection and no protection.
+        /// </summary>
+        /// <param name="req"><see cref="EndGameServerSessionAndProcessRequest"/></param>
+        /// <returns><see cref="EndGameServerSessionAndProcessResponse"/></returns>
+        public async Task<EndGameServerSessionAndProcessResponse> EndGameServerSessionAndProcess(EndGameServerSessionAndProcessRequest req)
+        {
+             JsonResponseModel<EndGameServerSessionAndProcessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EndGameServerSessionAndProcess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EndGameServerSessionAndProcessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate the game server session and the corresponding process, which is applicable to time-limited protection and no protection.
+        /// </summary>
+        /// <param name="req"><see cref="EndGameServerSessionAndProcessRequest"/></param>
+        /// <returns><see cref="EndGameServerSessionAndProcessResponse"/></returns>
+        public EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcessSync(EndGameServerSessionAndProcessRequest req)
+        {
+             JsonResponseModel<EndGameServerSessionAndProcessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EndGameServerSessionAndProcess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EndGameServerSessionAndProcessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the log URL of a game server session.
         /// </summary>
         /// <param name="req"><see cref="GetGameServerSessionLogUrlRequest"/></param>

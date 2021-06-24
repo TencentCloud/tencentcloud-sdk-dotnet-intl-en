@@ -819,6 +819,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to query task status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowRequest"/></param>
+        /// <returns><see cref="DescribeFlowResponse"/></returns>
+        public async Task<DescribeFlowResponse> DescribeFlow(DescribeFlowRequest req)
+        {
+             JsonResponseModel<DescribeFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query task status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowRequest"/></param>
+        /// <returns><see cref="DescribeFlowResponse"/></returns>
+        public DescribeFlowResponse DescribeFlowSync(DescribeFlowRequest req)
+        {
+             JsonResponseModel<DescribeFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the security group details of a project.
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
@@ -890,6 +930,86 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProjects");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate an isolated monthly-subscribed instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDCDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyDCDBInstanceResponse"/></returns>
+        public async Task<DestroyDCDBInstanceResponse> DestroyDCDBInstance(DestroyDCDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate an isolated monthly-subscribed instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDCDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyDCDBInstanceResponse"/></returns>
+        public DestroyDCDBInstanceResponse DestroyDCDBInstanceSync(DestroyDCDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate a pay-as-you-go instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyHourDCDBInstanceResponse"/></returns>
+        public async Task<DestroyHourDCDBInstanceResponse> DestroyHourDCDBInstance(DestroyHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate a pay-as-you-go instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyHourDCDBInstanceResponse"/></returns>
+        public DestroyHourDCDBInstanceResponse DestroyHourDCDBInstanceSync(DestroyHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyHourDCDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
