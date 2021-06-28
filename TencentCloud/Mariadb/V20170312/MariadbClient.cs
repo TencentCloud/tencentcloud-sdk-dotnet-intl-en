@@ -1019,6 +1019,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to terminate a pay-as-you-go instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyHourDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyHourDBInstanceResponse"/></returns>
+        public async Task<DestroyHourDBInstanceResponse> DestroyHourDBInstance(DestroyHourDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate a pay-as-you-go instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyHourDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyHourDBInstanceResponse"/></returns>
+        public DestroyHourDBInstanceResponse DestroyHourDBInstanceSync(DestroyHourDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unassociate security groups from instances in batches.
         /// </summary>
         /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
@@ -1174,6 +1214,56 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountDescription");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the permissions of a TencentDB instance account.
+        /// 
+        /// **Notes**
+        /// - Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
+        /// - An error will be reported if read-write permissions are granted to a read-only account.
+        /// - If the parameter of permissions at a level is left empty, no change will be made to the permissions at the level that have been granted. To clear granted permissions at a level, set `GlobalPrivileges.N` or `Privileges` to an empty array.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public async Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the permissions of a TencentDB instance account.
+        /// 
+        /// **Notes**
+        /// - Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
+        /// - An error will be reported if read-write permissions are granted to a read-only account.
+        /// - If the parameter of permissions at a level is left empty, no change will be made to the permissions at the level that have been granted. To clear granted permissions at a level, set `GlobalPrivileges.N` or `Privileges` to an empty array.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

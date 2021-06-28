@@ -45,12 +45,14 @@
 
   <ItemGroup>
     <Compile Include="V20170312\MariadbClient.cs" />
+    <Compile Include="V20170312\Models\Account.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="V20170312\Models\CloneAccountResponse.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\ColumnPrivilege.cs" />
     <Compile Include="V20170312\Models\ConstraintRange.cs" />
     <Compile Include="V20170312\Models\CopyAccountPrivilegesRequest.cs" />
     <Compile Include="V20170312\Models\CopyAccountPrivilegesResponse.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="V20170312\Models\DBInstance.cs" />
     <Compile Include="V20170312\Models\DBParamValue.cs" />
     <Compile Include="V20170312\Models\Database.cs" />
+    <Compile Include="V20170312\Models\DatabasePrivilege.cs" />
     <Compile Include="V20170312\Models\DcnDetailItem.cs" />
     <Compile Include="V20170312\Models\DeleteAccountRequest.cs" />
     <Compile Include="V20170312\Models\DeleteAccountResponse.cs" />
@@ -100,8 +103,11 @@
     <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DestroyHourDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\DestroyHourDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\FunctionPrivilege.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
@@ -109,6 +115,8 @@
     <Compile Include="V20170312\Models\LogFileInfo.cs" />
     <Compile Include="V20170312\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyAccountPrivilegesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyAccountPrivilegesResponse.cs" />
     <Compile Include="V20170312\Models\ModifyBackupTimeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyBackupTimeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />
@@ -129,11 +137,14 @@
     <Compile Include="V20170312\Models\ParamDesc.cs" />
     <Compile Include="V20170312\Models\ParamModifyResult.cs" />
     <Compile Include="V20170312\Models\PerformanceMonitorSet.cs" />
+    <Compile Include="V20170312\Models\ProcedurePrivilege.cs" />
     <Compile Include="V20170312\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20170312\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20170312\Models\ResourceUsageMonitorSet.cs" />
     <Compile Include="V20170312\Models\SecurityGroup.cs" />
     <Compile Include="V20170312\Models\SecurityGroupBound.cs" />
     <Compile Include="V20170312\Models\SlowLogData.cs" />
+    <Compile Include="V20170312\Models\TablePrivilege.cs" />
+    <Compile Include="V20170312\Models\ViewPrivileges.cs" />
   </ItemGroup>
 </Project>
