@@ -31,8 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// For `directory`, enter the path, e.g., `/xxx/test/`.
         /// For `path`, enter the absolute path, e.g., `/xxx/test.html`.
         /// For `index`, enter a forward slash `/`.
-        /// For `default`, enter `no max-age`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
@@ -44,8 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// `directory`: effective for specified paths.
         /// `path`: effective for specified absolute paths.
         /// `index`: homepage.
-        /// `default`: effective when the origin server does not have the `max-age` value.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }

@@ -48,6 +48,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// Whether to return a value as an IP range
+        /// </summary>
+        [JsonProperty("Segment")]
+        public bool? Segment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +63,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Layer", this.Layer);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "Segment", this.Segment);
         }
     }
 }

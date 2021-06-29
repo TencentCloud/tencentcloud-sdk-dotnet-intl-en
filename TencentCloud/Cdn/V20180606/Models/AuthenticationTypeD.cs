@@ -34,7 +34,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Signature expiration time
-        /// Unit: second. The maximum value is 31536000.
+        /// Unit: second. The maximum value is 630720000.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
