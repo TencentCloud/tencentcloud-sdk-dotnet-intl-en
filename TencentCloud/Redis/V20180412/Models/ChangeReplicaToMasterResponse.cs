@@ -21,38 +21,20 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNode : AbstractModel
+    public class ChangeReplicaToMasterResponse : AbstractModel
     {
         
         /// <summary>
-        /// The number of keys on a node
+        /// Async task ID
         /// </summary>
-        [JsonProperty("Keys")]
-        public long? Keys{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
-        /// Distribution of node slots
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Slot")]
-        public string Slot{ get; set; }
-
-        /// <summary>
-        /// Node ID
-        /// </summary>
-        [JsonProperty("NodeId")]
-        public string NodeId{ get; set; }
-
-        /// <summary>
-        /// Node status
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// Node role
-        /// </summary>
-        [JsonProperty("Role")]
-        public string Role{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +42,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Keys", this.Keys);
-            this.SetParamSimple(map, prefix + "Slot", this.Slot);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -84,6 +84,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
+        /// <summary>
+        /// The resource isolation type after the instance is upgraded. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). If this parameter is left empty, the resource isolation type will be the same as the original one.
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
             this.SetParamSimple(map, prefix + "BackupZone", this.BackupZone);
             this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

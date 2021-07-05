@@ -42,6 +42,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ClusterId")]
         public long? ClusterId{ get; set; }
 
+        /// <summary>
+        /// AZ ID
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
             this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

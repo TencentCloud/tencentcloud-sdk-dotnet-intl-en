@@ -93,6 +93,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
+        /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
+        public async Task<ChangeReplicaToMasterResponse> ChangeReplicaToMaster(ChangeReplicaToMasterRequest req)
+        {
+             JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeReplicaToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeReplicaToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
+        /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
+        public ChangeReplicaToMasterResponse ChangeReplicaToMasterSync(ChangeReplicaToMasterRequest req)
+        {
+             JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeReplicaToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeReplicaToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to deactivate an instance in the recycle bin immediately.
         /// </summary>
         /// <param name="req"><see cref="CleanUpInstanceRequest"/></param>

@@ -54,6 +54,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("EventCondition")]
         public AlarmPolicyEventCondition EventCondition{ get; set; }
 
+        /// <summary>
+        /// Global filter.
+        /// </summary>
+        [JsonProperty("Filter")]
+        public AlarmPolicyFilter Filter{ get; set; }
+
+        /// <summary>
+        /// Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+        /// </summary>
+        [JsonProperty("GroupBy")]
+        public string[] GroupBy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
             this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamObj(map, prefix + "EventCondition.", this.EventCondition);
+            this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         }
     }
 }

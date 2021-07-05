@@ -30,6 +30,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
+        /// <summary>
+        /// The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
+        /// </summary>
+        [JsonProperty("CompleteMode")]
+        public string CompleteMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "CompleteMode", this.CompleteMode);
         }
     }
 }
