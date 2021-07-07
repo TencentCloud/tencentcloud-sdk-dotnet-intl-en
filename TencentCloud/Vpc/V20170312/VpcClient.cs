@@ -2377,6 +2377,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to create destination routes of a route-based VPN gateway.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpnGatewayRoutesRequest"/></param>
+        /// <returns><see cref="CreateVpnGatewayRoutesResponse"/></returns>
+        public async Task<CreateVpnGatewayRoutesResponse> CreateVpnGatewayRoutes(CreateVpnGatewayRoutesRequest req)
+        {
+             JsonResponseModel<CreateVpnGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVpnGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpnGatewayRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create destination routes of a route-based VPN gateway.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpnGatewayRoutesRequest"/></param>
+        /// <returns><see cref="CreateVpnGatewayRoutesResponse"/></returns>
+        public CreateVpnGatewayRoutesResponse CreateVpnGatewayRoutesSync(CreateVpnGatewayRoutesRequest req)
+        {
+             JsonResponseModel<CreateVpnGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVpnGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpnGatewayRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DeleteAddressTemplate) is used to delete an IP address template.
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateRequest"/></param>
@@ -3602,6 +3642,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteVpnGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpnGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete routes of a VPN gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpnGatewayRoutesRequest"/></param>
+        /// <returns><see cref="DeleteVpnGatewayRoutesResponse"/></returns>
+        public async Task<DeleteVpnGatewayRoutesResponse> DeleteVpnGatewayRoutes(DeleteVpnGatewayRoutesRequest req)
+        {
+             JsonResponseModel<DeleteVpnGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVpnGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpnGatewayRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete routes of a VPN gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpnGatewayRoutesRequest"/></param>
+        /// <returns><see cref="DeleteVpnGatewayRoutesResponse"/></returns>
+        public DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutesSync(DeleteVpnGatewayRoutesRequest req)
+        {
+             JsonResponseModel<DeleteVpnGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVpnGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpnGatewayRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5814,6 +5894,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVpnGatewayCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query destination routes of a route-based VPN gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpnGatewayRoutesRequest"/></param>
+        /// <returns><see cref="DescribeVpnGatewayRoutesResponse"/></returns>
+        public async Task<DescribeVpnGatewayRoutesResponse> DescribeVpnGatewayRoutes(DescribeVpnGatewayRoutesRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpnGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewayRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query destination routes of a route-based VPN gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpnGatewayRoutesRequest"/></param>
+        /// <returns><see cref="DescribeVpnGatewayRoutesResponse"/></returns>
+        public DescribeVpnGatewayRoutesResponse DescribeVpnGatewayRoutesSync(DescribeVpnGatewayRoutesRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpnGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewayRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -8392,6 +8512,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyVpnGatewayCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the route status of a VPN gateway.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpnGatewayRoutesRequest"/></param>
+        /// <returns><see cref="ModifyVpnGatewayRoutesResponse"/></returns>
+        public async Task<ModifyVpnGatewayRoutesResponse> ModifyVpnGatewayRoutes(ModifyVpnGatewayRoutesRequest req)
+        {
+             JsonResponseModel<ModifyVpnGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVpnGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewayRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the route status of a VPN gateway.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpnGatewayRoutesRequest"/></param>
+        /// <returns><see cref="ModifyVpnGatewayRoutesResponse"/></returns>
+        public ModifyVpnGatewayRoutesResponse ModifyVpnGatewayRoutesSync(ModifyVpnGatewayRoutesRequest req)
+        {
+             JsonResponseModel<ModifyVpnGatewayRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVpnGatewayRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewayRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public Instance[] Instances{ get; set; }
 
         /// <summary>
-        /// Monitoring statistical period in seconds, such as 60. Default value: 300. The statistical period varies by metric. For more information on the statistical periods supported by each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The values in the statistical period column are the supported statistical periods. A single request can get data at up to 1,440 data points.
+        /// Monitoring statistical period in seconds, such as 60. Default value: 300. The statistical period varies by metric. For more information on the statistical periods supported by each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The values in the statistical period column are the supported statistical periods. A single request can get up to 1,440 data points.
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }

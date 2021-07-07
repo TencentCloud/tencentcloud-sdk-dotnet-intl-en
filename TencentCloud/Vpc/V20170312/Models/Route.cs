@@ -32,16 +32,15 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// Type of the next hop. Valid values:
-        /// CVM: public gateway CVM;
-        /// VPN: VPN gateway;
-        /// DIRECTCONNECT: direct connect gateway;
-        /// PEERCONNECTION: peering connection;
-        /// SSLVPN: SSL VPN gateway;
-        /// NAT: NAT Gateway; 
-        /// NORMAL_CVM: normal CVM;
-        /// EIP: public IP address of the CVM;
-        /// CCN: Cloud Connect Network;
-        /// LOCAL_GATEWAY: local gateway.
+        /// `CVM`: public gateway CVM;
+        /// `VPN`: VPN gateway;
+        /// `DIRECTCONNECT`: direct connect gateway;
+        /// `PEERCONNECTION`: peering connection;
+        /// `HAVIP`: HAVIP;
+        /// `NAT`: NAT Gateway; 
+        /// `NORMAL_CVM`: normal CVM;
+        /// `EIP`: public IP address of the CVM;
+        /// `LOCAL_GATEWAY`: local gateway.
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }

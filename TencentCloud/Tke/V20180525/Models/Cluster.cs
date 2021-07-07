@@ -137,6 +137,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
+        /// <summary>
+        /// Specifies whether the cluster supports external nodes.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("EnableExternalNode")]
+        public bool? EnableExternalNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +168,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "EnableExternalNode", this.EnableExternalNode);
         }
     }
 }

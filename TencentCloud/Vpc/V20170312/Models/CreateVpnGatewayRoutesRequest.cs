@@ -21,26 +21,20 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetCcnRegionBandwidthLimitsRequest : AbstractModel
+    public class CreateVpnGatewayRoutesRequest : AbstractModel
     {
         
         /// <summary>
-        /// The CCN instance ID, such as `ccn-f49l6u0z`.
+        /// VPN gateway ID
         /// </summary>
-        [JsonProperty("CcnId")]
-        public string CcnId{ get; set; }
+        [JsonProperty("VpnGatewayId")]
+        public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// The outbound bandwidth cap of each CCN region.
+        /// Destination route list of a VPN gateway
         /// </summary>
-        [JsonProperty("CcnRegionBandwidthLimits")]
-        public CcnRegionBandwidthLimit[] CcnRegionBandwidthLimits{ get; set; }
-
-        /// <summary>
-        /// Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
-        /// </summary>
-        [JsonProperty("SetDefaultLimitFlag")]
-        public bool? SetDefaultLimitFlag{ get; set; }
+        [JsonProperty("Routes")]
+        public VpnGatewayRoute[] Routes{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
-            this.SetParamArrayObj(map, prefix + "CcnRegionBandwidthLimits.", this.CcnRegionBandwidthLimits);
-            this.SetParamSimple(map, prefix + "SetDefaultLimitFlag", this.SetDefaultLimitFlag);
+            this.SetParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
+            this.SetParamArrayObj(map, prefix + "Routes.", this.Routes);
         }
     }
 }

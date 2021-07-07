@@ -21,26 +21,32 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetCcnRegionBandwidthLimitsRequest : AbstractModel
+    public class DescribeVpnGatewayRoutesRequest : AbstractModel
     {
         
         /// <summary>
-        /// The CCN instance ID, such as `ccn-f49l6u0z`.
+        /// VPN gateway ID
         /// </summary>
-        [JsonProperty("CcnId")]
-        public string CcnId{ get; set; }
+        [JsonProperty("VpnGatewayId")]
+        public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// The outbound bandwidth cap of each CCN region.
+        /// Filter condition. Valid values: `DestinationCidr`, `InstanceId`, and `InstanceType`.
         /// </summary>
-        [JsonProperty("CcnRegionBandwidthLimits")]
-        public CcnRegionBandwidthLimit[] CcnRegionBandwidthLimits{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+        /// Offset. Default value: 0
         /// </summary>
-        [JsonProperty("SetDefaultLimitFlag")]
-        public bool? SetDefaultLimitFlag{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// Number of returned results per page. Default value: 20; maximum value: 100
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
-            this.SetParamArrayObj(map, prefix + "CcnRegionBandwidthLimits.", this.CcnRegionBandwidthLimits);
-            this.SetParamSimple(map, prefix + "SetDefaultLimitFlag", this.SetDefaultLimitFlag);
+            this.SetParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

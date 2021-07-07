@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.231</VersionPrefix>
+    <VersionPrefix>3.0.232</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6126,6 +6126,8 @@
     <Compile Include="Vpc\V20170312\Models\CreateVpnConnectionResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CrossBorderCompliance.cs" />
     <Compile Include="Vpc\V20170312\Models\CustomerGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\CustomerGatewayVendor.cs" />
@@ -6191,6 +6193,8 @@
     <Compile Include="Vpc\V20170312\Models\DeleteVpnConnectionResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpnGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpnGatewayResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpnGatewayRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpnGatewayRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAccountAttributesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAccountAttributesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAddressQuotaRequest.cs" />
@@ -6301,6 +6305,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeVpnConnectionsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewayCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewayCcnRoutesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewayRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewayRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewaysRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewaysResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DestinationIpPortTranslationNatRule.cs" />
@@ -6448,6 +6454,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayCcnRoutesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayAddress.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
@@ -6527,6 +6535,8 @@
     <Compile Include="Vpc\V20170312\Models\VpnConnection.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnGatewayQuota.cs" />
+    <Compile Include="Vpc\V20170312\Models\VpnGatewayRoute.cs" />
+    <Compile Include="Vpc\V20170312\Models\VpnGatewayRouteModify.cs" />
     <Compile Include="Vpc\V20170312\Models\VpngwCcnRoutes.cs" />
     <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesResponse.cs" />

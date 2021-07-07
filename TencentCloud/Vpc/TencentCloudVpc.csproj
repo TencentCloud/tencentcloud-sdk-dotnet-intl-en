@@ -172,6 +172,8 @@
     <Compile Include="V20170312\Models\CreateVpnConnectionResponse.cs" />
     <Compile Include="V20170312\Models\CreateVpnGatewayRequest.cs" />
     <Compile Include="V20170312\Models\CreateVpnGatewayResponse.cs" />
+    <Compile Include="V20170312\Models\CreateVpnGatewayRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateVpnGatewayRoutesResponse.cs" />
     <Compile Include="V20170312\Models\CrossBorderCompliance.cs" />
     <Compile Include="V20170312\Models\CustomerGateway.cs" />
     <Compile Include="V20170312\Models\CustomerGatewayVendor.cs" />
@@ -237,6 +239,8 @@
     <Compile Include="V20170312\Models\DeleteVpnConnectionResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpnGatewayRequest.cs" />
     <Compile Include="V20170312\Models\DeleteVpnGatewayResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteVpnGatewayRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteVpnGatewayRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAccountAttributesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAccountAttributesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAddressQuotaRequest.cs" />
@@ -347,6 +351,8 @@
     <Compile Include="V20170312\Models\DescribeVpnConnectionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewayCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewayCcnRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpnGatewayRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpnGatewayRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysResponse.cs" />
     <Compile Include="V20170312\Models\DestinationIpPortTranslationNatRule.cs" />
@@ -494,6 +500,8 @@
     <Compile Include="V20170312\Models\ModifyVpnGatewayAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpnGatewayCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpnGatewayCcnRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyVpnGatewayRoutesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyVpnGatewayRoutesResponse.cs" />
     <Compile Include="V20170312\Models\NatGateway.cs" />
     <Compile Include="V20170312\Models\NatGatewayAddress.cs" />
     <Compile Include="V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
@@ -573,6 +581,8 @@
     <Compile Include="V20170312\Models\VpnConnection.cs" />
     <Compile Include="V20170312\Models\VpnGateway.cs" />
     <Compile Include="V20170312\Models\VpnGatewayQuota.cs" />
+    <Compile Include="V20170312\Models\VpnGatewayRoute.cs" />
+    <Compile Include="V20170312\Models\VpnGatewayRouteModify.cs" />
     <Compile Include="V20170312\Models\VpngwCcnRoutes.cs" />
     <Compile Include="V20170312\Models\WithdrawNotifyRoutesRequest.cs" />
     <Compile Include="V20170312\Models\WithdrawNotifyRoutesResponse.cs" />
