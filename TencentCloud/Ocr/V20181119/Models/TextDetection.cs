@@ -56,6 +56,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ItemPolygon")]
         public ItemCoord ItemPolygon{ get; set; }
 
+        /// <summary>
+        /// Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+        /// </summary>
+        [JsonProperty("Words")]
+        public DetectedWords[] Words{ get; set; }
+
+        /// <summary>
+        /// Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+        /// </summary>
+        [JsonProperty("WordCoordPoint")]
+        public DetectedWordCoordPoint[] WordCoordPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +79,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
+            this.SetParamArrayObj(map, prefix + "Words.", this.Words);
+            this.SetParamArrayObj(map, prefix + "WordCoordPoint.", this.WordCoordPoint);
         }
     }
 }

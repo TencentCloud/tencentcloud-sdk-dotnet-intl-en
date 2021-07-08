@@ -48,6 +48,8 @@
     <Compile Include="V20181119\Models\BankCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\BankCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\Coord.cs" />
+    <Compile Include="V20181119\Models\DetectedWordCoordPoint.cs" />
+    <Compile Include="V20181119\Models\DetectedWords.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />

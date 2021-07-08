@@ -82,6 +82,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long?[] WarningCode{ get; set; }
 
         /// <summary>
+        /// Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("QualityValue")]
+        public long? QualityValue{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -101,6 +108,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "BorderCutImage", this.BorderCutImage);
             this.SetParamSimple(map, prefix + "CardNoImage", this.CardNoImage);
             this.SetParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
+            this.SetParamSimple(map, prefix + "QualityValue", this.QualityValue);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
