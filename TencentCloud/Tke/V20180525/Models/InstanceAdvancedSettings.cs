@@ -60,7 +60,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public Label[] Labels{ get; set; }
 
         /// <summary>
-        /// Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+        /// Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataDisks")]
@@ -72,6 +72,12 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("ExtraArgs")]
         public InstanceExtraArgs ExtraArgs{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DesiredPodNumber")]
+        public long? DesiredPodNumber{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+            this.SetParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
         }
     }
 }

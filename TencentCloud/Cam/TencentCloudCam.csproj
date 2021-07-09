@@ -117,6 +117,8 @@
     <Compile Include="V20190116\Models\GetRoleResponse.cs" />
     <Compile Include="V20190116\Models\GetSAMLProviderRequest.cs" />
     <Compile Include="V20190116\Models\GetSAMLProviderResponse.cs" />
+    <Compile Include="V20190116\Models\GetSecurityLastUsedRequest.cs" />
+    <Compile Include="V20190116\Models\GetSecurityLastUsedResponse.cs" />
     <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
     <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
     <Compile Include="V20190116\Models\GetUserRequest.cs" />
@@ -163,6 +165,7 @@
     <Compile Include="V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="V20190116\Models\RoleInfo.cs" />
     <Compile Include="V20190116\Models\SAMLProviderInfo.cs" />
+    <Compile Include="V20190116\Models\SecretIdLastUsed.cs" />
     <Compile Include="V20190116\Models\SetDefaultPolicyVersionRequest.cs" />
     <Compile Include="V20190116\Models\SetDefaultPolicyVersionResponse.cs" />
     <Compile Include="V20190116\Models\SetMfaFlagRequest.cs" />

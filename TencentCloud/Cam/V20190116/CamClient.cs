@@ -1413,6 +1413,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to get a key’s recent usage details.
+        /// </summary>
+        /// <param name="req"><see cref="GetSecurityLastUsedRequest"/></param>
+        /// <returns><see cref="GetSecurityLastUsedResponse"/></returns>
+        public async Task<GetSecurityLastUsedResponse> GetSecurityLastUsed(GetSecurityLastUsedRequest req)
+        {
+             JsonResponseModel<GetSecurityLastUsedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSecurityLastUsed");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSecurityLastUsedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get a key’s recent usage details.
+        /// </summary>
+        /// <param name="req"><see cref="GetSecurityLastUsedRequest"/></param>
+        /// <returns><see cref="GetSecurityLastUsedResponse"/></returns>
+        public GetSecurityLastUsedResponse GetSecurityLastUsedSync(GetSecurityLastUsedRequest req)
+        {
+             JsonResponseModel<GetSecurityLastUsedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSecurityLastUsed");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSecurityLastUsedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the status of the service-linked role deletion based on the `TaskId`
         /// </summary>
         /// <param name="req"><see cref="GetServiceLinkedRoleDeletionStatusRequest"/></param>
