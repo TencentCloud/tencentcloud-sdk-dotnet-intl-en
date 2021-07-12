@@ -43,12 +43,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter conditions.   
-        /// The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-        /// ProjectId - String - Required: No - Filter by a project ID.    
-        /// AccessRegion - String - Required: No - Filter by an access region.    
-        /// RealServerRegion - String - Required: No - Filter by an origin server region.
-        /// GroupId - String - Required: No - Filter by a connection group ID.
+        /// Filter condition   
+        /// The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+        /// ProjectId - String - Required: No - Filter by project ID.   
+        /// AccessRegion - String - Required: No - Filter by access region.    
+        /// RealServerRegion - String - Required: No - Filter by origin server region.
+        /// GroupId - String - Required: No - Filter by connection group ID.
+        /// IPAddressVersion - String - Required: No - Filter by IP version.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

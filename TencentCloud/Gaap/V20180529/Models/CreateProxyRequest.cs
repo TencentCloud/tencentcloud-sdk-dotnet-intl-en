@@ -92,6 +92,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }
 
+        /// <summary>
+        /// IP version. Valid values: `IPv4` (default), `IPv6`.
+        /// </summary>
+        [JsonProperty("IPAddressVersion")]
+        public string IPAddressVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
+            this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         }
     }
 }

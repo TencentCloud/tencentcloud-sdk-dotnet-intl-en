@@ -30,6 +30,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("DestRegion")]
         public string DestRegion{ get; set; }
 
+        /// <summary>
+        /// IP version. Valid values: `IPv4` (default), `IPv6`.
+        /// </summary>
+        [JsonProperty("IPAddressVersion")]
+        public string IPAddressVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DestRegion", this.DestRegion);
+            this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         }
     }
 }

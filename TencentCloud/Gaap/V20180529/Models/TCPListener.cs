@@ -129,6 +129,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ClientIPMethod")]
         public ulong? ClientIPMethod{ get; set; }
 
+        /// <summary>
+        /// Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HealthyThreshold")]
+        public ulong? HealthyThreshold{ get; set; }
+
+        /// <summary>
+        /// Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("UnhealthyThreshold")]
+        public ulong? UnhealthyThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +164,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
+            this.SetParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+            this.SetParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
         }
     }
 }

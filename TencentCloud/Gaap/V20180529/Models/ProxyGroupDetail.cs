@@ -129,6 +129,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ClientIPMethod")]
         public long?[] ClientIPMethod{ get; set; }
 
+        /// <summary>
+        /// IP version. Valid values: `IPv4` (default), `IPv6`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IPAddressVersion")]
+        public string IPAddressVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +158,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
+            this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         }
     }
 }

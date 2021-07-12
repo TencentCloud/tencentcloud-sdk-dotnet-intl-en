@@ -39,6 +39,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ScalingMode")]
         public string ScalingMode{ get; set; }
 
+        /// <summary>
+        /// Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+        /// </summary>
+        [JsonProperty("ReplaceLoadBalancerUnhealthy")]
+        public bool? ReplaceLoadBalancerUnhealthy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +53,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
             this.SetParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
+            this.SetParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
         }
     }
 }

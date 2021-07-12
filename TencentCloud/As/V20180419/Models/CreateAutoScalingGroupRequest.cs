@@ -156,6 +156,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("MultiZoneSubnetPolicy")]
         public string MultiZoneSubnetPolicy{ get; set; }
 
+        /// <summary>
+        /// Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).<br>If the parameter is set to `CLB`, the scaling group will check both the network status and the CLB health check status. If the network check indicates unhealthy, the `HealthStatus` field will return `UNHEALTHY`. If the CLB health check indicates unhealthy, the `HealthStatus` field will return `CLB_UNHEALTHY`. If both checks indicate unhealthy, the `HealthStatus` field will return `UNHEALTHY|CLB_UNHEALTHY`. Default value: `CLB`.
+        /// </summary>
+        [JsonProperty("HealthCheckType")]
+        public string HealthCheckType{ get; set; }
+
+        /// <summary>
+        /// Grace period of the CLB health check during which the `IN_SERVICE` instances added will not be marked as `CLB_UNHEALTHY`.<br>Valid range: 0-7200, in seconds. Default value: `0`.
+        /// </summary>
+        [JsonProperty("LoadBalancerHealthCheckGracePeriod")]
+        public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -181,6 +193,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
             this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
+            this.SetParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
+            this.SetParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
         }
     }
 }

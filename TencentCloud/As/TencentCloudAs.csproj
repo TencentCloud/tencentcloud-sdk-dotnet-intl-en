@@ -66,8 +66,6 @@
     <Compile Include="V20180419\Models\CreateLifecycleHookResponse.cs" />
     <Compile Include="V20180419\Models\CreateNotificationConfigurationRequest.cs" />
     <Compile Include="V20180419\Models\CreateNotificationConfigurationResponse.cs" />
-    <Compile Include="V20180419\Models\CreatePaiInstanceRequest.cs" />
-    <Compile Include="V20180419\Models\CreatePaiInstanceResponse.cs" />
     <Compile Include="V20180419\Models\CreateScalingPolicyRequest.cs" />
     <Compile Include="V20180419\Models\CreateScalingPolicyResponse.cs" />
     <Compile Include="V20180419\Models\CreateScheduledActionRequest.cs" />
@@ -101,8 +99,6 @@
     <Compile Include="V20180419\Models\DescribeLifecycleHooksResponse.cs" />
     <Compile Include="V20180419\Models\DescribeNotificationConfigurationsRequest.cs" />
     <Compile Include="V20180419\Models\DescribeNotificationConfigurationsResponse.cs" />
-    <Compile Include="V20180419\Models\DescribePaiInstancesRequest.cs" />
-    <Compile Include="V20180419\Models\DescribePaiInstancesResponse.cs" />
     <Compile Include="V20180419\Models\DescribeScalingPoliciesRequest.cs" />
     <Compile Include="V20180419\Models\DescribeScalingPoliciesResponse.cs" />
     <Compile Include="V20180419\Models\DescribeScheduledActionsRequest.cs" />
@@ -146,9 +142,6 @@
     <Compile Include="V20180419\Models\ModifyScheduledActionRequest.cs" />
     <Compile Include="V20180419\Models\ModifyScheduledActionResponse.cs" />
     <Compile Include="V20180419\Models\NotificationTarget.cs" />
-    <Compile Include="V20180419\Models\PaiInstance.cs" />
-    <Compile Include="V20180419\Models\PreviewPaiDomainNameRequest.cs" />
-    <Compile Include="V20180419\Models\PreviewPaiDomainNameResponse.cs" />
     <Compile Include="V20180419\Models\RemoveInstancesRequest.cs" />
     <Compile Include="V20180419\Models\RemoveInstancesResponse.cs" />
     <Compile Include="V20180419\Models\RunMonitorServiceEnabled.cs" />

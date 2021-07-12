@@ -24,12 +24,19 @@ namespace TencentCloud.Gaap.V20180529.Models
     public class DescribeRegionAndPriceRequest : AbstractModel
     {
         
+        /// <summary>
+        /// IP version. Valid values: `IPv4` (default), `IPv6`.
+        /// </summary>
+        [JsonProperty("IPAddressVersion")]
+        public string IPAddressVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         }
     }
 }

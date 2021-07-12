@@ -425,46 +425,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (CreatePaiInstance) is used to create a PAI instance.
-        /// </summary>
-        /// <param name="req"><see cref="CreatePaiInstanceRequest"/></param>
-        /// <returns><see cref="CreatePaiInstanceResponse"/></returns>
-        public async Task<CreatePaiInstanceResponse> CreatePaiInstance(CreatePaiInstanceRequest req)
-        {
-             JsonResponseModel<CreatePaiInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreatePaiInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePaiInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (CreatePaiInstance) is used to create a PAI instance.
-        /// </summary>
-        /// <param name="req"><see cref="CreatePaiInstanceRequest"/></param>
-        /// <returns><see cref="CreatePaiInstanceResponse"/></returns>
-        public CreatePaiInstanceResponse CreatePaiInstanceSync(CreatePaiInstanceRequest req)
-        {
-             JsonResponseModel<CreatePaiInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreatePaiInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePaiInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (CreateScalingPolicy) is used to create an alarm trigger policy.
         /// </summary>
         /// <param name="req"><see cref="CreateScalingPolicyRequest"/></param>
@@ -1139,52 +1099,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (DescribePaiInstances) is used to query the information of PAI instances.
-        /// 
-        /// * You can query the detailed information of PAI instances based on information such as instance ID and instance domain name. For more information on filters, see `Filter`.
-        /// * If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of PAI instances of the current user will be returned.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePaiInstancesRequest"/></param>
-        /// <returns><see cref="DescribePaiInstancesResponse"/></returns>
-        public async Task<DescribePaiInstancesResponse> DescribePaiInstances(DescribePaiInstancesRequest req)
-        {
-             JsonResponseModel<DescribePaiInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePaiInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePaiInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (DescribePaiInstances) is used to query the information of PAI instances.
-        /// 
-        /// * You can query the detailed information of PAI instances based on information such as instance ID and instance domain name. For more information on filters, see `Filter`.
-        /// * If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of PAI instances of the current user will be returned.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePaiInstancesRequest"/></param>
-        /// <returns><see cref="DescribePaiInstancesResponse"/></returns>
-        public DescribePaiInstancesResponse DescribePaiInstancesSync(DescribePaiInstancesRequest req)
-        {
-             JsonResponseModel<DescribePaiInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePaiInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePaiInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (DescribeScalingPolicies) is used to query alarm trigger policies.
         /// </summary>
         /// <param name="req"><see cref="DescribeScalingPoliciesRequest"/></param>
@@ -1728,46 +1642,6 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "ModifyScheduledAction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyScheduledActionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (PreviewPaiDomainName) is used to preview a PAI domain name.
-        /// </summary>
-        /// <param name="req"><see cref="PreviewPaiDomainNameRequest"/></param>
-        /// <returns><see cref="PreviewPaiDomainNameResponse"/></returns>
-        public async Task<PreviewPaiDomainNameResponse> PreviewPaiDomainName(PreviewPaiDomainNameRequest req)
-        {
-             JsonResponseModel<PreviewPaiDomainNameResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PreviewPaiDomainName");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PreviewPaiDomainNameResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (PreviewPaiDomainName) is used to preview a PAI domain name.
-        /// </summary>
-        /// <param name="req"><see cref="PreviewPaiDomainNameRequest"/></param>
-        /// <returns><see cref="PreviewPaiDomainNameResponse"/></returns>
-        public PreviewPaiDomainNameResponse PreviewPaiDomainNameSync(PreviewPaiDomainNameRequest req)
-        {
-             JsonResponseModel<PreviewPaiDomainNameResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PreviewPaiDomainName");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PreviewPaiDomainNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

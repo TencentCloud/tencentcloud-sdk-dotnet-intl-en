@@ -96,6 +96,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("FailoverSwitch")]
         public long? FailoverSwitch{ get; set; }
 
+        /// <summary>
+        /// Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+        /// </summary>
+        [JsonProperty("HealthyThreshold")]
+        public ulong? HealthyThreshold{ get; set; }
+
+        /// <summary>
+        /// Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+        /// </summary>
+        [JsonProperty("UnhealthyThreshold")]
+        public ulong? UnhealthyThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArraySimple(map, prefix + "RealServerPorts.", this.RealServerPorts);
             this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
             this.SetParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+            this.SetParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+            this.SetParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
         }
     }
 }
