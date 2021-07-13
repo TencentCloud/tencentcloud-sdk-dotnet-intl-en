@@ -37,10 +37,11 @@ namespace TencentCloud.Es.V20180416.Models
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Node type <li>hotData: hot data node</li>
-        /// <li>warmData: warm data node</li>
-        /// <li>dedicatedMaster: dedicated primary node</li>
-        /// Default value: hotData
+        /// Node type<li>`hotData`: hot data node</li>
+        /// <li>`warmData`: warm data node</li>
+        /// <li>`dedicatedMaster`: dedicated master node</li>
+        /// <li>`kibana`: Kibana node</li>
+        /// Default value: `hotData`
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

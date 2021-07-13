@@ -65,6 +65,7 @@
     <Compile Include="V20180416\Models\InstanceInfo.cs" />
     <Compile Include="V20180416\Models\InstanceLog.cs" />
     <Compile Include="V20180416\Models\KeyValue.cs" />
+    <Compile Include="V20180416\Models\KibanaNodeInfo.cs" />
     <Compile Include="V20180416\Models\LocalDiskInfo.cs" />
     <Compile Include="V20180416\Models\MasterNodeInfo.cs" />
     <Compile Include="V20180416\Models\NodeInfo.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="V20180416\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="V20180416\Models\UpgradeLicenseRequest.cs" />
     <Compile Include="V20180416\Models\UpgradeLicenseResponse.cs" />
+    <Compile Include="V20180416\Models\WebNodeTypeInfo.cs" />
     <Compile Include="V20180416\Models\ZoneDetail.cs" />
   </ItemGroup>
 </Project>

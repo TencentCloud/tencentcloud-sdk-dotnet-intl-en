@@ -366,6 +366,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaConfig")]
         public string KibanaConfig{ get; set; }
 
+        /// <summary>
+        /// Kibana node information
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("KibanaNodeInfo")]
+        public KibanaNodeInfo KibanaNodeInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -426,6 +433,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
+            this.SetParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
         }
     }
 }

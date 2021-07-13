@@ -61,6 +61,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
+        /// <summary>
+        /// ID of the instance to be queried
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +85,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Month", this.Month);
             this.SetParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

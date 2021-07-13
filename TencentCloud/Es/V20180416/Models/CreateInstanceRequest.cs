@@ -31,7 +31,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+        /// Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
         /// </summary>
         [JsonProperty("EsVersion")]
         public string EsVersion{ get; set; }
@@ -200,6 +200,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SceneType")]
         public long? SceneType{ get; set; }
 
+        /// <summary>
+        /// Visual node configuration
+        /// </summary>
+        [JsonProperty("WebNodeTypeInfo")]
+        public WebNodeTypeInfo WebNodeTypeInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +240,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
+            this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
         }
     }
 }
