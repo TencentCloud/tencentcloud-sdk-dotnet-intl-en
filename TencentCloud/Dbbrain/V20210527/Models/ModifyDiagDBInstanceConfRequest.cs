@@ -15,44 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCosTokenV2Request : AbstractModel
+    public class ModifyDiagDBInstanceConfRequest : AbstractModel
     {
         
         /// <summary>
-        /// Service ID
+        /// Instance configuration, including inspection and overview switch.
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
+        [JsonProperty("InstanceConfs")]
+        public InstanceConfs InstanceConfs{ get; set; }
 
         /// <summary>
-        /// Package name
+        /// Target regions of the request. If the value is `All`, it is applied to all regions.
         /// </summary>
-        [JsonProperty("PkgName")]
-        public string PkgName{ get; set; }
+        [JsonProperty("Regions")]
+        public string Regions{ get; set; }
 
         /// <summary>
-        /// optType. 1: upload; 2: query
+        /// Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL).
         /// </summary>
-        [JsonProperty("OptType")]
-        public long? OptType{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// ID of the instance to modify.
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// Input parameter of `deployVersion`
-        /// </summary>
-        [JsonProperty("TimeVersion")]
-        public string TimeVersion{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
-            this.SetParamSimple(map, prefix + "OptType", this.OptType);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
+            this.SetParamObj(map, prefix + "InstanceConfs.", this.InstanceConfs);
+            this.SetParamSimple(map, prefix + "Regions", this.Regions);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

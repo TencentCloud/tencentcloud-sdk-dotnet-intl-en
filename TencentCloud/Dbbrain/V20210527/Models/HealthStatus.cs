@@ -15,44 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCosTokenV2Request : AbstractModel
+    public class HealthStatus : AbstractModel
     {
         
         /// <summary>
-        /// Service ID
+        /// Health score out of 100 points.
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
+        [JsonProperty("HealthScore")]
+        public long? HealthScore{ get; set; }
 
         /// <summary>
-        /// Package name
+        /// Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
         /// </summary>
-        [JsonProperty("PkgName")]
-        public string PkgName{ get; set; }
+        [JsonProperty("HealthLevel")]
+        public string HealthLevel{ get; set; }
 
         /// <summary>
-        /// optType. 1: upload; 2: query
+        /// Total deducted scores.
         /// </summary>
-        [JsonProperty("OptType")]
-        public long? OptType{ get; set; }
+        [JsonProperty("ScoreLost")]
+        public long? ScoreLost{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// Deduction details.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// Input parameter of `deployVersion`
-        /// </summary>
-        [JsonProperty("TimeVersion")]
-        public string TimeVersion{ get; set; }
+        [JsonProperty("ScoreDetails")]
+        public ScoreDetail[] ScoreDetails{ get; set; }
 
 
         /// <summary>
@@ -60,11 +55,10 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
-            this.SetParamSimple(map, prefix + "OptType", this.OptType);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
+            this.SetParamSimple(map, prefix + "HealthScore", this.HealthScore);
+            this.SetParamSimple(map, prefix + "HealthLevel", this.HealthLevel);
+            this.SetParamSimple(map, prefix + "ScoreLost", this.ScoreLost);
+            this.SetParamArrayObj(map, prefix + "ScoreDetails.", this.ScoreDetails);
         }
     }
 }

@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class MonitorFloatMetric : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Metric name.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("Metric")]
+        public string Metric{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Metric unit.
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
 
         /// <summary>
-        /// Configuration Content
+        /// Metric value.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("Values")]
+        public float?[] Values{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Metric", this.Metric);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

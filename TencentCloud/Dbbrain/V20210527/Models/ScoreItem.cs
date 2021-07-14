@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCosTokenV2Request : AbstractModel
+    public class ScoreItem : AbstractModel
     {
         
         /// <summary>
-        /// Service ID
+        /// Exception diagnosis item name.
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
+        [JsonProperty("DiagItem")]
+        public string DiagItem{ get; set; }
 
         /// <summary>
-        /// Package name
+        /// Diagnosis item type. Valid values: availability, maintainability, performance, and reliability.
         /// </summary>
-        [JsonProperty("PkgName")]
-        public string PkgName{ get; set; }
+        [JsonProperty("IssueType")]
+        public string IssueType{ get; set; }
 
         /// <summary>
-        /// optType. 1: upload; 2: query
+        /// Health level. Valid values: information, reminder, alarm, serious, fatal.
         /// </summary>
-        [JsonProperty("OptType")]
-        public long? OptType{ get; set; }
+        [JsonProperty("TopSeverity")]
+        public string TopSeverity{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// Number of occurrences of this exception diagnosis item.
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
         /// <summary>
-        /// Input parameter of `deployVersion`
+        /// Deducted scores.
         /// </summary>
-        [JsonProperty("TimeVersion")]
-        public string TimeVersion{ get; set; }
+        [JsonProperty("ScoreLost")]
+        public long? ScoreLost{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
-            this.SetParamSimple(map, prefix + "OptType", this.OptType);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
+            this.SetParamSimple(map, prefix + "DiagItem", this.DiagItem);
+            this.SetParamSimple(map, prefix + "IssueType", this.IssueType);
+            this.SetParamSimple(map, prefix + "TopSeverity", this.TopSeverity);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "ScoreLost", this.ScoreLost);
         }
     }
 }

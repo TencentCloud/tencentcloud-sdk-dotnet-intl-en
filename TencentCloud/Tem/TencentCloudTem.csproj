@@ -71,6 +71,8 @@
     <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Response.cs" />
     <Compile Include="V20201221\Models\EksService.cs" />
     <Compile Include="V20201221\Models\EsInfo.cs" />
+    <Compile Include="V20201221\Models\GenerateDownloadUrlRequest.cs" />
+    <Compile Include="V20201221\Models\GenerateDownloadUrlResponse.cs" />
     <Compile Include="V20201221\Models\IngressInfo.cs" />
     <Compile Include="V20201221\Models\IngressRule.cs" />
     <Compile Include="V20201221\Models\IngressRuleBackend.cs" />

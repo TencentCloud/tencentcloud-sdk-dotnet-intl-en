@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class DescribeHealthScoreRequest : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Instance ID for which to get the health score.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Time to get the health score.
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
         /// <summary>
-        /// Configuration Content
+        /// Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
         /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

@@ -25,67 +25,78 @@ namespace TencentCloud.Tem.V20201221.Models
     {
         
         /// <summary>
-        /// service name
+        /// Service name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Available ports
         /// </summary>
         [JsonProperty("Ports")]
         public long?[] Ports{ get; set; }
 
         /// <summary>
-        /// 
+        /// Yaml contents
         /// </summary>
         [JsonProperty("Yaml")]
         public string Yaml{ get; set; }
 
         /// <summary>
-        /// 
+        /// Service name
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Version name
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Private IP
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ClusterIp")]
         public string[] ClusterIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public IP
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ExternalIp")]
         public string ExternalIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// The access type. Valid values:
+        /// - EXTERNAL (internet access)
+        /// - VPC（Intra-VPC access)
+        /// - CLUSTER (Intra-cluster access)
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subnet ID. It is filled when the access type is `VPC`.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("LoadBalanceId")]
         public string LoadBalanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Port Mapping
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PortMappings")]
         public PortMapping[] PortMappings{ get; set; }

@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class DeleteSecurityAuditLogExportTasksRequest : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Security audit group ID.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("SecAuditGroupId")]
+        public string SecAuditGroupId{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Log export task ID list. This API will ignore task IDs that do not exist or have been deleted.
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
+        [JsonProperty("AsyncRequestIds")]
+        public ulong?[] AsyncRequestIds{ get; set; }
 
         /// <summary>
-        /// Configuration Content
+        /// Service type. Valid values: mysql (TencentDB for MySQL).
         /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "SecAuditGroupId", this.SecAuditGroupId);
+            this.SetParamArraySimple(map, prefix + "AsyncRequestIds.", this.AsyncRequestIds);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

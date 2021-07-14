@@ -21,7 +21,7 @@ namespace TencentCloud.Tem.V20201221.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCosTokenV2Request : AbstractModel
+    public class GenerateDownloadUrlRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,28 +31,22 @@ namespace TencentCloud.Tem.V20201221.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Package name
+        /// Package Name
         /// </summary>
         [JsonProperty("PkgName")]
         public string PkgName{ get; set; }
 
         /// <summary>
-        /// optType. 1: upload; 2: query
+        /// Version of the package to download
         /// </summary>
-        [JsonProperty("OptType")]
-        public long? OptType{ get; set; }
+        [JsonProperty("DeployVersion")]
+        public string DeployVersion{ get; set; }
 
         /// <summary>
         /// Source channel
         /// </summary>
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// Input parameter of `deployVersion`
-        /// </summary>
-        [JsonProperty("TimeVersion")]
-        public string TimeVersion{ get; set; }
 
 
         /// <summary>
@@ -62,9 +56,8 @@ namespace TencentCloud.Tem.V20201221.Models
         {
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
-            this.SetParamSimple(map, prefix + "OptType", this.OptType);
+            this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
         }
     }
 }

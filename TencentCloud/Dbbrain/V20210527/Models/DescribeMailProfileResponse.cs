@@ -15,32 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class DescribeMailProfileResponse : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Email configuration details.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("ProfileList")]
+        public UserProfile[] ProfileList{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Total number of email templates.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Configuration Content
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +50,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamArrayObj(map, prefix + "ProfileList.", this.ProfileList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

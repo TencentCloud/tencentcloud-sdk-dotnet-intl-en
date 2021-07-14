@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class ProfileInfo : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Email language, such as `en`.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("Language")]
+        public string Language{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Email template content.
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
-
-        /// <summary>
-        /// Configuration Content
-        /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("MailConfiguration")]
+        public MailConfiguration MailConfiguration{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Language", this.Language);
+            this.SetParamObj(map, prefix + "MailConfiguration.", this.MailConfiguration);
         }
     }
 }

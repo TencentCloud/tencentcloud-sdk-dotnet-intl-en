@@ -493,6 +493,46 @@ namespace TencentCloud.Tem.V20201221
         }
 
         /// <summary>
+        /// Generate the pre-signed download URL for the specified package
+        /// </summary>
+        /// <param name="req"><see cref="GenerateDownloadUrlRequest"/></param>
+        /// <returns><see cref="GenerateDownloadUrlResponse"/></returns>
+        public async Task<GenerateDownloadUrlResponse> GenerateDownloadUrl(GenerateDownloadUrlRequest req)
+        {
+             JsonResponseModel<GenerateDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Generate the pre-signed download URL for the specified package
+        /// </summary>
+        /// <param name="req"><see cref="GenerateDownloadUrlRequest"/></param>
+        /// <returns><see cref="GenerateDownloadUrlResponse"/></returns>
+        public GenerateDownloadUrlResponse GenerateDownloadUrlSync(GenerateDownloadUrlRequest req)
+        {
+             JsonResponseModel<GenerateDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create or update an ingress rule.
         /// </summary>
         /// <param name="req"><see cref="ModifyIngressRequest"/></param>

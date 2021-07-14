@@ -15,44 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCosTokenV2Request : AbstractModel
+    public class HealthScoreInfo : AbstractModel
     {
         
         /// <summary>
-        /// Service ID
+        /// Exception details.
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
+        [JsonProperty("IssueTypes")]
+        public IssueTypeInfo[] IssueTypes{ get; set; }
 
         /// <summary>
-        /// Package name
+        /// Total number of exceptions.
         /// </summary>
-        [JsonProperty("PkgName")]
-        public string PkgName{ get; set; }
+        [JsonProperty("EventsTotalCount")]
+        public long? EventsTotalCount{ get; set; }
 
         /// <summary>
-        /// optType. 1: upload; 2: query
+        /// Health score.
         /// </summary>
-        [JsonProperty("OptType")]
-        public long? OptType{ get; set; }
+        [JsonProperty("HealthScore")]
+        public long? HealthScore{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// Health level, such as "HEALTH", "SUB_HEALTH", "RISK", and "HIGH_RISK".
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// Input parameter of `deployVersion`
-        /// </summary>
-        [JsonProperty("TimeVersion")]
-        public string TimeVersion{ get; set; }
+        [JsonProperty("HealthLevel")]
+        public string HealthLevel{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
-            this.SetParamSimple(map, prefix + "OptType", this.OptType);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
+            this.SetParamArrayObj(map, prefix + "IssueTypes.", this.IssueTypes);
+            this.SetParamSimple(map, prefix + "EventsTotalCount", this.EventsTotalCount);
+            this.SetParamSimple(map, prefix + "HealthScore", this.HealthScore);
+            this.SetParamSimple(map, prefix + "HealthLevel", this.HealthLevel);
         }
     }
 }

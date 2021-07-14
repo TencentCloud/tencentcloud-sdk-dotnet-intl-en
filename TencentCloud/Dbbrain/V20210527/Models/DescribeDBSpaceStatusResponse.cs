@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCosTokenV2Request : AbstractModel
+    public class DescribeDBSpaceStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// Service ID
+        /// Disk usage growth in MB.
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
+        [JsonProperty("Growth")]
+        public long? Growth{ get; set; }
 
         /// <summary>
-        /// Package name
+        /// Available disk space in MB.
         /// </summary>
-        [JsonProperty("PkgName")]
-        public string PkgName{ get; set; }
+        [JsonProperty("Remain")]
+        public long? Remain{ get; set; }
 
         /// <summary>
-        /// optType. 1: upload; 2: query
+        /// Total disk space in MB.
         /// </summary>
-        [JsonProperty("OptType")]
-        public long? OptType{ get; set; }
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// Estimated number of available days.
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
+        [JsonProperty("AvailableDays")]
+        public long? AvailableDays{ get; set; }
 
         /// <summary>
-        /// Input parameter of `deployVersion`
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("TimeVersion")]
-        public string TimeVersion{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
-            this.SetParamSimple(map, prefix + "OptType", this.OptType);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
+            this.SetParamSimple(map, prefix + "Growth", this.Growth);
+            this.SetParamSimple(map, prefix + "Remain", this.Remain);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "AvailableDays", this.AvailableDays);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

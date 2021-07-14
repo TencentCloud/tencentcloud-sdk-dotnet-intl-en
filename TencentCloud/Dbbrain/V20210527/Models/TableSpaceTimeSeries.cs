@@ -15,44 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCosTokenV2Request : AbstractModel
+    public class TableSpaceTimeSeries : AbstractModel
     {
         
         /// <summary>
-        /// Service ID
+        /// Table name.
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
 
         /// <summary>
-        /// Package name
+        /// Database name.
         /// </summary>
-        [JsonProperty("PkgName")]
-        public string PkgName{ get; set; }
+        [JsonProperty("TableSchema")]
+        public string TableSchema{ get; set; }
 
         /// <summary>
-        /// optType. 1: upload; 2: query
+        /// Database table storage engine.
         /// </summary>
-        [JsonProperty("OptType")]
-        public long? OptType{ get; set; }
+        [JsonProperty("Engine")]
+        public string Engine{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// Space metric value in a unit of time interval
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// Input parameter of `deployVersion`
-        /// </summary>
-        [JsonProperty("TimeVersion")]
-        public string TimeVersion{ get; set; }
+        [JsonProperty("SeriesData")]
+        public MonitorFloatMetricSeriesData SeriesData{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
-            this.SetParamSimple(map, prefix + "OptType", this.OptType);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "TableSchema", this.TableSchema);
+            this.SetParamSimple(map, prefix + "Engine", this.Engine);
+            this.SetParamObj(map, prefix + "SeriesData.", this.SeriesData);
         }
     }
 }

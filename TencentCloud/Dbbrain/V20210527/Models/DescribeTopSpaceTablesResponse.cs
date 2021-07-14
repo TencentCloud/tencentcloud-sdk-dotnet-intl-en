@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class DescribeTopSpaceTablesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// List of the returned space statistics of top tables.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("TopSpaceTables")]
+        public TableSpaceData[] TopSpaceTables{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Timestamp (in seconds) of tablespace data collection points
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
+        [JsonProperty("Timestamp")]
+        public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// Configuration Content
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamArrayObj(map, prefix + "TopSpaceTables.", this.TopSpaceTables);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

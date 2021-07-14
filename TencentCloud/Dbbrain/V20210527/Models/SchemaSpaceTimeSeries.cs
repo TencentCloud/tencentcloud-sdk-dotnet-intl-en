@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class SchemaSpaceTimeSeries : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Database name
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("TableSchema")]
+        public string TableSchema{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Space metric value in a unit of time interval
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
-
-        /// <summary>
-        /// Configuration Content
-        /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("SeriesData")]
+        public MonitorMetricSeriesData SeriesData{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "TableSchema", this.TableSchema);
+            this.SetParamObj(map, prefix + "SeriesData.", this.SeriesData);
         }
     }
 }

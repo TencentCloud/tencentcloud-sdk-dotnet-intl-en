@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class InstanceConfs : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Whether to enable database inspection. Valid values: Yes, No.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("DailyInspection")]
+        public string DailyInspection{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Whether to enable instance overview. Valid values: Yes, No.
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
-
-        /// <summary>
-        /// Configuration Content
-        /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("OverviewDisplay")]
+        public string OverviewDisplay{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+            this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
         }
     }
 }

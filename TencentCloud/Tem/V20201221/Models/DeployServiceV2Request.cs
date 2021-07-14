@@ -187,16 +187,22 @@ namespace TencentCloud.Tem.V20201221.Models
         public bool? UseRegistryDefaultConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Mounting configurations
         /// </summary>
         [JsonProperty("SettingConfs")]
         public MountedSettingConf[] SettingConfs{ get; set; }
 
         /// <summary>
-        /// 
+        /// EKS access configuration
         /// </summary>
         [JsonProperty("EksService")]
         public EksService EksService{ get; set; }
+
+        /// <summary>
+        /// ID of the version that you want to roll back to
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
 
 
         /// <summary>
@@ -232,6 +238,7 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
             this.SetParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
             this.SetParamObj(map, prefix + "EksService.", this.EksService);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
         }
     }
 }

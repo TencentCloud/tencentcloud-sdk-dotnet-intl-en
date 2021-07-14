@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class AddUserContactRequest : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
+        [JsonProperty("ContactInfo")]
+        public string ContactInfo{ get; set; }
 
         /// <summary>
-        /// Configuration Content
+        /// Service type, which is fixed to `mysql`.
         /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ContactInfo", this.ContactInfo);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

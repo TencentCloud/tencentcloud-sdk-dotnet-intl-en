@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCosTokenV2Request : AbstractModel
+    public class DescribeSecurityAuditLogExportTasksRequest : AbstractModel
     {
         
         /// <summary>
-        /// Service ID
+        /// Security audit group ID.
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
+        [JsonProperty("SecAuditGroupId")]
+        public string SecAuditGroupId{ get; set; }
 
         /// <summary>
-        /// Package name
+        /// Service type. Valid values: mysql (TencentDB for MySQL).
         /// </summary>
-        [JsonProperty("PkgName")]
-        public string PkgName{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
         /// <summary>
-        /// optType. 1: upload; 2: query
+        /// List of log export task IDs.
         /// </summary>
-        [JsonProperty("OptType")]
-        public long? OptType{ get; set; }
+        [JsonProperty("AsyncRequestIds")]
+        public ulong?[] AsyncRequestIds{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// Offset. Default value: 0.
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Input parameter of `deployVersion`
+        /// Number of returned results. Default value: 20. Maximum value: 100.
         /// </summary>
-        [JsonProperty("TimeVersion")]
-        public string TimeVersion{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
-            this.SetParamSimple(map, prefix + "OptType", this.OptType);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
+            this.SetParamSimple(map, prefix + "SecAuditGroupId", this.SecAuditGroupId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamArraySimple(map, prefix + "AsyncRequestIds.", this.AsyncRequestIds);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

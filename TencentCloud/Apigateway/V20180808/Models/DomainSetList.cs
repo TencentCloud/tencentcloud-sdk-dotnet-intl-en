@@ -60,6 +60,18 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
+        /// <summary>
+        /// Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+        /// </summary>
+        [JsonProperty("IsForcedHttps")]
+        public bool? IsForcedHttps{ get; set; }
+
+        /// <summary>
+        /// ICP filing status
+        /// </summary>
+        [JsonProperty("RegistrationStatus")]
+        public bool? RegistrationStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "IsDefaultMapping", this.IsDefaultMapping);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "NetType", this.NetType);
+            this.SetParamSimple(map, prefix + "IsForcedHttps", this.IsForcedHttps);
+            this.SetParamSimple(map, prefix + "RegistrationStatus", this.RegistrationStatus);
         }
     }
 }

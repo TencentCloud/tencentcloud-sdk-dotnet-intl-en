@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20201221.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MountedSettingConf : AbstractModel
+    public class SlowLogHost : AbstractModel
     {
         
         /// <summary>
-        /// Configuration Name
+        /// Source addresses.
         /// </summary>
-        [JsonProperty("ConfigDataName")]
-        public string ConfigDataName{ get; set; }
+        [JsonProperty("UserHost")]
+        public string UserHost{ get; set; }
 
         /// <summary>
-        /// Mount point path
+        /// Proportion (in %) of slow logs from this source address to the total number of slow logs.
         /// </summary>
-        [JsonProperty("MountedPath")]
-        public string MountedPath{ get; set; }
+        [JsonProperty("Ratio")]
+        public float? Ratio{ get; set; }
 
         /// <summary>
-        /// Configuration Content
+        /// Number of slow logs from this source address.
         /// </summary>
-        [JsonProperty("Data")]
-        public Pair[] Data{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tem.V20201221.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
-            this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "UserHost", this.UserHost);
+            this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }
