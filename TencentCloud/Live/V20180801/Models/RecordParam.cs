@@ -25,18 +25,18 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Recording interval.
-        /// In seconds. Default value: 1800.
-        /// Value range: 300-7200.
-        /// This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+        /// Max recording time per file
+        /// Default value: `1800` (seconds)
+        /// Value range: 60-7200
+        /// This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
         /// </summary>
         [JsonProperty("RecordInterval")]
         public long? RecordInterval{ get; set; }
 
         /// <summary>
-        /// Recording storage period.
-        /// In seconds. Value range: 0-93312000.
-        /// 0: permanent storage.
+        /// Storage duration of the recording file
+        /// Value range: 0-129600000 seconds (0-1500 days)
+        /// `0`: permanent
         /// </summary>
         [JsonProperty("StorageTime")]
         public long? StorageTime{ get; set; }
@@ -77,6 +77,29 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("VodFileName")]
         public string VodFileName{ get; set; }
 
+        /// <summary>
+        /// Task flow
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("Procedure")]
+        public string Procedure{ get; set; }
+
+        /// <summary>
+        /// Video storage class. Valid values:
+        /// `normal`: STANDARD
+        /// `cold`: STANDARD_IA
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("StorageMode")]
+        public string StorageMode{ get; set; }
+
+        /// <summary>
+        /// VOD subapplication category
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("ClassId")]
+        public long? ClassId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +111,9 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
             this.SetParamSimple(map, prefix + "VodFileName", this.VodFileName);
+            this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
+            this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
+            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
         }
     }
 }

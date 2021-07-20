@@ -37,9 +37,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// Start time (Beijing time).
-        /// In the format of `yyyymmdd`.
-        /// Note: details for a specified day in the last month can be queried.
+        /// Query date (UTC+8)
+        /// Format: yyyymmdd
+        /// Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
         /// </summary>
         [JsonProperty("DayTime")]
         public string DayTime{ get; set; }
@@ -67,9 +67,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string StartDayTime{ get; set; }
 
         /// <summary>
-        /// End day time (Beijing time),
-        /// In the format of `yyyymmdd`.
-        /// Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+        /// End date (UTC+8)
+        /// Format: yyyymmdd
+        /// Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
         /// </summary>
         [JsonProperty("EndDayTime")]
         public string EndDayTime{ get; set; }
