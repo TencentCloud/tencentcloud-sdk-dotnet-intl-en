@@ -1013,6 +1013,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to query security settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeAuthFlagIntlRequest"/></param>
+        /// <returns><see cref="DescribeSafeAuthFlagIntlResponse"/></returns>
+        public async Task<DescribeSafeAuthFlagIntlResponse> DescribeSafeAuthFlagIntl(DescribeSafeAuthFlagIntlRequest req)
+        {
+             JsonResponseModel<DescribeSafeAuthFlagIntlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSafeAuthFlagIntl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagIntlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query security settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeAuthFlagIntlRequest"/></param>
+        /// <returns><see cref="DescribeSafeAuthFlagIntlResponse"/></returns>
+        public DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntlSync(DescribeSafeAuthFlagIntlRequest req)
+        {
+             JsonResponseModel<DescribeSafeAuthFlagIntlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSafeAuthFlagIntl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagIntlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query sub-users through the sub-user UIN list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSubAccountsRequest"/></param>
@@ -1164,6 +1204,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DetachUserPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query account summary. 
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountSummaryRequest"/></param>
+        /// <returns><see cref="GetAccountSummaryResponse"/></returns>
+        public async Task<GetAccountSummaryResponse> GetAccountSummary(GetAccountSummaryRequest req)
+        {
+             JsonResponseModel<GetAccountSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAccountSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAccountSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query account summary. 
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountSummaryRequest"/></param>
+        /// <returns><see cref="GetAccountSummaryResponse"/></returns>
+        public GetAccountSummaryResponse GetAccountSummarySync(GetAccountSummaryRequest req)
+        {
+             JsonResponseModel<GetAccountSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAccountSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAccountSummaryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
