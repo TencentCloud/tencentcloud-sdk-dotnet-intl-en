@@ -54,6 +54,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+        /// This field is required when you want to delete a routing policy.
         /// </summary>
         [JsonProperty("RouteId")]
         public ulong? RouteId{ get; set; }

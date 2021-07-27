@@ -37,6 +37,20 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ClearDataDisks")]
         public bool? ClearDataDisks{ get; set; }
 
+        /// <summary>
+        /// Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+        /// Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+        /// </summary>
+        [JsonProperty("ClearHostNameSettings")]
+        public bool? ClearHostNameSettings{ get; set; }
+
+        /// <summary>
+        /// Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+        /// Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+        /// </summary>
+        [JsonProperty("ClearInstanceNameSettings")]
+        public bool? ClearInstanceNameSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +59,8 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
             this.SetParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
+            this.SetParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
+            this.SetParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
         }
     }
 }

@@ -947,6 +947,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        ///  This API is used to invoke functions synchronously.
+        /// </summary>
+        /// <param name="req"><see cref="InvokeFunctionRequest"/></param>
+        /// <returns><see cref="InvokeFunctionResponse"/></returns>
+        public async Task<InvokeFunctionResponse> InvokeFunction(InvokeFunctionRequest req)
+        {
+             JsonResponseModel<InvokeFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InvokeFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  This API is used to invoke functions synchronously.
+        /// </summary>
+        /// <param name="req"><see cref="InvokeFunctionRequest"/></param>
+        /// <returns><see cref="InvokeFunctionResponse"/></returns>
+        public InvokeFunctionResponse InvokeFunctionSync(InvokeFunctionRequest req)
+        {
+             JsonResponseModel<InvokeFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InvokeFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
         /// </summary>
         /// <param name="req"><see cref="ListAliasesRequest"/></param>

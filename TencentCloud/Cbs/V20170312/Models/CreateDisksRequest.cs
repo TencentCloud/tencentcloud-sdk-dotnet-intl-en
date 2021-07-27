@@ -25,10 +25,10 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+        /// The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
         /// </summary>
-        [JsonProperty("DiskType")]
-        public string DiskType{ get; set; }
+        [JsonProperty("Placement")]
+        public Placement Placement{ get; set; }
 
         /// <summary>
         /// Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
@@ -37,10 +37,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskChargeType{ get; set; }
 
         /// <summary>
-        /// The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
+        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
         /// </summary>
-        [JsonProperty("Placement")]
-        public Placement Placement{ get; set; }
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
 
         /// <summary>
         /// The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
@@ -49,16 +49,28 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskName{ get; set; }
 
         /// <summary>
+        /// Cloud disk binding tag.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
+        /// <summary>
         /// If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskCount")]
         public ulong? DiskCount{ get; set; }
 
         /// <summary>
-        /// Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+        /// Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
         /// </summary>
-        [JsonProperty("DiskChargePrepaid")]
-        public DiskChargePrepaid DiskChargePrepaid{ get; set; }
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
 
         /// <summary>
         /// Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
@@ -67,10 +79,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+        /// The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
         /// </summary>
-        [JsonProperty("SnapshotId")]
-        public string SnapshotId{ get; set; }
+        [JsonProperty("Shareable")]
+        public bool? Shareable{ get; set; }
 
         /// <summary>
         /// A string to ensure the idempotency of the request, which is generated by the client. Each request shall have a unique string with a maximum of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be ensured.
@@ -85,22 +97,16 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string Encrypt{ get; set; }
 
         /// <summary>
-        /// Cloud disk binding tag.
+        /// Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("DiskChargePrepaid")]
+        public DiskChargePrepaid DiskChargePrepaid{ get; set; }
 
         /// <summary>
-        /// The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+        /// Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
         /// </summary>
-        [JsonProperty("Shareable")]
-        public bool? Shareable{ get; set; }
-
-        /// <summary>
-        /// Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
-        /// </summary>
-        [JsonProperty("ThroughputPerformance")]
-        public ulong? ThroughputPerformance{ get; set; }
+        [JsonProperty("DeleteSnapshot")]
+        public long? DeleteSnapshot{ get; set; }
 
 
         /// <summary>
@@ -108,19 +114,20 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
-            this.SetParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
+            this.SetParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
-            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
-            this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
-            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
-            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+            this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
+            this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
         }
     }
 }

@@ -182,6 +182,36 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("MultiZoneSubnetPolicy")]
         public string MultiZoneSubnetPolicy{ get; set; }
 
+        /// <summary>
+        /// Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("HealthCheckType")]
+        public string HealthCheckType{ get; set; }
+
+        /// <summary>
+        /// Grace period of the CLB health check
+        /// </summary>
+        [JsonProperty("LoadBalancerHealthCheckGracePeriod")]
+        public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceAllocationPolicy")]
+        public string InstanceAllocationPolicy{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SpotMixedAllocationPolicy")]
+        public SpotMixedAllocationPolicy SpotMixedAllocationPolicy{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CapacityRebalance")]
+        public bool? CapacityRebalance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +244,11 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
             this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
+            this.SetParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
+            this.SetParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
+            this.SetParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
+            this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
+            this.SetParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
         }
     }
 }

@@ -156,6 +156,7 @@
     <Compile Include="V20180419\Models\SetInstancesProtectionRequest.cs" />
     <Compile Include="V20180419\Models\SetInstancesProtectionResponse.cs" />
     <Compile Include="V20180419\Models\SpotMarketOptions.cs" />
+    <Compile Include="V20180419\Models\SpotMixedAllocationPolicy.cs" />
     <Compile Include="V20180419\Models\StartAutoScalingInstancesRequest.cs" />
     <Compile Include="V20180419\Models\StartAutoScalingInstancesResponse.cs" />
     <Compile Include="V20180419\Models\StopAutoScalingInstancesRequest.cs" />

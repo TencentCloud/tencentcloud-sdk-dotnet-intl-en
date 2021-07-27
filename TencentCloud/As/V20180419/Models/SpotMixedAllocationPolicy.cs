@@ -21,22 +21,32 @@ namespace TencentCloud.As.V20180419.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SystemDisk : AbstractModel
+    public class SpotMixedAllocationPolicy : AbstractModel
     {
         
         /// <summary>
-        /// System disk type. For more information on limits of system disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>LOCAL_BASIC: local disk <br><li>LOCAL_SSD: local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk <br><br>Default value: CLOUD_PREMIUM.
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
-        [JsonProperty("DiskType")]
-        public string DiskType{ get; set; }
+        [JsonProperty("BaseCapacity")]
+        public ulong? BaseCapacity{ get; set; }
 
         /// <summary>
-        /// System disk size in GB. Default value: 50
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
-        [JsonProperty("DiskSize")]
-        public ulong? DiskSize{ get; set; }
+        [JsonProperty("OnDemandPercentageAboveBaseCapacity")]
+        public ulong? OnDemandPercentageAboveBaseCapacity{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SpotAllocationStrategy")]
+        public string SpotAllocationStrategy{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CompensateWithBaseInstance")]
+        public bool? CompensateWithBaseInstance{ get; set; }
 
 
         /// <summary>
@@ -44,8 +54,10 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
-            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "BaseCapacity", this.BaseCapacity);
+            this.SetParamSimple(map, prefix + "OnDemandPercentageAboveBaseCapacity", this.OnDemandPercentageAboveBaseCapacity);
+            this.SetParamSimple(map, prefix + "SpotAllocationStrategy", this.SpotAllocationStrategy);
+            this.SetParamSimple(map, prefix + "CompensateWithBaseInstance", this.CompensateWithBaseInstance);
         }
     }
 }

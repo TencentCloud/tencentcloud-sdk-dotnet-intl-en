@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cbs.V20170312.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSnapshotsRequest : AbstractModel
+    public class InvokeFunctionResponse : AbstractModel
     {
         
         /// <summary>
-        /// List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+        /// Function execution result
         /// </summary>
-        [JsonProperty("SnapshotIds")]
-        public string[] SnapshotIds{ get; set; }
+        [JsonProperty("Result")]
+        public Result Result{ get; set; }
 
         /// <summary>
-        /// Whether to forcibly delete the image associated with the snapshot
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("DeleteBindImages")]
-        public bool? DeleteBindImages{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
-            this.SetParamSimple(map, prefix + "DeleteBindImages", this.DeleteBindImages);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

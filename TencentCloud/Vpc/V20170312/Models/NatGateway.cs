@@ -117,6 +117,27 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SecurityGroupSet")]
         public string[] SecurityGroupSet{ get; set; }
 
+        /// <summary>
+        /// SNAT forwarding rule of the NAT Gateway.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SourceIpTranslationNatRuleSet")]
+        public SourceIpTranslationNatRule[] SourceIpTranslationNatRuleSet{ get; set; }
+
+        /// <summary>
+        /// Whether the NAT Gateway is dedicated.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("IsExclusive")]
+        public bool? IsExclusive{ get; set; }
+
+        /// <summary>
+        /// Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ExclusiveGatewayBandwidth")]
+        public ulong? ExclusiveGatewayBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +159,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArraySimple(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
+            this.SetParamArrayObj(map, prefix + "SourceIpTranslationNatRuleSet.", this.SourceIpTranslationNatRuleSet);
+            this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
+            this.SetParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
         }
     }
 }

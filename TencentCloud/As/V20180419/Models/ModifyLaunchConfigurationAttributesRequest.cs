@@ -38,7 +38,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-        /// The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
+        /// The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationName{ get; set; }
 
         /// <summary>
-        /// Base64-encoded custom data of up to 16 KB. If you want to clear UserData, specify it as an empty string
+        /// Base64-encoded custom data of up to 16 KB. If you want to clear `UserData`, set it to an empty string.
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
@@ -75,7 +75,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Information of the public network bandwidth configuration.
-        /// To modify it or even its subfield, you should specify all the subfields again.
+        /// When the public outbound network bandwidth is 0 Mbps, assigning a public IP is not allowed. Accordingly, if a public IP is assigned, the new public network outbound bandwidth must be greater than 0 Mbps.
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
@@ -89,15 +89,19 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set the auto-renewal, and other attributes of the monthly-subscribed instances.
+        /// This parameter is required when changing the instance billing mode to monthly subscription. It will be automatically discarded after you choose another billing mode.
+        /// This field requires passing in the `Period` field. Other fields that are not passed in will use their default values.
+        /// This field can be modified only when the current billing mode is monthly subscription.
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
         /// Market-related options for instances, such as parameters related to spot instances.
-        /// This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
-        /// To modify it or even its subfield, you should specify all the subfields again.
+        /// This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after you choose another instance billing mode.
+        /// This field requires passing in the `MaxPrice` field under the `SpotOptions`. Other fields that are not passed in will use their default values.
+        /// This field can be modified only when the current billing mode is spot instance.
         /// </summary>
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
@@ -117,10 +121,28 @@ namespace TencentCloud.As.V20180419.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+        /// Configuration information of instance data disks.
+        /// Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+        /// The default data disk should be the same as the system disk.
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
+
+        /// <summary>
+        /// CVM hostname settings.
+        /// This field is not supported for Windows instances.
+        /// This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+        /// </summary>
+        [JsonProperty("HostNameSettings")]
+        public HostNameSettings HostNameSettings{ get; set; }
+
+        /// <summary>
+        /// Settings of CVM instance names. 
+        /// If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+        /// This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+        /// </summary>
+        [JsonProperty("InstanceNameSettings")]
+        public InstanceNameSettings InstanceNameSettings{ get; set; }
 
 
         /// <summary>
@@ -142,6 +164,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
+            this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         }
     }
 }
