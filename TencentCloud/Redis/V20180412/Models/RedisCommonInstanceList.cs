@@ -73,7 +73,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: `0` (creating), `1` (running)
+        /// Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

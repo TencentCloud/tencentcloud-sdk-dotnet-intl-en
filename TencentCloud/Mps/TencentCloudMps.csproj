@@ -233,6 +233,7 @@
     <Compile Include="V20190612\Models\DisableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\EditMediaFileInfo.cs" />
+    <Compile Include="V20190612\Models\EditMediaOutputConfig.cs" />
     <Compile Include="V20190612\Models\EditMediaRequest.cs" />
     <Compile Include="V20190612\Models\EditMediaResponse.cs" />
     <Compile Include="V20190612\Models\EditMediaTask.cs" />

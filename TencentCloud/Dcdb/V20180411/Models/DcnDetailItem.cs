@@ -90,6 +90,48 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("DcnStatus")]
         public long? DcnStatus{ get; set; }
 
+        /// <summary>
+        /// Number of CPU cores of the instance
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
+        /// <summary>
+        /// Instance memory capacity in GB
+        /// </summary>
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
+
+        /// <summary>
+        /// Instance storage capacity in GB
+        /// </summary>
+        [JsonProperty("Storage")]
+        public long? Storage{ get; set; }
+
+        /// <summary>
+        /// Billing mode
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// Creation time of the instance in the format of 2006-01-02 15:04:05
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Expiration time of the instance in the format of 2006-01-02 15:04:05
+        /// </summary>
+        [JsonProperty("PeriodEndTime")]
+        public string PeriodEndTime{ get; set; }
+
+        /// <summary>
+        /// Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance).
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +149,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
             this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
             this.SetParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

@@ -43,6 +43,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
+        /// Configuration for output files of video editing
+        /// </summary>
+        [JsonProperty("OutputConfig")]
+        public EditMediaOutputConfig OutputConfig{ get; set; }
+
+        /// <summary>
         /// Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
@@ -75,6 +81,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
+            this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

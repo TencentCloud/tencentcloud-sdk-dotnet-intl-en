@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.245</VersionPrefix>
+    <VersionPrefix>3.0.246</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4219,6 +4219,7 @@
     <Compile Include="Mps\V20190612\Models\DisableWorkflowRequest.cs" />
     <Compile Include="Mps\V20190612\Models\DisableWorkflowResponse.cs" />
     <Compile Include="Mps\V20190612\Models\EditMediaFileInfo.cs" />
+    <Compile Include="Mps\V20190612\Models\EditMediaOutputConfig.cs" />
     <Compile Include="Mps\V20190612\Models\EditMediaRequest.cs" />
     <Compile Include="Mps\V20190612\Models\EditMediaResponse.cs" />
     <Compile Include="Mps\V20190612\Models\EditMediaTask.cs" />
@@ -4692,6 +4693,8 @@
     <Compile Include="Redis\V20180412\Models\InstanceSlowlogDetail.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceTagInfo.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceTextParam.cs" />
+    <Compile Include="Redis\V20180412\Models\KillMasterGroupRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\KillMasterGroupResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ManualBackupInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ManualBackupInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModfiyInstancePasswordRequest.cs" />

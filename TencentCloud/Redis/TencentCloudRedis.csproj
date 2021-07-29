@@ -153,6 +153,8 @@
     <Compile Include="V20180412\Models\InstanceSlowlogDetail.cs" />
     <Compile Include="V20180412\Models\InstanceTagInfo.cs" />
     <Compile Include="V20180412\Models\InstanceTextParam.cs" />
+    <Compile Include="V20180412\Models\KillMasterGroupRequest.cs" />
+    <Compile Include="V20180412\Models\KillMasterGroupResponse.cs" />
     <Compile Include="V20180412\Models\ManualBackupInstanceRequest.cs" />
     <Compile Include="V20180412\Models\ManualBackupInstanceResponse.cs" />
     <Compile Include="V20180412\Models\ModfiyInstancePasswordRequest.cs" />

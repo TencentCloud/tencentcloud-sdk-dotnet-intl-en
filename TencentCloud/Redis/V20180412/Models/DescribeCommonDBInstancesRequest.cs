@@ -79,7 +79,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] Vips{ get; set; }
 
         /// <summary>
-        /// List of unique VPC IDs
+        /// List of VPC IDs
         /// </summary>
         [JsonProperty("UniqVpcIds")]
         public string[] UniqVpcIds{ get; set; }

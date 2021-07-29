@@ -21,7 +21,7 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstanceAccountRequest : AbstractModel
+    public class KillMasterGroupRequest : AbstractModel
     {
         
         /// <summary>
@@ -29,12 +29,6 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// Sub-account name
-        /// </summary>
-        [JsonProperty("AccountName")]
-        public string AccountName{ get; set; }
 
         /// <summary>
         /// 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
@@ -45,26 +39,8 @@ namespace TencentCloud.Redis.V20180412.Models
         ///     c. Digits (0-9)
         ///     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
         /// </summary>
-        [JsonProperty("AccountPassword")]
-        public string AccountPassword{ get; set; }
-
-        /// <summary>
-        /// Routing policy. Enter `master` for primary node or `replication` for secondary node
-        /// </summary>
-        [JsonProperty("ReadonlyPolicy")]
-        public string[] ReadonlyPolicy{ get; set; }
-
-        /// <summary>
-        /// Read/write policy. Valid values: r (read-only), rw (read/write).
-        /// </summary>
-        [JsonProperty("Privilege")]
-        public string Privilege{ get; set; }
-
-        /// <summary>
-        /// Sub-account description information
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
 
 
         /// <summary>
@@ -73,11 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
-            this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
-            this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
-            this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }
