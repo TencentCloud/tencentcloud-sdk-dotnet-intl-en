@@ -53,6 +53,86 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// This API is used to verify the information of the Enterprise Edition instance.
+        /// </summary>
+        /// <param name="req"><see cref="CheckInstanceRequest"/></param>
+        /// <returns><see cref="CheckInstanceResponse"/></returns>
+        public async Task<CheckInstanceResponse> CheckInstance(CheckInstanceRequest req)
+        {
+             JsonResponseModel<CheckInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify the information of the Enterprise Edition instance.
+        /// </summary>
+        /// <param name="req"><see cref="CheckInstanceRequest"/></param>
+        /// <returns><see cref="CheckInstanceResponse"/></returns>
+        public CheckInstanceResponse CheckInstanceSync(CheckInstanceRequest req)
+        {
+             JsonResponseModel<CheckInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create the tag immutability rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="CreateImmutableTagRulesResponse"/></returns>
+        public async Task<CreateImmutableTagRulesResponse> CreateImmutableTagRules(CreateImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<CreateImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create the tag immutability rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="CreateImmutableTagRulesResponse"/></returns>
+        public CreateImmutableTagRulesResponse CreateImmutableTagRulesSync(CreateImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<CreateImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create multiple public network access allowlist policies of the TCR instance.
         /// </summary>
         /// <param name="req"><see cref="CreateMultipleSecurityPolicyRequest"/></param>
@@ -93,6 +173,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        ///  This API is used to delete the tag immutability rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="DeleteImmutableTagRulesResponse"/></returns>
+        public async Task<DeleteImmutableTagRulesResponse> DeleteImmutableTagRules(DeleteImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<DeleteImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  This API is used to delete the tag immutability rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="DeleteImmutableTagRulesResponse"/></returns>
+        public DeleteImmutableTagRulesResponse DeleteImmutableTagRulesSync(DeleteImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<DeleteImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete multiple public network access allowlist policies of the instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteMultipleSecurityPolicyRequest"/></param>
@@ -124,6 +244,86 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteMultipleSecurityPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMultipleSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list the tag immutability rule.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="DescribeImmutableTagRulesResponse"/></returns>
+        public async Task<DescribeImmutableTagRulesResponse> DescribeImmutableTagRules(DescribeImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<DescribeImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list the tag immutability rule.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="DescribeImmutableTagRulesResponse"/></returns>
+        public DescribeImmutableTagRulesResponse DescribeImmutableTagRulesSync(DescribeImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<DescribeImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the tag immutability rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="ModifyImmutableTagRulesResponse"/></returns>
+        public async Task<ModifyImmutableTagRulesResponse> ModifyImmutableTagRules(ModifyImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<ModifyImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the tag immutability rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="ModifyImmutableTagRulesResponse"/></returns>
+        public ModifyImmutableTagRulesResponse ModifyImmutableTagRulesSync(ModifyImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<ModifyImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImmutableTagRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
