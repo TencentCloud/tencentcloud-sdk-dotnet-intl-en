@@ -48,6 +48,8 @@
     <Compile Include="V20180411\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\BriefNodeInfo.cs" />
+    <Compile Include="V20180411\Models\CancelDcnJobRequest.cs" />
+    <Compile Include="V20180411\Models\CancelDcnJobResponse.cs" />
     <Compile Include="V20180411\Models\CloneAccountRequest.cs" />
     <Compile Include="V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="V20180411\Models\CloseDBExtranetAccessRequest.cs" />

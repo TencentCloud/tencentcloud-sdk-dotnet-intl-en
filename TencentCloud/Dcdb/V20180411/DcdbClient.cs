@@ -93,6 +93,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to cancel CDN synchronization.
+        /// </summary>
+        /// <param name="req"><see cref="CancelDcnJobRequest"/></param>
+        /// <returns><see cref="CancelDcnJobResponse"/></returns>
+        public async Task<CancelDcnJobResponse> CancelDcnJob(CancelDcnJobRequest req)
+        {
+             JsonResponseModel<CancelDcnJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelDcnJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelDcnJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to cancel CDN synchronization.
+        /// </summary>
+        /// <param name="req"><see cref="CancelDcnJobRequest"/></param>
+        /// <returns><see cref="CancelDcnJobResponse"/></returns>
+        public CancelDcnJobResponse CancelDcnJobSync(CancelDcnJobRequest req)
+        {
+             JsonResponseModel<CancelDcnJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelDcnJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelDcnJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to clone an instance account.
         /// </summary>
         /// <param name="req"><see cref="CloneAccountRequest"/></param>
