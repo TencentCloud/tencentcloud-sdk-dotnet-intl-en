@@ -179,12 +179,12 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AssignIpv6Addresses) is used to apply for an IPv6 address for the ENI.<br />
-        /// This API is completed asynchronously. If you need to query the async execution results, use the `RequestId` returned by this API to query the `QueryTask` API.
-        /// * An ENI can only be bound with a limited number of IPs. For more information about resource limits, see<a href="/document/product/576/18527">ENI use limits</a>.
-        /// * You can specify the `IPv6` address when applying. The address type cannot be the primary `IP`. Currently, `IPv6` can only be supported as the secondary `IP`.
-        /// * The address must be unoccupied and is in the subnet to which the ENI belongs.
-        /// * When applying for one to multiple secondary `IPv6` addresses on ENI, the API will return the specified number of secondary `IPv6` addresses in the subnet range where the ENI is located.
+        /// This API is used to apply for an IPv6 address for the ENI. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
+        /// * The number of IPs bound with an ENI is limited. For more information, see <a href="/document/product/576/18527">ENI Use Limits</a>.
+        /// * You can apply for a specified IPv6 address. Currently, the IPv6 address can only be used as a secondary IP, instead of the primary IP.
+        /// * The address must be an idle IP in the subnet to which the ENI belongs.
+        /// * When applying for one or more secondary IPv6 addresses for an ENI, the API will return the specified number of secondary IPv6 addresses in the subnet range where the ENI is located.
         /// </summary>
         /// <param name="req"><see cref="AssignIpv6AddressesRequest"/></param>
         /// <returns><see cref="AssignIpv6AddressesResponse"/></returns>
@@ -204,12 +204,12 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (AssignIpv6Addresses) is used to apply for an IPv6 address for the ENI.<br />
-        /// This API is completed asynchronously. If you need to query the async execution results, use the `RequestId` returned by this API to query the `QueryTask` API.
-        /// * An ENI can only be bound with a limited number of IPs. For more information about resource limits, see<a href="/document/product/576/18527">ENI use limits</a>.
-        /// * You can specify the `IPv6` address when applying. The address type cannot be the primary `IP`. Currently, `IPv6` can only be supported as the secondary `IP`.
-        /// * The address must be unoccupied and is in the subnet to which the ENI belongs.
-        /// * When applying for one to multiple secondary `IPv6` addresses on ENI, the API will return the specified number of secondary `IPv6` addresses in the subnet range where the ENI is located.
+        /// This API is used to apply for an IPv6 address for the ENI. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
+        /// * The number of IPs bound with an ENI is limited. For more information, see <a href="/document/product/576/18527">ENI Use Limits</a>.
+        /// * You can apply for a specified IPv6 address. Currently, the IPv6 address can only be used as a secondary IP, instead of the primary IP.
+        /// * The address must be an idle IP in the subnet to which the ENI belongs.
+        /// * When applying for one or more secondary IPv6 addresses for an ENI, the API will return the specified number of secondary IPv6 addresses in the subnet range where the ENI is located.
         /// </summary>
         /// <param name="req"><see cref="AssignIpv6AddressesRequest"/></param>
         /// <returns><see cref="AssignIpv6AddressesResponse"/></returns>
@@ -662,10 +662,12 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to bind an ENI to a CVM.
-        /// * One CVM can be bound with multiple ENIs, but only one primary ENI. For more information about the limits, please see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
+        /// * One CVM can be bound with multiple ENIs, but only one primary ENI. * For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
         /// * An ENI can only be bound to one CVM at a time.
         /// * Only the running or shutdown CVMs can be bound with ENIs. For more information about the CVM status, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">InstanceStatus</a> in the Data Types.
         /// * An ENI can only be bound to a VPC-based CVM under the same availability zone as the ENI subnet.
+        /// 
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
         /// <returns><see cref="AttachNetworkInterfaceResponse"/></returns>
@@ -686,10 +688,12 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to bind an ENI to a CVM.
-        /// * One CVM can be bound with multiple ENIs, but only one primary ENI. For more information about the limits, please see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
+        /// * One CVM can be bound with multiple ENIs, but only one primary ENI. * For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
         /// * An ENI can only be bound to one CVM at a time.
         /// * Only the running or shutdown CVMs can be bound with ENIs. For more information about the CVM status, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">InstanceStatus</a> in the Data Types.
         /// * An ENI can only be bound to a VPC-based CVM under the same availability zone as the ENI subnet.
+        /// 
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
         /// <returns><see cref="AttachNetworkInterfaceResponse"/></returns>
@@ -2787,8 +2791,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteHaVip) is used to delete Highly Available Virtual IP (HAVIP)<br />
-        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to delete an HAVIP. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="DeleteHaVipRequest"/></param>
         /// <returns><see cref="DeleteHaVipResponse"/></returns>
@@ -2808,8 +2812,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteHaVip) is used to delete Highly Available Virtual IP (HAVIP)<br />
-        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to delete an HAVIP. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="DeleteHaVipRequest"/></param>
         /// <returns><see cref="DeleteHaVipResponse"/></returns>
@@ -3071,9 +3075,11 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteNetworkInterface) is used to delete ENIs.
-        /// * An ENI that has been bound to a CVM cannot be deleted.
-        /// * An ENI can be deleted only after being unbound from the server. After the deletion, all private IP addresses associated with the ENI will be released.
+        /// This API is used to delete an ENI.
+        /// * An ENI cannot be deleted when it’s bound to a CVM.
+        ///  * After the deletion, all of its private IP addresses will be released.
+        /// 
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="DeleteNetworkInterfaceRequest"/></param>
         /// <returns><see cref="DeleteNetworkInterfaceResponse"/></returns>
@@ -3093,9 +3099,11 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteNetworkInterface) is used to delete ENIs.
-        /// * An ENI that has been bound to a CVM cannot be deleted.
-        /// * An ENI can be deleted only after being unbound from the server. After the deletion, all private IP addresses associated with the ENI will be released.
+        /// This API is used to delete an ENI.
+        /// * An ENI cannot be deleted when it’s bound to a CVM.
+        ///  * After the deletion, all of its private IP addresses will be released.
+        /// 
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="DeleteNetworkInterfaceRequest"/></param>
         /// <returns><see cref="DeleteNetworkInterfaceResponse"/></returns>
@@ -5783,6 +5791,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the execution result of a VPC task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeVpcTaskResultResponse"/></returns>
+        public async Task<DescribeVpcTaskResultResponse> DescribeVpcTaskResult(DescribeVpcTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeVpcTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the execution result of a VPC task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeVpcTaskResultResponse"/></returns>
+        public DescribeVpcTaskResultResponse DescribeVpcTaskResultSync(DescribeVpcTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeVpcTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeVpcs) is used to query the VPC list.
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcsRequest"/></param>
@@ -6066,6 +6114,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to unbind an ENI from a CVM.
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="DetachNetworkInterfaceRequest"/></param>
         /// <returns><see cref="DetachNetworkInterfaceResponse"/></returns>
@@ -6086,6 +6135,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to unbind an ENI from a CVM.
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="DetachNetworkInterfaceRequest"/></param>
         /// <returns><see cref="DetachNetworkInterfaceResponse"/></returns>
@@ -6635,8 +6685,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (HaVipAssociateAddressIp) is used to bind an EIP to an HAVIP.<br />
-        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to bind an EIP to an HAVIP. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="HaVipAssociateAddressIpRequest"/></param>
         /// <returns><see cref="HaVipAssociateAddressIpResponse"/></returns>
@@ -6656,8 +6706,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (HaVipAssociateAddressIp) is used to bind an EIP to an HAVIP.<br />
-        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to bind an EIP to an HAVIP. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="HaVipAssociateAddressIpRequest"/></param>
         /// <returns><see cref="HaVipAssociateAddressIpResponse"/></returns>
@@ -6677,8 +6727,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (HaVipDisassociateAddressIp) is used to unbind an EIP which has been bound to an HAVIP.<br />
-        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to unbind an EIP from an HAVIP. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="HaVipDisassociateAddressIpRequest"/></param>
         /// <returns><see cref="HaVipDisassociateAddressIpResponse"/></returns>
@@ -6698,8 +6748,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (HaVipDisassociateAddressIp) is used to unbind an EIP which has been bound to an HAVIP.<br />
-        /// This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to unbind an EIP from an HAVIP. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="HaVipDisassociateAddressIpRequest"/></param>
         /// <returns><see cref="HaVipDisassociateAddressIpResponse"/></returns>
@@ -6879,7 +6929,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (MigrateNetworkInterface) is used to migrate ENIs.
+        /// This API is used to migrate ENIs.
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="MigrateNetworkInterfaceRequest"/></param>
         /// <returns><see cref="MigrateNetworkInterfaceResponse"/></returns>
@@ -6899,7 +6950,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (MigrateNetworkInterface) is used to migrate ENIs.
+        /// This API is used to migrate ENIs.
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="MigrateNetworkInterfaceRequest"/></param>
         /// <returns><see cref="MigrateNetworkInterfaceResponse"/></returns>
@@ -6919,10 +6971,11 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        ///  This API (MigratePrivateIpAddress) is used to migrate the private IPs of ENIs.
-        /// 
+        ///  This API is used to migrate the private IPs between ENIs.
         /// * This API is used to migrate a private IP from one ENI to another. Primary IPs cannot be migrated.
-        /// * The ENIs before and after migration must belong to the same subnet.
+        /// * The source and destination ENIs must be in the same subnet.  
+        /// 
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="MigratePrivateIpAddressRequest"/></param>
         /// <returns><see cref="MigratePrivateIpAddressResponse"/></returns>
@@ -6942,10 +6995,11 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        ///  This API (MigratePrivateIpAddress) is used to migrate the private IPs of ENIs.
-        /// 
+        ///  This API is used to migrate the private IPs between ENIs.
         /// * This API is used to migrate a private IP from one ENI to another. Primary IPs cannot be migrated.
-        /// * The ENIs before and after migration must belong to the same subnet.
+        /// * The source and destination ENIs must be in the same subnet.  
+        /// 
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="MigratePrivateIpAddressRequest"/></param>
         /// <returns><see cref="MigratePrivateIpAddressResponse"/></returns>
@@ -8049,20 +8103,20 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to reset the egress and ingress policies (SecurityGroupPolicy) of a security group.
+        /// This API is used to reset the `Egress` and `Ingress` rules (SecurityGroupPolicy) of a security group.
         /// 
         /// <ul>
-        /// <li>This API deletes all the existing egress and ingress policies, and then adds Egress and Ingress policies. It does not support custom indexes `PolicyIndex`.</li>
-        /// <li>For parameters of SecurityGroupPolicySet,<ul>
-        /// 	<li>If `SecurityGroupPolicySet.Version` is set to 0, all policies will be cleared, and `Egress` and `Ingress` will be ignored.</li>
-        /// 	<li>If `SecurityGroupPolicySet.Version` is not set to 0, add `Egress` and `Ingress` policies:<ul>
-        /// 		<li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
-        /// 		<li>`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// 		<li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// 		<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually.</li>
-        /// 		<li>`Port`: a single port number such as 80, or a port range in the format of '8000-8010'. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`.</li>
-        /// 		<li>`Action`: only allows ACCEPT or DROP.</li>
-        /// 		<li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
+        /// <li>This API does not support custom indexes <code>PolicyIndex</code>. </li>
+        /// <li>For <code>SecurityGroupPolicySet</code> parameter,<ul> <ul>
+        /// 	<li>If <code>SecurityGroupPolicySet.Version</code> is set to `0`, all policies will be cleared, and <code>Egress</code> and <code>Ingress</code> will be ignored. </li>
+        /// 	<li>If <code>SecurityGroupPolicySet.Version</code> is not set to `0`, add <code>Egress</code> and <code>Ingress</code> policies: <ul>
+        /// 		<li><code>Protocol</code>: <code>TCP</code>, <code>UDP</code>, <code>ICMP</code>, <code>ICMPV6</code>, <code>GRE</code>, or <code>ALL</code>. </li>
+        /// 		<li><code>CidrBlock</code>: a CIDR block in the correct format. In the classic network, even if the CIDR block specified in <code>CidrBlock</code> contains the Tencent Cloud private IPs that are not using for CVMs under your Tencent Cloud account, it does not mean this policy allows you to access those resources. The network isolation policies between tenants take priority over the private network policies in security groups. </li>
+        /// 		<li><code>Ipv6CidrBlock</code>: an IPv6 CIDR block in the correct format. In the classic network, even if the CIDR block specified in <code>Ipv6CidrBlock</code> contains the Tencent Cloud private IPv6 addresses that are not using for CVMs under your Tencent Cloud account, it does not mean this policy allows you to access those resources. The network isolation policies between tenants take priority over the private network policies in security groups. </li>
+        /// 		<li><code>SecurityGroupId</code>: ID of the security group. It can be the ID of a security group to be modified, or the ID of another security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually. </li>
+        /// 		<li><code>Port</code>: a single port number such as 80, or a port range in the format of '8000-8010'.  You may use this field only if the <code>Protocol</code> field takes the value <code>TCP</code> or <code>UDP</code>. </li>
+        /// 		<li><code>Action</code>: only allows <code>ACCEPT</code> or <code>DROP</code>. </li>
+        /// 		<li><code>CidrBlock</code>, <code>Ipv6CidrBlock</code>, <code>SecurityGroupId</code>, and <code>AddressTemplate</code> are mutually exclusive. <code>Protocol</code> + <code>Port</code> and <code>ServiceTemplate</code> are mutually exclusive.</li> </li>
         /// </ul></li></ul></li>
         /// </ul>
         /// </summary>
@@ -8084,20 +8138,20 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to reset the egress and ingress policies (SecurityGroupPolicy) of a security group.
+        /// This API is used to reset the `Egress` and `Ingress` rules (SecurityGroupPolicy) of a security group.
         /// 
         /// <ul>
-        /// <li>This API deletes all the existing egress and ingress policies, and then adds Egress and Ingress policies. It does not support custom indexes `PolicyIndex`.</li>
-        /// <li>For parameters of SecurityGroupPolicySet,<ul>
-        /// 	<li>If `SecurityGroupPolicySet.Version` is set to 0, all policies will be cleared, and `Egress` and `Ingress` will be ignored.</li>
-        /// 	<li>If `SecurityGroupPolicySet.Version` is not set to 0, add `Egress` and `Ingress` policies:<ul>
-        /// 		<li>`Protocol`: allows TCP, UDP, ICMP, ICMPV6, GRE, or ALL.</li>
-        /// 		<li>`CidrBlock`: a CIDR block in the correct format. In a classic network, if a `CidrBlock` contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// 		<li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// 		<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually.</li>
-        /// 		<li>`Port`: a single port number such as 80, or a port range in the format of '8000-8010'. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`.</li>
-        /// 		<li>`Action`: only allows ACCEPT or DROP.</li>
-        /// 		<li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
+        /// <li>This API does not support custom indexes <code>PolicyIndex</code>. </li>
+        /// <li>For <code>SecurityGroupPolicySet</code> parameter,<ul> <ul>
+        /// 	<li>If <code>SecurityGroupPolicySet.Version</code> is set to `0`, all policies will be cleared, and <code>Egress</code> and <code>Ingress</code> will be ignored. </li>
+        /// 	<li>If <code>SecurityGroupPolicySet.Version</code> is not set to `0`, add <code>Egress</code> and <code>Ingress</code> policies: <ul>
+        /// 		<li><code>Protocol</code>: <code>TCP</code>, <code>UDP</code>, <code>ICMP</code>, <code>ICMPV6</code>, <code>GRE</code>, or <code>ALL</code>. </li>
+        /// 		<li><code>CidrBlock</code>: a CIDR block in the correct format. In the classic network, even if the CIDR block specified in <code>CidrBlock</code> contains the Tencent Cloud private IPs that are not using for CVMs under your Tencent Cloud account, it does not mean this policy allows you to access those resources. The network isolation policies between tenants take priority over the private network policies in security groups. </li>
+        /// 		<li><code>Ipv6CidrBlock</code>: an IPv6 CIDR block in the correct format. In the classic network, even if the CIDR block specified in <code>Ipv6CidrBlock</code> contains the Tencent Cloud private IPv6 addresses that are not using for CVMs under your Tencent Cloud account, it does not mean this policy allows you to access those resources. The network isolation policies between tenants take priority over the private network policies in security groups. </li>
+        /// 		<li><code>SecurityGroupId</code>: ID of the security group. It can be the ID of a security group to be modified, or the ID of another security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don't need to change it manually. </li>
+        /// 		<li><code>Port</code>: a single port number such as 80, or a port range in the format of '8000-8010'.  You may use this field only if the <code>Protocol</code> field takes the value <code>TCP</code> or <code>UDP</code>. </li>
+        /// 		<li><code>Action</code>: only allows <code>ACCEPT</code> or <code>DROP</code>. </li>
+        /// 		<li><code>CidrBlock</code>, <code>Ipv6CidrBlock</code>, <code>SecurityGroupId</code>, and <code>AddressTemplate</code> are mutually exclusive. <code>Protocol</code> + <code>Port</code> and <code>ServiceTemplate</code> are mutually exclusive.</li> </li>
         /// </ul></li></ul></li>
         /// </ul>
         /// </summary>
@@ -9213,8 +9267,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (UnassignIpv6Addresses) is used to release ENI `IPv6` addresses.<br />
-        /// This API is completed asynchronously. If you need to query the async execution results, use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to release the IPv6 addresses of an ENI. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="UnassignIpv6AddressesRequest"/></param>
         /// <returns><see cref="UnassignIpv6AddressesResponse"/></returns>
@@ -9234,8 +9288,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (UnassignIpv6Addresses) is used to release ENI `IPv6` addresses.<br />
-        /// This API is completed asynchronously. If you need to query the async execution results, use the `RequestId` returned by this API to query the `QueryTask` API.
+        /// This API is used to release the IPv6 addresses of an ENI. <br />
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="UnassignIpv6AddressesRequest"/></param>
         /// <returns><see cref="UnassignIpv6AddressesResponse"/></returns>
@@ -9339,8 +9393,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (UnassignPrivateIpAddresses) is used to return the private IPs of ENI.
-        /// * To return the secondary private IPs of an ENI, the API will automatically unbind the IPs of an ENI. The primary private IP of the ENI cannot be returned.
+        /// This API is used to return the private IP addresses of an ENI.
+        /// * If a secondary private IP of an ENI is returned, the EIP will be automatically unassociated as well. The primary private IP of the ENI cannot be returned.
+        /// 
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="UnassignPrivateIpAddressesRequest"/></param>
         /// <returns><see cref="UnassignPrivateIpAddressesResponse"/></returns>
@@ -9360,8 +9416,10 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (UnassignPrivateIpAddresses) is used to return the private IPs of ENI.
-        /// * To return the secondary private IPs of an ENI, the API will automatically unbind the IPs of an ENI. The primary private IP of the ENI cannot be returned.
+        /// This API is used to return the private IP addresses of an ENI.
+        /// * If a secondary private IP of an ENI is returned, the EIP will be automatically unassociated as well. The primary private IP of the ENI cannot be returned.
+        /// 
+        /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
         /// <param name="req"><see cref="UnassignPrivateIpAddressesRequest"/></param>
         /// <returns><see cref="UnassignPrivateIpAddressesResponse"/></returns>

@@ -21,34 +21,35 @@ namespace TencentCloud.Ssm.V20190923.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSecretValueResponse : AbstractModel
+    public class DescribeRotationDetailResponse : AbstractModel
     {
         
         /// <summary>
-        /// Name of the Secret.
+        /// Specifies whether to allow rotation. True: yes; False: no.
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
+        [JsonProperty("EnableRotation")]
+        public bool? EnableRotation{ get; set; }
 
         /// <summary>
-        /// ID of the Secret version.
+        /// Rotation frequency in days. Default value: 1 day.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("VersionId")]
-        public string VersionId{ get; set; }
+        [JsonProperty("Frequency")]
+        public long? Frequency{ get; set; }
 
         /// <summary>
-        /// When creating a credential (CreateSecret), if you specify binary data, this field will be the Base64-encoded returned result. The application needs to Base64-decode the result to get the original data.
-        /// Either `SecretBinary` or `SecretString` cannot be empty.
+        /// Last rotation time, which is an explicitly visible time string in the format of 2006-01-02 15:04:05.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SecretBinary")]
-        public string SecretBinary{ get; set; }
+        [JsonProperty("LatestRotateTime")]
+        public string LatestRotateTime{ get; set; }
 
         /// <summary>
-        /// When creating a credential (CreateSecret), if you specify general text data, this field will be the returned result.
-        /// Either `SecretBinary` or `SecretString` cannot be empty.
+        /// Next rotation start time, which is an explicitly visible time string in the format of 2006-01-02 15:04:05.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SecretString")]
-        public string SecretString{ get; set; }
+        [JsonProperty("NextRotateBeginTime")]
+        public string NextRotateBeginTime{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -62,10 +63,10 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
-            this.SetParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
-            this.SetParamSimple(map, prefix + "SecretString", this.SecretString);
+            this.SetParamSimple(map, prefix + "EnableRotation", this.EnableRotation);
+            this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
+            this.SetParamSimple(map, prefix + "LatestRotateTime", this.LatestRotateTime);
+            this.SetParamSimple(map, prefix + "NextRotateBeginTime", this.NextRotateBeginTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

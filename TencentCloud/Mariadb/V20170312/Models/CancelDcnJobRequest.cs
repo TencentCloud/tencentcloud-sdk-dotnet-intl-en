@@ -15,27 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ssm.V20190923.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSecretValueRequest : AbstractModel
+    public class CancelDcnJobRequest : AbstractModel
     {
         
         /// <summary>
-        /// Name of a Secret.
+        /// Disaster recovery instance ID
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
-
-        /// <summary>
-        /// Specifies the version number of the corresponding credential.
-        /// For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
-        /// </summary>
-        [JsonProperty("VersionId")]
-        public string VersionId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +36,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

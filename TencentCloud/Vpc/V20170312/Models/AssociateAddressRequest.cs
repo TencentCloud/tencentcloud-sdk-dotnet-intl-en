@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("PrivateIpAddress")]
         public string PrivateIpAddress{ get; set; }
 
+        /// <summary>
+        /// Whether to enable direct access when binding a specified EIP. For more information, see [EIP Direct Access](https://intl.cloud.tencent.com/document/product/1199/41709?from_cn_redirect=1). Valid values: `True` and `False`; default value: `False`. You can set this parameter to `True` when binding an EIP to a CVM instance or an EKS elastic cluster. This parameter is currently in beta. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2).
+        /// </summary>
+        [JsonProperty("EipDirectConnection")]
+        public bool? EipDirectConnection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
             this.SetParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
+            this.SetParamSimple(map, prefix + "EipDirectConnection", this.EipDirectConnection);
         }
     }
 }

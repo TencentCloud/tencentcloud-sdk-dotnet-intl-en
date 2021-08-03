@@ -15,27 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ssm.V20190923.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSecretValueRequest : AbstractModel
+    public class DescribeVpcTaskResultResponse : AbstractModel
     {
         
         /// <summary>
-        /// Name of a Secret.
+        /// Execution result of an async task Valid values: `SUCCESS`: the task has been successfully executed; `FAILED`: the job execution failed; `RUNNING`: the job is executing.
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// Specifies the version number of the corresponding credential.
-        /// For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
+        /// Output of the async task execution result
         /// </summary>
-        [JsonProperty("VersionId")]
-        public string VersionId{ get; set; }
+        [JsonProperty("Output")]
+        public string Output{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +48,9 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Output", this.Output);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

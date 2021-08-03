@@ -49,7 +49,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+        /// Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -65,6 +65,41 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// 0: user-defined credential; 1: Tencent Cloud service credential.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public long? SecretType{ get; set; }
+
+        /// <summary>
+        /// Tencent Cloud service name.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
+        /// <summary>
+        /// Tencent Cloud service instance ID.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceID")]
+        public string ResourceID{ get; set; }
+
+        /// <summary>
+        /// Whether to enable rotation. True: yes; False: no.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RotationStatus")]
+        public bool? RotationStatus{ get; set; }
+
+        /// <summary>
+        /// Rotation frequency in days by default.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RotationFrequency")]
+        public long? RotationFrequency{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -85,6 +120,11 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "ResourceID", this.ResourceID);
+            this.SetParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
+            this.SetParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

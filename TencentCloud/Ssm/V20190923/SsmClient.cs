@@ -53,6 +53,46 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// This API is used to create a Tencent Cloud service credential.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProductSecretRequest"/></param>
+        /// <returns><see cref="CreateProductSecretResponse"/></returns>
+        public async Task<CreateProductSecretResponse> CreateProductSecret(CreateProductSecretRequest req)
+        {
+             JsonResponseModel<CreateProductSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProductSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Tencent Cloud service credential.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProductSecretRequest"/></param>
+        /// <returns><see cref="CreateProductSecretResponse"/></returns>
+        public CreateProductSecretResponse CreateProductSecretSync(CreateProductSecretRequest req)
+        {
+             JsonResponseModel<CreateProductSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProductSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a KMS-encrypted Secret. You can create and store up to 1,000 Secrets in each region.
         /// </summary>
         /// <param name="req"><see cref="CreateSecretRequest"/></param>
@@ -133,7 +173,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// This API is used to delete a version of a Secret. The deletion takes effect immediately. Secret versions in any status can be deleted.
+        /// This API is used to directly delete a single credential version under the specified credential. The deletion takes effect immediately, and the credential version in all status can be deleted.
+        /// This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecretVersionRequest"/></param>
         /// <returns><see cref="DeleteSecretVersionResponse"/></returns>
@@ -153,7 +194,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// This API is used to delete a version of a Secret. The deletion takes effect immediately. Secret versions in any status can be deleted.
+        /// This API is used to directly delete a single credential version under the specified credential. The deletion takes effect immediately, and the credential version in all status can be deleted.
+        /// This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecretVersionRequest"/></param>
         /// <returns><see cref="DeleteSecretVersionResponse"/></returns>
@@ -164,6 +206,130 @@ namespace TencentCloud.Ssm.V20190923
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSecretVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecretVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the execution result of an async task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public async Task<DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the execution result of an async task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfoSync(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a credential rotation policy.
+        /// This API is only applicable to Tencent Cloud service credentials.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRotationDetailRequest"/></param>
+        /// <returns><see cref="DescribeRotationDetailResponse"/></returns>
+        public async Task<DescribeRotationDetailResponse> DescribeRotationDetail(DescribeRotationDetailRequest req)
+        {
+             JsonResponseModel<DescribeRotationDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRotationDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRotationDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a credential rotation policy.
+        /// This API is only applicable to Tencent Cloud service credentials.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRotationDetailRequest"/></param>
+        /// <returns><see cref="DescribeRotationDetailResponse"/></returns>
+        public DescribeRotationDetailResponse DescribeRotationDetailSync(DescribeRotationDetailRequest req)
+        {
+             JsonResponseModel<DescribeRotationDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRotationDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRotationDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the historical versions of a rotated credential.
+        /// This API is only applicable to Tencent Cloud service credentials.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRotationHistoryRequest"/></param>
+        /// <returns><see cref="DescribeRotationHistoryResponse"/></returns>
+        public async Task<DescribeRotationHistoryResponse> DescribeRotationHistory(DescribeRotationHistoryRequest req)
+        {
+             JsonResponseModel<DescribeRotationHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRotationHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRotationHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the historical versions of a rotated credential.
+        /// This API is only applicable to Tencent Cloud service credentials.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRotationHistoryRequest"/></param>
+        /// <returns><see cref="DescribeRotationHistoryResponse"/></returns>
+        public DescribeRotationHistoryResponse DescribeRotationHistorySync(DescribeRotationHistoryRequest req)
+        {
+             JsonResponseModel<DescribeRotationHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRotationHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRotationHistoryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -204,6 +370,46 @@ namespace TencentCloud.Ssm.V20190923
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSecret");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of supported Tencent Cloud services.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedProductsRequest"/></param>
+        /// <returns><see cref="DescribeSupportedProductsResponse"/></returns>
+        public async Task<DescribeSupportedProductsResponse> DescribeSupportedProducts(DescribeSupportedProductsRequest req)
+        {
+             JsonResponseModel<DescribeSupportedProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSupportedProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportedProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of supported Tencent Cloud services.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedProductsRequest"/></param>
+        /// <returns><see cref="DescribeSupportedProductsResponse"/></returns>
+        public DescribeSupportedProductsResponse DescribeSupportedProductsSync(DescribeSupportedProductsRequest req)
+        {
+             JsonResponseModel<DescribeSupportedProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSupportedProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportedProductsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,7 +539,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// This API is used to obtain the plaintext of a specified Secret and version. Only plaintext of an enabled Secret can be obtained.
+        /// For user-defined credentials, this API is used to get the plaintext information of a credential by specifying the credential name and version.
+        /// For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
         /// </summary>
         /// <param name="req"><see cref="GetSecretValueRequest"/></param>
         /// <returns><see cref="GetSecretValueResponse"/></returns>
@@ -353,7 +560,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// This API is used to obtain the plaintext of a specified Secret and version. Only plaintext of an enabled Secret can be obtained.
+        /// For user-defined credentials, this API is used to get the plaintext information of a credential by specifying the credential name and version.
+        /// For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
         /// </summary>
         /// <param name="req"><see cref="GetSecretValueRequest"/></param>
         /// <returns><see cref="GetSecretValueResponse"/></returns>
@@ -493,7 +701,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// This API is used to add a new version to a specified Secret. Each Secret supports up to 10 versions. You can only add versions to Secrets in `Enabled` or `Disabled` status.
+        /// This API adds the new version of the credential content under the specified credential. One credential can have up to 10 versions. New versions can be added to credentials only in `Enabled` or `Disabled` status.
+        /// This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
         /// </summary>
         /// <param name="req"><see cref="PutSecretValueRequest"/></param>
         /// <returns><see cref="PutSecretValueResponse"/></returns>
@@ -513,7 +722,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// This API is used to add a new version to a specified Secret. Each Secret supports up to 10 versions. You can only add versions to Secrets in `Enabled` or `Disabled` status.
+        /// This API adds the new version of the credential content under the specified credential. One credential can have up to 10 versions. New versions can be added to credentials only in `Enabled` or `Disabled` status.
+        /// This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
         /// </summary>
         /// <param name="req"><see cref="PutSecretValueRequest"/></param>
         /// <returns><see cref="PutSecretValueResponse"/></returns>
@@ -573,6 +783,46 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// This API is used to rotate a Tencent Cloud service credential. It is only applicable to Tencent Cloud service credentials in `Enabled` status but not Tencent Cloud service credentials in other status or user-defined credentials.
+        /// </summary>
+        /// <param name="req"><see cref="RotateProductSecretRequest"/></param>
+        /// <returns><see cref="RotateProductSecretResponse"/></returns>
+        public async Task<RotateProductSecretResponse> RotateProductSecret(RotateProductSecretRequest req)
+        {
+             JsonResponseModel<RotateProductSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RotateProductSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RotateProductSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to rotate a Tencent Cloud service credential. It is only applicable to Tencent Cloud service credentials in `Enabled` status but not Tencent Cloud service credentials in other status or user-defined credentials.
+        /// </summary>
+        /// <param name="req"><see cref="RotateProductSecretRequest"/></param>
+        /// <returns><see cref="RotateProductSecretResponse"/></returns>
+        public RotateProductSecretResponse RotateProductSecretSync(RotateProductSecretRequest req)
+        {
+             JsonResponseModel<RotateProductSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RotateProductSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RotateProductSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to update the description of a Secret. This API can only update Secrets in `Enabled` or `Disabled` status.
         /// </summary>
         /// <param name="req"><see cref="UpdateDescriptionRequest"/></param>
@@ -613,7 +863,54 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// This API is used to update the name and version ID of a Secret. Calling this API encrypts the new Secret content and overwrites the old content. This API can only update Secrets in `Enabled` or `Disabled` status.
+        /// This API is used to set a Tencent Cloud service credential rotation policy, including the following parameters:
+        /// Specifies whether to enable rotation
+        /// Rotation frequency
+        /// Rotation start time
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRotationStatusRequest"/></param>
+        /// <returns><see cref="UpdateRotationStatusResponse"/></returns>
+        public async Task<UpdateRotationStatusResponse> UpdateRotationStatus(UpdateRotationStatusRequest req)
+        {
+             JsonResponseModel<UpdateRotationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateRotationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRotationStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set a Tencent Cloud service credential rotation policy, including the following parameters:
+        /// Specifies whether to enable rotation
+        /// Rotation frequency
+        /// Rotation start time
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRotationStatusRequest"/></param>
+        /// <returns><see cref="UpdateRotationStatusResponse"/></returns>
+        public UpdateRotationStatusResponse UpdateRotationStatusSync(UpdateRotationStatusRequest req)
+        {
+             JsonResponseModel<UpdateRotationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateRotationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRotationStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the credential content of the specified credential name and version number. Calling this API will encrypt the content of the new credential and overwrite the old content. Only credentials in `Enabled` or `Disabled` status can be updated.
+        /// This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
         /// </summary>
         /// <param name="req"><see cref="UpdateSecretRequest"/></param>
         /// <returns><see cref="UpdateSecretResponse"/></returns>
@@ -633,7 +930,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// This API is used to update the name and version ID of a Secret. Calling this API encrypts the new Secret content and overwrites the old content. This API can only update Secrets in `Enabled` or `Disabled` status.
+        /// This API is used to update the credential content of the specified credential name and version number. Calling this API will encrypt the content of the new credential and overwrite the old content. Only credentials in `Enabled` or `Disabled` status can be updated.
+        /// This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
         /// </summary>
         /// <param name="req"><see cref="UpdateSecretRequest"/></param>
         /// <returns><see cref="UpdateSecretResponse"/></returns>

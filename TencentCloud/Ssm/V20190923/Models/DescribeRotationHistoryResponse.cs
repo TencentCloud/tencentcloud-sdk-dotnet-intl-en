@@ -21,21 +21,26 @@ namespace TencentCloud.Ssm.V20190923.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSecretValueRequest : AbstractModel
+    public class DescribeRotationHistoryResponse : AbstractModel
     {
         
         /// <summary>
-        /// Name of a Secret.
+        /// List of version numbers.
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
+        [JsonProperty("VersionIDs")]
+        public string[] VersionIDs{ get; set; }
 
         /// <summary>
-        /// Specifies the version number of the corresponding credential.
-        /// For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
+        /// Number of version numbers. The maximum number of version numbers that can be shown to users is 10.
         /// </summary>
-        [JsonProperty("VersionId")]
-        public string VersionId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +48,9 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamArraySimple(map, prefix + "VersionIDs.", this.VersionIDs);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

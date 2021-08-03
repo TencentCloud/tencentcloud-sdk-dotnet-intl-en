@@ -345,6 +345,8 @@
     <Compile Include="V20170312\Models\DescribeVpcPrivateIpAddressesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcResourceDashboardRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcResourceDashboardResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcTaskResultRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcTaskResultResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpnConnectionsRequest.cs" />

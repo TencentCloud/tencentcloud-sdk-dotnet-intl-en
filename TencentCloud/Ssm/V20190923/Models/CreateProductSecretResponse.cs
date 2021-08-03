@@ -21,34 +21,35 @@ namespace TencentCloud.Ssm.V20190923.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSecretValueResponse : AbstractModel
+    public class CreateProductSecretResponse : AbstractModel
     {
         
         /// <summary>
-        /// Name of the Secret.
+        /// Name of the created credential.
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// ID of the Secret version.
+        /// Tag operation return code. 0: success; 1: internal error; 2: business processing error.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("VersionId")]
-        public string VersionId{ get; set; }
+        [JsonProperty("TagCode")]
+        public ulong? TagCode{ get; set; }
 
         /// <summary>
-        /// When creating a credential (CreateSecret), if you specify binary data, this field will be the Base64-encoded returned result. The application needs to Base64-decode the result to get the original data.
-        /// Either `SecretBinary` or `SecretString` cannot be empty.
+        /// Tag operation return message.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SecretBinary")]
-        public string SecretBinary{ get; set; }
+        [JsonProperty("TagMsg")]
+        public string TagMsg{ get; set; }
 
         /// <summary>
-        /// When creating a credential (CreateSecret), if you specify general text data, this field will be the returned result.
-        /// Either `SecretBinary` or `SecretString` cannot be empty.
+        /// ID of the created Tencent Cloud service credential async task.
         /// </summary>
-        [JsonProperty("SecretString")]
-        public string SecretString{ get; set; }
+        [JsonProperty("FlowID")]
+        public long? FlowID{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -63,9 +64,9 @@ namespace TencentCloud.Ssm.V20190923.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
-            this.SetParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
-            this.SetParamSimple(map, prefix + "SecretString", this.SecretString);
+            this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
+            this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
+            this.SetParamSimple(map, prefix + "FlowID", this.FlowID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

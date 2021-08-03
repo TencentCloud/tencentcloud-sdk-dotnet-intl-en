@@ -21,33 +21,14 @@ namespace TencentCloud.Ssm.V20190923.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateSecretRequest : AbstractModel
+    public class DescribeRotationHistoryRequest : AbstractModel
     {
         
         /// <summary>
-        /// Name of a Secret whose content is to be updated.
+        /// Specifies the name of the credential for which to get the credential rotation records.
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
-
-        /// <summary>
-        /// ID of the Secret version whose content is to be updated.
-        /// </summary>
-        [JsonProperty("VersionId")]
-        public string VersionId{ get; set; }
-
-        /// <summary>
-        /// This field should be used and Base64-encoded if the content of the new credential is binary.
-        /// Either `SecretBinary` or `SecretString` cannot be empty.
-        /// </summary>
-        [JsonProperty("SecretBinary")]
-        public string SecretBinary{ get; set; }
-
-        /// <summary>
-        /// This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
-        /// </summary>
-        [JsonProperty("SecretString")]
-        public string SecretString{ get; set; }
 
 
         /// <summary>
@@ -56,9 +37,6 @@ namespace TencentCloud.Ssm.V20190923.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
-            this.SetParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
-            this.SetParamSimple(map, prefix + "SecretString", this.SecretString);
         }
     }
 }

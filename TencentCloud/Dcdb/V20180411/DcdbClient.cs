@@ -93,7 +93,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// This API is used to cancel CDN synchronization.
+        /// This API is used to cancel DCN synchronization.
         /// </summary>
         /// <param name="req"><see cref="CancelDcnJobRequest"/></param>
         /// <returns><see cref="CancelDcnJobResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// This API is used to cancel CDN synchronization.
+        /// This API is used to cancel DCN synchronization.
         /// </summary>
         /// <param name="req"><see cref="CancelDcnJobRequest"/></param>
         /// <returns><see cref="CancelDcnJobResponse"/></returns>

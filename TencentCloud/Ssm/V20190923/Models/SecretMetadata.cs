@@ -25,52 +25,80 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// Name of the Secret.
+        /// Credential name
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// Description of the Secret.
+        /// Credential description
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// KMS Key ID used for Secret encryption.
+        /// KMS `KeyId` used to encrypt the credential
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// Creator UIN.
+        /// Creator UIN
         /// </summary>
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+        /// Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
+        /// Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
         /// </summary>
         [JsonProperty("DeleteTime")]
         public ulong? DeleteTime{ get; set; }
 
         /// <summary>
-        /// Secret creation time, formatted as a Unix timestamp.
+        /// Credential creation time in UNIX timestamp format
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
+        /// Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
         /// </summary>
         [JsonProperty("KmsKeyType")]
         public string KmsKeyType{ get; set; }
+
+        /// <summary>
+        /// 1: enable rotation; 0: disable rotation
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RotationStatus")]
+        public long? RotationStatus{ get; set; }
+
+        /// <summary>
+        /// Start time of the next rotation in UNIX timestamp format
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NextRotationTime")]
+        public ulong? NextRotationTime{ get; set; }
+
+        /// <summary>
+        /// 0: user-defined credential; 1: Tencent Cloud service credential.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public long? SecretType{ get; set; }
+
+        /// <summary>
+        /// Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
 
         /// <summary>
@@ -86,6 +114,10 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "KmsKeyType", this.KmsKeyType);
+            this.SetParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
+            this.SetParamSimple(map, prefix + "NextRotationTime", this.NextRotationTime);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

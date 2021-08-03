@@ -43,7 +43,14 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// Filter according to Secret statuses. `0` (default): all Secrets; `1`: Secrets in `Enabled` status; `2`: Secrets in `Disabled` status; `3`: Secrets in `PendingDelete` status.
+        /// Filter based on credential status.
+        /// The default value is 0, indicating to query all.
+        /// 1: query the list of credentials in `Enabled` status.
+        /// 2: query the list of credentials in `Disabled` status.
+        /// 3: query the list of credentials in `PendingDelete` status.
+        /// 4: query the list of credentials in `PendingCreate` status.
+        /// 5: query the list of credentials in `CreateFailed` status.
+        /// The `PendingCreate` and `CreateFailed` status only take effect when `SecretType` is Tencent Cloud service credential
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }
@@ -55,10 +62,18 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string SearchSecretName{ get; set; }
 
         /// <summary>
-        /// Tag filter condition.
+        /// Tag filter.
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
+
+        /// <summary>
+        /// 0: user-defined credential (default value).
+        /// 1: Tencent Cloud service credential.
+        /// Either 1 or 0 can be selected for this parameter.
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public ulong? SecretType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +87,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
         }
     }
 }

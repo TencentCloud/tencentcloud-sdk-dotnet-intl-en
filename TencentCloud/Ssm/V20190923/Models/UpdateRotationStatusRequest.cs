@@ -21,33 +21,35 @@ namespace TencentCloud.Ssm.V20190923.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateSecretRequest : AbstractModel
+    public class UpdateRotationStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// Name of a Secret whose content is to be updated.
+        /// Tencent Cloud service credential name.
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// ID of the Secret version whose content is to be updated.
+        /// Specifies whether to enable rotation.
+        /// True: enable rotation.
+        /// False: disable rotation.
         /// </summary>
-        [JsonProperty("VersionId")]
-        public string VersionId{ get; set; }
+        [JsonProperty("EnableRotation")]
+        public bool? EnableRotation{ get; set; }
 
         /// <summary>
-        /// This field should be used and Base64-encoded if the content of the new credential is binary.
-        /// Either `SecretBinary` or `SecretString` cannot be empty.
+        /// Rotation frequency in days. Value range: 30–365.
         /// </summary>
-        [JsonProperty("SecretBinary")]
-        public string SecretBinary{ get; set; }
+        [JsonProperty("Frequency")]
+        public long? Frequency{ get; set; }
 
         /// <summary>
-        /// This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
+        /// User-Defined rotation start time in the format of 2006-01-02 15:04:05.
+        /// When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
         /// </summary>
-        [JsonProperty("SecretString")]
-        public string SecretString{ get; set; }
+        [JsonProperty("RotationBeginTime")]
+        public string RotationBeginTime{ get; set; }
 
 
         /// <summary>
@@ -56,9 +58,9 @@ namespace TencentCloud.Ssm.V20190923.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
-            this.SetParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
-            this.SetParamSimple(map, prefix + "SecretString", this.SecretString);
+            this.SetParamSimple(map, prefix + "EnableRotation", this.EnableRotation);
+            this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
+            this.SetParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
         }
     }
 }

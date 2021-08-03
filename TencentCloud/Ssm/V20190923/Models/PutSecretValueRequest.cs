@@ -37,7 +37,8 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string VersionId{ get; set; }
 
         /// <summary>
-        /// Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
+        /// Base64-encoded binary credential information.
+        /// Either `SecretBinary` or `SecretString` must be set.
         /// </summary>
         [JsonProperty("SecretBinary")]
         public string SecretBinary{ get; set; }
