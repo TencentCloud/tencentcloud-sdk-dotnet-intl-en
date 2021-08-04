@@ -25,6 +25,20 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// ID of the node that has successfully set the removal protection
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SucceedInstanceIds")]
+        public string[] SucceedInstanceIds{ get; set; }
+
+        /// <summary>
+        /// ID of the node that fails to set the removal protection
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FailedInstanceIds")]
+        public string[] FailedInstanceIds{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +50,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "SucceedInstanceIds.", this.SucceedInstanceIds);
+            this.SetParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

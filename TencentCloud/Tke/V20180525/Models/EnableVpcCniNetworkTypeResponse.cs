@@ -15,22 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Emr.V20190103.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstanceResponse : AbstractModel
+    public class EnableVpcCniNetworkTypeResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Instance ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -43,7 +36,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

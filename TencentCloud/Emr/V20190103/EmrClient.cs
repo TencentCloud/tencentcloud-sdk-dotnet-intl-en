@@ -53,7 +53,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create EMR instance.
+        /// This API is used to create an EMR cluster instance.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create EMR instance.
+        /// This API is used to create an EMR cluster instance.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>

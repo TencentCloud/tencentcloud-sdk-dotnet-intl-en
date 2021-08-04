@@ -114,7 +114,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+        /// Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
@@ -151,9 +151,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Number of master nodes to be added
+        /// When a ClickHouse cluster is scaled, this parameter does not take effect.
+        /// When a Kafka cluster is scaled, this parameter does not take effect.
+        /// When `HardwareResourceType` is `pod`, this parameter does not take effect.
         /// </summary>
         [JsonProperty("MasterCount")]
         public ulong? MasterCount{ get; set; }
+
+        /// <summary>
+        /// Whether to start the service after scaling. `true`: yes; `false`: no
+        /// </summary>
+        [JsonProperty("StartServiceAfterScaleOut")]
+        public string StartServiceAfterScaleOut{ get; set; }
 
 
         /// <summary>
@@ -182,6 +191,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
             this.SetParamObj(map, prefix + "PodParameter.", this.PodParameter);
             this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
+            this.SetParamSimple(map, prefix + "StartServiceAfterScaleOut", this.StartServiceAfterScaleOut);
         }
     }
 }

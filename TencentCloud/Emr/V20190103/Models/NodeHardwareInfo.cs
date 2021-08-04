@@ -297,6 +297,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DynamicPodSpec")]
         public string DynamicPodSpec{ get; set; }
 
+        /// <summary>
+        /// Whether to support billing mode change. `0`: no; `1`: yes
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SupportModifyPayMode")]
+        public long? SupportModifyPayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -342,6 +349,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
             this.SetParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
             this.SetParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
+            this.SetParamSimple(map, prefix + "SupportModifyPayMode", this.SupportModifyPayMode);
         }
     }
 }

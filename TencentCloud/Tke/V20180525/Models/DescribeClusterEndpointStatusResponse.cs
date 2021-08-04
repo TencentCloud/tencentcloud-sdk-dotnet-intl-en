@@ -25,7 +25,8 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+        /// The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

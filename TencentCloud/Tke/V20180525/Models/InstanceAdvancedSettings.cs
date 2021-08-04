@@ -74,7 +74,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public InstanceExtraArgs ExtraArgs{ get; set; }
 
         /// <summary>
-        /// 
+        /// When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DesiredPodNumber")]
         public long? DesiredPodNumber{ get; set; }

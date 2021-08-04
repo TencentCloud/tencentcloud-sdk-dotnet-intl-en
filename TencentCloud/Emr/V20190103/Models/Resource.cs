@@ -25,22 +25,32 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Node specification description
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node specification description, such as CVM.SA2
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// Storage class
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Storage type
+        /// Valid values:
+        /// <li>4: SSD</li>
+        /// <li>5: Premium Cloud Storage</li>
+        /// <li>6: Enhanced SSD</li>
+        /// <li>11: High-Throughput cloud disk</li>
+        /// <li>12: Tremendous SSD</li>
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
         /// <summary>
         /// Disk type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Valid values:
+        /// <li>`CLOUD_SSD`: SSD</li>
+        /// <li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+        /// <li>`CLOUD_BASIC`: HDD</li>
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -88,22 +98,22 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Specification type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specification type, such as S2.MEDIUM8
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Number of local disks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of local disks. This field has been disused.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LocalDiskNum")]
         public ulong? LocalDiskNum{ get; set; }
 
         /// <summary>
-        /// Number of disks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of local disks, such as 2
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskNum")]
         public ulong? DiskNum{ get; set; }

@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Emr.V20190103.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstanceResponse : AbstractModel
+    public class DescribeClusterCommonNamesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The CommonName in the certificate of the client corresponding to the sub-account UIN
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("CommonNames")]
+        public CommonName[] CommonNames{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,7 +42,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "CommonNames.", this.CommonNames);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

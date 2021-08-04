@@ -15,27 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Emr.V20190103.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstanceResponse : AbstractModel
+    public class DescribeClusterCommonNamesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Sub-account. Up to 50 sub-accounts can be passed in at a time.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SubaccountUins")]
+        public string[] SubaccountUins{ get; set; }
+
+        /// <summary>
+        /// Role ID. Up to 50 role IDs can be passed in at a time.
+        /// </summary>
+        [JsonProperty("RoleIds")]
+        public string[] RoleIds{ get; set; }
 
 
         /// <summary>
@@ -43,8 +48,9 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "SubaccountUins.", this.SubaccountUins);
+            this.SetParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
         }
     }
 }

@@ -15,21 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Emr.V20190103.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstanceResponse : AbstractModel
+    public class DescribeEnableVpcCniProgressResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Task status, which can be `Running`, `Succeed`, or `Failed`.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,7 +49,8 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

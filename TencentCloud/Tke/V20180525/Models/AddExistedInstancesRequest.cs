@@ -78,6 +78,14 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("SkipValidateOptions")]
         public string[] SkipValidateOptions{ get; set; }
 
+        /// <summary>
+        /// This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+        /// 
+        /// The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+        /// </summary>
+        [JsonProperty("InstanceAdvancedSettingsOverrides")]
+        public InstanceAdvancedSettings[] InstanceAdvancedSettingsOverrides{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +101,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamObj(map, prefix + "NodePool.", this.NodePool);
             this.SetParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
+            this.SetParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceAdvancedSettingsOverride")]
         public InstanceAdvancedSettings InstanceAdvancedSettingsOverride{ get; set; }
 
+        /// <summary>
+        /// When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+        /// </summary>
+        [JsonProperty("DesiredPodNumbers")]
+        public long?[] DesiredPodNumbers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
             this.SetParamObj(map, prefix + "ExistedInstancesPara.", this.ExistedInstancesPara);
             this.SetParamObj(map, prefix + "InstanceAdvancedSettingsOverride.", this.InstanceAdvancedSettingsOverride);
+            this.SetParamArraySimple(map, prefix + "DesiredPodNumbers.", this.DesiredPodNumbers);
         }
     }
 }

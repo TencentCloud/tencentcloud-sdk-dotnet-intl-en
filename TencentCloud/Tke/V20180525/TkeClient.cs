@@ -1013,6 +1013,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to obtain the CommonName from the kube-apiserver client certificate that corresponding to the sub-account in RBAC authorization mode. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterCommonNamesRequest"/></param>
+        /// <returns><see cref="DescribeClusterCommonNamesResponse"/></returns>
+        public async Task<DescribeClusterCommonNamesResponse> DescribeClusterCommonNames(DescribeClusterCommonNamesRequest req)
+        {
+             JsonResponseModel<DescribeClusterCommonNamesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterCommonNames");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterCommonNamesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the CommonName from the kube-apiserver client certificate that corresponding to the sub-account in RBAC authorization mode. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterCommonNamesRequest"/></param>
+        /// <returns><see cref="DescribeClusterCommonNamesResponse"/></returns>
+        public DescribeClusterCommonNamesResponse DescribeClusterCommonNamesSync(DescribeClusterCommonNamesRequest req)
+        {
+             JsonResponseModel<DescribeClusterCommonNamesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterCommonNames");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterCommonNamesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Query cluster access port status (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterEndpointStatusRequest"/></param>
@@ -1413,6 +1453,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query the task progress of enabling VPC-CNI mode.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnableVpcCniProgressRequest"/></param>
+        /// <returns><see cref="DescribeEnableVpcCniProgressResponse"/></returns>
+        public async Task<DescribeEnableVpcCniProgressResponse> DescribeEnableVpcCniProgress(DescribeEnableVpcCniProgressRequest req)
+        {
+             JsonResponseModel<DescribeEnableVpcCniProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnableVpcCniProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnableVpcCniProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the task progress of enabling VPC-CNI mode.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnableVpcCniProgressRequest"/></param>
+        /// <returns><see cref="DescribeEnableVpcCniProgressResponse"/></returns>
+        public DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgressSync(DescribeEnableVpcCniProgressRequest req)
+        {
+             JsonResponseModel<DescribeEnableVpcCniProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnableVpcCniProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnableVpcCniProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query one or more existing node and determine whether they can be added to a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeExistedInstancesRequest"/></param>
@@ -1564,6 +1644,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRouteTableConflicts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTableConflictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the VPC-CNI network mode for GR clusters.
+        /// </summary>
+        /// <param name="req"><see cref="EnableVpcCniNetworkTypeRequest"/></param>
+        /// <returns><see cref="EnableVpcCniNetworkTypeResponse"/></returns>
+        public async Task<EnableVpcCniNetworkTypeResponse> EnableVpcCniNetworkType(EnableVpcCniNetworkTypeRequest req)
+        {
+             JsonResponseModel<EnableVpcCniNetworkTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableVpcCniNetworkType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the VPC-CNI network mode for GR clusters.
+        /// </summary>
+        /// <param name="req"><see cref="EnableVpcCniNetworkTypeRequest"/></param>
+        /// <returns><see cref="EnableVpcCniNetworkTypeResponse"/></returns>
+        public EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkTypeSync(EnableVpcCniNetworkTypeRequest req)
+        {
+             JsonResponseModel<EnableVpcCniNetworkTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableVpcCniNetworkType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

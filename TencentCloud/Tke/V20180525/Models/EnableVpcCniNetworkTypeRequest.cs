@@ -21,7 +21,7 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetNodePoolNodeProtectionRequest : AbstractModel
+    public class EnableVpcCniNetworkTypeRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,22 +31,28 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Node pool ID
+        /// The VPC-CNI mode. `tke-route-eni`: Multi-IP ENI, `tke-direct-eni`: Independent ENI
         /// </summary>
-        [JsonProperty("NodePoolId")]
-        public string NodePoolId{ get; set; }
+        [JsonProperty("VpcCniType")]
+        public string VpcCniType{ get; set; }
 
         /// <summary>
-        /// Node ID
+        /// Whether to enable static IP address
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("EnableStaticIp")]
+        public bool? EnableStaticIp{ get; set; }
 
         /// <summary>
-        /// Whether the node needs removal protection
+        /// The container subnet being used
         /// </summary>
-        [JsonProperty("ProtectedFromScaleIn")]
-        public bool? ProtectedFromScaleIn{ get; set; }
+        [JsonProperty("Subnets")]
+        public string[] Subnets{ get; set; }
+
+        /// <summary>
+        /// Specifies when to release the IP after the Pod termination in static IP mode. It must be longer than 300 seconds. If this parameter is left empty, the IP address will never be released.
+        /// </summary>
+        [JsonProperty("ExpiredSeconds")]
+        public ulong? ExpiredSeconds{ get; set; }
 
 
         /// <summary>
@@ -55,9 +61,10 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "ProtectedFromScaleIn", this.ProtectedFromScaleIn);
+            this.SetParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
+            this.SetParamSimple(map, prefix + "EnableStaticIp", this.EnableStaticIp);
+            this.SetParamArraySimple(map, prefix + "Subnets.", this.Subnets);
+            this.SetParamSimple(map, prefix + "ExpiredSeconds", this.ExpiredSeconds);
         }
     }
 }

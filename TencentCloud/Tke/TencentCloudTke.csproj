@@ -67,6 +67,7 @@
     <Compile Include="V20180525\Models\ClusterExtraArgs.cs" />
     <Compile Include="V20180525\Models\ClusterNetworkSettings.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
+    <Compile Include="V20180525\Models\CommonName.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointRequest.cs" />
@@ -106,6 +107,8 @@
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterCommonNamesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterCommonNamesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointStatusRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusRequest.cs" />
@@ -126,6 +129,8 @@
     <Compile Include="V20180525\Models\DescribeClusterSecurityResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
@@ -134,6 +139,8 @@
     <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
+    <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\EnhancedService.cs" />
     <Compile Include="V20180525\Models\ExistedInstance.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesForNode.cs" />
