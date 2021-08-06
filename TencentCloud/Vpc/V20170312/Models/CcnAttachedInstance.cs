@@ -108,6 +108,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// Route table ID
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RouteTableId")]
+        public string RouteTableId{ get; set; }
+
+        /// <summary>
+        /// Route table name
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RouteTableName")]
+        public string RouteTableName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +140,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CcnUin", this.CcnUin);
             this.SetParamSimple(map, prefix + "InstanceArea", this.InstanceArea);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+            this.SetParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
         }
     }
 }

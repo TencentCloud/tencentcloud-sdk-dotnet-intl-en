@@ -194,6 +194,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
+        /// <summary>
+        /// Prepaid cluster storage
+        /// </summary>
+        [JsonProperty("Storage")]
+        public long? Storage{ get; set; }
+
+        /// <summary>
+        /// Cluster storage ID used in prepaid storage modification
+        /// </summary>
+        [JsonProperty("StorageId")]
+        public string StorageId{ get; set; }
+
+        /// <summary>
+        /// Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
+
+        /// <summary>
+        /// The minimum storage corresponding to the compute specifications of the cluster
+        /// </summary>
+        [JsonProperty("MinStorageSize")]
+        public long? MinStorageSize{ get; set; }
+
+        /// <summary>
+        /// The maximum storage corresponding to the compute specifications of the cluster
+        /// </summary>
+        [JsonProperty("MaxStorageSize")]
+        public long? MaxStorageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +258,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+            this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
         }
     }
 }

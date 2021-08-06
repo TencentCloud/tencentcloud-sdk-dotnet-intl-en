@@ -69,13 +69,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory of normal instance
+        /// Memory of a non-serverless instance in GB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Storage
+        /// Storage capacity in GB
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -87,7 +87,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
+        /// Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
@@ -144,7 +144,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? ExpectTimeThresh{ get; set; }
 
         /// <summary>
-        /// Storage upper limit of normal instance in GB
+        /// The maximum storage of a non-serverless instance in GB
+        /// If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
@@ -236,6 +237,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
 
+        /// <summary>
+        /// The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+        /// If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+        /// Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +284,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
             this.SetParamSimple(map, prefix + "AutoPause", this.AutoPause);
             this.SetParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         }
     }
 }

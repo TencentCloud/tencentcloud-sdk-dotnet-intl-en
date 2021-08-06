@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] VpcIds{ get; set; }
 
         /// <summary>
-        /// Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+        /// Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
         /// <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
         /// </summary>
         [JsonProperty("Filters")]

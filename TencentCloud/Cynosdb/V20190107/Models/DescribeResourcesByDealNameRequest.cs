@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Billing order ID
+        /// Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

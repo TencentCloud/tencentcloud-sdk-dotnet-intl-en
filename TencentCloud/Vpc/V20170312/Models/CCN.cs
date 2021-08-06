@@ -92,6 +92,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RoutePriorityFlag")]
         public bool? RoutePriorityFlag{ get; set; }
 
+        /// <summary>
+        /// Number of route tables associated with the instance.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RouteTableCount")]
+        public ulong? RouteTableCount{ get; set; }
+
+        /// <summary>
+        /// Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RouteTableFlag")]
+        public bool? RouteTableFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +123,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
+            this.SetParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
+            this.SetParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
         }
     }
 }

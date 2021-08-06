@@ -195,19 +195,24 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+        /// <br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+        /// <br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
         /// </summary>
         [JsonProperty("InstanceAllocationPolicy")]
         public string InstanceAllocationPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies how to assign pay-as-you-go instances and spot instances.
+        /// A valid value will be returned only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
         /// </summary>
         [JsonProperty("SpotMixedAllocationPolicy")]
         public SpotMixedAllocationPolicy SpotMixedAllocationPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+        /// <br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+        /// <br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
         /// </summary>
         [JsonProperty("CapacityRebalance")]
         public bool? CapacityRebalance{ get; set; }

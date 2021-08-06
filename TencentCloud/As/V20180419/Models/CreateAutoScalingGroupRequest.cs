@@ -168,6 +168,21 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LoadBalancerHealthCheckGracePeriod")]
         public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }
 
+        /// <summary>
+        /// Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`; default value: `LAUNCH_CONFIGURATION`.
+        /// <br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+        /// <br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+        /// </summary>
+        [JsonProperty("InstanceAllocationPolicy")]
+        public string InstanceAllocationPolicy{ get; set; }
+
+        /// <summary>
+        /// Specifies how to assign pay-as-you-go instances and spot instances.
+        /// This parameter is valid only when `InstanceAllocationPolicy ` is set to `SPOT_MIXED`.
+        /// </summary>
+        [JsonProperty("SpotMixedAllocationPolicy")]
+        public SpotMixedAllocationPolicy SpotMixedAllocationPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +210,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
             this.SetParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
             this.SetParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
+            this.SetParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
+            this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
         }
     }
 }
