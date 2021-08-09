@@ -102,6 +102,27 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("IsServiceLinkedPolicy")]
         public ulong? IsServiceLinkedPolicy{ get; set; }
 
+        /// <summary>
+        /// The number of entities associated with the policy.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AttachEntityCount")]
+        public long? AttachEntityCount{ get; set; }
+
+        /// <summary>
+        /// The number of entities associated with the permission boundary.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AttachEntityBoundaryCount")]
+        public long? AttachEntityBoundaryCount{ get; set; }
+
+        /// <summary>
+        /// The last editted time.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +141,9 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
             this.SetParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
             this.SetParamSimple(map, prefix + "IsServiceLinkedPolicy", this.IsServiceLinkedPolicy);
+            this.SetParamSimple(map, prefix + "AttachEntityCount", this.AttachEntityCount);
+            this.SetParamSimple(map, prefix + "AttachEntityBoundaryCount", this.AttachEntityBoundaryCount);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

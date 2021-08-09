@@ -1493,6 +1493,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to perform a primary-standby switch for an instance waiting for the switch after it is upgraded.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySwitchTimePeriodRequest"/></param>
+        /// <returns><see cref="ModifySwitchTimePeriodResponse"/></returns>
+        public async Task<ModifySwitchTimePeriodResponse> ModifySwitchTimePeriod(ModifySwitchTimePeriodRequest req)
+        {
+             JsonResponseModel<ModifySwitchTimePeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySwitchTimePeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySwitchTimePeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to perform a primary-standby switch for an instance waiting for the switch after it is upgraded.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySwitchTimePeriodRequest"/></param>
+        /// <returns><see cref="ModifySwitchTimePeriodResponse"/></returns>
+        public ModifySwitchTimePeriodResponse ModifySwitchTimePeriodSync(ModifySwitchTimePeriodRequest req)
+        {
+             JsonResponseModel<ModifySwitchTimePeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySwitchTimePeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySwitchTimePeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to enable public network access.
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
@@ -1813,7 +1853,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to upgrade an instance.
+        /// This API is used to upgrade instance configurations.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
@@ -1833,7 +1873,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to upgrade an instance.
+        /// This API is used to upgrade instance configurations.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>

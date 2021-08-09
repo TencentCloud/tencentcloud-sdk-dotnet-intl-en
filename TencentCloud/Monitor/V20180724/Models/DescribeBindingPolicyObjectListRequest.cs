@@ -31,19 +31,25 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// Policy group ID.
+        /// Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+        /// Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
+
+        /// <summary>
+        /// The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Parameter offset on each page. The value starts from 0 and the default value is 0.
+        /// Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -62,6 +68,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);

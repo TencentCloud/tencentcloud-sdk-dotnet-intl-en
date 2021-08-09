@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
+        /// Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }

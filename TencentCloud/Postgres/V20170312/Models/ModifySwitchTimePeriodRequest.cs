@@ -15,30 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnBindLiveDomainCertRequest : AbstractModel
+    public class ModifySwitchTimePeriodRequest : AbstractModel
     {
         
         /// <summary>
-        /// Playback domain name.
+        /// The ID of the instance waiting for a switch
         /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
+        [JsonProperty("DBInstanceId")]
+        public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Valid values:
-        /// `gray`: unbind the canary certificate
-        /// `formal` (default): unbind the formal certificate
-        /// 
-        /// `formal` will be used if no value is passed in
+        /// Valid value: `0` (switch immediately)
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("SwitchTag")]
+        public ulong? SwitchTag{ get; set; }
 
 
         /// <summary>
@@ -46,8 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+            this.SetParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
         }
     }
 }

@@ -25,22 +25,21 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
+        /// Filter instances using one or more criteria. Valid filter names:
+        /// db-instance-id: filter by instance ID (the filter value is a string)
+        /// db-instance-name: filter by instance name (the filter value is a string)
+        /// db-project-id: filter by project ID (the filter value is an integer)
+        /// db-pay-mode: filter by billing mode (the filter value is a string)
+        /// db-tag-key: filter by tag key (the filter value is a string)
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page. Default value: 10.
+        /// The maximum number of results returned per page. Value range: 1-100. Default: `10`
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// Data offset which starts from 0
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
 
         /// <summary>
         /// Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
@@ -49,7 +48,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// In ascending or descending order
+        /// Pagination offset, starting from 0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// Sorting order. Valid values: `asc` (ascending), `desc` (descending)
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
@@ -62,8 +67,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }
     }

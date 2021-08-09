@@ -83,8 +83,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string CallbackKey{ get; set; }
 
         /// <summary>
-        /// Stream mixing callback URL,
-        /// Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+        /// Disused
         /// </summary>
         [JsonProperty("StreamMixNotifyUrl")]
         public string StreamMixNotifyUrl{ get; set; }

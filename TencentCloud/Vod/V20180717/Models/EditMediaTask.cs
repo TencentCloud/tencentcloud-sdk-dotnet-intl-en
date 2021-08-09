@@ -50,6 +50,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
+        /// Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+        /// </summary>
+        [JsonProperty("ErrCodeExt")]
+        public string ErrCodeExt{ get; set; }
+
+        /// <summary>
         /// Error message.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -106,6 +112,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);

@@ -49,16 +49,16 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamBeginNotifyUrl{ get; set; }
 
         /// <summary>
+        /// Stream mixing callback URL (disused)
+        /// </summary>
+        [JsonProperty("StreamMixNotifyUrl")]
+        public string StreamMixNotifyUrl{ get; set; }
+
+        /// <summary>
         /// Interruption callback URL.
         /// </summary>
         [JsonProperty("StreamEndNotifyUrl")]
         public string StreamEndNotifyUrl{ get; set; }
-
-        /// <summary>
-        /// Stream mixing callback URL.
-        /// </summary>
-        [JsonProperty("StreamMixNotifyUrl")]
-        public string StreamMixNotifyUrl{ get; set; }
 
         /// <summary>
         /// Recording callback URL.
@@ -94,8 +94,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "StreamBeginNotifyUrl", this.StreamBeginNotifyUrl);
-            this.SetParamSimple(map, prefix + "StreamEndNotifyUrl", this.StreamEndNotifyUrl);
             this.SetParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
+            this.SetParamSimple(map, prefix + "StreamEndNotifyUrl", this.StreamEndNotifyUrl);
             this.SetParamSimple(map, prefix + "RecordNotifyUrl", this.RecordNotifyUrl);
             this.SetParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
             this.SetParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);

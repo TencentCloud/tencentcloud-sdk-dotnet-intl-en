@@ -247,6 +247,7 @@
     <Compile Include="V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\HeadTailParameter.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTemplate.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkInput.cs" />

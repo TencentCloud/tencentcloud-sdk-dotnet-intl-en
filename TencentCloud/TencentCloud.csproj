@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.252</VersionPrefix>
+    <VersionPrefix>3.0.253</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4237,6 +4237,7 @@
     <Compile Include="Mps\V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="Mps\V20190612\Models\FrameTagConfigureInfoForUpdate.cs" />
+    <Compile Include="Mps\V20190612\Models\HeadTailParameter.cs" />
     <Compile Include="Mps\V20190612\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\ImageSpriteTemplate.cs" />
     <Compile Include="Mps\V20190612\Models\ImageWatermarkInput.cs" />
@@ -4557,6 +4558,8 @@
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifySwitchTimePeriodRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifySwitchTimePeriodResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\NormalQueryItem.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessResponse.cs" />

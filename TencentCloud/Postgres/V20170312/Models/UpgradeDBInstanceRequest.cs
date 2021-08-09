@@ -60,6 +60,24 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }
 
+        /// <summary>
+        /// Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+        /// </summary>
+        [JsonProperty("SwitchTag")]
+        public long? SwitchTag{ get; set; }
+
+        /// <summary>
+        /// The earliest time to start a switch
+        /// </summary>
+        [JsonProperty("SwitchStartTime")]
+        public string SwitchStartTime{ get; set; }
+
+        /// <summary>
+        /// The latest time to start a switch
+        /// </summary>
+        [JsonProperty("SwitchEndTime")]
+        public string SwitchEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
+            this.SetParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
+            this.SetParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
+            this.SetParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
         }
     }
 }

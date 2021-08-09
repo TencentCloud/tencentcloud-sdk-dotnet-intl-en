@@ -123,6 +123,8 @@
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
     <Compile Include="V20170312\Models\ModifyReadOnlyGroupConfigResponse.cs" />
+    <Compile Include="V20170312\Models\ModifySwitchTimePeriodRequest.cs" />
+    <Compile Include="V20170312\Models\ModifySwitchTimePeriodResponse.cs" />
     <Compile Include="V20170312\Models\NormalQueryItem.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />

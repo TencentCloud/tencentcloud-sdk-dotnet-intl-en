@@ -163,6 +163,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("MetricsInfo")]
         public AlarmHistoryMetric[] MetricsInfo{ get; set; }
 
+        /// <summary>
+        /// Dimension information of an instance that triggered alarms.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Dimensions")]
+        public string Dimensions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +199,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
             this.SetParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
+            this.SetParamSimple(map, prefix + "Dimensions", this.Dimensions);
         }
     }
 }
