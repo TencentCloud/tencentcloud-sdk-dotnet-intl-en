@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
+        /// Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
+        /// Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
         /// </summary>
         [JsonProperty("ContactInfo")]
         public string ContactInfo{ get; set; }

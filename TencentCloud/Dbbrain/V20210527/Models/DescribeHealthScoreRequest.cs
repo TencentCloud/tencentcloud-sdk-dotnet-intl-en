@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Time to get the health score.
+        /// Time to get the health score in the format of `2019-09-10 12:13:14`.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }

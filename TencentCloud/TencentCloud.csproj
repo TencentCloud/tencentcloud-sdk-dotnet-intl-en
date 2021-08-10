@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.253</VersionPrefix>
+    <VersionPrefix>3.0.254</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5470,6 +5470,7 @@
     <Compile Include="Tem\V20201221\Models\DeleteIngressResponse.cs" />
     <Compile Include="Tem\V20201221\Models\DeployServiceV2Request.cs" />
     <Compile Include="Tem\V20201221\Models\DeployServiceV2Response.cs" />
+    <Compile Include="Tem\V20201221\Models\DeployStrategyConf.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeIngressRequest.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeIngressResponse.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeIngressesRequest.cs" />
@@ -5485,6 +5486,7 @@
     <Compile Include="Tem\V20201221\Models\EsInfo.cs" />
     <Compile Include="Tem\V20201221\Models\GenerateDownloadUrlRequest.cs" />
     <Compile Include="Tem\V20201221\Models\GenerateDownloadUrlResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\HealthCheckConfig.cs" />
     <Compile Include="Tem\V20201221\Models\IngressInfo.cs" />
     <Compile Include="Tem\V20201221\Models\IngressRule.cs" />
     <Compile Include="Tem\V20201221\Models\IngressRuleBackend.cs" />

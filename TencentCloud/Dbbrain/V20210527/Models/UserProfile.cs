@@ -32,14 +32,14 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string ProfileId{ get; set; }
 
         /// <summary>
-        /// Configuration type.
+        /// Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProfileType")]
         public string ProfileType{ get; set; }
 
         /// <summary>
-        /// Configuration level. Valid values: User, Instance.
+        /// Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProfileLevel")]

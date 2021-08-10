@@ -43,7 +43,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Event ID.
+        /// Unique event ID.
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
@@ -55,34 +55,32 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Severity{ get; set; }
 
         /// <summary>
-        /// Summary.
+        /// Diagnosis summary.
         /// </summary>
         [JsonProperty("Outline")]
         public string Outline{ get; set; }
 
         /// <summary>
-        /// Diagnosis item.
+        /// Diagnosis item description.
         /// </summary>
         [JsonProperty("DiagItem")]
         public string DiagItem{ get; set; }
 
         /// <summary>
         /// Instance ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Reserved field
+        /// Reserved field.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

@@ -53,7 +53,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// This API is used to add the contact name and email. The returned value is the ID of the successfully added contact. Please always select Guangzhou for `Region`.
+        /// This API is used to add the recipient name and email. The returned value is the ID of the successfully added recipient.
         /// </summary>
         /// <param name="req"><see cref="AddUserContactRequest"/></param>
         /// <returns><see cref="AddUserContactResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// This API is used to add the contact name and email. The returned value is the ID of the successfully added contact. Please always select Guangzhou for `Region`.
+        /// This API is used to add the recipient name and email. The returned value is the ID of the successfully added recipient.
         /// </summary>
         /// <param name="req"><see cref="AddUserContactRequest"/></param>
         /// <returns><see cref="AddUserContactResponse"/></returns>
@@ -653,7 +653,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// This API is used to get the email sending configuration, including the email configuration for database inspection and the email sending configuration for scheduled task health reports. Please always select Guangzhou for `Region`.
+        /// This API is used to get the email sending configuration, including the email configuration for database inspection and the email sending configuration for scheduled task health reports.
         /// </summary>
         /// <param name="req"><see cref="DescribeMailProfileRequest"/></param>
         /// <returns><see cref="DescribeMailProfileResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// This API is used to get the email sending configuration, including the email configuration for database inspection and the email sending configuration for scheduled task health reports. Please always select Guangzhou for `Region`.
+        /// This API is used to get the email sending configuration, including the email configuration for database inspection and the email sending configuration for scheduled task health reports.
         /// </summary>
         /// <param name="req"><see cref="DescribeMailProfileRequest"/></param>
         /// <returns><see cref="DescribeMailProfileResponse"/></returns>

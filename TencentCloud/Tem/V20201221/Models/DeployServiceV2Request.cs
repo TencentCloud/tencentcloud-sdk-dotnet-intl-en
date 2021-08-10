@@ -204,6 +204,36 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
+        /// <summary>
+        /// The script to run after startup
+        /// </summary>
+        [JsonProperty("PostStart")]
+        public string PostStart{ get; set; }
+
+        /// <summary>
+        /// The script to run before stop
+        /// </summary>
+        [JsonProperty("PreStop")]
+        public string PreStop{ get; set; }
+
+        /// <summary>
+        /// Configuration of 
+        /// </summary>
+        [JsonProperty("DeployStrategyConf")]
+        public DeployStrategyConf DeployStrategyConf{ get; set; }
+
+        /// <summary>
+        /// Configuration of aliveness probe
+        /// </summary>
+        [JsonProperty("Liveness")]
+        public HealthCheckConfig Liveness{ get; set; }
+
+        /// <summary>
+        /// Configuration of readiness probe
+        /// </summary>
+        [JsonProperty("Readiness")]
+        public HealthCheckConfig Readiness{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -239,6 +269,11 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
             this.SetParamObj(map, prefix + "EksService.", this.EksService);
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "PostStart", this.PostStart);
+            this.SetParamSimple(map, prefix + "PreStop", this.PreStop);
+            this.SetParamObj(map, prefix + "DeployStrategyConf.", this.DeployStrategyConf);
+            this.SetParamObj(map, prefix + "Liveness.", this.Liveness);
+            this.SetParamObj(map, prefix + "Readiness.", this.Readiness);
         }
     }
 }

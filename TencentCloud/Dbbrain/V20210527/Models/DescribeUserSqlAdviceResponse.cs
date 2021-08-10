@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// SQL statement optimization suggestions, which can be parsed into JSON arrays.
+        /// SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
         /// </summary>
         [JsonProperty("Advices")]
         public string Advices{ get; set; }
 
         /// <summary>
-        /// Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
+        /// Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
         /// </summary>
         [JsonProperty("Comments")]
         public string Comments{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Tables{ get; set; }
 
         /// <summary>
-        /// SQL execution plan, which can be parsed into JSON.
+        /// SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
         /// </summary>
         [JsonProperty("SqlPlan")]
         public string SqlPlan{ get; set; }
 
         /// <summary>
-        /// Cost saving details after SQL statement optimization, which can be parsed into JSON.
+        /// Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
         /// </summary>
         [JsonProperty("Cost")]
         public string Cost{ get; set; }

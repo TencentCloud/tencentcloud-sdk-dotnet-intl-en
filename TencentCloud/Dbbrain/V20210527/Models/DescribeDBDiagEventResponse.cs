@@ -43,13 +43,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// Event details.
+        /// Diagnosis event details. If there is no additional explanation information, the output will be empty.
         /// </summary>
         [JsonProperty("Explanation")]
         public string Explanation{ get; set; }
 
         /// <summary>
-        /// Summary.
+        /// Diagnosis summary.
         /// </summary>
         [JsonProperty("Outline")]
         public string Outline{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Suggestion.
+        /// Suggestions. If there are no suggestions, the output will be empty.
         /// </summary>
         [JsonProperty("Suggestions")]
         public string Suggestions{ get; set; }
