@@ -37,13 +37,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string BackupMigrationId{ get; set; }
 
         /// <summary>
-        /// Incremental import task ID
+        /// Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
         /// </summary>
         [JsonProperty("IncrementalMigrationId")]
         public string IncrementalMigrationId{ get; set; }
 
         /// <summary>
-        /// Whether restoration is required. No: not required. Yes: required.
+        /// Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
         /// </summary>
         [JsonProperty("IsRecovery")]
         public string IsRecovery{ get; set; }

@@ -21,26 +21,44 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteIncrementalMigrationRequest : AbstractModel
+    public class ParamRecord : AbstractModel
     {
         
         /// <summary>
-        /// Target instance ID.
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup import task ID, which is returned through the `CreateBackupMigration` API
+        /// Parameter name
         /// </summary>
-        [JsonProperty("BackupMigrationId")]
-        public string BackupMigrationId{ get; set; }
+        [JsonProperty("ParamName")]
+        public string ParamName{ get; set; }
 
         /// <summary>
-        /// Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
+        /// Parameter value before modification
         /// </summary>
-        [JsonProperty("IncrementalMigrationId")]
-        public string IncrementalMigrationId{ get; set; }
+        [JsonProperty("OldValue")]
+        public string OldValue{ get; set; }
+
+        /// <summary>
+        /// Parameter value after modification
+        /// </summary>
+        [JsonProperty("NewValue")]
+        public string NewValue{ get; set; }
+
+        /// <summary>
+        /// Parameter modification status. Valid values: `1` (initializing and waiting for modification), `2` (modification succeed), `3` (modification failed), `4` (modifying)
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// Modification time
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
 
 
         /// <summary>
@@ -49,8 +67,11 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "BackupMigrationId", this.BackupMigrationId);
-            this.SetParamSimple(map, prefix + "IncrementalMigrationId", this.IncrementalMigrationId);
+            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
+            this.SetParamSimple(map, prefix + "OldValue", this.OldValue);
+            this.SetParamSimple(map, prefix + "NewValue", this.NewValue);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         }
     }
 }

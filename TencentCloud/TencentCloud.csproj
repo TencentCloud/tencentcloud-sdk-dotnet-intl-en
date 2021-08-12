@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.255</VersionPrefix>
+    <VersionPrefix>3.0.256</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5052,6 +5052,7 @@
     <Compile Include="Sqlserver\V20180328\Models\DBPrivilege.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBPrivilegeModifyInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBRemark.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DbNormalDetail.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DbRollbackTimeInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DealInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteAccountRequest.cs" />
@@ -5078,12 +5079,18 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBCharsetsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeDBsNormalRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeDBsNormalResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeIncrementalMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeIncrementalMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeInstanceParamRecordsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeInstanceParamRecordsResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeInstanceParamsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeInstanceParamsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDetailRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDetailResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationsRequest.cs" />
@@ -5134,10 +5141,21 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseCDCRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseCDCResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseCTRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseCTResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseMdfRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseMdfResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyIncrementalMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyIncrementalMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyInstanceParamRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyInstanceParamResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ParamRecord.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\Parameter.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ParameterDetail.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RecycleDBInstanceRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RecycleDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RegionInfo.cs" />

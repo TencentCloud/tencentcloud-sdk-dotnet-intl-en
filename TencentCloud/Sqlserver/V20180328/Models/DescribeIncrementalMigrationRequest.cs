@@ -49,31 +49,31 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long?[] StatusSet{ get; set; }
 
         /// <summary>
-        /// Paging. Page size
+        /// The maximum number of results returned per page. Default value: `100`.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Paging. Number of pages
+        /// Page number. Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Field for order: name,createTime,startTime,endTime
+        /// Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Type of order: desc,asc
+        /// Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// ID of an incremental backup import task
+        /// Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
         /// </summary>
         [JsonProperty("IncrementalMigrationId")]
         public string IncrementalMigrationId{ get; set; }

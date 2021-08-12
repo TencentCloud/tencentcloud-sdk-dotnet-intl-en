@@ -21,26 +21,26 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteIncrementalMigrationRequest : AbstractModel
+    public class DescribeInstanceParamRecordsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Target instance ID.
+        /// Instance ID in the format of mssql-dj5i29c5n. It is the same as the instance ID displayed in the TencentDB console and the response parameter `InstanceId` of the `DescribeDBInstances` API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup import task ID, which is returned through the `CreateBackupMigration` API
+        /// Page number. Default value: `0`.
         /// </summary>
-        [JsonProperty("BackupMigrationId")]
-        public string BackupMigrationId{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
+        /// The maximum number of results returned per page. Maximum value: `100`. Default value: `20`.
         /// </summary>
-        [JsonProperty("IncrementalMigrationId")]
-        public string IncrementalMigrationId{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "BackupMigrationId", this.BackupMigrationId);
-            this.SetParamSimple(map, prefix + "IncrementalMigrationId", this.IncrementalMigrationId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

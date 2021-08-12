@@ -21,26 +21,26 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteIncrementalMigrationRequest : AbstractModel
+    public class DescribeInstanceParamsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Target instance ID.
+        /// Total number of instance parameters
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Backup import task ID, which is returned through the `CreateBackupMigration` API
+        /// Parameter details
         /// </summary>
-        [JsonProperty("BackupMigrationId")]
-        public string BackupMigrationId{ get; set; }
+        [JsonProperty("Items")]
+        public ParameterDetail[] Items{ get; set; }
 
         /// <summary>
-        /// Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("IncrementalMigrationId")]
-        public string IncrementalMigrationId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "BackupMigrationId", this.BackupMigrationId);
-            this.SetParamSimple(map, prefix + "IncrementalMigrationId", this.IncrementalMigrationId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

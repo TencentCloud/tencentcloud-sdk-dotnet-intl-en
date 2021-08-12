@@ -893,6 +893,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query database configurations. It does not return information of the accounts that have permissions to operate the database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBsNormalRequest"/></param>
+        /// <returns><see cref="DescribeDBsNormalResponse"/></returns>
+        public async Task<DescribeDBsNormalResponse> DescribeDBsNormal(DescribeDBsNormalRequest req)
+        {
+             JsonResponseModel<DescribeDBsNormalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBsNormal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBsNormalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query database configurations. It does not return information of the accounts that have permissions to operate the database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBsNormalRequest"/></param>
+        /// <returns><see cref="DescribeDBsNormalResponse"/></returns>
+        public DescribeDBsNormalResponse DescribeDBsNormalSync(DescribeDBsNormalRequest req)
+        {
+             JsonResponseModel<DescribeDBsNormalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBsNormal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBsNormalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query flow status.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowStatusRequest"/></param>
@@ -964,6 +1004,86 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIncrementalMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the parameter modification records of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamRecordsResponse"/></returns>
+        public async Task<DescribeInstanceParamRecordsResponse> DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParamRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the parameter modification records of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamRecordsResponse"/></returns>
+        public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecordsSync(DescribeInstanceParamRecordsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParamRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the parameter list of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public async Task<DescribeInstanceParamsResponse> DescribeInstanceParams(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the parameter list of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1773,6 +1893,126 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to enable or disable the change data capture (CDC) feature.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseCDCRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseCDCResponse"/></returns>
+        public async Task<ModifyDatabaseCDCResponse> ModifyDatabaseCDC(ModifyDatabaseCDCRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseCDCResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDatabaseCDC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseCDCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the change data capture (CDC) feature.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseCDCRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseCDCResponse"/></returns>
+        public ModifyDatabaseCDCResponse ModifyDatabaseCDCSync(ModifyDatabaseCDCRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseCDCResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatabaseCDC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseCDCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the change tracking (CT) feature.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseCTRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseCTResponse"/></returns>
+        public async Task<ModifyDatabaseCTResponse> ModifyDatabaseCT(ModifyDatabaseCTRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseCTResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDatabaseCT");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseCTResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the change tracking (CT) feature.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseCTRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseCTResponse"/></returns>
+        public ModifyDatabaseCTResponse ModifyDatabaseCTSync(ModifyDatabaseCTRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseCTResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatabaseCT");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseCTResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to shrink database MDF files.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseMdfRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseMdfResponse"/></returns>
+        public async Task<ModifyDatabaseMdfResponse> ModifyDatabaseMdf(ModifyDatabaseMdfRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseMdfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDatabaseMdf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseMdfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to shrink database MDF files.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseMdfRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseMdfResponse"/></returns>
+        public ModifyDatabaseMdfResponse ModifyDatabaseMdfSync(ModifyDatabaseMdfRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseMdfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatabaseMdf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseMdfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify an incremental backup import task.
         /// </summary>
         /// <param name="req"><see cref="ModifyIncrementalMigrationRequest"/></param>
@@ -1804,6 +2044,50 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIncrementalMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance parameters.
+        /// <b>Note</b>: if <b>the instance needs to be restarted</b> for the modified parameter to take effect, <b>it will be restarted</b> immediately or during the maintenance time according to the `WaitSwitch` parameter.
+        /// Before you modify a parameter, you can use the `DescribeInstanceParams` API to query whether the instance needs to be restarted.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamResponse"/></returns>
+        public async Task<ModifyInstanceParamResponse> ModifyInstanceParam(ModifyInstanceParamRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance parameters.
+        /// <b>Note</b>: if <b>the instance needs to be restarted</b> for the modified parameter to take effect, <b>it will be restarted</b> immediately or during the maintenance time according to the `WaitSwitch` parameter.
+        /// Before you modify a parameter, you can use the `DescribeInstanceParams` API to query whether the instance needs to be restarted.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamResponse"/></returns>
+        public ModifyInstanceParamResponse ModifyInstanceParamSync(ModifyInstanceParamRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

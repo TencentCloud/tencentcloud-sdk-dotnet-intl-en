@@ -21,26 +21,20 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteIncrementalMigrationRequest : AbstractModel
+    public class ModifyDatabaseMdfRequest : AbstractModel
     {
         
         /// <summary>
-        /// Target instance ID.
+        /// Array of database names
+        /// </summary>
+        [JsonProperty("DBNames")]
+        public string[] DBNames{ get; set; }
+
+        /// <summary>
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// Backup import task ID, which is returned through the `CreateBackupMigration` API
-        /// </summary>
-        [JsonProperty("BackupMigrationId")]
-        public string BackupMigrationId{ get; set; }
-
-        /// <summary>
-        /// Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
-        /// </summary>
-        [JsonProperty("IncrementalMigrationId")]
-        public string IncrementalMigrationId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "DBNames.", this.DBNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "BackupMigrationId", this.BackupMigrationId);
-            this.SetParamSimple(map, prefix + "IncrementalMigrationId", this.IncrementalMigrationId);
         }
     }
 }
