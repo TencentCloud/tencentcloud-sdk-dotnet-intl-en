@@ -117,7 +117,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public long? AttachEntityBoundaryCount{ get; set; }
 
         /// <summary>
-        /// The last editted time.
+        /// The last edited time.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
