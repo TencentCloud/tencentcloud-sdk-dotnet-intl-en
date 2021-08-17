@@ -100,8 +100,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public bool? IsDebugAfterCharge{ get; set; }
 
         /// <summary>
-        /// API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }

@@ -427,6 +427,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
+        /// <summary>
+        /// Access authentication for OSS origin
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OssPrivateAccess")]
+        public OssPrivateAccess OssPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// WebSocket configuration.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WebSocket")]
+        public WebSocket WebSocket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -489,6 +503,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
             this.SetParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
+            this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+            this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
         }
     }
 }

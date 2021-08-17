@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
+        /// Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

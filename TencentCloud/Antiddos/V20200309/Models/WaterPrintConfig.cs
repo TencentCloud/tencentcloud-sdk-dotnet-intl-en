@@ -52,7 +52,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public WaterPrintKey[] Keys{ get; set; }
 
         /// <summary>
-        /// 
+        /// Watermark checking mode, which can be:
+        /// `checkall`: normal mode
+        /// `shortfpcheckall`: compact mode
+        /// ]
         /// </summary>
         [JsonProperty("Verify")]
         public string Verify{ get; set; }

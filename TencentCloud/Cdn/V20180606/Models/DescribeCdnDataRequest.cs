@@ -41,9 +41,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Specifies the query metric, which can be:
+        /// Specifies the metric to query, which can be:
         /// `flux`: traffic (in bytes)
+        /// `fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+        /// `fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
         /// `bandwidth`: bandwidth (in bps)
+        /// `bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+        /// `bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
         /// `request`: number of requests
         /// `hitRequest`: number of hit requests
         /// `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -54,7 +58,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
         /// `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
         /// `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-        /// It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+        /// Specifies the status code to query. The return will be empty if the status code has never been generated.
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
@@ -149,6 +153,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AreaType")]
         public string AreaType{ get; set; }
 
+        /// <summary>
+        /// Specifies the product to query, either `cdn` (default) or `ecdn`.
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +179,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "AreaType", this.AreaType);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

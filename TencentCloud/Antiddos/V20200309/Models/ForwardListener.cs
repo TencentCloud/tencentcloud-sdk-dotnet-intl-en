@@ -25,7 +25,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// Forwarding listening port. Value range: 1–65535.
+        /// The starting port for listener forwarding. Value range: 1 to 65535.
         /// </summary>
         [JsonProperty("FrontendPort")]
         public long? FrontendPort{ get; set; }
@@ -40,7 +40,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// 
+        /// The ending port for listener forwarding. Value range: 1 to 65535.
         /// </summary>
         [JsonProperty("FrontendPortEnd")]
         public long? FrontendPortEnd{ get; set; }

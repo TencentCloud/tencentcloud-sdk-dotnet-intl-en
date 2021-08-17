@@ -53,6 +53,86 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to bind a plugin to an API.
+        /// </summary>
+        /// <param name="req"><see cref="AttachPluginRequest"/></param>
+        /// <returns><see cref="AttachPluginResponse"/></returns>
+        public async Task<AttachPluginResponse> AttachPlugin(AttachPluginRequest req)
+        {
+             JsonResponseModel<AttachPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a plugin to an API.
+        /// </summary>
+        /// <param name="req"><see cref="AttachPluginRequest"/></param>
+        /// <returns><see cref="AttachPluginResponse"/></returns>
+        public AttachPluginResponse AttachPluginSync(AttachPluginRequest req)
+        {
+             JsonResponseModel<AttachPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind an application to an API.
+        /// </summary>
+        /// <param name="req"><see cref="BindApiAppRequest"/></param>
+        /// <returns><see cref="BindApiAppResponse"/></returns>
+        public async Task<BindApiAppResponse> BindApiApp(BindApiAppRequest req)
+        {
+             JsonResponseModel<BindApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind an application to an API.
+        /// </summary>
+        /// <param name="req"><see cref="BindApiAppRequest"/></param>
+        /// <returns><see cref="BindApiAppResponse"/></returns>
+        public BindApiAppResponse BindApiAppSync(BindApiAppRequest req)
+        {
+             JsonResponseModel<BindApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to bind a usage plan to a service or API.
         /// After you publish a service to an environment, if the API requires authentication and can be called only when it is bound to a usage plan, you can use this API to bind a usage plan to the specified environment.
         /// Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to degrade it.
@@ -341,6 +421,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to create an application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiAppRequest"/></param>
+        /// <returns><see cref="CreateApiAppResponse"/></returns>
+        public async Task<CreateApiAppResponse> CreateApiApp(CreateApiAppRequest req)
+        {
+             JsonResponseModel<CreateApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiAppRequest"/></param>
+        /// <returns><see cref="CreateApiAppResponse"/></returns>
+        public CreateApiAppResponse CreateApiAppSync(CreateApiAppRequest req)
+        {
+             JsonResponseModel<CreateApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an API key pair.
         /// </summary>
         /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
@@ -412,6 +532,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "CreateIPStrategy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIPStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an API Gateway plugin.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePluginRequest"/></param>
+        /// <returns><see cref="CreatePluginResponse"/></returns>
+        public async Task<CreatePluginResponse> CreatePlugin(CreatePluginRequest req)
+        {
+             JsonResponseModel<CreatePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an API Gateway plugin.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePluginRequest"/></param>
+        /// <returns><see cref="CreatePluginResponse"/></returns>
+        public CreatePluginResponse CreatePluginSync(CreatePluginRequest req)
+        {
+             JsonResponseModel<CreatePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePluginResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -585,6 +745,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to delete a created application.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiAppRequest"/></param>
+        /// <returns><see cref="DeleteApiAppResponse"/></returns>
+        public async Task<DeleteApiAppResponse> DeleteApiApp(DeleteApiAppRequest req)
+        {
+             JsonResponseModel<DeleteApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a created application.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiAppRequest"/></param>
+        /// <returns><see cref="DeleteApiAppResponse"/></returns>
+        public DeleteApiAppResponse DeleteApiAppSync(DeleteApiAppRequest req)
+        {
+             JsonResponseModel<DeleteApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an API key pair.
         /// </summary>
         /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
@@ -656,6 +856,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DeleteIPStrategy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIPStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an API Gateway plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePluginRequest"/></param>
+        /// <returns><see cref="DeletePluginResponse"/></returns>
+        public async Task<DeletePluginResponse> DeletePlugin(DeletePluginRequest req)
+        {
+             JsonResponseModel<DeletePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an API Gateway plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePluginRequest"/></param>
+        /// <returns><see cref="DeletePluginResponse"/></returns>
+        public DeletePluginResponse DeletePluginSync(DeletePluginRequest req)
+        {
+             JsonResponseModel<DeletePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePluginResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -911,6 +1151,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to list all APIs that can use this plugin, no matter whether the API is bound with the plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllPluginApisRequest"/></param>
+        /// <returns><see cref="DescribeAllPluginApisResponse"/></returns>
+        public async Task<DescribeAllPluginApisResponse> DescribeAllPluginApis(DescribeAllPluginApisRequest req)
+        {
+             JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllPluginApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllPluginApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list all APIs that can use this plugin, no matter whether the API is bound with the plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllPluginApisRequest"/></param>
+        /// <returns><see cref="DescribeAllPluginApisResponse"/></returns>
+        public DescribeAllPluginApisResponse DescribeAllPluginApisSync(DescribeAllPluginApisRequest req)
+        {
+             JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllPluginApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllPluginApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (`DescribeApi`) is used to query the details of the APIs users manage via Tencent Cloud API Gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiRequest"/></param>
@@ -951,6 +1231,166 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to search for an application by application ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
+        /// <returns><see cref="DescribeApiAppResponse"/></returns>
+        public async Task<DescribeApiAppResponse> DescribeApiApp(DescribeApiAppRequest req)
+        {
+             JsonResponseModel<DescribeApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search for an application by application ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
+        /// <returns><see cref="DescribeApiAppResponse"/></returns>
+        public DescribeApiAppResponse DescribeApiAppSync(DescribeApiAppRequest req)
+        {
+             JsonResponseModel<DescribeApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of APIs bound to an application.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppBindApisStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiAppBindApisStatusResponse"/></returns>
+        public async Task<DescribeApiAppBindApisStatusResponse> DescribeApiAppBindApisStatus(DescribeApiAppBindApisStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiAppBindApisStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of APIs bound to an application.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppBindApisStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiAppBindApisStatusResponse"/></returns>
+        public DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatusSync(DescribeApiAppBindApisStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiAppBindApisStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the application list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiAppsStatusResponse"/></returns>
+        public async Task<DescribeApiAppsStatusResponse> DescribeApiAppsStatus(DescribeApiAppsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiAppsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the application list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiAppsStatusResponse"/></returns>
+        public DescribeApiAppsStatusResponse DescribeApiAppsStatusSync(DescribeApiAppsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiAppsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of applications bound to an API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiBindApiAppsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiBindApiAppsStatusResponse"/></returns>
+        public async Task<DescribeApiBindApiAppsStatusResponse> DescribeApiBindApiAppsStatus(DescribeApiBindApiAppsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiBindApiAppsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of applications bound to an API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiBindApiAppsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiBindApiAppsStatusResponse"/></returns>
+        public DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatusSync(DescribeApiBindApiAppsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiBindApiAppsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to display the throttling policies bound to an API.
         /// </summary>
         /// <param name="req"><see cref="DescribeApiEnvironmentStrategyRequest"/></param>
@@ -982,6 +1422,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeApiEnvironmentStrategy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiEnvironmentStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of an API deployed at API Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiForApiAppRequest"/></param>
+        /// <returns><see cref="DescribeApiForApiAppResponse"/></returns>
+        public async Task<DescribeApiForApiAppResponse> DescribeApiForApiApp(DescribeApiForApiAppRequest req)
+        {
+             JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiForApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiForApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of an API deployed at API Gateway.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiForApiAppRequest"/></param>
+        /// <returns><see cref="DescribeApiForApiAppResponse"/></returns>
+        public DescribeApiForApiAppResponse DescribeApiForApiAppSync(DescribeApiForApiAppRequest req)
+        {
+             JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiForApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiForApiAppResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1317,6 +1797,86 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to query the plugin details by plugin ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginRequest"/></param>
+        /// <returns><see cref="DescribePluginResponse"/></returns>
+        public async Task<DescribePluginResponse> DescribePlugin(DescribePluginRequest req)
+        {
+             JsonResponseModel<DescribePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the plugin details by plugin ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginRequest"/></param>
+        /// <returns><see cref="DescribePluginResponse"/></returns>
+        public DescribePluginResponse DescribePluginSync(DescribePluginRequest req)
+        {
+             JsonResponseModel<DescribePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query APIs bound with a specified plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginApisRequest"/></param>
+        /// <returns><see cref="DescribePluginApisResponse"/></returns>
+        public async Task<DescribePluginApisResponse> DescribePluginApis(DescribePluginApisRequest req)
+        {
+             JsonResponseModel<DescribePluginApisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePluginApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query APIs bound with a specified plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginApisRequest"/></param>
+        /// <returns><see cref="DescribePluginApisResponse"/></returns>
+        public DescribePluginApisResponse DescribePluginApisSync(DescribePluginApisRequest req)
+        {
+             JsonResponseModel<DescribePluginApisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePluginApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceRequest"/></param>
@@ -1470,6 +2030,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeServiceEnvironmentStrategy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceEnvironmentStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a service, such as its description, domain name, and protocol.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceForApiAppRequest"/></param>
+        /// <returns><see cref="DescribeServiceForApiAppResponse"/></returns>
+        public async Task<DescribeServiceForApiAppResponse> DescribeServiceForApiApp(DescribeServiceForApiAppRequest req)
+        {
+             JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServiceForApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceForApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a service, such as its description, domain name, and protocol.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceForApiAppRequest"/></param>
+        /// <returns><see cref="DescribeServiceForApiAppResponse"/></returns>
+        public DescribeServiceForApiAppResponse DescribeServiceForApiAppSync(DescribeServiceForApiAppRequest req)
+        {
+             JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServiceForApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceForApiAppResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1851,6 +2451,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to unbind an API from the plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DetachPluginRequest"/></param>
+        /// <returns><see cref="DetachPluginResponse"/></returns>
+        public async Task<DetachPluginResponse> DetachPlugin(DetachPluginRequest req)
+        {
+             JsonResponseModel<DetachPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind an API from the plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DetachPluginRequest"/></param>
+        /// <returns><see cref="DetachPluginResponse"/></returns>
+        public DetachPluginResponse DetachPluginSync(DetachPluginRequest req)
+        {
+             JsonResponseModel<DetachPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to disable an API key.
         /// </summary>
         /// <param name="req"><see cref="DisableApiKeyRequest"/></param>
@@ -2051,6 +2691,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to modify a created API.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiAppRequest"/></param>
+        /// <returns><see cref="ModifyApiAppResponse"/></returns>
+        public async Task<ModifyApiAppResponse> ModifyApiApp(ModifyApiAppRequest req)
+        {
+             JsonResponseModel<ModifyApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a created API.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiAppRequest"/></param>
+        /// <returns><see cref="ModifyApiAppResponse"/></returns>
+        public ModifyApiAppResponse ModifyApiAppSync(ModifyApiAppRequest req)
+        {
+             JsonResponseModel<ModifyApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify an API throttling policy.
         /// </summary>
         /// <param name="req"><see cref="ModifyApiEnvironmentStrategyRequest"/></param>
@@ -2162,6 +2842,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIPStrategy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIPStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a plugin.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPluginRequest"/></param>
+        /// <returns><see cref="ModifyPluginResponse"/></returns>
+        public async Task<ModifyPluginResponse> ModifyPlugin(ModifyPluginRequest req)
+        {
+             JsonResponseModel<ModifyPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a plugin.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPluginRequest"/></param>
+        /// <returns><see cref="ModifyPluginResponse"/></returns>
+        public ModifyPluginResponse ModifyPluginSync(ModifyPluginRequest req)
+        {
+             JsonResponseModel<ModifyPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPluginResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2608,6 +3328,86 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "UnReleaseService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnReleaseServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind an application from an API.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindApiAppRequest"/></param>
+        /// <returns><see cref="UnbindApiAppResponse"/></returns>
+        public async Task<UnbindApiAppResponse> UnbindApiApp(UnbindApiAppRequest req)
+        {
+             JsonResponseModel<UnbindApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind an application from an API.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindApiAppRequest"/></param>
+        /// <returns><see cref="UnbindApiAppResponse"/></returns>
+        public UnbindApiAppResponse UnbindApiAppSync(UnbindApiAppRequest req)
+        {
+             JsonResponseModel<UnbindApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update an application key.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiAppKeyRequest"/></param>
+        /// <returns><see cref="UpdateApiAppKeyResponse"/></returns>
+        public async Task<UpdateApiAppKeyResponse> UpdateApiAppKey(UpdateApiAppKeyRequest req)
+        {
+             JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateApiAppKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiAppKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update an application key.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiAppKeyRequest"/></param>
+        /// <returns><see cref="UpdateApiAppKeyResponse"/></returns>
+        public UpdateApiAppKeyResponse UpdateApiAppKeySync(UpdateApiAppKeyRequest req)
+        {
+             JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateApiAppKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiAppKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

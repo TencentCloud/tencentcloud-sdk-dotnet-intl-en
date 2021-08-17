@@ -171,6 +171,14 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("SpotMixedAllocationPolicy")]
         public SpotMixedAllocationPolicy SpotMixedAllocationPolicy{ get; set; }
 
+        /// <summary>
+        /// Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+        /// <br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+        /// <br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+        /// </summary>
+        [JsonProperty("CapacityRebalance")]
+        public bool? CapacityRebalance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +206,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
             this.SetParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
             this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
+            this.SetParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
         }
     }
 }

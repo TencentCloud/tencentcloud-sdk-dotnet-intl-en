@@ -300,6 +300,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("IsBase64Encoded")]
         public bool? IsBase64Encoded{ get; set; }
 
+        /// <summary>
+        /// SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+        /// </summary>
+        [JsonProperty("ServiceScfFunctionType")]
+        public string ServiceScfFunctionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -352,6 +358,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "TargetNamespaceId", this.TargetNamespaceId);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+            this.SetParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
         }
     }
 }

@@ -115,6 +115,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AreaType")]
         public string AreaType{ get; set; }
 
+        /// <summary>
+        /// Specifies the product to query, either `cdn` (default) or `ecdn`.
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +137,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Code", this.Code);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "AreaType", this.AreaType);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

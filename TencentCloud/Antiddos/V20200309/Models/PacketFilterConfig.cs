@@ -100,9 +100,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string MatchType{ get; set; }
 
         /// <summary>
-        /// Detection value. Should be in key string or regular expression.
-        /// For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-        /// For `pcre`, enter a regular expression.
+        /// Detection value. Should be in key string or regular expression. 
+        /// When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+        /// When the `MatchType` is `pcre`, enter a regular expression.
         /// ]
         /// </summary>
         [JsonProperty("Str")]
@@ -158,8 +158,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// The second detection value. Should be in key string or regular expression.
-        /// For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-        /// For `pcre`, enter a regular expression.
+        /// When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+        /// When the `MatchType` is `pcre`, enter a regular expression.
         /// ]
         /// </summary>
         [JsonProperty("Str2")]

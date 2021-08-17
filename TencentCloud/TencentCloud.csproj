@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.257</VersionPrefix>
+    <VersionPrefix>3.0.258</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -172,6 +172,8 @@
     <Compile Include="Antiddos\V20200309\Models\SpeedValue.cs" />
     <Compile Include="Antiddos\V20200309\Models\StaticPackRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\SuccessCode.cs" />
+    <Compile Include="Antiddos\V20200309\Models\SwitchWaterPrintConfigRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\SwitchWaterPrintConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintConfig.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintKey.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintRelation.cs" />
@@ -179,17 +181,29 @@
     <Compile Include="Apigateway\V20180808\Models\APIDoc.cs" />
     <Compile Include="Apigateway\V20180808\Models\APIDocInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\APIDocs.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiAppApiInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiAppApiInfos.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiAppInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiAppInfos.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategy.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategyStataus.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiIdStatus.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiInfoSummary.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiKey.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiKeysStatus.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiRequestConfig.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlan.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlanSet.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApisStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AttachPluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AttachPluginResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AttachedApiInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AttachedApiSummary.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AvailableApiInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\Base64EncodedTriggerRule.cs" />
+    <Compile Include="Apigateway\V20180808\Models\BindApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\BindApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindIPStrategyRequest.cs" />
@@ -203,6 +217,8 @@
     <Compile Include="Apigateway\V20180808\Models\ConstantParameter.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateAPIDocResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreateApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreateApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiRequest.cs" />
@@ -210,18 +226,24 @@
     <Compile Include="Apigateway\V20180808\Models\CreateApiRsp.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateIPStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateIPStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreatePluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreatePluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateServiceResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateUsagePlanRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteAPIDocResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeleteApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeleteApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteIPStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteIPStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeletePluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeletePluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceSubDomainMappingRequest.cs" />
@@ -235,8 +257,20 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocDetailResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocsRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocsResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeAllPluginApisRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeAllPluginApisResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppBindApisStatusRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppBindApisStatusResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppsStatusRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppsStatusResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiBindApiAppsStatusRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiBindApiAppsStatusResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiForApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiForApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeysStatusRequest.cs" />
@@ -255,12 +289,18 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeIPStrategysStatusResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeLogSearchRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeLogSearchResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginApisRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginApisResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentListRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentListResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentReleaseHistoryRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentReleaseHistoryResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeServiceForApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeServiceForApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceReleaseVersionRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceReleaseVersionResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceRequest.cs" />
@@ -281,6 +321,8 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlanSecretIdsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlansStatusRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlansStatusResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DetachPluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DetachPluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DisableApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DisableApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DocumentSDK.cs" />
@@ -304,6 +346,8 @@
     <Compile Include="Apigateway\V20180808\Models\MicroServiceReq.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyAPIDocResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiEnvironmentStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiIncrementRequest.cs" />
@@ -312,6 +356,8 @@
     <Compile Include="Apigateway\V20180808\Models\ModifyApiResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyIPStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyIPStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyPluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyPluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyServiceEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyServiceEnvironmentStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyServiceRequest.cs" />
@@ -322,6 +368,7 @@
     <Compile Include="Apigateway\V20180808\Models\ModifyUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\OauthConfig.cs" />
     <Compile Include="Apigateway\V20180808\Models\PathMapping.cs" />
+    <Compile Include="Apigateway\V20180808\Models\Plugin.cs" />
     <Compile Include="Apigateway\V20180808\Models\ReleaseService.cs" />
     <Compile Include="Apigateway\V20180808\Models\ReleaseServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ReleaseServiceResponse.cs" />
@@ -356,6 +403,10 @@
     <Compile Include="Apigateway\V20180808\Models\UnBindSubDomainResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\UnReleaseServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\UnReleaseServiceResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UnbindApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UnbindApiAppResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UpdateApiAppKeyRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UpdateApiAppKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\UpdateApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\UpdateApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\UpdateServiceRequest.cs" />
@@ -1264,6 +1315,7 @@
     <Compile Include="Cdn\V20180606\Models\OriginIp.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullTimeout.cs" />
+    <Compile Include="Cdn\V20180606\Models\OssPrivateAccess.cs" />
     <Compile Include="Cdn\V20180606\Models\OverseaConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\PathBasedOriginRule.cs" />
     <Compile Include="Cdn\V20180606\Models\PathRule.cs" />
@@ -1341,6 +1393,7 @@
     <Compile Include="Cdn\V20180606\Models\VideoSeek.cs" />
     <Compile Include="Cdn\V20180606\Models\ViolationUrl.cs" />
     <Compile Include="Cdn\V20180606\Models\WafSubRuleStatus.cs" />
+    <Compile Include="Cdn\V20180606\Models\WebSocket.cs" />
     <Compile Include="Cdn\V20180606\Models\WebpAdapter.cs" />
     <Compile Include="Cfs\V20190719\CfsClient.cs" />
     <Compile Include="Cfs\V20190719\Models\AvailableProtoStatus.cs" />
@@ -2789,6 +2842,8 @@
     <Compile Include="Gaap\V20180529\Models\CountryAreaMap.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateCertificateRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateCertificateResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\CreateCustomHeaderRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\CreateCustomHeaderResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateDomainErrorPageInfoRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateDomainErrorPageInfoResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateDomainRequest.cs" />
@@ -2833,12 +2888,16 @@
     <Compile Include="Gaap\V20180529\Models\DescribeAccessRegionsByDestRegionResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeAccessRegionsRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeAccessRegionsResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeBlackHeaderRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeBlackHeaderResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCertificateDetailRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCertificateDetailResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCertificatesRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCertificatesResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCountryAreaMappingRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCountryAreaMappingResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeCustomHeaderRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeCustomHeaderResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeDestRegionsRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeDestRegionsResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeDomainErrorPageInfoByIdsRequest.cs" />

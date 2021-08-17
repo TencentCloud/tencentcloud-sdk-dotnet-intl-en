@@ -37,7 +37,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ScdnAclRule[] Configure{ get; set; }
 
         /// <summary>
-        /// Rule action, which is generally `refuse`.
+        /// Rule action, which can be `refuse` or `redirect`.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
@@ -47,6 +47,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// Error page configuration.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ErrorPage")]
+        public ScdnErrorPage ErrorPage{ get; set; }
 
 
         /// <summary>
@@ -58,6 +65,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArrayObj(map, prefix + "Configure.", this.Configure);
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
         }
     }
 }

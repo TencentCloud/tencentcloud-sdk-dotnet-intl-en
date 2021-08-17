@@ -375,6 +375,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// This API is used to create a custom header of the HTTP/HTTPS listener. When client requests reach the listener, they will be forwarded to the origin with this custom hearer.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomHeaderRequest"/></param>
+        /// <returns><see cref="CreateCustomHeaderResponse"/></returns>
+        public async Task<CreateCustomHeaderResponse> CreateCustomHeader(CreateCustomHeaderRequest req)
+        {
+             JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a custom header of the HTTP/HTTPS listener. When client requests reach the listener, they will be forwarded to the origin with this custom hearer.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomHeaderRequest"/></param>
+        /// <returns><see cref="CreateCustomHeaderResponse"/></returns>
+        public CreateCustomHeaderResponse CreateCustomHeaderSync(CreateCustomHeaderRequest req)
+        {
+             JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateDomain) is used to create the access domain name for the HTTP/HTTPS listener. Clients request the backend data by accessing this domain.
         /// This API only supports connections of version 3.0.
         /// </summary>
@@ -1257,6 +1297,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// This API is used to query names of blocked custom headers.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlackHeaderRequest"/></param>
+        /// <returns><see cref="DescribeBlackHeaderResponse"/></returns>
+        public async Task<DescribeBlackHeaderResponse> DescribeBlackHeader(DescribeBlackHeaderRequest req)
+        {
+             JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBlackHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlackHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query names of blocked custom headers.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlackHeaderRequest"/></param>
+        /// <returns><see cref="DescribeBlackHeaderResponse"/></returns>
+        public DescribeBlackHeaderResponse DescribeBlackHeaderSync(DescribeBlackHeaderRequest req)
+        {
+             JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBlackHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlackHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeCertificateDetail) is used to query certificate details, including the certificate ID, name, type, content, key, and other information.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateDetailRequest"/></param>
@@ -1368,6 +1448,46 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCountryAreaMapping");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCountryAreaMappingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of custom headers.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomHeaderRequest"/></param>
+        /// <returns><see cref="DescribeCustomHeaderResponse"/></returns>
+        public async Task<DescribeCustomHeaderResponse> DescribeCustomHeader(DescribeCustomHeaderRequest req)
+        {
+             JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of custom headers.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomHeaderRequest"/></param>
+        /// <returns><see cref="DescribeCustomHeaderResponse"/></returns>
+        public DescribeCustomHeaderResponse DescribeCustomHeaderSync(DescribeCustomHeaderRequest req)
+        {
+             JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomHeaderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,6 +25,12 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
+        /// Specifies the URL to be queried
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
         /// Starting time, such as `2018-12-12 10:24:00`
         /// </summary>
         [JsonProperty("StartTime")]
@@ -35,12 +41,6 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
-
-        /// <summary>
-        /// Specifies the URL to be queried
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
 
         /// <summary>
         /// Current URL status
@@ -62,18 +62,25 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// Task ID. The task ID and start time cannot be both left empty.
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

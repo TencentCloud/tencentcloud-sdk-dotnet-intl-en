@@ -28,7 +28,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Billing modes:
         /// `flux`: bill-by-traffic
         /// `bandwidth`: bill-by-bandwidth
-        /// When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect
+        /// `request`: bill-by-request
+        /// In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode.
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
@@ -42,12 +43,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string BillingCycle{ get; set; }
 
         /// <summary>
-        /// Billing method:
-        /// monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-        /// day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-        /// month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-        /// sum: billed by the total traffic (daily or monthly settlement)
-        /// max: billed by the peak bandwidth (daily settlement)
+        /// `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+        /// `day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+        /// `month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+        /// `sum`: billed by the total traffic/total requests (daily or monthly settlement)
+        /// `max`: billed by the peak bandwidth (daily settlement)
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
@@ -61,9 +61,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string RegionType{ get; set; }
 
         /// <summary>
-        /// Currently billing mode in effect:
+        /// The current billing mode in effect:
         /// `flux`: bill-by-traffic
         /// `bandwidth`: bill-by-bandwidth
+        /// `request`: bill-by-request
         /// </summary>
         [JsonProperty("CurrentPayType")]
         public string CurrentPayType{ get; set; }

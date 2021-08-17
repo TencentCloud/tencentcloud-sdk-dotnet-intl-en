@@ -71,6 +71,8 @@
     <Compile Include="V20180529\Models\CountryAreaMap.cs" />
     <Compile Include="V20180529\Models\CreateCertificateRequest.cs" />
     <Compile Include="V20180529\Models\CreateCertificateResponse.cs" />
+    <Compile Include="V20180529\Models\CreateCustomHeaderRequest.cs" />
+    <Compile Include="V20180529\Models\CreateCustomHeaderResponse.cs" />
     <Compile Include="V20180529\Models\CreateDomainErrorPageInfoRequest.cs" />
     <Compile Include="V20180529\Models\CreateDomainErrorPageInfoResponse.cs" />
     <Compile Include="V20180529\Models\CreateDomainRequest.cs" />
@@ -115,12 +117,16 @@
     <Compile Include="V20180529\Models\DescribeAccessRegionsByDestRegionResponse.cs" />
     <Compile Include="V20180529\Models\DescribeAccessRegionsRequest.cs" />
     <Compile Include="V20180529\Models\DescribeAccessRegionsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeBlackHeaderRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeBlackHeaderResponse.cs" />
     <Compile Include="V20180529\Models\DescribeCertificateDetailRequest.cs" />
     <Compile Include="V20180529\Models\DescribeCertificateDetailResponse.cs" />
     <Compile Include="V20180529\Models\DescribeCertificatesRequest.cs" />
     <Compile Include="V20180529\Models\DescribeCertificatesResponse.cs" />
     <Compile Include="V20180529\Models\DescribeCountryAreaMappingRequest.cs" />
     <Compile Include="V20180529\Models\DescribeCountryAreaMappingResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeCustomHeaderRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeCustomHeaderResponse.cs" />
     <Compile Include="V20180529\Models\DescribeDestRegionsRequest.cs" />
     <Compile Include="V20180529\Models\DescribeDestRegionsResponse.cs" />
     <Compile Include="V20180529\Models\DescribeDomainErrorPageInfoByIdsRequest.cs" />

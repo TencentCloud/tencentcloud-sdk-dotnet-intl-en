@@ -124,6 +124,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Readonly")]
         public string Readonly{ get; set; }
 
+        /// <summary>
+        /// Product of the domain name, either `cdn` or `ecdn`.
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +149,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Disable", this.Disable);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Readonly", this.Readonly);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

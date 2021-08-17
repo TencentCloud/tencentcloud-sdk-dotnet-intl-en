@@ -187,6 +187,7 @@
     <Compile Include="V20180606\Models\OriginIp.cs" />
     <Compile Include="V20180606\Models\OriginPullOptimization.cs" />
     <Compile Include="V20180606\Models\OriginPullTimeout.cs" />
+    <Compile Include="V20180606\Models\OssPrivateAccess.cs" />
     <Compile Include="V20180606\Models\OverseaConfig.cs" />
     <Compile Include="V20180606\Models\PathBasedOriginRule.cs" />
     <Compile Include="V20180606\Models\PathRule.cs" />
@@ -264,6 +265,7 @@
     <Compile Include="V20180606\Models\VideoSeek.cs" />
     <Compile Include="V20180606\Models\ViolationUrl.cs" />
     <Compile Include="V20180606\Models\WafSubRuleStatus.cs" />
+    <Compile Include="V20180606\Models\WebSocket.cs" />
     <Compile Include="V20180606\Models\WebpAdapter.cs" />
   </ItemGroup>
 </Project>

@@ -30,6 +30,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Cert")]
         public string Cert{ get; set; }
 
+        /// <summary>
+        /// Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
+        /// <summary>
+        /// Product of the domain name, either `cdn` (default) or `ecdn`.
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Cert", this.Cert);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }
