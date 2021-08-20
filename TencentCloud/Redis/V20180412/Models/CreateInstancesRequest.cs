@@ -25,12 +25,6 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
-
-        /// <summary>
         /// Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
         /// </summary>
         [JsonProperty("TypeId")]
@@ -59,6 +53,12 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
+
+        /// <summary>
+        /// Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public ulong? ZoneId{ get; set; }
 
         /// <summary>
         /// Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
@@ -146,18 +146,30 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
+        /// <summary>
+        /// ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "TypeId", this.TypeId);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
@@ -172,6 +184,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
             this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

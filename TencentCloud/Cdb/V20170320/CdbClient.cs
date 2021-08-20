@@ -473,7 +473,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (CreateParamTemplate) is used to create a parameter template.
+        /// This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (CreateParamTemplate) is used to create a parameter template.
+        /// This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DeleteParamTemplate) is used to delete a parameter template.
+        /// This API is used to delete a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
         /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
@@ -693,7 +693,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DeleteParamTemplate) is used to delete a parameter template.
+        /// This API is used to delete a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
         /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
@@ -1961,7 +1961,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeParamTemplateInfo) is used to query parameter template details.
+        /// This API is used to query parameter template details. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -1981,7 +1981,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeParamTemplateInfo) is used to query parameter template details.
+        /// This API is used to query parameter template details. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -3207,7 +3207,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (ModifyParamTemplate) is used to modify a parameter template.
+        /// This API is used to modify a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
         /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
@@ -3227,7 +3227,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (ModifyParamTemplate) is used to modify a parameter template.
+        /// This API is used to modify a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
         /// <returns><see cref="ModifyParamTemplateResponse"/></returns>

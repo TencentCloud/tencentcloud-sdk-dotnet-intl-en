@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.260</VersionPrefix>
+    <VersionPrefix>3.0.261</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3253,6 +3253,45 @@
     <Compile Include="Iai\V20200303\Models\VerifyFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyPersonRequest.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyPersonResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\IotcloudClient.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\Attribute.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\BindProductInfo.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CertInfo.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CreateDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CreateDeviceResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CreatePrivateCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CreatePrivateCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeletePrivateCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeletePrivateCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeleteProductRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeleteProductResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeDeviceResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCABindedProductsRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCABindedProductsResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCAsRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCAsResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeProductCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeProductCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeProductRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeProductResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeviceInfo.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeviceLabel.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeviceTag.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\ProductMetadata.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\ProductProperties.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateDeviceLogLevelRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateDeviceLogLevelResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateDevicesEnableStateRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateDevicesEnableStateResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCAResponse.cs" />
     <Compile Include="Ip\V20210409\IpClient.cs" />
     <Compile Include="Ip\V20210409\Models\CountryCodeItem.cs" />
     <Compile Include="Ip\V20210409\Models\CreateAccountRequest.cs" />
@@ -4652,8 +4691,11 @@
     <Compile Include="Postgres\V20170312\Models\ZoneInfo.cs" />
     <Compile Include="Redis\V20180412\RedisClient.cs" />
     <Compile Include="Redis\V20180412\Models\Account.cs" />
+    <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Redis\V20180412\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\BackupDownloadInfo.cs" />
     <Compile Include="Redis\V20180412\Models\BigKeyInfo.cs" />
     <Compile Include="Redis\V20180412\Models\BigKeyTypeInfo.cs" />
     <Compile Include="Redis\V20180412\Models\ChangeReplicaToMasterRequest.cs" />
@@ -4667,9 +4709,13 @@
     <Compile Include="Redis\V20180412\Models\CreateInstanceAccountResponse.cs" />
     <Compile Include="Redis\V20180412\Models\CreateInstancesRequest.cs" />
     <Compile Include="Redis\V20180412\Models\CreateInstancesResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\CreateParamTemplateRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DelayDistribution.cs" />
     <Compile Include="Redis\V20180412\Models\DeleteInstanceAccountRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DeleteInstanceAccountResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DeleteParamTemplateRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeBackupUrlRequest.cs" />
@@ -4719,6 +4765,10 @@
     <Compile Include="Redis\V20180412\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeParamTemplateInfoRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeParamTemplateInfoResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeParamTemplatesRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeParamTemplatesResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupRequest.cs" />
@@ -4733,6 +4783,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeTaskListRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeTaskListResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeTendisSlowLogRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeTendisSlowLogResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DestroyPostpaidInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DestroyPostpaidInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DestroyPrepaidInstanceRequest.cs" />
@@ -4745,6 +4797,10 @@
     <Compile Include="Redis\V20180412\Models\EnableReplicaReadonlyResponse.cs" />
     <Compile Include="Redis\V20180412\Models\HotKeyInfo.cs" />
     <Compile Include="Redis\V20180412\Models\Inbound.cs" />
+    <Compile Include="Redis\V20180412\Models\InquiryPriceCreateInstanceRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\InquiryPriceCreateInstanceResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\InquiryPriceUpgradeInstanceRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\InquiryPriceUpgradeInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceClusterNode.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceClusterShard.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceEnumParam.cs" />
@@ -4779,7 +4835,11 @@
     <Compile Include="Redis\V20180412\Models\ModifyMaintenanceWindowResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyParamTemplateRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\Outbound.cs" />
+    <Compile Include="Redis\V20180412\Models\ParamTemplateInfo.cs" />
+    <Compile Include="Redis\V20180412\Models\ParameterDetail.cs" />
     <Compile Include="Redis\V20180412\Models\ProductConf.cs" />
     <Compile Include="Redis\V20180412\Models\ProxyNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RedisBackupSet.cs" />
@@ -4807,6 +4867,7 @@
     <Compile Include="Redis\V20180412\Models\SwitchInstanceVipResponse.cs" />
     <Compile Include="Redis\V20180412\Models\TaskInfoDetail.cs" />
     <Compile Include="Redis\V20180412\Models\TendisNodes.cs" />
+    <Compile Include="Redis\V20180412\Models\TendisSlowLogDetail.cs" />
     <Compile Include="Redis\V20180412\Models\TradeDealDetail.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceResponse.cs" />

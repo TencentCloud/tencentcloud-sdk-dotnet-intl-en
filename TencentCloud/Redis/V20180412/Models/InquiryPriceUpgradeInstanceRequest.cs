@@ -21,32 +21,32 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class InquiryPriceUpgradeInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// Instance ID.
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node, which is not required upon creation of the instance
+        /// Shard size in MB.
         /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("MemSize")]
+        public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Number of shards. This parameter can be left blank for Redis 2.8 in standard architecture, CKV in standard architecture, and Redis 2.8 in standalone architecture.
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
+        [JsonProperty("RedisShardNum")]
+        public ulong? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Number of replicas. This parameter can be left blank for Redis 2.8 in standard architecture, CKV in standard architecture, and Redis 2.8 in standalone architecture.
         /// </summary>
-        [JsonProperty("ZoneName")]
-        public string ZoneName{ get; set; }
+        [JsonProperty("RedisReplicasNum")]
+        public ulong? RedisReplicasNum{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
+            this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
+            this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
         }
     }
 }

@@ -15,40 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Iotcloud.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBackupUrlResponse : AbstractModel
+    public class DescribeProductResponse : AbstractModel
     {
         
         /// <summary>
-        /// Download address on the public network (valid for 6 hours)
+        /// Product ID
         /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string[] DownloadUrl{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
-        /// Download address on the private network (valid for 6 hours)
+        /// Product name
         /// </summary>
-        [JsonProperty("InnerDownloadUrl")]
-        public string[] InnerDownloadUrl{ get; set; }
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
         /// <summary>
-        /// File name (only valid for TencentDB for Tendis instances)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Product metadata
         /// </summary>
-        [JsonProperty("Filenames")]
-        public string[] Filenames{ get; set; }
+        [JsonProperty("ProductMetadata")]
+        public ProductMetadata ProductMetadata{ get; set; }
 
         /// <summary>
-        /// List of backup file information
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Product properties
         /// </summary>
-        [JsonProperty("BackupInfos")]
-        public BackupDownloadInfo[] BackupInfos{ get; set; }
+        [JsonProperty("ProductProperties")]
+        public ProductProperties ProductProperties{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -62,10 +60,10 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DownloadUrl.", this.DownloadUrl);
-            this.SetParamArraySimple(map, prefix + "InnerDownloadUrl.", this.InnerDownloadUrl);
-            this.SetParamArraySimple(map, prefix + "Filenames.", this.Filenames);
-            this.SetParamArrayObj(map, prefix + "BackupInfos.", this.BackupInfos);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamObj(map, prefix + "ProductMetadata.", this.ProductMetadata);
+            this.SetParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

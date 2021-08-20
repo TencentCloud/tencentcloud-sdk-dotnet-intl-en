@@ -53,6 +53,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to apply a parameter template to instances.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyParamsTemplateRequest"/></param>
+        /// <returns><see cref="ApplyParamsTemplateResponse"/></returns>
+        public async Task<ApplyParamsTemplateResponse> ApplyParamsTemplate(ApplyParamsTemplateRequest req)
+        {
+             JsonResponseModel<ApplyParamsTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyParamsTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyParamsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply a parameter template to instances.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyParamsTemplateRequest"/></param>
+        /// <returns><see cref="ApplyParamsTemplateResponse"/></returns>
+        public ApplyParamsTemplateResponse ApplyParamsTemplateSync(ApplyParamsTemplateRequest req)
+        {
+             JsonResponseModel<ApplyParamsTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyParamsTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyParamsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to associate a security group with instances in batches.
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -293,6 +333,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to create a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
+        /// <returns><see cref="CreateParamTemplateResponse"/></returns>
+        public async Task<CreateParamTemplateResponse> CreateParamTemplate(CreateParamTemplateRequest req)
+        {
+             JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
+        /// <returns><see cref="CreateParamTemplateResponse"/></returns>
+        public CreateParamTemplateResponse CreateParamTemplateSync(CreateParamTemplateRequest req)
+        {
+             JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an instance sub-account.
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceAccountRequest"/></param>
@@ -324,6 +404,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "DeleteInstanceAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
+        public async Task<DeleteParamTemplateResponse> DeleteParamTemplate(DeleteParamTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
+        public DeleteParamTemplateResponse DeleteParamTemplateSync(DeleteParamTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1293,6 +1413,86 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query parameter template details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
+        public async Task<DescribeParamTemplateInfoResponse> DescribeParamTemplateInfo(DescribeParamTemplateInfoRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamTemplateInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplateInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query parameter template details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
+        public DescribeParamTemplateInfoResponse DescribeParamTemplateInfoSync(DescribeParamTemplateInfoRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParamTemplateInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplateInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of parameter templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
+        public async Task<DescribeParamTemplatesResponse> DescribeParamTemplates(DescribeParamTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of parameter templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
+        public DescribeParamTemplatesResponse DescribeParamTemplatesSync(DescribeParamTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParamTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the allowlist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
         /// </summary>
         /// <param name="req"><see cref="DescribeProductInfoRequest"/></param>
@@ -1573,6 +1773,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query slow queries of a TencentDB for Tendis instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTendisSlowLogRequest"/></param>
+        /// <returns><see cref="DescribeTendisSlowLogResponse"/></returns>
+        public async Task<DescribeTendisSlowLogResponse> DescribeTendisSlowLog(DescribeTendisSlowLogRequest req)
+        {
+             JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTendisSlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTendisSlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query slow queries of a TencentDB for Tendis instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTendisSlowLogRequest"/></param>
+        /// <returns><see cref="DescribeTendisSlowLogResponse"/></returns>
+        public DescribeTendisSlowLogResponse DescribeTendisSlowLogSync(DescribeTendisSlowLogRequest req)
+        {
+             JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTendisSlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTendisSlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to terminate a pay-as-you-go instance.
         /// </summary>
         /// <param name="req"><see cref="DestroyPostpaidInstanceRequest"/></param>
@@ -1764,6 +2004,86 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "EnableReplicaReadonly");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableReplicaReadonlyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price for purchasing an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
+        public async Task<InquiryPriceCreateInstanceResponse> InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceCreateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price for purchasing an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
+        public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstanceSync(InquiryPriceCreateInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceCreateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price for scaling an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceUpgradeInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceUpgradeInstanceResponse"/></returns>
+        public async Task<InquiryPriceUpgradeInstanceResponse> InquiryPriceUpgradeInstance(InquiryPriceUpgradeInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceUpgradeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceUpgradeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price for scaling an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceUpgradeInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceUpgradeInstanceResponse"/></returns>
+        public InquiryPriceUpgradeInstanceResponse InquiryPriceUpgradeInstanceSync(InquiryPriceUpgradeInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceUpgradeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceUpgradeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2164,6 +2484,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNetworkConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
+        public async Task<ModifyParamTemplateResponse> ModifyParamTemplate(ModifyParamTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
+        public ModifyParamTemplateResponse ModifyParamTemplateSync(ModifyParamTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

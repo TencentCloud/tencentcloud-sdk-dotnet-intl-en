@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Iotcloud.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class DescribePrivateCABindedProductsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// Certificate name
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("CertName")]
+        public string CertName{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node, which is not required upon creation of the instance
+        /// Offset for query
         /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Maximum number of records to return, which is 20 by default and cannot exceed 200
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
-
-        /// <summary>
-        /// ID of the availability zone of the master or replica node
-        /// </summary>
-        [JsonProperty("ZoneName")]
-        public string ZoneName{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "CertName", this.CertName);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

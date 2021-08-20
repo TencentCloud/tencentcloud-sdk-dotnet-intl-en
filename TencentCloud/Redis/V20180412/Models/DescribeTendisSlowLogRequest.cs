@@ -15,44 +15,50 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAccountsRequest : AbstractModel
+    public class DescribeTendisSlowLogRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+        /// Instance ID in the format of crs-ngvou0i1
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// TencentDB account.
+        /// Start time in the format of 2019-09-08 12:12:41
         /// </summary>
-        [JsonProperty("Accounts")]
-        public Account[] Accounts{ get; set; }
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
 
         /// <summary>
-        /// Password of the new account
+        /// End time in the format of 2019-09-09 12:12:41
         /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Slow query threshold in ms
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("MinQueryTime")]
+        public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+        /// The maximum number of results returned per page. Default value: `20`
         /// </summary>
-        [JsonProperty("MaxUserConnections")]
-        public long? MaxUserConnections{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// Offset, which is an integral multiple of `Limit`
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -61,10 +67,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "MinQueryTime", this.MinQueryTime);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

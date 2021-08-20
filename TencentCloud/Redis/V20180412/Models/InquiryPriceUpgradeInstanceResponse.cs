@@ -21,34 +21,15 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBackupUrlResponse : AbstractModel
+    public class InquiryPriceUpgradeInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Download address on the public network (valid for 6 hours)
-        /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string[] DownloadUrl{ get; set; }
-
-        /// <summary>
-        /// Download address on the private network (valid for 6 hours)
-        /// </summary>
-        [JsonProperty("InnerDownloadUrl")]
-        public string[] InnerDownloadUrl{ get; set; }
-
-        /// <summary>
-        /// File name (only valid for TencentDB for Tendis instances)
+        /// Price. Unit: USD
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Filenames")]
-        public string[] Filenames{ get; set; }
-
-        /// <summary>
-        /// List of backup file information
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("BackupInfos")]
-        public BackupDownloadInfo[] BackupInfos{ get; set; }
+        [JsonProperty("Price")]
+        public float? Price{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -62,10 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DownloadUrl.", this.DownloadUrl);
-            this.SetParamArraySimple(map, prefix + "InnerDownloadUrl.", this.InnerDownloadUrl);
-            this.SetParamArraySimple(map, prefix + "Filenames.", this.Filenames);
-            this.SetParamArrayObj(map, prefix + "BackupInfos.", this.BackupInfos);
+            this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

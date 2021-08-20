@@ -96,6 +96,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
+        /// <summary>
+        /// Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked: QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+        /// </summary>
+        [JsonProperty("FastUpgrade")]
+        public long? FastUpgrade{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
         }
     }
 }

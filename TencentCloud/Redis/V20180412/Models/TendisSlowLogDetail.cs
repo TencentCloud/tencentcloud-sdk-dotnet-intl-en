@@ -21,32 +21,38 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodeInfo : AbstractModel
+    public class TendisSlowLogDetail : AbstractModel
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// Execution time
         /// </summary>
-        [JsonProperty("NodeType")]
-        public long? NodeType{ get; set; }
+        [JsonProperty("ExecuteTime")]
+        public string ExecuteTime{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node, which is not required upon creation of the instance
+        /// Duration of the slow query (ms)
         /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("Duration")]
+        public long? Duration{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Command
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// Command line details
         /// </summary>
-        [JsonProperty("ZoneName")]
-        public string ZoneName{ get; set; }
+        [JsonProperty("CommandLine")]
+        public string CommandLine{ get; set; }
+
+        /// <summary>
+        /// Node ID
+        /// </summary>
+        [JsonProperty("Node")]
+        public string Node{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamSimple(map, prefix + "CommandLine", this.CommandLine);
+            this.SetParamSimple(map, prefix + "Node", this.Node);
         }
     }
 }

@@ -46,8 +46,11 @@
   <ItemGroup>
     <Compile Include="V20180412\RedisClient.cs" />
     <Compile Include="V20180412\Models\Account.cs" />
+    <Compile Include="V20180412\Models\ApplyParamsTemplateRequest.cs" />
+    <Compile Include="V20180412\Models\ApplyParamsTemplateResponse.cs" />
     <Compile Include="V20180412\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\BackupDownloadInfo.cs" />
     <Compile Include="V20180412\Models\BigKeyInfo.cs" />
     <Compile Include="V20180412\Models\BigKeyTypeInfo.cs" />
     <Compile Include="V20180412\Models\ChangeReplicaToMasterRequest.cs" />
@@ -61,9 +64,13 @@
     <Compile Include="V20180412\Models\CreateInstanceAccountResponse.cs" />
     <Compile Include="V20180412\Models\CreateInstancesRequest.cs" />
     <Compile Include="V20180412\Models\CreateInstancesResponse.cs" />
+    <Compile Include="V20180412\Models\CreateParamTemplateRequest.cs" />
+    <Compile Include="V20180412\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\DelayDistribution.cs" />
     <Compile Include="V20180412\Models\DeleteInstanceAccountRequest.cs" />
     <Compile Include="V20180412\Models\DeleteInstanceAccountResponse.cs" />
+    <Compile Include="V20180412\Models\DeleteParamTemplateRequest.cs" />
+    <Compile Include="V20180412\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
     <Compile Include="V20180412\Models\DescribeBackupUrlRequest.cs" />
@@ -113,6 +120,10 @@
     <Compile Include="V20180412\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
     <Compile Include="V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeParamTemplateInfoRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeParamTemplateInfoResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeParamTemplatesRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeParamTemplatesResponse.cs" />
     <Compile Include="V20180412\Models\DescribeProductInfoRequest.cs" />
     <Compile Include="V20180412\Models\DescribeProductInfoResponse.cs" />
     <Compile Include="V20180412\Models\DescribeProjectSecurityGroupRequest.cs" />
@@ -127,6 +138,8 @@
     <Compile Include="V20180412\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="V20180412\Models\DescribeTaskListRequest.cs" />
     <Compile Include="V20180412\Models\DescribeTaskListResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeTendisSlowLogRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeTendisSlowLogResponse.cs" />
     <Compile Include="V20180412\Models\DestroyPostpaidInstanceRequest.cs" />
     <Compile Include="V20180412\Models\DestroyPostpaidInstanceResponse.cs" />
     <Compile Include="V20180412\Models\DestroyPrepaidInstanceRequest.cs" />
@@ -139,6 +152,10 @@
     <Compile Include="V20180412\Models\EnableReplicaReadonlyResponse.cs" />
     <Compile Include="V20180412\Models\HotKeyInfo.cs" />
     <Compile Include="V20180412\Models\Inbound.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceCreateInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceCreateInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceUpgradeInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceUpgradeInstanceResponse.cs" />
     <Compile Include="V20180412\Models\InstanceClusterNode.cs" />
     <Compile Include="V20180412\Models\InstanceClusterShard.cs" />
     <Compile Include="V20180412\Models\InstanceEnumParam.cs" />
@@ -173,7 +190,11 @@
     <Compile Include="V20180412\Models\ModifyMaintenanceWindowResponse.cs" />
     <Compile Include="V20180412\Models\ModifyNetworkConfigRequest.cs" />
     <Compile Include="V20180412\Models\ModifyNetworkConfigResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyParamTemplateRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\Outbound.cs" />
+    <Compile Include="V20180412\Models\ParamTemplateInfo.cs" />
+    <Compile Include="V20180412\Models\ParameterDetail.cs" />
     <Compile Include="V20180412\Models\ProductConf.cs" />
     <Compile Include="V20180412\Models\ProxyNodes.cs" />
     <Compile Include="V20180412\Models\RedisBackupSet.cs" />
@@ -201,6 +222,7 @@
     <Compile Include="V20180412\Models\SwitchInstanceVipResponse.cs" />
     <Compile Include="V20180412\Models\TaskInfoDetail.cs" />
     <Compile Include="V20180412\Models\TendisNodes.cs" />
+    <Compile Include="V20180412\Models\TendisSlowLogDetail.cs" />
     <Compile Include="V20180412\Models\TradeDealDetail.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceResponse.cs" />
