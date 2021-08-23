@@ -21,11 +21,11 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteMediaConnectFlowRequest : AbstractModel
+    public class StopStreamLinkFlowRequest : AbstractModel
     {
         
         /// <summary>
-        /// Flow ID.
+        /// Flow ID
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

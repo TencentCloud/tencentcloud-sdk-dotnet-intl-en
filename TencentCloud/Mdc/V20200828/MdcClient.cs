@@ -53,17 +53,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to create the configuration of a MediaConnect flow.
+        /// This API is used to create a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="CreateMediaConnectFlowResponse"/></returns>
-        public async Task<CreateMediaConnectFlowResponse> CreateMediaConnectFlow(CreateMediaConnectFlowRequest req)
+        /// <param name="req"><see cref="CreateStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkFlowResponse"/></returns>
+        public async Task<CreateStreamLinkFlowResponse> CreateStreamLinkFlow(CreateStreamLinkFlowRequest req)
         {
-             JsonResponseModel<CreateMediaConnectFlowResponse> rsp = null;
+             JsonResponseModel<CreateStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaConnectFlowResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -73,17 +73,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to create the configuration of a MediaConnect flow.
+        /// This API is used to create a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="CreateMediaConnectFlowResponse"/></returns>
-        public CreateMediaConnectFlowResponse CreateMediaConnectFlowSync(CreateMediaConnectFlowRequest req)
+        /// <param name="req"><see cref="CreateStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkFlowResponse"/></returns>
+        public CreateStreamLinkFlowResponse CreateStreamLinkFlowSync(CreateStreamLinkFlowRequest req)
         {
-             JsonResponseModel<CreateMediaConnectFlowResponse> rsp = null;
+             JsonResponseModel<CreateStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaConnectFlowResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -93,17 +93,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to create the output information of a MediaConnect flow.
+        /// This API is used to delete a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaConnectOutputRequest"/></param>
-        /// <returns><see cref="CreateMediaConnectOutputResponse"/></returns>
-        public async Task<CreateMediaConnectOutputResponse> CreateMediaConnectOutput(CreateMediaConnectOutputRequest req)
+        /// <param name="req"><see cref="DeleteStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="DeleteStreamLinkFlowResponse"/></returns>
+        public async Task<DeleteStreamLinkFlowResponse> DeleteStreamLinkFlow(DeleteStreamLinkFlowRequest req)
         {
-             JsonResponseModel<CreateMediaConnectOutputResponse> rsp = null;
+             JsonResponseModel<DeleteStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateMediaConnectOutput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaConnectOutputResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -113,17 +113,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to create the output information of a MediaConnect flow.
+        /// This API is used to delete a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaConnectOutputRequest"/></param>
-        /// <returns><see cref="CreateMediaConnectOutputResponse"/></returns>
-        public CreateMediaConnectOutputResponse CreateMediaConnectOutputSync(CreateMediaConnectOutputRequest req)
+        /// <param name="req"><see cref="DeleteStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="DeleteStreamLinkFlowResponse"/></returns>
+        public DeleteStreamLinkFlowResponse DeleteStreamLinkFlowSync(DeleteStreamLinkFlowRequest req)
         {
-             JsonResponseModel<CreateMediaConnectOutputResponse> rsp = null;
+             JsonResponseModel<DeleteStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateMediaConnectOutput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaConnectOutputResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -133,17 +133,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to delete the configuration of a MediaConnect flow.
+        /// This API is used to delete an output of a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="DeleteMediaConnectFlowResponse"/></returns>
-        public async Task<DeleteMediaConnectFlowResponse> DeleteMediaConnectFlow(DeleteMediaConnectFlowRequest req)
+        /// <param name="req"><see cref="DeleteStreamLinkOutputRequest"/></param>
+        /// <returns><see cref="DeleteStreamLinkOutputResponse"/></returns>
+        public async Task<DeleteStreamLinkOutputResponse> DeleteStreamLinkOutput(DeleteStreamLinkOutputRequest req)
         {
-             JsonResponseModel<DeleteMediaConnectFlowResponse> rsp = null;
+             JsonResponseModel<DeleteStreamLinkOutputResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaConnectFlowResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteStreamLinkOutput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLinkOutputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -153,17 +153,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to delete the configuration of a MediaConnect flow.
+        /// This API is used to delete an output of a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="DeleteMediaConnectFlowResponse"/></returns>
-        public DeleteMediaConnectFlowResponse DeleteMediaConnectFlowSync(DeleteMediaConnectFlowRequest req)
+        /// <param name="req"><see cref="DeleteStreamLinkOutputRequest"/></param>
+        /// <returns><see cref="DeleteStreamLinkOutputResponse"/></returns>
+        public DeleteStreamLinkOutputResponse DeleteStreamLinkOutputSync(DeleteStreamLinkOutputRequest req)
         {
-             JsonResponseModel<DeleteMediaConnectFlowResponse> rsp = null;
+             JsonResponseModel<DeleteStreamLinkOutputResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaConnectFlowResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamLinkOutput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLinkOutputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -173,17 +173,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to delete the output configuration of a MediaConnect flow.
+        /// This API is used to query the configuration information of a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaConnectOutputRequest"/></param>
-        /// <returns><see cref="DeleteMediaConnectOutputResponse"/></returns>
-        public async Task<DeleteMediaConnectOutputResponse> DeleteMediaConnectOutput(DeleteMediaConnectOutputRequest req)
+        /// <param name="req"><see cref="DescribeStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowResponse"/></returns>
+        public async Task<DescribeStreamLinkFlowResponse> DescribeStreamLinkFlow(DescribeStreamLinkFlowRequest req)
         {
-             JsonResponseModel<DeleteMediaConnectOutputResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteMediaConnectOutput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaConnectOutputResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -193,17 +193,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to delete the output configuration of a MediaConnect flow.
+        /// This API is used to query the configuration information of a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaConnectOutputRequest"/></param>
-        /// <returns><see cref="DeleteMediaConnectOutputResponse"/></returns>
-        public DeleteMediaConnectOutputResponse DeleteMediaConnectOutputSync(DeleteMediaConnectOutputRequest req)
+        /// <param name="req"><see cref="DescribeStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowResponse"/></returns>
+        public DescribeStreamLinkFlowResponse DescribeStreamLinkFlowSync(DescribeStreamLinkFlowRequest req)
         {
-             JsonResponseModel<DeleteMediaConnectOutputResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteMediaConnectOutput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaConnectOutputResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,17 +213,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to query the configuration information of a MediaConnect flow.
+        /// This API is used to query the configuration information of multiple StreamLink flows in batches.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="DescribeMediaConnectFlowResponse"/></returns>
-        public async Task<DescribeMediaConnectFlowResponse> DescribeMediaConnectFlow(DescribeMediaConnectFlowRequest req)
+        /// <param name="req"><see cref="DescribeStreamLinkFlowsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowsResponse"/></returns>
+        public async Task<DescribeStreamLinkFlowsResponse> DescribeStreamLinkFlows(DescribeStreamLinkFlowsRequest req)
         {
-             JsonResponseModel<DescribeMediaConnectFlowResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLinkFlowsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaConnectFlowResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -233,17 +233,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to query the configuration information of a MediaConnect flow.
+        /// This API is used to query the configuration information of multiple StreamLink flows in batches.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="DescribeMediaConnectFlowResponse"/></returns>
-        public DescribeMediaConnectFlowResponse DescribeMediaConnectFlowSync(DescribeMediaConnectFlowRequest req)
+        /// <param name="req"><see cref="DescribeStreamLinkFlowsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowsResponse"/></returns>
+        public DescribeStreamLinkFlowsResponse DescribeStreamLinkFlowsSync(DescribeStreamLinkFlowsRequest req)
         {
-             JsonResponseModel<DescribeMediaConnectFlowResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLinkFlowsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaConnectFlowResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -253,17 +253,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to query the configuration information of multiple MediaConnect flows in batches.
+        /// This API is used to modify the configuration information of a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaConnectFlowsRequest"/></param>
-        /// <returns><see cref="DescribeMediaConnectFlowsResponse"/></returns>
-        public async Task<DescribeMediaConnectFlowsResponse> DescribeMediaConnectFlows(DescribeMediaConnectFlowsRequest req)
+        /// <param name="req"><see cref="ModifyStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkFlowResponse"/></returns>
+        public async Task<ModifyStreamLinkFlowResponse> ModifyStreamLinkFlow(ModifyStreamLinkFlowRequest req)
         {
-             JsonResponseModel<DescribeMediaConnectFlowsResponse> rsp = null;
+             JsonResponseModel<ModifyStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaConnectFlows");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaConnectFlowsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -273,17 +273,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to query the configuration information of multiple MediaConnect flows in batches.
+        /// This API is used to modify the configuration information of a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaConnectFlowsRequest"/></param>
-        /// <returns><see cref="DescribeMediaConnectFlowsResponse"/></returns>
-        public DescribeMediaConnectFlowsResponse DescribeMediaConnectFlowsSync(DescribeMediaConnectFlowsRequest req)
+        /// <param name="req"><see cref="ModifyStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkFlowResponse"/></returns>
+        public ModifyStreamLinkFlowResponse ModifyStreamLinkFlowSync(ModifyStreamLinkFlowRequest req)
         {
-             JsonResponseModel<DescribeMediaConnectFlowsResponse> rsp = null;
+             JsonResponseModel<ModifyStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaConnectFlows");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaConnectFlowsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,17 +293,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to modify the configuration information of a MediaConnect flow.
+        /// This API is used to start a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="ModifyMediaConnectFlowResponse"/></returns>
-        public async Task<ModifyMediaConnectFlowResponse> ModifyMediaConnectFlow(ModifyMediaConnectFlowRequest req)
+        /// <param name="req"><see cref="StartStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="StartStreamLinkFlowResponse"/></returns>
+        public async Task<StartStreamLinkFlowResponse> StartStreamLinkFlow(StartStreamLinkFlowRequest req)
         {
-             JsonResponseModel<ModifyMediaConnectFlowResponse> rsp = null;
+             JsonResponseModel<StartStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaConnectFlowResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "StartStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -313,17 +313,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to modify the configuration information of a MediaConnect flow.
+        /// This API is used to start a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="ModifyMediaConnectFlowResponse"/></returns>
-        public ModifyMediaConnectFlowResponse ModifyMediaConnectFlowSync(ModifyMediaConnectFlowRequest req)
+        /// <param name="req"><see cref="StartStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="StartStreamLinkFlowResponse"/></returns>
+        public StartStreamLinkFlowResponse StartStreamLinkFlowSync(StartStreamLinkFlowRequest req)
         {
-             JsonResponseModel<ModifyMediaConnectFlowResponse> rsp = null;
+             JsonResponseModel<StartStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaConnectFlowResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "StartStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,17 +333,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to modify the input information of a MediaConnect flow.
+        /// This API is used to stop a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaConnectInputRequest"/></param>
-        /// <returns><see cref="ModifyMediaConnectInputResponse"/></returns>
-        public async Task<ModifyMediaConnectInputResponse> ModifyMediaConnectInput(ModifyMediaConnectInputRequest req)
+        /// <param name="req"><see cref="StopStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="StopStreamLinkFlowResponse"/></returns>
+        public async Task<StopStreamLinkFlowResponse> StopStreamLinkFlow(StopStreamLinkFlowRequest req)
         {
-             JsonResponseModel<ModifyMediaConnectInputResponse> rsp = null;
+             JsonResponseModel<StopStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaConnectInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaConnectInputResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "StopStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -353,137 +353,17 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
-        /// This API is used to modify the input information of a MediaConnect flow.
+        /// This API is used to stop a StreamLink flow.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaConnectInputRequest"/></param>
-        /// <returns><see cref="ModifyMediaConnectInputResponse"/></returns>
-        public ModifyMediaConnectInputResponse ModifyMediaConnectInputSync(ModifyMediaConnectInputRequest req)
+        /// <param name="req"><see cref="StopStreamLinkFlowRequest"/></param>
+        /// <returns><see cref="StopStreamLinkFlowResponse"/></returns>
+        public StopStreamLinkFlowResponse StopStreamLinkFlowSync(StopStreamLinkFlowRequest req)
         {
-             JsonResponseModel<ModifyMediaConnectInputResponse> rsp = null;
+             JsonResponseModel<StopStreamLinkFlowResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaConnectInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaConnectInputResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the output configuration of a MediaConnect flow.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyMediaConnectOutputRequest"/></param>
-        /// <returns><see cref="ModifyMediaConnectOutputResponse"/></returns>
-        public async Task<ModifyMediaConnectOutputResponse> ModifyMediaConnectOutput(ModifyMediaConnectOutputRequest req)
-        {
-             JsonResponseModel<ModifyMediaConnectOutputResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaConnectOutput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaConnectOutputResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the output configuration of a MediaConnect flow.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyMediaConnectOutputRequest"/></param>
-        /// <returns><see cref="ModifyMediaConnectOutputResponse"/></returns>
-        public ModifyMediaConnectOutputResponse ModifyMediaConnectOutputSync(ModifyMediaConnectOutputRequest req)
-        {
-             JsonResponseModel<ModifyMediaConnectOutputResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaConnectOutput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaConnectOutputResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to start a MediaConnect flow.
-        /// </summary>
-        /// <param name="req"><see cref="StartMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="StartMediaConnectFlowResponse"/></returns>
-        public async Task<StartMediaConnectFlowResponse> StartMediaConnectFlow(StartMediaConnectFlowRequest req)
-        {
-             JsonResponseModel<StartMediaConnectFlowResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMediaConnectFlowResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to start a MediaConnect flow.
-        /// </summary>
-        /// <param name="req"><see cref="StartMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="StartMediaConnectFlowResponse"/></returns>
-        public StartMediaConnectFlowResponse StartMediaConnectFlowSync(StartMediaConnectFlowRequest req)
-        {
-             JsonResponseModel<StartMediaConnectFlowResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMediaConnectFlowResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to stop a MediaConnect flow.
-        /// </summary>
-        /// <param name="req"><see cref="StopMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="StopMediaConnectFlowResponse"/></returns>
-        public async Task<StopMediaConnectFlowResponse> StopMediaConnectFlow(StopMediaConnectFlowRequest req)
-        {
-             JsonResponseModel<StopMediaConnectFlowResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StopMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMediaConnectFlowResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to stop a MediaConnect flow.
-        /// </summary>
-        /// <param name="req"><see cref="StopMediaConnectFlowRequest"/></param>
-        /// <returns><see cref="StopMediaConnectFlowResponse"/></returns>
-        public StopMediaConnectFlowResponse StopMediaConnectFlowSync(StopMediaConnectFlowRequest req)
-        {
-             JsonResponseModel<StopMediaConnectFlowResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StopMediaConnectFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMediaConnectFlowResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "StopStreamLinkFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopStreamLinkFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

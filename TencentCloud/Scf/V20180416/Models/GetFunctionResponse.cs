@@ -271,6 +271,20 @@ namespace TencentCloud.Scf.V20180416.Models
         public StatusReason[] StatusReasons{ get; set; }
 
         /// <summary>
+        /// Specifies whether to enable asynchronization 
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AsyncRunEnable")]
+        public string AsyncRunEnable{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable event tracking
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TraceEnable")]
+        public string TraceEnable{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -322,6 +336,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
             this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
+            this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+            this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

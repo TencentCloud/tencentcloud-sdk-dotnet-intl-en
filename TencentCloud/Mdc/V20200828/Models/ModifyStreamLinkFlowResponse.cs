@@ -21,39 +21,9 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMediaConnectFlowsResponse : AbstractModel
+    public class ModifyStreamLinkFlowResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Configuration information list of a flow.
-        /// </summary>
-        [JsonProperty("Infos")]
-        public DescribeFlow[] Infos{ get; set; }
-
-        /// <summary>
-        /// Number of current pages.
-        /// </summary>
-        [JsonProperty("PageNum")]
-        public long? PageNum{ get; set; }
-
-        /// <summary>
-        /// Number of entries per page.
-        /// </summary>
-        [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
-
-        /// <summary>
-        /// Total number.
-        /// </summary>
-        [JsonProperty("TotalNum")]
-        public long? TotalNum{ get; set; }
-
-        /// <summary>
-        /// Total number of pages.
-        /// </summary>
-        [JsonProperty("TotalPage")]
-        public long? TotalPage{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -66,11 +36,6 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Infos.", this.Infos);
-            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
-            this.SetParamSimple(map, prefix + "TotalPage", this.TotalPage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

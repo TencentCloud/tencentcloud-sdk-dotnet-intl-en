@@ -37,7 +37,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// Flow status.
+        /// Flow status. Valid values: `IDLE`, `RUNNING`
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

@@ -21,17 +21,19 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOutputRtmpSettingsDestinations : AbstractModel
+    public class DescribeInputRTMPSettings : AbstractModel
     {
         
         /// <summary>
-        /// Push URL in the format of `rtmp://domain/live`.
+        /// Path for RTMP stream pushing
+        /// Note: this field may return `null`, indicating that no valid value was found.
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
 
         /// <summary>
-        /// Push `StreamKey` in the format of `stream?key=value`.
+        /// StreamKey for RTMP stream pushing
+        /// Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
         /// </summary>
         [JsonProperty("StreamKey")]
         public string StreamKey{ get; set; }
@@ -42,7 +44,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "StreamKey", this.StreamKey);
         }
     }

@@ -31,7 +31,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string InputName{ get; set; }
 
         /// <summary>
-        /// Input protocol. Valid values: SRT, RTP.
+        /// Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("RTPSettings")]
         public CreateInputRTPSettings RTPSettings{ get; set; }
 
+        /// <summary>
+        /// Input failover. Valid values: `OPEN`, `CLOSE` (default)
+        /// </summary>
+        [JsonProperty("FailOver")]
+        public string FailOver{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
             this.SetParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
             this.SetParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
+            this.SetParamSimple(map, prefix + "FailOver", this.FailOver);
         }
     }
 }

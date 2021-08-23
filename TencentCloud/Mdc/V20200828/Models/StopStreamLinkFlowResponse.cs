@@ -21,14 +21,14 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopMediaConnectFlowRequest : AbstractModel
+    public class StopStreamLinkFlowResponse : AbstractModel
     {
         
         /// <summary>
-        /// Flow ID.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("FlowId")]
-        public string FlowId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -21,20 +21,14 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMediaConnectInputResponse : AbstractModel
+    public class DescribeStreamLinkFlowRequest : AbstractModel
     {
         
         /// <summary>
-        /// Input information after modification.
+        /// Flow ID
         /// </summary>
-        [JsonProperty("Info")]
-        public DescribeInput Info{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Info.", this.Info);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
         }
     }
 }

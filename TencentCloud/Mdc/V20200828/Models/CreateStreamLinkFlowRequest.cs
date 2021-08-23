@@ -21,14 +21,26 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMediaConnectFlowRequest : AbstractModel
+    public class CreateStreamLinkFlowRequest : AbstractModel
     {
         
         /// <summary>
-        /// Flow ID.
+        /// Flow name
         /// </summary>
-        [JsonProperty("FlowId")]
-        public string FlowId{ get; set; }
+        [JsonProperty("FlowName")]
+        public string FlowName{ get; set; }
+
+        /// <summary>
+        /// Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+        /// </summary>
+        [JsonProperty("MaxBandwidth")]
+        public long? MaxBandwidth{ get; set; }
+
+        /// <summary>
+        /// Flow input group
+        /// </summary>
+        [JsonProperty("InputGroup")]
+        public CreateInput[] InputGroup{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
+            this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
+            this.SetParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
         }
     }
 }

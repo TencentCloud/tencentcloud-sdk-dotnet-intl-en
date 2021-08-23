@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Qualifier{ get; set; }
 
         /// <summary>
-        /// Event status
+        /// Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

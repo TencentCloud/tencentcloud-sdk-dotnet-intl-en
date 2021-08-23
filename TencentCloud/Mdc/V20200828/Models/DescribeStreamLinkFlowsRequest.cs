@@ -21,20 +21,20 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateMediaConnectOutputRequest : AbstractModel
+    public class DescribeStreamLinkFlowsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Flow ID.
+        /// Number of the current page. Default value: `1`
         /// </summary>
-        [JsonProperty("FlowId")]
-        public string FlowId{ get; set; }
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
 
         /// <summary>
-        /// Output configuration of a flow.
+        /// Number of entries per page. Default value: `10`
         /// </summary>
-        [JsonProperty("Output")]
-        public CreateOutput Output{ get; set; }
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

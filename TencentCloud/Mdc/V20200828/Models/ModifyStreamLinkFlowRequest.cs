@@ -21,20 +21,20 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMediaConnectOutputRequest : AbstractModel
+    public class ModifyStreamLinkFlowRequest : AbstractModel
     {
         
         /// <summary>
-        /// Flow ID.
+        /// Flow ID
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// Configuration of the output to be modified.
+        /// Name of the flow to modify
         /// </summary>
-        [JsonProperty("Output")]
-        public ModifyOutput Output{ get; set; }
+        [JsonProperty("FlowName")]
+        public string FlowName{ get; set; }
 
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
         }
     }
 }

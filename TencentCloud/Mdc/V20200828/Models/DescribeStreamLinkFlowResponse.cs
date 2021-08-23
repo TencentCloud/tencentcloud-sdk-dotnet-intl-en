@@ -21,20 +21,20 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOutputRTMPSettings : AbstractModel
+    public class DescribeStreamLinkFlowResponse : AbstractModel
     {
         
         /// <summary>
-        /// Push destination address. You can enter one or two addresses.
+        /// Configuration information of a flow
         /// </summary>
-        [JsonProperty("Destinations")]
-        public CreateOutputRtmpSettingsDestinations[] Destinations{ get; set; }
+        [JsonProperty("Info")]
+        public DescribeFlow Info{ get; set; }
 
         /// <summary>
-        /// RTMP chunk size. Value range: [4096, 40960].
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("ChunkSize")]
-        public long? ChunkSize{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Destinations.", this.Destinations);
-            this.SetParamSimple(map, prefix + "ChunkSize", this.ChunkSize);
+            this.SetParamObj(map, prefix + "Info.", this.Info);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

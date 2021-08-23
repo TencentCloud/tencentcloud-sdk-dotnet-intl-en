@@ -81,6 +81,19 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("InputRegion")]
         public string InputRegion{ get; set; }
 
+        /// <summary>
+        /// RTMP configuration information of an input
+        /// </summary>
+        [JsonProperty("RTMPSettings")]
+        public DescribeInputRTMPSettings RTMPSettings{ get; set; }
+
+        /// <summary>
+        /// Input failover
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("FailOver")]
+        public string FailOver{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +109,8 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
             this.SetParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
             this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
+            this.SetParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
+            this.SetParamSimple(map, prefix + "FailOver", this.FailOver);
         }
     }
 }
