@@ -15,45 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdp.V20200527.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChannelInfo : AbstractModel
+    public class CreateStreamLiveChannelResponse : AbstractModel
     {
         
         /// <summary>
-        /// Channel ID.
+        /// Channel ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Channel name.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Channel protocol.
-        /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
-
-        /// <summary>
-        /// Channel input and output.
-        /// </summary>
-        [JsonProperty("Points")]
-        public PointInfo Points{ get; set; }
-
-        /// <summary>
-        /// Cache configuration
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("CacheInfo")]
-        public CacheInfo CacheInfo{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -62,10 +43,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamObj(map, prefix + "Points.", this.Points);
-            this.SetParamObj(map, prefix + "CacheInfo.", this.CacheInfo);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

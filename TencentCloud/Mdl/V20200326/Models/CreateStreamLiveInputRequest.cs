@@ -15,45 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdp.V20200527.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChannelInfo : AbstractModel
+    public class CreateStreamLiveInputRequest : AbstractModel
     {
         
         /// <summary>
-        /// Channel ID.
-        /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
-
-        /// <summary>
-        /// Channel name.
+        /// Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Channel protocol.
+        /// Input type
+        /// Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// Channel input and output.
+        /// ID of the input security group to attach
+        /// You can attach only one security group to an input.
         /// </summary>
-        [JsonProperty("Points")]
-        public PointInfo Points{ get; set; }
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Cache configuration
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Input settings. For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
         /// </summary>
-        [JsonProperty("CacheInfo")]
-        public CacheInfo CacheInfo{ get; set; }
+        [JsonProperty("InputSettings")]
+        public InputSettingInfo[] InputSettings{ get; set; }
 
 
         /// <summary>
@@ -61,11 +56,10 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamObj(map, prefix + "Points.", this.Points);
-            this.SetParamObj(map, prefix + "CacheInfo.", this.CacheInfo);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArrayObj(map, prefix + "InputSettings.", this.InputSettings);
         }
     }
 }

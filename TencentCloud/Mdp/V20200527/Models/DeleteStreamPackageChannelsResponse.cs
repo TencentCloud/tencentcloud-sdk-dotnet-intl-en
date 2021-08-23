@@ -21,39 +21,26 @@ namespace TencentCloud.Mdp.V20200527.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChannelInfo : AbstractModel
+    public class DeleteStreamPackageChannelsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Channel ID.
+        /// List of the information of successfully deleted channels
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("SuccessInfos")]
+        public ChannelInfo[] SuccessInfos{ get; set; }
 
         /// <summary>
-        /// Channel name.
+        /// List of the information of the channels that failed to be deleted
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("FailInfos")]
+        public ChannelInfo[] FailInfos{ get; set; }
 
         /// <summary>
-        /// Channel protocol.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
-
-        /// <summary>
-        /// Channel input and output.
-        /// </summary>
-        [JsonProperty("Points")]
-        public PointInfo Points{ get; set; }
-
-        /// <summary>
-        /// Cache configuration
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("CacheInfo")]
-        public CacheInfo CacheInfo{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -61,11 +48,9 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamObj(map, prefix + "Points.", this.Points);
-            this.SetParamObj(map, prefix + "CacheInfo.", this.CacheInfo);
+            this.SetParamArrayObj(map, prefix + "SuccessInfos.", this.SuccessInfos);
+            this.SetParamArrayObj(map, prefix + "FailInfos.", this.FailInfos);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

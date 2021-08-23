@@ -15,45 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdp.V20200527.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChannelInfo : AbstractModel
+    public class DescribeStreamLiveChannelInputStatisticsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Channel ID.
+        /// Channel ID
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("ChannelId")]
+        public string ChannelId{ get; set; }
 
         /// <summary>
-        /// Channel name.
+        /// Start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
+        /// UTC time, such as `2020-01-01T12:00:00Z`
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// Channel protocol.
+        /// End time for query, which is 1 hour after `StartTime` by default
+        /// UTC time, such as `2020-01-01T12:00:00Z`
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// Channel input and output.
+        /// Data collection interval. Valid values: `5s`, `1min` (default), `5min`, `15min`
         /// </summary>
-        [JsonProperty("Points")]
-        public PointInfo Points{ get; set; }
-
-        /// <summary>
-        /// Cache configuration
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("CacheInfo")]
-        public CacheInfo CacheInfo{ get; set; }
+        [JsonProperty("Period")]
+        public string Period{ get; set; }
 
 
         /// <summary>
@@ -61,11 +56,10 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamObj(map, prefix + "Points.", this.Points);
-            this.SetParamObj(map, prefix + "CacheInfo.", this.CacheInfo);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

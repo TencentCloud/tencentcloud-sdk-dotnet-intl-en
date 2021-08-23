@@ -21,39 +21,23 @@ namespace TencentCloud.Mdp.V20200527.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChannelInfo : AbstractModel
+    public class CacheInfoInfo : AbstractModel
     {
         
         /// <summary>
-        /// Channel ID.
+        /// Timeout period (ms), which must be an integer multiple of 1000
+        /// .m3u8/.mpd: [1000, 60000]
+        /// .ts/.m4s/.mp4: [10000, 1800000]
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("Timeout")]
+        public long? Timeout{ get; set; }
 
         /// <summary>
-        /// Channel name.
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Channel protocol.
-        /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
-
-        /// <summary>
-        /// Channel input and output.
-        /// </summary>
-        [JsonProperty("Points")]
-        public PointInfo Points{ get; set; }
-
-        /// <summary>
-        /// Cache configuration
+        /// File extension. Valid values: .m3u8, .ts, .mpd, .m4s, .mp4
         /// Note: this field may return `null`, indicating that no valid value was found.
         /// </summary>
-        [JsonProperty("CacheInfo")]
-        public CacheInfo CacheInfo{ get; set; }
+        [JsonProperty("Ext")]
+        public string Ext{ get; set; }
 
 
         /// <summary>
@@ -61,11 +45,8 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamObj(map, prefix + "Points.", this.Points);
-            this.SetParamObj(map, prefix + "CacheInfo.", this.CacheInfo);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "Ext", this.Ext);
         }
     }
 }

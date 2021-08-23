@@ -53,17 +53,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to create a media package channel.
+        /// This API is used to create a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaPackageChannelRequest"/></param>
-        /// <returns><see cref="CreateMediaPackageChannelResponse"/></returns>
-        public async Task<CreateMediaPackageChannelResponse> CreateMediaPackageChannel(CreateMediaPackageChannelRequest req)
+        /// <param name="req"><see cref="CreateStreamPackageChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageChannelResponse"/></returns>
+        public async Task<CreateStreamPackageChannelResponse> CreateStreamPackageChannel(CreateStreamPackageChannelRequest req)
         {
-             JsonResponseModel<CreateMediaPackageChannelResponse> rsp = null;
+             JsonResponseModel<CreateStreamPackageChannelResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateMediaPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaPackageChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateStreamPackageChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -73,17 +73,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to create a media package channel.
+        /// This API is used to create a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaPackageChannelRequest"/></param>
-        /// <returns><see cref="CreateMediaPackageChannelResponse"/></returns>
-        public CreateMediaPackageChannelResponse CreateMediaPackageChannelSync(CreateMediaPackageChannelRequest req)
+        /// <param name="req"><see cref="CreateStreamPackageChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageChannelResponse"/></returns>
+        public CreateStreamPackageChannelResponse CreateStreamPackageChannelSync(CreateStreamPackageChannelRequest req)
         {
-             JsonResponseModel<CreateMediaPackageChannelResponse> rsp = null;
+             JsonResponseModel<CreateStreamPackageChannelResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateMediaPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaPackageChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateStreamPackageChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -93,17 +93,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to create an endpoint of a media package channel.
+        /// This API is used to create an endpoint on a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaPackageChannelEndpointRequest"/></param>
-        /// <returns><see cref="CreateMediaPackageChannelEndpointResponse"/></returns>
-        public async Task<CreateMediaPackageChannelEndpointResponse> CreateMediaPackageChannelEndpoint(CreateMediaPackageChannelEndpointRequest req)
+        /// <param name="req"><see cref="CreateStreamPackageChannelEndpointRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageChannelEndpointResponse"/></returns>
+        public async Task<CreateStreamPackageChannelEndpointResponse> CreateStreamPackageChannelEndpoint(CreateStreamPackageChannelEndpointRequest req)
         {
-             JsonResponseModel<CreateMediaPackageChannelEndpointResponse> rsp = null;
+             JsonResponseModel<CreateStreamPackageChannelEndpointResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateMediaPackageChannelEndpoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaPackageChannelEndpointResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateStreamPackageChannelEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageChannelEndpointResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -113,17 +113,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to create an endpoint of a media package channel.
+        /// This API is used to create an endpoint on a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaPackageChannelEndpointRequest"/></param>
-        /// <returns><see cref="CreateMediaPackageChannelEndpointResponse"/></returns>
-        public CreateMediaPackageChannelEndpointResponse CreateMediaPackageChannelEndpointSync(CreateMediaPackageChannelEndpointRequest req)
+        /// <param name="req"><see cref="CreateStreamPackageChannelEndpointRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageChannelEndpointResponse"/></returns>
+        public CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpointSync(CreateStreamPackageChannelEndpointRequest req)
         {
-             JsonResponseModel<CreateMediaPackageChannelEndpointResponse> rsp = null;
+             JsonResponseModel<CreateStreamPackageChannelEndpointResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateMediaPackageChannelEndpoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaPackageChannelEndpointResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateStreamPackageChannelEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageChannelEndpointResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -133,17 +133,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to delete endpoints from a media package channel in batches.
+        /// This API is used to delete endpoints from a StreamPackage channel in batches.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaPackageChannelEndpointsRequest"/></param>
-        /// <returns><see cref="DeleteMediaPackageChannelEndpointsResponse"/></returns>
-        public async Task<DeleteMediaPackageChannelEndpointsResponse> DeleteMediaPackageChannelEndpoints(DeleteMediaPackageChannelEndpointsRequest req)
+        /// <param name="req"><see cref="DeleteStreamPackageChannelEndpointsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageChannelEndpointsResponse"/></returns>
+        public async Task<DeleteStreamPackageChannelEndpointsResponse> DeleteStreamPackageChannelEndpoints(DeleteStreamPackageChannelEndpointsRequest req)
         {
-             JsonResponseModel<DeleteMediaPackageChannelEndpointsResponse> rsp = null;
+             JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteMediaPackageChannelEndpoints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaPackageChannelEndpointsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteStreamPackageChannelEndpoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -153,17 +153,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to delete endpoints from a media package channel in batches.
+        /// This API is used to delete endpoints from a StreamPackage channel in batches.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaPackageChannelEndpointsRequest"/></param>
-        /// <returns><see cref="DeleteMediaPackageChannelEndpointsResponse"/></returns>
-        public DeleteMediaPackageChannelEndpointsResponse DeleteMediaPackageChannelEndpointsSync(DeleteMediaPackageChannelEndpointsRequest req)
+        /// <param name="req"><see cref="DeleteStreamPackageChannelEndpointsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageChannelEndpointsResponse"/></returns>
+        public DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpointsSync(DeleteStreamPackageChannelEndpointsRequest req)
         {
-             JsonResponseModel<DeleteMediaPackageChannelEndpointsResponse> rsp = null;
+             JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteMediaPackageChannelEndpoints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaPackageChannelEndpointsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamPackageChannelEndpoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -173,17 +173,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to delete media package channels in batches.
+        /// This API is used to delete StreamPackage channels in batches.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaPackageChannelsRequest"/></param>
-        /// <returns><see cref="DeleteMediaPackageChannelsResponse"/></returns>
-        public async Task<DeleteMediaPackageChannelsResponse> DeleteMediaPackageChannels(DeleteMediaPackageChannelsRequest req)
+        /// <param name="req"><see cref="DeleteStreamPackageChannelsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageChannelsResponse"/></returns>
+        public async Task<DeleteStreamPackageChannelsResponse> DeleteStreamPackageChannels(DeleteStreamPackageChannelsRequest req)
         {
-             JsonResponseModel<DeleteMediaPackageChannelsResponse> rsp = null;
+             JsonResponseModel<DeleteStreamPackageChannelsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteMediaPackageChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaPackageChannelsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteStreamPackageChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageChannelsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -193,17 +193,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to delete media package channels in batches.
+        /// This API is used to delete StreamPackage channels in batches.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaPackageChannelsRequest"/></param>
-        /// <returns><see cref="DeleteMediaPackageChannelsResponse"/></returns>
-        public DeleteMediaPackageChannelsResponse DeleteMediaPackageChannelsSync(DeleteMediaPackageChannelsRequest req)
+        /// <param name="req"><see cref="DeleteStreamPackageChannelsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageChannelsResponse"/></returns>
+        public DeleteStreamPackageChannelsResponse DeleteStreamPackageChannelsSync(DeleteStreamPackageChannelsRequest req)
         {
-             JsonResponseModel<DeleteMediaPackageChannelsResponse> rsp = null;
+             JsonResponseModel<DeleteStreamPackageChannelsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteMediaPackageChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaPackageChannelsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamPackageChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageChannelsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,17 +213,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to query the information of a media package channel.
+        /// This API is used to query the information of a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaPackageChannelRequest"/></param>
-        /// <returns><see cref="DescribeMediaPackageChannelResponse"/></returns>
-        public async Task<DescribeMediaPackageChannelResponse> DescribeMediaPackageChannel(DescribeMediaPackageChannelRequest req)
+        /// <param name="req"><see cref="DescribeStreamPackageChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageChannelResponse"/></returns>
+        public async Task<DescribeStreamPackageChannelResponse> DescribeStreamPackageChannel(DescribeStreamPackageChannelRequest req)
         {
-             JsonResponseModel<DescribeMediaPackageChannelResponse> rsp = null;
+             JsonResponseModel<DescribeStreamPackageChannelResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaPackageChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamPackageChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -233,17 +233,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to query the information of a media package channel.
+        /// This API is used to query the information of a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaPackageChannelRequest"/></param>
-        /// <returns><see cref="DescribeMediaPackageChannelResponse"/></returns>
-        public DescribeMediaPackageChannelResponse DescribeMediaPackageChannelSync(DescribeMediaPackageChannelRequest req)
+        /// <param name="req"><see cref="DescribeStreamPackageChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageChannelResponse"/></returns>
+        public DescribeStreamPackageChannelResponse DescribeStreamPackageChannelSync(DescribeStreamPackageChannelRequest req)
         {
-             JsonResponseModel<DescribeMediaPackageChannelResponse> rsp = null;
+             JsonResponseModel<DescribeStreamPackageChannelResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaPackageChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamPackageChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -253,17 +253,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to query the information list of media package channels.
+        /// This API is used to query the information of multiple StreamPackage channels.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaPackageChannelsRequest"/></param>
-        /// <returns><see cref="DescribeMediaPackageChannelsResponse"/></returns>
-        public async Task<DescribeMediaPackageChannelsResponse> DescribeMediaPackageChannels(DescribeMediaPackageChannelsRequest req)
+        /// <param name="req"><see cref="DescribeStreamPackageChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageChannelsResponse"/></returns>
+        public async Task<DescribeStreamPackageChannelsResponse> DescribeStreamPackageChannels(DescribeStreamPackageChannelsRequest req)
         {
-             JsonResponseModel<DescribeMediaPackageChannelsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamPackageChannelsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaPackageChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaPackageChannelsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamPackageChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -273,17 +273,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to query the information list of media package channels.
+        /// This API is used to query the information of multiple StreamPackage channels.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaPackageChannelsRequest"/></param>
-        /// <returns><see cref="DescribeMediaPackageChannelsResponse"/></returns>
-        public DescribeMediaPackageChannelsResponse DescribeMediaPackageChannelsSync(DescribeMediaPackageChannelsRequest req)
+        /// <param name="req"><see cref="DescribeStreamPackageChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageChannelsResponse"/></returns>
+        public DescribeStreamPackageChannelsResponse DescribeStreamPackageChannelsSync(DescribeStreamPackageChannelsRequest req)
         {
-             JsonResponseModel<DescribeMediaPackageChannelsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamPackageChannelsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaPackageChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaPackageChannelsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamPackageChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,17 +293,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to modify the information of a media package channel.
+        /// This API is used to modify a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaPackageChannelRequest"/></param>
-        /// <returns><see cref="ModifyMediaPackageChannelResponse"/></returns>
-        public async Task<ModifyMediaPackageChannelResponse> ModifyMediaPackageChannel(ModifyMediaPackageChannelRequest req)
+        /// <param name="req"><see cref="ModifyStreamPackageChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageChannelResponse"/></returns>
+        public async Task<ModifyStreamPackageChannelResponse> ModifyStreamPackageChannel(ModifyStreamPackageChannelRequest req)
         {
-             JsonResponseModel<ModifyMediaPackageChannelResponse> rsp = null;
+             JsonResponseModel<ModifyStreamPackageChannelResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaPackageChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyStreamPackageChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -313,17 +313,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to modify the information of a media package channel.
+        /// This API is used to modify a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaPackageChannelRequest"/></param>
-        /// <returns><see cref="ModifyMediaPackageChannelResponse"/></returns>
-        public ModifyMediaPackageChannelResponse ModifyMediaPackageChannelSync(ModifyMediaPackageChannelRequest req)
+        /// <param name="req"><see cref="ModifyStreamPackageChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageChannelResponse"/></returns>
+        public ModifyStreamPackageChannelResponse ModifyStreamPackageChannelSync(ModifyStreamPackageChannelRequest req)
         {
-             JsonResponseModel<ModifyMediaPackageChannelResponse> rsp = null;
+             JsonResponseModel<ModifyStreamPackageChannelResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaPackageChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamPackageChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,17 +333,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to modify an endpoint of a media package channel.
+        /// This API is used to modify an endpoint of a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaPackageChannelEndpointRequest"/></param>
-        /// <returns><see cref="ModifyMediaPackageChannelEndpointResponse"/></returns>
-        public async Task<ModifyMediaPackageChannelEndpointResponse> ModifyMediaPackageChannelEndpoint(ModifyMediaPackageChannelEndpointRequest req)
+        /// <param name="req"><see cref="ModifyStreamPackageChannelEndpointRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageChannelEndpointResponse"/></returns>
+        public async Task<ModifyStreamPackageChannelEndpointResponse> ModifyStreamPackageChannelEndpoint(ModifyStreamPackageChannelEndpointRequest req)
         {
-             JsonResponseModel<ModifyMediaPackageChannelEndpointResponse> rsp = null;
+             JsonResponseModel<ModifyStreamPackageChannelEndpointResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaPackageChannelEndpoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaPackageChannelEndpointResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyStreamPackageChannelEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelEndpointResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -353,17 +353,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to modify an endpoint of a media package channel.
+        /// This API is used to modify an endpoint of a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaPackageChannelEndpointRequest"/></param>
-        /// <returns><see cref="ModifyMediaPackageChannelEndpointResponse"/></returns>
-        public ModifyMediaPackageChannelEndpointResponse ModifyMediaPackageChannelEndpointSync(ModifyMediaPackageChannelEndpointRequest req)
+        /// <param name="req"><see cref="ModifyStreamPackageChannelEndpointRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageChannelEndpointResponse"/></returns>
+        public ModifyStreamPackageChannelEndpointResponse ModifyStreamPackageChannelEndpointSync(ModifyStreamPackageChannelEndpointRequest req)
         {
-             JsonResponseModel<ModifyMediaPackageChannelEndpointResponse> rsp = null;
+             JsonResponseModel<ModifyStreamPackageChannelEndpointResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaPackageChannelEndpoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaPackageChannelEndpointResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamPackageChannelEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelEndpointResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -373,17 +373,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to modify the input authentication information of a media package channel.
+        /// This API is used to modify the input authentication information of a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaPackageChannelInputAuthInfoRequest"/></param>
-        /// <returns><see cref="ModifyMediaPackageChannelInputAuthInfoResponse"/></returns>
-        public async Task<ModifyMediaPackageChannelInputAuthInfoResponse> ModifyMediaPackageChannelInputAuthInfo(ModifyMediaPackageChannelInputAuthInfoRequest req)
+        /// <param name="req"><see cref="ModifyStreamPackageChannelInputAuthInfoRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageChannelInputAuthInfoResponse"/></returns>
+        public async Task<ModifyStreamPackageChannelInputAuthInfoResponse> ModifyStreamPackageChannelInputAuthInfo(ModifyStreamPackageChannelInputAuthInfoRequest req)
         {
-             JsonResponseModel<ModifyMediaPackageChannelInputAuthInfoResponse> rsp = null;
+             JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaPackageChannelInputAuthInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaPackageChannelInputAuthInfoResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyStreamPackageChannelInputAuthInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -393,17 +393,17 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// This API is used to modify the input authentication information of a media package channel.
+        /// This API is used to modify the input authentication information of a StreamPackage channel.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaPackageChannelInputAuthInfoRequest"/></param>
-        /// <returns><see cref="ModifyMediaPackageChannelInputAuthInfoResponse"/></returns>
-        public ModifyMediaPackageChannelInputAuthInfoResponse ModifyMediaPackageChannelInputAuthInfoSync(ModifyMediaPackageChannelInputAuthInfoRequest req)
+        /// <param name="req"><see cref="ModifyStreamPackageChannelInputAuthInfoRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageChannelInputAuthInfoResponse"/></returns>
+        public ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfoSync(ModifyStreamPackageChannelInputAuthInfoRequest req)
         {
-             JsonResponseModel<ModifyMediaPackageChannelInputAuthInfoResponse> rsp = null;
+             JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaPackageChannelInputAuthInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaPackageChannelInputAuthInfoResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamPackageChannelInputAuthInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

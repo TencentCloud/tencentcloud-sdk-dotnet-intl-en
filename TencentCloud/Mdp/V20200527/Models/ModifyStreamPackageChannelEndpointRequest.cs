@@ -21,39 +21,32 @@ namespace TencentCloud.Mdp.V20200527.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChannelInfo : AbstractModel
+    public class ModifyStreamPackageChannelEndpointRequest : AbstractModel
     {
         
         /// <summary>
-        /// Channel ID.
+        /// Channel ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Channel name.
+        /// Channel endpoint URL
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// New endpoint name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Channel protocol.
+        /// New channel authentication information
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
-
-        /// <summary>
-        /// Channel input and output.
-        /// </summary>
-        [JsonProperty("Points")]
-        public PointInfo Points{ get; set; }
-
-        /// <summary>
-        /// Cache configuration
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("CacheInfo")]
-        public CacheInfo CacheInfo{ get; set; }
+        [JsonProperty("AuthInfo")]
+        public EndpointAuthInfo AuthInfo{ get; set; }
 
 
         /// <summary>
@@ -62,10 +55,9 @@ namespace TencentCloud.Mdp.V20200527.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamObj(map, prefix + "Points.", this.Points);
-            this.SetParamObj(map, prefix + "CacheInfo.", this.CacheInfo);
+            this.SetParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
         }
     }
 }

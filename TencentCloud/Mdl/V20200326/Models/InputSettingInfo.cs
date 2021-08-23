@@ -52,6 +52,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("InputAddress")]
         public string InputAddress{ get; set; }
 
+        /// <summary>
+        /// Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "SourceUrl", this.SourceUrl);
             this.SetParamSimple(map, prefix + "InputAddress", this.InputAddress);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }
     }
 }

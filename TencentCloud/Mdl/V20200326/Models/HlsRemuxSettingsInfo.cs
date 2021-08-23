@@ -48,6 +48,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("PdtDuration")]
         public ulong? PdtDuration{ get; set; }
 
+        /// <summary>
+        /// Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public string Scheme{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "SegmentNumber", this.SegmentNumber);
             this.SetParamSimple(map, prefix + "PdtInsertion", this.PdtInsertion);
             this.SetParamSimple(map, prefix + "PdtDuration", this.PdtDuration);
+            this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
         }
     }
 }

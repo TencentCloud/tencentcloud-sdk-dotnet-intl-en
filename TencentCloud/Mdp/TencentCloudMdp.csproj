@@ -45,29 +45,31 @@
 
   <ItemGroup>
     <Compile Include="V20200527\MdpClient.cs" />
+    <Compile Include="V20200527\Models\CacheInfo.cs" />
+    <Compile Include="V20200527\Models\CacheInfoInfo.cs" />
     <Compile Include="V20200527\Models\ChannelInfo.cs" />
-    <Compile Include="V20200527\Models\CreateMediaPackageChannelEndpointRequest.cs" />
-    <Compile Include="V20200527\Models\CreateMediaPackageChannelEndpointResponse.cs" />
-    <Compile Include="V20200527\Models\CreateMediaPackageChannelRequest.cs" />
-    <Compile Include="V20200527\Models\CreateMediaPackageChannelResponse.cs" />
-    <Compile Include="V20200527\Models\DeleteMediaPackageChannelEndpointsRequest.cs" />
-    <Compile Include="V20200527\Models\DeleteMediaPackageChannelEndpointsResponse.cs" />
-    <Compile Include="V20200527\Models\DeleteMediaPackageChannelsRequest.cs" />
-    <Compile Include="V20200527\Models\DeleteMediaPackageChannelsResponse.cs" />
-    <Compile Include="V20200527\Models\DescribeMediaPackageChannelRequest.cs" />
-    <Compile Include="V20200527\Models\DescribeMediaPackageChannelResponse.cs" />
-    <Compile Include="V20200527\Models\DescribeMediaPackageChannelsRequest.cs" />
-    <Compile Include="V20200527\Models\DescribeMediaPackageChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageChannelRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageChannelResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageChannelsRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageChannelRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageChannelResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageChannelsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageChannelsResponse.cs" />
     <Compile Include="V20200527\Models\EndpointAuthInfo.cs" />
     <Compile Include="V20200527\Models\EndpointInfo.cs" />
     <Compile Include="V20200527\Models\InputAuthInfo.cs" />
     <Compile Include="V20200527\Models\InputInfo.cs" />
-    <Compile Include="V20200527\Models\ModifyMediaPackageChannelEndpointRequest.cs" />
-    <Compile Include="V20200527\Models\ModifyMediaPackageChannelEndpointResponse.cs" />
-    <Compile Include="V20200527\Models\ModifyMediaPackageChannelInputAuthInfoRequest.cs" />
-    <Compile Include="V20200527\Models\ModifyMediaPackageChannelInputAuthInfoResponse.cs" />
-    <Compile Include="V20200527\Models\ModifyMediaPackageChannelRequest.cs" />
-    <Compile Include="V20200527\Models\ModifyMediaPackageChannelResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageChannelEndpointRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageChannelEndpointResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageChannelInputAuthInfoRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageChannelInputAuthInfoResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageChannelRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageChannelResponse.cs" />
     <Compile Include="V20200527\Models\PointInfo.cs" />
   </ItemGroup>
 </Project>

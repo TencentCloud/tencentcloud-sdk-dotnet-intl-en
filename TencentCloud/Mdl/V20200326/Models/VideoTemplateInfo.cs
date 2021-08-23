@@ -72,6 +72,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("BitrateCompressionRatio")]
         public ulong? BitrateCompressionRatio{ get; set; }
 
+        /// <summary>
+        /// Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+        /// </summary>
+        [JsonProperty("RateControlMode")]
+        public string RateControlMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
             this.SetParamSimple(map, prefix + "TopSpeed", this.TopSpeed);
             this.SetParamSimple(map, prefix + "BitrateCompressionRatio", this.BitrateCompressionRatio);
+            this.SetParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
         }
     }
 }

@@ -53,17 +53,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to create a media channel.
+        /// This API is used to create a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="CreateMediaLiveChannelResponse"/></returns>
-        public async Task<CreateMediaLiveChannelResponse> CreateMediaLiveChannel(CreateMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="CreateStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamLiveChannelResponse"/></returns>
+        public async Task<CreateStreamLiveChannelResponse> CreateStreamLiveChannel(CreateStreamLiveChannelRequest req)
         {
-             JsonResponseModel<CreateMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<CreateStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaLiveChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLiveChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -73,17 +73,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to create a media channel.
+        /// This API is used to create a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="CreateMediaLiveChannelResponse"/></returns>
-        public CreateMediaLiveChannelResponse CreateMediaLiveChannelSync(CreateMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="CreateStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamLiveChannelResponse"/></returns>
+        public CreateStreamLiveChannelResponse CreateStreamLiveChannelSync(CreateStreamLiveChannelRequest req)
         {
-             JsonResponseModel<CreateMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<CreateStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaLiveChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLiveChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -93,17 +93,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to create a media input.
+        /// This API is used to create a StreamLive input.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaLiveInputRequest"/></param>
-        /// <returns><see cref="CreateMediaLiveInputResponse"/></returns>
-        public async Task<CreateMediaLiveInputResponse> CreateMediaLiveInput(CreateMediaLiveInputRequest req)
+        /// <param name="req"><see cref="CreateStreamLiveInputRequest"/></param>
+        /// <returns><see cref="CreateStreamLiveInputResponse"/></returns>
+        public async Task<CreateStreamLiveInputResponse> CreateStreamLiveInput(CreateStreamLiveInputRequest req)
         {
-             JsonResponseModel<CreateMediaLiveInputResponse> rsp = null;
+             JsonResponseModel<CreateStreamLiveInputResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateMediaLiveInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaLiveInputResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateStreamLiveInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLiveInputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -113,17 +113,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to create a media input.
+        /// This API is used to create a StreamLive input.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaLiveInputRequest"/></param>
-        /// <returns><see cref="CreateMediaLiveInputResponse"/></returns>
-        public CreateMediaLiveInputResponse CreateMediaLiveInputSync(CreateMediaLiveInputRequest req)
+        /// <param name="req"><see cref="CreateStreamLiveInputRequest"/></param>
+        /// <returns><see cref="CreateStreamLiveInputResponse"/></returns>
+        public CreateStreamLiveInputResponse CreateStreamLiveInputSync(CreateStreamLiveInputRequest req)
         {
-             JsonResponseModel<CreateMediaLiveInputResponse> rsp = null;
+             JsonResponseModel<CreateStreamLiveInputResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateMediaLiveInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaLiveInputResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLiveInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLiveInputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -133,17 +133,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to create an input security group. Up to 5 ones can be created.
+        /// This API is used to create an input security group. Up to 5 security groups are allowed.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaLiveInputSecurityGroupRequest"/></param>
-        /// <returns><see cref="CreateMediaLiveInputSecurityGroupResponse"/></returns>
-        public async Task<CreateMediaLiveInputSecurityGroupResponse> CreateMediaLiveInputSecurityGroup(CreateMediaLiveInputSecurityGroupRequest req)
+        /// <param name="req"><see cref="CreateStreamLiveInputSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateStreamLiveInputSecurityGroupResponse"/></returns>
+        public async Task<CreateStreamLiveInputSecurityGroupResponse> CreateStreamLiveInputSecurityGroup(CreateStreamLiveInputSecurityGroupRequest req)
         {
-             JsonResponseModel<CreateMediaLiveInputSecurityGroupResponse> rsp = null;
+             JsonResponseModel<CreateStreamLiveInputSecurityGroupResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateMediaLiveInputSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaLiveInputSecurityGroupResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateStreamLiveInputSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLiveInputSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -153,17 +153,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to create an input security group. Up to 5 ones can be created.
+        /// This API is used to create an input security group. Up to 5 security groups are allowed.
         /// </summary>
-        /// <param name="req"><see cref="CreateMediaLiveInputSecurityGroupRequest"/></param>
-        /// <returns><see cref="CreateMediaLiveInputSecurityGroupResponse"/></returns>
-        public CreateMediaLiveInputSecurityGroupResponse CreateMediaLiveInputSecurityGroupSync(CreateMediaLiveInputSecurityGroupRequest req)
+        /// <param name="req"><see cref="CreateStreamLiveInputSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateStreamLiveInputSecurityGroupResponse"/></returns>
+        public CreateStreamLiveInputSecurityGroupResponse CreateStreamLiveInputSecurityGroupSync(CreateStreamLiveInputSecurityGroupRequest req)
         {
-             JsonResponseModel<CreateMediaLiveInputSecurityGroupResponse> rsp = null;
+             JsonResponseModel<CreateStreamLiveInputSecurityGroupResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateMediaLiveInputSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaLiveInputSecurityGroupResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLiveInputSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLiveInputSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -173,17 +173,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to delete a MediaLive channel.
+        /// This API is used to create an event in the plan.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="DeleteMediaLiveChannelResponse"/></returns>
-        public async Task<DeleteMediaLiveChannelResponse> DeleteMediaLiveChannel(DeleteMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="CreateStreamLivePlanRequest"/></param>
+        /// <returns><see cref="CreateStreamLivePlanResponse"/></returns>
+        public async Task<CreateStreamLivePlanResponse> CreateStreamLivePlan(CreateStreamLivePlanRequest req)
         {
-             JsonResponseModel<DeleteMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<CreateStreamLivePlanResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaLiveChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateStreamLivePlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLivePlanResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -193,17 +193,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to delete a MediaLive channel.
+        /// This API is used to create an event in the plan.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="DeleteMediaLiveChannelResponse"/></returns>
-        public DeleteMediaLiveChannelResponse DeleteMediaLiveChannelSync(DeleteMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="CreateStreamLivePlanRequest"/></param>
+        /// <returns><see cref="CreateStreamLivePlanResponse"/></returns>
+        public CreateStreamLivePlanResponse CreateStreamLivePlanSync(CreateStreamLivePlanRequest req)
         {
-             JsonResponseModel<DeleteMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<CreateStreamLivePlanResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaLiveChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLivePlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLivePlanResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,17 +213,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to delete a media input.
+        /// This API is used to delete a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaLiveInputRequest"/></param>
-        /// <returns><see cref="DeleteMediaLiveInputResponse"/></returns>
-        public async Task<DeleteMediaLiveInputResponse> DeleteMediaLiveInput(DeleteMediaLiveInputRequest req)
+        /// <param name="req"><see cref="DeleteStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamLiveChannelResponse"/></returns>
+        public async Task<DeleteStreamLiveChannelResponse> DeleteStreamLiveChannel(DeleteStreamLiveChannelRequest req)
         {
-             JsonResponseModel<DeleteMediaLiveInputResponse> rsp = null;
+             JsonResponseModel<DeleteStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteMediaLiveInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaLiveInputResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLiveChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -233,17 +233,57 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to delete a media input.
+        /// This API is used to delete a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaLiveInputRequest"/></param>
-        /// <returns><see cref="DeleteMediaLiveInputResponse"/></returns>
-        public DeleteMediaLiveInputResponse DeleteMediaLiveInputSync(DeleteMediaLiveInputRequest req)
+        /// <param name="req"><see cref="DeleteStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamLiveChannelResponse"/></returns>
+        public DeleteStreamLiveChannelResponse DeleteStreamLiveChannelSync(DeleteStreamLiveChannelRequest req)
         {
-             JsonResponseModel<DeleteMediaLiveInputResponse> rsp = null;
+             JsonResponseModel<DeleteStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteMediaLiveInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaLiveInputResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a StreamLive input.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLiveInputRequest"/></param>
+        /// <returns><see cref="DeleteStreamLiveInputResponse"/></returns>
+        public async Task<DeleteStreamLiveInputResponse> DeleteStreamLiveInput(DeleteStreamLiveInputRequest req)
+        {
+             JsonResponseModel<DeleteStreamLiveInputResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteStreamLiveInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLiveInputResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a StreamLive input.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLiveInputRequest"/></param>
+        /// <returns><see cref="DeleteStreamLiveInputResponse"/></returns>
+        public DeleteStreamLiveInputResponse DeleteStreamLiveInputSync(DeleteStreamLiveInputRequest req)
+        {
+             JsonResponseModel<DeleteStreamLiveInputResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamLiveInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLiveInputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -255,15 +295,15 @@ namespace TencentCloud.Mdl.V20200326
         /// <summary>
         /// This API is used to delete an input security group.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaLiveInputSecurityGroupRequest"/></param>
-        /// <returns><see cref="DeleteMediaLiveInputSecurityGroupResponse"/></returns>
-        public async Task<DeleteMediaLiveInputSecurityGroupResponse> DeleteMediaLiveInputSecurityGroup(DeleteMediaLiveInputSecurityGroupRequest req)
+        /// <param name="req"><see cref="DeleteStreamLiveInputSecurityGroupRequest"/></param>
+        /// <returns><see cref="DeleteStreamLiveInputSecurityGroupResponse"/></returns>
+        public async Task<DeleteStreamLiveInputSecurityGroupResponse> DeleteStreamLiveInputSecurityGroup(DeleteStreamLiveInputSecurityGroupRequest req)
         {
-             JsonResponseModel<DeleteMediaLiveInputSecurityGroupResponse> rsp = null;
+             JsonResponseModel<DeleteStreamLiveInputSecurityGroupResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DeleteMediaLiveInputSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaLiveInputSecurityGroupResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteStreamLiveInputSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLiveInputSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -275,15 +315,15 @@ namespace TencentCloud.Mdl.V20200326
         /// <summary>
         /// This API is used to delete an input security group.
         /// </summary>
-        /// <param name="req"><see cref="DeleteMediaLiveInputSecurityGroupRequest"/></param>
-        /// <returns><see cref="DeleteMediaLiveInputSecurityGroupResponse"/></returns>
-        public DeleteMediaLiveInputSecurityGroupResponse DeleteMediaLiveInputSecurityGroupSync(DeleteMediaLiveInputSecurityGroupRequest req)
+        /// <param name="req"><see cref="DeleteStreamLiveInputSecurityGroupRequest"/></param>
+        /// <returns><see cref="DeleteStreamLiveInputSecurityGroupResponse"/></returns>
+        public DeleteStreamLiveInputSecurityGroupResponse DeleteStreamLiveInputSecurityGroupSync(DeleteStreamLiveInputSecurityGroupRequest req)
         {
-             JsonResponseModel<DeleteMediaLiveInputSecurityGroupResponse> rsp = null;
+             JsonResponseModel<DeleteStreamLiveInputSecurityGroupResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteMediaLiveInputSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaLiveInputSecurityGroupResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamLiveInputSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLiveInputSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,17 +333,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the information of a MediaLive channel.
+        /// This API is used to query a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelResponse"/></returns>
-        public async Task<DescribeMediaLiveChannelResponse> DescribeMediaLiveChannel(DescribeMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelResponse"/></returns>
+        public async Task<DescribeStreamLiveChannelResponse> DescribeStreamLiveChannel(DescribeStreamLiveChannelRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -313,17 +353,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the information of a MediaLive channel.
+        /// This API is used to query a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelResponse"/></returns>
-        public DescribeMediaLiveChannelResponse DescribeMediaLiveChannelSync(DescribeMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelResponse"/></returns>
+        public DescribeStreamLiveChannelResponse DescribeStreamLiveChannelSync(DescribeStreamLiveChannelRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,17 +373,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the channel alarm information.
+        /// This API is used to query the alarm information of a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelAlertsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelAlertsResponse"/></returns>
-        public async Task<DescribeMediaLiveChannelAlertsResponse> DescribeMediaLiveChannelAlerts(DescribeMediaLiveChannelAlertsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelAlertsResponse"/></returns>
+        public async Task<DescribeStreamLiveChannelAlertsResponse> DescribeStreamLiveChannelAlerts(DescribeStreamLiveChannelAlertsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelAlertsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelAlertsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannelAlerts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelAlertsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveChannelAlerts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelAlertsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -353,17 +393,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the channel alarm information.
+        /// This API is used to query the alarm information of a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelAlertsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelAlertsResponse"/></returns>
-        public DescribeMediaLiveChannelAlertsResponse DescribeMediaLiveChannelAlertsSync(DescribeMediaLiveChannelAlertsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelAlertsResponse"/></returns>
+        public DescribeStreamLiveChannelAlertsResponse DescribeStreamLiveChannelAlertsSync(DescribeStreamLiveChannelAlertsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelAlertsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelAlertsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannelAlerts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelAlertsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveChannelAlerts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelAlertsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -373,17 +413,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the input statistics.
+        /// This API is used to query input statistics.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelInputStatisticsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelInputStatisticsResponse"/></returns>
-        public async Task<DescribeMediaLiveChannelInputStatisticsResponse> DescribeMediaLiveChannelInputStatistics(DescribeMediaLiveChannelInputStatisticsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelInputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelInputStatisticsResponse"/></returns>
+        public async Task<DescribeStreamLiveChannelInputStatisticsResponse> DescribeStreamLiveChannelInputStatistics(DescribeStreamLiveChannelInputStatisticsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelInputStatisticsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannelInputStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveChannelInputStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelInputStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -393,17 +433,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the input statistics.
+        /// This API is used to query input statistics.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelInputStatisticsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelInputStatisticsResponse"/></returns>
-        public DescribeMediaLiveChannelInputStatisticsResponse DescribeMediaLiveChannelInputStatisticsSync(DescribeMediaLiveChannelInputStatisticsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelInputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelInputStatisticsResponse"/></returns>
+        public DescribeStreamLiveChannelInputStatisticsResponse DescribeStreamLiveChannelInputStatisticsSync(DescribeStreamLiveChannelInputStatisticsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelInputStatisticsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannelInputStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveChannelInputStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelInputStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -413,17 +453,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query MediaLive channel logs, such as push event logs.
+        /// This API is used to query StreamLive channel logs, such as push event logs.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelLogsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelLogsResponse"/></returns>
-        public async Task<DescribeMediaLiveChannelLogsResponse> DescribeMediaLiveChannelLogs(DescribeMediaLiveChannelLogsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelLogsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelLogsResponse"/></returns>
+        public async Task<DescribeStreamLiveChannelLogsResponse> DescribeStreamLiveChannelLogs(DescribeStreamLiveChannelLogsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelLogsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelLogsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannelLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelLogsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveChannelLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -433,17 +473,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query MediaLive channel logs, such as push event logs.
+        /// This API is used to query StreamLive channel logs, such as push event logs.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelLogsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelLogsResponse"/></returns>
-        public DescribeMediaLiveChannelLogsResponse DescribeMediaLiveChannelLogsSync(DescribeMediaLiveChannelLogsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelLogsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelLogsResponse"/></returns>
+        public DescribeStreamLiveChannelLogsResponse DescribeStreamLiveChannelLogsSync(DescribeStreamLiveChannelLogsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelLogsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelLogsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannelLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelLogsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveChannelLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -453,17 +493,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the output statistics of a channel.
+        /// This API is used to query the output statistics of a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelOutputStatisticsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelOutputStatisticsResponse"/></returns>
-        public async Task<DescribeMediaLiveChannelOutputStatisticsResponse> DescribeMediaLiveChannelOutputStatistics(DescribeMediaLiveChannelOutputStatisticsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelOutputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelOutputStatisticsResponse"/></returns>
+        public async Task<DescribeStreamLiveChannelOutputStatisticsResponse> DescribeStreamLiveChannelOutputStatistics(DescribeStreamLiveChannelOutputStatisticsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelOutputStatisticsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannelOutputStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveChannelOutputStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelOutputStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -473,17 +513,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the output statistics of a channel.
+        /// This API is used to query the output statistics of a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelOutputStatisticsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelOutputStatisticsResponse"/></returns>
-        public DescribeMediaLiveChannelOutputStatisticsResponse DescribeMediaLiveChannelOutputStatisticsSync(DescribeMediaLiveChannelOutputStatisticsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelOutputStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelOutputStatisticsResponse"/></returns>
+        public DescribeStreamLiveChannelOutputStatisticsResponse DescribeStreamLiveChannelOutputStatisticsSync(DescribeStreamLiveChannelOutputStatisticsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelOutputStatisticsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannelOutputStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveChannelOutputStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelOutputStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,17 +533,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the information of MediaLive channels in batches.
+        /// This API is used to query StreamLive channels in batches.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelsResponse"/></returns>
-        public async Task<DescribeMediaLiveChannelsResponse> DescribeMediaLiveChannels(DescribeMediaLiveChannelsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelsResponse"/></returns>
+        public async Task<DescribeStreamLiveChannelsResponse> DescribeStreamLiveChannels(DescribeStreamLiveChannelsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -513,17 +553,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the information of MediaLive channels in batches.
+        /// This API is used to query StreamLive channels in batches.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveChannelsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveChannelsResponse"/></returns>
-        public DescribeMediaLiveChannelsResponse DescribeMediaLiveChannelsSync(DescribeMediaLiveChannelsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveChannelsResponse"/></returns>
+        public DescribeStreamLiveChannelsResponse DescribeStreamLiveChannelsSync(DescribeStreamLiveChannelsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveChannelsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveChannelsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveChannelsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveChannelsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -533,17 +573,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query a media input.
+        /// This API is used to query a StreamLive input.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveInputRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveInputResponse"/></returns>
-        public async Task<DescribeMediaLiveInputResponse> DescribeMediaLiveInput(DescribeMediaLiveInputRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveInputRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveInputResponse"/></returns>
+        public async Task<DescribeStreamLiveInputResponse> DescribeStreamLiveInput(DescribeStreamLiveInputRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveInputResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveInputResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveInputResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveInputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -553,37 +593,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query a media input.
+        /// This API is used to query a StreamLive input.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveInputRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveInputResponse"/></returns>
-        public DescribeMediaLiveInputResponse DescribeMediaLiveInputSync(DescribeMediaLiveInputRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveInputRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveInputResponse"/></returns>
+        public DescribeStreamLiveInputResponse DescribeStreamLiveInputSync(DescribeStreamLiveInputRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveInputResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveInputResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveInputResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query an input security group.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveInputSecurityGroupRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveInputSecurityGroupResponse"/></returns>
-        public async Task<DescribeMediaLiveInputSecurityGroupResponse> DescribeMediaLiveInputSecurityGroup(DescribeMediaLiveInputSecurityGroupRequest req)
-        {
-             JsonResponseModel<DescribeMediaLiveInputSecurityGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveInputSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveInputSecurityGroupResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveInputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -595,15 +615,15 @@ namespace TencentCloud.Mdl.V20200326
         /// <summary>
         /// This API is used to query an input security group.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveInputSecurityGroupRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveInputSecurityGroupResponse"/></returns>
-        public DescribeMediaLiveInputSecurityGroupResponse DescribeMediaLiveInputSecurityGroupSync(DescribeMediaLiveInputSecurityGroupRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveInputSecurityGroupRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveInputSecurityGroupResponse"/></returns>
+        public async Task<DescribeStreamLiveInputSecurityGroupResponse> DescribeStreamLiveInputSecurityGroup(DescribeStreamLiveInputSecurityGroupRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveInputSecurityGroupResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveInputSecurityGroupResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveInputSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveInputSecurityGroupResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveInputSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveInputSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -613,17 +633,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the information of input security groups in batches.
+        /// This API is used to query an input security group.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveInputSecurityGroupsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveInputSecurityGroupsResponse"/></returns>
-        public async Task<DescribeMediaLiveInputSecurityGroupsResponse> DescribeMediaLiveInputSecurityGroups(DescribeMediaLiveInputSecurityGroupsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveInputSecurityGroupRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveInputSecurityGroupResponse"/></returns>
+        public DescribeStreamLiveInputSecurityGroupResponse DescribeStreamLiveInputSecurityGroupSync(DescribeStreamLiveInputSecurityGroupRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveInputSecurityGroupsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveInputSecurityGroupResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveInputSecurityGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveInputSecurityGroupsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveInputSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveInputSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -633,17 +653,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the information of input security groups in batches.
+        /// This API is used to query input security groups in batches.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveInputSecurityGroupsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveInputSecurityGroupsResponse"/></returns>
-        public DescribeMediaLiveInputSecurityGroupsResponse DescribeMediaLiveInputSecurityGroupsSync(DescribeMediaLiveInputSecurityGroupsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveInputSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveInputSecurityGroupsResponse"/></returns>
+        public async Task<DescribeStreamLiveInputSecurityGroupsResponse> DescribeStreamLiveInputSecurityGroups(DescribeStreamLiveInputSecurityGroupsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveInputSecurityGroupsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveInputSecurityGroupsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveInputSecurityGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveInputSecurityGroupsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveInputSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveInputSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -653,17 +673,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the information of media inputs in batches.
+        /// This API is used to query input security groups in batches.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveInputsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveInputsResponse"/></returns>
-        public async Task<DescribeMediaLiveInputsResponse> DescribeMediaLiveInputs(DescribeMediaLiveInputsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveInputSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveInputSecurityGroupsResponse"/></returns>
+        public DescribeStreamLiveInputSecurityGroupsResponse DescribeStreamLiveInputSecurityGroupsSync(DescribeStreamLiveInputSecurityGroupsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveInputsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveInputSecurityGroupsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeMediaLiveInputs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveInputsResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveInputSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveInputSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -673,17 +693,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to query the information of media inputs in batches.
+        /// This API is used to query StreamLive inputs in batches.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMediaLiveInputsRequest"/></param>
-        /// <returns><see cref="DescribeMediaLiveInputsResponse"/></returns>
-        public DescribeMediaLiveInputsResponse DescribeMediaLiveInputsSync(DescribeMediaLiveInputsRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveInputsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveInputsResponse"/></returns>
+        public async Task<DescribeStreamLiveInputsResponse> DescribeStreamLiveInputs(DescribeStreamLiveInputsRequest req)
         {
-             JsonResponseModel<DescribeMediaLiveInputsResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveInputsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeMediaLiveInputs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaLiveInputsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveInputs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveInputsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -693,17 +713,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to modify the information of a MediaLive channel.
+        /// This API is used to query StreamLive inputs in batches.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="ModifyMediaLiveChannelResponse"/></returns>
-        public async Task<ModifyMediaLiveChannelResponse> ModifyMediaLiveChannel(ModifyMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="DescribeStreamLiveInputsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveInputsResponse"/></returns>
+        public DescribeStreamLiveInputsResponse DescribeStreamLiveInputsSync(DescribeStreamLiveInputsRequest req)
         {
-             JsonResponseModel<ModifyMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLiveInputsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaLiveChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveInputs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveInputsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -713,17 +733,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to modify the information of a MediaLive channel.
+        /// This API is used to query the events in the plan in batches.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="ModifyMediaLiveChannelResponse"/></returns>
-        public ModifyMediaLiveChannelResponse ModifyMediaLiveChannelSync(ModifyMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="DescribeStreamLivePlansRequest"/></param>
+        /// <returns><see cref="DescribeStreamLivePlansResponse"/></returns>
+        public async Task<DescribeStreamLivePlansResponse> DescribeStreamLivePlans(DescribeStreamLivePlansRequest req)
         {
-             JsonResponseModel<ModifyMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLivePlansResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaLiveChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLivePlans");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLivePlansResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -733,17 +753,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to update a media input.
+        /// This API is used to query the events in the plan in batches.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaLiveInputRequest"/></param>
-        /// <returns><see cref="ModifyMediaLiveInputResponse"/></returns>
-        public async Task<ModifyMediaLiveInputResponse> ModifyMediaLiveInput(ModifyMediaLiveInputRequest req)
+        /// <param name="req"><see cref="DescribeStreamLivePlansRequest"/></param>
+        /// <returns><see cref="DescribeStreamLivePlansResponse"/></returns>
+        public DescribeStreamLivePlansResponse DescribeStreamLivePlansSync(DescribeStreamLivePlansRequest req)
         {
-             JsonResponseModel<ModifyMediaLiveInputResponse> rsp = null;
+             JsonResponseModel<DescribeStreamLivePlansResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaLiveInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaLiveInputResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLivePlans");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLivePlansResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -753,17 +773,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to update a media input.
+        /// This API is used to modify a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaLiveInputRequest"/></param>
-        /// <returns><see cref="ModifyMediaLiveInputResponse"/></returns>
-        public ModifyMediaLiveInputResponse ModifyMediaLiveInputSync(ModifyMediaLiveInputRequest req)
+        /// <param name="req"><see cref="ModifyStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamLiveChannelResponse"/></returns>
+        public async Task<ModifyStreamLiveChannelResponse> ModifyStreamLiveChannel(ModifyStreamLiveChannelRequest req)
         {
-             JsonResponseModel<ModifyMediaLiveInputResponse> rsp = null;
+             JsonResponseModel<ModifyStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaLiveInput");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaLiveInputResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -773,17 +793,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to update an input security group.
+        /// This API is used to modify a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaLiveInputSecurityGroupRequest"/></param>
-        /// <returns><see cref="ModifyMediaLiveInputSecurityGroupResponse"/></returns>
-        public async Task<ModifyMediaLiveInputSecurityGroupResponse> ModifyMediaLiveInputSecurityGroup(ModifyMediaLiveInputSecurityGroupRequest req)
+        /// <param name="req"><see cref="ModifyStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamLiveChannelResponse"/></returns>
+        public ModifyStreamLiveChannelResponse ModifyStreamLiveChannelSync(ModifyStreamLiveChannelRequest req)
         {
-             JsonResponseModel<ModifyMediaLiveInputSecurityGroupResponse> rsp = null;
+             JsonResponseModel<ModifyStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyMediaLiveInputSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaLiveInputSecurityGroupResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -793,17 +813,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to update an input security group.
+        /// This API is used to modify a StreamLive input.
         /// </summary>
-        /// <param name="req"><see cref="ModifyMediaLiveInputSecurityGroupRequest"/></param>
-        /// <returns><see cref="ModifyMediaLiveInputSecurityGroupResponse"/></returns>
-        public ModifyMediaLiveInputSecurityGroupResponse ModifyMediaLiveInputSecurityGroupSync(ModifyMediaLiveInputSecurityGroupRequest req)
+        /// <param name="req"><see cref="ModifyStreamLiveInputRequest"/></param>
+        /// <returns><see cref="ModifyStreamLiveInputResponse"/></returns>
+        public async Task<ModifyStreamLiveInputResponse> ModifyStreamLiveInput(ModifyStreamLiveInputRequest req)
         {
-             JsonResponseModel<ModifyMediaLiveInputSecurityGroupResponse> rsp = null;
+             JsonResponseModel<ModifyStreamLiveInputResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyMediaLiveInputSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaLiveInputSecurityGroupResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyStreamLiveInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveInputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,17 +833,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to start a MediaLive channel.
+        /// This API is used to modify a StreamLive input.
         /// </summary>
-        /// <param name="req"><see cref="StartMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="StartMediaLiveChannelResponse"/></returns>
-        public async Task<StartMediaLiveChannelResponse> StartMediaLiveChannel(StartMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="ModifyStreamLiveInputRequest"/></param>
+        /// <returns><see cref="ModifyStreamLiveInputResponse"/></returns>
+        public ModifyStreamLiveInputResponse ModifyStreamLiveInputSync(ModifyStreamLiveInputRequest req)
         {
-             JsonResponseModel<StartMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<ModifyStreamLiveInputResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "StartMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMediaLiveChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamLiveInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveInputResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -833,17 +853,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to start a MediaLive channel.
+        /// This API is used to modify an input security group.
         /// </summary>
-        /// <param name="req"><see cref="StartMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="StartMediaLiveChannelResponse"/></returns>
-        public StartMediaLiveChannelResponse StartMediaLiveChannelSync(StartMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="ModifyStreamLiveInputSecurityGroupRequest"/></param>
+        /// <returns><see cref="ModifyStreamLiveInputSecurityGroupResponse"/></returns>
+        public async Task<ModifyStreamLiveInputSecurityGroupResponse> ModifyStreamLiveInputSecurityGroup(ModifyStreamLiveInputSecurityGroupRequest req)
         {
-             JsonResponseModel<StartMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "StartMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMediaLiveChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyStreamLiveInputSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -853,17 +873,17 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to stop a MediaLive channel.
+        /// This API is used to modify an input security group.
         /// </summary>
-        /// <param name="req"><see cref="StopMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="StopMediaLiveChannelResponse"/></returns>
-        public async Task<StopMediaLiveChannelResponse> StopMediaLiveChannel(StopMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="ModifyStreamLiveInputSecurityGroupRequest"/></param>
+        /// <returns><see cref="ModifyStreamLiveInputSecurityGroupResponse"/></returns>
+        public ModifyStreamLiveInputSecurityGroupResponse ModifyStreamLiveInputSecurityGroupSync(ModifyStreamLiveInputSecurityGroupRequest req)
         {
-             JsonResponseModel<StopMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "StopMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMediaLiveChannelResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamLiveInputSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -873,17 +893,77 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
-        /// This API is used to stop a MediaLive channel.
+        /// This API is used to start a StreamLive channel.
         /// </summary>
-        /// <param name="req"><see cref="StopMediaLiveChannelRequest"/></param>
-        /// <returns><see cref="StopMediaLiveChannelResponse"/></returns>
-        public StopMediaLiveChannelResponse StopMediaLiveChannelSync(StopMediaLiveChannelRequest req)
+        /// <param name="req"><see cref="StartStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="StartStreamLiveChannelResponse"/></returns>
+        public async Task<StartStreamLiveChannelResponse> StartStreamLiveChannel(StartStreamLiveChannelRequest req)
         {
-             JsonResponseModel<StopMediaLiveChannelResponse> rsp = null;
+             JsonResponseModel<StartStreamLiveChannelResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "StopMediaLiveChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMediaLiveChannelResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "StartStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartStreamLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a StreamLive channel.
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="StartStreamLiveChannelResponse"/></returns>
+        public StartStreamLiveChannelResponse StartStreamLiveChannelSync(StartStreamLiveChannelRequest req)
+        {
+             JsonResponseModel<StartStreamLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartStreamLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop a StreamLive channel.
+        /// </summary>
+        /// <param name="req"><see cref="StopStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="StopStreamLiveChannelResponse"/></returns>
+        public async Task<StopStreamLiveChannelResponse> StopStreamLiveChannel(StopStreamLiveChannelRequest req)
+        {
+             JsonResponseModel<StopStreamLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopStreamLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop a StreamLive channel.
+        /// </summary>
+        /// <param name="req"><see cref="StopStreamLiveChannelRequest"/></param>
+        /// <returns><see cref="StopStreamLiveChannelResponse"/></returns>
+        public StopStreamLiveChannelResponse StopStreamLiveChannelSync(StopStreamLiveChannelRequest req)
+        {
+             JsonResponseModel<StopStreamLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopStreamLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopStreamLiveChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

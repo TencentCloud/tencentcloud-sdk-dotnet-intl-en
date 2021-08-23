@@ -51,6 +51,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Scte35Settings")]
         public Scte35SettingsInfo Scte35Settings{ get; set; }
 
+        /// <summary>
+        /// Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("AVTemplateNames")]
+        public string[] AVTemplateNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +68,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArraySimple(map, prefix + "AudioTemplateNames.", this.AudioTemplateNames);
             this.SetParamArraySimple(map, prefix + "VideoTemplateNames.", this.VideoTemplateNames);
             this.SetParamObj(map, prefix + "Scte35Settings.", this.Scte35Settings);
+            this.SetParamArraySimple(map, prefix + "AVTemplateNames.", this.AVTemplateNames);
         }
     }
 }
