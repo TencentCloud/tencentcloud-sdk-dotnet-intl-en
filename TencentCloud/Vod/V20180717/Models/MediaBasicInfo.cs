@@ -148,6 +148,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Storage class of a media file:
         /// <li>STANDARD</li>
         /// <li>STANDARD_IA</li>
+        /// <li>ARCHIVE</li>
+        /// <li>DEEP_ARCHIVE</li>
         /// </summary>
         [JsonProperty("StorageClass")]
         public string StorageClass{ get; set; }

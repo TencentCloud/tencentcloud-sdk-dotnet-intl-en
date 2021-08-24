@@ -109,6 +109,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
+        /// Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+        /// <li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public TimeRange ExpireTime{ get; set; }
+
+        /// <summary>
         /// Sorting order.
         /// <li>Valid value of `Sort.Field`: CreateTime.</li>
         /// <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
@@ -159,6 +166,16 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
+
+        /// <summary>
+        /// An array of storage classes. Valid values:
+        /// <li>STANDARD</li>
+        /// <li>STANDARD_IA</li>
+        /// <li>ARCHIVE</li>
+        /// <li>DEEP_ARCHIVE</li>
+        /// </summary>
+        [JsonProperty("StorageClasses")]
+        public string[] StorageClasses{ get; set; }
 
         /// <summary>
         /// (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -225,12 +242,14 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
             this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
             this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
+            this.SetParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);

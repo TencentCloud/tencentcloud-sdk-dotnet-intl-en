@@ -25,10 +25,23 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Full text recognition result set.
+        /// Full-text recognition result set
+        /// <font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskOcrFullTextSegmentItem[] SegmentSet{ get; set; }
+
+        /// <summary>
+        /// URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+        /// </summary>
+        [JsonProperty("SegmentSetFileUrl")]
+        public string SegmentSetFileUrl{ get; set; }
+
+        /// <summary>
+        /// Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+        /// </summary>
+        [JsonProperty("SegmentSetFileUrlExpireTime")]
+        public string SegmentSetFileUrlExpireTime{ get; set; }
 
 
         /// <summary>
@@ -37,6 +50,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+            this.SetParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
+            this.SetParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
         }
     }
 }

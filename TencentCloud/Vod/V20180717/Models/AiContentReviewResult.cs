@@ -26,16 +26,16 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>Porn: porn information detection in image</li>
-        /// <li>Terrorism: terrorism information detection in image</li>
-        /// <li>Political: politically sensitive information detection in image</li>
-        /// <li>Porn.Asr: ASR-based porn information detection in speech</li>
-        /// <li>Porn.Ocr: OCR-based porn information detection in text</li>
-        /// <li>Political.Asr: ASR-based politically sensitive information detection in speech</li>
-        /// <li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
-        /// <li>Terrorism.Ocr: OCR-based terrorism information in text</li>
-        /// <li>Prohibited.Asr: ASR-based prohibited information detection in speech</li>
-        /// <li>Prohibited.Ocr: OCR-based prohibited information detection in text</li>
+        /// <li>`Porn`: porn information recognition in images</li>
+        /// <li>`Terrorism`: terrorism information recognition in images</li>
+        /// <li>`Political`: politically sensitive information recognition in images</li>
+        /// <li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
+        /// <li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
+        /// <li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
+        /// <li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
+        /// <li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
+        /// <li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
+        /// <li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
