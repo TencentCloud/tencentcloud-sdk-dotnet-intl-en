@@ -45,6 +45,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
+        /// <summary>
+        /// Number of sound channels, e.g., 2
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Channel")]
+        public long? Channel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
+            this.SetParamSimple(map, prefix + "Channel", this.Channel);
         }
     }
 }

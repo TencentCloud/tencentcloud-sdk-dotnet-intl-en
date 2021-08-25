@@ -59,6 +59,27 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
+        /// <summary>
+        /// Color primaries
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColorPrimaries")]
+        public string ColorPrimaries{ get; set; }
+
+        /// <summary>
+        /// Color space
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColorSpace")]
+        public string ColorSpace{ get; set; }
+
+        /// <summary>
+        /// Color transfer
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColorTransfer")]
+        public string ColorTransfer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +91,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
+            this.SetParamSimple(map, prefix + "ColorPrimaries", this.ColorPrimaries);
+            this.SetParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
+            this.SetParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
         }
     }
 }
