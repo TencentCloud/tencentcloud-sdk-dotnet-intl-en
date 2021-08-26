@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.265</VersionPrefix>
+    <VersionPrefix>3.0.266</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5595,6 +5595,63 @@
     <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\SecurityPolicy.cs" />
+    <Compile Include="Tem\V20210701\TemClient.cs" />
+    <Compile Include="Tem\V20210701\Models\CosToken.cs" />
+    <Compile Include="Tem\V20210701\Models\CreateApplicationRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\CreateApplicationResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\CreateCosTokenRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\CreateCosTokenResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\CreateEnvironmentRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\CreateEnvironmentResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\CreateResourceRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\CreateResourceResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\CronHorizontalAutoscaler.cs" />
+    <Compile Include="Tem\V20210701\Models\CronHorizontalAutoscalerSchedule.cs" />
+    <Compile Include="Tem\V20210701\Models\DeleteIngressRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DeleteIngressResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\DeployApplicationRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DeployApplicationResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\DeployStrategyConf.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeApplicationPodsRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeApplicationPodsResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeEnvironmentsRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeEnvironmentsResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeIngressRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeIngressResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeIngressesRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeIngressesResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeRelatedIngressesRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeRelatedIngressesResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeRunPodPage.cs" />
+    <Compile Include="Tem\V20210701\Models\EksService.cs" />
+    <Compile Include="Tem\V20210701\Models\EsInfo.cs" />
+    <Compile Include="Tem\V20210701\Models\GenerateApplicationPackageDownloadUrlRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\GenerateApplicationPackageDownloadUrlResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\HealthCheckConfig.cs" />
+    <Compile Include="Tem\V20210701\Models\HorizontalAutoscaler.cs" />
+    <Compile Include="Tem\V20210701\Models\IngressInfo.cs" />
+    <Compile Include="Tem\V20210701\Models\IngressRule.cs" />
+    <Compile Include="Tem\V20210701\Models\IngressRuleBackend.cs" />
+    <Compile Include="Tem\V20210701\Models\IngressRulePath.cs" />
+    <Compile Include="Tem\V20210701\Models\IngressRuleValue.cs" />
+    <Compile Include="Tem\V20210701\Models\IngressTls.cs" />
+    <Compile Include="Tem\V20210701\Models\LogOutputConf.cs" />
+    <Compile Include="Tem\V20210701\Models\ModifyApplicationInfoRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\ModifyApplicationInfoResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\ModifyEnvironmentRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\ModifyEnvironmentResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\ModifyIngressRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\ModifyIngressResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\MountedSettingConf.cs" />
+    <Compile Include="Tem\V20210701\Models\NamespacePage.cs" />
+    <Compile Include="Tem\V20210701\Models\Pair.cs" />
+    <Compile Include="Tem\V20210701\Models\PortMapping.cs" />
+    <Compile Include="Tem\V20210701\Models\RestartApplicationPodRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\RestartApplicationPodResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\RunVersionPod.cs" />
+    <Compile Include="Tem\V20210701\Models\StorageConf.cs" />
+    <Compile Include="Tem\V20210701\Models\StorageMountConf.cs" />
+    <Compile Include="Tem\V20210701\Models\TemNamespaceInfo.cs" />
     <Compile Include="Tem\V20201221\TemClient.cs" />
     <Compile Include="Tem\V20201221\Models\CosToken.cs" />
     <Compile Include="Tem\V20201221\Models\CreateCosTokenV2Request.cs" />
