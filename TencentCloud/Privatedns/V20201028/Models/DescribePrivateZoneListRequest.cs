@@ -15,47 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterInstancesRequest : AbstractModel
+    public class DescribePrivateZoneListRequest : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// Offset. Default value: 0
+        /// Pagination offset, starting from 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number of output entries. Default value: 20
+        /// Number of entries per page. Maximum value: 100. Default value: 20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// List of instance IDs to be obtained. This parameter is empty by default, which indicates that all instances in the cluster will be pulled.
-        /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
-
-        /// <summary>
-        /// Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
-        /// </summary>
-        [JsonProperty("InstanceRole")]
-        public string InstanceRole{ get; set; }
-
-        /// <summary>
-        /// Filters include `nodepool-id` and `nodepool-instance-type` (how the instance is added to the pool). For `nodepool-instance-type`, the values can be `MANUALLY_ADDED`, `AUTOSCALING_ADDED` and `ALL`.
+        /// Filter parameter
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -66,11 +48,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }

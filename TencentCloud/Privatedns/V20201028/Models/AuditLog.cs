@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RemoveNodeFromNodePoolRequest : AbstractModel
+    public class AuditLog : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Log type
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Resource")]
+        public string Resource{ get; set; }
 
         /// <summary>
-        /// Node pool ID
+        /// Log table name
         /// </summary>
-        [JsonProperty("NodePoolId")]
-        public string NodePoolId{ get; set; }
+        [JsonProperty("Metric")]
+        public string Metric{ get; set; }
 
         /// <summary>
-        /// The node ID list. Up to 100 nodes can be removed at a time.
+        /// Total number of logs
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// List of logs
+        /// </summary>
+        [JsonProperty("DataSet")]
+        public AuditLogInfo[] DataSet{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "Resource", this.Resource);
+            this.SetParamSimple(map, prefix + "Metric", this.Metric);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "DataSet.", this.DataSet);
         }
     }
 }

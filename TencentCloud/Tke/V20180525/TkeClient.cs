@@ -573,6 +573,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to create an alarm rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAlertRuleResponse"/></returns>
+        public async Task<CreatePrometheusAlertRuleResponse> CreatePrometheusAlertRule(CreatePrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<CreatePrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an alarm rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAlertRuleResponse"/></returns>
+        public CreatePrometheusAlertRuleResponse CreatePrometheusAlertRuleSync(CreatePrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<CreatePrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a cluster. (Cloud API v3).
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterRequest"/></param>
@@ -884,6 +924,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DeleteClusterRouteTable");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an alarm rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="DeletePrometheusAlertRuleResponse"/></returns>
+        public async Task<DeletePrometheusAlertRuleResponse> DeletePrometheusAlertRule(DeletePrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<DeletePrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an alarm rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="DeletePrometheusAlertRuleResponse"/></returns>
+        public DeletePrometheusAlertRuleResponse DeletePrometheusAlertRuleSync(DeletePrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<DeletePrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrometheusAlertRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1573,6 +1653,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to obtain the instance details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstanceRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstanceResponse"/></returns>
+        public async Task<DescribePrometheusInstanceResponse> DescribePrometheusInstance(DescribePrometheusInstanceRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the instance details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstanceRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstanceResponse"/></returns>
+        public DescribePrometheusInstanceResponse DescribePrometheusInstanceSync(DescribePrometheusInstanceRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain all regions supported by TKE.
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
@@ -1644,6 +1764,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRouteTableConflicts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTableConflictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query cluster version information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVersionsRequest"/></param>
+        /// <returns><see cref="DescribeVersionsResponse"/></returns>
+        public async Task<DescribeVersionsResponse> DescribeVersions(DescribeVersionsRequest req)
+        {
+             JsonResponseModel<DescribeVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query cluster version information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVersionsRequest"/></param>
+        /// <returns><see cref="DescribeVersionsResponse"/></returns>
+        public DescribeVersionsResponse DescribeVersionsSync(DescribeVersionsRequest req)
+        {
+             JsonResponseModel<DescribeVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the maximum number of Pods in the VPC-CNI network mode supported by the models in the specified availability zone of the current user and region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcCniPodLimitsRequest"/></param>
+        /// <returns><see cref="DescribeVpcCniPodLimitsResponse"/></returns>
+        public async Task<DescribeVpcCniPodLimitsResponse> DescribeVpcCniPodLimits(DescribeVpcCniPodLimitsRequest req)
+        {
+             JsonResponseModel<DescribeVpcCniPodLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcCniPodLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcCniPodLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the maximum number of Pods in the VPC-CNI network mode supported by the models in the specified availability zone of the current user and region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcCniPodLimitsRequest"/></param>
+        /// <returns><see cref="DescribeVpcCniPodLimitsResponse"/></returns>
+        public DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimitsSync(DescribeVpcCniPodLimitsRequest req)
+        {
+             JsonResponseModel<DescribeVpcCniPodLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcCniPodLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcCniPodLimitsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1924,6 +2124,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "ModifyClusterNodePool");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an alarm rule. 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusAlertRuleResponse"/></returns>
+        public async Task<ModifyPrometheusAlertRuleResponse> ModifyPrometheusAlertRule(ModifyPrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an alarm rule. 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusAlertRuleResponse"/></returns>
+        public ModifyPrometheusAlertRuleResponse ModifyPrometheusAlertRuleSync(ModifyPrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusAlertRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

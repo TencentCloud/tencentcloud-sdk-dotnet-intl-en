@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RemoveNodeFromNodePoolRequest : AbstractModel
+    public class DeletePrivateZoneRecordResponse : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// Node pool ID
-        /// </summary>
-        [JsonProperty("NodePoolId")]
-        public string NodePoolId{ get; set; }
-
-        /// <summary>
-        /// The node ID list. Up to 100 nodes can be removed at a time.
-        /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

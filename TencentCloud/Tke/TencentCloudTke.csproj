@@ -84,6 +84,8 @@
     <Compile Include="V20180525\Models\CreateClusterResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusAlertRuleRequest.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\DataDisk.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
@@ -101,6 +103,8 @@
     <Compile Include="V20180525\Models\DeleteClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\DeletePrometheusAlertRuleRequest.cs" />
+    <Compile Include="V20180525\Models\DeletePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableClusterVersionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
@@ -135,10 +139,16 @@
     <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusInstanceRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusInstanceResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeVersionsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeVersionsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\EnhancedService.cs" />
@@ -171,9 +181,17 @@
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="V20180525\Models\NodePool.cs" />
     <Compile Include="V20180525\Models\NodePoolOption.cs" />
+    <Compile Include="V20180525\Models\PodLimitsByType.cs" />
+    <Compile Include="V20180525\Models\PodLimitsInstance.cs" />
+    <Compile Include="V20180525\Models\PrometheusAlertRule.cs" />
+    <Compile Include="V20180525\Models\PrometheusAlertRuleDetail.cs" />
+    <Compile Include="V20180525\Models\PrometheusGrafanaInfo.cs" />
+    <Compile Include="V20180525\Models\PrometheusNotification.cs" />
     <Compile Include="V20180525\Models\RegionInstance.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
@@ -196,5 +214,6 @@
     <Compile Include="V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeNodeResetParam.cs" />
+    <Compile Include="V20180525\Models\VersionInstance.cs" />
   </ItemGroup>
 </Project>

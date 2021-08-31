@@ -21,26 +21,26 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RemoveNodeFromNodePoolRequest : AbstractModel
+    public class DescribeVpcCniPodLimitsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// The availability zone of the model to query, for example, `ap-guangzhou-3`. This field is left empty by default, that is, do not filter by the availability zone.
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
-        /// Node pool ID
+        /// The instance family to query, for example, `S5`. This field is left empty by default, that is, do not filter by the instance family.
         /// </summary>
-        [JsonProperty("NodePoolId")]
-        public string NodePoolId{ get; set; }
+        [JsonProperty("InstanceFamily")]
+        public string InstanceFamily{ get; set; }
 
         /// <summary>
-        /// The node ID list. Up to 100 nodes can be removed at a time.
+        /// The instance model to query, for example, `S5.LARGE8`. This field is empty by default, that is, do not filter by instance type.
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

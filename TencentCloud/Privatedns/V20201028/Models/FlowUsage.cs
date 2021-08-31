@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RemoveNodeFromNodePoolRequest : AbstractModel
+    public class FlowUsage : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Traffic package type, Valid values: ZONE (private domain); TRAFFIC (DNS traffic package)
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("FlowType")]
+        public string FlowType{ get; set; }
 
         /// <summary>
-        /// Node pool ID
+        /// Traffic package quota
         /// </summary>
-        [JsonProperty("NodePoolId")]
-        public string NodePoolId{ get; set; }
+        [JsonProperty("TotalQuantity")]
+        public long? TotalQuantity{ get; set; }
 
         /// <summary>
-        /// The node ID list. Up to 100 nodes can be removed at a time.
+        /// Available quota of traffic package
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("AvailableQuantity")]
+        public long? AvailableQuantity{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
+            this.SetParamSimple(map, prefix + "TotalQuantity", this.TotalQuantity);
+            this.SetParamSimple(map, prefix + "AvailableQuantity", this.AvailableQuantity);
         }
     }
 }

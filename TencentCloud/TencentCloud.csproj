@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.268</VersionPrefix>
+    <VersionPrefix>3.0.269</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4693,6 +4693,47 @@
     <Compile Include="Postgres\V20170312\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\Xlog.cs" />
     <Compile Include="Postgres\V20170312\Models\ZoneInfo.cs" />
+    <Compile Include="Privatedns\V20201028\PrivatednsClient.cs" />
+    <Compile Include="Privatedns\V20201028\Models\AuditLog.cs" />
+    <Compile Include="Privatedns\V20201028\Models\AuditLogInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRecordRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRecordResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DatePoint.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRecordRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRecordResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeAuditLogRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeAuditLogResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeDashboardRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeDashboardResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneListRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneListResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneRecordListRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneRecordListResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneServiceRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneServiceResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeRequestDataRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeRequestDataResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\Filter.cs" />
+    <Compile Include="Privatedns\V20201028\Models\FlowUsage.cs" />
+    <Compile Include="Privatedns\V20201028\Models\MetricData.cs" />
+    <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneRecordRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneRecordResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneVpcRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneVpcResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\PrivateZone.cs" />
+    <Compile Include="Privatedns\V20201028\Models\PrivateZoneRecord.cs" />
+    <Compile Include="Privatedns\V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\TagInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\VpcInfo.cs" />
     <Compile Include="Redis\V20180412\RedisClient.cs" />
     <Compile Include="Redis\V20180412\Models\Account.cs" />
     <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateRequest.cs" />
@@ -5787,6 +5828,8 @@
     <Compile Include="Tke\V20180525\Models\CreateClusterResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteTableRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertRuleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DataDisk.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
@@ -5804,6 +5847,8 @@
     <Compile Include="Tke\V20180525\Models\DeleteClusterRouteResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterRouteTableRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterRouteTableResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusAlertRuleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeAvailableClusterVersionRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeAvailableClusterVersionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
@@ -5838,10 +5883,16 @@
     <Compile Include="Tke\V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeImagesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeImagesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeVersionsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeVersionsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\EnhancedService.cs" />
@@ -5874,9 +5925,17 @@
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="Tke\V20180525\Models\NodePool.cs" />
     <Compile Include="Tke\V20180525\Models\NodePoolOption.cs" />
+    <Compile Include="Tke\V20180525\Models\PodLimitsByType.cs" />
+    <Compile Include="Tke\V20180525\Models\PodLimitsInstance.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusAlertRule.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusAlertRuleDetail.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusGrafanaInfo.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusNotification.cs" />
     <Compile Include="Tke\V20180525\Models\RegionInstance.cs" />
     <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
@@ -5899,6 +5958,7 @@
     <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\UpgradeNodeResetParam.cs" />
+    <Compile Include="Tke\V20180525\Models\VersionInstance.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />

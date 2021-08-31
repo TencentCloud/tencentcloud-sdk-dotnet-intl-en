@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RemoveNodeFromNodePoolRequest : AbstractModel
+    public class VpcInfo : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// VpcId: vpc-xadsafsdasd
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Node pool ID
+        /// VPC region: ap-guangzhou, ap-shanghai
         /// </summary>
-        [JsonProperty("NodePoolId")]
-        public string NodePoolId{ get; set; }
-
-        /// <summary>
-        /// The node ID list. Up to 100 nodes can be removed at a time.
-        /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }
