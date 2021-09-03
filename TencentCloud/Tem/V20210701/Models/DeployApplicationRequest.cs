@@ -235,7 +235,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public CronHorizontalAutoscaler[] CronHorizontalAutoscaler{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies whether to enable logging. `1`: enable; `0`: do not enable
         /// </summary>
         [JsonProperty("LogEnable")]
         public long? LogEnable{ get; set; }

@@ -134,7 +134,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] DisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// The tag description list. This parameter is used to bind a tag to a resource instance. A tag can only be bound to CVM instances.
+        /// Binds the tag with the specified resources (CVM and CLB) as well
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }

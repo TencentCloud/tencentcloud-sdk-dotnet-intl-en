@@ -79,7 +79,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+        /// Information of the instance data disks.
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
@@ -230,6 +230,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("RdmaIpAddresses")]
         public string[] RdmaIpAddresses{ get; set; }
 
+        /// <summary>
+        /// The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("IsolatedSource")]
+        public string IsolatedSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -269,6 +276,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
+            this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
         }
     }
 }

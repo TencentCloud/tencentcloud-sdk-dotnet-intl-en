@@ -191,6 +191,7 @@
     <Compile Include="V20170312\Models\ResetInstancesTypeResponse.cs" />
     <Compile Include="V20170312\Models\ResizeInstanceDisksRequest.cs" />
     <Compile Include="V20170312\Models\ResizeInstanceDisksResponse.cs" />
+    <Compile Include="V20170312\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="V20170312\Models\RunInstancesRequest.cs" />
     <Compile Include="V20170312\Models\RunInstancesResponse.cs" />
     <Compile Include="V20170312\Models\RunMonitorServiceEnabled.cs" />

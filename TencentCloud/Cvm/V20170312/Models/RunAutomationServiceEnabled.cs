@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListAttachedGroupPoliciesRequest : AbstractModel
+    public class RunAutomationServiceEnabled : AbstractModel
     {
         
         /// <summary>
-        /// User group ID
+        /// Whether to enable the TAT service. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default: `FALSE`.
         /// </summary>
-        [JsonProperty("TargetGroupId")]
-        public ulong? TargetGroupId{ get; set; }
-
-        /// <summary>
-        /// Page number, which starts from 1. Default is 1
-        /// </summary>
-        [JsonProperty("Page")]
-        public ulong? Page{ get; set; }
-
-        /// <summary>
-        /// Number of entries per page; 20 by default
-        /// </summary>
-        [JsonProperty("Rp")]
-        public ulong? Rp{ get; set; }
-
-        /// <summary>
-        /// Search by keyword
-        /// </summary>
-        [JsonProperty("Keyword")]
-        public string Keyword{ get; set; }
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
-            this.SetParamSimple(map, prefix + "Page", this.Page);
-            this.SetParamSimple(map, prefix + "Rp", this.Rp);
-            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

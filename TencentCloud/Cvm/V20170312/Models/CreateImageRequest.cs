@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// Instance ID used to create an image.
+        /// ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,7 +49,10 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ForcePoweroff{ get; set; }
 
         /// <summary>
-        /// Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
+        /// Whether to enable Sysprep when creating a Windows image.
+        /// Valid values: `TRUE` and `FALSE`; default value: `FALSE`.
+        /// 
+        /// Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
         /// </summary>
         [JsonProperty("Sysprep")]
         public string Sysprep{ get; set; }
