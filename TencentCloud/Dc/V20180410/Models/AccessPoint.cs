@@ -88,6 +88,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccessPointType")]
+        public string AccessPointType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +111,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamObj(map, prefix + "Coordinate.", this.Coordinate);
             this.SetParamSimple(map, prefix + "City", this.City);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         }
     }
 }

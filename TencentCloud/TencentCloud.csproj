@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.272</VersionPrefix>
+    <VersionPrefix>3.0.273</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="Antiddos\V20200309\AntiddosClient.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipAddressRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipAddressResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipLoadBalancerRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipLoadBalancerResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstance.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstanceSpecification.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstanceUsages.cs" />
@@ -106,6 +108,8 @@
     <Compile Include="Antiddos\V20200309\Models\DeleteWaterPrintConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteWaterPrintKeyRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteWaterPrintKeyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeBasicDeviceStatusRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeBasicDeviceStatusResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -148,6 +152,7 @@
     <Compile Include="Antiddos\V20200309\Models\IPLineInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\InsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\InstanceRelation.cs" />
+    <Compile Include="Antiddos\V20200309\Models\KeyValue.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer4Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer7Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\ListenerCcThreholdConfig.cs" />

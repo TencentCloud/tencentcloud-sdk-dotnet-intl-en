@@ -48,6 +48,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("OplogSize")]
         public ulong? OplogSize{ get; set; }
 
+        /// <summary>
+        /// Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+        /// </summary>
+        [JsonProperty("NodeNum")]
+        public ulong? NodeNum{ get; set; }
+
+        /// <summary>
+        /// Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+        /// </summary>
+        [JsonProperty("ReplicateSetNum")]
+        public ulong? ReplicateSetNum{ get; set; }
+
+        /// <summary>
+        /// Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
+        /// </summary>
+        [JsonProperty("InMaintenance")]
+        public ulong? InMaintenance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
             this.SetParamSimple(map, prefix + "OplogSize", this.OplogSize);
+            this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
+            this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+            this.SetParamSimple(map, prefix + "InMaintenance", this.InMaintenance);
         }
     }
 }

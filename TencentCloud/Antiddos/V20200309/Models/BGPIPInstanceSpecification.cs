@@ -25,7 +25,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// Base protection bandwidth (in Gbps)
+        /// Base protection bandwidth (in Mbps)
         /// </summary>
         [JsonProperty("ProtectBandwidth")]
         public ulong? ProtectBandwidth{ get; set; }
@@ -70,7 +70,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? Line{ get; set; }
 
         /// <summary>
-        /// Elastic protection bandwidth (in Gbps)
+        /// Elastic protection bandwidth (in Mbps)
         /// </summary>
         [JsonProperty("ElasticBandwidth")]
         public ulong? ElasticBandwidth{ get; set; }

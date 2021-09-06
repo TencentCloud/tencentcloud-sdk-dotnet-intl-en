@@ -93,6 +93,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to bind an Anti-DDoS EIP to the specified private IP of a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDDoSEipLoadBalancerRequest"/></param>
+        /// <returns><see cref="AssociateDDoSEipLoadBalancerResponse"/></returns>
+        public async Task<AssociateDDoSEipLoadBalancerResponse> AssociateDDoSEipLoadBalancer(AssociateDDoSEipLoadBalancerRequest req)
+        {
+             JsonResponseModel<AssociateDDoSEipLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateDDoSEipLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateDDoSEipLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind an Anti-DDoS EIP to the specified private IP of a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDDoSEipLoadBalancerRequest"/></param>
+        /// <returns><see cref="AssociateDDoSEipLoadBalancerResponse"/></returns>
+        public AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancerSync(AssociateDDoSEipLoadBalancerRequest req)
+        {
+             JsonResponseModel<AssociateDDoSEipLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateDDoSEipLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateDDoSEipLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add an Anti-DDoS IP blocklist/allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateBlackWhiteIpListRequest"/></param>
@@ -844,6 +884,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DeleteWaterPrintKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWaterPrintKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to querying the status of Anti-DDoS IP.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicDeviceStatusRequest"/></param>
+        /// <returns><see cref="DescribeBasicDeviceStatusResponse"/></returns>
+        public async Task<DescribeBasicDeviceStatusResponse> DescribeBasicDeviceStatus(DescribeBasicDeviceStatusRequest req)
+        {
+             JsonResponseModel<DescribeBasicDeviceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBasicDeviceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDeviceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to querying the status of Anti-DDoS IP.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicDeviceStatusRequest"/></param>
+        /// <returns><see cref="DescribeBasicDeviceStatusResponse"/></returns>
+        public DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatusSync(DescribeBasicDeviceStatusRequest req)
+        {
+             JsonResponseModel<DescribeBasicDeviceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBasicDeviceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDeviceStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

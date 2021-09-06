@@ -95,8 +95,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public StaticPackRelation StaticPackRelation{ get; set; }
 
         /// <summary>
-        /// Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
@@ -138,6 +138,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("EipAddressInfo")]
         public EipAddressRelation EipAddressInfo{ get; set; }
 
+        /// <summary>
+        /// Recommended domain name for clients to access.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +167,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "EipFlag", this.EipFlag);
             this.SetParamObj(map, prefix + "EipAddressPackRelation.", this.EipAddressPackRelation);
             this.SetParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }
