@@ -48,7 +48,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+        /// The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

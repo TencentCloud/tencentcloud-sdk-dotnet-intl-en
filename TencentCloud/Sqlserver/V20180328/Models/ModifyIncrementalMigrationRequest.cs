@@ -43,7 +43,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string IncrementalMigrationId{ get; set; }
 
         /// <summary>
-        /// Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
+        /// Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
         /// </summary>
         [JsonProperty("IsRecovery")]
         public string IsRecovery{ get; set; }

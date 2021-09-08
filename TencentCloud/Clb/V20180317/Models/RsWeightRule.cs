@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB listener ID
+        /// CLB listener ID.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// List of real servers for which to modify the weight
+        /// List of real servers whose weights to modify.
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// Forwarding rule ID
+        /// Forwarding rule ID, which is required only for layer-7 rules.
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// New forwarding weight of a real server. Value range: 0-100.
+        /// The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

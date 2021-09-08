@@ -248,6 +248,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerPassToTarget")]
         public ulong? LoadBalancerPassToTarget{ get; set; }
 
+        /// <summary>
+        /// Health status of the target real server.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TargetHealth")]
+        public string TargetHealth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +293,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Isolation", this.Isolation);
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
         }
     }
 }

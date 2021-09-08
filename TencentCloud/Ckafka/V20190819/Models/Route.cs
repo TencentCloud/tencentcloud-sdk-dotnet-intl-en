@@ -41,7 +41,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RouteId{ get; set; }
 
         /// <summary>
-        /// VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+        /// VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
@@ -66,6 +66,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DomainPort")]
         public long? DomainPort{ get; set; }
 
+        /// <summary>
+        /// Timestamp
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeleteTimestamp")]
+        public string DeleteTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "VipList.", this.VipList);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "DomainPort", this.DomainPort);
+            this.SetParamSimple(map, prefix + "DeleteTimestamp", this.DeleteTimestamp);
         }
     }
 }

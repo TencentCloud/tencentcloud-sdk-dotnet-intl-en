@@ -25,37 +25,38 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Listener ID
+        /// Listener ID.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Binding port
+        /// The port to Bind
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// CVM instance ID. Indicating binding the primary IP of the primary ENI.
+        /// CVM instance ID. The primary IP of the primary ENI will be bound.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
+        /// It is required for binding an IP. It supports an ENI IP or any other private IP. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+        /// Note: either `InstanceId` or `EniIp` must be passed in, which is required for binding a dual-stack IPv6 CVM instance.
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }
 
         /// <summary>
-        /// CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+        /// Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// Layer-7 rule ID
+        /// Layer-7 rule ID.
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

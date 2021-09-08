@@ -207,6 +207,27 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RetentionTimeConfig")]
         public DynamicRetentionTime RetentionTimeConfig{ get; set; }
 
+        /// <summary>
+        /// Maximum number of connections
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxConnection")]
+        public ulong? MaxConnection{ get; set; }
+
+        /// <summary>
+        /// Public network bandwidth
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublicNetwork")]
+        public long? PublicNetwork{ get; set; }
+
+        /// <summary>
+        /// Time
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeleteRouteTimestamp")]
+        public string DeleteRouteTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -242,6 +263,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamArraySimple(map, prefix + "Features.", this.Features);
             this.SetParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
+            this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+            this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+            this.SetParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
         }
     }
 }

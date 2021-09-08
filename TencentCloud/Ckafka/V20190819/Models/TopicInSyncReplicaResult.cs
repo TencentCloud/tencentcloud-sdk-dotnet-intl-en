@@ -21,15 +21,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OperateResponseData : AbstractModel
+    public class TopicInSyncReplicaResult : AbstractModel
     {
         
         /// <summary>
-        /// FlowId11
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Set of topic details and replicas
         /// </summary>
-        [JsonProperty("FlowId")]
-        public long? FlowId{ get; set; }
+        [JsonProperty("TopicInSyncReplicaList")]
+        public TopicInSyncReplicaInfo[] TopicInSyncReplicaList{ get; set; }
+
+        /// <summary>
+        /// Total number
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamArrayObj(map, prefix + "TopicInSyncReplicaList.", this.TopicInSyncReplicaList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
         }
     }
 }
