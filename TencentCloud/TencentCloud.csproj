@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.276</VersionPrefix>
+    <VersionPrefix>3.0.277</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -640,6 +640,7 @@
     <Compile Include="Batch\V20170312\Models\RedirectLocalInfo.cs" />
     <Compile Include="Batch\V20170312\Models\RetryJobsRequest.cs" />
     <Compile Include="Batch\V20170312\Models\RetryJobsResponse.cs" />
+    <Compile Include="Batch\V20170312\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="Batch\V20170312\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Batch\V20170312\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="Batch\V20170312\Models\SpotMarketOptions.cs" />
@@ -4598,6 +4599,7 @@
     <Compile Include="Postgres\V20170312\Models\AccountInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\AnalysisItems.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
@@ -4645,12 +4647,18 @@
     <Compile Include="Postgres\V20170312\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeServerlessDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeServerlessDBInstancesResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeSlowQueryAnalysisRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeSlowQueryAnalysisResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeSlowQueryListRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeSlowQueryListResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeZonesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeZonesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DestroyDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DestroyDBInstanceResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\Detail.cs" />
     <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DurationAnalysis.cs" />
     <Compile Include="Postgres\V20170312\Models\ErrLogDetail.cs" />
     <Compile Include="Postgres\V20170312\Models\Filter.cs" />
     <Compile Include="Postgres\V20170312\Models\InitDBInstancesRequest.cs" />
@@ -4681,6 +4689,7 @@
     <Compile Include="Postgres\V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\PgDeal.cs" />
+    <Compile Include="Postgres\V20170312\Models\RawSlowQuery.cs" />
     <Compile Include="Postgres\V20170312\Models\ReadOnlyGroup.cs" />
     <Compile Include="Postgres\V20170312\Models\RebalanceReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\RebalanceReadOnlyGroupResponse.cs" />

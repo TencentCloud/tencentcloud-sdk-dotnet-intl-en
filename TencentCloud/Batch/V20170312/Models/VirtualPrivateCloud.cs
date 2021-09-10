@@ -37,7 +37,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Whether to use an instance as a public gateway. An instance can be used as a public gateway only when it has a public IP and resides in a VPC. Valid values: <br><li>TRUE: use the instance as a public gateway <br><li>FALSE: do not use the instance as a public gateway <br><br>Default value: FALSE.
+        /// Whether to use a CVM instance as a public gateway. The public gateway is only available when the instance has a public IP and resides in a VPC. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default: `FALSE`.
         /// </summary>
         [JsonProperty("AsVpcGateway")]
         public bool? AsVpcGateway{ get; set; }

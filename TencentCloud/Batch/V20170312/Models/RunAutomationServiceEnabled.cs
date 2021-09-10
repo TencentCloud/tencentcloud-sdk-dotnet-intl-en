@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Es.V20180416.Models
+namespace TencentCloud.Batch.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RestartInstanceRequest : AbstractModel
+    public class RunAutomationServiceEnabled : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Whether to enable the TAT service. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default: `FALSE`.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
-        /// </summary>
-        [JsonProperty("ForceRestart")]
-        public bool? ForceRestart{ get; set; }
-
-        /// <summary>
-        /// Restart mode. `0`: rolling restart; `1`: full restart
-        /// </summary>
-        [JsonProperty("RestartMode")]
-        public long? RestartMode{ get; set; }
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
-            this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

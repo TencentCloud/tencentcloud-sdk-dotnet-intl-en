@@ -373,6 +373,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaNodeInfo")]
         public KibanaNodeInfo KibanaNodeInfo{ get; set; }
 
+        /// <summary>
+        /// Visual node configuration
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WebNodeTypeInfo")]
+        public WebNodeTypeInfo WebNodeTypeInfo{ get; set; }
+
+        /// <summary>
+        /// JDK type. Valid values: `oracle`, `kona`
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Jdk")]
+        public string Jdk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -434,6 +448,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
             this.SetParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
+            this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+            this.SetParamSimple(map, prefix + "Jdk", this.Jdk);
         }
     }
 }

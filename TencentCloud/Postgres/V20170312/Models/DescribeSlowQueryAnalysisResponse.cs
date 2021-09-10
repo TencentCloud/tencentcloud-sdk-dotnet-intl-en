@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Es.V20180416.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RestartInstanceRequest : AbstractModel
+    public class DescribeSlowQueryAnalysisResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// The total number of query results.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+        /// Detailed analysis.
         /// </summary>
-        [JsonProperty("ForceRestart")]
-        public bool? ForceRestart{ get; set; }
+        [JsonProperty("Detail")]
+        public Detail Detail{ get; set; }
 
         /// <summary>
-        /// Restart mode. `0`: rolling restart; `1`: full restart
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("RestartMode")]
-        public long? RestartMode{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
-            this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamObj(map, prefix + "Detail.", this.Detail);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

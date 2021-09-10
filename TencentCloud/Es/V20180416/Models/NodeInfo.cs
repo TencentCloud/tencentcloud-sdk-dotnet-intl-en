@@ -40,7 +40,6 @@ namespace TencentCloud.Es.V20180416.Models
         /// Node type<li>`hotData`: hot data node</li>
         /// <li>`warmData`: warm data node</li>
         /// <li>`dedicatedMaster`: dedicated master node</li>
-        /// <li>`kibana`: Kibana node</li>
         /// Default value: `hotData`
         /// </summary>
         [JsonProperty("Type")]

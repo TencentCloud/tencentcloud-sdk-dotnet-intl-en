@@ -84,6 +84,18 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
+        /// <summary>
+        /// CCN instance ID used by CFS Turbo
+        /// </summary>
+        [JsonProperty("CcnID")]
+        public string CcnID{ get; set; }
+
+        /// <summary>
+        /// CCN IP range used by CFS Turbo
+        /// </summary>
+        [JsonProperty("CidrBlock")]
+        public string CidrBlock{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
+            this.SetParamSimple(map, prefix + "CcnID", this.CcnID);
+            this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         }
     }
 }

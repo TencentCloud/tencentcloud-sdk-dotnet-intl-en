@@ -174,6 +174,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaConfig")]
         public string KibanaConfig{ get; set; }
 
+        /// <summary>
+        /// Visual node configuration
+        /// </summary>
+        [JsonProperty("WebNodeTypeInfo")]
+        public WebNodeTypeInfo WebNodeTypeInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +210,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
+            this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
         }
     }
 }

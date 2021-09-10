@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Es.V20180416.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RestartInstanceRequest : AbstractModel
+    public class Detail : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// The total execution time (in ms) of all slow query statements during the specified period of time
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TotalTime")]
+        public float? TotalTime{ get; set; }
 
         /// <summary>
-        /// Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+        /// The total number of all slow query statements during the specified period of time
         /// </summary>
-        [JsonProperty("ForceRestart")]
-        public bool? ForceRestart{ get; set; }
+        [JsonProperty("TotalCallNum")]
+        public ulong? TotalCallNum{ get; set; }
 
         /// <summary>
-        /// Restart mode. `0`: rolling restart; `1`: full restart
+        /// The statistical analysis list of slow queries
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RestartMode")]
-        public long? RestartMode{ get; set; }
+        [JsonProperty("AnalysisItems")]
+        public AnalysisItems[] AnalysisItems{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
-            this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
+            this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
+            this.SetParamSimple(map, prefix + "TotalCallNum", this.TotalCallNum);
+            this.SetParamArrayObj(map, prefix + "AnalysisItems.", this.AnalysisItems);
         }
     }
 }

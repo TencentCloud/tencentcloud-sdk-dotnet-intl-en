@@ -134,6 +134,7 @@
     <Compile Include="V20170312\Models\RedirectLocalInfo.cs" />
     <Compile Include="V20170312\Models\RetryJobsRequest.cs" />
     <Compile Include="V20170312\Models\RetryJobsResponse.cs" />
+    <Compile Include="V20170312\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="V20170312\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20170312\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="V20170312\Models\SpotMarketOptions.cs" />

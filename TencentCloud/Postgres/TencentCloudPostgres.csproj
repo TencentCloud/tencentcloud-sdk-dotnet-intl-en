@@ -48,6 +48,7 @@
     <Compile Include="V20170312\Models\AccountInfo.cs" />
     <Compile Include="V20170312\Models\AddDBInstanceToReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\AddDBInstanceToReadOnlyGroupResponse.cs" />
+    <Compile Include="V20170312\Models\AnalysisItems.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
@@ -95,12 +96,18 @@
     <Compile Include="V20170312\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeServerlessDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeServerlessDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSlowQueryAnalysisRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSlowQueryAnalysisResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSlowQueryListRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSlowQueryListResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20170312\Models\DestroyDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\DestroyDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\Detail.cs" />
     <Compile Include="V20170312\Models\DisIsolateDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DisIsolateDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DurationAnalysis.cs" />
     <Compile Include="V20170312\Models\ErrLogDetail.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
@@ -131,6 +138,7 @@
     <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\PgDeal.cs" />
+    <Compile Include="V20170312\Models\RawSlowQuery.cs" />
     <Compile Include="V20170312\Models\ReadOnlyGroup.cs" />
     <Compile Include="V20170312\Models\RebalanceReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\RebalanceReadOnlyGroupResponse.cs" />

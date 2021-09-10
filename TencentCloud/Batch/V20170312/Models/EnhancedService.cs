@@ -36,6 +36,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("MonitorService")]
         public RunMonitorServiceEnabled MonitorService{ get; set; }
 
+        /// <summary>
+        /// Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+        /// </summary>
+        [JsonProperty("AutomationService")]
+        public RunAutomationServiceEnabled AutomationService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Batch.V20170312.Models
         {
             this.SetParamObj(map, prefix + "SecurityService.", this.SecurityService);
             this.SetParamObj(map, prefix + "MonitorService.", this.MonitorService);
+            this.SetParamObj(map, prefix + "AutomationService.", this.AutomationService);
         }
     }
 }

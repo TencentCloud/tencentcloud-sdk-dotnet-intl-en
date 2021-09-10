@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Es.V20180416.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RestartInstanceRequest : AbstractModel
+    public class DurationAnalysis : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Time range
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TimeSegment")]
+        public string TimeSegment{ get; set; }
 
         /// <summary>
-        /// Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+        /// The number of slow query statements whose execution time falls within the time range
         /// </summary>
-        [JsonProperty("ForceRestart")]
-        public bool? ForceRestart{ get; set; }
-
-        /// <summary>
-        /// Restart mode. `0`: rolling restart; `1`: full restart
-        /// </summary>
-        [JsonProperty("RestartMode")]
-        public long? RestartMode{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
-            this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
+            this.SetParamSimple(map, prefix + "TimeSegment", this.TimeSegment);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

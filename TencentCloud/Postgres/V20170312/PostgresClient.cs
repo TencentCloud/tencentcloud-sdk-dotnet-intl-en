@@ -973,6 +973,86 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to analyze slow query statements with abstract parameter values and return aggregated statistical analysis results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowQueryAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeSlowQueryAnalysisResponse"/></returns>
+        public async Task<DescribeSlowQueryAnalysisResponse> DescribeSlowQueryAnalysis(DescribeSlowQueryAnalysisRequest req)
+        {
+             JsonResponseModel<DescribeSlowQueryAnalysisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowQueryAnalysis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowQueryAnalysisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to analyze slow query statements with abstract parameter values and return aggregated statistical analysis results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowQueryAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeSlowQueryAnalysisResponse"/></returns>
+        public DescribeSlowQueryAnalysisResponse DescribeSlowQueryAnalysisSync(DescribeSlowQueryAnalysisRequest req)
+        {
+             JsonResponseModel<DescribeSlowQueryAnalysisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowQueryAnalysis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowQueryAnalysisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the slow query list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowQueryListRequest"/></param>
+        /// <returns><see cref="DescribeSlowQueryListResponse"/></returns>
+        public async Task<DescribeSlowQueryListResponse> DescribeSlowQueryList(DescribeSlowQueryListRequest req)
+        {
+             JsonResponseModel<DescribeSlowQueryListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowQueryList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowQueryListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the slow query list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowQueryListRequest"/></param>
+        /// <returns><see cref="DescribeSlowQueryListResponse"/></returns>
+        public DescribeSlowQueryListResponse DescribeSlowQueryListSync(DescribeSlowQueryListRequest req)
+        {
+             JsonResponseModel<DescribeSlowQueryListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowQueryList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowQueryListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the supported AZs.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>

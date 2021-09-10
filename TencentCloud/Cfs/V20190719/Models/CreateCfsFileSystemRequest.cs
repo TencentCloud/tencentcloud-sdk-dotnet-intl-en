@@ -31,25 +31,25 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: VPC (VPC), BASIC (basic network)
+        /// Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
         /// </summary>
         [JsonProperty("NetInterface")]
         public string NetInterface{ get; set; }
 
         /// <summary>
-        /// Permission group ID
+        /// Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
 
         /// <summary>
-        /// File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
+        /// File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// File system storage class. Valid values: SD (standard), HP (high-performance)
+        /// Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
+        /// IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
         /// </summary>
         [JsonProperty("MountIP")]
         public string MountIP{ get; set; }
@@ -90,6 +90,24 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// CCN instance ID (required if the network type is CCN)
+        /// </summary>
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
+
+        /// <summary>
+        /// CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+        /// </summary>
+        [JsonProperty("CidrBlock")]
+        public string CidrBlock{ get; set; }
+
+        /// <summary>
+        /// File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+        /// </summary>
+        [JsonProperty("Capacity")]
+        public ulong? Capacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +125,9 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "FsName", this.FsName);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
+            this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+            this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
         }
     }
 }
