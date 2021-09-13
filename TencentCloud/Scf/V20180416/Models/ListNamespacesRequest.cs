@@ -48,6 +48,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
+        /// <summary>
+        /// Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+        /// </summary>
+        [JsonProperty("SearchKey")]
+        public SearchKey[] SearchKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Orderby", this.Orderby);
             this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamArrayObj(map, prefix + "SearchKey.", this.SearchKey);
         }
     }
 }

@@ -31,25 +31,25 @@ namespace TencentCloud.Scf.V20180416.Models
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Version number or alias of the triggered function
+        /// Version or alias of the function. It defaults to `$DEFAULT`.
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
 
         /// <summary>
-        /// Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+        /// Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
         /// </summary>
         [JsonProperty("Event")]
         public string Event{ get; set; }
 
         /// <summary>
-        /// If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
+        /// Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Namespace
+        /// Namespace. `default` is used if it’s left empty.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

@@ -25,16 +25,16 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the VPC instance
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
         /// The unique ID of the flow log.
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }
+
+        /// <summary>
+        /// The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
         /// The name of the flow log.
@@ -54,8 +54,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogId", this.FlowLogId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
             this.SetParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
         }

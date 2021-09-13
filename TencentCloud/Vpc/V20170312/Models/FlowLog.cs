@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+        /// The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

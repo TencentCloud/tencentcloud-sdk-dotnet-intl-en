@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteFlowLogRequest : AbstractModel
+    public class SearchKey : AbstractModel
     {
         
         /// <summary>
-        /// The unique ID of the flow log.
+        /// Search range
         /// </summary>
-        [JsonProperty("FlowLogId")]
-        public string FlowLogId{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
+        /// Keyword for search
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowLogId", this.FlowLogId);
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

@@ -146,6 +146,7 @@
     <Compile Include="V20180416\Models\Result.cs" />
     <Compile Include="V20180416\Models\RetryConfig.cs" />
     <Compile Include="V20180416\Models\RoutingConfig.cs" />
+    <Compile Include="V20180416\Models\SearchKey.cs" />
     <Compile Include="V20180416\Models\StatusReason.cs" />
     <Compile Include="V20180416\Models\Tag.cs" />
     <Compile Include="V20180416\Models\TerminateAsyncEventRequest.cs" />

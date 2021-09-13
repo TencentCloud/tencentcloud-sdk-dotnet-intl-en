@@ -25,19 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the VPC instance
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
         /// The name of the flow log instance.
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+        /// The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -61,6 +55,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CloudLogId{ get; set; }
 
         /// <summary>
+        /// The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
         /// The description of the flow log instance
         /// </summary>
         [JsonProperty("FlowLogDescription")]
@@ -78,12 +78,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "TrafficType", this.TrafficType);
             this.SetParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }

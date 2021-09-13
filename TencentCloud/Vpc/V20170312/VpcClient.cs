@@ -1053,7 +1053,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// This API is used to create a [device bandwidth package](https://intl.cloud.tencent.com/document/product/684/15245?from_cn_redirect=1#bwptype) or an [IP bandwidth package](https://intl.cloud.tencent.com/document/product/684/15245?from_cn_redirect=1#bwptype).
         /// </summary>
         /// <param name="req"><see cref="CreateBandwidthPackageRequest"/></param>
         /// <returns><see cref="CreateBandwidthPackageResponse"/></returns>
@@ -1073,7 +1073,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// This API is used to create a [device bandwidth package](https://intl.cloud.tencent.com/document/product/684/15245?from_cn_redirect=1#bwptype) or an [IP bandwidth package](https://intl.cloud.tencent.com/document/product/684/15245?from_cn_redirect=1#bwptype).
         /// </summary>
         /// <param name="req"><see cref="CreateBandwidthPackageRequest"/></param>
         /// <returns><see cref="CreateBandwidthPackageResponse"/></returns>

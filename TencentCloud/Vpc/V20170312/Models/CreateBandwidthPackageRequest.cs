@@ -25,13 +25,18 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
+        /// The network type of the bandwidth package. Default value: `BGP`. Valid values:
+        /// `BGP` 
+        /// `HIGH_QUALITY_BGP`
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+        /// The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+        /// <li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+        /// <li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+        /// <li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
@@ -43,7 +48,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageName{ get; set; }
 
         /// <summary>
-        /// The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
+        /// The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
         /// </summary>
         [JsonProperty("BandwidthPackageCount")]
         public ulong? BandwidthPackageCount{ get; set; }
