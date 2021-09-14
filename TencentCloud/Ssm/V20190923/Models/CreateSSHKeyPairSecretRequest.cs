@@ -21,35 +21,40 @@ namespace TencentCloud.Ssm.V20190923.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateRotationStatusRequest : AbstractModel
+    public class CreateSSHKeyPairSecretRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tencent Cloud service credential name.
+        /// Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit.
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable rotation.
-        /// `true`: enables rotation.
-        /// `false`: disables rotation.
+        /// ID of the project to which the created SSH key belongs.
         /// </summary>
-        [JsonProperty("EnableRotation")]
-        public bool? EnableRotation{ get; set; }
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Rotation frequency in days. Value range: 30–365.
+        /// Description, such as what it is used for. It contains up to 2,048 bytes.
         /// </summary>
-        [JsonProperty("Frequency")]
-        public long? Frequency{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
-        /// User-defined rotation start time in the format of 2006-01-02 15:04:05.
-        /// When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
+        /// Specifies a KMS CMK to encrypt the secret.
+        /// If this parameter is left empty, the CMK created by Secrets Manager by default will be used for encryption.
+        /// You can also specify a custom KMS CMK created in the same region for encryption.
         /// </summary>
-        [JsonProperty("RotationBeginTime")]
-        public string RotationBeginTime{ get; set; }
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
+        /// <summary>
+        /// List of tags.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -58,9 +63,10 @@ namespace TencentCloud.Ssm.V20190923.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "EnableRotation", this.EnableRotation);
-            this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
-            this.SetParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -25,10 +25,16 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Application usage statistics
+        /// App usage statistics
         /// </summary>
-        [JsonProperty("AppStatistics")]
-        public AppStatisticsItem[] AppStatistics{ get; set; }
+        [JsonProperty("Data")]
+        public DescribeAppStatisticsResp Data{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AppStatistics.", this.AppStatistics);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

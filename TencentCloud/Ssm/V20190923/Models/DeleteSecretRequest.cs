@@ -31,10 +31,19 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
+        /// Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+        /// For an SSH key secret, this field can only be `0`.
         /// </summary>
         [JsonProperty("RecoveryWindowInDays")]
         public ulong? RecoveryWindowInDays{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+        /// `True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+        /// `False`: only deletes the SSH key information in the secret.
+        /// </summary>
+        [JsonProperty("CleanSSHKey")]
+        public bool? CleanSSHKey{ get; set; }
 
 
         /// <summary>
@@ -44,6 +53,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "RecoveryWindowInDays", this.RecoveryWindowInDays);
+            this.SetParamSimple(map, prefix + "CleanSSHKey", this.CleanSSHKey);
         }
     }
 }

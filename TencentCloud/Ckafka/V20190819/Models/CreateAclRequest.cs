@@ -66,6 +66,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Principal")]
         public string Principal{ get; set; }
 
+        /// <summary>
+        /// The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+        /// </summary>
+        [JsonProperty("ResourceNameList")]
+        public string ResourceNameList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Principal", this.Principal);
+            this.SetParamSimple(map, prefix + "ResourceNameList", this.ResourceNameList);
         }
     }
 }

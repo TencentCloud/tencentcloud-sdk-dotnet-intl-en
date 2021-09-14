@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? MaxNodePodNum{ get; set; }
 
         /// <summary>
-        /// Maximum number of cluster services
+        /// The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
         /// </summary>
         [JsonProperty("MaxClusterServiceNum")]
         public ulong? MaxClusterServiceNum{ get; set; }

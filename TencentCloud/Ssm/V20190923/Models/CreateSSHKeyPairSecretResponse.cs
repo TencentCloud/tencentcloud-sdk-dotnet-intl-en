@@ -21,35 +21,40 @@ namespace TencentCloud.Ssm.V20190923.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRotationDetailResponse : AbstractModel
+    public class CreateSSHKeyPairSecretResponse : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable rotation. `true`: enabled; `false`: disabled.
+        /// Name of the created secret.
         /// </summary>
-        [JsonProperty("EnableRotation")]
-        public bool? EnableRotation{ get; set; }
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
 
         /// <summary>
-        /// Rotation frequency in days. Default value: 1 day.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// ID of the created SSH key.
         /// </summary>
-        [JsonProperty("Frequency")]
-        public long? Frequency{ get; set; }
+        [JsonProperty("SSHKeyID")]
+        public string SSHKeyID{ get; set; }
 
         /// <summary>
-        /// Last rotation time, which is an explicitly visible time string in the format of 2006-01-02 15:04:05.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Name of the created SSH key.
         /// </summary>
-        [JsonProperty("LatestRotateTime")]
-        public string LatestRotateTime{ get; set; }
+        [JsonProperty("SSHKeyName")]
+        public string SSHKeyName{ get; set; }
 
         /// <summary>
-        /// Next rotation start time, which is an explicitly visible time string in the format of 2006-01-02 15:04:05.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Tag return code. `0`: success; `1`: internal error; `2`: business processing error.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("NextRotateBeginTime")]
-        public string NextRotateBeginTime{ get; set; }
+        [JsonProperty("TagCode")]
+        public ulong? TagCode{ get; set; }
+
+        /// <summary>
+        /// Tag return message.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TagMsg")]
+        public string TagMsg{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -63,10 +68,11 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnableRotation", this.EnableRotation);
-            this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
-            this.SetParamSimple(map, prefix + "LatestRotateTime", this.LatestRotateTime);
-            this.SetParamSimple(map, prefix + "NextRotateBeginTime", this.NextRotateBeginTime);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamSimple(map, prefix + "SSHKeyID", this.SSHKeyID);
+            this.SetParamSimple(map, prefix + "SSHKeyName", this.SSHKeyName);
+            this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
+            this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

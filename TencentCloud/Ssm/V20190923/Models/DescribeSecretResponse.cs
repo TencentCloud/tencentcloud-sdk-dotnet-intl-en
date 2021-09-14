@@ -67,8 +67,8 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 0: user-defined credential; 1: Tencent Cloud service credential.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecretType")]
         public long? SecretType{ get; set; }
@@ -102,6 +102,27 @@ namespace TencentCloud.Ssm.V20190923.Models
         public long? RotationFrequency{ get; set; }
 
         /// <summary>
+        /// Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
+
+        /// <summary>
+        /// Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProjectID")]
+        public long? ProjectID{ get; set; }
+
+        /// <summary>
+        /// ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AssociatedInstanceIDs")]
+        public string[] AssociatedInstanceIDs{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -125,6 +146,9 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "ResourceID", this.ResourceID);
             this.SetParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
             this.SetParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
+            this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
+            this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

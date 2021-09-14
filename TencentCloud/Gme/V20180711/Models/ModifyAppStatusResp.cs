@@ -21,20 +21,20 @@ namespace TencentCloud.Gme.V20180711.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAppResponse : AbstractModel
+    public class ModifyAppStatusResp : AbstractModel
     {
         
         /// <summary>
-        /// Returned data
+        /// GME app ID
         /// </summary>
-        [JsonProperty("Data")]
-        public CreateAppResp Data{ get; set; }
+        [JsonProperty("BizId")]
+        public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// App status. Valid values: `open`, `close`
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "BizId", this.BizId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

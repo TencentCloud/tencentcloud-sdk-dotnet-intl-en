@@ -93,6 +93,46 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// This API is used to create a secret that hosts SSH keys.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSHKeyPairSecretRequest"/></param>
+        /// <returns><see cref="CreateSSHKeyPairSecretResponse"/></returns>
+        public async Task<CreateSSHKeyPairSecretResponse> CreateSSHKeyPairSecret(CreateSSHKeyPairSecretRequest req)
+        {
+             JsonResponseModel<CreateSSHKeyPairSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSSHKeyPairSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSSHKeyPairSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a secret that hosts SSH keys.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSHKeyPairSecretRequest"/></param>
+        /// <returns><see cref="CreateSSHKeyPairSecretResponse"/></returns>
+        public CreateSSHKeyPairSecretResponse CreateSSHKeyPairSecretSync(CreateSSHKeyPairSecretRequest req)
+        {
+             JsonResponseModel<CreateSSHKeyPairSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSSHKeyPairSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSSHKeyPairSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a KMS-encrypted Secret. You can create and store up to 1,000 Secrets in each region.
         /// </summary>
         /// <param name="req"><see cref="CreateSecretRequest"/></param>
@@ -530,6 +570,46 @@ namespace TencentCloud.Ssm.V20190923
              {
                  var strResp = this.InternalRequestSync(req, "GetRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the plaintext value of the SSH key secret.
+        /// </summary>
+        /// <param name="req"><see cref="GetSSHKeyPairValueRequest"/></param>
+        /// <returns><see cref="GetSSHKeyPairValueResponse"/></returns>
+        public async Task<GetSSHKeyPairValueResponse> GetSSHKeyPairValue(GetSSHKeyPairValueRequest req)
+        {
+             JsonResponseModel<GetSSHKeyPairValueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSSHKeyPairValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSSHKeyPairValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the plaintext value of the SSH key secret.
+        /// </summary>
+        /// <param name="req"><see cref="GetSSHKeyPairValueRequest"/></param>
+        /// <returns><see cref="GetSSHKeyPairValueResponse"/></returns>
+        public GetSSHKeyPairValueResponse GetSSHKeyPairValueSync(GetSSHKeyPairValueRequest req)
+        {
+             JsonResponseModel<GetSSHKeyPairValueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSSHKeyPairValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSSHKeyPairValueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

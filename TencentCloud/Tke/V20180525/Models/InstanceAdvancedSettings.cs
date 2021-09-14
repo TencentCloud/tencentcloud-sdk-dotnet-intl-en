@@ -80,6 +80,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DesiredPodNumber")]
         public long? DesiredPodNumber{ get; set; }
 
+        /// <summary>
+        /// Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PreStartUserScript")]
+        public string PreStartUserScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
             this.SetParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
+            this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         }
     }
 }

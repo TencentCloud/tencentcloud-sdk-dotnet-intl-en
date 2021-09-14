@@ -25,16 +25,16 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// GME application ID
+        /// Returned data
         /// </summary>
-        [JsonProperty("BizId")]
-        public ulong? BizId{ get; set; }
+        [JsonProperty("Data")]
+        public ModifyAppStatusResp Data{ get; set; }
 
         /// <summary>
-        /// Application status. Valid values: open, close
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BizId", this.BizId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

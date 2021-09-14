@@ -68,12 +68,18 @@ namespace TencentCloud.Ssm.V20190923.Models
         public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// 0: user-defined credential (default value).
-        /// 1: Tencent Cloud service credential.
-        /// Either 1 or 0 can be selected for this parameter.
+        /// `0` (default): user-defined secret.
+        /// `1`: Tencent Cloud services secret.
+        /// `2`: SSH key secret.
         /// </summary>
         [JsonProperty("SecretType")]
         public ulong? SecretType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
 
         /// <summary>
@@ -88,6 +94,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

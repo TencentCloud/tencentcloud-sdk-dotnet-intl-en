@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.278</VersionPrefix>
+    <VersionPrefix>3.0.279</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1478,6 +1478,8 @@
     <Compile Include="Ckafka\V20190819\Models\CreateUserResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteRouteTriggerTimeRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteRouteTriggerTimeResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteTopicIpWhiteListRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteTopicIpWhiteListResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteTopicRequest.cs" />
@@ -3053,8 +3055,10 @@
     <Compile Include="Gme\V20180711\Models\AppStatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\ApplicationDataStatistics.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAppRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\CreateAppResp.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAppResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsResp.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeApplicationDataRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeApplicationDataResponse.cs" />
@@ -3062,6 +3066,7 @@
     <Compile Include="Gme\V20180711\Models\DescribeScanResultListRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeScanResultListResponse.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\ModifyAppStatusResp.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusResponse.cs" />
     <Compile Include="Gme\V20180711\Models\RealTimeSpeechStatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\RealtimeSpeechConf.cs" />
@@ -5410,6 +5415,8 @@
     <Compile Include="Ssm\V20190923\SsmClient.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateProductSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateProductSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\CreateSSHKeyPairSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\CreateSSHKeyPairSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\DeleteSecretRequest.cs" />
@@ -5432,6 +5439,8 @@
     <Compile Include="Ssm\V20190923\Models\EnableSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\GetRegionsRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\GetRegionsResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetSSHKeyPairValueRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetSSHKeyPairValueResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\GetSecretValueRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\GetSecretValueResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\GetServiceStatusRequest.cs" />
@@ -5948,6 +5957,8 @@
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyNodePoolInstanceTypesRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyNodePoolInstanceTypesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\NodeCountSummary.cs" />
@@ -5966,6 +5977,7 @@
     <Compile Include="Tke\V20180525\Models\RouteInfo.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableConflict.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableInfo.cs" />
+    <Compile Include="Tke\V20180525\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="Tke\V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\RunSecurityServiceEnabled.cs" />

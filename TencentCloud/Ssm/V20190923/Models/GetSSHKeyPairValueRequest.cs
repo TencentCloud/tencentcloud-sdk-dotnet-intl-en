@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Ssm.V20190923.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAppResponse : AbstractModel
+    public class GetSSHKeyPairValueRequest : AbstractModel
     {
         
         /// <summary>
-        /// Returned data
+        /// Secret name. This field is only valid for SSH key secrets.
         /// </summary>
-        [JsonProperty("Data")]
-        public CreateAppResp Data{ get; set; }
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// 
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SSHKeyId")]
+        public string SSHKeyId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamSimple(map, prefix + "SSHKeyId", this.SSHKeyId);
         }
     }
 }

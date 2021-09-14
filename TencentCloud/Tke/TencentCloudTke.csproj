@@ -181,6 +181,8 @@
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyNodePoolInstanceTypesRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyNodePoolInstanceTypesResponse.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
@@ -199,6 +201,7 @@
     <Compile Include="V20180525\Models\RouteInfo.cs" />
     <Compile Include="V20180525\Models\RouteTableConflict.cs" />
     <Compile Include="V20180525\Models\RouteTableInfo.cs" />
+    <Compile Include="V20180525\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180525\Models\RunSecurityServiceEnabled.cs" />

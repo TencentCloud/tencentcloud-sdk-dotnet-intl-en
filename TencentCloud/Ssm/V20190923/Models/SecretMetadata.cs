@@ -100,6 +100,27 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
+        /// <summary>
+        /// Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
+
+        /// <summary>
+        /// Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProjectID")]
+        public long? ProjectID{ get; set; }
+
+        /// <summary>
+        /// ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AssociatedInstanceIDs")]
+        public string[] AssociatedInstanceIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +139,9 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "NextRotationTime", this.NextRotationTime);
             this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
+            this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
+            this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
         }
     }
 }

@@ -21,20 +21,14 @@ namespace TencentCloud.Gme.V20180711.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAppResponse : AbstractModel
+    public class DescribeAppStatisticsResp : AbstractModel
     {
         
         /// <summary>
-        /// Returned data
+        /// App usage statistics
         /// </summary>
-        [JsonProperty("Data")]
-        public CreateAppResp Data{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("AppStatistics")]
+        public AppStatisticsItem[] AppStatistics{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "AppStatistics.", this.AppStatistics);
         }
     }
 }
