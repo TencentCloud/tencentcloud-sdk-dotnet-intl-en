@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.280</VersionPrefix>
+    <VersionPrefix>3.0.281</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1590,6 +1590,7 @@
     <Compile Include="Clb\V20180317\Models\BatchRegisterTargetsRequest.cs" />
     <Compile Include="Clb\V20180317\Models\BatchRegisterTargetsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\BatchTarget.cs" />
+    <Compile Include="Clb\V20180317\Models\BindDetailItem.cs" />
     <Compile Include="Clb\V20180317\Models\BlockedIP.cs" />
     <Compile Include="Clb\V20180317\Models\CertIdRelatedWithLoadBalancers.cs" />
     <Compile Include="Clb\V20180317\Models\CertificateInput.cs" />
@@ -1600,6 +1601,7 @@
     <Compile Include="Clb\V20180317\Models\ClassicalTarget.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTargetInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ClusterItem.cs" />
+    <Compile Include="Clb\V20180317\Models\ConfigListItem.cs" />
     <Compile Include="Clb\V20180317\Models\CreateClsLogSetRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateListenerRequest.cs" />
@@ -1648,6 +1650,10 @@
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBTargetsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClsLogSetRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClsLogSetResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigAssociateListRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigListResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />

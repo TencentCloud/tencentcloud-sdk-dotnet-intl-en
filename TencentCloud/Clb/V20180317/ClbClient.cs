@@ -1235,6 +1235,86 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to query the configured location, bound server or bound CLB instance. If there are domain names, the result will be filtered by domain name.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomizedConfigAssociateListRequest"/></param>
+        /// <returns><see cref="DescribeCustomizedConfigAssociateListResponse"/></returns>
+        public async Task<DescribeCustomizedConfigAssociateListResponse> DescribeCustomizedConfigAssociateList(DescribeCustomizedConfigAssociateListRequest req)
+        {
+             JsonResponseModel<DescribeCustomizedConfigAssociateListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomizedConfigAssociateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomizedConfigAssociateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the configured location, bound server or bound CLB instance. If there are domain names, the result will be filtered by domain name.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomizedConfigAssociateListRequest"/></param>
+        /// <returns><see cref="DescribeCustomizedConfigAssociateListResponse"/></returns>
+        public DescribeCustomizedConfigAssociateListResponse DescribeCustomizedConfigAssociateListSync(DescribeCustomizedConfigAssociateListRequest req)
+        {
+             JsonResponseModel<DescribeCustomizedConfigAssociateListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomizedConfigAssociateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomizedConfigAssociateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pull custom configuration lists to return the user configuration of `AppId`.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomizedConfigListRequest"/></param>
+        /// <returns><see cref="DescribeCustomizedConfigListResponse"/></returns>
+        public async Task<DescribeCustomizedConfigListResponse> DescribeCustomizedConfigList(DescribeCustomizedConfigListRequest req)
+        {
+             JsonResponseModel<DescribeCustomizedConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomizedConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomizedConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pull custom configuration lists to return the user configuration of `AppId`.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomizedConfigListRequest"/></param>
+        /// <returns><see cref="DescribeCustomizedConfigListResponse"/></returns>
+        public DescribeCustomizedConfigListResponse DescribeCustomizedConfigListSync(DescribeCustomizedConfigListRequest req)
+        {
+             JsonResponseModel<DescribeCustomizedConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomizedConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomizedConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of listeners by CLB ID, listener protocol, or listener port. If no filter is specified, all listeners for the CLB instance will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeListenersRequest"/></param>

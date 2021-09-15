@@ -59,6 +59,7 @@
     <Compile Include="V20180317\Models\BatchRegisterTargetsRequest.cs" />
     <Compile Include="V20180317\Models\BatchRegisterTargetsResponse.cs" />
     <Compile Include="V20180317\Models\BatchTarget.cs" />
+    <Compile Include="V20180317\Models\BindDetailItem.cs" />
     <Compile Include="V20180317\Models\BlockedIP.cs" />
     <Compile Include="V20180317\Models\CertIdRelatedWithLoadBalancers.cs" />
     <Compile Include="V20180317\Models\CertificateInput.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="V20180317\Models\ClassicalTarget.cs" />
     <Compile Include="V20180317\Models\ClassicalTargetInfo.cs" />
     <Compile Include="V20180317\Models\ClusterItem.cs" />
+    <Compile Include="V20180317\Models\ConfigListItem.cs" />
     <Compile Include="V20180317\Models\CreateClsLogSetRequest.cs" />
     <Compile Include="V20180317\Models\CreateClsLogSetResponse.cs" />
     <Compile Include="V20180317\Models\CreateListenerRequest.cs" />
@@ -117,6 +119,10 @@
     <Compile Include="V20180317\Models\DescribeClassicalLBTargetsResponse.cs" />
     <Compile Include="V20180317\Models\DescribeClsLogSetRequest.cs" />
     <Compile Include="V20180317\Models\DescribeClsLogSetResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeCustomizedConfigListResponse.cs" />
     <Compile Include="V20180317\Models\DescribeListenersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
