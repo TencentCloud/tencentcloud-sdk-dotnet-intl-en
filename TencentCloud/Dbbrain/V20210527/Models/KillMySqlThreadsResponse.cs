@@ -15,33 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveDomainsResponse : AbstractModel
+    public class KillMySqlThreadsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Total number of results.
+        /// The ID list of MySQL sessions that have been killed.
         /// </summary>
-        [JsonProperty("AllCount")]
-        public ulong? AllCount{ get; set; }
+        [JsonProperty("Threads")]
+        public long?[] Threads{ get; set; }
 
         /// <summary>
-        /// List of domain name details.
-        /// </summary>
-        [JsonProperty("DomainList")]
-        public DomainInfo[] DomainList{ get; set; }
-
-        /// <summary>
-        /// The number of domain names that can be added
+        /// Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("CreateLimitCount")]
-        public long? CreateLimitCount{ get; set; }
+        [JsonProperty("SqlExecId")]
+        public string SqlExecId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -55,9 +49,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AllCount", this.AllCount);
-            this.SetParamArrayObj(map, prefix + "DomainList.", this.DomainList);
-            this.SetParamSimple(map, prefix + "CreateLimitCount", this.CreateLimitCount);
+            this.SetParamArraySimple(map, prefix + "Threads.", this.Threads);
+            this.SetParamSimple(map, prefix + "SqlExecId", this.SqlExecId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

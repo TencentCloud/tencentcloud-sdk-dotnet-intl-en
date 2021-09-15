@@ -27,7 +27,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// Max recording time per file
         /// Default value: `1800` (seconds)
-        /// Value range: 60-7200
+        /// Value range: 30-7200
         /// This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
         /// </summary>
         [JsonProperty("RecordInterval")]

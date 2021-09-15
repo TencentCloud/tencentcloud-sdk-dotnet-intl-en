@@ -67,13 +67,15 @@ namespace TencentCloud.Live.V20180801.Models
         public long? SnapshotInterval{ get; set; }
 
         /// <summary>
-        /// Screenshot width. Default value: 0 (original width).
+        /// Screenshot width. Default value: `0` (original width)
+        /// Value range: 0-3000
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Screenshot height. Default value: 0 (original height).
+        /// Screenshot height. Default value: `0` (original height)
+        /// Value range: 0-2000
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

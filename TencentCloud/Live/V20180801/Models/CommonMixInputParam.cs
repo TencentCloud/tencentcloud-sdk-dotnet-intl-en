@@ -25,7 +25,9 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+        /// Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+        /// The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+        /// The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
         /// </summary>
         [JsonProperty("InputStreamName")]
         public string InputStreamName{ get; set; }

@@ -67,7 +67,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Principal{ get; set; }
 
         /// <summary>
-        /// The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+        /// The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
         /// </summary>
         [JsonProperty("ResourceNameList")]
         public string ResourceNameList{ get; set; }

@@ -1133,6 +1133,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// This API is used to interrupt the current session according to the session ID. It needs to be called twice to commit the session interruption task in two stages. In the pre-commit stage, the stage value is `Prepare`, and the returned value is `SqlExecId’. In the commit stage, the stage value is `Commit`, and `SqlExecId` will be passed in as a parameter. Then the session process will be terminated.
+        /// </summary>
+        /// <param name="req"><see cref="KillMySqlThreadsRequest"/></param>
+        /// <returns><see cref="KillMySqlThreadsResponse"/></returns>
+        public async Task<KillMySqlThreadsResponse> KillMySqlThreads(KillMySqlThreadsRequest req)
+        {
+             JsonResponseModel<KillMySqlThreadsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KillMySqlThreads");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMySqlThreadsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to interrupt the current session according to the session ID. It needs to be called twice to commit the session interruption task in two stages. In the pre-commit stage, the stage value is `Prepare`, and the returned value is `SqlExecId’. In the commit stage, the stage value is `Commit`, and `SqlExecId` will be passed in as a parameter. Then the session process will be terminated.
+        /// </summary>
+        /// <param name="req"><see cref="KillMySqlThreadsRequest"/></param>
+        /// <returns><see cref="KillMySqlThreadsResponse"/></returns>
+        public KillMySqlThreadsResponse KillMySqlThreadsSync(KillMySqlThreadsRequest req)
+        {
+             JsonResponseModel<KillMySqlThreadsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KillMySqlThreads");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMySqlThreadsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to enable/disable instance inspection.
         /// </summary>
         /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>
