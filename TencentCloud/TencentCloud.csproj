@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.281</VersionPrefix>
+    <VersionPrefix>3.0.282</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -110,8 +110,14 @@
     <Compile Include="Antiddos\V20200309\Models\DeleteWaterPrintKeyResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBasicDeviceStatusRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBasicDeviceStatusResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeBizTrendRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeL7RulesBySSLCertIdRequest.cs" />
@@ -171,6 +177,7 @@
     <Compile Include="Antiddos\V20200309\Models\ProtectThresholdRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\ProtocolBlockConfig.cs" />
     <Compile Include="Antiddos\V20200309\Models\ProtocolBlockRelation.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ProtocolPort.cs" />
     <Compile Include="Antiddos\V20200309\Models\ProxyTypeInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\RegionInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\SchedulingDomainInfo.cs" />
@@ -1457,8 +1464,11 @@
     <Compile Include="Ckafka\V20190819\CkafkaClient.cs" />
     <Compile Include="Ckafka\V20190819\Models\Acl.cs" />
     <Compile Include="Ckafka\V20190819\Models\AclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\AppIdResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Assignment.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchCreateAclRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchCreateAclResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ClusterInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\Config.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />

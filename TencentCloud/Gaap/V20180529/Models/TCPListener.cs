@@ -143,6 +143,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("UnhealthyThreshold")]
         public ulong? UnhealthyThreshold{ get; set; }
 
+        /// <summary>
+        /// Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FailoverSwitch")]
+        public ulong? FailoverSwitch{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SessionPersist")]
+        public ulong? SessionPersist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +180,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
             this.SetParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
             this.SetParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
+            this.SetParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+            this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         }
     }
 }

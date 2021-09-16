@@ -21,23 +21,20 @@ namespace TencentCloud.Antiddos.V20200309.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusResponse : AbstractModel
+    public class ProtocolPort : AbstractModel
     {
         
         /// <summary>
-        /// Status of the specified Anti-DDoS resource. Valid values:
-        /// `1`: The IP is blocked.
-        /// `2`: The P is normal.
-        /// `3`: The IP is being attacked.
+        /// Protocol. Valid values: `tcp`, `udp`
         /// </summary>
-        [JsonProperty("Data")]
-        public KeyValue[] Data{ get; set; }
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Port
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Port")]
+        public ulong? Port{ get; set; }
 
 
         /// <summary>
@@ -45,8 +42,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

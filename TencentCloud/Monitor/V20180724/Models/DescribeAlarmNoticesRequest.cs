@@ -78,6 +78,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("GroupIds")]
         public long?[] GroupIds{ get; set; }
 
+        /// <summary>
+        /// Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
+        /// </summary>
+        [JsonProperty("NoticeIds")]
+        public string[] NoticeIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         }
     }
 }

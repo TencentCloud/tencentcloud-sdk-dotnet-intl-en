@@ -46,19 +46,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
+        /// Filter condition   
+        /// Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+        /// RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+        /// PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// Tag list. If this field exists, the list of the resources with the tag will be pulled.
         /// It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
         /// </summary>
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
-
-        /// <summary>
-        /// Filter conditions.   
-        /// The limit on Filter.Values of each request is 5.
-        /// RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -69,8 +70,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

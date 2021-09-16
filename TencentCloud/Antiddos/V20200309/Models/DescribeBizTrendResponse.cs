@@ -21,17 +21,20 @@ namespace TencentCloud.Antiddos.V20200309.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusResponse : AbstractModel
+    public class DescribeBizTrendResponse : AbstractModel
     {
         
         /// <summary>
-        /// Status of the specified Anti-DDoS resource. Valid values:
-        /// `1`: The IP is blocked.
-        /// `2`: The P is normal.
-        /// `3`: The IP is being attacked.
+        /// Value at a time point on the curve
         /// </summary>
-        [JsonProperty("Data")]
-        public KeyValue[] Data{ get; set; }
+        [JsonProperty("DataList")]
+        public float?[] DataList{ get; set; }
+
+        /// <summary>
+        /// Statistical dimension
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,7 +48,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamArraySimple(map, prefix + "DataList.", this.DataList);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

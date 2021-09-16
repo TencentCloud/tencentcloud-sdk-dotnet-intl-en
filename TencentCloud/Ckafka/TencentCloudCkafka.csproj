@@ -47,8 +47,11 @@
     <Compile Include="V20190819\CkafkaClient.cs" />
     <Compile Include="V20190819\Models\Acl.cs" />
     <Compile Include="V20190819\Models\AclResponse.cs" />
+    <Compile Include="V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
+    <Compile Include="V20190819\Models\BatchCreateAclRequest.cs" />
+    <Compile Include="V20190819\Models\BatchCreateAclResponse.cs" />
     <Compile Include="V20190819\Models\ClusterInfo.cs" />
     <Compile Include="V20190819\Models\Config.cs" />
     <Compile Include="V20190819\Models\ConsumerGroup.cs" />

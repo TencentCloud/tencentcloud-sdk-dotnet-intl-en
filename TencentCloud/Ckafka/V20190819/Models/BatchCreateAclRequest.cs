@@ -15,29 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusResponse : AbstractModel
+    public class BatchCreateAclRequest : AbstractModel
     {
         
         /// <summary>
-        /// Status of the specified Anti-DDoS resource. Valid values:
-        /// `1`: The IP is blocked.
-        /// `2`: The P is normal.
-        /// `3`: The IP is being attacked.
+        /// Instance ID.
         /// </summary>
-        [JsonProperty("Data")]
-        public KeyValue[] Data{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// ACL resource type. Default value: `2` (topic).
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ResourceType")]
+        public long? ResourceType{ get; set; }
+
+        /// <summary>
+        /// Resource list array.
+        /// </summary>
+        [JsonProperty("ResourceNames")]
+        public string[] ResourceNames{ get; set; }
+
+        /// <summary>
+        /// ACL rule list.
+        /// </summary>
+        [JsonProperty("RuleList")]
+        public AclRuleInfo[] RuleList{ get; set; }
 
 
         /// <summary>
@@ -45,8 +54,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamArraySimple(map, prefix + "ResourceNames.", this.ResourceNames);
+            this.SetParamArrayObj(map, prefix + "RuleList.", this.RuleList);
         }
     }
 }

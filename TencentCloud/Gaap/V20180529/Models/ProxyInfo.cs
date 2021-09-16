@@ -196,8 +196,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? ModifyConfigTime{ get; set; }
 
         /// <summary>
-        /// Connection type. 104: SILVER connection.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Connection type
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ProxyType")]
         public ulong? ProxyType{ get; set; }
@@ -215,6 +215,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
+
+        /// <summary>
+        /// Network type. Valid values: `normal`, `cn2`
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
 
 
         /// <summary>
@@ -250,6 +264,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
             this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }

@@ -64,6 +64,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         public float? DiscountFlowUnitPrice{ get; set; }
 
         /// <summary>
+        /// Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Cn2BandwidthPrice")]
+        public float? Cn2BandwidthPrice{ get; set; }
+
+        /// <summary>
+        /// Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Cn2BandwidthPriceWithDiscount")]
+        public float? Cn2BandwidthPriceWithDiscount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -81,6 +95,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "FlowUnitPrice", this.FlowUnitPrice);
             this.SetParamSimple(map, prefix + "DiscountFlowUnitPrice", this.DiscountFlowUnitPrice);
+            this.SetParamSimple(map, prefix + "Cn2BandwidthPrice", this.Cn2BandwidthPrice);
+            this.SetParamSimple(map, prefix + "Cn2BandwidthPriceWithDiscount", this.Cn2BandwidthPriceWithDiscount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

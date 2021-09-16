@@ -15,23 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusResponse : AbstractModel
+    public class BatchCreateAclResponse : AbstractModel
     {
         
         /// <summary>
-        /// Status of the specified Anti-DDoS resource. Valid values:
-        /// `1`: The IP is blocked.
-        /// `2`: The P is normal.
-        /// `3`: The IP is being attacked.
+        /// Status code.
         /// </summary>
-        [JsonProperty("Data")]
-        public KeyValue[] Data{ get; set; }
+        [JsonProperty("Result")]
+        public long? Result{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,7 +42,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

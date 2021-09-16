@@ -96,6 +96,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SessionPersist")]
+        public ulong? SessionPersist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +120,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         }
     }
 }

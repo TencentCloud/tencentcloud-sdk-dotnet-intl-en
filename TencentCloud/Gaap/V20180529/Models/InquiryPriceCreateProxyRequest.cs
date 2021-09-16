@@ -72,6 +72,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
+        /// <summary>
+        /// Network type. Valid values: `normal` (default), `cn2`
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Concurrent", this.Concurrent);
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }

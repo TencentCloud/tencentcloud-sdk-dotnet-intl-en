@@ -53,6 +53,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to create ACL policies in batches.
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateAclRequest"/></param>
+        /// <returns><see cref="BatchCreateAclResponse"/></returns>
+        public async Task<BatchCreateAclResponse> BatchCreateAcl(BatchCreateAclRequest req)
+        {
+             JsonResponseModel<BatchCreateAclResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchCreateAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create ACL policies in batches.
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateAclRequest"/></param>
+        /// <returns><see cref="BatchCreateAclResponse"/></returns>
+        public BatchCreateAclResponse BatchCreateAclSync(BatchCreateAclRequest req)
+        {
+             JsonResponseModel<BatchCreateAclResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchCreateAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add an ACL policy.
         /// </summary>
         /// <param name="req"><see cref="CreateAclRequest"/></param>

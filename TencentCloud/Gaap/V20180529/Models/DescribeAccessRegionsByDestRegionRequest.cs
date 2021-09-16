@@ -36,6 +36,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
+        /// <summary>
+        /// Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         {
             this.SetParamSimple(map, prefix + "DestRegion", this.DestRegion);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }
