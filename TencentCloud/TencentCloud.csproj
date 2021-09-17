@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.282</VersionPrefix>
+    <VersionPrefix>3.0.283</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1461,6 +1461,73 @@
     <Compile Include="Cfs\V20190719\Models\UpdateCfsPGroupResponse.cs" />
     <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleRequest.cs" />
     <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleResponse.cs" />
+    <Compile Include="Chdfs\V20201112\ChdfsClient.cs" />
+    <Compile Include="Chdfs\V20201112\Models\AccessGroup.cs" />
+    <Compile Include="Chdfs\V20201112\Models\AccessRule.cs" />
+    <Compile Include="Chdfs\V20201112\Models\AssociateAccessGroupsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\AssociateAccessGroupsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateAccessGroupRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateAccessGroupResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateAccessRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateAccessRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateFileSystemRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateLifeCycleRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateLifeCycleRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateMountPointRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateRestoreTasksRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateRestoreTasksResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteAccessGroupRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteAccessGroupResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteAccessRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteAccessRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteFileSystemRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteLifeCycleRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteLifeCycleRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteMountPointRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DeleteMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessGroupRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessGroupResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessGroupsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessGroupsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeFileSystemRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeFileSystemsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeFileSystemsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeLifeCycleRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeLifeCycleRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeMountPointRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeMountPointsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeMountPointsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeResourceTagsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeResourceTagsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeRestoreTasksRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeRestoreTasksResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DisassociateAccessGroupsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DisassociateAccessGroupsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\FileSystem.cs" />
+    <Compile Include="Chdfs\V20201112\Models\LifeCycleRule.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyAccessGroupRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyAccessGroupResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyAccessRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyAccessRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyFileSystemRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyLifeCycleRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyLifeCycleRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyMountPointRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyResourceTagsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyResourceTagsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\MountPoint.cs" />
+    <Compile Include="Chdfs\V20201112\Models\RestoreTask.cs" />
+    <Compile Include="Chdfs\V20201112\Models\Tag.cs" />
+    <Compile Include="Chdfs\V20201112\Models\Transition.cs" />
     <Compile Include="Ckafka\V20190819\CkafkaClient.cs" />
     <Compile Include="Ckafka\V20190819\Models\Acl.cs" />
     <Compile Include="Ckafka\V20190819\Models\AclResponse.cs" />
