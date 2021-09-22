@@ -60,6 +60,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("Vpcs")]
         public VpcInfo[] Vpcs{ get; set; }
 
+        /// <summary>
+        /// List of authorized accounts' VPCs to associate with the private domain
+        /// </summary>
+        [JsonProperty("AccountVpcSet")]
+        public AccountVpcInfo[] AccountVpcSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
             this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+            this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
         }
     }
 }

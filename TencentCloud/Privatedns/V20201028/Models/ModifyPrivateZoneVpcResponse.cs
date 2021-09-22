@@ -37,6 +37,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public VpcInfo[] VpcSet{ get; set; }
 
         /// <summary>
+        /// List of authorized accounts' VPCs associated with the private domain
+        /// </summary>
+        [JsonProperty("AccountVpcSet")]
+        public AccountVpcInfoOutput[] AccountVpcSet{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
+            this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

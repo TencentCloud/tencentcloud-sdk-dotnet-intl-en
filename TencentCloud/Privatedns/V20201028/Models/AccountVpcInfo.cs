@@ -21,26 +21,35 @@ namespace TencentCloud.Privatedns.V20201028.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyPrivateZoneVpcRequest : AbstractModel
+    public class AccountVpcInfo : AbstractModel
     {
         
         /// <summary>
-        /// Private domain ID
+        /// VpcId: vpc-xadsafsdasd
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// List of all VPCs associated with private domain
+        /// VPC region: ap-guangzhou, ap-shanghai
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("VpcSet")]
-        public VpcInfo[] VpcSet{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// List of authorized accounts' VPCs to associate with the private domain
+        /// VPC account: 123456789
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("AccountVpcSet")]
-        public AccountVpcInfo[] AccountVpcSet{ get; set; }
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// VPC name: testname
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
 
 
         /// <summary>
@@ -48,9 +57,10 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
-            this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
         }
     }
 }

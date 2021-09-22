@@ -21,26 +21,26 @@ namespace TencentCloud.Privatedns.V20201028.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyPrivateZoneVpcRequest : AbstractModel
+    public class AccountVpcInfoOutput : AbstractModel
     {
         
         /// <summary>
-        /// Private domain ID
+        /// UIN of the VPC account
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
 
         /// <summary>
-        /// List of all VPCs associated with private domain
+        /// VPC ID
         /// </summary>
-        [JsonProperty("VpcSet")]
-        public VpcInfo[] VpcSet{ get; set; }
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// List of authorized accounts' VPCs to associate with the private domain
+        /// Region
         /// </summary>
-        [JsonProperty("AccountVpcSet")]
-        public AccountVpcInfo[] AccountVpcSet{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
-            this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

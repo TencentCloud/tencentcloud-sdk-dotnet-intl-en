@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.283</VersionPrefix>
+    <VersionPrefix>3.0.284</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -494,6 +494,7 @@
     <Compile Include="As\V20180419\Models\DescribeScheduledActionsResponse.cs" />
     <Compile Include="As\V20180419\Models\DetachInstancesRequest.cs" />
     <Compile Include="As\V20180419\Models\DetachInstancesResponse.cs" />
+    <Compile Include="As\V20180419\Models\DetailedStatusMessage.cs" />
     <Compile Include="As\V20180419\Models\DisableAutoScalingGroupRequest.cs" />
     <Compile Include="As\V20180419\Models\DisableAutoScalingGroupResponse.cs" />
     <Compile Include="As\V20180419\Models\EnableAutoScalingGroupRequest.cs" />
@@ -4806,6 +4807,8 @@
     <Compile Include="Postgres\V20170312\Models\Xlog.cs" />
     <Compile Include="Postgres\V20170312\Models\ZoneInfo.cs" />
     <Compile Include="Privatedns\V20201028\PrivatednsClient.cs" />
+    <Compile Include="Privatedns\V20201028\Models\AccountVpcInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\AccountVpcInfoOutput.cs" />
     <Compile Include="Privatedns\V20201028\Models\AuditLog.cs" />
     <Compile Include="Privatedns\V20201028\Models\AuditLogInfo.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRecordRequest.cs" />

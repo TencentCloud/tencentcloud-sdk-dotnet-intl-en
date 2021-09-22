@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20201028\PrivatednsClient.cs" />
+    <Compile Include="V20201028\Models\AccountVpcInfo.cs" />
+    <Compile Include="V20201028\Models\AccountVpcInfoOutput.cs" />
     <Compile Include="V20201028\Models\AuditLog.cs" />
     <Compile Include="V20201028\Models\AuditLogInfo.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneRecordRequest.cs" />

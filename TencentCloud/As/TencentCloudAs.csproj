@@ -105,6 +105,7 @@
     <Compile Include="V20180419\Models\DescribeScheduledActionsResponse.cs" />
     <Compile Include="V20180419\Models\DetachInstancesRequest.cs" />
     <Compile Include="V20180419\Models\DetachInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\DetailedStatusMessage.cs" />
     <Compile Include="V20180419\Models\DisableAutoScalingGroupRequest.cs" />
     <Compile Include="V20180419\Models\DisableAutoScalingGroupResponse.cs" />
     <Compile Include="V20180419\Models\EnableAutoScalingGroupRequest.cs" />
