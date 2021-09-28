@@ -49,7 +49,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// SMS request error code. For specific meanings, please see [Error Codes](https://intl.cloud.tencent.com/document/product/382/49316?from_cn_redirect=1).
+        /// SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

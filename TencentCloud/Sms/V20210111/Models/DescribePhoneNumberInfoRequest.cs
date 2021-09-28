@@ -21,23 +21,15 @@ namespace TencentCloud.Sms.V20210111.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSmsTemplateListRequest : AbstractModel
+    public class DescribePhoneNumberInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// Template ID array.
-        /// <dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+        /// A parameter used to query mobile numbers in E.164 format (+[country/region code][subscriber number]). Up to 200 mobile numbers can be queried at a time.
+        /// Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
         /// </summary>
-        [JsonProperty("TemplateIdSet")]
-        public ulong?[] TemplateIdSet{ get; set; }
-
-        /// <summary>
-        /// Whether it is Global SMS:
-        /// 0: Mainland China SMS.
-        /// 1: Global SMS.
-        /// </summary>
-        [JsonProperty("International")]
-        public ulong? International{ get; set; }
+        [JsonProperty("PhoneNumberSet")]
+        public string[] PhoneNumberSet{ get; set; }
 
 
         /// <summary>
@@ -45,8 +37,7 @@ namespace TencentCloud.Sms.V20210111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
-            this.SetParamSimple(map, prefix + "International", this.International);
+            this.SetParamArraySimple(map, prefix + "PhoneNumberSet.", this.PhoneNumberSet);
         }
     }
 }

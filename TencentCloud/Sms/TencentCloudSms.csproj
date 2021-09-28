@@ -60,6 +60,8 @@
     <Compile Include="V20210111\Models\DeleteSmsTemplateRequest.cs" />
     <Compile Include="V20210111\Models\DeleteSmsTemplateResponse.cs" />
     <Compile Include="V20210111\Models\DeleteTemplateStatus.cs" />
+    <Compile Include="V20210111\Models\DescribePhoneNumberInfoRequest.cs" />
+    <Compile Include="V20210111\Models\DescribePhoneNumberInfoResponse.cs" />
     <Compile Include="V20210111\Models\DescribeSignListStatus.cs" />
     <Compile Include="V20210111\Models\DescribeSmsSignListRequest.cs" />
     <Compile Include="V20210111\Models\DescribeSmsSignListResponse.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="V20210111\Models\ModifySmsTemplateRequest.cs" />
     <Compile Include="V20210111\Models\ModifySmsTemplateResponse.cs" />
     <Compile Include="V20210111\Models\ModifyTemplateStatus.cs" />
+    <Compile Include="V20210111\Models\PhoneNumberInfo.cs" />
     <Compile Include="V20210111\Models\PullSmsReplyStatus.cs" />
     <Compile Include="V20210111\Models\PullSmsReplyStatusByPhoneNumberRequest.cs" />
     <Compile Include="V20210111\Models\PullSmsReplyStatusByPhoneNumberResponse.cs" />

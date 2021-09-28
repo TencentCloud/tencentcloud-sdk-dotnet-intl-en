@@ -21,23 +21,20 @@ namespace TencentCloud.Sms.V20210111.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSmsTemplateListRequest : AbstractModel
+    public class DescribePhoneNumberInfoResponse : AbstractModel
     {
         
         /// <summary>
-        /// Template ID array.
-        /// <dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+        /// A parameter used to obtain mobile number information.
         /// </summary>
-        [JsonProperty("TemplateIdSet")]
-        public ulong?[] TemplateIdSet{ get; set; }
+        [JsonProperty("PhoneNumberInfoSet")]
+        public PhoneNumberInfo[] PhoneNumberInfoSet{ get; set; }
 
         /// <summary>
-        /// Whether it is Global SMS:
-        /// 0: Mainland China SMS.
-        /// 1: Global SMS.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("International")]
-        public ulong? International{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +42,8 @@ namespace TencentCloud.Sms.V20210111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
-            this.SetParamSimple(map, prefix + "International", this.International);
+            this.SetParamArrayObj(map, prefix + "PhoneNumberInfoSet.", this.PhoneNumberInfoSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

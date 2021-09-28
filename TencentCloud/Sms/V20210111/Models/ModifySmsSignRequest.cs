@@ -65,9 +65,10 @@ namespace TencentCloud.Sms.V20210111.Models
         public ulong? DocumentType{ get; set; }
 
         /// <summary>
-        /// Whether it is Global SMS:
-        /// 0: Mainland China SMS.
-        /// 1: Global SMS.
+        /// A parameter used to specify whether it is Global SMS:
+        /// `0`: Chinese mainland SMS.
+        /// `1`: Global SMS.
+        /// Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
         /// </summary>
         [JsonProperty("International")]
         public ulong? International{ get; set; }

@@ -26,6 +26,7 @@ namespace TencentCloud.Sms.V20210111.Models
         
         /// <summary>
         /// Signature name.
+        /// Note: you cannot apply for an approved or pending signature again.
         /// </summary>
         [JsonProperty("SignName")]
         public string SignName{ get; set; }
