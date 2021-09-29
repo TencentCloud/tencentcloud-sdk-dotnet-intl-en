@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.289</VersionPrefix>
+    <VersionPrefix>3.0.290</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3999,6 +3999,8 @@
     <Compile Include="Mdl\V20200326\Models\VideoPipelineInputStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\VideoTemplateInfo.cs" />
     <Compile Include="Mdp\V20200527\MdpClient.cs" />
+    <Compile Include="Mdp\V20200527\Models\BindNewLVBDomainWithChannelRequest.cs" />
+    <Compile Include="Mdp\V20200527\Models\BindNewLVBDomainWithChannelResponse.cs" />
     <Compile Include="Mdp\V20200527\Models\CacheInfo.cs" />
     <Compile Include="Mdp\V20200527\Models\CacheInfoInfo.cs" />
     <Compile Include="Mdp\V20200527\Models\ChannelInfo.cs" />

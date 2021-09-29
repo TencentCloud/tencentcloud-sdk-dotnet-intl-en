@@ -21,14 +21,14 @@ namespace TencentCloud.Mdp.V20200527.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateStreamPackageChannelResponse : AbstractModel
+    public class BindNewLVBDomainWithChannelResponse : AbstractModel
     {
         
         /// <summary>
-        /// Channel information
+        /// The LVB domain name bound successfully
         /// </summary>
-        [JsonProperty("Info")]
-        public ChannelInfo Info{ get; set; }
+        [JsonProperty("LVBDomain")]
+        public string LVBDomain{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +42,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Info.", this.Info);
+            this.SetParamSimple(map, prefix + "LVBDomain", this.LVBDomain);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

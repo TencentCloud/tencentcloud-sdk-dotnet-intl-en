@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20200527\MdpClient.cs" />
+    <Compile Include="V20200527\Models\BindNewLVBDomainWithChannelRequest.cs" />
+    <Compile Include="V20200527\Models\BindNewLVBDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\CacheInfo.cs" />
     <Compile Include="V20200527\Models\CacheInfoInfo.cs" />
     <Compile Include="V20200527\Models\ChannelInfo.cs" />

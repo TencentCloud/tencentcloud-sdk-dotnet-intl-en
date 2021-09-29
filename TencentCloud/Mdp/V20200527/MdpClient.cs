@@ -53,6 +53,46 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
+        /// This API is used to bind an LVB domain name to a channel.
+        /// </summary>
+        /// <param name="req"><see cref="BindNewLVBDomainWithChannelRequest"/></param>
+        /// <returns><see cref="BindNewLVBDomainWithChannelResponse"/></returns>
+        public async Task<BindNewLVBDomainWithChannelResponse> BindNewLVBDomainWithChannel(BindNewLVBDomainWithChannelRequest req)
+        {
+             JsonResponseModel<BindNewLVBDomainWithChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindNewLVBDomainWithChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindNewLVBDomainWithChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind an LVB domain name to a channel.
+        /// </summary>
+        /// <param name="req"><see cref="BindNewLVBDomainWithChannelRequest"/></param>
+        /// <returns><see cref="BindNewLVBDomainWithChannelResponse"/></returns>
+        public BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannelSync(BindNewLVBDomainWithChannelRequest req)
+        {
+             JsonResponseModel<BindNewLVBDomainWithChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindNewLVBDomainWithChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindNewLVBDomainWithChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a StreamPackage channel.
         /// </summary>
         /// <param name="req"><see cref="CreateStreamPackageChannelRequest"/></param>
