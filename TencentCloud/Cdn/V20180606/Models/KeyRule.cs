@@ -47,10 +47,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Whether to enable full-path cache
-        /// on: enable full-path cache (i.e., disable parameter filter)
-        /// off: disable full-path cache (i.e., enable parameter filter)
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Whether full-path cache is enaled
+        /// `on`: enables full-path cache (i.e., disables ignore query string)
+        /// `off`: disables full-path cache (i.e., enables ignore query string)
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }

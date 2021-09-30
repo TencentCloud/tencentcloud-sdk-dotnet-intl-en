@@ -25,16 +25,16 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// URL redirect configuration switch
-        /// on: enabled
-        /// off: disabled
+        /// Whether URL rewriting is enabled
+        /// `on`: enabled
+        /// `off`: disabled
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PathRules")]
         public UrlRedirectRule[] PathRules{ get; set; }

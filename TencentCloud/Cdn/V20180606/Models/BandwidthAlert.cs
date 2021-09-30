@@ -25,16 +25,16 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Bandwidth cap configuration switch
-        /// on: enabled
-        /// off: disabled
+        /// Specifies whether to enable the bandwidth cap
+        /// `on`: enable
+        /// `off`: disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Bandwidth cap threshold (in bps)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BpsThreshold")]
         public long? BpsThreshold{ get; set; }
@@ -49,11 +49,43 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string CounterMeasure{ get; set; }
 
         /// <summary>
-        /// The last time the bandwidth cap threshold was triggered
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The last time when the usage upper limit in the Chinese mainland was reached
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastTriggerTime")]
         public string LastTriggerTime{ get; set; }
+
+        /// <summary>
+        /// Indicates whether to trigger alerts when the upper limit is reached
+        /// `on`: enable
+        /// `off`: disable
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AlertSwitch")]
+        public string AlertSwitch{ get; set; }
+
+        /// <summary>
+        /// Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AlertPercentage")]
+        public long? AlertPercentage{ get; set; }
+
+        /// <summary>
+        /// The last time when the usage outside the Chinese mainland reached the upper limit
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LastTriggerTimeOverseas")]
+        public string LastTriggerTimeOverseas{ get; set; }
+
+        /// <summary>
+        /// Dimension of the usage limit
+        /// `bandwidth`: bandwidth
+        /// `flux`: traffic
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Metric")]
+        public string Metric{ get; set; }
 
 
         /// <summary>
@@ -65,6 +97,10 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "BpsThreshold", this.BpsThreshold);
             this.SetParamSimple(map, prefix + "CounterMeasure", this.CounterMeasure);
             this.SetParamSimple(map, prefix + "LastTriggerTime", this.LastTriggerTime);
+            this.SetParamSimple(map, prefix + "AlertSwitch", this.AlertSwitch);
+            this.SetParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
+            this.SetParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
+            this.SetParamSimple(map, prefix + "Metric", this.Metric);
         }
     }
 }

@@ -64,8 +64,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Metric{ get; set; }
 
         /// <summary>
-        /// Specifies the list of domain names to be queried
-        /// Up to 30 domain names can be queried at a time
+        /// Queries the information of specified domain names
+        /// Specifies a domain name to query
+        /// Specifies multiple domain names to query (30 at most at a time)
+        /// Queries all Specifies an account to query all domain names
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

@@ -32,8 +32,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public SimpleCache SimpleCache{ get; set; }
 
         /// <summary>
-        /// Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// (Disused) Advanced cache validity configuration
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdvancedCache")]
         public AdvancedCache AdvancedCache{ get; set; }

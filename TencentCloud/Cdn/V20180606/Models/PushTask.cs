@@ -41,6 +41,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// `fail`: prefetch failed
         /// `done`: prefetch succeeded
         /// `process`: prefetch in progress
+        /// `invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

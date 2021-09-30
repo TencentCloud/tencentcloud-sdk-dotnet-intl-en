@@ -25,11 +25,11 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Resource name, which is classified as follows based on different query conditions:
-        /// A specific domain name: This indicates the details of this domain name
-        /// multiDomains: This indicates the aggregate details of multiple domain names
-        /// Project ID: This displays the ID of the specifically queried project
-        /// all: This indicates the details at the account level
+        /// Resource name, which is classified as follows based on different query filters:
+        /// A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
+        /// Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+        /// Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+        /// `all`: account-level data, which is aggregated details of all domain names of an account.
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }

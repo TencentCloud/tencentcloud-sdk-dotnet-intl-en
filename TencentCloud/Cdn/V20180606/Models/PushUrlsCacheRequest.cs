@@ -48,7 +48,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+        /// If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+        /// Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
         /// </summary>
         [JsonProperty("Layer")]
         public string Layer{ get; set; }

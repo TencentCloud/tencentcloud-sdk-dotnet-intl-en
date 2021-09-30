@@ -65,6 +65,8 @@
     <Compile Include="V20170320\Models\CommonTimeWindow.cs" />
     <Compile Include="V20170320\Models\CreateAccountsRequest.cs" />
     <Compile Include="V20170320\Models\CreateAccountsResponse.cs" />
+    <Compile Include="V20170320\Models\CreateAuditPolicyRequest.cs" />
+    <Compile Include="V20170320\Models\CreateAuditPolicyResponse.cs" />
     <Compile Include="V20170320\Models\CreateBackupRequest.cs" />
     <Compile Include="V20170320\Models\CreateBackupResponse.cs" />
     <Compile Include="V20170320\Models\CreateCloneInstanceRequest.cs" />

@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Date{ get; set; }
 
         /// <summary>
-        /// Download address on the private network
+        /// Download address
         /// </summary>
         [JsonProperty("IntranetUrl")]
         public string IntranetUrl{ get; set; }
 
         /// <summary>
-        /// Download address on the public network
+        /// Download address
         /// </summary>
         [JsonProperty("InternetUrl")]
         public string InternetUrl{ get; set; }

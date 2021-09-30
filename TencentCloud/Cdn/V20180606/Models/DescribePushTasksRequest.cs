@@ -71,10 +71,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// Specifies a task state for your query:
+        /// Queries the status of a specified task
         /// `fail`: prefetch failed
         /// `done`: prefetch succeeded
         /// `process`: prefetch in progress
+        /// `invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

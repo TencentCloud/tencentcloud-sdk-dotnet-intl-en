@@ -253,6 +253,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditPolicyRequest"/></param>
+        /// <returns><see cref="CreateAuditPolicyResponse"/></returns>
+        public async Task<CreateAuditPolicyResponse> CreateAuditPolicy(CreateAuditPolicyRequest req)
+        {
+             JsonResponseModel<CreateAuditPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAuditPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditPolicyRequest"/></param>
+        /// <returns><see cref="CreateAuditPolicyResponse"/></returns>
+        public CreateAuditPolicyResponse CreateAuditPolicySync(CreateAuditPolicyRequest req)
+        {
+             JsonResponseModel<CreateAuditPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAuditPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (CreateBackup) is used to create a TencentDB instance backup.
         /// </summary>
         /// <param name="req"><see cref="CreateBackupRequest"/></param>

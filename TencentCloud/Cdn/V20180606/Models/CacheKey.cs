@@ -26,8 +26,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Whether to enable full-path cache
-        /// on: enable full-path cache (i.e., disable parameter filter)
-        /// off: disable full-path cache (i.e., enable parameter filter)
+        /// `on`: enables full-path cache (i.e., disables Ignore Query String)
+        /// `off`: disables full-path cache (i.e., enables Ignore Query String)
         /// </summary>
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }

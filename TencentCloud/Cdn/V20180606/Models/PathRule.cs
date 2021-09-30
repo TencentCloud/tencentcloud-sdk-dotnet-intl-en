@@ -78,6 +78,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RequestHeaders")]
         public HttpHeaderRule[] RequestHeaders{ get; set; }
 
+        /// <summary>
+        /// When `Regex` is `false`, this parameter should be `true`.
+        /// `false`: disabled
+        /// `true`: enabled
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("FullMatch")]
+        public bool? FullMatch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +100,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "OriginArea", this.OriginArea);
             this.SetParamSimple(map, prefix + "ForwardUri", this.ForwardUri);
             this.SetParamArrayObj(map, prefix + "RequestHeaders.", this.RequestHeaders);
+            this.SetParamSimple(map, prefix + "FullMatch", this.FullMatch);
         }
     }
 }
