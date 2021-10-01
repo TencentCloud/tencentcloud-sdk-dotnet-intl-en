@@ -293,6 +293,46 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// This API is used to get the list of Private DNS accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateDNSAccountListRequest"/></param>
+        /// <returns><see cref="DescribePrivateDNSAccountListResponse"/></returns>
+        public async Task<DescribePrivateDNSAccountListResponse> DescribePrivateDNSAccountList(DescribePrivateDNSAccountListRequest req)
+        {
+             JsonResponseModel<DescribePrivateDNSAccountListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrivateDNSAccountList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateDNSAccountListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of Private DNS accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateDNSAccountListRequest"/></param>
+        /// <returns><see cref="DescribePrivateDNSAccountListResponse"/></returns>
+        public DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountListSync(DescribePrivateDNSAccountListRequest req)
+        {
+             JsonResponseModel<DescribePrivateDNSAccountListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrivateDNSAccountList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateDNSAccountListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the private domain information.
         /// </summary>
         /// <param name="req"><see cref="DescribePrivateZoneRequest"/></param>

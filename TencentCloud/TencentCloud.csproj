@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.291</VersionPrefix>
+    <VersionPrefix>3.0.292</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4961,6 +4961,8 @@
     <Compile Include="Privatedns\V20201028\Models\DescribeAuditLogResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeDashboardRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeDashboardResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateDNSAccountListRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateDNSAccountListResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneListRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneListResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneRecordListRequest.cs" />
@@ -4980,6 +4982,7 @@
     <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneVpcRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneVpcResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\PrivateDNSAccount.cs" />
     <Compile Include="Privatedns\V20201028\Models\PrivateZone.cs" />
     <Compile Include="Privatedns\V20201028\Models\PrivateZoneRecord.cs" />
     <Compile Include="Privatedns\V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />

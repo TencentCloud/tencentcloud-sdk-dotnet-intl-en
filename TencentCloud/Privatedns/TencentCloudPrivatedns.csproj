@@ -62,6 +62,8 @@
     <Compile Include="V20201028\Models\DescribeAuditLogResponse.cs" />
     <Compile Include="V20201028\Models\DescribeDashboardRequest.cs" />
     <Compile Include="V20201028\Models\DescribeDashboardResponse.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateDNSAccountListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateDNSAccountListResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneListRequest.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneListResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneRecordListRequest.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="V20201028\Models\ModifyPrivateZoneResponse.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneVpcRequest.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneVpcResponse.cs" />
+    <Compile Include="V20201028\Models\PrivateDNSAccount.cs" />
     <Compile Include="V20201028\Models\PrivateZone.cs" />
     <Compile Include="V20201028\Models\PrivateZoneRecord.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
