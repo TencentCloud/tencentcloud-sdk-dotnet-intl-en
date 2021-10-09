@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ssm.V20190923.Models
+namespace TencentCloud.Mdp.V20200527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSSHKeyPairValueRequest : AbstractModel
+    public class UnbindCdnDomainWithChannelResponse : AbstractModel
     {
         
         /// <summary>
-        /// Secret name. This field is only valid for SSH key secrets.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("SecretName")]
-        public string SecretName{ get; set; }
-
-        /// <summary>
-        /// ID of the key pair, which is the unique identifier of the key pair in the CVM.
-        /// </summary>
-        [JsonProperty("SSHKeyId")]
-        public string SSHKeyId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
-            this.SetParamSimple(map, prefix + "SSHKeyId", this.SSHKeyId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

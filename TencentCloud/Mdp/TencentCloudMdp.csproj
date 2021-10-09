@@ -73,5 +73,7 @@
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelRequest.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelResponse.cs" />
     <Compile Include="V20200527\Models\PointInfo.cs" />
+    <Compile Include="V20200527\Models\UnbindCdnDomainWithChannelRequest.cs" />
+    <Compile Include="V20200527\Models\UnbindCdnDomainWithChannelResponse.cs" />
   </ItemGroup>
 </Project>

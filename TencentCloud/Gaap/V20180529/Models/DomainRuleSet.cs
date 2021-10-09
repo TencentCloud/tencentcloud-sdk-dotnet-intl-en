@@ -164,6 +164,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("DomainStatus")]
         public ulong? DomainStatus{ get; set; }
 
+        /// <summary>
+        /// Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BanStatus")]
+        public string BanStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +196,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
             this.SetParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
             this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
+            this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
         }
     }
 }

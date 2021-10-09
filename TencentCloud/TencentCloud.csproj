@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.293</VersionPrefix>
+    <VersionPrefix>3.0.294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1534,6 +1534,7 @@
     <Compile Include="Ckafka\V20190819\CkafkaClient.cs" />
     <Compile Include="Ckafka\V20190819\Models\Acl.cs" />
     <Compile Include="Ckafka\V20190819\Models\AclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\AclRule.cs" />
     <Compile Include="Ckafka\V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\AppIdResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Assignment.cs" />
@@ -4162,6 +4163,8 @@
     <Compile Include="Mdp\V20200527\Models\ModifyStreamPackageChannelRequest.cs" />
     <Compile Include="Mdp\V20200527\Models\ModifyStreamPackageChannelResponse.cs" />
     <Compile Include="Mdp\V20200527\Models\PointInfo.cs" />
+    <Compile Include="Mdp\V20200527\Models\UnbindCdnDomainWithChannelRequest.cs" />
+    <Compile Include="Mdp\V20200527\Models\UnbindCdnDomainWithChannelResponse.cs" />
     <Compile Include="Mongodb\V20190725\MongodbClient.cs" />
     <Compile Include="Mongodb\V20190725\Models\AssignProjectRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\AssignProjectResponse.cs" />
@@ -5901,6 +5904,8 @@
     <Compile Include="Tcr\V20190924\Models\ImmutableTagRule.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifyInstanceRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifyInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\SecurityPolicy.cs" />
     <Compile Include="Tem\V20210701\TemClient.cs" />
     <Compile Include="Tem\V20210701\Models\CosToken.cs" />

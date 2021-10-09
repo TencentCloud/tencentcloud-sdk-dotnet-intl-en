@@ -76,7 +76,11 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? SecretType{ get; set; }
 
         /// <summary>
-        /// 
+        /// This parameter is valid only when SecretType is `1`.
+        ///  
+        /// An empty value indicates querying all types of Tencent Cloud service secrets.
+        /// `Mysql`: queries MySQL database credentials.
+        /// `Tdsql-mysql`: queries TDSQL MySQL database credentials.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }

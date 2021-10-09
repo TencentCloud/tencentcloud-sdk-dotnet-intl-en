@@ -332,5 +332,45 @@ namespace TencentCloud.Tcr.V20190924
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to update instance information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceResponse"/></returns>
+        public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest req)
+        {
+             JsonResponseModel<ModifyInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update instance information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceResponse"/></returns>
+        public ModifyInstanceResponse ModifyInstanceSync(ModifyInstanceRequest req)
+        {
+             JsonResponseModel<ModifyInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

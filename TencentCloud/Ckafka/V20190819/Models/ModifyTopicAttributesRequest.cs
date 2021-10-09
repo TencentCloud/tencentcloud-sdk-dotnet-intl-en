@@ -84,6 +84,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("CleanUpPolicy")]
         public string CleanUpPolicy{ get; set; }
 
+        /// <summary>
+        /// IP allowlist, which is required if the value of `enableWhileList` is 1.
+        /// </summary>
+        [JsonProperty("IpWhiteList")]
+        public string[] IpWhiteList{ get; set; }
+
+        /// <summary>
+        /// Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+        /// </summary>
+        [JsonProperty("EnableAclRule")]
+        public long? EnableAclRule{ get; set; }
+
+        /// <summary>
+        /// Name of the preset ACL rule.
+        /// </summary>
+        [JsonProperty("AclRuleName")]
+        public string AclRuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +118,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
             this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
             this.SetParamSimple(map, prefix + "CleanUpPolicy", this.CleanUpPolicy);
+            this.SetParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
+            this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
+            this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         }
     }
 }

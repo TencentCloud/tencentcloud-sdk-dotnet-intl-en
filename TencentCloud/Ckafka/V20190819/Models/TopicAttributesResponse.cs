@@ -73,6 +73,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Partitions")]
         public TopicPartitionDO[] Partitions{ get; set; }
 
+        /// <summary>
+        /// Switch of the preset ACL rule. `1`: enable, `0`: disable.
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnableAclRule")]
+        public long? EnableAclRule{ get; set; }
+
+        /// <summary>
+        /// Preset ACL rule list.
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AclRuleList")]
+        public AclRule[] AclRuleList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +101,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
             this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+            this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
+            this.SetParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
         }
     }
 }

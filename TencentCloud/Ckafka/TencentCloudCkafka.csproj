@@ -47,6 +47,7 @@
     <Compile Include="V20190819\CkafkaClient.cs" />
     <Compile Include="V20190819\Models\Acl.cs" />
     <Compile Include="V20190819\Models\AclResponse.cs" />
+    <Compile Include="V20190819\Models\AclRule.cs" />
     <Compile Include="V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />

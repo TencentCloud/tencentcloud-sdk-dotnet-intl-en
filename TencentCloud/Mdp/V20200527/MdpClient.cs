@@ -452,5 +452,45 @@ namespace TencentCloud.Mdp.V20200527
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to unbind a CDN playback domain name from a channel.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCdnDomainWithChannelRequest"/></param>
+        /// <returns><see cref="UnbindCdnDomainWithChannelResponse"/></returns>
+        public async Task<UnbindCdnDomainWithChannelResponse> UnbindCdnDomainWithChannel(UnbindCdnDomainWithChannelRequest req)
+        {
+             JsonResponseModel<UnbindCdnDomainWithChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindCdnDomainWithChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCdnDomainWithChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a CDN playback domain name from a channel.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCdnDomainWithChannelRequest"/></param>
+        /// <returns><see cref="UnbindCdnDomainWithChannelResponse"/></returns>
+        public UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannelSync(UnbindCdnDomainWithChannelRequest req)
+        {
+             JsonResponseModel<UnbindCdnDomainWithChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindCdnDomainWithChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCdnDomainWithChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -196,7 +196,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? ModifyConfigTime{ get; set; }
 
         /// <summary>
-        /// Connection type
+        /// Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
         /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ProxyType")]
@@ -229,6 +229,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
+
+        /// <summary>
+        /// Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BanStatus")]
+        public string BanStatus{ get; set; }
 
 
         /// <summary>
@@ -266,6 +273,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
         }
     }
 }
