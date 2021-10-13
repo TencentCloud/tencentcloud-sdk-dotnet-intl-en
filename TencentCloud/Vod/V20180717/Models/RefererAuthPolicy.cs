@@ -34,22 +34,24 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Referer authentication method. Valid values:
-        /// <li>`Black`: blocklist</li>
-        /// <li>`White`: allowlist</li>
+        /// <li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+        /// <li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+        /// When `Status` is set to `Enabled`, `AuthType` must be specified.
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }
 
         /// <summary>
-        /// List for referer authentication
+        /// The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
         /// </summary>
         [JsonProperty("Referers")]
         public string[] Referers{ get; set; }
 
         /// <summary>
         /// Whether to allow requests with empty referer to access this domain name. Valid values:
-        /// <li>Yes</li>
-        /// <li>No</li>
+        /// <li>`Yes`</li>
+        /// <li>`No`</li>
+        /// When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
         /// </summary>
         [JsonProperty("BlankRefererAllowed")]
         public string BlankRefererAllowed{ get; set; }

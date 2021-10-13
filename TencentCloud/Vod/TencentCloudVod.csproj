@@ -213,6 +213,8 @@
     <Compile Include="V20180717\Models\CreateSuperPlayerConfigResponse.cs" />
     <Compile Include="V20180717\Models\CreateTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateVodDomainRequest.cs" />
+    <Compile Include="V20180717\Models\CreateVodDomainResponse.cs" />
     <Compile Include="V20180717\Models\CreateWatermarkTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateWordSamplesRequest.cs" />
@@ -245,6 +247,8 @@
     <Compile Include="V20180717\Models\DeleteSuperPlayerConfigResponse.cs" />
     <Compile Include="V20180717\Models\DeleteTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteVodDomainRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteVodDomainResponse.cs" />
     <Compile Include="V20180717\Models\DeleteWatermarkTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteWordSamplesRequest.cs" />
@@ -427,6 +431,10 @@
     <Compile Include="V20180717\Models\ModifySuperPlayerConfigResponse.cs" />
     <Compile Include="V20180717\Models\ModifyTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyVodDomainAccelerateConfigRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyVodDomainAccelerateConfigResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyVodDomainConfigRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyVodDomainConfigResponse.cs" />
     <Compile Include="V20180717\Models\ModifyWatermarkTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyWordSampleRequest.cs" />

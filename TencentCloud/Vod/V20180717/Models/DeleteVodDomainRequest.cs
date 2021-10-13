@@ -21,23 +21,20 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UrlSignatureAuthPolicy : AbstractModel
+    public class DeleteVodDomainRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-        /// <li>`Enabled`: enable</li>
-        /// <li>`Disabled`: disable</li>
+        /// Domain name to delete from VOD
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-        /// `EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+        /// VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
         /// </summary>
-        [JsonProperty("EncryptedKey")]
-        public string EncryptedKey{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "EncryptedKey", this.EncryptedKey);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

@@ -21,23 +21,14 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UrlSignatureAuthPolicy : AbstractModel
+    public class ModifyVodDomainConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-        /// <li>`Enabled`: enable</li>
-        /// <li>`Disabled`: disable</li>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-        /// `EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
-        /// </summary>
-        [JsonProperty("EncryptedKey")]
-        public string EncryptedKey{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "EncryptedKey", this.EncryptedKey);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
