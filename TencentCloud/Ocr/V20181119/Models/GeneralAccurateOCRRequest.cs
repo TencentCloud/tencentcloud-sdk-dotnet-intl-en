@@ -46,6 +46,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("IsWords")]
         public bool? IsWords{ get; set; }
 
+        /// <summary>
+        /// Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+        /// </summary>
+        [JsonProperty("EnableDetectSplit")]
+        public bool? EnableDetectSplit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +61,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "IsWords", this.IsWords);
+            this.SetParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
         }
     }
 }

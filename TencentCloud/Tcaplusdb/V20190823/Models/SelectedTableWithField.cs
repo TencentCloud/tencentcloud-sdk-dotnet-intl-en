@@ -55,7 +55,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string TableType{ get; set; }
 
         /// <summary>
-        /// The list of fields on which indexes need to be created
+        /// The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
         /// </summary>
         [JsonProperty("SelectedFields")]
         public FieldInfo[] SelectedFields{ get; set; }
@@ -65,6 +65,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         [JsonProperty("ShardNum")]
         public ulong? ShardNum{ get; set; }
+
+        /// <summary>
+        /// CKafka instance information
+        /// </summary>
+        [JsonProperty("KafkaInfo")]
+        public KafkaInfo KafkaInfo{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "TableType", this.TableType);
             this.SetParamArrayObj(map, prefix + "SelectedFields.", this.SelectedFields);
             this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
+            this.SetParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
         }
     }
 }

@@ -653,6 +653,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the list of unarchived database backup files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public async Task<DescribeBackupFilesResponse> DescribeBackupFiles(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of unarchived database backup files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public DescribeBackupFilesResponse DescribeBackupFilesSync(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an incremental backup import task.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupMigrationRequest"/></param>

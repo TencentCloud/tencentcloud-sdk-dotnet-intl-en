@@ -178,6 +178,20 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("DbaUins")]
         public string[] DbaUins{ get; set; }
 
+        /// <summary>
+        /// Whether data subscription is enabled
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DataFlowStatus")]
+        public long? DataFlowStatus{ get; set; }
+
+        /// <summary>
+        /// CKafka information when data subscription is enabled
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KafkaInfo")]
+        public KafkaInfo KafkaInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +222,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
             this.SetParamSimple(map, prefix + "Censorship", this.Censorship);
             this.SetParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
+            this.SetParamSimple(map, prefix + "DataFlowStatus", this.DataFlowStatus);
+            this.SetParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
         }
     }
 }

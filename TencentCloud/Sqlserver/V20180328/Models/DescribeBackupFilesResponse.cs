@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcaplusdb.V20190823.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyMachineInfo : AbstractModel
+    public class DescribeBackupFilesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Unique ID
+        /// Total number of backups
         /// </summary>
-        [JsonProperty("ProxyUid")]
-        public string ProxyUid{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Machine type
+        /// List of backup file details
         /// </summary>
-        [JsonProperty("MachineType")]
-        public string MachineType{ get; set; }
+        [JsonProperty("BackupFiles")]
+        public BackupFile[] BackupFiles{ get; set; }
 
         /// <summary>
-        /// The number of proxy resources to be assigned
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("AvailableCount")]
-        public long? AvailableCount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProxyUid", this.ProxyUid);
-            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
-            this.SetParamSimple(map, prefix + "AvailableCount", this.AvailableCount);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "BackupFiles.", this.BackupFiles);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -52,6 +52,7 @@
     <Compile Include="V20180328\Models\AccountPrivilegeModifyInfo.cs" />
     <Compile Include="V20180328\Models\AccountRemark.cs" />
     <Compile Include="V20180328\Models\Backup.cs" />
+    <Compile Include="V20180328\Models\BackupFile.cs" />
     <Compile Include="V20180328\Models\CloneDBRequest.cs" />
     <Compile Include="V20180328\Models\CloneDBResponse.cs" />
     <Compile Include="V20180328\Models\CosUploadBackupFile.cs" />
@@ -92,6 +93,8 @@
     <Compile Include="V20180328\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeBackupCommandRequest.cs" />
     <Compile Include="V20180328\Models\DescribeBackupCommandResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeBackupFilesRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeBackupFilesResponse.cs" />
     <Compile Include="V20180328\Models\DescribeBackupMigrationRequest.cs" />
     <Compile Include="V20180328\Models\DescribeBackupMigrationResponse.cs" />
     <Compile Include="V20180328\Models\DescribeBackupUploadSizeRequest.cs" />

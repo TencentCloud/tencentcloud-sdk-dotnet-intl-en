@@ -21,38 +21,38 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyBackupStrategyRequest : AbstractModel
+    public class DescribeBackupFilesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID in the format of mssql-njj2mtpl
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup mode, which supports daily backup only. Valid value: daily.
+        /// Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
         /// </summary>
-        [JsonProperty("BackupType")]
-        public string BackupType{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
-        /// Backup time. Value range: an integer from 0 to 23.
+        /// Number of entries to be returned per page. Value range: 1-100. Default value: `20`
         /// </summary>
-        [JsonProperty("BackupTime")]
-        public ulong? BackupTime{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
+        /// Page number. Default value: `0`
         /// </summary>
-        [JsonProperty("BackupDay")]
-        public ulong? BackupDay{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+        /// Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.
         /// </summary>
-        [JsonProperty("BackupModel")]
-        public string BackupModel{ get; set; }
+        [JsonProperty("DatabaseName")]
+        public string DatabaseName{ get; set; }
 
 
         /// <summary>
@@ -61,10 +61,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
-            this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
-            this.SetParamSimple(map, prefix + "BackupDay", this.BackupDay);
-            this.SetParamSimple(map, prefix + "BackupModel", this.BackupModel);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         }
     }
 }

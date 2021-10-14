@@ -48,6 +48,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("RenameRestore")]
         public RenameRestoreDatabase[] RenameRestore{ get; set; }
 
+        /// <summary>
+        /// Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
             this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

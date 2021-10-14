@@ -15,32 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcaplusdb.V20190823.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyMachineInfo : AbstractModel
+    public class BackupFile : AbstractModel
     {
         
         /// <summary>
-        /// Unique ID
+        /// Unique ID of a backup file
         /// </summary>
-        [JsonProperty("ProxyUid")]
-        public string ProxyUid{ get; set; }
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Machine type
+        /// Backup file name
         /// </summary>
-        [JsonProperty("MachineType")]
-        public string MachineType{ get; set; }
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
 
         /// <summary>
-        /// The number of proxy resources to be assigned
+        /// File size in KB
         /// </summary>
-        [JsonProperty("AvailableCount")]
-        public long? AvailableCount{ get; set; }
+        [JsonProperty("Size")]
+        public ulong? Size{ get; set; }
+
+        /// <summary>
+        /// Name of the database corresponding to the backup file
+        /// </summary>
+        [JsonProperty("DBs")]
+        public string[] DBs{ get; set; }
+
+        /// <summary>
+        /// Download address
+        /// </summary>
+        [JsonProperty("DownloadLink")]
+        public string DownloadLink{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProxyUid", this.ProxyUid);
-            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
-            this.SetParamSimple(map, prefix + "AvailableCount", this.AvailableCount);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
+            this.SetParamSimple(map, prefix + "DownloadLink", this.DownloadLink);
         }
     }
 }

@@ -83,7 +83,7 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QualityValue")]
         public long? QualityValue{ get; set; }

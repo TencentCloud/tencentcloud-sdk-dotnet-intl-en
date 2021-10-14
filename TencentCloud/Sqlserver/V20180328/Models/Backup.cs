@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// Filename
+        /// File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// File size in KB
+        /// File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Download address for private network
+        /// Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
         /// </summary>
         [JsonProperty("InternalAddr")]
         public string InternalAddr{ get; set; }
 
         /// <summary>
-        /// Download address for public network
+        /// Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
         /// </summary>
         [JsonProperty("ExternalAddr")]
         public string ExternalAddr{ get; set; }
 
         /// <summary>
-        /// Unique ID of backup file, which will be used by the `RestoreInstance` API
+        /// Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -91,10 +91,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? BackupWay{ get; set; }
 
         /// <summary>
-        /// Backup name, which can be customized.
+        /// Backup task name (customizable)
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
+
+        /// <summary>
+        /// Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
             this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

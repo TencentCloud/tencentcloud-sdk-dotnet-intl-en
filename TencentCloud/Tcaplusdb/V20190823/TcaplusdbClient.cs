@@ -453,6 +453,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// This API is used to disable data subscription for tables.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableDataFlowRequest"/></param>
+        /// <returns><see cref="DeleteTableDataFlowResponse"/></returns>
+        public async Task<DeleteTableDataFlowResponse> DeleteTableDataFlow(DeleteTableDataFlowRequest req)
+        {
+             JsonResponseModel<DeleteTableDataFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTableDataFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTableDataFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable data subscription for tables.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableDataFlowRequest"/></param>
+        /// <returns><see cref="DeleteTableDataFlowResponse"/></returns>
+        public DeleteTableDataFlowResponse DeleteTableDataFlowSync(DeleteTableDataFlowRequest req)
+        {
+             JsonResponseModel<DeleteTableDataFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTableDataFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTableDataFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a table group.
         /// </summary>
         /// <param name="req"><see cref="DeleteTableGroupRequest"/></param>
@@ -1844,6 +1884,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "RollbackTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable data subscription for tables or modify the feature's configurations.
+        /// </summary>
+        /// <param name="req"><see cref="SetTableDataFlowRequest"/></param>
+        /// <returns><see cref="SetTableDataFlowResponse"/></returns>
+        public async Task<SetTableDataFlowResponse> SetTableDataFlow(SetTableDataFlowRequest req)
+        {
+             JsonResponseModel<SetTableDataFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetTableDataFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTableDataFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable data subscription for tables or modify the feature's configurations.
+        /// </summary>
+        /// <param name="req"><see cref="SetTableDataFlowRequest"/></param>
+        /// <returns><see cref="SetTableDataFlowResponse"/></returns>
+        public SetTableDataFlowResponse SetTableDataFlowSync(SetTableDataFlowRequest req)
+        {
+             JsonResponseModel<SetTableDataFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetTableDataFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTableDataFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

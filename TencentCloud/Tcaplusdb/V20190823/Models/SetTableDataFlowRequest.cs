@@ -21,26 +21,20 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyMachineInfo : AbstractModel
+    public class SetTableDataFlowRequest : AbstractModel
     {
         
         /// <summary>
-        /// Unique ID
+        /// The ID of the cluster where the tables reside
         /// </summary>
-        [JsonProperty("ProxyUid")]
-        public string ProxyUid{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Machine type
+        /// The list of tables for which data subscription will be enabled
         /// </summary>
-        [JsonProperty("MachineType")]
-        public string MachineType{ get; set; }
-
-        /// <summary>
-        /// The number of proxy resources to be assigned
-        /// </summary>
-        [JsonProperty("AvailableCount")]
-        public long? AvailableCount{ get; set; }
+        [JsonProperty("SelectedTables")]
+        public SelectedTableWithField[] SelectedTables{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProxyUid", this.ProxyUid);
-            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
-            this.SetParamSimple(map, prefix + "AvailableCount", this.AvailableCount);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
         }
     }
 }

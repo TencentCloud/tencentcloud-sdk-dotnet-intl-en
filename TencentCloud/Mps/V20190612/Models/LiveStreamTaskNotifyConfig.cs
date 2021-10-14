@@ -48,6 +48,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
+        /// <summary>
+        /// Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
+
+        /// <summary>
+        /// HTTP callback URL, required if `NotifyType` is set to `URL`
+        /// </summary>
+        [JsonProperty("NotifyUrl")]
+        public string NotifyUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
+            this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
         }
     }
 }

@@ -46,21 +46,32 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Scene{ get; set; }
 
         /// <summary>
-        /// Language to be recognized.
+        /// Language to recognize
         /// The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
         /// Valid values:
-        /// zh\auto\jap\kor\
-        /// spa\fre\ger\por\
-        /// vie\may\rus\ita\
-        /// hol\swe\fin\dan\
-        /// nor\hun\tha\lat\ara
-        /// Value meanings:
-        /// Chinese-English mix, automatic recognition, Japanese, Korean,
-        /// Spanish, French, German, Portuguese,
-        /// Vietnamese, Malay, Russian, Italian,
-        /// Dutch, Swedish, Finnish, Danish,
-        /// Norwegian, Hungarian, Thai, Latin,
-        /// Arabic.
+        /// `zh`: Chinese-English mix
+        /// `zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+        /// `auto`
+        /// `mix`: language mix
+        /// `jap`: Japanese
+        /// `kor`: Korean
+        /// `spa`: Spanish
+        /// `fre`: French
+        /// `ger`: German
+        /// `por`: Portuguese
+        /// `vie`: Vietnamese
+        /// `may`: Malay
+        /// `rus`: Russian
+        /// `ita`: Italian
+        /// `hol`: Dutch
+        /// `swe`: Swedish
+        /// `fin`: Finnish
+        /// `dan`: Danish
+        /// `nor`: Norwegian
+        /// `hun`: Hungarian
+        /// `tha`: Thai
+        /// `hi`: Hindi
+        /// `ara`: Arabic
         /// </summary>
         [JsonProperty("LanguageType")]
         public string LanguageType{ get; set; }

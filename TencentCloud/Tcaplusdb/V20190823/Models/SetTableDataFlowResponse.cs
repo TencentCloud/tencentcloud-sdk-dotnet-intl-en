@@ -21,26 +21,26 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyMachineInfo : AbstractModel
+    public class SetTableDataFlowResponse : AbstractModel
     {
         
         /// <summary>
-        /// Unique ID
+        /// The number of tables for which data subscription has been enabled
         /// </summary>
-        [JsonProperty("ProxyUid")]
-        public string ProxyUid{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Machine type
+        /// The result list of tables for which data subscription has been enabled
         /// </summary>
-        [JsonProperty("MachineType")]
-        public string MachineType{ get; set; }
+        [JsonProperty("TableResults")]
+        public TableResultNew[] TableResults{ get; set; }
 
         /// <summary>
-        /// The number of proxy resources to be assigned
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("AvailableCount")]
-        public long? AvailableCount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProxyUid", this.ProxyUid);
-            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
-            this.SetParamSimple(map, prefix + "AvailableCount", this.AvailableCount);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "TableResults.", this.TableResults);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
