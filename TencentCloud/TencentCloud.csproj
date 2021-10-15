@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.298</VersionPrefix>
+    <VersionPrefix>3.0.299</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5903,18 +5903,34 @@
     <Compile Include="Tcr\V20190924\Models\CreateImmutableTagRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateMultipleSecurityPolicyRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateMultipleSecurityPolicyResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateReplicationInstanceRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateReplicationInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteImmutableTagRulesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteImmutableTagRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteMultipleSecurityPolicyRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteMultipleSecurityPolicyResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeImmutableTagRulesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeImmutableTagRulesResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstanceCreateTasksRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstanceCreateTasksResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstanceSyncStatusRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstanceSyncStatusResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstancesRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstancesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ImmutableTagRule.cs" />
+    <Compile Include="Tcr\V20190924\Models\ManageReplicationRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\ManageReplicationResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyInstanceRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\PeerReplicationOption.cs" />
+    <Compile Include="Tcr\V20190924\Models\ReplicationFilter.cs" />
+    <Compile Include="Tcr\V20190924\Models\ReplicationLog.cs" />
+    <Compile Include="Tcr\V20190924\Models\ReplicationRegistry.cs" />
+    <Compile Include="Tcr\V20190924\Models\ReplicationRule.cs" />
     <Compile Include="Tcr\V20190924\Models\SecurityPolicy.cs" />
+    <Compile Include="Tcr\V20190924\Models\TaskDetail.cs" />
     <Compile Include="Tem\V20210701\TemClient.cs" />
     <Compile Include="Tem\V20210701\Models\CosToken.cs" />
     <Compile Include="Tem\V20210701\Models\CreateApplicationRequest.cs" />

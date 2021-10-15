@@ -51,17 +51,33 @@
     <Compile Include="V20190924\Models\CreateImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\CreateMultipleSecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\CreateMultipleSecurityPolicyResponse.cs" />
+    <Compile Include="V20190924\Models\CreateReplicationInstanceRequest.cs" />
+    <Compile Include="V20190924\Models\CreateReplicationInstanceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\DeleteImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\DeleteMultipleSecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\DeleteMultipleSecurityPolicyResponse.cs" />
     <Compile Include="V20190924\Models\DescribeImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeImmutableTagRulesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstanceCreateTasksRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstanceCreateTasksResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstanceSyncStatusRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstanceSyncStatusResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstancesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstancesResponse.cs" />
     <Compile Include="V20190924\Models\ImmutableTagRule.cs" />
+    <Compile Include="V20190924\Models\ManageReplicationRequest.cs" />
+    <Compile Include="V20190924\Models\ManageReplicationResponse.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20190924\Models\PeerReplicationOption.cs" />
+    <Compile Include="V20190924\Models\ReplicationFilter.cs" />
+    <Compile Include="V20190924\Models\ReplicationLog.cs" />
+    <Compile Include="V20190924\Models\ReplicationRegistry.cs" />
+    <Compile Include="V20190924\Models\ReplicationRule.cs" />
     <Compile Include="V20190924\Models\SecurityPolicy.cs" />
+    <Compile Include="V20190924\Models\TaskDetail.cs" />
   </ItemGroup>
 </Project>

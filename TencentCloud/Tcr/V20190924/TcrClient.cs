@@ -173,6 +173,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// This API is used to create a replication instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReplicationInstanceRequest"/></param>
+        /// <returns><see cref="CreateReplicationInstanceResponse"/></returns>
+        public async Task<CreateReplicationInstanceResponse> CreateReplicationInstance(CreateReplicationInstanceRequest req)
+        {
+             JsonResponseModel<CreateReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a replication instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReplicationInstanceRequest"/></param>
+        /// <returns><see cref="CreateReplicationInstanceResponse"/></returns>
+        public CreateReplicationInstanceResponse CreateReplicationInstanceSync(CreateReplicationInstanceRequest req)
+        {
+             JsonResponseModel<CreateReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         ///  This API is used to delete the tag immutability rule.
         /// </summary>
         /// <param name="req"><see cref="DeleteImmutableTagRulesRequest"/></param>
@@ -284,6 +324,166 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImmutableTagRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the task status of creating a replication instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstanceCreateTasksRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstanceCreateTasksResponse"/></returns>
+        public async Task<DescribeReplicationInstanceCreateTasksResponse> DescribeReplicationInstanceCreateTasks(DescribeReplicationInstanceCreateTasksRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReplicationInstanceCreateTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the task status of creating a replication instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstanceCreateTasksRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstanceCreateTasksResponse"/></returns>
+        public DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasksSync(DescribeReplicationInstanceCreateTasksRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReplicationInstanceCreateTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the synchronization status of a replication instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstanceSyncStatusRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstanceSyncStatusResponse"/></returns>
+        public async Task<DescribeReplicationInstanceSyncStatusResponse> DescribeReplicationInstanceSyncStatus(DescribeReplicationInstanceSyncStatusRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstanceSyncStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReplicationInstanceSyncStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstanceSyncStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the synchronization status of a replication instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstanceSyncStatusRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstanceSyncStatusResponse"/></returns>
+        public DescribeReplicationInstanceSyncStatusResponse DescribeReplicationInstanceSyncStatusSync(DescribeReplicationInstanceSyncStatusRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstanceSyncStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReplicationInstanceSyncStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstanceSyncStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of replication instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstancesResponse"/></returns>
+        public async Task<DescribeReplicationInstancesResponse> DescribeReplicationInstances(DescribeReplicationInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReplicationInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of replication instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstancesResponse"/></returns>
+        public DescribeReplicationInstancesResponse DescribeReplicationInstancesSync(DescribeReplicationInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReplicationInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to manage the instance synchronization rule.
+        /// </summary>
+        /// <param name="req"><see cref="ManageReplicationRequest"/></param>
+        /// <returns><see cref="ManageReplicationResponse"/></returns>
+        public async Task<ManageReplicationResponse> ManageReplication(ManageReplicationRequest req)
+        {
+             JsonResponseModel<ManageReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManageReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to manage the instance synchronization rule.
+        /// </summary>
+        /// <param name="req"><see cref="ManageReplicationRequest"/></param>
+        /// <returns><see cref="ManageReplicationResponse"/></returns>
+        public ManageReplicationResponse ManageReplicationSync(ManageReplicationRequest req)
+        {
+             JsonResponseModel<ManageReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManageReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageReplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
