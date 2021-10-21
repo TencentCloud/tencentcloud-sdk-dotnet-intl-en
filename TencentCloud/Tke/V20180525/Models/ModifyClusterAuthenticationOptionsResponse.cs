@@ -15,44 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20210701.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRunPodPage : AbstractModel
+    public class ModifyClusterAuthenticationOptionsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Page offset
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// Number of records per page
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// Total number of returned records
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// Request ID
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
-
-        /// <summary>
-        /// List of pods
-        /// </summary>
-        [JsonProperty("PodList")]
-        public RunVersionPod[] PodList{ get; set; }
 
 
         /// <summary>
@@ -60,11 +36,7 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
-            this.SetParamArrayObj(map, prefix + "PodList.", this.PodList);
         }
     }
 }

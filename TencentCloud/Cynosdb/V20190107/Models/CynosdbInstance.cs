@@ -267,18 +267,17 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// Storage billing mode
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("StoragePayMode")]
-        public long? StoragePayMode{ get; set; }
-
-        /// <summary>
         /// Prepaid storage ID
         /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
+
+        /// <summary>
+        /// Storage billing mode
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
 
 
         /// <summary>
@@ -326,8 +325,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
-            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
             this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         }
     }
 }

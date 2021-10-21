@@ -37,7 +37,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Inputs to attach. You can attach 1-5 inputs.
+        /// Inputs to attach. You can attach 1 to 5 inputs.
         /// </summary>
         [JsonProperty("AttachedInputs")]
         public AttachedInput[] AttachedInputs{ get; set; }

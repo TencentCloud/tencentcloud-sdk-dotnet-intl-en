@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20210701.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEnvironmentsRequest : AbstractModel
+    public class DescribeClusterAuthenticationOptionsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Pagination limit
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// Page offset
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// Source
-        /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

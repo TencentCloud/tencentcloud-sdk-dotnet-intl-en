@@ -15,44 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20210701.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRunPodPage : AbstractModel
+    public class DescribeClusterAuthenticationOptionsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Page offset
+        /// ServiceAccount authentication configuration
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("ServiceAccounts")]
+        public ServiceAccountAuthenticationOptions ServiceAccounts{ get; set; }
 
         /// <summary>
-        /// Number of records per page
+        /// Result of the last modification. Values: `Updating`, `Success`, `Failed` or `TimeOut`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("LatestOperationState")]
+        public string LatestOperationState{ get; set; }
 
         /// <summary>
-        /// Total number of returned records
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// Request ID
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
-
-        /// <summary>
-        /// List of pods
-        /// </summary>
-        [JsonProperty("PodList")]
-        public RunVersionPod[] PodList{ get; set; }
 
 
         /// <summary>
@@ -60,11 +50,9 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
+            this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
-            this.SetParamArrayObj(map, prefix + "PodList.", this.PodList);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Page number
+        /// Page offset
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

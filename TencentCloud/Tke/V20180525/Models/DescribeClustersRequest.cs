@@ -44,10 +44,44 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter condition. Currently, only filtering by a single ClusterName is supported
+        /// ·  ClusterName
+        ///     Filters by the cluster name
+        ///     Type: String
+        ///     Required: no
+        /// 
+        /// ·  Tags
+        ///     Filters by key-value pairs of tags
+        ///     Type: String
+        ///     Required: no
+        /// 
+        /// ·  vpc-id
+        ///     Filters by the VPC ID
+        ///     Type: String
+        ///     Required: no
+        /// 
+        /// ·  tag-key
+        ///     Filters by the tag key
+        ///     Type: String
+        ///     Required: no
+        /// 
+        /// ·  tag-value
+        ///     Filters by the tag value
+        ///     Type: String
+        ///     Required: no
+        /// 
+        /// ·  tag:tag-key
+        ///     Filters by key-value pairs of tags
+        ///     Type: String
+        ///     Required: no
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// Cluster type, such as `MANAGED_CLUSTER`
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
 
 
         /// <summary>
@@ -59,6 +93,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

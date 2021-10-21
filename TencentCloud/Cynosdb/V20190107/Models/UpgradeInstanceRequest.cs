@@ -67,6 +67,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
+        /// <summary>
+        /// Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+        /// </summary>
+        [JsonProperty("DealMode")]
+        public long? DealMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
+            this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
         }
     }
 }

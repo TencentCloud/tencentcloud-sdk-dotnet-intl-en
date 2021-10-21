@@ -245,6 +245,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
+        /// <summary>
+        /// Array of security group IDs
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// Array of alarm policy IDs
+        /// </summary>
+        [JsonProperty("AlarmPolicyIds")]
+        public string[] AlarmPolicyIds{ get; set; }
+
+        /// <summary>
+        /// Array of parameters
+        /// </summary>
+        [JsonProperty("ClusterParams")]
+        public ParamItem[] ClusterParams{ get; set; }
+
+        /// <summary>
+        /// Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+        /// </summary>
+        [JsonProperty("DealMode")]
+        public long? DealMode{ get; set; }
+
+        /// <summary>
+        /// Parameter template ID
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public long? ParamTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -285,6 +315,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AutoPause", this.AutoPause);
             this.SetParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
             this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "AlarmPolicyIds.", this.AlarmPolicyIds);
+            this.SetParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
+            this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         }
     }
 }

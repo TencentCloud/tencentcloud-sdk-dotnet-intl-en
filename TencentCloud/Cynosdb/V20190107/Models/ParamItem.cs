@@ -15,44 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20210701.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRunPodPage : AbstractModel
+    public class ParamItem : AbstractModel
     {
         
         /// <summary>
-        /// Page offset
+        /// Parameter name
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("ParamName")]
+        public string ParamName{ get; set; }
 
         /// <summary>
-        /// Number of records per page
+        /// New value
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("CurrentValue")]
+        public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Total number of returned records
+        /// Original value
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// Request ID
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
-        /// <summary>
-        /// List of pods
-        /// </summary>
-        [JsonProperty("PodList")]
-        public RunVersionPod[] PodList{ get; set; }
+        [JsonProperty("OldValue")]
+        public string OldValue{ get; set; }
 
 
         /// <summary>
@@ -60,11 +48,9 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
-            this.SetParamArrayObj(map, prefix + "PodList.", this.PodList);
+            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
+            this.SetParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
+            this.SetParamSimple(map, prefix + "OldValue", this.OldValue);
         }
     }
 }

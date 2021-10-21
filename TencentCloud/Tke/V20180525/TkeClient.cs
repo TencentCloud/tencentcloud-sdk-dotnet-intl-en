@@ -1093,6 +1093,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query cluster authentication configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAuthenticationOptionsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAuthenticationOptionsResponse"/></returns>
+        public async Task<DescribeClusterAuthenticationOptionsResponse> DescribeClusterAuthenticationOptions(DescribeClusterAuthenticationOptionsRequest req)
+        {
+             JsonResponseModel<DescribeClusterAuthenticationOptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterAuthenticationOptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAuthenticationOptionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query cluster authentication configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAuthenticationOptionsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAuthenticationOptionsResponse"/></returns>
+        public DescribeClusterAuthenticationOptionsResponse DescribeClusterAuthenticationOptionsSync(DescribeClusterAuthenticationOptionsRequest req)
+        {
+             JsonResponseModel<DescribeClusterAuthenticationOptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterAuthenticationOptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAuthenticationOptionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain the CommonName from the kube-apiserver client certificate that corresponding to the sub-account in RBAC authorization mode. 
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterCommonNamesRequest"/></param>
@@ -2044,6 +2084,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "ModifyClusterAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify cluster authentication configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAuthenticationOptionsRequest"/></param>
+        /// <returns><see cref="ModifyClusterAuthenticationOptionsResponse"/></returns>
+        public async Task<ModifyClusterAuthenticationOptionsResponse> ModifyClusterAuthenticationOptions(ModifyClusterAuthenticationOptionsRequest req)
+        {
+             JsonResponseModel<ModifyClusterAuthenticationOptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterAuthenticationOptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAuthenticationOptionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify cluster authentication configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAuthenticationOptionsRequest"/></param>
+        /// <returns><see cref="ModifyClusterAuthenticationOptionsResponse"/></returns>
+        public ModifyClusterAuthenticationOptionsResponse ModifyClusterAuthenticationOptionsSync(ModifyClusterAuthenticationOptionsRequest req)
+        {
+             JsonResponseModel<ModifyClusterAuthenticationOptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterAuthenticationOptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAuthenticationOptionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

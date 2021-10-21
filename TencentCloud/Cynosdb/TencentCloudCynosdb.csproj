@@ -105,6 +105,7 @@
     <Compile Include="V20190107\Models\OfflineClusterResponse.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceRequest.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\ParamItem.cs" />
     <Compile Include="V20190107\Models\PolicyRule.cs" />
     <Compile Include="V20190107\Models\QueryFilter.cs" />
     <Compile Include="V20190107\Models\SecurityGroup.cs" />

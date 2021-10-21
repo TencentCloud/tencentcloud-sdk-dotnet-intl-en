@@ -3719,8 +3719,8 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to enable or disable the acceleration region of a domain name on VOD.
-        /// 1. You can enable or disable acceleration regions of only domain names whose status is `Online`.
+        /// This API is used to modify the acceleration region of a domain name on VOD.
+        /// 1. You can modify acceleration regions of only domain names whose status is `Online`.
         /// </summary>
         /// <param name="req"><see cref="ModifyVodDomainAccelerateConfigRequest"/></param>
         /// <returns><see cref="ModifyVodDomainAccelerateConfigResponse"/></returns>
@@ -3740,8 +3740,8 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to enable or disable the acceleration region of a domain name on VOD.
-        /// 1. You can enable or disable acceleration regions of only domain names whose status is `Online`.
+        /// This API is used to modify the acceleration region of a domain name on VOD.
+        /// 1. You can modify acceleration regions of only domain names whose status is `Online`.
         /// </summary>
         /// <param name="req"><see cref="ModifyVodDomainAccelerateConfigRequest"/></param>
         /// <returns><see cref="ModifyVodDomainAccelerateConfigResponse"/></returns>
