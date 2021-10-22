@@ -21,32 +21,33 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateRecorderRequest : AbstractModel
+    public class DescribeEventsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Role name authorized to CFA
+        /// Whether the logset ends.
         /// </summary>
-        [JsonProperty("Role")]
-        public string Role{ get; set; }
+        [JsonProperty("ListOver")]
+        public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// Whether to select all supported resource types. Valid values: true (default), false.
+        /// Credential for viewing more logs.
         /// </summary>
-        [JsonProperty("AllSupported")]
-        public bool? AllSupported{ get; set; }
+        [JsonProperty("NextToken")]
+        public ulong? NextToken{ get; set; }
 
         /// <summary>
-        /// Whether to enable the resource recorder. Valid values: true (default), false.
+        /// Logset.
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Enable")]
-        public bool? Enable{ get; set; }
+        [JsonProperty("Events")]
+        public Event[] Events{ get; set; }
 
         /// <summary>
-        /// Resource recorder name. Default name: default.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +55,10 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Role", this.Role);
-            this.SetParamSimple(map, prefix + "AllSupported", this.AllSupported);
-            this.SetParamSimple(map, prefix + "Enable", this.Enable);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
+            this.SetParamArrayObj(map, prefix + "Events.", this.Events);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

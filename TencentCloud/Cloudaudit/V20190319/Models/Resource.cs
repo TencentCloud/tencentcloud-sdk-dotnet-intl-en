@@ -21,15 +21,30 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRecorderRequest : AbstractModel
+    public class Resource : AbstractModel
     {
         
+        /// <summary>
+        /// Resource type
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// Resource name
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
         }
     }
 }

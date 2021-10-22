@@ -21,14 +21,22 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDiscoveredResourceRequest : AbstractModel
+    public class LookupAttribute : AbstractModel
     {
         
         /// <summary>
-        /// Request ID
+        /// Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ResourceId")]
-        public string ResourceId{ get; set; }
+        [JsonProperty("AttributeKey")]
+        public string AttributeKey{ get; set; }
+
+        /// <summary>
+        /// Value of `AttributeValue`
+        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AttributeValue")]
+        public string AttributeValue{ get; set; }
 
 
         /// <summary>
@@ -36,7 +44,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "AttributeKey", this.AttributeKey);
+            this.SetParamSimple(map, prefix + "AttributeValue", this.AttributeValue);
         }
     }
 }

@@ -45,26 +45,10 @@
 
   <ItemGroup>
     <Compile Include="V20190319\CloudauditClient.cs" />
-    <Compile Include="V20190319\Models\ConfigurationItems.cs" />
-    <Compile Include="V20190319\Models\CreateRecorderRequest.cs" />
-    <Compile Include="V20190319\Models\CreateRecorderResponse.cs" />
-    <Compile Include="V20190319\Models\DeleteRecorderRequest.cs" />
-    <Compile Include="V20190319\Models\DeleteRecorderResponse.cs" />
-    <Compile Include="V20190319\Models\DescribeDiscoveredResourceRequest.cs" />
-    <Compile Include="V20190319\Models\DescribeDiscoveredResourceResponse.cs" />
-    <Compile Include="V20190319\Models\DescribeRecorderRequest.cs" />
-    <Compile Include="V20190319\Models\DescribeRecorderResponse.cs" />
-    <Compile Include="V20190319\Models\GetConfigurationItemsRequest.cs" />
-    <Compile Include="V20190319\Models\GetConfigurationItemsResponse.cs" />
-    <Compile Include="V20190319\Models\ListDiscoveredResourcesRequest.cs" />
-    <Compile Include="V20190319\Models\ListDiscoveredResourcesResponse.cs" />
-    <Compile Include="V20190319\Models\ListSupportResourceTypesRequest.cs" />
-    <Compile Include="V20190319\Models\ListSupportResourceTypesResponse.cs" />
-    <Compile Include="V20190319\Models\RecordResourceType.cs" />
-    <Compile Include="V20190319\Models\RelatedEvent.cs" />
-    <Compile Include="V20190319\Models\Resources.cs" />
-    <Compile Include="V20190319\Models\SupportResourceType.cs" />
-    <Compile Include="V20190319\Models\UpdateRecorderRequest.cs" />
-    <Compile Include="V20190319\Models\UpdateRecorderResponse.cs" />
+    <Compile Include="V20190319\Models\DescribeEventsRequest.cs" />
+    <Compile Include="V20190319\Models\DescribeEventsResponse.cs" />
+    <Compile Include="V20190319\Models\Event.cs" />
+    <Compile Include="V20190319\Models\LookupAttribute.cs" />
+    <Compile Include="V20190319\Models\Resource.cs" />
   </ItemGroup>
 </Project>
