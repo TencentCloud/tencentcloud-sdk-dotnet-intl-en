@@ -43,13 +43,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// Number of nodes in each replica set. Currently, the number of nodes in a replica set is fixed at 3, while the number of shards is customizable. For more information, please see the parameter returned by the DescribeSpecInfo API
+        /// The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// Version number. For the specific purchasable versions supported, please see the return result of the DescribeSpecInfo API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition
+        /// Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// AZ information in the format of ap-guangzhou-2
+        /// AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+        /// Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
@@ -125,6 +125,42 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
+
+        /// <summary>
+        /// The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+        /// </summary>
+        [JsonProperty("RestoreTime")]
+        public string RestoreTime{ get; set; }
+
+        /// <summary>
+        /// Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+        /// </summary>
+        [JsonProperty("AvailabilityZoneList")]
+        public string[] AvailabilityZoneList{ get; set; }
+
+        /// <summary>
+        /// The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+        /// </summary>
+        [JsonProperty("MongosCpu")]
+        public ulong? MongosCpu{ get; set; }
+
+        /// <summary>
+        /// The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+        /// </summary>
+        [JsonProperty("MongosMemory")]
+        public ulong? MongosMemory{ get; set; }
+
+        /// <summary>
+        /// The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+        /// </summary>
+        [JsonProperty("MongosNodeNum")]
+        public ulong? MongosNodeNum{ get; set; }
 
 
         /// <summary>
@@ -149,6 +185,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Clone", this.Clone);
             this.SetParamSimple(map, prefix + "Father", this.Father);
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "RestoreTime", this.RestoreTime);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamArraySimple(map, prefix + "AvailabilityZoneList.", this.AvailabilityZoneList);
+            this.SetParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
+            this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+            this.SetParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
         }
     }
 }

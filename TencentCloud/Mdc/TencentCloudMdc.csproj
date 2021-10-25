@@ -60,6 +60,8 @@
     <Compile Include="V20200828\Models\DescribeInputRTPSettings.cs" />
     <Compile Include="V20200828\Models\DescribeInputSRTSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutput.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputRTMPPullServerUrl.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputRTMPPullSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutputRTMPSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutputRTPSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutputSRTSettings.cs" />

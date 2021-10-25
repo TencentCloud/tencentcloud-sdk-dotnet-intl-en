@@ -89,6 +89,21 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("RTMPSettings")]
         public DescribeOutputRTMPSettings RTMPSettings{ get; set; }
 
+        /// <summary>
+        /// RTMP pull configuration of the output
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("RTMPPullSettings")]
+        public DescribeOutputRTMPPullSettings RTMPPullSettings{ get; set; }
+
+        /// <summary>
+        /// CIDR allowlist
+        /// This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("AllowIpList")]
+        public string[] AllowIpList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +120,8 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
             this.SetParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
             this.SetParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
+            this.SetParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
+            this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
         }
     }
 }

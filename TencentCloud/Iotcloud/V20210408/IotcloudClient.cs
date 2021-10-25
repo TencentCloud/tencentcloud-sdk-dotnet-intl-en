@@ -533,6 +533,46 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
+        /// This API is used to enable or disable multiple products at a time.
+        /// </summary>
+        /// <param name="req"><see cref="SetProductsForbiddenStatusRequest"/></param>
+        /// <returns><see cref="SetProductsForbiddenStatusResponse"/></returns>
+        public async Task<SetProductsForbiddenStatusResponse> SetProductsForbiddenStatus(SetProductsForbiddenStatusRequest req)
+        {
+             JsonResponseModel<SetProductsForbiddenStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetProductsForbiddenStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetProductsForbiddenStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable multiple products at a time.
+        /// </summary>
+        /// <param name="req"><see cref="SetProductsForbiddenStatusRequest"/></param>
+        /// <returns><see cref="SetProductsForbiddenStatusResponse"/></returns>
+        public SetProductsForbiddenStatusResponse SetProductsForbiddenStatusSync(SetProductsForbiddenStatusRequest req)
+        {
+             JsonResponseModel<SetProductsForbiddenStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetProductsForbiddenStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetProductsForbiddenStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to set the device log level.  
         /// </summary>
         /// <param name="req"><see cref="UpdateDeviceLogLevelRequest"/></param>

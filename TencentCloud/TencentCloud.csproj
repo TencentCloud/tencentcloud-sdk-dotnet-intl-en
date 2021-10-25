@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.303</VersionPrefix>
+    <VersionPrefix>3.0.304</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3383,6 +3383,8 @@
     <Compile Include="Iotcloud\V20210408\Models\DeviceTag.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ProductMetadata.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ProductProperties.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\SetProductsForbiddenStatusRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\SetProductsForbiddenStatusResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UpdateDeviceLogLevelRequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UpdateDeviceLogLevelResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UpdateDevicesEnableStateRequest.cs" />
@@ -4011,6 +4013,8 @@
     <Compile Include="Mdc\V20200828\Models\DescribeInputRTPSettings.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeInputSRTSettings.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeOutput.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeOutputRTMPPullServerUrl.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeOutputRTMPPullSettings.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeOutputRTMPSettings.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeOutputRTPSettings.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeOutputSRTSettings.cs" />

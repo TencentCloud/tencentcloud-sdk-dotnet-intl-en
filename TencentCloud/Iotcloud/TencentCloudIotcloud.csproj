@@ -77,6 +77,8 @@
     <Compile Include="V20210408\Models\DeviceTag.cs" />
     <Compile Include="V20210408\Models\ProductMetadata.cs" />
     <Compile Include="V20210408\Models\ProductProperties.cs" />
+    <Compile Include="V20210408\Models\SetProductsForbiddenStatusRequest.cs" />
+    <Compile Include="V20210408\Models\SetProductsForbiddenStatusResponse.cs" />
     <Compile Include="V20210408\Models\UpdateDeviceLogLevelRequest.cs" />
     <Compile Include="V20210408\Models\UpdateDeviceLogLevelResponse.cs" />
     <Compile Include="V20210408\Models\UpdateDevicesEnableStateRequest.cs" />

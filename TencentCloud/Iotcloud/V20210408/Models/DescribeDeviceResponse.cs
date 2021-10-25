@@ -178,7 +178,8 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         public ulong? FirmwareUpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Account ID of the creator
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateUserId")]
         public ulong? CreateUserId{ get; set; }
