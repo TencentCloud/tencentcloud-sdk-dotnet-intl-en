@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Name of the function for which to set the provisioned concurrency
+        /// Specifies the function of which you want to configure the reserved quota
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
+        /// Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
         /// </summary>
         [JsonProperty("ReservedConcurrencyMem")]
         public ulong? ReservedConcurrencyMem{ get; set; }

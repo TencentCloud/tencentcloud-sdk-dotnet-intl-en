@@ -103,6 +103,7 @@
     <Compile Include="V20180416\Models\GetProvisionedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\GetReservedConcurrencyConfigRequest.cs" />
     <Compile Include="V20180416\Models\GetReservedConcurrencyConfigResponse.cs" />
+    <Compile Include="V20180416\Models\ImageConfig.cs" />
     <Compile Include="V20180416\Models\InvokeFunctionRequest.cs" />
     <Compile Include="V20180416\Models\InvokeFunctionResponse.cs" />
     <Compile Include="V20180416\Models\InvokeRequest.cs" />

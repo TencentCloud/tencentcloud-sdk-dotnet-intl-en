@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Name of the function for which to delete the provisioned concurrency
+        /// Specifies the function of which you want to delete the reserved quota
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }

@@ -25,8 +25,8 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Reserved concurrency memory of function.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The reserved quota of the function
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReservedMem")]
         public ulong? ReservedMem{ get; set; }

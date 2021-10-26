@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Qualifier{ get; set; }
 
         /// <summary>
-        /// Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+        /// Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
         /// </summary>
         [JsonProperty("Event")]
         public string Event{ get; set; }

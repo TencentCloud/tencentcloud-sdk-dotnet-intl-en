@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Name of the function for which to get the provisioned concurrency details.
+        /// Specifies the function of which you want to obtain the reserved quota
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }

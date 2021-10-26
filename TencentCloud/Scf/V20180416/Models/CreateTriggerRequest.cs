@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+        /// Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

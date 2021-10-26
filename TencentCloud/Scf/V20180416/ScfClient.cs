@@ -467,7 +467,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to delete the reserved concurrency configuration of a function.
+        /// This API is used to delete the configuration of reserved quota.
         /// </summary>
         /// <param name="req"><see cref="DeleteReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="DeleteReservedConcurrencyConfigResponse"/></returns>
@@ -487,7 +487,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to delete the reserved concurrency configuration of a function.
+        /// This API is used to delete the configuration of reserved quota.
         /// </summary>
         /// <param name="req"><see cref="DeleteReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="DeleteReservedConcurrencyConfigResponse"/></returns>
@@ -867,7 +867,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to get the reserved concurrency details of a function.
+        /// This API is used to obtain the reserved quota details of a function. 
         /// </summary>
         /// <param name="req"><see cref="GetReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="GetReservedConcurrencyConfigResponse"/></returns>
@@ -887,7 +887,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to get the reserved concurrency details of a function.
+        /// This API is used to obtain the reserved quota details of a function. 
         /// </summary>
         /// <param name="req"><see cref="GetReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="GetReservedConcurrencyConfigResponse"/></returns>
@@ -1427,7 +1427,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to set the reserved concurrency of a function.
+        /// This API is used to configure the reserved quota of a function.
         /// </summary>
         /// <param name="req"><see cref="PutReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="PutReservedConcurrencyConfigResponse"/></returns>
@@ -1447,7 +1447,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to set the reserved concurrency of a function.
+        /// This API is used to configure the reserved quota of a function.
         /// </summary>
         /// <param name="req"><see cref="PutReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="PutReservedConcurrencyConfigResponse"/></returns>

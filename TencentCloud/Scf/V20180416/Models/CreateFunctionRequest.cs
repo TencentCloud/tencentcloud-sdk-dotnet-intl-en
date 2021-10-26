@@ -139,7 +139,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public CfsConfig CfsConfig{ get; set; }
 
         /// <summary>
-        /// Timeout period for function initialization
+        /// The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
         /// </summary>
         [JsonProperty("InitTimeout")]
         public long? InitTimeout{ get; set; }
