@@ -92,6 +92,8 @@
     <Compile Include="V20200326\Models\DescribeStreamLiveInputsResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLivePlansRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLivePlansResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeStreamLiveRegionsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeStreamLiveRegionsResponse.cs" />
     <Compile Include="V20200326\Models\DestinationInfo.cs" />
     <Compile Include="V20200326\Models\DrmKey.cs" />
     <Compile Include="V20200326\Models\DrmSettingsInfo.cs" />
@@ -118,6 +120,7 @@
     <Compile Include="V20200326\Models\PipelineOutputStatistics.cs" />
     <Compile Include="V20200326\Models\PlanReq.cs" />
     <Compile Include="V20200326\Models\PlanResp.cs" />
+    <Compile Include="V20200326\Models\RegionInfo.cs" />
     <Compile Include="V20200326\Models\Scte35SettingsInfo.cs" />
     <Compile Include="V20200326\Models\StartStreamLiveChannelRequest.cs" />
     <Compile Include="V20200326\Models\StartStreamLiveChannelResponse.cs" />
@@ -127,6 +130,7 @@
     <Compile Include="V20200326\Models\StreamInfo.cs" />
     <Compile Include="V20200326\Models\StreamLiveChannelInfo.cs" />
     <Compile Include="V20200326\Models\StreamLiveOutputGroupsInfo.cs" />
+    <Compile Include="V20200326\Models\StreamLiveRegionInfo.cs" />
     <Compile Include="V20200326\Models\StreamPackageSettingsInfo.cs" />
     <Compile Include="V20200326\Models\StreamScte35Info.cs" />
     <Compile Include="V20200326\Models\StreamVideoInfo.cs" />

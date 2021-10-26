@@ -773,6 +773,46 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
+        /// This API is used to query all StreamLive regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLiveRegionsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveRegionsResponse"/></returns>
+        public async Task<DescribeStreamLiveRegionsResponse> DescribeStreamLiveRegions(DescribeStreamLiveRegionsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLiveRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all StreamLive regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLiveRegionsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveRegionsResponse"/></returns>
+        public DescribeStreamLiveRegionsResponse DescribeStreamLiveRegionsSync(DescribeStreamLiveRegionsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLiveRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify a StreamLive channel.
         /// </summary>
         /// <param name="req"><see cref="ModifyStreamLiveChannelRequest"/></param>

@@ -253,6 +253,46 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
+        /// This API is used to query all StreamLink regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkRegionsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkRegionsResponse"/></returns>
+        public async Task<DescribeStreamLinkRegionsResponse> DescribeStreamLinkRegions(DescribeStreamLinkRegionsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all StreamLink regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkRegionsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkRegionsResponse"/></returns>
+        public DescribeStreamLinkRegionsResponse DescribeStreamLinkRegionsSync(DescribeStreamLinkRegionsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the configuration information of a StreamLink flow.
         /// </summary>
         /// <param name="req"><see cref="ModifyStreamLinkFlowRequest"/></param>

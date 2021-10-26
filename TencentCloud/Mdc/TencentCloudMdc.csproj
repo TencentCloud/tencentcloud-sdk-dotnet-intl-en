@@ -69,16 +69,20 @@
     <Compile Include="V20200828\Models\DescribeStreamLinkFlowResponse.cs" />
     <Compile Include="V20200828\Models\DescribeStreamLinkFlowsRequest.cs" />
     <Compile Include="V20200828\Models\DescribeStreamLinkFlowsResponse.cs" />
+    <Compile Include="V20200828\Models\DescribeStreamLinkRegionsRequest.cs" />
+    <Compile Include="V20200828\Models\DescribeStreamLinkRegionsResponse.cs" />
     <Compile Include="V20200828\Models\InputAddress.cs" />
     <Compile Include="V20200828\Models\ModifyStreamLinkFlowRequest.cs" />
     <Compile Include="V20200828\Models\ModifyStreamLinkFlowResponse.cs" />
     <Compile Include="V20200828\Models\OutputAddress.cs" />
     <Compile Include="V20200828\Models\RTMPAddressDestination.cs" />
     <Compile Include="V20200828\Models\RTPAddressDestination.cs" />
+    <Compile Include="V20200828\Models\RegionInfo.cs" />
     <Compile Include="V20200828\Models\SRTAddressDestination.cs" />
     <Compile Include="V20200828\Models\StartStreamLinkFlowRequest.cs" />
     <Compile Include="V20200828\Models\StartStreamLinkFlowResponse.cs" />
     <Compile Include="V20200828\Models\StopStreamLinkFlowRequest.cs" />
     <Compile Include="V20200828\Models\StopStreamLinkFlowResponse.cs" />
+    <Compile Include="V20200828\Models\StreamLinkRegionInfo.cs" />
   </ItemGroup>
 </Project>

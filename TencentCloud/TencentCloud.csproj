@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.304</VersionPrefix>
+    <VersionPrefix>3.0.305</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4022,17 +4022,21 @@
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowsRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowsResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkRegionsRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkRegionsResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\InputAddress.cs" />
     <Compile Include="Mdc\V20200828\Models\ModifyStreamLinkFlowRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\ModifyStreamLinkFlowResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\OutputAddress.cs" />
     <Compile Include="Mdc\V20200828\Models\RTMPAddressDestination.cs" />
     <Compile Include="Mdc\V20200828\Models\RTPAddressDestination.cs" />
+    <Compile Include="Mdc\V20200828\Models\RegionInfo.cs" />
     <Compile Include="Mdc\V20200828\Models\SRTAddressDestination.cs" />
     <Compile Include="Mdc\V20200828\Models\StartStreamLinkFlowRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\StartStreamLinkFlowResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\StopStreamLinkFlowRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\StopStreamLinkFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\StreamLinkRegionInfo.cs" />
     <Compile Include="Mdl\V20200326\MdlClient.cs" />
     <Compile Include="Mdl\V20200326\Models\AVTemplate.cs" />
     <Compile Include="Mdl\V20200326\Models\AttachedInput.cs" />
@@ -4081,6 +4085,8 @@
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveInputsResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLivePlansRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLivePlansResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveRegionsRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveRegionsResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DestinationInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\DrmKey.cs" />
     <Compile Include="Mdl\V20200326\Models\DrmSettingsInfo.cs" />
@@ -4107,6 +4113,7 @@
     <Compile Include="Mdl\V20200326\Models\PipelineOutputStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\PlanReq.cs" />
     <Compile Include="Mdl\V20200326\Models\PlanResp.cs" />
+    <Compile Include="Mdl\V20200326\Models\RegionInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\Scte35SettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\StartStreamLiveChannelRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\StartStreamLiveChannelResponse.cs" />
@@ -4116,6 +4123,7 @@
     <Compile Include="Mdl\V20200326\Models\StreamInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\StreamLiveChannelInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\StreamLiveOutputGroupsInfo.cs" />
+    <Compile Include="Mdl\V20200326\Models\StreamLiveRegionInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\StreamPackageSettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\StreamScte35Info.cs" />
     <Compile Include="Mdl\V20200326\Models\StreamVideoInfo.cs" />
