@@ -31,13 +31,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string CommId{ get; set; }
 
         /// <summary>
-        /// Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+        /// Query start time (s) in the format of Unix timestamp (e.g., 1588055615), which must be a time point in the last 14 days
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time in the format of local UNIX timestamp, such as 1588031999s.
+        /// Query end time (s) in the format of Unix timestamp, e.g., 1588058615
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

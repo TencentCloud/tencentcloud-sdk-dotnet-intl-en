@@ -152,6 +152,7 @@
     <Compile Include="V20190819\Models\Region.cs" />
     <Compile Include="V20190819\Models\Route.cs" />
     <Compile Include="V20190819\Models\RouteResponse.cs" />
+    <Compile Include="V20190819\Models\SaleInfo.cs" />
     <Compile Include="V20190819\Models\SubscribedInfo.cs" />
     <Compile Include="V20190819\Models\Tag.cs" />
     <Compile Include="V20190819\Models\Topic.cs" />

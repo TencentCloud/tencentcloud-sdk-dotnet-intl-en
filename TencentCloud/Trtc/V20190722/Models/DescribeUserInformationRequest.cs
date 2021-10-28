@@ -31,19 +31,19 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string CommId{ get; set; }
 
         /// <summary>
-        /// Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
+        /// Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time in the format of UNIX timestamp (e.g. 1588031999s).
+        /// Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// User `SDKAppID` (e.g. 1400188366).
+        /// `SDKAppID` of the users to query, e.g., 1400353843
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }

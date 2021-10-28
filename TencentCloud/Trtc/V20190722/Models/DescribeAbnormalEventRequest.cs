@@ -31,13 +31,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// Query start time
+        /// Query start time (s) in the format of Unix timestamp, e.g., 1592448600
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time
+        /// Query end time (s) in the format of Unix timestamp, e.g., 1592449080
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

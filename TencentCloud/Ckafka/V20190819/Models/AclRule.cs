@@ -110,7 +110,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// Name of rule type.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PatternTypeTitle")]
         public string PatternTypeTitle{ get; set; }

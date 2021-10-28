@@ -54,6 +54,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("LocationY")]
         public ulong? LocationY{ get; set; }
 
+        /// <summary>
+        /// URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
+        /// </summary>
+        [JsonProperty("WaterMarkUrl")]
+        public string WaterMarkUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "WaterMarkHeight", this.WaterMarkHeight);
             this.SetParamSimple(map, prefix + "LocationX", this.LocationX);
             this.SetParamSimple(map, prefix + "LocationY", this.LocationY);
+            this.SetParamSimple(map, prefix + "WaterMarkUrl", this.WaterMarkUrl);
         }
     }
 }

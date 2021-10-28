@@ -97,6 +97,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("AudioCodec")]
         public ulong? AudioCodec{ get; set; }
 
+        /// <summary>
+        /// URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
+        /// </summary>
+        [JsonProperty("BackgroundImageUrl")]
+        public string BackgroundImageUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
             this.SetParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
             this.SetParamSimple(map, prefix + "AudioCodec", this.AudioCodec);
+            this.SetParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
         }
     }
 }

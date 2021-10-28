@@ -72,6 +72,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SoldOut")]
         public string SoldOut{ get; set; }
 
+        /// <summary>
+        /// Information on whether Standard Edition has been sold out.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SalesInfo")]
+        public SaleInfo[] SalesInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ZoneStatus", this.ZoneStatus);
             this.SetParamSimple(map, prefix + "Exflag", this.Exflag);
             this.SetParamSimple(map, prefix + "SoldOut", this.SoldOut);
+            this.SetParamArrayObj(map, prefix + "SalesInfo.", this.SalesInfo);
         }
     }
 }
