@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Project ID. If this is left empty, the default project will be used. Please use the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API to get the project ID.
+        /// Project ID. If this is left empty, the default project will be used.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

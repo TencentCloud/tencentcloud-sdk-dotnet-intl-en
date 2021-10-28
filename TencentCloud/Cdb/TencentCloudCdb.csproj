@@ -82,7 +82,6 @@
     <Compile Include="V20170320\Models\CreateRoInstanceIpRequest.cs" />
     <Compile Include="V20170320\Models\CreateRoInstanceIpResponse.cs" />
     <Compile Include="V20170320\Models\DBSwitchInfo.cs" />
-    <Compile Include="V20170320\Models\DatabaseNameInfo.cs" />
     <Compile Include="V20170320\Models\DatabasePrivilege.cs" />
     <Compile Include="V20170320\Models\DatabasesWithCharacterLists.cs" />
     <Compile Include="V20170320\Models\DeleteAccountsRequest.cs" />
@@ -104,14 +103,10 @@
     <Compile Include="V20170320\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigResponse.cs" />
-    <Compile Include="V20170320\Models\DescribeBackupDatabasesRequest.cs" />
-    <Compile Include="V20170320\Models\DescribeBackupDatabasesResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupOverviewRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupOverviewResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupSummariesRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupSummariesResponse.cs" />
-    <Compile Include="V20170320\Models\DescribeBackupTablesRequest.cs" />
-    <Compile Include="V20170320\Models\DescribeBackupTablesResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupsRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupsResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBinlogBackupOverviewRequest.cs" />
@@ -295,7 +290,6 @@
     <Compile Include="V20170320\Models\SwitchDrInstanceToMasterResponse.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeRequest.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeResponse.cs" />
-    <Compile Include="V20170320\Models\TableNameInfo.cs" />
     <Compile Include="V20170320\Models\TablePrivilege.cs" />
     <Compile Include="V20170320\Models\TagInfo.cs" />
     <Compile Include="V20170320\Models\TagInfoItem.cs" />

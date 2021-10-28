@@ -127,6 +127,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }
 
+        /// <summary>
+        /// Placement group ID.
+        /// </summary>
+        [JsonProperty("DeployGroupId")]
+        public string DeployGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +156,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupZone", this.BackupZone);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+            this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         }
     }
 }

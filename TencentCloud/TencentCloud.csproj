@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.308</VersionPrefix>
+    <VersionPrefix>3.0.309</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -962,7 +962,6 @@
     <Compile Include="Cdb\V20170320\Models\CreateRoInstanceIpRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateRoInstanceIpResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DBSwitchInfo.cs" />
-    <Compile Include="Cdb\V20170320\Models\DatabaseNameInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabasePrivilege.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabasesWithCharacterLists.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteAccountsRequest.cs" />
@@ -984,14 +983,10 @@
     <Compile Include="Cdb\V20170320\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupConfigResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\DescribeBackupDatabasesRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\DescribeBackupDatabasesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupOverviewRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupOverviewResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupSummariesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupSummariesResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\DescribeBackupTablesRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\DescribeBackupTablesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBinlogBackupOverviewRequest.cs" />
@@ -1175,7 +1170,6 @@
     <Compile Include="Cdb\V20170320\Models\SwitchDrInstanceToMasterResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchForUpgradeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchForUpgradeResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\TableNameInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\TablePrivilege.cs" />
     <Compile Include="Cdb\V20170320\Models\TagInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\TagInfoItem.cs" />

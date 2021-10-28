@@ -953,50 +953,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to query the databases contained in a backup file. It has been disused.
-        /// After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
-        /// The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupDatabasesRequest"/></param>
-        /// <returns><see cref="DescribeBackupDatabasesResponse"/></returns>
-        public async Task<DescribeBackupDatabasesResponse> DescribeBackupDatabases(DescribeBackupDatabasesRequest req)
-        {
-             JsonResponseModel<DescribeBackupDatabasesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBackupDatabases");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDatabasesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the databases contained in a backup file. It has been disused.
-        /// After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
-        /// The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupDatabasesRequest"/></param>
-        /// <returns><see cref="DescribeBackupDatabasesResponse"/></returns>
-        public DescribeBackupDatabasesResponse DescribeBackupDatabasesSync(DescribeBackupDatabasesRequest req)
-        {
-             JsonResponseModel<DescribeBackupDatabasesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBackupDatabases");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDatabasesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
@@ -1068,50 +1024,6 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupSummaries");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupSummariesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the backup tables of the specified database. It has been disused.
-        /// After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
-        /// The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupTablesRequest"/></param>
-        /// <returns><see cref="DescribeBackupTablesResponse"/></returns>
-        public async Task<DescribeBackupTablesResponse> DescribeBackupTables(DescribeBackupTablesRequest req)
-        {
-             JsonResponseModel<DescribeBackupTablesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBackupTables");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupTablesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the backup tables of the specified database. It has been disused.
-        /// After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
-        /// The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupTablesRequest"/></param>
-        /// <returns><see cref="DescribeBackupTablesResponse"/></returns>
-        public DescribeBackupTablesResponse DescribeBackupTablesSync(DescribeBackupTablesRequest req)
-        {
-             JsonResponseModel<DescribeBackupTablesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBackupTables");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupTablesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

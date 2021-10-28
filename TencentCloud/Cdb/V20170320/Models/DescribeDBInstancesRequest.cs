@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
