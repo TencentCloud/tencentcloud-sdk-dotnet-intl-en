@@ -73,6 +73,8 @@
     <Compile Include="V20190116\Models\CreateSAMLProviderResponse.cs" />
     <Compile Include="V20190116\Models\CreateServiceLinkedRoleRequest.cs" />
     <Compile Include="V20190116\Models\CreateServiceLinkedRoleResponse.cs" />
+    <Compile Include="V20190116\Models\CreateUserSAMLConfigRequest.cs" />
+    <Compile Include="V20190116\Models\CreateUserSAMLConfigResponse.cs" />
     <Compile Include="V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="V20190116\Models\DeleteGroupResponse.cs" />
     <Compile Include="V20190116\Models\DeletePolicyRequest.cs" />
@@ -101,6 +103,8 @@
     <Compile Include="V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
     <Compile Include="V20190116\Models\DescribeSubAccountsRequest.cs" />
     <Compile Include="V20190116\Models\DescribeSubAccountsResponse.cs" />
+    <Compile Include="V20190116\Models\DescribeUserSAMLConfigRequest.cs" />
+    <Compile Include="V20190116\Models\DescribeUserSAMLConfigResponse.cs" />
     <Compile Include="V20190116\Models\DetachGroupPolicyRequest.cs" />
     <Compile Include="V20190116\Models\DetachGroupPolicyResponse.cs" />
     <Compile Include="V20190116\Models\DetachRolePolicyRequest.cs" />
@@ -192,5 +196,7 @@
     <Compile Include="V20190116\Models\UpdateSAMLProviderResponse.cs" />
     <Compile Include="V20190116\Models\UpdateUserRequest.cs" />
     <Compile Include="V20190116\Models\UpdateUserResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateUserSAMLConfigRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateUserSAMLConfigResponse.cs" />
   </ItemGroup>
 </Project>

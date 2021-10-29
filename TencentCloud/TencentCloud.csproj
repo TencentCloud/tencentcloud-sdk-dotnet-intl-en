@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.309</VersionPrefix>
+    <VersionPrefix>3.0.310</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -728,6 +728,8 @@
     <Compile Include="Cam\V20190116\Models\CreateSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateServiceLinkedRoleRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreateServiceLinkedRoleResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateUserSAMLConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateUserSAMLConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyRequest.cs" />
@@ -756,6 +758,8 @@
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSubAccountsRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSubAccountsResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeUserSAMLConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeUserSAMLConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachRolePolicyRequest.cs" />
@@ -847,6 +851,8 @@
     <Compile Include="Cam\V20190116\Models\UpdateSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateUserResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateUserSAMLConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateUserSAMLConfigResponse.cs" />
     <Compile Include="Cbs\V20170312\CbsClient.cs" />
     <Compile Include="Cbs\V20170312\Models\ApplySnapshotRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ApplySnapshotResponse.cs" />

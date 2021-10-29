@@ -533,6 +533,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to create user SAML configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSAMLConfigRequest"/></param>
+        /// <returns><see cref="CreateUserSAMLConfigResponse"/></returns>
+        public async Task<CreateUserSAMLConfigResponse> CreateUserSAMLConfig(CreateUserSAMLConfigRequest req)
+        {
+             JsonResponseModel<CreateUserSAMLConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUserSAMLConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserSAMLConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create user SAML configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSAMLConfigRequest"/></param>
+        /// <returns><see cref="CreateUserSAMLConfigResponse"/></returns>
+        public CreateUserSAMLConfigResponse CreateUserSAMLConfigSync(CreateUserSAMLConfigRequest req)
+        {
+             JsonResponseModel<CreateUserSAMLConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUserSAMLConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserSAMLConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a user group.
         /// </summary>
         /// <param name="req"><see cref="DeleteGroupRequest"/></param>
@@ -1084,6 +1124,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSubAccounts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query user SAML configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSAMLConfigRequest"/></param>
+        /// <returns><see cref="DescribeUserSAMLConfigResponse"/></returns>
+        public async Task<DescribeUserSAMLConfigResponse> DescribeUserSAMLConfig(DescribeUserSAMLConfigRequest req)
+        {
+             JsonResponseModel<DescribeUserSAMLConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserSAMLConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserSAMLConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query user SAML configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSAMLConfigRequest"/></param>
+        /// <returns><see cref="DescribeUserSAMLConfigResponse"/></returns>
+        public DescribeUserSAMLConfigResponse DescribeUserSAMLConfigSync(DescribeUserSAMLConfigRequest req)
+        {
+             JsonResponseModel<DescribeUserSAMLConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserSAMLConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserSAMLConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2606,6 +2686,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "UpdateUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify user SAML configurations.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserSAMLConfigRequest"/></param>
+        /// <returns><see cref="UpdateUserSAMLConfigResponse"/></returns>
+        public async Task<UpdateUserSAMLConfigResponse> UpdateUserSAMLConfig(UpdateUserSAMLConfigRequest req)
+        {
+             JsonResponseModel<UpdateUserSAMLConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateUserSAMLConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserSAMLConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify user SAML configurations.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserSAMLConfigRequest"/></param>
+        /// <returns><see cref="UpdateUserSAMLConfigResponse"/></returns>
+        public UpdateUserSAMLConfigResponse UpdateUserSAMLConfigSync(UpdateUserSAMLConfigRequest req)
+        {
+             JsonResponseModel<UpdateUserSAMLConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateUserSAMLConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserSAMLConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
