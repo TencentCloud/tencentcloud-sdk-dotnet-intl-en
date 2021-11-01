@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Cls.V20201016.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeMachinesResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// Group of machine status information
+        /// </summary>
+        [JsonProperty("Machines")]
+        public MachineInfo[] Machines{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the automatic update feature for the machine group
+        /// </summary>
+        [JsonProperty("AutoUpdate")]
+        public long? AutoUpdate{ get; set; }
+
+        /// <summary>
+        /// Preset start time of automatic update of machine group
+        /// </summary>
+        [JsonProperty("UpdateStartTime")]
+        public string UpdateStartTime{ get; set; }
+
+        /// <summary>
+        /// Preset end time of automatic update of machine group
+        /// </summary>
+        [JsonProperty("UpdateEndTime")]
+        public string UpdateEndTime{ get; set; }
+
+        /// <summary>
+        /// Latest LogListener version available to the current user
+        /// </summary>
+        [JsonProperty("LatestAgentVersion")]
+        public string LatestAgentVersion{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the service log
+        /// </summary>
+        [JsonProperty("ServiceLogging")]
+        public bool? ServiceLogging{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamArrayObj(map, prefix + "Machines.", this.Machines);
+            this.SetParamSimple(map, prefix + "AutoUpdate", this.AutoUpdate);
+            this.SetParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
+            this.SetParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
+            this.SetParamSimple(map, prefix + "LatestAgentVersion", this.LatestAgentVersion);
+            this.SetParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+
