@@ -59,7 +59,7 @@ namespace TencentCloud.Ip.V20210409.Models
         public string PhoneNum{ get; set; }
 
         /// <summary>
-        /// Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
+        /// Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
         /// </summary>
         [JsonProperty("CountryCode")]
         public string CountryCode{ get; set; }
