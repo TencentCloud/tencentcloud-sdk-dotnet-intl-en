@@ -45,10 +45,20 @@
 
   <ItemGroup>
     <Compile Include="V20210409\IpClient.cs" />
+    <Compile Include="V20210409\Models\AssignClientCreditRequest.cs" />
+    <Compile Include="V20210409\Models\AssignClientCreditResponse.cs" />
     <Compile Include="V20210409\Models\CountryCodeItem.cs" />
     <Compile Include="V20210409\Models\CreateAccountRequest.cs" />
     <Compile Include="V20210409\Models\CreateAccountResponse.cs" />
     <Compile Include="V20210409\Models\GetCountryCodesRequest.cs" />
     <Compile Include="V20210409\Models\GetCountryCodesResponse.cs" />
+    <Compile Include="V20210409\Models\QueryAgentCreditRequest.cs" />
+    <Compile Include="V20210409\Models\QueryAgentCreditResponse.cs" />
+    <Compile Include="V20210409\Models\QueryClientListItem.cs" />
+    <Compile Include="V20210409\Models\QueryClientListRequest.cs" />
+    <Compile Include="V20210409\Models\QueryClientListResponse.cs" />
+    <Compile Include="V20210409\Models\QueryCreditHistoryRequest.cs" />
+    <Compile Include="V20210409\Models\QueryCreditHistoryResponse.cs" />
+    <Compile Include="V20210409\Models\QueryUinCreditHistoryData.cs" />
   </ItemGroup>
 </Project>

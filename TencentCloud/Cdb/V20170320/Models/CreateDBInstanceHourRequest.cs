@@ -216,6 +216,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("CageId")]
         public string CageId{ get; set; }
 
+        /// <summary>
+        /// The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid.
+        /// </summary>
+        [JsonProperty("AlarmPolicyIdList")]
+        public string[] AlarmPolicyIdList{ get; set; }
+
+        /// <summary>
+        /// Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +266,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
+            this.SetParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

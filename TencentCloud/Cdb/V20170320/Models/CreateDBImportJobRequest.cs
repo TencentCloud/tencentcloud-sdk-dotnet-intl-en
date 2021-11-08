@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Filename. The file should have already been uploaded to Tencent Cloud.
+        /// Filename. The file must be a .sql file uploaded to Tencent Cloud.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }

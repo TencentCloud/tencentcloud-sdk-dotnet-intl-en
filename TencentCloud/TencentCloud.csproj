@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.314</VersionPrefix>
+    <VersionPrefix>3.0.315</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1118,8 +1118,6 @@
     <Compile Include="Cdb\V20170320\Models\ModifyRoGroupInfoResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoReplicationDelayRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoReplicationDelayResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyRoTypeRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyRoTypeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\OfflineIsolatedInstancesRequest.cs" />
@@ -3550,11 +3548,21 @@
     <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCARequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCAResponse.cs" />
     <Compile Include="Ip\V20210409\IpClient.cs" />
+    <Compile Include="Ip\V20210409\Models\AssignClientCreditRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\AssignClientCreditResponse.cs" />
     <Compile Include="Ip\V20210409\Models\CountryCodeItem.cs" />
     <Compile Include="Ip\V20210409\Models\CreateAccountRequest.cs" />
     <Compile Include="Ip\V20210409\Models\CreateAccountResponse.cs" />
     <Compile Include="Ip\V20210409\Models\GetCountryCodesRequest.cs" />
     <Compile Include="Ip\V20210409\Models\GetCountryCodesResponse.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryAgentCreditRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryAgentCreditResponse.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryClientListItem.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryClientListRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryClientListResponse.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryCreditHistoryRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryCreditHistoryResponse.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryUinCreditHistoryData.cs" />
     <Compile Include="Kms\V20190118\KmsClient.cs" />
     <Compile Include="Kms\V20190118\Models\AlgorithmInfo.cs" />
     <Compile Include="Kms\V20190118\Models\ArchiveKeyRequest.cs" />
@@ -4272,6 +4280,7 @@
     <Compile Include="Mdl\V20200326\Models\PlanReq.cs" />
     <Compile Include="Mdl\V20200326\Models\PlanResp.cs" />
     <Compile Include="Mdl\V20200326\Models\RegionInfo.cs" />
+    <Compile Include="Mdl\V20200326\Models\SDMCSettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\Scte35SettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\StartStreamLiveChannelRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\StartStreamLiveChannelResponse.cs" />
@@ -4285,6 +4294,7 @@
     <Compile Include="Mdl\V20200326\Models\StreamPackageSettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\StreamScte35Info.cs" />
     <Compile Include="Mdl\V20200326\Models\StreamVideoInfo.cs" />
+    <Compile Include="Mdl\V20200326\Models\TimeShiftSettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\TimingSettingsReq.cs" />
     <Compile Include="Mdl\V20200326\Models\TimingSettingsResp.cs" />
     <Compile Include="Mdl\V20200326\Models\VideoPipelineInputStatistics.cs" />

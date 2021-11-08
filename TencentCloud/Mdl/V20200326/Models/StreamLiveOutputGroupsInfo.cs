@@ -78,6 +78,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("StreamPackageSettings")]
         public StreamPackageSettingsInfo StreamPackageSettings{ get; set; }
 
+        /// <summary>
+        /// Time-shift configuration information
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("TimeShiftSettings")]
+        public TimeShiftSettingsInfo TimeShiftSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +99,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "DrmSettings.", this.DrmSettings);
             this.SetParamObj(map, prefix + "DashRemuxSettings.", this.DashRemuxSettings);
             this.SetParamObj(map, prefix + "StreamPackageSettings.", this.StreamPackageSettings);
+            this.SetParamObj(map, prefix + "TimeShiftSettings.", this.TimeShiftSettings);
         }
     }
 }

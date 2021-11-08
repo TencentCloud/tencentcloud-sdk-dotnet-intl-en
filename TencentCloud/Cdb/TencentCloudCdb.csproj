@@ -232,8 +232,6 @@
     <Compile Include="V20170320\Models\ModifyRoGroupInfoResponse.cs" />
     <Compile Include="V20170320\Models\ModifyRoReplicationDelayRequest.cs" />
     <Compile Include="V20170320\Models\ModifyRoReplicationDelayResponse.cs" />
-    <Compile Include="V20170320\Models\ModifyRoTypeRequest.cs" />
-    <Compile Include="V20170320\Models\ModifyRoTypeResponse.cs" />
     <Compile Include="V20170320\Models\ModifyTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\OfflineIsolatedInstancesRequest.cs" />

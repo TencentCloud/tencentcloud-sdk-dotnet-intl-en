@@ -32,14 +32,16 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string State{ get; set; }
 
         /// <summary>
-        /// This parameter can be set to `CustomDRMKeys` or left empty.
-        /// CustomDRMKeys means encryption keys customized by users.
+        /// Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+        /// `CustomDRMKeys` means encryption keys customized by users.
+        /// `SDMCDRM` means the DRM key management system of SDMC.
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+        /// If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+        /// If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
         /// </summary>
         [JsonProperty("ContentId")]
         public string ContentId{ get; set; }
@@ -51,6 +53,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Keys")]
         public DrmKey[] Keys{ get; set; }
 
+        /// <summary>
+        /// SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("SDMCSettings")]
+        public SDMCSettingsInfo SDMCSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +70,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
             this.SetParamSimple(map, prefix + "ContentId", this.ContentId);
             this.SetParamArrayObj(map, prefix + "Keys.", this.Keys);
+            this.SetParamObj(map, prefix + "SDMCSettings.", this.SDMCSettings);
         }
     }
 }

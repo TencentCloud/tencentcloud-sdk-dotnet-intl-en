@@ -133,6 +133,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
+        /// <summary>
+        /// Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +163,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

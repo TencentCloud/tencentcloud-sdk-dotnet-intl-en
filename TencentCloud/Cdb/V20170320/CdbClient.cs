@@ -3279,46 +3279,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to change a general RO replica to delayed RO replica.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyRoTypeRequest"/></param>
-        /// <returns><see cref="ModifyRoTypeResponse"/></returns>
-        public async Task<ModifyRoTypeResponse> ModifyRoType(ModifyRoTypeRequest req)
-        {
-             JsonResponseModel<ModifyRoTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRoType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to change a general RO replica to delayed RO replica.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyRoTypeRequest"/></param>
-        /// <returns><see cref="ModifyRoTypeResponse"/></returns>
-        public ModifyRoTypeResponse ModifyRoTypeSync(ModifyRoTypeRequest req)
-        {
-             JsonResponseModel<ModifyRoTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRoType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (ModifyTimeWindow) is used to update the maintenance time window of a TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyTimeWindowRequest"/></param>
