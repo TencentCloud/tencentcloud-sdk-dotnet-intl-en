@@ -96,10 +96,13 @@
     <Compile Include="V20190107\Models\IsolateInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterParamRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterParamResponse.cs" />
     <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigResponse.cs" />
+    <Compile Include="V20190107\Models\NetAddr.cs" />
     <Compile Include="V20190107\Models\ObjectTask.cs" />
     <Compile Include="V20190107\Models\OfflineClusterRequest.cs" />
     <Compile Include="V20190107\Models\OfflineClusterResponse.cs" />

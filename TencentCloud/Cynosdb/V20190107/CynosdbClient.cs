@@ -853,6 +853,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify the parameters of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
+        /// <returns><see cref="ModifyClusterParamResponse"/></returns>
+        public async Task<ModifyClusterParamResponse> ModifyClusterParam(ModifyClusterParamRequest req)
+        {
+             JsonResponseModel<ModifyClusterParamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the parameters of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
+        /// <returns><see cref="ModifyClusterParamResponse"/></returns>
+        public ModifyClusterParamResponse ModifyClusterParamSync(ModifyClusterParamRequest req)
+        {
+             JsonResponseModel<ModifyClusterParamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>

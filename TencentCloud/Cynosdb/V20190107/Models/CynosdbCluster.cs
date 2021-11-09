@@ -224,6 +224,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
+        /// <summary>
+        /// Network information of the cluster
+        /// </summary>
+        [JsonProperty("NetAddrs")]
+        public NetAddr[] NetAddrs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -263,6 +269,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
             this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
             this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
+            this.SetParamArrayObj(map, prefix + "NetAddrs.", this.NetAddrs);
         }
     }
 }

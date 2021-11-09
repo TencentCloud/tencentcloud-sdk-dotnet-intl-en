@@ -102,6 +102,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
+        /// <summary>
+        /// Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         }
     }
 }

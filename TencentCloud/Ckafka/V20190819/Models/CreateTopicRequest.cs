@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+        /// Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -108,6 +108,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
+        /// <summary>
+        /// Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         }
     }
 }
