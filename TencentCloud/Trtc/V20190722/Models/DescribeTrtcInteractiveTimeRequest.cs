@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdp.V20200527.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateStreamPackageChannelEndpointRequest : AbstractModel
+    public class DescribeTrtcInteractiveTimeRequest : AbstractModel
     {
         
         /// <summary>
-        /// Channel ID
+        /// Query start date in the format of YYYY-MM-DD
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
+        /// Query end date in the format of YYYY-MM-DD
+        /// The period queried in a request cannot be longer than 31 days.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// Authentication information
+        /// Application ID, which is optional. If it is specified, duration statistics for the specified application are returned; otherwise, the total durations of all applications are returned.
         /// </summary>
-        [JsonProperty("AuthInfo")]
-        public EndpointAuthInfo AuthInfo{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         }
     }
 }

@@ -21,34 +21,20 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeScaleRequest : AbstractModel
+    public class SdkAppIdRecordUsage : AbstractModel
     {
         
         /// <summary>
-        /// Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
-
-        /// <summary>
-        /// Query end time in the format of local UNIX timestamp, such as 1588031999s.
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
-
-        /// <summary>
-        /// User `sdkappid`
+        /// Application ID
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// Type of data to query
-        /// `UserNum: number of users in call;
-        /// RoomNum: number of rooms.
+        /// Durations for the period queried
         /// </summary>
-        [JsonProperty("DataType")]
-        public string[] DataType{ get; set; }
+        [JsonProperty("Usages")]
+        public RecordUsage[] Usages{ get; set; }
 
 
         /// <summary>
@@ -56,10 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
+            this.SetParamArrayObj(map, prefix + "Usages.", this.Usages);
         }
     }
 }

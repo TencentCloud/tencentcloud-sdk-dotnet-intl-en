@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdp.V20200527.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateStreamPackageChannelEndpointRequest : AbstractModel
+    public class OneSdkAppIdUsagesInfo : AbstractModel
     {
         
         /// <summary>
-        /// Channel ID
+        /// Number of records returned for the `SdkAppId`
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("TotalNum")]
+        public ulong? TotalNum{ get; set; }
 
         /// <summary>
-        /// Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
+        /// Array of durations
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("SdkAppIdTrtcTimeUsages")]
+        public SdkAppIdTrtcUsage[] SdkAppIdTrtcTimeUsages{ get; set; }
 
         /// <summary>
-        /// Authentication information
+        /// Application ID
         /// </summary>
-        [JsonProperty("AuthInfo")]
-        public EndpointAuthInfo AuthInfo{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public string SdkAppId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
+            this.SetParamArrayObj(map, prefix + "SdkAppIdTrtcTimeUsages.", this.SdkAppIdTrtcTimeUsages);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         }
     }
 }

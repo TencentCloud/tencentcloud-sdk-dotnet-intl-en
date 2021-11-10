@@ -21,20 +21,20 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RealtimeData : AbstractModel
+    public class DescribeTrtcInteractiveTimeResponse : AbstractModel
     {
         
         /// <summary>
-        /// Returned data
+        /// Duration statistics of the queried application(s)
         /// </summary>
-        [JsonProperty("Content")]
-        public TimeValue[] Content{ get; set; }
+        [JsonProperty("Usages")]
+        public OneSdkAppIdUsagesInfo[] Usages{ get; set; }
 
         /// <summary>
-        /// Data type field
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("DataType")]
-        public string DataType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Content.", this.Content);
-            this.SetParamSimple(map, prefix + "DataType", this.DataType);
+            this.SetParamArrayObj(map, prefix + "Usages.", this.Usages);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

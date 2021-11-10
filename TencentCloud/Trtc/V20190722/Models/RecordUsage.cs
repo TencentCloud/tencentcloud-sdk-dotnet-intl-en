@@ -21,34 +21,38 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeNetworkRequest : AbstractModel
+    public class RecordUsage : AbstractModel
     {
         
         /// <summary>
-        /// Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+        /// Time point for the statistics, e.g., `2020-09-07` or `2020-09-07 00:05:05`
         /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
+        [JsonProperty("TimeKey")]
+        public string TimeKey{ get; set; }
 
         /// <summary>
-        /// Query end time in the format of local UNIX timestamp, such as 1588031999s.
+        /// SD video duration (s)
         /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
+        [JsonProperty("Class1VideoTime")]
+        public ulong? Class1VideoTime{ get; set; }
 
         /// <summary>
-        /// User `sdkappid`
+        /// HD video duration (s)
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        [JsonProperty("Class2VideoTime")]
+        public ulong? Class2VideoTime{ get; set; }
 
         /// <summary>
-        /// Type of data to query
-        /// sendLossRateRaw: upstream packet loss rate;
-        /// recvLossRateRaw: downstream packet loss rate.
+        /// FHD video duration (s)
         /// </summary>
-        [JsonProperty("DataType")]
-        public string[] DataType{ get; set; }
+        [JsonProperty("Class3VideoTime")]
+        public ulong? Class3VideoTime{ get; set; }
+
+        /// <summary>
+        /// Audio duration (s)
+        /// </summary>
+        [JsonProperty("AudioTime")]
+        public ulong? AudioTime{ get; set; }
 
 
         /// <summary>
@@ -56,10 +60,11 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
+            this.SetParamSimple(map, prefix + "TimeKey", this.TimeKey);
+            this.SetParamSimple(map, prefix + "Class1VideoTime", this.Class1VideoTime);
+            this.SetParamSimple(map, prefix + "Class2VideoTime", this.Class2VideoTime);
+            this.SetParamSimple(map, prefix + "Class3VideoTime", this.Class3VideoTime);
+            this.SetParamSimple(map, prefix + "AudioTime", this.AudioTime);
         }
     }
 }

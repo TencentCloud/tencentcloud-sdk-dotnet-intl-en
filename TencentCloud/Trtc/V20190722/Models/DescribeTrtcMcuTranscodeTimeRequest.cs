@@ -21,20 +21,27 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeNetworkResponse : AbstractModel
+    public class DescribeTrtcMcuTranscodeTimeRequest : AbstractModel
     {
         
         /// <summary>
-        /// Data returned by query
+        /// Query start date in the format of YYYY-MM-DD
         /// </summary>
-        [JsonProperty("Data")]
-        public RealtimeData[] Data{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Query end date in the format of YYYY-MM-DD
+        /// The period queried in a request cannot be longer than 31 days.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// Application ID, which is optional. If it is specified, duration statistics for the specified application are returned; otherwise, the total durations of all applications are returned.
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         }
     }
 }

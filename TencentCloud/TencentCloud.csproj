@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.316</VersionPrefix>
+    <VersionPrefix>3.0.317</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6447,14 +6447,14 @@
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribePictureRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribePictureResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRecordStatisticRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRecordStatisticResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeTrtcInteractiveTimeRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeTrtcInteractiveTimeResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeTrtcMcuTranscodeTimeRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeTrtcMcuTranscodeTimeResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeUserInformationRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeUserInformationResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomByStrRoomIdRequest.cs" />
@@ -6467,18 +6467,23 @@
     <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
     <Compile Include="Trtc\V20190722\Models\ModifyPictureRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\ModifyPictureResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
+    <Compile Include="Trtc\V20190722\Models\OneSdkAppIdUsagesInfo.cs" />
     <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
     <Compile Include="Trtc\V20190722\Models\PictureInfo.cs" />
     <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="Trtc\V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
-    <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
+    <Compile Include="Trtc\V20190722\Models\RecordUsage.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\RoomState.cs" />
     <Compile Include="Trtc\V20190722\Models\ScaleInfomation.cs" />
+    <Compile Include="Trtc\V20190722\Models\SdkAppIdRecordUsage.cs" />
+    <Compile Include="Trtc\V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
+    <Compile Include="Trtc\V20190722\Models\SdkAppIdTrtcUsage.cs" />
     <Compile Include="Trtc\V20190722\Models\SmallVideoLayoutParams.cs" />
     <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeByStrRoomIdRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeByStrRoomIdResponse.cs" />

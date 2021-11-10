@@ -21,20 +21,26 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeScaleResponse : AbstractModel
+    public class OneSdkAppIdTranscodeTimeUsagesInfo : AbstractModel
     {
         
         /// <summary>
-        /// Returned data array
+        /// Array of relaying and transcoding durations
         /// </summary>
-        [JsonProperty("Data")]
-        public RealtimeData[] Data{ get; set; }
+        [JsonProperty("SdkAppIdTranscodeTimeUsages")]
+        public SdkAppIdTrtcMcuTranscodeTimeUsage[] SdkAppIdTranscodeTimeUsages{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Number of records returned
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TotalNum")]
+        public ulong? TotalNum{ get; set; }
+
+        /// <summary>
+        /// ID of the application queried. Its value may be an application ID or `total`, which indicates that the total durations of all applications are queried.
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public string SdkAppId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "SdkAppIdTranscodeTimeUsages.", this.SdkAppIdTranscodeTimeUsages);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         }
     }
 }

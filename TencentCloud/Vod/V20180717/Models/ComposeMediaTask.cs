@@ -56,6 +56,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
+        /// Progress of a media file composing task. Value range: [0, 100]
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
+        /// <summary>
         /// Input of media file composing task.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -77,16 +83,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-        /// </summary>
-        [JsonProperty("SessionContext")]
-        public string SessionContext{ get; set; }
-
-        /// <summary>
         /// ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
+
+        /// <summary>
+        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
 
 
         /// <summary>
@@ -98,11 +104,12 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
-            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }
     }
 }

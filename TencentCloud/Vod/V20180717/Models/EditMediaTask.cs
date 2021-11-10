@@ -63,6 +63,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
+        /// Progress of a video editing task. Value range: [0, 100]
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
+        /// <summary>
         /// Input of video editing task.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -77,18 +83,17 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaTaskOutput Output{ get; set; }
 
         /// <summary>
+        /// Metadata of a source video
+        /// </summary>
+        [JsonProperty("MetaData")]
+        public MediaMetaData MetaData{ get; set; }
+
+        /// <summary>
         /// If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
-
-        /// <summary>
-        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("SessionContext")]
-        public string SessionContext{ get; set; }
 
         /// <summary>
         /// The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
@@ -98,10 +103,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Metadata of a source video
+        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("MetaData")]
-        public MediaMetaData MetaData{ get; set; }
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
 
 
         /// <summary>
@@ -114,12 +120,13 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
-            this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
-            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
+            this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }
     }
 }

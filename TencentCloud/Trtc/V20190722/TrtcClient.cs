@@ -375,17 +375,22 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query the network conditions of an `SDKAppID`, including upstream and downstream packet loss, in the last 24 hours on a per-minute basis. The query period must be 1-60 minutes.
+        /// This API is used to query billable on-cloud recording durations.
+        /// 
+        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+        /// - The period queried in a request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
         /// </summary>
-        /// <param name="req"><see cref="DescribeRealtimeNetworkRequest"/></param>
-        /// <returns><see cref="DescribeRealtimeNetworkResponse"/></returns>
-        public async Task<DescribeRealtimeNetworkResponse> DescribeRealtimeNetwork(DescribeRealtimeNetworkRequest req)
+        /// <param name="req"><see cref="DescribeRecordStatisticRequest"/></param>
+        /// <returns><see cref="DescribeRecordStatisticResponse"/></returns>
+        public async Task<DescribeRecordStatisticResponse> DescribeRecordStatistic(DescribeRecordStatisticRequest req)
         {
-             JsonResponseModel<DescribeRealtimeNetworkResponse> rsp = null;
+             JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeRealtimeNetwork");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeNetworkResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeRecordStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStatisticResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -395,97 +400,22 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query the network conditions of an `SDKAppID`, including upstream and downstream packet loss, in the last 24 hours on a per-minute basis. The query period must be 1-60 minutes.
+        /// This API is used to query billable on-cloud recording durations.
+        /// 
+        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+        /// - The period queried in a request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
         /// </summary>
-        /// <param name="req"><see cref="DescribeRealtimeNetworkRequest"/></param>
-        /// <returns><see cref="DescribeRealtimeNetworkResponse"/></returns>
-        public DescribeRealtimeNetworkResponse DescribeRealtimeNetworkSync(DescribeRealtimeNetworkRequest req)
+        /// <param name="req"><see cref="DescribeRecordStatisticRequest"/></param>
+        /// <returns><see cref="DescribeRecordStatisticResponse"/></returns>
+        public DescribeRecordStatisticResponse DescribeRecordStatisticSync(DescribeRecordStatisticRequest req)
         {
-             JsonResponseModel<DescribeRealtimeNetworkResponse> rsp = null;
+             JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeRealtimeNetwork");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeNetworkResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the quality metrics of an `SDKAppID` in the last 24 hours on a per-minute basis, including room entry success rate, instant playback rate of the first frame, and audio/video lag rate. The query period must be 1-60 minutes.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRealtimeQualityRequest"/></param>
-        /// <returns><see cref="DescribeRealtimeQualityResponse"/></returns>
-        public async Task<DescribeRealtimeQualityResponse> DescribeRealtimeQuality(DescribeRealtimeQualityRequest req)
-        {
-             JsonResponseModel<DescribeRealtimeQualityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRealtimeQuality");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeQualityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the quality metrics of an `SDKAppID` in the last 24 hours on a per-minute basis, including room entry success rate, instant playback rate of the first frame, and audio/video lag rate. The query period must be 1-60 minutes.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRealtimeQualityRequest"/></param>
-        /// <returns><see cref="DescribeRealtimeQualityResponse"/></returns>
-        public DescribeRealtimeQualityResponse DescribeRealtimeQualitySync(DescribeRealtimeQualityRequest req)
-        {
-             JsonResponseModel<DescribeRealtimeQualityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRealtimeQuality");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeQualityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        ///  This API is used to query the scale of an `SDKAppID` in the last 24 hours on a per-minute basis. The query period must be 1-60 minutes.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRealtimeScaleRequest"/></param>
-        /// <returns><see cref="DescribeRealtimeScaleResponse"/></returns>
-        public async Task<DescribeRealtimeScaleResponse> DescribeRealtimeScale(DescribeRealtimeScaleRequest req)
-        {
-             JsonResponseModel<DescribeRealtimeScaleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRealtimeScale");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeScaleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        ///  This API is used to query the scale of an `SDKAppID` in the last 24 hours on a per-minute basis. The query period must be 1-60 minutes.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRealtimeScaleRequest"/></param>
-        /// <returns><see cref="DescribeRealtimeScaleResponse"/></returns>
-        public DescribeRealtimeScaleResponse DescribeRealtimeScaleSync(DescribeRealtimeScaleRequest req)
-        {
-             JsonResponseModel<DescribeRealtimeScaleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRealtimeScale");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeScaleResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStatisticResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -528,6 +458,102 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRoomInformation");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query billable audio/video interaction durations.
+        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+        /// - The period queried in a request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcInteractiveTimeRequest"/></param>
+        /// <returns><see cref="DescribeTrtcInteractiveTimeResponse"/></returns>
+        public async Task<DescribeTrtcInteractiveTimeResponse> DescribeTrtcInteractiveTime(DescribeTrtcInteractiveTimeRequest req)
+        {
+             JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrtcInteractiveTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query billable audio/video interaction durations.
+        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+        /// - The period queried in a request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcInteractiveTimeRequest"/></param>
+        /// <returns><see cref="DescribeTrtcInteractiveTimeResponse"/></returns>
+        public DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTimeSync(DescribeTrtcInteractiveTimeRequest req)
+        {
+             JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTrtcInteractiveTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query billable relaying and transcoding durations.
+        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+        /// - The period queried in a request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcMcuTranscodeTimeRequest"/></param>
+        /// <returns><see cref="DescribeTrtcMcuTranscodeTimeResponse"/></returns>
+        public async Task<DescribeTrtcMcuTranscodeTimeResponse> DescribeTrtcMcuTranscodeTime(DescribeTrtcMcuTranscodeTimeRequest req)
+        {
+             JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrtcMcuTranscodeTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query billable relaying and transcoding durations.
+        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+        /// - The period queried in a request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcMcuTranscodeTimeRequest"/></param>
+        /// <returns><see cref="DescribeTrtcMcuTranscodeTimeResponse"/></returns>
+        public DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTimeSync(DescribeTrtcMcuTranscodeTimeRequest req)
+        {
+             JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTrtcMcuTranscodeTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

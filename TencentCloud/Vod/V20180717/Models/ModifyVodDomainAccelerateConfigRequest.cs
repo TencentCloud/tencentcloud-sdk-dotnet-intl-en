@@ -43,7 +43,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Whether to enable or disable domain name acceleration for the selected region. Valid values:
         /// <li>`Enabled`: enable</li>
         /// <li>`Disabled`: disable</li>
-        /// To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

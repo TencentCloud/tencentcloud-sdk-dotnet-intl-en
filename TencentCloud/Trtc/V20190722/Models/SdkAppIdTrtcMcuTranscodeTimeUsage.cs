@@ -21,36 +21,38 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeQualityRequest : AbstractModel
+    public class SdkAppIdTrtcMcuTranscodeTimeUsage : AbstractModel
     {
         
         /// <summary>
-        /// Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+        /// Time point for the statistics. e.g., `2020-09-07` or `2020-09-07 00:05:05`
         /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
+        [JsonProperty("TimeKey")]
+        public string TimeKey{ get; set; }
 
         /// <summary>
-        /// Query end time in the format of local UNIX timestamp, such as 1588031999s.
+        /// Audio duration (s)
         /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
+        [JsonProperty("AudioTime")]
+        public ulong? AudioTime{ get; set; }
 
         /// <summary>
-        /// User `sdkappid`
+        /// SD video duration (s)
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        [JsonProperty("VideoTimeSd")]
+        public ulong? VideoTimeSd{ get; set; }
 
         /// <summary>
-        /// Type of data to query
-        /// enterTotalSuccPercent: room entry success rate;
-        /// fistFreamInSecRate: instant playback rate of the first frame;
-        /// blockPercent: video lag rate;
-        /// audioBlockPercent: audio lag rate.
+        /// HD video duration (s)
         /// </summary>
-        [JsonProperty("DataType")]
-        public string[] DataType{ get; set; }
+        [JsonProperty("VideoTimeHd")]
+        public ulong? VideoTimeHd{ get; set; }
+
+        /// <summary>
+        /// FHD video duration (s)
+        /// </summary>
+        [JsonProperty("VideoTimeFhd")]
+        public ulong? VideoTimeFhd{ get; set; }
 
 
         /// <summary>
@@ -58,10 +60,11 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
+            this.SetParamSimple(map, prefix + "TimeKey", this.TimeKey);
+            this.SetParamSimple(map, prefix + "AudioTime", this.AudioTime);
+            this.SetParamSimple(map, prefix + "VideoTimeSd", this.VideoTimeSd);
+            this.SetParamSimple(map, prefix + "VideoTimeHd", this.VideoTimeHd);
+            this.SetParamSimple(map, prefix + "VideoTimeFhd", this.VideoTimeFhd);
         }
     }
 }
