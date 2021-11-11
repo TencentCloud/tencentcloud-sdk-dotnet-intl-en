@@ -37,16 +37,16 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-        /// </summary>
-        [JsonProperty("PeriodType")]
-        public string PeriodType{ get; set; }
-
-        /// <summary>
         /// Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
+
+        /// <summary>
+        /// The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+        /// </summary>
+        [JsonProperty("PeriodType")]
+        public string PeriodType{ get; set; }
 
         /// <summary>
         /// Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
@@ -56,7 +56,36 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? NeedRecordNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// Action type to query. Valid values:
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
+        ///  
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -81,8 +110,8 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "PeriodType", this.PeriodType);
             this.SetParamSimple(map, prefix + "Month", this.Month);
+            this.SetParamSimple(map, prefix + "PeriodType", this.PeriodType);
             this.SetParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);

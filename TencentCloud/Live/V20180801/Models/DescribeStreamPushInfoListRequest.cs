@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+        /// End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

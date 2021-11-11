@@ -45,6 +45,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("RealTotalCostRatio")]
         public string RealTotalCostRatio{ get; set; }
 
+        /// <summary>
+        /// The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TotalCost")]
+        public string TotalCost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
         }
     }
 }

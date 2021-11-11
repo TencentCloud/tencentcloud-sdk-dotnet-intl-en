@@ -25,17 +25,31 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
+        /// Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
         /// </summary>
         [JsonProperty("StartType")]
         public string StartType{ get; set; }
 
         /// <summary>
-        /// Required if `StartType` is `FIXED_TIME`
-        /// UTC time, such as `2020-01-01T12:00:00Z`
+        /// This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+        /// It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
+
+        /// <summary>
+        /// This parameter is required if `EventType` is `TIMED_RECORD`.
+        /// It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// This parameter is required if `EventType` is `TIMED_RECORD`.
+        /// It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -45,6 +59,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         {
             this.SetParamSimple(map, prefix + "StartType", this.StartType);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

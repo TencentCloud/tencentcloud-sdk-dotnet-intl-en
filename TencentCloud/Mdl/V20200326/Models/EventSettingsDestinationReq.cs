@@ -15,34 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveForbidStreamListRequest : AbstractModel
+    public class EventSettingsDestinationReq : AbstractModel
     {
         
         /// <summary>
-        /// Page number to get. Default value: 1.
+        /// URL of the COS bucket to save recording files
         /// </summary>
-        [JsonProperty("PageNum")]
-        public long? PageNum{ get; set; }
-
-        /// <summary>
-        /// Number of entries per page. Maximum value: 100. 
-        /// Value: any integer between 1 and 100.
-        /// Default value: 10.
-        /// </summary>
-        [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
-
-        /// <summary>
-        /// Stream name for query
-        /// </summary>
-        [JsonProperty("StreamName")]
-        public string StreamName{ get; set; }
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -50,9 +36,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

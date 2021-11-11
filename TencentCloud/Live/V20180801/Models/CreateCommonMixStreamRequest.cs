@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// ID of stream mix session (from applying for stream mix to canceling stream mix).
+        /// ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
         /// </summary>
         [JsonProperty("MixStreamSessionId")]
         public string MixStreamSessionId{ get; set; }

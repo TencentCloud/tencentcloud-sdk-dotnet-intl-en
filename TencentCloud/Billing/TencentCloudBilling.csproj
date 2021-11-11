@@ -69,6 +69,7 @@
     <Compile Include="V20180709\Models\PayModeSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\ProjectSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\RegionSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\SummaryTotal.cs" />
     <Compile Include="V20180709\Models\TagSummaryOverviewItem.cs" />
   </ItemGroup>
 </Project>

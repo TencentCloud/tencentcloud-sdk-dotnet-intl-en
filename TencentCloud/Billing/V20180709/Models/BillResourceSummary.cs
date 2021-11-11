@@ -127,7 +127,8 @@ namespace TencentCloud.Billing.V20180709.Models
         public string TotalCost{ get; set; }
 
         /// <summary>
-        /// Discount rate
+        /// Discount
+        /// If different discounts or contract prices are applied, `-` will be returned for this parameter.
         /// </summary>
         [JsonProperty("Discount")]
         public string Discount{ get; set; }

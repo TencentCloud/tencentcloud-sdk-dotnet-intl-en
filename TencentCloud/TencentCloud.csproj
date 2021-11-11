@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.317</VersionPrefix>
+    <VersionPrefix>3.0.318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -698,6 +698,7 @@
     <Compile Include="Billing\V20180709\Models\PayModeSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\ProjectSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\RegionSummaryOverviewItem.cs" />
+    <Compile Include="Billing\V20180709\Models\SummaryTotal.cs" />
     <Compile Include="Billing\V20180709\Models\TagSummaryOverviewItem.cs" />
     <Compile Include="Cam\V20190116\CamClient.cs" />
     <Compile Include="Cam\V20190116\Models\AccessKey.cs" />
@@ -4259,6 +4260,8 @@
     <Compile Include="Mdl\V20200326\Models\DestinationInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\DrmKey.cs" />
     <Compile Include="Mdl\V20200326\Models\DrmSettingsInfo.cs" />
+    <Compile Include="Mdl\V20200326\Models\EventSettingsDestinationReq.cs" />
+    <Compile Include="Mdl\V20200326\Models\EventSettingsDestinationResp.cs" />
     <Compile Include="Mdl\V20200326\Models\EventSettingsReq.cs" />
     <Compile Include="Mdl\V20200326\Models\EventSettingsResp.cs" />
     <Compile Include="Mdl\V20200326\Models\FailOverSettings.cs" />

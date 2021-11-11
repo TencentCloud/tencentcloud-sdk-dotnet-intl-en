@@ -21,34 +21,22 @@ namespace TencentCloud.Billing.V20180709.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBillSummaryByTagResponse : AbstractModel
+    public class SummaryTotal : AbstractModel
     {
         
-        /// <summary>
-        /// Indicates whether or not the data is ready. `0`: not ready; `1`: ready.
-        /// </summary>
-        [JsonProperty("Ready")]
-        public ulong? Ready{ get; set; }
-
-        /// <summary>
-        /// Details about cost distribution over different tags
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("SummaryOverview")]
-        public TagSummaryOverviewItem[] SummaryOverview{ get; set; }
-
         /// <summary>
         /// Total cost
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SummaryTotal")]
-        public SummaryTotal SummaryTotal{ get; set; }
+        [JsonProperty("RealTotalCost")]
+        public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TotalCost")]
+        public string TotalCost{ get; set; }
 
 
         /// <summary>
@@ -56,10 +44,8 @@ namespace TencentCloud.Billing.V20180709.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ready", this.Ready);
-            this.SetParamArrayObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
-            this.SetParamObj(map, prefix + "SummaryTotal.", this.SummaryTotal);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
         }
     }
 }

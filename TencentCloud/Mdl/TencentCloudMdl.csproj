@@ -97,6 +97,8 @@
     <Compile Include="V20200326\Models\DestinationInfo.cs" />
     <Compile Include="V20200326\Models\DrmKey.cs" />
     <Compile Include="V20200326\Models\DrmSettingsInfo.cs" />
+    <Compile Include="V20200326\Models\EventSettingsDestinationReq.cs" />
+    <Compile Include="V20200326\Models\EventSettingsDestinationResp.cs" />
     <Compile Include="V20200326\Models\EventSettingsReq.cs" />
     <Compile Include="V20200326\Models\EventSettingsResp.cs" />
     <Compile Include="V20200326\Models\FailOverSettings.cs" />

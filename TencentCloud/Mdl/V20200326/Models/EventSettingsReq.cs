@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Only `INPUT_SWITCH` is supported currently. If you do not specify this parameter, `INPUT_SWITCH` will be used.
+        /// Valid values: `INPUT_SWITCH`, `TIMED_RECORD`. If it is not specified, `INPUT_SWITCH` will be used.
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -36,6 +36,24 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("InputAttachment")]
         public string InputAttachment{ get; set; }
 
+        /// <summary>
+        /// Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
+        /// </summary>
+        [JsonProperty("OutputGroupName")]
+        public string OutputGroupName{ get; set; }
+
+        /// <summary>
+        /// Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`.
+        /// </summary>
+        [JsonProperty("ManifestName")]
+        public string ManifestName{ get; set; }
+
+        /// <summary>
+        /// URL of the COS bucket to save recording files. This parameter is required if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+        /// </summary>
+        [JsonProperty("Destinations")]
+        public EventSettingsDestinationReq[] Destinations{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Mdl.V20200326.Models
         {
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamSimple(map, prefix + "InputAttachment", this.InputAttachment);
+            this.SetParamSimple(map, prefix + "OutputGroupName", this.OutputGroupName);
+            this.SetParamSimple(map, prefix + "ManifestName", this.ManifestName);
+            this.SetParamArrayObj(map, prefix + "Destinations.", this.Destinations);
         }
     }
 }
