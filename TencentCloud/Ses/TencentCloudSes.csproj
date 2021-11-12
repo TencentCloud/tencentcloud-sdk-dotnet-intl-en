@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="V20201002\SesClient.cs" />
     <Compile Include="V20201002\Models\Attachment.cs" />
+    <Compile Include="V20201002\Models\BatchSendEmailRequest.cs" />
+    <Compile Include="V20201002\Models\BatchSendEmailResponse.cs" />
     <Compile Include="V20201002\Models\BlackEmailAddress.cs" />
     <Compile Include="V20201002\Models\CreateEmailAddressRequest.cs" />
     <Compile Include="V20201002\Models\CreateEmailAddressResponse.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="V20201002\Models\CreateEmailIdentityResponse.cs" />
     <Compile Include="V20201002\Models\CreateEmailTemplateRequest.cs" />
     <Compile Include="V20201002\Models\CreateEmailTemplateResponse.cs" />
+    <Compile Include="V20201002\Models\CycleEmailParam.cs" />
     <Compile Include="V20201002\Models\DNSAttributes.cs" />
     <Compile Include="V20201002\Models\DeleteBlackListRequest.cs" />
     <Compile Include="V20201002\Models\DeleteBlackListResponse.cs" />
@@ -87,6 +90,7 @@
     <Compile Include="V20201002\Models\Template.cs" />
     <Compile Include="V20201002\Models\TemplateContent.cs" />
     <Compile Include="V20201002\Models\TemplatesMetadata.cs" />
+    <Compile Include="V20201002\Models\TimedEmailParam.cs" />
     <Compile Include="V20201002\Models\UpdateEmailIdentityRequest.cs" />
     <Compile Include="V20201002\Models\UpdateEmailIdentityResponse.cs" />
     <Compile Include="V20201002\Models\UpdateEmailTemplateRequest.cs" />

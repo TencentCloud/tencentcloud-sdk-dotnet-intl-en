@@ -21,11 +21,11 @@ namespace TencentCloud.Ses.V20201002.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SendEmailRequest : AbstractModel
+    public class BatchSendEmailRequest : AbstractModel
     {
         
         /// <summary>
-        /// Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+        /// Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
         /// Sender <email address>, for example:
         /// Tencent Cloud team <noreply@mail.qcloud.com>
         /// </summary>
@@ -33,31 +33,37 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+        /// Recipient group ID
         /// </summary>
-        [JsonProperty("Destination")]
-        public string[] Destination{ get; set; }
+        [JsonProperty("ReceiverId")]
+        public ulong? ReceiverId{ get; set; }
 
         /// <summary>
-        /// Email subject.
+        /// Email subject
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }
 
         /// <summary>
-        /// Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+        /// Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public ulong? TaskType{ get; set; }
+
+        /// <summary>
+        /// Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
-        /// Template when sending emails using a template.
+        /// Template when emails are sent using a template
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
 
         /// <summary>
-        /// Email content when sending emails by calling the API.
+        /// Email content when emails are sent by calling the API
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }
@@ -68,6 +74,18 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }
 
+        /// <summary>
+        /// Parameter required for a recurring sending task
+        /// </summary>
+        [JsonProperty("CycleParam")]
+        public CycleEmailParam CycleParam{ get; set; }
+
+        /// <summary>
+        /// Parameter required for a scheduled sending task
+        /// </summary>
+        [JsonProperty("TimedParam")]
+        public TimedEmailParam TimedParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,12 +93,15 @@ namespace TencentCloud.Ses.V20201002.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FromEmailAddress", this.FromEmailAddress);
-            this.SetParamArraySimple(map, prefix + "Destination.", this.Destination);
+            this.SetParamSimple(map, prefix + "ReceiverId", this.ReceiverId);
             this.SetParamSimple(map, prefix + "Subject", this.Subject);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
             this.SetParamObj(map, prefix + "Template.", this.Template);
             this.SetParamObj(map, prefix + "Simple.", this.Simple);
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
+            this.SetParamObj(map, prefix + "CycleParam.", this.CycleParam);
+            this.SetParamObj(map, prefix + "TimedParam.", this.TimedParam);
         }
     }
 }
