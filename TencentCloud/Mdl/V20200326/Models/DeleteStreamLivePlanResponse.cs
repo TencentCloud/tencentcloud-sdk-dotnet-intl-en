@@ -15,21 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Ip.V20210409.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryAgentCreditRequest : AbstractModel
+    public class DeleteStreamLivePlanResponse : AbstractModel
     {
         
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

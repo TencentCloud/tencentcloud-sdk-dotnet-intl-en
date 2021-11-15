@@ -21,32 +21,27 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryUinCreditHistoryData : AbstractModel
+    public class QueryCustomersCreditResponse : AbstractModel
     {
         
         /// <summary>
-        /// Credit allocatee UIN
+        /// Queries the list of customers
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("CreditAssignUin")]
-        public ulong? CreditAssignUin{ get; set; }
+        [JsonProperty("Data")]
+        public QueryCustomersCreditData[] Data{ get; set; }
 
         /// <summary>
-        /// Allocation time
+        /// Number of customers
         /// </summary>
-        [JsonProperty("AssginTime")]
-        public string AssginTime{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// Operator
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Operator")]
-        public string Operator{ get; set; }
-
-        /// <summary>
-        /// Allocated credit value
-        /// </summary>
-        [JsonProperty("CreditAmount")]
-        public float? CreditAmount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +49,9 @@ namespace TencentCloud.Ip.V20210409.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CreditAssignUin", this.CreditAssignUin);
-            this.SetParamSimple(map, prefix + "AssginTime", this.AssginTime);
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
-            this.SetParamSimple(map, prefix + "CreditAmount", this.CreditAmount);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

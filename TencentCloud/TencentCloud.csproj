@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.319</VersionPrefix>
+    <VersionPrefix>3.0.320</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3552,21 +3552,21 @@
     <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCARequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCAResponse.cs" />
     <Compile Include="Ip\V20210409\IpClient.cs" />
-    <Compile Include="Ip\V20210409\Models\AssignClientCreditRequest.cs" />
-    <Compile Include="Ip\V20210409\Models\AssignClientCreditResponse.cs" />
+    <Compile Include="Ip\V20210409\Models\AllocateCustomerCreditRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\AllocateCustomerCreditResponse.cs" />
     <Compile Include="Ip\V20210409\Models\CountryCodeItem.cs" />
     <Compile Include="Ip\V20210409\Models\CreateAccountRequest.cs" />
     <Compile Include="Ip\V20210409\Models\CreateAccountResponse.cs" />
     <Compile Include="Ip\V20210409\Models\GetCountryCodesRequest.cs" />
     <Compile Include="Ip\V20210409\Models\GetCountryCodesResponse.cs" />
-    <Compile Include="Ip\V20210409\Models\QueryAgentCreditRequest.cs" />
-    <Compile Include="Ip\V20210409\Models\QueryAgentCreditResponse.cs" />
-    <Compile Include="Ip\V20210409\Models\QueryClientListItem.cs" />
-    <Compile Include="Ip\V20210409\Models\QueryClientListRequest.cs" />
-    <Compile Include="Ip\V20210409\Models\QueryClientListResponse.cs" />
-    <Compile Include="Ip\V20210409\Models\QueryCreditHistoryRequest.cs" />
-    <Compile Include="Ip\V20210409\Models\QueryCreditHistoryResponse.cs" />
-    <Compile Include="Ip\V20210409\Models\QueryUinCreditHistoryData.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryCreditAllocationHistoryData.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryCreditAllocationHistoryRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryCreditAllocationHistoryResponse.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryCustomersCreditData.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryCustomersCreditRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryCustomersCreditResponse.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryPartnerCreditRequest.cs" />
+    <Compile Include="Ip\V20210409\Models\QueryPartnerCreditResponse.cs" />
     <Compile Include="Kms\V20190118\KmsClient.cs" />
     <Compile Include="Kms\V20190118\Models\AlgorithmInfo.cs" />
     <Compile Include="Kms\V20190118\Models\ArchiveKeyRequest.cs" />
@@ -4233,6 +4233,8 @@
     <Compile Include="Mdl\V20200326\Models\DeleteStreamLiveInputResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DeleteStreamLiveInputSecurityGroupRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DeleteStreamLiveInputSecurityGroupResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DeleteStreamLivePlanRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\DeleteStreamLivePlanResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveChannelAlertsRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveChannelAlertsResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveChannelInputStatisticsRequest.cs" />

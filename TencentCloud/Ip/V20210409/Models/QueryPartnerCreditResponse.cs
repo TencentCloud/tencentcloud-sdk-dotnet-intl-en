@@ -21,9 +21,27 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssignClientCreditResponse : AbstractModel
+    public class QueryPartnerCreditResponse : AbstractModel
     {
         
+        /// <summary>
+        /// Allocated credit
+        /// </summary>
+        [JsonProperty("AllocatedCredit")]
+        public float? AllocatedCredit{ get; set; }
+
+        /// <summary>
+        /// Total credit
+        /// </summary>
+        [JsonProperty("TotalCredit")]
+        public float? TotalCredit{ get; set; }
+
+        /// <summary>
+        /// Remaining credit
+        /// </summary>
+        [JsonProperty("RemainingCredit")]
+        public float? RemainingCredit{ get; set; }
+
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -36,6 +54,9 @@ namespace TencentCloud.Ip.V20210409.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
+            this.SetParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
+            this.SetParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

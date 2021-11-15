@@ -59,15 +59,15 @@ namespace TencentCloud.Ip.V20210409
         /// 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
         /// 4. The set credit is an increase to the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates to repossess it. The available credit can be set to 0 at the minimum.
         /// </summary>
-        /// <param name="req"><see cref="AssignClientCreditRequest"/></param>
-        /// <returns><see cref="AssignClientCreditResponse"/></returns>
-        public async Task<AssignClientCreditResponse> AssignClientCredit(AssignClientCreditRequest req)
+        /// <param name="req"><see cref="AllocateCustomerCreditRequest"/></param>
+        /// <returns><see cref="AllocateCustomerCreditResponse"/></returns>
+        public async Task<AllocateCustomerCreditResponse> AllocateCustomerCredit(AllocateCustomerCreditRequest req)
         {
-             JsonResponseModel<AssignClientCreditResponse> rsp = null;
+             JsonResponseModel<AllocateCustomerCreditResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "AssignClientCredit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignClientCreditResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "AllocateCustomerCredit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateCustomerCreditResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -83,15 +83,15 @@ namespace TencentCloud.Ip.V20210409
         /// 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
         /// 4. The set credit is an increase to the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates to repossess it. The available credit can be set to 0 at the minimum.
         /// </summary>
-        /// <param name="req"><see cref="AssignClientCreditRequest"/></param>
-        /// <returns><see cref="AssignClientCreditResponse"/></returns>
-        public AssignClientCreditResponse AssignClientCreditSync(AssignClientCreditRequest req)
+        /// <param name="req"><see cref="AllocateCustomerCreditRequest"/></param>
+        /// <returns><see cref="AllocateCustomerCreditResponse"/></returns>
+        public AllocateCustomerCreditResponse AllocateCustomerCreditSync(AllocateCustomerCreditRequest req)
         {
-             JsonResponseModel<AssignClientCreditResponse> rsp = null;
+             JsonResponseModel<AllocateCustomerCreditResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "AssignClientCredit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignClientCreditResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "AllocateCustomerCredit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateCustomerCreditResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -189,77 +189,17 @@ namespace TencentCloud.Ip.V20210409
         }
 
         /// <summary>
-        /// This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+        /// This API is used to query all the credit allocation records of a single customer.
         /// </summary>
-        /// <param name="req"><see cref="QueryAgentCreditRequest"/></param>
-        /// <returns><see cref="QueryAgentCreditResponse"/></returns>
-        public async Task<QueryAgentCreditResponse> QueryAgentCredit(QueryAgentCreditRequest req)
+        /// <param name="req"><see cref="QueryCreditAllocationHistoryRequest"/></param>
+        /// <returns><see cref="QueryCreditAllocationHistoryResponse"/></returns>
+        public async Task<QueryCreditAllocationHistoryResponse> QueryCreditAllocationHistory(QueryCreditAllocationHistoryRequest req)
         {
-             JsonResponseModel<QueryAgentCreditResponse> rsp = null;
+             JsonResponseModel<QueryCreditAllocationHistoryResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "QueryAgentCredit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAgentCreditResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used for a partner to query its own total credit, available credit, and used credit in USD.
-        /// </summary>
-        /// <param name="req"><see cref="QueryAgentCreditRequest"/></param>
-        /// <returns><see cref="QueryAgentCreditResponse"/></returns>
-        public QueryAgentCreditResponse QueryAgentCreditSync(QueryAgentCreditRequest req)
-        {
-             JsonResponseModel<QueryAgentCreditResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryAgentCredit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAgentCreditResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used for a partner to query a customer's credit and basic information.
-        /// </summary>
-        /// <param name="req"><see cref="QueryClientListRequest"/></param>
-        /// <returns><see cref="QueryClientListResponse"/></returns>
-        public async Task<QueryClientListResponse> QueryClientList(QueryClientListRequest req)
-        {
-             JsonResponseModel<QueryClientListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryClientList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryClientListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used for a partner to query a customer's credit and basic information.
-        /// </summary>
-        /// <param name="req"><see cref="QueryClientListRequest"/></param>
-        /// <returns><see cref="QueryClientListResponse"/></returns>
-        public QueryClientListResponse QueryClientListSync(QueryClientListRequest req)
-        {
-             JsonResponseModel<QueryClientListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryClientList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryClientListResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "QueryCreditAllocationHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCreditAllocationHistoryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -271,15 +211,15 @@ namespace TencentCloud.Ip.V20210409
         /// <summary>
         /// This API is used to query all the credit allocation records of a single customer.
         /// </summary>
-        /// <param name="req"><see cref="QueryCreditHistoryRequest"/></param>
-        /// <returns><see cref="QueryCreditHistoryResponse"/></returns>
-        public async Task<QueryCreditHistoryResponse> QueryCreditHistory(QueryCreditHistoryRequest req)
+        /// <param name="req"><see cref="QueryCreditAllocationHistoryRequest"/></param>
+        /// <returns><see cref="QueryCreditAllocationHistoryResponse"/></returns>
+        public QueryCreditAllocationHistoryResponse QueryCreditAllocationHistorySync(QueryCreditAllocationHistoryRequest req)
         {
-             JsonResponseModel<QueryCreditHistoryResponse> rsp = null;
+             JsonResponseModel<QueryCreditAllocationHistoryResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "QueryCreditHistory");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCreditHistoryResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "QueryCreditAllocationHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCreditAllocationHistoryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -289,17 +229,77 @@ namespace TencentCloud.Ip.V20210409
         }
 
         /// <summary>
-        /// This API is used to query all the credit allocation records of a single customer.
+        /// This API is used for a partner to query a customer's credit and basic information.
         /// </summary>
-        /// <param name="req"><see cref="QueryCreditHistoryRequest"/></param>
-        /// <returns><see cref="QueryCreditHistoryResponse"/></returns>
-        public QueryCreditHistoryResponse QueryCreditHistorySync(QueryCreditHistoryRequest req)
+        /// <param name="req"><see cref="QueryCustomersCreditRequest"/></param>
+        /// <returns><see cref="QueryCustomersCreditResponse"/></returns>
+        public async Task<QueryCustomersCreditResponse> QueryCustomersCredit(QueryCustomersCreditRequest req)
         {
-             JsonResponseModel<QueryCreditHistoryResponse> rsp = null;
+             JsonResponseModel<QueryCustomersCreditResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "QueryCreditHistory");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCreditHistoryResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "QueryCustomersCredit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomersCreditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for a partner to query a customer's credit and basic information.
+        /// </summary>
+        /// <param name="req"><see cref="QueryCustomersCreditRequest"/></param>
+        /// <returns><see cref="QueryCustomersCreditResponse"/></returns>
+        public QueryCustomersCreditResponse QueryCustomersCreditSync(QueryCustomersCreditRequest req)
+        {
+             JsonResponseModel<QueryCustomersCreditResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCustomersCredit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomersCreditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+        /// </summary>
+        /// <param name="req"><see cref="QueryPartnerCreditRequest"/></param>
+        /// <returns><see cref="QueryPartnerCreditResponse"/></returns>
+        public async Task<QueryPartnerCreditResponse> QueryPartnerCredit(QueryPartnerCreditRequest req)
+        {
+             JsonResponseModel<QueryPartnerCreditResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryPartnerCredit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryPartnerCreditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+        /// </summary>
+        /// <param name="req"><see cref="QueryPartnerCreditRequest"/></param>
+        /// <returns><see cref="QueryPartnerCreditResponse"/></returns>
+        public QueryPartnerCreditResponse QueryPartnerCreditSync(QueryPartnerCreditRequest req)
+        {
+             JsonResponseModel<QueryPartnerCreditResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryPartnerCredit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryPartnerCreditResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

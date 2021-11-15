@@ -21,26 +21,14 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryCreditHistoryRequest : AbstractModel
+    public class AllocateCustomerCreditResponse : AbstractModel
     {
         
         /// <summary>
-        /// Customer UIN
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("ClientUin")]
-        public ulong? ClientUin{ get; set; }
-
-        /// <summary>
-        /// Page number
-        /// </summary>
-        [JsonProperty("Page")]
-        public ulong? Page{ get; set; }
-
-        /// <summary>
-        /// Number of data entries per page
-        /// </summary>
-        [JsonProperty("PageRow")]
-        public ulong? PageRow{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Ip.V20210409.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
-            this.SetParamSimple(map, prefix + "Page", this.Page);
-            this.SetParamSimple(map, prefix + "PageRow", this.PageRow);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

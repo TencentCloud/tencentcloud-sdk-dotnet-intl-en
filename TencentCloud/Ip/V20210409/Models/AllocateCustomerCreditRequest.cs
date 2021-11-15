@@ -21,14 +21,14 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssignClientCreditRequest : AbstractModel
+    public class AllocateCustomerCreditRequest : AbstractModel
     {
         
         /// <summary>
         /// Specific value of the credit allocated to the customer
         /// </summary>
-        [JsonProperty("QuotaNum")]
-        public float? QuotaNum{ get; set; }
+        [JsonProperty("AddedCredit")]
+        public float? AddedCredit{ get; set; }
 
         /// <summary>
         /// Customer UIN
@@ -42,7 +42,7 @@ namespace TencentCloud.Ip.V20210409.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
+            this.SetParamSimple(map, prefix + "AddedCredit", this.AddedCredit);
             this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
         }
     }

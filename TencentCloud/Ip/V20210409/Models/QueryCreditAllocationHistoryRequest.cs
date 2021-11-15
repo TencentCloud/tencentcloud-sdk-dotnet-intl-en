@@ -21,32 +21,26 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryAgentCreditResponse : AbstractModel
+    public class QueryCreditAllocationHistoryRequest : AbstractModel
     {
         
         /// <summary>
-        /// Allocated credit
+        /// Customer UIN
         /// </summary>
-        [JsonProperty("AssignedCreditAmount")]
-        public float? AssignedCreditAmount{ get; set; }
+        [JsonProperty("ClientUin")]
+        public ulong? ClientUin{ get; set; }
 
         /// <summary>
-        /// Total credit
+        /// Page number
         /// </summary>
-        [JsonProperty("CustomerCreditAmount")]
-        public float? CustomerCreditAmount{ get; set; }
+        [JsonProperty("Page")]
+        public ulong? Page{ get; set; }
 
         /// <summary>
-        /// Remaining credit
+        /// Number of data entries per page
         /// </summary>
-        [JsonProperty("RemainingCreditAmount")]
-        public float? RemainingCreditAmount{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Ip.V20210409.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AssignedCreditAmount", this.AssignedCreditAmount);
-            this.SetParamSimple(map, prefix + "CustomerCreditAmount", this.CustomerCreditAmount);
-            this.SetParamSimple(map, prefix + "RemainingCreditAmount", this.RemainingCreditAmount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

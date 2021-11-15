@@ -333,6 +333,46 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
+        /// This API is used to delete a StreamLive event.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLivePlanRequest"/></param>
+        /// <returns><see cref="DeleteStreamLivePlanResponse"/></returns>
+        public async Task<DeleteStreamLivePlanResponse> DeleteStreamLivePlan(DeleteStreamLivePlanRequest req)
+        {
+             JsonResponseModel<DeleteStreamLivePlanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteStreamLivePlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLivePlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a StreamLive event.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLivePlanRequest"/></param>
+        /// <returns><see cref="DeleteStreamLivePlanResponse"/></returns>
+        public DeleteStreamLivePlanResponse DeleteStreamLivePlanSync(DeleteStreamLivePlanRequest req)
+        {
+             JsonResponseModel<DeleteStreamLivePlanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamLivePlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLivePlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query a StreamLive channel.
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamLiveChannelRequest"/></param>

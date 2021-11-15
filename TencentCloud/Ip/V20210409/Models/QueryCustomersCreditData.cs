@@ -21,78 +21,68 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryClientListItem : AbstractModel
+    public class QueryCustomersCreditData : AbstractModel
     {
         
         /// <summary>
         /// Name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Phone
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
         /// Email
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
         /// Overdue payment flag
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Arrears")]
         public string Arrears{ get; set; }
 
         /// <summary>
         /// Binding time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssociationTime")]
         public string AssociationTime{ get; set; }
 
         /// <summary>
         /// Expiration time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RecentExpiry")]
         public string RecentExpiry{ get; set; }
 
         /// <summary>
-        /// Customer UIN
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The UIN of reseller’s customer
         /// </summary>
         [JsonProperty("ClientUin")]
         public ulong? ClientUin{ get; set; }
 
         /// <summary>
-        /// Credit granted to customer
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Credit granted to reseller’s customer
         /// </summary>
-        [JsonProperty("CreditAmount")]
-        public float? CreditAmount{ get; set; }
+        [JsonProperty("Credit")]
+        public float? Credit{ get; set; }
 
         /// <summary>
-        /// Customer's remaining credit
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The remaining credit of reseller’s customer
         /// </summary>
-        [JsonProperty("RestCreditAmount")]
-        public float? RestCreditAmount{ get; set; }
+        [JsonProperty("RemainingCredit")]
+        public float? RemainingCredit{ get; set; }
 
 
         /// <summary>
@@ -108,8 +98,8 @@ namespace TencentCloud.Ip.V20210409.Models
             this.SetParamSimple(map, prefix + "AssociationTime", this.AssociationTime);
             this.SetParamSimple(map, prefix + "RecentExpiry", this.RecentExpiry);
             this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
-            this.SetParamSimple(map, prefix + "CreditAmount", this.CreditAmount);
-            this.SetParamSimple(map, prefix + "RestCreditAmount", this.RestCreditAmount);
+            this.SetParamSimple(map, prefix + "Credit", this.Credit);
+            this.SetParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
         }
     }
 }

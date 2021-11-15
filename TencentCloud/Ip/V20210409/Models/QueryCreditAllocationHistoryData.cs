@@ -21,15 +21,36 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryClientListRequest : AbstractModel
+    public class QueryCreditAllocationHistoryData : AbstractModel
     {
         
+        /// <summary>
+        /// Allocation time
+        /// </summary>
+        [JsonProperty("AllocatedTime")]
+        public string AllocatedTime{ get; set; }
+
+        /// <summary>
+        /// Operator
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
+        /// <summary>
+        /// Allocated credit value
+        /// </summary>
+        [JsonProperty("Credit")]
+        public float? Credit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AllocatedTime", this.AllocatedTime);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "Credit", this.Credit);
         }
     }
 }

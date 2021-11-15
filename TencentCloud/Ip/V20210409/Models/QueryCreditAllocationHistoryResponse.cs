@@ -21,7 +21,7 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryCreditHistoryResponse : AbstractModel
+    public class QueryCreditAllocationHistoryResponse : AbstractModel
     {
         
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Ip.V20210409.Models
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("History")]
-        public QueryUinCreditHistoryData[] History{ get; set; }
+        public QueryCreditAllocationHistoryData[] History{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.

@@ -21,37 +21,15 @@ namespace TencentCloud.Ip.V20210409.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryClientListResponse : AbstractModel
+    public class QueryPartnerCreditRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Queries the list of customers
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Data")]
-        public QueryClientListItem[] Data{ get; set; }
-
-        /// <summary>
-        /// Number of customers
-        /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -70,6 +70,8 @@
     <Compile Include="V20200326\Models\DeleteStreamLiveInputResponse.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLiveInputSecurityGroupRequest.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLiveInputSecurityGroupResponse.cs" />
+    <Compile Include="V20200326\Models\DeleteStreamLivePlanRequest.cs" />
+    <Compile Include="V20200326\Models\DeleteStreamLivePlanResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelAlertsRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelAlertsResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelInputStatisticsRequest.cs" />
