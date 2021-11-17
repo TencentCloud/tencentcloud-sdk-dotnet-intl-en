@@ -127,7 +127,9 @@ namespace TencentCloud.Clb.V20180317.Models
         public ExclusiveCluster ExclusiveCluster{ get; set; }
 
         /// <summary>
-        /// 
+        /// Creates an LCU-supported CLB instance
+        /// <ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+        /// <li>It’s not required for a shared CLB instance.</li></ul>
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
@@ -169,6 +171,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EipAddressId")]
         public string EipAddressId{ get; set; }
 
+        /// <summary>
+        /// Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +206,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
             this.SetParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         }
     }
 }

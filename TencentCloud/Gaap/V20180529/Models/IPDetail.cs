@@ -21,30 +21,26 @@ namespace TencentCloud.Gaap.V20180529.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyStatus : AbstractModel
+    public class IPDetail : AbstractModel
     {
         
         /// <summary>
-        /// Connection instance ID.
+        /// IP string
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("IP")]
+        public string IP{ get; set; }
 
         /// <summary>
-        /// Connection status.
-        /// Valid values:
-        /// `RUNNING`: running
-        /// `CREATING`: creating
-        /// `DESTROYING`: terminating
-        /// `OPENING`: enabling
-        /// `CLOSING`: disabling
-        /// `CLOSED`: disabled
-        /// `ADJUSTING`: adjusting configuration
-        /// `ISOLATING`: isolating
-        /// `ISOLATED`: isolated
+        /// Network provider. `BGP`: Tencent Cloud BGP (default); `CMCC`: China Mobile; `CUCC`: China Unicom; `CTCC`: China Telecom.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Provider")]
+        public string Provider{ get; set; }
+
+        /// <summary>
+        /// Max bandwidth
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public long? Bandwidth{ get; set; }
 
 
         /// <summary>
@@ -52,8 +48,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IP", this.IP);
+            this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         }
     }
 }

@@ -195,6 +195,7 @@
     <Compile Include="V20180529\Models\HTTPListener.cs" />
     <Compile Include="V20180529\Models\HTTPSListener.cs" />
     <Compile Include="V20180529\Models\HttpHeaderParam.cs" />
+    <Compile Include="V20180529\Models\IPDetail.cs" />
     <Compile Include="V20180529\Models\InquiryPriceCreateProxyRequest.cs" />
     <Compile Include="V20180529\Models\InquiryPriceCreateProxyResponse.cs" />
     <Compile Include="V20180529\Models\ListenerInfo.cs" />

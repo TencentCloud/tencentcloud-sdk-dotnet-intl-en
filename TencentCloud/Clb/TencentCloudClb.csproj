@@ -123,6 +123,8 @@
     <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigListResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeLBListenersRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeLBListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeListenersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
@@ -157,9 +159,13 @@
     <Compile Include="V20180317\Models\HealthCheck.cs" />
     <Compile Include="V20180317\Models\InternetAccessible.cs" />
     <Compile Include="V20180317\Models\LBChargePrepaid.cs" />
+    <Compile Include="V20180317\Models\LBItem.cs" />
+    <Compile Include="V20180317\Models\LbRsItem.cs" />
+    <Compile Include="V20180317\Models\LbRsTargets.cs" />
     <Compile Include="V20180317\Models\Listener.cs" />
     <Compile Include="V20180317\Models\ListenerBackend.cs" />
     <Compile Include="V20180317\Models\ListenerHealth.cs" />
+    <Compile Include="V20180317\Models\ListenerItem.cs" />
     <Compile Include="V20180317\Models\LoadBalancer.cs" />
     <Compile Include="V20180317\Models\LoadBalancerDetail.cs" />
     <Compile Include="V20180317\Models\LoadBalancerHealth.cs" />
@@ -204,6 +210,7 @@
     <Compile Include="V20180317\Models\RuleInput.cs" />
     <Compile Include="V20180317\Models\RuleOutput.cs" />
     <Compile Include="V20180317\Models\RuleTargets.cs" />
+    <Compile Include="V20180317\Models\RulesItems.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerClsLogRequest.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerClsLogResponse.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerSecurityGroupsRequest.cs" />

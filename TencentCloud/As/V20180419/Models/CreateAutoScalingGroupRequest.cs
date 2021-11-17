@@ -73,13 +73,13 @@ namespace TencentCloud.As.V20180419.Models
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID of an instance in a scaling group. The default project is used if it’s left blank.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+        /// List of application CLBs. Up to 50 CLBs are allowed. You cannot specify `loadBalancerIds` and `ForwardLoadBalancers` at the same time.
         /// </summary>
         [JsonProperty("ForwardLoadBalancers")]
         public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }

@@ -613,6 +613,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to get the list of modifiable parameters of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParametersResponse"/></returns>
+        public async Task<DescribeDBInstanceParametersResponse> DescribeDBInstanceParameters(DescribeDBInstanceParametersRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of modifiable parameters of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParametersResponse"/></returns>
+        public DescribeDBInstanceParametersResponse DescribeDBInstanceParametersSync(DescribeDBInstanceParametersRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of one or more instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
@@ -653,7 +693,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get slow query logs.
+        /// This API was used to get slow query logs. Since it was deprecated on September 1, 2021, it has no longer returned data. Please use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
         /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
@@ -673,7 +713,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get slow query logs.
+        /// This API was used to get slow query logs. Since it was deprecated on September 1, 2021, it has no longer returned data. Please use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
         /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
@@ -804,6 +844,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeOrders");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of parameter modification events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
+        /// <returns><see cref="DescribeParamsEventResponse"/></returns>
+        public async Task<DescribeParamsEventResponse> DescribeParamsEvent(DescribeParamsEventRequest req)
+        {
+             JsonResponseModel<DescribeParamsEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamsEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamsEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of parameter modification events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
+        /// <returns><see cref="DescribeParamsEventResponse"/></returns>
+        public DescribeParamsEventResponse DescribeParamsEventSync(DescribeParamsEventRequest req)
+        {
+             JsonResponseModel<DescribeParamsEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParamsEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamsEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -973,7 +1053,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to analyze slow query statements with abstract parameter values and return aggregated statistical analysis results.
+        /// This API is used to count and analyze slow query statements during the specified period of time and return aggregated statistical analysis results which are classified by statement with abstract parameter values.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowQueryAnalysisRequest"/></param>
         /// <returns><see cref="DescribeSlowQueryAnalysisResponse"/></returns>
@@ -993,7 +1073,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to analyze slow query statements with abstract parameter values and return aggregated statistical analysis results.
+        /// This API is used to count and analyze slow query statements during the specified period of time and return aggregated statistical analysis results which are classified by statement with abstract parameter values.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowQueryAnalysisRequest"/></param>
         /// <returns><see cref="DescribeSlowQueryAnalysisResponse"/></returns>
@@ -1013,7 +1093,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the slow query list.
+        /// This API is used to get the slow queries during the specified period of time.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowQueryListRequest"/></param>
         /// <returns><see cref="DescribeSlowQueryListResponse"/></returns>
@@ -1033,7 +1113,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the slow query list.
+        /// This API is used to get the slow queries during the specified period of time.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowQueryListRequest"/></param>
         /// <returns><see cref="DescribeSlowQueryListResponse"/></returns>
@@ -1444,6 +1524,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstanceName");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify parameters in batches.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceParametersRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceParametersResponse"/></returns>
+        public async Task<ModifyDBInstanceParametersResponse> ModifyDBInstanceParameters(ModifyDBInstanceParametersRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify parameters in batches.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceParametersRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceParametersResponse"/></returns>
+        public ModifyDBInstanceParametersResponse ModifyDBInstanceParametersSync(ModifyDBInstanceParametersRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceParametersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,36 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyStatus : AbstractModel
+    public class LbRsItem : AbstractModel
     {
         
         /// <summary>
-        /// Connection instance ID.
+        /// VPC ID
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
-        /// Connection status.
-        /// Valid values:
-        /// `RUNNING`: running
-        /// `CREATING`: creating
-        /// `DESTROYING`: terminating
-        /// `OPENING`: enabling
-        /// `CLOSING`: disabling
-        /// `CLOSED`: disabled
-        /// `ADJUSTING`: adjusting configuration
-        /// `ISOLATING`: isolating
-        /// `ISOLATED`: isolated
+        /// Private network IP to be queried, which can be of the CVM or ENI.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("PrivateIp")]
+        public string PrivateIp{ get; set; }
 
 
         /// <summary>
@@ -52,8 +42,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
         }
     }
 }

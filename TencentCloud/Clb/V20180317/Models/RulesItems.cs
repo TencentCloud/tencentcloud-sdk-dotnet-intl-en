@@ -15,36 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyStatus : AbstractModel
+    public class RulesItems : AbstractModel
     {
         
         /// <summary>
-        /// Connection instance ID.
+        /// Rule ID.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("LocationId")]
+        public string LocationId{ get; set; }
 
         /// <summary>
-        /// Connection status.
-        /// Valid values:
-        /// `RUNNING`: running
-        /// `CREATING`: creating
-        /// `DESTROYING`: terminating
-        /// `OPENING`: enabling
-        /// `CLOSING`: disabling
-        /// `CLOSED`: disabled
-        /// `ADJUSTING`: adjusting configuration
-        /// `ISOLATING`: isolating
-        /// `ISOLATED`: isolated
+        /// Domain name.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// Uri
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// Object bound to the real server.
+        /// </summary>
+        [JsonProperty("Targets")]
+        public LbRsTargets[] Targets{ get; set; }
 
 
         /// <summary>
@@ -52,8 +54,10 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
         }
     }
 }

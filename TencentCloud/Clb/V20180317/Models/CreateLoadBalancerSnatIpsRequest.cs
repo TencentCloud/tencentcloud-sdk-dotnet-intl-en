@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SnatIps")]
         public SnatIp[] SnatIps{ get; set; }
 
+        /// <summary>
+        /// Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+        /// </summary>
+        [JsonProperty("Number")]
+        public ulong? Number{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+            this.SetParamSimple(map, prefix + "Number", this.Number);
         }
     }
 }

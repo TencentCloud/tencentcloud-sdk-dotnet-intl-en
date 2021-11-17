@@ -15,36 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyStatus : AbstractModel
+    public class LBItem : AbstractModel
     {
         
         /// <summary>
-        /// Connection instance ID.
+        /// String ID of the CLB instance.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Connection status.
-        /// Valid values:
-        /// `RUNNING`: running
-        /// `CREATING`: creating
-        /// `DESTROYING`: terminating
-        /// `OPENING`: enabling
-        /// `CLOSING`: disabling
-        /// `CLOSED`: disabled
-        /// `ADJUSTING`: adjusting configuration
-        /// `ISOLATING`: isolating
-        /// `ISOLATED`: isolated
+        /// VIP of the CLB instance.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
+        /// <summary>
+        /// Listener rule.
+        /// </summary>
+        [JsonProperty("Listeners")]
+        public ListenerItem[] Listeners{ get; set; }
+
+        /// <summary>
+        /// Region of the CLB instance
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -52,8 +54,10 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamArrayObj(map, prefix + "Listeners.", this.Listeners);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

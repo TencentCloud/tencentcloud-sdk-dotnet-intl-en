@@ -15,39 +15,46 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RealServerStatus : AbstractModel
+    public class LbRsTargets : AbstractModel
     {
         
         /// <summary>
-        /// Origin server ID.
+        /// Private network IP type, which can be `cvm` or `eni`.
         /// </summary>
-        [JsonProperty("RealServerId")]
-        public string RealServerId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 0: not bound, 1: bound to rule or listener.
+        /// Private network IP of the real server.
         /// </summary>
-        [JsonProperty("BindStatus")]
-        public long? BindStatus{ get; set; }
+        [JsonProperty("PrivateIp")]
+        public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// ID of the connection bound to this origin server. This string is empty if they are not bound.
+        /// Port bound to the real server.
         /// </summary>
-        [JsonProperty("ProxyId")]
-        public string ProxyId{ get; set; }
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
 
         /// <summary>
-        /// ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+        /// VPC ID of the real server.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("VpcId")]
+        public long? VpcId{ get; set; }
+
+        /// <summary>
+        /// Weight of the real server.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Weight")]
+        public long? Weight{ get; set; }
 
 
         /// <summary>
@@ -55,10 +62,11 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RealServerId", this.RealServerId);
-            this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
-            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

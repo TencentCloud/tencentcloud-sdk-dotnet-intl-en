@@ -74,17 +74,17 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? Concurrent{ get; set; }
 
         /// <summary>
-        /// Connection status:
-        /// RUNNING: running;
-        /// CREATING: creating;
-        /// DESTROYING: terminating;
-        /// OPENING: enabling;
-        /// CLOSING: disabling;
-        /// CLOSED: disabled;
-        /// ADJUSTING: adjusting configuration
-        /// ISOLATING: isolating (it's triggered when the account is in arrears);
-        /// ISOLATED: isolated (it's triggered when the account is in arrears);
-        /// UNKNOWN: unknown status.
+        /// Connection status. Valid values:
+        /// `RUNNING`: running
+        /// `CREATING`: creating
+        /// `DESTROYING`: terminating
+        /// `OPENING`: enabling
+        /// `CLOSING`: disabling
+        /// `CLOSED`: disabled
+        /// `ADJUSTING`: adjusting configuration
+        /// `ISOLATING`: isolating
+        /// `ISOLATED`: isolated
+        /// `CLONING`: copying
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -217,7 +217,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: `normal`, `cn2`
+        /// Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
         /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("NetworkType")]
@@ -236,6 +236,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("BanStatus")]
         public string BanStatus{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IPList")]
+        public IPDetail[] IPList{ get; set; }
 
 
         /// <summary>
@@ -274,6 +280,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
             this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
+            this.SetParamArrayObj(map, prefix + "IPList.", this.IPList);
         }
     }
 }

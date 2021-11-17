@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Whether the instance needs to be protected from scale-in.
+        /// Whether to enable scale-in protection for this instance
         /// </summary>
         [JsonProperty("ProtectedFromScaleIn")]
         public bool? ProtectedFromScaleIn{ get; set; }

@@ -48,6 +48,24 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("BandwidthList")]
         public long?[] BandwidthList{ get; set; }
 
+        /// <summary>
+        /// Region where the data center locates
+        /// </summary>
+        [JsonProperty("RegionArea")]
+        public string RegionArea{ get; set; }
+
+        /// <summary>
+        /// Name of the region where the data center locates
+        /// </summary>
+        [JsonProperty("RegionAreaName")]
+        public string RegionAreaName{ get; set; }
+
+        /// <summary>
+        /// Data center type. `dc`: data center; `ec`: edge server.
+        /// </summary>
+        [JsonProperty("IDCType")]
+        public string IDCType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamArraySimple(map, prefix + "ConcurrentList.", this.ConcurrentList);
             this.SetParamArraySimple(map, prefix + "BandwidthList.", this.BandwidthList);
+            this.SetParamSimple(map, prefix + "RegionArea", this.RegionArea);
+            this.SetParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
+            this.SetParamSimple(map, prefix + "IDCType", this.IDCType);
         }
     }
 }

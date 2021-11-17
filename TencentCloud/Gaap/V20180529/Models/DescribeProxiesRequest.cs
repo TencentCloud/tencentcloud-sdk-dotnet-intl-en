@@ -75,6 +75,26 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Independent")]
         public long? Independent{ get; set; }
 
+        /// <summary>
+        /// Specifies how connections are listed. Valid values:
+        /// `asc`: ascending order
+        /// `desc`: descending order
+        /// Default: `desc`
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// Sorting field. Valid values:
+        /// `create_time`: sort by the creation time
+        /// `proxy_id`: sort by the connection ID
+        /// `bandwidth`:sort by the bandwidth limit
+        /// `concurrent_connections`: sort by the number of concurrent connections
+        /// Default: `create_time`
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +108,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "Independent", this.Independent);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
         }
     }
 }

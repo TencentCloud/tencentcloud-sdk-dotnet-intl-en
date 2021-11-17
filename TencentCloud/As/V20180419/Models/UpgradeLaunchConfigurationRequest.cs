@@ -98,7 +98,7 @@ namespace TencentCloud.As.V20180419.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+        /// Project ID of the instance. Leave it blank as the default.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

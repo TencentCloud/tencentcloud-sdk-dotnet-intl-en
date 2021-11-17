@@ -1315,6 +1315,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to query CLB instances bound to the CVM or ENI.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLBListenersRequest"/></param>
+        /// <returns><see cref="DescribeLBListenersResponse"/></returns>
+        public async Task<DescribeLBListenersResponse> DescribeLBListeners(DescribeLBListenersRequest req)
+        {
+             JsonResponseModel<DescribeLBListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLBListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLBListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query CLB instances bound to the CVM or ENI.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLBListenersRequest"/></param>
+        /// <returns><see cref="DescribeLBListenersResponse"/></returns>
+        public DescribeLBListenersResponse DescribeLBListenersSync(DescribeLBListenersRequest req)
+        {
+             JsonResponseModel<DescribeLBListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLBListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLBListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of listeners by CLB ID, listener protocol, or listener port. If no filter is specified, all listeners for the CLB instance will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeListenersRequest"/></param>

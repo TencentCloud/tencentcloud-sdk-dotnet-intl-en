@@ -129,6 +129,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HttpVersion")]
         public string HttpVersion{ get; set; }
 
+        /// <summary>
+        /// Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SourceIpType")]
+        public long? SourceIpType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RecvContext", this.RecvContext);
             this.SetParamSimple(map, prefix + "CheckType", this.CheckType);
             this.SetParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
+            this.SetParamSimple(map, prefix + "SourceIpType", this.SourceIpType);
         }
     }
 }
