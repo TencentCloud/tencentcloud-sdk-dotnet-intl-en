@@ -42,6 +42,17 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
+        /// <summary>
+        /// A bill type, which corresponds to a subtotal type of L0 bills.
+        /// This parameter has become valid since v3.0 bills took effect in May 2021.
+        /// Valid values:
+        /// `consume`: consumption
+        /// `refund`: refund
+        /// `adjustment`: bill adjustment
+        /// </summary>
+        [JsonProperty("PayType")]
+        public string PayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +62,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
+            this.SetParamSimple(map, prefix + "PayType", this.PayType);
         }
     }
 }
