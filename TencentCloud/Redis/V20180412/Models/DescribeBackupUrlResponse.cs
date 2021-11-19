@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Download address on the public network (valid for 6 hours)
+        /// Public network download address (valid for six hours). This field will be deprecated soon.
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string[] DownloadUrl{ get; set; }
 
         /// <summary>
-        /// Download address on the private network (valid for 6 hours)
+        /// Private network download address (valid for six hours). This field will be deprecated soon.
         /// </summary>
         [JsonProperty("InnerDownloadUrl")]
         public string[] InnerDownloadUrl{ get; set; }
 
         /// <summary>
-        /// File name (only valid for TencentDB for Tendis instances)
+        /// Filename. This field will be deprecated soon.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Filenames")]

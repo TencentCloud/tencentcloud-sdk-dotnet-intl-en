@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+        /// Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
         /// </summary>
         [JsonProperty("WeekDays")]
         public string[] WeekDays{ get; set; }

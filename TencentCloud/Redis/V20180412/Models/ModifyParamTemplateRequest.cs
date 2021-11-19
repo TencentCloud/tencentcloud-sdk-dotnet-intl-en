@@ -31,19 +31,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// New name of the parameter template.
+        /// New name after the parameter template is modified.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// New description of the parameter template.
+        /// New description after the parameter template is modified.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// List of new parameters.
+        /// New parameter list after the parameter template is modified.
         /// </summary>
         [JsonProperty("ParamList")]
         public InstanceParam[] ParamList{ get; set; }
