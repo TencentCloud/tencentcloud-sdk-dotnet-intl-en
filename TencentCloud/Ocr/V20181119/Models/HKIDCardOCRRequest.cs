@@ -37,9 +37,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? ReturnHeadImage{ get; set; }
 
         /// <summary>
-        /// Base64-encoded value of image.
-        /// Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-        /// Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+        /// Base64 string of the image
+        /// Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+        /// Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }

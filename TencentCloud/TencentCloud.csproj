@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.324</VersionPrefix>
+    <VersionPrefix>3.0.325</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4295,6 +4295,7 @@
     <Compile Include="Mdl\V20200326\Models\PipelineOutputStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\PlanReq.cs" />
     <Compile Include="Mdl\V20200326\Models\PlanResp.cs" />
+    <Compile Include="Mdl\V20200326\Models\PlanSettings.cs" />
     <Compile Include="Mdl\V20200326\Models\RegionInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\SDMCSettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\Scte35SettingsInfo.cs" />
@@ -4311,6 +4312,7 @@
     <Compile Include="Mdl\V20200326\Models\StreamScte35Info.cs" />
     <Compile Include="Mdl\V20200326\Models\StreamVideoInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\TimeShiftSettingsInfo.cs" />
+    <Compile Include="Mdl\V20200326\Models\TimedRecordSettings.cs" />
     <Compile Include="Mdl\V20200326\Models\TimingSettingsReq.cs" />
     <Compile Include="Mdl\V20200326\Models\TimingSettingsResp.cs" />
     <Compile Include="Mdl\V20200326\Models\VideoPipelineInputStatistics.cs" />
@@ -5097,6 +5099,8 @@
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceParametersResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceSpecRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceSpecResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />

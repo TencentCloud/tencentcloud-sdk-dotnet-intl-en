@@ -124,6 +124,7 @@
     <Compile Include="V20200326\Models\PipelineOutputStatistics.cs" />
     <Compile Include="V20200326\Models\PlanReq.cs" />
     <Compile Include="V20200326\Models\PlanResp.cs" />
+    <Compile Include="V20200326\Models\PlanSettings.cs" />
     <Compile Include="V20200326\Models\RegionInfo.cs" />
     <Compile Include="V20200326\Models\SDMCSettingsInfo.cs" />
     <Compile Include="V20200326\Models\Scte35SettingsInfo.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="V20200326\Models\StreamScte35Info.cs" />
     <Compile Include="V20200326\Models\StreamVideoInfo.cs" />
     <Compile Include="V20200326\Models\TimeShiftSettingsInfo.cs" />
+    <Compile Include="V20200326\Models\TimedRecordSettings.cs" />
     <Compile Include="V20200326\Models\TimingSettingsReq.cs" />
     <Compile Include="V20200326\Models\TimingSettingsResp.cs" />
     <Compile Include="V20200326\Models\VideoPipelineInputStatistics.cs" />

@@ -1613,6 +1613,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify instance specifications including memory and disk size.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
+        public async Task<ModifyDBInstanceSpecResponse> ModifyDBInstanceSpec(ModifyDBInstanceSpecRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance specifications including memory and disk size.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
+        public ModifyDBInstanceSpecResponse ModifyDBInstanceSpecSync(ModifyDBInstanceSpecRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to transfer an instance to another project.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>

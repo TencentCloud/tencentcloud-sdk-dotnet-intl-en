@@ -52,6 +52,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableDetectSplit")]
         public bool? EnableDetectSplit{ get; set; }
 
+        /// <summary>
+        /// Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+        /// </summary>
+        [JsonProperty("IsPdf")]
+        public bool? IsPdf{ get; set; }
+
+        /// <summary>
+        /// Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+        /// </summary>
+        [JsonProperty("PdfPageNumber")]
+        public ulong? PdfPageNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +74,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "IsWords", this.IsWords);
             this.SetParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
+            this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
+            this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         }
     }
 }

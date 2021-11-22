@@ -75,6 +75,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("AVTemplates")]
         public AVTemplate[] AVTemplates{ get; set; }
 
+        /// <summary>
+        /// Event settings
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("PlanSettings")]
+        public PlanSettings PlanSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +96,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArrayObj(map, prefix + "AudioTemplates.", this.AudioTemplates);
             this.SetParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
             this.SetParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
+            this.SetParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
         }
     }
 }

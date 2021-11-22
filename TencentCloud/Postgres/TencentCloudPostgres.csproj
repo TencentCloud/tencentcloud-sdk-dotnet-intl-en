@@ -134,6 +134,8 @@
     <Compile Include="V20170312\Models\ModifyDBInstanceParametersResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSpecRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSpecResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
