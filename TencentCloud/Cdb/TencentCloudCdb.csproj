@@ -54,6 +54,7 @@
     <Compile Include="V20170320\Models\BackupConfig.cs" />
     <Compile Include="V20170320\Models\BackupInfo.cs" />
     <Compile Include="V20170320\Models\BackupItem.cs" />
+    <Compile Include="V20170320\Models\BackupLimitVpcItem.cs" />
     <Compile Include="V20170320\Models\BackupSummaryItem.cs" />
     <Compile Include="V20170320\Models\BalanceRoGroupLoadRequest.cs" />
     <Compile Include="V20170320\Models\BalanceRoGroupLoadResponse.cs" />
@@ -103,6 +104,8 @@
     <Compile Include="V20170320\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupOverviewRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupOverviewResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupSummariesRequest.cs" />
@@ -212,6 +215,8 @@
     <Compile Include="V20170320\Models\ModifyAutoRenewFlagResponse.cs" />
     <Compile Include="V20170320\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="V20170320\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceProjectRequest.cs" />

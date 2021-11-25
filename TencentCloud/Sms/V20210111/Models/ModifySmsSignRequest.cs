@@ -38,12 +38,13 @@ namespace TencentCloud.Sms.V20210111.Models
 
         /// <summary>
         /// Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
-        /// 0: company. Valid values of `DocumentType` include 0, 1, 2, and 3.
+        /// 0: company. Valid values of `DocumentType` include 0 and 1.
         /// 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
         /// 2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
-        /// 3: WeChat Official Account or WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
+        /// 3: WeChat Official Account. Valid values of `DocumentType` include 0, 1, 2, 3, and 8.
         /// 4: trademark. Valid values of `DocumentType` include 7.
         /// 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
+        /// 6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
         /// Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
         /// </summary>
         [JsonProperty("SignType")]
@@ -59,7 +60,7 @@ namespace TencentCloud.Sms.V20210111.Models
         /// 5: screenshot of website ICP filing backend (for personal website).
         /// 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
         /// 7: trademark registration certificate.
-        /// Note: the corresponding `DocumentType` must be selected according to `SignType`.
+        /// 8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
         /// </summary>
         [JsonProperty("DocumentType")]
         public ulong? DocumentType{ get; set; }

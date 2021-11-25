@@ -25,13 +25,6 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// Template ID array.
-        /// <dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
-        /// </summary>
-        [JsonProperty("TemplateIdSet")]
-        public ulong?[] TemplateIdSet{ get; set; }
-
-        /// <summary>
         /// Whether it is Global SMS:
         /// 0: Mainland China SMS.
         /// 1: Global SMS.
@@ -39,14 +32,37 @@ namespace TencentCloud.Sms.V20210111.Models
         [JsonProperty("International")]
         public ulong? International{ get; set; }
 
+        /// <summary>
+        /// Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+        /// <dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+        /// </summary>
+        [JsonProperty("TemplateIdSet")]
+        public ulong?[] TemplateIdSet{ get; set; }
+
+        /// <summary>
+        /// Upper limit. Maximum value: 100.
+        /// Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// Offset.
+        /// Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
             this.SetParamSimple(map, prefix + "International", this.International);
+            this.SetParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

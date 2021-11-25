@@ -37,7 +37,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+        /// Number of billable SMS messages. For billing rules, see Billing Policy.
         /// </summary>
         [JsonProperty("Fee")]
         public ulong? Fee{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
+        /// SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

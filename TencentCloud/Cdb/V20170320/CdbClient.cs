@@ -953,6 +953,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the restrictions of downloading backups in a region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public async Task<DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the restrictions of downloading backups in a region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestrictionSync(DescribeBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
@@ -2870,6 +2910,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBackupConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the restrictions of downloading backups in a region. You can specify which types of networks (private, or both private and public), VPCs, and IPs to download backups.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public async Task<ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the restrictions of downloading backups in a region. You can specify which types of networks (private, or both private and public), VPCs, and IPs to download backups.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestrictionSync(ModifyBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,41 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Cloudaudit.V20190319.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeEventsResponse : AbstractModel
+    public class ModifyBackupDownloadRestrictionResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Whether the logset ends.
-        /// </summary>
-        [JsonProperty("ListOver")]
-        public bool? ListOver{ get; set; }
-
-        /// <summary>
-        /// Credential for viewing more logs.
-        /// </summary>
-        [JsonProperty("NextToken")]
-        public ulong? NextToken{ get; set; }
-
-        /// <summary>
-        /// Logset.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Events")]
-        public Event[] Events{ get; set; }
-
-        /// <summary>
-        /// Total number of events.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -62,10 +36,6 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
-            this.SetParamArrayObj(map, prefix + "Events.", this.Events);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
