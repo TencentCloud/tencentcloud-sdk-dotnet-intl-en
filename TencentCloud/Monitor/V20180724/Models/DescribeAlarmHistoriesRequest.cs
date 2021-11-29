@@ -80,7 +80,6 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-        /// You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
@@ -93,7 +92,6 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-        /// This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Namespaces")]
         public MonitorTypeNamespace[] Namespaces{ get; set; }
@@ -117,13 +115,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+        /// Search by recipient
         /// </summary>
         [JsonProperty("ReceiverUids")]
         public long?[] ReceiverUids{ get; set; }
 
         /// <summary>
-        /// Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+        /// Search by recipient group
         /// </summary>
         [JsonProperty("ReceiverGroups")]
         public long?[] ReceiverGroups{ get; set; }

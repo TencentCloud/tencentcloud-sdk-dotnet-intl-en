@@ -47,7 +47,7 @@ namespace TencentCloud.Sms.V20210111.Models
 
         /// <summary>
         /// Identity certificate type:
-        /// 0: three-in-one.
+        /// 0: three-in-one licence.
         /// 1: business license.
         /// 2: organization code certificate.
         /// 3: social credit code certificate.

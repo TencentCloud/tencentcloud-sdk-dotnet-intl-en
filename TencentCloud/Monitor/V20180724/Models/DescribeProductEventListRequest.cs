@@ -55,7 +55,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public DescribeProductEventListDimensions[] Dimensions{ get; set; }
 
         /// <summary>
-        /// Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
+        /// Region filter parameter for service events.
         /// </summary>
         [JsonProperty("RegionList")]
         public string[] RegionList{ get; set; }

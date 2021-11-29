@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
+        /// Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
