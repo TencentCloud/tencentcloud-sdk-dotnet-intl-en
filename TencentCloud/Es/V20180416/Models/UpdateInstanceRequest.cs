@@ -180,6 +180,30 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("WebNodeTypeInfo")]
         public WebNodeTypeInfo WebNodeTypeInfo{ get; set; }
 
+        /// <summary>
+        /// Whether to switch to the new network architecture
+        /// </summary>
+        [JsonProperty("SwitchPrivateLink")]
+        public string SwitchPrivateLink{ get; set; }
+
+        /// <summary>
+        /// Whether to enable Cerebro
+        /// </summary>
+        [JsonProperty("EnableCerebro")]
+        public bool? EnableCerebro{ get; set; }
+
+        /// <summary>
+        /// Cerebro public network access status
+        /// </summary>
+        [JsonProperty("CerebroPublicAccess")]
+        public string CerebroPublicAccess{ get; set; }
+
+        /// <summary>
+        /// Cerebro private network access status
+        /// </summary>
+        [JsonProperty("CerebroPrivateAccess")]
+        public string CerebroPrivateAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +235,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
             this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+            this.SetParamSimple(map, prefix + "SwitchPrivateLink", this.SwitchPrivateLink);
+            this.SetParamSimple(map, prefix + "EnableCerebro", this.EnableCerebro);
+            this.SetParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
+            this.SetParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
         }
     }
 }

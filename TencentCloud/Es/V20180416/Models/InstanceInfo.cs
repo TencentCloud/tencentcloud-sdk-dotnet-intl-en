@@ -387,6 +387,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Jdk")]
         public string Jdk{ get; set; }
 
+        /// <summary>
+        /// Cluster network communication protocol
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// Security group ID
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecurityGroups")]
+        public string[] SecurityGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -450,6 +464,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
             this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
             this.SetParamSimple(map, prefix + "Jdk", this.Jdk);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         }
     }
 }
