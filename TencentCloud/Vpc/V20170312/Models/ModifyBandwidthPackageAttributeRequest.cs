@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
+        /// <summary>
+        /// When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+        /// </summary>
+        [JsonProperty("MigrateOnRefund")]
+        public bool? MigrateOnRefund{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "MigrateOnRefund", this.MigrateOnRefund);
         }
     }
 }

@@ -58,6 +58,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>blueprint-name</li>Filter by **image name**.
         /// Type: String
         /// Required: no
+        /// <li>blueprint-state</li>Filter by **image status**.
+        /// Type: String
+        /// Required: no
         /// 
         /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
         /// </summary>

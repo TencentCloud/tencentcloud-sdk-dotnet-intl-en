@@ -31,7 +31,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// COS object path
+        /// File path of code package stored in COS, which should start with “/”
         /// </summary>
         [JsonProperty("CosObjectName")]
         public string CosObjectName{ get; set; }

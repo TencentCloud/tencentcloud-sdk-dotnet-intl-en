@@ -64,13 +64,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public LogItems[] AnalysisResults{ get; set; }
 
         /// <summary>
-        /// 
+        /// New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AnalysisRecords")]
         public string[] AnalysisRecords{ get; set; }
 
         /// <summary>
-        /// 
+        /// Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Columns")]
         public Column[] Columns{ get; set; }

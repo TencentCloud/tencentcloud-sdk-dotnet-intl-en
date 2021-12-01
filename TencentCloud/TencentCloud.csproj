@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.331</VersionPrefix>
+    <VersionPrefix>3.0.332</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5489,6 +5489,7 @@
     <Compile Include="Scf\V20180416\Models\TerminateAsyncEventResponse.cs" />
     <Compile Include="Scf\V20180416\Models\TimeInterval.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
+    <Compile Include="Scf\V20180416\Models\TriggerAction.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerCount.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerInfo.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateAliasRequest.cs" />
@@ -7057,6 +7058,7 @@
     <Compile Include="Vpc\V20170312\Models\AddBandwidthPackageResourcesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\Address.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressChargePrepaid.cs" />
+    <Compile Include="Vpc\V20170312\Models\AddressInfo.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplate.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplateGroup.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplateItem.cs" />
@@ -7565,6 +7567,7 @@
     <Compile Include="Vpc\V20170312\Models\ServiceTemplate.cs" />
     <Compile Include="Vpc\V20170312\Models\ServiceTemplateGroup.cs" />
     <Compile Include="Vpc\V20170312\Models\ServiceTemplateSpecification.cs" />
+    <Compile Include="Vpc\V20170312\Models\ServicesInfo.cs" />
     <Compile Include="Vpc\V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\SourceIpTranslationNatRule.cs" />

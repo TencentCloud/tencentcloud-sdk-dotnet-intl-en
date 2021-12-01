@@ -21,26 +21,21 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UnassignPrivateIpAddressesRequest : AbstractModel
+    public class ServicesInfo : AbstractModel
     {
         
         /// <summary>
-        /// The ID of the ENI instance, such as `eni-m6dyj72l`.
+        /// Protocol port
         /// </summary>
-        [JsonProperty("NetworkInterfaceId")]
-        public string NetworkInterfaceId{ get; set; }
+        [JsonProperty("Service")]
+        public string Service{ get; set; }
 
         /// <summary>
-        /// The information of the specified private IPs. You can specify a maximum of 10 each time.
+        /// Remarks
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("PrivateIpAddresses")]
-        public PrivateIpAddressSpecification[] PrivateIpAddresses{ get; set; }
-
-        /// <summary>
-        /// Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
-            this.SetParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Service", this.Service);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

@@ -31,10 +31,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceTemplateName{ get; set; }
 
         /// <summary>
-        /// It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+        /// Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
         /// </summary>
         [JsonProperty("Services")]
         public string[] Services{ get; set; }
+
+        /// <summary>
+        /// You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+        /// </summary>
+        [JsonProperty("ServicesExtra")]
+        public ServicesInfo[] ServicesExtra{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "ServiceTemplateName", this.ServiceTemplateName);
             this.SetParamArraySimple(map, prefix + "Services.", this.Services);
+            this.SetParamArrayObj(map, prefix + "ServicesExtra.", this.ServicesExtra);
         }
     }
 }

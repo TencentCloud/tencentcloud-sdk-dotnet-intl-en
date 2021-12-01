@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Addresses")]
         public string[] Addresses{ get; set; }
 
+        /// <summary>
+        /// Address information with remarks, including the IP, CIDR block or IP address range.
+        /// </summary>
+        [JsonProperty("AddressesExtra")]
+        public AddressInfo[] AddressesExtra{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
             this.SetParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
             this.SetParamArraySimple(map, prefix + "Addresses.", this.Addresses);
+            this.SetParamArrayObj(map, prefix + "AddressesExtra.", this.AddressesExtra);
         }
     }
 }

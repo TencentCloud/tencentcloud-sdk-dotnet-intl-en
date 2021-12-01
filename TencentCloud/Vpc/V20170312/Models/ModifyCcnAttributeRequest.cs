@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// The name of the CCN. The maximum length is 60 characters.
+        /// The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
         /// </summary>
         [JsonProperty("CcnName")]
         public string CcnName{ get; set; }
 
         /// <summary>
-        /// The description of the CCN. The maximum length is 100 characters.
+        /// The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
         /// </summary>
         [JsonProperty("CcnDescription")]
         public string CcnDescription{ get; set; }

@@ -52,6 +52,7 @@
     <Compile Include="V20170312\Models\AddBandwidthPackageResourcesResponse.cs" />
     <Compile Include="V20170312\Models\Address.cs" />
     <Compile Include="V20170312\Models\AddressChargePrepaid.cs" />
+    <Compile Include="V20170312\Models\AddressInfo.cs" />
     <Compile Include="V20170312\Models\AddressTemplate.cs" />
     <Compile Include="V20170312\Models\AddressTemplateGroup.cs" />
     <Compile Include="V20170312\Models\AddressTemplateItem.cs" />
@@ -560,6 +561,7 @@
     <Compile Include="V20170312\Models\ServiceTemplate.cs" />
     <Compile Include="V20170312\Models\ServiceTemplateGroup.cs" />
     <Compile Include="V20170312\Models\ServiceTemplateSpecification.cs" />
+    <Compile Include="V20170312\Models\ServicesInfo.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="V20170312\Models\SourceIpTranslationNatRule.cs" />

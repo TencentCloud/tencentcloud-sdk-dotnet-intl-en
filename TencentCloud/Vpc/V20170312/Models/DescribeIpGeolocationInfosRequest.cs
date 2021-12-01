@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
+        /// The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
         /// </summary>
         [JsonProperty("AddressIps")]
         public string[] AddressIps{ get; set; }
 
         /// <summary>
-        /// Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
+        /// Fields of the IP addresses to be queried.
         /// </summary>
         [JsonProperty("Fields")]
         public IpField Fields{ get; set; }

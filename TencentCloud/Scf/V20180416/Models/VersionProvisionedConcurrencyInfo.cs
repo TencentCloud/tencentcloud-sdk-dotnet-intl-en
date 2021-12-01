@@ -54,6 +54,13 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
 
+        /// <summary>
+        /// List of scheduled provisioned concurrency scaling actions
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TriggerActions")]
+        public TriggerAction[] TriggerActions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusReason", this.StatusReason);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
+            this.SetParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
         }
     }
 }

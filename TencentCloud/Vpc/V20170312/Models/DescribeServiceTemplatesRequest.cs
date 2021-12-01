@@ -25,9 +25,10 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Filter conditions.
-        /// <li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-        /// <li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+        /// Filters
+        /// <li>service-template-name - Protocol port template name.</li>
+        /// <li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+        /// <li>service-port-Protocol port.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

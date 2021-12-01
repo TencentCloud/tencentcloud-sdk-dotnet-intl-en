@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 
+        /// If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
         /// </summary>
         [JsonProperty("UseNewAnalysis")]
         public bool? UseNewAnalysis{ get; set; }
