@@ -1513,6 +1513,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the sync mode of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBSyncModeRequest"/></param>
+        /// <returns><see cref="ModifyDBSyncModeResponse"/></returns>
+        public async Task<ModifyDBSyncModeResponse> ModifyDBSyncMode(ModifyDBSyncModeRequest req)
+        {
+             JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBSyncMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBSyncModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the sync mode of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBSyncModeRequest"/></param>
+        /// <returns><see cref="ModifyDBSyncModeResponse"/></returns>
+        public ModifyDBSyncModeResponse ModifyDBSyncModeSync(ModifyDBSyncModeRequest req)
+        {
+             JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBSyncMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBSyncModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the number of days for retention of database backup logs.
         /// </summary>
         /// <param name="req"><see cref="ModifyLogFileRetentionPeriodRequest"/></param>
@@ -1544,6 +1584,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLogFileRetentionPeriod");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLogFileRetentionPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify sync task attributes (currently, only the task name can be modified).
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncTaskAttributeRequest"/></param>
+        /// <returns><see cref="ModifySyncTaskAttributeResponse"/></returns>
+        public async Task<ModifySyncTaskAttributeResponse> ModifySyncTaskAttribute(ModifySyncTaskAttributeRequest req)
+        {
+             JsonResponseModel<ModifySyncTaskAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySyncTaskAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncTaskAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify sync task attributes (currently, only the task name can be modified).
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncTaskAttributeRequest"/></param>
+        /// <returns><see cref="ModifySyncTaskAttributeResponse"/></returns>
+        public ModifySyncTaskAttributeResponse ModifySyncTaskAttributeSync(ModifySyncTaskAttributeRequest req)
+        {
+             JsonResponseModel<ModifySyncTaskAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySyncTaskAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncTaskAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

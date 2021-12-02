@@ -43,7 +43,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+        /// Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

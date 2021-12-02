@@ -129,8 +129,12 @@
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBParametersRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBParametersResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBSyncModeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBSyncModeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodRequest.cs" />
     <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodResponse.cs" />
+    <Compile Include="V20170312\Models\ModifySyncTaskAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifySyncTaskAttributeResponse.cs" />
     <Compile Include="V20170312\Models\MonitorData.cs" />
     <Compile Include="V20170312\Models\NodeInfo.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />

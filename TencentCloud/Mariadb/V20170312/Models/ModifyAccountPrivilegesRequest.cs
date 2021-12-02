@@ -51,8 +51,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public DatabasePrivilege[] DatabasePrivileges{ get; set; }
 
         /// <summary>
-        /// Table permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
-        /// Note: if the parameter is left empty, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+        /// Database table permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
+        /// Note: if the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
         /// </summary>
         [JsonProperty("TablePrivileges")]
         public TablePrivilege[] TablePrivileges{ get; set; }
@@ -65,22 +65,22 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public ColumnPrivilege[] ColumnPrivileges{ get; set; }
 
         /// <summary>
-        /// View permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
-        /// Note: if the parameter is left empty, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
+        /// Database view permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
+        /// Note: if the parameter is not passed in, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
         /// </summary>
         [JsonProperty("ViewPrivileges")]
         public ViewPrivileges[] ViewPrivileges{ get; set; }
 
         /// <summary>
-        /// Function permissions. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
-        /// Note: if the parameter is left empty, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
+        /// Database function permissions. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
+        /// Note: if the parameter is not passed in, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
         /// </summary>
         [JsonProperty("FunctionPrivileges")]
         public FunctionPrivilege[] FunctionPrivileges{ get; set; }
 
         /// <summary>
-        /// Stored procedure permission. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
-        /// Note: if the parameter is left empty, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
+        /// Database stored procedure permission. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
+        /// Note: if the parameter is not passed in, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
         /// </summary>
         [JsonProperty("ProcedurePrivileges")]
         public ProcedurePrivilege[] ProcedurePrivileges{ get; set; }
