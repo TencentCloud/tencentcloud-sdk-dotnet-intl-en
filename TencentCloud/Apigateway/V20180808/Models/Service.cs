@@ -150,6 +150,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("SetType")]
         public string SetType{ get; set; }
 
+        /// <summary>
+        /// Cluster type for service deployment
+        /// Note: this field may return null, indicating that no valid values found.
+        /// </summary>
+        [JsonProperty("DeploymentType")]
+        public string DeploymentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SetType", this.SetType);
+            this.SetParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
         }
     }
 }

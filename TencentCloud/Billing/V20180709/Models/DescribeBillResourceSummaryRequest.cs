@@ -93,6 +93,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
+        /// <summary>
+        /// Business code
+        /// Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+        /// </summary>
+        [JsonProperty("BusinessCode")]
+        public string BusinessCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         }
     }
 }

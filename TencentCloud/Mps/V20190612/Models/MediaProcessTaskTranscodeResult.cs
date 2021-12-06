@@ -61,6 +61,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Output")]
         public MediaTranscodeItem Output{ get; set; }
 
+        /// <summary>
+        /// Transcoding progress. Value range: 0-100
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

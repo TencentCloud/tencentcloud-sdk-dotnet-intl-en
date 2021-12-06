@@ -25,13 +25,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Custom plugin name. A plugin name contain up to 50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
+        /// Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
         /// </summary>
         [JsonProperty("PluginName")]
         public string PluginName{ get; set; }
 
         /// <summary>
-        /// Plugin type. Valid value: `IPControl`.
+        /// Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`
         /// </summary>
         [JsonProperty("PluginType")]
         public string PluginType{ get; set; }

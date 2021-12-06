@@ -179,6 +179,20 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string SetType{ get; set; }
 
         /// <summary>
+        /// Cluster type for service deployment
+        /// Note: this field may return null, indicating that no valid values found.
+        /// </summary>
+        [JsonProperty("DeploymentType")]
+        public string DeploymentType{ get; set; }
+
+        /// <summary>
+        /// Whether it’s for special usage
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SpecialUse")]
+        public string SpecialUse{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -214,6 +228,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "SetType", this.SetType);
+            this.SetParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
+            this.SetParamSimple(map, prefix + "SpecialUse", this.SpecialUse);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
