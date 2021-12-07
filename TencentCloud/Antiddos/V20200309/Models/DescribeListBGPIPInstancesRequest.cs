@@ -84,6 +84,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterEipEipAddressStatus")]
         public string[] FilterEipEipAddressStatus{ get; set; }
 
+        /// <summary>
+        /// Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
+        /// </summary>
+        [JsonProperty("FilterDamDDoSStatus")]
+        public long? FilterDamDDoSStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +105,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterName", this.FilterName);
             this.SetParamSimple(map, prefix + "FilterEipType", this.FilterEipType);
             this.SetParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
+            this.SetParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
         }
     }
 }

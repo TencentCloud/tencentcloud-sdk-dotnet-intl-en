@@ -153,6 +153,7 @@
     <Compile Include="V20200309\Models\InsL7Rules.cs" />
     <Compile Include="V20200309\Models\InstanceRelation.cs" />
     <Compile Include="V20200309\Models\KeyValue.cs" />
+    <Compile Include="V20200309\Models\L4RuleSource.cs" />
     <Compile Include="V20200309\Models\Layer4Rule.cs" />
     <Compile Include="V20200309\Models\Layer7Rule.cs" />
     <Compile Include="V20200309\Models\ListenerCcThreholdConfig.cs" />
@@ -162,8 +163,11 @@
     <Compile Include="V20200309\Models\ModifyDDoSSpeedLimitConfigResponse.cs" />
     <Compile Include="V20200309\Models\ModifyDomainUsrNameRequest.cs" />
     <Compile Include="V20200309\Models\ModifyDomainUsrNameResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyNewDomainRulesRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyNewDomainRulesResponse.cs" />
     <Compile Include="V20200309\Models\ModifyPacketFilterConfigRequest.cs" />
     <Compile Include="V20200309\Models\ModifyPacketFilterConfigResponse.cs" />
+    <Compile Include="V20200309\Models\NewL7RuleEntry.cs" />
     <Compile Include="V20200309\Models\PackInfo.cs" />
     <Compile Include="V20200309\Models\PacketFilterConfig.cs" />
     <Compile Include="V20200309\Models\PacketFilterRelation.cs" />

@@ -1893,6 +1893,86 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to disable cluster deletion protection.
+        /// </summary>
+        /// <param name="req"><see cref="DisableClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="DisableClusterDeletionProtectionResponse"/></returns>
+        public async Task<DisableClusterDeletionProtectionResponse> DisableClusterDeletionProtection(DisableClusterDeletionProtectionRequest req)
+        {
+             JsonResponseModel<DisableClusterDeletionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableClusterDeletionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable cluster deletion protection.
+        /// </summary>
+        /// <param name="req"><see cref="DisableClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="DisableClusterDeletionProtectionResponse"/></returns>
+        public DisableClusterDeletionProtectionResponse DisableClusterDeletionProtectionSync(DisableClusterDeletionProtectionRequest req)
+        {
+             JsonResponseModel<DisableClusterDeletionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableClusterDeletionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable cluster deletion protection.
+        /// </summary>
+        /// <param name="req"><see cref="EnableClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="EnableClusterDeletionProtectionResponse"/></returns>
+        public async Task<EnableClusterDeletionProtectionResponse> EnableClusterDeletionProtection(EnableClusterDeletionProtectionRequest req)
+        {
+             JsonResponseModel<EnableClusterDeletionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableClusterDeletionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable cluster deletion protection.
+        /// </summary>
+        /// <param name="req"><see cref="EnableClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="EnableClusterDeletionProtectionResponse"/></returns>
+        public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtectionSync(EnableClusterDeletionProtectionRequest req)
+        {
+             JsonResponseModel<EnableClusterDeletionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableClusterDeletionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to enable the VPC-CNI network mode for GR clusters.
         /// </summary>
         /// <param name="req"><see cref="EnableVpcCniNetworkTypeRequest"/></param>

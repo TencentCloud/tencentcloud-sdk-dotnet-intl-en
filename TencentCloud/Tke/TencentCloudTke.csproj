@@ -151,6 +151,10 @@
     <Compile Include="V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
+    <Compile Include="V20180525\Models\DisableClusterDeletionProtectionRequest.cs" />
+    <Compile Include="V20180525\Models\DisableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="V20180525\Models\EnableClusterDeletionProtectionRequest.cs" />
+    <Compile Include="V20180525\Models\EnableClusterDeletionProtectionResponse.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\EnhancedService.cs" />

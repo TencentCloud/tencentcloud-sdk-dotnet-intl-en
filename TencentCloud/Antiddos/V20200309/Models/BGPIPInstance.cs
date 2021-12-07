@@ -145,6 +145,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+        /// </summary>
+        [JsonProperty("DamDDoSStatus")]
+        public ulong? DamDDoSStatus{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("V6Flag")]
+        public ulong? V6Flag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +180,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamObj(map, prefix + "EipAddressPackRelation.", this.EipAddressPackRelation);
             this.SetParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
+            this.SetParamSimple(map, prefix + "V6Flag", this.V6Flag);
         }
     }
 }

@@ -74,7 +74,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+        /// Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

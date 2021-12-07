@@ -1013,7 +1013,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to get CC attack data, including total peak requests (QPS) and attack requests (QPS).
+        /// This API is used to get CC attack data, including total QPS peaks, attack QPS, total number of requests and number of attack requests.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
         /// <returns><see cref="DescribeCCTrendResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to get CC attack data, including total peak requests (QPS) and attack requests (QPS).
+        /// This API is used to get CC attack data, including total QPS peaks, attack QPS, total number of requests and number of attack requests.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
         /// <returns><see cref="DescribeCCTrendResponse"/></returns>
@@ -1844,6 +1844,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDomainUsrName");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainUsrNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewDomainRulesRequest"/></param>
+        /// <returns><see cref="ModifyNewDomainRulesResponse"/></returns>
+        public async Task<ModifyNewDomainRulesResponse> ModifyNewDomainRules(ModifyNewDomainRulesRequest req)
+        {
+             JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNewDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewDomainRulesRequest"/></param>
+        /// <returns><see cref="ModifyNewDomainRulesResponse"/></returns>
+        public ModifyNewDomainRulesResponse ModifyNewDomainRulesSync(ModifyNewDomainRulesRequest req)
+        {
+             JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNewDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewDomainRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
