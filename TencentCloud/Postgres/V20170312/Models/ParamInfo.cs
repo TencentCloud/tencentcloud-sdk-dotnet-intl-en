@@ -39,7 +39,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+        /// Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+        /// For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+        /// For a `bool` parameter, the valid values include `true` and `false`; 
+        /// For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ParamValueType")]

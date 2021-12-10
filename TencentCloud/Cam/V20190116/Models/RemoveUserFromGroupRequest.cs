@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// The UID of the user to be deleted and an array corresponding to the User Group IDs
+        /// The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
         /// </summary>
         [JsonProperty("Info")]
         public GroupIdOfUidInfo[] Info{ get; set; }

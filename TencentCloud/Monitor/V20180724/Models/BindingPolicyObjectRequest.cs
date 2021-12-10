@@ -25,16 +25,22 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
+        /// Required. The value is fixed to monitor.
+        /// </summary>
+        [JsonProperty("Module")]
+        public string Module{ get; set; }
+
+        /// <summary>
+        /// Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// Required. The value is fixed to monitor.
+        /// Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
 
         /// <summary>
         /// Instance group ID.
@@ -48,23 +54,17 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Dimensions")]
         public BindingPolicyObjectDimension[] Dimensions{ get; set; }
 
-        /// <summary>
-        /// Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Module", this.Module);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

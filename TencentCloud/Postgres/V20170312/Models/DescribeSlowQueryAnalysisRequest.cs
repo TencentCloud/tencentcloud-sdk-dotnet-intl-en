@@ -49,25 +49,25 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
+        /// Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+        /// Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Value range: [1,100].
+        /// Number of entries per page. Value range: [1,100]. Default value: `50`.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Value range: [0,INF).
+        /// Pagination offset. Value range: [0,INF). Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

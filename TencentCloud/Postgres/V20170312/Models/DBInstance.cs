@@ -115,7 +115,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBCharset{ get; set; }
 
         /// <summary>
-        /// PostgreSQL kernel version
+        /// PostgreSQL major version
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -221,6 +221,20 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
+        /// <summary>
+        /// Database kernel version
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DBKernelVersion")]
+        public string DBKernelVersion{ get; set; }
+
+        /// <summary>
+        /// Network information list of the instance
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NetworkAccessList")]
+        public NetworkAccess[] NetworkAccessList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -259,6 +273,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
             this.SetParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+            this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+            this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
         }
     }
 }

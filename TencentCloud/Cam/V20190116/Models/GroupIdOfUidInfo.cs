@@ -25,16 +25,22 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
+        /// User Group ID
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public ulong? GroupId{ get; set; }
+
+        /// <summary>
         /// Sub-user UID
         /// </summary>
         [JsonProperty("Uid")]
         public ulong? Uid{ get; set; }
 
         /// <summary>
-        /// User Group ID
+        /// Sub-user UIN. For UIN and UID, at least one of them is required.
         /// </summary>
-        [JsonProperty("GroupId")]
-        public ulong? GroupId{ get; set; }
+        [JsonProperty("Uin")]
+        public ulong? Uin{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
         }
     }
 }

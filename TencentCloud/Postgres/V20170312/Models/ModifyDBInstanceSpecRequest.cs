@@ -67,13 +67,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? SwitchTag{ get; set; }
 
         /// <summary>
-        /// The earliest time to start a switch.
+        /// The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
         /// </summary>
         [JsonProperty("SwitchStartTime")]
         public string SwitchStartTime{ get; set; }
 
         /// <summary>
-        /// The latest time to start a switch.
+        /// The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
         /// </summary>
         [JsonProperty("SwitchEndTime")]
         public string SwitchEndTime{ get; set; }

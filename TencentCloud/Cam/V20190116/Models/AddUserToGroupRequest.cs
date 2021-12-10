@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// How sub-user UIDs are associated with the ID of the user group they are added to.
+        /// The association between the user group ID and the sub-user UIN/UID.
         /// </summary>
         [JsonProperty("Info")]
         public GroupIdOfUidInfo[] Info{ get; set; }

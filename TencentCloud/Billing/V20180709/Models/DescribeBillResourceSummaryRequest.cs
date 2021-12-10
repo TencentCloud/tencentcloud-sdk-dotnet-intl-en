@@ -75,7 +75,6 @@ namespace TencentCloud.Billing.V20180709.Models
         /// New monthly subscription
         /// Monthly subscription renewal
         /// Monthly subscription specification adjustment
-        /// Monthly subscription specification adjustment
         /// Monthly subscription refund
         /// </summary>
         [JsonProperty("ActionType")]
