@@ -229,7 +229,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBKernelVersion{ get; set; }
 
         /// <summary>
-        /// Network information list of the instance
+        /// Network access list of the instance
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetworkAccessList")]
