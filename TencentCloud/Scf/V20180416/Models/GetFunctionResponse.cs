@@ -285,6 +285,20 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TraceEnable{ get; set; }
 
         /// <summary>
+        /// Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ProtocolType")]
+        public string ProtocolType{ get; set; }
+
+        /// <summary>
+        /// Parameters of the specified protocol
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProtocolParams")]
+        public ProtocolParams ProtocolParams{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -338,6 +352,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
             this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
             this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+            this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+            this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

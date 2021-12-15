@@ -132,6 +132,7 @@
     <Compile Include="V20180416\Models\Namespace.cs" />
     <Compile Include="V20180416\Models\NamespaceLimit.cs" />
     <Compile Include="V20180416\Models\NamespaceUsage.cs" />
+    <Compile Include="V20180416\Models\ProtocolParams.cs" />
     <Compile Include="V20180416\Models\PublicNetConfigIn.cs" />
     <Compile Include="V20180416\Models\PublicNetConfigOut.cs" />
     <Compile Include="V20180416\Models\PublishLayerVersionRequest.cs" />
@@ -173,5 +174,6 @@
     <Compile Include="V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
     <Compile Include="V20180416\Models\VersionWeight.cs" />
     <Compile Include="V20180416\Models\VpcConfig.cs" />
+    <Compile Include="V20180416\Models\WSParams.cs" />
   </ItemGroup>
 </Project>

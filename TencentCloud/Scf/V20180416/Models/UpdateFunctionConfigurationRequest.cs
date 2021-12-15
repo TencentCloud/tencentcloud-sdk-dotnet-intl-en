@@ -79,6 +79,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Role{ get; set; }
 
         /// <summary>
+        /// Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+        /// </summary>
+        [JsonProperty("InstallDependency")]
+        public string InstallDependency{ get; set; }
+
+        /// <summary>
         /// CLS logset ID to which logs are shipped
         /// </summary>
         [JsonProperty("ClsLogsetId")]
@@ -132,6 +138,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("InitTimeout")]
         public long? InitTimeout{ get; set; }
 
+        /// <summary>
+        /// Parameters of the specified protocol
+        /// </summary>
+        [JsonProperty("ProtocolParams")]
+        public ProtocolParams ProtocolParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +159,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
             this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "Publish", this.Publish);
@@ -156,6 +169,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+            this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
         }
     }
 }

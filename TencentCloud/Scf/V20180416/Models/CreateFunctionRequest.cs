@@ -91,6 +91,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Role{ get; set; }
 
         /// <summary>
+        /// Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+        /// </summary>
+        [JsonProperty("InstallDependency")]
+        public string InstallDependency{ get; set; }
+
+        /// <summary>
         /// CLS Logset ID to which the function logs are shipped
         /// </summary>
         [JsonProperty("ClsLogsetId")]
@@ -162,6 +168,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("TraceEnable")]
         public string TraceEnable{ get; set; }
 
+        /// <summary>
+        /// Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+        /// </summary>
+        [JsonProperty("ProtocolType")]
+        public string ProtocolType{ get; set; }
+
+        /// <summary>
+        /// Parameters of the specified protocol
+        /// </summary>
+        [JsonProperty("ProtocolParams")]
+        public ProtocolParams ProtocolParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +197,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
             this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
@@ -191,6 +210,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
             this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+            this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+            this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
         }
     }
 }
