@@ -75,6 +75,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
+        /// <summary>
+        /// Backup key, which is used to calculate a signature.
+        /// 6-32 characters. Only digits and letters are allowed. 
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupSecretKey")]
+        public string BackupSecretKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +96,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "SignParam", this.SignParam);
             this.SetParamSimple(map, prefix + "TimeParam", this.TimeParam);
             this.SetParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
+            this.SetParamSimple(map, prefix + "BackupSecretKey", this.BackupSecretKey);
         }
     }
 }

@@ -21,35 +21,38 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScdnAclConfig : AbstractModel
+    public class AdvancedScdnAclGroup : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable. Valid values: `on` and `off`.
+        /// Rule name
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
 
         /// <summary>
-        /// This field is disused. Please use `AdvancedScriptData` instead.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specific configurations
         /// </summary>
-        [JsonProperty("ScriptData")]
-        public ScdnAclGroup[] ScriptData{ get; set; }
+        [JsonProperty("Configure")]
+        public AdvancedScdnAclRule[] Configure{ get; set; }
+
+        /// <summary>
+        /// Action. Valid values: `intercept` and `redirect`.
+        /// </summary>
+        [JsonProperty("Result")]
+        public string Result{ get; set; }
+
+        /// <summary>
+        /// Whether the rule is activated. Valid values: `active` and `inactive`.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
         /// Error page configuration
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorPage")]
         public ScdnErrorPage ErrorPage{ get; set; }
-
-        /// <summary>
-        /// ACL rule group, which is required when the access control is on.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("AdvancedScriptData")]
-        public AdvancedScdnAclGroup[] AdvancedScriptData{ get; set; }
 
 
         /// <summary>
@@ -57,10 +60,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArrayObj(map, prefix + "ScriptData.", this.ScriptData);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamArrayObj(map, prefix + "Configure.", this.Configure);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
-            this.SetParamArrayObj(map, prefix + "AdvancedScriptData.", this.AdvancedScriptData);
         }
     }
 }

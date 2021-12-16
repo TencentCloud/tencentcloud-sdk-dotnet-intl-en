@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScdnConfig : AbstractModel
+    public class SlaUpdateParam : AbstractModel
     {
         
         /// <summary>
-        /// Valid values: `on` and `off`.
+        /// ID of the CLB instance
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Custom CC attack defense rule
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Target instance specification
         /// </summary>
-        [JsonProperty("Rules")]
-        public ScdnCCRules[] Rules{ get; set; }
-
-        /// <summary>
-        /// Advanced custom CC attack defense rule
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("AdvancedRules")]
-        public AdvancedCCRules[] AdvancedRules{ get; set; }
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
-            this.SetParamArrayObj(map, prefix + "AdvancedRules.", this.AdvancedRules);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
         }
     }
 }

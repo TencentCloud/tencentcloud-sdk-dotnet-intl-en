@@ -2165,6 +2165,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to upgrade shared CLB instances to LCU-supported CLB instances (downgrade is not allowed) and upgrade/downgrade the specification of LCU-supported instances.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerSlaResponse"/></returns>
+        public async Task<ModifyLoadBalancerSlaResponse> ModifyLoadBalancerSla(ModifyLoadBalancerSlaRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerSlaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancerSla");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerSlaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade shared CLB instances to LCU-supported CLB instances (downgrade is not allowed) and upgrade/downgrade the specification of LCU-supported instances.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerSlaResponse"/></returns>
+        public ModifyLoadBalancerSlaResponse ModifyLoadBalancerSlaSync(ModifyLoadBalancerSlaRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerSlaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancerSla");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerSlaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyRule) is used to modify the attributes of a forwarding rule under a layer-7 CLB listener, such as forwarding path, health check attribute, and forwarding policy.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>

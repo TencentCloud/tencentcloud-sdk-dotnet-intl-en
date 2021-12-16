@@ -33,19 +33,22 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] Origins{ get; set; }
 
         /// <summary>
-        /// Master origin server type
-        /// The following types are supported for input parameters:
-        /// domain: domain name type
-        /// cos: COS origin
-        /// ip: IP list used as origin server
-        /// ipv6: origin server list is a single IPv6 address
-        /// ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
-        /// The following types of output parameters are added:
-        /// image: Cloud Infinite origin
-        /// ftp: legacy FTP origin, which is no longer maintained.
-        /// When modifying `Origins`, you need to enter the corresponding OriginType.
-        /// The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Primary origin server type
+        /// Input:
+        /// `domain`: domain name
+        /// `cos`: COS bucket address
+        /// `ip`: IP address
+        /// `ipv6`: a single IPv6 address
+        /// `ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+        /// `ip_domain`: both IP addresses and domain names (only available to beta users)
+        /// `ipv6_domain`: multiple IPv6 addresses and one domain name
+        /// `ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+        /// Output: 
+        /// `image`: Cloud Infinite origin
+        /// `ftp`: FTP origin (disused)
+        /// When modifying `Origins`, you need to enter the corresponding `OriginType`.
+        /// The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
@@ -85,11 +88,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] BackupOrigins{ get; set; }
 
         /// <summary>
-        /// Backup origin server type, which supports the following types:
-        /// domain: domain name type
-        /// ip: IP list used as origin server
-        /// When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Secondary origin type. Values:
+        /// `domain`: domain name
+        /// `ip`: IP address
+        /// When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+        /// The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+        /// `ipv6_domain`: multiple IPv6 addresses and one domain name
+        /// `ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+        /// `ipv6_domain`: multiple IPv6 addresses and one domain name
+        /// `ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupOriginType")]
         public string BackupOriginType{ get; set; }
@@ -121,6 +129,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("PathBasedOrigin")]
         public PathBasedOriginRule[] PathBasedOrigin{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AdvanceHttps")]
+        public AdvanceHttps AdvanceHttps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +152,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "BasePath", this.BasePath);
             this.SetParamArrayObj(map, prefix + "PathRules.", this.PathRules);
             this.SetParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
+            this.SetParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
         }
     }
 }

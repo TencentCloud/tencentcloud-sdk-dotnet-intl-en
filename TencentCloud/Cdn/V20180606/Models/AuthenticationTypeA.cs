@@ -60,6 +60,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
+        /// <summary>
+        /// Backup key, which is used to calculate a signature.
+        /// 6-32 characters. Only digits and letters are allowed. 
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupSecretKey")]
+        public string BackupSecretKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +79,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
             this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
+            this.SetParamSimple(map, prefix + "BackupSecretKey", this.BackupSecretKey);
         }
     }
 }

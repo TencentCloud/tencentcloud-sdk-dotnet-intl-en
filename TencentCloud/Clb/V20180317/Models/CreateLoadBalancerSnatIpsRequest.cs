@@ -31,13 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
+        /// Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
         /// </summary>
         [JsonProperty("SnatIps")]
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
-        /// Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+        /// Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
         /// </summary>
         [JsonProperty("Number")]
         public ulong? Number{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.342</VersionPrefix>
+    <VersionPrefix>3.0.343</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1204,6 +1204,7 @@
     <Compile Include="Cdn\V20180606\Models\AddCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvanceCacheRule.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvanceConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvanceHttps.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthentication.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeA.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeB.cs" />
@@ -1211,7 +1212,10 @@
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeD.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeE.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeF.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedCCRules.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedCache.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedScdnAclGroup.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedScdnAclRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Authentication.cs" />
     <Compile Include="Cdn\V20180606\Models\AuthenticationTypeA.cs" />
     <Compile Include="Cdn\V20180606\Models\AuthenticationTypeB.cs" />
@@ -1357,9 +1361,12 @@
     <Compile Include="Cdn\V20180606\Models\Quic.cs" />
     <Compile Include="Cdn\V20180606\Models\Quota.cs" />
     <Compile Include="Cdn\V20180606\Models\RangeOriginPull.cs" />
+    <Compile Include="Cdn\V20180606\Models\RangeOriginPullRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Referer.cs" />
     <Compile Include="Cdn\V20180606\Models\RefererRule.cs" />
     <Compile Include="Cdn\V20180606\Models\RegionMapRelation.cs" />
+    <Compile Include="Cdn\V20180606\Models\RemoteAuthentication.cs" />
+    <Compile Include="Cdn\V20180606\Models\RemoteAuthenticationRule.cs" />
     <Compile Include="Cdn\V20180606\Models\ReportData.cs" />
     <Compile Include="Cdn\V20180606\Models\RequestHeader.cs" />
     <Compile Include="Cdn\V20180606\Models\ResourceBillingData.cs" />
@@ -1379,6 +1386,7 @@
     <Compile Include="Cdn\V20180606\Models\ScdnConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnDdosConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnErrorPage.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnSevenLayerRules.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnWafConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnWafRule.cs" />
     <Compile Include="Cdn\V20180606\Models\SchemeKey.cs" />
@@ -1387,6 +1395,7 @@
     <Compile Include="Cdn\V20180606\Models\SecurityConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\Seo.cs" />
     <Compile Include="Cdn\V20180606\Models\ServerCert.cs" />
+    <Compile Include="Cdn\V20180606\Models\ShareCname.cs" />
     <Compile Include="Cdn\V20180606\Models\SimpleCache.cs" />
     <Compile Include="Cdn\V20180606\Models\SimpleCacheRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Sort.cs" />
@@ -1803,6 +1812,8 @@
     <Compile Include="Clb\V20180317\Models\ModifyListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerAttributesRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerAttributesResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerSlaRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerSlaResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyRuleRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyRuleResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyTargetGroupAttributeRequest.cs" />
@@ -1838,6 +1849,7 @@
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerSecurityGroupsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\SetSecurityGroupForLoadbalancersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\SetSecurityGroupForLoadbalancersResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\SlaUpdateParam.cs" />
     <Compile Include="Clb\V20180317\Models\SnatIp.cs" />
     <Compile Include="Clb\V20180317\Models\TagInfo.cs" />
     <Compile Include="Clb\V20180317\Models\Target.cs" />

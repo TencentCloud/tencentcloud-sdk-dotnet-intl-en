@@ -26,6 +26,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Status code
+        /// `403` is passed in when the action is `intercept`.
+        /// `301` is passed in when the action is `redirect`.
         /// </summary>
         [JsonProperty("RedirectCode")]
         public long? RedirectCode{ get; set; }

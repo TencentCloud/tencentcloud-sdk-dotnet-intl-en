@@ -51,6 +51,7 @@
     <Compile Include="V20180606\Models\AddCdnDomainResponse.cs" />
     <Compile Include="V20180606\Models\AdvanceCacheRule.cs" />
     <Compile Include="V20180606\Models\AdvanceConfig.cs" />
+    <Compile Include="V20180606\Models\AdvanceHttps.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthentication.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeA.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeB.cs" />
@@ -58,7 +59,10 @@
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeD.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeE.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeF.cs" />
+    <Compile Include="V20180606\Models\AdvancedCCRules.cs" />
     <Compile Include="V20180606\Models\AdvancedCache.cs" />
+    <Compile Include="V20180606\Models\AdvancedScdnAclGroup.cs" />
+    <Compile Include="V20180606\Models\AdvancedScdnAclRule.cs" />
     <Compile Include="V20180606\Models\Authentication.cs" />
     <Compile Include="V20180606\Models\AuthenticationTypeA.cs" />
     <Compile Include="V20180606\Models\AuthenticationTypeB.cs" />
@@ -204,9 +208,12 @@
     <Compile Include="V20180606\Models\Quic.cs" />
     <Compile Include="V20180606\Models\Quota.cs" />
     <Compile Include="V20180606\Models\RangeOriginPull.cs" />
+    <Compile Include="V20180606\Models\RangeOriginPullRule.cs" />
     <Compile Include="V20180606\Models\Referer.cs" />
     <Compile Include="V20180606\Models\RefererRule.cs" />
     <Compile Include="V20180606\Models\RegionMapRelation.cs" />
+    <Compile Include="V20180606\Models\RemoteAuthentication.cs" />
+    <Compile Include="V20180606\Models\RemoteAuthenticationRule.cs" />
     <Compile Include="V20180606\Models\ReportData.cs" />
     <Compile Include="V20180606\Models\RequestHeader.cs" />
     <Compile Include="V20180606\Models\ResourceBillingData.cs" />
@@ -226,6 +233,7 @@
     <Compile Include="V20180606\Models\ScdnConfig.cs" />
     <Compile Include="V20180606\Models\ScdnDdosConfig.cs" />
     <Compile Include="V20180606\Models\ScdnErrorPage.cs" />
+    <Compile Include="V20180606\Models\ScdnSevenLayerRules.cs" />
     <Compile Include="V20180606\Models\ScdnWafConfig.cs" />
     <Compile Include="V20180606\Models\ScdnWafRule.cs" />
     <Compile Include="V20180606\Models\SchemeKey.cs" />
@@ -234,6 +242,7 @@
     <Compile Include="V20180606\Models\SecurityConfig.cs" />
     <Compile Include="V20180606\Models\Seo.cs" />
     <Compile Include="V20180606\Models\ServerCert.cs" />
+    <Compile Include="V20180606\Models\ShareCname.cs" />
     <Compile Include="V20180606\Models\SimpleCache.cs" />
     <Compile Include="V20180606\Models\SimpleCacheRule.cs" />
     <Compile Include="V20180606\Models\Sort.cs" />

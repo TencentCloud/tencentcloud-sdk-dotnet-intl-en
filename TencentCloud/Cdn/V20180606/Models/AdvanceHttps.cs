@@ -21,39 +21,44 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScdnAclGroup : AbstractModel
+    public class AdvanceHttps : AbstractModel
     {
         
         /// <summary>
-        /// Rule name
+        /// 
         /// </summary>
-        [JsonProperty("RuleName")]
-        public string RuleName{ get; set; }
+        [JsonProperty("CustomTlsStatus")]
+        public string CustomTlsStatus{ get; set; }
 
         /// <summary>
-        /// Specific configurations
+        /// 
         /// </summary>
-        [JsonProperty("Configure")]
-        public ScdnAclRule[] Configure{ get; set; }
+        [JsonProperty("TlsVersion")]
+        public string[] TlsVersion{ get; set; }
 
         /// <summary>
-        /// Action. Valid values: `intercept` and `redirect`.
+        /// 
         /// </summary>
-        [JsonProperty("Result")]
-        public string Result{ get; set; }
+        [JsonProperty("Cipher")]
+        public string Cipher{ get; set; }
 
         /// <summary>
-        /// Whether the rule is effective. Valid values: `active` and `inactive`.
+        /// 
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("VerifyOriginType")]
+        public string VerifyOriginType{ get; set; }
 
         /// <summary>
-        /// Error page configuration.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
-        [JsonProperty("ErrorPage")]
-        public ScdnErrorPage ErrorPage{ get; set; }
+        [JsonProperty("CertInfo")]
+        public ServerCert CertInfo{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OriginCertInfo")]
+        public ClientCert OriginCertInfo{ get; set; }
 
 
         /// <summary>
@@ -61,11 +66,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
-            this.SetParamArrayObj(map, prefix + "Configure.", this.Configure);
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
+            this.SetParamSimple(map, prefix + "CustomTlsStatus", this.CustomTlsStatus);
+            this.SetParamArraySimple(map, prefix + "TlsVersion.", this.TlsVersion);
+            this.SetParamSimple(map, prefix + "Cipher", this.Cipher);
+            this.SetParamSimple(map, prefix + "VerifyOriginType", this.VerifyOriginType);
+            this.SetParamObj(map, prefix + "CertInfo.", this.CertInfo);
+            this.SetParamObj(map, prefix + "OriginCertInfo.", this.OriginCertInfo);
         }
     }
 }

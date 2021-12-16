@@ -192,9 +192,10 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Domain name acceleration region
-        /// mainland: acceleration inside mainland China
-        /// overseas: acceleration outside mainland China
-        /// global: global acceleration
+        /// `mainland`: acceleration inside the Chinese mainland
+        /// `overseas`: acceleration outside the Chinese mainland
+        /// `global`: global acceleration
+        /// When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -224,7 +225,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public AccessControl AccessControl{ get; set; }
 
         /// <summary>
-        /// URL redirect configuration
+        /// Configuration of URL rewriting
         /// </summary>
         [JsonProperty("UrlRedirect")]
         public UrlRedirect UrlRedirect{ get; set; }
@@ -283,6 +284,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
+        /// <summary>
+        /// Configuration of remote authentication
+        /// </summary>
+        [JsonProperty("RemoteAuthentication")]
+        public RemoteAuthentication RemoteAuthentication{ get; set; }
+
+        /// <summary>
+        /// Shared CNAME configuration (only available to beta users)
+        /// </summary>
+        [JsonProperty("ShareCname")]
+        public ShareCname ShareCname{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -331,6 +344,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
+            this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
+            this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
         }
     }
 }

@@ -32,8 +32,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
-        /// SQL execution duration.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// SQL execution duration in seconds.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QueryTime")]
         public float? QueryTime{ get; set; }
@@ -67,8 +67,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// Lock duration.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Lock duration in seconds.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LockTime")]
         public float? LockTime{ get; set; }

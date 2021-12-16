@@ -142,8 +142,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public FollowRedirect FollowRedirect{ get; set; }
 
         /// <summary>
-        /// Custom error page configuration (in beta)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Configuration of custom error page
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorPage")]
         public ErrorPage ErrorPage{ get; set; }
@@ -393,21 +393,21 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Ipv6Access Ipv6Access{ get; set; }
 
         /// <summary>
-        /// Advanced configuration set
+        /// Advanced configuration settings
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdvanceSet")]
         public AdvanceConfig[] AdvanceSet{ get; set; }
 
         /// <summary>
-        /// Offline cache
+        /// Offline cache (only available to beta users)
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OfflineCache")]
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// Merging pull requests
+        /// Merging origin-pull requests (only available to beta users)
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginCombine")]
@@ -440,6 +440,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
+
+        /// <summary>
+        /// Remote authentication configuration
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RemoteAuthentication")]
+        public RemoteAuthentication RemoteAuthentication{ get; set; }
+
+        /// <summary>
+        /// Shared CNAME configuration (only available to beta users)
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ShareCname")]
+        public ShareCname ShareCname{ get; set; }
 
 
         /// <summary>
@@ -505,6 +519,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
+            this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
+            this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
         }
     }
 }

@@ -32,18 +32,25 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// CLS logset ID
+        /// <li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+        /// <li>To delete the log set, set this parameter to `null`.</li>
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
         /// CLS log topic ID
+        /// <li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+        /// <li>To delete the log set, set this parameter to `null`.</li>
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
         /// <summary>
-        /// Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+        /// Log type:
+        /// <li>`ACCESS`: access logs</li>
+        /// <li>`HEALTH`: health check logs</li>
+        /// Default: `ACCESS`
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

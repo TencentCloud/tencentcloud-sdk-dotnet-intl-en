@@ -32,14 +32,6 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Compress{ get; set; }
 
         /// <summary>
-        /// Compress according to the file suffix type
-        /// Such as: jpg, txt
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("FileExtensions")]
-        public string[] FileExtensions{ get; set; }
-
-        /// <summary>
         /// The minimum file size to trigger compression (in bytes)
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -63,6 +55,39 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Algorithms")]
         public string[] Algorithms{ get; set; }
 
+        /// <summary>
+        /// Compress according to the file suffix type
+        /// Such as: jpg, txt
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FileExtensions")]
+        public string[] FileExtensions{ get; set; }
+
+        /// <summary>
+        /// Rule types:
+        /// `all`: effective for all files.
+        /// `file`: effective for specified file suffixes.
+        /// `directory`: effective for specified paths.
+        /// `path`: effective for specified absolute paths.
+        /// `contentType`: effective when the `ContentType` is specified
+        /// If this field is specified, `FileExtensions` does not take effect.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// Content for each `CacheType`:
+        /// For `all`, enter a wildcard `*`.
+        /// For `file`, enter a suffix, e.g., `jpg` or `txt`.
+        /// For `directory`, enter a path, e.g., `/xxx/test/`.
+        /// For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+        /// For `contentType`, enter `text/html`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RulePaths")]
+        public string[] RulePaths{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,10 +95,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
-            this.SetParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
             this.SetParamSimple(map, prefix + "MinLength", this.MinLength);
             this.SetParamSimple(map, prefix + "MaxLength", this.MaxLength);
             this.SetParamArraySimple(map, prefix + "Algorithms.", this.Algorithms);
+            this.SetParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
         }
     }
 }

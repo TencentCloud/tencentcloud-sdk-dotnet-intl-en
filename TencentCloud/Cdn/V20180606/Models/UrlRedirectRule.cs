@@ -49,6 +49,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RedirectHost")]
         public string RedirectHost{ get; set; }
 
+        /// <summary>
+        /// Whether to use full-path matching or arbitrary matching
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FullMatch")]
+        public bool? FullMatch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +66,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
             this.SetParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
+            this.SetParamSimple(map, prefix + "FullMatch", this.FullMatch);
         }
     }
 }

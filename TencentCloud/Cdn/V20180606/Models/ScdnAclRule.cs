@@ -25,19 +25,19 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
+        /// Keyword
         /// </summary>
         [JsonProperty("MatchKey")]
         public string MatchKey{ get; set; }
 
         /// <summary>
-        /// Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
+        /// Logical operator. Valid values:
         /// </summary>
         [JsonProperty("LogiOperator")]
         public string LogiOperator{ get; set; }
 
         /// <summary>
-        /// Match value
+        /// Matched value
         /// </summary>
         [JsonProperty("MatchValue")]
         public string MatchValue{ get; set; }

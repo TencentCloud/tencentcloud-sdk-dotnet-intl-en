@@ -57,6 +57,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FilterRules")]
         public IpFilterPathRule[] FilterRules{ get; set; }
 
+        /// <summary>
+        /// HTTP code returned when the IP allowlist/blocklist verification fails
+        /// Valid values: 400-499
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReturnCode")]
+        public long? ReturnCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +75,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
         }
     }
 }
