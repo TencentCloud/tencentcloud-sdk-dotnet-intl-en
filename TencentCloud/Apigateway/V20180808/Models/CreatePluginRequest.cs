@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string PluginName{ get; set; }
 
         /// <summary>
-        /// Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`
+        /// Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`.
         /// </summary>
         [JsonProperty("PluginType")]
         public string PluginType{ get; set; }

@@ -133,7 +133,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public DBInstanceNetInfo[] DBInstanceNetInfo{ get; set; }
 
         /// <summary>
-        /// Network access list of the RO group
+        /// Network access list of the RO group (this field has been deprecated)
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetworkAccessList")]

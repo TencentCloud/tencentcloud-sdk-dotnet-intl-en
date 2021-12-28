@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.349</VersionPrefix>
+    <VersionPrefix>3.0.350</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5169,18 +5169,25 @@
     <Compile Include="Postgres\V20170312\Models\ZoneInfo.cs" />
     <Compile Include="Privatedns\V20201028\PrivatednsClient.cs" />
     <Compile Include="Privatedns\V20201028\Models\AccountVpcInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\AccountVpcInfoOut.cs" />
     <Compile Include="Privatedns\V20201028\Models\AccountVpcInfoOutput.cs" />
     <Compile Include="Privatedns\V20201028\Models\AuditLog.cs" />
     <Compile Include="Privatedns\V20201028\Models\AuditLogInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\CreatePrivateDNSAccountRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\CreatePrivateDNSAccountResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRecordRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRecordResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DatePoint.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DeletePrivateDNSAccountRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DeletePrivateDNSAccountResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRecordRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRecordResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeAccountVpcListRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeAccountVpcListResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeAuditLogRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeAuditLogResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeDashboardRequest.cs" />

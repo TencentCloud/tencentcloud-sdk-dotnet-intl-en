@@ -25,14 +25,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Network resource ID, instance ID or RO group ID (this field has been deprecated)
+        /// Network resource ID, instance ID, or RO group ID
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+        /// Resource type. Valid values: `1` (instance), `2` (RO group)
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceType")]

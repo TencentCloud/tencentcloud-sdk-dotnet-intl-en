@@ -152,7 +152,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? DamDDoSStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("V6Flag")]
         public ulong? V6Flag{ get; set; }

@@ -57,6 +57,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Granularity")]
         public ulong? Granularity{ get; set; }
 
+        /// <summary>
+        /// Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+        /// </summary>
+        [JsonProperty("Isp")]
+        public string Isp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
             this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
+            this.SetParamSimple(map, prefix + "Isp", this.Isp);
         }
     }
 }

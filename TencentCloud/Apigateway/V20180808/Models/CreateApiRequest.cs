@@ -306,6 +306,30 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ServiceScfFunctionType")]
         public string ServiceScfFunctionType{ get; set; }
 
+        /// <summary>
+        /// EIAM application type.
+        /// </summary>
+        [JsonProperty("EIAMAppType")]
+        public string EIAMAppType{ get; set; }
+
+        /// <summary>
+        /// EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+        /// </summary>
+        [JsonProperty("EIAMAuthType")]
+        public string EIAMAuthType{ get; set; }
+
+        /// <summary>
+        /// Validity of the EIAM application token. Unit: second. Default value: `7200`.
+        /// </summary>
+        [JsonProperty("TokenTimeout")]
+        public long? TokenTimeout{ get; set; }
+
+        /// <summary>
+        /// EIAM application ID.
+        /// </summary>
+        [JsonProperty("EIAMAppId")]
+        public string EIAMAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -359,6 +383,10 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
             this.SetParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
+            this.SetParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
+            this.SetParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
+            this.SetParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
+            this.SetParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
         }
     }
 }
