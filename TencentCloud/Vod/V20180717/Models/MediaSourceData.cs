@@ -25,12 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Source category of media file:
-        /// <li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-        /// <li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-        /// <li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-        /// <li>Unknown: unknown source.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Source of a media file:
+        /// <li>`Record`: recording, such as live or time-shift recording</li>
+        /// <li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+        /// <li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+        /// <li>`WebPageRecord`: panoramic recording </li>
+        /// <li>`Unknown`: unknown source</li>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }

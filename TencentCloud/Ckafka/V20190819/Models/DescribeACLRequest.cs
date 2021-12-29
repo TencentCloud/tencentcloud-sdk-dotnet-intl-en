@@ -31,13 +31,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
+        /// ACL resource type (`2`: TOPIC, `3`: GROUP, `4`: CLUSTER).
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
+        /// Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name; if `resourceType` is `CLUSTER`, this field can be left empty.
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }

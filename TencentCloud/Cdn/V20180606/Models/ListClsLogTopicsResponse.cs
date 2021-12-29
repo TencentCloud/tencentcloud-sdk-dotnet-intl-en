@@ -25,17 +25,24 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Logset information
+        /// Information of logsets in the Shanghai region
         /// </summary>
         [JsonProperty("Logset")]
         public LogSetInfo Logset{ get; set; }
 
         /// <summary>
-        /// Log topic information list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Information of log topics in the Shanghai region
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Topics")]
         public TopicInfo[] Topics{ get; set; }
+
+        /// <summary>
+        /// Information on logsets in regions except Shanghai
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtraLogset")]
+        public ExtraLogset[] ExtraLogset{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,6 +58,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamObj(map, prefix + "Logset.", this.Logset);
             this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
+            this.SetParamArrayObj(map, prefix + "ExtraLogset.", this.ExtraLogset);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

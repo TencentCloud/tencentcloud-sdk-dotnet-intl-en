@@ -228,6 +228,26 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DeleteRouteTimestamp")]
         public string DeleteRouteTimestamp{ get; set; }
 
+        /// <summary>
+        /// Number of remaining creatable partitions
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RemainingPartitions")]
+        public long? RemainingPartitions{ get; set; }
+
+        /// <summary>
+        /// Number of remaining creatable topics
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RemainingTopics")]
+        public long? RemainingTopics{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DynamicDiskConfig")]
+        public DynamicDiskConfig DynamicDiskConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -266,6 +286,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
+            this.SetParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
+            this.SetParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
+            this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
         }
     }
 }

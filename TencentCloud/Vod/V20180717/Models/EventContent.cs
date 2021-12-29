@@ -149,6 +149,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("WechatMiniProgramPublishCompleteEvent")]
         public WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RestoreMediaCompleteEvent")]
+        public RestoreMediaTask RestoreMediaCompleteEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +178,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
             this.SetParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
             this.SetParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
+            this.SetParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
         }
     }
 }

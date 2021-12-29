@@ -117,6 +117,7 @@
     <Compile Include="V20190819\Models\DescribeTopicSyncReplicaResponse.cs" />
     <Compile Include="V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20190819\Models\DynamicDiskConfig.cs" />
     <Compile Include="V20190819\Models\DynamicRetentionTime.cs" />
     <Compile Include="V20190819\Models\FetchMessageByOffsetRequest.cs" />
     <Compile Include="V20190819\Models\FetchMessageByOffsetResponse.cs" />

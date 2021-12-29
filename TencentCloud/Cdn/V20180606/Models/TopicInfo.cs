@@ -56,6 +56,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
+        /// <summary>
+        /// Whether the log topic has been removed from CLS
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Deleted")]
+        public string Deleted{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "Deleted", this.Deleted);
         }
     }
 }

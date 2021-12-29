@@ -494,6 +494,7 @@
     <Compile Include="V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ResolutionNameInfo.cs" />
     <Compile Include="V20180717\Models\ResourceTag.cs" />
+    <Compile Include="V20180717\Models\RestoreMediaTask.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20180717\Models\SearchMediaRequest.cs" />

@@ -1,0 +1,50 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tdmq.V20200217.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class RewindCmqQueueRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
+        /// After this time is configured, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
+        /// </summary>
+        [JsonProperty("StartConsumeTime")]
+        public ulong? StartConsumeTime{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "StartConsumeTime", this.StartConsumeTime);
+        }
+    }
+}
+

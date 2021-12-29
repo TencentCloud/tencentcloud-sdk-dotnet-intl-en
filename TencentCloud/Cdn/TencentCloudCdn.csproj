@@ -152,6 +152,7 @@
     <Compile Include="V20180606\Models\EnableClsLogTopicResponse.cs" />
     <Compile Include="V20180606\Models\ErrorPage.cs" />
     <Compile Include="V20180606\Models\ErrorPageRule.cs" />
+    <Compile Include="V20180606\Models\ExtraLogset.cs" />
     <Compile Include="V20180606\Models\FollowRedirect.cs" />
     <Compile Include="V20180606\Models\ForceRedirect.cs" />
     <Compile Include="V20180606\Models\GetDisableRecordsRequest.cs" />

@@ -73,6 +73,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// Whether the logset has been removed from CLS
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Deleted")]
+        public string Deleted{ get; set; }
+
+        /// <summary>
+        /// Whether English is used in this region
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RegionEn")]
+        public string RegionEn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +101,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "LogsetSavePeriod", this.LogsetSavePeriod);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Deleted", this.Deleted);
+            this.SetParamSimple(map, prefix + "RegionEn", this.RegionEn);
         }
     }
 }

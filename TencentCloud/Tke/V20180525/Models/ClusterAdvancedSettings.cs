@@ -103,7 +103,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string AuditLogTopicId{ get; set; }
 
         /// <summary>
-        /// Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+        /// Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
         /// </summary>
         [JsonProperty("VpcCniType")]
         public string VpcCniType{ get; set; }

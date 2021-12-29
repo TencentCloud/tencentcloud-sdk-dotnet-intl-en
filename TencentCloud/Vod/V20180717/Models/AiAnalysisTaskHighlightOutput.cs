@@ -25,10 +25,23 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of intelligently generated highlights.
+        /// List of intelligently generated highlights
+        /// <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `HighlightSetFileUrl`.
         /// </summary>
         [JsonProperty("HighlightSet")]
         public MediaAiAnalysisHighlightItem[] HighlightSet{ get; set; }
+
+        /// <summary>
+        /// URL to the file for intelligently generated highlights. The file is in JSON format and has the same data structure as `HighlightSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `HighlightSetFileUrlExpireTime`.
+        /// </summary>
+        [JsonProperty("HighlightSetFileUrl")]
+        public string HighlightSetFileUrl{ get; set; }
+
+        /// <summary>
+        /// Expiration time of the URL to the file for intelligently generated highlights, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+        /// </summary>
+        [JsonProperty("HighlightSetFileUrlExpireTime")]
+        public string HighlightSetFileUrlExpireTime{ get; set; }
 
 
         /// <summary>
@@ -37,6 +50,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "HighlightSet.", this.HighlightSet);
+            this.SetParamSimple(map, prefix + "HighlightSetFileUrl", this.HighlightSetFileUrl);
+            this.SetParamSimple(map, prefix + "HighlightSetFileUrlExpireTime", this.HighlightSetFileUrlExpireTime);
         }
     }
 }

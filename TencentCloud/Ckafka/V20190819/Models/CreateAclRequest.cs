@@ -31,25 +31,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
+        /// ACL resource type (`2`: TOPIC, `3`: GROUP, `4`: CLUSTER).
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS
+        /// ACL operation type (`2`: ALL, `3`: READ, `4`: WRITE, `5`: CREATE, `6`: DELETE, `7`: ALTER, `8`: DESCRIBE, `9`: CLUSTER_ACTION, `10`: DESCRIBE_CONFIGS, `11`: ALTER_CONFIGS, `12`: IDEMPOTENT_WRITE).
         /// </summary>
         [JsonProperty("Operation")]
         public long? Operation{ get; set; }
 
         /// <summary>
-        /// Permission type. 0: UNKNOWN, 1: ANY, 2: DENY, 3: ALLOW. Currently, CKafka supports `ALLOW` (equivalent to allowlist), and other fields will be used for future ACLs compatible with open-source Kafka
+        /// Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
         /// </summary>
         [JsonProperty("PermissionType")]
         public long? PermissionType{ get; set; }
 
         /// <summary>
-        /// Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
+        /// Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name; if `resourceType` is `CLUSTER`, this field can be left empty.
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }

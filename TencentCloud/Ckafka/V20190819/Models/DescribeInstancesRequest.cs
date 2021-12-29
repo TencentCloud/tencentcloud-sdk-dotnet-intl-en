@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Tag key match.
+        /// Tag key value (this field has been deprecated).
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }

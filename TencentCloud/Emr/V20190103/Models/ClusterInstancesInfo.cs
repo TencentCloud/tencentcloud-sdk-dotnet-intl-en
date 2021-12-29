@@ -261,6 +261,48 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// Scenario name
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("SceneName")]
+        public string SceneName{ get; set; }
+
+        /// <summary>
+        /// Scenario-based cluster type
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("SceneServiceClass")]
+        public string SceneServiceClass{ get; set; }
+
+        /// <summary>
+        /// Scenario-based EMR version
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("SceneEmrVersion")]
+        public string SceneEmrVersion{ get; set; }
+
+        /// <summary>
+        /// Scenario-based cluster type
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DisplayName")]
+        public string DisplayName{ get; set; }
+
+        /// <summary>
+        /// VPC name
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
+
+        /// <summary>
+        /// Subnet name
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("SubnetName")]
+        public string SubnetName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -297,6 +339,12 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
+            this.SetParamSimple(map, prefix + "SceneServiceClass", this.SceneServiceClass);
+            this.SetParamSimple(map, prefix + "SceneEmrVersion", this.SceneEmrVersion);
+            this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
+            this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
         }
     }
 }
