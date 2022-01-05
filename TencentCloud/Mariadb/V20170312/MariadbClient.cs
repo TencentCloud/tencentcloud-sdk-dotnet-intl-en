@@ -899,6 +899,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to get the download URL of a specific backup or log file of a database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeFileDownloadUrlResponse"/></returns>
+        public async Task<DescribeFileDownloadUrlResponse> DescribeFileDownloadUrl(DescribeFileDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeFileDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFileDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the download URL of a specific backup or log file of a database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeFileDownloadUrlResponse"/></returns>
+        public DescribeFileDownloadUrlResponse DescribeFileDownloadUrlSync(DescribeFileDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeFileDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFileDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query flow status.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowRequest"/></param>

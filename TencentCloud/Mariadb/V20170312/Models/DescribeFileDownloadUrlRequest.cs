@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ClientConnection : AbstractModel
+    public class DescribeFileDownloadUrlRequest : AbstractModel
     {
         
         /// <summary>
-        /// Client IP of a connection
+        /// Instance ID
         /// </summary>
-        [JsonProperty("IP")]
-        public string IP{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of connections corresponding to a client IP
+        /// Unsigned file path
         /// </summary>
-        [JsonProperty("Count")]
-        public ulong? Count{ get; set; }
-
-        /// <summary>
-        /// Whether it is the Tencent Cloud IP for automated testing
-        /// </summary>
-        [JsonProperty("InternalService")]
-        public bool? InternalService{ get; set; }
+        [JsonProperty("FilePath")]
+        public string FilePath{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IP", this.IP);
-            this.SetParamSimple(map, prefix + "Count", this.Count);
-            this.SetParamSimple(map, prefix + "InternalService", this.InternalService);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
         }
     }
 }

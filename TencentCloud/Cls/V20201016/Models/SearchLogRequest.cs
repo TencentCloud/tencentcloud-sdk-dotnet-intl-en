@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
+        /// This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

@@ -541,6 +541,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to query the modifiable parameter list of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public async Task<DescribeInstanceParamsResponse> DescribeInstanceParams(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the modifiable parameter list of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the security groups associated with an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>

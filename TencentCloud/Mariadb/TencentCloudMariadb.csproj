@@ -97,6 +97,8 @@
     <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeFileDownloadUrlRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="V20170312\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20170312\Models\DescribeFlowResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstanceNodeInfoRequest.cs" />

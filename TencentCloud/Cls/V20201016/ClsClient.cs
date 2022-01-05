@@ -133,7 +133,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create an alarm notification template.
+        /// This API is used to create a notification group.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create an alarm notification template.
+        /// This API is used to create a notification group.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -284,6 +284,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "CreateConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a shipping task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerRequest"/></param>
+        /// <returns><see cref="CreateConsumerResponse"/></returns>
+        public async Task<CreateConsumerResponse> CreateConsumer(CreateConsumerRequest req)
+        {
+             JsonResponseModel<CreateConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a shipping task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerRequest"/></param>
+        /// <returns><see cref="CreateConsumerResponse"/></returns>
+        public CreateConsumerResponse CreateConsumerSync(CreateConsumerRequest req)
+        {
+             JsonResponseModel<CreateConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,7 +613,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete an alarm notification template.
+        /// This API is used to delete a notification group.
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmNoticeRequest"/></param>
         /// <returns><see cref="DeleteAlarmNoticeResponse"/></returns>
@@ -593,7 +633,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete an alarm notification template.
+        /// This API is used to delete a notification group.
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmNoticeRequest"/></param>
         /// <returns><see cref="DeleteAlarmNoticeResponse"/></returns>
@@ -764,6 +804,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DeleteConfigFromMachineGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteConfigFromMachineGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a shipping task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
+        /// <returns><see cref="DeleteConsumerResponse"/></returns>
+        public async Task<DeleteConsumerResponse> DeleteConsumer(DeleteConsumerRequest req)
+        {
+             JsonResponseModel<DeleteConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a shipping task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
+        /// <returns><see cref="DeleteConsumerResponse"/></returns>
+        public DeleteConsumerResponse DeleteConsumerSync(DeleteConsumerRequest req)
+        {
+             JsonResponseModel<DeleteConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1013,7 +1093,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of alarm notification templates.
+        /// This API is used to get the notification group list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticesRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticesResponse"/></returns>
@@ -1033,7 +1113,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of alarm notification templates.
+        /// This API is used to get the notification group list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticesRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticesResponse"/></returns>
@@ -1053,7 +1133,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of alarm policies.
+        /// This API is used to get the alarm policy list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmsRequest"/></param>
         /// <returns><see cref="DescribeAlarmsResponse"/></returns>
@@ -1073,7 +1153,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of alarm policies.
+        /// This API is used to get the alarm policy list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmsRequest"/></param>
         /// <returns><see cref="DescribeAlarmsResponse"/></returns>
@@ -1324,6 +1404,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeConfigs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query a shipping task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerRequest"/></param>
+        /// <returns><see cref="DescribeConsumerResponse"/></returns>
+        public async Task<DescribeConsumerResponse> DescribeConsumer(DescribeConsumerRequest req)
+        {
+             JsonResponseModel<DescribeConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query a shipping task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerRequest"/></param>
+        /// <returns><see cref="DescribeConsumerResponse"/></returns>
+        public DescribeConsumerResponse DescribeConsumerSync(DescribeConsumerRequest req)
+        {
+             JsonResponseModel<DescribeConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1893,7 +2013,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify an alarm notification template.
+        /// This API is used to modify a notification group.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmNoticeRequest"/></param>
         /// <returns><see cref="ModifyAlarmNoticeResponse"/></returns>
@@ -1913,7 +2033,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify an alarm notification template.
+        /// This API is used to modify a notification group.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmNoticeRequest"/></param>
         /// <returns><see cref="ModifyAlarmNoticeResponse"/></returns>
@@ -1964,6 +2084,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a shipping task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
+        /// <returns><see cref="ModifyConsumerResponse"/></returns>
+        public async Task<ModifyConsumerResponse> ModifyConsumer(ModifyConsumerRequest req)
+        {
+             JsonResponseModel<ModifyConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a shipping task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
+        /// <returns><see cref="ModifyConsumerResponse"/></returns>
+        public ModifyConsumerResponse ModifyConsumerSync(ModifyConsumerRequest req)
+        {
+             JsonResponseModel<ModifyConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2213,7 +2373,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to search for logs.
+        /// This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent calls to the same log topic cannot exceed 15.
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -2233,7 +2393,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to search for logs.
+        /// This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent calls to the same log topic cannot exceed 15.
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>

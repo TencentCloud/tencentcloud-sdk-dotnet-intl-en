@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Cls.V20201016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ClientConnection : AbstractModel
+    public class DeleteConsumerResponse : AbstractModel
     {
         
         /// <summary>
-        /// Client IP of a connection
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("IP")]
-        public string IP{ get; set; }
-
-        /// <summary>
-        /// Number of connections corresponding to a client IP
-        /// </summary>
-        [JsonProperty("Count")]
-        public ulong? Count{ get; set; }
-
-        /// <summary>
-        /// Whether it is the Tencent Cloud IP for automated testing
-        /// </summary>
-        [JsonProperty("InternalService")]
-        public bool? InternalService{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IP", this.IP);
-            this.SetParamSimple(map, prefix + "Count", this.Count);
-            this.SetParamSimple(map, prefix + "InternalService", this.InternalService);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -76,6 +76,8 @@
     <Compile Include="V20190725\Models\DescribeDBInstanceDealResponse.cs" />
     <Compile Include="V20190725\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="V20190725\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20190725\Models\DescribeInstanceParamsRequest.cs" />
+    <Compile Include="V20190725\Models\DescribeInstanceParamsResponse.cs" />
     <Compile Include="V20190725\Models\DescribeSecurityGroupRequest.cs" />
     <Compile Include="V20190725\Models\DescribeSecurityGroupResponse.cs" />
     <Compile Include="V20190725\Models\DescribeSlowLogPatternsRequest.cs" />
@@ -94,6 +96,10 @@
     <Compile Include="V20190725\Models\InquirePriceRenewDBInstancesResponse.cs" />
     <Compile Include="V20190725\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20190725\Models\InstanceDetail.cs" />
+    <Compile Include="V20190725\Models\InstanceEnumParam.cs" />
+    <Compile Include="V20190725\Models\InstanceIntegerParam.cs" />
+    <Compile Include="V20190725\Models\InstanceMultiParam.cs" />
+    <Compile Include="V20190725\Models\InstanceTextParam.cs" />
     <Compile Include="V20190725\Models\IsolateDBInstanceRequest.cs" />
     <Compile Include="V20190725\Models\IsolateDBInstanceResponse.cs" />
     <Compile Include="V20190725\Models\ModifyDBInstanceSpecRequest.cs" />
