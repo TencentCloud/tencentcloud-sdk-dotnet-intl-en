@@ -453,6 +453,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// This API is used to obtain the diagnosis event list in a specified time period by risk level, instance ID, etc.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagEventsRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagEventsResponse"/></returns>
+        public async Task<DescribeDBDiagEventsResponse> DescribeDBDiagEvents(DescribeDBDiagEventsRequest req)
+        {
+             JsonResponseModel<DescribeDBDiagEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBDiagEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the diagnosis event list in a specified time period by risk level, instance ID, etc.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagEventsRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagEventsResponse"/></returns>
+        public DescribeDBDiagEventsResponse DescribeDBDiagEventsSync(DescribeDBDiagEventsRequest req)
+        {
+             JsonResponseModel<DescribeDBDiagEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBDiagEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of instance diagnosis events.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBDiagHistoryRequest"/></param>

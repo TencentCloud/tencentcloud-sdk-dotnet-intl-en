@@ -66,6 +66,18 @@ namespace TencentCloud.Chdfs.V20201112.Models
         [JsonProperty("RootInodeGroup")]
         public string RootInodeGroup{ get; set; }
 
+        /// <summary>
+        /// Whether to enable verification of Ranger service addresses
+        /// </summary>
+        [JsonProperty("EnableRanger")]
+        public bool? EnableRanger{ get; set; }
+
+        /// <summary>
+        /// List of Ranger service addresses (empty array by default)
+        /// </summary>
+        [JsonProperty("RangerServiceAddresses")]
+        public string[] RangerServiceAddresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
             this.SetParamSimple(map, prefix + "RootInodeUser", this.RootInodeUser);
             this.SetParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);
+            this.SetParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+            this.SetParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
         }
     }
 }

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Chdfs.V20201112.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Transition : AbstractModel
+    public class DescribeDBDiagEventsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Trigger time (in days)
+        /// Total number of diagnosis events.
         /// </summary>
-        [JsonProperty("Days")]
-        public ulong? Days{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+        /// Diagnosis event list.
         /// </summary>
-        [JsonProperty("Type")]
-        public ulong? Type{ get; set; }
+        [JsonProperty("Items")]
+        public DiagHistoryEventItem[] Items{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Chdfs.V20201112.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Days", this.Days);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

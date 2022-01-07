@@ -31,18 +31,32 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public FileSystem FileSystem{ get; set; }
 
         /// <summary>
-        /// Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Used capacity of the file system, in bytes
+        /// Note: this field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("CapacityUsed")]
         public ulong? CapacityUsed{ get; set; }
 
         /// <summary>
-        /// Used ARCHIVE storage capacity (in bytes)
+        /// Used ARCHIVE capacity of COS, in bytes
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ArchiveCapacityUsed")]
         public ulong? ArchiveCapacityUsed{ get; set; }
+
+        /// <summary>
+        /// Used STANDARD capacity of COS, in bytes
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StandardCapacityUsed")]
+        public ulong? StandardCapacityUsed{ get; set; }
+
+        /// <summary>
+        /// Used STANDARD_IA capacity of COS, in bytes
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DegradeCapacityUsed")]
+        public ulong? DegradeCapacityUsed{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -59,6 +73,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamObj(map, prefix + "FileSystem.", this.FileSystem);
             this.SetParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
             this.SetParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
+            this.SetParamSimple(map, prefix + "StandardCapacityUsed", this.StandardCapacityUsed);
+            this.SetParamSimple(map, prefix + "DegradeCapacityUsed", this.DegradeCapacityUsed);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

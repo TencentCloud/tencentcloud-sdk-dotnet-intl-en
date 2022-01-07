@@ -37,7 +37,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// Restoration task type (1: standard; 2: expedited; 3: bulk)
+        /// Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

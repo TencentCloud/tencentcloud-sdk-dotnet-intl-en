@@ -61,6 +61,18 @@ namespace TencentCloud.Chdfs.V20201112.Models
         [JsonProperty("PosixAcl")]
         public bool? PosixAcl{ get; set; }
 
+        /// <summary>
+        /// Whether to enable verification of Ranger service addresses
+        /// </summary>
+        [JsonProperty("EnableRanger")]
+        public bool? EnableRanger{ get; set; }
+
+        /// <summary>
+        /// List of Ranger service addresses, which can be an empty array
+        /// </summary>
+        [JsonProperty("RangerServiceAddresses")]
+        public string[] RangerServiceAddresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +85,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
             this.SetParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
             this.SetParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
+            this.SetParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+            this.SetParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
         }
     }
 }
