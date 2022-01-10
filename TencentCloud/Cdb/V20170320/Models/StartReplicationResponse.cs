@@ -21,7 +21,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyRoGroupInfoResponse : AbstractModel
+    public class StartReplicationResponse : AbstractModel
     {
         
         /// <summary>

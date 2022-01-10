@@ -50,6 +50,7 @@
     <Compile Include="V20170312\Models\AttachDetail.cs" />
     <Compile Include="V20170312\Models\AttachDisksRequest.cs" />
     <Compile Include="V20170312\Models\AttachDisksResponse.cs" />
+    <Compile Include="V20170312\Models\AutoMountConfiguration.cs" />
     <Compile Include="V20170312\Models\AutoSnapshotPolicy.cs" />
     <Compile Include="V20170312\Models\BindAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20170312\Models\BindAutoSnapshotPolicyResponse.cs" />

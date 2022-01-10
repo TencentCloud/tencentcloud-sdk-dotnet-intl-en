@@ -377,6 +377,19 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HealthLogTopicId")]
         public string HealthLogTopicId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
+
+        /// <summary>
+        /// CLB attribute
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AttributeFlags")]
+        public string[] AttributeFlags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -434,6 +447,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
             this.SetParamSimple(map, prefix + "HealthLogSetId", this.HealthLogSetId);
             this.SetParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+            this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         }
     }
 }

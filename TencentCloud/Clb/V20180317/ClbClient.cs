@@ -255,6 +255,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to generate a CLB instance that has the same rules and binding relations as the specified CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloneLoadBalancerRequest"/></param>
+        /// <returns><see cref="CloneLoadBalancerResponse"/></returns>
+        public async Task<CloneLoadBalancerResponse> CloneLoadBalancer(CloneLoadBalancerRequest req)
+        {
+             JsonResponseModel<CloneLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to generate a CLB instance that has the same rules and binding relations as the specified CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloneLoadBalancerRequest"/></param>
+        /// <returns><see cref="CloneLoadBalancerResponse"/></returns>
+        public CloneLoadBalancerResponse CloneLoadBalancerSync(CloneLoadBalancerRequest req)
+        {
+             JsonResponseModel<CloneLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a CLB exclusive logset for storing CLB logs.
         /// </summary>
         /// <param name="req"><see cref="CreateClsLogSetRequest"/></param>
@@ -1426,6 +1466,46 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLoadBalancerListByCertId");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerListByCertIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Queries the total number of CLB instances and the number of CLB instances in different status (running, isolated and about to expire).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerOverviewRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerOverviewResponse"/></returns>
+        public async Task<DescribeLoadBalancerOverviewResponse> DescribeLoadBalancerOverview(DescribeLoadBalancerOverviewRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancerOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancerOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Queries the total number of CLB instances and the number of CLB instances in different status (running, isolated and about to expire).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerOverviewRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerOverviewResponse"/></returns>
+        public DescribeLoadBalancerOverviewResponse DescribeLoadBalancerOverviewSync(DescribeLoadBalancerOverviewRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancerOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancerOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerOverviewResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -61,7 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
 
         /// <summary>
-        /// Configuration information of an existing instance
+        /// The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
         /// </summary>
         [JsonProperty("ExistedInstancesForNode")]
         public ExistedInstancesForNode[] ExistedInstancesForNode{ get; set; }

@@ -108,6 +108,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DeleteSnapshot")]
         public long? DeleteSnapshot{ get; set; }
 
+        /// <summary>
+        /// When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+        /// </summary>
+        [JsonProperty("AutoMountConfiguration")]
+        public AutoMountConfiguration AutoMountConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
             this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+            this.SetParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
         }
     }
 }

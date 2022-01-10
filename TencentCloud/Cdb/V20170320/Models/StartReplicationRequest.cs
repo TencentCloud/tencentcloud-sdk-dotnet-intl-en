@@ -21,11 +21,11 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopDelayReplicationRequest : AbstractModel
+    public class StartReplicationRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Read-Only instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

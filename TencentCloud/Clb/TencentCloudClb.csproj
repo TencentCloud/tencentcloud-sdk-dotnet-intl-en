@@ -69,6 +69,8 @@
     <Compile Include="V20180317\Models\ClassicalLoadBalancerInfo.cs" />
     <Compile Include="V20180317\Models\ClassicalTarget.cs" />
     <Compile Include="V20180317\Models\ClassicalTargetInfo.cs" />
+    <Compile Include="V20180317\Models\CloneLoadBalancerRequest.cs" />
+    <Compile Include="V20180317\Models\CloneLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\ClusterItem.cs" />
     <Compile Include="V20180317\Models\ConfigListItem.cs" />
     <Compile Include="V20180317\Models\CreateClsLogSetRequest.cs" />
@@ -129,6 +131,8 @@
     <Compile Include="V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeLoadBalancerOverviewRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeLoadBalancerOverviewResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerTrafficRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerTrafficResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersDetailRequest.cs" />

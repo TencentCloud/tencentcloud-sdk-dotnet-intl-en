@@ -21,32 +21,14 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartDelayReplicationRequest : AbstractModel
+    public class StopReplicationRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Read-Only instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// Delayed replication mode. Valid values: `DEFAULT` (replicate according to the specified replication delay), `GTID` (replicate according to the specified GTID), `DUE_TIME` (replicate according to the specified point in time).
-        /// </summary>
-        [JsonProperty("DelayReplicationType")]
-        public string DelayReplicationType{ get; set; }
-
-        /// <summary>
-        /// Specified point in time. Default value: 0. The maximum value cannot be later than the current time.
-        /// </summary>
-        [JsonProperty("DueTime")]
-        public long? DueTime{ get; set; }
-
-        /// <summary>
-        /// Specified GITD. This parameter is required when the delayed replication mode is `GTID`.
-        /// </summary>
-        [JsonProperty("Gtid")]
-        public string Gtid{ get; set; }
 
 
         /// <summary>
@@ -55,9 +37,6 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "DelayReplicationType", this.DelayReplicationType);
-            this.SetParamSimple(map, prefix + "DueTime", this.DueTime);
-            this.SetParamSimple(map, prefix + "Gtid", this.Gtid);
         }
     }
 }

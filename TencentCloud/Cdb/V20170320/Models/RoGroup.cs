@@ -118,6 +118,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("RoGroupZone")]
         public string RoGroupZone{ get; set; }
 
+        /// <summary>
+        /// Replication delay.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DelayReplicationTime")]
+        public long? DelayReplicationTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +146,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamSimple(map, prefix + "RoGroupRegion", this.RoGroupRegion);
             this.SetParamSimple(map, prefix + "RoGroupZone", this.RoGroupZone);
+            this.SetParamSimple(map, prefix + "DelayReplicationTime", this.DelayReplicationTime);
         }
     }
 }

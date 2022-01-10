@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyRoReplicationDelayResponse : AbstractModel
+    public class CloneLoadBalancerResponse : AbstractModel
     {
         
         /// <summary>

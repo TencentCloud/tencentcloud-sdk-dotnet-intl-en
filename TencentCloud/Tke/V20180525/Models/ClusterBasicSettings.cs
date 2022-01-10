@@ -78,6 +78,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("NeedWorkSecurityGroup")]
         public bool? NeedWorkSecurityGroup{ get; set; }
 
+        /// <summary>
+        /// When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

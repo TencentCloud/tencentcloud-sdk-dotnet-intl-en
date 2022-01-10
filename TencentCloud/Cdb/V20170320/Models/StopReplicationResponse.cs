@@ -21,9 +21,16 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopDelayReplicationResponse : AbstractModel
+    public class StopReplicationResponse : AbstractModel
     {
         
+        /// <summary>
+        /// Async task ID.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AsyncRequestId")]
+        public string AsyncRequestId{ get; set; }
+
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -36,6 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

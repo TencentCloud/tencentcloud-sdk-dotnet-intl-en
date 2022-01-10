@@ -3283,7 +3283,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to update the information of a TencentDB RO group, such as configuring an instance removal policy in case of excessive delay and setting read weights of RO instances.
+        /// This API is used to update the information of a TencentDB RO group, such as configuring a read-only instance removal policy in case of excessive delay, setting read weights of read-only instances, and setting the replication delay.
         /// </summary>
         /// <param name="req"><see cref="ModifyRoGroupInfoRequest"/></param>
         /// <returns><see cref="ModifyRoGroupInfoResponse"/></returns>
@@ -3303,7 +3303,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to update the information of a TencentDB RO group, such as configuring an instance removal policy in case of excessive delay and setting read weights of RO instances.
+        /// This API is used to update the information of a TencentDB RO group, such as configuring a read-only instance removal policy in case of excessive delay, setting read weights of read-only instances, and setting the replication delay.
         /// </summary>
         /// <param name="req"><see cref="ModifyRoGroupInfoRequest"/></param>
         /// <returns><see cref="ModifyRoGroupInfoResponse"/></returns>
@@ -3314,46 +3314,6 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyRoGroupInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoGroupInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the replication delay of a delayed RO replica.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyRoReplicationDelayRequest"/></param>
-        /// <returns><see cref="ModifyRoReplicationDelayResponse"/></returns>
-        public async Task<ModifyRoReplicationDelayResponse> ModifyRoReplicationDelay(ModifyRoReplicationDelayRequest req)
-        {
-             JsonResponseModel<ModifyRoReplicationDelayResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRoReplicationDelay");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoReplicationDelayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the replication delay of a delayed RO replica.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyRoReplicationDelayRequest"/></param>
-        /// <returns><see cref="ModifyRoReplicationDelayResponse"/></returns>
-        public ModifyRoReplicationDelayResponse ModifyRoReplicationDelaySync(ModifyRoReplicationDelayRequest req)
-        {
-             JsonResponseModel<ModifyRoReplicationDelayResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRoReplicationDelay");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoReplicationDelayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3663,17 +3623,17 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to start delayed replication on a delayed RO replica.
+        /// This API is used to start the data replication from the source instance to the read-only instance.
         /// </summary>
-        /// <param name="req"><see cref="StartDelayReplicationRequest"/></param>
-        /// <returns><see cref="StartDelayReplicationResponse"/></returns>
-        public async Task<StartDelayReplicationResponse> StartDelayReplication(StartDelayReplicationRequest req)
+        /// <param name="req"><see cref="StartReplicationRequest"/></param>
+        /// <returns><see cref="StartReplicationResponse"/></returns>
+        public async Task<StartReplicationResponse> StartReplication(StartReplicationRequest req)
         {
-             JsonResponseModel<StartDelayReplicationResponse> rsp = null;
+             JsonResponseModel<StartReplicationResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "StartDelayReplication");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDelayReplicationResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "StartReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartReplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3683,17 +3643,17 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to start delayed replication on a delayed RO replica.
+        /// This API is used to start the data replication from the source instance to the read-only instance.
         /// </summary>
-        /// <param name="req"><see cref="StartDelayReplicationRequest"/></param>
-        /// <returns><see cref="StartDelayReplicationResponse"/></returns>
-        public StartDelayReplicationResponse StartDelayReplicationSync(StartDelayReplicationRequest req)
+        /// <param name="req"><see cref="StartReplicationRequest"/></param>
+        /// <returns><see cref="StartReplicationResponse"/></returns>
+        public StartReplicationResponse StartReplicationSync(StartReplicationRequest req)
         {
-             JsonResponseModel<StartDelayReplicationResponse> rsp = null;
+             JsonResponseModel<StartReplicationResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "StartDelayReplication");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDelayReplicationResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "StartReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartReplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3743,17 +3703,17 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to stop delayed replication on a delayed RO replica.
+        /// This API is used to stop the data replication from the source instance to the read-only instance.
         /// </summary>
-        /// <param name="req"><see cref="StopDelayReplicationRequest"/></param>
-        /// <returns><see cref="StopDelayReplicationResponse"/></returns>
-        public async Task<StopDelayReplicationResponse> StopDelayReplication(StopDelayReplicationRequest req)
+        /// <param name="req"><see cref="StopReplicationRequest"/></param>
+        /// <returns><see cref="StopReplicationResponse"/></returns>
+        public async Task<StopReplicationResponse> StopReplication(StopReplicationRequest req)
         {
-             JsonResponseModel<StopDelayReplicationResponse> rsp = null;
+             JsonResponseModel<StopReplicationResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "StopDelayReplication");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDelayReplicationResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "StopReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopReplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3763,17 +3723,17 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to stop delayed replication on a delayed RO replica.
+        /// This API is used to stop the data replication from the source instance to the read-only instance.
         /// </summary>
-        /// <param name="req"><see cref="StopDelayReplicationRequest"/></param>
-        /// <returns><see cref="StopDelayReplicationResponse"/></returns>
-        public StopDelayReplicationResponse StopDelayReplicationSync(StopDelayReplicationRequest req)
+        /// <param name="req"><see cref="StopReplicationRequest"/></param>
+        /// <returns><see cref="StopReplicationResponse"/></returns>
+        public StopReplicationResponse StopReplicationSync(StopReplicationRequest req)
         {
-             JsonResponseModel<StopDelayReplicationResponse> rsp = null;
+             JsonResponseModel<StopReplicationResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "StopDelayReplication");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDelayReplicationResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "StopReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopReplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,21 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartDelayReplicationResponse : AbstractModel
+    public class DescribeLoadBalancerOverviewResponse : AbstractModel
     {
         
         /// <summary>
-        /// Delayed replication task ID. This parameter will be returned if `DelayReplicationType` is not `DEFAULT`. It can be used to view the status of the delayed replication task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total number of CLB instances
         /// </summary>
-        [JsonProperty("AsyncRequestId")]
-        public string AsyncRequestId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// Number of CLB instances that are running
+        /// </summary>
+        [JsonProperty("RunningCount")]
+        public long? RunningCount{ get; set; }
+
+        /// <summary>
+        /// Number of CLB instances that are isolated
+        /// </summary>
+        [JsonProperty("IsolationCount")]
+        public long? IsolationCount{ get; set; }
+
+        /// <summary>
+        /// Number of CLB instances that are about to expire
+        /// </summary>
+        [JsonProperty("WillExpireCount")]
+        public long? WillExpireCount{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,7 +60,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RunningCount", this.RunningCount);
+            this.SetParamSimple(map, prefix + "IsolationCount", this.IsolationCount);
+            this.SetParamSimple(map, prefix + "WillExpireCount", this.WillExpireCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

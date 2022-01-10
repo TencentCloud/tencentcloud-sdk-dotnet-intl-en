@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Cbs.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyRoReplicationDelayRequest : AbstractModel
+    public class AutoMountConfiguration : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// ID of the instance to which the cloud disk is attached.
         /// </summary>
         [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        public string[] InstanceId{ get; set; }
 
         /// <summary>
-        /// Replication delay in seconds. Value range: 1 to 259200.
+        /// Path to the mount point in the CVM
         /// </summary>
-        [JsonProperty("ReplicationDelay")]
-        public long? ReplicationDelay{ get; set; }
+        [JsonProperty("MountPoint")]
+        public string[] MountPoint{ get; set; }
+
+        /// <summary>
+        /// File system type. Supported: ext4 and xfs.
+        /// </summary>
+        [JsonProperty("FileSystemType")]
+        public string FileSystemType{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ReplicationDelay", this.ReplicationDelay);
+            this.SetParamArraySimple(map, prefix + "InstanceId.", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "MountPoint.", this.MountPoint);
+            this.SetParamSimple(map, prefix + "FileSystemType", this.FileSystemType);
         }
     }
 }

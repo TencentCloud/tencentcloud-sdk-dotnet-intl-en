@@ -235,8 +235,6 @@
     <Compile Include="V20170320\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="V20170320\Models\ModifyRoGroupInfoRequest.cs" />
     <Compile Include="V20170320\Models\ModifyRoGroupInfoResponse.cs" />
-    <Compile Include="V20170320\Models\ModifyRoReplicationDelayRequest.cs" />
-    <Compile Include="V20170320\Models\ModifyRoReplicationDelayResponse.cs" />
     <Compile Include="V20170320\Models\ModifyTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\OfflineIsolatedInstancesRequest.cs" />
@@ -279,12 +277,12 @@
     <Compile Include="V20170320\Models\SqlFileInfo.cs" />
     <Compile Include="V20170320\Models\StartBatchRollbackRequest.cs" />
     <Compile Include="V20170320\Models\StartBatchRollbackResponse.cs" />
-    <Compile Include="V20170320\Models\StartDelayReplicationRequest.cs" />
-    <Compile Include="V20170320\Models\StartDelayReplicationResponse.cs" />
+    <Compile Include="V20170320\Models\StartReplicationRequest.cs" />
+    <Compile Include="V20170320\Models\StartReplicationResponse.cs" />
     <Compile Include="V20170320\Models\StopDBImportJobRequest.cs" />
     <Compile Include="V20170320\Models\StopDBImportJobResponse.cs" />
-    <Compile Include="V20170320\Models\StopDelayReplicationRequest.cs" />
-    <Compile Include="V20170320\Models\StopDelayReplicationResponse.cs" />
+    <Compile Include="V20170320\Models\StopReplicationRequest.cs" />
+    <Compile Include="V20170320\Models\StopReplicationResponse.cs" />
     <Compile Include="V20170320\Models\StopRollbackRequest.cs" />
     <Compile Include="V20170320\Models\StopRollbackResponse.cs" />
     <Compile Include="V20170320\Models\SwitchDBInstanceMasterSlaveRequest.cs" />

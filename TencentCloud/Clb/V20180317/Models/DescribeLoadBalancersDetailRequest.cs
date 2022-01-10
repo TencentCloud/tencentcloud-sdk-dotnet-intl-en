@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// List of fields to be returned. The `LoadBalancerId` and `LoadBalancerName` are returned by default.
+        /// List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }

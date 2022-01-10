@@ -108,6 +108,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
+        /// <summary>
+        /// Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+        /// </summary>
+        [JsonProperty("CrossCluster")]
+        public long? CrossCluster{ get; set; }
+
+        /// <summary>
+        /// New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+            this.SetParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

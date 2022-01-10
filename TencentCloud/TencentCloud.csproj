@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.355</VersionPrefix>
+    <VersionPrefix>3.0.356</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -864,6 +864,7 @@
     <Compile Include="Cbs\V20170312\Models\AttachDetail.cs" />
     <Compile Include="Cbs\V20170312\Models\AttachDisksRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\AttachDisksResponse.cs" />
+    <Compile Include="Cbs\V20170312\Models\AutoMountConfiguration.cs" />
     <Compile Include="Cbs\V20170312\Models\AutoSnapshotPolicy.cs" />
     <Compile Include="Cbs\V20170312\Models\BindAutoSnapshotPolicyRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\BindAutoSnapshotPolicyResponse.cs" />
@@ -1126,8 +1127,6 @@
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoGroupInfoRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoGroupInfoResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyRoReplicationDelayRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyRoReplicationDelayResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\OfflineIsolatedInstancesRequest.cs" />
@@ -1170,12 +1169,12 @@
     <Compile Include="Cdb\V20170320\Models\SqlFileInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\StartBatchRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StartBatchRollbackResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\StartDelayReplicationRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\StartDelayReplicationResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\StartReplicationRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\StartReplicationResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopDBImportJobRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StopDBImportJobResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\StopDelayReplicationRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\StopDelayReplicationResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\StopReplicationRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\StopReplicationResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchDBInstanceMasterSlaveRequest.cs" />
@@ -1701,6 +1700,8 @@
     <Compile Include="Clb\V20180317\Models\ClassicalLoadBalancerInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTarget.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTargetInfo.cs" />
+    <Compile Include="Clb\V20180317\Models\CloneLoadBalancerRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\CloneLoadBalancerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ClusterItem.cs" />
     <Compile Include="Clb\V20180317\Models\ConfigListItem.cs" />
     <Compile Include="Clb\V20180317\Models\CreateClsLogSetRequest.cs" />
@@ -1761,6 +1762,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerOverviewRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerOverviewResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerTrafficRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerTrafficResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancersDetailRequest.cs" />
