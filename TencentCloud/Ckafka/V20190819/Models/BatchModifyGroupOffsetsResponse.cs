@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SwitchDrToMasterRequest : AbstractModel
+    public class BatchModifyGroupOffsetsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Disaster recovery instance information
+        /// Returned result.
         /// </summary>
-        [JsonProperty("DstInfo")]
-        public SyncInstanceInfo DstInfo{ get; set; }
+        [JsonProperty("Result")]
+        public JgwOperateResponse Result{ get; set; }
 
         /// <summary>
-        /// Database type (such as MySQL)
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("DatabaseType")]
-        public string DatabaseType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
-            this.SetParamSimple(map, prefix + "DatabaseType", this.DatabaseType);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

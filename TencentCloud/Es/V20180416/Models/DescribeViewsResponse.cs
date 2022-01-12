@@ -15,15 +15,36 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartSyncJobResponse : AbstractModel
+    public class DescribeViewsResponse : AbstractModel
     {
         
+        /// <summary>
+        /// Cluster view
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ClusterView")]
+        public ClusterView ClusterView{ get; set; }
+
+        /// <summary>
+        /// Node view
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("NodesView")]
+        public NodeView[] NodesView{ get; set; }
+
+        /// <summary>
+        /// Kibana view
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("KibanasView")]
+        public KibanaView[] KibanasView{ get; set; }
+
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -36,6 +57,9 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "ClusterView.", this.ClusterView);
+            this.SetParamArrayObj(map, prefix + "NodesView.", this.NodesView);
+            this.SetParamArrayObj(map, prefix + "KibanasView.", this.KibanasView);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// PostgreSQL kernel version number
+        /// PostgerSQL version number
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
@@ -84,6 +84,20 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// PostgreSQL major version number
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MajorVersion")]
+        public string MajorVersion{ get; set; }
+
+        /// <summary>
+        /// PostgreSQL kernel version number
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KernelVersion")]
+        public string KernelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +114,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Qps", this.Qps);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "MajorVersion", this.MajorVersion);
+            this.SetParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
         }
     }
 }

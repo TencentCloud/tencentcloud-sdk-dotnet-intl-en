@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SyncCheckStepInfo : AbstractModel
+    public class DescribeViewsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Step number
+        /// Cluster instance ID
         /// </summary>
-        [JsonProperty("StepNo")]
-        public ulong? StepNo{ get; set; }
-
-        /// <summary>
-        /// Step name
-        /// </summary>
-        [JsonProperty("StepName")]
-        public string StepName{ get; set; }
-
-        /// <summary>
-        /// Code of the step execution result
-        /// </summary>
-        [JsonProperty("StepCode")]
-        public long? StepCode{ get; set; }
-
-        /// <summary>
-        /// Message about the step execution result
-        /// </summary>
-        [JsonProperty("StepMessage")]
-        public string StepMessage{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StepNo", this.StepNo);
-            this.SetParamSimple(map, prefix + "StepName", this.StepName);
-            this.SetParamSimple(map, prefix + "StepCode", this.StepCode);
-            this.SetParamSimple(map, prefix + "StepMessage", this.StepMessage);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

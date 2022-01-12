@@ -25,25 +25,29 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 
+        /// Percentage of dynamic disk expansion each time.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StepForwardPercentage")]
         public long? StepForwardPercentage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskQuotaPercentage")]
         public long? DiskQuotaPercentage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Max disk space in GB.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxDiskSpace")]
         public long? MaxDiskSpace{ get; set; }

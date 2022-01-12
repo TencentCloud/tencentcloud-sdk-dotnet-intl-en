@@ -89,6 +89,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Physical")]
         public string Physical{ get; set; }
 
+        /// <summary>
+        /// Public network bandwidth.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublicNetwork")]
+        public string PublicNetwork{ get; set; }
+
+        /// <summary>
+        /// Public network bandwidth configuration.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublicNetworkLimit")]
+        public string PublicNetworkLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +119,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "StandardS2", this.StandardS2);
             this.SetParamSimple(map, prefix + "Profession", this.Profession);
             this.SetParamSimple(map, prefix + "Physical", this.Physical);
+            this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+            this.SetParamSimple(map, prefix + "PublicNetworkLimit", this.PublicNetworkLimit);
         }
     }
 }

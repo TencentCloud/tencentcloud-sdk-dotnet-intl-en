@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SyncStepDetailInfo : AbstractModel
+    public class BatchModifyGroupOffsetsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Step number
+        /// Consumer group name.
         /// </summary>
-        [JsonProperty("StepNo")]
-        public ulong? StepNo{ get; set; }
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
 
         /// <summary>
-        /// Step name
+        /// Instance name.
         /// </summary>
-        [JsonProperty("StepName")]
-        public string StepName{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether it can be stopped
+        /// Partition information.
         /// </summary>
-        [JsonProperty("CanStop")]
-        public long? CanStop{ get; set; }
+        [JsonProperty("Partitions")]
+        public Partitions[] Partitions{ get; set; }
 
         /// <summary>
-        /// Step ID
+        /// Name of the specified topic. Default value: names of all topics.
         /// </summary>
-        [JsonProperty("StepId")]
-        public long? StepId{ get; set; }
+        [JsonProperty("TopicName")]
+        public string[] TopicName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StepNo", this.StepNo);
-            this.SetParamSimple(map, prefix + "StepName", this.StepName);
-            this.SetParamSimple(map, prefix + "CanStop", this.CanStop);
-            this.SetParamSimple(map, prefix + "StepId", this.StepId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+            this.SetParamArraySimple(map, prefix + "TopicName.", this.TopicName);
         }
     }
 }

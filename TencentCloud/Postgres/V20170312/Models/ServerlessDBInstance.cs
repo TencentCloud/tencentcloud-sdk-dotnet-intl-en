@@ -136,6 +136,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
 
+        /// <summary>
+        /// Database major version number
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DBMajorVersion")]
+        public string DBMajorVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArraySimple(map, prefix + "DBDatabaseList.", this.DBDatabaseList);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+            this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         }
     }
 }

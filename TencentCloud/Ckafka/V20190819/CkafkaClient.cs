@@ -93,6 +93,86 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to batch modify consumer group offsets.
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyGroupOffsetsRequest"/></param>
+        /// <returns><see cref="BatchModifyGroupOffsetsResponse"/></returns>
+        public async Task<BatchModifyGroupOffsetsResponse> BatchModifyGroupOffsets(BatchModifyGroupOffsetsRequest req)
+        {
+             JsonResponseModel<BatchModifyGroupOffsetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchModifyGroupOffsets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyGroupOffsetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch modify consumer group offsets.
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyGroupOffsetsRequest"/></param>
+        /// <returns><see cref="BatchModifyGroupOffsetsResponse"/></returns>
+        public BatchModifyGroupOffsetsResponse BatchModifyGroupOffsetsSync(BatchModifyGroupOffsetsRequest req)
+        {
+             JsonResponseModel<BatchModifyGroupOffsetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchModifyGroupOffsets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyGroupOffsetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch set topic attributes.
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyTopicAttributesRequest"/></param>
+        /// <returns><see cref="BatchModifyTopicAttributesResponse"/></returns>
+        public async Task<BatchModifyTopicAttributesResponse> BatchModifyTopicAttributes(BatchModifyTopicAttributesRequest req)
+        {
+             JsonResponseModel<BatchModifyTopicAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchModifyTopicAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTopicAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch set topic attributes.
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyTopicAttributesRequest"/></param>
+        /// <returns><see cref="BatchModifyTopicAttributesResponse"/></returns>
+        public BatchModifyTopicAttributesResponse BatchModifyTopicAttributesSync(BatchModifyTopicAttributesRequest req)
+        {
+             JsonResponseModel<BatchModifyTopicAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchModifyTopicAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTopicAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add an ACL policy.
         /// </summary>
         /// <param name="req"><see cref="CreateAclRequest"/></param>
@@ -773,7 +853,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get instance attributes.
+        /// This API is used to get instance attributes. 
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAttributesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAttributesResponse"/></returns>
@@ -793,7 +873,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get instance attributes.
+        /// This API is used to get instance attributes. 
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAttributesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAttributesResponse"/></returns>

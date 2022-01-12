@@ -15,44 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSyncCheckJobResponse : AbstractModel
+    public class BatchModifyTopicAttributesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Task check status: starting, running, finished
+        /// Returned result.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// Code of the task check result
-        /// </summary>
-        [JsonProperty("ErrorCode")]
-        public long? ErrorCode{ get; set; }
-
-        /// <summary>
-        /// Prompt message
-        /// </summary>
-        [JsonProperty("ErrorMessage")]
-        public string ErrorMessage{ get; set; }
-
-        /// <summary>
-        /// Description of a task execution step
-        /// </summary>
-        [JsonProperty("StepInfo")]
-        public SyncCheckStepInfo[] StepInfo{ get; set; }
-
-        /// <summary>
-        /// Check flag. 0: checking; 1: successfully checked
-        /// </summary>
-        [JsonProperty("CheckFlag")]
-        public long? CheckFlag{ get; set; }
+        [JsonProperty("Result")]
+        public BatchModifyTopicResultDTO[] Result{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -66,11 +42,7 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
-            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
-            this.SetParamArrayObj(map, prefix + "StepInfo.", this.StepInfo);
-            this.SetParamSimple(map, prefix + "CheckFlag", this.CheckFlag);
+            this.SetParamArrayObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

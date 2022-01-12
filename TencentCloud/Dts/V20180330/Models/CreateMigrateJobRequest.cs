@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public MigrateOption MigrateOption{ get; set; }
 
         /// <summary>
-        /// Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+        /// Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public SrcInfo SrcInfo{ get; set; }
 
         /// <summary>
-        /// Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+        /// Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }
@@ -75,16 +75,18 @@ namespace TencentCloud.Dts.V20180330.Models
         /// <summary>
         /// Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
         /// For databases with a database-table structure:
-        /// [{Database:db1,Table:[table1,table2]},{Database:db2}]
+        /// [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
         /// For databases with a database-schema-table structure:
-        /// [{Database:db1,Schema:s1
-        /// Table:[table1,table2]},{Database:db1,Schema:s2
-        /// Table:[table1,table2]},{Database:db2,Schema:s1
-        /// Table:[table1,table2]},{Database:db3},{Database:db4
-        /// Schema:s1}]
+        /// [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
         /// </summary>
         [JsonProperty("DatabaseInfo")]
         public string DatabaseInfo{ get; set; }
+
+        /// <summary>
+        /// Tag of the instance to be migrated.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItem[] Tags{ get; set; }
 
 
         /// <summary>
@@ -101,6 +103,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
             this.SetParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

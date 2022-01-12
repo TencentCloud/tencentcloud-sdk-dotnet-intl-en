@@ -15,38 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SyncOption : AbstractModel
+    public class BatchModifyTopicResultDTO : AbstractModel
     {
         
         /// <summary>
-        /// Sync object. 1: entire instance; 2: specified table
+        /// Instance ID.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SyncObject")]
-        public ulong? SyncObject{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Sync start configuration. 1: start immediately
+        /// Topic name.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RunMode")]
-        public ulong? RunMode{ get; set; }
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
 
         /// <summary>
-        /// Sync mode. 3: full + incremental sync
+        /// Status code.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SyncType")]
-        public ulong? SyncType{ get; set; }
+        [JsonProperty("ReturnCode")]
+        public string ReturnCode{ get; set; }
 
         /// <summary>
-        /// Data consistency check. 1: no configuration required
+        /// Message status.
         /// </summary>
-        [JsonProperty("ConsistencyType")]
-        public ulong? ConsistencyType{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
 
         /// <summary>
@@ -54,10 +57,10 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SyncObject", this.SyncObject);
-            this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
-            this.SetParamSimple(map, prefix + "SyncType", this.SyncType);
-            this.SetParamSimple(map, prefix + "ConsistencyType", this.ConsistencyType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

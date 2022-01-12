@@ -53,6 +53,12 @@
     <Compile Include="V20190819\Models\Assignment.cs" />
     <Compile Include="V20190819\Models\BatchCreateAclRequest.cs" />
     <Compile Include="V20190819\Models\BatchCreateAclResponse.cs" />
+    <Compile Include="V20190819\Models\BatchModifyGroupOffsetsRequest.cs" />
+    <Compile Include="V20190819\Models\BatchModifyGroupOffsetsResponse.cs" />
+    <Compile Include="V20190819\Models\BatchModifyTopicAttributesRequest.cs" />
+    <Compile Include="V20190819\Models\BatchModifyTopicAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\BatchModifyTopicInfo.cs" />
+    <Compile Include="V20190819\Models\BatchModifyTopicResultDTO.cs" />
     <Compile Include="V20190819\Models\ClusterInfo.cs" />
     <Compile Include="V20190819\Models\Config.cs" />
     <Compile Include="V20190819\Models\ConsumerGroup.cs" />
@@ -149,6 +155,7 @@
     <Compile Include="V20190819\Models\OperateResponseData.cs" />
     <Compile Include="V20190819\Models\Partition.cs" />
     <Compile Include="V20190819\Models\PartitionOffset.cs" />
+    <Compile Include="V20190819\Models\Partitions.cs" />
     <Compile Include="V20190819\Models\Price.cs" />
     <Compile Include="V20190819\Models\Region.cs" />
     <Compile Include="V20190819\Models\Route.cs" />

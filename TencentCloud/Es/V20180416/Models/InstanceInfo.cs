@@ -243,42 +243,42 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("WarmNodeType")]
         public string WarmNodeType{ get; set; }
 
         /// <summary>
         /// Number of warm nodes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("WarmNodeNum")]
         public ulong? WarmNodeNum{ get; set; }
 
         /// <summary>
         /// Number of warm node CPU cores
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("WarmCpuNum")]
         public ulong? WarmCpuNum{ get; set; }
 
         /// <summary>
-        /// Warm node memory size in GB
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Warm node memory size (in GB)
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("WarmMemSize")]
         public ulong? WarmMemSize{ get; set; }
 
         /// <summary>
         /// Warm node disk type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("WarmDiskType")]
         public string WarmDiskType{ get; set; }
 
         /// <summary>
-        /// Warm node disk size in GB
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Warm node disk size (in GB)
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("WarmDiskSize")]
         public ulong? WarmDiskSize{ get; set; }
@@ -401,6 +401,90 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
+        /// <summary>
+        /// Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColdNodeType")]
+        public string ColdNodeType{ get; set; }
+
+        /// <summary>
+        /// Number of cold nodes
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColdNodeNum")]
+        public ulong? ColdNodeNum{ get; set; }
+
+        /// <summary>
+        /// Number of cold node CPU cores
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColdCpuNum")]
+        public ulong? ColdCpuNum{ get; set; }
+
+        /// <summary>
+        /// Cold node memory size (in GB)
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColdMemSize")]
+        public ulong? ColdMemSize{ get; set; }
+
+        /// <summary>
+        /// Cold node disk type
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColdDiskType")]
+        public string ColdDiskType{ get; set; }
+
+        /// <summary>
+        /// Cold node disk size (in GB)
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColdDiskSize")]
+        public ulong? ColdDiskSize{ get; set; }
+
+        /// <summary>
+        /// Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("FrozenNodeType")]
+        public string FrozenNodeType{ get; set; }
+
+        /// <summary>
+        /// Number of frozen nodes
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("FrozenNodeNum")]
+        public ulong? FrozenNodeNum{ get; set; }
+
+        /// <summary>
+        /// Number of frozen node CPU cores
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("FrozenCpuNum")]
+        public ulong? FrozenCpuNum{ get; set; }
+
+        /// <summary>
+        /// Frozen node memory size (GB)
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("FrozenMemSize")]
+        public ulong? FrozenMemSize{ get; set; }
+
+        /// <summary>
+        /// Frozen node disk type
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("FrozenDiskType")]
+        public string FrozenDiskType{ get; set; }
+
+        /// <summary>
+        /// Frozen node disk size (in GB)
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("FrozenDiskSize")]
+        public ulong? FrozenDiskSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -466,6 +550,18 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Jdk", this.Jdk);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "ColdNodeType", this.ColdNodeType);
+            this.SetParamSimple(map, prefix + "ColdNodeNum", this.ColdNodeNum);
+            this.SetParamSimple(map, prefix + "ColdCpuNum", this.ColdCpuNum);
+            this.SetParamSimple(map, prefix + "ColdMemSize", this.ColdMemSize);
+            this.SetParamSimple(map, prefix + "ColdDiskType", this.ColdDiskType);
+            this.SetParamSimple(map, prefix + "ColdDiskSize", this.ColdDiskSize);
+            this.SetParamSimple(map, prefix + "FrozenNodeType", this.FrozenNodeType);
+            this.SetParamSimple(map, prefix + "FrozenNodeNum", this.FrozenNodeNum);
+            this.SetParamSimple(map, prefix + "FrozenCpuNum", this.FrozenCpuNum);
+            this.SetParamSimple(map, prefix + "FrozenMemSize", this.FrozenMemSize);
+            this.SetParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
+            this.SetParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
         }
     }
 }

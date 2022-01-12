@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20180416\EsClient.cs" />
+    <Compile Include="V20180416\Models\ClusterView.cs" />
     <Compile Include="V20180416\Models\CosBackup.cs" />
     <Compile Include="V20180416\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20180416\Models\CreateInstanceResponse.cs" />
@@ -56,6 +57,8 @@
     <Compile Include="V20180416\Models\DescribeInstanceOperationsResponse.cs" />
     <Compile Include="V20180416\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20180416\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeViewsRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeViewsResponse.cs" />
     <Compile Include="V20180416\Models\DictInfo.cs" />
     <Compile Include="V20180416\Models\EsAcl.cs" />
     <Compile Include="V20180416\Models\EsDictionaryInfo.cs" />
@@ -66,9 +69,11 @@
     <Compile Include="V20180416\Models\InstanceLog.cs" />
     <Compile Include="V20180416\Models\KeyValue.cs" />
     <Compile Include="V20180416\Models\KibanaNodeInfo.cs" />
+    <Compile Include="V20180416\Models\KibanaView.cs" />
     <Compile Include="V20180416\Models\LocalDiskInfo.cs" />
     <Compile Include="V20180416\Models\MasterNodeInfo.cs" />
     <Compile Include="V20180416\Models\NodeInfo.cs" />
+    <Compile Include="V20180416\Models\NodeView.cs" />
     <Compile Include="V20180416\Models\Operation.cs" />
     <Compile Include="V20180416\Models\OperationDetail.cs" />
     <Compile Include="V20180416\Models\RestartInstanceRequest.cs" />

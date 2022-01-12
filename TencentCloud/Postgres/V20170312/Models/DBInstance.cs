@@ -115,7 +115,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBCharset{ get; set; }
 
         /// <summary>
-        /// PostgreSQL major version
+        /// PostgreSQL version number
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -236,10 +236,17 @@ namespace TencentCloud.Postgres.V20170312.Models
         public NetworkAccess[] NetworkAccessList{ get; set; }
 
         /// <summary>
-        /// 
+        /// PostgreSQL major version number
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DBNodeSet")]
+        public DBNode[] DBNodeSet{ get; set; }
 
 
         /// <summary>
@@ -282,6 +289,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
             this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+            this.SetParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
         }
     }
 }

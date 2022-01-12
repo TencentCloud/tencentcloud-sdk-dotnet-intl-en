@@ -66,6 +66,7 @@
     <Compile Include="V20170312\Models\DBBackup.cs" />
     <Compile Include="V20170312\Models\DBInstance.cs" />
     <Compile Include="V20170312\Models\DBInstanceNetInfo.cs" />
+    <Compile Include="V20170312\Models\DBNode.cs" />
     <Compile Include="V20170312\Models\DeleteReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\DeleteReadOnlyGroupResponse.cs" />
     <Compile Include="V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />

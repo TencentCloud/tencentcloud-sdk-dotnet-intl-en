@@ -253,6 +253,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// This API is used to query view data from three dimensions: cluster, node, and Kibana.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeViewsRequest"/></param>
+        /// <returns><see cref="DescribeViewsResponse"/></returns>
+        public async Task<DescribeViewsResponse> DescribeViews(DescribeViewsRequest req)
+        {
+             JsonResponseModel<DescribeViewsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeViews");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeViewsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query view data from three dimensions: cluster, node, and Kibana.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeViewsRequest"/></param>
+        /// <returns><see cref="DescribeViewsResponse"/></returns>
+        public DescribeViewsResponse DescribeViewsSync(DescribeViewsRequest req)
+        {
+             JsonResponseModel<DescribeViewsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeViews");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeViewsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the node types used to receive client requests.
         /// </summary>
         /// <param name="req"><see cref="GetRequestTargetNodeTypesRequest"/></param>

@@ -243,7 +243,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RemainingTopics{ get; set; }
 
         /// <summary>
-        /// 
+        /// Dynamic disk expansion policy.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DynamicDiskConfig")]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
