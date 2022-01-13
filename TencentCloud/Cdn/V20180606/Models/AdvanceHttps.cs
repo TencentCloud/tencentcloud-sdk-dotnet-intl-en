@@ -25,37 +25,46 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 
+        /// Custom TLS data switch
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CustomTlsStatus")]
         public string CustomTlsStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TlsVersion")]
         public string[] TlsVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom encryption suite
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Cipher")]
         public string Cipher{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin authentication type
+        /// `off`: disable authentication
+        /// `oneWay`: authenticate the origin 
+        /// `twoWay`: two-way authentication
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VerifyOriginType")]
         public string VerifyOriginType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Information of the origin-pull certificate
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertInfo")]
         public ServerCert CertInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Information of the origin server certificate
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginCertInfo")]
         public ClientCert OriginCertInfo{ get; set; }

@@ -130,7 +130,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public PathBasedOriginRule[] PathBasedOrigin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Advanced HTTPS forwarding configuration
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdvanceHttps")]
         public AdvanceHttps AdvanceHttps{ get; set; }
