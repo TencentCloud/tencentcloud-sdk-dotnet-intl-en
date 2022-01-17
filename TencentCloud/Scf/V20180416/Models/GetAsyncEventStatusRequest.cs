@@ -21,23 +21,14 @@ namespace TencentCloud.Scf.V20180416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class GetAsyncEventStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// Fields to be filtered. Up to 10 conditions allowed.
-        /// Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
-        /// Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
-        /// When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+        /// ID of the async execution request
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Filter values of the field
-        /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("InvokeRequestId")]
+        public string InvokeRequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +36,7 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "InvokeRequestId", this.InvokeRequestId);
         }
     }
 }

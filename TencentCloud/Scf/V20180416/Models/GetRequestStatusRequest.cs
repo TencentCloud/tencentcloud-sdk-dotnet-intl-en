@@ -21,7 +21,7 @@ namespace TencentCloud.Scf.V20180416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TerminateAsyncEventRequest : AbstractModel
+    public class GetRequestStatusRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,22 +31,28 @@ namespace TencentCloud.Scf.V20180416.Models
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Terminated invocation request ID
+        /// ID of the request to be queried
         /// </summary>
-        [JsonProperty("InvokeRequestId")]
-        public string InvokeRequestId{ get; set; }
+        [JsonProperty("FunctionRequestId")]
+        public string FunctionRequestId{ get; set; }
 
         /// <summary>
-        /// Namespace
+        /// Function namespace
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Disused
+        /// Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
         /// </summary>
-        [JsonProperty("GraceShutdown")]
-        public bool? GraceShutdown{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -55,9 +61,10 @@ namespace TencentCloud.Scf.V20180416.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
-            this.SetParamSimple(map, prefix + "InvokeRequestId", this.InvokeRequestId);
+            this.SetParamSimple(map, prefix + "FunctionRequestId", this.FunctionRequestId);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
-            this.SetParamSimple(map, prefix + "GraceShutdown", this.GraceShutdown);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

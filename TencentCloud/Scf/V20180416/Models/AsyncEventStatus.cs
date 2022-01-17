@@ -21,23 +21,26 @@ namespace TencentCloud.Scf.V20180416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class AsyncEventStatus : AbstractModel
     {
         
         /// <summary>
-        /// Fields to be filtered. Up to 10 conditions allowed.
-        /// Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
-        /// Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
-        /// When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+        /// Async event status. Values: `RUNNING` (running); `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed).
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// Filter values of the field
+        /// Request status code
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("StatusCode")]
+        public long? StatusCode{ get; set; }
+
+        /// <summary>
+        /// Async execution request ID
+        /// </summary>
+        [JsonProperty("InvokeRequestId")]
+        public string InvokeRequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +48,9 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
+            this.SetParamSimple(map, prefix + "InvokeRequestId", this.InvokeRequestId);
         }
     }
 }

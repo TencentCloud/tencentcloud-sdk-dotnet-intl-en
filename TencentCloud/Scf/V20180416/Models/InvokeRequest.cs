@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string InvocationType{ get; set; }
 
         /// <summary>
-        /// Version number or name of the triggered function
+        /// The version or alias of the triggered function. It defaults to $LATEST
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }

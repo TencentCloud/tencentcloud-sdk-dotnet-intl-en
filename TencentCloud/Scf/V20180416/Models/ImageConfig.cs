@@ -44,7 +44,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// Entry point of the application
+        /// Disused
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EntryPoint")]

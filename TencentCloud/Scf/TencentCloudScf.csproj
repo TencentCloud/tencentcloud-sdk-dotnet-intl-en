@@ -48,6 +48,7 @@
     <Compile Include="V20180416\Models\AccessInfo.cs" />
     <Compile Include="V20180416\Models\Alias.cs" />
     <Compile Include="V20180416\Models\AsyncEvent.cs" />
+    <Compile Include="V20180416\Models\AsyncEventStatus.cs" />
     <Compile Include="V20180416\Models\AsyncTriggerConfig.cs" />
     <Compile Include="V20180416\Models\CfsConfig.cs" />
     <Compile Include="V20180416\Models\CfsInsInfo.cs" />
@@ -89,6 +90,8 @@
     <Compile Include="V20180416\Models\GetAccountResponse.cs" />
     <Compile Include="V20180416\Models\GetAliasRequest.cs" />
     <Compile Include="V20180416\Models\GetAliasResponse.cs" />
+    <Compile Include="V20180416\Models\GetAsyncEventStatusRequest.cs" />
+    <Compile Include="V20180416\Models\GetAsyncEventStatusResponse.cs" />
     <Compile Include="V20180416\Models\GetFunctionAddressRequest.cs" />
     <Compile Include="V20180416\Models\GetFunctionAddressResponse.cs" />
     <Compile Include="V20180416\Models\GetFunctionEventInvokeConfigRequest.cs" />
@@ -101,6 +104,8 @@
     <Compile Include="V20180416\Models\GetLayerVersionResponse.cs" />
     <Compile Include="V20180416\Models\GetProvisionedConcurrencyConfigRequest.cs" />
     <Compile Include="V20180416\Models\GetProvisionedConcurrencyConfigResponse.cs" />
+    <Compile Include="V20180416\Models\GetRequestStatusRequest.cs" />
+    <Compile Include="V20180416\Models\GetRequestStatusResponse.cs" />
     <Compile Include="V20180416\Models\GetReservedConcurrencyConfigRequest.cs" />
     <Compile Include="V20180416\Models\GetReservedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\ImageConfig.cs" />
@@ -145,6 +150,7 @@
     <Compile Include="V20180416\Models\PutReservedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\PutTotalConcurrencyConfigRequest.cs" />
     <Compile Include="V20180416\Models\PutTotalConcurrencyConfigResponse.cs" />
+    <Compile Include="V20180416\Models\RequestStatus.cs" />
     <Compile Include="V20180416\Models\Result.cs" />
     <Compile Include="V20180416\Models\RetryConfig.cs" />
     <Compile Include="V20180416\Models\RoutingConfig.cs" />

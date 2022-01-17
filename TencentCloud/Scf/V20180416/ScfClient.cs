@@ -627,6 +627,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// This API is used to get the status of an async function execution event. The event status is retained for 3*24 hours, counting from the completion of the event.
+        /// </summary>
+        /// <param name="req"><see cref="GetAsyncEventStatusRequest"/></param>
+        /// <returns><see cref="GetAsyncEventStatusResponse"/></returns>
+        public async Task<GetAsyncEventStatusResponse> GetAsyncEventStatus(GetAsyncEventStatusRequest req)
+        {
+             JsonResponseModel<GetAsyncEventStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAsyncEventStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAsyncEventStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the status of an async function execution event. The event status is retained for 3*24 hours, counting from the completion of the event.
+        /// </summary>
+        /// <param name="req"><see cref="GetAsyncEventStatusRequest"/></param>
+        /// <returns><see cref="GetAsyncEventStatusResponse"/></returns>
+        public GetAsyncEventStatusResponse GetAsyncEventStatusSync(GetAsyncEventStatusRequest req)
+        {
+             JsonResponseModel<GetAsyncEventStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAsyncEventStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAsyncEventStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
         /// </summary>
         /// <param name="req"><see cref="GetFunctionRequest"/></param>
@@ -858,6 +898,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "GetProvisionedConcurrencyConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the status of a single function request.
+        /// </summary>
+        /// <param name="req"><see cref="GetRequestStatusRequest"/></param>
+        /// <returns><see cref="GetRequestStatusResponse"/></returns>
+        public async Task<GetRequestStatusResponse> GetRequestStatus(GetRequestStatusRequest req)
+        {
+             JsonResponseModel<GetRequestStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRequestStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the status of a single function request.
+        /// </summary>
+        /// <param name="req"><see cref="GetRequestStatusRequest"/></param>
+        /// <returns><see cref="GetRequestStatusResponse"/></returns>
+        public GetRequestStatusResponse GetRequestStatusSync(GetRequestStatusRequest req)
+        {
+             JsonResponseModel<GetRequestStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRequestStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

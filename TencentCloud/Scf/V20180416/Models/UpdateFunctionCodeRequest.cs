@@ -25,16 +25,16 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-        /// </summary>
-        [JsonProperty("Handler")]
-        public string Handler{ get; set; }
-
-        /// <summary>
         /// Name of the function to be modified
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
+
+        /// <summary>
+        /// Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+        /// </summary>
+        [JsonProperty("Handler")]
+        public string Handler{ get; set; }
 
         /// <summary>
         /// COS bucket name
@@ -67,6 +67,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string CosBucketRegion{ get; set; }
 
         /// <summary>
+        /// Whether to install dependencies automatically
+        /// </summary>
+        [JsonProperty("InstallDependency")]
+        public string InstallDependency{ get; set; }
+
+        /// <summary>
         /// Function environment
         /// </summary>
         [JsonProperty("EnvId")]
@@ -96,13 +102,14 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Handler", this.Handler);
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "Handler", this.Handler);
             this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
             this.SetParamSimple(map, prefix + "CosObjectName", this.CosObjectName);
             this.SetParamSimple(map, prefix + "ZipFile", this.ZipFile);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+            this.SetParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "Publish", this.Publish);
             this.SetParamObj(map, prefix + "Code.", this.Code);
