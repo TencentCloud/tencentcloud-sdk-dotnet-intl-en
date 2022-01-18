@@ -21,27 +21,26 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquirePriceRenewInstancesResponse : AbstractModel
+    public class AttachDetail : AbstractModel
     {
         
         /// <summary>
-        /// Price query information.
+        /// Instance ID
         /// </summary>
-        [JsonProperty("Price")]
-        public Price Price{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List of data disk price information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of elastic cloud disks attached to the instance
         /// </summary>
-        [JsonProperty("DataDiskPriceSet")]
-        public DataDiskPrice[] DataDiskPriceSet{ get; set; }
+        [JsonProperty("AttachedDiskCount")]
+        public long? AttachedDiskCount{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Upper limit of attached elastic cloud disks
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("MaxAttachCount")]
+        public long? MaxAttachCount{ get; set; }
 
 
         /// <summary>
@@ -49,9 +48,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Price.", this.Price);
-            this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AttachedDiskCount", this.AttachedDiskCount);
+            this.SetParamSimple(map, prefix + "MaxAttachCount", this.MaxAttachCount);
         }
     }
 }

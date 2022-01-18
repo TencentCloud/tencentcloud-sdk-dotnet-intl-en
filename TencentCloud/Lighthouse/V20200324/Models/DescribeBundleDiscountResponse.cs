@@ -21,21 +21,20 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquirePriceRenewInstancesResponse : AbstractModel
+    public class DescribeBundleDiscountResponse : AbstractModel
     {
         
         /// <summary>
-        /// Price query information.
+        /// Currency: CNY, USD.
         /// </summary>
-        [JsonProperty("Price")]
-        public Price Price{ get; set; }
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
 
         /// <summary>
-        /// List of data disk price information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Discount tier details. The information of each tier includes the duration, discounted quantity, total price, discounted price, and discount details (user discount, official website discount, or final discount).
         /// </summary>
-        [JsonProperty("DataDiskPriceSet")]
-        public DataDiskPrice[] DataDiskPriceSet{ get; set; }
+        [JsonProperty("DiscountDetail")]
+        public DiscountDetail[] DiscountDetail{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -49,8 +48,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Price.", this.Price);
-            this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamArrayObj(map, prefix + "DiscountDetail.", this.DiscountDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -36,6 +36,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
+        /// <summary>
+        /// Whether to renew the data disk
+        /// </summary>
+        [JsonProperty("RenewDataDisk")]
+        public bool? RenewDataDisk{ get; set; }
+
+        /// <summary>
+        /// Whether the data disk has the same expiration time as the instance
+        /// </summary>
+        [JsonProperty("AlignInstanceExpiredTime")]
+        public bool? AlignInstanceExpiredTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "RenewDataDisk", this.RenewDataDisk);
+            this.SetParamSimple(map, prefix + "AlignInstanceExpiredTime", this.AlignInstanceExpiredTime);
         }
     }
 }

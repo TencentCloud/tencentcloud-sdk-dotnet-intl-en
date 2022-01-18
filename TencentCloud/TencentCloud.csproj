@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.361</VersionPrefix>
+    <VersionPrefix>3.0.362</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3718,6 +3718,9 @@
     <Compile Include="Lighthouse\V20200324\Models\AssociateInstancesKeyPairsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\AttachCcnRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\AttachCcnResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\AttachDetail.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\AttachDisksRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\AttachDisksResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Blueprint.cs" />
     <Compile Include="Lighthouse\V20200324\Models\BlueprintInstance.cs" />
     <Compile Include="Lighthouse\V20200324\Models\BlueprintPrice.cs" />
@@ -3731,6 +3734,7 @@
     <Compile Include="Lighthouse\V20200324\Models\CreateInstanceSnapshotResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateKeyPairRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateKeyPairResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DataDiskPrice.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteBlueprintsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteBlueprintsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteFirewallRulesRequest.cs" />
@@ -3744,10 +3748,22 @@
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeBundleDiscountRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeBundleDiscountResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeCcnAttachedInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeCcnAttachedInstancesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDiskConfigsRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDiskConfigsResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDiskDiscountRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDiskDiscountResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDisksDeniedActionsRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDisksDeniedActionsResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDisksRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDisksResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDisksReturnableRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeDisksReturnableResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeFirewallRulesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeFirewallRulesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeFirewallRulesTemplateRequest.cs" />
@@ -3760,6 +3776,8 @@
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstanceVncUrlResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesDeniedActionsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesDeniedActionsResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesDiskNumRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesDiskNumResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesReturnableRequest.cs" />
@@ -3782,8 +3800,17 @@
     <Compile Include="Lighthouse\V20200324\Models\DescribeZonesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DetachCcnRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DetachCcnResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DetachDisksRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DetachDisksResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DisassociateInstancesKeyPairsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DiscountDetail.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Disk.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DiskChargePrepaid.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DiskConfig.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DiskDeniedActions.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DiskPrice.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DiskReturnable.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Filter.cs" />
     <Compile Include="Lighthouse\V20200324\Models\FirewallRule.cs" />
     <Compile Include="Lighthouse\V20200324\Models\FirewallRuleInfo.cs" />
@@ -3792,8 +3819,12 @@
     <Compile Include="Lighthouse\V20200324\Models\ImportKeyPairResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InquirePriceCreateBlueprintRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InquirePriceCreateBlueprintResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\InquirePriceCreateDisksRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\InquirePriceCreateDisksResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InquirePriceCreateInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InquirePriceCreateInstancesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\InquirePriceRenewDisksRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\InquirePriceRenewDisksResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InquirePriceRenewInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InquirePriceRenewInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Instance.cs" />
@@ -3808,6 +3839,10 @@
     <Compile Include="Lighthouse\V20200324\Models\ModifyBlueprintAttributeRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifyBlueprintAttributeResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifyBundle.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ModifyDisksAttributeRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ModifyDisksAttributeResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ModifyDisksRenewFlagRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ModifyDisksRenewFlagResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifyFirewallRuleDescriptionRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifyFirewallRuleDescriptionResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifyFirewallRulesRequest.cs" />
@@ -3820,10 +3855,12 @@
     <Compile Include="Lighthouse\V20200324\Models\ModifyInstancesRenewFlagResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifySnapshotAttributeRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifySnapshotAttributeResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\PolicyDetail.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Price.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RebootInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RebootInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RegionInfo.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\RenewDiskChargePrepaid.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ResetAttachCcnRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ResetAttachCcnResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ResetInstanceBlueprint.cs" />
@@ -3840,6 +3877,9 @@
     <Compile Include="Lighthouse\V20200324\Models\StopInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\StopInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\SystemDisk.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Tag.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\TerminateDisksRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\TerminateDisksResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\TerminateInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\TerminateInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\TrafficPackage.cs" />

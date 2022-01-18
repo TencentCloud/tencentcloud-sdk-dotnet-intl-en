@@ -21,27 +21,26 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquirePriceRenewInstancesResponse : AbstractModel
+    public class DiskChargePrepaid : AbstractModel
     {
         
         /// <summary>
-        /// Price query information.
+        /// Purchase duration.
         /// </summary>
-        [JsonProperty("Price")]
-        public Price Price{ get; set; }
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
 
         /// <summary>
-        /// List of data disk price information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether Auto-Renewal is enabled 
         /// </summary>
-        [JsonProperty("DataDiskPriceSet")]
-        public DataDiskPrice[] DataDiskPriceSet{ get; set; }
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Purchase duration unit. Default value: "m" (month)
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
 
 
         /// <summary>
@@ -49,9 +48,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Price.", this.Price);
-            this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         }
     }
 }

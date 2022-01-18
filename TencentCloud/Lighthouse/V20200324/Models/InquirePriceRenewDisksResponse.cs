@@ -21,21 +21,14 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquirePriceRenewInstancesResponse : AbstractModel
+    public class InquirePriceRenewDisksResponse : AbstractModel
     {
         
         /// <summary>
-        /// Price query information.
+        /// Cloud disk price.
         /// </summary>
-        [JsonProperty("Price")]
-        public Price Price{ get; set; }
-
-        /// <summary>
-        /// List of data disk price information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DataDiskPriceSet")]
-        public DataDiskPrice[] DataDiskPriceSet{ get; set; }
+        [JsonProperty("DiskPrice")]
+        public DiskPrice DiskPrice{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -49,8 +42,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Price.", this.Price);
-            this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+            this.SetParamObj(map, prefix + "DiskPrice.", this.DiskPrice);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

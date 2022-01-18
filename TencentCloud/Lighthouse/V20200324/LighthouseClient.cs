@@ -191,6 +191,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// This API is used to attach one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="AttachDisksRequest"/></param>
+        /// <returns><see cref="AttachDisksResponse"/></returns>
+        public async Task<AttachDisksResponse> AttachDisks(AttachDisksRequest req)
+        {
+             JsonResponseModel<AttachDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to attach one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="AttachDisksRequest"/></param>
+        /// <returns><see cref="AttachDisksResponse"/></returns>
+        public AttachDisksResponse AttachDisksSync(AttachDisksRequest req)
+        {
+             JsonResponseModel<AttachDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an image.
         /// </summary>
         /// <param name="req"><see cref="CreateBlueprintRequest"/></param>
@@ -631,6 +671,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// This API is used to query the discount information of a package.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBundleDiscountRequest"/></param>
+        /// <returns><see cref="DescribeBundleDiscountResponse"/></returns>
+        public async Task<DescribeBundleDiscountResponse> DescribeBundleDiscount(DescribeBundleDiscountRequest req)
+        {
+             JsonResponseModel<DescribeBundleDiscountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBundleDiscount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBundleDiscountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the discount information of a package.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBundleDiscountRequest"/></param>
+        /// <returns><see cref="DescribeBundleDiscountResponse"/></returns>
+        public DescribeBundleDiscountResponse DescribeBundleDiscountSync(DescribeBundleDiscountRequest req)
+        {
+             JsonResponseModel<DescribeBundleDiscountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBundleDiscount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBundleDiscountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the information of a package.
         /// </summary>
         /// <param name="req"><see cref="DescribeBundlesRequest"/></param>
@@ -702,6 +782,206 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCcnAttachedInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnAttachedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the cloud disk configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskConfigsRequest"/></param>
+        /// <returns><see cref="DescribeDiskConfigsResponse"/></returns>
+        public async Task<DescribeDiskConfigsResponse> DescribeDiskConfigs(DescribeDiskConfigsRequest req)
+        {
+             JsonResponseModel<DescribeDiskConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the cloud disk configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskConfigsRequest"/></param>
+        /// <returns><see cref="DescribeDiskConfigsResponse"/></returns>
+        public DescribeDiskConfigsResponse DescribeDiskConfigsSync(DescribeDiskConfigsRequest req)
+        {
+             JsonResponseModel<DescribeDiskConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiskConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the discount information of a cloud disk.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskDiscountRequest"/></param>
+        /// <returns><see cref="DescribeDiskDiscountResponse"/></returns>
+        public async Task<DescribeDiskDiscountResponse> DescribeDiskDiscount(DescribeDiskDiscountRequest req)
+        {
+             JsonResponseModel<DescribeDiskDiscountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskDiscount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskDiscountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the discount information of a cloud disk.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskDiscountRequest"/></param>
+        /// <returns><see cref="DescribeDiskDiscountResponse"/></returns>
+        public DescribeDiskDiscountResponse DescribeDiskDiscountSync(DescribeDiskDiscountRequest req)
+        {
+             JsonResponseModel<DescribeDiskDiscountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiskDiscount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskDiscountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksRequest"/></param>
+        /// <returns><see cref="DescribeDisksResponse"/></returns>
+        public async Task<DescribeDisksResponse> DescribeDisks(DescribeDisksRequest req)
+        {
+             JsonResponseModel<DescribeDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksRequest"/></param>
+        /// <returns><see cref="DescribeDisksResponse"/></returns>
+        public DescribeDisksResponse DescribeDisksSync(DescribeDisksRequest req)
+        {
+             JsonResponseModel<DescribeDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of operation limits of one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeDisksDeniedActionsResponse"/></returns>
+        public async Task<DescribeDisksDeniedActionsResponse> DescribeDisksDeniedActions(DescribeDisksDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeDisksDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDisksDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of operation limits of one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeDisksDeniedActionsResponse"/></returns>
+        public DescribeDisksDeniedActionsResponse DescribeDisksDeniedActionsSync(DescribeDisksDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeDisksDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDisksDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query whether the specified cloud disk can be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksReturnableRequest"/></param>
+        /// <returns><see cref="DescribeDisksReturnableResponse"/></returns>
+        public async Task<DescribeDisksReturnableResponse> DescribeDisksReturnable(DescribeDisksReturnableRequest req)
+        {
+             JsonResponseModel<DescribeDisksReturnableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDisksReturnable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksReturnableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query whether the specified cloud disk can be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksReturnableRequest"/></param>
+        /// <returns><see cref="DescribeDisksReturnableResponse"/></returns>
+        public DescribeDisksReturnableResponse DescribeDisksReturnableSync(DescribeDisksReturnableRequest req)
+        {
+             JsonResponseModel<DescribeDisksReturnableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDisksReturnable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksReturnableResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1002,6 +1282,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstancesDeniedActions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of cloud disks attached to instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesDiskNumRequest"/></param>
+        /// <returns><see cref="DescribeInstancesDiskNumResponse"/></returns>
+        public async Task<DescribeInstancesDiskNumResponse> DescribeInstancesDiskNum(DescribeInstancesDiskNumRequest req)
+        {
+             JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesDiskNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDiskNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of cloud disks attached to instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesDiskNumRequest"/></param>
+        /// <returns><see cref="DescribeInstancesDiskNumResponse"/></returns>
+        public DescribeInstancesDiskNumResponse DescribeInstancesDiskNumSync(DescribeInstancesDiskNumRequest req)
+        {
+             JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesDiskNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDiskNumResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1411,6 +1731,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// This API is used to detach one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="DetachDisksRequest"/></param>
+        /// <returns><see cref="DetachDisksResponse"/></returns>
+        public async Task<DetachDisksResponse> DetachDisks(DetachDisksRequest req)
+        {
+             JsonResponseModel<DetachDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to detach one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="DetachDisksRequest"/></param>
+        /// <returns><see cref="DetachDisksResponse"/></returns>
+        public DetachDisksResponse DetachDisksSync(DetachDisksRequest req)
+        {
+             JsonResponseModel<DetachDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unbind an instance from the specified key pair.
         /// 
         /// * Only instances on LINUX_UNIX in [RUNNING, STOPPED] status are supported. Instances in `RUNNING` status will be forcibly shut down before unbinding.
@@ -1543,6 +1903,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// This API is used to query the price of purchasing cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDisksResponse"/></returns>
+        public async Task<InquirePriceCreateDisksResponse> InquirePriceCreateDisks(InquirePriceCreateDisksRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of purchasing cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDisksResponse"/></returns>
+        public InquirePriceCreateDisksResponse InquirePriceCreateDisksSync(InquirePriceCreateDisksRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the price of a created instance.
         /// </summary>
         /// <param name="req"><see cref="InquirePriceCreateInstancesRequest"/></param>
@@ -1574,6 +1974,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "InquirePriceCreateInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of renewing cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewDisksResponse"/></returns>
+        public async Task<InquirePriceRenewDisksResponse> InquirePriceRenewDisks(InquirePriceRenewDisksRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenewDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of renewing cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewDisksResponse"/></returns>
+        public InquirePriceRenewDisksResponse InquirePriceRenewDisksSync(InquirePriceRenewDisksRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenewDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDisksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1654,6 +2094,86 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBlueprintAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlueprintAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify cloud disk attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDisksAttributeResponse"/></returns>
+        public async Task<ModifyDisksAttributeResponse> ModifyDisksAttribute(ModifyDisksAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDisksAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDisksAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify cloud disk attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDisksAttributeResponse"/></returns>
+        public ModifyDisksAttributeResponse ModifyDisksAttributeSync(ModifyDisksAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDisksAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDisksAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration of auto-renewal of cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDisksRenewFlagResponse"/></returns>
+        public async Task<ModifyDisksRenewFlagResponse> ModifyDisksRenewFlag(ModifyDisksRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDisksRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration of auto-renewal of cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDisksRenewFlagResponse"/></returns>
+        public ModifyDisksRenewFlagResponse ModifyDisksRenewFlagSync(ModifyDisksRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDisksRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2240,6 +2760,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "StopInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate one or more cloud disk.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDisksRequest"/></param>
+        /// <returns><see cref="TerminateDisksResponse"/></returns>
+        public async Task<TerminateDisksResponse> TerminateDisks(TerminateDisksRequest req)
+        {
+             JsonResponseModel<TerminateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate one or more cloud disk.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDisksRequest"/></param>
+        /// <returns><see cref="TerminateDisksResponse"/></returns>
+        public TerminateDisksResponse TerminateDisksSync(TerminateDisksRequest req)
+        {
+             JsonResponseModel<TerminateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDisksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -21,27 +21,32 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquirePriceRenewInstancesResponse : AbstractModel
+    public class DiskReturnable : AbstractModel
     {
         
         /// <summary>
-        /// Price query information.
+        /// Cloud disk ID.
         /// </summary>
-        [JsonProperty("Price")]
-        public Price Price{ get; set; }
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
         /// <summary>
-        /// List of data disk price information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether the cloud disk can be returned.
         /// </summary>
-        [JsonProperty("DataDiskPriceSet")]
-        public DataDiskPrice[] DataDiskPriceSet{ get; set; }
+        [JsonProperty("IsReturnable")]
+        public bool? IsReturnable{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Error code of cloud disk return failure.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ReturnFailCode")]
+        public long? ReturnFailCode{ get; set; }
+
+        /// <summary>
+        /// Error message of cloud disk return failure.
+        /// </summary>
+        [JsonProperty("ReturnFailMessage")]
+        public string ReturnFailMessage{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Price.", this.Price);
-            this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "IsReturnable", this.IsReturnable);
+            this.SetParamSimple(map, prefix + "ReturnFailCode", this.ReturnFailCode);
+            this.SetParamSimple(map, prefix + "ReturnFailMessage", this.ReturnFailMessage);
         }
     }
 }

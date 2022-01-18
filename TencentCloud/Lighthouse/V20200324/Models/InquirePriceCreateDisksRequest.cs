@@ -21,27 +21,32 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquirePriceRenewInstancesResponse : AbstractModel
+    public class InquirePriceCreateDisksRequest : AbstractModel
     {
         
         /// <summary>
-        /// Price query information.
+        /// Cloud disk size in GB.
         /// </summary>
-        [JsonProperty("Price")]
-        public Price Price{ get; set; }
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// List of data disk price information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Cloud disk media type. Valid values: "CLOUD_PREMIUM" (premium cloud storage), "CLOUD_SSD" (SSD cloud disk).
         /// </summary>
-        [JsonProperty("DataDiskPriceSet")]
-        public DataDiskPrice[] DataDiskPriceSet{ get; set; }
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Parameter settings for purchasing the monthly subscribed cloud disk.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DiskChargePrepaid")]
+        public DiskChargePrepaid DiskChargePrepaid{ get; set; }
+
+        /// <summary>
+        /// Number of cloud disks. Default value: 1.
+        /// </summary>
+        [JsonProperty("DiskCount")]
+        public long? DiskCount{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Price.", this.Price);
-            this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
+            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
         }
     }
 }

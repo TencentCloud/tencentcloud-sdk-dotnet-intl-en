@@ -21,27 +21,38 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquirePriceRenewInstancesResponse : AbstractModel
+    public class DataDiskPrice : AbstractModel
     {
         
         /// <summary>
-        /// Price query information.
+        /// Cloud disk ID.
         /// </summary>
-        [JsonProperty("Price")]
-        public Price Price{ get; set; }
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
         /// <summary>
-        /// List of data disk price information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Cloud disk unit price.
         /// </summary>
-        [JsonProperty("DataDiskPriceSet")]
-        public DataDiskPrice[] DataDiskPriceSet{ get; set; }
+        [JsonProperty("OriginalDiskPrice")]
+        public float? OriginalDiskPrice{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Total cloud disk price.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// Discount.
+        /// </summary>
+        [JsonProperty("Discount")]
+        public float? Discount{ get; set; }
+
+        /// <summary>
+        /// Discounted total price.
+        /// </summary>
+        [JsonProperty("DiscountPrice")]
+        public float? DiscountPrice{ get; set; }
 
 
         /// <summary>
@@ -49,9 +60,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Price.", this.Price);
-            this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "OriginalDiskPrice", this.OriginalDiskPrice);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "Discount", this.Discount);
+            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         }
     }
 }
