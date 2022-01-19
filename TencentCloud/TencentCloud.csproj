@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.362</VersionPrefix>
+    <VersionPrefix>3.0.363</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -440,8 +440,12 @@
     <Compile Include="As\V20180419\AsClient.cs" />
     <Compile Include="As\V20180419\Models\Activity.cs" />
     <Compile Include="As\V20180419\Models\ActivtyRelatedInstance.cs" />
+    <Compile Include="As\V20180419\Models\Advice.cs" />
     <Compile Include="As\V20180419\Models\AttachInstancesRequest.cs" />
     <Compile Include="As\V20180419\Models\AttachInstancesResponse.cs" />
+    <Compile Include="As\V20180419\Models\AttachLoadBalancersRequest.cs" />
+    <Compile Include="As\V20180419\Models\AttachLoadBalancersResponse.cs" />
+    <Compile Include="As\V20180419\Models\AutoScalingAdvice.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingGroup.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingGroupAbstract.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingNotification.cs" />
@@ -480,6 +484,8 @@
     <Compile Include="As\V20180419\Models\DescribeAccountLimitsResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingActivitiesRequest.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingActivitiesResponse.cs" />
+    <Compile Include="As\V20180419\Models\DescribeAutoScalingAdvicesRequest.cs" />
+    <Compile Include="As\V20180419\Models\DescribeAutoScalingAdvicesResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupLastActivitiesRequest.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupLastActivitiesResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupsRequest.cs" />
@@ -498,6 +504,8 @@
     <Compile Include="As\V20180419\Models\DescribeScheduledActionsResponse.cs" />
     <Compile Include="As\V20180419\Models\DetachInstancesRequest.cs" />
     <Compile Include="As\V20180419\Models\DetachInstancesResponse.cs" />
+    <Compile Include="As\V20180419\Models\DetachLoadBalancersRequest.cs" />
+    <Compile Include="As\V20180419\Models\DetachLoadBalancersResponse.cs" />
     <Compile Include="As\V20180419\Models\DetailedStatusMessage.cs" />
     <Compile Include="As\V20180419\Models\DisableAutoScalingGroupRequest.cs" />
     <Compile Include="As\V20180419\Models\DisableAutoScalingGroupResponse.cs" />
@@ -508,6 +516,7 @@
     <Compile Include="As\V20180419\Models\ExecuteScalingPolicyResponse.cs" />
     <Compile Include="As\V20180419\Models\Filter.cs" />
     <Compile Include="As\V20180419\Models\ForwardLoadBalancer.cs" />
+    <Compile Include="As\V20180419\Models\ForwardLoadBalancerIdentification.cs" />
     <Compile Include="As\V20180419\Models\HostNameSettings.cs" />
     <Compile Include="As\V20180419\Models\Instance.cs" />
     <Compile Include="As\V20180419\Models\InstanceChargePrepaid.cs" />
@@ -527,6 +536,8 @@
     <Compile Include="As\V20180419\Models\ModifyDesiredCapacityResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyLaunchConfigurationAttributesRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyLaunchConfigurationAttributesResponse.cs" />
+    <Compile Include="As\V20180419\Models\ModifyLoadBalancerTargetAttributesRequest.cs" />
+    <Compile Include="As\V20180419\Models\ModifyLoadBalancerTargetAttributesResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyLoadBalancersRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyLoadBalancersResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyNotificationConfigurationRequest.cs" />
@@ -1555,6 +1566,7 @@
     <Compile Include="Ckafka\V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\AppIdResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Assignment.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchContent.cs" />
     <Compile Include="Ckafka\V20190819\Models\BatchCreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\BatchCreateAclResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\BatchModifyGroupOffsetsRequest.cs" />
@@ -1665,6 +1677,8 @@
     <Compile Include="Ckafka\V20190819\Models\Route.cs" />
     <Compile Include="Ckafka\V20190819\Models\RouteResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\SaleInfo.cs" />
+    <Compile Include="Ckafka\V20190819\Models\SendMessageRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\SendMessageResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\SubscribedInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\Tag.cs" />
     <Compile Include="Ckafka\V20190819\Models\Topic.cs" />

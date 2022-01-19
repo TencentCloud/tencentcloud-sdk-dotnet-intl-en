@@ -46,7 +46,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API [overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+        /// Number of returned results. The default value is 20. The maximum is 2000. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

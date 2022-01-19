@@ -1413,7 +1413,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// This API is used to get the information of the public key that is encrypted with the asymmetric cryptographic algorithm and of which the `KeyUsage` is `ASYMMETRIC_DECRYPT_RSA_2048` or `ASYMMETRIC_DECRYPT_SM2`. This public key can be used to encrypt data locally, and the data encrypted with it can only be decrypted with the corresponding private key through KMS. The public key can only be obtained from the asymmetric key in `Enabled` state.
+        /// This API is used to get the public key of an asymmetric KMS key (which must be enabled). With the public key, you can encrypt messages and verify signatures.
         /// </summary>
         /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
         /// <returns><see cref="GetPublicKeyResponse"/></returns>
@@ -1433,7 +1433,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// This API is used to get the information of the public key that is encrypted with the asymmetric cryptographic algorithm and of which the `KeyUsage` is `ASYMMETRIC_DECRYPT_RSA_2048` or `ASYMMETRIC_DECRYPT_SM2`. This public key can be used to encrypt data locally, and the data encrypted with it can only be decrypted with the corresponding private key through KMS. The public key can only be obtained from the asymmetric key in `Enabled` state.
+        /// This API is used to get the public key of an asymmetric KMS key (which must be enabled). With the public key, you can encrypt messages and verify signatures.
         /// </summary>
         /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
         /// <returns><see cref="GetPublicKeyResponse"/></returns>
@@ -1453,7 +1453,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// This API is used to obtain the list of supported regions.
+        /// This API is used to return all regions support KMS service.
         /// </summary>
         /// <param name="req"><see cref="GetRegionsRequest"/></param>
         /// <returns><see cref="GetRegionsResponse"/></returns>
@@ -1473,7 +1473,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// This API is used to obtain the list of supported regions.
+        /// This API is used to return all regions support KMS service.
         /// </summary>
         /// <param name="req"><see cref="GetRegionsRequest"/></param>
         /// <returns><see cref="GetRegionsResponse"/></returns>
@@ -1816,7 +1816,7 @@ namespace TencentCloud.Kms.V20190118
 
         /// <summary>
         /// This API is used to generate a signature with an asymmetric key.
-        /// Note: only the keys with `KeyUsage= ASYMMETRIC_SIGN_VERIFY_SM2` can be used for signature generation.
+        /// Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `ASYMMETRIC_SIGN_VERIFY_SM2` and `ASYMMETRIC_SIGN_VERIFY_ECC`), the key can be used for signing.
         /// </summary>
         /// <param name="req"><see cref="SignByAsymmetricKeyRequest"/></param>
         /// <returns><see cref="SignByAsymmetricKeyResponse"/></returns>
@@ -1837,7 +1837,7 @@ namespace TencentCloud.Kms.V20190118
 
         /// <summary>
         /// This API is used to generate a signature with an asymmetric key.
-        /// Note: only the keys with `KeyUsage= ASYMMETRIC_SIGN_VERIFY_SM2` can be used for signature generation.
+        /// Note that only when KeyUsage is `ASYMMETRIC_SIGN_VERIFY_${ALGORITHM}` (e.g., `ASYMMETRIC_SIGN_VERIFY_SM2` and `ASYMMETRIC_SIGN_VERIFY_ECC`), the key can be used for signing.
         /// </summary>
         /// <param name="req"><see cref="SignByAsymmetricKeyRequest"/></param>
         /// <returns><see cref="SignByAsymmetricKeyResponse"/></returns>

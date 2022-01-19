@@ -49,19 +49,26 @@ namespace TencentCloud.As.V20180419.Models
         public string[] NotificationUserGroupIds{ get; set; }
 
         /// <summary>
-        /// Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+        /// Notification receiver type. Valid values:
+        /// <br><li>USER_GROUP:User group
+        /// <br><li>CMQ_QUEUE:CMQ queue
+        /// <br><li>CMQ_TOPIC:CMQ topic
+        /// <br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
+        /// <br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+        /// 
+        /// Default value: `USER_GROUP`.
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+        /// CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+        /// CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

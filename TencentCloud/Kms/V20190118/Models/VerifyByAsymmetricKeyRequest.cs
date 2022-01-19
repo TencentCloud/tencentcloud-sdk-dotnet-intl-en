@@ -37,13 +37,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public string SignatureValue{ get; set; }
 
         /// <summary>
-        /// The original message or message abstract. For an original message, the length before Base64 encoding can contain up to 4,096 bytes. For a message abstract, the SM2 signature algorithm only supports 32-byte (before Base64 encoding) message abstracts.
+        /// Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// Signature algorithm. Supported algorithm: SM2DSA.
+        /// Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }

@@ -25,21 +25,23 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-        /// <li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-        /// <li> CMQ_TOPIC: CMQ topic model.</li>
+        /// Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+        /// <li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+        /// <li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+        /// <li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+        /// <li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+        /// Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+        /// Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

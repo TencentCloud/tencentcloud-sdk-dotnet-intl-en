@@ -31,7 +31,8 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
+        /// If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+        /// If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
         /// </summary>
         [JsonProperty("Plaintext")]
         public string Plaintext{ get; set; }

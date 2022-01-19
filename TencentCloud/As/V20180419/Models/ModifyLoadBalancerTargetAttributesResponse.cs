@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Kms.V20190118.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EncryptResponse : AbstractModel
+    public class ModifyLoadBalancerTargetAttributesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
+        /// Scaling activity ID
         /// </summary>
-        [JsonProperty("CiphertextBlob")]
-        public string CiphertextBlob{ get; set; }
-
-        /// <summary>
-        /// Globally unique ID of the CMK used for encryption
-        /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
+        [JsonProperty("ActivityId")]
+        public string ActivityId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +42,7 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -140,6 +140,48 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// The status of gateway traffic monitoring
+        /// 0: disable
+        /// 1: enable
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnableFlowDetails")]
+        public ulong? EnableFlowDetails{ get; set; }
+
+        /// <summary>
+        /// The last time when the gateway traffic monitoring is enabled/disabled
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FlowDetailsUpdateTime")]
+        public string FlowDetailsUpdateTime{ get; set; }
+
+        /// <summary>
+        /// Whether gateway traffic monitoring is supported
+        /// 0: No
+        /// 1: Yes
+        /// Note: this field may return `null`, indicating that no valid values can be found.
+        /// </summary>
+        [JsonProperty("NewAfc")]
+        public ulong? NewAfc{ get; set; }
+
+        /// <summary>
+        /// Direct connect gateway access network types:
+        /// <li>`VXLAN` - VXLAN type.</li>
+        /// <li>`MPLS` - MPLS type.</li>
+        /// <li>`Hybrid` - Hybrid type.</li>
+        /// Note: this field may return `null`, indicating that no valid values can be found.
+        /// </summary>
+        [JsonProperty("AccessNetworkType")]
+        public string AccessNetworkType{ get; set; }
+
+        /// <summary>
+        /// AZ list of direct connect gateway with cross-AZ placement groups
+        /// Note: this field may return `null`, indicating that no valid values can be found.
+        /// </summary>
+        [JsonProperty("HaZoneList")]
+        public string[] HaZoneList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +205,11 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
             this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "EnableFlowDetails", this.EnableFlowDetails);
+            this.SetParamSimple(map, prefix + "FlowDetailsUpdateTime", this.FlowDetailsUpdateTime);
+            this.SetParamSimple(map, prefix + "NewAfc", this.NewAfc);
+            this.SetParamSimple(map, prefix + "AccessNetworkType", this.AccessNetworkType);
+            this.SetParamArraySimple(map, prefix + "HaZoneList.", this.HaZoneList);
         }
     }
 }

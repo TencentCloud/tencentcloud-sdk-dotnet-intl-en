@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Kms.V20190118.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EncryptResponse : AbstractModel
+    public class ForwardLoadBalancerIdentification : AbstractModel
     {
         
         /// <summary>
-        /// Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
+        /// ID of the CLB
         /// </summary>
-        [JsonProperty("CiphertextBlob")]
-        public string CiphertextBlob{ get; set; }
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Globally unique ID of the CMK used for encryption
+        /// Application CLB listener ID
         /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// ID of a forwarding rule. This parameter is required for layer-7 listeners.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("LocationId")]
+        public string LocationId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
         }
     }
 }

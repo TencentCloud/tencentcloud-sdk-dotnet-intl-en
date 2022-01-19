@@ -51,6 +51,7 @@
     <Compile Include="V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
+    <Compile Include="V20190819\Models\BatchContent.cs" />
     <Compile Include="V20190819\Models\BatchCreateAclRequest.cs" />
     <Compile Include="V20190819\Models\BatchCreateAclResponse.cs" />
     <Compile Include="V20190819\Models\BatchModifyGroupOffsetsRequest.cs" />
@@ -161,6 +162,8 @@
     <Compile Include="V20190819\Models\Route.cs" />
     <Compile Include="V20190819\Models\RouteResponse.cs" />
     <Compile Include="V20190819\Models\SaleInfo.cs" />
+    <Compile Include="V20190819\Models\SendMessageRequest.cs" />
+    <Compile Include="V20190819\Models\SendMessageResponse.cs" />
     <Compile Include="V20190819\Models\SubscribedInfo.cs" />
     <Compile Include="V20190819\Models\Tag.cs" />
     <Compile Include="V20190819\Models\Topic.cs" />

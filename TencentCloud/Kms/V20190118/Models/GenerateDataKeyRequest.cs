@@ -48,6 +48,18 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("EncryptionContext")]
         public string EncryptionContext{ get; set; }
 
+        /// <summary>
+        /// PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+        /// </summary>
+        [JsonProperty("EncryptionPublicKey")]
+        public string EncryptionPublicKey{ get; set; }
+
+        /// <summary>
+        /// Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+        /// </summary>
+        [JsonProperty("EncryptionAlgorithm")]
+        public string EncryptionAlgorithm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeySpec", this.KeySpec);
             this.SetParamSimple(map, prefix + "NumberOfBytes", this.NumberOfBytes);
             this.SetParamSimple(map, prefix + "EncryptionContext", this.EncryptionContext);
+            this.SetParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
+            this.SetParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
         }
     }
 }

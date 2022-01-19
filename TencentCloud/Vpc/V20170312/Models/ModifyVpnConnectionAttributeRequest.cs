@@ -78,6 +78,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("HealthCheckRemoteIp")]
         public string HealthCheckRemoteIp{ get; set; }
 
+        /// <summary>
+        /// Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+        /// </summary>
+        [JsonProperty("NegotiationType")]
+        public string NegotiationType{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+        /// </summary>
+        [JsonProperty("DpdEnable")]
+        public long? DpdEnable{ get; set; }
+
+        /// <summary>
+        /// DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+        /// </summary>
+        [JsonProperty("DpdTimeout")]
+        public string DpdTimeout{ get; set; }
+
+        /// <summary>
+        /// The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+        /// </summary>
+        [JsonProperty("DpdAction")]
+        public string DpdAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +117,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
             this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
             this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+            this.SetParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
+            this.SetParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
+            this.SetParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
+            this.SetParamSimple(map, prefix + "DpdAction", this.DpdAction);
         }
     }
 }

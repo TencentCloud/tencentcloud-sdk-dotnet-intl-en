@@ -49,13 +49,13 @@ namespace TencentCloud.As.V20180419.Models
         public string[] NotificationUserGroupIds{ get; set; }
 
         /// <summary>
-        /// CMQ queue name.
+        /// CMQ or TDMQ CMQ queue name.
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// CMQ topic name.
+        /// CMQ or TDMQ CMQ toipc name.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

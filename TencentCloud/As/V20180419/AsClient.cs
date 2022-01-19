@@ -93,6 +93,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API is used to add CLBs to a security group.
+        /// </summary>
+        /// <param name="req"><see cref="AttachLoadBalancersRequest"/></param>
+        /// <returns><see cref="AttachLoadBalancersResponse"/></returns>
+        public async Task<AttachLoadBalancersResponse> AttachLoadBalancers(AttachLoadBalancersRequest req)
+        {
+             JsonResponseModel<AttachLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add CLBs to a security group.
+        /// </summary>
+        /// <param name="req"><see cref="AttachLoadBalancersRequest"/></param>
+        /// <returns><see cref="AttachLoadBalancersResponse"/></returns>
+        public AttachLoadBalancersResponse AttachLoadBalancersSync(AttachLoadBalancersRequest req)
+        {
+             JsonResponseModel<AttachLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to clear specific attributes of the launch configuration.
         /// </summary>
         /// <param name="req"><see cref="ClearLaunchConfigurationAttributesRequest"/></param>
@@ -883,6 +923,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API is used to query suggestions for scaling group configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalingAdvicesRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalingAdvicesResponse"/></returns>
+        public async Task<DescribeAutoScalingAdvicesResponse> DescribeAutoScalingAdvices(DescribeAutoScalingAdvicesRequest req)
+        {
+             JsonResponseModel<DescribeAutoScalingAdvicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoScalingAdvices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoScalingAdvicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query suggestions for scaling group configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalingAdvicesRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalingAdvicesResponse"/></returns>
+        public DescribeAutoScalingAdvicesResponse DescribeAutoScalingAdvicesSync(DescribeAutoScalingAdvicesRequest req)
+        {
+             JsonResponseModel<DescribeAutoScalingAdvicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAutoScalingAdvices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoScalingAdvicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the latest activity history of an auto scaling group.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScalingGroupLastActivitiesRequest"/></param>
@@ -1285,6 +1365,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API is used to unbind one or more CLBs from a scaling group. This API will not terminate CLBs.
+        /// </summary>
+        /// <param name="req"><see cref="DetachLoadBalancersRequest"/></param>
+        /// <returns><see cref="DetachLoadBalancersResponse"/></returns>
+        public async Task<DetachLoadBalancersResponse> DetachLoadBalancers(DetachLoadBalancersRequest req)
+        {
+             JsonResponseModel<DetachLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind one or more CLBs from a scaling group. This API will not terminate CLBs.
+        /// </summary>
+        /// <param name="req"><see cref="DetachLoadBalancersRequest"/></param>
+        /// <returns><see cref="DetachLoadBalancersResponse"/></returns>
+        public DetachLoadBalancersResponse DetachLoadBalancersSync(DetachLoadBalancersRequest req)
+        {
+             JsonResponseModel<DetachLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DisableAutoScalingGroup) is used to disable the specified auto scaling group.
         /// </summary>
         /// <param name="req"><see cref="DisableAutoScalingGroupRequest"/></param>
@@ -1528,6 +1648,46 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLaunchConfigurationAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the target rule attributes of the CLB in the scaling group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerTargetAttributesRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerTargetAttributesResponse"/></returns>
+        public async Task<ModifyLoadBalancerTargetAttributesResponse> ModifyLoadBalancerTargetAttributes(ModifyLoadBalancerTargetAttributesRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancerTargetAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the target rule attributes of the CLB in the scaling group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerTargetAttributesRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerTargetAttributesResponse"/></returns>
+        public ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributesSync(ModifyLoadBalancerTargetAttributesRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancerTargetAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
