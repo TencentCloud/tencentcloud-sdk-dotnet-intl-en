@@ -2517,7 +2517,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to query the list of user-imported SQL files.
+        /// This API is used to query the list of SQL files imported by users. The common request parameter `Region` must be `ap-shanghai`.
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadedFilesRequest"/></param>
         /// <returns><see cref="DescribeUploadedFilesResponse"/></returns>
@@ -2537,7 +2537,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to query the list of user-imported SQL files.
+        /// This API is used to query the list of SQL files imported by users. The common request parameter `Region` must be `ap-shanghai`.
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadedFilesRequest"/></param>
         /// <returns><see cref="DescribeUploadedFilesResponse"/></returns>

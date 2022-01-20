@@ -139,6 +139,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
+        /// <summary>
+        /// Financial cage ID.
+        /// </summary>
+        [JsonProperty("CageId")]
+        public string CageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +170,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "CageId", this.CageId);
         }
     }
 }

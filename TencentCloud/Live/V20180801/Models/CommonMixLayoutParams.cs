@@ -25,9 +25,10 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Input layer. Value range: [1,16].
-        /// 1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-        /// 2) For audio stream mix, this parameter is also required.
+        /// Input layer. Value range: [1,16]
+        /// (1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+        /// (2) This parameter is required for audio-only stream mixing as well.
+        /// Note that two inputs cannot have the same `ImageLayer` value.
         /// </summary>
         [JsonProperty("ImageLayer")]
         public long? ImageLayer{ get; set; }
@@ -45,16 +46,6 @@ namespace TencentCloud.Live.V20180801.Models
         public long? InputType{ get; set; }
 
         /// <summary>
-        /// Output width of input video image. Value range:
-        /// Pixel: [0,2000]
-        /// Percentage: [0.01,0.99]
-        /// If this parameter is left empty, the input stream width will be used by default.
-        /// If percentage is used, the expected output is (percentage * background width).
-        /// </summary>
-        [JsonProperty("ImageWidth")]
-        public float? ImageWidth{ get; set; }
-
-        /// <summary>
         /// Output height of input video image. Value range:
         /// Pixel: [0,2000]
         /// Percentage: [0.01,0.99]
@@ -63,6 +54,16 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         [JsonProperty("ImageHeight")]
         public float? ImageHeight{ get; set; }
+
+        /// <summary>
+        /// Output width of input video image. Value range:
+        /// Pixel: [0,2000]
+        /// Percentage: [0.01,0.99]
+        /// If this parameter is left empty, the input stream width will be used by default.
+        /// If percentage is used, the expected output is (percentage * background width).
+        /// </summary>
+        [JsonProperty("ImageWidth")]
+        public float? ImageWidth{ get; set; }
 
         /// <summary>
         /// X-axis offset of input in output video image. Value range:
@@ -114,8 +115,8 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "ImageLayer", this.ImageLayer);
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
-            this.SetParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
             this.SetParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
+            this.SetParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
             this.SetParamSimple(map, prefix + "LocationX", this.LocationX);
             this.SetParamSimple(map, prefix + "LocationY", this.LocationY);
             this.SetParamSimple(map, prefix + "Color", this.Color);

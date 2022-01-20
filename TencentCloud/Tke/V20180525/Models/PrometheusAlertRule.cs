@@ -68,6 +68,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Annotations")]
         public Label[] Annotations{ get; set; }
 
+        /// <summary>
+        /// Alarm rule status
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RuleState")]
+        public long? RuleState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +88,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "For", this.For);
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
             this.SetParamArrayObj(map, prefix + "Annotations.", this.Annotations);
+            this.SetParamSimple(map, prefix + "RuleState", this.RuleState);
         }
     }
 }

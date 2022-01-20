@@ -66,6 +66,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IDCType")]
         public string IDCType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FeatureBitmap")]
+        public long? FeatureBitmap{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RegionArea", this.RegionArea);
             this.SetParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
             this.SetParamSimple(map, prefix + "IDCType", this.IDCType);
+            this.SetParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
         }
     }
 }

@@ -99,10 +99,22 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: `normal` (default), `cn2`
+        /// Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
 
 
         /// <summary>
@@ -123,6 +135,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

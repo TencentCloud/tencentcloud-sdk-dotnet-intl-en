@@ -50,6 +50,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// RealServerRegion - String - Required: No - Filter by origin server region.
         /// GroupId - String - Required: No - Filter by connection group ID.
         /// IPAddressVersion - String - Required: No - Filter by IP version.
+        /// PackageType - String - Required: No - Filter by package type of connection groups.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

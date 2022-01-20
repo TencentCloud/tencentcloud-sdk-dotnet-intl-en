@@ -1257,7 +1257,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (DescribeAccessRegionsByDestRegion) is used to query the list of the available acceleration regions based on the origin server region.
+        /// This API is used to query the available accelerator region based on the origin server region.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessRegionsByDestRegionRequest"/></param>
         /// <returns><see cref="DescribeAccessRegionsByDestRegionResponse"/></returns>
@@ -1277,7 +1277,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (DescribeAccessRegionsByDestRegion) is used to query the list of the available acceleration regions based on the origin server region.
+        /// This API is used to query the available accelerator region based on the origin server region.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessRegionsByDestRegionRequest"/></param>
         /// <returns><see cref="DescribeAccessRegionsByDestRegionResponse"/></returns>

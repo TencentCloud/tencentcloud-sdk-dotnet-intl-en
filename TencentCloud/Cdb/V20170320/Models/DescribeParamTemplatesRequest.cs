@@ -24,12 +24,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     public class DescribeParamTemplatesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EngineVersions")]
+        public string[] EngineVersions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
         }
     }
 }

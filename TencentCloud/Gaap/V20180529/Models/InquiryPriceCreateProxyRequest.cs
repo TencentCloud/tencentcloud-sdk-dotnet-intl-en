@@ -79,10 +79,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+        /// Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

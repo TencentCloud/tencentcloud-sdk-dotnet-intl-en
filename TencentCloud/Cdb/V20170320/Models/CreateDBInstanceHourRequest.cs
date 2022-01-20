@@ -217,6 +217,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CageId{ get; set; }
 
         /// <summary>
+        /// Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+        /// </summary>
+        [JsonProperty("ParamTemplateType")]
+        public string ParamTemplateType{ get; set; }
+
+        /// <summary>
         /// The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid.
         /// </summary>
         [JsonProperty("AlarmPolicyIdList")]
@@ -266,6 +272,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
+            this.SetParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }

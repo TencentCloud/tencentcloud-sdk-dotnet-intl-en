@@ -68,6 +68,21 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
+        /// <summary>
+        /// Region. Valid values:
+        /// China Mainland
+        /// Asia Pacific I
+        /// Asia Pacific II
+        /// Asia Pacific III
+        /// Europe
+        /// North America
+        /// South America
+        /// Middle East
+        /// Africa
+        /// </summary>
+        [JsonProperty("RegionNames")]
+        public string[] RegionNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +95,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
             this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamArraySimple(map, prefix + "RegionNames.", this.RegionNames);
         }
     }
 }

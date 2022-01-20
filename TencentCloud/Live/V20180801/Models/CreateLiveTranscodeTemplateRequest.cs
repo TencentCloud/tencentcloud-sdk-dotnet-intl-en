@@ -89,9 +89,10 @@ namespace TencentCloud.Live.V20180801.Models
         public long? NeedAudio{ get; set; }
 
         /// <summary>
-        /// Height. Default value: 0.
-        /// Value range: [0,3000]
-        /// The value must be a multiple of 2, and 0 is the original height.
+        /// Height. Default value: 0
+        /// Value range: 0-3000
+        /// The value must be a multiple of 2. The original height is `0`.
+        /// This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

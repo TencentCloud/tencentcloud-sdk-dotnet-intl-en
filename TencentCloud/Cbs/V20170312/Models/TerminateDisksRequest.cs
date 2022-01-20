@@ -30,6 +30,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
 
+        /// <summary>
+        /// Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+        /// </summary>
+        [JsonProperty("DeleteSnapshot")]
+        public long? DeleteSnapshot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+            this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
         }
     }
 }

@@ -247,6 +247,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+        /// </summary>
+        [JsonProperty("DeleteSnapshot")]
+        public long? DeleteSnapshot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -288,6 +294,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "ReturnFailCode", this.ReturnFailCode);
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
         }
     }
 }
