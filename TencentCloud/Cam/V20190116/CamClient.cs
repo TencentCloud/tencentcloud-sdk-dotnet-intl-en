@@ -1813,6 +1813,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to list policies associated with the user (including those inherited from the user group).
+        /// </summary>
+        /// <param name="req"><see cref="ListAttachedUserAllPoliciesRequest"/></param>
+        /// <returns><see cref="ListAttachedUserAllPoliciesResponse"/></returns>
+        public async Task<ListAttachedUserAllPoliciesResponse> ListAttachedUserAllPolicies(ListAttachedUserAllPoliciesRequest req)
+        {
+             JsonResponseModel<ListAttachedUserAllPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAttachedUserAllPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAttachedUserAllPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list policies associated with the user (including those inherited from the user group).
+        /// </summary>
+        /// <param name="req"><see cref="ListAttachedUserAllPoliciesRequest"/></param>
+        /// <returns><see cref="ListAttachedUserAllPoliciesResponse"/></returns>
+        public ListAttachedUserAllPoliciesResponse ListAttachedUserAllPoliciesSync(ListAttachedUserAllPoliciesRequest req)
+        {
+             JsonResponseModel<ListAttachedUserAllPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAttachedUserAllPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAttachedUserAllPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ListAttachedUserPolicies) is used to query the list of policies associated with a sub-account.
         /// </summary>
         /// <param name="req"><see cref="ListAttachedUserPoliciesRequest"/></param>

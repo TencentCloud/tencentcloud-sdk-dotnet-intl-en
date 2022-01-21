@@ -82,6 +82,7 @@
     <Compile Include="V20180808\Models\BuildAPIDocRequest.cs" />
     <Compile Include="V20180808\Models\BuildAPIDocResponse.cs" />
     <Compile Include="V20180808\Models\ConstantParameter.cs" />
+    <Compile Include="V20180808\Models\CosConfig.cs" />
     <Compile Include="V20180808\Models\CreateAPIDocRequest.cs" />
     <Compile Include="V20180808\Models\CreateAPIDocResponse.cs" />
     <Compile Include="V20180808\Models\CreateApiAppRequest.cs" />

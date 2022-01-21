@@ -141,20 +141,21 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// Product code
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
         /// Subproduct code
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// Transaction type/code (optional)
+        /// Transaction type
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }

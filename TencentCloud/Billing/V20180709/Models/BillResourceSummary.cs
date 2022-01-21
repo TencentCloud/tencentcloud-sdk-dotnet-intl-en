@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
+        /// Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
@@ -207,13 +207,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Product code
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subproduct code
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }

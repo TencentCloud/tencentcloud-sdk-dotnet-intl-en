@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProjectSecurityGroupsResponse : AbstractModel
+    public class ListAttachedUserAllPoliciesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Security group details
+        /// Policy list.
         /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
+        [JsonProperty("PolicyList")]
+        public AttachedUserPolicy[] PolicyList{ get; set; }
 
         /// <summary>
-        /// Number of security groups.
+        /// Total number of policies.
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("TotalNum")]
+        public ulong? TotalNum{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +48,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "PolicyList.", this.PolicyList);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

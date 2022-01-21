@@ -97,6 +97,8 @@
     <Compile Include="V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeFileDownloadUrlRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="V20180411\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20180411\Models\DescribeFlowResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
@@ -132,6 +134,7 @@
     <Compile Include="V20180411\Models\Project.cs" />
     <Compile Include="V20180411\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20180411\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="V20180411\Models\ResourceTag.cs" />
     <Compile Include="V20180411\Models\SecurityGroup.cs" />
     <Compile Include="V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="V20180411\Models\ShardInfo.cs" />

@@ -192,6 +192,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("VideoSeek")]
         public VideoSeek VideoSeek{ get; set; }
 
+        /// <summary>
+        /// Private access for S3 origin
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AwsPrivateAccess")]
+        public AwsPrivateAccess AwsPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// Private access for OSS origin
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OssPrivateAccess")]
+        public OssPrivateAccess OssPrivateAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +236,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamObj(map, prefix + "StatusCodeCache.", this.StatusCodeCache);
             this.SetParamObj(map, prefix + "VideoSeek.", this.VideoSeek);
+            this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+            this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         }
     }
 }

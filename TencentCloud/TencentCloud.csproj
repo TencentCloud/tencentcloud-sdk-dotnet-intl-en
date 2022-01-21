@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.364</VersionPrefix>
+    <VersionPrefix>3.0.365</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -232,6 +232,7 @@
     <Compile Include="Apigateway\V20180808\Models\BuildAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BuildAPIDocResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ConstantParameter.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CosConfig.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateAPIDocResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiAppRequest.cs" />
@@ -730,6 +731,8 @@
     <Compile Include="Cam\V20190116\Models\AttachUserPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\AttachUserPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\AttachedPolicyOfRole.cs" />
+    <Compile Include="Cam\V20190116\Models\AttachedUserPolicy.cs" />
+    <Compile Include="Cam\V20190116\Models\AttachedUserPolicyGroupInfo.cs" />
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupRequest.cs" />
@@ -811,6 +814,8 @@
     <Compile Include="Cam\V20190116\Models\ListAttachedGroupPoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedRolePoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedRolePoliciesResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\ListAttachedUserAllPoliciesRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\ListAttachedUserAllPoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedUserPoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedUserPoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListCollaboratorsRequest.cs" />
@@ -2855,6 +2860,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeFileDownloadUrlRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeFlowRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeFlowResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
@@ -2890,6 +2897,7 @@
     <Compile Include="Dcdb\V20180411\Models\Project.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ResourceTag.cs" />
     <Compile Include="Dcdb\V20180411\Models\SecurityGroup.cs" />
     <Compile Include="Dcdb\V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardInfo.cs" />

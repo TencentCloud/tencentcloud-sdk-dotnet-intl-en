@@ -25,9 +25,8 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Server certificate ID
-        /// This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

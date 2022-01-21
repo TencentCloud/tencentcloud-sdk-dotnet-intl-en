@@ -26,7 +26,7 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// Product code
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }

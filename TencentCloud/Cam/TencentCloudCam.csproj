@@ -59,6 +59,8 @@
     <Compile Include="V20190116\Models\AttachUserPolicyRequest.cs" />
     <Compile Include="V20190116\Models\AttachUserPolicyResponse.cs" />
     <Compile Include="V20190116\Models\AttachedPolicyOfRole.cs" />
+    <Compile Include="V20190116\Models\AttachedUserPolicy.cs" />
+    <Compile Include="V20190116\Models\AttachedUserPolicyGroupInfo.cs" />
     <Compile Include="V20190116\Models\ConsumeCustomMFATokenRequest.cs" />
     <Compile Include="V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="V20190116\Models\CreateGroupRequest.cs" />
@@ -140,6 +142,8 @@
     <Compile Include="V20190116\Models\ListAttachedGroupPoliciesResponse.cs" />
     <Compile Include="V20190116\Models\ListAttachedRolePoliciesRequest.cs" />
     <Compile Include="V20190116\Models\ListAttachedRolePoliciesResponse.cs" />
+    <Compile Include="V20190116\Models\ListAttachedUserAllPoliciesRequest.cs" />
+    <Compile Include="V20190116\Models\ListAttachedUserAllPoliciesResponse.cs" />
     <Compile Include="V20190116\Models\ListAttachedUserPoliciesRequest.cs" />
     <Compile Include="V20190116\Models\ListAttachedUserPoliciesResponse.cs" />
     <Compile Include="V20190116\Models\ListCollaboratorsRequest.cs" />

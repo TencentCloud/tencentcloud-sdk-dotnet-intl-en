@@ -21,26 +21,26 @@ namespace TencentCloud.Dcdb.V20180411.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProjectSecurityGroupsResponse : AbstractModel
+    public class DescribeFileDownloadUrlRequest : AbstractModel
     {
         
         /// <summary>
-        /// Security group details
+        /// Instance ID
         /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of security groups.
+        /// Shard ID
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("ShardId")]
+        public string ShardId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Unsigned file path
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("FilePath")]
+        public string FilePath{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
+            this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
         }
     }
 }

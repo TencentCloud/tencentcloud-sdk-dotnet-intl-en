@@ -21,20 +21,14 @@ namespace TencentCloud.Dcdb.V20180411.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProjectSecurityGroupsResponse : AbstractModel
+    public class DescribeFileDownloadUrlResponse : AbstractModel
     {
         
         /// <summary>
-        /// Security group details
+        /// Signed download URL
         /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
-
-        /// <summary>
-        /// Number of security groups.
-        /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("PreSignedUrl")]
+        public string PreSignedUrl{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +42,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "PreSignedUrl", this.PreSignedUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

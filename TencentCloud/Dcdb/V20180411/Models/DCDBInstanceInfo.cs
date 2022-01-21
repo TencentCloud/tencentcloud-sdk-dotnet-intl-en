@@ -322,6 +322,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
+        /// <summary>
+        /// Instance tag information
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -376,6 +383,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
             this.SetParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }
