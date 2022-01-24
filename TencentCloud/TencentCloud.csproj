@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.365</VersionPrefix>
+    <VersionPrefix>3.0.366</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2677,8 +2677,12 @@
     <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportUrlRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportUrlResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateKillTaskRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateKillTaskResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateProxySessionKillTaskRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateProxySessionKillTaskResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateSchedulerMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateSecurityAuditLogExportTaskRequest.cs" />
@@ -3031,12 +3035,14 @@
     <Compile Include="Emr\V20190103\Models\CreateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\CreateInstanceResponse.cs" />
     <Compile Include="Emr\V20190103\Models\CustomMetaInfo.cs" />
+    <Compile Include="Emr\V20190103\Models\CustomServiceDefine.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeClusterNodesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeClusterNodesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DynamicPodSpec.cs" />
     <Compile Include="Emr\V20190103\Models\EmrProductConfigOutter.cs" />
+    <Compile Include="Emr\V20190103\Models\ExternalService.cs" />
     <Compile Include="Emr\V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
@@ -5635,6 +5641,10 @@
     <Compile Include="Ses\V20201002\Models\CreateEmailIdentityResponse.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailTemplateRequest.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateReceiverDetailRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateReceiverDetailResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateReceiverRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateReceiverResponse.cs" />
     <Compile Include="Ses\V20201002\Models\CycleEmailParam.cs" />
     <Compile Include="Ses\V20201002\Models\DNSAttributes.cs" />
     <Compile Include="Ses\V20201002\Models\DeleteBlackListRequest.cs" />
@@ -5663,9 +5673,15 @@
     <Compile Include="Ses\V20201002\Models\ListEmailIdentitiesResponse.cs" />
     <Compile Include="Ses\V20201002\Models\ListEmailTemplatesRequest.cs" />
     <Compile Include="Ses\V20201002\Models\ListEmailTemplatesResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListReceiversRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListReceiversResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListSendTasksRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListSendTasksResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ReceiverData.cs" />
     <Compile Include="Ses\V20201002\Models\SendEmailRequest.cs" />
     <Compile Include="Ses\V20201002\Models\SendEmailResponse.cs" />
     <Compile Include="Ses\V20201002\Models\SendEmailStatus.cs" />
+    <Compile Include="Ses\V20201002\Models\SendTaskData.cs" />
     <Compile Include="Ses\V20201002\Models\Simple.cs" />
     <Compile Include="Ses\V20201002\Models\Template.cs" />
     <Compile Include="Ses\V20201002\Models\TemplateContent.cs" />

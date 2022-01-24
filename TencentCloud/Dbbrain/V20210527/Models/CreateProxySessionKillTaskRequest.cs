@@ -21,28 +21,20 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMailProfileResponse : AbstractModel
+    public class CreateProxySessionKillTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// Email configuration details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Instance ID.
         /// </summary>
-        [JsonProperty("ProfileList")]
-        public UserProfile[] ProfileList{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Total number of the configured emails.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Service type. Valid value: `redis` (TencentDB for Redis).
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ProfileList.", this.ProfileList);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

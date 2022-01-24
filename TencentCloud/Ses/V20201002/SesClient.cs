@@ -215,6 +215,86 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// This API is used to create a recipient group, which is the list of target email addresses for batch sending emails. After creating a group, you need to upload recipient email addresses. Then, you can create a sending task and select the group to batch send emails.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverRequest"/></param>
+        /// <returns><see cref="CreateReceiverResponse"/></returns>
+        public async Task<CreateReceiverResponse> CreateReceiver(CreateReceiverRequest req)
+        {
+             JsonResponseModel<CreateReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a recipient group, which is the list of target email addresses for batch sending emails. After creating a group, you need to upload recipient email addresses. Then, you can create a sending task and select the group to batch send emails.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverRequest"/></param>
+        /// <returns><see cref="CreateReceiverResponse"/></returns>
+        public CreateReceiverResponse CreateReceiverSync(CreateReceiverRequest req)
+        {
+             JsonResponseModel<CreateReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add recipient email addresses (up to 100,000 at a time) to a recipient group. This will be processed asynchronously. You can upload recipient email addresses only once. If the data volume is large, it may take some time to upload. You can check the recipient group to learn the upload status and upload quantity.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverDetailRequest"/></param>
+        /// <returns><see cref="CreateReceiverDetailResponse"/></returns>
+        public async Task<CreateReceiverDetailResponse> CreateReceiverDetail(CreateReceiverDetailRequest req)
+        {
+             JsonResponseModel<CreateReceiverDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReceiverDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add recipient email addresses (up to 100,000 at a time) to a recipient group. This will be processed asynchronously. You can upload recipient email addresses only once. If the data volume is large, it may take some time to upload. You can check the recipient group to learn the upload status and upload quantity.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverDetailRequest"/></param>
+        /// <returns><see cref="CreateReceiverDetailResponse"/></returns>
+        public CreateReceiverDetailResponse CreateReceiverDetailSync(CreateReceiverDetailRequest req)
+        {
+             JsonResponseModel<CreateReceiverDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReceiverDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unblocklist email addresses. If you confirm that a blocklisted recipient address is valid and active, you can remove it from Tencent Cloud’s address blocklist database.
         /// </summary>
         /// <param name="req"><see cref="DeleteBlackListRequest"/></param>
@@ -455,7 +535,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// This API is used to get email sending status. Only data within 90 days can be queried.
+        /// This API is used to get email sending status. Only data within 30 days can be queried.
         /// </summary>
         /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
         /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
@@ -475,7 +555,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// This API is used to get email sending status. Only data within 90 days can be queried.
+        /// This API is used to get email sending status. Only data within 30 days can be queried.
         /// </summary>
         /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
         /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
@@ -686,6 +766,86 @@ namespace TencentCloud.Ses.V20201002
              {
                  var strResp = this.InternalRequestSync(req, "ListEmailTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEmailTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query recipient groups. It supports pagination, fuzzy query, and query by status.
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiversRequest"/></param>
+        /// <returns><see cref="ListReceiversResponse"/></returns>
+        public async Task<ListReceiversResponse> ListReceivers(ListReceiversRequest req)
+        {
+             JsonResponseModel<ListReceiversResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListReceivers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListReceiversResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query recipient groups. It supports pagination, fuzzy query, and query by status.
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiversRequest"/></param>
+        /// <returns><see cref="ListReceiversResponse"/></returns>
+        public ListReceiversResponse ListReceiversSync(ListReceiversRequest req)
+        {
+             JsonResponseModel<ListReceiversResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListReceivers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListReceiversResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query batch email sending tasks (including immediate, scheduled, and recurring tasks) by page. You can query task data including the number of emails requested to be sent, the number of sent emails, the number of cached emails, and task status.
+        /// </summary>
+        /// <param name="req"><see cref="ListSendTasksRequest"/></param>
+        /// <returns><see cref="ListSendTasksResponse"/></returns>
+        public async Task<ListSendTasksResponse> ListSendTasks(ListSendTasksRequest req)
+        {
+             JsonResponseModel<ListSendTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListSendTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSendTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query batch email sending tasks (including immediate, scheduled, and recurring tasks) by page. You can query task data including the number of emails requested to be sent, the number of sent emails, the number of cached emails, and task status.
+        /// </summary>
+        /// <param name="req"><see cref="ListSendTasksRequest"/></param>
+        /// <returns><see cref="ListSendTasksResponse"/></returns>
+        public ListSendTasksResponse ListSendTasksSync(ListSendTasksRequest req)
+        {
+             JsonResponseModel<ListSendTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListSendTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSendTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

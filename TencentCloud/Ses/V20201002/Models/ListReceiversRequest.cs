@@ -15,34 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20210527.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMailProfileResponse : AbstractModel
+    public class ListReceiversRequest : AbstractModel
     {
         
         /// <summary>
-        /// Email configuration details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Offset, starting from 0. The value is an integer.
         /// </summary>
-        [JsonProperty("ProfileList")]
-        public UserProfile[] ProfileList{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Total number of the configured emails.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of records to query. The value is an integer not exceeding 100.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Group status (`1`: to be uploaded; `2` uploading; `3` uploaded). To query groups in all states, do not pass in this parameter.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// Group name keyword for fuzzy query
+        /// </summary>
+        [JsonProperty("KeyWord")]
+        public string KeyWord{ get; set; }
 
 
         /// <summary>
@@ -50,9 +54,10 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ProfileList.", this.ProfileList);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
         }
     }
 }

@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20210527.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMailProfileResponse : AbstractModel
+    public class CreateReceiverDetailRequest : AbstractModel
     {
         
         /// <summary>
-        /// Email configuration details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Recipient group ID
         /// </summary>
-        [JsonProperty("ProfileList")]
-        public UserProfile[] ProfileList{ get; set; }
+        [JsonProperty("ReceiverId")]
+        public ulong? ReceiverId{ get; set; }
 
         /// <summary>
-        /// Total number of the configured emails.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Email address
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Emails")]
+        public string[] Emails{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ProfileList.", this.ProfileList);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ReceiverId", this.ReceiverId);
+            this.SetParamArraySimple(map, prefix + "Emails.", this.Emails);
         }
     }
 }

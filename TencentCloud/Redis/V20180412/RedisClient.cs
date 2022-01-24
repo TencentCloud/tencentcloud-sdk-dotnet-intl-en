@@ -133,7 +133,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group.
+        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
         /// </summary>
         /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
         /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group.
+        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
         /// </summary>
         /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
         /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>

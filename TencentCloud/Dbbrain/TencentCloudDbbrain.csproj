@@ -127,8 +127,12 @@
     <Compile Include="V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportUrlRequest.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportUrlResponse.cs" />
+    <Compile Include="V20210527\Models\CreateKillTaskRequest.cs" />
+    <Compile Include="V20210527\Models\CreateKillTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateMailProfileRequest.cs" />
     <Compile Include="V20210527\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="V20210527\Models\CreateProxySessionKillTaskRequest.cs" />
+    <Compile Include="V20210527\Models\CreateProxySessionKillTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateSchedulerMailProfileRequest.cs" />
     <Compile Include="V20210527\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="V20210527\Models\CreateSecurityAuditLogExportTaskRequest.cs" />

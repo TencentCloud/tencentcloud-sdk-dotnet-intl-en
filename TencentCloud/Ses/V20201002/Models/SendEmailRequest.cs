@@ -25,9 +25,9 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-        /// Sender <email address>, for example:
-        /// Tencent Cloud team <noreply@mail.qcloud.com>
+        /// Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+        /// To display the sender name, enter the address in the following format: 
+        /// Sender <email address>
         /// </summary>
         [JsonProperty("FromEmailAddress")]
         public string FromEmailAddress{ get; set; }
@@ -68,6 +68,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }
 
+        /// <summary>
+        /// Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+        /// </summary>
+        [JsonProperty("Unsubscribe")]
+        public string Unsubscribe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamObj(map, prefix + "Template.", this.Template);
             this.SetParamObj(map, prefix + "Simple.", this.Simple);
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
+            this.SetParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
         }
     }
 }

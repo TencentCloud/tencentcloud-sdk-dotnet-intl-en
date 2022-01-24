@@ -43,13 +43,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default
+        /// Offset. If this parameter is left empty, `0` will be used by default.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+        /// Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -61,10 +61,16 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Filter
+        /// Filter.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// This parameter has been deprecated and replaced with `InstanceIdList`.
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
         }
     }
 }

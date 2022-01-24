@@ -15,28 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20210527.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMailProfileResponse : AbstractModel
+    public class ListReceiversResponse : AbstractModel
     {
         
         /// <summary>
-        /// Email configuration details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ProfileList")]
-        public UserProfile[] ProfileList{ get; set; }
-
-        /// <summary>
-        /// Total number of the configured emails.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total number
         /// </summary>
         [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// Data record
+        /// </summary>
+        [JsonProperty("Data")]
+        public ReceiverData[] Data{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -50,8 +48,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ProfileList.", this.ProfileList);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

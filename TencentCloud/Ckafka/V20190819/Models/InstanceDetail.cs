@@ -194,6 +194,27 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RebalanceTime")]
         public string RebalanceTime{ get; set; }
 
+        /// <summary>
+        /// Number of partitions in the current instance.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PartitionNumber")]
+        public ulong? PartitionNumber{ get; set; }
+
+        /// <summary>
+        /// Public network bandwidth type.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublicNetworkChargeType")]
+        public string PublicNetworkChargeType{ get; set; }
+
+        /// <summary>
+        /// Public network bandwidth.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublicNetwork")]
+        public long? PublicNetwork{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +248,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MaxTopicNumber", this.MaxTopicNumber);
             this.SetParamSimple(map, prefix + "MaxPartitionNumber", this.MaxPartitionNumber);
             this.SetParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
+            this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+            this.SetParamSimple(map, prefix + "PublicNetworkChargeType", this.PublicNetworkChargeType);
+            this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         }
     }
 }

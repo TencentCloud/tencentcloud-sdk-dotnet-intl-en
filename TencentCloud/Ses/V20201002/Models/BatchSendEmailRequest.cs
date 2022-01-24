@@ -45,7 +45,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string Subject{ get; set; }
 
         /// <summary>
-        /// Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
+        /// Task type. `1`: immediate; `2`: scheduled; `3`: recurring
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
@@ -86,6 +86,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("TimedParam")]
         public TimedEmailParam TimedParam{ get; set; }
 
+        /// <summary>
+        /// Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+        /// </summary>
+        [JsonProperty("Unsubscribe")]
+        public string Unsubscribe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
             this.SetParamObj(map, prefix + "CycleParam.", this.CycleParam);
             this.SetParamObj(map, prefix + "TimedParam.", this.TimedParam);
+            this.SetParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
         }
     }
 }

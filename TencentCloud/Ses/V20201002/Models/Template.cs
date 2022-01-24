@@ -32,6 +32,8 @@ namespace TencentCloud.Ses.V20201002.Models
 
         /// <summary>
         /// Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+        /// Note: The parameter value cannot be data of a complex type such as HTML.
+        /// Example: {"name":"xxx","age":"xx"}
         /// </summary>
         [JsonProperty("TemplateData")]
         public string TemplateData{ get; set; }

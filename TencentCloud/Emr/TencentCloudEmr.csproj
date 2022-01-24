@@ -51,12 +51,14 @@
     <Compile Include="V20190103\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\CustomMetaInfo.cs" />
+    <Compile Include="V20190103\Models\CustomServiceDefine.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20190103\Models\DynamicPodSpec.cs" />
     <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
+    <Compile Include="V20190103\Models\ExternalService.cs" />
     <Compile Include="V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />

@@ -55,6 +55,10 @@
     <Compile Include="V20201002\Models\CreateEmailIdentityResponse.cs" />
     <Compile Include="V20201002\Models\CreateEmailTemplateRequest.cs" />
     <Compile Include="V20201002\Models\CreateEmailTemplateResponse.cs" />
+    <Compile Include="V20201002\Models\CreateReceiverDetailRequest.cs" />
+    <Compile Include="V20201002\Models\CreateReceiverDetailResponse.cs" />
+    <Compile Include="V20201002\Models\CreateReceiverRequest.cs" />
+    <Compile Include="V20201002\Models\CreateReceiverResponse.cs" />
     <Compile Include="V20201002\Models\CycleEmailParam.cs" />
     <Compile Include="V20201002\Models\DNSAttributes.cs" />
     <Compile Include="V20201002\Models\DeleteBlackListRequest.cs" />
@@ -83,9 +87,15 @@
     <Compile Include="V20201002\Models\ListEmailIdentitiesResponse.cs" />
     <Compile Include="V20201002\Models\ListEmailTemplatesRequest.cs" />
     <Compile Include="V20201002\Models\ListEmailTemplatesResponse.cs" />
+    <Compile Include="V20201002\Models\ListReceiversRequest.cs" />
+    <Compile Include="V20201002\Models\ListReceiversResponse.cs" />
+    <Compile Include="V20201002\Models\ListSendTasksRequest.cs" />
+    <Compile Include="V20201002\Models\ListSendTasksResponse.cs" />
+    <Compile Include="V20201002\Models\ReceiverData.cs" />
     <Compile Include="V20201002\Models\SendEmailRequest.cs" />
     <Compile Include="V20201002\Models\SendEmailResponse.cs" />
     <Compile Include="V20201002\Models\SendEmailStatus.cs" />
+    <Compile Include="V20201002\Models\SendTaskData.cs" />
     <Compile Include="V20201002\Models\Simple.cs" />
     <Compile Include="V20201002\Models\Template.cs" />
     <Compile Include="V20201002\Models\TemplateContent.cs" />

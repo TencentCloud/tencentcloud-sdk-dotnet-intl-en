@@ -173,6 +173,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// This API is used to create session killing tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateKillTaskRequest"/></param>
+        /// <returns><see cref="CreateKillTaskResponse"/></returns>
+        public async Task<CreateKillTaskResponse> CreateKillTask(CreateKillTaskRequest req)
+        {
+             JsonResponseModel<CreateKillTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateKillTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKillTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create session killing tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateKillTaskRequest"/></param>
+        /// <returns><see cref="CreateKillTaskResponse"/></returns>
+        public CreateKillTaskResponse CreateKillTaskSync(CreateKillTaskRequest req)
+        {
+             JsonResponseModel<CreateKillTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateKillTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKillTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email sending configuration of scheduled task health report). Please always select Guangzhou for `Region`, regardless of the region where the instance resides.
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "CreateMailProfile");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an async task of killing all proxy node connection sessions and is currently supported only for Redis. The async task ID is the returned value, which can be passed to the API `DescribeProxySessionKillTasks` as a parameter to query the execution status of the session killing task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProxySessionKillTaskRequest"/></param>
+        /// <returns><see cref="CreateProxySessionKillTaskResponse"/></returns>
+        public async Task<CreateProxySessionKillTaskResponse> CreateProxySessionKillTask(CreateProxySessionKillTaskRequest req)
+        {
+             JsonResponseModel<CreateProxySessionKillTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProxySessionKillTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProxySessionKillTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an async task of killing all proxy node connection sessions and is currently supported only for Redis. The async task ID is the returned value, which can be passed to the API `DescribeProxySessionKillTasks` as a parameter to query the execution status of the session killing task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProxySessionKillTaskRequest"/></param>
+        /// <returns><see cref="CreateProxySessionKillTaskResponse"/></returns>
+        public CreateProxySessionKillTaskResponse CreateProxySessionKillTaskSync(CreateProxySessionKillTaskRequest req)
+        {
+             JsonResponseModel<CreateProxySessionKillTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProxySessionKillTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProxySessionKillTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
