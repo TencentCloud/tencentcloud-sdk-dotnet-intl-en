@@ -198,6 +198,8 @@
     <Compile Include="V20180801\Models\DescribeLiveTranscodeTemplateResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTranscodeTemplatesRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTranscodeTemplatesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeTotalInfoRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeTotalInfoResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveWatermarkRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveWatermarkResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveWatermarkRulesRequest.cs" />
@@ -296,6 +298,7 @@
     <Compile Include="V20180801\Models\TemplateInfo.cs" />
     <Compile Include="V20180801\Models\TimeValue.cs" />
     <Compile Include="V20180801\Models\TranscodeDetailInfo.cs" />
+    <Compile Include="V20180801\Models\TranscodeTotalInfo.cs" />
     <Compile Include="V20180801\Models\UnBindLiveDomainCertRequest.cs" />
     <Compile Include="V20180801\Models\UnBindLiveDomainCertResponse.cs" />
     <Compile Include="V20180801\Models\UpdateLiveWatermarkRequest.cs" />

@@ -2899,6 +2899,52 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to query your total usage of the transcoding service in the last 30 days.
+        /// Notes:
+        /// If the start time and end time are on the same day, the data returned will be on a 5-minute basis.
+        /// If not or if the data of specified domains is queried, the data returned will be on an hourly basis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTranscodeTotalInfoRequest"/></param>
+        /// <returns><see cref="DescribeLiveTranscodeTotalInfoResponse"/></returns>
+        public async Task<DescribeLiveTranscodeTotalInfoResponse> DescribeLiveTranscodeTotalInfo(DescribeLiveTranscodeTotalInfoRequest req)
+        {
+             JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveTranscodeTotalInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your total usage of the transcoding service in the last 30 days.
+        /// Notes:
+        /// If the start time and end time are on the same day, the data returned will be on a 5-minute basis.
+        /// If not or if the data of specified domains is queried, the data returned will be on an hourly basis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTranscodeTotalInfoRequest"/></param>
+        /// <returns><see cref="DescribeLiveTranscodeTotalInfoResponse"/></returns>
+        public DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfoSync(DescribeLiveTranscodeTotalInfoRequest req)
+        {
+             JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveTranscodeTotalInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the information of a single watermark.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveWatermarkRequest"/></param>
