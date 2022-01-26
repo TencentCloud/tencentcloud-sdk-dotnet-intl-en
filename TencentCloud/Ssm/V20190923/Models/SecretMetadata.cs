@@ -87,8 +87,11 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? NextRotationTime{ get; set; }
 
         /// <summary>
-        /// 0: user-defined credential; 1: Tencent Cloud service credential.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `0`: user-defined secret.
+        /// `1`: Tencent Cloud services secret.
+        /// `2`: SSH key secret.
+        /// `3`: Tencent Cloud API key secret.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecretType")]
         public long? SecretType{ get; set; }
@@ -121,6 +124,13 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("AssociatedInstanceIDs")]
         public string[] AssociatedInstanceIDs{ get; set; }
 
+        /// <summary>
+        /// UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TargetUin")]
+        public ulong? TargetUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +152,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
+            this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
         }
     }
 }

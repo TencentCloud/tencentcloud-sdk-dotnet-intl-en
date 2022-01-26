@@ -88,8 +88,8 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string ResourceID{ get; set; }
 
         /// <summary>
-        /// Whether to enable rotation. True: yes; False: no.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable rotation. `True`: enable rotation; `False`: disable rotation.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RotationStatus")]
         public bool? RotationStatus{ get; set; }
@@ -123,6 +123,13 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string[] AssociatedInstanceIDs{ get; set; }
 
         /// <summary>
+        /// UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TargetUin")]
+        public ulong? TargetUin{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -149,6 +156,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
+            this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

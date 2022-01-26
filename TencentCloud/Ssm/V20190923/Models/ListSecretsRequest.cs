@@ -71,6 +71,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// `0` (default): user-defined secret.
         /// `1`: Tencent Cloud services secret.
         /// `2`: SSH key secret.
+        /// `3`: Tencent Cloud API key secret.
         /// </summary>
         [JsonProperty("SecretType")]
         public ulong? SecretType{ get; set; }

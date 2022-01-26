@@ -25,7 +25,7 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// Async rotation task ID.
+        /// Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
         /// </summary>
         [JsonProperty("FlowID")]
         public long? FlowID{ get; set; }
