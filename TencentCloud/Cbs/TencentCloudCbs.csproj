@@ -92,6 +92,8 @@
     <Compile Include="V20170312\Models\GetSnapOverviewRequest.cs" />
     <Compile Include="V20170312\Models\GetSnapOverviewResponse.cs" />
     <Compile Include="V20170312\Models\Image.cs" />
+    <Compile Include="V20170312\Models\InitializeDisksRequest.cs" />
+    <Compile Include="V20170312\Models\InitializeDisksResponse.cs" />
     <Compile Include="V20170312\Models\InquirePriceModifyDiskExtraPerformanceRequest.cs" />
     <Compile Include="V20170312\Models\InquirePriceModifyDiskExtraPerformanceResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateDisksRequest.cs" />

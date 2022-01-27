@@ -897,6 +897,54 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// This API is used to reinitialize the cloud disks. Note the following when reinitializing the cloud disks:
+        /// 1. For a cloud disk created from a snapshot, it is rolled back to the state of the snapshot;
+        /// 2. For a cloud disk created from the scratch, all data are cleared. Please check and back up the necessary data before the reinitialization;
+        /// 3. Currently, you can only re-initialize a cloud disk when it’s not attached to a resource and not shared by others;
+        /// 4. For a cloud disk created from a snapshot, if the snapshot has been deleted, it cannot be reinitialized.
+        /// </summary>
+        /// <param name="req"><see cref="InitializeDisksRequest"/></param>
+        /// <returns><see cref="InitializeDisksResponse"/></returns>
+        public async Task<InitializeDisksResponse> InitializeDisks(InitializeDisksRequest req)
+        {
+             JsonResponseModel<InitializeDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InitializeDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitializeDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to reinitialize the cloud disks. Note the following when reinitializing the cloud disks:
+        /// 1. For a cloud disk created from a snapshot, it is rolled back to the state of the snapshot;
+        /// 2. For a cloud disk created from the scratch, all data are cleared. Please check and back up the necessary data before the reinitialization;
+        /// 3. Currently, you can only re-initialize a cloud disk when it’s not attached to a resource and not shared by others;
+        /// 4. For a cloud disk created from a snapshot, if the snapshot has been deleted, it cannot be reinitialized.
+        /// </summary>
+        /// <param name="req"><see cref="InitializeDisksRequest"/></param>
+        /// <returns><see cref="InitializeDisksResponse"/></returns>
+        public InitializeDisksResponse InitializeDisksSync(InitializeDisksRequest req)
+        {
+             JsonResponseModel<InitializeDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InitializeDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitializeDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the price for adjusting the cloud disk’s extra performance.
         /// </summary>
         /// <param name="req"><see cref="InquirePriceModifyDiskExtraPerformanceRequest"/></param>
