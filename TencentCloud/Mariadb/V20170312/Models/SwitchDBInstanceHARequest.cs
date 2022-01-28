@@ -21,26 +21,20 @@ namespace TencentCloud.Mariadb.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProjectSecurityGroupsResponse : AbstractModel
+    public class SwitchDBInstanceHARequest : AbstractModel
     {
         
         /// <summary>
-        /// Security group details
+        /// Instance ID in the format of tdsql-ow728lmc
         /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Total number of security groups.
+        /// Target AZ. The node with the lowest delay in the target AZ will be automatically promoted to primary node.
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

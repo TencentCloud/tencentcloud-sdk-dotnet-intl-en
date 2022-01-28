@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.369</VersionPrefix>
+    <VersionPrefix>3.0.370</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4190,6 +4190,8 @@
     <Compile Include="Mariadb\V20170312\Models\CopyAccountPrivilegesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateAccountRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateAccountResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CreateHourDBInstanceRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CreateHourDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DBAccount.cs" />
     <Compile Include="Mariadb\V20170312\Models\DBBackupTimeConfig.cs" />
     <Compile Include="Mariadb\V20170312\Models\DBInstance.cs" />
@@ -4278,10 +4280,13 @@
     <Compile Include="Mariadb\V20170312\Models\ProcedurePrivilege.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ResourceTag.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResourceUsageMonitorSet.cs" />
     <Compile Include="Mariadb\V20170312\Models\SecurityGroup.cs" />
     <Compile Include="Mariadb\V20170312\Models\SecurityGroupBound.cs" />
     <Compile Include="Mariadb\V20170312\Models\SlowLogData.cs" />
+    <Compile Include="Mariadb\V20170312\Models\SwitchDBInstanceHARequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\SwitchDBInstanceHAResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\TablePrivilege.cs" />
     <Compile Include="Mariadb\V20170312\Models\ViewPrivileges.cs" />
     <Compile Include="Mdc\V20200828\MdcClient.cs" />

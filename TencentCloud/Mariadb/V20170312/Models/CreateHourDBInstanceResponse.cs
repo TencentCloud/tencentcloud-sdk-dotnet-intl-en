@@ -21,20 +21,22 @@ namespace TencentCloud.Mariadb.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProjectSecurityGroupsResponse : AbstractModel
+    public class CreateHourDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Security group details
+        /// Order ID, which is used in the `DescribeOrders` API.
+        ///  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
         /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
         /// <summary>
-        /// Total number of security groups.
+        /// IDs of the instances you have purchased in this order. If no instance IDs are returned, you can query them with the `DescribeOrders` API. You can also use the `DescribeDBInstances` API to check whether an instance has been created successfully.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +50,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

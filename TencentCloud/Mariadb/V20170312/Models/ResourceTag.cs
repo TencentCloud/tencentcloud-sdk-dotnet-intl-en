@@ -21,26 +21,20 @@ namespace TencentCloud.Mariadb.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProjectSecurityGroupsResponse : AbstractModel
+    public class ResourceTag : AbstractModel
     {
         
         /// <summary>
-        /// Security group details
+        /// Tag key
         /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// Total number of security groups.
+        /// Tag value
         /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

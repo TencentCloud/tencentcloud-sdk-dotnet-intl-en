@@ -21,20 +21,14 @@ namespace TencentCloud.Mariadb.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProjectSecurityGroupsResponse : AbstractModel
+    public class SwitchDBInstanceHAResponse : AbstractModel
     {
         
         /// <summary>
-        /// Security group details
+        /// Async task ID
         /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
-
-        /// <summary>
-        /// Total number of security groups.
-        /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +42,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

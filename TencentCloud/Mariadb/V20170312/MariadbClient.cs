@@ -295,6 +295,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to create pay-as-you-go instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateHourDBInstanceResponse"/></returns>
+        public async Task<CreateHourDBInstanceResponse> CreateHourDBInstance(CreateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create pay-as-you-go instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateHourDBInstanceResponse"/></returns>
+        public CreateHourDBInstanceResponse CreateHourDBInstanceSync(CreateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a TencentDB account, which is uniquely identified by username and host.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountRequest"/></param>
@@ -1746,6 +1786,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ResetAccountPassword");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a primary-replica switch of instances.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceHAResponse"/></returns>
+        public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHA(SwitchDBInstanceHARequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDBInstanceHA");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceHAResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a primary-replica switch of instances.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceHAResponse"/></returns>
+        public SwitchDBInstanceHAResponse SwitchDBInstanceHASync(SwitchDBInstanceHARequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDBInstanceHA");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceHAResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
