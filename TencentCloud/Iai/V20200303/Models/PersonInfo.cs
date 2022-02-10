@@ -55,8 +55,8 @@ namespace TencentCloud.Iai.V20200303.Models
         public string[] FaceIds{ get; set; }
 
         /// <summary>
-        /// Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-        /// The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+        /// Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+        /// The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
         /// </summary>
         [JsonProperty("CreationTimestamp")]
         public ulong? CreationTimestamp{ get; set; }

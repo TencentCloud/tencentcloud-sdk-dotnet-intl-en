@@ -91,7 +91,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? IsEipDirectConnection{ get; set; }
 
         /// <summary>
-        /// The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+        /// EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
@@ -129,6 +129,16 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Including:
+        /// <li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+        /// <p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+        /// <li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+        /// <p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+        /// <li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+        /// <p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+        /// <li><strong>BANDWIDTH_PACKAGE</strong></li>
+        /// <p style="padding-left: 30px;">Bandwidth package.</p>
         /// Note: this field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("InternetChargeType")]

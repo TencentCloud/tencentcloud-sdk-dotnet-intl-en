@@ -1533,6 +1533,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query the information of clusters under the current account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterStatusResponse"/></returns>
+        public async Task<DescribeClusterStatusResponse> DescribeClusterStatus(DescribeClusterStatusRequest req)
+        {
+             JsonResponseModel<DescribeClusterStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of clusters under the current account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterStatusResponse"/></returns>
+        public DescribeClusterStatusResponse DescribeClusterStatusSync(DescribeClusterStatusRequest req)
+        {
+             JsonResponseModel<DescribeClusterStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query clusters list.
         /// </summary>
         /// <param name="req"><see cref="DescribeClustersRequest"/></param>

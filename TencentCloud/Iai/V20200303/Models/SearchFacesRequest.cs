@@ -26,6 +26,7 @@ namespace TencentCloud.Iai.V20200303.Models
         
         /// <summary>
         /// List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+        /// You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }

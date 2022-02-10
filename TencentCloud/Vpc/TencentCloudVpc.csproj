@@ -396,6 +396,7 @@
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\FilterObject.cs" />
     <Compile Include="V20170312\Models\FlowLog.cs" />
+    <Compile Include="V20170312\Models\FlowLogStorage.cs" />
     <Compile Include="V20170312\Models\GatewayFlowMonitorDetail.cs" />
     <Compile Include="V20170312\Models\GatewayQos.cs" />
     <Compile Include="V20170312\Models\GetCcnRegionBandwidthLimitsRequest.cs" />

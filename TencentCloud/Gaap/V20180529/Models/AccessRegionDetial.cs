@@ -67,7 +67,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IDCType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Feature bitmap. Valid values:
+        /// `0`: disable the feature;
+        /// `1`: enable the feature.
+        /// Each bit in the bitmap represents a feature:
+        /// 1st bit: layer-4 acceleration;
+        /// 2nd bit: layer-7 acceleration;
+        /// 3rd bit: HTTP3 access;
+        /// 4th bit: IPv6;
+        /// 5th bit: dedicated BGP access;
+        /// 6th bit: non-BGP access;
+        /// 7th bit: QoS acceleration.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FeatureBitmap")]
         public long? FeatureBitmap{ get; set; }

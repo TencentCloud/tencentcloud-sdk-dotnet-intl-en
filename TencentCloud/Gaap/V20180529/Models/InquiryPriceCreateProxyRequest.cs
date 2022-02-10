@@ -85,7 +85,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }

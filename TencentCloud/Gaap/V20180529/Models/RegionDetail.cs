@@ -54,6 +54,23 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IDCType")]
         public string IDCType{ get; set; }
 
+        /// <summary>
+        /// Feature bitmap. Valid values:
+        /// `0`: the feature is not supported;
+        /// `1`: the feature is supported.
+        /// Each bit in the bitmap represents a feature:
+        /// 1st bit: layer-4 acceleration;
+        /// 2nd bit: layer-7 acceleration;
+        /// 3rd bit: HTTP3 access;
+        /// 4th bit: IPv6;
+        /// 5th bit: dedicated BGP access;
+        /// 6th bit: non-BGP access;
+        /// 7th bit: QoS acceleration.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FeatureBitmap")]
+        public ulong? FeatureBitmap{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +82,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RegionArea", this.RegionArea);
             this.SetParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
             this.SetParamSimple(map, prefix + "IDCType", this.IDCType);
+            this.SetParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
         }
     }
 }

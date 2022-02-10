@@ -245,7 +245,10 @@ namespace TencentCloud.Gaap.V20180529.Models
         public IPDetail[] IPList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies whether to enable HTTP3. Valid values:
+        /// `0`: disable HTTP3;
+        /// `1`: enable HTTP3.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }

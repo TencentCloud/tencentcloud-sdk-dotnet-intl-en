@@ -163,7 +163,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBKernelVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance node information, which is required if you purchase a multi-AZ deployed instance.
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// List of application CLBs to modify.Up to 50 CLBs allowed.
+        /// List of application CLBs to modify. Up to 50 CLBs allowed.
         /// </summary>
         [JsonProperty("ForwardLoadBalancers")]
         public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }

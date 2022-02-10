@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the VPC instance
+        /// ID of the VPC instance.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// The unique ID of the resource.
+        /// The unique ID of the resource
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string TrafficType{ get; set; }
 
         /// <summary>
-        /// The storage ID of the flow log.
+        /// The storage ID of the flow log
         /// </summary>
         [JsonProperty("CloudLogId")]
         public string CloudLogId{ get; set; }
 
         /// <summary>
-        /// The storage ID status of the flow log.
+        /// Flow log storage ID status.
         /// </summary>
         [JsonProperty("CloudLogState")]
         public string CloudLogState{ get; set; }
@@ -85,10 +85,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+        /// Tag list, such as [{"Key": "city", "Value": "shanghai"}].
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
+
+        /// <summary>
+        /// Whether to enable. `true`: yes; `false`: no.
+        /// </summary>
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
+
+        /// <summary>
+        /// Consumer end types: cls and ckafka
+        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
+        /// <summary>
+        /// Information of the consumer, which is returned when the consumer type is `ckafka`.
+        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("FlowLogStorage")]
+        public FlowLogStorage FlowLogStorage{ get; set; }
 
 
         /// <summary>
@@ -107,6 +127,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
         }
     }
 }

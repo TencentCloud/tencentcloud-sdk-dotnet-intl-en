@@ -66,6 +66,7 @@
     <Compile Include="V20180525\Models\ClusterCIDRSettings.cs" />
     <Compile Include="V20180525\Models\ClusterExtraArgs.cs" />
     <Compile Include="V20180525\Models\ClusterNetworkSettings.cs" />
+    <Compile Include="V20180525\Models\ClusterStatus.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CommonName.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupRequest.cs" />
@@ -133,6 +134,8 @@
     <Compile Include="V20180525\Models\DescribeClusterRoutesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterSecurityRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterSecurityResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterStatusRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />

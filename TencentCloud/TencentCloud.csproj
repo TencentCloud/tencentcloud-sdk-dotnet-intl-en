@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.370</VersionPrefix>
+    <VersionPrefix>3.0.371</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3509,6 +3509,7 @@
     <Compile Include="Iai\V20200303\IaiClient.cs" />
     <Compile Include="Iai\V20200303\Models\AnalyzeFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\AnalyzeFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\AttributeItem.cs" />
     <Compile Include="Iai\V20200303\Models\Candidate.cs" />
     <Compile Include="Iai\V20200303\Models\CompareFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\CompareFaceResponse.cs" />
@@ -3528,11 +3529,17 @@
     <Compile Include="Iai\V20200303\Models\DeletePersonFromGroupResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DeletePersonRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DeletePersonResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectFaceAttributesRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectFaceAttributesResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\Eye.cs" />
+    <Compile Include="Iai\V20200303\Models\Eyebrow.cs" />
     <Compile Include="Iai\V20200303\Models\FaceAttributesInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceDetailAttributesInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceDetailInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceHairAttributesInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceQualityCompleteness.cs" />
@@ -3554,12 +3561,16 @@
     <Compile Include="Iai\V20200303\Models\GroupCandidate.cs" />
     <Compile Include="Iai\V20200303\Models\GroupExDescriptionInfo.cs" />
     <Compile Include="Iai\V20200303\Models\GroupInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\Hair.cs" />
+    <Compile Include="Iai\V20200303\Models\Hat.cs" />
+    <Compile Include="Iai\V20200303\Models\HeadPose.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyGroupRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyGroupResponse.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonBaseInfoRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonBaseInfoResponse.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonGroupInfoRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonGroupInfoResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\Mouth.cs" />
     <Compile Include="Iai\V20200303\Models\PersonExDescriptionInfo.cs" />
     <Compile Include="Iai\V20200303\Models\PersonGroupInfo.cs" />
     <Compile Include="Iai\V20200303\Models\PersonInfo.cs" />
@@ -5134,6 +5145,9 @@
     <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\AnalysisItems.cs" />
+    <Compile Include="Postgres\V20170312\Models\BackupPlan.cs" />
+    <Compile Include="Postgres\V20170312\Models\CloneDBInstanceRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CloneDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
@@ -5158,6 +5172,12 @@
     <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeAccountsRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeAvailableRecoveryTimeRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeAvailableRecoveryTimeResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeBackupPlansRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeBackupPlansResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeCloneDBInstanceSpecRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeCloneDBInstanceSpecResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBBackupsRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBBackupsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBErrlogsRequest.cs" />
@@ -5214,6 +5234,10 @@
     <Compile Include="Postgres\V20170312\Models\IsolateDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyBackupPlanRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyBackupPlanResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceDeploymentRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceDeploymentResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceParametersRequest.cs" />
@@ -6249,6 +6273,8 @@
     <Compile Include="Tcr\V20190924\Models\CheckInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateImmutableTagRulesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateImmutableTagRulesResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateInstanceTokenRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateInstanceTokenResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateMultipleSecurityPolicyRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateMultipleSecurityPolicyResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateReplicationInstanceRequest.cs" />
@@ -6627,6 +6653,7 @@
     <Compile Include="Tke\V20180525\Models\ClusterCIDRSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterExtraArgs.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterNetworkSettings.cs" />
+    <Compile Include="Tke\V20180525\Models\ClusterStatus.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterVersion.cs" />
     <Compile Include="Tke\V20180525\Models\CommonName.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupRequest.cs" />
@@ -6694,6 +6721,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterRoutesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterSecurityRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterSecurityResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterStatusRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterStatusResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClustersResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
@@ -7726,6 +7755,7 @@
     <Compile Include="Vpc\V20170312\Models\Filter.cs" />
     <Compile Include="Vpc\V20170312\Models\FilterObject.cs" />
     <Compile Include="Vpc\V20170312\Models\FlowLog.cs" />
+    <Compile Include="Vpc\V20170312\Models\FlowLogStorage.cs" />
     <Compile Include="Vpc\V20170312\Models\GatewayFlowMonitorDetail.cs" />
     <Compile Include="Vpc\V20170312\Models\GatewayQos.cs" />
     <Compile Include="Vpc\V20170312\Models\GetCcnRegionBandwidthLimitsRequest.cs" />

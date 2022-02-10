@@ -25,13 +25,15 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 
+        /// Node type. Valid values:
+        /// `Primary`;
+        /// `Standby`.
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
-        /// 
+        /// AZ where the node resides, such as ap-guangzhou-1.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

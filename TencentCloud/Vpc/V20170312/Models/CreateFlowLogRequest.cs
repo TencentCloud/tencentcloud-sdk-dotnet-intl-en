@@ -49,12 +49,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string TrafficType{ get; set; }
 
         /// <summary>
-        /// The storage ID of the flow log.
-        /// </summary>
-        [JsonProperty("CloudLogId")]
-        public string CloudLogId{ get; set; }
-
-        /// <summary>
         /// The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
         /// </summary>
         [JsonProperty("VpcId")]
@@ -67,10 +61,28 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string FlowLogDescription{ get; set; }
 
         /// <summary>
+        /// The storage ID of the flow log.
+        /// </summary>
+        [JsonProperty("CloudLogId")]
+        public string CloudLogId{ get; set; }
+
+        /// <summary>
         /// Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Consumer types: `cls` and `ckafka`
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
+        /// <summary>
+        /// Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+        /// </summary>
+        [JsonProperty("FlowLogStorage")]
+        public FlowLogStorage FlowLogStorage{ get; set; }
 
 
         /// <summary>
@@ -82,10 +94,12 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "TrafficType", this.TrafficType);
-            this.SetParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+            this.SetParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
         }
     }
 }

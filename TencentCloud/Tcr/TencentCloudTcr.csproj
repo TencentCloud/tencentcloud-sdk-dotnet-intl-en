@@ -49,6 +49,8 @@
     <Compile Include="V20190924\Models\CheckInstanceResponse.cs" />
     <Compile Include="V20190924\Models\CreateImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\CreateImmutableTagRulesResponse.cs" />
+    <Compile Include="V20190924\Models\CreateInstanceTokenRequest.cs" />
+    <Compile Include="V20190924\Models\CreateInstanceTokenResponse.cs" />
     <Compile Include="V20190924\Models\CreateMultipleSecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\CreateMultipleSecurityPolicyResponse.cs" />
     <Compile Include="V20190924\Models\CreateReplicationInstanceRequest.cs" />

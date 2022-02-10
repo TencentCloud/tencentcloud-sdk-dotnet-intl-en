@@ -133,6 +133,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// This API is used to create a temporary or long-term instance access credential.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceTokenRequest"/></param>
+        /// <returns><see cref="CreateInstanceTokenResponse"/></returns>
+        public async Task<CreateInstanceTokenResponse> CreateInstanceToken(CreateInstanceTokenRequest req)
+        {
+             JsonResponseModel<CreateInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a temporary or long-term instance access credential.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceTokenRequest"/></param>
+        /// <returns><see cref="CreateInstanceTokenResponse"/></returns>
+        public CreateInstanceTokenResponse CreateInstanceTokenSync(CreateInstanceTokenRequest req)
+        {
+             JsonResponseModel<CreateInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create multiple public network access allowlist policies of the TCR instance.
         /// </summary>
         /// <param name="req"><see cref="CreateMultipleSecurityPolicyRequest"/></param>

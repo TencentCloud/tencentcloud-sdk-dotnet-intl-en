@@ -56,6 +56,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolyClientCertificateIds")]
         public string[] PolyClientCertificateIds{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable HTTP3. Valid values:
+        /// `0`: disable HTTP3;
+        /// `1`: enable HTTP3.
+        /// HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +76,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
             this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

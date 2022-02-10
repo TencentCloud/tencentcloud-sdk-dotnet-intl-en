@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+        /// Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
         /// </summary>
         [JsonProperty("ZoneState")]
         public string ZoneState{ get; set; }
@@ -53,6 +53,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("ZoneSupportIpv6")]
         public ulong? ZoneSupportIpv6{ get; set; }
+
+        /// <summary>
+        /// AZs that can be used as standby when this AZ is primary
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StandbyZoneSet")]
+        public string[] StandbyZoneSet{ get; set; }
 
 
         /// <summary>
@@ -65,6 +72,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneState", this.ZoneState);
             this.SetParamSimple(map, prefix + "ZoneSupportIpv6", this.ZoneSupportIpv6);
+            this.SetParamArraySimple(map, prefix + "StandbyZoneSet.", this.StandbyZoneSet);
         }
     }
 }

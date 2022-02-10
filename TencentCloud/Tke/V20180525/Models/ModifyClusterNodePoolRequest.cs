@@ -97,7 +97,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
         /// </summary>
         [JsonProperty("Unschedulable")]
         public long? Unschedulable{ get; set; }
