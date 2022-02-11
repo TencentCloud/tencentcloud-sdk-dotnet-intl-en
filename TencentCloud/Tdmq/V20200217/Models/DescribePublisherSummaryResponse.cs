@@ -21,20 +21,36 @@ namespace TencentCloud.Tdmq.V20200217.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProducersResponse : AbstractModel
+    public class DescribePublisherSummaryResponse : AbstractModel
     {
         
         /// <summary>
-        /// Array set of producers.
+        /// Production rate (messages/sec).
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ProducerSets")]
-        public Producer[] ProducerSets{ get; set; }
+        [JsonProperty("MsgRateIn")]
+        public float? MsgRateIn{ get; set; }
 
         /// <summary>
-        /// Total number of records.
+        /// Production rate (byte/sec).
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("MsgThroughputIn")]
+        public float? MsgThroughputIn{ get; set; }
+
+        /// <summary>
+        /// The number of producers.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublisherCount")]
+        public long? PublisherCount{ get; set; }
+
+        /// <summary>
+        /// Message storage size in bytes.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StorageSize")]
+        public long? StorageSize{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +64,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ProducerSets.", this.ProducerSets);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "MsgRateIn", this.MsgRateIn);
+            this.SetParamSimple(map, prefix + "MsgThroughputIn", this.MsgThroughputIn);
+            this.SetParamSimple(map, prefix + "PublisherCount", this.PublisherCount);
+            this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

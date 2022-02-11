@@ -21,44 +21,50 @@ namespace TencentCloud.Tdmq.V20200217.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProducersRequest : AbstractModel
+    public class DescribePublishersRequest : AbstractModel
     {
         
         /// <summary>
-        /// Environment (namespace) name.
+        /// Cluster ID.
         /// </summary>
-        [JsonProperty("EnvironmentId")]
-        public string EnvironmentId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Namespace name.
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
 
         /// <summary>
         /// Topic name.
         /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
+        [JsonProperty("Topic")]
+        public string Topic{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default.
+        /// Parameter filter. The `ProducerName` and `Address` fields are supported.
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// Offset for query. Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+        /// The number of query results displayed per page. Default value: `20`.
         /// </summary>
         [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// Fuzzy match by producer name.
+        /// Sort by field.
         /// </summary>
-        [JsonProperty("ProducerName")]
-        public string ProducerName{ get; set; }
-
-        /// <summary>
-        /// Pulsar cluster ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Sort")]
+        public Sort Sort{ get; set; }
 
 
         /// <summary>
@@ -66,12 +72,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "ProducerName", this.ProducerName);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
         }
     }
 }

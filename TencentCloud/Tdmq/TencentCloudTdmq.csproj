@@ -59,7 +59,6 @@
     <Compile Include="V20200217\Models\CmqSubscription.cs" />
     <Compile Include="V20200217\Models\CmqTopic.cs" />
     <Compile Include="V20200217\Models\CmqTransactionPolicy.cs" />
-    <Compile Include="V20200217\Models\Connection.cs" />
     <Compile Include="V20200217\Models\Consumer.cs" />
     <Compile Include="V20200217\Models\ConsumersSchedule.cs" />
     <Compile Include="V20200217\Models\CreateClusterRequest.cs" />
@@ -140,8 +139,10 @@
     <Compile Include="V20200217\Models\DescribeEnvironmentRolesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeEnvironmentsRequest.cs" />
     <Compile Include="V20200217\Models\DescribeEnvironmentsResponse.cs" />
-    <Compile Include="V20200217\Models\DescribeProducersRequest.cs" />
-    <Compile Include="V20200217\Models\DescribeProducersResponse.cs" />
+    <Compile Include="V20200217\Models\DescribePublisherSummaryRequest.cs" />
+    <Compile Include="V20200217\Models\DescribePublisherSummaryResponse.cs" />
+    <Compile Include="V20200217\Models\DescribePublishersRequest.cs" />
+    <Compile Include="V20200217\Models\DescribePublishersResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClusterRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClusterResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClustersRequest.cs" />
@@ -187,9 +188,9 @@
     <Compile Include="V20200217\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20200217\Models\ModifyTopicResponse.cs" />
     <Compile Include="V20200217\Models\PartitionsTopic.cs" />
-    <Compile Include="V20200217\Models\Producer.cs" />
     <Compile Include="V20200217\Models\PublishCmqMsgRequest.cs" />
     <Compile Include="V20200217\Models\PublishCmqMsgResponse.cs" />
+    <Compile Include="V20200217\Models\Publisher.cs" />
     <Compile Include="V20200217\Models\ReceiveMessageRequest.cs" />
     <Compile Include="V20200217\Models\ReceiveMessageResponse.cs" />
     <Compile Include="V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
@@ -213,6 +214,7 @@
     <Compile Include="V20200217\Models\SendMessagesResponse.cs" />
     <Compile Include="V20200217\Models\SendMsgRequest.cs" />
     <Compile Include="V20200217\Models\SendMsgResponse.cs" />
+    <Compile Include="V20200217\Models\Sort.cs" />
     <Compile Include="V20200217\Models\Subscription.cs" />
     <Compile Include="V20200217\Models\SubscriptionTopic.cs" />
     <Compile Include="V20200217\Models\Tag.cs" />

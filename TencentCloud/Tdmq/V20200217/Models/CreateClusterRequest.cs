@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// List of cluster tags
+        /// Cluster tag list (deprecated).
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

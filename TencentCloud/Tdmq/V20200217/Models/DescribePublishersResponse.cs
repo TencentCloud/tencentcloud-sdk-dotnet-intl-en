@@ -21,34 +21,27 @@ namespace TencentCloud.Tdmq.V20200217.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Producer : AbstractModel
+    public class DescribePublishersResponse : AbstractModel
     {
         
         /// <summary>
-        /// Environment (namespace) name.
+        /// Total number of query results.
         /// </summary>
-        [JsonProperty("EnvironmentId")]
-        public string EnvironmentId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Topic name.
+        /// List of producer information.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
+        [JsonProperty("Publishers")]
+        public Publisher[] Publishers{ get; set; }
 
         /// <summary>
-        /// Number of connections.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("CountConnect")]
-        public long? CountConnect{ get; set; }
-
-        /// <summary>
-        /// Set of connections.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ConnectionSets")]
-        public Connection[] ConnectionSets{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -56,10 +49,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamSimple(map, prefix + "CountConnect", this.CountConnect);
-            this.SetParamArrayObj(map, prefix + "ConnectionSets.", this.ConnectionSets);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Publishers.", this.Publishers);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

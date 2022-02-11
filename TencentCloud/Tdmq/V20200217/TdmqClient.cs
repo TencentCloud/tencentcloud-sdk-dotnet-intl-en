@@ -1733,17 +1733,17 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to get the list of producers. Only online producers will be displayed.
+        /// This API is used to obtain message production overview information.
         /// </summary>
-        /// <param name="req"><see cref="DescribeProducersRequest"/></param>
-        /// <returns><see cref="DescribeProducersResponse"/></returns>
-        public async Task<DescribeProducersResponse> DescribeProducers(DescribeProducersRequest req)
+        /// <param name="req"><see cref="DescribePublisherSummaryRequest"/></param>
+        /// <returns><see cref="DescribePublisherSummaryResponse"/></returns>
+        public async Task<DescribePublisherSummaryResponse> DescribePublisherSummary(DescribePublisherSummaryRequest req)
         {
-             JsonResponseModel<DescribeProducersResponse> rsp = null;
+             JsonResponseModel<DescribePublisherSummaryResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeProducers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProducersResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribePublisherSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublisherSummaryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1753,17 +1753,57 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to get the list of producers. Only online producers will be displayed.
+        /// This API is used to obtain message production overview information.
         /// </summary>
-        /// <param name="req"><see cref="DescribeProducersRequest"/></param>
-        /// <returns><see cref="DescribeProducersResponse"/></returns>
-        public DescribeProducersResponse DescribeProducersSync(DescribeProducersRequest req)
+        /// <param name="req"><see cref="DescribePublisherSummaryRequest"/></param>
+        /// <returns><see cref="DescribePublisherSummaryResponse"/></returns>
+        public DescribePublisherSummaryResponse DescribePublisherSummarySync(DescribePublisherSummaryRequest req)
         {
-             JsonResponseModel<DescribeProducersResponse> rsp = null;
+             JsonResponseModel<DescribePublisherSummaryResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeProducers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProducersResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribePublisherSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublisherSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of producer information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublishersRequest"/></param>
+        /// <returns><see cref="DescribePublishersResponse"/></returns>
+        public async Task<DescribePublishersResponse> DescribePublishers(DescribePublishersRequest req)
+        {
+             JsonResponseModel<DescribePublishersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePublishers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublishersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of producer information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublishersRequest"/></param>
+        /// <returns><see cref="DescribePublishersResponse"/></returns>
+        public DescribePublishersResponse DescribePublishersSync(DescribePublishersRequest req)
+        {
+             JsonResponseModel<DescribePublishersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePublishers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublishersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

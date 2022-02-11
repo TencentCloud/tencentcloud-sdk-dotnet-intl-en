@@ -68,7 +68,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string HealthyInfo{ get; set; }
 
         /// <summary>
-        /// Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
+        /// Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
