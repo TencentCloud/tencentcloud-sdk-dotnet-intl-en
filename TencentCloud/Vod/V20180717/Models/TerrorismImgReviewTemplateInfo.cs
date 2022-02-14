@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of terrorism information detection in video image task. Valid values:
-        /// <li>ON: enables terrorism information detection in video image task;</li>
-        /// <li>OFF: disables terrorism information detection in video image task.</li>
+        /// Whether to enable recognition of terrorism content in images. Valid values:
+        /// <li>ON</li>
+        /// <li>OFF</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+        /// Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
         /// <li>`guns`: weapons and guns</li>
-        /// <li>`crowd`: crowds</li>
-        /// <li>`bloody`: bloody images</li>
-        /// <li>`police`: police forces</li>
+        /// <li>`crowd`: crowd</li>
+        /// <li>`bloody`: bloody scenes</li>
+        /// <li>`police`: police force</li>
         /// <li>`banners`: terrorism flags</li>
         /// <li>`militant`: militants</li>
         /// <li>`explosion`: explosions and fires</li>
@@ -48,13 +48,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] LabelSet{ get; set; }
 
         /// <summary>
-        /// Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
+        /// Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0-100.
+        /// Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `80` will be used by default. Value range: 0-100
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

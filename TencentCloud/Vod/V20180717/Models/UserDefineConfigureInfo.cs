@@ -25,22 +25,22 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Control parameter of custom figure audit.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for custom facial recognition
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("FaceReviewInfo")]
         public UserDefineFaceReviewTemplateInfo FaceReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of custom speech audit.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for custom ASR-based recognition
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public UserDefineAsrTextReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of custom text audit.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for custom OCR-based recognition
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public UserDefineOcrTextReviewTemplateInfo OcrReviewInfo{ get; set; }

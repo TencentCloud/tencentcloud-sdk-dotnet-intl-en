@@ -50,14 +50,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of terrorism information detection task in content audit.
+        /// Input for intelligent recognition of terrorism content
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewTerrorismTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of terrorism information detection task in content audit.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Output for intelligent recognition of terrorism content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewTerrorismTaskOutput Output{ get; set; }

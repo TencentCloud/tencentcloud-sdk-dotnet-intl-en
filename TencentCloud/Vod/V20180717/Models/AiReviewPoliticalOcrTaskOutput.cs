@@ -25,35 +25,35 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Score of OCR-detected politically sensitive information in text between 0 and 100.
+        /// Confidence score for the OCR-detected politically sensitive content. Value range: 0-100
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for OCR-detected politically sensitive information in text. Valid values:
-        /// <li>pass.</li>
-        /// <li>review.</li>
-        /// <li>block.</li>
+        /// Processing suggestion for the OCR-detected politically sensitive content. Valid values:
+        /// <li>pass</li>
+        /// <li>review</li>
+        /// <li>block</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// List of video segments that contain OCR-detected politically sensitive information
+        /// List of video segments that contain OCR-detected politically sensitive content
         /// <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewOcrTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL to the file for video segments that contain OCR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+        /// URL to the file for video segments that contain OCR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+        /// Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

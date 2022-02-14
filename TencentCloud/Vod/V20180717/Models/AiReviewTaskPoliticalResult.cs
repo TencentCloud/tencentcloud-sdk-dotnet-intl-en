@@ -50,14 +50,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of politically sensitive information detection task in content audit.
+        /// Input for intelligent recognition of politically sensitive content
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPoliticalTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of politically sensitive information detection task in content audit.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Output for intelligent recognition of politically sensitive content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalTaskOutput Output{ get; set; }

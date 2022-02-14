@@ -50,14 +50,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of ASR-based porn information detection in speech task in content audit.
+        /// Input for ASR-based recognition of pornographic content
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPornAsrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of ASR-based porn information detection in speech task in content audit.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Output for ASR-based recognition of pornographic content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPornAsrTaskOutput Output{ get; set; }

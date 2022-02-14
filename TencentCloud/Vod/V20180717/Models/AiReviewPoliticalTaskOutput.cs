@@ -25,47 +25,45 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Score of detected politically sensitive information in video between 0 and 100.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Confidence score for the detected politically sensitive content. Value range: 0-100
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for detected politically sensitive information. Valid values:
-        /// <li>pass.</li>
-        /// <li>review.</li>
-        /// <li>block.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Processing suggestion for the detected politically sensitive content
+        /// <li>pass</li>
+        /// <li>review</li>
+        /// <li>block</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+        /// Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
         /// violation_photo:
-        /// <li>violation_photo: violating photo.</li>
+        /// <li>`violation_photo`: banned images</li>
         /// Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-        /// <li>politician: political figure.</li>
+        /// <li>`politician`: politically sensitive people</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// List of video segments that contain politically sensitive information
+        /// List of video segments that contain detected politically sensitive content
         /// <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewPoliticalSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+        /// URL to the file for video segments that contain detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+        /// Expiration time of the URL to the file for video segments that contain politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

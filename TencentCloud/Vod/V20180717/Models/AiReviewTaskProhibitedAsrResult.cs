@@ -49,14 +49,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of ASR-based prohibited information detection in speech task in content audit
+        /// Input for ASR-based recognition of banned content
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewProhibitedAsrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of ASR-based prohibited information detection in speech task in content audit
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Output for ASR-based recognition of banned content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewProhibitedAsrTaskOutput Output{ get; set; }

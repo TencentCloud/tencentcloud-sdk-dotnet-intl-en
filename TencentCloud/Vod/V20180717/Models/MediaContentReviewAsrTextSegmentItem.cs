@@ -46,11 +46,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for suspected segment audit. Valid values:
-        /// <li>pass.</li>
-        /// <li>review.</li>
-        /// <li>block.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Processing suggestion for the detected suspicious content. Valid values:
+        /// <li>pass</li>
+        /// <li>review</li>
+        /// <li>block</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }

@@ -48,6 +48,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// File size (bytes)
+        /// <li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+        /// <li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+        /// <li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+        /// </summary>
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Package", this.Package);
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

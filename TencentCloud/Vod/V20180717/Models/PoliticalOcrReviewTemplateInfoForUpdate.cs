@@ -25,21 +25,21 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of politically sensitive information detection in text task. Valid values:
-        /// <li>ON: enables politically sensitive information detection in text task;</li>
-        /// <li>OFF: disables politically sensitive information detection in text task.</li>
+        /// Whether to enable OCR-based recognition of politically sensitive content. Valid values:
+        /// <li>ON</li>
+        /// <li>OFF</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+        /// Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+        /// Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

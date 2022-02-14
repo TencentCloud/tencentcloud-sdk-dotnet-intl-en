@@ -26,89 +26,89 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>`Porn`: porn information recognition in images</li>
-        /// <li>`Terrorism`: terrorism information recognition in images</li>
-        /// <li>`Political`: politically sensitive information recognition in images</li>
-        /// <li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
-        /// <li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
-        /// <li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
-        /// <li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
-        /// <li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
-        /// <li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
-        /// <li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
+        /// <li>`Porn`: recognition of pornographic content in images</li>
+        /// <li>`Terrorism`: recognition of terrorism content in images</li>
+        /// <li>`Political`: recognition of politically sensitive content in images</li>
+        /// <li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
+        /// <li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
+        /// <li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
+        /// <li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
+        /// <li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
+        /// <li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
+        /// <li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent porn information detection in video image task in video content audit, which is valid when task type is `Porn`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for intelligent recognition of pornographic content in images. This parameter is valid when `Type` is `Porn`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("PornTask")]
         public AiReviewTaskPornResult PornTask{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent terrorism information detection in video image task in video content audit, which is valid when task type is `Terrorism`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for intelligent recognition of terrorism content in images. This parameter is valid when `Type` is `Terrorism`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("TerrorismTask")]
         public AiReviewTaskTerrorismResult TerrorismTask{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent politically sensitive information detection in video image task in video content audit, which is valid when task type is `Political`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for intelligent recognition of politically sensitive content in images. This parameter is valid when `Type` is `Political`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("PoliticalTask")]
         public AiReviewTaskPoliticalResult PoliticalTask{ get; set; }
 
         /// <summary>
-        /// Query result of ASR-based porn information detection in speech task in video content audit, which is valid when task type is `Porn.Asr`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for ASR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Asr`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("PornAsrTask")]
         public AiReviewTaskPornAsrResult PornAsrTask{ get; set; }
 
         /// <summary>
-        /// Query result of OCR-based porn information detection in text task in video content audit, which is valid when task type is `Porn.Ocr`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for OCR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Ocr`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("PornOcrTask")]
         public AiReviewTaskPornOcrResult PornOcrTask{ get; set; }
 
         /// <summary>
-        /// Query result of ASR-based politically sensitive information detection in speech task in video content audit, which is valid when task type is `Political.Asr`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for ASR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Asr`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("PoliticalAsrTask")]
         public AiReviewTaskPoliticalAsrResult PoliticalAsrTask{ get; set; }
 
         /// <summary>
-        /// Query result of OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for OCR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Ocr`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("PoliticalOcrTask")]
         public AiReviewTaskPoliticalOcrResult PoliticalOcrTask{ get; set; }
 
         /// <summary>
-        /// Query result of OCR-based terrorism information detection in text task in video content audit, which is valid when task type is `Terrorism.Ocr`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for OCR-based recognition of terrorism content. This parameter is valid when `Type` is `Terrorism.Ocr`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("TerrorismOcrTask")]
         public AiReviewTaskTerrorismOcrResult TerrorismOcrTask{ get; set; }
 
         /// <summary>
-        /// Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid when task type is `Prohibited.Asr`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ProhibitedAsrTask")]
-        public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }
-
-        /// <summary>
-        /// Query result of OCR-based prohibited information detection in text task in video content audit, which is valid when task type is `Prohibited.Ocr`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result for OCR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Ocr`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("ProhibitedOcrTask")]
         public AiReviewTaskProhibitedOcrResult ProhibitedOcrTask{ get; set; }
+
+        /// <summary>
+        /// Result for ASR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Asr`.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("ProhibitedAsrTask")]
+        public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }
 
 
         /// <summary>
@@ -125,8 +125,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "PoliticalAsrTask.", this.PoliticalAsrTask);
             this.SetParamObj(map, prefix + "PoliticalOcrTask.", this.PoliticalOcrTask);
             this.SetParamObj(map, prefix + "TerrorismOcrTask.", this.TerrorismOcrTask);
-            this.SetParamObj(map, prefix + "ProhibitedAsrTask.", this.ProhibitedAsrTask);
             this.SetParamObj(map, prefix + "ProhibitedOcrTask.", this.ProhibitedOcrTask);
+            this.SetParamObj(map, prefix + "ProhibitedAsrTask.", this.ProhibitedAsrTask);
         }
     }
 }

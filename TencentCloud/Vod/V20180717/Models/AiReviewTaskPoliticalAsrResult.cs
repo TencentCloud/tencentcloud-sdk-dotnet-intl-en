@@ -50,13 +50,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of ASR-based politically sensitive information detection in speech task in content audit.
+        /// Input for ASR-based recognition of politically sensitive content
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPoliticalAsrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of ASR-based politically sensitive information detection in speech task in content audit.
+        /// Output for ASR-based recognition of politically sensitive content
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalAsrTaskOutput Output{ get; set; }

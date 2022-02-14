@@ -50,14 +50,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of OCR-based porn information detection in text task in content audit.
+        /// Input for OCR-based recognition of pornographic content
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPornOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of OCR-based porn information detection in text task in content audit.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Output for OCR-based recognition of pornographic content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPornOcrTaskOutput Output{ get; set; }

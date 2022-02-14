@@ -25,15 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Control parameter of terrorism information detection in video image task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for recognition of terrorism content in images
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of terrorism information detection in text task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for OCR-based recognition of terrorism content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

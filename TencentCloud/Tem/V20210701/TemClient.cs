@@ -213,6 +213,52 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// This API is used to delete an application.
+        ///   - Stop the application if it’s running
+        ///   - Delete resources associated with this application
+        ///   - Delele the application
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
+        /// <returns><see cref="DeleteApplicationResponse"/></returns>
+        public async Task<DeleteApplicationResponse> DeleteApplication(DeleteApplicationRequest req)
+        {
+             JsonResponseModel<DeleteApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an application.
+        ///   - Stop the application if it’s running
+        ///   - Delete resources associated with this application
+        ///   - Delele the application
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
+        /// <returns><see cref="DeleteApplicationResponse"/></returns>
+        public DeleteApplicationResponse DeleteApplicationSync(DeleteApplicationRequest req)
+        {
+             JsonResponseModel<DeleteApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an ingress rule.
         /// </summary>
         /// <param name="req"><see cref="DeleteIngressRequest"/></param>
@@ -653,6 +699,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// This API is used to restart an application.
+        /// </summary>
+        /// <param name="req"><see cref="RestartApplicationRequest"/></param>
+        /// <returns><see cref="RestartApplicationResponse"/></returns>
+        public async Task<RestartApplicationResponse> RestartApplication(RestartApplicationRequest req)
+        {
+             JsonResponseModel<RestartApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to restart an application.
+        /// </summary>
+        /// <param name="req"><see cref="RestartApplicationRequest"/></param>
+        /// <returns><see cref="RestartApplicationResponse"/></returns>
+        public RestartApplicationResponse RestartApplicationSync(RestartApplicationRequest req)
+        {
+             JsonResponseModel<RestartApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to restart an application pod.
         /// </summary>
         /// <param name="req"><see cref="RestartApplicationPodRequest"/></param>
@@ -684,6 +770,86 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "RestartApplicationPod");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartApplicationPodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure the rolling update policy for an application.
+        /// </summary>
+        /// <param name="req"><see cref="RollingUpdateApplicationByVersionRequest"/></param>
+        /// <returns><see cref="RollingUpdateApplicationByVersionResponse"/></returns>
+        public async Task<RollingUpdateApplicationByVersionResponse> RollingUpdateApplicationByVersion(RollingUpdateApplicationByVersionRequest req)
+        {
+             JsonResponseModel<RollingUpdateApplicationByVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RollingUpdateApplicationByVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollingUpdateApplicationByVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure the rolling update policy for an application.
+        /// </summary>
+        /// <param name="req"><see cref="RollingUpdateApplicationByVersionRequest"/></param>
+        /// <returns><see cref="RollingUpdateApplicationByVersionResponse"/></returns>
+        public RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersionSync(RollingUpdateApplicationByVersionRequest req)
+        {
+             JsonResponseModel<RollingUpdateApplicationByVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RollingUpdateApplicationByVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollingUpdateApplicationByVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop an application.
+        /// </summary>
+        /// <param name="req"><see cref="StopApplicationRequest"/></param>
+        /// <returns><see cref="StopApplicationResponse"/></returns>
+        public async Task<StopApplicationResponse> StopApplication(StopApplicationRequest req)
+        {
+             JsonResponseModel<StopApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop an application.
+        /// </summary>
+        /// <param name="req"><see cref="StopApplicationRequest"/></param>
+        /// <returns><see cref="StopApplicationResponse"/></returns>
+        public StopApplicationResponse StopApplicationSync(StopApplicationRequest req)
+        {
+             JsonResponseModel<StopApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopApplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,40 +25,40 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of content audit template.
+        /// Unique ID of an intelligent recognition template
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Content audit template name. Length limit: 64 characters.
+        /// Name of an intelligent recognition template. Max 64 characters
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Content audit template description. Length limit: 256 characters.
+        /// Description of an intelligent recognition template. Max 256 characters
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Porn information detection control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for recognition of pornographic content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// Terrorism information detection control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for recognition of terrorism content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Politically sensitive information detection control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for recognition of politically sensitive content
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
@@ -73,16 +73,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// Custom content audit control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Custom recognition parameters
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }
 
         /// <summary>
-        /// Switch controlling whether to add audit result to review list (for human review).
-        /// <li>ON: yes;</li>
-        /// <li>OFF: no.</li>
+        /// Whether to subject the recognition result to human review
+        /// <li>ON</li>
+        /// <li>OFF</li>
         /// </summary>
         [JsonProperty("ReviewWallSwitch")]
         public string ReviewWallSwitch{ get; set; }

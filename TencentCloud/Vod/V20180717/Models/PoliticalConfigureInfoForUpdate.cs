@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Control parameter of politically sensitive information detection in video image.
+        /// Parameters for recognition of politically sensitive content in images
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of politically sensitive information detection in speech.
+        /// Parameters for ASR-based recognition of politically sensitive content
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of politically sensitive information detection in text.
+        /// Parameters for OCR-based recognition of politically sensitive content
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

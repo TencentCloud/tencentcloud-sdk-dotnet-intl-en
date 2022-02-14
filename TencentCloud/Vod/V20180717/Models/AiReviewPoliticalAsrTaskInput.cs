@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Politically sensitive information detection template ID.
+        /// ID of the template for recognition of politically sensitive content
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

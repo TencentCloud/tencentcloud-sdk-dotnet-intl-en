@@ -25,48 +25,45 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Score of detected porn information in video between 0 and 100.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Confidence score for the detected pornographic content. Value range: 0-100
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for detected porn information. Valid values:
-        /// <li>pass.</li>
-        /// <li>review.</li>
-        /// <li>block.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Processing suggestion for the detected pornographic content. Valid values:
+        /// <li>pass</li>
+        /// <li>review</li>
+        /// <li>block</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tag of detected porn information in video. Valid values:
-        /// <li>porn: porn.</li>
-        /// <li>sexy: sexiness.</li>
-        /// <li>vulgar: vulgarity.</li>
-        /// <li>intimacy: intimacy.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Labels for the detected pornographic content. Valid values:
+        /// <li>porn</li>
+        /// <li>sexy</li>
+        /// <li>vulgar</li>
+        /// <li>intimacy</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// List of video segments that contain porn information
+        /// List of video segments that contain detected pornographic content
         /// <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+        /// URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+        /// Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

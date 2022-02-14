@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// Parameter of AI-based content audit task.
+        /// Intelligent recognition task
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }

@@ -92,8 +92,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }
 
         /// <summary>
-        /// Execution status and result of video content audit task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Status and result of an intelligent recognition task
         /// </summary>
         [JsonProperty("AiContentReviewResultSet")]
         public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }

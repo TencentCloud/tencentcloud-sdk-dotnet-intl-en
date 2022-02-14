@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of porn detection in text task. Valid values:
-        /// <li>ON: enables porn detection in text task;</li>
-        /// <li>OFF: disables porn detection in text task.</li>
+        /// Whether to enable OCR-based recognition of pornographic content. Valid values:
+        /// <li>ON</li>
+        /// <li>OFF</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

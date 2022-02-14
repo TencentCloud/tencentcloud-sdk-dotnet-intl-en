@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AiReviewTerrorismOcrTaskInput : AbstractModel
+    public class StopApplicationResponse : AbstractModel
     {
         
         /// <summary>
-        /// ID of the template for recognition of terrorism content
+        /// Returned result
         /// </summary>
-        [JsonProperty("Definition")]
-        public ulong? Definition{ get; set; }
+        [JsonProperty("Result")]
+        public bool? Result{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

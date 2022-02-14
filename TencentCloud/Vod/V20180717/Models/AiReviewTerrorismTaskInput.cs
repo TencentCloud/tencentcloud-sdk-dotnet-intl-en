@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Terrorism information detection template ID.
+        /// ID of the template for recognition of terrorism content
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

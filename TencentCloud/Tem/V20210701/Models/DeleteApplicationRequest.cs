@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PornConfigureInfoForUpdate : AbstractModel
+    public class DeleteApplicationRequest : AbstractModel
     {
         
         /// <summary>
-        /// Parameters for recognition of pornographic content in images
+        /// Service ID
         /// </summary>
-        [JsonProperty("ImgReviewInfo")]
-        public PornImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Parameters for ASR-based recognition of pornographic content
+        /// Environment ID
         /// </summary>
-        [JsonProperty("AsrReviewInfo")]
-        public PornAsrReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Parameters for OCR-based recognition of pornographic content
+        /// Retain as default
         /// </summary>
-        [JsonProperty("OcrReviewInfo")]
-        public PornOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
+
+        /// <summary>
+        /// Whether to delete this application automatically when there is no running version.
+        /// </summary>
+        [JsonProperty("DeleteApplicationIfNoRunningVersion")]
+        public bool? DeleteApplicationIfNoRunningVersion{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
-            this.SetParamObj(map, prefix + "AsrReviewInfo.", this.AsrReviewInfo);
-            this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "DeleteApplicationIfNoRunningVersion", this.DeleteApplicationIfNoRunningVersion);
         }
     }
 }

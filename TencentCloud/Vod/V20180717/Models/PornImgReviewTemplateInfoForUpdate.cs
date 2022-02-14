@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of porn detection in video image task. Valid values:
-        /// <li>ON: enables porn detection in video image task;</li>
-        /// <li>OFF: disables porn detection in video image task.</li>
+        /// Whether to enable recognition of pornographic content in images. Valid values:
+        /// <li>ON</li>
+        /// <li>OFF</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Filter tag for porn detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-        /// <li>porn: porn;</li>
-        /// <li>vulgar: vulgarity;</li>
-        /// <li>intimacy: intimacy;</li>
-        /// <li>sexy: sexiness.</li>
+        /// Filter labels for recognition of pornographic content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
+        /// <li>porn</li>
+        /// <li>vulgar</li>
+        /// <li>intimacy</li>
+        /// <li>sexy</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }
 
         /// <summary>
-        /// Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+        /// Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+        /// Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

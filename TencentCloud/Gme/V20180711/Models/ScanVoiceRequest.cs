@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+        /// Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
         /// </summary>
         [JsonProperty("Scenes")]
         public string[] Scenes{ get; set; }
@@ -56,6 +56,12 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("Callback")]
         public string Callback{ get; set; }
 
+        /// <summary>
+        /// The language. `jp` represents Japanese
+        /// </summary>
+        [JsonProperty("Lang")]
+        public string Lang{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "Live", this.Live);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "Callback", this.Callback);
+            this.SetParamSimple(map, prefix + "Lang", this.Lang);
         }
     }
 }
