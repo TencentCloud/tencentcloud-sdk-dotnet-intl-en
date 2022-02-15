@@ -1504,5 +1504,45 @@ namespace TencentCloud.Dcdb.V20180411
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to start a source-replica switch of instances.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceHAResponse"/></returns>
+        public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHA(SwitchDBInstanceHARequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDBInstanceHA");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceHAResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a source-replica switch of instances.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceHAResponse"/></returns>
+        public SwitchDBInstanceHAResponse SwitchDBInstanceHASync(SwitchDBInstanceHARequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDBInstanceHA");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceHAResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -138,6 +138,8 @@
     <Compile Include="V20180411\Models\SecurityGroup.cs" />
     <Compile Include="V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="V20180411\Models\ShardInfo.cs" />
+    <Compile Include="V20180411\Models\SwitchDBInstanceHARequest.cs" />
+    <Compile Include="V20180411\Models\SwitchDBInstanceHAResponse.cs" />
     <Compile Include="V20180411\Models\TableColumn.cs" />
   </ItemGroup>
 </Project>

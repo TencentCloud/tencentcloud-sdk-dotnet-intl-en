@@ -25,7 +25,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+        /// AZs to deploy instance nodes. You can specify up to two AZs.
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
