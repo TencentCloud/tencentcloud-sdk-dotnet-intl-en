@@ -21,14 +21,21 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeParamTemplatesRequest : AbstractModel
+    public class UpgradeCDBProxyVersionResponse : AbstractModel
     {
         
         /// <summary>
-        /// Engine version. If it is left empty, all parameter templates will be queried.
+        /// Async request ID
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("EngineVersions")]
-        public string[] EngineVersions{ get; set; }
+        [JsonProperty("AsyncRequestId")]
+        public string AsyncRequestId{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

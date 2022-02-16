@@ -21,14 +21,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeParamTemplatesRequest : AbstractModel
+    public class ModifyLocalBinlogConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Engine version. If it is left empty, all parameter templates will be queried.
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
         /// </summary>
-        [JsonProperty("EngineVersions")]
-        public string[] EngineVersions{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Retention period of local binlog. Value range: [72,168].
+        /// </summary>
+        [JsonProperty("SaveHours")]
+        public long? SaveHours{ get; set; }
+
+        /// <summary>
+        /// Space utilization of local binlog. Value range: [30,50].
+        /// </summary>
+        [JsonProperty("MaxUsage")]
+        public long? MaxUsage{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "SaveHours", this.SaveHours);
+            this.SetParamSimple(map, prefix + "MaxUsage", this.MaxUsage);
         }
     }
 }

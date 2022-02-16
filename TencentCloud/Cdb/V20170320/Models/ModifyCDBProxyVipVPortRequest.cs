@@ -21,38 +21,44 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ParamTemplateInfo : AbstractModel
+    public class ModifyCDBProxyVipVPortRequest : AbstractModel
     {
         
         /// <summary>
-        /// Parameter template ID
+        /// Proxy group ID
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("ProxyGroupId")]
+        public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Parameter template name
+        /// VPC ID
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Parameter template description
+        /// VPC subnet ID
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Instance engine version
+        /// New IP
         /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string EngineVersion{ get; set; }
+        [JsonProperty("DstIp")]
+        public string DstIp{ get; set; }
 
         /// <summary>
-        /// Parameter template type
+        /// New port
         /// </summary>
-        [JsonProperty("TemplateType")]
-        public string TemplateType{ get; set; }
+        [JsonProperty("DstPort")]
+        public ulong? DstPort{ get; set; }
+
+        /// <summary>
+        /// Valid hours of the old IP
+        /// </summary>
+        [JsonProperty("ReleaseDuration")]
+        public ulong? ReleaseDuration{ get; set; }
 
 
         /// <summary>
@@ -60,11 +66,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "DstIp", this.DstIp);
+            this.SetParamSimple(map, prefix + "DstPort", this.DstPort);
+            this.SetParamSimple(map, prefix + "ReleaseDuration", this.ReleaseDuration);
         }
     }
 }

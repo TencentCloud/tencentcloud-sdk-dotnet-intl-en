@@ -21,14 +21,14 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeParamTemplatesRequest : AbstractModel
+    public class DescribeLocalBinlogConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Engine version. If it is left empty, all parameter templates will be queried.
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
         /// </summary>
-        [JsonProperty("EngineVersions")]
-        public string[] EngineVersions{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

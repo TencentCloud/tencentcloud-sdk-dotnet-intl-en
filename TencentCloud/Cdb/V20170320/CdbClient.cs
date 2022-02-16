@@ -93,6 +93,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to create a database proxy group for a source instance.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyCDBProxyRequest"/></param>
+        /// <returns><see cref="ApplyCDBProxyResponse"/></returns>
+        public async Task<ApplyCDBProxyResponse> ApplyCDBProxy(ApplyCDBProxyRequest req)
+        {
+             JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a database proxy group for a source instance.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyCDBProxyRequest"/></param>
+        /// <returns><see cref="ApplyCDBProxyResponse"/></returns>
+        public ApplyCDBProxyResponse ApplyCDBProxySync(ApplyCDBProxyRequest req)
+        {
+             JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "BalanceRoGroupLoad");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BalanceRoGroupLoadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="CloseCDBProxyRequest"/></param>
+        /// <returns><see cref="CloseCDBProxyResponse"/></returns>
+        public async Task<CloseCDBProxyResponse> CloseCDBProxy(CloseCDBProxyRequest req)
+        {
+             JsonResponseModel<CloseCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="CloseCDBProxyRequest"/></param>
+        /// <returns><see cref="CloseCDBProxyResponse"/></returns>
+        public CloseCDBProxyResponse CloseCDBProxySync(CloseCDBProxyRequest req)
+        {
+             JsonResponseModel<CloseCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseCDBProxyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1193,6 +1273,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the information of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
+        /// <returns><see cref="DescribeCDBProxyResponse"/></returns>
+        public async Task<DescribeCDBProxyResponse> DescribeCDBProxy(DescribeCDBProxyRequest req)
+        {
+             JsonResponseModel<DescribeCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
+        /// <returns><see cref="DescribeCDBProxyResponse"/></returns>
+        public DescribeCDBProxyResponse DescribeCDBProxySync(DescribeCDBProxyRequest req)
+        {
+             JsonResponseModel<DescribeCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the clone task list of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeCloneListRequest"/></param>
@@ -1955,6 +2075,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the retention policy of local binlog of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLocalBinlogConfigRequest"/></param>
+        /// <returns><see cref="DescribeLocalBinlogConfigResponse"/></returns>
+        public async Task<DescribeLocalBinlogConfigResponse> DescribeLocalBinlogConfig(DescribeLocalBinlogConfigRequest req)
+        {
+             JsonResponseModel<DescribeLocalBinlogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLocalBinlogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLocalBinlogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the retention policy of local binlog of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLocalBinlogConfigRequest"/></param>
+        /// <returns><see cref="DescribeLocalBinlogConfigResponse"/></returns>
+        public DescribeLocalBinlogConfigResponse DescribeLocalBinlogConfigSync(DescribeLocalBinlogConfigRequest req)
+        {
+             JsonResponseModel<DescribeLocalBinlogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLocalBinlogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLocalBinlogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query parameter template details. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
@@ -1995,7 +2155,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeParamTemplates) is used to query the list of parameter templates
+        /// This API is used to query the parameter template list. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -2015,7 +2175,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeParamTemplates) is used to query the list of parameter templates
+        /// This API is used to query the parameter template list. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -2066,6 +2226,86 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProjectSecurityGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the connection pool configuration of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyConnectionPoolConfRequest"/></param>
+        /// <returns><see cref="DescribeProxyConnectionPoolConfResponse"/></returns>
+        public async Task<DescribeProxyConnectionPoolConfResponse> DescribeProxyConnectionPoolConf(DescribeProxyConnectionPoolConfRequest req)
+        {
+             JsonResponseModel<DescribeProxyConnectionPoolConfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProxyConnectionPoolConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyConnectionPoolConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the connection pool configuration of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyConnectionPoolConfRequest"/></param>
+        /// <returns><see cref="DescribeProxyConnectionPoolConfResponse"/></returns>
+        public DescribeProxyConnectionPoolConfResponse DescribeProxyConnectionPoolConfSync(DescribeProxyConnectionPoolConfRequest req)
+        {
+             JsonResponseModel<DescribeProxyConnectionPoolConfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProxyConnectionPoolConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyConnectionPoolConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the proxy configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyCustomConfRequest"/></param>
+        /// <returns><see cref="DescribeProxyCustomConfResponse"/></returns>
+        public async Task<DescribeProxyCustomConfResponse> DescribeProxyCustomConf(DescribeProxyCustomConfRequest req)
+        {
+             JsonResponseModel<DescribeProxyCustomConfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProxyCustomConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyCustomConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the proxy configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyCustomConfRequest"/></param>
+        /// <returns><see cref="DescribeProxyCustomConfResponse"/></returns>
+        public DescribeProxyCustomConfResponse DescribeProxyCustomConfSync(DescribeProxyCustomConfRequest req)
+        {
+             JsonResponseModel<DescribeProxyCustomConfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProxyCustomConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyCustomConfResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2963,6 +3203,166 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to configure read/write separation of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyResponse"/></returns>
+        public async Task<ModifyCDBProxyResponse> ModifyCDBProxy(ModifyCDBProxyRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure read/write separation of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyResponse"/></returns>
+        public ModifyCDBProxyResponse ModifyCDBProxySync(ModifyCDBProxyRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyConnectionPoolResponse"/></returns>
+        public async Task<ModifyCDBProxyConnectionPoolResponse> ModifyCDBProxyConnectionPool(ModifyCDBProxyConnectionPoolRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyConnectionPoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDBProxyConnectionPool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyConnectionPoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyConnectionPoolResponse"/></returns>
+        public ModifyCDBProxyConnectionPoolResponse ModifyCDBProxyConnectionPoolSync(ModifyCDBProxyConnectionPoolRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyConnectionPoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxyConnectionPool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyConnectionPoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the description of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyDescRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyDescResponse"/></returns>
+        public async Task<ModifyCDBProxyDescResponse> ModifyCDBProxyDesc(ModifyCDBProxyDescRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyDescResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDBProxyDesc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyDescResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the description of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyDescRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyDescResponse"/></returns>
+        public ModifyCDBProxyDescResponse ModifyCDBProxyDescSync(ModifyCDBProxyDescRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyDescResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxyDesc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyDescResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the VIP or port of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyVipVPortRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyVipVPortResponse"/></returns>
+        public async Task<ModifyCDBProxyVipVPortResponse> ModifyCDBProxyVipVPort(ModifyCDBProxyVipVPortRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyVipVPortResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDBProxyVipVPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyVipVPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the VIP or port of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyVipVPortRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyVipVPortResponse"/></returns>
+        public ModifyCDBProxyVipVPortResponse ModifyCDBProxyVipVPortSync(ModifyCDBProxyVipVPortRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyVipVPortResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxyVipVPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyVipVPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyDBInstanceName) is used to rename a TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
@@ -3194,6 +3594,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyInstanceTag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the retention policy of local binlog of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLocalBinlogConfigRequest"/></param>
+        /// <returns><see cref="ModifyLocalBinlogConfigResponse"/></returns>
+        public async Task<ModifyLocalBinlogConfigResponse> ModifyLocalBinlogConfig(ModifyLocalBinlogConfigRequest req)
+        {
+             JsonResponseModel<ModifyLocalBinlogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLocalBinlogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLocalBinlogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the retention policy of local binlog of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLocalBinlogConfigRequest"/></param>
+        /// <returns><see cref="ModifyLocalBinlogConfigResponse"/></returns>
+        public ModifyLocalBinlogConfigResponse ModifyLocalBinlogConfigSync(ModifyLocalBinlogConfigRequest req)
+        {
+             JsonResponseModel<ModifyLocalBinlogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLocalBinlogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLocalBinlogConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3495,6 +3935,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the proxy details.
+        /// </summary>
+        /// <param name="req"><see cref="QueryCDBProxyRequest"/></param>
+        /// <returns><see cref="QueryCDBProxyResponse"/></returns>
+        public async Task<QueryCDBProxyResponse> QueryCDBProxy(QueryCDBProxyRequest req)
+        {
+             JsonResponseModel<QueryCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the proxy details.
+        /// </summary>
+        /// <param name="req"><see cref="QueryCDBProxyRequest"/></param>
+        /// <returns><see cref="QueryCDBProxyResponse"/></returns>
+        public QueryCDBProxyResponse QueryCDBProxySync(QueryCDBProxyRequest req)
+        {
+             JsonResponseModel<QueryCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to deisolate an isolated TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="ReleaseIsolatedDBInstancesRequest"/></param>
@@ -3526,6 +4006,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseIsolatedDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseIsolatedDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to rebalance the load on database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="ReloadBalanceProxyNodeRequest"/></param>
+        /// <returns><see cref="ReloadBalanceProxyNodeResponse"/></returns>
+        public async Task<ReloadBalanceProxyNodeResponse> ReloadBalanceProxyNode(ReloadBalanceProxyNodeRequest req)
+        {
+             JsonResponseModel<ReloadBalanceProxyNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReloadBalanceProxyNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReloadBalanceProxyNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to rebalance the load on database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="ReloadBalanceProxyNodeRequest"/></param>
+        /// <returns><see cref="ReloadBalanceProxyNodeResponse"/></returns>
+        public ReloadBalanceProxyNodeResponse ReloadBalanceProxyNodeSync(ReloadBalanceProxyNodeRequest req)
+        {
+             JsonResponseModel<ReloadBalanceProxyNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReloadBalanceProxyNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReloadBalanceProxyNodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3783,6 +4303,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to switch database proxy after the proxy configuration is modified or the proxy version is upgraded.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCDBProxyRequest"/></param>
+        /// <returns><see cref="SwitchCDBProxyResponse"/></returns>
+        public async Task<SwitchCDBProxyResponse> SwitchCDBProxy(SwitchCDBProxyRequest req)
+        {
+             JsonResponseModel<SwitchCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to switch database proxy after the proxy configuration is modified or the proxy version is upgraded.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCDBProxyRequest"/></param>
+        /// <returns><see cref="SwitchCDBProxyResponse"/></returns>
+        public SwitchCDBProxyResponse SwitchCDBProxySync(SwitchCDBProxyRequest req)
+        {
+             JsonResponseModel<SwitchCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used for source-to-replica switch.
         /// </summary>
         /// <param name="req"><see cref="SwitchDBInstanceMasterSlaveRequest"/></param>
@@ -3894,6 +4454,86 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "SwitchForUpgrade");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchForUpgradeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the configuration of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeCDBProxyRequest"/></param>
+        /// <returns><see cref="UpgradeCDBProxyResponse"/></returns>
+        public async Task<UpgradeCDBProxyResponse> UpgradeCDBProxy(UpgradeCDBProxyRequest req)
+        {
+             JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the configuration of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeCDBProxyRequest"/></param>
+        /// <returns><see cref="UpgradeCDBProxyResponse"/></returns>
+        public UpgradeCDBProxyResponse UpgradeCDBProxySync(UpgradeCDBProxyRequest req)
+        {
+             JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the version of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeCDBProxyVersionRequest"/></param>
+        /// <returns><see cref="UpgradeCDBProxyVersionResponse"/></returns>
+        public async Task<UpgradeCDBProxyVersionResponse> UpgradeCDBProxyVersion(UpgradeCDBProxyVersionRequest req)
+        {
+             JsonResponseModel<UpgradeCDBProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeCDBProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the version of database proxy.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeCDBProxyVersionRequest"/></param>
+        /// <returns><see cref="UpgradeCDBProxyVersionResponse"/></returns>
+        public UpgradeCDBProxyVersionResponse UpgradeCDBProxyVersionSync(UpgradeCDBProxyVersionRequest req)
+        {
+             JsonResponseModel<UpgradeCDBProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeCDBProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

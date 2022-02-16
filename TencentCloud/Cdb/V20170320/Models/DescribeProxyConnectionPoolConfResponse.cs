@@ -21,14 +21,28 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeParamTemplatesRequest : AbstractModel
+    public class DescribeProxyConnectionPoolConfResponse : AbstractModel
     {
         
         /// <summary>
-        /// Engine version. If it is left empty, all parameter templates will be queried.
+        /// Number of queried configurations
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("EngineVersions")]
-        public string[] EngineVersions{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
+        /// <summary>
+        /// Connection pool configuration details
+        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("PoolConf")]
+        public PoolConf PoolConf{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +50,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamObj(map, prefix + "PoolConf.", this.PoolConf);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Parameter type
+        /// Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
         /// </summary>
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
@@ -78,6 +78,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
+        /// <summary>
+        /// Maximum parameter value, which is valid only when `ParamType` is set to `func`
+        /// </summary>
+        [JsonProperty("MaxFunc")]
+        public string MaxFunc{ get; set; }
+
+        /// <summary>
+        /// Minimum parameter value, which is valid only when `ParamType` is set to `func`
+        /// </summary>
+        [JsonProperty("MinFunc")]
+        public string MinFunc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Max", this.Max);
             this.SetParamSimple(map, prefix + "Min", this.Min);
             this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
+            this.SetParamSimple(map, prefix + "MaxFunc", this.MaxFunc);
+            this.SetParamSimple(map, prefix + "MinFunc", this.MinFunc);
         }
     }
 }

@@ -21,14 +21,22 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeParamTemplatesRequest : AbstractModel
+    public class Rule : AbstractModel
     {
         
         /// <summary>
-        /// Engine version. If it is left empty, all parameter templates will be queried.
+        /// The maximum weight
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("EngineVersions")]
-        public string[] EngineVersions{ get; set; }
+        [JsonProperty("LessThan")]
+        public ulong? LessThan{ get; set; }
+
+        /// <summary>
+        /// Weight
+        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
 
 
         /// <summary>
@@ -36,7 +44,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamSimple(map, prefix + "LessThan", this.LessThan);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

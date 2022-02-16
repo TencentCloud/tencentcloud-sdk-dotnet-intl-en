@@ -21,14 +21,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeParamTemplatesRequest : AbstractModel
+    public class ModifyCDBProxyDescRequest : AbstractModel
     {
         
         /// <summary>
-        /// Engine version. If it is left empty, all parameter templates will be queried.
+        /// Instance ID
         /// </summary>
-        [JsonProperty("EngineVersions")]
-        public string[] EngineVersions{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Database proxy ID
+        /// </summary>
+        [JsonProperty("ProxyGroupId")]
+        public string ProxyGroupId{ get; set; }
+
+        /// <summary>
+        /// Database proxy description
+        /// </summary>
+        [JsonProperty("Desc")]
+        public string Desc{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+            this.SetParamSimple(map, prefix + "Desc", this.Desc);
         }
     }
 }

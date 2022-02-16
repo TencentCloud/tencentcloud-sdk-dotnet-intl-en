@@ -21,38 +21,35 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ParamTemplateInfo : AbstractModel
+    public class DescribeProxyCustomConfResponse : AbstractModel
     {
         
         /// <summary>
-        /// Parameter template ID
+        /// Number of queried proxy configurations
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("Count")]
+        public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Parameter template name
+        /// Proxy configuration details
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("CustomConf")]
+        public CustomConfig CustomConf{ get; set; }
 
         /// <summary>
-        /// Parameter template description
+        /// Weight rule
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("WeightRule")]
+        public Rule WeightRule{ get; set; }
 
         /// <summary>
-        /// Instance engine version
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string EngineVersion{ get; set; }
-
-        /// <summary>
-        /// Parameter template type
-        /// </summary>
-        [JsonProperty("TemplateType")]
-        public string TemplateType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +57,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamObj(map, prefix + "CustomConf.", this.CustomConf);
+            this.SetParamObj(map, prefix + "WeightRule.", this.WeightRule);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

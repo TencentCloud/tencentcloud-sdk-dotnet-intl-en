@@ -21,14 +21,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeParamTemplatesRequest : AbstractModel
+    public class DescribeLocalBinlogConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// Engine version. If it is left empty, all parameter templates will be queried.
+        /// Binlog retention policy of the instance.
         /// </summary>
-        [JsonProperty("EngineVersions")]
-        public string[] EngineVersions{ get; set; }
+        [JsonProperty("LocalBinlogConfig")]
+        public LocalBinlogConfig LocalBinlogConfig{ get; set; }
+
+        /// <summary>
+        /// Default binlog retention policy in the region.
+        /// </summary>
+        [JsonProperty("LocalBinlogConfigDefault")]
+        public LocalBinlogConfigDefault LocalBinlogConfigDefault{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamObj(map, prefix + "LocalBinlogConfig.", this.LocalBinlogConfig);
+            this.SetParamObj(map, prefix + "LocalBinlogConfigDefault.", this.LocalBinlogConfigDefault);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

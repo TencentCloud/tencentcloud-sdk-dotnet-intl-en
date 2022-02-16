@@ -21,38 +21,34 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ParamTemplateInfo : AbstractModel
+    public class ModifyCDBProxyConnectionPoolRequest : AbstractModel
     {
         
         /// <summary>
-        /// Parameter template ID
+        /// Database proxy ID
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("ProxyGroupId")]
+        public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Parameter template name
+        /// Whether to enable the connection pool. Valid values: `true` (enable);
+        ///                              `false` (disable).
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("OpenConnectionPool")]
+        public bool? OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// Parameter template description
+        /// Connection pool type.
+        /// You can use the `DescribeProxyConnectionPoolConf` API to query the connection pool type.
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("ConnectionPoolType")]
+        public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// Instance engine version
+        /// Connection persistence timeout in seconds
         /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string EngineVersion{ get; set; }
-
-        /// <summary>
-        /// Parameter template type
-        /// </summary>
-        [JsonProperty("TemplateType")]
-        public string TemplateType{ get; set; }
+        [JsonProperty("PoolConnectionTimeOut")]
+        public long? PoolConnectionTimeOut{ get; set; }
 
 
         /// <summary>
@@ -60,11 +56,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+            this.SetParamSimple(map, prefix + "OpenConnectionPool", this.OpenConnectionPool);
+            this.SetParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
+            this.SetParamSimple(map, prefix + "PoolConnectionTimeOut", this.PoolConnectionTimeOut);
         }
     }
 }

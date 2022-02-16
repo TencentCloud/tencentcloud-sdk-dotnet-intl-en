@@ -21,38 +21,38 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ParamTemplateInfo : AbstractModel
+    public class UpgradeCDBProxyVersionRequest : AbstractModel
     {
         
         /// <summary>
-        /// Parameter template ID
+        /// Instance ID
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Parameter template name
+        /// Database proxy ID
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ProxyGroupId")]
+        public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Parameter template description
+        /// Current version of database proxy
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("SrcProxyVersion")]
+        public string SrcProxyVersion{ get; set; }
 
         /// <summary>
-        /// Instance engine version
+        /// Target version of database proxy
         /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string EngineVersion{ get; set; }
+        [JsonProperty("DstProxyVersion")]
+        public string DstProxyVersion{ get; set; }
 
         /// <summary>
-        /// Parameter template type
+        /// Upgrade time. Valid values: `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time)
         /// </summary>
-        [JsonProperty("TemplateType")]
-        public string TemplateType{ get; set; }
+        [JsonProperty("UpgradeTime")]
+        public string UpgradeTime{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+            this.SetParamSimple(map, prefix + "SrcProxyVersion", this.SrcProxyVersion);
+            this.SetParamSimple(map, prefix + "DstProxyVersion", this.DstProxyVersion);
+            this.SetParamSimple(map, prefix + "UpgradeTime", this.UpgradeTime);
         }
     }
 }

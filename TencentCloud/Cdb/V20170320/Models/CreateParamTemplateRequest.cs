@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ParamList")]
         public Parameter[] ParamList{ get; set; }
 
+        /// <summary>
+        /// Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+        /// </summary>
+        [JsonProperty("TemplateType")]
+        public string TemplateType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
         }
     }
 }

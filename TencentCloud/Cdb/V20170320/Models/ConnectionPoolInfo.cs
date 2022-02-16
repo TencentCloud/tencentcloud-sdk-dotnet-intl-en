@@ -21,38 +21,29 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ParamTemplateInfo : AbstractModel
+    public class ConnectionPoolInfo : AbstractModel
     {
         
         /// <summary>
-        /// Parameter template ID
+        /// Whether the connection pool is enabled
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("ConnectionPool")]
+        public bool? ConnectionPool{ get; set; }
 
         /// <summary>
-        /// Parameter template name
+        /// Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ConnectionPoolType")]
+        public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// Parameter template description
+        /// Connection persistence timeout in seconds
+        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// Instance engine version
-        /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string EngineVersion{ get; set; }
-
-        /// <summary>
-        /// Parameter template type
-        /// </summary>
-        [JsonProperty("TemplateType")]
-        public string TemplateType{ get; set; }
+        [JsonProperty("PoolConnectionTimeOut")]
+        public long? PoolConnectionTimeOut{ get; set; }
 
 
         /// <summary>
@@ -60,11 +51,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
+            this.SetParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
+            this.SetParamSimple(map, prefix + "PoolConnectionTimeOut", this.PoolConnectionTimeOut);
         }
     }
 }
