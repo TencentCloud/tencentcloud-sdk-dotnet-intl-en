@@ -66,6 +66,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterLine")]
         public ulong? FilterLine{ get; set; }
 
+        /// <summary>
+        /// Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+        /// </summary>
+        [JsonProperty("FilterStatus")]
+        public string FilterStatus{ get; set; }
+
+        /// <summary>
+        /// Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+        /// </summary>
+        [JsonProperty("FilterBoundStatus")]
+        public string FilterBoundStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
             this.SetParamSimple(map, prefix + "FilterName", this.FilterName);
             this.SetParamSimple(map, prefix + "FilterLine", this.FilterLine);
+            this.SetParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
+            this.SetParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
         }
     }
 }

@@ -51,15 +51,15 @@ namespace TencentCloud.Scf.V20180416.Models
         public string EntryPoint{ get; set; }
 
         /// <summary>
-        /// entrypoint execution command
+        /// The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// Command parameters
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("Args")]
         public string Args{ get; set; }

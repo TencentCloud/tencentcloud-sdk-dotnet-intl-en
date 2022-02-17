@@ -61,49 +61,49 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TempCosObjectName{ get; set; }
 
         /// <summary>
-        /// Git address
+        /// (Disused) Git address
         /// </summary>
         [JsonProperty("GitUrl")]
         public string GitUrl{ get; set; }
 
         /// <summary>
-        /// Git user name
+        /// (Disused) Git username
         /// </summary>
         [JsonProperty("GitUserName")]
         public string GitUserName{ get; set; }
 
         /// <summary>
-        /// Git password
+        /// (Disused) Git password
         /// </summary>
         [JsonProperty("GitPassword")]
         public string GitPassword{ get; set; }
 
         /// <summary>
-        /// Git password after encryption. In general, this value is not required.
+        /// (Disused) Git password after encryption. It’s usually not required.
         /// </summary>
         [JsonProperty("GitPasswordSecret")]
         public string GitPasswordSecret{ get; set; }
 
         /// <summary>
-        /// Git branch
+        /// (Disused) Git branch
         /// </summary>
         [JsonProperty("GitBranch")]
         public string GitBranch{ get; set; }
 
         /// <summary>
-        /// Code path in Git repository
+        /// (Disused) Directory to the codes in the Git repository. 
         /// </summary>
         [JsonProperty("GitDirectory")]
         public string GitDirectory{ get; set; }
 
         /// <summary>
-        /// Version to be pulled
+        /// (Disused) 
         /// </summary>
         [JsonProperty("GitCommitId")]
         public string GitCommitId{ get; set; }
 
         /// <summary>
-        /// Git user name after encryption. In general, this value is not required.
+        /// (Disused) Git username after encryption. It’s usually not required.
         /// </summary>
         [JsonProperty("GitUserNameSecret")]
         public string GitUserNameSecret{ get; set; }

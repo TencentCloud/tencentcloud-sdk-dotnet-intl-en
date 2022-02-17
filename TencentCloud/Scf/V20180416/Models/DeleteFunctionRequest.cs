@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+        /// ID of the version to delete. All versions are deleted if it’s left empty.
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }

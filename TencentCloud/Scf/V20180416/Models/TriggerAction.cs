@@ -45,6 +45,13 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("TriggerCronConfig")]
         public string TriggerCronConfig{ get; set; }
 
+        /// <summary>
+        /// The provision type. Value: `Default`
+        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("ProvisionedType")]
+        public string ProvisionedType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "TriggerName", this.TriggerName);
             this.SetParamSimple(map, prefix + "TriggerProvisionedConcurrencyNum", this.TriggerProvisionedConcurrencyNum);
             this.SetParamSimple(map, prefix + "TriggerCronConfig", this.TriggerCronConfig);
+            this.SetParamSimple(map, prefix + "ProvisionedType", this.ProvisionedType);
         }
     }
 }

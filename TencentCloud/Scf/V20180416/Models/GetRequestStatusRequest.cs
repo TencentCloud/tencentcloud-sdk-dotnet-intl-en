@@ -43,13 +43,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
+        /// Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
+        /// End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
