@@ -49,10 +49,11 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Alarm code
-        /// -9103	Alarm for photographed document
-        /// -9102	Alarm for photocopied document
-        /// -9106       Alarm for covered card
+        /// Warning code
+        /// -9103 Warning for spoofed card
+        /// -9102 Warning for photocopied card
+        /// -9106 Warning for covered card
+        /// -9107 Warning for blurry image
         /// </summary>
         [JsonProperty("Warn")]
         public long?[] Warn{ get; set; }
