@@ -95,6 +95,8 @@
     <Compile Include="V20170312\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowLogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDatabaseTableRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDatabaseTableResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDcnDetailRequest.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="V20170312\Models\SlowLogData.cs" />
     <Compile Include="V20170312\Models\SwitchDBInstanceHARequest.cs" />
     <Compile Include="V20170312\Models\SwitchDBInstanceHAResponse.cs" />
+    <Compile Include="V20170312\Models\TableColumn.cs" />
     <Compile Include="V20170312\Models\TablePrivilege.cs" />
     <Compile Include="V20170312\Models\ViewPrivileges.cs" />
   </ItemGroup>

@@ -859,6 +859,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the table information of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
+        public async Task<DescribeDatabaseTableResponse> DescribeDatabaseTable(DescribeDatabaseTableRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabaseTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the table information of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
+        public DescribeDatabaseTableResponse DescribeDatabaseTableSync(DescribeDatabaseTableRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabaseTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of databases of a TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
