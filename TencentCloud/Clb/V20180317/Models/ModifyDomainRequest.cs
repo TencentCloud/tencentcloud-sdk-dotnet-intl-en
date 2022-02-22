@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB instance ID
+        /// CLB instance ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// CLB listener ID
+        /// CLB listener ID.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// ID of the LCU-supported CLB instance, and the target specification
+        /// CLB instance information
         /// </summary>
         [JsonProperty("LoadBalancerSla")]
         public SlaUpdateParam[] LoadBalancerSla{ get; set; }

@@ -38,14 +38,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+        /// Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-        /// Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+        /// Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
         /// </summary>
         [JsonProperty("MasterZoneId")]
         public string MasterZoneId{ get; set; }
@@ -118,7 +118,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Guaranteed performance specification.
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }

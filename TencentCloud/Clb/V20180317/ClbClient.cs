@@ -255,7 +255,22 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to generate a CLB instance that has the same rules and binding relations as the specified CLB instance.
+        /// This API is used to create a CLB instance with the same forwarding rules and binding relation as the source CLB instance. Note that this API is asynchronous, which means that changes to the source CLB after the invocation are not cloned.
+        /// 
+        /// Use limits:
+        /// Classic network-based CLBs, Classic CLBs, IPv6 CLBs, and NAT64 CLBs are not supported.
+        /// Monthly-subscribed CLB instances are not supported.
+        /// QUIC and port listeners are not supported.
+        /// The CLB backend server cannot be bound to a target group or an SCF function.
+        /// The following settings will not be cloned automatically: "Custom Configuration", "Redirection Configuration" and "Allow Traffic by Default in Security Group".
+        /// 
+        /// Permissions:
+        /// The required permissions are as follows: `CreateLoadBalancer`, `CreateLoadBalancerListeners`, `CreateListenerRules`, `BatchRegisterTargets`, `SetLoadBalancerSecurityGroups`, `ModifyLoadBalancerAttributes`, `SetLoadBalancerClsLog`, and `DeleteLoadBalancer`. Note that `DeleteLoadBalancer` is used to roll back in case of cloning failures. If you do not have the permission, the failure data will remain.
+        /// 
+        /// Notes:
+        /// For a BGP bandwidth package, you need to pass the package ID.
+        /// To clone a dedicated CLB cluster, specify it in the parameter, otherwise a shared CLB cluster is created.
+        /// This API is only available for beta users. To try it out, [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&step=1).
         /// </summary>
         /// <param name="req"><see cref="CloneLoadBalancerRequest"/></param>
         /// <returns><see cref="CloneLoadBalancerResponse"/></returns>
@@ -275,7 +290,22 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to generate a CLB instance that has the same rules and binding relations as the specified CLB instance.
+        /// This API is used to create a CLB instance with the same forwarding rules and binding relation as the source CLB instance. Note that this API is asynchronous, which means that changes to the source CLB after the invocation are not cloned.
+        /// 
+        /// Use limits:
+        /// Classic network-based CLBs, Classic CLBs, IPv6 CLBs, and NAT64 CLBs are not supported.
+        /// Monthly-subscribed CLB instances are not supported.
+        /// QUIC and port listeners are not supported.
+        /// The CLB backend server cannot be bound to a target group or an SCF function.
+        /// The following settings will not be cloned automatically: "Custom Configuration", "Redirection Configuration" and "Allow Traffic by Default in Security Group".
+        /// 
+        /// Permissions:
+        /// The required permissions are as follows: `CreateLoadBalancer`, `CreateLoadBalancerListeners`, `CreateListenerRules`, `BatchRegisterTargets`, `SetLoadBalancerSecurityGroups`, `ModifyLoadBalancerAttributes`, `SetLoadBalancerClsLog`, and `DeleteLoadBalancer`. Note that `DeleteLoadBalancer` is used to roll back in case of cloning failures. If you do not have the permission, the failure data will remain.
+        /// 
+        /// Notes:
+        /// For a BGP bandwidth package, you need to pass the package ID.
+        /// To clone a dedicated CLB cluster, specify it in the parameter, otherwise a shared CLB cluster is created.
+        /// This API is only available for beta users. To try it out, [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&step=1).
         /// </summary>
         /// <param name="req"><see cref="CloneLoadBalancerRequest"/></param>
         /// <returns><see cref="CloneLoadBalancerResponse"/></returns>
@@ -1275,6 +1305,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// Queries information of CVMs and ENIs that use cross-region binding 2.0
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossTargetsRequest"/></param>
+        /// <returns><see cref="DescribeCrossTargetsResponse"/></returns>
+        public async Task<DescribeCrossTargetsResponse> DescribeCrossTargets(DescribeCrossTargetsRequest req)
+        {
+             JsonResponseModel<DescribeCrossTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCrossTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Queries information of CVMs and ENIs that use cross-region binding 2.0
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossTargetsRequest"/></param>
+        /// <returns><see cref="DescribeCrossTargetsResponse"/></returns>
+        public DescribeCrossTargetsResponse DescribeCrossTargetsSync(DescribeCrossTargetsRequest req)
+        {
+             JsonResponseModel<DescribeCrossTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCrossTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the configured location, bound server or bound CLB instance. If there are domain names, the result will be filtered by domain name.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomizedConfigAssociateListRequest"/></param>
@@ -2037,6 +2107,48 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to upgrade classic CLB instances to application CLB instances.
+        /// This is an async API. After it is returned successfully, you can check the action result by calling `DescribeLoadBalancers`. 
+        /// </summary>
+        /// <param name="req"><see cref="MigrateClassicalLoadBalancersRequest"/></param>
+        /// <returns><see cref="MigrateClassicalLoadBalancersResponse"/></returns>
+        public async Task<MigrateClassicalLoadBalancersResponse> MigrateClassicalLoadBalancers(MigrateClassicalLoadBalancersRequest req)
+        {
+             JsonResponseModel<MigrateClassicalLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MigrateClassicalLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateClassicalLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade classic CLB instances to application CLB instances.
+        /// This is an async API. After it is returned successfully, you can check the action result by calling `DescribeLoadBalancers`. 
+        /// </summary>
+        /// <param name="req"><see cref="MigrateClassicalLoadBalancersRequest"/></param>
+        /// <returns><see cref="MigrateClassicalLoadBalancersResponse"/></returns>
+        public MigrateClassicalLoadBalancersResponse MigrateClassicalLoadBalancersSync(MigrateClassicalLoadBalancersRequest req)
+        {
+             JsonResponseModel<MigrateClassicalLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MigrateClassicalLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateClassicalLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the client IP blocklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blocklist can contain up to 2,000,000 entries.
         /// (This API is in beta test. To use it, please submit a ticket.)
         /// </summary>
@@ -2245,7 +2357,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to upgrade shared CLB instances to LCU-supported CLB instances (downgrade is not allowed) and upgrade/downgrade the specification of LCU-supported instances.
+        /// This API is used to upgrade shared CLB instances to LCU-supported CLB instances.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerSlaResponse"/></returns>
@@ -2265,7 +2377,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to upgrade shared CLB instances to LCU-supported CLB instances (downgrade is not allowed) and upgrade/downgrade the specification of LCU-supported instances.
+        /// This API is used to upgrade shared CLB instances to LCU-supported CLB instances.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerSlaResponse"/></returns>

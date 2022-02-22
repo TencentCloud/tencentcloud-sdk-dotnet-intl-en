@@ -21,20 +21,26 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SlaUpdateParam : AbstractModel
+    public class DescribeCrossTargetsResponse : AbstractModel
     {
         
         /// <summary>
-        /// ID of the CLB instance
+        /// Total number of real server lists
         /// </summary>
-        [JsonProperty("LoadBalancerId")]
-        public string LoadBalancerId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// To upgrade to LCU-supported CLB instances. It must be `SLA`.
+        /// Real server list
         /// </summary>
-        [JsonProperty("SlaType")]
-        public string SlaType{ get; set; }
+        [JsonProperty("CrossTargetSet")]
+        public CrossTargets[] CrossTargetSet{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "CrossTargetSet.", this.CrossTargetSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

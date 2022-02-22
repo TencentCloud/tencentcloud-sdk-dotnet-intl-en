@@ -21,20 +21,14 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SlaUpdateParam : AbstractModel
+    public class MigrateClassicalLoadBalancersResponse : AbstractModel
     {
         
         /// <summary>
-        /// ID of the CLB instance
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("LoadBalancerId")]
-        public string LoadBalancerId{ get; set; }
-
-        /// <summary>
-        /// To upgrade to LCU-supported CLB instances. It must be `SLA`.
-        /// </summary>
-        [JsonProperty("SlaType")]
-        public string SlaType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

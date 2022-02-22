@@ -31,6 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Status{ get; set; }
 
         /// <summary>
+        /// Array of unique CLB instance IDs.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LoadBalancerIds")]
+        public string[] LoadBalancerIds{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

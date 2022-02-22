@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Number of results in current query
+        /// Number of results returned for the current query
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public TargetGroupBackend[] TargetGroupInstanceSet{ get; set; }
 
         /// <summary>
-        /// Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+        /// The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
         /// </summary>
         [JsonProperty("RealCount")]
         public ulong? RealCount{ get; set; }

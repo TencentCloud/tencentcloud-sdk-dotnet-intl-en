@@ -87,6 +87,7 @@
     <Compile Include="V20180317\Models\CreateTargetGroupResponse.cs" />
     <Compile Include="V20180317\Models\CreateTopicRequest.cs" />
     <Compile Include="V20180317\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20180317\Models\CrossTargets.cs" />
     <Compile Include="V20180317\Models\DeleteListenerRequest.cs" />
     <Compile Include="V20180317\Models\DeleteListenerResponse.cs" />
     <Compile Include="V20180317\Models\DeleteLoadBalancerListenersRequest.cs" />
@@ -121,6 +122,8 @@
     <Compile Include="V20180317\Models\DescribeClassicalLBTargetsResponse.cs" />
     <Compile Include="V20180317\Models\DescribeClsLogSetRequest.cs" />
     <Compile Include="V20180317\Models\DescribeClsLogSetResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeCrossTargetsRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeCrossTargetsResponse.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListRequest.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
@@ -176,6 +179,8 @@
     <Compile Include="V20180317\Models\LoadBalancerTraffic.cs" />
     <Compile Include="V20180317\Models\ManualRewriteRequest.cs" />
     <Compile Include="V20180317\Models\ManualRewriteResponse.cs" />
+    <Compile Include="V20180317\Models\MigrateClassicalLoadBalancersRequest.cs" />
+    <Compile Include="V20180317\Models\MigrateClassicalLoadBalancersResponse.cs" />
     <Compile Include="V20180317\Models\ModifyBlockIPListRequest.cs" />
     <Compile Include="V20180317\Models\ModifyBlockIPListResponse.cs" />
     <Compile Include="V20180317\Models\ModifyDomainAttributesRequest.cs" />

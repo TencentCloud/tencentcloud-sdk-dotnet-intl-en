@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.379</VersionPrefix>
+    <VersionPrefix>3.0.380</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1793,6 +1793,7 @@
     <Compile Include="Clb\V20180317\Models\CreateTargetGroupResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateTopicRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateTopicResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\CrossTargets.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteListenerRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteLoadBalancerListenersRequest.cs" />
@@ -1827,6 +1828,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBTargetsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClsLogSetRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClsLogSetResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCrossTargetsRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCrossTargetsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigAssociateListRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
@@ -1882,6 +1885,8 @@
     <Compile Include="Clb\V20180317\Models\LoadBalancerTraffic.cs" />
     <Compile Include="Clb\V20180317\Models\ManualRewriteRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ManualRewriteResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\MigrateClassicalLoadBalancersRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\MigrateClassicalLoadBalancersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyBlockIPListRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyBlockIPListResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyDomainAttributesRequest.cs" />
