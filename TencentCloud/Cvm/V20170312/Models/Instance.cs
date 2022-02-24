@@ -237,6 +237,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("IsolatedSource")]
         public string IsolatedSource{ get; set; }
 
+        /// <summary>
+        /// GPU information. This field is only returned for GPU instances.
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("GPUInfo")]
+        public GPUInfo GPUInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -277,6 +284,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
             this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
+            this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
         }
     }
 }

@@ -160,6 +160,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("QuicStatus")]
         public string QuicStatus{ get; set; }
 
+        /// <summary>
+        /// List of domain names associated with the forwarding rule
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +194,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
             this.SetParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
         }
     }
 }

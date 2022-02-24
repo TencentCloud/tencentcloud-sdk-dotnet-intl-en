@@ -47,6 +47,7 @@
     <Compile Include="V20191012\EcdnClient.cs" />
     <Compile Include="V20191012\Models\AddEcdnDomainRequest.cs" />
     <Compile Include="V20191012\Models\AddEcdnDomainResponse.cs" />
+    <Compile Include="V20191012\Models\AdvanceHttps.cs" />
     <Compile Include="V20191012\Models\Cache.cs" />
     <Compile Include="V20191012\Models\CacheKey.cs" />
     <Compile Include="V20191012\Models\CacheRule.cs" />

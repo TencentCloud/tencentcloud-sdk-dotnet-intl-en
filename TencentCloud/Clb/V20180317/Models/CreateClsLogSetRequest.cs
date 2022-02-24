@@ -25,16 +25,16 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Logset retention period in days; max value: 90
-        /// </summary>
-        [JsonProperty("Period")]
-        public ulong? Period{ get; set; }
-
-        /// <summary>
         /// Logset name, which must be unique among all CLS logsets; default value: clb_logset
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
+
+        /// <summary>
+        /// Logset retention period (in days)
+        /// </summary>
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
 
         /// <summary>
         /// Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
@@ -48,8 +48,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "LogsetType", this.LogsetType);
         }
     }

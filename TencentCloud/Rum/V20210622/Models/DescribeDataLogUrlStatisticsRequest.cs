@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// "analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+        /// `analysis`: exception analysis; `compare`: exception list comparison; `allcount`: performance view; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

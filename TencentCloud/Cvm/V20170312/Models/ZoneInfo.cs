@@ -62,7 +62,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> ap-mumbai-1 </li>
         /// <li> ap-mumbai-2 </li>
         /// <li> eu-moscow-1 </li>
-        /// <li> ap-beijing-1 </li>
+        /// <li> ap-beijing-1 (sold out) </li>
         /// <li> ap-beijing-2 </li>
         /// <li> ap-beijing-3 </li>
         /// <li> ap-beijing-4 </li>
@@ -78,6 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> na-ashburn-2 </li>
         /// <li> ap-nanjing-1 </li>
         /// <li> ap-nanjing-2 </li>
+        /// <li> sa-saopaulo-1</li>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.381</VersionPrefix>
+    <VersionPrefix>3.0.382</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2176,6 +2176,10 @@
     <Compile Include="Cvm\V20170312\Models\CreateImageResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\CreateKeyPairRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\CreateKeyPairResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\CreateLaunchTemplateRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\CreateLaunchTemplateResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\CreateLaunchTemplateVersionRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\CreateLaunchTemplateVersionResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DataDisk.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteDisasterRecoverGroupsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteDisasterRecoverGroupsResponse.cs" />
@@ -2183,6 +2187,10 @@
     <Compile Include="Cvm\V20170312\Models\DeleteImagesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteKeyPairsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteKeyPairsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DeleteLaunchTemplateRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DeleteLaunchTemplateResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DeleteLaunchTemplateVersionsRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DeleteLaunchTemplateVersionsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeDisasterRecoverGroupQuotaResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeDisasterRecoverGroupsRequest.cs" />
@@ -2213,6 +2221,10 @@
     <Compile Include="Cvm\V20170312\Models\DescribeInternetChargeTypeConfigsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeKeyPairsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeKeyPairsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeLaunchTemplateVersionsRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeLaunchTemplateVersionsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeLaunchTemplatesRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeLaunchTemplatesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesConfigInfosRequest.cs" />
@@ -2233,6 +2245,7 @@
     <Compile Include="Cvm\V20170312\Models\EnhancedService.cs" />
     <Compile Include="Cvm\V20170312\Models\Externals.cs" />
     <Compile Include="Cvm\V20170312\Models\Filter.cs" />
+    <Compile Include="Cvm\V20170312\Models\GPUInfo.cs" />
     <Compile Include="Cvm\V20170312\Models\HostItem.cs" />
     <Compile Include="Cvm\V20170312\Models\HostResource.cs" />
     <Compile Include="Cvm\V20170312\Models\Image.cs" />
@@ -2264,6 +2277,10 @@
     <Compile Include="Cvm\V20170312\Models\InternetChargeTypeConfig.cs" />
     <Compile Include="Cvm\V20170312\Models\ItemPrice.cs" />
     <Compile Include="Cvm\V20170312\Models\KeyPair.cs" />
+    <Compile Include="Cvm\V20170312\Models\LaunchTemplate.cs" />
+    <Compile Include="Cvm\V20170312\Models\LaunchTemplateInfo.cs" />
+    <Compile Include="Cvm\V20170312\Models\LaunchTemplateVersionData.cs" />
+    <Compile Include="Cvm\V20170312\Models\LaunchTemplateVersionInfo.cs" />
     <Compile Include="Cvm\V20170312\Models\LocalDiskType.cs" />
     <Compile Include="Cvm\V20170312\Models\LoginSettings.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyDisasterRecoverGroupAttributeRequest.cs" />
@@ -2282,6 +2299,8 @@
     <Compile Include="Cvm\V20170312\Models\ModifyInstancesVpcAttributeResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyKeyPairAttributeRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyKeyPairAttributeResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\ModifyLaunchTemplateDefaultVersionRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\ModifyLaunchTemplateDefaultVersionResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\OperationCountLimit.cs" />
     <Compile Include="Cvm\V20170312\Models\OsVersion.cs" />
     <Compile Include="Cvm\V20170312\Models\Placement.cs" />
@@ -3028,6 +3047,7 @@
     <Compile Include="Ecdn\V20191012\EcdnClient.cs" />
     <Compile Include="Ecdn\V20191012\Models\AddEcdnDomainRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\AddEcdnDomainResponse.cs" />
+    <Compile Include="Ecdn\V20191012\Models\AdvanceHttps.cs" />
     <Compile Include="Ecdn\V20191012\Models\Cache.cs" />
     <Compile Include="Ecdn\V20191012\Models\CacheKey.cs" />
     <Compile Include="Ecdn\V20191012\Models\CacheRule.cs" />

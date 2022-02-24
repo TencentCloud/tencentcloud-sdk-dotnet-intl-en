@@ -36,6 +36,20 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// Configuration name
+        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("Config")]
+        public string Config{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Tem.V20210701.Models
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Config", this.Config);
         }
     }
 }

@@ -75,6 +75,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
+        /// <summary>
+        /// Tag description list. This parameter is used to bind a tag to a custom image.
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "DataDiskIds.", this.DataDiskIds);
             this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

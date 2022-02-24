@@ -59,6 +59,10 @@
     <Compile Include="V20170312\Models\CreateImageResponse.cs" />
     <Compile Include="V20170312\Models\CreateKeyPairRequest.cs" />
     <Compile Include="V20170312\Models\CreateKeyPairResponse.cs" />
+    <Compile Include="V20170312\Models\CreateLaunchTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\CreateLaunchTemplateResponse.cs" />
+    <Compile Include="V20170312\Models\CreateLaunchTemplateVersionRequest.cs" />
+    <Compile Include="V20170312\Models\CreateLaunchTemplateVersionResponse.cs" />
     <Compile Include="V20170312\Models\DataDisk.cs" />
     <Compile Include="V20170312\Models\DeleteDisasterRecoverGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteDisasterRecoverGroupsResponse.cs" />
@@ -66,6 +70,10 @@
     <Compile Include="V20170312\Models\DeleteImagesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteLaunchTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteLaunchTemplateResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupsRequest.cs" />
@@ -96,6 +104,10 @@
     <Compile Include="V20170312\Models\DescribeInternetChargeTypeConfigsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeKeyPairsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeKeyPairsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeLaunchTemplateVersionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeLaunchTemplateVersionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeLaunchTemplatesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeLaunchTemplatesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeReservedInstancesConfigInfosRequest.cs" />
@@ -116,6 +128,7 @@
     <Compile Include="V20170312\Models\EnhancedService.cs" />
     <Compile Include="V20170312\Models\Externals.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
+    <Compile Include="V20170312\Models\GPUInfo.cs" />
     <Compile Include="V20170312\Models\HostItem.cs" />
     <Compile Include="V20170312\Models\HostResource.cs" />
     <Compile Include="V20170312\Models\Image.cs" />
@@ -147,6 +160,10 @@
     <Compile Include="V20170312\Models\InternetChargeTypeConfig.cs" />
     <Compile Include="V20170312\Models\ItemPrice.cs" />
     <Compile Include="V20170312\Models\KeyPair.cs" />
+    <Compile Include="V20170312\Models\LaunchTemplate.cs" />
+    <Compile Include="V20170312\Models\LaunchTemplateInfo.cs" />
+    <Compile Include="V20170312\Models\LaunchTemplateVersionData.cs" />
+    <Compile Include="V20170312\Models\LaunchTemplateVersionInfo.cs" />
     <Compile Include="V20170312\Models\LocalDiskType.cs" />
     <Compile Include="V20170312\Models\LoginSettings.cs" />
     <Compile Include="V20170312\Models\ModifyDisasterRecoverGroupAttributeRequest.cs" />
@@ -165,6 +182,8 @@
     <Compile Include="V20170312\Models\ModifyInstancesVpcAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyKeyPairAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyKeyPairAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyLaunchTemplateDefaultVersionRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyLaunchTemplateDefaultVersionResponse.cs" />
     <Compile Include="V20170312\Models\OperationCountLimit.cs" />
     <Compile Include="V20170312\Models\OsVersion.cs" />
     <Compile Include="V20170312\Models\Placement.cs" />

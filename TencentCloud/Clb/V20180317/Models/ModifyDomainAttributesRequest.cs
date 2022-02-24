@@ -37,13 +37,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Domain name, which must be under a created forwarding rule.
+        /// The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// New domain name
+        /// The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
         /// </summary>
         [JsonProperty("NewDomain")]
         public string NewDomain{ get; set; }
@@ -67,10 +67,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? DefaultServer{ get; set; }
 
         /// <summary>
-        /// A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+        /// Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
         /// </summary>
         [JsonProperty("NewDefaultServerDomain")]
         public string NewDefaultServerDomain{ get; set; }
+
+        /// <summary>
+        /// The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+        /// </summary>
+        [JsonProperty("NewDomains")]
+        public string[] NewDomains{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
             this.SetParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
+            this.SetParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
         }
     }
 }

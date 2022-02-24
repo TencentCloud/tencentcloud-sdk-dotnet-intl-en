@@ -315,6 +315,94 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to create an instance launch template.
+        /// 
+        /// An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+        /// 
+        /// When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
+        public async Task<CreateLaunchTemplateResponse> CreateLaunchTemplate(CreateLaunchTemplateRequest req)
+        {
+             JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLaunchTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an instance launch template.
+        /// 
+        /// An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+        /// 
+        /// When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
+        public CreateLaunchTemplateResponse CreateLaunchTemplateSync(CreateLaunchTemplateRequest req)
+        {
+             JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLaunchTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateVersionRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateVersionResponse"/></returns>
+        public async Task<CreateLaunchTemplateVersionResponse> CreateLaunchTemplateVersion(CreateLaunchTemplateVersionRequest req)
+        {
+             JsonResponseModel<CreateLaunchTemplateVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLaunchTemplateVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateVersionRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateVersionResponse"/></returns>
+        public CreateLaunchTemplateVersionResponse CreateLaunchTemplateVersionSync(CreateLaunchTemplateVersionRequest req)
+        {
+             JsonResponseModel<CreateLaunchTemplateVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLaunchTemplateVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). Only empty placement groups can be deleted. To delete a non-empty group, you need to terminate all the CVM instances in it first. Otherwise, the deletion will fail.
         /// </summary>
         /// <param name="req"><see cref="DeleteDisasterRecoverGroupsRequest"/></param>
@@ -440,6 +528,86 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteKeyPairs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an instance launch template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaunchTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLaunchTemplateResponse"/></returns>
+        public async Task<DeleteLaunchTemplateResponse> DeleteLaunchTemplate(DeleteLaunchTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLaunchTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLaunchTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an instance launch template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaunchTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLaunchTemplateResponse"/></returns>
+        public DeleteLaunchTemplateResponse DeleteLaunchTemplateSync(DeleteLaunchTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLaunchTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLaunchTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more instance launch template versions.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaunchTemplateVersionsRequest"/></param>
+        /// <returns><see cref="DeleteLaunchTemplateVersionsResponse"/></returns>
+        public async Task<DeleteLaunchTemplateVersionsResponse> DeleteLaunchTemplateVersions(DeleteLaunchTemplateVersionsRequest req)
+        {
+             JsonResponseModel<DeleteLaunchTemplateVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLaunchTemplateVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more instance launch template versions.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaunchTemplateVersionsRequest"/></param>
+        /// <returns><see cref="DeleteLaunchTemplateVersionsResponse"/></returns>
+        public DeleteLaunchTemplateVersionsResponse DeleteLaunchTemplateVersionsSync(DeleteLaunchTemplateVersionsRequest req)
+        {
+             JsonResponseModel<DeleteLaunchTemplateVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLaunchTemplateVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1100,6 +1268,86 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeKeyPairs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of instance launch template versions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaunchTemplateVersionsRequest"/></param>
+        /// <returns><see cref="DescribeLaunchTemplateVersionsResponse"/></returns>
+        public async Task<DescribeLaunchTemplateVersionsResponse> DescribeLaunchTemplateVersions(DescribeLaunchTemplateVersionsRequest req)
+        {
+             JsonResponseModel<DescribeLaunchTemplateVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLaunchTemplateVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchTemplateVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of instance launch template versions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaunchTemplateVersionsRequest"/></param>
+        /// <returns><see cref="DescribeLaunchTemplateVersionsResponse"/></returns>
+        public DescribeLaunchTemplateVersionsResponse DescribeLaunchTemplateVersionsSync(DescribeLaunchTemplateVersionsRequest req)
+        {
+             JsonResponseModel<DescribeLaunchTemplateVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLaunchTemplateVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchTemplateVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query one or more instance launch templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaunchTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLaunchTemplatesResponse"/></returns>
+        public async Task<DescribeLaunchTemplatesResponse> DescribeLaunchTemplates(DescribeLaunchTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLaunchTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLaunchTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query one or more instance launch templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaunchTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLaunchTemplatesResponse"/></returns>
+        public DescribeLaunchTemplatesResponse DescribeLaunchTemplatesSync(DescribeLaunchTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLaunchTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLaunchTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1967,12 +2215,13 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// The API is used to modify the attributes of an instance. Currently, you can only use the API to modify the name and the associated security groups of the instance.
+        /// The API is used to modify the attributes of an instance. Only the name and the associated security groups can be modified for now.
         /// 
-        /// * **Instance names** are used only for users' convenience. Tencent Cloud does not use these names for online support or instance management.
-        /// * Batch operations are supported. The maximum number of Batch instances in each request is 100.
-        /// * When you modify the security groups associated with an instance, the original security groups will be disassociated.
-        /// * You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
+        /// * An attribute must be specified in the request.
+        /// * "Instance name" is a custom name for easier management. Tencent Cloud does not use the name for online support or instance management.
+        /// * Batch operations are supported. Each request can modify up to 100 instances.
+        /// * When you modify the security groups associated with an instance is modified, the original security groups are disassociated.
+        /// * You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesAttributeRequest"/></param>
         /// <returns><see cref="ModifyInstancesAttributeResponse"/></returns>
@@ -1992,12 +2241,13 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// The API is used to modify the attributes of an instance. Currently, you can only use the API to modify the name and the associated security groups of the instance.
+        /// The API is used to modify the attributes of an instance. Only the name and the associated security groups can be modified for now.
         /// 
-        /// * **Instance names** are used only for users' convenience. Tencent Cloud does not use these names for online support or instance management.
-        /// * Batch operations are supported. The maximum number of Batch instances in each request is 100.
-        /// * When you modify the security groups associated with an instance, the original security groups will be disassociated.
-        /// * You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
+        /// * An attribute must be specified in the request.
+        /// * "Instance name" is a custom name for easier management. Tencent Cloud does not use the name for online support or instance management.
+        /// * Batch operations are supported. Each request can modify up to 100 instances.
+        /// * When you modify the security groups associated with an instance is modified, the original security groups are disassociated.
+        /// * You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesAttributeRequest"/></param>
         /// <returns><see cref="ModifyInstancesAttributeResponse"/></returns>
@@ -2152,6 +2402,46 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyKeyPairAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyKeyPairAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the default version of the instance launch template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLaunchTemplateDefaultVersionRequest"/></param>
+        /// <returns><see cref="ModifyLaunchTemplateDefaultVersionResponse"/></returns>
+        public async Task<ModifyLaunchTemplateDefaultVersionResponse> ModifyLaunchTemplateDefaultVersion(ModifyLaunchTemplateDefaultVersionRequest req)
+        {
+             JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLaunchTemplateDefaultVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the default version of the instance launch template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLaunchTemplateDefaultVersionRequest"/></param>
+        /// <returns><see cref="ModifyLaunchTemplateDefaultVersionResponse"/></returns>
+        public ModifyLaunchTemplateDefaultVersionResponse ModifyLaunchTemplateDefaultVersionSync(ModifyLaunchTemplateDefaultVersionRequest req)
+        {
+             JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLaunchTemplateDefaultVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

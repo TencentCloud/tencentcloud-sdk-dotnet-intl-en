@@ -37,7 +37,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone, project, and CDH. You can specify a CDH for a CVM by creating the CVM on the CDH.
+        /// Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone, project, and CDH (for dedicated CVMs)
+        ///  <b>Note: `Zone` is required.</b>
+        /// `Placement` is required when `LaunchTemplate` is not specified. If both the parameters are passed in, `Placement` prevails.
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
@@ -50,7 +52,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// The [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are four types of images:<br/><li>Public images</li><li>Custom images</li><li>Shared images</li><li>Marketplace images</li><br/>You can retrieve available image IDs in the following ways:<br/><li>For the IDs of `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the information. For the IDs of `marketplace images`, go to [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1), pass in `InstanceType` to retrieve the list of images supported by the current model, and then find the `ImageId` in the response.</li>
+        /// The [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are four types of images:<br/><li>Public images</li><li>Custom images</li><li>Shared images</li><li>Marketplace images (for Chinese mainland only)</li><br/>To check the image ID:<br/><li>For public images, custom images, and shared images, go to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE). For marketplace images, go to [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>Call [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1), pass in `InstanceType` to retrieve the list of images supported by the current model, and then find the `ImageId` in the response.</li>
+        /// `ImageId` is required when `LaunchTemplate` is not specified. If both the parameters are passed in, `ImageId` prevails.
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
@@ -173,6 +176,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
 
+        /// <summary>
+        /// Instance launch template.
+        /// </summary>
+        [JsonProperty("LaunchTemplate")]
+        public LaunchTemplate LaunchTemplate{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ChcIds")]
+        public string[] ChcIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +218,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+            this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
+            this.SetParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
         }
     }
 }

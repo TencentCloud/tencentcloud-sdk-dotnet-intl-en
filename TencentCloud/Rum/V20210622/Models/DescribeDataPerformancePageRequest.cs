@@ -43,7 +43,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// ["pagepv","allcount"]
+        /// `pagepv`: PV view; `allcount`: performance view; `falls`: page loading waterfall plot; `samp`: FMP, `day`: 14-day data, `nettype`: network/platform view; `performance`: top underperformed pages view; `version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: version view; device view; ISP view; region view; browser view, and so on.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

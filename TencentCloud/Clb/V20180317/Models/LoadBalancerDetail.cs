@@ -255,6 +255,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetHealth")]
         public string TargetHealth{ get; set; }
 
+        /// <summary>
+        /// List o domain names associated with the forwarding rule
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string Domains{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +301,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
             this.SetParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
+            this.SetParamSimple(map, prefix + "Domains", this.Domains);
         }
     }
 }

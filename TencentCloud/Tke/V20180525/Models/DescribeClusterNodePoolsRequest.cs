@@ -30,6 +30,30 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// ·  NodePoolsName
+        ///     Filters by the node pool name
+        ///     Type: String
+        ///     Required: No
+        /// 
+        /// ·  NodePoolsId
+        ///     Filters by the node pool ID
+        ///     Type: String
+        ///     Required: No
+        /// 
+        /// ·  tags
+        ///     Filters by key-value pairs of tags
+        ///     Type: String
+        ///     Required: No
+        /// 
+        /// ·  tag:tag-key
+        ///     Filters by key-value pairs of tags
+        ///     Type: String
+        ///     Required: No
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

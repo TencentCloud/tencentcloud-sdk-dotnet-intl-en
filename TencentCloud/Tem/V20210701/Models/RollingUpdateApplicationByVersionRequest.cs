@@ -55,31 +55,31 @@ namespace TencentCloud.Tem.V20210701.Models
         public string From{ get; set; }
 
         /// <summary>
-        /// 
+        /// The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
         /// </summary>
         [JsonProperty("DeployStrategyType")]
         public string DeployStrategyType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Total number of batches
         /// </summary>
         [JsonProperty("TotalBatchCount")]
         public long? TotalBatchCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Interval between the batches
         /// </summary>
         [JsonProperty("BatchInterval")]
         public long? BatchInterval{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of instances in a beta batch
         /// </summary>
         [JsonProperty("BetaBatchNum")]
         public long? BetaBatchNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// Minimum number of available instances during the deployment
         /// </summary>
         [JsonProperty("MinAvailable")]
         public long? MinAvailable{ get; set; }

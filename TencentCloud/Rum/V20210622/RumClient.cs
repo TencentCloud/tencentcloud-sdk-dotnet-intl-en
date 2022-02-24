@@ -2119,7 +2119,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to add or modify a project limit.
+        /// This API is used to add or modify data reporting limit.
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectLimitRequest"/></param>
         /// <returns><see cref="ModifyProjectLimitResponse"/></returns>
@@ -2139,7 +2139,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to add or modify a project limit.
+        /// This API is used to add or modify data reporting limit.
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectLimitRequest"/></param>
         /// <returns><see cref="ModifyProjectLimitResponse"/></returns>

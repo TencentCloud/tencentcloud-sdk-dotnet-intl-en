@@ -130,8 +130,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string HttpVersion{ get; set; }
 
         /// <summary>
-        /// Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceIpType")]
         public long? SourceIpType{ get; set; }

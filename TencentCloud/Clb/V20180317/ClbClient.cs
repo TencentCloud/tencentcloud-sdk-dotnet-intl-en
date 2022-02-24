@@ -452,6 +452,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to add an SNAT IP for an SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
+        /// This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerSnatIpsResponse"/></returns>
@@ -472,6 +473,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to add an SNAT IP for an SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
+        /// This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerSnatIpsResponse"/></returns>
@@ -740,6 +742,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to delete the SNAT IP for an SnatPro CLB instance.
+        /// This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerSnatIpsResponse"/></returns>
@@ -760,6 +763,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to delete the SNAT IP for an SnatPro CLB instance.
+        /// This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerSnatIpsResponse"/></returns>
@@ -2318,6 +2322,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to modify the attributes of a CLB instance such as name and cross-region attributes.
+        /// This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerAttributesResponse"/></returns>
@@ -2338,6 +2343,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to modify the attributes of a CLB instance such as name and cross-region attributes.
+        /// This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerAttributesResponse"/></returns>

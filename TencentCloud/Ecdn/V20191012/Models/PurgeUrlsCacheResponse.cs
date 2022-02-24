@@ -25,7 +25,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
     {
         
         /// <summary>
-        /// Purge task ID. The first ten digits are the UTC time when the task is submitted.
+        /// Purge task ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

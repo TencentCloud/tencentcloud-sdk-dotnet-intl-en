@@ -31,16 +31,23 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+        /// The instance name, which can not exceed 60 characters
+        /// <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+        /// IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
         /// </summary>
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DisableApiTermination")]
+        public bool? DisableApiTermination{ get; set; }
 
 
         /// <summary>
@@ -51,6 +58,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         }
     }
 }

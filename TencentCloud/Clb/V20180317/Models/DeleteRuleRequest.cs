@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LocationIds{ get; set; }
 
         /// <summary>
-        /// Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+        /// Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+        /// Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
         /// </summary>
         [JsonProperty("NewDefaultServerDomain")]
         public string NewDefaultServerDomain{ get; set; }

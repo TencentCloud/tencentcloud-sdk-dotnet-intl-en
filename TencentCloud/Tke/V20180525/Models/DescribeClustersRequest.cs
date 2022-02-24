@@ -47,32 +47,42 @@ namespace TencentCloud.Tke.V20180525.Models
         /// ·  ClusterName
         ///     Filters by the cluster name
         ///     Type: String
-        ///     Required: no
+        ///     Required: No
+        /// 
+        /// ·  ClusterType
+        ///     Filters by the cluster type
+        ///     Type: String
+        ///     Required: No
+        /// 
+        /// ·  ClusterStatus
+        ///     Filters by the cluster status
+        ///     Type: String
+        ///     Required: No
         /// 
         /// ·  Tags
         ///     Filters by key-value pairs of tags
         ///     Type: String
-        ///     Required: no
+        ///     Required: No
         /// 
         /// ·  vpc-id
         ///     Filters by the VPC ID
         ///     Type: String
-        ///     Required: no
+        ///     Required: No
         /// 
         /// ·  tag-key
         ///     Filters by the tag key
         ///     Type: String
-        ///     Required: no
+        ///     Required: No
         /// 
         /// ·  tag-value
         ///     Filters by the tag value
         ///     Type: String
-        ///     Required: no
+        ///     Required: No
         /// 
         /// ·  tag:tag-key
         ///     Filters by key-value pairs of tags
         ///     Type: String
-        ///     Required: no
+        ///     Required: No
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
