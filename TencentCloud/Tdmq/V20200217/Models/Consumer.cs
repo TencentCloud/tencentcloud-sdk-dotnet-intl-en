@@ -52,6 +52,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClientVersion")]
         public string ClientVersion{ get; set; }
 
+        /// <summary>
+        /// Serial number of the topic partition connected to the consumer.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Partition")]
+        public long? Partition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ConsumerAddr", this.ConsumerAddr);
             this.SetParamSimple(map, prefix + "ConsumerName", this.ConsumerName);
             this.SetParamSimple(map, prefix + "ClientVersion", this.ClientVersion);
+            this.SetParamSimple(map, prefix + "Partition", this.Partition);
         }
     }
 }

@@ -161,6 +161,8 @@
     <Compile Include="V20210527\Models\DescribeMailProfileResponse.cs" />
     <Compile Include="V20210527\Models\DescribeMySqlProcessListRequest.cs" />
     <Compile Include="V20210527\Models\DescribeMySqlProcessListResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeProxySessionKillTasksRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeProxySessionKillTasksResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
@@ -212,6 +214,7 @@
     <Compile Include="V20210527\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="V20210527\Models\TableSpaceData.cs" />
     <Compile Include="V20210527\Models\TableSpaceTimeSeries.cs" />
+    <Compile Include="V20210527\Models\TaskInfo.cs" />
     <Compile Include="V20210527\Models\TimeSlice.cs" />
     <Compile Include="V20210527\Models\UserProfile.cs" />
   </ItemGroup>

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDefaultParamsRequest : AbstractModel
+    public class DescribeProxySessionKillTasksRequest : AbstractModel
     {
         
         /// <summary>
-        /// MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+        /// Instance ID.
         /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string EngineVersion{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+        /// The async session killing task ID, which is obtained after the API `CreateProxySessionKillTask` is successfully called.
         /// </summary>
-        [JsonProperty("TemplateType")]
-        public string TemplateType{ get; set; }
+        [JsonProperty("AsyncRequestIds")]
+        public long?[] AsyncRequestIds{ get; set; }
+
+        /// <summary>
+        /// Service type. Valid value: `redis` (TencentDB for Redis).
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "AsyncRequestIds.", this.AsyncRequestIds);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

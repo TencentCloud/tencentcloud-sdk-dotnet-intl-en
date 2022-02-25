@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+        /// AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -121,6 +121,26 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("RemoteRoZone")]
         public string[] RemoteRoZone{ get; set; }
 
+        /// <summary>
+        /// AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+        /// </summary>
+        [JsonProperty("ExClusterStatus")]
+        public long? ExClusterStatus{ get; set; }
+
+        /// <summary>
+        /// AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExClusterRemoteRoZone")]
+        public string[] ExClusterRemoteRoZone{ get; set; }
+
+        /// <summary>
+        /// AZ information of a multi-AZ deployed dedicated instance.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExClusterZoneConf")]
+        public ZoneConf ExClusterZoneConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +163,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "DrZone.", this.DrZone);
             this.SetParamSimple(map, prefix + "IsSupportRemoteRo", this.IsSupportRemoteRo);
             this.SetParamArraySimple(map, prefix + "RemoteRoZone.", this.RemoteRoZone);
+            this.SetParamSimple(map, prefix + "ExClusterStatus", this.ExClusterStatus);
+            this.SetParamArraySimple(map, prefix + "ExClusterRemoteRoZone.", this.ExClusterRemoteRoZone);
+            this.SetParamObj(map, prefix + "ExClusterZoneConf.", this.ExClusterZoneConf);
         }
     }
 }

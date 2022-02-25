@@ -43,6 +43,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Partitions{ get; set; }
 
         /// <summary>
+        /// Remarks (up to 128 characters).
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
         /// 0: general message;
         /// 1: globally sequential message;
         /// 2: partitionally sequential message;
@@ -53,16 +59,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? TopicType{ get; set; }
 
         /// <summary>
-        /// Remarks (up to 128 characters).
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
-
-        /// <summary>
         /// Pulsar cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Pulsar topic type.
+        /// `0`: Non-persistent and non-partitioned
+        /// `1`: Non-persistent and partitioned
+        /// `2`: Persistent and non-partitioned
+        /// `3`: Persistent and partitioned
+        /// </summary>
+        [JsonProperty("PulsarTopicType")]
+        public long? PulsarTopicType{ get; set; }
 
 
         /// <summary>
@@ -73,9 +83,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "Partitions", this.Partitions);
-            this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
         }
     }
 }

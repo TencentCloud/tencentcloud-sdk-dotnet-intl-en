@@ -31,16 +31,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Filename. The file must be a .sql file uploaded to Tencent Cloud.
-        /// </summary>
-        [JsonProperty("FileName")]
-        public string FileName{ get; set; }
-
-        /// <summary>
         /// TencentDB username
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
+
+        /// <summary>
+        /// Filename. The file must be a .sql file uploaded to Tencent Cloud.
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
 
         /// <summary>
         /// Password of a TencentDB instance user account
@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
+        /// <summary>
+        /// URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+        /// </summary>
+        [JsonProperty("CosUrl")]
+        public string CosUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,10 +67,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "User", this.User);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamSimple(map, prefix + "CosUrl", this.CosUrl);
         }
     }
 }

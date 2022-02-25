@@ -177,6 +177,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ConsumerLimit")]
         public string ConsumerLimit{ get; set; }
 
+        /// <summary>
+        /// `0`: Non-persistent and non-partitioned
+        /// `1`: Non-persistent and partitioned
+        /// `2`: Persistent and non-partitioned
+        /// `3`: Persistent and partitioned
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PulsarTopicType")]
+        public long? PulsarTopicType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +214,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
             this.SetParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
+            this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
         }
     }
 }
