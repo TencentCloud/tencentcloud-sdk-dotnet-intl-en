@@ -53,6 +53,46 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// This API is used to query the CloudAudit tracking set list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditTracksRequest"/></param>
+        /// <returns><see cref="DescribeAuditTracksResponse"/></returns>
+        public async Task<DescribeAuditTracksResponse> DescribeAuditTracks(DescribeAuditTracksRequest req)
+        {
+             JsonResponseModel<DescribeAuditTracksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditTracks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditTracksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the CloudAudit tracking set list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditTracksRequest"/></param>
+        /// <returns><see cref="DescribeAuditTracksResponse"/></returns>
+        public DescribeAuditTracksResponse DescribeAuditTracksSync(DescribeAuditTracksRequest req)
+        {
+             JsonResponseModel<DescribeAuditTracksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditTracks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditTracksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query CloudAudit logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeEventsRequest"/></param>

@@ -31,25 +31,48 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Switch of DRM-protected adaptive bitstream playback:
-        /// <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-        /// <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-        /// Default value: OFF.
+        /// Type of audio/video played. Valid values:
+        /// <li>AdaptiveDynamicStreaming</li>
+        /// <li>Transcode</li>
+        /// <li>Original</li>
+        /// Default value: `AdaptiveDynamicStream`
+        /// </summary>
+        [JsonProperty("AudioVideoType")]
+        public string AudioVideoType{ get; set; }
+
+        /// <summary>
+        /// Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+        /// <li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+        /// <li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+        /// Default value: `OFF`
+        /// This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
         /// </summary>
         [JsonProperty("DrmSwitch")]
         public string DrmSwitch{ get; set; }
 
         /// <summary>
-        /// ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
+        /// ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+        /// 
+        /// This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingDefinition")]
         public ulong? AdaptiveDynamicStreamingDefinition{ get; set; }
 
         /// <summary>
-        /// Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+        /// Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+        /// 
+        /// This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
         /// </summary>
         [JsonProperty("DrmStreamingsInfo")]
         public DrmStreamingsInfo DrmStreamingsInfo{ get; set; }
+
+        /// <summary>
+        /// ID of the transcoding template allowed for playback
+        /// 
+        /// This parameter is required if `AudioVideoType` is `Transcode`.
+        /// </summary>
+        [JsonProperty("TranscodeDefinition")]
+        public ulong? TranscodeDefinition{ get; set; }
 
         /// <summary>
         /// ID of the image sprite generating template that allows output.
@@ -103,9 +126,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
             this.SetParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
             this.SetParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+            this.SetParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
             this.SetParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
             this.SetParamArrayObj(map, prefix + "ResolutionNames.", this.ResolutionNames);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);

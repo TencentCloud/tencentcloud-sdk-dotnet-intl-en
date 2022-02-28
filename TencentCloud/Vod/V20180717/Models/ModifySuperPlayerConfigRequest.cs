@@ -31,6 +31,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// Type of audio/video played. Valid values:
+        /// <li>AdaptiveDynamicStreaming</li>
+        /// <li>Transcode</li>
+        /// <li>Original</li>
+        /// </summary>
+        [JsonProperty("AudioVideoType")]
+        public string AudioVideoType{ get; set; }
+
+        /// <summary>
         /// Switch of DRM-protected adaptive bitstream playback:
         /// <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
         /// <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -49,6 +58,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("DrmStreamingsInfo")]
         public DrmStreamingsInfoForUpdate DrmStreamingsInfo{ get; set; }
+
+        /// <summary>
+        /// ID of the transcoding template allowed for playback
+        /// </summary>
+        [JsonProperty("TranscodeDefinition")]
+        public ulong? TranscodeDefinition{ get; set; }
 
         /// <summary>
         /// ID of the image sprite generating template that allows output.
@@ -96,9 +111,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
             this.SetParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
             this.SetParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+            this.SetParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
             this.SetParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
             this.SetParamArrayObj(map, prefix + "ResolutionNames.", this.ResolutionNames);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);

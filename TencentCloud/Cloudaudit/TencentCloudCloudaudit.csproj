@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20190319\CloudauditClient.cs" />
+    <Compile Include="V20190319\Models\DescribeAuditTracksRequest.cs" />
+    <Compile Include="V20190319\Models\DescribeAuditTracksResponse.cs" />
     <Compile Include="V20190319\Models\DescribeEventsRequest.cs" />
     <Compile Include="V20190319\Models\DescribeEventsResponse.cs" />
     <Compile Include="V20190319\Models\Event.cs" />
