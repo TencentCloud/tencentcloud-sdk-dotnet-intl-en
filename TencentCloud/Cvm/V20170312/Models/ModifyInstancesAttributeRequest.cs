@@ -44,7 +44,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] SecurityGroups{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
         /// </summary>
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }

@@ -95,7 +95,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+        /// Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
@@ -183,7 +183,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public LaunchTemplate LaunchTemplate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specify the CHC physical server that used to create the CHC CVM.
         /// </summary>
         [JsonProperty("ChcIds")]
         public string[] ChcIds{ get; set; }
