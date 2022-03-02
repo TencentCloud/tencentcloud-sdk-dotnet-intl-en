@@ -267,7 +267,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OriginCombine OriginCombine{ get; set; }
 
         /// <summary>
-        /// QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+        /// QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }

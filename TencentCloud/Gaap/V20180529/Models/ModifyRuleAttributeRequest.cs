@@ -73,11 +73,23 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// The `host` carried in the request forwarded from the acceleration connection to the origin server.
-        /// If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+        /// The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+        /// If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
         /// </summary>
         [JsonProperty("ForwardHost")]
         public string ForwardHost{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+        /// </summary>
+        [JsonProperty("ServerNameIndicationSwitch")]
+        public string ServerNameIndicationSwitch{ get; set; }
+
+        /// <summary>
+        /// Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+        /// </summary>
+        [JsonProperty("ServerNameIndication")]
+        public string ServerNameIndication{ get; set; }
 
 
         /// <summary>
@@ -93,6 +105,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
             this.SetParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
+            this.SetParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
+            this.SetParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
         }
     }
 }

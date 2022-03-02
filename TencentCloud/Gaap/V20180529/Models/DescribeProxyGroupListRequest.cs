@@ -48,8 +48,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// <summary>
         /// Filter condition   
         /// Each request can have a maximum of 5 filter conditions for `Filter.Values`.
-        /// RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
-        /// PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+        /// `RealServerRegion` - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+        /// `PackageType` - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (silver connection group).
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

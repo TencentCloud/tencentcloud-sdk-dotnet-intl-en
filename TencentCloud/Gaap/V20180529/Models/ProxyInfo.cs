@@ -224,9 +224,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+        /// Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
         /// and `CrossBorder` (cross-MLC-border connection).
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
@@ -252,6 +252,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
+
+        /// <summary>
+        /// Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("InBanBlacklist")]
+        public long? InBanBlacklist{ get; set; }
 
 
         /// <summary>
@@ -292,6 +299,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
             this.SetParamArrayObj(map, prefix + "IPList.", this.IPList);
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+            this.SetParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
         }
     }
 }

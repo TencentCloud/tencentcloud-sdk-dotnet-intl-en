@@ -225,6 +225,7 @@
     <Compile Include="V20180606\Models\Revalidate.cs" />
     <Compile Include="V20180606\Models\RuleCache.cs" />
     <Compile Include="V20180606\Models\RuleCacheConfig.cs" />
+    <Compile Include="V20180606\Models\RuleEngine.cs" />
     <Compile Include="V20180606\Models\RuleQueryString.cs" />
     <Compile Include="V20180606\Models\ScdnAclConfig.cs" />
     <Compile Include="V20180606\Models\ScdnAclGroup.cs" />

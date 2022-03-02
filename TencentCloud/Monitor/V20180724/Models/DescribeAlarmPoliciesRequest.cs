@@ -67,6 +67,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// You can also refer to the “Example 2” below.
         /// 
         /// For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+        /// 
+        /// Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }
@@ -139,6 +141,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
 
+        /// <summary>
+        /// Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+        /// </summary>
+        [JsonProperty("NeedCorrespondence")]
+        public long? NeedCorrespondence{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +171,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "Enable.", this.Enable);
             this.SetParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+            this.SetParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
         }
     }
 }

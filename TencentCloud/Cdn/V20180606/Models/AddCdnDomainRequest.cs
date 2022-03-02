@@ -32,9 +32,11 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Acceleration domain name service type
-        /// web: static acceleration
-        /// download: download acceleration
-        /// media: streaming media VOD acceleration
+        /// `web`: Webpage file downloads
+        /// `download`: Large file downloads
+        /// `media`: Audio and video on demand acceleration
+        /// `hybrid`: Dynamic and static content acceleration
+        /// `dynamic`: Dynamic content acceleration
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -231,7 +233,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+        /// QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }

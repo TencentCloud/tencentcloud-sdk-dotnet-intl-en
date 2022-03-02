@@ -46,8 +46,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NoticeWay")]
         public string[] NoticeWay{ get; set; }
@@ -101,6 +101,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("NeedPhoneArriveNotice")]
         public long? NeedPhoneArriveNotice{ get; set; }
 
+        /// <summary>
+        /// Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PhoneCallType")]
+        public string PhoneCallType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "PhoneInnerInterval", this.PhoneInnerInterval);
             this.SetParamSimple(map, prefix + "PhoneCircleInterval", this.PhoneCircleInterval);
             this.SetParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
+            this.SetParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
         }
     }
 }

@@ -230,6 +230,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("TagInstances")]
         public TagInstance[] TagInstances{ get; set; }
 
+        /// <summary>
+        /// Information on the filter dimension associated with a policy.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FilterDimensionsParam")]
+        public string FilterDimensionsParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -265,6 +272,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "OriginId", this.OriginId);
             this.SetParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
+            this.SetParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
         }
     }
 }

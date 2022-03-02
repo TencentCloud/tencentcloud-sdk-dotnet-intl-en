@@ -82,7 +82,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerCertificateId{ get; set; }
 
         /// <summary>
-        /// Domain name of the origin server certificate.
+        /// This field has been disused. Use ServerNameIndication instead.
         /// </summary>
         [JsonProperty("RealServerCertificateDomain")]
         public string RealServerCertificateDomain{ get; set; }

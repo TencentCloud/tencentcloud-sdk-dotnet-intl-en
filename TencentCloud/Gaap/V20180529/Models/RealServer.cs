@@ -48,6 +48,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+        /// </summary>
+        [JsonProperty("InBanBlacklist")]
+        public long? InBanBlacklist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerId", this.RealServerId);
             this.SetParamSimple(map, prefix + "RealServerName", this.RealServerName);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
         }
     }
 }

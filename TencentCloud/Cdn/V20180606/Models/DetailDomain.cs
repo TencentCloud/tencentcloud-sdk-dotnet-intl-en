@@ -66,10 +66,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Domain name service type
-        /// web: static acceleration
-        /// download: download acceleration
-        /// media: streaming VOD acceleration
+        /// Acceleration domain name service type
+        /// `web`: Webpage file downloads
+        /// `download`: Large file downloads
+        /// `media`: Audio and video on demand acceleration
+        /// `hybrid`: Dynamic and static content acceleration
+        /// `dynamic`: Dynamic content acceleration
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -455,6 +457,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ShareCname")]
         public ShareCname ShareCname{ get; set; }
 
+        /// <summary>
+        /// Rule engine
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RuleEngine")]
+        public RuleEngine RuleEngine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -521,6 +530,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
             this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
+            this.SetParamObj(map, prefix + "RuleEngine.", this.RuleEngine);
         }
     }
 }
