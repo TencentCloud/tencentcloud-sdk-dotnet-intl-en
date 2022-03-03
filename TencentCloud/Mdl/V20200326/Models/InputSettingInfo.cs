@@ -25,22 +25,22 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("SourceUrl")]
         public string SourceUrl{ get; set; }
@@ -59,6 +59,15 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
+        /// <summary>
+        /// Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+        /// Value range: 0 (default) or 10000-600000
+        /// The value must be a multiple of 1,000.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DelayTime")]
+        public long? DelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +79,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "SourceUrl", this.SourceUrl);
             this.SetParamSimple(map, prefix + "InputAddress", this.InputAddress);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
         }
     }
 }

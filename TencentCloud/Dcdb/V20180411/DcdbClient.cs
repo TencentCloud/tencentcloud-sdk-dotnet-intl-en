@@ -537,6 +537,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to query the list of slow query logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSlowLogsResponse"/></returns>
+        public async Task<DescribeDBSlowLogsResponse> DescribeDBSlowLogs(DescribeDBSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of slow query logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSlowLogsResponse"/></returns>
+        public DescribeDBSlowLogsResponse DescribeDBSlowLogsSync(DescribeDBSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the sync mode of a TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSyncModeRequest"/></param>

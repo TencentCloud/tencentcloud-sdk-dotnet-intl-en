@@ -103,6 +103,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("RateControlMode")]
         public string RateControlMode{ get; set; }
 
+        /// <summary>
+        /// Watermark ID
+        /// </summary>
+        [JsonProperty("WatermarkId")]
+        public string WatermarkId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
             this.SetParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
             this.SetParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
+            this.SetParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
         }
     }
 }

@@ -33,15 +33,15 @@ namespace TencentCloud.Sts.V20180813.Models
         /// <summary>
         /// Policy description
         /// Note:
-        /// 1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-        /// 2. For the policy syntax, please see CAM’s [Syntax Logic](https://cloud.tencent.com/document/product/598/10603).
+        /// 1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+        /// 2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
         /// 3. The policy cannot contain the `principal` element.
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }
 
         /// <summary>
-        /// Specifies the validity period of credentials in seconds. Default value: 1800. Maximum value: 7200
+        /// The validity period of temporary credentials in seconds. Default value: 1,800s. Maximum value for a root account: 7,200s. Maximum value for a sub-account: 129,600s.
         /// </summary>
         [JsonProperty("DurationSeconds")]
         public ulong? DurationSeconds{ get; set; }

@@ -50,6 +50,8 @@
     <Compile Include="V20180813\Models\AssumeRoleWithSAMLRequest.cs" />
     <Compile Include="V20180813\Models\AssumeRoleWithSAMLResponse.cs" />
     <Compile Include="V20180813\Models\Credentials.cs" />
+    <Compile Include="V20180813\Models\GetCallerIdentityRequest.cs" />
+    <Compile Include="V20180813\Models\GetCallerIdentityResponse.cs" />
     <Compile Include="V20180813\Models\GetFederationTokenRequest.cs" />
     <Compile Include="V20180813\Models\GetFederationTokenResponse.cs" />
   </ItemGroup>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.386</VersionPrefix>
+    <VersionPrefix>3.0.387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2927,6 +2927,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDBParametersResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSlowLogsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstanceNodeInfoRequest.cs" />
@@ -2984,6 +2986,7 @@
     <Compile Include="Dcdb\V20180411\Models\SecurityGroup.cs" />
     <Compile Include="Dcdb\V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardInfo.cs" />
+    <Compile Include="Dcdb\V20180411\Models\SlowLogData.cs" />
     <Compile Include="Dcdb\V20180411\Models\SwitchDBInstanceHARequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\SwitchDBInstanceHAResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\TableColumn.cs" />
@@ -6285,6 +6288,8 @@
     <Compile Include="Sts\V20180813\Models\AssumeRoleWithSAMLRequest.cs" />
     <Compile Include="Sts\V20180813\Models\AssumeRoleWithSAMLResponse.cs" />
     <Compile Include="Sts\V20180813\Models\Credentials.cs" />
+    <Compile Include="Sts\V20180813\Models\GetCallerIdentityRequest.cs" />
+    <Compile Include="Sts\V20180813\Models\GetCallerIdentityResponse.cs" />
     <Compile Include="Sts\V20180813\Models\GetFederationTokenRequest.cs" />
     <Compile Include="Sts\V20180813\Models\GetFederationTokenResponse.cs" />
     <Compile Include="Tag\V20180813\TagClient.cs" />

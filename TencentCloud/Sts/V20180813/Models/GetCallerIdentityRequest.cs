@@ -21,36 +21,15 @@ namespace TencentCloud.Sts.V20180813.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Credentials : AbstractModel
+    public class GetCallerIdentityRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Token, which contains up to 4,096 bytes depending on the associated policies.
-        /// </summary>
-        [JsonProperty("Token")]
-        public string Token{ get; set; }
-
-        /// <summary>
-        /// Temporary credentials key ID, which contains up to 1,024 bytes.
-        /// </summary>
-        [JsonProperty("TmpSecretId")]
-        public string TmpSecretId{ get; set; }
-
-        /// <summary>
-        /// Temporary credentials key, which contains up to 1,024 bytes.
-        /// </summary>
-        [JsonProperty("TmpSecretKey")]
-        public string TmpSecretKey{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
-            this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         }
     }
 }

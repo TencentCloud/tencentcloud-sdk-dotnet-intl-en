@@ -49,7 +49,7 @@ namespace TencentCloud.Sts.V20180813.Models
         public string RoleSessionName{ get; set; }
 
         /// <summary>
-        /// Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 7200
+        /// The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
         /// </summary>
         [JsonProperty("DurationSeconds")]
         public ulong? DurationSeconds{ get; set; }
