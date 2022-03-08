@@ -53,6 +53,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to remove the isolation of an instance to make it accessible again.
+        /// </summary>
+        /// <param name="req"><see cref="ActivateInstanceRequest"/></param>
+        /// <returns><see cref="ActivateInstanceResponse"/></returns>
+        public async Task<ActivateInstanceResponse> ActivateInstance(ActivateInstanceRequest req)
+        {
+             JsonResponseModel<ActivateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ActivateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove the isolation of an instance to make it accessible again.
+        /// </summary>
+        /// <param name="req"><see cref="ActivateInstanceRequest"/></param>
+        /// <returns><see cref="ActivateInstanceResponse"/></returns>
+        public ActivateInstanceResponse ActivateInstanceSync(ActivateInstanceRequest req)
+        {
+             JsonResponseModel<ActivateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ActivateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add an instance in a cluster.
         /// </summary>
         /// <param name="req"><see cref="AddInstancesRequest"/></param>
@@ -1044,6 +1084,86 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "OfflineInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OfflineInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pause a serverless cluster.
+        /// </summary>
+        /// <param name="req"><see cref="PauseServerlessRequest"/></param>
+        /// <returns><see cref="PauseServerlessResponse"/></returns>
+        public async Task<PauseServerlessResponse> PauseServerless(PauseServerlessRequest req)
+        {
+             JsonResponseModel<PauseServerlessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PauseServerless");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseServerlessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pause a serverless cluster.
+        /// </summary>
+        /// <param name="req"><see cref="PauseServerlessRequest"/></param>
+        /// <returns><see cref="PauseServerlessResponse"/></returns>
+        public PauseServerlessResponse PauseServerlessSync(PauseServerlessRequest req)
+        {
+             JsonResponseModel<PauseServerlessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PauseServerless");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseServerlessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to resume a serverless cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeServerlessRequest"/></param>
+        /// <returns><see cref="ResumeServerlessResponse"/></returns>
+        public async Task<ResumeServerlessResponse> ResumeServerless(ResumeServerlessRequest req)
+        {
+             JsonResponseModel<ResumeServerlessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResumeServerless");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeServerlessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to resume a serverless cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeServerlessRequest"/></param>
+        /// <returns><see cref="ResumeServerlessResponse"/></returns>
+        public ResumeServerlessResponse ResumeServerlessSync(ResumeServerlessRequest req)
+        {
+             JsonResponseModel<ResumeServerlessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResumeServerless");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeServerlessResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

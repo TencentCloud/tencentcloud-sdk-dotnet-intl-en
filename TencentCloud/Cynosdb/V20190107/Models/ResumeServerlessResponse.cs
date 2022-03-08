@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyDesiredCapacityRequest : AbstractModel
+    public class ResumeServerlessResponse : AbstractModel
     {
         
         /// <summary>
-        /// Auto scaling group ID
+        /// Async task ID
         /// </summary>
-        [JsonProperty("AutoScalingGroupId")]
-        public string AutoScalingGroupId{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Desired capacity
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("DesiredCapacity")]
-        public ulong? DesiredCapacity{ get; set; }
-
-        /// <summary>
-        /// Minimum number of instances. Value range: 0-2000.
-        /// </summary>
-        [JsonProperty("MinSize")]
-        public ulong? MinSize{ get; set; }
-
-        /// <summary>
-        /// Maximum number of instances. Value range: 0-2000.
-        /// </summary>
-        [JsonProperty("MaxSize")]
-        public ulong? MaxSize{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
-            this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
-            this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
-            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="V20170312\MariadbClient.cs" />
     <Compile Include="V20170312\Models\Account.cs" />
+    <Compile Include="V20170312\Models\ActivateHourDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\ActivateHourDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\CancelDcnJobRequest.cs" />
@@ -67,7 +69,11 @@
     <Compile Include="V20170312\Models\DBInstance.cs" />
     <Compile Include="V20170312\Models\DBParamValue.cs" />
     <Compile Include="V20170312\Models\Database.cs" />
+    <Compile Include="V20170312\Models\DatabaseFunction.cs" />
     <Compile Include="V20170312\Models\DatabasePrivilege.cs" />
+    <Compile Include="V20170312\Models\DatabaseProcedure.cs" />
+    <Compile Include="V20170312\Models\DatabaseTable.cs" />
+    <Compile Include="V20170312\Models\DatabaseView.cs" />
     <Compile Include="V20170312\Models\DcnDetailItem.cs" />
     <Compile Include="V20170312\Models\DeleteAccountRequest.cs" />
     <Compile Include="V20170312\Models\DeleteAccountResponse.cs" />
@@ -95,6 +101,8 @@
     <Compile Include="V20170312\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowLogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDatabaseObjectsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDatabaseObjectsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDatabaseTableRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDatabaseTableResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
@@ -120,6 +128,8 @@
     <Compile Include="V20170312\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\IsolateHourDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\IsolateHourDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\LogFileInfo.cs" />
     <Compile Include="V20170312\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountDescriptionResponse.cs" />

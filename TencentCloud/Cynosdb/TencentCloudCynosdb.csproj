@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="V20190107\CynosdbClient.cs" />
     <Compile Include="V20190107\Models\Account.cs" />
+    <Compile Include="V20190107\Models\ActivateInstanceRequest.cs" />
+    <Compile Include="V20190107\Models\ActivateInstanceResponse.cs" />
     <Compile Include="V20190107\Models\AddInstancesRequest.cs" />
     <Compile Include="V20190107\Models\AddInstancesResponse.cs" />
     <Compile Include="V20190107\Models\Addr.cs" />
@@ -109,8 +111,12 @@
     <Compile Include="V20190107\Models\OfflineInstanceRequest.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ParamItem.cs" />
+    <Compile Include="V20190107\Models\PauseServerlessRequest.cs" />
+    <Compile Include="V20190107\Models\PauseServerlessResponse.cs" />
     <Compile Include="V20190107\Models\PolicyRule.cs" />
     <Compile Include="V20190107\Models\QueryFilter.cs" />
+    <Compile Include="V20190107\Models\ResumeServerlessRequest.cs" />
+    <Compile Include="V20190107\Models\ResumeServerlessResponse.cs" />
     <Compile Include="V20190107\Models\SecurityGroup.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagRequest.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagResponse.cs" />

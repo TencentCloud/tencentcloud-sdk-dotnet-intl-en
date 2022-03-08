@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyDesiredCapacityRequest : AbstractModel
+    public class ActivateInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Auto scaling group ID
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("AutoScalingGroupId")]
-        public string AutoScalingGroupId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Desired capacity
+        /// Array of instance IDs
         /// </summary>
-        [JsonProperty("DesiredCapacity")]
-        public ulong? DesiredCapacity{ get; set; }
-
-        /// <summary>
-        /// Minimum number of instances. Value range: 0-2000.
-        /// </summary>
-        [JsonProperty("MinSize")]
-        public ulong? MinSize{ get; set; }
-
-        /// <summary>
-        /// Maximum number of instances. Value range: 0-2000.
-        /// </summary>
-        [JsonProperty("MaxSize")]
-        public ulong? MaxSize{ get; set; }
+        [JsonProperty("InstanceIdList")]
+        public string[] InstanceIdList{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
-            this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
-            this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
-            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         }
     }
 }

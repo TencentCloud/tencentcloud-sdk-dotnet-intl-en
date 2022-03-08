@@ -63,19 +63,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores of normal instance
+        /// It is required when `DbMode` is set to `NORMAL` or left empty.
+        /// Number of CPU cores of a non-serverless instance
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
+        /// It is required when `DbMode` is set to `NORMAL` or left empty.
         /// Memory of a non-serverless instance in GB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Storage capacity in GB
+        /// This parameter has been deprecated.
+        /// Storage capacity in GB.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -138,6 +141,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ExpectTime{ get; set; }
 
         /// <summary>
+        /// This parameter has been deprecated.
         /// Specified allowed time range for time point rollback
         /// </summary>
         [JsonProperty("ExpectTimeThresh")]

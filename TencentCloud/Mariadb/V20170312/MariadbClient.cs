@@ -53,6 +53,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to remove the isolation of pay-as-you-go instances.
+        /// </summary>
+        /// <param name="req"><see cref="ActivateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="ActivateHourDBInstanceResponse"/></returns>
+        public async Task<ActivateHourDBInstanceResponse> ActivateHourDBInstance(ActivateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<ActivateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ActivateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove the isolation of pay-as-you-go instances.
+        /// </summary>
+        /// <param name="req"><see cref="ActivateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="ActivateHourDBInstanceResponse"/></returns>
+        public ActivateHourDBInstanceResponse ActivateHourDBInstanceSync(ActivateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<ActivateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ActivateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to associate security groups with Tencent Cloud resources in batches.
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -859,6 +899,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectsResponse"/></returns>
+        public async Task<DescribeDatabaseObjectsResponse> DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabaseObjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseObjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectsResponse"/></returns>
+        public DescribeDatabaseObjectsResponse DescribeDatabaseObjectsSync(DescribeDatabaseObjectsRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabaseObjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseObjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the table information of a TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
@@ -1332,6 +1412,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "InitDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate pay-as-you-go instances.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateHourDBInstanceResponse"/></returns>
+        public async Task<IsolateHourDBInstanceResponse> IsolateHourDBInstance(IsolateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate pay-as-you-go instances.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateHourDBInstanceResponse"/></returns>
+        public IsolateHourDBInstanceResponse IsolateHourDBInstanceSync(IsolateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyClusterParamRequest : AbstractModel
+    public class ActivateHourDBInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Instance ID list
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// The list of parameters to be modified
-        /// </summary>
-        [JsonProperty("ParamList")]
-        public ParamItem[] ParamList{ get; set; }
-
-        /// <summary>
-        /// Valid values: `yes` (execute during maintenance time), `no` (execute now)
-        /// </summary>
-        [JsonProperty("IsInMaintainPeriod")]
-        public string IsInMaintainPeriod{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
-            this.SetParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

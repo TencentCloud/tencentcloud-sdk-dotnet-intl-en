@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyDesiredCapacityRequest : AbstractModel
+    public class DescribeDatabaseObjectsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Auto scaling group ID
+        /// Instance ID in the format of dcdbt-ow7t8lmc.
         /// </summary>
-        [JsonProperty("AutoScalingGroupId")]
-        public string AutoScalingGroupId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Desired capacity
+        /// Database name, which can be obtained through the `DescribeDatabases` API.
         /// </summary>
-        [JsonProperty("DesiredCapacity")]
-        public ulong? DesiredCapacity{ get; set; }
-
-        /// <summary>
-        /// Minimum number of instances. Value range: 0-2000.
-        /// </summary>
-        [JsonProperty("MinSize")]
-        public ulong? MinSize{ get; set; }
-
-        /// <summary>
-        /// Maximum number of instances. Value range: 0-2000.
-        /// </summary>
-        [JsonProperty("MaxSize")]
-        public ulong? MaxSize{ get; set; }
+        [JsonProperty("DbName")]
+        public string DbName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
-            this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
-            this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
-            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "DbName", this.DbName);
         }
     }
 }

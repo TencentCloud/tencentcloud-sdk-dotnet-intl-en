@@ -65,7 +65,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Instance status
+        /// Instance status. Valid values:
+        /// creating
+        /// running
+        /// isolating
+        /// isolated
+        /// activating: Removing the instance from isolation
+        /// offlining: Eliminating the instance
+        /// offlined: Instance eliminated
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
