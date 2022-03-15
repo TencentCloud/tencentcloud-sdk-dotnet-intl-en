@@ -31,7 +31,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// Policy version ID
+        /// Policy version, which can be obtained through `ListPolicyVersions`.
         /// </summary>
         [JsonProperty("VersionId")]
         public ulong? VersionId{ get; set; }

@@ -45,6 +45,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Bundle")]
         public Bundle Bundle{ get; set; }
 
+        /// <summary>
+        /// The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NotSupportModifyMessage")]
+        public string NotSupportModifyMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamObj(map, prefix + "ModifyPrice.", this.ModifyPrice);
             this.SetParamSimple(map, prefix + "ModifyBundleState", this.ModifyBundleState);
             this.SetParamObj(map, prefix + "Bundle.", this.Bundle);
+            this.SetParamSimple(map, prefix + "NotSupportModifyMessage", this.NotSupportModifyMessage);
         }
     }
 }

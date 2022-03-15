@@ -131,6 +131,8 @@
     <Compile Include="V20190116\Models\GetSecurityLastUsedResponse.cs" />
     <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
     <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
+    <Compile Include="V20190116\Models\GetUserAppIdRequest.cs" />
+    <Compile Include="V20190116\Models\GetUserAppIdResponse.cs" />
     <Compile Include="V20190116\Models\GetUserRequest.cs" />
     <Compile Include="V20190116\Models\GetUserResponse.cs" />
     <Compile Include="V20190116\Models\GroupIdOfUidInfo.cs" />

@@ -44,12 +44,13 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// Sub-user remarks
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// If sub-user can log in to the Console
+        /// Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
         /// </summary>
         [JsonProperty("ConsoleLogin")]
         public ulong? ConsoleLogin{ get; set; }

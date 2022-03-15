@@ -31,7 +31,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string SAMLMetadata{ get; set; }
 
         /// <summary>
-        /// Status. `0`: not set, `11`: enabled, `2`: disabled.
+        /// Status. `0`: not set, `1`: enabled, `2`: disabled.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

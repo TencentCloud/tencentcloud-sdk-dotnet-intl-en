@@ -31,13 +31,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public long? ConsoleLogin{ get; set; }
 
         /// <summary>
-        /// Role ID
+        /// Role ID. Use either `RoleId` or `RoleName` as the input parameter.
         /// </summary>
         [JsonProperty("RoleId")]
         public long? RoleId{ get; set; }
 
         /// <summary>
-        /// Role name
+        /// Role name. Use either `RoleId` or `RoleName` as the input parameter.
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// A parameter used to query the key ID list.
+        /// Key ID list query. Up to 10 key IDs can be queried.
         /// </summary>
         [JsonProperty("SecretIdList")]
         public string[] SecretIdList{ get; set; }

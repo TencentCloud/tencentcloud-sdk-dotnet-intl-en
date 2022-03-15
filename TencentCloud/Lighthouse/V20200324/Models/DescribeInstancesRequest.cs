@@ -47,7 +47,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>instance-state</li>Filter by **instance status**.
         /// Type: String
         /// Required: no
-        /// Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+        /// Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

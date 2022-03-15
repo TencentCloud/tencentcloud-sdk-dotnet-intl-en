@@ -55,7 +55,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string CountryCode{ get; set; }
 
         /// <summary>
-        /// If mobile number has been verified
+        /// Whether the mobile phone has been verified. `0`: No; `1`: Yes.
         /// </summary>
         [JsonProperty("PhoneFlag")]
         public ulong? PhoneFlag{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// If email has been verified
+        /// Whether the email has been verified. `0`: No; `1`: Yes.
         /// </summary>
         [JsonProperty("EmailFlag")]
         public ulong? EmailFlag{ get; set; }
 
         /// <summary>
-        /// User type
+        /// User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
         /// </summary>
         [JsonProperty("UserType")]
         public ulong? UserType{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// If the user is the main message recipient
+        /// Whether the user is the primary message recipient. `0`: No; `1`: Yes.
         /// </summary>
         [JsonProperty("IsReceiverOwner")]
         public ulong? IsReceiverOwner{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.393</VersionPrefix>
+    <VersionPrefix>3.0.394</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -803,6 +803,8 @@
     <Compile Include="Cam\V20190116\Models\GetSecurityLastUsedResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\GetUserAppIdRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\GetUserAppIdResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GroupIdOfUidInfo.cs" />
@@ -3059,6 +3061,76 @@
     <Compile Include="Dts\V20180330\Models\SubscribeRegionConf.cs" />
     <Compile Include="Dts\V20180330\Models\TagFilter.cs" />
     <Compile Include="Dts\V20180330\Models\TagItem.cs" />
+    <Compile Include="Eb\V20210416\EbClient.cs" />
+    <Compile Include="Eb\V20210416\Models\APIGWParams.cs" />
+    <Compile Include="Eb\V20210416\Models\CheckRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CheckRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CheckTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CheckTransformationResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CkafkaDeliveryParams.cs" />
+    <Compile Include="Eb\V20210416\Models\CkafkaParams.cs" />
+    <Compile Include="Eb\V20210416\Models\CkafkaTargetParams.cs" />
+    <Compile Include="Eb\V20210416\Models\Connection.cs" />
+    <Compile Include="Eb\V20210416\Models\ConnectionDescription.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateConnectionRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateConnectionResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateEventBusRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateEventBusResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateTargetRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateTargetResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateTransformationResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeadLetterConfig.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteConnectionRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteConnectionResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteEventBusRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteEventBusResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteTargetRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteTargetResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteTransformationResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\EtlFilter.cs" />
+    <Compile Include="Eb\V20210416\Models\EventBus.cs" />
+    <Compile Include="Eb\V20210416\Models\Extraction.cs" />
+    <Compile Include="Eb\V20210416\Models\Filter.cs" />
+    <Compile Include="Eb\V20210416\Models\GetEventBusRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\GetEventBusResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\GetRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\GetRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\GetTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\GetTransformationResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\ListConnectionsRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\ListConnectionsResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\ListEventBusesRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\ListEventBusesResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\ListRulesRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\ListRulesResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\ListTargetsRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\ListTargetsResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\OutputStructParam.cs" />
+    <Compile Include="Eb\V20210416\Models\RetryPolicy.cs" />
+    <Compile Include="Eb\V20210416\Models\Rule.cs" />
+    <Compile Include="Eb\V20210416\Models\SCFParams.cs" />
+    <Compile Include="Eb\V20210416\Models\Target.cs" />
+    <Compile Include="Eb\V20210416\Models\TargetBrief.cs" />
+    <Compile Include="Eb\V20210416\Models\TargetDescription.cs" />
+    <Compile Include="Eb\V20210416\Models\TextParams.cs" />
+    <Compile Include="Eb\V20210416\Models\Transform.cs" />
+    <Compile Include="Eb\V20210416\Models\Transformation.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateConnectionRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateConnectionResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateEventBusRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateEventBusResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateTargetRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateTargetResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateTransformationResponse.cs" />
     <Compile Include="Ecdn\V20191012\EcdnClient.cs" />
     <Compile Include="Ecdn\V20191012\Models\AddEcdnDomainRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\AddEcdnDomainResponse.cs" />
@@ -4204,12 +4276,15 @@
     <Compile Include="Lighthouse\V20200324\Models\BlueprintPrice.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Bundle.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CcnAttachedInstance.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ContainerEnv.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateBlueprintRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateBlueprintResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateFirewallRulesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateFirewallRulesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateInstanceSnapshotRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateInstanceSnapshotResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\CreateInstancesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\CreateInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateKeyPairRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateKeyPairResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DataDiskPrice.cs" />
@@ -4289,6 +4364,9 @@
     <Compile Include="Lighthouse\V20200324\Models\DiskDeniedActions.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DiskPrice.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DiskReturnable.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DockerContainerConfiguration.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DockerContainerPublishPort.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DockerContainerVolume.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Filter.cs" />
     <Compile Include="Lighthouse\V20200324\Models\FirewallRule.cs" />
     <Compile Include="Lighthouse\V20200324\Models\FirewallRuleInfo.cs" />
@@ -4313,6 +4391,7 @@
     <Compile Include="Lighthouse\V20200324\Models\InstanceTrafficPackage.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InternetAccessible.cs" />
     <Compile Include="Lighthouse\V20200324\Models\KeyPair.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\LoginConfiguration.cs" />
     <Compile Include="Lighthouse\V20200324\Models\LoginSettings.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifyBlueprintAttributeRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifyBlueprintAttributeResponse.cs" />

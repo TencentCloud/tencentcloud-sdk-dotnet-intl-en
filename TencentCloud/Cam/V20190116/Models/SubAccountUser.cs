@@ -37,7 +37,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Sub-user UID
+        /// Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
         /// </summary>
         [JsonProperty("Uid")]
         public ulong? Uid{ get; set; }

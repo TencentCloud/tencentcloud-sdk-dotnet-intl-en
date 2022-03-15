@@ -59,12 +59,15 @@
     <Compile Include="V20200324\Models\BlueprintPrice.cs" />
     <Compile Include="V20200324\Models\Bundle.cs" />
     <Compile Include="V20200324\Models\CcnAttachedInstance.cs" />
+    <Compile Include="V20200324\Models\ContainerEnv.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintRequest.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintResponse.cs" />
     <Compile Include="V20200324\Models\CreateFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\CreateFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\CreateInstanceSnapshotRequest.cs" />
     <Compile Include="V20200324\Models\CreateInstanceSnapshotResponse.cs" />
+    <Compile Include="V20200324\Models\CreateInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\CreateInstancesResponse.cs" />
     <Compile Include="V20200324\Models\CreateKeyPairRequest.cs" />
     <Compile Include="V20200324\Models\CreateKeyPairResponse.cs" />
     <Compile Include="V20200324\Models\DataDiskPrice.cs" />
@@ -144,6 +147,9 @@
     <Compile Include="V20200324\Models\DiskDeniedActions.cs" />
     <Compile Include="V20200324\Models\DiskPrice.cs" />
     <Compile Include="V20200324\Models\DiskReturnable.cs" />
+    <Compile Include="V20200324\Models\DockerContainerConfiguration.cs" />
+    <Compile Include="V20200324\Models\DockerContainerPublishPort.cs" />
+    <Compile Include="V20200324\Models\DockerContainerVolume.cs" />
     <Compile Include="V20200324\Models\Filter.cs" />
     <Compile Include="V20200324\Models\FirewallRule.cs" />
     <Compile Include="V20200324\Models\FirewallRuleInfo.cs" />
@@ -168,6 +174,7 @@
     <Compile Include="V20200324\Models\InstanceTrafficPackage.cs" />
     <Compile Include="V20200324\Models\InternetAccessible.cs" />
     <Compile Include="V20200324\Models\KeyPair.cs" />
+    <Compile Include="V20200324\Models\LoginConfiguration.cs" />
     <Compile Include="V20200324\Models\LoginSettings.cs" />
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeResponse.cs" />

@@ -1693,6 +1693,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to get the user AppId.
+        /// </summary>
+        /// <param name="req"><see cref="GetUserAppIdRequest"/></param>
+        /// <returns><see cref="GetUserAppIdResponse"/></returns>
+        public async Task<GetUserAppIdResponse> GetUserAppId(GetUserAppIdRequest req)
+        {
+             JsonResponseModel<GetUserAppIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetUserAppId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUserAppIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the user AppId.
+        /// </summary>
+        /// <param name="req"><see cref="GetUserAppIdRequest"/></param>
+        /// <returns><see cref="GetUserAppIdResponse"/></returns>
+        public GetUserAppIdResponse GetUserAppIdSync(GetUserAppIdRequest req)
+        {
+             JsonResponseModel<GetUserAppIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetUserAppId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUserAppIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to list the access keys associated with a specified CAM user.
         /// </summary>
         /// <param name="req"><see cref="ListAccessKeysRequest"/></param>
