@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssignProjectRequest : AbstractModel
+    public class ModifyStreamLiveWatermarkRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+        /// Watermark ID
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// Unique ID of an existing project (instead of a new project).
+        /// Watermark name
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
+        /// </summary>
+        [JsonProperty("ImageSettings")]
+        public CreateImageSettings ImageSettings{ get; set; }
+
+        /// <summary>
+        /// Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+        /// </summary>
+        [JsonProperty("TextSettings")]
+        public CreateTextSettings TextSettings{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamObj(map, prefix + "ImageSettings.", this.ImageSettings);
+            this.SetParamObj(map, prefix + "TextSettings.", this.TextSettings);
         }
     }
 }

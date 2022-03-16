@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReplicaSetInfo : AbstractModel
+    public class ExcludedProducts : AbstractModel
     {
         
         /// <summary>
-        /// Replica set ID
+        /// The names of non-applicable products.
         /// </summary>
-        [JsonProperty("ReplicaSetId")]
-        public string ReplicaSetId{ get; set; }
+        [JsonProperty("GoodsName")]
+        public string GoodsName{ get; set; }
+
+        /// <summary>
+        /// `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all.
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReplicaSetId", this.ReplicaSetId);
+            this.SetParamSimple(map, prefix + "GoodsName", this.GoodsName);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

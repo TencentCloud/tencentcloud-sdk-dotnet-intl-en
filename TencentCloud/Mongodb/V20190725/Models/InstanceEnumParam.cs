@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+        /// Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (yes), `0` (no, and displays "Loading" in the console)
+        /// Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

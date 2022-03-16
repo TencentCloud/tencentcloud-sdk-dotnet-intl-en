@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+        /// The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+        /// Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }

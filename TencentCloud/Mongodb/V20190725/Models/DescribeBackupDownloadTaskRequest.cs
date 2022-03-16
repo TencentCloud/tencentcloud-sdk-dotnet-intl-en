@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
+        /// The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

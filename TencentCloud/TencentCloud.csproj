@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.394</VersionPrefix>
+    <VersionPrefix>3.0.395</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -691,6 +691,7 @@
     <Compile Include="Batch\V20170312\Models\VirtualPrivateCloud.cs" />
     <Compile Include="Billing\V20180709\BillingClient.cs" />
     <Compile Include="Billing\V20180709\Models\ActionSummaryOverviewItem.cs" />
+    <Compile Include="Billing\V20180709\Models\ApplicableProducts.cs" />
     <Compile Include="Billing\V20180709\Models\BillDetail.cs" />
     <Compile Include="Billing\V20180709\Models\BillDetailComponent.cs" />
     <Compile Include="Billing\V20180709\Models\BillResourceSummary.cs" />
@@ -711,11 +712,19 @@
     <Compile Include="Billing\V20180709\Models\DescribeBillSummaryByRegionResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeBillSummaryByTagRequest.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeBillSummaryByTagResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeVoucherInfoRequest.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeVoucherInfoResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeVoucherUsageDetailsRequest.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeVoucherUsageDetailsResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\ExcludedProducts.cs" />
     <Compile Include="Billing\V20180709\Models\PayModeSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\ProjectSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\RegionSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\SummaryTotal.cs" />
     <Compile Include="Billing\V20180709\Models\TagSummaryOverviewItem.cs" />
+    <Compile Include="Billing\V20180709\Models\UsageDetails.cs" />
+    <Compile Include="Billing\V20180709\Models\UsageRecords.cs" />
+    <Compile Include="Billing\V20180709\Models\VoucherInfos.cs" />
     <Compile Include="Cam\V20190116\CamClient.cs" />
     <Compile Include="Cam\V20190116\Models\AccessKey.cs" />
     <Compile Include="Cam\V20190116\Models\AddUserRequest.cs" />
@@ -2899,6 +2908,8 @@
     <Compile Include="Dc\V20180410\Models\RouteFilterPrefix.cs" />
     <Compile Include="Dc\V20180410\Models\Tag.cs" />
     <Compile Include="Dcdb\V20180411\DcdbClient.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ActiveHourDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ActiveHourDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\BriefNodeInfo.cs" />
@@ -2913,6 +2924,8 @@
     <Compile Include="Dcdb\V20180411\Models\CopyAccountPrivilegesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CreateAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CreateAccountResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\CreateHourDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\CreateHourDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DBAccount.cs" />
     <Compile Include="Dcdb\V20180411\Models\DBParamValue.cs" />
     <Compile Include="Dcdb\V20180411\Models\DCDBInstanceInfo.cs" />
@@ -2971,6 +2984,8 @@
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\IsolateHourDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\IsolateHourDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\LogFileInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionResponse.cs" />
@@ -4880,6 +4895,7 @@
     <Compile Include="Mdl\V20200326\Models\ChannelInputStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\ChannelOutputsStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\ChannelPipelineAlerts.cs" />
+    <Compile Include="Mdl\V20200326\Models\CreateImageSettings.cs" />
     <Compile Include="Mdl\V20200326\Models\CreateStreamLiveChannelRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\CreateStreamLiveChannelResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\CreateStreamLiveInputRequest.cs" />
@@ -4888,6 +4904,9 @@
     <Compile Include="Mdl\V20200326\Models\CreateStreamLiveInputSecurityGroupResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\CreateStreamLivePlanRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\CreateStreamLivePlanResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\CreateStreamLiveWatermarkRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\CreateStreamLiveWatermarkResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\CreateTextSettings.cs" />
     <Compile Include="Mdl\V20200326\Models\DashRemuxSettingsInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\DeleteStreamLiveChannelRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DeleteStreamLiveChannelResponse.cs" />
@@ -4897,6 +4916,9 @@
     <Compile Include="Mdl\V20200326\Models\DeleteStreamLiveInputSecurityGroupResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DeleteStreamLivePlanRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DeleteStreamLivePlanResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DeleteStreamLiveWatermarkRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\DeleteStreamLiveWatermarkResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeImageSettings.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveChannelAlertsRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveChannelAlertsResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveChannelInputStatisticsRequest.cs" />
@@ -4921,6 +4943,12 @@
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLivePlansResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveRegionsRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveRegionsResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveWatermarkRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveWatermarkResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveWatermarksRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveWatermarksResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeTextSettings.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeWatermarkInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\DestinationInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\DrmKey.cs" />
     <Compile Include="Mdl\V20200326\Models\DrmSettingsInfo.cs" />
@@ -4942,6 +4970,8 @@
     <Compile Include="Mdl\V20200326\Models\ModifyStreamLiveInputResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\ModifyStreamLiveInputSecurityGroupRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\ModifyStreamLiveInputSecurityGroupResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\ModifyStreamLiveWatermarkRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\ModifyStreamLiveWatermarkResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\OutputInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\OutputsStatistics.cs" />
     <Compile Include="Mdl\V20200326\Models\PipelineInputStatistics.cs" />
@@ -5060,6 +5090,8 @@
     <Compile Include="Mongodb\V20190725\Models\InstanceTextParam.cs" />
     <Compile Include="Mongodb\V20190725\Models\IsolateDBInstanceRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\IsolateDBInstanceResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\ModifyDBInstanceSecurityGroupRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\ModifyDBInstanceSecurityGroupResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\ModifyDBInstanceSpecRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\ModifyDBInstanceSpecResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\OfflineIsolatedDBInstanceRequest.cs" />

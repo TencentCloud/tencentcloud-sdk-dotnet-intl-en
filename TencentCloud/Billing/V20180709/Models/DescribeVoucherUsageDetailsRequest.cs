@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssignProjectRequest : AbstractModel
+    public class DescribeVoucherUsageDetailsRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+        /// The number of records per page. The default is 20, and the maximum is 1,000.
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// Unique ID of an existing project (instead of a new project).
+        /// The page number the records start from. The default is 1.
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// The voucher ID.
+        /// </summary>
+        [JsonProperty("VoucherId")]
+        public string VoucherId{ get; set; }
+
+        /// <summary>
+        /// The operator. The default is the UIN of the current.
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "VoucherId", this.VoucherId);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

@@ -72,6 +72,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+        /// </summary>
+        [JsonProperty("BackupMethod")]
+        public long? BackupMethod{ get; set; }
+
+        /// <summary>
+        /// Backup description you set when starting a backup task
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupDesc")]
+        public string BackupDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +99,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Percent", this.Percent);
             this.SetParamSimple(map, prefix + "TimeSpend", this.TimeSpend);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+            this.SetParamSimple(map, prefix + "BackupDesc", this.BackupDesc);
         }
     }
 }

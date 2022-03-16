@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClientConnectionsRequest : AbstractModel
+    public class CreateStreamLiveWatermarkRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+        /// Watermark name
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+        /// Watermark type. Valid values: STATIC_IMAGE, TEXT.
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("ImageSettings")]
+        public CreateImageSettings ImageSettings{ get; set; }
+
+        /// <summary>
+        /// Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+        /// </summary>
+        [JsonProperty("TextSettings")]
+        public CreateTextSettings TextSettings{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "ImageSettings.", this.ImageSettings);
+            this.SetParamObj(map, prefix + "TextSettings.", this.TextSettings);
         }
     }
 }

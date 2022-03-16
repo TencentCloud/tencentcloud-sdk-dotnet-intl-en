@@ -53,6 +53,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to remove the isolation of pay-as-you-go TDSQL for MySQL instances.
+        /// </summary>
+        /// <param name="req"><see cref="ActiveHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="ActiveHourDCDBInstanceResponse"/></returns>
+        public async Task<ActiveHourDCDBInstanceResponse> ActiveHourDCDBInstance(ActiveHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<ActiveHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ActiveHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActiveHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove the isolation of pay-as-you-go TDSQL for MySQL instances.
+        /// </summary>
+        /// <param name="req"><see cref="ActiveHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="ActiveHourDCDBInstanceResponse"/></returns>
+        public ActiveHourDCDBInstanceResponse ActiveHourDCDBInstanceSync(ActiveHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<ActiveHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ActiveHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActiveHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to associate security groups with Tencent Cloud resources in batches.
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -286,6 +326,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "CreateAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create pay-as-you-go TDSQL for MySQL instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateHourDCDBInstanceResponse"/></returns>
+        public async Task<CreateHourDCDBInstanceResponse> CreateHourDCDBInstance(CreateHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create pay-as-you-go TDSQL for MySQL instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateHourDCDBInstanceResponse"/></returns>
+        public CreateHourDCDBInstanceResponse CreateHourDCDBInstanceSync(CreateHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDCDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1252,6 +1332,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "InitDCDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitDCDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateHourDCDBInstanceResponse"/></returns>
+        public async Task<IsolateHourDCDBInstanceResponse> IsolateHourDCDBInstance(IsolateHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateHourDCDBInstanceResponse"/></returns>
+        public IsolateHourDCDBInstanceResponse IsolateHourDCDBInstanceSync(IsolateHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDCDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

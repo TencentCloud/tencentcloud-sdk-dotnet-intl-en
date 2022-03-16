@@ -15,28 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReplicaSetInfo : AbstractModel
+    public class DescribeStreamLiveWatermarksRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Replica set ID
-        /// </summary>
-        [JsonProperty("ReplicaSetId")]
-        public string ReplicaSetId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReplicaSetId", this.ReplicaSetId);
         }
     }
 }

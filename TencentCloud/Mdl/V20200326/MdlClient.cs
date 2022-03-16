@@ -213,6 +213,46 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
+        /// This API is used to add a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLiveWatermarkRequest"/></param>
+        /// <returns><see cref="CreateStreamLiveWatermarkResponse"/></returns>
+        public async Task<CreateStreamLiveWatermarkResponse> CreateStreamLiveWatermark(CreateStreamLiveWatermarkRequest req)
+        {
+             JsonResponseModel<CreateStreamLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStreamLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLiveWatermarkRequest"/></param>
+        /// <returns><see cref="CreateStreamLiveWatermarkResponse"/></returns>
+        public CreateStreamLiveWatermarkResponse CreateStreamLiveWatermarkSync(CreateStreamLiveWatermarkRequest req)
+        {
+             JsonResponseModel<CreateStreamLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a StreamLive channel.
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamLiveChannelRequest"/></param>
@@ -364,6 +404,46 @@ namespace TencentCloud.Mdl.V20200326
              {
                  var strResp = this.InternalRequestSync(req, "DeleteStreamLivePlan");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLivePlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLiveWatermarkRequest"/></param>
+        /// <returns><see cref="DeleteStreamLiveWatermarkResponse"/></returns>
+        public async Task<DeleteStreamLiveWatermarkResponse> DeleteStreamLiveWatermark(DeleteStreamLiveWatermarkRequest req)
+        {
+             JsonResponseModel<DeleteStreamLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteStreamLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamLiveWatermarkRequest"/></param>
+        /// <returns><see cref="DeleteStreamLiveWatermarkResponse"/></returns>
+        public DeleteStreamLiveWatermarkResponse DeleteStreamLiveWatermarkSync(DeleteStreamLiveWatermarkRequest req)
+        {
+             JsonResponseModel<DeleteStreamLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamLiveWatermarkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -853,6 +933,86 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
+        /// This API is used to query a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLiveWatermarkRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveWatermarkResponse"/></returns>
+        public async Task<DescribeStreamLiveWatermarkResponse> DescribeStreamLiveWatermark(DescribeStreamLiveWatermarkRequest req)
+        {
+             JsonResponseModel<DescribeStreamLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLiveWatermarkRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveWatermarkResponse"/></returns>
+        public DescribeStreamLiveWatermarkResponse DescribeStreamLiveWatermarkSync(DescribeStreamLiveWatermarkRequest req)
+        {
+             JsonResponseModel<DescribeStreamLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query multiple watermarks at a time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLiveWatermarksRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveWatermarksResponse"/></returns>
+        public async Task<DescribeStreamLiveWatermarksResponse> DescribeStreamLiveWatermarks(DescribeStreamLiveWatermarksRequest req)
+        {
+             JsonResponseModel<DescribeStreamLiveWatermarksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveWatermarks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveWatermarksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query multiple watermarks at a time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLiveWatermarksRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveWatermarksResponse"/></returns>
+        public DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarksSync(DescribeStreamLiveWatermarksRequest req)
+        {
+             JsonResponseModel<DescribeStreamLiveWatermarksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveWatermarks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveWatermarksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify a StreamLive channel.
         /// </summary>
         /// <param name="req"><see cref="ModifyStreamLiveChannelRequest"/></param>
@@ -964,6 +1124,46 @@ namespace TencentCloud.Mdl.V20200326
              {
                  var strResp = this.InternalRequestSync(req, "ModifyStreamLiveInputSecurityGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLiveWatermarkRequest"/></param>
+        /// <returns><see cref="ModifyStreamLiveWatermarkResponse"/></returns>
+        public async Task<ModifyStreamLiveWatermarkResponse> ModifyStreamLiveWatermark(ModifyStreamLiveWatermarkRequest req)
+        {
+             JsonResponseModel<ModifyStreamLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyStreamLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLiveWatermarkRequest"/></param>
+        /// <returns><see cref="ModifyStreamLiveWatermarkResponse"/></returns>
+        public ModifyStreamLiveWatermarkResponse ModifyStreamLiveWatermarkSync(ModifyStreamLiveWatermarkRequest req)
+        {
+             JsonResponseModel<ModifyStreamLiveWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamLiveWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLiveWatermarkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

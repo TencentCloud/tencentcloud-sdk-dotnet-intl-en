@@ -42,6 +42,18 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
+        /// <summary>
+        /// Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+        /// </summary>
+        [JsonProperty("NodeNum")]
+        public long? NodeNum{ get; set; }
+
+        /// <summary>
+        /// Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+        /// </summary>
+        [JsonProperty("ReplicateSetNum")]
+        public long? ReplicateSetNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
+            this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
+            this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
         }
     }
 }

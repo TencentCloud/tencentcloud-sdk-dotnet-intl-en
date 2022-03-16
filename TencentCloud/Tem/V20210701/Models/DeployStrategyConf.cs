@@ -54,6 +54,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("MinAvailable")]
         public long? MinAvailable{ get; set; }
 
+        /// <summary>
+        /// Whether to enable force release
+        /// </summary>
+        [JsonProperty("Force")]
+        public bool? Force{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "DeployStrategyType", this.DeployStrategyType);
             this.SetParamSimple(map, prefix + "BatchInterval", this.BatchInterval);
             this.SetParamSimple(map, prefix + "MinAvailable", this.MinAvailable);
+            this.SetParamSimple(map, prefix + "Force", this.Force);
         }
     }
 }

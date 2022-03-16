@@ -25,49 +25,49 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Current value (not in use)
+        /// Current value
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Default value (not in use)
+        /// Default value
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// Whether to restart the instance for the parameter to take effect (not in use)
+        /// Whether to restart the instance for the parameter to take effect
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
 
         /// <summary>
-        /// Parameter name (not in use)
+        /// Parameter name
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Acceptable values (not in use)
+        /// Value of a text parameter
         /// </summary>
         [JsonProperty("TextValue")]
         public string TextValue{ get; set; }
 
         /// <summary>
-        /// Parameter description (not in use)
+        /// Parameter description
         /// </summary>
         [JsonProperty("Tips")]
         public string[] Tips{ get; set; }
 
         /// <summary>
-        /// Data type of the parameter (not in use)
+        /// Value type
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+        /// Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

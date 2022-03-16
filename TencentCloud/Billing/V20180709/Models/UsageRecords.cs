@@ -15,20 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReplicaSetInfo : AbstractModel
+    public class UsageRecords : AbstractModel
     {
         
         /// <summary>
-        /// Replica set ID
+        /// The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
         /// </summary>
-        [JsonProperty("ReplicaSetId")]
-        public string ReplicaSetId{ get; set; }
+        [JsonProperty("UsedAmount")]
+        public long? UsedAmount{ get; set; }
+
+        /// <summary>
+        /// The time when the voucher was used.
+        /// </summary>
+        [JsonProperty("UsedTime")]
+        public string UsedTime{ get; set; }
+
+        /// <summary>
+        /// The details of the product purchased.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("UsageDetails")]
+        public UsageDetails[] UsageDetails{ get; set; }
 
 
         /// <summary>
@@ -36,7 +49,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReplicaSetId", this.ReplicaSetId);
+            this.SetParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
+            this.SetParamSimple(map, prefix + "UsedTime", this.UsedTime);
+            this.SetParamArrayObj(map, prefix + "UsageDetails.", this.UsageDetails);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
         /// </summary>
         [JsonProperty("NewName")]
         public string NewName{ get; set; }

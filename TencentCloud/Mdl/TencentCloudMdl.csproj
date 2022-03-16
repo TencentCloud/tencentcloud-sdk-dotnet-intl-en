@@ -55,6 +55,7 @@
     <Compile Include="V20200326\Models\ChannelInputStatistics.cs" />
     <Compile Include="V20200326\Models\ChannelOutputsStatistics.cs" />
     <Compile Include="V20200326\Models\ChannelPipelineAlerts.cs" />
+    <Compile Include="V20200326\Models\CreateImageSettings.cs" />
     <Compile Include="V20200326\Models\CreateStreamLiveChannelRequest.cs" />
     <Compile Include="V20200326\Models\CreateStreamLiveChannelResponse.cs" />
     <Compile Include="V20200326\Models\CreateStreamLiveInputRequest.cs" />
@@ -63,6 +64,9 @@
     <Compile Include="V20200326\Models\CreateStreamLiveInputSecurityGroupResponse.cs" />
     <Compile Include="V20200326\Models\CreateStreamLivePlanRequest.cs" />
     <Compile Include="V20200326\Models\CreateStreamLivePlanResponse.cs" />
+    <Compile Include="V20200326\Models\CreateStreamLiveWatermarkRequest.cs" />
+    <Compile Include="V20200326\Models\CreateStreamLiveWatermarkResponse.cs" />
+    <Compile Include="V20200326\Models\CreateTextSettings.cs" />
     <Compile Include="V20200326\Models\DashRemuxSettingsInfo.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLiveChannelRequest.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLiveChannelResponse.cs" />
@@ -72,6 +76,9 @@
     <Compile Include="V20200326\Models\DeleteStreamLiveInputSecurityGroupResponse.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLivePlanRequest.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLivePlanResponse.cs" />
+    <Compile Include="V20200326\Models\DeleteStreamLiveWatermarkRequest.cs" />
+    <Compile Include="V20200326\Models\DeleteStreamLiveWatermarkResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeImageSettings.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelAlertsRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelAlertsResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelInputStatisticsRequest.cs" />
@@ -96,6 +103,12 @@
     <Compile Include="V20200326\Models\DescribeStreamLivePlansResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveRegionsRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveRegionsResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeStreamLiveWatermarkRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeStreamLiveWatermarkResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeStreamLiveWatermarksRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeStreamLiveWatermarksResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeTextSettings.cs" />
+    <Compile Include="V20200326\Models\DescribeWatermarkInfo.cs" />
     <Compile Include="V20200326\Models\DestinationInfo.cs" />
     <Compile Include="V20200326\Models\DrmKey.cs" />
     <Compile Include="V20200326\Models\DrmSettingsInfo.cs" />
@@ -117,6 +130,8 @@
     <Compile Include="V20200326\Models\ModifyStreamLiveInputResponse.cs" />
     <Compile Include="V20200326\Models\ModifyStreamLiveInputSecurityGroupRequest.cs" />
     <Compile Include="V20200326\Models\ModifyStreamLiveInputSecurityGroupResponse.cs" />
+    <Compile Include="V20200326\Models\ModifyStreamLiveWatermarkRequest.cs" />
+    <Compile Include="V20200326\Models\ModifyStreamLiveWatermarkResponse.cs" />
     <Compile Include="V20200326\Models\OutputInfo.cs" />
     <Compile Include="V20200326\Models\OutputsStatistics.cs" />
     <Compile Include="V20200326\Models\PipelineInputStatistics.cs" />

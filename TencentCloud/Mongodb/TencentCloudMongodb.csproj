@@ -102,6 +102,8 @@
     <Compile Include="V20190725\Models\InstanceTextParam.cs" />
     <Compile Include="V20190725\Models\IsolateDBInstanceRequest.cs" />
     <Compile Include="V20190725\Models\IsolateDBInstanceResponse.cs" />
+    <Compile Include="V20190725\Models\ModifyDBInstanceSecurityGroupRequest.cs" />
+    <Compile Include="V20190725\Models\ModifyDBInstanceSecurityGroupResponse.cs" />
     <Compile Include="V20190725\Models\ModifyDBInstanceSpecRequest.cs" />
     <Compile Include="V20190725\Models\ModifyDBInstanceSpecResponse.cs" />
     <Compile Include="V20190725\Models\OfflineIsolatedDBInstanceRequest.cs" />
