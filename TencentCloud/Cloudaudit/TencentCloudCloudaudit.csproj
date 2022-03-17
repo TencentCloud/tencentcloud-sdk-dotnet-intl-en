@@ -45,12 +45,46 @@
 
   <ItemGroup>
     <Compile Include="V20190319\CloudauditClient.cs" />
+    <Compile Include="V20190319\Models\AttributeKeyDetail.cs" />
+    <Compile Include="V20190319\Models\AuditSummary.cs" />
+    <Compile Include="V20190319\Models\CmqRegionInfo.cs" />
+    <Compile Include="V20190319\Models\CosRegionInfo.cs" />
+    <Compile Include="V20190319\Models\CreateAuditRequest.cs" />
+    <Compile Include="V20190319\Models\CreateAuditResponse.cs" />
+    <Compile Include="V20190319\Models\CreateAuditTrackRequest.cs" />
+    <Compile Include="V20190319\Models\CreateAuditTrackResponse.cs" />
+    <Compile Include="V20190319\Models\DeleteAuditRequest.cs" />
+    <Compile Include="V20190319\Models\DeleteAuditResponse.cs" />
+    <Compile Include="V20190319\Models\DeleteAuditTrackRequest.cs" />
+    <Compile Include="V20190319\Models\DeleteAuditTrackResponse.cs" />
+    <Compile Include="V20190319\Models\DescribeAuditRequest.cs" />
+    <Compile Include="V20190319\Models\DescribeAuditResponse.cs" />
     <Compile Include="V20190319\Models\DescribeAuditTracksRequest.cs" />
     <Compile Include="V20190319\Models\DescribeAuditTracksResponse.cs" />
     <Compile Include="V20190319\Models\DescribeEventsRequest.cs" />
     <Compile Include="V20190319\Models\DescribeEventsResponse.cs" />
     <Compile Include="V20190319\Models\Event.cs" />
+    <Compile Include="V20190319\Models\GetAttributeKeyRequest.cs" />
+    <Compile Include="V20190319\Models\GetAttributeKeyResponse.cs" />
+    <Compile Include="V20190319\Models\InquireAuditCreditRequest.cs" />
+    <Compile Include="V20190319\Models\InquireAuditCreditResponse.cs" />
+    <Compile Include="V20190319\Models\ListAuditsRequest.cs" />
+    <Compile Include="V20190319\Models\ListAuditsResponse.cs" />
+    <Compile Include="V20190319\Models\ListCmqEnableRegionRequest.cs" />
+    <Compile Include="V20190319\Models\ListCmqEnableRegionResponse.cs" />
+    <Compile Include="V20190319\Models\ListCosEnableRegionRequest.cs" />
+    <Compile Include="V20190319\Models\ListCosEnableRegionResponse.cs" />
+    <Compile Include="V20190319\Models\LookUpEventsRequest.cs" />
+    <Compile Include="V20190319\Models\LookUpEventsResponse.cs" />
     <Compile Include="V20190319\Models\LookupAttribute.cs" />
+    <Compile Include="V20190319\Models\ModifyAuditTrackRequest.cs" />
+    <Compile Include="V20190319\Models\ModifyAuditTrackResponse.cs" />
     <Compile Include="V20190319\Models\Resource.cs" />
+    <Compile Include="V20190319\Models\StartLoggingRequest.cs" />
+    <Compile Include="V20190319\Models\StartLoggingResponse.cs" />
+    <Compile Include="V20190319\Models\StopLoggingRequest.cs" />
+    <Compile Include="V20190319\Models\StopLoggingResponse.cs" />
+    <Compile Include="V20190319\Models\UpdateAuditRequest.cs" />
+    <Compile Include="V20190319\Models\UpdateAuditResponse.cs" />
   </ItemGroup>
 </Project>

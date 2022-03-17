@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.395</VersionPrefix>
+    <VersionPrefix>3.0.396</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,11 +63,27 @@
     <Compile Include="Antiddos\V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="Antiddos\V20200309\Models\BlackWhiteIpRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\BoundIpInfo.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CCLevelPolicy.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CCPrecisionPlyRecord.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CCPrecisionPolicy.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CCReqLimitPolicyRecord.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CCThresholdPolicy.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CcBlackWhiteIpPolicy.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CcGeoIPBlockConfig.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CcGeoIpPolicyNew.cs" />
     <Compile Include="Antiddos\V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBoundIPRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBoundIPResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCCPrecisionPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCCPrecisionPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCCReqLimitPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCCReqLimitPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCcBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCcGeoIPBlockConfigRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCcGeoIPBlockConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSGeoIPBlockConfigRequest.cs" />
@@ -98,6 +114,16 @@
     <Compile Include="Antiddos\V20200309\Models\DefaultAlarmThreshold.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCLevelPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCLevelPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCPrecisionPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCPrecisionPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCThresholdPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCThresholdPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCcBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCcGeoIPBlockConfigRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCcGeoIPBlockConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteDDoSGeoIPBlockConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteDDoSSpeedLimitConfigRequest.cs" />
@@ -114,8 +140,20 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCPrecisionPlyListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCPrecisionPlyListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCThresholdListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCThresholdListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCcBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCcGeoIPBlockConfigListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCcGeoIPBlockConfigListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -158,11 +196,16 @@
     <Compile Include="Antiddos\V20200309\Models\IPLineInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\InsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\InstanceRelation.cs" />
+    <Compile Include="Antiddos\V20200309\Models\IpSegment.cs" />
     <Compile Include="Antiddos\V20200309\Models\KeyValue.cs" />
     <Compile Include="Antiddos\V20200309\Models\L4RuleSource.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer4Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer7Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\ListenerCcThreholdConfig.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ModifyCCPrecisionPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ModifyCCPrecisionPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ModifyCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ModifyCcBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\ModifyDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\ModifyDDoSGeoIPBlockConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\ModifyDDoSSpeedLimitConfigRequest.cs" />
@@ -1649,6 +1692,8 @@
     <Compile Include="Ckafka\V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateConsumerRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateConsumerResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreatePartitionRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreatePartitionResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
@@ -1958,13 +2003,47 @@
     <Compile Include="Clb\V20180317\Models\TargetRegionInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ZoneInfo.cs" />
     <Compile Include="Cloudaudit\V20190319\CloudauditClient.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\AttributeKeyDetail.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\AuditSummary.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CmqRegionInfo.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CosRegionInfo.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditTrackRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditTrackResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditTrackRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditTrackResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditTracksRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditTracksResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeEventsRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeEventsResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\Event.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\InquireAuditCreditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\InquireAuditCreditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListAuditsRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListAuditsResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListCmqEnableRegionRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListCmqEnableRegionResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListCosEnableRegionRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListCosEnableRegionResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\LookupAttribute.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ModifyAuditTrackRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ModifyAuditTrackResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\Resource.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\StartLoggingRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\StartLoggingResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\StopLoggingRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\StopLoggingResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\UpdateAuditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\UpdateAuditResponse.cs" />
     <Compile Include="Cls\V20201016\ClsClient.cs" />
     <Compile Include="Cls\V20201016\Models\AlarmInfo.cs" />
     <Compile Include="Cls\V20201016\Models\AlarmNotice.cs" />
@@ -3557,6 +3636,7 @@
     <Compile Include="Emr\V20190103\EmrClient.cs" />
     <Compile Include="Emr\V20190103\Models\COSSettings.cs" />
     <Compile Include="Emr\V20190103\Models\CdbInfo.cs" />
+    <Compile Include="Emr\V20190103\Models\ClusterExternalServiceInfo.cs" />
     <Compile Include="Emr\V20190103\Models\ClusterInstancesInfo.cs" />
     <Compile Include="Emr\V20190103\Models\CreateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\CreateInstanceResponse.cs" />

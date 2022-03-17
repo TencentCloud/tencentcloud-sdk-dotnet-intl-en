@@ -236,6 +236,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }
 
+        /// <summary>
+        /// Shared component information
+        /// </summary>
+        [JsonProperty("ExternalService")]
+        public ExternalService[] ExternalService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +276,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
             this.SetParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
             this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
+            this.SetParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
         }
     }
 }

@@ -45,6 +45,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
+        /// <summary>
+        /// Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DeleteWithInstance")]
+        public bool? DeleteWithInstance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         }
     }
 }

@@ -84,6 +84,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+        /// </summary>
+        [JsonProperty("ScheduledType")]
+        public string ScheduledType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
             this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "ScheduledType", this.ScheduledType);
         }
     }
 }

@@ -97,7 +97,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+        /// Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
         /// </summary>
         [JsonProperty("Healthy")]
         public long? Healthy{ get; set; }

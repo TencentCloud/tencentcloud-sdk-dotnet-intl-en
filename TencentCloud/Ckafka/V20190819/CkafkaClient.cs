@@ -213,6 +213,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to create a consumer group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerRequest"/></param>
+        /// <returns><see cref="CreateConsumerResponse"/></returns>
+        public async Task<CreateConsumerResponse> CreateConsumer(CreateConsumerRequest req)
+        {
+             JsonResponseModel<CreateConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a consumer group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerRequest"/></param>
+        /// <returns><see cref="CreateConsumerResponse"/></returns>
+        public CreateConsumerResponse CreateConsumerSync(CreateConsumerRequest req)
+        {
+             JsonResponseModel<CreateConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add a partition in a topic.
         /// </summary>
         /// <param name="req"><see cref="CreatePartitionRequest"/></param>

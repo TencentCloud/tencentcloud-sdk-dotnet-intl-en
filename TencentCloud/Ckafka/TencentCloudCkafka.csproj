@@ -68,6 +68,8 @@
     <Compile Include="V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="V20190819\Models\CreateAclResponse.cs" />
+    <Compile Include="V20190819\Models\CreateConsumerRequest.cs" />
+    <Compile Include="V20190819\Models\CreateConsumerResponse.cs" />
     <Compile Include="V20190819\Models\CreatePartitionRequest.cs" />
     <Compile Include="V20190819\Models\CreatePartitionResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListRequest.cs" />

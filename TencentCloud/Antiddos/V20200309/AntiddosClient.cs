@@ -213,6 +213,166 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to create a CC precise protection policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="CreateCCPrecisionPolicyResponse"/></returns>
+        public async Task<CreateCCPrecisionPolicyResponse> CreateCCPrecisionPolicy(CreateCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<CreateCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a CC precise protection policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="CreateCCPrecisionPolicyResponse"/></returns>
+        public CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicySync(CreateCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<CreateCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a CC frequency limit policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCReqLimitPolicyRequest"/></param>
+        /// <returns><see cref="CreateCCReqLimitPolicyResponse"/></returns>
+        public async Task<CreateCCReqLimitPolicyResponse> CreateCCReqLimitPolicy(CreateCCReqLimitPolicyRequest req)
+        {
+             JsonResponseModel<CreateCCReqLimitPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCCReqLimitPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCReqLimitPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a CC frequency limit policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCReqLimitPolicyRequest"/></param>
+        /// <returns><see cref="CreateCCReqLimitPolicyResponse"/></returns>
+        public CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicySync(CreateCCReqLimitPolicyRequest req)
+        {
+             JsonResponseModel<CreateCCReqLimitPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCCReqLimitPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCReqLimitPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a layer 4 access control list to prevent CC attacks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="CreateCcBlackWhiteIpListResponse"/></returns>
+        public async Task<CreateCcBlackWhiteIpListResponse> CreateCcBlackWhiteIpList(CreateCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<CreateCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a layer 4 access control list to prevent CC attacks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="CreateCcBlackWhiteIpListResponse"/></returns>
+        public CreateCcBlackWhiteIpListResponse CreateCcBlackWhiteIpListSync(CreateCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<CreateCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a regional blocking configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcGeoIPBlockConfigRequest"/></param>
+        /// <returns><see cref="CreateCcGeoIPBlockConfigResponse"/></returns>
+        public async Task<CreateCcGeoIPBlockConfigResponse> CreateCcGeoIPBlockConfig(CreateCcGeoIPBlockConfigRequest req)
+        {
+             JsonResponseModel<CreateCcGeoIPBlockConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCcGeoIPBlockConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCcGeoIPBlockConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a regional blocking configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcGeoIPBlockConfigRequest"/></param>
+        /// <returns><see cref="CreateCcGeoIPBlockConfigResponse"/></returns>
+        public CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfigSync(CreateCcGeoIPBlockConfigRequest req)
+        {
+             JsonResponseModel<CreateCcGeoIPBlockConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCcGeoIPBlockConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCcGeoIPBlockConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to set Anti-DDoS AI protection switches.
         /// </summary>
         /// <param name="req"><see cref="CreateDDoSAIRequest"/></param>
@@ -693,6 +853,206 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to delete a level-defining policy of CC attacks. 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCLevelPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCLevelPolicyResponse"/></returns>
+        public async Task<DeleteCCLevelPolicyResponse> DeleteCCLevelPolicy(DeleteCCLevelPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCLevelPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCCLevelPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCLevelPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a level-defining policy of CC attacks. 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCLevelPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCLevelPolicyResponse"/></returns>
+        public DeleteCCLevelPolicyResponse DeleteCCLevelPolicySync(DeleteCCLevelPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCLevelPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCCLevelPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCLevelPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a CC precise protection policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCPrecisionPolicyResponse"/></returns>
+        public async Task<DeleteCCPrecisionPolicyResponse> DeleteCCPrecisionPolicy(DeleteCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a CC precise protection policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCPrecisionPolicyResponse"/></returns>
+        public DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicySync(DeleteCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a CC cleansing threshold policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCThresholdPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCThresholdPolicyResponse"/></returns>
+        public async Task<DeleteCCThresholdPolicyResponse> DeleteCCThresholdPolicy(DeleteCCThresholdPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCThresholdPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCCThresholdPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCThresholdPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a CC cleansing threshold policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCThresholdPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCThresholdPolicyResponse"/></returns>
+        public DeleteCCThresholdPolicyResponse DeleteCCThresholdPolicySync(DeleteCCThresholdPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCThresholdPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCCThresholdPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCThresholdPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a layer-4 access control list.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DeleteCcBlackWhiteIpListResponse"/></returns>
+        public async Task<DeleteCcBlackWhiteIpListResponse> DeleteCcBlackWhiteIpList(DeleteCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DeleteCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a layer-4 access control list.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DeleteCcBlackWhiteIpListResponse"/></returns>
+        public DeleteCcBlackWhiteIpListResponse DeleteCcBlackWhiteIpListSync(DeleteCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DeleteCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a regional blocking configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcGeoIPBlockConfigRequest"/></param>
+        /// <returns><see cref="DeleteCcGeoIPBlockConfigResponse"/></returns>
+        public async Task<DeleteCcGeoIPBlockConfigResponse> DeleteCcGeoIPBlockConfig(DeleteCcGeoIPBlockConfigRequest req)
+        {
+             JsonResponseModel<DeleteCcGeoIPBlockConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCcGeoIPBlockConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcGeoIPBlockConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a regional blocking configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcGeoIPBlockConfigRequest"/></param>
+        /// <returns><see cref="DeleteCcGeoIPBlockConfigResponse"/></returns>
+        public DeleteCcGeoIPBlockConfigResponse DeleteCcGeoIPBlockConfigSync(DeleteCcGeoIPBlockConfigRequest req)
+        {
+             JsonResponseModel<DeleteCcGeoIPBlockConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCcGeoIPBlockConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcGeoIPBlockConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete Anti-DDoS region blocking configurations.
         /// </summary>
         /// <param name="req"><see cref="DeleteDDoSGeoIPBlockConfigRequest"/></param>
@@ -1013,6 +1373,166 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to query the list of CC protection levels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCLevelListRequest"/></param>
+        /// <returns><see cref="DescribeCCLevelListResponse"/></returns>
+        public async Task<DescribeCCLevelListResponse> DescribeCCLevelList(DescribeCCLevelListRequest req)
+        {
+             JsonResponseModel<DescribeCCLevelListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCLevelList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCLevelListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of CC protection levels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCLevelListRequest"/></param>
+        /// <returns><see cref="DescribeCCLevelListResponse"/></returns>
+        public DescribeCCLevelListResponse DescribeCCLevelListSync(DescribeCCLevelListRequest req)
+        {
+             JsonResponseModel<DescribeCCLevelListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCLevelList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCLevelListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used the query a level-defining policy of CC attacks
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCLevelPolicyRequest"/></param>
+        /// <returns><see cref="DescribeCCLevelPolicyResponse"/></returns>
+        public async Task<DescribeCCLevelPolicyResponse> DescribeCCLevelPolicy(DescribeCCLevelPolicyRequest req)
+        {
+             JsonResponseModel<DescribeCCLevelPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCLevelPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCLevelPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used the query a level-defining policy of CC attacks
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCLevelPolicyRequest"/></param>
+        /// <returns><see cref="DescribeCCLevelPolicyResponse"/></returns>
+        public DescribeCCLevelPolicyResponse DescribeCCLevelPolicySync(DescribeCCLevelPolicyRequest req)
+        {
+             JsonResponseModel<DescribeCCLevelPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCLevelPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCLevelPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain a CC precise protection policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCPrecisionPlyListRequest"/></param>
+        /// <returns><see cref="DescribeCCPrecisionPlyListResponse"/></returns>
+        public async Task<DescribeCCPrecisionPlyListResponse> DescribeCCPrecisionPlyList(DescribeCCPrecisionPlyListRequest req)
+        {
+             JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCPrecisionPlyList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain a CC precise protection policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCPrecisionPlyListRequest"/></param>
+        /// <returns><see cref="DescribeCCPrecisionPlyListResponse"/></returns>
+        public DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyListSync(DescribeCCPrecisionPlyListRequest req)
+        {
+             JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCPrecisionPlyList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of CC cleansing thresholds.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCThresholdListRequest"/></param>
+        /// <returns><see cref="DescribeCCThresholdListResponse"/></returns>
+        public async Task<DescribeCCThresholdListResponse> DescribeCCThresholdList(DescribeCCThresholdListRequest req)
+        {
+             JsonResponseModel<DescribeCCThresholdListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCThresholdList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCThresholdListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of CC cleansing thresholds.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCThresholdListRequest"/></param>
+        /// <returns><see cref="DescribeCCThresholdListResponse"/></returns>
+        public DescribeCCThresholdListResponse DescribeCCThresholdListSync(DescribeCCThresholdListRequest req)
+        {
+             JsonResponseModel<DescribeCCThresholdListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCThresholdList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCThresholdListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get CC attack data, including total QPS peaks, attack QPS, total number of requests and number of attack requests.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
@@ -1044,6 +1564,86 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCCTrend");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain a layer-4 access control list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeCcBlackWhiteIpListResponse"/></returns>
+        public async Task<DescribeCcBlackWhiteIpListResponse> DescribeCcBlackWhiteIpList(DescribeCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain a layer-4 access control list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeCcBlackWhiteIpListResponse"/></returns>
+        public DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpListSync(DescribeCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain a list of regional blocking configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcGeoIPBlockConfigListRequest"/></param>
+        /// <returns><see cref="DescribeCcGeoIPBlockConfigListResponse"/></returns>
+        public async Task<DescribeCcGeoIPBlockConfigListResponse> DescribeCcGeoIPBlockConfigList(DescribeCcGeoIPBlockConfigListRequest req)
+        {
+             JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcGeoIPBlockConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain a list of regional blocking configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcGeoIPBlockConfigListRequest"/></param>
+        /// <returns><see cref="DescribeCcGeoIPBlockConfigListResponse"/></returns>
+        public DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigListSync(DescribeCcGeoIPBlockConfigListRequest req)
+        {
+             JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCcGeoIPBlockConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1724,6 +2324,86 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DisassociateDDoSEipAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateDDoSEipAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a CC precise protection policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCPrecisionPolicyResponse"/></returns>
+        public async Task<ModifyCCPrecisionPolicyResponse> ModifyCCPrecisionPolicy(ModifyCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a CC precise protection policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCPrecisionPolicyResponse"/></returns>
+        public ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicySync(ModifyCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a layer-4 access control list.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="ModifyCcBlackWhiteIpListResponse"/></returns>
+        public async Task<ModifyCcBlackWhiteIpListResponse> ModifyCcBlackWhiteIpList(ModifyCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<ModifyCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a layer-4 access control list.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="ModifyCcBlackWhiteIpListResponse"/></returns>
+        public ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpListSync(ModifyCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<ModifyCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcBlackWhiteIpListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

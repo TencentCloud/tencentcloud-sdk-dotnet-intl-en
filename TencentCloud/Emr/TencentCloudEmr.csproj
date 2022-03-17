@@ -47,6 +47,7 @@
     <Compile Include="V20190103\EmrClient.cs" />
     <Compile Include="V20190103\Models\COSSettings.cs" />
     <Compile Include="V20190103\Models\CdbInfo.cs" />
+    <Compile Include="V20190103\Models\ClusterExternalServiceInfo.cs" />
     <Compile Include="V20190103\Models\ClusterInstancesInfo.cs" />
     <Compile Include="V20190103\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\CreateInstanceResponse.cs" />

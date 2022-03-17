@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// ID of the CVM instance to be queried. This parameter does not support specifying both InstanceIds and Filters at the same time.
+        /// IDs of the CVM instances to query. Up to 100 IDs can be queried at one time. `InstanceIds` and `Filters` can not be both specified.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -46,7 +46,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. The default value is 20. The maximum is 2000. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+        /// The number of returned results. Default value: `20`. Maximum value: `100`. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
