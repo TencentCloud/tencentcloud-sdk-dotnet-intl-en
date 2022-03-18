@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Cbs.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAlarmPolicyNoticeRequest : AbstractModel
+    public class SnapshotCopyResult : AbstractModel
     {
         
         /// <summary>
-        /// Module name, which is specified as `monitor`.
+        /// ID of the snapshot replica
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+        /// Error message. It’s null if the request succeeds.
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
         /// <summary>
-        /// List of alarm notification template IDs.
+        /// Error code. It’s `Success` if the request succeeds.
         /// </summary>
-        [JsonProperty("NoticeIds")]
-        public string[] NoticeIds{ get; set; }
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+        /// Destination region of the replication task
         /// </summary>
-        [JsonProperty("PolicyIds")]
-        public string[] PolicyIds{ get; set; }
+        [JsonProperty("DestinationRegion")]
+        public string DestinationRegion{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
-            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "DestinationRegion", this.DestinationRegion);
         }
     }
 }

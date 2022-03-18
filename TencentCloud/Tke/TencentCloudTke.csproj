@@ -150,6 +150,8 @@
     <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeScriptRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeScriptResponse.cs" />
     <Compile Include="V20180525\Models\DescribeVersionsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />

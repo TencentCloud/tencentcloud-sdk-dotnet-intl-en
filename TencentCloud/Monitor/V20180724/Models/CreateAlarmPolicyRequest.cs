@@ -67,7 +67,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// ID of trigger condition template. This parameter can be left empty.
+        /// Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ConditionTemplateId")]
         public long? ConditionTemplateId{ get; set; }

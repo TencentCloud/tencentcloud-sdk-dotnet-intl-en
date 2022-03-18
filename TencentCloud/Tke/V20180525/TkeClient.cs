@@ -1853,6 +1853,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query the URL of TKE edge script.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeScriptRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeScriptResponse"/></returns>
+        public async Task<DescribeTKEEdgeScriptResponse> DescribeTKEEdgeScript(DescribeTKEEdgeScriptRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeScriptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTKEEdgeScript");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeScriptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the URL of TKE edge script.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeScriptRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeScriptResponse"/></returns>
+        public DescribeTKEEdgeScriptResponse DescribeTKEEdgeScriptSync(DescribeTKEEdgeScriptRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeScriptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTKEEdgeScript");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeScriptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query cluster version information.
         /// </summary>
         /// <param name="req"><see cref="DescribeVersionsRequest"/></param>

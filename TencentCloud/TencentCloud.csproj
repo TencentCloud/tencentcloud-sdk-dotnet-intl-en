@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.396</VersionPrefix>
+    <VersionPrefix>3.0.397</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -938,6 +938,8 @@
     <Compile Include="Cbs\V20170312\Models\AutoSnapshotPolicy.cs" />
     <Compile Include="Cbs\V20170312\Models\BindAutoSnapshotPolicyRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\BindAutoSnapshotPolicyResponse.cs" />
+    <Compile Include="Cbs\V20170312\Models\CopySnapshotCrossRegionsRequest.cs" />
+    <Compile Include="Cbs\V20170312\Models\CopySnapshotCrossRegionsResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\CreateAutoSnapshotPolicyRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\CreateAutoSnapshotPolicyResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\CreateDisksRequest.cs" />
@@ -1002,6 +1004,7 @@
     <Compile Include="Cbs\V20170312\Models\ResizeDiskResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\SharePermission.cs" />
     <Compile Include="Cbs\V20170312\Models\Snapshot.cs" />
+    <Compile Include="Cbs\V20170312\Models\SnapshotCopyResult.cs" />
     <Compile Include="Cbs\V20170312\Models\SnapshotOperationLog.cs" />
     <Compile Include="Cbs\V20170312\Models\Tag.cs" />
     <Compile Include="Cbs\V20170312\Models\TerminateDisksRequest.cs" />
@@ -5205,6 +5208,7 @@
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\CommonNamespace.cs" />
+    <Compile Include="Monitor\V20180724\Models\Condition.cs" />
     <Compile Include="Monitor\V20180724\Models\ConditionsTemp.cs" />
     <Compile Include="Monitor\V20180724\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\CreateAlarmNoticeResponse.cs" />
@@ -5252,6 +5256,8 @@
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListInstanceGroup.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeConditionsTemplateListRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeConditionsTemplateListResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeMonitorTypesRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeMonitorTypesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribePolicyConditionListCondition.cs" />
@@ -5288,6 +5294,7 @@
     <Compile Include="Monitor\V20180724\Models\DescribeStatisticDataResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\Dimension.cs" />
     <Compile Include="Monitor\V20180724\Models\DimensionsDesc.cs" />
+    <Compile Include="Monitor\V20180724\Models\EventCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\GetMonitorDataRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\GetMonitorDataResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\Instance.cs" />
@@ -5322,6 +5329,8 @@
     <Compile Include="Monitor\V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
     <Compile Include="Monitor\V20180724\Models\Point.cs" />
+    <Compile Include="Monitor\V20180724\Models\PolicyGroup.cs" />
+    <Compile Include="Monitor\V20180724\Models\PolicyGroupReceiverInfo.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\ReceiverInfo.cs" />
@@ -5330,6 +5339,7 @@
     <Compile Include="Monitor\V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\TagInstance.cs" />
+    <Compile Include="Monitor\V20180724\Models\TemplateGroup.cs" />
     <Compile Include="Monitor\V20180724\Models\URLNotice.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
@@ -7511,6 +7521,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeTKEEdgeScriptRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeTKEEdgeScriptResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVersionsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />

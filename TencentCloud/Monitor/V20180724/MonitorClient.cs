@@ -133,7 +133,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to create an alarm policy.
+        /// This API is used to create a Cloud Monitor alarm policy.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmPolicyRequest"/></param>
         /// <returns><see cref="CreateAlarmPolicyResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to create an alarm policy.
+        /// This API is used to create a Cloud Monitor alarm policy.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmPolicyRequest"/></param>
         /// <returns><see cref="CreateAlarmPolicyResponse"/></returns>
@@ -848,6 +848,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBindingPolicyObjectList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the trigger condition template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConditionsTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeConditionsTemplateListResponse"/></returns>
+        public async Task<DescribeConditionsTemplateListResponse> DescribeConditionsTemplateList(DescribeConditionsTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeConditionsTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConditionsTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConditionsTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the trigger condition template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConditionsTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeConditionsTemplateListResponse"/></returns>
+        public DescribeConditionsTemplateListResponse DescribeConditionsTemplateListSync(DescribeConditionsTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeConditionsTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConditionsTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConditionsTemplateListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

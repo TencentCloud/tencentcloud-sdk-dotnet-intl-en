@@ -54,6 +54,8 @@
     <Compile Include="V20170312\Models\AutoSnapshotPolicy.cs" />
     <Compile Include="V20170312\Models\BindAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20170312\Models\BindAutoSnapshotPolicyResponse.cs" />
+    <Compile Include="V20170312\Models\CopySnapshotCrossRegionsRequest.cs" />
+    <Compile Include="V20170312\Models\CopySnapshotCrossRegionsResponse.cs" />
     <Compile Include="V20170312\Models\CreateAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20170312\Models\CreateAutoSnapshotPolicyResponse.cs" />
     <Compile Include="V20170312\Models\CreateDisksRequest.cs" />
@@ -118,6 +120,7 @@
     <Compile Include="V20170312\Models\ResizeDiskResponse.cs" />
     <Compile Include="V20170312\Models\SharePermission.cs" />
     <Compile Include="V20170312\Models\Snapshot.cs" />
+    <Compile Include="V20170312\Models\SnapshotCopyResult.cs" />
     <Compile Include="V20170312\Models\SnapshotOperationLog.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
     <Compile Include="V20170312\Models\TerminateDisksRequest.cs" />

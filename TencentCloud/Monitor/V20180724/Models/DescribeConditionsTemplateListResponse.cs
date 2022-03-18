@@ -21,32 +21,27 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAlarmPolicyNoticeRequest : AbstractModel
+    public class DescribeConditionsTemplateListResponse : AbstractModel
     {
         
         /// <summary>
-        /// Module name, which is specified as `monitor`.
+        /// Total number of templates.
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+        /// Template list.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("TemplateGroupList")]
+        public TemplateGroup[] TemplateGroupList{ get; set; }
 
         /// <summary>
-        /// List of alarm notification template IDs.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("NoticeIds")]
-        public string[] NoticeIds{ get; set; }
-
-        /// <summary>
-        /// Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
-        /// </summary>
-        [JsonProperty("PolicyIds")]
-        public string[] PolicyIds{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +49,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
-            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "TemplateGroupList.", this.TemplateGroupList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
