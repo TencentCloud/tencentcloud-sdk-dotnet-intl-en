@@ -56,12 +56,16 @@
     <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\CreateDBInstanceNetworkAccessRequest.cs" />
+    <Compile Include="V20170312\Models\CreateDBInstanceNetworkAccessResponse.cs" />
     <Compile Include="V20170312\Models\CreateDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\CreateDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\CreateInstancesRequest.cs" />
     <Compile Include="V20170312\Models\CreateInstancesResponse.cs" />
     <Compile Include="V20170312\Models\CreateReadOnlyDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\CreateReadOnlyDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\CreateReadOnlyGroupNetworkAccessRequest.cs" />
+    <Compile Include="V20170312\Models\CreateReadOnlyGroupNetworkAccessResponse.cs" />
     <Compile Include="V20170312\Models\CreateReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\CreateReadOnlyGroupResponse.cs" />
     <Compile Include="V20170312\Models\CreateServerlessDBInstanceRequest.cs" />
@@ -70,6 +74,10 @@
     <Compile Include="V20170312\Models\DBInstance.cs" />
     <Compile Include="V20170312\Models\DBInstanceNetInfo.cs" />
     <Compile Include="V20170312\Models\DBNode.cs" />
+    <Compile Include="V20170312\Models\DeleteDBInstanceNetworkAccessRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteDBInstanceNetworkAccessResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteReadOnlyGroupNetworkAccessRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteReadOnlyGroupNetworkAccessResponse.cs" />
     <Compile Include="V20170312\Models\DeleteReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\DeleteReadOnlyGroupResponse.cs" />
     <Compile Include="V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />
