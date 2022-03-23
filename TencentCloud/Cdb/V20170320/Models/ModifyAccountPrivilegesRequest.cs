@@ -37,8 +37,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
-        /// Note: if this parameter is not passed in, it means to clear the permission.
+        /// Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE".
+        /// Note: If this parameter is not passed in, it means to clear the permission.
         /// </summary>
         [JsonProperty("GlobalPrivileges")]
         public string[] GlobalPrivileges{ get; set; }

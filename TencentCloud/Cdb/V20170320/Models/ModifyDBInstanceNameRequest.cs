@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name.
+        /// The modified instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

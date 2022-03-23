@@ -205,7 +205,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
+        /// Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes). Default value: `0`.
         /// </summary>
         [JsonProperty("AutoSyncFlag")]
         public long? AutoSyncFlag{ get; set; }

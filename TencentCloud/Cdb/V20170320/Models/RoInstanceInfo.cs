@@ -67,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
+        /// RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

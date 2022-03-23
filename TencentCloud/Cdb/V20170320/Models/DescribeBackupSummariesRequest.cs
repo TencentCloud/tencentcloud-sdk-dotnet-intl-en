@@ -31,25 +31,25 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// Pagination offset.
+        /// Paginated query offset. Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Paginated query limit. Default value: 20.
+        /// Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
+        /// Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: ASC (ascending), DESC (descending).
+        /// Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

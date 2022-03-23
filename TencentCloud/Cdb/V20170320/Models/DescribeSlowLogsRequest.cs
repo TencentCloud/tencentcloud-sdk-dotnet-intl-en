@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Offset. Minimum value: 0.
+        /// Pagination offset, starting from `0`. Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
