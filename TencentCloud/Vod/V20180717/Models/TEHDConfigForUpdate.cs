@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// TESHD type. Valid values:
-        /// <li>TEHD-100: TESHD-100.</li>
-        /// If this parameter is left blank, no modification will be made.
+        /// TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

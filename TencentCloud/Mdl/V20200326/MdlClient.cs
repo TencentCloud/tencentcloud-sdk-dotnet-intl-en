@@ -933,6 +933,46 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
+        /// This API is used to query the transcoding information of StreamLive streams.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLiveTranscodeDetailRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveTranscodeDetailResponse"/></returns>
+        public async Task<DescribeStreamLiveTranscodeDetailResponse> DescribeStreamLiveTranscodeDetail(DescribeStreamLiveTranscodeDetailRequest req)
+        {
+             JsonResponseModel<DescribeStreamLiveTranscodeDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLiveTranscodeDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveTranscodeDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the transcoding information of StreamLive streams.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLiveTranscodeDetailRequest"/></param>
+        /// <returns><see cref="DescribeStreamLiveTranscodeDetailResponse"/></returns>
+        public DescribeStreamLiveTranscodeDetailResponse DescribeStreamLiveTranscodeDetailSync(DescribeStreamLiveTranscodeDetailRequest req)
+        {
+             JsonResponseModel<DescribeStreamLiveTranscodeDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLiveTranscodeDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLiveTranscodeDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query a watermark.
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamLiveWatermarkRequest"/></param>

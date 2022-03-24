@@ -15,20 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateNetworkAclResponse : AbstractModel
+    public class DescribeStreamLiveTranscodeDetailResponse : AbstractModel
     {
         
         /// <summary>
-        /// Network ACL instance
+        /// A list of the transcoding information.
         /// </summary>
-        [JsonProperty("NetworkAcl")]
-        public NetworkAcl NetworkAcl{ get; set; }
+        [JsonProperty("Infos")]
+        public DescribeTranscodeDetailInfo[] Infos{ get; set; }
+
+        /// <summary>
+        /// The number of the current page.
+        /// </summary>
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
+
+        /// <summary>
+        /// The number of records per page.
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// The total number of records.
+        /// </summary>
+        [JsonProperty("TotalNum")]
+        public long? TotalNum{ get; set; }
+
+        /// <summary>
+        /// The total number of pages.
+        /// </summary>
+        [JsonProperty("TotalPage")]
+        public long? TotalPage{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +66,11 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "NetworkAcl.", this.NetworkAcl);
+            this.SetParamArrayObj(map, prefix + "Infos.", this.Infos);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
+            this.SetParamSimple(map, prefix + "TotalPage", this.TotalPage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

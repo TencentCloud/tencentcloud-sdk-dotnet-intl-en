@@ -103,11 +103,14 @@
     <Compile Include="V20200326\Models\DescribeStreamLivePlansResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveRegionsRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveRegionsResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeStreamLiveTranscodeDetailRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeStreamLiveTranscodeDetailResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveWatermarkRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveWatermarkResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveWatermarksRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveWatermarksResponse.cs" />
     <Compile Include="V20200326\Models\DescribeTextSettings.cs" />
+    <Compile Include="V20200326\Models\DescribeTranscodeDetailInfo.cs" />
     <Compile Include="V20200326\Models\DescribeWatermarkInfo.cs" />
     <Compile Include="V20200326\Models\DestinationInfo.cs" />
     <Compile Include="V20200326\Models\DrmKey.cs" />

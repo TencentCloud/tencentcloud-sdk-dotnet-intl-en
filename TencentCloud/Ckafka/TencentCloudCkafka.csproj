@@ -144,6 +144,7 @@
     <Compile Include="V20190819\Models\InstanceConfigDO.cs" />
     <Compile Include="V20190819\Models\InstanceDetail.cs" />
     <Compile Include="V20190819\Models\InstanceDetailResponse.cs" />
+    <Compile Include="V20190819\Models\InstanceQuotaConfigResp.cs" />
     <Compile Include="V20190819\Models\InstanceResponse.cs" />
     <Compile Include="V20190819\Models\JgwOperateResponse.cs" />
     <Compile Include="V20190819\Models\ModifyGroupOffsetsRequest.cs" />

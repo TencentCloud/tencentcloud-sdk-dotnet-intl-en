@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The name of the IP address template group.
+        /// Name of the IP address template group
         /// </summary>
         [JsonProperty("AddressTemplateGroupName")]
         public string AddressTemplateGroupName{ get; set; }
 
         /// <summary>
-        /// The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+        /// IP address template instance ID, such as `ipm-mdunqeb6`.
         /// </summary>
         [JsonProperty("AddressTemplateIds")]
         public string[] AddressTemplateIds{ get; set; }

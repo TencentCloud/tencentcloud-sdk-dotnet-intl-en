@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.401</VersionPrefix>
+    <VersionPrefix>3.0.402</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1790,6 +1790,7 @@
     <Compile Include="Ckafka\V20190819\Models\InstanceConfigDO.cs" />
     <Compile Include="Ckafka\V20190819\Models\InstanceDetail.cs" />
     <Compile Include="Ckafka\V20190819\Models\InstanceDetailResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\InstanceQuotaConfigResp.cs" />
     <Compile Include="Ckafka\V20190819\Models\InstanceResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\JgwOperateResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ModifyGroupOffsetsRequest.cs" />
@@ -5045,11 +5046,14 @@
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLivePlansResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveRegionsRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveRegionsResponse.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveTranscodeDetailRequest.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveTranscodeDetailResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveWatermarkRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveWatermarkResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveWatermarksRequest.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeStreamLiveWatermarksResponse.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeTextSettings.cs" />
+    <Compile Include="Mdl\V20200326\Models\DescribeTranscodeDetailInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\DescribeWatermarkInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\DestinationInfo.cs" />
     <Compile Include="Mdl\V20200326\Models\DrmKey.cs" />
@@ -8073,6 +8077,8 @@
     <Compile Include="Vod\V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyMediaStorageClassRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyMediaStorageClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyPersonSampleResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifySampleSnapshotTemplateRequest.cs" />
@@ -8249,8 +8255,6 @@
     <Compile Include="Vpc\V20170312\Models\AssociateDirectConnectGatewayNatGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNatGatewayAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNatGatewayAddressResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\AssociateNetworkAclSubnetsRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\AssociateNetworkAclSubnetsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNetworkInterfaceSecurityGroupsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNetworkInterfaceSecurityGroupsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AttachCcnInstancesRequest.cs" />
@@ -8285,8 +8289,6 @@
     <Compile Include="Vpc\V20170312\Models\CreateAddressTemplateResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateAndAttachNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateAndAttachNetworkInterfaceResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\CreateAssistantCidrRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\CreateAssistantCidrResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateBandwidthPackageRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateBandwidthPackageResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateCcnRequest.cs" />
@@ -8313,8 +8315,6 @@
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetDetectRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetDetectResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\CreateNetworkAclRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\CreateNetworkAclResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetworkInterfaceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateRouteTableRequest.cs" />
@@ -8358,8 +8358,6 @@
     <Compile Include="Vpc\V20170312\Models\DeleteAddressTemplateGroupResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteAddressTemplateRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteAddressTemplateResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\DeleteAssistantCidrRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\DeleteAssistantCidrResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteBandwidthPackageRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteBandwidthPackageResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteCcnRequest.cs" />
@@ -8384,8 +8382,6 @@
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetDetectRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetDetectResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\DeleteNetworkAclRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\DeleteNetworkAclResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetworkInterfaceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteRouteTableRequest.cs" />
@@ -8462,8 +8458,6 @@
     <Compile Include="Vpc\V20170312\Models\DescribeFlowLogsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeGatewayFlowMonitorDetailRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeGatewayFlowMonitorDetailResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\DescribeGatewayFlowQosRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\DescribeGatewayFlowQosResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeHaVipsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeHaVipsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationDatabaseUrlRequest.cs" />
@@ -8520,8 +8514,6 @@
     <Compile Include="Vpc\V20170312\Models\DescribeVpcPrivateIpAddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcResourceDashboardRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcResourceDashboardResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\DescribeVpcTaskResultRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\DescribeVpcTaskResultResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnConnectionsRequest.cs" />
@@ -8543,16 +8535,12 @@
     <Compile Include="Vpc\V20170312\Models\DirectConnectGatewayCcnRoute.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableCcnRoutesResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\DisableGatewayFlowMonitorRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\DisableGatewayFlowMonitorResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateDirectConnectGatewayNatGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateDirectConnectGatewayNatGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNatGatewayAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNatGatewayAddressResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\DisassociateNetworkAclSubnetsRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\DisassociateNetworkAclSubnetsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateVpcEndPointSecurityGroupsRequest.cs" />
@@ -8561,8 +8549,6 @@
     <Compile Include="Vpc\V20170312\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableCcnRoutesResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\EnableGatewayFlowMonitorRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\EnableGatewayFlowMonitorResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableVpcEndPointConnectRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableVpcEndPointConnectResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EndPoint.cs" />
@@ -8572,7 +8558,6 @@
     <Compile Include="Vpc\V20170312\Models\FlowLog.cs" />
     <Compile Include="Vpc\V20170312\Models\FlowLogStorage.cs" />
     <Compile Include="Vpc\V20170312\Models\GatewayFlowMonitorDetail.cs" />
-    <Compile Include="Vpc\V20170312\Models\GatewayQos.cs" />
     <Compile Include="Vpc\V20170312\Models\GetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\GetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\HaVip.cs" />
@@ -8612,8 +8597,6 @@
     <Compile Include="Vpc\V20170312\Models\ModifyAddressTemplateGroupAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyAddressesBandwidthRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyAddressesBandwidthResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\ModifyAssistantCidrRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\ModifyAssistantCidrResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyBandwidthPackageAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyBandwidthPackageAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCcnAttachedInstancesAttributeRequest.cs" />
@@ -8628,8 +8611,6 @@
     <Compile Include="Vpc\V20170312\Models\ModifyDirectConnectGatewayAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyFlowLogAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyFlowLogAttributeResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\ModifyGatewayFlowQosRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\ModifyGatewayFlowQosResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyHaVipAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyHaVipAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyIpv6AddressesAttributeRequest.cs" />
@@ -8644,10 +8625,6 @@
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetDetectRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetDetectResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\ModifyNetworkAclAttributeRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\ModifyNetworkAclAttributeResponse.cs" />
-    <Compile Include="Vpc\V20170312\Models\ModifyNetworkAclEntriesRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\ModifyNetworkAclEntriesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetworkInterfaceAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetworkInterfaceAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyPrivateIpAddressesAttributeRequest.cs" />
@@ -8688,11 +8665,8 @@
     <Compile Include="Vpc\V20170312\Models\NetDetectState.cs" />
     <Compile Include="Vpc\V20170312\Models\NetworkAcl.cs" />
     <Compile Include="Vpc\V20170312\Models\NetworkAclEntry.cs" />
-    <Compile Include="Vpc\V20170312\Models\NetworkAclEntrySet.cs" />
     <Compile Include="Vpc\V20170312\Models\NetworkInterface.cs" />
     <Compile Include="Vpc\V20170312\Models\NetworkInterfaceAttachment.cs" />
-    <Compile Include="Vpc\V20170312\Models\NotifyRoutesRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\NotifyRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\Price.cs" />
     <Compile Include="Vpc\V20170312\Models\PrivateIpAddressSpecification.cs" />
     <Compile Include="Vpc\V20170312\Models\Quota.cs" />
@@ -8763,8 +8737,6 @@
     <Compile Include="Vpc\V20170312\Models\VpnGatewayRoute.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnGatewayRouteModify.cs" />
     <Compile Include="Vpc\V20170312\Models\VpngwCcnRoutes.cs" />
-    <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesRequest.cs" />
-    <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesResponse.cs" />
     <Compile Include="Yunjing\V20180228\YunjingClient.cs" />
     <Compile Include="Yunjing\V20180228\Models\Account.cs" />
     <Compile Include="Yunjing\V20180228\Models\AccountStatistics.cs" />

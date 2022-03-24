@@ -60,6 +60,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("UpgradeMode")]
         public string UpgradeMode{ get; set; }
 
+        /// <summary>
+        /// Whether to back up the cluster before version upgrade (no backup by default)
+        /// </summary>
+        [JsonProperty("CosBackup")]
+        public bool? CosBackup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
             this.SetParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
+            this.SetParamSimple(map, prefix + "CosBackup", this.CosBackup);
         }
     }
 }

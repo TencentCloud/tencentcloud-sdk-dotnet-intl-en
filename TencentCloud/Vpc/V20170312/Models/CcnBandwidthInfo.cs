@@ -66,6 +66,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CcnRegionBandwidthLimit")]
         public CcnRegionBandwidthLimit CcnRegionBandwidthLimit{ get; set; }
 
+        /// <summary>
+        /// Cloud marketplace instance ID.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MarketId")]
+        public string MarketId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RegionFlowControlId", this.RegionFlowControlId);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
+            this.SetParamSimple(map, prefix + "MarketId", this.MarketId);
         }
     }
 }

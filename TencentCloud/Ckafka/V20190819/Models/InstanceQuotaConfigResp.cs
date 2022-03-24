@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAssistantCidrRequest : AbstractModel
+    public class InstanceQuotaConfigResp : AbstractModel
     {
         
         /// <summary>
-        /// `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+        /// Production throttling in MB/sec.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
+        [JsonProperty("QuotaProducerByteRate")]
+        public long? QuotaProducerByteRate{ get; set; }
 
         /// <summary>
-        /// Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+        /// Consumption throttling in MB/sec.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("NewCidrBlocks")]
-        public string[] NewCidrBlocks{ get; set; }
-
-        /// <summary>
-        /// Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
-        /// </summary>
-        [JsonProperty("OldCidrBlocks")]
-        public string[] OldCidrBlocks{ get; set; }
+        [JsonProperty("QuotaConsumerByteRate")]
+        public long? QuotaConsumerByteRate{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamArraySimple(map, prefix + "NewCidrBlocks.", this.NewCidrBlocks);
-            this.SetParamArraySimple(map, prefix + "OldCidrBlocks.", this.OldCidrBlocks);
+            this.SetParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
+            this.SetParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
         }
     }
 }

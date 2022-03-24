@@ -499,46 +499,6 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to associate a network ACL with subnets in a VPC instance.
-        /// </summary>
-        /// <param name="req"><see cref="AssociateNetworkAclSubnetsRequest"/></param>
-        /// <returns><see cref="AssociateNetworkAclSubnetsResponse"/></returns>
-        public async Task<AssociateNetworkAclSubnetsResponse> AssociateNetworkAclSubnets(AssociateNetworkAclSubnetsRequest req)
-        {
-             JsonResponseModel<AssociateNetworkAclSubnetsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AssociateNetworkAclSubnets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNetworkAclSubnetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to associate a network ACL with subnets in a VPC instance.
-        /// </summary>
-        /// <param name="req"><see cref="AssociateNetworkAclSubnetsRequest"/></param>
-        /// <returns><see cref="AssociateNetworkAclSubnetsResponse"/></returns>
-        public AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnetsSync(AssociateNetworkAclSubnetsRequest req)
-        {
-             JsonResponseModel<AssociateNetworkAclSubnetsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AssociateNetworkAclSubnets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNetworkAclSubnetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (AssociateNetworkInterfaceSecurityGroups) is used to attach a security group to an ENI.
         /// </summary>
         /// <param name="req"><see cref="AssociateNetworkInterfaceSecurityGroupsRequest"/></param>
@@ -891,7 +851,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateAddressTemplate) is used to create an IP address template.
+        /// This API is used to create an IP address template.
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateRequest"/></param>
         /// <returns><see cref="CreateAddressTemplateResponse"/></returns>
@@ -911,7 +871,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateAddressTemplate) is used to create an IP address template.
+        /// This API is used to create an IP address template.
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateRequest"/></param>
         /// <returns><see cref="CreateAddressTemplateResponse"/></returns>
@@ -931,7 +891,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateAddressTemplateGroup) is used to create an IP address template group.
+        /// This API is used to create an IP address template group.
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="CreateAddressTemplateGroupResponse"/></returns>
@@ -951,7 +911,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateAddressTemplateGroup) is used to create an IP address template group.
+        /// This API is used to create an IP address template group.
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="CreateAddressTemplateGroupResponse"/></returns>
@@ -1016,46 +976,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateAndAttachNetworkInterface");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAndAttachNetworkInterfaceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-        /// </summary>
-        /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
-        /// <returns><see cref="CreateAssistantCidrResponse"/></returns>
-        public async Task<CreateAssistantCidrResponse> CreateAssistantCidr(CreateAssistantCidrRequest req)
-        {
-             JsonResponseModel<CreateAssistantCidrResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateAssistantCidr");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAssistantCidrResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-        /// </summary>
-        /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
-        /// <returns><see cref="CreateAssistantCidrResponse"/></returns>
-        public CreateAssistantCidrResponse CreateAssistantCidrSync(CreateAssistantCidrRequest req)
-        {
-             JsonResponseModel<CreateAssistantCidrResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateAssistantCidr");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAssistantCidrResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1598,48 +1518,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateNetDetect");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetDetectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
-        /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
-        /// </summary>
-        /// <param name="req"><see cref="CreateNetworkAclRequest"/></param>
-        /// <returns><see cref="CreateNetworkAclResponse"/></returns>
-        public async Task<CreateNetworkAclResponse> CreateNetworkAcl(CreateNetworkAclRequest req)
-        {
-             JsonResponseModel<CreateNetworkAclResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateNetworkAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
-        /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
-        /// </summary>
-        /// <param name="req"><see cref="CreateNetworkAclRequest"/></param>
-        /// <returns><see cref="CreateNetworkAclResponse"/></returns>
-        public CreateNetworkAclResponse CreateNetworkAclSync(CreateNetworkAclRequest req)
-        {
-             JsonResponseModel<CreateNetworkAclResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateNetworkAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2523,46 +2401,6 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteAssistantCidr) is used to delete secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAssistantCidrRequest"/></param>
-        /// <returns><see cref="DeleteAssistantCidrResponse"/></returns>
-        public async Task<DeleteAssistantCidrResponse> DeleteAssistantCidr(DeleteAssistantCidrRequest req)
-        {
-             JsonResponseModel<DeleteAssistantCidrResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteAssistantCidr");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAssistantCidrResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (DeleteAssistantCidr) is used to delete secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAssistantCidrRequest"/></param>
-        /// <returns><see cref="DeleteAssistantCidrResponse"/></returns>
-        public DeleteAssistantCidrResponse DeleteAssistantCidrSync(DeleteAssistantCidrRequest req)
-        {
-             JsonResponseModel<DeleteAssistantCidrResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteAssistantCidr");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAssistantCidrResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to delete bandwidth packages, including [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
         /// </summary>
         /// <param name="req"><see cref="DeleteBandwidthPackageRequest"/></param>
@@ -3048,46 +2886,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNetDetect");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetDetectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a network ACL.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteNetworkAclRequest"/></param>
-        /// <returns><see cref="DeleteNetworkAclResponse"/></returns>
-        public async Task<DeleteNetworkAclResponse> DeleteNetworkAcl(DeleteNetworkAclRequest req)
-        {
-             JsonResponseModel<DeleteNetworkAclResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteNetworkAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a network ACL.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteNetworkAclRequest"/></param>
-        /// <returns><see cref="DeleteNetworkAclResponse"/></returns>
-        public DeleteNetworkAclResponse DeleteNetworkAclSync(DeleteNetworkAclRequest req)
-        {
-             JsonResponseModel<DeleteNetworkAclResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteNetworkAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4649,46 +4447,6 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeGatewayFlowQos) is used to query the QoS bandwidth limit of inbound IP flow in a gateway.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayFlowQosRequest"/></param>
-        /// <returns><see cref="DescribeGatewayFlowQosResponse"/></returns>
-        public async Task<DescribeGatewayFlowQosResponse> DescribeGatewayFlowQos(DescribeGatewayFlowQosRequest req)
-        {
-             JsonResponseModel<DescribeGatewayFlowQosResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeGatewayFlowQos");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayFlowQosResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (DescribeGatewayFlowQos) is used to query the QoS bandwidth limit of inbound IP flow in a gateway.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGatewayFlowQosRequest"/></param>
-        /// <returns><see cref="DescribeGatewayFlowQosResponse"/></returns>
-        public DescribeGatewayFlowQosResponse DescribeGatewayFlowQosSync(DescribeGatewayFlowQosRequest req)
-        {
-             JsonResponseModel<DescribeGatewayFlowQosResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeGatewayFlowQos");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayFlowQosResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (DescribeHaVips) is used to query the list of highly available virtual IPs (HAVIP).
         /// </summary>
         /// <param name="req"><see cref="DescribeHaVipsRequest"/></param>
@@ -5815,46 +5573,6 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the execution result of a VPC task.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVpcTaskResultRequest"/></param>
-        /// <returns><see cref="DescribeVpcTaskResultResponse"/></returns>
-        public async Task<DescribeVpcTaskResultResponse> DescribeVpcTaskResult(DescribeVpcTaskResultRequest req)
-        {
-             JsonResponseModel<DescribeVpcTaskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeVpcTaskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcTaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the execution result of a VPC task.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVpcTaskResultRequest"/></param>
-        /// <returns><see cref="DescribeVpcTaskResultResponse"/></returns>
-        public DescribeVpcTaskResultResponse DescribeVpcTaskResultSync(DescribeVpcTaskResultRequest req)
-        {
-             JsonResponseModel<DescribeVpcTaskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeVpcTaskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcTaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (DescribeVpcs) is used to query the VPC list.
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcsRequest"/></param>
@@ -6223,46 +5941,6 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DisableGatewayFlowMonitor) is used to disable gateway flow monitor.
-        /// </summary>
-        /// <param name="req"><see cref="DisableGatewayFlowMonitorRequest"/></param>
-        /// <returns><see cref="DisableGatewayFlowMonitorResponse"/></returns>
-        public async Task<DisableGatewayFlowMonitorResponse> DisableGatewayFlowMonitor(DisableGatewayFlowMonitorRequest req)
-        {
-             JsonResponseModel<DisableGatewayFlowMonitorResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisableGatewayFlowMonitor");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableGatewayFlowMonitorResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (DisableGatewayFlowMonitor) is used to disable gateway flow monitor.
-        /// </summary>
-        /// <param name="req"><see cref="DisableGatewayFlowMonitorRequest"/></param>
-        /// <returns><see cref="DisableGatewayFlowMonitorResponse"/></returns>
-        public DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitorSync(DisableGatewayFlowMonitorRequest req)
-        {
-             JsonResponseModel<DisableGatewayFlowMonitorResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisableGatewayFlowMonitor");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableGatewayFlowMonitorResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
         /// * This API supports unbinding an EIP from CVM instances and ENIs.
         /// * This API does not support unbinding an EIP from a NAT Gateway. To unbind an EIP from a NAT Gateway, use the [`DisassociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/api/215/36716?from_cn_redirect=1) API.
@@ -6382,46 +6060,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DisassociateNatGatewayAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateNatGatewayAddressResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to disassociate a network ACL from subnets in a VPC instance.
-        /// </summary>
-        /// <param name="req"><see cref="DisassociateNetworkAclSubnetsRequest"/></param>
-        /// <returns><see cref="DisassociateNetworkAclSubnetsResponse"/></returns>
-        public async Task<DisassociateNetworkAclSubnetsResponse> DisassociateNetworkAclSubnets(DisassociateNetworkAclSubnetsRequest req)
-        {
-             JsonResponseModel<DisassociateNetworkAclSubnetsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisassociateNetworkAclSubnets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateNetworkAclSubnetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to disassociate a network ACL from subnets in a VPC instance.
-        /// </summary>
-        /// <param name="req"><see cref="DisassociateNetworkAclSubnetsRequest"/></param>
-        /// <returns><see cref="DisassociateNetworkAclSubnetsResponse"/></returns>
-        public DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnetsSync(DisassociateNetworkAclSubnetsRequest req)
-        {
-             JsonResponseModel<DisassociateNetworkAclSubnetsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisassociateNetworkAclSubnets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateNetworkAclSubnetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6584,46 +6222,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "EnableCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableCcnRoutesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (EnableGatewayFlowMonitor) is used to enable gateway flow monitor.
-        /// </summary>
-        /// <param name="req"><see cref="EnableGatewayFlowMonitorRequest"/></param>
-        /// <returns><see cref="EnableGatewayFlowMonitorResponse"/></returns>
-        public async Task<EnableGatewayFlowMonitorResponse> EnableGatewayFlowMonitor(EnableGatewayFlowMonitorRequest req)
-        {
-             JsonResponseModel<EnableGatewayFlowMonitorResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EnableGatewayFlowMonitor");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGatewayFlowMonitorResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (EnableGatewayFlowMonitor) is used to enable gateway flow monitor.
-        /// </summary>
-        /// <param name="req"><see cref="EnableGatewayFlowMonitorRequest"/></param>
-        /// <returns><see cref="EnableGatewayFlowMonitorResponse"/></returns>
-        public EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitorSync(EnableGatewayFlowMonitorRequest req)
-        {
-             JsonResponseModel<EnableGatewayFlowMonitorResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EnableGatewayFlowMonitor");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGatewayFlowMonitorResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7251,46 +6849,6 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAssistantCidr) is used to batch modify (e.g. add and delete) secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAssistantCidrRequest"/></param>
-        /// <returns><see cref="ModifyAssistantCidrResponse"/></returns>
-        public async Task<ModifyAssistantCidrResponse> ModifyAssistantCidr(ModifyAssistantCidrRequest req)
-        {
-             JsonResponseModel<ModifyAssistantCidrResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyAssistantCidr");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAssistantCidrResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (ModifyAssistantCidr) is used to batch modify (e.g. add and delete) secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAssistantCidrRequest"/></param>
-        /// <returns><see cref="ModifyAssistantCidrResponse"/></returns>
-        public ModifyAssistantCidrResponse ModifyAssistantCidrSync(ModifyAssistantCidrRequest req)
-        {
-             JsonResponseModel<ModifyAssistantCidrResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyAssistantCidr");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAssistantCidrResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to modify the attributes of a bandwidth package, including the bandwidth package name, and so on.
         /// </summary>
         /// <param name="req"><see cref="ModifyBandwidthPackageAttributeRequest"/></param>
@@ -7571,46 +7129,6 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyGatewayFlowQos) is used to adjust the QoS bandwidth limit in a gateway.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyGatewayFlowQosRequest"/></param>
-        /// <returns><see cref="ModifyGatewayFlowQosResponse"/></returns>
-        public async Task<ModifyGatewayFlowQosResponse> ModifyGatewayFlowQos(ModifyGatewayFlowQosRequest req)
-        {
-             JsonResponseModel<ModifyGatewayFlowQosResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyGatewayFlowQos");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGatewayFlowQosResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (ModifyGatewayFlowQos) is used to adjust the QoS bandwidth limit in a gateway.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyGatewayFlowQosRequest"/></param>
-        /// <returns><see cref="ModifyGatewayFlowQosResponse"/></returns>
-        public ModifyGatewayFlowQosResponse ModifyGatewayFlowQosSync(ModifyGatewayFlowQosRequest req)
-        {
-             JsonResponseModel<ModifyGatewayFlowQosResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyGatewayFlowQos");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGatewayFlowQosResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (ModifyHaVipAttribute) is used to modify HAVIP attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyHaVipAttributeRequest"/></param>
@@ -7882,86 +7400,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNetDetect");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetDetectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the attributes of a network ACL.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyNetworkAclAttributeRequest"/></param>
-        /// <returns><see cref="ModifyNetworkAclAttributeResponse"/></returns>
-        public async Task<ModifyNetworkAclAttributeResponse> ModifyNetworkAclAttribute(ModifyNetworkAclAttributeRequest req)
-        {
-             JsonResponseModel<ModifyNetworkAclAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyNetworkAclAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the attributes of a network ACL.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyNetworkAclAttributeRequest"/></param>
-        /// <returns><see cref="ModifyNetworkAclAttributeResponse"/></returns>
-        public ModifyNetworkAclAttributeResponse ModifyNetworkAclAttributeSync(ModifyNetworkAclAttributeRequest req)
-        {
-             JsonResponseModel<ModifyNetworkAclAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyNetworkAclAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyNetworkAclEntriesRequest"/></param>
-        /// <returns><see cref="ModifyNetworkAclEntriesResponse"/></returns>
-        public async Task<ModifyNetworkAclEntriesResponse> ModifyNetworkAclEntries(ModifyNetworkAclEntriesRequest req)
-        {
-             JsonResponseModel<ModifyNetworkAclEntriesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyNetworkAclEntries");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclEntriesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyNetworkAclEntriesRequest"/></param>
-        /// <returns><see cref="ModifyNetworkAclEntriesResponse"/></returns>
-        public ModifyNetworkAclEntriesResponse ModifyNetworkAclEntriesSync(ModifyNetworkAclEntriesRequest req)
-        {
-             JsonResponseModel<ModifyNetworkAclEntriesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyNetworkAclEntries");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -8634,46 +8072,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyVpnGatewayRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewayRoutesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
-        /// </summary>
-        /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
-        /// <returns><see cref="NotifyRoutesResponse"/></returns>
-        public async Task<NotifyRoutesResponse> NotifyRoutes(NotifyRoutesRequest req)
-        {
-             JsonResponseModel<NotifyRoutesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "NotifyRoutes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<NotifyRoutesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
-        /// </summary>
-        /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
-        /// <returns><see cref="NotifyRoutesResponse"/></returns>
-        public NotifyRoutesResponse NotifyRoutesSync(NotifyRoutesRequest req)
-        {
-             JsonResponseModel<NotifyRoutesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "NotifyRoutes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<NotifyRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -9458,46 +8856,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "UnassignPrivateIpAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnassignPrivateIpAddressesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
-        /// </summary>
-        /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
-        /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>
-        public async Task<WithdrawNotifyRoutesResponse> WithdrawNotifyRoutes(WithdrawNotifyRoutesRequest req)
-        {
-             JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "WithdrawNotifyRoutes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WithdrawNotifyRoutesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
-        /// </summary>
-        /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
-        /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>
-        public WithdrawNotifyRoutesResponse WithdrawNotifyRoutesSync(WithdrawNotifyRoutesRequest req)
-        {
-             JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "WithdrawNotifyRoutes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WithdrawNotifyRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

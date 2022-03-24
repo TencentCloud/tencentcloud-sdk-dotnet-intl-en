@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The name of the IP address template
+        /// IP address template name.
         /// </summary>
         [JsonProperty("AddressTemplateName")]
         public string AddressTemplateName{ get; set; }

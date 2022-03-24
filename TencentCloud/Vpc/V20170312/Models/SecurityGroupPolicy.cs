@@ -37,7 +37,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Port (all, discrete port, range).
+        /// Port (`all`, a single port, or a port range).
+        /// Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }

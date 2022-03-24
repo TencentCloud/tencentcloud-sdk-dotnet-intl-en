@@ -52,6 +52,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
+        /// <summary>
+        /// TESHD transcoding parameters
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("TEHDConfig")]
+        public TEHDConfig TEHDConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Audio.", this.Audio);
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+            this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         }
     }
 }

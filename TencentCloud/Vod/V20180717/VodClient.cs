@@ -3439,6 +3439,70 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to modify the storage class of media files.
+        /// If the current storage class is STANDARD, it can be changed to one of the following classes:
+        /// <li>STANDARD_IA</li>
+        /// <li>ARCHIVE</li>
+        /// <li>DEEP ARCHIVE</li>
+        /// If the current storage class is STANDARD_IA, it can be changed to one of the following classes:
+        /// <li>STANDARD</li>
+        /// <li>ARCHIVE</li>
+        /// <li>DEEP ARCHIVE</li>
+        /// If the current storage class is ARCHIVE, it can be changed to the following class:
+        /// <li>STANDARD</li>
+        /// If the current storage class is DEEP ARCHIVE, it can be changed to the following class:
+        /// <li>STANDARD</li>
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMediaStorageClassRequest"/></param>
+        /// <returns><see cref="ModifyMediaStorageClassResponse"/></returns>
+        public async Task<ModifyMediaStorageClassResponse> ModifyMediaStorageClass(ModifyMediaStorageClassRequest req)
+        {
+             JsonResponseModel<ModifyMediaStorageClassResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMediaStorageClass");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaStorageClassResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the storage class of media files.
+        /// If the current storage class is STANDARD, it can be changed to one of the following classes:
+        /// <li>STANDARD_IA</li>
+        /// <li>ARCHIVE</li>
+        /// <li>DEEP ARCHIVE</li>
+        /// If the current storage class is STANDARD_IA, it can be changed to one of the following classes:
+        /// <li>STANDARD</li>
+        /// <li>ARCHIVE</li>
+        /// <li>DEEP ARCHIVE</li>
+        /// If the current storage class is ARCHIVE, it can be changed to the following class:
+        /// <li>STANDARD</li>
+        /// If the current storage class is DEEP ARCHIVE, it can be changed to the following class:
+        /// <li>STANDARD</li>
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMediaStorageClassRequest"/></param>
+        /// <returns><see cref="ModifyMediaStorageClassResponse"/></returns>
+        public ModifyMediaStorageClassResponse ModifyMediaStorageClassSync(ModifyMediaStorageClassRequest req)
+        {
+             JsonResponseModel<ModifyMediaStorageClassResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMediaStorageClass");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaStorageClassResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify sample information according to the sample ID. You can modify the name and description, add, delete, and reset facial features or tags. Leave at least one image after deleting facial features. To leave no image, please use the reset operation.
         /// </summary>
         /// <param name="req"><see cref="ModifyPersonSampleRequest"/></param>

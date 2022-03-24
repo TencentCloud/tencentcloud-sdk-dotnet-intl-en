@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeVpcTaskResultRequest : AbstractModel
+    public class ModifyMediaStorageClassResponse : AbstractModel
     {
         
         /// <summary>
-        /// `RequestId` returned by an async task
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -114,6 +114,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Production throttling in MB/sec.
+        /// </summary>
+        [JsonProperty("QuotaProducerByteRate")]
+        public long? QuotaProducerByteRate{ get; set; }
+
+        /// <summary>
+        /// Consumption throttling in MB/sec.
+        /// </summary>
+        [JsonProperty("QuotaConsumerByteRate")]
+        public long? QuotaConsumerByteRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
             this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
+            this.SetParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
         }
     }
 }

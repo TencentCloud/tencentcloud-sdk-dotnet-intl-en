@@ -417,6 +417,8 @@
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoRequest.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyMediaStorageClassRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyMediaStorageClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\ModifySampleSnapshotTemplateRequest.cs" />
