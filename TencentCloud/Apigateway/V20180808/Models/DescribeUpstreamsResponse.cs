@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Apigateway.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Attachment : AbstractModel
+    public class DescribeUpstreamsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Attachment name, which cannot exceed 255 characters. Some attachment types are not supported. For details, see [Attachment Types](https://intl.cloud.tencent.com/document/product/1288/51951?from_cn_redirect=1).
+        /// Query results
         /// </summary>
-        [JsonProperty("FileName")]
-        public string FileName{ get; set; }
+        [JsonProperty("Result")]
+        public DescribeUpstreamInfo Result{ get; set; }
 
         /// <summary>
-        /// Attachment content after Base64 encoding. A single attachment cannot exceed 4 MB. Note: Tencent Cloud APIs require that a request packet should not exceed 8 MB. If you are sending multiple attachments, the total size of these attachments cannot exceed 8 MB.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileName", this.FileName);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

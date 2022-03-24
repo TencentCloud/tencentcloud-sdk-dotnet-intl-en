@@ -174,7 +174,7 @@ namespace TencentCloud.Ses.V20201002
 
         /// <summary>
         /// This API is used to create a TEXT or HTML email template. To create an HTML template, ensure that it does not include external CSS files. You can use {{variable name}} to specify a variable in the template.
-        /// Note: only an approved template can be used to send emails.
+        /// Note: Only an approved template can be used to send emails.
         /// </summary>
         /// <param name="req"><see cref="CreateEmailTemplateRequest"/></param>
         /// <returns><see cref="CreateEmailTemplateResponse"/></returns>
@@ -195,7 +195,7 @@ namespace TencentCloud.Ses.V20201002
 
         /// <summary>
         /// This API is used to create a TEXT or HTML email template. To create an HTML template, ensure that it does not include external CSS files. You can use {{variable name}} to specify a variable in the template.
-        /// Note: only an approved template can be used to send emails.
+        /// Note: Only an approved template can be used to send emails.
         /// </summary>
         /// <param name="req"><see cref="CreateEmailTemplateRequest"/></param>
         /// <returns><see cref="CreateEmailTemplateResponse"/></returns>
@@ -446,6 +446,46 @@ namespace TencentCloud.Ses.V20201002
              {
                  var strResp = this.InternalRequestSync(req, "DeleteEmailTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEmailTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a recipient group and all recipient email addresses in the group based on the recipient group ID.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReceiverRequest"/></param>
+        /// <returns><see cref="DeleteReceiverResponse"/></returns>
+        public async Task<DeleteReceiverResponse> DeleteReceiver(DeleteReceiverRequest req)
+        {
+             JsonResponseModel<DeleteReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a recipient group and all recipient email addresses in the group based on the recipient group ID.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReceiverRequest"/></param>
+        /// <returns><see cref="DeleteReceiverResponse"/></returns>
+        public DeleteReceiverResponse DeleteReceiverSync(DeleteReceiverRequest req)
+        {
+             JsonResponseModel<DeleteReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReceiverResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

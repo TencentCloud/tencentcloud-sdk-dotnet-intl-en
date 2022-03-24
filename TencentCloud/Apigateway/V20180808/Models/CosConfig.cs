@@ -50,6 +50,17 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Authorization")]
         public bool? Authorization{ get; set; }
 
+        /// <summary>
+        /// The path matching mode of the backend COS service
+        /// `BackEndPath`: Match the backend path
+        /// `FullPath`: Match the full path
+        /// 
+        /// Default: `BackEndPath`
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PathMatchMode")]
+        public string PathMatchMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +70,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
             this.SetParamSimple(map, prefix + "Authorization", this.Authorization);
+            this.SetParamSimple(map, prefix + "PathMatchMode", this.PathMatchMode);
         }
     }
 }

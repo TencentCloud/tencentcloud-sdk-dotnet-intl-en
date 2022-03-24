@@ -69,6 +69,8 @@
     <Compile Include="V20201002\Models\DeleteEmailIdentityResponse.cs" />
     <Compile Include="V20201002\Models\DeleteEmailTemplateRequest.cs" />
     <Compile Include="V20201002\Models\DeleteEmailTemplateResponse.cs" />
+    <Compile Include="V20201002\Models\DeleteReceiverRequest.cs" />
+    <Compile Include="V20201002\Models\DeleteReceiverResponse.cs" />
     <Compile Include="V20201002\Models\EmailIdentity.cs" />
     <Compile Include="V20201002\Models\EmailSender.cs" />
     <Compile Include="V20201002\Models\GetEmailIdentityRequest.cs" />

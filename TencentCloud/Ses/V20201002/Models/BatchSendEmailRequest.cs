@@ -63,13 +63,13 @@ namespace TencentCloud.Ses.V20201002.Models
         public Template Template{ get; set; }
 
         /// <summary>
-        /// Email content when emails are sent by calling the API
+        /// Email content when emails are sent by calling the API. This parameter is currently unavailable.
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// Email attachments
+        /// Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }
@@ -92,6 +92,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ADLocation")]
+        public ulong? ADLocation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamObj(map, prefix + "CycleParam.", this.CycleParam);
             this.SetParamObj(map, prefix + "TimedParam.", this.TimedParam);
             this.SetParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
+            this.SetParamSimple(map, prefix + "ADLocation", this.ADLocation);
         }
     }
 }

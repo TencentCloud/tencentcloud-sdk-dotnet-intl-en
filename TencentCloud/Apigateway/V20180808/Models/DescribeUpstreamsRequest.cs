@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Apigateway.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Attachment : AbstractModel
+    public class DescribeUpstreamsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Attachment name, which cannot exceed 255 characters. Some attachment types are not supported. For details, see [Attachment Types](https://intl.cloud.tencent.com/document/product/1288/51951?from_cn_redirect=1).
+        /// Number of results returned in a page
         /// </summary>
-        [JsonProperty("FileName")]
-        public string FileName{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Attachment content after Base64 encoding. A single attachment cannot exceed 4 MB. Note: Tencent Cloud APIs require that a request packet should not exceed 8 MB. If you are sending multiple attachments, the total size of these attachments cannot exceed 8 MB.
+        /// Page offset
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// Filters
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileName", this.FileName);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

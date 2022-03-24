@@ -32,15 +32,15 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ApiId{ get; set; }
 
         /// <summary>
-        /// path
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Path
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// method
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Request method
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
@@ -52,6 +52,27 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// Status of the import task
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// Details of the error
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
+
+        /// <summary>
+        /// API name
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApiName")]
+        public string ApiName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +83,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "ApiName", this.ApiName);
         }
     }
 }

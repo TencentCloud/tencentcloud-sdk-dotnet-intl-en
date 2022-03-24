@@ -623,6 +623,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to create an upstream.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUpstreamRequest"/></param>
+        /// <returns><see cref="CreateUpstreamResponse"/></returns>
+        public async Task<CreateUpstreamResponse> CreateUpstream(CreateUpstreamRequest req)
+        {
+             JsonResponseModel<CreateUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an upstream.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUpstreamRequest"/></param>
+        /// <returns><see cref="CreateUpstreamResponse"/></returns>
+        public CreateUpstreamResponse CreateUpstreamSync(CreateUpstreamRequest req)
+        {
+             JsonResponseModel<CreateUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a usage plan.
         /// To use API Gateway, you need to create a usage plan and bind it to a service environment.
         /// </summary>
@@ -978,6 +1018,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DeleteServiceSubDomainMapping");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceSubDomainMappingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUpstreamRequest"/></param>
+        /// <returns><see cref="DeleteUpstreamResponse"/></returns>
+        public async Task<DeleteUpstreamResponse> DeleteUpstream(DeleteUpstreamRequest req)
+        {
+             JsonResponseModel<DeleteUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUpstreamRequest"/></param>
+        /// <returns><see cref="DeleteUpstreamResponse"/></returns>
+        public DeleteUpstreamResponse DeleteUpstreamSync(DeleteUpstreamRequest req)
+        {
+             JsonResponseModel<DeleteUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUpstreamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1513,8 +1593,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the list of keys.
-        /// If you have created multiple API key pairs, you can use this API to query the information of one or more keys. This API does not display the `secretKey`.
+        /// This API is used to query the information of one or more API keys.
+        ///  
         /// </summary>
         /// <param name="req"><see cref="DescribeApiKeysStatusRequest"/></param>
         /// <returns><see cref="DescribeApiKeysStatusResponse"/></returns>
@@ -1534,8 +1614,8 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the list of keys.
-        /// If you have created multiple API key pairs, you can use this API to query the information of one or more keys. This API does not display the `secretKey`.
+        /// This API is used to query the information of one or more API keys.
+        ///  
         /// </summary>
         /// <param name="req"><see cref="DescribeApiKeysStatusRequest"/></param>
         /// <returns><see cref="DescribeApiKeysStatusResponse"/></returns>
@@ -2287,6 +2367,86 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to query the list of APIs bound with an upstream.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamBindApisRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamBindApisResponse"/></returns>
+        public async Task<DescribeUpstreamBindApisResponse> DescribeUpstreamBindApis(DescribeUpstreamBindApisRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUpstreamBindApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamBindApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of APIs bound with an upstream.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamBindApisRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamBindApisResponse"/></returns>
+        public DescribeUpstreamBindApisResponse DescribeUpstreamBindApisSync(DescribeUpstreamBindApisRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUpstreamBindApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamBindApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of upstreams.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamsRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamsResponse"/></returns>
+        public async Task<DescribeUpstreamsResponse> DescribeUpstreams(DescribeUpstreamsRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUpstreams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of upstreams.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamsRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamsResponse"/></returns>
+        public DescribeUpstreamsResponse DescribeUpstreamsSync(DescribeUpstreamsRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUpstreams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of a usage plan, such as its name, QPS, creation time, and bound environment.
         /// </summary>
         /// <param name="req"><see cref="DescribeUsagePlanRequest"/></param>
@@ -3002,6 +3162,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "ModifySubDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an upstream.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUpstreamRequest"/></param>
+        /// <returns><see cref="ModifyUpstreamResponse"/></returns>
+        public async Task<ModifyUpstreamResponse> ModifyUpstream(ModifyUpstreamRequest req)
+        {
+             JsonResponseModel<ModifyUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an upstream.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUpstreamRequest"/></param>
+        /// <returns><see cref="ModifyUpstreamResponse"/></returns>
+        public ModifyUpstreamResponse ModifyUpstreamSync(ModifyUpstreamRequest req)
+        {
+             JsonResponseModel<ModifyUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUpstreamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

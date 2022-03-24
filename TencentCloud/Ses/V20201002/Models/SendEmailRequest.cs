@@ -74,6 +74,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
 
+        /// <summary>
+        /// Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+        /// </summary>
+        [JsonProperty("TriggerType")]
+        public ulong? TriggerType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamObj(map, prefix + "Simple.", this.Simple);
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
             this.SetParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
+            this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
         }
     }
 }
