@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.404</VersionPrefix>
+    <VersionPrefix>3.0.405</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,29 @@
     <Compile Include="Common\Profile\HttpProfile.cs" />
     <Compile Include="Common\Profile\Language.cs" />
     <Compile Include="Common\Sign.cs" />
+    <Compile Include="Ams\V20201229\AmsClient.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioResult.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioSegments.cs" />
+    <Compile Include="Ams\V20201229\Models\BucketInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\CancelTaskRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\CancelTaskResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\CreateAudioModerationTaskRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\CreateAudioModerationTaskResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\DescribeTasksRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\DescribeTasksResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\InputInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\MediaInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\StorageInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskData.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskFilter.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskInput.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskLabel.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskResult.cs" />
     <Compile Include="Antiddos\V20200309\AntiddosClient.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipAddressRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipAddressResponse.cs" />
@@ -4216,6 +4239,20 @@
     <Compile Include="Iai\V20200303\Models\VerifyFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyPersonRequest.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyPersonResponse.cs" />
+    <Compile Include="Ims\V20201229\ImsClient.cs" />
+    <Compile Include="Ims\V20201229\Models\Device.cs" />
+    <Compile Include="Ims\V20201229\Models\ImageModerationRequest.cs" />
+    <Compile Include="Ims\V20201229\Models\ImageModerationResponse.cs" />
+    <Compile Include="Ims\V20201229\Models\LabelDetailItem.cs" />
+    <Compile Include="Ims\V20201229\Models\LabelResult.cs" />
+    <Compile Include="Ims\V20201229\Models\LibDetail.cs" />
+    <Compile Include="Ims\V20201229\Models\LibResult.cs" />
+    <Compile Include="Ims\V20201229\Models\Location.cs" />
+    <Compile Include="Ims\V20201229\Models\ObjectDetail.cs" />
+    <Compile Include="Ims\V20201229\Models\ObjectResult.cs" />
+    <Compile Include="Ims\V20201229\Models\OcrResult.cs" />
+    <Compile Include="Ims\V20201229\Models\OcrTextDetail.cs" />
+    <Compile Include="Ims\V20201229\Models\User.cs" />
     <Compile Include="Iotcloud\V20210408\IotcloudClient.cs" />
     <Compile Include="Iotcloud\V20210408\Models\Attribute.cs" />
     <Compile Include="Iotcloud\V20210408\Models\BindProductInfo.cs" />
@@ -7636,6 +7673,13 @@
     <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\UpgradeNodeResetParam.cs" />
     <Compile Include="Tke\V20180525\Models\VersionInstance.cs" />
+    <Compile Include="Tms\V20201229\TmsClient.cs" />
+    <Compile Include="Tms\V20201229\Models\DetailResults.cs" />
+    <Compile Include="Tms\V20201229\Models\Device.cs" />
+    <Compile Include="Tms\V20201229\Models\RiskDetails.cs" />
+    <Compile Include="Tms\V20201229\Models\TextModerationRequest.cs" />
+    <Compile Include="Tms\V20201229\Models\TextModerationResponse.cs" />
+    <Compile Include="Tms\V20201229\Models\User.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />
@@ -7704,6 +7748,34 @@
     <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
     <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
     <Compile Include="Trtc\V20190722\Models\WaterMarkParams.cs" />
+    <Compile Include="Vm\V20201229\VmClient.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioResult.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioSegments.cs" />
+    <Compile Include="Vm\V20201229\Models\BucketInfo.cs" />
+    <Compile Include="Vm\V20201229\Models\CancelTaskRequest.cs" />
+    <Compile Include="Vm\V20201229\Models\CancelTaskResponse.cs" />
+    <Compile Include="Vm\V20201229\Models\CreateVideoModerationTaskRequest.cs" />
+    <Compile Include="Vm\V20201229\Models\CreateVideoModerationTaskResponse.cs" />
+    <Compile Include="Vm\V20201229\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="Vm\V20201229\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="Vm\V20201229\Models\DescribeTasksRequest.cs" />
+    <Compile Include="Vm\V20201229\Models\DescribeTasksResponse.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageResult.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageResultResult.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageResultsResultDetail.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageResultsResultDetailLocation.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageSegments.cs" />
+    <Compile Include="Vm\V20201229\Models\InputInfo.cs" />
+    <Compile Include="Vm\V20201229\Models\MediaInfo.cs" />
+    <Compile Include="Vm\V20201229\Models\StorageInfo.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskData.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskFilter.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskInput.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskLabel.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskResult.cs" />
     <Compile Include="Vod\V20180717\VodClient.cs" />
     <Compile Include="Vod\V20180717\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="Vod\V20180717\Models\AIRecognitionTemplateItem.cs" />
