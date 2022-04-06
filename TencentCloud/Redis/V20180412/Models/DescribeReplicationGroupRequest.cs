@@ -21,21 +21,32 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceCreateInstanceResponse : AbstractModel
+    public class DescribeReplicationGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// Price. Unit: USD (accurate down to the cent)
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Instance list size. Default value: 20
         /// </summary>
-        [JsonProperty("Price")]
-        public float? Price{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Offset, which is an integral multiple of `Limit`
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// Replication group ID
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// Instance ID/name. Fuzzy query is supported.
+        /// </summary>
+        [JsonProperty("SearchKey")]
+        public string SearchKey{ get; set; }
 
 
         /// <summary>
@@ -43,8 +54,10 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Price", this.Price);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
         }
     }
 }

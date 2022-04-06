@@ -453,6 +453,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// This API is used to update ES cluster dictionaries.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDictionariesRequest"/></param>
+        /// <returns><see cref="UpdateDictionariesResponse"/></returns>
+        public async Task<UpdateDictionariesResponse> UpdateDictionaries(UpdateDictionariesRequest req)
+        {
+             JsonResponseModel<UpdateDictionariesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDictionaries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDictionariesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update ES cluster dictionaries.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDictionariesRequest"/></param>
+        /// <returns><see cref="UpdateDictionariesResponse"/></returns>
+        public UpdateDictionariesResponse UpdateDictionariesSync(UpdateDictionariesRequest req)
+        {
+             JsonResponseModel<UpdateDictionariesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDictionaries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDictionariesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
         /// - InstanceName: renames an instance (only for instance identification)
         /// - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)

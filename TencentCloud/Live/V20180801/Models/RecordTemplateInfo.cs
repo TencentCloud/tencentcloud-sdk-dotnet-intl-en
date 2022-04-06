@@ -85,6 +85,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Mp3Param")]
         public RecordParam Mp3Param{ get; set; }
 
+        /// <summary>
+        /// Whether the watermark is removed.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("RemoveWatermark")]
+        public bool? RemoveWatermark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
             this.SetParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
             this.SetParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
+            this.SetParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
         }
     }
 }

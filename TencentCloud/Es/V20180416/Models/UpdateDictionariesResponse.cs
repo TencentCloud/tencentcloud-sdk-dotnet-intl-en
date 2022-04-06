@@ -15,22 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceCreateInstanceResponse : AbstractModel
+    public class UpdateDictionariesResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Price. Unit: USD (accurate down to the cent)
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Price")]
-        public float? Price{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -43,7 +36,6 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

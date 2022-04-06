@@ -1031,46 +1031,6 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
-        /// This API is used to submit a instance.
-        /// </summary>
-        /// <param name="req"><see cref="SubmitJobRequest"/></param>
-        /// <returns><see cref="SubmitJobResponse"/></returns>
-        public async Task<SubmitJobResponse> SubmitJob(SubmitJobRequest req)
-        {
-             JsonResponseModel<SubmitJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to submit a instance.
-        /// </summary>
-        /// <param name="req"><see cref="SubmitJobRequest"/></param>
-        /// <returns><see cref="SubmitJobResponse"/></returns>
-        public SubmitJobResponse SubmitJobSync(SubmitJobRequest req)
-        {
-             JsonResponseModel<SubmitJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to terminate a compute node.
         /// Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABNORMAL state.
         /// </summary>

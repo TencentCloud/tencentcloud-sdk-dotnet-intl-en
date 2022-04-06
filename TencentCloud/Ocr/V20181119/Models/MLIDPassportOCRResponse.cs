@@ -96,6 +96,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
+        /// The first row of the machine-readable zone (MRZ) at the bottom
+        /// </summary>
+        [JsonProperty("CodeSet")]
+        public string CodeSet{ get; set; }
+
+        /// <summary>
+        /// The second row of the MRZ at the bottom
+        /// </summary>
+        [JsonProperty("CodeCrc")]
+        public string CodeCrc{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -117,6 +129,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "Warn.", this.Warn);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamSimple(map, prefix + "CodeSet", this.CodeSet);
+            this.SetParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

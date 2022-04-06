@@ -1495,46 +1495,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query the data of billable LVB bandwidth and traffic.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
-        /// <returns><see cref="DescribeBillBandwidthAndFluxListResponse"/></returns>
-        public async Task<DescribeBillBandwidthAndFluxListResponse> DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req)
-        {
-             JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBillBandwidthAndFluxList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the data of billable LVB bandwidth and traffic.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
-        /// <returns><see cref="DescribeBillBandwidthAndFluxListResponse"/></returns>
-        public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxListSync(DescribeBillBandwidthAndFluxListRequest req)
-        {
-             JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillBandwidthAndFluxList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
         /// </summary>
         /// <param name="req"><see cref="DescribeConcurrentRecordStreamNumRequest"/></param>
@@ -3340,46 +3300,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStreamPlayInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPlayInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStreamPushInfoListRequest"/></param>
-        /// <returns><see cref="DescribeStreamPushInfoListResponse"/></returns>
-        public async Task<DescribeStreamPushInfoListResponse> DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req)
-        {
-             JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStreamPushInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPushInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStreamPushInfoListRequest"/></param>
-        /// <returns><see cref="DescribeStreamPushInfoListResponse"/></returns>
-        public DescribeStreamPushInfoListResponse DescribeStreamPushInfoListSync(DescribeStreamPushInfoListRequest req)
-        {
-             JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStreamPushInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPushInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

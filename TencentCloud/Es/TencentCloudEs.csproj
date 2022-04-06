@@ -85,6 +85,8 @@
     <Compile Include="V20180416\Models\SubTaskDetail.cs" />
     <Compile Include="V20180416\Models\TagInfo.cs" />
     <Compile Include="V20180416\Models\TaskDetail.cs" />
+    <Compile Include="V20180416\Models\UpdateDictionariesRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateDictionariesResponse.cs" />
     <Compile Include="V20180416\Models\UpdateInstanceRequest.cs" />
     <Compile Include="V20180416\Models\UpdateInstanceResponse.cs" />
     <Compile Include="V20180416\Models\UpdatePluginsRequest.cs" />

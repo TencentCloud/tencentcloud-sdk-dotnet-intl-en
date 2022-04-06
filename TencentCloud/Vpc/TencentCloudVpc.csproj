@@ -73,8 +73,6 @@
     <Compile Include="V20170312\Models\AssociateAddressResponse.cs" />
     <Compile Include="V20170312\Models\AssociateDirectConnectGatewayNatGatewayRequest.cs" />
     <Compile Include="V20170312\Models\AssociateDirectConnectGatewayNatGatewayResponse.cs" />
-    <Compile Include="V20170312\Models\AssociateNatGatewayAddressRequest.cs" />
-    <Compile Include="V20170312\Models\AssociateNatGatewayAddressResponse.cs" />
     <Compile Include="V20170312\Models\AssociateNetworkInterfaceSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\AssociateNetworkInterfaceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\AttachCcnInstancesRequest.cs" />
@@ -129,8 +127,6 @@
     <Compile Include="V20170312\Models\CreateLocalGatewayResponse.cs" />
     <Compile Include="V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
     <Compile Include="V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
-    <Compile Include="V20170312\Models\CreateNatGatewayRequest.cs" />
-    <Compile Include="V20170312\Models\CreateNatGatewayResponse.cs" />
     <Compile Include="V20170312\Models\CreateNatGatewaySourceIpTranslationNatRuleRequest.cs" />
     <Compile Include="V20170312\Models\CreateNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\CreateNetDetectRequest.cs" />
@@ -194,12 +190,6 @@
     <Compile Include="V20170312\Models\DeleteHaVipResponse.cs" />
     <Compile Include="V20170312\Models\DeleteLocalGatewayRequest.cs" />
     <Compile Include="V20170312\Models\DeleteLocalGatewayResponse.cs" />
-    <Compile Include="V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
-    <Compile Include="V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
-    <Compile Include="V20170312\Models\DeleteNatGatewayRequest.cs" />
-    <Compile Include="V20170312\Models\DeleteNatGatewayResponse.cs" />
-    <Compile Include="V20170312\Models\DeleteNatGatewaySourceIpTranslationNatRuleRequest.cs" />
-    <Compile Include="V20170312\Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\DeleteNetDetectRequest.cs" />
     <Compile Include="V20170312\Models\DeleteNetDetectResponse.cs" />
     <Compile Include="V20170312\Models\DeleteNetworkInterfaceRequest.cs" />
@@ -286,12 +276,6 @@
     <Compile Include="V20170312\Models\DescribeIpGeolocationInfosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeLocalGatewayRequest.cs" />
     <Compile Include="V20170312\Models\DescribeLocalGatewayResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeNatGatewaysRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeNatGatewaysResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNetDetectStatesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNetDetectStatesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNetDetectsRequest.cs" />
@@ -359,8 +343,6 @@
     <Compile Include="V20170312\Models\DisassociateAddressResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateDirectConnectGatewayNatGatewayRequest.cs" />
     <Compile Include="V20170312\Models\DisassociateDirectConnectGatewayNatGatewayResponse.cs" />
-    <Compile Include="V20170312\Models\DisassociateNatGatewayAddressRequest.cs" />
-    <Compile Include="V20170312\Models\DisassociateNatGatewayAddressResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateVpcEndPointSecurityGroupsRequest.cs" />
@@ -389,8 +371,6 @@
     <Compile Include="V20170312\Models\IPSECOptionsSpecification.cs" />
     <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayRequest.cs" />
     <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayResponse.cs" />
-    <Compile Include="V20170312\Models\InquiryPriceCreateVpnGatewayRequest.cs" />
-    <Compile Include="V20170312\Models\InquiryPriceCreateVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewVpnGatewayRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest.cs" />
@@ -437,12 +417,6 @@
     <Compile Include="V20170312\Models\ModifyIpv6AddressesAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyLocalGatewayRequest.cs" />
     <Compile Include="V20170312\Models\ModifyLocalGatewayResponse.cs" />
-    <Compile Include="V20170312\Models\ModifyNatGatewayAttributeRequest.cs" />
-    <Compile Include="V20170312\Models\ModifyNatGatewayAttributeResponse.cs" />
-    <Compile Include="V20170312\Models\ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
-    <Compile Include="V20170312\Models\ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
-    <Compile Include="V20170312\Models\ModifyNatGatewaySourceIpTranslationNatRuleRequest.cs" />
-    <Compile Include="V20170312\Models\ModifyNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\ModifyNetDetectRequest.cs" />
     <Compile Include="V20170312\Models\ModifyNetDetectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyNetworkInterfaceAttributeRequest.cs" />
@@ -477,9 +451,6 @@
     <Compile Include="V20170312\Models\ModifyVpnGatewayCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpnGatewayRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpnGatewayRoutesResponse.cs" />
-    <Compile Include="V20170312\Models\NatGateway.cs" />
-    <Compile Include="V20170312\Models\NatGatewayAddress.cs" />
-    <Compile Include="V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
     <Compile Include="V20170312\Models\NetDetect.cs" />
     <Compile Include="V20170312\Models\NetDetectIpState.cs" />
     <Compile Include="V20170312\Models\NetDetectState.cs" />
@@ -509,8 +480,6 @@
     <Compile Include="V20170312\Models\ReplaceSecurityGroupPolicyResponse.cs" />
     <Compile Include="V20170312\Models\ResetAttachCcnInstancesRequest.cs" />
     <Compile Include="V20170312\Models\ResetAttachCcnInstancesResponse.cs" />
-    <Compile Include="V20170312\Models\ResetNatGatewayConnectionRequest.cs" />
-    <Compile Include="V20170312\Models\ResetNatGatewayConnectionResponse.cs" />
     <Compile Include="V20170312\Models\ResetRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ResetRoutesResponse.cs" />
     <Compile Include="V20170312\Models\ResetVpnConnectionRequest.cs" />

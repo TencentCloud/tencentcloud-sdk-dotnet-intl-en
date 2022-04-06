@@ -55,7 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? VideoFps{ get; set; }
 
         /// <summary>
-        /// Video bitrate (Kbps) for publishing
+        /// Video bitrate (bps) for publishing
         /// </summary>
         [JsonProperty("VideoSpeed")]
         public ulong? VideoSpeed{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? AudioFps{ get; set; }
 
         /// <summary>
-        /// Audio bitrate (Kbps) for publishing
+        /// Audio bitrate (bps) for publishing
         /// </summary>
         [JsonProperty("AudioSpeed")]
         public ulong? AudioSpeed{ get; set; }
@@ -111,13 +111,13 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? AsampleRate{ get; set; }
 
         /// <summary>
-        /// Audio bitrate in `metadata` in Kbps.
+        /// Audio bitrate (bps) in metadata
         /// </summary>
         [JsonProperty("MetaAudioSpeed")]
         public ulong? MetaAudioSpeed{ get; set; }
 
         /// <summary>
-        /// Video bitrate in `metadata` in Kbps.
+        /// Video bitrate (bps) in metadata
         /// </summary>
         [JsonProperty("MetaVideoSpeed")]
         public ulong? MetaVideoSpeed{ get; set; }

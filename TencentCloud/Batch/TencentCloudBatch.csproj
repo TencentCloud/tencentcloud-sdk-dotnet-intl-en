@@ -116,7 +116,6 @@
     <Compile Include="V20170312\Models\InstanceTypeQuotaItem.cs" />
     <Compile Include="V20170312\Models\InternetAccessible.cs" />
     <Compile Include="V20170312\Models\ItemPrice.cs" />
-    <Compile Include="V20170312\Models\Job.cs" />
     <Compile Include="V20170312\Models\JobView.cs" />
     <Compile Include="V20170312\Models\LocalDiskType.cs" />
     <Compile Include="V20170312\Models\LoginSettings.cs" />
@@ -139,8 +138,6 @@
     <Compile Include="V20170312\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="V20170312\Models\SpotMarketOptions.cs" />
     <Compile Include="V20170312\Models\StorageBlock.cs" />
-    <Compile Include="V20170312\Models\SubmitJobRequest.cs" />
-    <Compile Include="V20170312\Models\SubmitJobResponse.cs" />
     <Compile Include="V20170312\Models\SystemDisk.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
     <Compile Include="V20170312\Models\Task.cs" />

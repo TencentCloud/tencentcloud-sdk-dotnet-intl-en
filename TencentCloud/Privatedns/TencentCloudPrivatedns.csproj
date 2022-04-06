@@ -57,12 +57,6 @@
     <Compile Include="V20201028\Models\CreatePrivateZoneRequest.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneResponse.cs" />
     <Compile Include="V20201028\Models\DatePoint.cs" />
-    <Compile Include="V20201028\Models\DeletePrivateDNSAccountRequest.cs" />
-    <Compile Include="V20201028\Models\DeletePrivateDNSAccountResponse.cs" />
-    <Compile Include="V20201028\Models\DeletePrivateZoneRecordRequest.cs" />
-    <Compile Include="V20201028\Models\DeletePrivateZoneRecordResponse.cs" />
-    <Compile Include="V20201028\Models\DeletePrivateZoneRequest.cs" />
-    <Compile Include="V20201028\Models\DeletePrivateZoneResponse.cs" />
     <Compile Include="V20201028\Models\DescribeAccountVpcListRequest.cs" />
     <Compile Include="V20201028\Models\DescribeAccountVpcListResponse.cs" />
     <Compile Include="V20201028\Models\DescribeAuditLogRequest.cs" />
@@ -71,14 +65,10 @@
     <Compile Include="V20201028\Models\DescribeDashboardResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateDNSAccountListRequest.cs" />
     <Compile Include="V20201028\Models\DescribePrivateDNSAccountListResponse.cs" />
-    <Compile Include="V20201028\Models\DescribePrivateZoneListRequest.cs" />
-    <Compile Include="V20201028\Models\DescribePrivateZoneListResponse.cs" />
-    <Compile Include="V20201028\Models\DescribePrivateZoneRecordListRequest.cs" />
-    <Compile Include="V20201028\Models\DescribePrivateZoneRecordListResponse.cs" />
-    <Compile Include="V20201028\Models\DescribePrivateZoneRequest.cs" />
-    <Compile Include="V20201028\Models\DescribePrivateZoneResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneServiceRequest.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneServiceResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeQuotaUsageRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeQuotaUsageResponse.cs" />
     <Compile Include="V20201028\Models\DescribeRequestDataRequest.cs" />
     <Compile Include="V20201028\Models\DescribeRequestDataResponse.cs" />
     <Compile Include="V20201028\Models\Filter.cs" />
@@ -91,11 +81,10 @@
     <Compile Include="V20201028\Models\ModifyPrivateZoneVpcRequest.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneVpcResponse.cs" />
     <Compile Include="V20201028\Models\PrivateDNSAccount.cs" />
-    <Compile Include="V20201028\Models\PrivateZone.cs" />
-    <Compile Include="V20201028\Models\PrivateZoneRecord.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />
     <Compile Include="V20201028\Models\TagInfo.cs" />
+    <Compile Include="V20201028\Models\TldQuota.cs" />
     <Compile Include="V20201028\Models\VpcInfo.cs" />
   </ItemGroup>
 </Project>

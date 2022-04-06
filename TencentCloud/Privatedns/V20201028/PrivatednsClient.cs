@@ -173,126 +173,6 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// This API is used to delete a Private DNS account.
-        /// </summary>
-        /// <param name="req"><see cref="DeletePrivateDNSAccountRequest"/></param>
-        /// <returns><see cref="DeletePrivateDNSAccountResponse"/></returns>
-        public async Task<DeletePrivateDNSAccountResponse> DeletePrivateDNSAccount(DeletePrivateDNSAccountRequest req)
-        {
-             JsonResponseModel<DeletePrivateDNSAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeletePrivateDNSAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateDNSAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a Private DNS account.
-        /// </summary>
-        /// <param name="req"><see cref="DeletePrivateDNSAccountRequest"/></param>
-        /// <returns><see cref="DeletePrivateDNSAccountResponse"/></returns>
-        public DeletePrivateDNSAccountResponse DeletePrivateDNSAccountSync(DeletePrivateDNSAccountRequest req)
-        {
-             JsonResponseModel<DeletePrivateDNSAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeletePrivateDNSAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateDNSAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a private domain and stop DNS.
-        /// </summary>
-        /// <param name="req"><see cref="DeletePrivateZoneRequest"/></param>
-        /// <returns><see cref="DeletePrivateZoneResponse"/></returns>
-        public async Task<DeletePrivateZoneResponse> DeletePrivateZone(DeletePrivateZoneRequest req)
-        {
-             JsonResponseModel<DeletePrivateZoneResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeletePrivateZone");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateZoneResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a private domain and stop DNS.
-        /// </summary>
-        /// <param name="req"><see cref="DeletePrivateZoneRequest"/></param>
-        /// <returns><see cref="DeletePrivateZoneResponse"/></returns>
-        public DeletePrivateZoneResponse DeletePrivateZoneSync(DeletePrivateZoneRequest req)
-        {
-             JsonResponseModel<DeletePrivateZoneResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeletePrivateZone");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateZoneResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a DNS record for a private domain.
-        /// </summary>
-        /// <param name="req"><see cref="DeletePrivateZoneRecordRequest"/></param>
-        /// <returns><see cref="DeletePrivateZoneRecordResponse"/></returns>
-        public async Task<DeletePrivateZoneRecordResponse> DeletePrivateZoneRecord(DeletePrivateZoneRecordRequest req)
-        {
-             JsonResponseModel<DeletePrivateZoneRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeletePrivateZoneRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateZoneRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a DNS record for a private domain.
-        /// </summary>
-        /// <param name="req"><see cref="DeletePrivateZoneRecordRequest"/></param>
-        /// <returns><see cref="DeletePrivateZoneRecordResponse"/></returns>
-        public DeletePrivateZoneRecordResponse DeletePrivateZoneRecordSync(DeletePrivateZoneRecordRequest req)
-        {
-             JsonResponseModel<DeletePrivateZoneRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeletePrivateZoneRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateZoneRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to get the VPC list of a Private DNS account.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountVpcListRequest"/></param>
@@ -453,126 +333,6 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// This API is used to get the private domain information.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrivateZoneRequest"/></param>
-        /// <returns><see cref="DescribePrivateZoneResponse"/></returns>
-        public async Task<DescribePrivateZoneResponse> DescribePrivateZone(DescribePrivateZoneRequest req)
-        {
-             JsonResponseModel<DescribePrivateZoneResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePrivateZone");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateZoneResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the private domain information.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrivateZoneRequest"/></param>
-        /// <returns><see cref="DescribePrivateZoneResponse"/></returns>
-        public DescribePrivateZoneResponse DescribePrivateZoneSync(DescribePrivateZoneRequest req)
-        {
-             JsonResponseModel<DescribePrivateZoneResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePrivateZone");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateZoneResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of private domains.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrivateZoneListRequest"/></param>
-        /// <returns><see cref="DescribePrivateZoneListResponse"/></returns>
-        public async Task<DescribePrivateZoneListResponse> DescribePrivateZoneList(DescribePrivateZoneListRequest req)
-        {
-             JsonResponseModel<DescribePrivateZoneListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePrivateZoneList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateZoneListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of private domains.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrivateZoneListRequest"/></param>
-        /// <returns><see cref="DescribePrivateZoneListResponse"/></returns>
-        public DescribePrivateZoneListResponse DescribePrivateZoneListSync(DescribePrivateZoneListRequest req)
-        {
-             JsonResponseModel<DescribePrivateZoneListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePrivateZoneList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateZoneListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of records for a private domain.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrivateZoneRecordListRequest"/></param>
-        /// <returns><see cref="DescribePrivateZoneRecordListResponse"/></returns>
-        public async Task<DescribePrivateZoneRecordListResponse> DescribePrivateZoneRecordList(DescribePrivateZoneRecordListRequest req)
-        {
-             JsonResponseModel<DescribePrivateZoneRecordListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePrivateZoneRecordList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateZoneRecordListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of records for a private domain.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrivateZoneRecordListRequest"/></param>
-        /// <returns><see cref="DescribePrivateZoneRecordListResponse"/></returns>
-        public DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordListSync(DescribePrivateZoneRecordListRequest req)
-        {
-             JsonResponseModel<DescribePrivateZoneRecordListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePrivateZoneRecordList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateZoneRecordListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the Private DNS activation status.
         /// </summary>
         /// <param name="req"><see cref="DescribePrivateZoneServiceRequest"/></param>
@@ -604,6 +364,46 @@ namespace TencentCloud.Privatedns.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "DescribePrivateZoneService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivateZoneServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query quota usage.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotaUsageRequest"/></param>
+        /// <returns><see cref="DescribeQuotaUsageResponse"/></returns>
+        public async Task<DescribeQuotaUsageResponse> DescribeQuotaUsage(DescribeQuotaUsageRequest req)
+        {
+             JsonResponseModel<DescribeQuotaUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQuotaUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotaUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query quota usage.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotaUsageRequest"/></param>
+        /// <returns><see cref="DescribeQuotaUsageResponse"/></returns>
+        public DescribeQuotaUsageResponse DescribeQuotaUsageSync(DescribeQuotaUsageRequest req)
+        {
+             JsonResponseModel<DescribeQuotaUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQuotaUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotaUsageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

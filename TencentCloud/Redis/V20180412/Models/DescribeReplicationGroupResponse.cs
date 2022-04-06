@@ -21,15 +21,20 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceCreateInstanceResponse : AbstractModel
+    public class DescribeReplicationGroupResponse : AbstractModel
     {
         
         /// <summary>
-        /// Price. Unit: USD (accurate down to the cent)
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Number of replication group
         /// </summary>
-        [JsonProperty("Price")]
-        public float? Price{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// Replication group info
+        /// </summary>
+        [JsonProperty("Groups")]
+        public Groups[] Groups{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,7 +48,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
