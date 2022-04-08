@@ -73,10 +73,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Database engine version. Valid values:
-        /// 10.0.10: MariaDB 10.0.10;
-        /// 10.1.9: MariaDB 10.1.9;
-        /// 5.7.17: Percona 5.7.17.
+        /// Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
         /// If this parameter is left empty, `10.1.9` will be used.
         /// </summary>
         [JsonProperty("DbVersionId")]
@@ -119,7 +116,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string DcnInstanceId{ get; set; }
 
         /// <summary>
-        /// List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+        /// List of parameters. Valid values: 
+        /// `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+        /// `innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
         /// </summary>
         [JsonProperty("InitParams")]
         public DBParamValue[] InitParams{ get; set; }

@@ -85,7 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// Cluster status (Running, Creating, or Abnormal)
+        /// Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
@@ -144,6 +144,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("EnableExternalNode")]
         public bool? EnableExternalNode{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutoUpgradeClusterLevel")]
+        public bool? AutoUpgradeClusterLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +181,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "EnableExternalNode", this.EnableExternalNode);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+            this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         }
     }
 }

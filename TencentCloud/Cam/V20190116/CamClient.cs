@@ -533,6 +533,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to create a user OIDC configuration. Only one user OIDC IdP can be created, and the user SAML SSO IdP will be automatically disabled after it is created.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="CreateUserOIDCConfigResponse"/></returns>
+        public async Task<CreateUserOIDCConfigResponse> CreateUserOIDCConfig(CreateUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<CreateUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a user OIDC configuration. Only one user OIDC IdP can be created, and the user SAML SSO IdP will be automatically disabled after it is created.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="CreateUserOIDCConfigResponse"/></returns>
+        public CreateUserOIDCConfigResponse CreateUserOIDCConfigSync(CreateUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<CreateUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create user SAML configurations.
         /// </summary>
         /// <param name="req"><see cref="CreateUserSAMLConfigRequest"/></param>
@@ -975,46 +1015,6 @@ namespace TencentCloud.Cam.V20190116
         /// <summary>
         /// This API is used to query security settings.
         /// </summary>
-        /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
-        /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
-        public async Task<DescribeSafeAuthFlagResponse> DescribeSafeAuthFlag(DescribeSafeAuthFlagRequest req)
-        {
-             JsonResponseModel<DescribeSafeAuthFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSafeAuthFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query security settings.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
-        /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
-        public DescribeSafeAuthFlagResponse DescribeSafeAuthFlagSync(DescribeSafeAuthFlagRequest req)
-        {
-             JsonResponseModel<DescribeSafeAuthFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSafeAuthFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query security settings.
-        /// </summary>
         /// <param name="req"><see cref="DescribeSafeAuthFlagCollRequest"/></param>
         /// <returns><see cref="DescribeSafeAuthFlagCollResponse"/></returns>
         public async Task<DescribeSafeAuthFlagCollResponse> DescribeSafeAuthFlagColl(DescribeSafeAuthFlagCollRequest req)
@@ -1124,6 +1124,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSubAccounts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the user OIDC configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="DescribeUserOIDCConfigResponse"/></returns>
+        public async Task<DescribeUserOIDCConfigResponse> DescribeUserOIDCConfig(DescribeUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<DescribeUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the user OIDC configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="DescribeUserOIDCConfigResponse"/></returns>
+        public DescribeUserOIDCConfigResponse DescribeUserOIDCConfigSync(DescribeUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<DescribeUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserOIDCConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1284,6 +1324,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DetachUserPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable user SSO.
+        /// </summary>
+        /// <param name="req"><see cref="DisableUserSSORequest"/></param>
+        /// <returns><see cref="DisableUserSSOResponse"/></returns>
+        public async Task<DisableUserSSOResponse> DisableUserSSO(DisableUserSSORequest req)
+        {
+             JsonResponseModel<DisableUserSSOResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableUserSSO");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUserSSOResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable user SSO.
+        /// </summary>
+        /// <param name="req"><see cref="DisableUserSSORequest"/></param>
+        /// <returns><see cref="DisableUserSSOResponse"/></returns>
+        public DisableUserSSOResponse DisableUserSSOSync(DisableUserSSORequest req)
+        {
+             JsonResponseModel<DisableUserSSOResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableUserSSO");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUserSSOResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2766,6 +2846,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "UpdateUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the user OIDC configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="UpdateUserOIDCConfigResponse"/></returns>
+        public async Task<UpdateUserOIDCConfigResponse> UpdateUserOIDCConfig(UpdateUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<UpdateUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the user OIDC configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="UpdateUserOIDCConfigResponse"/></returns>
+        public UpdateUserOIDCConfigResponse UpdateUserOIDCConfigSync(UpdateUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<UpdateUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserOIDCConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

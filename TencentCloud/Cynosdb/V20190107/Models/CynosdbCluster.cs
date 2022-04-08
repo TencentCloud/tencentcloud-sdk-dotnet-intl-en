@@ -25,7 +25,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster status
+        /// Cluster status. Valid values are as follows:
+        /// creating
+        /// running
+        /// isolating
+        /// isolated
+        /// activating (removing isolation)
+        /// offlining (deactivating)
+        /// offlined (deactivated)
+        /// deleting
+        /// deleted
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -75,6 +75,8 @@
     <Compile Include="V20190116\Models\CreateSAMLProviderResponse.cs" />
     <Compile Include="V20190116\Models\CreateServiceLinkedRoleRequest.cs" />
     <Compile Include="V20190116\Models\CreateServiceLinkedRoleResponse.cs" />
+    <Compile Include="V20190116\Models\CreateUserOIDCConfigRequest.cs" />
+    <Compile Include="V20190116\Models\CreateUserOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\CreateUserSAMLConfigRequest.cs" />
     <Compile Include="V20190116\Models\CreateUserSAMLConfigResponse.cs" />
     <Compile Include="V20190116\Models\DeleteGroupRequest.cs" />
@@ -101,10 +103,10 @@
     <Compile Include="V20190116\Models\DescribeSafeAuthFlagCollResponse.cs" />
     <Compile Include="V20190116\Models\DescribeSafeAuthFlagIntlRequest.cs" />
     <Compile Include="V20190116\Models\DescribeSafeAuthFlagIntlResponse.cs" />
-    <Compile Include="V20190116\Models\DescribeSafeAuthFlagRequest.cs" />
-    <Compile Include="V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
     <Compile Include="V20190116\Models\DescribeSubAccountsRequest.cs" />
     <Compile Include="V20190116\Models\DescribeSubAccountsResponse.cs" />
+    <Compile Include="V20190116\Models\DescribeUserOIDCConfigRequest.cs" />
+    <Compile Include="V20190116\Models\DescribeUserOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\DescribeUserSAMLConfigRequest.cs" />
     <Compile Include="V20190116\Models\DescribeUserSAMLConfigResponse.cs" />
     <Compile Include="V20190116\Models\DetachGroupPolicyRequest.cs" />
@@ -113,6 +115,8 @@
     <Compile Include="V20190116\Models\DetachRolePolicyResponse.cs" />
     <Compile Include="V20190116\Models\DetachUserPolicyRequest.cs" />
     <Compile Include="V20190116\Models\DetachUserPolicyResponse.cs" />
+    <Compile Include="V20190116\Models\DisableUserSSORequest.cs" />
+    <Compile Include="V20190116\Models\DisableUserSSOResponse.cs" />
     <Compile Include="V20190116\Models\GetAccountSummaryRequest.cs" />
     <Compile Include="V20190116\Models\GetAccountSummaryResponse.cs" />
     <Compile Include="V20190116\Models\GetCustomMFATokenInfoRequest.cs" />
@@ -200,6 +204,8 @@
     <Compile Include="V20190116\Models\UpdateRoleDescriptionResponse.cs" />
     <Compile Include="V20190116\Models\UpdateSAMLProviderRequest.cs" />
     <Compile Include="V20190116\Models\UpdateSAMLProviderResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateUserOIDCConfigRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateUserOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\UpdateUserRequest.cs" />
     <Compile Include="V20190116\Models\UpdateUserResponse.cs" />
     <Compile Include="V20190116\Models\UpdateUserSAMLConfigRequest.cs" />

@@ -133,17 +133,17 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a cluster.
+        /// This API is used to create an account.
         /// </summary>
-        /// <param name="req"><see cref="CreateClustersRequest"/></param>
-        /// <returns><see cref="CreateClustersResponse"/></returns>
-        public async Task<CreateClustersResponse> CreateClusters(CreateClustersRequest req)
+        /// <param name="req"><see cref="CreateAccountsRequest"/></param>
+        /// <returns><see cref="CreateAccountsResponse"/></returns>
+        public async Task<CreateAccountsResponse> CreateAccounts(CreateAccountsRequest req)
         {
-             JsonResponseModel<CreateClustersResponse> rsp = null;
+             JsonResponseModel<CreateAccountsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateClusters");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClustersResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -153,17 +153,17 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a cluster.
+        /// This API is used to create an account.
         /// </summary>
-        /// <param name="req"><see cref="CreateClustersRequest"/></param>
-        /// <returns><see cref="CreateClustersResponse"/></returns>
-        public CreateClustersResponse CreateClustersSync(CreateClustersRequest req)
+        /// <param name="req"><see cref="CreateAccountsRequest"/></param>
+        /// <returns><see cref="CreateAccountsResponse"/></returns>
+        public CreateAccountsResponse CreateAccountsSync(CreateAccountsRequest req)
         {
-             JsonResponseModel<CreateClustersResponse> rsp = null;
+             JsonResponseModel<CreateAccountsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateClusters");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClustersResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -893,6 +893,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify cluster name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterNameRequest"/></param>
+        /// <returns><see cref="ModifyClusterNameResponse"/></returns>
+        public async Task<ModifyClusterNameResponse> ModifyClusterName(ModifyClusterNameRequest req)
+        {
+             JsonResponseModel<ModifyClusterNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify cluster name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterNameRequest"/></param>
+        /// <returns><see cref="ModifyClusterNameResponse"/></returns>
+        public ModifyClusterNameResponse ModifyClusterNameSync(ModifyClusterNameRequest req)
+        {
+             JsonResponseModel<ModifyClusterNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the parameters of a cluster.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
@@ -964,6 +1004,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstanceSecurityGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNameResponse"/></returns>
+        public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNameResponse"/></returns>
+        public ModifyInstanceNameResponse ModifyInstanceNameSync(ModifyInstanceNameRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

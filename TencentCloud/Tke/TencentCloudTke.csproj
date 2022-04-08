@@ -54,6 +54,7 @@
     <Compile Include="V20180525\Models\AddVpcCniSubnetsRequest.cs" />
     <Compile Include="V20180525\Models\AddVpcCniSubnetsResponse.cs" />
     <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
+    <Compile Include="V20180525\Models\AutoUpgradeClusterLevel.cs" />
     <Compile Include="V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleResponse.cs" />

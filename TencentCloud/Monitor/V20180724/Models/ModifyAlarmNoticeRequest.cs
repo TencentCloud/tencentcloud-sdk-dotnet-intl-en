@@ -66,6 +66,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("URLNotices")]
         public URLNotice[] URLNotices{ get; set; }
 
+        /// <summary>
+        /// The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+        /// </summary>
+        [JsonProperty("CLSNotices")]
+        public CLSNotice[] CLSNotices{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NoticeId", this.NoticeId);
             this.SetParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
             this.SetParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
+            this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
         }
     }
 }
