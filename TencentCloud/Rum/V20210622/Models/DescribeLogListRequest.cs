@@ -61,7 +61,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// Query statement. Maximum length: 4096
+        /// Query statement, which can contain up to 4,096 characters.
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

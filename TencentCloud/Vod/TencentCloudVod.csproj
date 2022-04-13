@@ -179,6 +179,8 @@
     <Compile Include="V20180717\Models\ConcatTask2017.cs" />
     <Compile Include="V20180717\Models\ConfirmEventsRequest.cs" />
     <Compile Include="V20180717\Models\ConfirmEventsResponse.cs" />
+    <Compile Include="V20180717\Models\ContentReviewOcrResult.cs" />
+    <Compile Include="V20180717\Models\ContentReviewResult.cs" />
     <Compile Include="V20180717\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="V20180717\Models\CoverBySnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\CoverBySnapshotTaskOutput.cs" />
@@ -277,6 +279,8 @@
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeMediaPlayStatDetailsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeMediaPlayStatDetailsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaProcessUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeMediaProcessUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribePersonSamplesRequest.cs" />
@@ -314,9 +318,6 @@
     <Compile Include="V20180717\Models\DrmStreamingsInfo.cs" />
     <Compile Include="V20180717\Models\DrmStreamingsInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\EditMediaFileInfo.cs" />
-    <Compile Include="V20180717\Models\EditMediaOutputConfig.cs" />
-    <Compile Include="V20180717\Models\EditMediaRequest.cs" />
-    <Compile Include="V20180717\Models\EditMediaResponse.cs" />
     <Compile Include="V20180717\Models\EditMediaStreamInfo.cs" />
     <Compile Include="V20180717\Models\EditMediaTask.cs" />
     <Compile Include="V20180717\Models\EditMediaTaskInput.cs" />
@@ -339,6 +340,7 @@
     <Compile Include="V20180717\Models\HighlightSegmentItem.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\ImageContentReviewInput.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTemplate.cs" />
     <Compile Include="V20180717\Models\ImageTransform.cs" />
@@ -453,11 +455,13 @@
     <Compile Include="V20180717\Models\ParseStreamingManifestRequest.cs" />
     <Compile Include="V20180717\Models\ParseStreamingManifestResponse.cs" />
     <Compile Include="V20180717\Models\PlayStatFileInfo.cs" />
+    <Compile Include="V20180717\Models\PlayStatInfo.cs" />
     <Compile Include="V20180717\Models\PlayerConfig.cs" />
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PoliticalConfigureInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\PoliticalImageResult.cs" />
     <Compile Include="V20180717\Models\PoliticalImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PoliticalOcrReviewTemplateInfo.cs" />
@@ -466,12 +470,15 @@
     <Compile Include="V20180717\Models\PornAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PornConfigureInfo.cs" />
     <Compile Include="V20180717\Models\PornConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\PornImageResult.cs" />
     <Compile Include="V20180717\Models\PornImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PornImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PornOcrReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PornOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\ProcedureTask.cs" />
     <Compile Include="V20180717\Models\ProcedureTemplate.cs" />
+    <Compile Include="V20180717\Models\ProcessImageRequest.cs" />
+    <Compile Include="V20180717\Models\ProcessImageResponse.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureRequest.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureResponse.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByUrlRequest.cs" />
@@ -532,6 +539,7 @@
     <Compile Include="V20180717\Models\TempCertificate.cs" />
     <Compile Include="V20180717\Models\TerrorismConfigureInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\TerrorismImageResult.cs" />
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\TerrorismOcrReviewTemplateInfo.cs" />
@@ -559,8 +567,6 @@
     <Compile Include="V20180717\Models\WatermarkCycleConfigForUpdate.cs" />
     <Compile Include="V20180717\Models\WatermarkInput.cs" />
     <Compile Include="V20180717\Models\WatermarkTemplate.cs" />
-    <Compile Include="V20180717\Models\WeChatMiniProgramPublishRequest.cs" />
-    <Compile Include="V20180717\Models\WeChatMiniProgramPublishResponse.cs" />
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTask.cs" />
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTaskInput.cs" />
     <Compile Include="V20180717\Models\WechatPublishTask.cs" />

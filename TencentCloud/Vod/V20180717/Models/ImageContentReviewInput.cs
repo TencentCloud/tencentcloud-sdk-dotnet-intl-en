@@ -15,32 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeScoresRequest : AbstractModel
+    public class ImageContentReviewInput : AbstractModel
     {
         
         /// <summary>
-        /// End time
+        /// The ID of the image recognition template to use. Valid values:
+        /// <li>10: All recognition types enabled</li>
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// Start time
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// Project ID
-        /// </summary>
-        [JsonProperty("ID")]
-        public long? ID{ get; set; }
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
 
 
         /// <summary>
@@ -48,9 +37,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }
 }

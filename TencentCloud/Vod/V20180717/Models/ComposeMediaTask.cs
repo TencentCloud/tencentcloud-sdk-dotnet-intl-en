@@ -76,8 +76,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public ComposeMediaTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Metadata of a source video.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The metadata of the output video.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

@@ -15,26 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class PornImageResult : AbstractModel
     {
         
         /// <summary>
-        /// One or more filter values.
+        /// The confidence score for the pornographic content recognition result. Value range: 0-100.
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("Confidence")]
+        public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Filter name.
+        /// The suggestion for handling the detected pornographic content. Valid values:
+        /// <li>pass/li>
+        /// <li>review</li>
+        /// <li>block</li>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
+
+        /// <summary>
+        /// The label for the detected pornographic content. Valid values:
+        /// <li>porn</li>
+        /// <li>sexy</li>
+        /// <li>vulgar</li>
+        /// <li>intimacy</li>
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
 
 
         /// <summary>
@@ -42,8 +55,9 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

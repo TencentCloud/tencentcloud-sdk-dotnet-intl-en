@@ -1679,46 +1679,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the list of projects (under teams created by an instance).
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
-        /// <returns><see cref="DescribeProjectsResponse"/></returns>
-        public async Task<DescribeProjectsResponse> DescribeProjects(DescribeProjectsRequest req)
-        {
-             JsonResponseModel<DescribeProjectsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeProjects");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of projects (under teams created by an instance).
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
-        /// <returns><see cref="DescribeProjectsResponse"/></returns>
-        public DescribeProjectsResponse DescribeProjectsSync(DescribeProjectsRequest req)
-        {
-             JsonResponseModel<DescribeProjectsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeProjects");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to get the list of PVs under a project.
         /// </summary>
         /// <param name="req"><see cref="DescribePvListRequest"/></param>
@@ -1839,46 +1799,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the list of homepage scores.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScoresRequest"/></param>
-        /// <returns><see cref="DescribeScoresResponse"/></returns>
-        public async Task<DescribeScoresResponse> DescribeScores(DescribeScoresRequest req)
-        {
-             JsonResponseModel<DescribeScoresResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeScores");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScoresResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of homepage scores.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeScoresRequest"/></param>
-        /// <returns><see cref="DescribeScoresResponse"/></returns>
-        public DescribeScoresResponse DescribeScoresSync(DescribeScoresRequest req)
-        {
-             JsonResponseModel<DescribeScoresResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeScores");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScoresResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query region information.
         /// </summary>
         /// <param name="req"><see cref="DescribeTawAreasRequest"/></param>
@@ -1910,46 +1830,6 @@ namespace TencentCloud.Rum.V20210622
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTawAreas");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTawAreasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query instance information.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTawInstancesRequest"/></param>
-        /// <returns><see cref="DescribeTawInstancesResponse"/></returns>
-        public async Task<DescribeTawInstancesResponse> DescribeTawInstances(DescribeTawInstancesRequest req)
-        {
-             JsonResponseModel<DescribeTawInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTawInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTawInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query instance information.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTawInstancesRequest"/></param>
-        /// <returns><see cref="DescribeTawInstancesResponse"/></returns>
-        public DescribeTawInstancesResponse DescribeTawInstancesSync(DescribeTawInstancesRequest req)
-        {
-             JsonResponseModel<DescribeTawInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTawInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTawInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

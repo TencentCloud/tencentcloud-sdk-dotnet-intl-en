@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaBasicInfo MediaBasicInfo{ get; set; }
 
         /// <summary>
-        /// Metadata of a source video
+        /// The metadata of the output video.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

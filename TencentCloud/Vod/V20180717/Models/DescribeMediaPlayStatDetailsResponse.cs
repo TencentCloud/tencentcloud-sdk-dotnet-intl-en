@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTawInstancesResponse : AbstractModel
+    public class DescribeMediaPlayStatDetailsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance list
+        /// The playback statistics.
         /// </summary>
-        [JsonProperty("InstanceSet")]
-        public RumInstanceInfo[] InstanceSet{ get; set; }
-
-        /// <summary>
-        /// Total number of instances
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("PlayStatInfoSet")]
+        public PlayStatInfo[] PlayStatInfoSet{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +42,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "PlayStatInfoSet.", this.PlayStatInfoSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
