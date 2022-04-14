@@ -147,46 +147,6 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// This API is used to create a function based on the input parameters.
-        /// </summary>
-        /// <param name="req"><see cref="CreateFunctionRequest"/></param>
-        /// <returns><see cref="CreateFunctionResponse"/></returns>
-        public async Task<CreateFunctionResponse> CreateFunction(CreateFunctionRequest req)
-        {
-             JsonResponseModel<CreateFunctionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateFunction");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFunctionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a function based on the input parameters.
-        /// </summary>
-        /// <param name="req"><see cref="CreateFunctionRequest"/></param>
-        /// <returns><see cref="CreateFunctionResponse"/></returns>
-        public CreateFunctionResponse CreateFunctionSync(CreateFunctionRequest req)
-        {
-             JsonResponseModel<CreateFunctionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateFunction");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFunctionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to create a namespace based on the input parameters.
         /// </summary>
         /// <param name="req"><see cref="CreateNamespaceRequest"/></param>
@@ -658,46 +618,6 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "GetAsyncEventStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAsyncEventStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
-        /// </summary>
-        /// <param name="req"><see cref="GetFunctionRequest"/></param>
-        /// <returns><see cref="GetFunctionResponse"/></returns>
-        public async Task<GetFunctionResponse> GetFunction(GetFunctionRequest req)
-        {
-             JsonResponseModel<GetFunctionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetFunction");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFunctionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
-        /// </summary>
-        /// <param name="req"><see cref="GetFunctionRequest"/></param>
-        /// <returns><see cref="GetFunctionResponse"/></returns>
-        public GetFunctionResponse GetFunctionSync(GetFunctionRequest req)
-        {
-             JsonResponseModel<GetFunctionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetFunction");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFunctionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1698,46 +1618,6 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "UpdateFunctionCode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionCodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to update the function configuration based on the input parameters.
-        /// </summary>
-        /// <param name="req"><see cref="UpdateFunctionConfigurationRequest"/></param>
-        /// <returns><see cref="UpdateFunctionConfigurationResponse"/></returns>
-        public async Task<UpdateFunctionConfigurationResponse> UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req)
-        {
-             JsonResponseModel<UpdateFunctionConfigurationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateFunctionConfiguration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionConfigurationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to update the function configuration based on the input parameters.
-        /// </summary>
-        /// <param name="req"><see cref="UpdateFunctionConfigurationRequest"/></param>
-        /// <returns><see cref="UpdateFunctionConfigurationResponse"/></returns>
-        public UpdateFunctionConfigurationResponse UpdateFunctionConfigurationSync(UpdateFunctionConfigurationRequest req)
-        {
-             JsonResponseModel<UpdateFunctionConfigurationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateFunctionConfiguration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionConfigurationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

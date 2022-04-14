@@ -45,25 +45,19 @@
 
   <ItemGroup>
     <Compile Include="V20180416\ScfClient.cs" />
-    <Compile Include="V20180416\Models\AccessInfo.cs" />
     <Compile Include="V20180416\Models\Alias.cs" />
     <Compile Include="V20180416\Models\AsyncEvent.cs" />
     <Compile Include="V20180416\Models\AsyncEventStatus.cs" />
     <Compile Include="V20180416\Models\AsyncTriggerConfig.cs" />
-    <Compile Include="V20180416\Models\CfsConfig.cs" />
-    <Compile Include="V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="V20180416\Models\Code.cs" />
     <Compile Include="V20180416\Models\CopyFunctionRequest.cs" />
     <Compile Include="V20180416\Models\CopyFunctionResponse.cs" />
     <Compile Include="V20180416\Models\CreateAliasRequest.cs" />
     <Compile Include="V20180416\Models\CreateAliasResponse.cs" />
-    <Compile Include="V20180416\Models\CreateFunctionRequest.cs" />
-    <Compile Include="V20180416\Models\CreateFunctionResponse.cs" />
     <Compile Include="V20180416\Models\CreateNamespaceRequest.cs" />
     <Compile Include="V20180416\Models\CreateNamespaceResponse.cs" />
     <Compile Include="V20180416\Models\CreateTriggerRequest.cs" />
     <Compile Include="V20180416\Models\CreateTriggerResponse.cs" />
-    <Compile Include="V20180416\Models\DeadLetterConfig.cs" />
     <Compile Include="V20180416\Models\DeleteAliasRequest.cs" />
     <Compile Include="V20180416\Models\DeleteAliasResponse.cs" />
     <Compile Include="V20180416\Models\DeleteFunctionRequest.cs" />
@@ -78,10 +72,6 @@
     <Compile Include="V20180416\Models\DeleteReservedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\DeleteTriggerRequest.cs" />
     <Compile Include="V20180416\Models\DeleteTriggerResponse.cs" />
-    <Compile Include="V20180416\Models\EipConfigIn.cs" />
-    <Compile Include="V20180416\Models\EipConfigOut.cs" />
-    <Compile Include="V20180416\Models\EipOutConfig.cs" />
-    <Compile Include="V20180416\Models\Environment.cs" />
     <Compile Include="V20180416\Models\Filter.cs" />
     <Compile Include="V20180416\Models\Function.cs" />
     <Compile Include="V20180416\Models\FunctionLog.cs" />
@@ -98,8 +88,6 @@
     <Compile Include="V20180416\Models\GetFunctionEventInvokeConfigResponse.cs" />
     <Compile Include="V20180416\Models\GetFunctionLogsRequest.cs" />
     <Compile Include="V20180416\Models\GetFunctionLogsResponse.cs" />
-    <Compile Include="V20180416\Models\GetFunctionRequest.cs" />
-    <Compile Include="V20180416\Models\GetFunctionResponse.cs" />
     <Compile Include="V20180416\Models\GetLayerVersionRequest.cs" />
     <Compile Include="V20180416\Models\GetLayerVersionResponse.cs" />
     <Compile Include="V20180416\Models\GetProvisionedConcurrencyConfigRequest.cs" />
@@ -114,7 +102,6 @@
     <Compile Include="V20180416\Models\InvokeRequest.cs" />
     <Compile Include="V20180416\Models\InvokeResponse.cs" />
     <Compile Include="V20180416\Models\LayerVersionInfo.cs" />
-    <Compile Include="V20180416\Models\LayerVersionSimple.cs" />
     <Compile Include="V20180416\Models\LimitsInfo.cs" />
     <Compile Include="V20180416\Models\ListAliasesRequest.cs" />
     <Compile Include="V20180416\Models\ListAliasesResponse.cs" />
@@ -137,9 +124,6 @@
     <Compile Include="V20180416\Models\Namespace.cs" />
     <Compile Include="V20180416\Models\NamespaceLimit.cs" />
     <Compile Include="V20180416\Models\NamespaceUsage.cs" />
-    <Compile Include="V20180416\Models\ProtocolParams.cs" />
-    <Compile Include="V20180416\Models\PublicNetConfigIn.cs" />
-    <Compile Include="V20180416\Models\PublicNetConfigOut.cs" />
     <Compile Include="V20180416\Models\PublishLayerVersionRequest.cs" />
     <Compile Include="V20180416\Models\PublishLayerVersionResponse.cs" />
     <Compile Include="V20180416\Models\PublishVersionRequest.cs" />
@@ -168,18 +152,13 @@
     <Compile Include="V20180416\Models\UpdateAliasResponse.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionCodeRequest.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionCodeResponse.cs" />
-    <Compile Include="V20180416\Models\UpdateFunctionConfigurationRequest.cs" />
-    <Compile Include="V20180416\Models\UpdateFunctionConfigurationResponse.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionEventInvokeConfigRequest.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionEventInvokeConfigResponse.cs" />
     <Compile Include="V20180416\Models\UpdateNamespaceRequest.cs" />
     <Compile Include="V20180416\Models\UpdateNamespaceResponse.cs" />
     <Compile Include="V20180416\Models\UsageInfo.cs" />
-    <Compile Include="V20180416\Models\Variable.cs" />
     <Compile Include="V20180416\Models\VersionMatch.cs" />
     <Compile Include="V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
     <Compile Include="V20180416\Models\VersionWeight.cs" />
-    <Compile Include="V20180416\Models\VpcConfig.cs" />
-    <Compile Include="V20180416\Models\WSParams.cs" />
   </ItemGroup>
 </Project>

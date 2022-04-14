@@ -54,6 +54,35 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("TriggerActions")]
         public TriggerAction[] TriggerActions{ get; set; }
 
+        /// <summary>
+        /// Specifies the provisioned concurrency type.
+        /// `Default`: Static provisioned concurrency. 
+        /// `ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+        /// If `ConcurrencyUtilizationTracking` is passed in, 
+        /// 
+        /// `TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+        /// </summary>
+        [JsonProperty("ProvisionedType")]
+        public string ProvisionedType{ get; set; }
+
+        /// <summary>
+        /// The target concurrency utilization. Range: (0,1) (two decimal places)
+        /// </summary>
+        [JsonProperty("TrackingTarget")]
+        public float? TrackingTarget{ get; set; }
+
+        /// <summary>
+        /// The minimum number of instances. It can not be smaller than `1`.
+        /// </summary>
+        [JsonProperty("MinCapacity")]
+        public ulong? MinCapacity{ get; set; }
+
+        /// <summary>
+        /// The maximum number of instances
+        /// </summary>
+        [JsonProperty("MaxCapacity")]
+        public ulong? MaxCapacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +94,10 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "VersionProvisionedConcurrencyNum", this.VersionProvisionedConcurrencyNum);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
+            this.SetParamSimple(map, prefix + "ProvisionedType", this.ProvisionedType);
+            this.SetParamSimple(map, prefix + "TrackingTarget", this.TrackingTarget);
+            this.SetParamSimple(map, prefix + "MinCapacity", this.MinCapacity);
+            this.SetParamSimple(map, prefix + "MaxCapacity", this.MaxCapacity);
         }
     }
 }

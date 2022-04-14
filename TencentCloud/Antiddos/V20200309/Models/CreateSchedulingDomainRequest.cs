@@ -24,12 +24,19 @@ namespace TencentCloud.Antiddos.V20200309.Models
     public class CreateSchedulingDomainRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

@@ -1453,46 +1453,6 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to obtain a CC precise protection policy.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCCPrecisionPlyListRequest"/></param>
-        /// <returns><see cref="DescribeCCPrecisionPlyListResponse"/></returns>
-        public async Task<DescribeCCPrecisionPlyListResponse> DescribeCCPrecisionPlyList(DescribeCCPrecisionPlyListRequest req)
-        {
-             JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCCPrecisionPlyList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain a CC precise protection policy.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCCPrecisionPlyListRequest"/></param>
-        /// <returns><see cref="DescribeCCPrecisionPlyListResponse"/></returns>
-        public DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyListSync(DescribeCCPrecisionPlyListRequest req)
-        {
-             JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCCPrecisionPlyList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the list of CC cleansing thresholds.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCThresholdListRequest"/></param>
@@ -1564,86 +1524,6 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCCTrend");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCTrendResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain a layer-4 access control list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCcBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DescribeCcBlackWhiteIpListResponse"/></returns>
-        public async Task<DescribeCcBlackWhiteIpListResponse> DescribeCcBlackWhiteIpList(DescribeCcBlackWhiteIpListRequest req)
-        {
-             JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCcBlackWhiteIpList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain a layer-4 access control list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCcBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DescribeCcBlackWhiteIpListResponse"/></returns>
-        public DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpListSync(DescribeCcBlackWhiteIpListRequest req)
-        {
-             JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCcBlackWhiteIpList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain a list of regional blocking configurations.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCcGeoIPBlockConfigListRequest"/></param>
-        /// <returns><see cref="DescribeCcGeoIPBlockConfigListResponse"/></returns>
-        public async Task<DescribeCcGeoIPBlockConfigListResponse> DescribeCcGeoIPBlockConfigList(DescribeCcGeoIPBlockConfigListRequest req)
-        {
-             JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCcGeoIPBlockConfigList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain a list of regional blocking configurations.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCcGeoIPBlockConfigListRequest"/></param>
-        /// <returns><see cref="DescribeCcGeoIPBlockConfigListResponse"/></returns>
-        public DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigListSync(DescribeCcGeoIPBlockConfigListRequest req)
-        {
-             JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCcGeoIPBlockConfigList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1804,46 +1684,6 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeListBGPIPInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListBGPIPInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get a list of Anti-DDoS Pro instances.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeListBGPInstancesRequest"/></param>
-        /// <returns><see cref="DescribeListBGPInstancesResponse"/></returns>
-        public async Task<DescribeListBGPInstancesResponse> DescribeListBGPInstances(DescribeListBGPInstancesRequest req)
-        {
-             JsonResponseModel<DescribeListBGPInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeListBGPInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListBGPInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get a list of Anti-DDoS Pro instances.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeListBGPInstancesRequest"/></param>
-        /// <returns><see cref="DescribeListBGPInstancesResponse"/></returns>
-        public DescribeListBGPInstancesResponse DescribeListBGPInstancesSync(DescribeListBGPInstancesRequest req)
-        {
-             JsonResponseModel<DescribeListBGPInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeListBGPInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListBGPInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

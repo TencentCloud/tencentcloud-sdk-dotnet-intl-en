@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.414</VersionPrefix>
+    <VersionPrefix>3.0.415</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,19 +81,13 @@
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstance.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstanceSpecification.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstanceUsages.cs" />
-    <Compile Include="Antiddos\V20200309\Models\BGPInstance.cs" />
-    <Compile Include="Antiddos\V20200309\Models\BGPInstanceSpecification.cs" />
-    <Compile Include="Antiddos\V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="Antiddos\V20200309\Models\BlackWhiteIpRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\BoundIpInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\CCLevelPolicy.cs" />
     <Compile Include="Antiddos\V20200309\Models\CCPrecisionPlyRecord.cs" />
-    <Compile Include="Antiddos\V20200309\Models\CCPrecisionPolicy.cs" />
     <Compile Include="Antiddos\V20200309\Models\CCReqLimitPolicyRecord.cs" />
     <Compile Include="Antiddos\V20200309\Models\CCThresholdPolicy.cs" />
-    <Compile Include="Antiddos\V20200309\Models\CcBlackWhiteIpPolicy.cs" />
     <Compile Include="Antiddos\V20200309\Models\CcGeoIPBlockConfig.cs" />
-    <Compile Include="Antiddos\V20200309\Models\CcGeoIpPolicyNew.cs" />
     <Compile Include="Antiddos\V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
@@ -167,16 +161,10 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelPolicyRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelPolicyResponse.cs" />
-    <Compile Include="Antiddos\V20200309\Models\DescribeCCPrecisionPlyListRequest.cs" />
-    <Compile Include="Antiddos\V20200309\Models\DescribeCCPrecisionPlyListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCThresholdListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCThresholdListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendResponse.cs" />
-    <Compile Include="Antiddos\V20200309\Models\DescribeCcBlackWhiteIpListRequest.cs" />
-    <Compile Include="Antiddos\V20200309\Models\DescribeCcBlackWhiteIpListResponse.cs" />
-    <Compile Include="Antiddos\V20200309\Models\DescribeCcGeoIPBlockConfigListRequest.cs" />
-    <Compile Include="Antiddos\V20200309\Models\DescribeCcGeoIPBlockConfigListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -185,8 +173,6 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeL7RulesBySSLCertIdResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListBGPIPInstancesRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListBGPIPInstancesResponse.cs" />
-    <Compile Include="Antiddos\V20200309\Models\DescribeListBGPInstancesRequest.cs" />
-    <Compile Include="Antiddos\V20200309\Models\DescribeListBGPInstancesResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListDDoSAIRequest.cs" />
@@ -213,7 +199,6 @@
     <Compile Include="Antiddos\V20200309\Models\DisassociateDDoSEipAddressResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\EipAddressPackRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\EipAddressRelation.cs" />
-    <Compile Include="Antiddos\V20200309\Models\EipProductInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\ForwardListener.cs" />
     <Compile Include="Antiddos\V20200309\Models\IPAlarmThresholdRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\IPLineInfo.cs" />
@@ -5875,25 +5860,19 @@
     <Compile Include="Rum\V20210622\Models\Tag.cs" />
     <Compile Include="Rum\V20210622\Models\Whitelist.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
-    <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
     <Compile Include="Scf\V20180416\Models\AsyncEvent.cs" />
     <Compile Include="Scf\V20180416\Models\AsyncEventStatus.cs" />
     <Compile Include="Scf\V20180416\Models\AsyncTriggerConfig.cs" />
-    <Compile Include="Scf\V20180416\Models\CfsConfig.cs" />
-    <Compile Include="Scf\V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
     <Compile Include="Scf\V20180416\Models\CopyFunctionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CopyFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\CreateAliasRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CreateAliasResponse.cs" />
-    <Compile Include="Scf\V20180416\Models\CreateFunctionRequest.cs" />
-    <Compile Include="Scf\V20180416\Models\CreateFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\CreateNamespaceRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CreateNamespaceResponse.cs" />
     <Compile Include="Scf\V20180416\Models\CreateTriggerRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CreateTriggerResponse.cs" />
-    <Compile Include="Scf\V20180416\Models\DeadLetterConfig.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteAliasRequest.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteFunctionRequest.cs" />
@@ -5908,10 +5887,6 @@
     <Compile Include="Scf\V20180416\Models\DeleteReservedConcurrencyConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteTriggerRequest.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteTriggerResponse.cs" />
-    <Compile Include="Scf\V20180416\Models\EipConfigIn.cs" />
-    <Compile Include="Scf\V20180416\Models\EipConfigOut.cs" />
-    <Compile Include="Scf\V20180416\Models\EipOutConfig.cs" />
-    <Compile Include="Scf\V20180416\Models\Environment.cs" />
     <Compile Include="Scf\V20180416\Models\Filter.cs" />
     <Compile Include="Scf\V20180416\Models\Function.cs" />
     <Compile Include="Scf\V20180416\Models\FunctionLog.cs" />
@@ -5928,8 +5903,6 @@
     <Compile Include="Scf\V20180416\Models\GetFunctionEventInvokeConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionLogsRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionLogsResponse.cs" />
-    <Compile Include="Scf\V20180416\Models\GetFunctionRequest.cs" />
-    <Compile Include="Scf\V20180416\Models\GetFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetLayerVersionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetLayerVersionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetProvisionedConcurrencyConfigRequest.cs" />
@@ -5944,7 +5917,6 @@
     <Compile Include="Scf\V20180416\Models\InvokeRequest.cs" />
     <Compile Include="Scf\V20180416\Models\InvokeResponse.cs" />
     <Compile Include="Scf\V20180416\Models\LayerVersionInfo.cs" />
-    <Compile Include="Scf\V20180416\Models\LayerVersionSimple.cs" />
     <Compile Include="Scf\V20180416\Models\LimitsInfo.cs" />
     <Compile Include="Scf\V20180416\Models\ListAliasesRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListAliasesResponse.cs" />
@@ -5967,9 +5939,6 @@
     <Compile Include="Scf\V20180416\Models\Namespace.cs" />
     <Compile Include="Scf\V20180416\Models\NamespaceLimit.cs" />
     <Compile Include="Scf\V20180416\Models\NamespaceUsage.cs" />
-    <Compile Include="Scf\V20180416\Models\ProtocolParams.cs" />
-    <Compile Include="Scf\V20180416\Models\PublicNetConfigIn.cs" />
-    <Compile Include="Scf\V20180416\Models\PublicNetConfigOut.cs" />
     <Compile Include="Scf\V20180416\Models\PublishLayerVersionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\PublishLayerVersionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\PublishVersionRequest.cs" />
@@ -5998,19 +5967,14 @@
     <Compile Include="Scf\V20180416\Models\UpdateAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionCodeRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionCodeResponse.cs" />
-    <Compile Include="Scf\V20180416\Models\UpdateFunctionConfigurationRequest.cs" />
-    <Compile Include="Scf\V20180416\Models\UpdateFunctionConfigurationResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionEventInvokeConfigRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionEventInvokeConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UsageInfo.cs" />
-    <Compile Include="Scf\V20180416\Models\Variable.cs" />
     <Compile Include="Scf\V20180416\Models\VersionMatch.cs" />
     <Compile Include="Scf\V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
     <Compile Include="Scf\V20180416\Models\VersionWeight.cs" />
-    <Compile Include="Scf\V20180416\Models\VpcConfig.cs" />
-    <Compile Include="Scf\V20180416\Models\WSParams.cs" />
     <Compile Include="Ses\V20201002\SesClient.cs" />
     <Compile Include="Ses\V20201002\Models\Attachment.cs" />
     <Compile Include="Ses\V20201002\Models\BlackEmailAddress.cs" />
