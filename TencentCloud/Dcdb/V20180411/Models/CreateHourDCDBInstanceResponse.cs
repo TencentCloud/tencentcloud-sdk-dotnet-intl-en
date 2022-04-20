@@ -37,6 +37,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? FlowId{ get; set; }
 
         /// <summary>
+        /// Order ID, which is used for calling the `DescribeOrders` API.
+        ///  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
+        /// </summary>
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -613,46 +613,6 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
-        /// This API is used to query the list of cluster operation applications.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
-        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
-        public async Task<DescribeApplicationsResponse> DescribeApplications(DescribeApplicationsRequest req)
-        {
-             JsonResponseModel<DescribeApplicationsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeApplications");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the list of cluster operation applications.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
-        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
-        public DescribeApplicationsResponse DescribeApplicationsSync(DescribeApplicationsRequest req)
-        {
-             JsonResponseModel<DescribeApplicationsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeApplications");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to get the associated tag list of a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterTagsRequest"/></param>

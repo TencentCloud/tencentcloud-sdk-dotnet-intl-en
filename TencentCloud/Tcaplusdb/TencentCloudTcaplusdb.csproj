@@ -45,7 +45,6 @@
 
   <ItemGroup>
     <Compile Include="V20190823\TcaplusdbClient.cs" />
-    <Compile Include="V20190823\Models\Application.cs" />
     <Compile Include="V20190823\Models\ApplyResult.cs" />
     <Compile Include="V20190823\Models\ApplyStatus.cs" />
     <Compile Include="V20190823\Models\ClearTablesRequest.cs" />
@@ -78,8 +77,6 @@
     <Compile Include="V20190823\Models\DeleteTableIndexResponse.cs" />
     <Compile Include="V20190823\Models\DeleteTablesRequest.cs" />
     <Compile Include="V20190823\Models\DeleteTablesResponse.cs" />
-    <Compile Include="V20190823\Models\DescribeApplicationsRequest.cs" />
-    <Compile Include="V20190823\Models\DescribeApplicationsResponse.cs" />
     <Compile Include="V20190823\Models\DescribeClusterTagsRequest.cs" />
     <Compile Include="V20190823\Models\DescribeClusterTagsResponse.cs" />
     <Compile Include="V20190823\Models\DescribeClustersRequest.cs" />

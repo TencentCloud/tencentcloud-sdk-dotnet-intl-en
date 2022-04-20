@@ -25,54 +25,59 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// `Context` for loading subsequent content. It will expire after 1 hour.
+        /// You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
+        /// Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+        /// Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// Whether the return is the analysis result
+        /// Whether the returned data is the analysis (SQL) result
         /// </summary>
         [JsonProperty("Analysis")]
         public bool? Analysis{ get; set; }
 
         /// <summary>
-        /// If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ColNames")]
-        public string[] ColNames{ get; set; }
-
-        /// <summary>
-        /// Log query result. If `Analysis` is `True`, `null` may be returned
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Raw logs that meet the search conditions
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Results")]
         public LogInfo[] Results{ get; set; }
 
         /// <summary>
-        /// Log analysis result. If `Analysis` is `False`, `null` may be returned
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Column names of log analysis
+        /// This parameter is valid only when `UseNewAnalysis` is `false`.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("ColNames")]
+        public string[] ColNames{ get; set; }
+
+        /// <summary>
+        /// Log analysis result
+        /// This parameter is valid only when `UseNewAnalysis` is `false`.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("AnalysisResults")]
         public LogItems[] AnalysisResults{ get; set; }
 
         /// <summary>
-        /// New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Log analysis result
+        /// This parameter is valid only when `UseNewAnalysis` is `true`.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("AnalysisRecords")]
         public string[] AnalysisRecords{ get; set; }
 
         /// <summary>
-        /// Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Column attributes of log analysis
+        /// This parameter is valid only when `UseNewAnalysis` is `true`.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Columns")]
         public Column[] Columns{ get; set; }
@@ -92,8 +97,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
             this.SetParamSimple(map, prefix + "Analysis", this.Analysis);
-            this.SetParamArraySimple(map, prefix + "ColNames.", this.ColNames);
             this.SetParamArrayObj(map, prefix + "Results.", this.Results);
+            this.SetParamArraySimple(map, prefix + "ColNames.", this.ColNames);
             this.SetParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
             this.SetParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);

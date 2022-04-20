@@ -25,22 +25,22 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic
+        /// Log topic ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log export search statement
-        /// </summary>
-        [JsonProperty("Query")]
-        public string Query{ get; set; }
-
-        /// <summary>
-        /// Number of logs to be exported. Maximum value: 10 million
+        /// Number of logs to be exported. Maximum value: 50 million
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
+
+        /// <summary>
+        /// Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
 
         /// <summary>
         /// Start time of the log to be exported, which is a timestamp in milliseconds
@@ -73,8 +73,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Order", this.Order);

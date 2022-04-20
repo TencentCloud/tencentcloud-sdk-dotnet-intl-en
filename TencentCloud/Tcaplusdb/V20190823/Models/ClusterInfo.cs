@@ -192,6 +192,27 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("KafkaInfo")]
         public KafkaInfo KafkaInfo{ get; set; }
 
+        /// <summary>
+        /// The number of days after which the cluster Txh backup file will expire and be deleted.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TxhBackupExpireDay")]
+        public ulong? TxhBackupExpireDay{ get; set; }
+
+        /// <summary>
+        /// The number of days after which the cluster Ulog backup file will expire and be deleted.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UlogBackupExpireDay")]
+        public ulong? UlogBackupExpireDay{ get; set; }
+
+        /// <summary>
+        /// Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsReadOnlyUlogBackupExpireDay")]
+        public ulong? IsReadOnlyUlogBackupExpireDay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +245,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
             this.SetParamSimple(map, prefix + "DataFlowStatus", this.DataFlowStatus);
             this.SetParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
+            this.SetParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+            this.SetParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
+            this.SetParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
         }
     }
 }

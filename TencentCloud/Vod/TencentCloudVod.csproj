@@ -209,6 +209,8 @@
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateStorageRegionRequest.cs" />
+    <Compile Include="V20180717\Models\CreateStorageRegionResponse.cs" />
     <Compile Include="V20180717\Models\CreateSubAppIdRequest.cs" />
     <Compile Include="V20180717\Models\CreateSubAppIdResponse.cs" />
     <Compile Include="V20180717\Models\CreateSuperPlayerConfigRequest.cs" />
@@ -297,6 +299,8 @@
     <Compile Include="V20180717\Models\DescribeStorageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeStorageDetailsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeStorageDetailsResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeStorageRegionsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeStorageRegionsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSubAppIdsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeSubAppIdsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSuperPlayerConfigsRequest.cs" />
@@ -415,6 +419,8 @@
     <Compile Include="V20180717\Models\ModifyClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyDefaultStorageRegionRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyDefaultStorageRegionResponse.cs" />
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoRequest.cs" />
@@ -524,6 +530,7 @@
     <Compile Include="V20180717\Models\SplitMediaTaskSegmentInfo.cs" />
     <Compile Include="V20180717\Models\StatDataItem.cs" />
     <Compile Include="V20180717\Models\StickerTrackItem.cs" />
+    <Compile Include="V20180717\Models\StorageRegionInfo.cs" />
     <Compile Include="V20180717\Models\StorageStatData.cs" />
     <Compile Include="V20180717\Models\SubAppIdInfo.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInput.cs" />

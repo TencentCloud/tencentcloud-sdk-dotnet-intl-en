@@ -25,19 +25,19 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+        /// [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
-        /// The tags to be added or modified. If the resource described by `Resource` is not associated with the input tag keys, an association will be added. If the tag keys are already associated, the values corresponding to the associated tag keys will be modified to the input values. This API must contain either `ReplaceTags` or `DeleteTag`. And these two parameters cannot include the same tag keys.
+        /// The tags to be added or modified. If the resource described by `Resource` is not associated with the input tag keys, an association will be added. If the tag keys are already associated, the values corresponding to the associated tag keys will be modified to the input values. This API must contain either `ReplaceTags` or `DeleteTag`, and these two parameters cannot include the same tag keys. This parameter can be omitted, but it cannot be an empty array.
         /// </summary>
         [JsonProperty("ReplaceTags")]
         public Tag[] ReplaceTags{ get; set; }
 
         /// <summary>
-        /// The tags to be unassociated. This API must contain either `ReplaceTags` or `DeleteTag`. And these two parameters cannot include the same tag keys.
+        /// The tags to be disassociated. This API must contain either `ReplaceTags` or `DeleteTag`, and these two parameters cannot include the same tag keys. This parameter can be omitted, but it cannot be an empty array.
         /// </summary>
         [JsonProperty("DeleteTags")]
         public TagKeyObject[] DeleteTags{ get; set; }

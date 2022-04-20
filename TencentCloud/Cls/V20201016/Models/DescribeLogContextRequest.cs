@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log time in the format of `YYYY-mm-dd HH:MM:SS`
+        /// Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
         /// </summary>
         [JsonProperty("BTime")]
         public string BTime{ get; set; }

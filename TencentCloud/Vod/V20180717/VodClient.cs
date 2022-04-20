@@ -713,6 +713,50 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to enable storage in a region.
+        ///   1. When you activate VOD, the system will enable storage for you in certain regions. If you need to store data in another region, you can use this API to enable storage in that region.
+        ///   2. You can use the `DescribeStorageRegions` API to query all supported storage regions and the regions you have storage access to currently.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageRegionRequest"/></param>
+        /// <returns><see cref="CreateStorageRegionResponse"/></returns>
+        public async Task<CreateStorageRegionResponse> CreateStorageRegion(CreateStorageRegionRequest req)
+        {
+             JsonResponseModel<CreateStorageRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStorageRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable storage in a region.
+        ///   1. When you activate VOD, the system will enable storage for you in certain regions. If you need to store data in another region, you can use this API to enable storage in that region.
+        ///   2. You can use the `DescribeStorageRegions` API to query all supported storage regions and the regions you have storage access to currently.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageRegionRequest"/></param>
+        /// <returns><see cref="CreateStorageRegionResponse"/></returns>
+        public CreateStorageRegionResponse CreateStorageRegionSync(CreateStorageRegionRequest req)
+        {
+             JsonResponseModel<CreateStorageRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStorageRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a VOD subapplication.
         /// </summary>
         /// <param name="req"><see cref="CreateSubAppIdRequest"/></param>
@@ -2569,6 +2613,52 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to query the following information:
+        ///   1. All supported storage regions.
+        ///   2. The regions you have storage access to currently.
+        ///   3. The default storage region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageRegionsRequest"/></param>
+        /// <returns><see cref="DescribeStorageRegionsResponse"/></returns>
+        public async Task<DescribeStorageRegionsResponse> DescribeStorageRegions(DescribeStorageRegionsRequest req)
+        {
+             JsonResponseModel<DescribeStorageRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStorageRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStorageRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the following information:
+        ///   1. All supported storage regions.
+        ///   2. The regions you have storage access to currently.
+        ///   3. The default storage region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageRegionsRequest"/></param>
+        /// <returns><see cref="DescribeStorageRegionsResponse"/></returns>
+        public DescribeStorageRegionsResponse DescribeStorageRegionsSync(DescribeStorageRegionsRequest req)
+        {
+             JsonResponseModel<DescribeStorageRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStorageRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStorageRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of the primary application and subapplications of the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeSubAppIdsRequest"/></param>
@@ -3336,6 +3426,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyContentReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set the default storage region. A file will be stored in the default region if no region is specified for file upload.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefaultStorageRegionRequest"/></param>
+        /// <returns><see cref="ModifyDefaultStorageRegionResponse"/></returns>
+        public async Task<ModifyDefaultStorageRegionResponse> ModifyDefaultStorageRegion(ModifyDefaultStorageRegionRequest req)
+        {
+             JsonResponseModel<ModifyDefaultStorageRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDefaultStorageRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultStorageRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set the default storage region. A file will be stored in the default region if no region is specified for file upload.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefaultStorageRegionRequest"/></param>
+        /// <returns><see cref="ModifyDefaultStorageRegionResponse"/></returns>
+        public ModifyDefaultStorageRegionResponse ModifyDefaultStorageRegionSync(ModifyDefaultStorageRegionRequest req)
+        {
+             JsonResponseModel<ModifyDefaultStorageRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDefaultStorageRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultStorageRegionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

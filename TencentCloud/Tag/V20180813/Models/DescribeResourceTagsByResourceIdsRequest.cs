@@ -37,7 +37,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string ResourcePrefix{ get; set; }
 
         /// <summary>
-        /// Unique resource ID.
+        /// Array of resource IDs (up to 50)
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }

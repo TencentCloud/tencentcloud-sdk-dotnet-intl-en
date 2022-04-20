@@ -32,32 +32,34 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// Callback type. Valid values:
-        /// <br><li> WeCom
-        /// <br><li> Http
+        /// <li> WeCom
+        /// <li> Http
         /// </summary>
         [JsonProperty("CallbackType")]
         public string CallbackType{ get; set; }
 
         /// <summary>
         /// Callback method. Valid values:
-        /// <br><li> POST
-        /// <br><li> PUT
+        /// <li> POST
+        /// <li> PUT
         /// Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
         /// Request header
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Headers")]
         public string[] Headers{ get; set; }
 
         /// <summary>
-        /// Request content, which is required when `CallbackType` is `Http`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Request content
+        /// Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }

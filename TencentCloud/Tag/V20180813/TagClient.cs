@@ -173,6 +173,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// This API is used to create multiple tag key-value pairs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagsRequest"/></param>
+        /// <returns><see cref="CreateTagsResponse"/></returns>
+        public async Task<CreateTagsResponse> CreateTags(CreateTagsRequest req)
+        {
+             JsonResponseModel<CreateTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create multiple tag key-value pairs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagsRequest"/></param>
+        /// <returns><see cref="CreateTagsResponse"/></returns>
+        public CreateTagsResponse CreateTagsSync(CreateTagsRequest req)
+        {
+             JsonResponseModel<CreateTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unassociate tags and resources.
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceTagRequest"/></param>
@@ -253,6 +293,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// This API is used to delete multiple tag key-value pairs.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTagsRequest"/></param>
+        /// <returns><see cref="DeleteTagsResponse"/></returns>
+        public async Task<DeleteTagsResponse> DeleteTags(DeleteTagsRequest req)
+        {
+             JsonResponseModel<DeleteTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete multiple tag key-value pairs.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTagsRequest"/></param>
+        /// <returns><see cref="DeleteTagsResponse"/></returns>
+        public DeleteTagsResponse DeleteTagsSync(DeleteTagsRequest req)
+        {
+             JsonResponseModel<DeleteTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the tags associated with a resource.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
@@ -293,7 +373,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// This API is used to query tag key and value pairs for existing resources.
+        /// This API is used to query the tag key-value pairs associated with an existing resource.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsByResourceIdsRequest"/></param>
         /// <returns><see cref="DescribeResourceTagsByResourceIdsResponse"/></returns>
@@ -313,7 +393,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// This API is used to query tag key and value pairs for existing resources.
+        /// This API is used to query the tag key-value pairs associated with an existing resource.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsByResourceIdsRequest"/></param>
         /// <returns><see cref="DescribeResourceTagsByResourceIdsResponse"/></returns>
@@ -733,6 +813,166 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// This API is used to query the list of resources associated with a tag.
+        /// </summary>
+        /// <param name="req"><see cref="GetResourcesRequest"/></param>
+        /// <returns><see cref="GetResourcesResponse"/></returns>
+        public async Task<GetResourcesResponse> GetResources(GetResourcesRequest req)
+        {
+             JsonResponseModel<GetResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of resources associated with a tag.
+        /// </summary>
+        /// <param name="req"><see cref="GetResourcesRequest"/></param>
+        /// <returns><see cref="GetResourcesResponse"/></returns>
+        public GetResourcesResponse GetResourcesSync(GetResourcesRequest req)
+        {
+             JsonResponseModel<GetResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of tag keys.
+        /// </summary>
+        /// <param name="req"><see cref="GetTagKeysRequest"/></param>
+        /// <returns><see cref="GetTagKeysResponse"/></returns>
+        public async Task<GetTagKeysResponse> GetTagKeys(GetTagKeysRequest req)
+        {
+             JsonResponseModel<GetTagKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTagKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTagKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of tag keys.
+        /// </summary>
+        /// <param name="req"><see cref="GetTagKeysRequest"/></param>
+        /// <returns><see cref="GetTagKeysResponse"/></returns>
+        public GetTagKeysResponse GetTagKeysSync(GetTagKeysRequest req)
+        {
+             JsonResponseModel<GetTagKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTagKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTagKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query tag values in the list of created tags.
+        /// </summary>
+        /// <param name="req"><see cref="GetTagValuesRequest"/></param>
+        /// <returns><see cref="GetTagValuesResponse"/></returns>
+        public async Task<GetTagValuesResponse> GetTagValues(GetTagValuesRequest req)
+        {
+             JsonResponseModel<GetTagValuesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTagValues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTagValuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query tag values in the list of created tags.
+        /// </summary>
+        /// <param name="req"><see cref="GetTagValuesRequest"/></param>
+        /// <returns><see cref="GetTagValuesResponse"/></returns>
+        public GetTagValuesResponse GetTagValuesSync(GetTagValuesRequest req)
+        {
+             JsonResponseModel<GetTagValuesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTagValues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTagValuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of created tags.
+        /// </summary>
+        /// <param name="req"><see cref="GetTagsRequest"/></param>
+        /// <returns><see cref="GetTagsResponse"/></returns>
+        public async Task<GetTagsResponse> GetTags(GetTagsRequest req)
+        {
+             JsonResponseModel<GetTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of created tags.
+        /// </summary>
+        /// <param name="req"><see cref="GetTagsRequest"/></param>
+        /// <returns><see cref="GetTagsResponse"/></returns>
+        public GetTagsResponse GetTagsSync(GetTagsRequest req)
+        {
+             JsonResponseModel<GetTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify all tags associated with a resource.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceTagsRequest"/></param>
@@ -804,6 +1044,86 @@ namespace TencentCloud.Tag.V20180813
              {
                  var strResp = this.InternalRequestSync(req, "ModifyResourcesTagValue");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcesTagValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create and bind a tag uniformly to multiple specified resources of multiple Tencent Cloud services.
+        /// </summary>
+        /// <param name="req"><see cref="TagResourcesRequest"/></param>
+        /// <returns><see cref="TagResourcesResponse"/></returns>
+        public async Task<TagResourcesResponse> TagResources(TagResourcesRequest req)
+        {
+             JsonResponseModel<TagResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TagResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TagResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create and bind a tag uniformly to multiple specified resources of multiple Tencent Cloud services.
+        /// </summary>
+        /// <param name="req"><see cref="TagResourcesRequest"/></param>
+        /// <returns><see cref="TagResourcesResponse"/></returns>
+        public TagResourcesResponse TagResourcesSync(TagResourcesRequest req)
+        {
+             JsonResponseModel<TagResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TagResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TagResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a tag uniformly from multiple specified resources of multiple Tencent Cloud services.
+        /// </summary>
+        /// <param name="req"><see cref="UnTagResourcesRequest"/></param>
+        /// <returns><see cref="UnTagResourcesResponse"/></returns>
+        public async Task<UnTagResourcesResponse> UnTagResources(UnTagResourcesRequest req)
+        {
+             JsonResponseModel<UnTagResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnTagResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnTagResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a tag uniformly from multiple specified resources of multiple Tencent Cloud services.
+        /// </summary>
+        /// <param name="req"><see cref="UnTagResourcesRequest"/></param>
+        /// <returns><see cref="UnTagResourcesResponse"/></returns>
+        public UnTagResourcesResponse UnTagResourcesSync(UnTagResourcesRequest req)
+        {
+             JsonResponseModel<UnTagResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnTagResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnTagResourcesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

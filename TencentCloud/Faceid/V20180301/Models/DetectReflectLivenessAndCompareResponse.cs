@@ -25,19 +25,19 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// URL of the best screenshot (in JPG format) of the video after successful verification
+        /// Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
         /// </summary>
         [JsonProperty("BestFrameUrl")]
         public string BestFrameUrl{ get; set; }
 
         /// <summary>
-        /// MD5 hash value of the best screenshot of the video after successful verification
+        /// MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
         /// </summary>
         [JsonProperty("BestFrameMd5")]
         public string BestFrameMd5{ get; set; }
 
         /// <summary>
-        /// Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+        /// Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

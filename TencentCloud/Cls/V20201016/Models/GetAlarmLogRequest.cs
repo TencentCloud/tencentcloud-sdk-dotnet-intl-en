@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// Number of logs returned in a single query. Maximum value: 100
+        /// Number of logs returned in a single query. Maximum value: 1000
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

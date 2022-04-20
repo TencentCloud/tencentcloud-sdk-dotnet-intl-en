@@ -25,37 +25,24 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li> name
-        /// 
-        /// Filter by **alarm notification template name**.
+        /// <li> name
+        /// Filter by **notification group name**.
         /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> alarmNoticeId
-        /// 
-        /// Filter by **alarm notification template ID**.
+        /// Required: No
+        /// <li> alarmNoticeId
+        /// Filter by **notification group ID**.
         /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> uid
-        /// 
+        /// Required: No
+        /// <li> uid
         /// Filter by **recipient ID**.
-        /// 
         /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> groupId
-        /// 
-        /// Filter by **user group ID**.
-        /// 
+        /// Required: No
+        /// <li> groupId
+        /// Filter by **recipient ID**.
         /// Type: String
+        /// Required: No
         /// 
-        /// Required: no
-        /// 
-        /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+        /// Each request can have up to 10 `Filters` and 5 `Filter.Values`.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

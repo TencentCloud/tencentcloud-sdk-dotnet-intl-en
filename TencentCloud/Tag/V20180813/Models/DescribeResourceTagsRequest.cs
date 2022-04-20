@@ -49,7 +49,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string ResourcePrefix{ get; set; }
 
         /// <summary>
-        /// Unique resource ID
+        /// Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Whether it is a COS resource ID
+        /// Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
         /// </summary>
         [JsonProperty("CosResourceId")]
         public ulong? CosResourceId{ get; set; }

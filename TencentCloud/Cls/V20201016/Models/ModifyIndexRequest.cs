@@ -37,10 +37,22 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// Index rule. Either `Rule` or `Effective` must exist.
+        /// Index rule
         /// </summary>
         [JsonProperty("Rule")]
         public RuleInfo Rule{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IncludeInternalFields")]
+        public bool? IncludeInternalFields{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MetadataFlag")]
+        public ulong? MetadataFlag{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
+            this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+            this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
         }
     }
 }

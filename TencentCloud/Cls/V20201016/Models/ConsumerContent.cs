@@ -38,6 +38,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetaFields")]
         public string[] MetaFields{ get; set; }
 
+        /// <summary>
+        /// This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("TagJsonNotTiled")]
+        public bool? TagJsonNotTiled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "EnableTag", this.EnableTag);
             this.SetParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
+            this.SetParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
         }
     }
 }

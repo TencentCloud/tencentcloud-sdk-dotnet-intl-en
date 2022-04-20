@@ -25,7 +25,7 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// Resource service name
+        /// Resource service name (the third segment in the six-segment resource description)
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Tag.V20180813.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Resource region. This field is not required for resources that do not have the region attribute
+        /// Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// Resource prefix, which is not required for COS buckets
+        /// Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
         /// </summary>
         [JsonProperty("ResourcePrefix")]
         public string ResourcePrefix{ get; set; }

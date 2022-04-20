@@ -95,8 +95,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// Lifecycle in days
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Whether to enable the shipping task
+        /// Whether the shipping task takes effect (default: no)
         /// </summary>
         [JsonProperty("Effective")]
         public bool? Effective{ get; set; }

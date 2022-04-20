@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// Field information in tag index configuration
+        /// Field information in the metafield index configuration
         /// </summary>
         [JsonProperty("KeyValues")]
         public KeyValueInfo[] KeyValues{ get; set; }

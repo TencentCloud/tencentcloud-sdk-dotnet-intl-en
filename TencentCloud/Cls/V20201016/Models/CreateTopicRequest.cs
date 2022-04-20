@@ -61,13 +61,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
+        /// Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// Lifecycle in days. Value range: 1–366. Default value: 30
+        /// Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

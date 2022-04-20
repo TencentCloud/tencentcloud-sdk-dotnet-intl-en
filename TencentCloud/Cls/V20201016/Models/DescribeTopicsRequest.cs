@@ -25,53 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li> topicName
-        /// 
-        /// Filter by **log topic name**.
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> topicId
-        /// 
-        /// Filter by **log topic ID**.
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> logsetId
-        /// 
-        /// Filter by **logset ID**. You can call `DescribeLogsets` to query the list of created logsets or log in to the console to view them. You can also call `CreateLogset` to create a logset.
-        /// 
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> tagKey
-        /// 
-        /// Filter by **tag key**.
-        /// 
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> tag:tagKey
-        /// 
-        /// Filter by **tag key-value pair**. The `tag-key` should be replaced with a specified tag key. For more information on how to use it, please see sample 2.
-        /// 
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> storageType
-        /// 
-        /// Filter by **log topic storage class**. Valid values: `hot`: real-time storage; `cold`: offline storage.
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// 
-        /// Each request can contain up to 10 `Filters` and 100 `Filter.Values`.
+        /// <br><li> `topicName` filters by **log topic name**. Type: String. Required: No<br><li> `logsetName` filters by **logset name**. Type: String. Required: No<br><li> `topicId` filters by **log topic ID**. Type: String. Required: No<br><li> `logsetId` filters by **logset ID**. You can call DescribeLogsets to query the list of created logsets or log in to the console to view them. You can also call CreateLogset to create a logset. Type: String. Required: No<br><li> `tagKey` filters by **tag key**. Type: String. Required: No<br><li> `tag:tagKey` filters by **tag key-value pair**. The tagKey should be replaced with a specified tag key, such as tag:exampleKey. Type: String. Required: No<br><li> `storageType` filters by **log topic storage type**. Valid values: `hot` (real-time storage); `cold`: (IA storage). Type: String. Required: No. Each request can contain up to 10 `Filters` and 100 `Filter.Values`.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

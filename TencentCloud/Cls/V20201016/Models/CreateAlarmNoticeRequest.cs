@@ -25,28 +25,28 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Alarm template name
+        /// Notification group name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Alarm template type. Valid values:
-        /// <br><li> `Trigger`: alarm triggered
-        /// <br><li> `Recovery`: alarm cleared
-        /// <br><li> `All`: alarm triggered and alarm cleared
+        /// Notification type. Valid values:
+        /// <li> `Trigger`: alarm triggered
+        /// <li> `Recovery`: alarm cleared
+        /// <li> `All`: alarm triggered and alarm cleared
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Information of the recipient in alarm template
+        /// Notification recipient
         /// </summary>
         [JsonProperty("NoticeReceivers")]
         public NoticeReceiver[] NoticeReceivers{ get; set; }
 
         /// <summary>
-        /// Alarm template callback information
+        /// API callback information (including WeCom)
         /// </summary>
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }
