@@ -315,54 +315,6 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to create an instance launch template.
-        /// 
-        /// An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
-        /// 
-        /// When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
-        /// </summary>
-        /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
-        /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
-        public async Task<CreateLaunchTemplateResponse> CreateLaunchTemplate(CreateLaunchTemplateRequest req)
-        {
-             JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLaunchTemplate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create an instance launch template.
-        /// 
-        /// An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
-        /// 
-        /// When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
-        /// </summary>
-        /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
-        /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
-        public CreateLaunchTemplateResponse CreateLaunchTemplateSync(CreateLaunchTemplateRequest req)
-        {
-             JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLaunchTemplate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchTemplateVersionRequest"/></param>
@@ -443,10 +395,10 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete images.
+        /// This API is used to delete one or more images.
         /// 
-        /// * If the [ImageState](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#image_state) of an image is `Creating` or `In Use`, it cannot be deleted. Use [DescribeImages](https://intl.cloud.tencent.com/document/api/213/9418?from_cn_redirect=1) to query the image state.
-        /// * You can only create up to 10 custom images in each region. If you have used up the quota, you can delete images to create new ones.
+        /// * If the [ImageState](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image) of an image is `CREATING` or `USING`, the image cannot be deleted. Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API to query the image status.
+        /// * Up to 10 custom images are allowed in each region. If you have run out of the quota, delete unused images to create new ones.
         /// * A shared image cannot be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteImagesRequest"/></param>
@@ -467,10 +419,10 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete images.
+        /// This API is used to delete one or more images.
         /// 
-        /// * If the [ImageState](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#image_state) of an image is `Creating` or `In Use`, it cannot be deleted. Use [DescribeImages](https://intl.cloud.tencent.com/document/api/213/9418?from_cn_redirect=1) to query the image state.
-        /// * You can only create up to 10 custom images in each region. If you have used up the quota, you can delete images to create new ones.
+        /// * If the [ImageState](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image) of an image is `CREATING` or `USING`, the image cannot be deleted. Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API to query the image status.
+        /// * Up to 10 custom images are allowed in each region. If you have run out of the quota, delete unused images to create new ones.
         /// * A shared image cannot be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteImagesRequest"/></param>
@@ -943,120 +895,6 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the model configuration of an instance.
-        /// 
-        /// * You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see [`Filter`](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#Filter).
-        /// * If no parameter is defined, the model configuration of all the instances in the specified region will be returned.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceTypeConfigsRequest"/></param>
-        /// <returns><see cref="DescribeInstanceTypeConfigsResponse"/></returns>
-        public async Task<DescribeInstanceTypeConfigsResponse> DescribeInstanceTypeConfigs(DescribeInstanceTypeConfigsRequest req)
-        {
-             JsonResponseModel<DescribeInstanceTypeConfigsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInstanceTypeConfigs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceTypeConfigsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the model configuration of an instance.
-        /// 
-        /// * You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see [`Filter`](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#Filter).
-        /// * If no parameter is defined, the model configuration of all the instances in the specified region will be returned.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceTypeConfigsRequest"/></param>
-        /// <returns><see cref="DescribeInstanceTypeConfigsResponse"/></returns>
-        public DescribeInstanceTypeConfigsResponse DescribeInstanceTypeConfigsSync(DescribeInstanceTypeConfigsRequest req)
-        {
-             JsonResponseModel<DescribeInstanceTypeConfigsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceTypeConfigs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceTypeConfigsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the Virtual Network Console (VNC) URL of an instance for its login to the VNC.
-        /// 
-        /// * It does not support `STOPPED` CVMs.
-        /// * A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid and you have to query a URL again.
-        /// * Once the VNC URL is accessed, it will become invalid and you have to query a URL again if needed.
-        /// * If the connection is interrupted, you can make up to 30 reconnection attempts per minute.
-        /// * After getting the value `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link <https://img.qcloud.com/qcloud/app/active_vnc/index.html?>.
-        /// 
-        ///   - `InstanceVncUrl`: its value will be returned after the API is successfully called.
-        /// 
-        ///     The final URL is in the following format:
-        /// 
-        /// ```
-        /// https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
-        /// ```
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
-        /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
-        public async Task<DescribeInstanceVncUrlResponse> DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest req)
-        {
-             JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInstanceVncUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceVncUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the Virtual Network Console (VNC) URL of an instance for its login to the VNC.
-        /// 
-        /// * It does not support `STOPPED` CVMs.
-        /// * A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid and you have to query a URL again.
-        /// * Once the VNC URL is accessed, it will become invalid and you have to query a URL again if needed.
-        /// * If the connection is interrupted, you can make up to 30 reconnection attempts per minute.
-        /// * After getting the value `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link <https://img.qcloud.com/qcloud/app/active_vnc/index.html?>.
-        /// 
-        ///   - `InstanceVncUrl`: its value will be returned after the API is successfully called.
-        /// 
-        ///     The final URL is in the following format:
-        /// 
-        /// ```
-        /// https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
-        /// ```
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
-        /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
-        public DescribeInstanceVncUrlResponse DescribeInstanceVncUrlSync(DescribeInstanceVncUrlRequest req)
-        {
-             JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceVncUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceVncUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the details of instances.
         /// 
         /// * You can filter the query results with the instance `ID`, name, or billing method. See `Filter` for more information.
@@ -1397,46 +1235,6 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to list reserved instances the user has purchased.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
-        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
-        public async Task<DescribeReservedInstancesResponse> DescribeReservedInstances(DescribeReservedInstancesRequest req)
-        {
-             JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeReservedInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to list reserved instances the user has purchased.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
-        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
-        public DescribeReservedInstancesResponse DescribeReservedInstancesSync(DescribeReservedInstancesRequest req)
-        {
-             JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeReservedInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
         /// </summary>
         /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
@@ -1729,7 +1527,7 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// This API is used to import key pairs.
         /// 
-        /// * You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/9404?from_cn_redirect=1) to associate key pairs with instances.
+        /// * You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/15698?from_cn_redirect=1) to associate key pairs with instances.
         /// * You need to specify the names of the key pairs and the content of the public keys.
         /// * If you only have private keys, you can convert them to public keys with the `SSL` tool before importing them.
         /// </summary>
@@ -1753,7 +1551,7 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// This API is used to import key pairs.
         /// 
-        /// * You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/9404?from_cn_redirect=1) to associate key pairs with instances.
+        /// * You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/15698?from_cn_redirect=1) to associate key pairs with instances.
         /// * You need to specify the names of the key pairs and the content of the public keys.
         /// * If you only have private keys, you can convert them to public keys with the `SSL` tool before importing them.
         /// </summary>
@@ -1992,46 +1790,6 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "InquiryPriceResizeInstanceDisks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceResizeInstanceDisksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
-        /// </summary>
-        /// <param name="req"><see cref="InquiryPriceRunInstancesRequest"/></param>
-        /// <returns><see cref="InquiryPriceRunInstancesResponse"/></returns>
-        public async Task<InquiryPriceRunInstancesResponse> InquiryPriceRunInstances(InquiryPriceRunInstancesRequest req)
-        {
-             JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "InquiryPriceRunInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRunInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
-        /// </summary>
-        /// <param name="req"><see cref="InquiryPriceRunInstancesRequest"/></param>
-        /// <returns><see cref="InquiryPriceRunInstancesResponse"/></returns>
-        public InquiryPriceRunInstancesResponse InquiryPriceRunInstancesSync(InquiryPriceRunInstancesRequest req)
-        {
-             JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquiryPriceRunInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRunInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2774,56 +2532,6 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ResizeInstanceDisks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResizeInstanceDisksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create one or more instances with a specified configuration.
-        /// 
-        /// * After an instance is created successfully, it will start up automatically, and the [instance state](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#instance_state) will become "Running".
-        /// * If you create a pay-as-you-go instance billed on an hourly basis, an amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
-        /// * The number of instances you can purchase through this API is subject to the [CVM instance purchase limit](https://intl.cloud.tencent.com/document/product/213/2664?from_cn_redirect=1). Both the instances created through this API and the console will be counted toward the quota.
-        /// * This API is an async API. An instance `ID` list will be returned after you successfully make a creation request. However, it does not mean the creation has been completed. The state of the instance will be `Creating` during the creation. You can use [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) to query the status of the instance. If the status changes from `Creating` to `Running`, it means that the instance has been created successfully.
-        /// </summary>
-        /// <param name="req"><see cref="RunInstancesRequest"/></param>
-        /// <returns><see cref="RunInstancesResponse"/></returns>
-        public async Task<RunInstancesResponse> RunInstances(RunInstancesRequest req)
-        {
-             JsonResponseModel<RunInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RunInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create one or more instances with a specified configuration.
-        /// 
-        /// * After an instance is created successfully, it will start up automatically, and the [instance state](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#instance_state) will become "Running".
-        /// * If you create a pay-as-you-go instance billed on an hourly basis, an amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
-        /// * The number of instances you can purchase through this API is subject to the [CVM instance purchase limit](https://intl.cloud.tencent.com/document/product/213/2664?from_cn_redirect=1). Both the instances created through this API and the console will be counted toward the quota.
-        /// * This API is an async API. An instance `ID` list will be returned after you successfully make a creation request. However, it does not mean the creation has been completed. The state of the instance will be `Creating` during the creation. You can use [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) to query the status of the instance. If the status changes from `Creating` to `Running`, it means that the instance has been created successfully.
-        /// </summary>
-        /// <param name="req"><see cref="RunInstancesRequest"/></param>
-        /// <returns><see cref="RunInstancesResponse"/></returns>
-        public RunInstancesResponse RunInstancesSync(RunInstancesRequest req)
-        {
-             JsonResponseModel<RunInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RunInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -1,0 +1,163 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Eiam.V20210420.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeApplicationResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// Key ID.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// Displayed application name, which can contain up to 64 characters and is the same as the application name by default.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DisplayName")]
+        public string DisplayName{ get; set; }
+
+        /// <summary>
+        /// Last modification time of the application in ISO 8601 format.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LastModifiedDate")]
+        public string LastModifiedDate{ get; set; }
+
+        /// <summary>
+        /// Client ID.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientId")]
+        public string ClientId{ get; set; }
+
+        /// <summary>
+        /// Application type, i.e., the application template type selected during application creation.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApplicationType")]
+        public string ApplicationType{ get; set; }
+
+        /// <summary>
+        /// Application creation time in ISO 8601 format.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CreatedDate")]
+        public string CreatedDate{ get; set; }
+
+        /// <summary>
+        /// Application ID, which is globally unique.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// Token validity period in seconds.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TokenExpired")]
+        public long? TokenExpired{ get; set; }
+
+        /// <summary>
+        /// Client secret.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientSecret")]
+        public string ClientSecret{ get; set; }
+
+        /// <summary>
+        /// Public key information.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublicKey")]
+        public string PublicKey{ get; set; }
+
+        /// <summary>
+        /// Authorization address.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AuthorizeUrl")]
+        public string AuthorizeUrl{ get; set; }
+
+        /// <summary>
+        /// Access address of the application icon image.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IconUrl")]
+        public string IconUrl{ get; set; }
+
+        /// <summary>
+        /// Security level.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecureLevel")]
+        public string SecureLevel{ get; set; }
+
+        /// <summary>
+        /// Application status.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AppStatus")]
+        public bool? AppStatus{ get; set; }
+
+        /// <summary>
+        /// Description.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "LastModifiedDate", this.LastModifiedDate);
+            this.SetParamSimple(map, prefix + "ClientId", this.ClientId);
+            this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamSimple(map, prefix + "CreatedDate", this.CreatedDate);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "TokenExpired", this.TokenExpired);
+            this.SetParamSimple(map, prefix + "ClientSecret", this.ClientSecret);
+            this.SetParamSimple(map, prefix + "PublicKey", this.PublicKey);
+            this.SetParamSimple(map, prefix + "AuthorizeUrl", this.AuthorizeUrl);
+            this.SetParamSimple(map, prefix + "IconUrl", this.IconUrl);
+            this.SetParamSimple(map, prefix + "SecureLevel", this.SecureLevel);
+            this.SetParamSimple(map, prefix + "AppStatus", this.AppStatus);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+

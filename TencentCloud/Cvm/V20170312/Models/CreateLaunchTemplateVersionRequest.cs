@@ -168,7 +168,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
+        /// CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }

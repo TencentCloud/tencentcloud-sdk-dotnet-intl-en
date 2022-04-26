@@ -59,8 +59,6 @@
     <Compile Include="V20170312\Models\CreateImageResponse.cs" />
     <Compile Include="V20170312\Models\CreateKeyPairRequest.cs" />
     <Compile Include="V20170312\Models\CreateKeyPairResponse.cs" />
-    <Compile Include="V20170312\Models\CreateLaunchTemplateRequest.cs" />
-    <Compile Include="V20170312\Models\CreateLaunchTemplateResponse.cs" />
     <Compile Include="V20170312\Models\CreateLaunchTemplateVersionRequest.cs" />
     <Compile Include="V20170312\Models\CreateLaunchTemplateVersionResponse.cs" />
     <Compile Include="V20170312\Models\DataDisk.cs" />
@@ -90,10 +88,6 @@
     <Compile Include="V20170312\Models\DescribeImportImageOsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstanceFamilyConfigsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstanceFamilyConfigsResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeInstanceTypeConfigsRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeInstanceTypeConfigsResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeInstanceVncUrlRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeInstanceVncUrlResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesOperationLimitRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesOperationLimitResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstancesRequest.cs" />
@@ -114,8 +108,6 @@
     <Compile Include="V20170312\Models\DescribeReservedInstancesConfigInfosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeReservedInstancesOfferingsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeReservedInstancesOfferingsResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeReservedInstancesRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeReservedInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
     <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosResponse.cs" />
     <Compile Include="V20170312\Models\DescribeZonesRequest.cs" />
@@ -147,20 +139,16 @@
     <Compile Include="V20170312\Models\InquiryPriceResetInstancesTypeResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResizeInstanceDisksRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResizeInstanceDisksResponse.cs" />
-    <Compile Include="V20170312\Models\InquiryPriceRunInstancesRequest.cs" />
-    <Compile Include="V20170312\Models\InquiryPriceRunInstancesResponse.cs" />
     <Compile Include="V20170312\Models\Instance.cs" />
     <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20170312\Models\InstanceFamilyConfig.cs" />
     <Compile Include="V20170312\Models\InstanceMarketOptionsRequest.cs" />
     <Compile Include="V20170312\Models\InstanceStatus.cs" />
-    <Compile Include="V20170312\Models\InstanceTypeConfig.cs" />
     <Compile Include="V20170312\Models\InstanceTypeQuotaItem.cs" />
     <Compile Include="V20170312\Models\InternetAccessible.cs" />
     <Compile Include="V20170312\Models\InternetChargeTypeConfig.cs" />
     <Compile Include="V20170312\Models\ItemPrice.cs" />
     <Compile Include="V20170312\Models\KeyPair.cs" />
-    <Compile Include="V20170312\Models\LaunchTemplate.cs" />
     <Compile Include="V20170312\Models\LaunchTemplateInfo.cs" />
     <Compile Include="V20170312\Models\LaunchTemplateVersionData.cs" />
     <Compile Include="V20170312\Models\LaunchTemplateVersionInfo.cs" />
@@ -198,7 +186,6 @@
     <Compile Include="V20170312\Models\ReservedInstancePrice.cs" />
     <Compile Include="V20170312\Models\ReservedInstancePriceItem.cs" />
     <Compile Include="V20170312\Models\ReservedInstanceTypeItem.cs" />
-    <Compile Include="V20170312\Models\ReservedInstances.cs" />
     <Compile Include="V20170312\Models\ReservedInstancesOffering.cs" />
     <Compile Include="V20170312\Models\ResetInstanceRequest.cs" />
     <Compile Include="V20170312\Models\ResetInstanceResponse.cs" />
@@ -211,8 +198,6 @@
     <Compile Include="V20170312\Models\ResizeInstanceDisksRequest.cs" />
     <Compile Include="V20170312\Models\ResizeInstanceDisksResponse.cs" />
     <Compile Include="V20170312\Models\RunAutomationServiceEnabled.cs" />
-    <Compile Include="V20170312\Models\RunInstancesRequest.cs" />
-    <Compile Include="V20170312\Models\RunInstancesResponse.cs" />
     <Compile Include="V20170312\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20170312\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="V20170312\Models\SharePermission.cs" />
