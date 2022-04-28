@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.421</VersionPrefix>
+    <VersionPrefix>3.0.422</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1043,7 +1043,6 @@
     <Compile Include="Cbs\V20170312\Models\UnbindAutoSnapshotPolicyResponse.cs" />
     <Compile Include="Cdb\V20170320\CdbClient.cs" />
     <Compile Include="Cdb\V20170320\Models\Account.cs" />
-    <Compile Include="Cdb\V20170320\Models\AccountInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\AddTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\AddTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\Address.cs" />
@@ -1051,6 +1050,9 @@
     <Compile Include="Cdb\V20170320\Models\ApplyCDBProxyResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\AuditFilter.cs" />
+    <Compile Include="Cdb\V20170320\Models\AuditPolicy.cs" />
+    <Compile Include="Cdb\V20170320\Models\AuditRule.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupConfig.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupItem.cs" />
@@ -1068,8 +1070,6 @@
     <Compile Include="Cdb\V20170320\Models\ColumnPrivilege.cs" />
     <Compile Include="Cdb\V20170320\Models\CommonTimeWindow.cs" />
     <Compile Include="Cdb\V20170320\Models\ConnectionPoolInfo.cs" />
-    <Compile Include="Cdb\V20170320\Models\CreateAccountsRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\CreateAccountsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateAuditPolicyRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateAuditPolicyResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateBackupRequest.cs" />
@@ -1080,8 +1080,6 @@
     <Compile Include="Cdb\V20170320\Models\CreateDBImportJobResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateDBInstanceHourRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateDBInstanceHourResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\CreateDeployGroupRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\CreateDeployGroupResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateParamTemplateRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateRoInstanceIpRequest.cs" />
@@ -1094,19 +1092,18 @@
     <Compile Include="Cdb\V20170320\Models\DeleteAccountsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteBackupRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteBackupResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\DeleteDeployGroupsRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\DeleteDeployGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteParamTemplateRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteTimeWindowResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\DeployGroupInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAccountPrivilegesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAccountPrivilegesResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\DescribeAccountsRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAsyncRequestInfoRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAsyncRequestInfoResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditPoliciesRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditPoliciesResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditRulesRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditRulesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupConfigResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupDownloadRestrictionRequest.cs" />
@@ -1151,8 +1148,6 @@
     <Compile Include="Cdb\V20170320\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDefaultParamsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDefaultParamsResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\DescribeDeployGroupListRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\DescribeDeployGroupListResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDeviceMonitorInfoRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDeviceMonitorInfoResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeErrorLogDataRequest.cs" />
@@ -1246,16 +1241,12 @@
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceProjectResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceVipVportRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceVipVportResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyInstanceParamRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyInstanceParamResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyInstanceTagRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyInstanceTagResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyLocalBinlogConfigRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyLocalBinlogConfigResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyNameOrDescByDpIdRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyNameOrDescByDpIdResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoGroupInfoRequest.cs" />
@@ -1289,6 +1280,8 @@
     <Compile Include="Cdb\V20170320\Models\ReleaseResult.cs" />
     <Compile Include="Cdb\V20170320\Models\ReloadBalanceProxyNodeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ReloadBalanceProxyNodeResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ResetRootAccountRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ResetRootAccountResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RestartDBInstancesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\RestartDBInstancesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RoGroup.cs" />
@@ -1349,12 +1342,24 @@
     <Compile Include="Cdb\V20170320\Models\ZoneConf.cs" />
     <Compile Include="Cdb\V20170320\Models\ZoneSellConf.cs" />
     <Compile Include="Cdn\V20180606\CdnClient.cs" />
+    <Compile Include="Cdn\V20180606\Models\CdnData.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnFailedLogTaskRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnFailedLogTaskResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeBillingDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeBillingDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeCdnDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeCdnDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeOriginDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeOriginDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgePathCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgePathCacheResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ResourceBillingData.cs" />
+    <Compile Include="Cdn\V20180606\Models\ResourceData.cs" />
+    <Compile Include="Cdn\V20180606\Models\ResourceOriginData.cs" />
+    <Compile Include="Cdn\V20180606\Models\SummarizedData.cs" />
+    <Compile Include="Cdn\V20180606\Models\TimestampData.cs" />
     <Compile Include="Cfs\V20190719\CfsClient.cs" />
     <Compile Include="Cfs\V20190719\Models\AvailableProtoStatus.cs" />
     <Compile Include="Cfs\V20190719\Models\AvailableRegion.cs" />
@@ -2728,6 +2733,7 @@
     <Compile Include="Dc\V20180410\Models\AccessPoint.cs" />
     <Compile Include="Dc\V20180410\Models\ApplyInternetAddressRequest.cs" />
     <Compile Include="Dc\V20180410\Models\ApplyInternetAddressResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\BFDInfo.cs" />
     <Compile Include="Dc\V20180410\Models\BgpPeer.cs" />
     <Compile Include="Dc\V20180410\Models\Coordinate.cs" />
     <Compile Include="Dc\V20180410\Models\CreateDirectConnectRequest.cs" />
@@ -2763,6 +2769,7 @@
     <Compile Include="Dc\V20180410\Models\ModifyDirectConnectAttributeResponse.cs" />
     <Compile Include="Dc\V20180410\Models\ModifyDirectConnectTunnelAttributeRequest.cs" />
     <Compile Include="Dc\V20180410\Models\ModifyDirectConnectTunnelAttributeResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\NQAInfo.cs" />
     <Compile Include="Dc\V20180410\Models\RejectDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\RejectDirectConnectTunnelResponse.cs" />
     <Compile Include="Dc\V20180410\Models\ReleaseInternetAddressRequest.cs" />
@@ -7151,6 +7158,8 @@
     <Compile Include="Tke\V20180525\Models\ClusterBasicSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterCIDRSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterExtraArgs.cs" />
+    <Compile Include="Tke\V20180525\Models\ClusterLevelAttribute.cs" />
+    <Compile Include="Tke\V20180525\Models\ClusterLevelChangeRecord.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterNetworkSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterStatus.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterVersion.cs" />
@@ -7210,6 +7219,10 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterKubeconfigResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterLevelAttributeRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterLevelAttributeResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterLevelChangeRecordsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterLevelChangeRecordsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolDetailRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolDetailResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolsRequest.cs" />
@@ -7234,6 +7247,8 @@
     <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeResourceUsageRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeResourceUsageResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeTKEEdgeScriptRequest.cs" />
@@ -7254,6 +7269,8 @@
     <Compile Include="Tke\V20180525\Models\ExistedInstancesPara.cs" />
     <Compile Include="Tke\V20180525\Models\ExtensionAddon.cs" />
     <Compile Include="Tke\V20180525\Models\Filter.cs" />
+    <Compile Include="Tke\V20180525\Models\GetClusterLevelPriceRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\GetClusterLevelPriceResponse.cs" />
     <Compile Include="Tke\V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />
     <Compile Include="Tke\V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ImageInstance.cs" />
@@ -7297,6 +7314,8 @@
     <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ResourceDeleteOption.cs" />
+    <Compile Include="Tke\V20180525\Models\ResourceUsage.cs" />
+    <Compile Include="Tke\V20180525\Models\ResourceUsageDetail.cs" />
     <Compile Include="Tke\V20180525\Models\RouteInfo.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableConflict.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableInfo.cs" />

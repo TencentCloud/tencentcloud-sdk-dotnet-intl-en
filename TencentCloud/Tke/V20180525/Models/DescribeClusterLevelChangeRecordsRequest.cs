@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyParamTemplateRequest : AbstractModel
+    public class DescribeClusterLevelChangeRecordsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Template ID.
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
 
         /// <summary>
-        /// Template name (up to 64 characters)
+        /// Start time
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("StartAt")]
+        public string StartAt{ get; set; }
 
         /// <summary>
-        /// Template description (up to 255 characters)
+        /// End time
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("EndAt")]
+        public string EndAt{ get; set; }
 
         /// <summary>
-        /// List of parameters.
+        /// Offset. Default value: `0`
         /// </summary>
-        [JsonProperty("ParamList")]
-        public Parameter[] ParamList{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// Maximum number of output entries. Default value: `20`
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "StartAt", this.StartAt);
+            this.SetParamSimple(map, prefix + "EndAt", this.EndAt);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

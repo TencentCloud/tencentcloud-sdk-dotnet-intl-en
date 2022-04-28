@@ -60,8 +60,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public string MountTarget{ get; set; }
 
         /// <summary>
-        /// The name of the device or partition to mount
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Mounted device name or partition name (only required when adding an existing node)
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskPartition")]
         public string DiskPartition{ get; set; }

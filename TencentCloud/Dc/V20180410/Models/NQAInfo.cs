@@ -15,22 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Dc.V20180410.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSchedulingDomainRequest : AbstractModel
+    public class NQAInfo : AbstractModel
     {
         
         /// <summary>
-        /// Indicates whether a hybrid cloud product is used.
-        /// `hybrid`: Anti-DDoS Service Platform
-        /// For other products, leave this field empty.
+        /// Number of health checks
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
+        [JsonProperty("ProbeFailedTimes")]
+        public long? ProbeFailedTimes{ get; set; }
+
+        /// <summary>
+        /// Health check interval
+        /// </summary>
+        [JsonProperty("Interval")]
+        public long? Interval{ get; set; }
+
+        /// <summary>
+        /// IP address for the health check
+        /// </summary>
+        [JsonProperty("DestinationIp")]
+        public string DestinationIp{ get; set; }
 
 
         /// <summary>
@@ -38,7 +48,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "ProbeFailedTimes", this.ProbeFailedTimes);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamSimple(map, prefix + "DestinationIp", this.DestinationIp);
         }
     }
 }

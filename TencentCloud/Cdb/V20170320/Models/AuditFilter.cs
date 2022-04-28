@@ -15,22 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSchedulingDomainRequest : AbstractModel
+    public class AuditFilter : AbstractModel
     {
         
         /// <summary>
-        /// Indicates whether a hybrid cloud product is used.
-        /// `hybrid`: Anti-DDoS Service Platform
-        /// For other products, leave this field empty.
+        /// Filter parameter names. Valid values:
+        /// SrcIp: Client IP;
+        /// User: Database account;
+        /// DB: Database name.
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// Filter match type. Valid value:
+        /// `INC`: Include;
+        /// `EXC`: Exclude;
+        /// `EQ`: Equal to;
+        /// `NEQ`: Not equal to.
+        /// </summary>
+        [JsonProperty("Compare")]
+        public string Compare{ get; set; }
+
+        /// <summary>
+        /// Filter match value
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -38,7 +55,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Compare", this.Compare);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

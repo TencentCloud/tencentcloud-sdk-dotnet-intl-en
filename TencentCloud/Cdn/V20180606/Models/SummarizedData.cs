@@ -15,22 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSchedulingDomainRequest : AbstractModel
+    public class SummarizedData : AbstractModel
     {
         
         /// <summary>
-        /// Indicates whether a hybrid cloud product is used.
-        /// `hybrid`: Anti-DDoS Service Platform
-        /// For other products, leave this field empty.
+        /// Aggregation method, which can be:
+        /// sum: aggregate summation
+        /// max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
+        /// avg: average value
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// Aggregate data value
+        /// </summary>
+        [JsonProperty("Value")]
+        public float? Value{ get; set; }
 
 
         /// <summary>
@@ -38,7 +45,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

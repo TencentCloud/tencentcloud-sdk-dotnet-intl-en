@@ -36,6 +36,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DestinationRegions")]
         public string[] DestinationRegions{ get; set; }
 
+        /// <summary>
+        /// Checks whether image synchronization can be initiated 
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
             this.SetParamArraySimple(map, prefix + "DestinationRegions.", this.DestinationRegions);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

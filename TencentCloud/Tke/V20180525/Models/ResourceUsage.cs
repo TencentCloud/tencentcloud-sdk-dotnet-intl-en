@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDeployGroupListRequest : AbstractModel
+    public class ResourceUsage : AbstractModel
     {
         
         /// <summary>
-        /// ID of a placement group.
+        /// Resource type
         /// </summary>
-        [JsonProperty("DeployGroupId")]
-        public string DeployGroupId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Name of a placement group.
+        /// Resource usage
         /// </summary>
-        [JsonProperty("DeployGroupName")]
-        public string DeployGroupName{ get; set; }
+        [JsonProperty("Usage")]
+        public ulong? Usage{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 100.
+        /// Resource usage details
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// Offset. Default value: 0.
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Details")]
+        public ResourceUsageDetail[] Details{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
-            this.SetParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Usage", this.Usage);
+            this.SetParamArrayObj(map, prefix + "Details.", this.Details);
         }
     }
 }

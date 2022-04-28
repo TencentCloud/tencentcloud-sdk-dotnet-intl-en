@@ -15,20 +15,30 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAccountsResponse : AbstractModel
+    public class DescribeCdnDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// Async task request ID, which can be used to query the execution result of an async task.
+        /// Time granularity of the returned data. Specify one of the following during querying:
+        /// min: 1 minute
+        /// 5min: 5 minutes
+        /// hour: 1 hour
+        /// day: 1 day
         /// </summary>
-        [JsonProperty("AsyncRequestId")]
-        public string AsyncRequestId{ get; set; }
+        [JsonProperty("Interval")]
+        public string Interval{ get; set; }
+
+        /// <summary>
+        /// Returned data details of the specified conditional query
+        /// </summary>
+        [JsonProperty("Data")]
+        public ResourceData[] Data{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +52,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

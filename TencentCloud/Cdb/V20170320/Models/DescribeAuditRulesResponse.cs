@@ -21,14 +21,21 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDeployGroupResponse : AbstractModel
+    public class DescribeAuditRulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Placement group ID.
+        /// Number of eligible audit rules
         /// </summary>
-        [JsonProperty("DeployGroupId")]
-        public string DeployGroupId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// Audit rule details
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Items")]
+        public AuditRule[] Items{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +49,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

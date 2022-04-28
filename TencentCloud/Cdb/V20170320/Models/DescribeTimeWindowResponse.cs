@@ -67,6 +67,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] Sunday{ get; set; }
 
         /// <summary>
+        /// Maximum data delay threshold
+        /// </summary>
+        [JsonProperty("MaxDelayTime")]
+        public ulong? MaxDelayTime{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "Friday.", this.Friday);
             this.SetParamArraySimple(map, prefix + "Saturday.", this.Saturday);
             this.SetParamArraySimple(map, prefix + "Sunday.", this.Sunday);
+            this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

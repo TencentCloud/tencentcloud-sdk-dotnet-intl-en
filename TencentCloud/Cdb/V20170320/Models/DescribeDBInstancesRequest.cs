@@ -109,7 +109,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong?[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// Lock flag.
+        /// Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
         /// </summary>
         [JsonProperty("CdbErrors")]
         public long?[] CdbErrors{ get; set; }
@@ -192,6 +192,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("CageIds")]
         public string[] CageIds{ get; set; }
 
+        /// <summary>
+        /// Tag value
+        /// </summary>
+        [JsonProperty("TagValues")]
+        public string[] TagValues{ get; set; }
+
+        /// <summary>
+        /// VPC character vpcId
+        /// </summary>
+        [JsonProperty("UniqueVpcIds")]
+        public string[] UniqueVpcIds{ get; set; }
+
+        /// <summary>
+        /// VPC character subnetId
+        /// </summary>
+        [JsonProperty("UniqSubnetIds")]
+        public string[] UniqSubnetIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +244,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
             this.SetParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
             this.SetParamArraySimple(map, prefix + "CageIds.", this.CageIds);
+            this.SetParamArraySimple(map, prefix + "TagValues.", this.TagValues);
+            this.SetParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
+            this.SetParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
         }
     }
 }

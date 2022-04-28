@@ -37,35 +37,35 @@ namespace TencentCloud.Cdb.V20170320.Models
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE".
-        /// Note: If this parameter is not passed in, it means to clear the permission.
+        /// Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER", "CREATE USER", "RELOAD", "REPLICATION CLIENT", "REPLICATION SLAVE", "UPDATE".
+        /// Note: When “ModifyAction” is empty, if `GlobalPrivileges` is not passed in, it indicates the global permission will become ineffective.
         /// </summary>
         [JsonProperty("GlobalPrivileges")]
         public string[] GlobalPrivileges{ get; set; }
 
         /// <summary>
-        /// Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
-        /// Note: if this parameter is not passed in, it means to clear the permission.
+        /// Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
+        /// Note: When “ModifyAction” is empty, if `DatabasePrivileges` is not passed in, it indicates the permission of the database will become ineffective.
         /// </summary>
         [JsonProperty("DatabasePrivileges")]
         public DatabasePrivilege[] DatabasePrivileges{ get; set; }
 
         /// <summary>
-        /// Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
-        /// Note: if this parameter is not passed in, it means to clear the permission.
+        /// Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
+        /// Note: When “ModifyAction” is empty, if `TablePrivileges` is not passed in, it indicates the permission of the table will become ineffective.
         /// </summary>
         [JsonProperty("TablePrivileges")]
         public TablePrivilege[] TablePrivileges{ get; set; }
 
         /// <summary>
-        /// Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
-        /// Note: if this parameter is not passed in, it means to clear the permission.
+        /// Column permission in the table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
+        /// Note: When “ModifyAction” is empty, if `ColumnPrivileges` is not passed in, it indicates the permission of the column will become ineffective.
         /// </summary>
         [JsonProperty("ColumnPrivileges")]
         public ColumnPrivilege[] ColumnPrivileges{ get; set; }
 
         /// <summary>
-        /// If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+        /// When this parameter is not empty, it indicates that the permission will be modified. Valid values: `grant` (grant permission), `revoke` (revoke permission)
         /// </summary>
         [JsonProperty("ModifyAction")]
         public string ModifyAction{ get; set; }

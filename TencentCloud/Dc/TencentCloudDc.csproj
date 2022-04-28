@@ -50,6 +50,7 @@
     <Compile Include="V20180410\Models\AccessPoint.cs" />
     <Compile Include="V20180410\Models\ApplyInternetAddressRequest.cs" />
     <Compile Include="V20180410\Models\ApplyInternetAddressResponse.cs" />
+    <Compile Include="V20180410\Models\BFDInfo.cs" />
     <Compile Include="V20180410\Models\BgpPeer.cs" />
     <Compile Include="V20180410\Models\Coordinate.cs" />
     <Compile Include="V20180410\Models\CreateDirectConnectRequest.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="V20180410\Models\ModifyDirectConnectAttributeResponse.cs" />
     <Compile Include="V20180410\Models\ModifyDirectConnectTunnelAttributeRequest.cs" />
     <Compile Include="V20180410\Models\ModifyDirectConnectTunnelAttributeResponse.cs" />
+    <Compile Include="V20180410\Models\NQAInfo.cs" />
     <Compile Include="V20180410\Models\RejectDirectConnectTunnelRequest.cs" />
     <Compile Include="V20180410\Models\RejectDirectConnectTunnelResponse.cs" />
     <Compile Include="V20180410\Models\ReleaseInternetAddressRequest.cs" />

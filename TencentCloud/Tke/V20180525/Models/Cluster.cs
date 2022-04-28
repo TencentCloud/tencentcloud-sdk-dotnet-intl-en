@@ -145,13 +145,15 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? EnableExternalNode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster models. It’s valid for managed clusters.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }
 
         /// <summary>
-        /// 
+        /// The target cluster model for auto-upgrade
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("AutoUpgradeClusterLevel")]
         public bool? AutoUpgradeClusterLevel{ get; set; }

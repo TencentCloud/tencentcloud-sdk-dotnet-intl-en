@@ -21,26 +21,32 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CloseCDBProxyRequest : AbstractModel
+    public class DescribeAuditRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Audit rule ID.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
 
         /// <summary>
-        /// Proxy group ID
+        /// Audit rule name. Fuzzy match query is supported.
         /// </summary>
-        [JsonProperty("ProxyGroupId")]
-        public string ProxyGroupId{ get; set; }
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
 
         /// <summary>
-        /// Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
+        /// Number of entries per page. Value range: 1-100. Default value: 20.
         /// </summary>
-        [JsonProperty("OnlyCloseRW")]
-        public bool? OnlyCloseRW{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// Pagination offset. Default value: 0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
-            this.SetParamSimple(map, prefix + "OnlyCloseRW", this.OnlyCloseRW);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

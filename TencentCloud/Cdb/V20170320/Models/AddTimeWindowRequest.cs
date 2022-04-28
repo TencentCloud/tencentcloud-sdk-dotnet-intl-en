@@ -72,6 +72,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Sunday")]
         public string[] Sunday{ get; set; }
 
+        /// <summary>
+        /// Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+        /// </summary>
+        [JsonProperty("MaxDelayTime")]
+        public ulong? MaxDelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "Friday.", this.Friday);
             this.SetParamArraySimple(map, prefix + "Saturday.", this.Saturday);
             this.SetParamArraySimple(map, prefix + "Sunday.", this.Sunday);
+            this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         }
     }
 }

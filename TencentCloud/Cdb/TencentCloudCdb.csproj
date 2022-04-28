@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="V20170320\CdbClient.cs" />
     <Compile Include="V20170320\Models\Account.cs" />
-    <Compile Include="V20170320\Models\AccountInfo.cs" />
     <Compile Include="V20170320\Models\AddTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\AddTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\Address.cs" />
@@ -54,6 +53,9 @@
     <Compile Include="V20170320\Models\ApplyCDBProxyResponse.cs" />
     <Compile Include="V20170320\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170320\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\AuditFilter.cs" />
+    <Compile Include="V20170320\Models\AuditPolicy.cs" />
+    <Compile Include="V20170320\Models\AuditRule.cs" />
     <Compile Include="V20170320\Models\BackupConfig.cs" />
     <Compile Include="V20170320\Models\BackupInfo.cs" />
     <Compile Include="V20170320\Models\BackupItem.cs" />
@@ -71,8 +73,6 @@
     <Compile Include="V20170320\Models\ColumnPrivilege.cs" />
     <Compile Include="V20170320\Models\CommonTimeWindow.cs" />
     <Compile Include="V20170320\Models\ConnectionPoolInfo.cs" />
-    <Compile Include="V20170320\Models\CreateAccountsRequest.cs" />
-    <Compile Include="V20170320\Models\CreateAccountsResponse.cs" />
     <Compile Include="V20170320\Models\CreateAuditPolicyRequest.cs" />
     <Compile Include="V20170320\Models\CreateAuditPolicyResponse.cs" />
     <Compile Include="V20170320\Models\CreateBackupRequest.cs" />
@@ -83,8 +83,6 @@
     <Compile Include="V20170320\Models\CreateDBImportJobResponse.cs" />
     <Compile Include="V20170320\Models\CreateDBInstanceHourRequest.cs" />
     <Compile Include="V20170320\Models\CreateDBInstanceHourResponse.cs" />
-    <Compile Include="V20170320\Models\CreateDeployGroupRequest.cs" />
-    <Compile Include="V20170320\Models\CreateDeployGroupResponse.cs" />
     <Compile Include="V20170320\Models\CreateParamTemplateRequest.cs" />
     <Compile Include="V20170320\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="V20170320\Models\CreateRoInstanceIpRequest.cs" />
@@ -97,19 +95,18 @@
     <Compile Include="V20170320\Models\DeleteAccountsResponse.cs" />
     <Compile Include="V20170320\Models\DeleteBackupRequest.cs" />
     <Compile Include="V20170320\Models\DeleteBackupResponse.cs" />
-    <Compile Include="V20170320\Models\DeleteDeployGroupsRequest.cs" />
-    <Compile Include="V20170320\Models\DeleteDeployGroupsResponse.cs" />
     <Compile Include="V20170320\Models\DeleteParamTemplateRequest.cs" />
     <Compile Include="V20170320\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="V20170320\Models\DeleteTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\DeleteTimeWindowResponse.cs" />
-    <Compile Include="V20170320\Models\DeployGroupInfo.cs" />
     <Compile Include="V20170320\Models\DescribeAccountPrivilegesRequest.cs" />
     <Compile Include="V20170320\Models\DescribeAccountPrivilegesResponse.cs" />
-    <Compile Include="V20170320\Models\DescribeAccountsRequest.cs" />
-    <Compile Include="V20170320\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20170320\Models\DescribeAsyncRequestInfoRequest.cs" />
     <Compile Include="V20170320\Models\DescribeAsyncRequestInfoResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditPoliciesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditPoliciesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditRulesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditRulesResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupDownloadRestrictionRequest.cs" />
@@ -154,8 +151,6 @@
     <Compile Include="V20170320\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDefaultParamsRequest.cs" />
     <Compile Include="V20170320\Models\DescribeDefaultParamsResponse.cs" />
-    <Compile Include="V20170320\Models\DescribeDeployGroupListRequest.cs" />
-    <Compile Include="V20170320\Models\DescribeDeployGroupListResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDeviceMonitorInfoRequest.cs" />
     <Compile Include="V20170320\Models\DescribeDeviceMonitorInfoResponse.cs" />
     <Compile Include="V20170320\Models\DescribeErrorLogDataRequest.cs" />
@@ -249,16 +244,12 @@
     <Compile Include="V20170320\Models\ModifyDBInstanceProjectResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
-    <Compile Include="V20170320\Models\ModifyDBInstanceVipVportRequest.cs" />
-    <Compile Include="V20170320\Models\ModifyDBInstanceVipVportResponse.cs" />
     <Compile Include="V20170320\Models\ModifyInstanceParamRequest.cs" />
     <Compile Include="V20170320\Models\ModifyInstanceParamResponse.cs" />
     <Compile Include="V20170320\Models\ModifyInstanceTagRequest.cs" />
     <Compile Include="V20170320\Models\ModifyInstanceTagResponse.cs" />
     <Compile Include="V20170320\Models\ModifyLocalBinlogConfigRequest.cs" />
     <Compile Include="V20170320\Models\ModifyLocalBinlogConfigResponse.cs" />
-    <Compile Include="V20170320\Models\ModifyNameOrDescByDpIdRequest.cs" />
-    <Compile Include="V20170320\Models\ModifyNameOrDescByDpIdResponse.cs" />
     <Compile Include="V20170320\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="V20170320\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="V20170320\Models\ModifyRoGroupInfoRequest.cs" />
@@ -292,6 +283,8 @@
     <Compile Include="V20170320\Models\ReleaseResult.cs" />
     <Compile Include="V20170320\Models\ReloadBalanceProxyNodeRequest.cs" />
     <Compile Include="V20170320\Models\ReloadBalanceProxyNodeResponse.cs" />
+    <Compile Include="V20170320\Models\ResetRootAccountRequest.cs" />
+    <Compile Include="V20170320\Models\ResetRootAccountResponse.cs" />
     <Compile Include="V20170320\Models\RestartDBInstancesRequest.cs" />
     <Compile Include="V20170320\Models\RestartDBInstancesResponse.cs" />
     <Compile Include="V20170320\Models\RoGroup.cs" />

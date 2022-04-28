@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Parameter template type. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+        /// Type of the parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }

@@ -21,7 +21,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyNameOrDescByDpIdResponse : AbstractModel
+    public class ResetRootAccountResponse : AbstractModel
     {
         
         /// <summary>

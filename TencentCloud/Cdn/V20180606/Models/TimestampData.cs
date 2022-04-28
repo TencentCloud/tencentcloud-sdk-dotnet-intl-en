@@ -15,22 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSchedulingDomainRequest : AbstractModel
+    public class TimestampData : AbstractModel
     {
         
         /// <summary>
-        /// Indicates whether a hybrid cloud product is used.
-        /// `hybrid`: Anti-DDoS Service Platform
-        /// For other products, leave this field empty.
+        /// Statistical point in time in forward rounding mode
+        /// Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
+
+        /// <summary>
+        /// Data value
+        /// </summary>
+        [JsonProperty("Value")]
+        public float? Value{ get; set; }
 
 
         /// <summary>
@@ -38,7 +43,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

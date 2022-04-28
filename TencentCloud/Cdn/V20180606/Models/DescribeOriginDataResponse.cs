@@ -15,22 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSchedulingDomainRequest : AbstractModel
+    public class DescribeOriginDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// Indicates whether a hybrid cloud product is used.
-        /// `hybrid`: Anti-DDoS Service Platform
-        /// For other products, leave this field empty.
+        /// Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
+        [JsonProperty("Interval")]
+        public string Interval{ get; set; }
+
+        /// <summary>
+        /// Origin-pull data details of each resource.
+        /// </summary>
+        [JsonProperty("Data")]
+        public ResourceOriginData[] Data{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -38,7 +48,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

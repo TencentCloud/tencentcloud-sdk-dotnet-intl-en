@@ -66,6 +66,8 @@
     <Compile Include="V20180525\Models\ClusterBasicSettings.cs" />
     <Compile Include="V20180525\Models\ClusterCIDRSettings.cs" />
     <Compile Include="V20180525\Models\ClusterExtraArgs.cs" />
+    <Compile Include="V20180525\Models\ClusterLevelAttribute.cs" />
+    <Compile Include="V20180525\Models\ClusterLevelChangeRecord.cs" />
     <Compile Include="V20180525\Models\ClusterNetworkSettings.cs" />
     <Compile Include="V20180525\Models\ClusterStatus.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
@@ -125,6 +127,10 @@
     <Compile Include="V20180525\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterKubeconfigResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterLevelAttributeRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterLevelAttributeResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterLevelChangeRecordsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterLevelChangeRecordsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterNodePoolDetailRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterNodePoolDetailResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterNodePoolsRequest.cs" />
@@ -149,6 +155,8 @@
     <Compile Include="V20180525\Models\DescribePrometheusInstanceResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeResourceUsageRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeResourceUsageResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeTKEEdgeScriptRequest.cs" />
@@ -169,6 +177,8 @@
     <Compile Include="V20180525\Models\ExistedInstancesPara.cs" />
     <Compile Include="V20180525\Models\ExtensionAddon.cs" />
     <Compile Include="V20180525\Models\Filter.cs" />
+    <Compile Include="V20180525\Models\GetClusterLevelPriceRequest.cs" />
+    <Compile Include="V20180525\Models\GetClusterLevelPriceResponse.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
     <Compile Include="V20180525\Models\ImageInstance.cs" />
@@ -212,6 +222,8 @@
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ResourceDeleteOption.cs" />
+    <Compile Include="V20180525\Models\ResourceUsage.cs" />
+    <Compile Include="V20180525\Models\ResourceUsageDetail.cs" />
     <Compile Include="V20180525\Models\RouteInfo.cs" />
     <Compile Include="V20180525\Models\RouteTableConflict.cs" />
     <Compile Include="V20180525\Models\RouteTableInfo.cs" />

@@ -15,22 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSchedulingDomainRequest : AbstractModel
+    public class GetClusterLevelPriceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Indicates whether a hybrid cloud product is used.
-        /// `hybrid`: Anti-DDoS Service Platform
-        /// For other products, leave this field empty.
+        /// Discount price (unit: US cent)
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
+        [JsonProperty("Cost")]
+        public ulong? Cost{ get; set; }
+
+        /// <summary>
+        /// Original price (unit: US cent)
+        /// </summary>
+        [JsonProperty("TotalCost")]
+        public ulong? TotalCost{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -38,7 +48,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Cost", this.Cost);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

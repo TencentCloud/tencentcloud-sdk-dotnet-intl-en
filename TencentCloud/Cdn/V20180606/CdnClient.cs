@@ -93,6 +93,170 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to query billing data details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
+        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
+        public async Task<DescribeBillingDataResponse> DescribeBillingData(DescribeBillingDataRequest req)
+        {
+             JsonResponseModel<DescribeBillingDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillingData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query billing data details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
+        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
+        public DescribeBillingDataResponse DescribeBillingDataSync(DescribeBillingDataRequest req)
+        {
+             JsonResponseModel<DescribeBillingDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillingData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+        /// 
+        /// + Traffic (in bytes)
+        /// + Bandwidth (in bps)
+        /// + Number of requests
+        /// + Number of hit requests
+        /// + Request hit rate (in %)
+        /// + Hit traffic (in bytes)
+        /// + Traffic hit rate (in %)
+        /// + Aggregate list of 2xx status codes and the details of status codes starting with 2 (in entries)
+        /// + Aggregate list of 3xx status codes and the details of status codes starting with 3 (in entries)
+        /// + Aggregate list of 4xx status codes and the details of status codes starting with 4 (in entries)
+        /// + Aggregate list of 5xx status codes and the details of status codes starting with 5 (in entries)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdnDataRequest"/></param>
+        /// <returns><see cref="DescribeCdnDataResponse"/></returns>
+        public async Task<DescribeCdnDataResponse> DescribeCdnData(DescribeCdnDataRequest req)
+        {
+             JsonResponseModel<DescribeCdnDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCdnData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+        /// 
+        /// + Traffic (in bytes)
+        /// + Bandwidth (in bps)
+        /// + Number of requests
+        /// + Number of hit requests
+        /// + Request hit rate (in %)
+        /// + Hit traffic (in bytes)
+        /// + Traffic hit rate (in %)
+        /// + Aggregate list of 2xx status codes and the details of status codes starting with 2 (in entries)
+        /// + Aggregate list of 3xx status codes and the details of status codes starting with 3 (in entries)
+        /// + Aggregate list of 4xx status codes and the details of status codes starting with 4 (in entries)
+        /// + Aggregate list of 5xx status codes and the details of status codes starting with 5 (in entries)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdnDataRequest"/></param>
+        /// <returns><see cref="DescribeCdnDataResponse"/></returns>
+        public DescribeCdnDataResponse DescribeCdnDataSync(DescribeCdnDataRequest req)
+        {
+             JsonResponseModel<DescribeCdnDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCdnData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+        /// 
+        /// + Origin-pull traffic (in bytes)
+        /// + Origin-pull bandwidth (in bps)
+        /// + Number of origin-pull requests
+        /// + Number of failed origin-pull requests
+        /// + Origin-pull failure rate (in % with two decimal digits)
+        /// + Aggregate list of 2xx origin-pull status codes and the details of origin-pull status codes starting with 2 (in entries)
+        /// + Aggregate list of 3xx origin-pull status codes and the details of origin-pull status codes starting with 3 (in entries)
+        /// + Aggregate list of 4xx origin-pull status codes and the details of origin-pull status codes starting with 4 (in entries)
+        /// + Aggregate list of 5xx origin-pull status codes and the details of origin-pull status codes starting with 5 (in entries)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginDataRequest"/></param>
+        /// <returns><see cref="DescribeOriginDataResponse"/></returns>
+        public async Task<DescribeOriginDataResponse> DescribeOriginData(DescribeOriginDataRequest req)
+        {
+             JsonResponseModel<DescribeOriginDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOriginData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+        /// 
+        /// + Origin-pull traffic (in bytes)
+        /// + Origin-pull bandwidth (in bps)
+        /// + Number of origin-pull requests
+        /// + Number of failed origin-pull requests
+        /// + Origin-pull failure rate (in % with two decimal digits)
+        /// + Aggregate list of 2xx origin-pull status codes and the details of origin-pull status codes starting with 2 (in entries)
+        /// + Aggregate list of 3xx origin-pull status codes and the details of origin-pull status codes starting with 3 (in entries)
+        /// + Aggregate list of 4xx origin-pull status codes and the details of origin-pull status codes starting with 4 (in entries)
+        /// + Aggregate list of 5xx origin-pull status codes and the details of origin-pull status codes starting with 5 (in entries)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginDataRequest"/></param>
+        /// <returns><see cref="DescribeOriginDataResponse"/></returns>
+        public DescribeOriginDataResponse DescribeOriginDataSync(DescribeOriginDataRequest req)
+        {
+             JsonResponseModel<DescribeOriginDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOriginData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to submit multiple directory purge tasks, which are carried out according to the acceleration region of the domain names.
         /// By default, a maximum of 100 directories can be purged per day for acceleration regions either within or outside the Chinese mainland, and up to 500 tasks can be submitted at a time.
         /// </summary>

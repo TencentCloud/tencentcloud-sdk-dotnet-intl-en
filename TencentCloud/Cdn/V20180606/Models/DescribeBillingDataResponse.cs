@@ -15,32 +15,30 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAccountsResponse : AbstractModel
+    public class DescribeBillingDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible accounts.
+        /// Time granularity, which is specified by the parameter passed in during the query:
+        /// min: 1-minute
+        /// 5min: 5-minute
+        /// hour: 1-hour
+        /// day: 1-day
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Interval")]
+        public string Interval{ get; set; }
 
         /// <summary>
-        /// Details of eligible accounts.
+        /// Data details
         /// </summary>
-        [JsonProperty("Items")]
-        public AccountInfo[] Items{ get; set; }
-
-        /// <summary>
-        /// The maximum number of instance connections (set by the MySQL parameter `max_connections`)
-        /// </summary>
-        [JsonProperty("MaxUserConnections")]
-        public long? MaxUserConnections{ get; set; }
+        [JsonProperty("Data")]
+        public ResourceBillingData[] Data{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,9 +52,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

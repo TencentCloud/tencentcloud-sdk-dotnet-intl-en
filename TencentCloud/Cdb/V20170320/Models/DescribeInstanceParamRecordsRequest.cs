@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Pagination offset.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page.
+        /// Number of entries per page. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

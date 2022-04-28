@@ -15,20 +15,30 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteDeployGroupsRequest : AbstractModel
+    public class ResourceBillingData : AbstractModel
     {
         
         /// <summary>
-        /// List of IDs of placement groups to be deleted.
+        /// Resource name, which is categorized as follows based on different query conditions:
+        /// Specific domain name: domain name details
+        /// multiDomains: aggregated details of multiple domain names
+        /// Project ID: displays the ID of the specified project to be queried
+        /// all: the details at the account level
         /// </summary>
-        [JsonProperty("DeployGroupIds")]
-        public string[] DeployGroupIds{ get; set; }
+        [JsonProperty("Resource")]
+        public string Resource{ get; set; }
+
+        /// <summary>
+        /// Billing data details
+        /// </summary>
+        [JsonProperty("BillingData")]
+        public CdnData[] BillingData{ get; set; }
 
 
         /// <summary>
@@ -36,7 +46,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
+            this.SetParamSimple(map, prefix + "Resource", this.Resource);
+            this.SetParamArrayObj(map, prefix + "BillingData.", this.BillingData);
         }
     }
 }

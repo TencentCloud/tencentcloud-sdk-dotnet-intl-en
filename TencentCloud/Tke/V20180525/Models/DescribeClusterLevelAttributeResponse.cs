@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyNameOrDescByDpIdRequest : AbstractModel
+    public class DescribeClusterLevelAttributeResponse : AbstractModel
     {
         
         /// <summary>
-        /// ID of a placement group.
+        /// Total number
         /// </summary>
-        [JsonProperty("DeployGroupId")]
-        public string DeployGroupId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
+        /// Cluster model
         /// </summary>
-        [JsonProperty("DeployGroupName")]
-        public string DeployGroupName{ get; set; }
+        [JsonProperty("Items")]
+        public ClusterLevelAttribute[] Items{ get; set; }
 
         /// <summary>
-        /// Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
-            this.SetParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

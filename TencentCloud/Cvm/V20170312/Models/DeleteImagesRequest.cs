@@ -30,6 +30,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ImageIds")]
         public string[] ImageIds{ get; set; }
 
+        /// <summary>
+        /// Whether to delete the snapshot associated with the image
+        /// </summary>
+        [JsonProperty("DeleteBindedSnap")]
+        public bool? DeleteBindedSnap{ get; set; }
+
+        /// <summary>
+        /// Check whether deleting an image is supported
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+            this.SetParamSimple(map, prefix + "DeleteBindedSnap", this.DeleteBindedSnap);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

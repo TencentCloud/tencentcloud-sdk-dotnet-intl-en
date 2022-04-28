@@ -117,6 +117,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("SnapshotSet")]
         public Snapshot[] SnapshotSet{ get; set; }
 
+        /// <summary>
+        /// The list of tags bound to the image.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +145,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "SyncPercent", this.SyncPercent);
             this.SetParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
             this.SetParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

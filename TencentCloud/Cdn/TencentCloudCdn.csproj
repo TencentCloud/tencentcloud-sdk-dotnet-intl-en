@@ -45,11 +45,23 @@
 
   <ItemGroup>
     <Compile Include="V20180606\CdnClient.cs" />
+    <Compile Include="V20180606\Models\CdnData.cs" />
     <Compile Include="V20180606\Models\CreateScdnFailedLogTaskRequest.cs" />
     <Compile Include="V20180606\Models\CreateScdnFailedLogTaskResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeBillingDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeBillingDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeCdnDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeCdnDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeOriginDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeOriginDataResponse.cs" />
     <Compile Include="V20180606\Models\PurgePathCacheRequest.cs" />
     <Compile Include="V20180606\Models\PurgePathCacheResponse.cs" />
     <Compile Include="V20180606\Models\PushUrlsCacheRequest.cs" />
     <Compile Include="V20180606\Models\PushUrlsCacheResponse.cs" />
+    <Compile Include="V20180606\Models\ResourceBillingData.cs" />
+    <Compile Include="V20180606\Models\ResourceData.cs" />
+    <Compile Include="V20180606\Models\ResourceOriginData.cs" />
+    <Compile Include="V20180606\Models\SummarizedData.cs" />
+    <Compile Include="V20180606\Models\TimestampData.cs" />
   </ItemGroup>
 </Project>

@@ -15,33 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDeployGroupListResponse : AbstractModel
+    public class GetClusterLevelPriceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible entries.
+        /// The cluster model. It’s used for price query.
         /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
-
-        /// <summary>
-        /// List of returned results.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Items")]
-        public DeployGroupInfo[] Items{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
 
 
         /// <summary>
@@ -49,9 +36,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         }
     }
 }

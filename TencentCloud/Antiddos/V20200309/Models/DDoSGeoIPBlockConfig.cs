@@ -26,9 +26,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         
         /// <summary>
         /// Region type. Valid values:
-        /// oversea: outside the Chinese mainland
-        /// `china`: the Chinese mainland
-        /// `customized`: custom region
+        /// `oversea`: Outside the Chinese mainland
+        /// `china`: The Chinese mainland
+        /// `customized`: User-specified region
         /// ]
         /// </summary>
         [JsonProperty("RegionType")]

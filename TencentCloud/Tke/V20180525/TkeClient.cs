@@ -1333,6 +1333,86 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to obtain the cluster model.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterLevelAttributeRequest"/></param>
+        /// <returns><see cref="DescribeClusterLevelAttributeResponse"/></returns>
+        public async Task<DescribeClusterLevelAttributeResponse> DescribeClusterLevelAttribute(DescribeClusterLevelAttributeRequest req)
+        {
+             JsonResponseModel<DescribeClusterLevelAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterLevelAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterLevelAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the cluster model.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterLevelAttributeRequest"/></param>
+        /// <returns><see cref="DescribeClusterLevelAttributeResponse"/></returns>
+        public DescribeClusterLevelAttributeResponse DescribeClusterLevelAttributeSync(DescribeClusterLevelAttributeRequest req)
+        {
+             JsonResponseModel<DescribeClusterLevelAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterLevelAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterLevelAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the cluster model adjustment history.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterLevelChangeRecordsRequest"/></param>
+        /// <returns><see cref="DescribeClusterLevelChangeRecordsResponse"/></returns>
+        public async Task<DescribeClusterLevelChangeRecordsResponse> DescribeClusterLevelChangeRecords(DescribeClusterLevelChangeRecordsRequest req)
+        {
+             JsonResponseModel<DescribeClusterLevelChangeRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterLevelChangeRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterLevelChangeRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the cluster model adjustment history.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterLevelChangeRecordsRequest"/></param>
+        /// <returns><see cref="DescribeClusterLevelChangeRecordsResponse"/></returns>
+        public DescribeClusterLevelChangeRecordsResponse DescribeClusterLevelChangeRecordsSync(DescribeClusterLevelChangeRecordsRequest req)
+        {
+             JsonResponseModel<DescribeClusterLevelChangeRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterLevelChangeRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterLevelChangeRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query detailed information of a node pool.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodePoolDetailRequest"/></param>
@@ -1813,6 +1893,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query the cluster resource usage.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUsageRequest"/></param>
+        /// <returns><see cref="DescribeResourceUsageResponse"/></returns>
+        public async Task<DescribeResourceUsageResponse> DescribeResourceUsage(DescribeResourceUsageRequest req)
+        {
+             JsonResponseModel<DescribeResourceUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the cluster resource usage.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUsageRequest"/></param>
+        /// <returns><see cref="DescribeResourceUsageResponse"/></returns>
+        public DescribeResourceUsageResponse DescribeResourceUsageSync(DescribeResourceUsageRequest req)
+        {
+             JsonResponseModel<DescribeResourceUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of route table conflicts.
         /// </summary>
         /// <param name="req"><see cref="DescribeRouteTableConflictsRequest"/></param>
@@ -2084,6 +2204,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "EnableVpcCniNetworkType");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Obtaining the price of specified cluster model
+        /// </summary>
+        /// <param name="req"><see cref="GetClusterLevelPriceRequest"/></param>
+        /// <returns><see cref="GetClusterLevelPriceResponse"/></returns>
+        public async Task<GetClusterLevelPriceResponse> GetClusterLevelPrice(GetClusterLevelPriceRequest req)
+        {
+             JsonResponseModel<GetClusterLevelPriceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetClusterLevelPrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetClusterLevelPriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Obtaining the price of specified cluster model
+        /// </summary>
+        /// <param name="req"><see cref="GetClusterLevelPriceRequest"/></param>
+        /// <returns><see cref="GetClusterLevelPriceResponse"/></returns>
+        public GetClusterLevelPriceResponse GetClusterLevelPriceSync(GetClusterLevelPriceRequest req)
+        {
+             JsonResponseModel<GetClusterLevelPriceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetClusterLevelPrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetClusterLevelPriceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

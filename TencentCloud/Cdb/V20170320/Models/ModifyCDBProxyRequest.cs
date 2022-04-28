@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
+        /// Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
         /// </summary>
         [JsonProperty("IsKickout")]
         public bool? IsKickout{ get; set; }
 
         /// <summary>
-        /// The minimum number of read-only instances allowed by the proxy group
+        /// The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
         /// </summary>
         [JsonProperty("MinCount")]
         public ulong? MinCount{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RoWeight RoWeightValues{ get; set; }
 
         /// <summary>
-        /// Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
+        /// Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
         /// </summary>
         [JsonProperty("FailOver")]
         public bool? FailOver{ get; set; }
 
         /// <summary>
-        /// Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
+        /// Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public bool? AutoAddRo{ get; set; }

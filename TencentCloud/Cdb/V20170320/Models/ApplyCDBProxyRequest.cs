@@ -67,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// Description
+        /// Description (up to 256 characters)
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }

@@ -15,27 +15,30 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyDBInstanceVipVportResponse : AbstractModel
+    public class ResourceOriginData : AbstractModel
     {
         
         /// <summary>
-        /// Async task ID. (This returned field has been disused)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Resource name, which is classified as follows based on different query conditions:
+        /// A specific domain name: This indicates the details of this domain name
+        /// multiDomains: This indicates the aggregate details of multiple domain names
+        /// Project ID: This displays the ID of the specifically queried project
+        /// all: This indicates the details at the account level
         /// </summary>
-        [JsonProperty("AsyncRequestId")]
-        public string AsyncRequestId{ get; set; }
+        [JsonProperty("Resource")]
+        public string Resource{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Origin-pull data details
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("OriginData")]
+        public CdnData[] OriginData{ get; set; }
 
 
         /// <summary>
@@ -43,8 +46,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Resource", this.Resource);
+            this.SetParamArrayObj(map, prefix + "OriginData.", this.OriginData);
         }
     }
 }

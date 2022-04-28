@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// Filters. Each request can have up to 10 `Filters` and 5 `Filters.Values`. You cannot specify `ImageIds` and `Filters` at the same time. Specific filters:
+        /// Filters. Each request can have up to 10 `Filters`, and 5 `Filters.Values` for each filter. `ImageIds` and `Filters` cannot be specified at the same time. See details:
         /// 
         /// <li><strong>image-id</strong></li>
         /// <p style="padding-left: 30px;">Filter by the <strong>image ID</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
@@ -40,9 +40,11 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li><strong>image-name</strong></li>
         /// <p style="padding-left: 30px;">Filter by the <strong>image name</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
         /// <li><strong>platform</strong></li>
-        /// <p style="padding-left: 30px;">Filter by the <strong>image operating system</strong>, such as CentOS.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+        /// <p style="padding-left: 30px;">Filter by the <strong>image operating system</strong>, such as `CentOS`.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
         /// <li><strong>tag-key</strong></li>
         /// <p style="padding-left: 30px;">Filter by the <strong>tag key</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+        /// <li><strong>tag-value</strong></li>
+        /// <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
         /// <li><strong>tag:tag-key</strong></li>
         /// <p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
         /// </summary>
