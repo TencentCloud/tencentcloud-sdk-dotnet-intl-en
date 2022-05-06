@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Cls.V20201016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteUpstreamRequest : AbstractModel
+    public class OpenKafkaConsumerRequest : AbstractModel
     {
         
         /// <summary>
-        /// ID of the upstream to be deleted
+        /// `TopicId` created by the CLS console
         /// </summary>
-        [JsonProperty("UpstreamId")]
-        public string UpstreamId{ get; set; }
+        [JsonProperty("FromTopicId")]
+        public string FromTopicId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
+            this.SetParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
         }
     }
 }

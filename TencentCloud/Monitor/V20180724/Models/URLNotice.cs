@@ -59,6 +59,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
+        /// <summary>
+        /// Notification cycle. The values 1-7 indicate Monday to Sunday.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Weekday")]
+        public long?[] Weekday{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ValidationCode", this.ValidationCode);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "Weekday.", this.Weekday);
         }
     }
 }

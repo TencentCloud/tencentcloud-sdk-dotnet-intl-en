@@ -54,6 +54,8 @@
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\CallBackInfo.cs" />
     <Compile Include="V20201016\Models\Ckafka.cs" />
+    <Compile Include="V20201016\Models\CloseKafkaConsumerRequest.cs" />
+    <Compile Include="V20201016\Models\CloseKafkaConsumerResponse.cs" />
     <Compile Include="V20201016\Models\Column.cs" />
     <Compile Include="V20201016\Models\CompressInfo.cs" />
     <Compile Include="V20201016\Models\ConfigInfo.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="V20201016\Models\CreateLogsetResponse.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\CreateShipperRequest.cs" />
+    <Compile Include="V20201016\Models\CreateShipperResponse.cs" />
     <Compile Include="V20201016\Models\CreateTopicRequest.cs" />
     <Compile Include="V20201016\Models\CreateTopicResponse.cs" />
     <Compile Include="V20201016\Models\CsvInfo.cs" />
@@ -172,8 +176,12 @@
     <Compile Include="V20201016\Models\ModifyMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\ModifyShipperRequest.cs" />
     <Compile Include="V20201016\Models\ModifyShipperResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyTopicRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyTopicResponse.cs" />
     <Compile Include="V20201016\Models\MonitorTime.cs" />
     <Compile Include="V20201016\Models\NoticeReceiver.cs" />
+    <Compile Include="V20201016\Models\OpenKafkaConsumerRequest.cs" />
+    <Compile Include="V20201016\Models\OpenKafkaConsumerResponse.cs" />
     <Compile Include="V20201016\Models\PartitionInfo.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />

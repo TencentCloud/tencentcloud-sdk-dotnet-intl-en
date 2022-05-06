@@ -25,8 +25,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Information of the upstream after the modification
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Return modified upstream information
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Result")]
         public UpstreamInfo Result{ get; set; }

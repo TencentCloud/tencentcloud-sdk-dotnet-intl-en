@@ -186,8 +186,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string DeploymentType{ get; set; }
 
         /// <summary>
-        /// Whether it’s for special usage
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("SpecialUse")]
         public string SpecialUse{ get; set; }

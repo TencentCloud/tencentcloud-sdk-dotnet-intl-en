@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeUpstreamBindApisRequest : AbstractModel
+    public class CreateEmailTemplateRequest : AbstractModel
     {
         
         /// <summary>
-        /// Number of entries per page
+        /// Template name.
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("TemplateName")]
+        public string TemplateName{ get; set; }
 
         /// <summary>
-        /// The starting position of paging
+        /// Template content.
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// Upstream ID
-        /// </summary>
-        [JsonProperty("UpstreamId")]
-        public string UpstreamId{ get; set; }
-
-        /// <summary>
-        /// Filters the results by `ServiceId` and `ApiId`
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("TemplateContent")]
+        public TemplateContent TemplateContent{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
+            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
         }
     }
 }

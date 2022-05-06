@@ -61,6 +61,36 @@ namespace TencentCloud.Cdb.V20170320.Models
         public CommonTimeWindow BackupTimeWindow{ get; set; }
 
         /// <summary>
+        /// Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+        /// </summary>
+        [JsonProperty("EnableBackupPeriodSave")]
+        public string EnableBackupPeriodSave{ get; set; }
+
+        /// <summary>
+        /// Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveDays")]
+        public long? BackupPeriodSaveDays{ get; set; }
+
+        /// <summary>
+        /// Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveInterval")]
+        public string BackupPeriodSaveInterval{ get; set; }
+
+        /// <summary>
+        /// Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveCount")]
+        public long? BackupPeriodSaveCount{ get; set; }
+
+        /// <summary>
+        /// The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+        /// </summary>
+        [JsonProperty("StartBackupPeriodSaveDate")]
+        public string StartBackupPeriodSaveDate{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +108,11 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BinlogExpireDays", this.BinlogExpireDays);
             this.SetParamObj(map, prefix + "BackupTimeWindow.", this.BackupTimeWindow);
+            this.SetParamSimple(map, prefix + "EnableBackupPeriodSave", this.EnableBackupPeriodSave);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveDays", this.BackupPeriodSaveDays);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveInterval", this.BackupPeriodSaveInterval);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveCount", this.BackupPeriodSaveCount);
+            this.SetParamSimple(map, prefix + "StartBackupPeriodSaveDate", this.StartBackupPeriodSaveDate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

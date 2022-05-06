@@ -43,13 +43,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public RuleInfo Rule{ get; set; }
 
         /// <summary>
-        /// 
+        /// Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
         /// </summary>
         [JsonProperty("IncludeInternalFields")]
         public bool? IncludeInternalFields{ get; set; }
 
         /// <summary>
-        /// 
+        /// Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
         /// </summary>
         [JsonProperty("MetadataFlag")]
         public ulong? MetadataFlag{ get; set; }

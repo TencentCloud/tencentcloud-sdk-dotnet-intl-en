@@ -79,7 +79,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+        /// PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -151,13 +151,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+        /// PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
 
         /// <summary>
-        /// PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+        /// PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
         /// </summary>
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
@@ -167,6 +167,24 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
+
+        /// <summary>
+        /// Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+        /// </summary>
+        [JsonProperty("NeedSupportTDE")]
+        public ulong? NeedSupportTDE{ get; set; }
+
+        /// <summary>
+        /// KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+        /// </summary>
+        [JsonProperty("KMSKeyId")]
+        public string KMSKeyId{ get; set; }
+
+        /// <summary>
+        /// The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+        /// </summary>
+        [JsonProperty("KMSRegion")]
+        public string KMSRegion{ get; set; }
 
 
         /// <summary>
@@ -198,6 +216,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
             this.SetParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
+            this.SetParamSimple(map, prefix + "NeedSupportTDE", this.NeedSupportTDE);
+            this.SetParamSimple(map, prefix + "KMSKeyId", this.KMSKeyId);
+            this.SetParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
         }
     }
 }

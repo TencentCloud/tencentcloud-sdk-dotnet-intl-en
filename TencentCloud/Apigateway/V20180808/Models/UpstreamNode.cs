@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// IP or domain name of the host
+        /// IP or domain name
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
@@ -43,8 +43,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// VM instance ID
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// CVM Instance ID
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("VmInstanceId")]
         public string VmInstanceId{ get; set; }
@@ -57,22 +57,22 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Healthy")]
         public string Healthy{ get; set; }
 
         /// <summary>
-        /// The K8s service name
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// TKE container name
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// K8s namespace
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// TKE namespace
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("NameSpace")]
         public string NameSpace{ get; set; }
@@ -85,8 +85,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Source of the node
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Node source. Valid value: `K8S`
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }

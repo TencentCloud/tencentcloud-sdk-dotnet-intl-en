@@ -21,21 +21,9 @@ namespace TencentCloud.Cls.V20201016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AlarmTargetInfo : AbstractModel
+    public class ModifyTopicRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Logset ID
-        /// </summary>
-        [JsonProperty("LogsetId")]
-        public string LogsetId{ get; set; }
-
-        /// <summary>
-        /// Logset name
-        /// </summary>
-        [JsonProperty("LogsetName")]
-        public string LogsetName{ get; set; }
-
         /// <summary>
         /// Log topic ID
         /// </summary>
@@ -49,28 +37,34 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Query statement
+        /// Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
         /// </summary>
-        [JsonProperty("Query")]
-        public string Query{ get; set; }
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Monitoring object number
+        /// Whether to start collection for this log topic
         /// </summary>
-        [JsonProperty("Number")]
-        public long? Number{ get; set; }
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
 
         /// <summary>
-        /// Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+        /// Whether to enable automatic split
         /// </summary>
-        [JsonProperty("StartTimeOffset")]
-        public long? StartTimeOffset{ get; set; }
+        [JsonProperty("AutoSplit")]
+        public bool? AutoSplit{ get; set; }
 
         /// <summary>
-        /// Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+        /// Maximum number of partitions to split into for this topic if automatic split is enabled
         /// </summary>
-        [JsonProperty("EndTimeOffset")]
-        public long? EndTimeOffset{ get; set; }
+        [JsonProperty("MaxSplitPartitions")]
+        public long? MaxSplitPartitions{ get; set; }
+
+        /// <summary>
+        /// Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
 
 
         /// <summary>
@@ -78,14 +72,13 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
-            this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamSimple(map, prefix + "Query", this.Query);
-            this.SetParamSimple(map, prefix + "Number", this.Number);
-            this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
-            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
+            this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

@@ -43,13 +43,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Number{ get; set; }
 
         /// <summary>
-        /// Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
+        /// Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public long? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+        /// Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public long? EndTimeOffset{ get; set; }

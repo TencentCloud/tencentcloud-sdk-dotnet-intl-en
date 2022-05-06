@@ -85,5 +85,7 @@
     <Compile Include="V20210408\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="V20210408\Models\UpdatePrivateCARequest.cs" />
     <Compile Include="V20210408\Models\UpdatePrivateCAResponse.cs" />
+    <Compile Include="V20210408\Models\UpdateProductDynamicRegisterRequest.cs" />
+    <Compile Include="V20210408\Models\UpdateProductDynamicRegisterResponse.cs" />
   </ItemGroup>
 </Project>

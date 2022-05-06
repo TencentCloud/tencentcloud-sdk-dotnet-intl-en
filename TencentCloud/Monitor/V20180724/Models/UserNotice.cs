@@ -108,6 +108,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("PhoneCallType")]
         public string PhoneCallType{ get; set; }
 
+        /// <summary>
+        /// Notification cycle. The values 1-7 indicate Monday to Sunday.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Weekday")]
+        public long?[] Weekday{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "PhoneCircleInterval", this.PhoneCircleInterval);
             this.SetParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
             this.SetParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
+            this.SetParamArraySimple(map, prefix + "Weekday.", this.Weekday);
         }
     }
 }

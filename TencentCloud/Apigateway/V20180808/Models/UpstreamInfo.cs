@@ -25,43 +25,43 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Unique ID of the upstream
+        /// Unique upstream ID
         /// </summary>
         [JsonProperty("UpstreamId")]
         public string UpstreamId{ get; set; }
 
         /// <summary>
-        /// Name of the upstream 
+        /// Upstream name
         /// </summary>
         [JsonProperty("UpstreamName")]
         public string UpstreamName{ get; set; }
 
         /// <summary>
-        /// Description of the upstream
+        /// Upstream description
         /// </summary>
         [JsonProperty("UpstreamDescription")]
         public string UpstreamDescription{ get; set; }
 
         /// <summary>
-        /// Protocol
+        /// Backend protocol. Valid values: `HTTP`, `HTTPS`
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// Load balancing algorithm
+        /// Load balancing algorithm. Valid value: `ROUND_ROBIN`
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }
 
         /// <summary>
-        /// Unique VPC ID.
+        /// Unique VPC ID
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Number of retried attempts
+        /// Number of retry attempts
         /// </summary>
         [JsonProperty("Retries")]
         public ulong? Retries{ get; set; }
@@ -93,21 +93,21 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public UpstreamHealthChecker HealthChecker{ get; set; }
 
         /// <summary>
-        /// Type of the upstream
+        /// Upstream type. Valid values: `IP_PORT`, `K8S`
         /// </summary>
         [JsonProperty("UpstreamType")]
         public string UpstreamType{ get; set; }
 
         /// <summary>
-        /// Configuration of K8s service
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Configuration of TKE service
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("K8sServices")]
         public K8sService[] K8sServices{ get; set; }
 
         /// <summary>
-        /// Host of the upstream
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// The Host header that the gateway forwards to the upstream
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("UpstreamHost")]
         public string UpstreamHost{ get; set; }

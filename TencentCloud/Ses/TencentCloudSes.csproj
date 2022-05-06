@@ -46,11 +46,15 @@
   <ItemGroup>
     <Compile Include="V20201002\SesClient.cs" />
     <Compile Include="V20201002\Models\Attachment.cs" />
+    <Compile Include="V20201002\Models\BatchSendEmailRequest.cs" />
+    <Compile Include="V20201002\Models\BatchSendEmailResponse.cs" />
     <Compile Include="V20201002\Models\BlackEmailAddress.cs" />
     <Compile Include="V20201002\Models\CreateEmailAddressRequest.cs" />
     <Compile Include="V20201002\Models\CreateEmailAddressResponse.cs" />
     <Compile Include="V20201002\Models\CreateEmailIdentityRequest.cs" />
     <Compile Include="V20201002\Models\CreateEmailIdentityResponse.cs" />
+    <Compile Include="V20201002\Models\CreateEmailTemplateRequest.cs" />
+    <Compile Include="V20201002\Models\CreateEmailTemplateResponse.cs" />
     <Compile Include="V20201002\Models\CreateReceiverDetailRequest.cs" />
     <Compile Include="V20201002\Models\CreateReceiverDetailResponse.cs" />
     <Compile Include="V20201002\Models\CreateReceiverRequest.cs" />
@@ -98,6 +102,8 @@
     <Compile Include="V20201002\Models\TimedEmailParam.cs" />
     <Compile Include="V20201002\Models\UpdateEmailIdentityRequest.cs" />
     <Compile Include="V20201002\Models\UpdateEmailIdentityResponse.cs" />
+    <Compile Include="V20201002\Models\UpdateEmailTemplateRequest.cs" />
+    <Compile Include="V20201002\Models\UpdateEmailTemplateResponse.cs" />
     <Compile Include="V20201002\Models\Volume.cs" />
   </ItemGroup>
 </Project>

@@ -42,6 +42,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("SpecItemInfoList")]
         public SpecItemInfo[] SpecItemInfoList{ get; set; }
 
+        /// <summary>
+        /// Regions where KMS is supported
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("SupportKMSRegions")]
+        public string[] SupportKMSRegions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "SpecItemInfoList.", this.SpecItemInfoList);
+            this.SetParamArraySimple(map, prefix + "SupportKMSRegions.", this.SupportKMSRegions);
         }
     }
 }

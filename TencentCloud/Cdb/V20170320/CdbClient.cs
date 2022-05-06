@@ -1193,7 +1193,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to query the information of database proxy.
+        /// This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
         /// </summary>
         /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
         /// <returns><see cref="DescribeCDBProxyResponse"/></returns>
@@ -1213,7 +1213,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to query the information of database proxy.
+        /// This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
         /// </summary>
         /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
         /// <returns><see cref="DescribeCDBProxyResponse"/></returns>

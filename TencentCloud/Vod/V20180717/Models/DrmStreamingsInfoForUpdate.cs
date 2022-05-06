@@ -30,6 +30,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SimpleAesDefinition")]
         public ulong? SimpleAesDefinition{ get; set; }
 
+        /// <summary>
+        /// The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+        /// </summary>
+        [JsonProperty("WidevineDefinition")]
+        public ulong? WidevineDefinition{ get; set; }
+
+        /// <summary>
+        /// The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+        /// </summary>
+        [JsonProperty("FairPlayDefinition")]
+        public ulong? FairPlayDefinition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SimpleAesDefinition", this.SimpleAesDefinition);
+            this.SetParamSimple(map, prefix + "WidevineDefinition", this.WidevineDefinition);
+            this.SetParamSimple(map, prefix + "FairPlayDefinition", this.FairPlayDefinition);
         }
     }
 }

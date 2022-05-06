@@ -73,6 +73,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("LogJson")]
         public string LogJson{ get; set; }
 
+        /// <summary>
+        /// Source host name of logs
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("HostName")]
+        public string HostName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
             this.SetParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
             this.SetParamSimple(map, prefix + "LogJson", this.LogJson);
+            this.SetParamSimple(map, prefix + "HostName", this.HostName);
         }
     }
 }

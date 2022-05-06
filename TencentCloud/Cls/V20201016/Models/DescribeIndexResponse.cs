@@ -50,6 +50,20 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ModifyTime{ get; set; }
 
         /// <summary>
+        /// Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("IncludeInternalFields")]
+        public bool? IncludeInternalFields{ get; set; }
+
+        /// <summary>
+        /// Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("MetadataFlag")]
+        public ulong? MetadataFlag{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -65,6 +79,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+            this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

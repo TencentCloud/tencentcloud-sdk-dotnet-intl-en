@@ -25,19 +25,19 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Number of results returned in a page
+        /// Number of entries per page
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Page offset
+        /// The starting position of paging
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filters
+        /// Filters. Valid values: `UpstreamId` and `UpstreamName`
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

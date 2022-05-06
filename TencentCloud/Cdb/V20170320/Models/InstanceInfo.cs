@@ -216,7 +216,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Lock flag
+        /// Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
         /// </summary>
         [JsonProperty("CdbError")]
         public long? CdbError{ get; set; }

@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Cls.V20201016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeUpstreamBindApisRequest : AbstractModel
+    public class CreateShipperResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of entries per page
+        /// Shipping rule ID
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("ShipperId")]
+        public string ShipperId{ get; set; }
 
         /// <summary>
-        /// The starting position of paging
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// Upstream ID
-        /// </summary>
-        [JsonProperty("UpstreamId")]
-        public string UpstreamId{ get; set; }
-
-        /// <summary>
-        /// Filters the results by `ServiceId` and `ApiId`
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ShipperId", this.ShipperId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -49,7 +49,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         public MidQueryCondition[] Conditions{ get; set; }
 
         /// <summary>
-        /// Statistical granularity in s. Default value: 300
+        /// Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+        /// Due to the storage period limit, the statistical period is subject to the time range of statistics:
+        /// 60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+        /// 300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+        /// 3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+        /// 86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Backend protocol. Values: `HTTP`, `HTTPS`
+        /// Backend protocol. Valid values: `HTTP`, `HTTPS`
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// The balancing method can only be `ROUND_ROBIN`.
+        /// Load balancing algorithm. Valid value: `ROUND-ROBIN`
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }
@@ -43,16 +43,22 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Name of the upstream 
+        /// Upstream name
         /// </summary>
         [JsonProperty("UpstreamName")]
         public string UpstreamName{ get; set; }
 
         /// <summary>
-        /// Description of the upstream
+        /// Upstream description
         /// </summary>
         [JsonProperty("UpstreamDescription")]
         public string UpstreamDescription{ get; set; }
+
+        /// <summary>
+        /// Upstream access type. Valid values: `IP_PORT`, `K8S`
+        /// </summary>
+        [JsonProperty("UpstreamType")]
+        public string UpstreamType{ get; set; }
 
         /// <summary>
         /// Retry attempts. It defaults to `3`.
@@ -61,7 +67,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public ulong? Retries{ get; set; }
 
         /// <summary>
-        /// The host header in the request sending to the backend
+        /// The Host request header that forwarded from the gateway to backend
         /// </summary>
         [JsonProperty("UpstreamHost")]
         public string UpstreamHost{ get; set; }
@@ -73,7 +79,19 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public UpstreamNode[] Nodes{ get; set; }
 
         /// <summary>
-        /// The location of K8s service
+        /// Label
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Health check configuration
+        /// </summary>
+        [JsonProperty("HealthChecker")]
+        public UpstreamHealthChecker HealthChecker{ get; set; }
+
+        /// <summary>
+        /// Configuration of TKE service
         /// </summary>
         [JsonProperty("K8sService")]
         public K8sService[] K8sService{ get; set; }
@@ -89,9 +107,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UpstreamName", this.UpstreamName);
             this.SetParamSimple(map, prefix + "UpstreamDescription", this.UpstreamDescription);
+            this.SetParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
             this.SetParamSimple(map, prefix + "Retries", this.Retries);
             this.SetParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
             this.SetParamArrayObj(map, prefix + "Nodes.", this.Nodes);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "HealthChecker.", this.HealthChecker);
             this.SetParamArrayObj(map, prefix + "K8sService.", this.K8sService);
         }
     }

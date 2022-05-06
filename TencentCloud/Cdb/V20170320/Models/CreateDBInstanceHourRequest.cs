@@ -217,7 +217,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CageId{ get; set; }
 
         /// <summary>
-        /// Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+        /// Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). Default value: `HIGH_STABILITY`.
         /// </summary>
         [JsonProperty("ParamTemplateType")]
         public string ParamTemplateType{ get; set; }

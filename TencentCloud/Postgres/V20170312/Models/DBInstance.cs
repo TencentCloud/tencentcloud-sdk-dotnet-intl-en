@@ -249,6 +249,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
 
+        /// <summary>
+        /// Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsSupportTDE")]
+        public long? IsSupportTDE{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -291,6 +298,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
+            this.SetParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
         }
     }
 }

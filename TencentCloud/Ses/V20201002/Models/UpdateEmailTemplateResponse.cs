@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteUpstreamRequest : AbstractModel
+    public class UpdateEmailTemplateResponse : AbstractModel
     {
         
         /// <summary>
-        /// ID of the upstream to be deleted
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("UpstreamId")]
-        public string UpstreamId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

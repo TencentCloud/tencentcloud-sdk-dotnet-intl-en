@@ -692,5 +692,45 @@ namespace TencentCloud.Iotcloud.V20210408
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to update the configuration of product dynamic registration. 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="UpdateProductDynamicRegisterResponse"/></returns>
+        public async Task<UpdateProductDynamicRegisterResponse> UpdateProductDynamicRegister(UpdateProductDynamicRegisterRequest req)
+        {
+             JsonResponseModel<UpdateProductDynamicRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateProductDynamicRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProductDynamicRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the configuration of product dynamic registration. 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="UpdateProductDynamicRegisterResponse"/></returns>
+        public UpdateProductDynamicRegisterResponse UpdateProductDynamicRegisterSync(UpdateProductDynamicRegisterRequest req)
+        {
+             JsonResponseModel<UpdateProductDynamicRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateProductDynamicRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProductDynamicRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

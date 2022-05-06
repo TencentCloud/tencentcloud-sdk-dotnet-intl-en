@@ -93,6 +93,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to disable Kafka consumption.
+        /// </summary>
+        /// <param name="req"><see cref="CloseKafkaConsumerRequest"/></param>
+        /// <returns><see cref="CloseKafkaConsumerResponse"/></returns>
+        public async Task<CloseKafkaConsumerResponse> CloseKafkaConsumer(CloseKafkaConsumerRequest req)
+        {
+             JsonResponseModel<CloseKafkaConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseKafkaConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseKafkaConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable Kafka consumption.
+        /// </summary>
+        /// <param name="req"><see cref="CloseKafkaConsumerRequest"/></param>
+        /// <returns><see cref="CloseKafkaConsumerResponse"/></returns>
+        public CloseKafkaConsumerResponse CloseKafkaConsumerSync(CloseKafkaConsumerRequest req)
+        {
+             JsonResponseModel<CloseKafkaConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseKafkaConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseKafkaConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an alarm policy.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmRequest"/></param>
@@ -404,6 +444,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "CreateMachineGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMachineGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a shipping rule. Note: To use this API, you need to check whether you have configured the role and permission for COS shipping tasks. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
+        /// </summary>
+        /// <param name="req"><see cref="CreateShipperRequest"/></param>
+        /// <returns><see cref="CreateShipperResponse"/></returns>
+        public async Task<CreateShipperResponse> CreateShipper(CreateShipperRequest req)
+        {
+             JsonResponseModel<CreateShipperResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateShipper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateShipperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a shipping rule. Note: To use this API, you need to check whether you have configured the role and permission for COS shipping tasks. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
+        /// </summary>
+        /// <param name="req"><see cref="CreateShipperRequest"/></param>
+        /// <returns><see cref="CreateShipperResponse"/></returns>
+        public CreateShipperResponse CreateShipperSync(CreateShipperRequest req)
+        {
+             JsonResponseModel<CreateShipperResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateShipper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateShipperResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1964,6 +2044,86 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyShipper");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyShipperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a log topic.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTopicRequest"/></param>
+        /// <returns><see cref="ModifyTopicResponse"/></returns>
+        public async Task<ModifyTopicResponse> ModifyTopic(ModifyTopicRequest req)
+        {
+             JsonResponseModel<ModifyTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a log topic.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTopicRequest"/></param>
+        /// <returns><see cref="ModifyTopicResponse"/></returns>
+        public ModifyTopicResponse ModifyTopicSync(ModifyTopicRequest req)
+        {
+             JsonResponseModel<ModifyTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the Kafka consumption feature.
+        /// </summary>
+        /// <param name="req"><see cref="OpenKafkaConsumerRequest"/></param>
+        /// <returns><see cref="OpenKafkaConsumerResponse"/></returns>
+        public async Task<OpenKafkaConsumerResponse> OpenKafkaConsumer(OpenKafkaConsumerRequest req)
+        {
+             JsonResponseModel<OpenKafkaConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenKafkaConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenKafkaConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the Kafka consumption feature.
+        /// </summary>
+        /// <param name="req"><see cref="OpenKafkaConsumerRequest"/></param>
+        /// <returns><see cref="OpenKafkaConsumerResponse"/></returns>
+        public OpenKafkaConsumerResponse OpenKafkaConsumerSync(OpenKafkaConsumerRequest req)
+        {
+             JsonResponseModel<OpenKafkaConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenKafkaConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenKafkaConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

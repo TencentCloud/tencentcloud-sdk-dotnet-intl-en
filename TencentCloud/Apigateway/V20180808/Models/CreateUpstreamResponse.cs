@@ -25,8 +25,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// The unique upstream IP returned
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// The unique upstream ID returned
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("UpstreamId")]
         public string UpstreamId{ get; set; }

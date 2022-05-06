@@ -133,7 +133,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// The information of tags to be associated with instances. This parameter is left empty by default.
+        /// The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
         /// </summary>
         [JsonProperty("TagList")]
         public Tag TagList{ get; set; }

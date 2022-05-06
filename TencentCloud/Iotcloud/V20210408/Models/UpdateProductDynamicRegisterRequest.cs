@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Iotcloud.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeUpstreamBindApisRequest : AbstractModel
+    public class UpdateProductDynamicRegisterRequest : AbstractModel
     {
         
         /// <summary>
-        /// Number of entries per page
+        /// Product ID
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
-        /// The starting position of paging
+        /// Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("RegisterType")]
+        public ulong? RegisterType{ get; set; }
 
         /// <summary>
-        /// Upstream ID
+        /// Maximum dynamically registered devices
         /// </summary>
-        [JsonProperty("UpstreamId")]
-        public string UpstreamId{ get; set; }
-
-        /// <summary>
-        /// Filters the results by `ServiceId` and `ApiId`
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("RegisterLimit")]
+        public ulong? RegisterLimit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "RegisterType", this.RegisterType);
+            this.SetParamSimple(map, prefix + "RegisterLimit", this.RegisterLimit);
         }
     }
 }

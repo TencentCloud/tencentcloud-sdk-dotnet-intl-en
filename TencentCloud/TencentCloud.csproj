@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.423</VersionPrefix>
+    <VersionPrefix>3.0.424</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1871,6 +1871,8 @@
     <Compile Include="Cls\V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CallBackInfo.cs" />
     <Compile Include="Cls\V20201016\Models\Ckafka.cs" />
+    <Compile Include="Cls\V20201016\Models\CloseKafkaConsumerRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CloseKafkaConsumerResponse.cs" />
     <Compile Include="Cls\V20201016\Models\Column.cs" />
     <Compile Include="Cls\V20201016\Models\CompressInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ConfigInfo.cs" />
@@ -1892,6 +1894,8 @@
     <Compile Include="Cls\V20201016\Models\CreateLogsetResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateMachineGroupResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateShipperRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateShipperResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateTopicRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateTopicResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CsvInfo.cs" />
@@ -1989,8 +1993,12 @@
     <Compile Include="Cls\V20201016\Models\ModifyMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyShipperRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyShipperResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyTopicRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyTopicResponse.cs" />
     <Compile Include="Cls\V20201016\Models\MonitorTime.cs" />
     <Compile Include="Cls\V20201016\Models\NoticeReceiver.cs" />
+    <Compile Include="Cls\V20201016\Models\OpenKafkaConsumerRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\OpenKafkaConsumerResponse.cs" />
     <Compile Include="Cls\V20201016\Models\PartitionInfo.cs" />
     <Compile Include="Cls\V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="Cls\V20201016\Models\RetryShipperTaskResponse.cs" />
@@ -4138,6 +4146,8 @@
     <Compile Include="Iotcloud\V20210408\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCARequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateProductDynamicRegisterRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateProductDynamicRegisterResponse.cs" />
     <Compile Include="Ip\V20210409\IpClient.cs" />
     <Compile Include="Ip\V20210409\Models\AllocateCustomerCreditRequest.cs" />
     <Compile Include="Ip\V20210409\Models\AllocateCustomerCreditResponse.cs" />
@@ -6099,11 +6109,15 @@
     <Compile Include="Scf\V20180416\Models\VersionWeight.cs" />
     <Compile Include="Ses\V20201002\SesClient.cs" />
     <Compile Include="Ses\V20201002\Models\Attachment.cs" />
+    <Compile Include="Ses\V20201002\Models\BatchSendEmailRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\BatchSendEmailResponse.cs" />
     <Compile Include="Ses\V20201002\Models\BlackEmailAddress.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailAddressRequest.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailAddressResponse.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailIdentityRequest.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailTemplateResponse.cs" />
     <Compile Include="Ses\V20201002\Models\CreateReceiverDetailRequest.cs" />
     <Compile Include="Ses\V20201002\Models\CreateReceiverDetailResponse.cs" />
     <Compile Include="Ses\V20201002\Models\CreateReceiverRequest.cs" />
@@ -6151,6 +6165,8 @@
     <Compile Include="Ses\V20201002\Models\TimedEmailParam.cs" />
     <Compile Include="Ses\V20201002\Models\UpdateEmailIdentityRequest.cs" />
     <Compile Include="Ses\V20201002\Models\UpdateEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailTemplateResponse.cs" />
     <Compile Include="Ses\V20201002\Models\Volume.cs" />
     <Compile Include="Sms\V20210111\SmsClient.cs" />
     <Compile Include="Sms\V20210111\Models\AddSignStatus.cs" />

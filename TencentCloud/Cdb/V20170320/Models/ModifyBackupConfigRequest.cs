@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup file retention period in days. Value range: 7-732.
+        /// Backup file retention period in days. Value range: 7-1830.
         /// </summary>
         [JsonProperty("ExpireDays")]
         public long? ExpireDays{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Binlog retention period in days. Value range: 7-732. It cannot be greater than the retention period of backup files.
+        /// Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
         /// </summary>
         [JsonProperty("BinlogExpireDays")]
         public long? BinlogExpireDays{ get; set; }
@@ -59,6 +59,42 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("BackupTimeWindow")]
         public CommonTimeWindow BackupTimeWindow{ get; set; }
+
+        /// <summary>
+        /// Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+        /// </summary>
+        [JsonProperty("EnableBackupPeriodSave")]
+        public string EnableBackupPeriodSave{ get; set; }
+
+        /// <summary>
+        /// Switch for long-term backup retention (This field can be ignored, for its feature hasn’t been launched). Valid values: `off` (disable), `on` (enable). Default value: `off`. Once enabled, the parameters (BackupPeriodSaveDays, BackupPeriodSaveInterval, and BackupPeriodSaveCount) will be invalid.
+        /// </summary>
+        [JsonProperty("EnableBackupPeriodLongTermSave")]
+        public string EnableBackupPeriodLongTermSave{ get; set; }
+
+        /// <summary>
+        /// Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveDays")]
+        public long? BackupPeriodSaveDays{ get; set; }
+
+        /// <summary>
+        /// Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveInterval")]
+        public string BackupPeriodSaveInterval{ get; set; }
+
+        /// <summary>
+        /// Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveCount")]
+        public long? BackupPeriodSaveCount{ get; set; }
+
+        /// <summary>
+        /// The start time in the format of yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+        /// </summary>
+        [JsonProperty("StartBackupPeriodSaveDate")]
+        public string StartBackupPeriodSaveDate{ get; set; }
 
 
         /// <summary>
@@ -72,6 +108,12 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BinlogExpireDays", this.BinlogExpireDays);
             this.SetParamObj(map, prefix + "BackupTimeWindow.", this.BackupTimeWindow);
+            this.SetParamSimple(map, prefix + "EnableBackupPeriodSave", this.EnableBackupPeriodSave);
+            this.SetParamSimple(map, prefix + "EnableBackupPeriodLongTermSave", this.EnableBackupPeriodLongTermSave);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveDays", this.BackupPeriodSaveDays);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveInterval", this.BackupPeriodSaveInterval);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveCount", this.BackupPeriodSaveCount);
+            this.SetParamSimple(map, prefix + "StartBackupPeriodSaveDate", this.StartBackupPeriodSaveDate);
         }
     }
 }

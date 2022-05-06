@@ -88,8 +88,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] SourceTypes{ get; set; }
 
         /// <summary>
-        /// [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-        /// <li>Array length limit: 10.</li>
+        /// The live stream code array. A media file will be returned if it matches any element in the array.
+        /// <li>Array length limit: 10</li>
         /// </summary>
         [JsonProperty("StreamIds")]
         public string[] StreamIds{ get; set; }
@@ -192,8 +192,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// (This is not recommended. `StreamIds` should be used instead)
-        /// [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+        /// (Not recommended. Consider using `StreamIds` instead.)
+        /// The live stream code.
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }

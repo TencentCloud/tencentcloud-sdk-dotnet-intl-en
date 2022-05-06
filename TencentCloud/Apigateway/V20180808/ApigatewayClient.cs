@@ -1027,7 +1027,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
+        /// This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with any APIs.
         /// </summary>
         /// <param name="req"><see cref="DeleteUpstreamRequest"/></param>
         /// <returns><see cref="DeleteUpstreamResponse"/></returns>
@@ -1047,7 +1047,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
+        /// This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with any APIs.
         /// </summary>
         /// <param name="req"><see cref="DeleteUpstreamRequest"/></param>
         /// <returns><see cref="DeleteUpstreamResponse"/></returns>
@@ -2367,7 +2367,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the list of APIs bound with an upstream.
+        /// This API is used to query APIs bound with an upstream.
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamBindApisRequest"/></param>
         /// <returns><see cref="DescribeUpstreamBindApisResponse"/></returns>
@@ -2387,7 +2387,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the list of APIs bound with an upstream.
+        /// This API is used to query APIs bound with an upstream.
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamBindApisRequest"/></param>
         /// <returns><see cref="DescribeUpstreamBindApisResponse"/></returns>
@@ -2407,7 +2407,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the list of upstreams.
+        /// This API is used to query details of upstreams under the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamsRequest"/></param>
         /// <returns><see cref="DescribeUpstreamsResponse"/></returns>
@@ -2427,7 +2427,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to query the list of upstreams.
+        /// This API is used to query details of upstreams under the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamsRequest"/></param>
         /// <returns><see cref="DescribeUpstreamsResponse"/></returns>

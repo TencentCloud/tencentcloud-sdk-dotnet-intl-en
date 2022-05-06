@@ -55,6 +55,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Method{ get; set; }
 
         /// <summary>
+        /// It’s required for `upstream`.
+        /// Note: This field may return `NULL`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("UpstreamId")]
+        public string UpstreamId{ get; set; }
+
+        /// <summary>
         /// API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
             this.SetParamObj(map, prefix + "CosConfig.", this.CosConfig);
         }
     }
