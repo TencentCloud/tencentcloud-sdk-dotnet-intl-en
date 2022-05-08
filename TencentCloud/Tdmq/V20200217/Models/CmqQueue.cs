@@ -231,6 +231,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxMsgBacklogSize")]
         public long? MaxMsgBacklogSize{ get; set; }
 
+        /// <summary>
+        /// Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RetentionSizeInMB")]
+        public ulong? RetentionSizeInMB{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -267,6 +274,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
             this.SetParamSimple(map, prefix + "MaxMsgBacklogSize", this.MaxMsgBacklogSize);
+            this.SetParamSimple(map, prefix + "RetentionSizeInMB", this.RetentionSizeInMB);
         }
     }
 }

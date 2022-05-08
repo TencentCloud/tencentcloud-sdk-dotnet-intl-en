@@ -1133,126 +1133,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to delete a subscription.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteSubscriptionsRequest"/></param>
-        /// <returns><see cref="DeleteSubscriptionsResponse"/></returns>
-        public async Task<DeleteSubscriptionsResponse> DeleteSubscriptions(DeleteSubscriptionsRequest req)
-        {
-             JsonResponseModel<DeleteSubscriptionsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteSubscriptions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSubscriptionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a subscription.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteSubscriptionsRequest"/></param>
-        /// <returns><see cref="DeleteSubscriptionsResponse"/></returns>
-        public DeleteSubscriptionsResponse DeleteSubscriptionsSync(DeleteSubscriptionsRequest req)
-        {
-             JsonResponseModel<DeleteSubscriptionsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteSubscriptions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSubscriptionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to batch delete topics.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTopicsRequest"/></param>
-        /// <returns><see cref="DeleteTopicsResponse"/></returns>
-        public async Task<DeleteTopicsResponse> DeleteTopics(DeleteTopicsRequest req)
-        {
-             JsonResponseModel<DeleteTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to batch delete topics.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTopicsRequest"/></param>
-        /// <returns><see cref="DeleteTopicsResponse"/></returns>
-        public DeleteTopicsResponse DeleteTopicsSync(DeleteTopicsRequest req)
-        {
-             JsonResponseModel<DeleteTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of dedicated clusters bound to a user.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBindClustersRequest"/></param>
-        /// <returns><see cref="DescribeBindClustersResponse"/></returns>
-        public async Task<DescribeBindClustersResponse> DescribeBindClusters(DescribeBindClustersRequest req)
-        {
-             JsonResponseModel<DescribeBindClustersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBindClusters");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindClustersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of dedicated clusters bound to a user.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBindClustersRequest"/></param>
-        /// <returns><see cref="DescribeBindClustersResponse"/></returns>
-        public DescribeBindClustersResponse DescribeBindClustersSync(DescribeBindClustersRequest req)
-        {
-             JsonResponseModel<DescribeBindClustersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBindClusters");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindClustersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to get the tenant-VPC binding relationship.
         /// </summary>
         /// <param name="req"><see cref="DescribeBindVpcsRequest"/></param>
@@ -1324,46 +1204,6 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusterDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of clusters.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClustersRequest"/></param>
-        /// <returns><see cref="DescribeClustersResponse"/></returns>
-        public async Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest req)
-        {
-             JsonResponseModel<DescribeClustersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeClusters");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClustersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of clusters.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeClustersRequest"/></param>
-        /// <returns><see cref="DescribeClustersResponse"/></returns>
-        public DescribeClustersResponse DescribeClustersSync(DescribeClustersRequest req)
-        {
-             JsonResponseModel<DescribeClustersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeClusters");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClustersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1453,46 +1293,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to query all CMQ queues.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCmqQueuesRequest"/></param>
-        /// <returns><see cref="DescribeCmqQueuesResponse"/></returns>
-        public async Task<DescribeCmqQueuesResponse> DescribeCmqQueues(DescribeCmqQueuesRequest req)
-        {
-             JsonResponseModel<DescribeCmqQueuesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCmqQueues");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqQueuesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query all CMQ queues.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCmqQueuesRequest"/></param>
-        /// <returns><see cref="DescribeCmqQueuesResponse"/></returns>
-        public DescribeCmqQueuesResponse DescribeCmqQueuesSync(DescribeCmqQueuesRequest req)
-        {
-             JsonResponseModel<DescribeCmqQueuesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCmqQueues");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqQueuesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the CMQ subscription details.
         /// </summary>
         /// <param name="req"><see cref="DescribeCmqSubscriptionDetailRequest"/></param>
@@ -1573,46 +1373,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to enumerate all CMQ topics.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCmqTopicsRequest"/></param>
-        /// <returns><see cref="DescribeCmqTopicsResponse"/></returns>
-        public async Task<DescribeCmqTopicsResponse> DescribeCmqTopics(DescribeCmqTopicsRequest req)
-        {
-             JsonResponseModel<DescribeCmqTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCmqTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to enumerate all CMQ topics.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCmqTopicsRequest"/></param>
-        /// <returns><see cref="DescribeCmqTopicsResponse"/></returns>
-        public DescribeCmqTopicsResponse DescribeCmqTopicsSync(DescribeCmqTopicsRequest req)
-        {
-             JsonResponseModel<DescribeCmqTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCmqTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to get the attributes of the specified namespace.
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentAttributesRequest"/></param>
@@ -1644,86 +1404,6 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEnvironmentAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of namespace roles.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEnvironmentRolesRequest"/></param>
-        /// <returns><see cref="DescribeEnvironmentRolesResponse"/></returns>
-        public async Task<DescribeEnvironmentRolesResponse> DescribeEnvironmentRoles(DescribeEnvironmentRolesRequest req)
-        {
-             JsonResponseModel<DescribeEnvironmentRolesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeEnvironmentRoles");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentRolesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of namespace roles.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEnvironmentRolesRequest"/></param>
-        /// <returns><see cref="DescribeEnvironmentRolesResponse"/></returns>
-        public DescribeEnvironmentRolesResponse DescribeEnvironmentRolesSync(DescribeEnvironmentRolesRequest req)
-        {
-             JsonResponseModel<DescribeEnvironmentRolesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeEnvironmentRoles");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentRolesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of namespaces under a tenant.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
-        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
-        public async Task<DescribeEnvironmentsResponse> DescribeEnvironments(DescribeEnvironmentsRequest req)
-        {
-             JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeEnvironments");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of namespaces under a tenant.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
-        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
-        public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
-        {
-             JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeEnvironments");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1853,166 +1533,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to get the list of RocketMQ clusters.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQClustersRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQClustersResponse"/></returns>
-        public async Task<DescribeRocketMQClustersResponse> DescribeRocketMQClusters(DescribeRocketMQClustersRequest req)
-        {
-             JsonResponseModel<DescribeRocketMQClustersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRocketMQClusters");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQClustersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of RocketMQ clusters.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQClustersRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQClustersResponse"/></returns>
-        public DescribeRocketMQClustersResponse DescribeRocketMQClustersSync(DescribeRocketMQClustersRequest req)
-        {
-             JsonResponseModel<DescribeRocketMQClustersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQClusters");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQClustersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of RocketMQ consumer groups.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQGroupsResponse"/></returns>
-        public async Task<DescribeRocketMQGroupsResponse> DescribeRocketMQGroups(DescribeRocketMQGroupsRequest req)
-        {
-             JsonResponseModel<DescribeRocketMQGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRocketMQGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of RocketMQ consumer groups.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQGroupsResponse"/></returns>
-        public DescribeRocketMQGroupsResponse DescribeRocketMQGroupsSync(DescribeRocketMQGroupsRequest req)
-        {
-             JsonResponseModel<DescribeRocketMQGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of RocketMQ namespaces.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQNamespacesResponse"/></returns>
-        public async Task<DescribeRocketMQNamespacesResponse> DescribeRocketMQNamespaces(DescribeRocketMQNamespacesRequest req)
-        {
-             JsonResponseModel<DescribeRocketMQNamespacesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRocketMQNamespaces");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQNamespacesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of RocketMQ namespaces.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQNamespacesResponse"/></returns>
-        public DescribeRocketMQNamespacesResponse DescribeRocketMQNamespacesSync(DescribeRocketMQNamespacesRequest req)
-        {
-             JsonResponseModel<DescribeRocketMQNamespacesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQNamespaces");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQNamespacesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of RocketMQ topics.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQTopicsRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQTopicsResponse"/></returns>
-        public async Task<DescribeRocketMQTopicsResponse> DescribeRocketMQTopics(DescribeRocketMQTopicsRequest req)
-        {
-             JsonResponseModel<DescribeRocketMQTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRocketMQTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of RocketMQ topics.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRocketMQTopicsRequest"/></param>
-        /// <returns><see cref="DescribeRocketMQTopicsResponse"/></returns>
-        public DescribeRocketMQTopicsResponse DescribeRocketMQTopicsSync(DescribeRocketMQTopicsRequest req)
-        {
-             JsonResponseModel<DescribeRocketMQTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to get the list of roles.
         /// </summary>
         /// <param name="req"><see cref="DescribeRolesRequest"/></param>
@@ -2044,86 +1564,6 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRoles");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRolesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the list of subscribers under the specified environment and topic.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSubscriptionsRequest"/></param>
-        /// <returns><see cref="DescribeSubscriptionsResponse"/></returns>
-        public async Task<DescribeSubscriptionsResponse> DescribeSubscriptions(DescribeSubscriptionsRequest req)
-        {
-             JsonResponseModel<DescribeSubscriptionsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSubscriptions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscriptionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the list of subscribers under the specified environment and topic.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSubscriptionsRequest"/></param>
-        /// <returns><see cref="DescribeSubscriptionsResponse"/></returns>
-        public DescribeSubscriptionsResponse DescribeSubscriptionsSync(DescribeSubscriptionsRequest req)
-        {
-             JsonResponseModel<DescribeSubscriptionsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSubscriptions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscriptionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of topics under an environment.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
-        /// <returns><see cref="DescribeTopicsResponse"/></returns>
-        public async Task<DescribeTopicsResponse> DescribeTopics(DescribeTopicsRequest req)
-        {
-             JsonResponseModel<DescribeTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the list of topics under an environment.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
-        /// <returns><see cref="DescribeTopicsResponse"/></returns>
-        public DescribeTopicsResponse DescribeTopicsSync(DescribeTopicsRequest req)
-        {
-             JsonResponseModel<DescribeTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2724,6 +2164,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "ResetMsgSubOffsetByTimestamp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetMsgSubOffsetByTimestampResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to reset the consumption offset of a specified consumer group to a specified timestamp.
+        /// </summary>
+        /// <param name="req"><see cref="ResetRocketMQConsumerOffSetRequest"/></param>
+        /// <returns><see cref="ResetRocketMQConsumerOffSetResponse"/></returns>
+        public async Task<ResetRocketMQConsumerOffSetResponse> ResetRocketMQConsumerOffSet(ResetRocketMQConsumerOffSetRequest req)
+        {
+             JsonResponseModel<ResetRocketMQConsumerOffSetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetRocketMQConsumerOffSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetRocketMQConsumerOffSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to reset the consumption offset of a specified consumer group to a specified timestamp.
+        /// </summary>
+        /// <param name="req"><see cref="ResetRocketMQConsumerOffSetRequest"/></param>
+        /// <returns><see cref="ResetRocketMQConsumerOffSetResponse"/></returns>
+        public ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSetSync(ResetRocketMQConsumerOffSetRequest req)
+        {
+             JsonResponseModel<ResetRocketMQConsumerOffSetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetRocketMQConsumerOffSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetRocketMQConsumerOffSetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

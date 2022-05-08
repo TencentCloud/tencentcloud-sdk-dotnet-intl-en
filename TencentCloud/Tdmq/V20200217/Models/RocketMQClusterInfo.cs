@@ -67,6 +67,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("VpcEndPoint")]
         public string VpcEndPoint{ get; set; }
 
+        /// <summary>
+        /// Whether the namespace access point is supported.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SupportNamespaceEndpoint")]
+        public bool? SupportNamespaceEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +87,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
             this.SetParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+            this.SetParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
         }
     }
 }

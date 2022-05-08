@@ -272,6 +272,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("OsFlavour")]
         public string OsFlavour{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable Prometheus metric
+        /// </summary>
+        [JsonProperty("EnablePrometheusConf")]
+        public EnablePrometheusConf EnablePrometheusConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -317,6 +323,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
             this.SetParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
             this.SetParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
+            this.SetParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
         }
     }
 }

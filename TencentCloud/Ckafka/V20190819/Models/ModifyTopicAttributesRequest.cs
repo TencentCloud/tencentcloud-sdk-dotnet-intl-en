@@ -73,7 +73,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+        /// Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }

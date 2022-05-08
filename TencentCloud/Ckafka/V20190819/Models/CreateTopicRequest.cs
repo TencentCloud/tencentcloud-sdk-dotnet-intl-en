@@ -85,7 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+        /// Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
@@ -95,6 +95,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
+
+        /// <summary>
+        /// Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+        /// </summary>
+        [JsonProperty("MaxMessageBytes")]
+        public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
         /// Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
@@ -138,6 +144,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
             this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
+            this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
             this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);

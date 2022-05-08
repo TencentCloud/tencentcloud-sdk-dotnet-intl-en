@@ -49,19 +49,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? VisibilityTimeout{ get; set; }
 
         /// <summary>
-        /// Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+        /// Max message size, which defaults to 1,024 KB for the queue of TDMQ for CMQ and cannot be modified.
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
-        /// Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+        /// The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
         /// </summary>
         [JsonProperty("MsgRetentionSeconds")]
         public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
-        /// Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of the queue). 0 indicates not to enable message rewinding.
+        /// Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
         /// </summary>
         [JsonProperty("RewindSeconds")]
         public ulong? RewindSeconds{ get; set; }
@@ -114,6 +114,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Transaction")]
         public ulong? Transaction{ get; set; }
 
+        /// <summary>
+        /// Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+        /// </summary>
+        [JsonProperty("RetentionSizeInMB")]
+        public ulong? RetentionSizeInMB{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "Trace", this.Trace);
             this.SetParamSimple(map, prefix + "Transaction", this.Transaction);
+            this.SetParamSimple(map, prefix + "RetentionSizeInMB", this.RetentionSizeInMB);
         }
     }
 }

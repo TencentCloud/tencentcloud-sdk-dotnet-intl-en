@@ -61,7 +61,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Filter.
+        /// Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -71,6 +71,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string InstanceIds{ get; set; }
+
+        /// <summary>
+        /// Filter by instance ID.
+        /// </summary>
+        [JsonProperty("InstanceIdList")]
+        public string[] InstanceIdList{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
+            this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         }
     }
 }

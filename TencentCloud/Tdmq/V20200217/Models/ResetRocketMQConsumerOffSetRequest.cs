@@ -21,33 +21,44 @@ namespace TencentCloud.Tdmq.V20200217.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RocketMQNamespace : AbstractModel
+    public class ResetRocketMQConsumerOffSetRequest : AbstractModel
     {
         
         /// <summary>
-        /// Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+        /// Cluster ID.
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Namespace name.
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+        /// Consumer group name.
         /// </summary>
-        [JsonProperty("Ttl")]
-        public ulong? Ttl{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
-        /// Retention period for persisted messages in milliseconds
+        /// Topic name.
         /// </summary>
-        [JsonProperty("RetentionTime")]
-        public ulong? RetentionTime{ get; set; }
+        [JsonProperty("Topic")]
+        public string Topic{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Reset method. 0: Start from the latest offset; 1: Start from specified time point.
         /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
+
+        /// <summary>
+        /// The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+        /// </summary>
+        [JsonProperty("ResetTimestamp")]
+        public ulong? ResetTimestamp{ get; set; }
 
 
         /// <summary>
@@ -55,10 +66,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
-            this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
-            this.SetParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ResetTimestamp", this.ResetTimestamp);
         }
     }
 }

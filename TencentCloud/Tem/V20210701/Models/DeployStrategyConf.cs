@@ -37,7 +37,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? BetaBatchNum{ get; set; }
 
         /// <summary>
-        /// Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+        /// Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
         /// </summary>
         [JsonProperty("DeployStrategyType")]
         public long? DeployStrategyType{ get; set; }

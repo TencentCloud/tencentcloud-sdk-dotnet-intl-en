@@ -41,7 +41,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RouteId{ get; set; }
 
         /// <summary>
-        /// VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
+        /// VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }

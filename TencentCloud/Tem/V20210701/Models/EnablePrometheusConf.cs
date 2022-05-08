@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubscriptionTopic : AbstractModel
+    public class EnablePrometheusConf : AbstractModel
     {
         
         /// <summary>
-        /// Environment (namespace) name.
+        /// The listening port of the applicaiton
         /// </summary>
-        [JsonProperty("EnvironmentId")]
-        public string EnvironmentId{ get; set; }
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
 
         /// <summary>
-        /// Topic name.
+        /// URL path for monitoring
         /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
-
-        /// <summary>
-        /// Subscription name.
-        /// </summary>
-        [JsonProperty("SubscriptionName")]
-        public string SubscriptionName{ get; set; }
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
         }
     }
 }
