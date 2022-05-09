@@ -37,13 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Score of a suspected terrorism segment.
+        /// The confidence score for the detected sensitive segments.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for terrorism information detection of a suspected segment. Valid values:
+        /// The suggestion for handling the sensitive segments. Valid values:
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -52,15 +52,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tag of the detected terrorism information in a video. Valid values:
-        /// <li>guns: Weapons and guns.</li>
-        /// <li>crowd: Crowd.</li>
-        /// <li>police: Police force.</li>
-        /// <li>bloody: Bloody scenes.</li>
-        /// <li>banners: Terrorism flags.</li>
-        /// <li>militant: Militants.</li>
-        /// <li>explosion: Explosions and fires.</li>
-        /// <li>terrorists: Terrorists.</li>
+        /// The labels for the detected sensitive content. Valid values:
+        /// <li>guns</li>
+        /// <li>crowd</li>
+        /// <li>police</li>
+        /// <li>bloody</li>
+        /// <li>banners (sensitive flags)</li>
+        /// <li>militant</li>
+        /// <li>explosion</li>
+        /// <li>terrorists</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

@@ -39,10 +39,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Score{ get; set; }
 
         /// <summary>
-        /// Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the default figures will be returned. Valid values:
-        /// <li>entertainment: Entertainment celebrity;</li>
-        /// <li>sport: Sports celebrity;</li>
-        /// <li>politician: Politically sensitive figure.</li>
+        /// The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+        /// <li>entertainment (people in the entertainment industry)</li>
+        /// <li>sport (sports celebrities)</li>
+        /// <li>politician</li>
         /// </summary>
         [JsonProperty("DefaultLibraryLabelSet")]
         public string[] DefaultLibraryLabelSet{ get; set; }

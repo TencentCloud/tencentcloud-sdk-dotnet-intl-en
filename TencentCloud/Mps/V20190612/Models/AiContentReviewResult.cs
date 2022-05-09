@@ -26,14 +26,16 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>Porn: Porn information detection in image</li>
-        /// <li>Terrorism: Terrorism information detection in image</li>
-        /// <li>Political: Politically sensitive information detection in image</li>
-        /// <li>Porn.Asr: ASR-based porn information detection in text</li>
-        /// <li>Porn.Ocr: OCR-based porn information detection in text</li>
-        /// <li>Porn.Voice: Porn information detection in speech</li>
-        /// <li>Political.Asr: ASR-based politically sensitive information detection in text</li>
-        /// <li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
+        /// <li>Porn (in images)</li>
+        /// <li>Terrorism (in images)</li>
+        /// <li>Political (in images)</li>
+        /// <li>Porn.Asr</li>
+        /// <li>Porn.Ocr</li>
+        /// <li>Political.Asr</li>
+        /// <li>Political.Ocr</li>
+        /// <li>Terrorism.Ocr</li>
+        /// <li>Prohibited.Asr</li>
+        /// <li>Prohibited.Ocr</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -58,15 +60,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiReviewTaskPornResult PornTask{ get; set; }
 
         /// <summary>
-        /// Query result of an intelligent terrorism information detection in image task in video content audit, which is valid when task type is `Terrorism`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The result of detecting terrorism content in images, which is valid when the task type is `Terrorism`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TerrorismTask")]
         public AiReviewTaskTerrorismResult TerrorismTask{ get; set; }
 
         /// <summary>
-        /// Query result of an intelligent politically sensitive information detection in image task in video content audit, which is valid when task type is `Political`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The result of detecting politically sensitive information in images, which is valid when the task type is `Political`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PoliticalTask")]
         public AiReviewTaskPoliticalResult PoliticalTask{ get; set; }
@@ -86,21 +88,22 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiReviewTaskPornOcrResult PornOcrTask{ get; set; }
 
         /// <summary>
-        /// Query result of an ASR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Asr`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The result of detecting politically sensitive information based on ASR, which is valid when the task type is `Political.Asr`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PoliticalAsrTask")]
         public AiReviewTaskPoliticalAsrResult PoliticalAsrTask{ get; set; }
 
         /// <summary>
-        /// Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The result of detecting politically sensitive information based on OCR, which is valid when the task type is `Political.Ocr`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PoliticalOcrTask")]
         public AiReviewTaskPoliticalOcrResult PoliticalOcrTask{ get; set; }
 
         /// <summary>
-        /// Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+        /// The result of detecting terrorism content based on OCR, which is valid when task type is `Terrorism.Ocr`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TerrorismOcrTask")]
         public AiReviewTaskTerrorismOcrResult TerrorismOcrTask{ get; set; }

@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of a politically sensitive information detection in speech task. Valid values:
-        /// <li>ON: Enables a politically sensitive information detection in speech task;</li>
-        /// <li>OFF: Disables a politically sensitive information detection in speech task.</li>
+        /// Whether to detect sensitive information based on ASR. Valid values:
+        /// <li>ON</li>
+        /// <li>OFF</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

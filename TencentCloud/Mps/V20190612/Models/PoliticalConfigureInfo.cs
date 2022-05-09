@@ -25,22 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Control parameter of politically sensitive information detection in image.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The parameters for detecting sensitive information in images.
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PoliticalImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of politically sensitive information detection in speech.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The parameters for detecting sensitive information based on ASR.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PoliticalAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of politically sensitive information detection in text.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The parameters for detecting sensitive information based on OCR.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PoliticalOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

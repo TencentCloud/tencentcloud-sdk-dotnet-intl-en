@@ -52,13 +52,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of OCR-based terrorism information detection in text task in content audit.
+        /// The input parameter for OCR-based detection of terrorism content.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewTerrorismOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of OCR-based terrorism information detection in text task in content audit.
+        /// The output of OCR-based detection of terrorism content.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewTerrorismOcrTaskOutput Output{ get; set; }

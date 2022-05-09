@@ -50,14 +50,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input for an OCR-based politically sensitive information detection in text task during content audit.
+        /// The input parameter for OCR-based detection of politically sensitive information.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPoliticalOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of an OCR-based politically sensitive information detection in text task during content audit.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The output of OCR-based detection of politically sensitive information.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalOcrTaskOutput Output{ get; set; }

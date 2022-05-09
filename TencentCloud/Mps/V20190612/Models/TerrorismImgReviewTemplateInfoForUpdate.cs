@@ -25,24 +25,24 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of a terrorism information detection in image task. Valid values:
-        /// <li>ON: Enables a terrorism information detection in image task;</li>
-        /// <li>OFF: Disables a terrorism information detection in image task.</li>
+        /// Whether to detect sensitive information in images. Valid values:
+        /// <li>ON</li>
+        /// <li>OFF</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-        /// <li>`guns`: weapons and guns</li>
-        /// <li>`crowd`: crowds</li>
-        /// <li>`bloody`: bloodiness</li>
-        /// <li>`police`: police forces</li>
-        /// <li>`banners`: terrorism flags</li>
-        /// <li>`militant`: militants</li>
-        /// <li>`explosion`: explosions and fires</li>
-        /// <li>`terrorists`: terrorists</li>
-        /// <li>`scenario`: terrorism images</li>
+        /// The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+        /// <li>guns</li>
+        /// <li>crowd</li>
+        /// <li>bloody</li>
+        /// <li>police</li>
+        /// <li>banners (sensitive flags)</li>
+        /// <li>militant</li>
+        /// <li>explosion</li>
+        /// <li>terrorists</li>
+        /// <li>scenario (sensitive scenes) </li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }

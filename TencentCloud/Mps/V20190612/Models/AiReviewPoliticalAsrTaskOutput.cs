@@ -25,22 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Score of the ASR-detected politically sensitive information in text from 0 to 100.
+        /// The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-        /// <li>pass.</li>
-        /// <li>review.</li>
-        /// <li>block.</li>
+        /// The suggestion for handling the sensitive information detected based on ASR. Valid values:
+        /// <li>pass</li>
+        /// <li>review</li>
+        /// <li>block</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// List of video segments that contain ASR-detected politically sensitive information in text.
+        /// The video segments that contain sensitive information detected based on ASR.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewAsrTextSegmentItem[] SegmentSet{ get; set; }

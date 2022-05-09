@@ -49,14 +49,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input for an ASR-based politically sensitive information detection in text task during content audit.
+        /// The input parameter for ASR-based detection of politically sensitive information.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPoliticalAsrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of an ASR-based politically sensitive information detection in text task during content audit.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The output of ASR-based detection of politically sensitive information.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalAsrTaskOutput Output{ get; set; }

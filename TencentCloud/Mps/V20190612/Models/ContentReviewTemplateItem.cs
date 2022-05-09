@@ -50,15 +50,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// Terrorism information detection control parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The parameters for detecting sensitive information.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Politically sensitive information detection control parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The parameters for detecting sensitive information.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }

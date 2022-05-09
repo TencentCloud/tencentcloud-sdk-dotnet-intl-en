@@ -25,14 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Control parameter of a terrorism information detection in image task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The parameters for detecting sensitive information in images.
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of terrorism information detection in text task.
+        /// The parameters for detecting sensitive information based on OCR.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

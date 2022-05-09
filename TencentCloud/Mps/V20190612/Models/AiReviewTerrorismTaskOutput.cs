@@ -25,37 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Score of the detected terrorism information in a video from 0 to 100.
+        /// The confidence score for the detection of sensitive information. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for the detected terrorism information. Valid values:
-        /// <li>pass.</li>
-        /// <li>review.</li>
-        /// <li>block.</li>
+        /// The suggestion for handling the sensitive information detected. Valid values:
+        /// <li>pass</li>
+        /// <li>review</li>
+        /// <li>block</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tags for detected terrorism information in a video. Valid values:
-        /// <li>`guns`: weapons and guns</li>
-        /// <li>`crowd`: crowds</li>
-        /// <li>`police`: police forces</li>
-        /// <li>`bloody`: bloodiness</li>
-        /// <li>`banners`: terrorism flags</li>
-        /// <li>`militant`: militants</li>
-        /// <li>`explosion`: explosions and fires</li>
-        /// <li>`terrorists`: terrorists</li>
-        /// <li>`scenario`: terrorism images</li>
+        /// The labels for the detected sensitive content. Valid values:
+        /// <li>guns</li>
+        /// <li>crowd</li>
+        /// <li>police</li>
+        /// <li>bloody</li>
+        /// <li>banners (sensitive flags)</li>
+        /// <li>militant</li>
+        /// <li>explosion</li>
+        /// <li>terrorists</li>
+        /// <li>scenario (sensitive scenes) </li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// List of video segments that contain the detected terrorism information.
+        /// The video segments that contain sensitive information.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewSegmentItem[] SegmentSet{ get; set; }

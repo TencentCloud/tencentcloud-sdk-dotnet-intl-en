@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of terrorism information detection in text task. Valid values:
-        /// <li>ON: enables terrorism information detection in text task;</li>
-        /// <li>OFF: disables terrorism information detection in text task.</li>
+        /// Whether to detect sensitive information based on OCR. Valid values:
+        /// <li>ON</li>
+        /// <li>OFF</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

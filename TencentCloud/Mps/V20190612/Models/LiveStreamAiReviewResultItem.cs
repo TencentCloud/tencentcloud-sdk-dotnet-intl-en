@@ -25,11 +25,11 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Content audit type. Valid values:
-        /// <li>ImagePorn: Porn information detection in image</li>
-        /// <li>ImageTerrorism: Terrorism information detection in image</li>
-        /// <li>ImagePolitical: Politically sensitive information detection in image</li>
-        /// <li>PornVoice: Porn information detection in speech</li>
+        /// The type of the moderation result. Valid values:
+        /// <li>ImagePorn</li>
+        /// <li>ImageTerrorism</li>
+        /// <li>ImagePolitical</li>
+        /// <li>PornVoice (pornographic content in speech)</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -41,13 +41,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamAiReviewImagePornResult[] ImagePornResultSet{ get; set; }
 
         /// <summary>
-        /// Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
+        /// The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
         /// </summary>
         [JsonProperty("ImageTerrorismResultSet")]
         public LiveStreamAiReviewImageTerrorismResult[] ImageTerrorismResultSet{ get; set; }
 
         /// <summary>
-        /// Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
+        /// The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
         /// </summary>
         [JsonProperty("ImagePoliticalResultSet")]
         public LiveStreamAiReviewImagePoliticalResult[] ImagePoliticalResultSet{ get; set; }

@@ -49,14 +49,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input for a terrorism information detection task during content audit.
+        /// The input parameter for sensitive information detection.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewTerrorismTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of a terrorism information detection task during content audit.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The output of sensitive information detection.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewTerrorismTaskOutput Output{ get; set; }

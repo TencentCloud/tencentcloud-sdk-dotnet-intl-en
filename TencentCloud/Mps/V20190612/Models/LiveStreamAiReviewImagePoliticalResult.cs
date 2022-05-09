@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Score of a suspected politically sensitive segment.
+        /// The confidence score for the detected sensitive segments.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -52,21 +52,21 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tag of the detected politically sensitive information in video. Valid values:
-        /// <li>politician: Politically sensitive figure.</li>
-        /// <li>violation_photo: Violating photo.</li>
+        /// The labels for the detected sensitive information. Valid values:
+        /// <li>politician</li>
+        /// <li>violation_photo (banned icons)</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// Name of a politically sensitive figure or violating photo.
+        /// The name of a sensitive person or banned icon.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+        /// The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

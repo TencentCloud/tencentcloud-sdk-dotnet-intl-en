@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
+        /// The timestamp (seconds) of the screenshot.
         /// </summary>
         [JsonProperty("TimeOffset")]
         public float? TimeOffset{ get; set; }
