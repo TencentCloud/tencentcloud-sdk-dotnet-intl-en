@@ -53,369 +53,28 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to add custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to add such images frequently, we recommend you add them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-        /// </summary>
-        /// <param name="req"><see cref="CreatePictureRequest"/></param>
-        /// <returns><see cref="CreatePictureResponse"/></returns>
-        public async Task<CreatePictureResponse> CreatePicture(CreatePictureRequest req)
-        {
-             JsonResponseModel<CreatePictureResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreatePicture");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePictureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to add custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to add such images frequently, we recommend you add them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-        /// </summary>
-        /// <param name="req"><see cref="CreatePictureRequest"/></param>
-        /// <returns><see cref="CreatePictureResponse"/></returns>
-        public CreatePictureResponse CreatePictureSync(CreatePictureRequest req)
-        {
-             JsonResponseModel<CreatePictureResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreatePicture");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePictureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create exception information.
-        /// </summary>
-        /// <param name="req"><see cref="CreateTroubleInfoRequest"/></param>
-        /// <returns><see cref="CreateTroubleInfoResponse"/></returns>
-        public async Task<CreateTroubleInfoResponse> CreateTroubleInfo(CreateTroubleInfoRequest req)
-        {
-             JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateTroubleInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTroubleInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create exception information.
-        /// </summary>
-        /// <param name="req"><see cref="CreateTroubleInfoRequest"/></param>
-        /// <returns><see cref="CreateTroubleInfoResponse"/></returns>
-        public CreateTroubleInfoResponse CreateTroubleInfoSync(CreateTroubleInfoRequest req)
-        {
-             JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateTroubleInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTroubleInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to delete such images frequently, we recommend you delete them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-        /// </summary>
-        /// <param name="req"><see cref="DeletePictureRequest"/></param>
-        /// <returns><see cref="DeletePictureResponse"/></returns>
-        public async Task<DeletePictureResponse> DeletePicture(DeletePictureRequest req)
-        {
-             JsonResponseModel<DeletePictureResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeletePicture");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePictureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to delete such images frequently, we recommend you delete them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-        /// </summary>
-        /// <param name="req"><see cref="DeletePictureRequest"/></param>
-        /// <returns><see cref="DeletePictureResponse"/></returns>
-        public DeletePictureResponse DeletePictureSync(DeletePictureRequest req)
-        {
-             JsonResponseModel<DeletePictureResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeletePicture");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePictureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query exception occurrences under a specified `SDKAppID` and return the exception IDs and possible causes. It queries data in last 15 days, and the query period is up to 1 hour, which can start and end on different days. For more information about exceptions, please see the exception event ID mapping table: https://intl.cloud.tencent.com/document/product/647/37906.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalEventRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalEventResponse"/></returns>
-        public async Task<DescribeAbnormalEventResponse> DescribeAbnormalEvent(DescribeAbnormalEventRequest req)
-        {
-             JsonResponseModel<DescribeAbnormalEventResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAbnormalEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAbnormalEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query exception occurrences under a specified `SDKAppID` and return the exception IDs and possible causes. It queries data in last 15 days, and the query period is up to 1 hour, which can start and end on different days. For more information about exceptions, please see the exception event ID mapping table: https://intl.cloud.tencent.com/document/product/647/37906.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalEventRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalEventResponse"/></returns>
-        public DescribeAbnormalEventResponse DescribeAbnormalEventSync(DescribeAbnormalEventRequest req)
-        {
-             JsonResponseModel<DescribeAbnormalEventResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAbnormalEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAbnormalEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the user list and call quality data of a specified time range in the last 14 days. When `DataType` is not null, data of up to 6 users during a period of up to 1 hour can be queried each time, and the period can start on one day and end on the next. When `DataType` and `UserIds` are null, 6 users are queried by default, and data of up to 100 users can be displayed on each page (`PageSize` set to 100 or smaller). This API is used to query call quality and is not recommended for billing.
-        /// **Note**: You can use this API to query or check historical data, but not for real-time key business logic.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
-        /// <returns><see cref="DescribeCallDetailResponse"/></returns>
-        public async Task<DescribeCallDetailResponse> DescribeCallDetail(DescribeCallDetailRequest req)
-        {
-             JsonResponseModel<DescribeCallDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCallDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the user list and call quality data of a specified time range in the last 14 days. When `DataType` is not null, data of up to 6 users during a period of up to 1 hour can be queried each time, and the period can start on one day and end on the next. When `DataType` and `UserIds` are null, 6 users are queried by default, and data of up to 100 users can be displayed on each page (`PageSize` set to 100 or smaller). This API is used to query call quality and is not recommended for billing.
-        /// **Note**: You can use this API to query or check historical data, but not for real-time key business logic.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
-        /// <returns><see cref="DescribeCallDetailResponse"/></returns>
-        public DescribeCallDetailResponse DescribeCallDetailSync(DescribeCallDetailRequest req)
-        {
-             JsonResponseModel<DescribeCallDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCallDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query a user’s activity details such as room entry/exit and video enablement/disablement during a call. It can query data for the last 14 days.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDetailEventRequest"/></param>
-        /// <returns><see cref="DescribeDetailEventResponse"/></returns>
-        public async Task<DescribeDetailEventResponse> DescribeDetailEvent(DescribeDetailEventRequest req)
-        {
-             JsonResponseModel<DescribeDetailEventResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDetailEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDetailEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query a user’s activity details such as room entry/exit and video enablement/disablement during a call. It can query data for the last 14 days.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDetailEventRequest"/></param>
-        /// <returns><see cref="DescribeDetailEventResponse"/></returns>
-        public DescribeDetailEventResponse DescribeDetailEventSync(DescribeDetailEventRequest req)
-        {
-             JsonResponseModel<DescribeDetailEventResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDetailEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDetailEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the daily numbers of rooms and users under a specified `SDKAppID`. It can query data once per minute for the last 14 days. If a day has not ended, the numbers of rooms and users on the day cannot be queried. 
-        /// </summary>
-        /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
-        /// <returns><see cref="DescribeHistoryScaleResponse"/></returns>
-        public async Task<DescribeHistoryScaleResponse> DescribeHistoryScale(DescribeHistoryScaleRequest req)
-        {
-             JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeHistoryScale");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryScaleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the daily numbers of rooms and users under a specified `SDKAppID`. It can query data once per minute for the last 14 days. If a day has not ended, the numbers of rooms and users on the day cannot be queried. 
-        /// </summary>
-        /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
-        /// <returns><see cref="DescribeHistoryScaleResponse"/></returns>
-        public DescribeHistoryScaleResponse DescribeHistoryScaleSync(DescribeHistoryScaleRequest req)
-        {
-             JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeHistoryScale");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryScaleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the information of custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to query such information frequently, we recommend you query it in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePictureRequest"/></param>
-        /// <returns><see cref="DescribePictureResponse"/></returns>
-        public async Task<DescribePictureResponse> DescribePicture(DescribePictureRequest req)
-        {
-             JsonResponseModel<DescribePictureResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePicture");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePictureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the information of custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to query such information frequently, we recommend you query it in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePictureRequest"/></param>
-        /// <returns><see cref="DescribePictureResponse"/></returns>
-        public DescribePictureResponse DescribePictureSync(DescribePictureRequest req)
-        {
-             JsonResponseModel<DescribePictureResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePicture");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePictureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query billable on-cloud recording durations.
+        /// ### API description
+        /// This API is used to start an on-cloud recording task. It records the audio and video streams in a room and saves them to the specified cloud storage. You can use this API to record the streams in a room separately, or you can mix the streams first and then record the mixed stream.
         /// 
-        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-        /// - The period queried in a request cannot be longer than 31 days.
-        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRecordStatisticRequest"/></param>
-        /// <returns><see cref="DescribeRecordStatisticResponse"/></returns>
-        public async Task<DescribeRecordStatisticResponse> DescribeRecordStatistic(DescribeRecordStatisticRequest req)
-        {
-             JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRecordStatistic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStatisticResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query billable on-cloud recording durations.
+        /// ### You can use this API to perform the following operations:
+        /// * Specify the anchors whose streams you want or do not want to record by using the `RecordParams` parameter
+        /// * Specify the storage service you want to save recording files to by using the `StorageParams` parameter
+        /// * Specify transcoding settings for mixed-stream recording, including video resolution, video bitrate, frame rate, and audio quality, by using `MixTranscodeParams`
+        /// * Specify the layout of different videos in mixed-stream recording mode or select an auto-arranged layout template
         /// 
-        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-        /// - The period queried in a request cannot be longer than 31 days.
-        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+        /// ### Key concepts
+        /// * Single-stream recording: Record the audio and video of each subscribed user (`UserId`) in a room and save the recording files (M3U8/TS) to the cloud
+        /// * Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files (M3U8/TS) to the cloud
         /// </summary>
-        /// <param name="req"><see cref="DescribeRecordStatisticRequest"/></param>
-        /// <returns><see cref="DescribeRecordStatisticResponse"/></returns>
-        public DescribeRecordStatisticResponse DescribeRecordStatisticSync(DescribeRecordStatisticRequest req)
+        /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
+        /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
+        public async Task<CreateCloudRecordingResponse> CreateCloudRecording(CreateCloudRecordingRequest req)
         {
-             JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
+             JsonResponseModel<CreateCloudRecordingResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeRecordStatistic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStatisticResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateCloudRecording");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -425,18 +84,28 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query the room list of an `SDKAppID` in the last 14 days. It returns 10 calls by default and can return up to 100 calls per query.
-        /// **Note**: You can use this API to query or check historical data, but not for real-time key business logic.
+        /// ### API description
+        /// This API is used to start an on-cloud recording task. It records the audio and video streams in a room and saves them to the specified cloud storage. You can use this API to record the streams in a room separately, or you can mix the streams first and then record the mixed stream.
+        /// 
+        /// ### You can use this API to perform the following operations:
+        /// * Specify the anchors whose streams you want or do not want to record by using the `RecordParams` parameter
+        /// * Specify the storage service you want to save recording files to by using the `StorageParams` parameter
+        /// * Specify transcoding settings for mixed-stream recording, including video resolution, video bitrate, frame rate, and audio quality, by using `MixTranscodeParams`
+        /// * Specify the layout of different videos in mixed-stream recording mode or select an auto-arranged layout template
+        /// 
+        /// ### Key concepts
+        /// * Single-stream recording: Record the audio and video of each subscribed user (`UserId`) in a room and save the recording files (M3U8/TS) to the cloud
+        /// * Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files (M3U8/TS) to the cloud
         /// </summary>
-        /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
-        /// <returns><see cref="DescribeRoomInformationResponse"/></returns>
-        public async Task<DescribeRoomInformationResponse> DescribeRoomInformation(DescribeRoomInformationRequest req)
+        /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
+        /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
+        public CreateCloudRecordingResponse CreateCloudRecordingSync(CreateCloudRecordingRequest req)
         {
-             JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
+             JsonResponseModel<CreateCloudRecordingResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeRoomInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInformationResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateCloudRecording");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -446,18 +115,17 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query the room list of an `SDKAppID` in the last 14 days. It returns 10 calls by default and can return up to 100 calls per query.
-        /// **Note**: You can use this API to query or check historical data, but not for real-time key business logic.
+        /// This API is used to stop a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
         /// </summary>
-        /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
-        /// <returns><see cref="DescribeRoomInformationResponse"/></returns>
-        public DescribeRoomInformationResponse DescribeRoomInformationSync(DescribeRoomInformationRequest req)
+        /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
+        /// <returns><see cref="DeleteCloudRecordingResponse"/></returns>
+        public async Task<DeleteCloudRecordingResponse> DeleteCloudRecording(DeleteCloudRecordingRequest req)
         {
-             JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
+             JsonResponseModel<DeleteCloudRecordingResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeRoomInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInformationResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DeleteCloudRecording");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -467,21 +135,17 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query billable audio/video interaction durations.
-        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-        /// - The period queried in a request cannot be longer than 31 days.
-        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+        /// This API is used to stop a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
         /// </summary>
-        /// <param name="req"><see cref="DescribeTrtcInteractiveTimeRequest"/></param>
-        /// <returns><see cref="DescribeTrtcInteractiveTimeResponse"/></returns>
-        public async Task<DescribeTrtcInteractiveTimeResponse> DescribeTrtcInteractiveTime(DescribeTrtcInteractiveTimeRequest req)
+        /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
+        /// <returns><see cref="DeleteCloudRecordingResponse"/></returns>
+        public DeleteCloudRecordingResponse DeleteCloudRecordingSync(DeleteCloudRecordingRequest req)
         {
-             JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
+             JsonResponseModel<DeleteCloudRecordingResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeTrtcInteractiveTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DeleteCloudRecording");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -491,21 +155,17 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query billable audio/video interaction durations.
-        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-        /// - The period queried in a request cannot be longer than 31 days.
-        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+        /// This API is used to query the status of a recording task after it starts. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned.
         /// </summary>
-        /// <param name="req"><see cref="DescribeTrtcInteractiveTimeRequest"/></param>
-        /// <returns><see cref="DescribeTrtcInteractiveTimeResponse"/></returns>
-        public DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTimeSync(DescribeTrtcInteractiveTimeRequest req)
+        /// <param name="req"><see cref="DescribeCloudRecordingRequest"/></param>
+        /// <returns><see cref="DescribeCloudRecordingResponse"/></returns>
+        public async Task<DescribeCloudRecordingResponse> DescribeCloudRecording(DescribeCloudRecordingRequest req)
         {
-             JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
+             JsonResponseModel<DescribeCloudRecordingResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeTrtcInteractiveTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeCloudRecording");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -515,87 +175,17 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to query billable relaying and transcoding durations.
-        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-        /// - The period queried in a request cannot be longer than 31 days.
-        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+        /// This API is used to query the status of a recording task after it starts. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned.
         /// </summary>
-        /// <param name="req"><see cref="DescribeTrtcMcuTranscodeTimeRequest"/></param>
-        /// <returns><see cref="DescribeTrtcMcuTranscodeTimeResponse"/></returns>
-        public async Task<DescribeTrtcMcuTranscodeTimeResponse> DescribeTrtcMcuTranscodeTime(DescribeTrtcMcuTranscodeTimeRequest req)
+        /// <param name="req"><see cref="DescribeCloudRecordingRequest"/></param>
+        /// <returns><see cref="DescribeCloudRecordingResponse"/></returns>
+        public DescribeCloudRecordingResponse DescribeCloudRecordingSync(DescribeCloudRecordingRequest req)
         {
-             JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
+             JsonResponseModel<DescribeCloudRecordingResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeTrtcMcuTranscodeTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query billable relaying and transcoding durations.
-        /// - If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-        /// - The period queried in a request cannot be longer than 31 days.
-        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-        /// - In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTrtcMcuTranscodeTimeRequest"/></param>
-        /// <returns><see cref="DescribeTrtcMcuTranscodeTimeResponse"/></returns>
-        public DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTimeSync(DescribeTrtcMcuTranscodeTimeRequest req)
-        {
-             JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTrtcMcuTranscodeTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the user list of a specified time range (up to 4 hours) in the last 14 days. Data of 6 users is displayed on each page by default, and data of up to 100 users can be displayed on each page (`PageSize` set to 100 or smaller).
-        /// **Note**: You can use this API to query or check historical data, but not for real-time key business logic.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserInformationRequest"/></param>
-        /// <returns><see cref="DescribeUserInformationResponse"/></returns>
-        public async Task<DescribeUserInformationResponse> DescribeUserInformation(DescribeUserInformationRequest req)
-        {
-             JsonResponseModel<DescribeUserInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeUserInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInformationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the user list of a specified time range (up to 4 hours) in the last 14 days. Data of 6 users is displayed on each page by default, and data of up to 100 users can be displayed on each page (`PageSize` set to 100 or smaller).
-        /// **Note**: You can use this API to query or check historical data, but not for real-time key business logic.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserInformationRequest"/></param>
-        /// <returns><see cref="DescribeUserInformationResponse"/></returns>
-        public DescribeUserInformationResponse DescribeUserInformationSync(DescribeUserInformationRequest req)
-        {
-             JsonResponseModel<DescribeUserInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeUserInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInformationResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudRecording");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -685,17 +275,17 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to modify custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to modify such images frequently, we recommend you modify them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
+        /// This API is used to modify a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. You need to specify all the parameters for each request instead of just the ones you want to modify.
         /// </summary>
-        /// <param name="req"><see cref="ModifyPictureRequest"/></param>
-        /// <returns><see cref="ModifyPictureResponse"/></returns>
-        public async Task<ModifyPictureResponse> ModifyPicture(ModifyPictureRequest req)
+        /// <param name="req"><see cref="ModifyCloudRecordingRequest"/></param>
+        /// <returns><see cref="ModifyCloudRecordingResponse"/></returns>
+        public async Task<ModifyCloudRecordingResponse> ModifyCloudRecording(ModifyCloudRecordingRequest req)
         {
-             JsonResponseModel<ModifyPictureResponse> rsp = null;
+             JsonResponseModel<ModifyCloudRecordingResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyPicture");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPictureResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyCloudRecording");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -705,17 +295,17 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// This API is used to modify custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to modify such images frequently, we recommend you modify them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
+        /// This API is used to modify a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. You need to specify all the parameters for each request instead of just the ones you want to modify.
         /// </summary>
-        /// <param name="req"><see cref="ModifyPictureRequest"/></param>
-        /// <returns><see cref="ModifyPictureResponse"/></returns>
-        public ModifyPictureResponse ModifyPictureSync(ModifyPictureRequest req)
+        /// <param name="req"><see cref="ModifyCloudRecordingRequest"/></param>
+        /// <returns><see cref="ModifyCloudRecordingResponse"/></returns>
+        public ModifyCloudRecordingResponse ModifyCloudRecordingSync(ModifyCloudRecordingRequest req)
         {
-             JsonResponseModel<ModifyPictureResponse> rsp = null;
+             JsonResponseModel<ModifyCloudRecordingResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyPicture");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPictureResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyCloudRecording");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -796,246 +386,6 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "RemoveUserByStrRoomId");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserByStrRoomIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to enable On-Cloud MixTranscoding and specify the position of each channel of image in stream mixing.
-        /// 
-        /// There may be multiple audio/video streams in a TRTC room. You can call this API to request the Tencent Cloud server to mix the audio and video and specify the position of each image to produce just one audio/video stream for recording and playback. The mixing stops automatically after a room is terminated.
-        /// 
-        /// You can use this API to perform the following operations:
-        /// - Set image and audio quality parameters of the final live stream, including video resolution, video bitrate, video frame rate, and audio quality.
-        /// - Set the layout, i.e., the position of each image. You only need to set it once when enabling On-Cloud MixTranscoding, and the layout engine will automatically arrange images as configured.
-        /// - Set the names of recording files for future playback.
-        /// - Set the stream ID for CDN live streaming.
-        /// 
-        /// Currently, On-Cloud MixTranscoding supports the following layout templates:
-        /// - Floating: The entire screen is covered by the video image of the first user who enters the room, and the images of other users are displayed as small images in rows in the bottom-left corner in room entry sequence. The screen allows up to 4 rows of 4 small images, which float over the big image. Up to 1 big image and 15 small images can be displayed. A user sending audio only will still occupy an image spot.
-        /// - Grid: The images of all users split the entire screen evenly. The more users, the smaller the image dimensions. Up to 16 images can be displayed. A user sending audio only will still occupy an image spot.
-        /// - Screen sharing: This is designed for video conferencing and online education. The shared screen (or camera image of the anchor) is always displayed as the big image, which occupies the left half of the screen, and the images of other users occupy the right half in up to 2 columns of up to 8 small images each. Up to 1 big image and 15 small images can be displayed. If the upstream aspect ratio does not match the output, the big image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
-        /// - Picture-in-picture: This template mixes the big and small images or big image of a user with the audio of other users. The small image floats over the big image. You can specify the user whose small and big images are displayed, as well as the position of the small image. This template can display at most 2 images.
-        /// - Custom: This is designed for cases where you want to specify the image positions of users in the mixed stream or preset image positions. If users are assigned to preset positions, the layout engine will reserve the positions for the users; if not, users will occupy the positions in room entry sequence. Once all preset positions are occupied, TRTC will stop mixing the audio and video of other users. If the place-holding feature is enabled for a custom template (by setting `PlaceHolderMode` in `LayoutParams` to `1`) and a user for whom a place is held is not sending video, the position will show the specified placeholder image (`PlaceImageId`).
-        /// 
-        /// Notes:
-        /// 1. **As On-Cloud MixTranscoding is a paid feature, you will be charged for calling this API. For details, see [Billing of On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/49446?from_cn_redirect=1).**
-        /// 2. You can call this API only if your application is created on or after January 9, 2020. Applications created before use the stream mixing service of CSS by default. If you want to switch to MCU On-Cloud MixTranscoding, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-        /// 3. You cannot use the server and client stream mixing APIs at the same time.
-        /// </summary>
-        /// <param name="req"><see cref="StartMCUMixTranscodeRequest"/></param>
-        /// <returns><see cref="StartMCUMixTranscodeResponse"/></returns>
-        public async Task<StartMCUMixTranscodeResponse> StartMCUMixTranscode(StartMCUMixTranscodeRequest req)
-        {
-             JsonResponseModel<StartMCUMixTranscodeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartMCUMixTranscode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMCUMixTranscodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to enable On-Cloud MixTranscoding and specify the position of each channel of image in stream mixing.
-        /// 
-        /// There may be multiple audio/video streams in a TRTC room. You can call this API to request the Tencent Cloud server to mix the audio and video and specify the position of each image to produce just one audio/video stream for recording and playback. The mixing stops automatically after a room is terminated.
-        /// 
-        /// You can use this API to perform the following operations:
-        /// - Set image and audio quality parameters of the final live stream, including video resolution, video bitrate, video frame rate, and audio quality.
-        /// - Set the layout, i.e., the position of each image. You only need to set it once when enabling On-Cloud MixTranscoding, and the layout engine will automatically arrange images as configured.
-        /// - Set the names of recording files for future playback.
-        /// - Set the stream ID for CDN live streaming.
-        /// 
-        /// Currently, On-Cloud MixTranscoding supports the following layout templates:
-        /// - Floating: The entire screen is covered by the video image of the first user who enters the room, and the images of other users are displayed as small images in rows in the bottom-left corner in room entry sequence. The screen allows up to 4 rows of 4 small images, which float over the big image. Up to 1 big image and 15 small images can be displayed. A user sending audio only will still occupy an image spot.
-        /// - Grid: The images of all users split the entire screen evenly. The more users, the smaller the image dimensions. Up to 16 images can be displayed. A user sending audio only will still occupy an image spot.
-        /// - Screen sharing: This is designed for video conferencing and online education. The shared screen (or camera image of the anchor) is always displayed as the big image, which occupies the left half of the screen, and the images of other users occupy the right half in up to 2 columns of up to 8 small images each. Up to 1 big image and 15 small images can be displayed. If the upstream aspect ratio does not match the output, the big image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
-        /// - Picture-in-picture: This template mixes the big and small images or big image of a user with the audio of other users. The small image floats over the big image. You can specify the user whose small and big images are displayed, as well as the position of the small image. This template can display at most 2 images.
-        /// - Custom: This is designed for cases where you want to specify the image positions of users in the mixed stream or preset image positions. If users are assigned to preset positions, the layout engine will reserve the positions for the users; if not, users will occupy the positions in room entry sequence. Once all preset positions are occupied, TRTC will stop mixing the audio and video of other users. If the place-holding feature is enabled for a custom template (by setting `PlaceHolderMode` in `LayoutParams` to `1`) and a user for whom a place is held is not sending video, the position will show the specified placeholder image (`PlaceImageId`).
-        /// 
-        /// Notes:
-        /// 1. **As On-Cloud MixTranscoding is a paid feature, you will be charged for calling this API. For details, see [Billing of On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/49446?from_cn_redirect=1).**
-        /// 2. You can call this API only if your application is created on or after January 9, 2020. Applications created before use the stream mixing service of CSS by default. If you want to switch to MCU On-Cloud MixTranscoding, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-        /// 3. You cannot use the server and client stream mixing APIs at the same time.
-        /// </summary>
-        /// <param name="req"><see cref="StartMCUMixTranscodeRequest"/></param>
-        /// <returns><see cref="StartMCUMixTranscodeResponse"/></returns>
-        public StartMCUMixTranscodeResponse StartMCUMixTranscodeSync(StartMCUMixTranscodeRequest req)
-        {
-             JsonResponseModel<StartMCUMixTranscodeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartMCUMixTranscode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMCUMixTranscodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to enable On-Cloud MixTranscoding and specify the position of each channel of image in stream mixing.
-        /// 
-        /// There may be multiple channels of audio/video streams in a TRTC room. You can call this API to request the Tencent Cloud server to mix multiple channels of video images and audio into one channel and specify the position of each image so as to produce only one channel of audio/video stream for recording and live streaming.
-        /// 
-        /// You can use this API to perform the following operations:
-        /// - Set image and audio quality parameters of the mixed stream, including video resolution, bitrate, frame rate, and audio quality.
-        /// - Set the layout, i.e., the position of each channel of image. You only need to set it once when enabling On-Cloud MixTranscoding, and the layout engine will automatically arrange images as configured.
-        /// - Set the names of recording files for future playback.
-        /// - Set the stream ID for CDN live streaming.
-        /// 
-        /// Currently, On-Cloud MixTranscoding supports the following layout templates:
-        /// - Floating: the entire screen is covered by the video image of the first user who enters the room, and the images of other users are displayed as small images in horizontal rows in the bottom-left corner in room entry sequence. The screen can accommodate up to 4 rows of 4 small images, which float over the big image. Up to 1 big image and 15 small images can be displayed. A user sending audio only will still occupy an image spot.
-        /// - Grid: the images of all users split the screen evenly. The more the users, the smaller the image dimensions. Up to 16 images can be displayed. A user sending audio only will still occupy an image spot.
-        /// - Screen sharing: this template is designed for video conferencing and online classes. The shared screen (or camera image of the anchor) is always displayed as the big image, which occupies the left half of the screen, and the images of other users occupy the right half in up to 2 columns of a maximum of 8 small images each. Up to 1 big image and 15 small images can be displayed. If the aspect ratio of upstream images does not match that of output images, the big image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
-        /// - Picture-in-picture: this template mixes the big and small images or big image of a user with the audio of other users. The small image floats over the big image. You can specify the user whose big and small images are displayed and the position of the small image.
-        /// - Custom: you can use custom templates to specify the image positions of users in mixed streams or preset image positions. If users are assigned to preset positions, the layout engine will reserve the positions for the users; if not, users will occupy the positions in room entry sequence. Once all preset positions are occupied, TRTC will stop mixing the audio and images of other users. If the placeholding feature is enabled for a custom template (`PlaceHolderMode` in `LayoutParams` is set to 1), but a user for whom a place is reserved is not sending video data, the position will show the corresponding placeholder image (`PlaceImageId`).
-        /// 
-        /// Notes:
-        /// 1. **As On-Cloud MixTranscoding is a paid feature, you will be charged for calling this API. For details, see [Billing of On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/49446?from_cn_redirect=1).**
-        /// 2. You can call this API only if your application is created on or after January 9, 2020. Applications created before use the stream mixing service of CSS by default. If you want to switch to MCU On-Cloud MixTranscoding, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-        /// 3. You cannot use the server and client stream mixing APIs at the same time.
-        /// </summary>
-        /// <param name="req"><see cref="StartMCUMixTranscodeByStrRoomIdRequest"/></param>
-        /// <returns><see cref="StartMCUMixTranscodeByStrRoomIdResponse"/></returns>
-        public async Task<StartMCUMixTranscodeByStrRoomIdResponse> StartMCUMixTranscodeByStrRoomId(StartMCUMixTranscodeByStrRoomIdRequest req)
-        {
-             JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartMCUMixTranscodeByStrRoomId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to enable On-Cloud MixTranscoding and specify the position of each channel of image in stream mixing.
-        /// 
-        /// There may be multiple channels of audio/video streams in a TRTC room. You can call this API to request the Tencent Cloud server to mix multiple channels of video images and audio into one channel and specify the position of each image so as to produce only one channel of audio/video stream for recording and live streaming.
-        /// 
-        /// You can use this API to perform the following operations:
-        /// - Set image and audio quality parameters of the mixed stream, including video resolution, bitrate, frame rate, and audio quality.
-        /// - Set the layout, i.e., the position of each channel of image. You only need to set it once when enabling On-Cloud MixTranscoding, and the layout engine will automatically arrange images as configured.
-        /// - Set the names of recording files for future playback.
-        /// - Set the stream ID for CDN live streaming.
-        /// 
-        /// Currently, On-Cloud MixTranscoding supports the following layout templates:
-        /// - Floating: the entire screen is covered by the video image of the first user who enters the room, and the images of other users are displayed as small images in horizontal rows in the bottom-left corner in room entry sequence. The screen can accommodate up to 4 rows of 4 small images, which float over the big image. Up to 1 big image and 15 small images can be displayed. A user sending audio only will still occupy an image spot.
-        /// - Grid: the images of all users split the screen evenly. The more the users, the smaller the image dimensions. Up to 16 images can be displayed. A user sending audio only will still occupy an image spot.
-        /// - Screen sharing: this template is designed for video conferencing and online classes. The shared screen (or camera image of the anchor) is always displayed as the big image, which occupies the left half of the screen, and the images of other users occupy the right half in up to 2 columns of a maximum of 8 small images each. Up to 1 big image and 15 small images can be displayed. If the aspect ratio of upstream images does not match that of output images, the big image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
-        /// - Picture-in-picture: this template mixes the big and small images or big image of a user with the audio of other users. The small image floats over the big image. You can specify the user whose big and small images are displayed and the position of the small image.
-        /// - Custom: you can use custom templates to specify the image positions of users in mixed streams or preset image positions. If users are assigned to preset positions, the layout engine will reserve the positions for the users; if not, users will occupy the positions in room entry sequence. Once all preset positions are occupied, TRTC will stop mixing the audio and images of other users. If the placeholding feature is enabled for a custom template (`PlaceHolderMode` in `LayoutParams` is set to 1), but a user for whom a place is reserved is not sending video data, the position will show the corresponding placeholder image (`PlaceImageId`).
-        /// 
-        /// Notes:
-        /// 1. **As On-Cloud MixTranscoding is a paid feature, you will be charged for calling this API. For details, see [Billing of On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/49446?from_cn_redirect=1).**
-        /// 2. You can call this API only if your application is created on or after January 9, 2020. Applications created before use the stream mixing service of CSS by default. If you want to switch to MCU On-Cloud MixTranscoding, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-        /// 3. You cannot use the server and client stream mixing APIs at the same time.
-        /// </summary>
-        /// <param name="req"><see cref="StartMCUMixTranscodeByStrRoomIdRequest"/></param>
-        /// <returns><see cref="StartMCUMixTranscodeByStrRoomIdResponse"/></returns>
-        public StartMCUMixTranscodeByStrRoomIdResponse StartMCUMixTranscodeByStrRoomIdSync(StartMCUMixTranscodeByStrRoomIdRequest req)
-        {
-             JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartMCUMixTranscodeByStrRoomId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to end On-Cloud MixTranscoding.
-        /// </summary>
-        /// <param name="req"><see cref="StopMCUMixTranscodeRequest"/></param>
-        /// <returns><see cref="StopMCUMixTranscodeResponse"/></returns>
-        public async Task<StopMCUMixTranscodeResponse> StopMCUMixTranscode(StopMCUMixTranscodeRequest req)
-        {
-             JsonResponseModel<StopMCUMixTranscodeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StopMCUMixTranscode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMCUMixTranscodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to end On-Cloud MixTranscoding.
-        /// </summary>
-        /// <param name="req"><see cref="StopMCUMixTranscodeRequest"/></param>
-        /// <returns><see cref="StopMCUMixTranscodeResponse"/></returns>
-        public StopMCUMixTranscodeResponse StopMCUMixTranscodeSync(StopMCUMixTranscodeRequest req)
-        {
-             JsonResponseModel<StopMCUMixTranscodeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StopMCUMixTranscode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMCUMixTranscodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to stop On-Cloud MixTranscoding.
-        /// </summary>
-        /// <param name="req"><see cref="StopMCUMixTranscodeByStrRoomIdRequest"/></param>
-        /// <returns><see cref="StopMCUMixTranscodeByStrRoomIdResponse"/></returns>
-        public async Task<StopMCUMixTranscodeByStrRoomIdResponse> StopMCUMixTranscodeByStrRoomId(StopMCUMixTranscodeByStrRoomIdRequest req)
-        {
-             JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StopMCUMixTranscodeByStrRoomId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to stop On-Cloud MixTranscoding.
-        /// </summary>
-        /// <param name="req"><see cref="StopMCUMixTranscodeByStrRoomIdRequest"/></param>
-        /// <returns><see cref="StopMCUMixTranscodeByStrRoomIdResponse"/></returns>
-        public StopMCUMixTranscodeByStrRoomIdResponse StopMCUMixTranscodeByStrRoomIdSync(StopMCUMixTranscodeByStrRoomIdRequest req)
-        {
-             JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StopMCUMixTranscodeByStrRoomId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -183,6 +183,19 @@ namespace TencentCloud.Dts.V20180330.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
+        /// Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+        /// </summary>
+        [JsonProperty("SubscribeVersion")]
+        public string SubscribeVersion{ get; set; }
+
+        /// <summary>
+        /// Error message.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Errors")]
+        public SubsErr[] Errors{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -220,6 +233,8 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
+            this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

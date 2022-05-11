@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.427</VersionPrefix>
+    <VersionPrefix>3.0.428</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2941,6 +2941,7 @@
     <Compile Include="Dts\V20180330\Models\StartMigrateJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\StopMigrateJobRequest.cs" />
     <Compile Include="Dts\V20180330\Models\StopMigrateJobResponse.cs" />
+    <Compile Include="Dts\V20180330\Models\SubsErr.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeInfo.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeObject.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeRegionConf.cs" />
@@ -7317,73 +7318,36 @@
     <Compile Include="Tms\V20201229\Models\TextModerationResponse.cs" />
     <Compile Include="Tms\V20201229\Models\User.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
-    <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
-    <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />
-    <Compile Include="Trtc\V20190722\Models\CreatePictureRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\CreatePictureResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DeletePictureRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DeletePictureResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeCallDetailResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeDetailEventRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeDetailEventResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribePictureRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribePictureResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRecordStatisticRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRecordStatisticResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeTrtcInteractiveTimeRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeTrtcInteractiveTimeResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeTrtcMcuTranscodeTimeRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeTrtcMcuTranscodeTimeResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeUserInformationRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeUserInformationResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\AudioParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\CloudStorage.cs" />
+    <Compile Include="Trtc\V20190722\Models\CloudVod.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreateCloudRecordingRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreateCloudRecordingResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DeleteCloudRecordingRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DeleteCloudRecordingResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeCloudRecordingRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeCloudRecordingResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomByStrRoomIdRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomByStrRoomIdResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\EncodeParams.cs" />
-    <Compile Include="Trtc\V20190722\Models\EventList.cs" />
-    <Compile Include="Trtc\V20190722\Models\EventMessage.cs" />
-    <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
-    <Compile Include="Trtc\V20190722\Models\ModifyPictureRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\ModifyPictureResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
-    <Compile Include="Trtc\V20190722\Models\OneSdkAppIdUsagesInfo.cs" />
-    <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
-    <Compile Include="Trtc\V20190722\Models\PictureInfo.cs" />
-    <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
-    <Compile Include="Trtc\V20190722\Models\PublishCdnParams.cs" />
-    <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
-    <Compile Include="Trtc\V20190722\Models\RecordUsage.cs" />
+    <Compile Include="Trtc\V20190722\Models\MixLayout.cs" />
+    <Compile Include="Trtc\V20190722\Models\MixLayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\MixTranscodeParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\ModifyCloudRecordingRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\ModifyCloudRecordingResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\RecordParams.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\RoomState.cs" />
-    <Compile Include="Trtc\V20190722\Models\ScaleInfomation.cs" />
-    <Compile Include="Trtc\V20190722\Models\SdkAppIdRecordUsage.cs" />
-    <Compile Include="Trtc\V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
-    <Compile Include="Trtc\V20190722\Models\SdkAppIdTrtcUsage.cs" />
-    <Compile Include="Trtc\V20190722\Models\SmallVideoLayoutParams.cs" />
-    <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeByStrRoomIdRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeByStrRoomIdResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeByStrRoomIdRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeByStrRoomIdResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
-    <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
-    <Compile Include="Trtc\V20190722\Models\WaterMarkParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\StorageFile.cs" />
+    <Compile Include="Trtc\V20190722\Models\StorageParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\SubscribeStreamUserIds.cs" />
+    <Compile Include="Trtc\V20190722\Models\TencentVod.cs" />
+    <Compile Include="Trtc\V20190722\Models\VideoParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\WaterMark.cs" />
+    <Compile Include="Trtc\V20190722\Models\WaterMarkImage.cs" />
     <Compile Include="Vm\V20201229\VmClient.cs" />
     <Compile Include="Vm\V20201229\Models\AudioResult.cs" />
     <Compile Include="Vm\V20201229\Models\AudioResultDetailLanguageResult.cs" />

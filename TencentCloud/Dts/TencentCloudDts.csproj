@@ -97,6 +97,7 @@
     <Compile Include="V20180330\Models\StartMigrateJobResponse.cs" />
     <Compile Include="V20180330\Models\StopMigrateJobRequest.cs" />
     <Compile Include="V20180330\Models\StopMigrateJobResponse.cs" />
+    <Compile Include="V20180330\Models\SubsErr.cs" />
     <Compile Include="V20180330\Models\SubscribeInfo.cs" />
     <Compile Include="V20180330\Models\SubscribeObject.cs" />
     <Compile Include="V20180330\Models\SubscribeRegionConf.cs" />

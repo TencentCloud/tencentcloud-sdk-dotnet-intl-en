@@ -79,6 +79,18 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("DatabaseInfo")]
         public string DatabaseInfo{ get; set; }
 
+        /// <summary>
+        /// Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+        /// </summary>
+        [JsonProperty("SrcNodeType")]
+        public string SrcNodeType{ get; set; }
+
+        /// <summary>
+        /// Source instance information, which is correlated with the migration task type.
+        /// </summary>
+        [JsonProperty("SrcInfoMulti")]
+        public SrcInfo[] SrcInfoMulti{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
             this.SetParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
+            this.SetParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
+            this.SetParamArrayObj(map, prefix + "SrcInfoMulti.", this.SrcInfoMulti);
         }
     }
 }
