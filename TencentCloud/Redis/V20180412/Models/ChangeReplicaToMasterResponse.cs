@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScaleInInstancesRequest : AbstractModel
+    public class ChangeReplicaToMasterResponse : AbstractModel
     {
         
         /// <summary>
-        /// Scaling group ID
+        /// Async task ID
         /// </summary>
-        [JsonProperty("AutoScalingGroupId")]
-        public string AutoScalingGroupId{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
-        /// Number of instances to be reduced
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("ScaleInNumber")]
-        public ulong? ScaleInNumber{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
-            this.SetParamSimple(map, prefix + "ScaleInNumber", this.ScaleInNumber);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

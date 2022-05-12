@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AutoScalingGroupAbstract : AbstractModel
+    public class RedisNodes : AbstractModel
     {
         
         /// <summary>
-        /// Auto scaling group ID.
+        /// Node ID
         /// </summary>
-        [JsonProperty("AutoScalingGroupId")]
-        public string AutoScalingGroupId{ get; set; }
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
 
         /// <summary>
-        /// Auto scaling group name.
+        /// Node role
         /// </summary>
-        [JsonProperty("AutoScalingGroupName")]
-        public string AutoScalingGroupName{ get; set; }
+        [JsonProperty("NodeRole")]
+        public string NodeRole{ get; set; }
+
+        /// <summary>
+        /// Shard ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public long? ClusterId{ get; set; }
+
+        /// <summary>
+        /// AZ ID
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
-            this.SetParamSimple(map, prefix + "AutoScalingGroupName", this.AutoScalingGroupName);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

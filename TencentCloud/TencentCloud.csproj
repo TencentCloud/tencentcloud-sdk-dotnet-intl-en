@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.428</VersionPrefix>
+    <VersionPrefix>3.0.429</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -518,7 +518,6 @@
     <Compile Include="As\V20180419\Models\AttachLoadBalancersResponse.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingAdvice.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingGroup.cs" />
-    <Compile Include="As\V20180419\Models\AutoScalingGroupAbstract.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingNotification.cs" />
     <Compile Include="As\V20180419\Models\ClearLaunchConfigurationAttributesRequest.cs" />
     <Compile Include="As\V20180419\Models\ClearLaunchConfigurationAttributesResponse.cs" />
@@ -528,8 +527,6 @@
     <Compile Include="As\V20180419\Models\CreateAutoScalingGroupFromInstanceResponse.cs" />
     <Compile Include="As\V20180419\Models\CreateAutoScalingGroupRequest.cs" />
     <Compile Include="As\V20180419\Models\CreateAutoScalingGroupResponse.cs" />
-    <Compile Include="As\V20180419\Models\CreateLaunchConfigurationRequest.cs" />
-    <Compile Include="As\V20180419\Models\CreateLaunchConfigurationResponse.cs" />
     <Compile Include="As\V20180419\Models\CreateLifecycleHookRequest.cs" />
     <Compile Include="As\V20180419\Models\CreateLifecycleHookResponse.cs" />
     <Compile Include="As\V20180419\Models\CreateNotificationConfigurationRequest.cs" />
@@ -563,8 +560,6 @@
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupsResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingInstancesRequest.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingInstancesResponse.cs" />
-    <Compile Include="As\V20180419\Models\DescribeLaunchConfigurationsRequest.cs" />
-    <Compile Include="As\V20180419\Models\DescribeLaunchConfigurationsResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeLifecycleHooksRequest.cs" />
     <Compile Include="As\V20180419\Models\DescribeLifecycleHooksResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeNotificationConfigurationsRequest.cs" />
@@ -578,8 +573,6 @@
     <Compile Include="As\V20180419\Models\DetachLoadBalancersRequest.cs" />
     <Compile Include="As\V20180419\Models\DetachLoadBalancersResponse.cs" />
     <Compile Include="As\V20180419\Models\DetailedStatusMessage.cs" />
-    <Compile Include="As\V20180419\Models\DisableAutoScalingGroupRequest.cs" />
-    <Compile Include="As\V20180419\Models\DisableAutoScalingGroupResponse.cs" />
     <Compile Include="As\V20180419\Models\EnableAutoScalingGroupRequest.cs" />
     <Compile Include="As\V20180419\Models\EnableAutoScalingGroupResponse.cs" />
     <Compile Include="As\V20180419\Models\EnhancedService.cs" />
@@ -593,13 +586,9 @@
     <Compile Include="As\V20180419\Models\InstanceChargePrepaid.cs" />
     <Compile Include="As\V20180419\Models\InstanceMarketOptionsRequest.cs" />
     <Compile Include="As\V20180419\Models\InstanceNameSettings.cs" />
-    <Compile Include="As\V20180419\Models\InstanceTag.cs" />
     <Compile Include="As\V20180419\Models\InternetAccessible.cs" />
-    <Compile Include="As\V20180419\Models\LaunchConfiguration.cs" />
     <Compile Include="As\V20180419\Models\LifecycleActionResultInfo.cs" />
     <Compile Include="As\V20180419\Models\LifecycleHook.cs" />
-    <Compile Include="As\V20180419\Models\LimitedLoginSettings.cs" />
-    <Compile Include="As\V20180419\Models\LoginSettings.cs" />
     <Compile Include="As\V20180419\Models\MetricAlarm.cs" />
     <Compile Include="As\V20180419\Models\ModifyAutoScalingGroupRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyAutoScalingGroupResponse.cs" />
@@ -607,6 +596,8 @@
     <Compile Include="As\V20180419\Models\ModifyDesiredCapacityResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyLaunchConfigurationAttributesRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyLaunchConfigurationAttributesResponse.cs" />
+    <Compile Include="As\V20180419\Models\ModifyLifecycleHookRequest.cs" />
+    <Compile Include="As\V20180419\Models\ModifyLifecycleHookResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyLoadBalancerTargetAttributesRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyLoadBalancerTargetAttributesResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyLoadBalancersRequest.cs" />
@@ -622,10 +613,6 @@
     <Compile Include="As\V20180419\Models\RemoveInstancesResponse.cs" />
     <Compile Include="As\V20180419\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="As\V20180419\Models\RunSecurityServiceEnabled.cs" />
-    <Compile Include="As\V20180419\Models\ScaleInInstancesRequest.cs" />
-    <Compile Include="As\V20180419\Models\ScaleInInstancesResponse.cs" />
-    <Compile Include="As\V20180419\Models\ScaleOutInstancesRequest.cs" />
-    <Compile Include="As\V20180419\Models\ScaleOutInstancesResponse.cs" />
     <Compile Include="As\V20180419\Models\ScalingPolicy.cs" />
     <Compile Include="As\V20180419\Models\ScheduledAction.cs" />
     <Compile Include="As\V20180419\Models\ServiceSettings.cs" />
@@ -640,8 +627,6 @@
     <Compile Include="As\V20180419\Models\SystemDisk.cs" />
     <Compile Include="As\V20180419\Models\Tag.cs" />
     <Compile Include="As\V20180419\Models\TargetAttribute.cs" />
-    <Compile Include="As\V20180419\Models\UpgradeLaunchConfigurationRequest.cs" />
-    <Compile Include="As\V20180419\Models\UpgradeLaunchConfigurationResponse.cs" />
     <Compile Include="As\V20180419\Models\UpgradeLifecycleHookRequest.cs" />
     <Compile Include="As\V20180419\Models\UpgradeLifecycleHookResponse.cs" />
     <Compile Include="Batch\V20170312\BatchClient.cs" />
@@ -5836,8 +5821,12 @@
     <Compile Include="Privatedns\V20201028\Models\VpcInfo.cs" />
     <Compile Include="Redis\V20180412\RedisClient.cs" />
     <Compile Include="Redis\V20180412\Models\Account.cs" />
+    <Compile Include="Redis\V20180412\Models\AllocateWanAddressRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\AllocateWanAddressResponse.cs" />
     <Compile Include="Redis\V20180412\Models\BigKeyInfo.cs" />
     <Compile Include="Redis\V20180412\Models\BigKeyTypeInfo.cs" />
+    <Compile Include="Redis\V20180412\Models\ChangeReplicaToMasterRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ChangeReplicaToMasterResponse.cs" />
     <Compile Include="Redis\V20180412\Models\CommandTake.cs" />
     <Compile Include="Redis\V20180412\Models\DelayDistribution.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceAccountRequest.cs" />
@@ -5858,6 +5847,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeInstanceMonitorTopNCmdResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceMonitorTopNCmdTookRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceMonitorTopNCmdTookResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoRequest.cs" />
@@ -5877,9 +5868,14 @@
     <Compile Include="Redis\V20180412\Models\ModfiyInstancePasswordRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModfiyInstancePasswordResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ProductConf.cs" />
+    <Compile Include="Redis\V20180412\Models\ProxyNodes.cs" />
+    <Compile Include="Redis\V20180412\Models\RedisNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RegionConf.cs" />
+    <Compile Include="Redis\V20180412\Models\ReleaseWanAddressRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ReleaseWanAddressResponse.cs" />
     <Compile Include="Redis\V20180412\Models\SourceCommand.cs" />
     <Compile Include="Redis\V20180412\Models\SourceInfo.cs" />
+    <Compile Include="Redis\V20180412\Models\TendisNodes.cs" />
     <Compile Include="Redis\V20180412\Models\ZoneCapacityConf.cs" />
     <Compile Include="Rum\V20210622\RumClient.cs" />
     <Compile Include="Rum\V20210622\Models\CreateLogExportRequest.cs" />

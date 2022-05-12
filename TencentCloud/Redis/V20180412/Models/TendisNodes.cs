@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLaunchConfigurationsResponse : AbstractModel
+    public class TendisNodes : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible launch configurations.
+        /// Node ID
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
 
         /// <summary>
-        /// List of launch configuration details.
+        /// Node role
         /// </summary>
-        [JsonProperty("LaunchConfigurationSet")]
-        public LaunchConfiguration[] LaunchConfigurationSet{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("NodeRole")]
+        public string NodeRole{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "LaunchConfigurationSet.", this.LaunchConfigurationSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
         }
     }
 }

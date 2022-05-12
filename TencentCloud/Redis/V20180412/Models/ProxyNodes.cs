@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScaleOutInstancesRequest : AbstractModel
+    public class ProxyNodes : AbstractModel
     {
         
         /// <summary>
-        /// Scaling group ID
+        /// Node ID
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("AutoScalingGroupId")]
-        public string AutoScalingGroupId{ get; set; }
-
-        /// <summary>
-        /// Number of instances to be added
-        /// </summary>
-        [JsonProperty("ScaleOutNumber")]
-        public ulong? ScaleOutNumber{ get; set; }
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
-            this.SetParamSimple(map, prefix + "ScaleOutNumber", this.ScaleOutNumber);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
         }
     }
 }

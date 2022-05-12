@@ -21,14 +21,14 @@ namespace TencentCloud.As.V20180419.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DisableAutoScalingGroupRequest : AbstractModel
+    public class ModifyLifecycleHookResponse : AbstractModel
     {
         
         /// <summary>
-        /// Auto scaling group ID
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("AutoScalingGroupId")]
-        public string AutoScalingGroupId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

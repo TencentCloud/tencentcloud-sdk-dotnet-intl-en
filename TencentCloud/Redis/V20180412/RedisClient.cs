@@ -53,6 +53,86 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to enable public network access.
+        /// </summary>
+        /// <param name="req"><see cref="AllocateWanAddressRequest"/></param>
+        /// <returns><see cref="AllocateWanAddressResponse"/></returns>
+        public async Task<AllocateWanAddressResponse> AllocateWanAddress(AllocateWanAddressRequest req)
+        {
+             JsonResponseModel<AllocateWanAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AllocateWanAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateWanAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable public network access.
+        /// </summary>
+        /// <param name="req"><see cref="AllocateWanAddressRequest"/></param>
+        /// <returns><see cref="AllocateWanAddressResponse"/></returns>
+        public AllocateWanAddressResponse AllocateWanAddressSync(AllocateWanAddressRequest req)
+        {
+             JsonResponseModel<AllocateWanAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AllocateWanAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateWanAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
+        /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
+        public async Task<ChangeReplicaToMasterResponse> ChangeReplicaToMaster(ChangeReplicaToMasterRequest req)
+        {
+             JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeReplicaToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeReplicaToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
+        /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
+        public ChangeReplicaToMasterResponse ChangeReplicaToMasterSync(ChangeReplicaToMasterRequest req)
+        {
+             JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeReplicaToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeReplicaToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to view instance sub-account information.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
@@ -413,6 +493,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query instance node information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
+        public async Task<DescribeInstanceNodeInfoResponse> DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query instance node information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
+        public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfoSync(DescribeInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business.
         /// </summary>
         /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
@@ -684,6 +804,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "ModfiyInstancePassword");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModfiyInstancePasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable public network access.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseWanAddressRequest"/></param>
+        /// <returns><see cref="ReleaseWanAddressResponse"/></returns>
+        public async Task<ReleaseWanAddressResponse> ReleaseWanAddress(ReleaseWanAddressRequest req)
+        {
+             JsonResponseModel<ReleaseWanAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseWanAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseWanAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable public network access.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseWanAddressRequest"/></param>
+        /// <returns><see cref="ReleaseWanAddressResponse"/></returns>
+        public ReleaseWanAddressResponse ReleaseWanAddressSync(ReleaseWanAddressRequest req)
+        {
+             JsonResponseModel<ReleaseWanAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseWanAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseWanAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

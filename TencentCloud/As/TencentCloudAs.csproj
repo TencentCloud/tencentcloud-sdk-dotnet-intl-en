@@ -54,7 +54,6 @@
     <Compile Include="V20180419\Models\AttachLoadBalancersResponse.cs" />
     <Compile Include="V20180419\Models\AutoScalingAdvice.cs" />
     <Compile Include="V20180419\Models\AutoScalingGroup.cs" />
-    <Compile Include="V20180419\Models\AutoScalingGroupAbstract.cs" />
     <Compile Include="V20180419\Models\AutoScalingNotification.cs" />
     <Compile Include="V20180419\Models\ClearLaunchConfigurationAttributesRequest.cs" />
     <Compile Include="V20180419\Models\ClearLaunchConfigurationAttributesResponse.cs" />
@@ -64,8 +63,6 @@
     <Compile Include="V20180419\Models\CreateAutoScalingGroupFromInstanceResponse.cs" />
     <Compile Include="V20180419\Models\CreateAutoScalingGroupRequest.cs" />
     <Compile Include="V20180419\Models\CreateAutoScalingGroupResponse.cs" />
-    <Compile Include="V20180419\Models\CreateLaunchConfigurationRequest.cs" />
-    <Compile Include="V20180419\Models\CreateLaunchConfigurationResponse.cs" />
     <Compile Include="V20180419\Models\CreateLifecycleHookRequest.cs" />
     <Compile Include="V20180419\Models\CreateLifecycleHookResponse.cs" />
     <Compile Include="V20180419\Models\CreateNotificationConfigurationRequest.cs" />
@@ -99,8 +96,6 @@
     <Compile Include="V20180419\Models\DescribeAutoScalingGroupsResponse.cs" />
     <Compile Include="V20180419\Models\DescribeAutoScalingInstancesRequest.cs" />
     <Compile Include="V20180419\Models\DescribeAutoScalingInstancesResponse.cs" />
-    <Compile Include="V20180419\Models\DescribeLaunchConfigurationsRequest.cs" />
-    <Compile Include="V20180419\Models\DescribeLaunchConfigurationsResponse.cs" />
     <Compile Include="V20180419\Models\DescribeLifecycleHooksRequest.cs" />
     <Compile Include="V20180419\Models\DescribeLifecycleHooksResponse.cs" />
     <Compile Include="V20180419\Models\DescribeNotificationConfigurationsRequest.cs" />
@@ -114,8 +109,6 @@
     <Compile Include="V20180419\Models\DetachLoadBalancersRequest.cs" />
     <Compile Include="V20180419\Models\DetachLoadBalancersResponse.cs" />
     <Compile Include="V20180419\Models\DetailedStatusMessage.cs" />
-    <Compile Include="V20180419\Models\DisableAutoScalingGroupRequest.cs" />
-    <Compile Include="V20180419\Models\DisableAutoScalingGroupResponse.cs" />
     <Compile Include="V20180419\Models\EnableAutoScalingGroupRequest.cs" />
     <Compile Include="V20180419\Models\EnableAutoScalingGroupResponse.cs" />
     <Compile Include="V20180419\Models\EnhancedService.cs" />
@@ -129,13 +122,9 @@
     <Compile Include="V20180419\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20180419\Models\InstanceMarketOptionsRequest.cs" />
     <Compile Include="V20180419\Models\InstanceNameSettings.cs" />
-    <Compile Include="V20180419\Models\InstanceTag.cs" />
     <Compile Include="V20180419\Models\InternetAccessible.cs" />
-    <Compile Include="V20180419\Models\LaunchConfiguration.cs" />
     <Compile Include="V20180419\Models\LifecycleActionResultInfo.cs" />
     <Compile Include="V20180419\Models\LifecycleHook.cs" />
-    <Compile Include="V20180419\Models\LimitedLoginSettings.cs" />
-    <Compile Include="V20180419\Models\LoginSettings.cs" />
     <Compile Include="V20180419\Models\MetricAlarm.cs" />
     <Compile Include="V20180419\Models\ModifyAutoScalingGroupRequest.cs" />
     <Compile Include="V20180419\Models\ModifyAutoScalingGroupResponse.cs" />
@@ -143,6 +132,8 @@
     <Compile Include="V20180419\Models\ModifyDesiredCapacityResponse.cs" />
     <Compile Include="V20180419\Models\ModifyLaunchConfigurationAttributesRequest.cs" />
     <Compile Include="V20180419\Models\ModifyLaunchConfigurationAttributesResponse.cs" />
+    <Compile Include="V20180419\Models\ModifyLifecycleHookRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyLifecycleHookResponse.cs" />
     <Compile Include="V20180419\Models\ModifyLoadBalancerTargetAttributesRequest.cs" />
     <Compile Include="V20180419\Models\ModifyLoadBalancerTargetAttributesResponse.cs" />
     <Compile Include="V20180419\Models\ModifyLoadBalancersRequest.cs" />
@@ -158,10 +149,6 @@
     <Compile Include="V20180419\Models\RemoveInstancesResponse.cs" />
     <Compile Include="V20180419\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180419\Models\RunSecurityServiceEnabled.cs" />
-    <Compile Include="V20180419\Models\ScaleInInstancesRequest.cs" />
-    <Compile Include="V20180419\Models\ScaleInInstancesResponse.cs" />
-    <Compile Include="V20180419\Models\ScaleOutInstancesRequest.cs" />
-    <Compile Include="V20180419\Models\ScaleOutInstancesResponse.cs" />
     <Compile Include="V20180419\Models\ScalingPolicy.cs" />
     <Compile Include="V20180419\Models\ScheduledAction.cs" />
     <Compile Include="V20180419\Models\ServiceSettings.cs" />
@@ -176,8 +163,6 @@
     <Compile Include="V20180419\Models\SystemDisk.cs" />
     <Compile Include="V20180419\Models\Tag.cs" />
     <Compile Include="V20180419\Models\TargetAttribute.cs" />
-    <Compile Include="V20180419\Models\UpgradeLaunchConfigurationRequest.cs" />
-    <Compile Include="V20180419\Models\UpgradeLaunchConfigurationResponse.cs" />
     <Compile Include="V20180419\Models\UpgradeLifecycleHookRequest.cs" />
     <Compile Include="V20180419\Models\UpgradeLifecycleHookResponse.cs" />
   </ItemGroup>

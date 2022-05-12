@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateLaunchConfigurationResponse : AbstractModel
+    public class AllocateWanAddressResponse : AbstractModel
     {
         
         /// <summary>
-        /// This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+        /// Async task ID
         /// </summary>
-        [JsonProperty("LaunchConfigurationId")]
-        public string LaunchConfigurationId{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
+
+        /// <summary>
+        /// Status of enabling public network access
+        /// </summary>
+        [JsonProperty("WanStatus")]
+        public string WanStatus{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +48,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

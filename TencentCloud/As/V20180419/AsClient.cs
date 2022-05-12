@@ -301,54 +301,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (CreateLaunchConfiguration) is used to create a launch configuration.
-        /// 
-        /// * A few fields of a launch configuration can be modified through `ModifyLaunchConfigurationAttributes`. To use a new launch configuration, it is recommended to create it from scratch.
-        /// 
-        /// * You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
-        /// </summary>
-        /// <param name="req"><see cref="CreateLaunchConfigurationRequest"/></param>
-        /// <returns><see cref="CreateLaunchConfigurationResponse"/></returns>
-        public async Task<CreateLaunchConfigurationResponse> CreateLaunchConfiguration(CreateLaunchConfigurationRequest req)
-        {
-             JsonResponseModel<CreateLaunchConfigurationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLaunchConfiguration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchConfigurationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (CreateLaunchConfiguration) is used to create a launch configuration.
-        /// 
-        /// * A few fields of a launch configuration can be modified through `ModifyLaunchConfigurationAttributes`. To use a new launch configuration, it is recommended to create it from scratch.
-        /// 
-        /// * You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
-        /// </summary>
-        /// <param name="req"><see cref="CreateLaunchConfigurationRequest"/></param>
-        /// <returns><see cref="CreateLaunchConfigurationResponse"/></returns>
-        public CreateLaunchConfigurationResponse CreateLaunchConfigurationSync(CreateLaunchConfigurationRequest req)
-        {
-             JsonResponseModel<CreateLaunchConfigurationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLaunchConfiguration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchConfigurationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (CreateLifeCycleHook) is used to create a lifecycle hook.
         /// 
         /// * You can configure message notifications in the following format for lifecycle hooks, which will be sent to your CMQ queue by AS:
@@ -1095,52 +1047,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (DescribeLaunchConfigurations) is used to query the information of launch configurations.
-        /// 
-        /// * You can query the launch configuration details based on information such as launch configuration ID and name. For more information on filters, see `Filter`.
-        /// * If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of launch configurations of the current user will be returned.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLaunchConfigurationsRequest"/></param>
-        /// <returns><see cref="DescribeLaunchConfigurationsResponse"/></returns>
-        public async Task<DescribeLaunchConfigurationsResponse> DescribeLaunchConfigurations(DescribeLaunchConfigurationsRequest req)
-        {
-             JsonResponseModel<DescribeLaunchConfigurationsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeLaunchConfigurations");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchConfigurationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (DescribeLaunchConfigurations) is used to query the information of launch configurations.
-        /// 
-        /// * You can query the launch configuration details based on information such as launch configuration ID and name. For more information on filters, see `Filter`.
-        /// * If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of launch configurations of the current user will be returned.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLaunchConfigurationsRequest"/></param>
-        /// <returns><see cref="DescribeLaunchConfigurationsResponse"/></returns>
-        public DescribeLaunchConfigurationsResponse DescribeLaunchConfigurationsSync(DescribeLaunchConfigurationsRequest req)
-        {
-             JsonResponseModel<DescribeLaunchConfigurationsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeLaunchConfigurations");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchConfigurationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (DescribeLifecycleHooks) is used to query the information of lifecycle hooks.
         /// 
         /// * You can query the details of lifecycle hooks based on information such as auto scaling group ID, lifecycle hook ID, or lifecycle hook name. For more information on filters, see `Filter`.
@@ -1405,46 +1311,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (DisableAutoScalingGroup) is used to disable the specified auto scaling group.
-        /// </summary>
-        /// <param name="req"><see cref="DisableAutoScalingGroupRequest"/></param>
-        /// <returns><see cref="DisableAutoScalingGroupResponse"/></returns>
-        public async Task<DisableAutoScalingGroupResponse> DisableAutoScalingGroup(DisableAutoScalingGroupRequest req)
-        {
-             JsonResponseModel<DisableAutoScalingGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DisableAutoScalingGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableAutoScalingGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (DisableAutoScalingGroup) is used to disable the specified auto scaling group.
-        /// </summary>
-        /// <param name="req"><see cref="DisableAutoScalingGroupRequest"/></param>
-        /// <returns><see cref="DisableAutoScalingGroupResponse"/></returns>
-        public DisableAutoScalingGroupResponse DisableAutoScalingGroupSync(DisableAutoScalingGroupRequest req)
-        {
-             JsonResponseModel<DisableAutoScalingGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DisableAutoScalingGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableAutoScalingGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (EnableAutoScalingGroup) is used to enable the specified auto scaling group.
         /// </summary>
         /// <param name="req"><see cref="EnableAutoScalingGroupRequest"/></param>
@@ -1648,6 +1514,46 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLaunchConfigurationAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the lifecycle hook.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifecycleHookRequest"/></param>
+        /// <returns><see cref="ModifyLifecycleHookResponse"/></returns>
+        public async Task<ModifyLifecycleHookResponse> ModifyLifecycleHook(ModifyLifecycleHookRequest req)
+        {
+             JsonResponseModel<ModifyLifecycleHookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLifecycleHook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLifecycleHookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the lifecycle hook.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifecycleHookRequest"/></param>
+        /// <returns><see cref="ModifyLifecycleHookResponse"/></returns>
+        public ModifyLifecycleHookResponse ModifyLifecycleHookSync(ModifyLifecycleHookRequest req)
+        {
+             JsonResponseModel<ModifyLifecycleHookResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLifecycleHook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLifecycleHookResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1913,102 +1819,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to reduce the specified number of instances from the scaling group, which returns the scaling activity ID `ActivityId`.
-        /// * The scaling group is not active.
-        /// * The scale-in instances will be selected according to the `TerminationPolicies` policy as described in [Reducing Capacity](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
-        /// * Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
-        /// * The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
-        /// * If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
-        /// </summary>
-        /// <param name="req"><see cref="ScaleInInstancesRequest"/></param>
-        /// <returns><see cref="ScaleInInstancesResponse"/></returns>
-        public async Task<ScaleInInstancesResponse> ScaleInInstances(ScaleInInstancesRequest req)
-        {
-             JsonResponseModel<ScaleInInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ScaleInInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleInInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to reduce the specified number of instances from the scaling group, which returns the scaling activity ID `ActivityId`.
-        /// * The scaling group is not active.
-        /// * The scale-in instances will be selected according to the `TerminationPolicies` policy as described in [Reducing Capacity](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
-        /// * Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
-        /// * The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
-        /// * If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
-        /// </summary>
-        /// <param name="req"><see cref="ScaleInInstancesRequest"/></param>
-        /// <returns><see cref="ScaleInInstancesResponse"/></returns>
-        public ScaleInInstancesResponse ScaleInInstancesSync(ScaleInInstancesRequest req)
-        {
-             JsonResponseModel<ScaleInInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ScaleInInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleInInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
-        /// * The scaling group is not active.
-        /// * The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
-        /// * If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
-        /// </summary>
-        /// <param name="req"><see cref="ScaleOutInstancesRequest"/></param>
-        /// <returns><see cref="ScaleOutInstancesResponse"/></returns>
-        public async Task<ScaleOutInstancesResponse> ScaleOutInstances(ScaleOutInstancesRequest req)
-        {
-             JsonResponseModel<ScaleOutInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ScaleOutInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
-        /// * The scaling group is not active.
-        /// * The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
-        /// * If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
-        /// </summary>
-        /// <param name="req"><see cref="ScaleOutInstancesRequest"/></param>
-        /// <returns><see cref="ScaleOutInstancesResponse"/></returns>
-        public ScaleOutInstancesResponse ScaleOutInstancesSync(ScaleOutInstancesRequest req)
-        {
-             JsonResponseModel<ScaleOutInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ScaleOutInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to enable scale-in protection for an instance.
         /// When scale-in protection is enabled, the instance will not be removed in scale-in activities triggered by replacement of unhealthy instances, alarm threshold reached, change of desired quantity, etc.
         /// </summary>
@@ -2134,52 +1944,6 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "StopAutoScalingInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopAutoScalingInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (UpgradeLaunchConfiguration) is used to upgrade a launch configuration.
-        /// 
-        /// * This API is used to upgrade a launch configuration in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
-        /// * After the launch configuration is upgraded, the existing instances that have been created by it will not be changed, but new instances will be created according to the new configuration.
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeLaunchConfigurationRequest"/></param>
-        /// <returns><see cref="UpgradeLaunchConfigurationResponse"/></returns>
-        public async Task<UpgradeLaunchConfigurationResponse> UpgradeLaunchConfiguration(UpgradeLaunchConfigurationRequest req)
-        {
-             JsonResponseModel<UpgradeLaunchConfigurationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpgradeLaunchConfiguration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeLaunchConfigurationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (UpgradeLaunchConfiguration) is used to upgrade a launch configuration.
-        /// 
-        /// * This API is used to upgrade a launch configuration in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
-        /// * After the launch configuration is upgraded, the existing instances that have been created by it will not be changed, but new instances will be created according to the new configuration.
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeLaunchConfigurationRequest"/></param>
-        /// <returns><see cref="UpgradeLaunchConfigurationResponse"/></returns>
-        public UpgradeLaunchConfigurationResponse UpgradeLaunchConfigurationSync(UpgradeLaunchConfigurationRequest req)
-        {
-             JsonResponseModel<UpgradeLaunchConfigurationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpgradeLaunchConfiguration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeLaunchConfigurationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

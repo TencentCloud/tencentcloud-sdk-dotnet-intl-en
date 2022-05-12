@@ -46,8 +46,12 @@
   <ItemGroup>
     <Compile Include="V20180412\RedisClient.cs" />
     <Compile Include="V20180412\Models\Account.cs" />
+    <Compile Include="V20180412\Models\AllocateWanAddressRequest.cs" />
+    <Compile Include="V20180412\Models\AllocateWanAddressResponse.cs" />
     <Compile Include="V20180412\Models\BigKeyInfo.cs" />
     <Compile Include="V20180412\Models\BigKeyTypeInfo.cs" />
+    <Compile Include="V20180412\Models\ChangeReplicaToMasterRequest.cs" />
+    <Compile Include="V20180412\Models\ChangeReplicaToMasterResponse.cs" />
     <Compile Include="V20180412\Models\CommandTake.cs" />
     <Compile Include="V20180412\Models\DelayDistribution.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceAccountRequest.cs" />
@@ -68,6 +72,8 @@
     <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdTookRequest.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdTookResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
     <Compile Include="V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
     <Compile Include="V20180412\Models\DescribeProductInfoRequest.cs" />
@@ -87,9 +93,14 @@
     <Compile Include="V20180412\Models\ModfiyInstancePasswordRequest.cs" />
     <Compile Include="V20180412\Models\ModfiyInstancePasswordResponse.cs" />
     <Compile Include="V20180412\Models\ProductConf.cs" />
+    <Compile Include="V20180412\Models\ProxyNodes.cs" />
+    <Compile Include="V20180412\Models\RedisNodes.cs" />
     <Compile Include="V20180412\Models\RegionConf.cs" />
+    <Compile Include="V20180412\Models\ReleaseWanAddressRequest.cs" />
+    <Compile Include="V20180412\Models\ReleaseWanAddressResponse.cs" />
     <Compile Include="V20180412\Models\SourceCommand.cs" />
     <Compile Include="V20180412\Models\SourceInfo.cs" />
+    <Compile Include="V20180412\Models\TendisNodes.cs" />
     <Compile Include="V20180412\Models\ZoneCapacityConf.cs" />
   </ItemGroup>
 </Project>

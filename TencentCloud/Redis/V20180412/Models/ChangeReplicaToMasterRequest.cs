@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LimitedLoginSettings : AbstractModel
+    public class ChangeReplicaToMasterRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of key IDs.
+        /// Instance ID
         /// </summary>
-        [JsonProperty("KeyIds")]
-        public string[] KeyIds{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Replica group ID, which is required for multi-AZ instances.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }
