@@ -122,6 +122,8 @@
     <Compile Include="V20180411\Models\LogFileInfo.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyDBInstanceNameRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstancesProjectRequest.cs" />

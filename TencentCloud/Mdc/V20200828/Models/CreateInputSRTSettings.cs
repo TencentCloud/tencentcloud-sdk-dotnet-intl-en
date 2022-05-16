@@ -25,6 +25,12 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
+        /// The SRT mode. Valid values: LISTENER (default), CALLER.
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
         /// Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
         /// </summary>
         [JsonProperty("StreamId")]
@@ -66,12 +72,19 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("PbKeyLen")]
         public long? PbKeyLen{ get; set; }
 
+        /// <summary>
+        /// The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+        /// </summary>
+        [JsonProperty("SourceAddresses")]
+        public SRTSourceAddressReq[] SourceAddresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);
             this.SetParamSimple(map, prefix + "Latency", this.Latency);
             this.SetParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
@@ -79,6 +92,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "PeerIdleTimeout", this.PeerIdleTimeout);
             this.SetParamSimple(map, prefix + "Passphrase", this.Passphrase);
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
+            this.SetParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
         }
     }
 }

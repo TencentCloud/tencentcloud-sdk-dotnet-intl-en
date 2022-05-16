@@ -1133,6 +1133,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to get instance key list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptionKeysRequest"/></param>
+        /// <returns><see cref="DescribeEncryptionKeysResponse"/></returns>
+        public async Task<DescribeEncryptionKeysResponse> DescribeEncryptionKeys(DescribeEncryptionKeysRequest req)
+        {
+             JsonResponseModel<DescribeEncryptionKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEncryptionKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptionKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get instance key list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptionKeysRequest"/></param>
+        /// <returns><see cref="DescribeEncryptionKeysResponse"/></returns>
+        public DescribeEncryptionKeysResponse DescribeEncryptionKeysSync(DescribeEncryptionKeysRequest req)
+        {
+             JsonResponseModel<DescribeEncryptionKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEncryptionKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptionKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get order information.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>

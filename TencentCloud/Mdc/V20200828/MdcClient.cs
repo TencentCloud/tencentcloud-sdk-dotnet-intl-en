@@ -93,6 +93,46 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
+        /// This API is used to create a StreamLink output.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkOutputInfoRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkOutputInfoResponse"/></returns>
+        public async Task<CreateStreamLinkOutputInfoResponse> CreateStreamLinkOutputInfo(CreateStreamLinkOutputInfoRequest req)
+        {
+             JsonResponseModel<CreateStreamLinkOutputInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStreamLinkOutputInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLinkOutputInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a StreamLink output.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkOutputInfoRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkOutputInfoResponse"/></returns>
+        public CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfoSync(CreateStreamLinkOutputInfoRequest req)
+        {
+             JsonResponseModel<CreateStreamLinkOutputInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStreamLinkOutputInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamLinkOutputInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a StreamLink flow.
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamLinkFlowRequest"/></param>
@@ -213,6 +253,206 @@ namespace TencentCloud.Mdc.V20200828
         }
 
         /// <summary>
+        /// This API is used to query the logs of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowLogsResponse"/></returns>
+        public async Task<DescribeStreamLinkFlowLogsResponse> DescribeStreamLinkFlowLogs(DescribeStreamLinkFlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the logs of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowLogsResponse"/></returns>
+        public DescribeStreamLinkFlowLogsResponse DescribeStreamLinkFlowLogsSync(DescribeStreamLinkFlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the media quality of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowMediaStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowMediaStatisticsResponse"/></returns>
+        public async Task<DescribeStreamLinkFlowMediaStatisticsResponse> DescribeStreamLinkFlowMediaStatistics(DescribeStreamLinkFlowMediaStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkFlowMediaStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the media quality of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowMediaStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowMediaStatisticsResponse"/></returns>
+        public DescribeStreamLinkFlowMediaStatisticsResponse DescribeStreamLinkFlowMediaStatisticsSync(DescribeStreamLinkFlowMediaStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkFlowMediaStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the current status of a flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowRealtimeStatusRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowRealtimeStatusResponse"/></returns>
+        public async Task<DescribeStreamLinkFlowRealtimeStatusResponse> DescribeStreamLinkFlowRealtimeStatus(DescribeStreamLinkFlowRealtimeStatusRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkFlowRealtimeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the current status of a flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowRealtimeStatusRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowRealtimeStatusResponse"/></returns>
+        public DescribeStreamLinkFlowRealtimeStatusResponse DescribeStreamLinkFlowRealtimeStatusSync(DescribeStreamLinkFlowRealtimeStatusRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkFlowRealtimeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the SRT streaming performance of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowSRTStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowSRTStatisticsResponse"/></returns>
+        public async Task<DescribeStreamLinkFlowSRTStatisticsResponse> DescribeStreamLinkFlowSRTStatistics(DescribeStreamLinkFlowSRTStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkFlowSRTStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the SRT streaming performance of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowSRTStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowSRTStatisticsResponse"/></returns>
+        public DescribeStreamLinkFlowSRTStatisticsResponse DescribeStreamLinkFlowSRTStatisticsSync(DescribeStreamLinkFlowSRTStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkFlowSRTStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the media quality of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowStatisticsResponse"/></returns>
+        public async Task<DescribeStreamLinkFlowStatisticsResponse> DescribeStreamLinkFlowStatistics(DescribeStreamLinkFlowStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamLinkFlowStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the media quality of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkFlowStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkFlowStatisticsResponse"/></returns>
+        public DescribeStreamLinkFlowStatisticsResponse DescribeStreamLinkFlowStatisticsSync(DescribeStreamLinkFlowStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamLinkFlowStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the configuration information of multiple StreamLink flows in batches.
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamLinkFlowsRequest"/></param>
@@ -324,6 +564,86 @@ namespace TencentCloud.Mdc.V20200828
              {
                  var strResp = this.InternalRequestSync(req, "ModifyStreamLinkFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an input of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLinkInputRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkInputResponse"/></returns>
+        public async Task<ModifyStreamLinkInputResponse> ModifyStreamLinkInput(ModifyStreamLinkInputRequest req)
+        {
+             JsonResponseModel<ModifyStreamLinkInputResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyStreamLinkInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkInputResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an input of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLinkInputRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkInputResponse"/></returns>
+        public ModifyStreamLinkInputResponse ModifyStreamLinkInputSync(ModifyStreamLinkInputRequest req)
+        {
+             JsonResponseModel<ModifyStreamLinkInputResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamLinkInput");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkInputResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an output of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLinkOutputInfoRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkOutputInfoResponse"/></returns>
+        public async Task<ModifyStreamLinkOutputInfoResponse> ModifyStreamLinkOutputInfo(ModifyStreamLinkOutputInfoRequest req)
+        {
+             JsonResponseModel<ModifyStreamLinkOutputInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyStreamLinkOutputInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkOutputInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an output of a StreamLink flow.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamLinkOutputInfoRequest"/></param>
+        /// <returns><see cref="ModifyStreamLinkOutputInfoResponse"/></returns>
+        public ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfoSync(ModifyStreamLinkOutputInfoRequest req)
+        {
+             JsonResponseModel<ModifyStreamLinkOutputInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyStreamLinkOutputInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamLinkOutputInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

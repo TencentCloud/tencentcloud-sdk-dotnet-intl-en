@@ -21,64 +21,62 @@ namespace TencentCloud.Mdc.V20200828.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInputSRTSettings : AbstractModel
+    public class CreateOutputSrtSettings : AbstractModel
     {
         
         /// <summary>
-        /// The SRT mode.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
         /// </summary>
-        [JsonProperty("Mode")]
-        public string Mode{ get; set; }
+        [JsonProperty("Destinations")]
+        public CreateOutputSrtSettingsDestinations[] Destinations{ get; set; }
 
         /// <summary>
-        /// Stream ID.
+        /// The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// Latency.
+        /// The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// Receive latency.
+        /// The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }
 
         /// <summary>
-        /// Peer latency.
+        /// The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
         /// </summary>
         [JsonProperty("PeerLatency")]
         public long? PeerLatency{ get; set; }
 
         /// <summary>
-        /// Peer idle timeout period.
+        /// The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
         /// </summary>
         [JsonProperty("PeerIdleTimeout")]
         public long? PeerIdleTimeout{ get; set; }
 
         /// <summary>
-        /// Decryption key.
+        /// The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
         /// </summary>
         [JsonProperty("Passphrase")]
         public string Passphrase{ get; set; }
 
         /// <summary>
-        /// Key length.
+        /// The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
         /// </summary>
         [JsonProperty("PbKeyLen")]
         public long? PbKeyLen{ get; set; }
 
         /// <summary>
-        /// The SRT peer address.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// The SRT mode. Valid values: LISTENER, CALLER (default).
         /// </summary>
-        [JsonProperty("SourceAddresses")]
-        public SRTSourceAddressResp[] SourceAddresses{ get; set; }
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
 
 
         /// <summary>
@@ -86,7 +84,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamArrayObj(map, prefix + "Destinations.", this.Destinations);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);
             this.SetParamSimple(map, prefix + "Latency", this.Latency);
             this.SetParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
@@ -94,7 +92,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "PeerIdleTimeout", this.PeerIdleTimeout);
             this.SetParamSimple(map, prefix + "Passphrase", this.Passphrase);
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
-            this.SetParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }

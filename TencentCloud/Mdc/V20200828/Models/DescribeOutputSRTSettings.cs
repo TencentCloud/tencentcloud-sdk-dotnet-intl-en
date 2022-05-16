@@ -25,8 +25,8 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Push destination address information list.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Destinations")]
         public SRTAddressDestination[] Destinations{ get; set; }
@@ -80,6 +80,20 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("PbKeyLen")]
         public long? PbKeyLen{ get; set; }
 
+        /// <summary>
+        /// The SRT mode.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// The server’s listen address, which is valid if `Mode` is `LISTENER`.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SourceAddresses")]
+        public OutputSRTSourceAddressResp[] SourceAddresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "PeerIdleTimeout", this.PeerIdleTimeout);
             this.SetParamSimple(map, prefix + "Passphrase", this.Passphrase);
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.429</VersionPrefix>
+    <VersionPrefix>3.0.430</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2847,6 +2847,8 @@
     <Compile Include="Dcdb\V20180411\Models\LogFileInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceNameRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstancesProjectRequest.cs" />
@@ -4755,8 +4757,17 @@
     <Compile Include="Mdc\V20200828\Models\CreateInput.cs" />
     <Compile Include="Mdc\V20200828\Models\CreateInputRTPSettings.cs" />
     <Compile Include="Mdc\V20200828\Models\CreateInputSRTSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputInfo.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputInfoRTPSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputRTMPSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputRTPSettingsDestinations.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputRtmpSettingsDestinations.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputSrtSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateOutputSrtSettingsDestinations.cs" />
     <Compile Include="Mdc\V20200828\Models\CreateStreamLinkFlowRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\CreateStreamLinkFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateStreamLinkOutputInfoRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\CreateStreamLinkOutputInfoResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\DeleteStreamLinkFlowRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\DeleteStreamLinkFlowResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\DeleteStreamLinkOutputRequest.cs" />
@@ -4772,20 +4783,53 @@
     <Compile Include="Mdc\V20200828\Models\DescribeOutputRTMPSettings.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeOutputRTPSettings.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeOutputSRTSettings.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowLogsRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowLogsResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowMediaStatisticsRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowMediaStatisticsResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowRealtimeStatusRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowRealtimeStatusResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowSRTStatisticsRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowSRTStatisticsResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowStatisticsRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowStatisticsResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowsRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkFlowsResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkRegionsRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\DescribeStreamLinkRegionsResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowAudio.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowLogInfo.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowMediaAudio.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowMediaInfo.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowMediaVideo.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowRealtimeStatusCommon.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowRealtimeStatusItem.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowRealtimeStatusRTMP.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowRealtimeStatusRTP.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowRealtimeStatusSRT.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowSRTInfo.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowStatistics.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowStatisticsArray.cs" />
+    <Compile Include="Mdc\V20200828\Models\FlowVideo.cs" />
     <Compile Include="Mdc\V20200828\Models\InputAddress.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyInput.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyOutputInfo.cs" />
     <Compile Include="Mdc\V20200828\Models\ModifyStreamLinkFlowRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\ModifyStreamLinkFlowResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyStreamLinkInputRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyStreamLinkInputResponse.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyStreamLinkOutputInfoRequest.cs" />
+    <Compile Include="Mdc\V20200828\Models\ModifyStreamLinkOutputInfoResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\OutputAddress.cs" />
+    <Compile Include="Mdc\V20200828\Models\OutputSRTSourceAddressResp.cs" />
     <Compile Include="Mdc\V20200828\Models\RTMPAddressDestination.cs" />
     <Compile Include="Mdc\V20200828\Models\RTPAddressDestination.cs" />
     <Compile Include="Mdc\V20200828\Models\RegionInfo.cs" />
     <Compile Include="Mdc\V20200828\Models\SRTAddressDestination.cs" />
+    <Compile Include="Mdc\V20200828\Models\SRTSourceAddressReq.cs" />
+    <Compile Include="Mdc\V20200828\Models\SRTSourceAddressResp.cs" />
     <Compile Include="Mdc\V20200828\Models\StartStreamLinkFlowRequest.cs" />
     <Compile Include="Mdc\V20200828\Models\StartStreamLinkFlowResponse.cs" />
     <Compile Include="Mdc\V20200828\Models\StopStreamLinkFlowRequest.cs" />
@@ -5684,6 +5728,8 @@
     <Compile Include="Postgres\V20170312\Models\DescribeDBXlogsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeEncryptionKeysRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeEncryptionKeysResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeParamsEventRequest.cs" />
@@ -5708,6 +5754,7 @@
     <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DurationAnalysis.cs" />
+    <Compile Include="Postgres\V20170312\Models\EncryptionKey.cs" />
     <Compile Include="Postgres\V20170312\Models\ErrLogDetail.cs" />
     <Compile Include="Postgres\V20170312\Models\EventInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\EventItem.cs" />
