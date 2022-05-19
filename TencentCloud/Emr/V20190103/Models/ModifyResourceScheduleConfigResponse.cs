@@ -21,37 +21,21 @@ namespace TencentCloud.Emr.V20190103.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceScaleOutInstanceResponse : AbstractModel
+    public class ModifyResourceScheduleConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// Original price.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `true`: Draft, indicating the resource pool is not refreshed.
         /// </summary>
-        [JsonProperty("OriginalCost")]
-        public string OriginalCost{ get; set; }
+        [JsonProperty("IsDraft")]
+        public bool? IsDraft{ get; set; }
 
         /// <summary>
-        /// Discounted price.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Verification error information. If it is not null, the verification fails and thus the configuration fails.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("DiscountCost")]
-        public string DiscountCost{ get; set; }
-
-        /// <summary>
-        /// Time unit of scale-out. Valid values:
-        /// <li>s: seconds.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Unit")]
-        public string Unit{ get; set; }
-
-        /// <summary>
-        /// Node specification queried for price.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("PriceSpec")]
-        public PriceResource PriceSpec{ get; set; }
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -65,10 +49,8 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
-            this.SetParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
-            this.SetParamSimple(map, prefix + "Unit", this.Unit);
-            this.SetParamObj(map, prefix + "PriceSpec.", this.PriceSpec);
+            this.SetParamSimple(map, prefix + "IsDraft", this.IsDraft);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

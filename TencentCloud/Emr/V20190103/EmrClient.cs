@@ -173,6 +173,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// This API is used to get data from the YARN Resource Scheduling page.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
+        /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
+        public async Task<DescribeResourceScheduleResponse> DescribeResourceSchedule(DescribeResourceScheduleRequest req)
+        {
+             JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get data from the YARN Resource Scheduling page.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
+        /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
+        public DescribeResourceScheduleResponse DescribeResourceScheduleSync(DescribeResourceScheduleRequest req)
+        {
+             JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query price of instance creation.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
@@ -253,46 +293,6 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query price of scale-out.
-        /// </summary>
-        /// <param name="req"><see cref="InquiryPriceScaleOutInstanceRequest"/></param>
-        /// <returns><see cref="InquiryPriceScaleOutInstanceResponse"/></returns>
-        public async Task<InquiryPriceScaleOutInstanceResponse> InquiryPriceScaleOutInstance(InquiryPriceScaleOutInstanceRequest req)
-        {
-             JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "InquiryPriceScaleOutInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query price of scale-out.
-        /// </summary>
-        /// <param name="req"><see cref="InquiryPriceScaleOutInstanceRequest"/></param>
-        /// <returns><see cref="InquiryPriceScaleOutInstanceResponse"/></returns>
-        public InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstanceSync(InquiryPriceScaleOutInstanceRequest req)
-        {
-             JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquiryPriceScaleOutInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query price of scaling.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpdateInstanceRequest"/></param>
@@ -333,17 +333,17 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to scale out instance.
+        /// This API is used to modify the resource configuration of YARN Resource Scheduling.
         /// </summary>
-        /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
-        /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
-        public async Task<ScaleOutInstanceResponse> ScaleOutInstance(ScaleOutInstanceRequest req)
+        /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
+        /// <returns><see cref="ModifyResourceScheduleConfigResponse"/></returns>
+        public async Task<ModifyResourceScheduleConfigResponse> ModifyResourceScheduleConfig(ModifyResourceScheduleConfigRequest req)
         {
-             JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+             JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ScaleOutInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstanceResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyResourceScheduleConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceScheduleConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -353,17 +353,17 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to scale out instance.
+        /// This API is used to modify the resource configuration of YARN Resource Scheduling.
         /// </summary>
-        /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
-        /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
-        public ScaleOutInstanceResponse ScaleOutInstanceSync(ScaleOutInstanceRequest req)
+        /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
+        /// <returns><see cref="ModifyResourceScheduleConfigResponse"/></returns>
+        public ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfigSync(ModifyResourceScheduleConfigRequest req)
         {
-             JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+             JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ScaleOutInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstanceResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyResourceScheduleConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceScheduleConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -373,17 +373,17 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate an EMR instance. It is only supported in the official paid edition of EMR.
+        /// This API is used to modify the YARN resource scheduler (the change will take effect after you click Apply).
         /// </summary>
-        /// <param name="req"><see cref="TerminateInstanceRequest"/></param>
-        /// <returns><see cref="TerminateInstanceResponse"/></returns>
-        public async Task<TerminateInstanceResponse> TerminateInstance(TerminateInstanceRequest req)
+        /// <param name="req"><see cref="ModifyResourceSchedulerRequest"/></param>
+        /// <returns><see cref="ModifyResourceSchedulerResponse"/></returns>
+        public async Task<ModifyResourceSchedulerResponse> ModifyResourceScheduler(ModifyResourceSchedulerRequest req)
         {
-             JsonResponseModel<TerminateInstanceResponse> rsp = null;
+             JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "TerminateInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstanceResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyResourceScheduler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceSchedulerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -393,17 +393,17 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate an EMR instance. It is only supported in the official paid edition of EMR.
+        /// This API is used to modify the YARN resource scheduler (the change will take effect after you click Apply).
         /// </summary>
-        /// <param name="req"><see cref="TerminateInstanceRequest"/></param>
-        /// <returns><see cref="TerminateInstanceResponse"/></returns>
-        public TerminateInstanceResponse TerminateInstanceSync(TerminateInstanceRequest req)
+        /// <param name="req"><see cref="ModifyResourceSchedulerRequest"/></param>
+        /// <returns><see cref="ModifyResourceSchedulerResponse"/></returns>
+        public ModifyResourceSchedulerResponse ModifyResourceSchedulerSync(ModifyResourceSchedulerRequest req)
         {
-             JsonResponseModel<TerminateInstanceResponse> rsp = null;
+             JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "TerminateInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstanceResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyResourceScheduler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceSchedulerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -21,15 +21,26 @@ namespace TencentCloud.Emr.V20190103.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HostVolumeContext : AbstractModel
+    public class ModifyResourceSchedulerRequest : AbstractModel
     {
         
         /// <summary>
-        /// Directory in the pod for mounting the host, which is the mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// EMR cluster ID
         /// </summary>
-        [JsonProperty("VolumePath")]
-        public string VolumePath{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// The original scheduler: `fair`
+        /// </summary>
+        [JsonProperty("OldValue")]
+        public string OldValue{ get; set; }
+
+        /// <summary>
+        /// The new scheduler: `capacity`
+        /// </summary>
+        [JsonProperty("NewValue")]
+        public string NewValue{ get; set; }
 
 
         /// <summary>
@@ -37,7 +48,9 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VolumePath", this.VolumePath);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "OldValue", this.OldValue);
+            this.SetParamSimple(map, prefix + "NewValue", this.NewValue);
         }
     }
 }

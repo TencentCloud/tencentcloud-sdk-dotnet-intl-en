@@ -21,42 +21,32 @@ namespace TencentCloud.Emr.V20190103.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScaleOutInstanceResponse : AbstractModel
+    public class DescribeResourceScheduleResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Whether to enable the resource scheduling feature
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("OpenSwitch")]
+        public bool? OpenSwitch{ get; set; }
 
         /// <summary>
-        /// Order number.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The resource scheduler in service
         /// </summary>
-        [JsonProperty("DealNames")]
-        public string[] DealNames{ get; set; }
+        [JsonProperty("Scheduler")]
+        public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Client token.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Fair Scheduler information
         /// </summary>
-        [JsonProperty("ClientToken")]
-        public string ClientToken{ get; set; }
+        [JsonProperty("FSInfo")]
+        public string FSInfo{ get; set; }
 
         /// <summary>
-        /// Scaling workflow ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Capacity Scheduler information
         /// </summary>
-        [JsonProperty("FlowId")]
-        public long? FlowId{ get; set; }
-
-        /// <summary>
-        /// Big order number.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("BillId")]
-        public string BillId{ get; set; }
+        [JsonProperty("CSInfo")]
+        public string CSInfo{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -70,11 +60,10 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamSimple(map, prefix + "BillId", this.BillId);
+            this.SetParamSimple(map, prefix + "OpenSwitch", this.OpenSwitch);
+            this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
+            this.SetParamSimple(map, prefix + "FSInfo", this.FSInfo);
+            this.SetParamSimple(map, prefix + "CSInfo", this.CSInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

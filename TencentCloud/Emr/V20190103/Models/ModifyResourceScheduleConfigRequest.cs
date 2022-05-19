@@ -21,29 +21,26 @@ namespace TencentCloud.Emr.V20190103.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PodVolume : AbstractModel
+    public class ModifyResourceScheduleConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Storage type. Valid values: "pvc", "hostpath".
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// EMR cluster ID
         /// </summary>
-        [JsonProperty("VolumeType")]
-        public string VolumeType{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// This field will take effect if `VolumeType` is `pvc`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Business identifier. `fair`: Edit fair configuration items; `fairPlan`: Edit the execution plan; `capacity`: Edit capacity configuration items.
         /// </summary>
-        [JsonProperty("PVCVolume")]
-        public PersistentVolumeContext PVCVolume{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// This field will take effect if `VolumeType` is `hostpath`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Modified module information
         /// </summary>
-        [JsonProperty("HostVolume")]
-        public HostVolumeContext HostVolume{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -51,9 +48,9 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VolumeType", this.VolumeType);
-            this.SetParamObj(map, prefix + "PVCVolume.", this.PVCVolume);
-            this.SetParamObj(map, prefix + "HostVolume.", this.HostVolume);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

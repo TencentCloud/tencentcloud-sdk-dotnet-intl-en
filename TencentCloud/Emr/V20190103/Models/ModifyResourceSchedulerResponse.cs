@@ -21,29 +21,14 @@ namespace TencentCloud.Emr.V20190103.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PersistentVolumeContext : AbstractModel
+    public class ModifyResourceSchedulerResponse : AbstractModel
     {
         
         /// <summary>
-        /// Disk size in GB
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("DiskSize")]
-        public ulong? DiskSize{ get; set; }
-
-        /// <summary>
-        /// Disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DiskType")]
-        public string DiskType{ get; set; }
-
-        /// <summary>
-        /// Number of disks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DiskNum")]
-        public long? DiskNum{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +36,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
-            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
-            this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
