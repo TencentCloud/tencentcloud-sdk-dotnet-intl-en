@@ -237,6 +237,20 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("FilterDimensionsParam")]
         public string FilterDimensionsParam{ get; set; }
 
+        /// <summary>
+        /// Whether it is a quick alarm policy.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsOneClick")]
+        public long? IsOneClick{ get; set; }
+
+        /// <summary>
+        /// Whether the quick alarm policy is enabled.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OneClickStatus")]
+        public long? OneClickStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -273,6 +287,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "OriginId", this.OriginId);
             this.SetParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
             this.SetParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
+            this.SetParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
+            this.SetParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);
         }
     }
 }

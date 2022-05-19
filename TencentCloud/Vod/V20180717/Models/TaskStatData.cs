@@ -25,14 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task type
-        /// <li>`Transcoding`: basic transcoding</li>
-        /// <li>`Transcoding-TESHD`: TESHD transcoding</li>
-        /// <li>`Editing`: video editing</li>
-        /// <li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-        /// <li>`ContentAudit`: content moderation</li>
-        /// <li>`RemoveWatermark`: watermark removal</li>
-        /// <li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+        /// The task type.
+        /// <li>Transcoding: General transcoding</li>
+        /// <li>Transcoding-TESHD: TESHD transcoding</li>
+        /// <li>Editing: Video editing</li>
+        /// <li>Editing-TESHD: TESHD editing</li>
+        /// <li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+        /// <li>ContentAudit: Content moderation</li>
+        /// <li>RemoveWatermark: Watermark removal</li>
+        /// <li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -44,8 +45,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public TaskStatDataItem[] Summary{ get; set; }
 
         /// <summary>
-        /// Detailed statistics of different tasks
-        /// Transcoding statistics:
+        /// The detailed statistics of different tasks.
+        /// Transcoding:
         /// <li>Remuxing</li>
         /// <li>Audio</li>
         /// <li>Standard.H264.SD</li>
@@ -79,13 +80,23 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Edit.H265.FHD</li>
         /// <li>Edit.H265.2K</li>
         /// <li>Edit.H265.4K</li>
+        /// <li>Edit.TESHD-10.H264.SD</li>
+        /// <li>Edit.TESHD-10.H264.HD</li>
+        /// <li>Edit.TESHD-10.H264.FHD</li>
+        /// <li>Edit.TESHD-10.H264.2K</li>
+        /// <li>Edit.TESHD-10.H264.4K</li>
+        /// <li>Edit.TESHD-10.H265.SD</li>
+        /// <li>Edit.TESHD-10.H265.HD</li>
+        /// <li>Edit.TESHD-10.H265.FHD</li>
+        /// <li>Edit.TESHD-10.H265.2K</li>
+        /// <li>Edit.TESHD-10.H265.4K</li>
         /// Watermark removal:
-        /// <li>`480P`: 640 × 480 and below</li>
-        /// <li>`720P`: 1280 × 720 and below</li>
-        /// <li>`1080P`: 1920 × 1080 and below</li>
-        /// <li>`2K`: 2560 × 1440 and below</li>
-        /// <li>`4K`: 3840 × 2160 and below</li>
-        /// <li>`8K`: 7680 × 4320 and below</li>
+        /// <li>480P: 640 x 480 and below</li>
+        /// <li>720P: 1280 x 720 and below</li>
+        /// <li>1080P: 1920 x 1080 and below</li>
+        /// <li>2K: 2560 x 1440 and below</li>
+        /// <li>4K: 3840 x 2160 and below</li>
+        /// <li>8K: 7680 x 4320 and below</li>
         /// </summary>
         [JsonProperty("Details")]
         public SpecificationDataItem[] Details{ get; set; }

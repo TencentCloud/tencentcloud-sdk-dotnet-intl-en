@@ -92,7 +92,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// The template type. Valid values:
+        /// * Preset
+        /// * Custom
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

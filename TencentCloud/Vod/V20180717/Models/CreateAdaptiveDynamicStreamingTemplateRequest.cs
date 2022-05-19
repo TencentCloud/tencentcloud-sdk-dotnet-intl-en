@@ -45,9 +45,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// DRM scheme type. Valid values:
-        /// <li>SimpleAES.</li>
-        /// If this field is an empty string, DRM will not be performed on the video.
+        /// The DRM type. Valid values:
+        /// <li>SimpleAES</li>
+        /// <li>Widevine</li>
+        /// <li>FairPlay</li>
+        /// If this parameter is an empty string, it indicates that the video is not protected by DRM.
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }

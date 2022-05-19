@@ -235,6 +235,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
+        /// Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
+        /// <summary>
         /// The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
         /// </summary>
         [JsonProperty("Vips")]
@@ -281,6 +287,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamArraySimple(map, prefix + "Vips.", this.Vips);
         }
     }

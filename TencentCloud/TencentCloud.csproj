@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.433</VersionPrefix>
+    <VersionPrefix>3.0.434</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -798,6 +798,8 @@
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateOIDCConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateOIDCConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyVersionRequest.cs" />
@@ -814,6 +816,8 @@
     <Compile Include="Cam\V20190116\Models\CreateUserSAMLConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteOIDCConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteOIDCConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyVersionRequest.cs" />
@@ -830,6 +834,8 @@
     <Compile Include="Cam\V20190116\Models\DeleteUserPermissionsBoundaryResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeOIDCConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeOIDCConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagCollRequest.cs" />
@@ -929,6 +935,8 @@
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateOIDCConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateOIDCConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdatePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdatePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleConsoleLoginRequest.cs" />
@@ -1506,6 +1514,8 @@
     <Compile Include="Ckafka\V20190819\Models\CreateUserResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteRouteRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteRouteResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteRouteTriggerTimeRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteRouteTriggerTimeResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteTopicIpWhiteListRequest.cs" />
@@ -1984,6 +1994,8 @@
     <Compile Include="Cls\V20201016\Models\NoticeReceiver.cs" />
     <Compile Include="Cls\V20201016\Models\OpenKafkaConsumerRequest.cs" />
     <Compile Include="Cls\V20201016\Models\OpenKafkaConsumerResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ParquetInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ParquetKeyInfo.cs" />
     <Compile Include="Cls\V20201016\Models\PartitionInfo.cs" />
     <Compile Include="Cls\V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="Cls\V20201016\Models\RetryShipperTaskResponse.cs" />
@@ -6559,11 +6571,14 @@
     <Compile Include="Sts\V20180813\Models\AssumeRoleResponse.cs" />
     <Compile Include="Sts\V20180813\Models\AssumeRoleWithSAMLRequest.cs" />
     <Compile Include="Sts\V20180813\Models\AssumeRoleWithSAMLResponse.cs" />
+    <Compile Include="Sts\V20180813\Models\AssumeRoleWithWebIdentityRequest.cs" />
+    <Compile Include="Sts\V20180813\Models\AssumeRoleWithWebIdentityResponse.cs" />
     <Compile Include="Sts\V20180813\Models\Credentials.cs" />
     <Compile Include="Sts\V20180813\Models\GetCallerIdentityRequest.cs" />
     <Compile Include="Sts\V20180813\Models\GetCallerIdentityResponse.cs" />
     <Compile Include="Sts\V20180813\Models\GetFederationTokenRequest.cs" />
     <Compile Include="Sts\V20180813\Models\GetFederationTokenResponse.cs" />
+    <Compile Include="Sts\V20180813\Models\Tag.cs" />
     <Compile Include="Tag\V20180813\TagClient.cs" />
     <Compile Include="Tag\V20180813\Models\AddResourceTagRequest.cs" />
     <Compile Include="Tag\V20180813\Models\AddResourceTagResponse.cs" />
@@ -7107,6 +7122,17 @@
     <Compile Include="Tem\V20201221\Models\StorageConf.cs" />
     <Compile Include="Tem\V20201221\Models\StorageMountConf.cs" />
     <Compile Include="Tem\V20201221\Models\TemNamespaceInfo.cs" />
+    <Compile Include="Teo\V20220106\TeoClient.cs" />
+    <Compile Include="Teo\V20220106\Models\CreatePurgeTaskRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\CreatePurgeTaskResponse.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribePurgeTasksRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribeZonesRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribeZonesResponse.cs" />
+    <Compile Include="Teo\V20220106\Models\FailReason.cs" />
+    <Compile Include="Teo\V20220106\Models\Task.cs" />
+    <Compile Include="Teo\V20220106\Models\Zone.cs" />
+    <Compile Include="Teo\V20220106\Models\ZoneFilter.cs" />
     <Compile Include="Tiw\V20190919\TiwClient.cs" />
     <Compile Include="Tiw\V20190919\Models\Canvas.cs" />
     <Compile Include="Tiw\V20190919\Models\Concat.cs" />
@@ -7645,8 +7671,12 @@
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeImageReviewUsageDataRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeLicenseUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaPlayStatDetailsRequest.cs" />
@@ -7713,12 +7743,14 @@
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageContentReviewInput.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageReviewUsageDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageTransform.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ManageTaskRequest.cs" />
@@ -7878,6 +7910,8 @@
     <Compile Include="Vod\V20180717\Models\ResolutionNameInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ResourceTag.cs" />
     <Compile Include="Vod\V20180717\Models\RestoreMediaTask.cs" />
+    <Compile Include="Vod\V20180717\Models\ReviewImageRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ReviewImageResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaRequest.cs" />

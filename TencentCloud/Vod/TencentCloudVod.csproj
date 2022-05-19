@@ -277,8 +277,12 @@
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeImageReviewUsageDataRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeLicenseUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaPlayStatDetailsRequest.cs" />
@@ -345,12 +349,14 @@
     <Compile Include="V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\ImageContentReviewInput.cs" />
+    <Compile Include="V20180717\Models\ImageReviewUsageDataItem.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTemplate.cs" />
     <Compile Include="V20180717\Models\ImageTransform.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkInput.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkTemplate.cs" />
+    <Compile Include="V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipResponse.cs" />
     <Compile Include="V20180717\Models\ManageTaskRequest.cs" />
@@ -510,6 +516,8 @@
     <Compile Include="V20180717\Models\ResolutionNameInfo.cs" />
     <Compile Include="V20180717\Models\ResourceTag.cs" />
     <Compile Include="V20180717\Models\RestoreMediaTask.cs" />
+    <Compile Include="V20180717\Models\ReviewImageRequest.cs" />
+    <Compile Include="V20180717\Models\ReviewImageResponse.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20180717\Models\SearchMediaRequest.cs" />

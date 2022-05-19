@@ -130,11 +130,18 @@ namespace TencentCloud.Clb.V20180317.Models
         public string HttpVersion{ get; set; }
 
         /// <summary>
-        /// Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+        /// Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceIpType")]
         public long? SourceIpType{ get; set; }
+
+        /// <summary>
+        /// GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtendedCode")]
+        public string ExtendedCode{ get; set; }
 
 
         /// <summary>
@@ -158,6 +165,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "CheckType", this.CheckType);
             this.SetParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
             this.SetParamSimple(map, prefix + "SourceIpType", this.SourceIpType);
+            this.SetParamSimple(map, prefix + "ExtendedCode", this.ExtendedCode);
         }
     }
 }

@@ -153,6 +153,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("TriggerTasks")]
         public AlarmPolicyTriggerTask[] TriggerTasks{ get; set; }
 
+        /// <summary>
+        /// Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+        /// </summary>
+        [JsonProperty("OneClickPolicyType")]
+        public string[] OneClickPolicyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +185,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
             this.SetParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
+            this.SetParamArraySimple(map, prefix + "OneClickPolicyType.", this.OneClickPolicyType);
         }
     }
 }

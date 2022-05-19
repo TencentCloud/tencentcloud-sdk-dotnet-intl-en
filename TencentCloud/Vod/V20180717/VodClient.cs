@@ -2127,6 +2127,52 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to query your daily usage of the image recognition feature in a specified time period.
+        ///    1. You can query statistics from the last 365 days.
+        ///    2. The maximum query period is 90 days.
+        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageReviewUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeImageReviewUsageDataResponse"/></returns>
+        public async Task<DescribeImageReviewUsageDataResponse> DescribeImageReviewUsageData(DescribeImageReviewUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeImageReviewUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageReviewUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageReviewUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your daily usage of the image recognition feature in a specified time period.
+        ///    1. You can query statistics from the last 365 days.
+        ///    2. The maximum query period is 90 days.
+        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageReviewUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeImageReviewUsageDataResponse"/></returns>
+        public DescribeImageReviewUsageDataResponse DescribeImageReviewUsageDataSync(DescribeImageReviewUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeImageReviewUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageReviewUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageReviewUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of image sprite generating templates and supports paged queries by filters.
         /// </summary>
         /// <param name="req"><see cref="DescribeImageSpriteTemplatesRequest"/></param>
@@ -2158,6 +2204,52 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImageSpriteTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query daily playback license requests in a specified time period.
+        ///    1. You can query statistics from the last 365 days.
+        ///    2. The maximum query period is 90 days.
+        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeLicenseUsageDataResponse"/></returns>
+        public async Task<DescribeLicenseUsageDataResponse> DescribeLicenseUsageData(DescribeLicenseUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeLicenseUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLicenseUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query daily playback license requests in a specified time period.
+        ///    1. You can query statistics from the last 365 days.
+        ///    2. The maximum query period is 90 days.
+        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeLicenseUsageDataResponse"/></returns>
+        public DescribeLicenseUsageDataResponse DescribeLicenseUsageDataSync(DescribeLicenseUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeLicenseUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLicenseUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseUsageDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4103,9 +4195,11 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+        /// 
         /// This API is used to initiate an image processing task. Image processing operations include the following:
         /// 
-        /// 1. Intelligent recognition of pornographic, terrorism, and politically sensitive content
+        /// 1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
         /// 
         /// ><li>File size: < 5 MB</li>
         /// ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
@@ -4129,9 +4223,11 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+        /// 
         /// This API is used to initiate an image processing task. Image processing operations include the following:
         /// 
-        /// 1. Intelligent recognition of pornographic, terrorism, and politically sensitive content
+        /// 1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
         /// 
         /// ><li>File size: < 5 MB</li>
         /// ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
@@ -4470,6 +4566,54 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ResetProcedureTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
+        /// 
+        /// ><li>File size: < 5 MB</li>
+        /// ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
+        /// ><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+        /// </summary>
+        /// <param name="req"><see cref="ReviewImageRequest"/></param>
+        /// <returns><see cref="ReviewImageResponse"/></returns>
+        public async Task<ReviewImageResponse> ReviewImage(ReviewImageRequest req)
+        {
+             JsonResponseModel<ReviewImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReviewImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
+        /// 
+        /// ><li>File size: < 5 MB</li>
+        /// ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
+        /// ><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+        /// </summary>
+        /// <param name="req"><see cref="ReviewImageRequest"/></param>
+        /// <returns><see cref="ReviewImageResponse"/></returns>
+        public ReviewImageResponse ReviewImageSync(ReviewImageRequest req)
+        {
+             JsonResponseModel<ReviewImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReviewImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewImageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

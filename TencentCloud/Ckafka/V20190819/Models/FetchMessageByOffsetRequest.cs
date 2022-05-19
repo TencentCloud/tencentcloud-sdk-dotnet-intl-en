@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// Offset information
+        /// Offset information, which is required.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

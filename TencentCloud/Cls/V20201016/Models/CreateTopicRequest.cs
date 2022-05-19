@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+        /// Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

@@ -182,6 +182,8 @@
     <Compile Include="V20201016\Models\NoticeReceiver.cs" />
     <Compile Include="V20201016\Models\OpenKafkaConsumerRequest.cs" />
     <Compile Include="V20201016\Models\OpenKafkaConsumerResponse.cs" />
+    <Compile Include="V20201016\Models\ParquetInfo.cs" />
+    <Compile Include="V20201016\Models\ParquetKeyInfo.cs" />
     <Compile Include="V20201016\Models\PartitionInfo.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />

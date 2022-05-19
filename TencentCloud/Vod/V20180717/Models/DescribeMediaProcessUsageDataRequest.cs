@@ -37,14 +37,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Type of media processing task. Valid values:
-        /// <li>`Transcoding`: basic transcoding</li>
-        /// <li>`Transcoding-TESHD`: TESHD transcoding</li>
-        /// <li>`Editing`: video editing</li>
-        /// <li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-        /// <li>`ContentAudit`: content moderation</li>
-        /// <li>`RemoveWatermark`: watermark removal</li>
-        /// <li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+        /// The type of media processing task. Valid values:
+        /// <li>Transcoding: General transcoding</li>
+        /// <li>Transcoding-TESHD: TESHD transcoding</li>
+        /// <li>Editing: Video editing</li>
+        /// <li>Editing-TESHD: TESHD editing</li>
+        /// <li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+        /// <li>ContentAudit: Content moderation</li>
+        /// <li>RemoveWatermark: Watermark removal</li>
+        /// <li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

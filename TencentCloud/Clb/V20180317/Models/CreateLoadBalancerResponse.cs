@@ -26,6 +26,8 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// Array of unique CLB instance IDs.
+        /// This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

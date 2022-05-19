@@ -453,6 +453,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to delete a route.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRouteRequest"/></param>
+        /// <returns><see cref="DeleteRouteResponse"/></returns>
+        public async Task<DeleteRouteResponse> DeleteRoute(DeleteRouteRequest req)
+        {
+             JsonResponseModel<DeleteRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a route.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRouteRequest"/></param>
+        /// <returns><see cref="DeleteRouteResponse"/></returns>
+        public DeleteRouteResponse DeleteRouteSync(DeleteRouteRequest req)
+        {
+             JsonResponseModel<DeleteRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the delayed trigger time of route deletion.
         /// </summary>
         /// <param name="req"><see cref="DeleteRouteTriggerTimeRequest"/></param>

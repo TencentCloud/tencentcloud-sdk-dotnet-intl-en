@@ -64,6 +64,12 @@ namespace TencentCloud.Sts.V20180813.Models
         [JsonProperty("ExternalId")]
         public string ExternalId{ get; set; }
 
+        /// <summary>
+        /// List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +81,7 @@ namespace TencentCloud.Sts.V20180813.Models
             this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

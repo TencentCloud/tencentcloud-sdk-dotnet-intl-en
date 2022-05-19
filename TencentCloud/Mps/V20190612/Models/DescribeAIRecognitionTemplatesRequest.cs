@@ -42,6 +42,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+        /// * Preset
+        /// * Custom
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }
