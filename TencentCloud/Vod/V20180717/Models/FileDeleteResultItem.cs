@@ -21,20 +21,21 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FileDeleteTask : AbstractModel
+    public class FileDeleteResultItem : AbstractModel
     {
         
         /// <summary>
-        /// List of IDs of deleted files.
+        /// The ID of the file deleted.
         /// </summary>
-        [JsonProperty("FileIdSet")]
-        public string[] FileIdSet{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
         /// <summary>
-        /// The information of the files deleted.
+        /// The type of the file deleted.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("FileDeleteResultInfo")]
-        public FileDeleteResultItem[] FileDeleteResultInfo{ get; set; }
+        [JsonProperty("DeleteParts")]
+        public MediaDeleteItem[] DeleteParts{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "FileIdSet.", this.FileIdSet);
-            this.SetParamArrayObj(map, prefix + "FileDeleteResultInfo.", this.FileDeleteResultInfo);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamArrayObj(map, prefix + "DeleteParts.", this.DeleteParts);
         }
     }
 }

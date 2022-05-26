@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FileDeleteTask : AbstractModel
+    public class ModifyInstanceReadOnlyResponse : AbstractModel
     {
         
         /// <summary>
-        /// List of IDs of deleted files.
+        /// Task ID
         /// </summary>
-        [JsonProperty("FileIdSet")]
-        public string[] FileIdSet{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
-        /// The information of the files deleted.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("FileDeleteResultInfo")]
-        public FileDeleteResultItem[] FileDeleteResultInfo{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "FileIdSet.", this.FileIdSet);
-            this.SetParamArrayObj(map, prefix + "FileDeleteResultInfo.", this.FileDeleteResultInfo);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

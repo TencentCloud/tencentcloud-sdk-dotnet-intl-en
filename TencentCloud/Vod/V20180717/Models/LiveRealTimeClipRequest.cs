@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+        /// The live stream code.
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }

@@ -25,11 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video stream encoder. Valid values:
+        /// The video codec. Valid values:
         /// <li>libx264: H.264</li>
         /// <li>libx265: H.265</li>
         /// <li>av1: AOMedia Video 1</li>
-        /// Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+        /// <li>H.266: H.266</li>
+        /// <font color=red>Notes:</font>
+        /// <li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+        /// <li> Only CRF is supported for H.266 currently.</li>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
@@ -83,8 +86,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FillType{ get; set; }
 
         /// <summary>
-        /// Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
-        /// We don’t recommend specifying this parameter unless you have special requirements.
+        /// The video constant rate factor (CRF). Value range: 1-51. `0` means to disable this parameter.
+        /// 
+        /// <font color=red>Notes:</font>
+        /// <li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+        /// <li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+        /// <li>We don’t recommend using this parameter unless you have special requirements.</li>
         /// </summary>
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }

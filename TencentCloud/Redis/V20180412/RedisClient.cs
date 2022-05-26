@@ -813,6 +813,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to set instance input mode.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceReadOnlyRequest"/></param>
+        /// <returns><see cref="ModifyInstanceReadOnlyResponse"/></returns>
+        public async Task<ModifyInstanceReadOnlyResponse> ModifyInstanceReadOnly(ModifyInstanceReadOnlyRequest req)
+        {
+             JsonResponseModel<ModifyInstanceReadOnlyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceReadOnly");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceReadOnlyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set instance input mode.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceReadOnlyRequest"/></param>
+        /// <returns><see cref="ModifyInstanceReadOnlyResponse"/></returns>
+        public ModifyInstanceReadOnlyResponse ModifyInstanceReadOnlySync(ModifyInstanceReadOnlyRequest req)
+        {
+             JsonResponseModel<ModifyInstanceReadOnlyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceReadOnly");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceReadOnlyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to disable public network access.
         /// </summary>
         /// <param name="req"><see cref="ReleaseWanAddressRequest"/></param>

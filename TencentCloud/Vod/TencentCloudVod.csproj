@@ -336,6 +336,7 @@
     <Compile Include="V20180717\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\FileDeleteResultItem.cs" />
     <Compile Include="V20180717\Models\FileDeleteTask.cs" />
     <Compile Include="V20180717\Models\FileUploadTask.cs" />
     <Compile Include="V20180717\Models\ForbidMediaDistributionRequest.cs" />

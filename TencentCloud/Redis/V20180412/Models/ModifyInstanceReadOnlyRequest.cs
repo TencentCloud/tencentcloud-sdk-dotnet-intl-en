@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FileDeleteTask : AbstractModel
+    public class ModifyInstanceReadOnlyRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of IDs of deleted files.
+        /// Instance ID
         /// </summary>
-        [JsonProperty("FileIdSet")]
-        public string[] FileIdSet{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The information of the files deleted.
+        /// Instance input mode. Valid values: `0` (read/write), `1` (read-only)
         /// </summary>
-        [JsonProperty("FileDeleteResultInfo")]
-        public FileDeleteResultItem[] FileDeleteResultInfo{ get; set; }
+        [JsonProperty("InputMode")]
+        public string InputMode{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "FileIdSet.", this.FileIdSet);
-            this.SetParamArrayObj(map, prefix + "FileDeleteResultInfo.", this.FileDeleteResultInfo);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InputMode", this.InputMode);
         }
     }
 }

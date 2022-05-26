@@ -92,6 +92,8 @@
     <Compile Include="V20180412\Models\Instances.cs" />
     <Compile Include="V20180412\Models\ModfiyInstancePasswordRequest.cs" />
     <Compile Include="V20180412\Models\ModfiyInstancePasswordResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceReadOnlyRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceReadOnlyResponse.cs" />
     <Compile Include="V20180412\Models\ProductConf.cs" />
     <Compile Include="V20180412\Models\ProxyNodes.cs" />
     <Compile Include="V20180412\Models\RedisNodes.cs" />
