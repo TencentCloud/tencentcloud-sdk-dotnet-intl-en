@@ -590,8 +590,9 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to bind an ENI to a CVM.
-        /// * One CVM can be bound with multiple ENIs, but only one primary ENI. * For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
-        /// * An ENI can only be bound to one CVM at a time.
+        /// * An ENI must be bound with one security group at least. To bind it, see <a href="https://intl.cloud.tencent.com/document/product/215/43132?from_cn_redirect=1">AssociateNetworkInterfaceSecurityGroups</a>.
+        /// * One CVM can be bound with multiple ENIs, but only one can be the primary ENI. For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
+        /// * An ENI can only be bound to one CVM.
         /// * Only the running or shutdown CVMs can be bound with ENIs. For more information about the CVM status, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">InstanceStatus</a> in the Data Types.
         /// * An ENI can only be bound to a VPC-based CVM under the same availability zone as the ENI subnet.
         /// 
@@ -616,8 +617,9 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to bind an ENI to a CVM.
-        /// * One CVM can be bound with multiple ENIs, but only one primary ENI. * For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
-        /// * An ENI can only be bound to one CVM at a time.
+        /// * An ENI must be bound with one security group at least. To bind it, see <a href="https://intl.cloud.tencent.com/document/product/215/43132?from_cn_redirect=1">AssociateNetworkInterfaceSecurityGroups</a>.
+        /// * One CVM can be bound with multiple ENIs, but only one can be the primary ENI. For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
+        /// * An ENI can only be bound to one CVM.
         /// * Only the running or shutdown CVMs can be bound with ENIs. For more information about the CVM status, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">InstanceStatus</a> in the Data Types.
         /// * An ENI can only be bound to a VPC-based CVM under the same availability zone as the ENI subnet.
         /// 
@@ -1316,86 +1318,6 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateLocalGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLocalGatewayResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
-        /// </summary>
-        /// <param name="req"><see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
-        /// <returns><see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
-        public async Task<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> CreateNatGatewayDestinationIpPortTranslationNatRule(CreateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
-        {
-             JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateNatGatewayDestinationIpPortTranslationNatRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
-        /// </summary>
-        /// <param name="req"><see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
-        /// <returns><see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
-        public CreateNatGatewayDestinationIpPortTranslationNatRuleResponse CreateNatGatewayDestinationIpPortTranslationNatRuleSync(CreateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
-        {
-             JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateNatGatewayDestinationIpPortTranslationNatRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a SNAT rule for the NAT Gateway.
-        /// </summary>
-        /// <param name="req"><see cref="CreateNatGatewaySourceIpTranslationNatRuleRequest"/></param>
-        /// <returns><see cref="CreateNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
-        public async Task<CreateNatGatewaySourceIpTranslationNatRuleResponse> CreateNatGatewaySourceIpTranslationNatRule(CreateNatGatewaySourceIpTranslationNatRuleRequest req)
-        {
-             JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateNatGatewaySourceIpTranslationNatRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a SNAT rule for the NAT Gateway.
-        /// </summary>
-        /// <param name="req"><see cref="CreateNatGatewaySourceIpTranslationNatRuleRequest"/></param>
-        /// <returns><see cref="CreateNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
-        public CreateNatGatewaySourceIpTranslationNatRuleResponse CreateNatGatewaySourceIpTranslationNatRuleSync(CreateNatGatewaySourceIpTranslationNatRuleRequest req)
-        {
-             JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateNatGatewaySourceIpTranslationNatRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5617,6 +5539,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to disable flow log.
+        /// </summary>
+        /// <param name="req"><see cref="DisableFlowLogsRequest"/></param>
+        /// <returns><see cref="DisableFlowLogsResponse"/></returns>
+        public async Task<DisableFlowLogsResponse> DisableFlowLogs(DisableFlowLogsRequest req)
+        {
+             JsonResponseModel<DisableFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable flow log.
+        /// </summary>
+        /// <param name="req"><see cref="DisableFlowLogsRequest"/></param>
+        /// <returns><see cref="DisableFlowLogsResponse"/></returns>
+        public DisableFlowLogsResponse DisableFlowLogsSync(DisableFlowLogsRequest req)
+        {
+             JsonResponseModel<DisableFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
         /// * This API supports unbinding an EIP from CVM instances and ENIs.
         /// * This API does not support unbinding an EIP from a NAT Gateway. To unbind an EIP from a NAT Gateway, use the [`DisassociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/api/215/36716?from_cn_redirect=1) API.
@@ -5858,6 +5820,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "EnableCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable flow log.
+        /// </summary>
+        /// <param name="req"><see cref="EnableFlowLogsRequest"/></param>
+        /// <returns><see cref="EnableFlowLogsResponse"/></returns>
+        public async Task<EnableFlowLogsResponse> EnableFlowLogs(EnableFlowLogsRequest req)
+        {
+             JsonResponseModel<EnableFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable flow log.
+        /// </summary>
+        /// <param name="req"><see cref="EnableFlowLogsRequest"/></param>
+        /// <returns><see cref="EnableFlowLogsResponse"/></returns>
+        public EnableFlowLogsResponse EnableFlowLogsSync(EnableFlowLogsRequest req)
+        {
+             JsonResponseModel<EnableFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableFlowLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

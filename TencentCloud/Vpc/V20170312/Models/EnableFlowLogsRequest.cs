@@ -21,14 +21,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateNatGatewaySourceIpTranslationNatRuleResponse : AbstractModel
+    public class EnableFlowLogsRequest : AbstractModel
     {
         
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Flow log ID.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("FlowLogIds")]
+        public string[] FlowLogIds{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "FlowLogIds.", this.FlowLogIds);
         }
     }
 }

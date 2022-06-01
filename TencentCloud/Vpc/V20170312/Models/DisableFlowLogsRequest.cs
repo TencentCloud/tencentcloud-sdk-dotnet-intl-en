@@ -21,20 +21,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateNatGatewaySourceIpTranslationNatRuleRequest : AbstractModel
+    public class DisableFlowLogsRequest : AbstractModel
     {
         
         /// <summary>
-        /// The ID of the NAT Gateway, such as `nat-df45454`
+        /// Flow log ID.
         /// </summary>
-        [JsonProperty("NatGatewayId")]
-        public string NatGatewayId{ get; set; }
-
-        /// <summary>
-        /// The SNAT forwarding rule of the NAT Gateway
-        /// </summary>
-        [JsonProperty("SourceIpTranslationNatRules")]
-        public SourceIpTranslationNatRule[] SourceIpTranslationNatRules{ get; set; }
+        [JsonProperty("FlowLogIds")]
+        public string[] FlowLogIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
-            this.SetParamArrayObj(map, prefix + "SourceIpTranslationNatRules.", this.SourceIpTranslationNatRules);
+            this.SetParamArraySimple(map, prefix + "FlowLogIds.", this.FlowLogIds);
         }
     }
 }

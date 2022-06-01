@@ -125,10 +125,6 @@
     <Compile Include="V20170312\Models\CreateHaVipResponse.cs" />
     <Compile Include="V20170312\Models\CreateLocalGatewayRequest.cs" />
     <Compile Include="V20170312\Models\CreateLocalGatewayResponse.cs" />
-    <Compile Include="V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
-    <Compile Include="V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
-    <Compile Include="V20170312\Models\CreateNatGatewaySourceIpTranslationNatRuleRequest.cs" />
-    <Compile Include="V20170312\Models\CreateNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="V20170312\Models\CreateNetDetectRequest.cs" />
     <Compile Include="V20170312\Models\CreateNetDetectResponse.cs" />
     <Compile Include="V20170312\Models\CreateNetworkInterfaceRequest.cs" />
@@ -328,7 +324,6 @@
     <Compile Include="V20170312\Models\DescribeVpnGatewayRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysResponse.cs" />
-    <Compile Include="V20170312\Models\DestinationIpPortTranslationNatRule.cs" />
     <Compile Include="V20170312\Models\DetachCcnInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DetachCcnInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DetachClassicLinkVpcRequest.cs" />
@@ -339,6 +334,8 @@
     <Compile Include="V20170312\Models\DirectConnectGatewayCcnRoute.cs" />
     <Compile Include="V20170312\Models\DisableCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DisableCcnRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\DisableFlowLogsRequest.cs" />
+    <Compile Include="V20170312\Models\DisableFlowLogsResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateAddressRequest.cs" />
     <Compile Include="V20170312\Models\DisassociateAddressResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateDirectConnectGatewayNatGatewayRequest.cs" />
@@ -351,6 +348,8 @@
     <Compile Include="V20170312\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
     <Compile Include="V20170312\Models\EnableCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\EnableCcnRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\EnableFlowLogsRequest.cs" />
+    <Compile Include="V20170312\Models\EnableFlowLogsResponse.cs" />
     <Compile Include="V20170312\Models\EnableVpcEndPointConnectRequest.cs" />
     <Compile Include="V20170312\Models\EnableVpcEndPointConnectResponse.cs" />
     <Compile Include="V20170312\Models\EndPoint.cs" />
@@ -502,7 +501,6 @@
     <Compile Include="V20170312\Models\ServicesInfo.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
-    <Compile Include="V20170312\Models\SourceIpTranslationNatRule.cs" />
     <Compile Include="V20170312\Models\Subnet.cs" />
     <Compile Include="V20170312\Models\SubnetInput.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />

@@ -21,7 +21,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateNatGatewayDestinationIpPortTranslationNatRuleResponse : AbstractModel
+    public class DisableFlowLogsResponse : AbstractModel
     {
         
         /// <summary>
