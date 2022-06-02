@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20190103\EmrClient.cs" />
+    <Compile Include="V20190103\Models\AddUsersForUserManagerRequest.cs" />
+    <Compile Include="V20190103\Models\AddUsersForUserManagerResponse.cs" />
     <Compile Include="V20190103\Models\COSSettings.cs" />
     <Compile Include="V20190103\Models\CdbInfo.cs" />
     <Compile Include="V20190103\Models\ClusterExternalServiceInfo.cs" />
@@ -55,12 +57,18 @@
     <Compile Include="V20190103\Models\CustomServiceDefine.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeInstancesListRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeInstancesListResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleRequest.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeUsersForUserManagerRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeUsersForUserManagerResponse.cs" />
+    <Compile Include="V20190103\Models\EmrListInstance.cs" />
     <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="V20190103\Models\ExternalService.cs" />
+    <Compile Include="V20190103\Models\Filters.cs" />
     <Compile Include="V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\InquiryPriceRenewInstanceRequest.cs" />
@@ -74,6 +82,7 @@
     <Compile Include="V20190103\Models\ModifyResourceSchedulerResponse.cs" />
     <Compile Include="V20190103\Models\MultiDisk.cs" />
     <Compile Include="V20190103\Models\MultiDiskMC.cs" />
+    <Compile Include="V20190103\Models\MultiZoneSetting.cs" />
     <Compile Include="V20190103\Models\NewResourceSpec.cs" />
     <Compile Include="V20190103\Models\NodeHardwareInfo.cs" />
     <Compile Include="V20190103\Models\OutterResource.cs" />
@@ -81,10 +90,14 @@
     <Compile Include="V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
     <Compile Include="V20190103\Models\SearchItem.cs" />
+    <Compile Include="V20190103\Models\ShortNodeInfo.cs" />
+    <Compile Include="V20190103\Models\SubnetInfo.cs" />
     <Compile Include="V20190103\Models\Tag.cs" />
     <Compile Include="V20190103\Models\TerminateTasksRequest.cs" />
     <Compile Include="V20190103\Models\TerminateTasksResponse.cs" />
+    <Compile Include="V20190103\Models\TopologyInfo.cs" />
     <Compile Include="V20190103\Models\UpdateInstanceSettings.cs" />
+    <Compile Include="V20190103\Models\UserInfoForUserManager.cs" />
     <Compile Include="V20190103\Models\VPCSettings.cs" />
   </ItemGroup>
 </Project>

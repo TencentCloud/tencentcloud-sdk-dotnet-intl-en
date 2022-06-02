@@ -137,6 +137,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("EcmRegion")]
         public string EcmRegion{ get; set; }
 
+        /// <summary>
+        /// Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +167,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "EniType", this.EniType);
             this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
         }
     }
 }

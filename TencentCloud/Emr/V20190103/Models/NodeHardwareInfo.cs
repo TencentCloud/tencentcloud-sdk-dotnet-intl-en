@@ -304,6 +304,34 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SupportModifyPayMode")]
         public long? SupportModifyPayMode{ get; set; }
 
+        /// <summary>
+        /// System disk type
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RootStorageType")]
+        public long? RootStorageType{ get; set; }
+
+        /// <summary>
+        /// AZ information
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// Subnet
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SubnetInfo")]
+        public SubnetInfo SubnetInfo{ get; set; }
+
+        /// <summary>
+        /// Client
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Clients")]
+        public string Clients{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -350,6 +378,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
             this.SetParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
             this.SetParamSimple(map, prefix + "SupportModifyPayMode", this.SupportModifyPayMode);
+            this.SetParamSimple(map, prefix + "RootStorageType", this.RootStorageType);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamObj(map, prefix + "SubnetInfo.", this.SubnetInfo);
+            this.SetParamSimple(map, prefix + "Clients", this.Clients);
         }
     }
 }

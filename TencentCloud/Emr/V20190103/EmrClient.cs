@@ -53,6 +53,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// This API is used to add user lists (user management).
+        /// </summary>
+        /// <param name="req"><see cref="AddUsersForUserManagerRequest"/></param>
+        /// <returns><see cref="AddUsersForUserManagerResponse"/></returns>
+        public async Task<AddUsersForUserManagerResponse> AddUsersForUserManager(AddUsersForUserManagerRequest req)
+        {
+             JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddUsersForUserManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUsersForUserManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add user lists (user management).
+        /// </summary>
+        /// <param name="req"><see cref="AddUsersForUserManagerRequest"/></param>
+        /// <returns><see cref="AddUsersForUserManagerResponse"/></returns>
+        public AddUsersForUserManagerResponse AddUsersForUserManagerSync(AddUsersForUserManagerRequest req)
+        {
+             JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddUsersForUserManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUsersForUserManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an EMR cluster instance.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
@@ -173,6 +213,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// This API is used to query EMR cluster instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesListRequest"/></param>
+        /// <returns><see cref="DescribeInstancesListResponse"/></returns>
+        public async Task<DescribeInstancesListResponse> DescribeInstancesList(DescribeInstancesListRequest req)
+        {
+             JsonResponseModel<DescribeInstancesListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query EMR cluster instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesListRequest"/></param>
+        /// <returns><see cref="DescribeInstancesListResponse"/></returns>
+        public DescribeInstancesListResponse DescribeInstancesListSync(DescribeInstancesListRequest req)
+        {
+             JsonResponseModel<DescribeInstancesListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get data from the YARN Resource Scheduling page.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
@@ -204,6 +284,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "DescribeResourceSchedule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to export users in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersForUserManagerRequest"/></param>
+        /// <returns><see cref="DescribeUsersForUserManagerResponse"/></returns>
+        public async Task<DescribeUsersForUserManagerResponse> DescribeUsersForUserManager(DescribeUsersForUserManagerRequest req)
+        {
+             JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUsersForUserManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsersForUserManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to export users in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersForUserManagerRequest"/></param>
+        /// <returns><see cref="DescribeUsersForUserManagerResponse"/></returns>
+        public DescribeUsersForUserManagerResponse DescribeUsersForUserManagerSync(DescribeUsersForUserManagerRequest req)
+        {
+             JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUsersForUserManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsersForUserManagerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRoleListRequest : AbstractModel
+    public class ShortNodeInfo : AbstractModel
     {
         
         /// <summary>
-        /// Page number, beginning from 1
+        /// Node type: Master/Core/Task/Router/Common
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("Page")]
-        public ulong? Page{ get; set; }
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
 
         /// <summary>
-        /// Number of lines per page, no greater than 200
+        /// Number of nodes
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("Rp")]
-        public ulong? Rp{ get; set; }
-
-        /// <summary>
-        /// A parameter used to filter the list of roles under a tag.
-        /// </summary>
-        [JsonProperty("Tags")]
-        public RoleTags[] Tags{ get; set; }
+        [JsonProperty("NodeSize")]
+        public ulong? NodeSize{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Page", this.Page);
-            this.SetParamSimple(map, prefix + "Rp", this.Rp);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeSize", this.NodeSize);
         }
     }
 }

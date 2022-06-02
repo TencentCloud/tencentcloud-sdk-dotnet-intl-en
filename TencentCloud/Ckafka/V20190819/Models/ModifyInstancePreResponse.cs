@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRoleListRequest : AbstractModel
+    public class ModifyInstancePreResponse : AbstractModel
     {
         
         /// <summary>
-        /// Page number, beginning from 1
+        /// Response structure of modifying the configurations of a prepaid instance.
         /// </summary>
-        [JsonProperty("Page")]
-        public ulong? Page{ get; set; }
+        [JsonProperty("Result")]
+        public CreateInstancePreResp Result{ get; set; }
 
         /// <summary>
-        /// Number of lines per page, no greater than 200
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Rp")]
-        public ulong? Rp{ get; set; }
-
-        /// <summary>
-        /// A parameter used to filter the list of roles under a tag.
-        /// </summary>
-        [JsonProperty("Tags")]
-        public RoleTags[] Tags{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Page", this.Page);
-            this.SetParamSimple(map, prefix + "Rp", this.Rp);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

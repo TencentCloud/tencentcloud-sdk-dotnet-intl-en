@@ -310,6 +310,34 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ClusterExternalServiceInfo")]
         public ClusterExternalServiceInfo[] ClusterExternalServiceInfo{ get; set; }
 
+        /// <summary>
+        /// The VPC ID string type of the cluster
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// The subnet ID string type of the cluster
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
+        /// <summary>
+        /// Node information
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TopologyInfoList")]
+        public TopologyInfo[] TopologyInfoList{ get; set; }
+
+        /// <summary>
+        /// Multi-AZ cluster
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsMultiZoneCluster")]
+        public bool? IsMultiZoneCluster{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -353,6 +381,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
             this.SetParamArrayObj(map, prefix + "ClusterExternalServiceInfo.", this.ClusterExternalServiceInfo);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
+            this.SetParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
         }
     }
 }

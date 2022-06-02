@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRoleListRequest : AbstractModel
+    public class DescribeUsersForUserManagerRequest : AbstractModel
     {
         
         /// <summary>
-        /// Page number, beginning from 1
+        /// Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
         /// </summary>
-        [JsonProperty("Page")]
-        public ulong? Page{ get; set; }
-
-        /// <summary>
-        /// Number of lines per page, no greater than 200
-        /// </summary>
-        [JsonProperty("Rp")]
-        public ulong? Rp{ get; set; }
-
-        /// <summary>
-        /// A parameter used to filter the list of roles under a tag.
-        /// </summary>
-        [JsonProperty("Tags")]
-        public RoleTags[] Tags{ get; set; }
+        [JsonProperty("NeedKeytabInfo")]
+        public bool? NeedKeytabInfo{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Page", this.Page);
-            this.SetParamSimple(map, prefix + "Rp", this.Rp);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NeedKeytabInfo", this.NeedKeytabInfo);
         }
     }
 }

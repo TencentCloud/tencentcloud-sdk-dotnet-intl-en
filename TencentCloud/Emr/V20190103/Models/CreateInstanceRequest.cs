@@ -51,23 +51,11 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? ProductId{ get; set; }
 
         /// <summary>
-        /// Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-        /// </summary>
-        [JsonProperty("VPCSettings")]
-        public VPCSettings VPCSettings{ get; set; }
-
-        /// <summary>
         /// List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
         /// Enter an instance value: `hive` or `flink`.
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
-
-        /// <summary>
-        /// Node resource specification.
-        /// </summary>
-        [JsonProperty("ResourceSpec")]
-        public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
         /// Whether to enable high node availability. Valid values:
@@ -91,12 +79,6 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
-
-        /// <summary>
-        /// Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-        /// </summary>
-        [JsonProperty("Placement")]
-        public Placement Placement{ get; set; }
 
         /// <summary>
         /// Purchase duration of instance, which needs to be used together with `TimeUnit`.
@@ -123,10 +105,28 @@ namespace TencentCloud.Emr.V20190103.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
+        /// Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+        /// </summary>
+        [JsonProperty("VPCSettings")]
+        public VPCSettings VPCSettings{ get; set; }
+
+        /// <summary>
+        /// Node resource specification.
+        /// </summary>
+        [JsonProperty("ResourceSpec")]
+        public NewResourceSpec ResourceSpec{ get; set; }
+
+        /// <summary>
         /// Parameter required for enabling COS access.
         /// </summary>
         [JsonProperty("COSSettings")]
         public COSSettings COSSettings{ get; set; }
+
+        /// <summary>
+        /// Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+        /// </summary>
+        [JsonProperty("Placement")]
+        public Placement Placement{ get; set; }
 
         /// <summary>
         /// Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
@@ -242,6 +242,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ExternalService")]
         public ExternalService[] ExternalService{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VersionID")]
+        public long? VersionID{ get; set; }
+
+        /// <summary>
+        /// `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+        /// </summary>
+        [JsonProperty("MultiZone")]
+        public bool? MultiZone{ get; set; }
+
+        /// <summary>
+        /// Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+        /// </summary>
+        [JsonProperty("MultiZoneSettings")]
+        public MultiZoneSetting[] MultiZoneSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -249,17 +267,17 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
             this.SetParamArraySimple(map, prefix + "Software.", this.Software);
-            this.SetParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
             this.SetParamSimple(map, prefix + "SupportHA", this.SupportHA);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
-            this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+            this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+            this.SetParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
             this.SetParamObj(map, prefix + "COSSettings.", this.COSSettings);
+            this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "SgId", this.SgId);
             this.SetParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
@@ -277,6 +295,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
             this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
             this.SetParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
+            this.SetParamSimple(map, prefix + "VersionID", this.VersionID);
+            this.SetParamSimple(map, prefix + "MultiZone", this.MultiZone);
+            this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
         }
     }
 }

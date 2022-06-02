@@ -40,12 +40,6 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Node specification queried for price.
-        /// </summary>
-        [JsonProperty("ResourceSpec")]
-        public NewResourceSpec ResourceSpec{ get; set; }
-
-        /// <summary>
         /// Currency.
         /// </summary>
         [JsonProperty("Currency")]
@@ -75,6 +69,12 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
+
+        /// <summary>
+        /// Node specification queried for price.
+        /// </summary>
+        [JsonProperty("ResourceSpec")]
+        public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
         /// Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
@@ -135,6 +135,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ExternalService")]
         public ExternalService[] ExternalService{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VersionID")]
+        public ulong? VersionID{ get; set; }
+
+        /// <summary>
+        /// AZ specs
+        /// </summary>
+        [JsonProperty("MultiZoneSettings")]
+        public MultiZoneSetting[] MultiZoneSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,11 +155,11 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-            this.SetParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "SupportHA", this.SupportHA);
             this.SetParamArraySimple(map, prefix + "Software.", this.Software);
+            this.SetParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
             this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
@@ -156,6 +168,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
             this.SetParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
+            this.SetParamSimple(map, prefix + "VersionID", this.VersionID);
+            this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
         }
     }
 }

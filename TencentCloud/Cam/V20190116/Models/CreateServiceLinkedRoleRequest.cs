@@ -42,6 +42,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// Tags bound to the role.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public RoleTags[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamArraySimple(map, prefix + "QCSServiceName.", this.QCSServiceName);
             this.SetParamSimple(map, prefix + "CustomSuffix", this.CustomSuffix);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

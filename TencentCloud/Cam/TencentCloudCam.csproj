@@ -189,6 +189,7 @@
     <Compile Include="V20190116\Models\RemoveUserFromGroupRequest.cs" />
     <Compile Include="V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="V20190116\Models\RoleInfo.cs" />
+    <Compile Include="V20190116\Models\RoleTags.cs" />
     <Compile Include="V20190116\Models\SAMLProviderInfo.cs" />
     <Compile Include="V20190116\Models\SecretIdLastUsed.cs" />
     <Compile Include="V20190116\Models\SetDefaultPolicyVersionRequest.cs" />
