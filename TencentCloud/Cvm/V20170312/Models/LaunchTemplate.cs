@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AccountPrivilegeModifyInfo : AbstractModel
+    public class LaunchTemplate : AbstractModel
     {
         
         /// <summary>
-        /// Database username
+        /// Instance launch template ID. This parameter enables you to create an instance using the preset parameters in the template.
         /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
+        [JsonProperty("LaunchTemplateId")]
+        public string LaunchTemplateId{ get; set; }
 
         /// <summary>
-        /// Account permission change information
+        /// Instance launch template version number. If specified, this parameter will be used to create a new instance launch template.
         /// </summary>
-        [JsonProperty("DBPrivileges")]
-        public DBPrivilegeModifyInfo[] DBPrivileges{ get; set; }
-
-        /// <summary>
-        /// Whether it is an admin account
-        /// </summary>
-        [JsonProperty("IsAdmin")]
-        public bool? IsAdmin{ get; set; }
+        [JsonProperty("LaunchTemplateVersion")]
+        public ulong? LaunchTemplateVersion{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
-            this.SetParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
-            this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+            this.SetParamSimple(map, prefix + "LaunchTemplateId", this.LaunchTemplateId);
+            this.SetParamSimple(map, prefix + "LaunchTemplateVersion", this.LaunchTemplateVersion);
         }
     }
 }

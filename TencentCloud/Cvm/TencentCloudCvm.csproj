@@ -149,6 +149,7 @@
     <Compile Include="V20170312\Models\InternetChargeTypeConfig.cs" />
     <Compile Include="V20170312\Models\ItemPrice.cs" />
     <Compile Include="V20170312\Models\KeyPair.cs" />
+    <Compile Include="V20170312\Models\LaunchTemplate.cs" />
     <Compile Include="V20170312\Models\LaunchTemplateInfo.cs" />
     <Compile Include="V20170312\Models\LaunchTemplateVersionData.cs" />
     <Compile Include="V20170312\Models\LaunchTemplateVersionInfo.cs" />
@@ -198,6 +199,8 @@
     <Compile Include="V20170312\Models\ResizeInstanceDisksRequest.cs" />
     <Compile Include="V20170312\Models\ResizeInstanceDisksResponse.cs" />
     <Compile Include="V20170312\Models\RunAutomationServiceEnabled.cs" />
+    <Compile Include="V20170312\Models\RunInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\RunInstancesResponse.cs" />
     <Compile Include="V20170312\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20170312\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="V20170312\Models\SharePermission.cs" />

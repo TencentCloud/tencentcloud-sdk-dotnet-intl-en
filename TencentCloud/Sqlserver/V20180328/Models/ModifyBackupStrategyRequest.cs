@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup mode, which supports daily backup only. Valid value: daily.
+        /// Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
@@ -54,6 +54,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupModel")]
         public string BackupModel{ get; set; }
 
+        /// <summary>
+        /// The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+        /// </summary>
+        [JsonProperty("BackupCycle")]
+        public ulong?[] BackupCycle{ get; set; }
+
+        /// <summary>
+        /// Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+        /// </summary>
+        [JsonProperty("BackupSaveDays")]
+        public ulong? BackupSaveDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
             this.SetParamSimple(map, prefix + "BackupDay", this.BackupDay);
             this.SetParamSimple(map, prefix + "BackupModel", this.BackupModel);
+            this.SetParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
+            this.SetParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
         }
     }
 }

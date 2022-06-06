@@ -78,6 +78,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("IsAdmin")]
         public bool? IsAdmin{ get; set; }
 
+        /// <summary>
+        /// Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+        /// </summary>
+        [JsonProperty("Authentication")]
+        public string Authentication{ get; set; }
+
+        /// <summary>
+        /// The host required for `win-windows authentication` account
+        /// </summary>
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
             this.SetParamArrayObj(map, prefix + "Dbs.", this.Dbs);
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+            this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
         }
     }
 }

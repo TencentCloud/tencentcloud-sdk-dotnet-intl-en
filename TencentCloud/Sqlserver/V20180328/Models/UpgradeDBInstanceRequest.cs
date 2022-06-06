@@ -78,6 +78,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("MultiZones")]
         public string MultiZones{ get; set; }
 
+        /// <summary>
+        /// The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+        /// </summary>
+        [JsonProperty("WaitSwitch")]
+        public long? WaitSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "HAType", this.HAType);
             this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
+            this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         }
     }
 }

@@ -90,6 +90,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Group")]
         public long? Group{ get; set; }
 
+        /// <summary>
+        /// Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
+        /// <summary>
+        /// Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+        /// </summary>
+        [JsonProperty("BackupFormat")]
+        public string BackupFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "Group", this.Group);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
         }
     }
 }

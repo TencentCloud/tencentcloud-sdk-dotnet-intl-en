@@ -258,6 +258,37 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupModel")]
         public string BackupModel{ get; set; }
 
+        /// <summary>
+        /// Instance backup info
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceNote")]
+        public string InstanceNote{ get; set; }
+
+        /// <summary>
+        /// Backup cycle
+        /// </summary>
+        [JsonProperty("BackupCycle")]
+        public long?[] BackupCycle{ get; set; }
+
+        /// <summary>
+        /// Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+        /// </summary>
+        [JsonProperty("BackupCycleType")]
+        public string BackupCycleType{ get; set; }
+
+        /// <summary>
+        /// Data (log) backup retention period
+        /// </summary>
+        [JsonProperty("BackupSaveDays")]
+        public long? BackupSaveDays{ get; set; }
+
+        /// <summary>
+        /// Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +333,11 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "HAFlag", this.HAFlag);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "BackupModel", this.BackupModel);
+            this.SetParamSimple(map, prefix + "InstanceNote", this.InstanceNote);
+            this.SetParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
+            this.SetParamSimple(map, prefix + "BackupCycleType", this.BackupCycleType);
+            this.SetParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }
