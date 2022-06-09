@@ -15,35 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Iotcloud.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SystemDisk : AbstractModel
+    public class CreateProductRequest : AbstractModel
     {
         
         /// <summary>
-        /// System disk type.
-        /// Valid values: 
-        /// <li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+        /// Product name, which cannot be same as that of an existing product. Naming rule: [a-zA-Z0-9:_-]{1,32}.
         /// </summary>
-        [JsonProperty("DiskType")]
-        public string DiskType{ get; set; }
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
         /// <summary>
-        /// System disk size in GB.
+        /// Product properties
         /// </summary>
-        [JsonProperty("DiskSize")]
-        public long? DiskSize{ get; set; }
+        [JsonProperty("ProductProperties")]
+        public ProductProperties ProductProperties{ get; set; }
 
         /// <summary>
-        /// System disk ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Skey, which is required to create a CLAA product.
         /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
+        [JsonProperty("Skey")]
+        public string Skey{ get; set; }
 
 
         /// <summary>
@@ -51,9 +48,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
-            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
+            this.SetParamSimple(map, prefix + "Skey", this.Skey);
         }
     }
 }

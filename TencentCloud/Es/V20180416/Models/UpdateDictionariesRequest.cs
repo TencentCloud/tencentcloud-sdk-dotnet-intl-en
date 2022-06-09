@@ -55,13 +55,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string[] QQDict{ get; set; }
 
         /// <summary>
-        /// 0: Install; 1: Delete
+        /// `0` (default): Install, `1`: Delete
         /// </summary>
         [JsonProperty("UpdateType")]
         public long? UpdateType{ get; set; }
 
         /// <summary>
-        /// Whether to force restart the cluster
+        /// Whether to force restart the cluster. The default value is `false`.
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }

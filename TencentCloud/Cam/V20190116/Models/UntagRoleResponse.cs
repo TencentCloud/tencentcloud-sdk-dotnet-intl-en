@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ContainerEnv : AbstractModel
+    public class UntagRoleResponse : AbstractModel
     {
         
         /// <summary>
-        /// Environment variable key
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
-
-        /// <summary>
-        /// Environment variable value
-        /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -15,32 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstancesResponse : AbstractModel
+    public class IndexSettingsField : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible instances.
+        /// Number of primary shards
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("NumberOfShards")]
+        public string NumberOfShards{ get; set; }
 
         /// <summary>
-        /// List of instance details.
+        /// Number of replica shards
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("InstanceSet")]
-        public Instance[] InstanceSet{ get; set; }
+        [JsonProperty("NumberOfReplicas")]
+        public string NumberOfReplicas{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Index refresh interval
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RefreshInterval")]
+        public string RefreshInterval{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "NumberOfShards", this.NumberOfShards);
+            this.SetParamSimple(map, prefix + "NumberOfReplicas", this.NumberOfReplicas);
+            this.SetParamSimple(map, prefix + "RefreshInterval", this.RefreshInterval);
         }
     }
 }

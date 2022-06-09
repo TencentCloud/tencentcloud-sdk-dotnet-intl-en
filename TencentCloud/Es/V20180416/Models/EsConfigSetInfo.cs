@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeZonesRequest : AbstractModel
+    public class EsConfigSetInfo : AbstractModel
     {
         
         /// <summary>
-        /// Sorting field. Valid values:
-        /// <li>`ZONE`: Sort by the availability zone.
-        /// <li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
-        /// The default value is `ZONE`.
+        /// Configuration set type, such as `LDAP` and `AD`.
         /// </summary>
-        [JsonProperty("OrderField")]
-        public string OrderField{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// Specifies how availability zones are listed. Valid values:
-        /// <li>ASC: Ascending sort. 
-        /// <li>DESC: Descending sort.
-        /// The default value is `ASC`.
+        /// "{\"order\":0,\"url\":\"ldap://10.0.1.72:389\",\"bind_dn\":\"cn=admin,dc=tencent,dc=com\",\"user_search.base_dn\":\"dc=tencent,dc=com\",\"user_search.filter\":\"(cn={0})\",\"group_search.base_dn\":\"dc=tencent,dc=com\"}"
         /// </summary>
-        [JsonProperty("Order")]
-        public string Order{ get; set; }
+        [JsonProperty("EsConfig")]
+        public string EsConfig{ get; set; }
 
 
         /// <summary>
@@ -48,8 +42,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "EsConfig", this.EsConfig);
         }
     }
 }

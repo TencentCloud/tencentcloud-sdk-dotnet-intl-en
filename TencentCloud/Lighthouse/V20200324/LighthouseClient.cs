@@ -371,46 +371,6 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to create one or more Lighthouse instances.
-        /// </summary>
-        /// <param name="req"><see cref="CreateInstancesRequest"/></param>
-        /// <returns><see cref="CreateInstancesResponse"/></returns>
-        public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest req)
-        {
-             JsonResponseModel<CreateInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create one or more Lighthouse instances.
-        /// </summary>
-        /// <param name="req"><see cref="CreateInstancesRequest"/></param>
-        /// <returns><see cref="CreateInstancesResponse"/></returns>
-        public CreateInstancesResponse CreateInstancesSync(CreateInstancesRequest req)
-        {
-             JsonResponseModel<CreateInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to create a key pair.
         /// </summary>
         /// <param name="req"><see cref="CreateKeyPairRequest"/></param>
@@ -1111,46 +1071,6 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to query the quota information of general resources.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGeneralResourceQuotasRequest"/></param>
-        /// <returns><see cref="DescribeGeneralResourceQuotasResponse"/></returns>
-        public async Task<DescribeGeneralResourceQuotasResponse> DescribeGeneralResourceQuotas(DescribeGeneralResourceQuotasRequest req)
-        {
-             JsonResponseModel<DescribeGeneralResourceQuotasResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeGeneralResourceQuotas");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralResourceQuotasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the quota information of general resources.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeGeneralResourceQuotasRequest"/></param>
-        /// <returns><see cref="DescribeGeneralResourceQuotasResponse"/></returns>
-        public DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotasSync(DescribeGeneralResourceQuotasRequest req)
-        {
-             JsonResponseModel<DescribeGeneralResourceQuotasResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeGeneralResourceQuotas");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralResourceQuotasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the attributes of the default login key of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceLoginKeyPairAttributeRequest"/></param>
@@ -1191,12 +1111,21 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to query the VNC URL of an instance, and the obtained address can be used for VNC login to the instance.
+        /// This API is used to query the URL for VNC login.
         /// 
-        /// * This feature is available to instances in `RUNNING` status.
-        /// * A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid, and you will have to query another one.
-        /// * Once the VNC URL is accessed, it will become invalid, and you will have to query another one if needed.
-        /// * If the connection is interrupted, up to 30 reconnection requests per minute are allowed.
+        /// * It does not support `STOPPED` CVMs.
+        /// * A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, you will need to query another one.
+        /// * The VNC URL can be used once only. You need to query a new one if you want to log in again.
+        /// * Up to 30 re-connection attempts allowed in one minute.
+        /// After you get the value of `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link `https://img.qcloud.com/qcloud/app/active_vnc/index.html?`.
+        /// 
+        ///   - `InstanceVncUrl`: Its value will be returned after the API is successfully called.
+        /// 
+        ///     The final URL can be in the following formats:
+        /// 
+        /// ```
+        /// https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
+        /// ```
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
         /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
@@ -1216,12 +1145,21 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to query the VNC URL of an instance, and the obtained address can be used for VNC login to the instance.
+        /// This API is used to query the URL for VNC login.
         /// 
-        /// * This feature is available to instances in `RUNNING` status.
-        /// * A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid, and you will have to query another one.
-        /// * Once the VNC URL is accessed, it will become invalid, and you will have to query another one if needed.
-        /// * If the connection is interrupted, up to 30 reconnection requests per minute are allowed.
+        /// * It does not support `STOPPED` CVMs.
+        /// * A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, you will need to query another one.
+        /// * The VNC URL can be used once only. You need to query a new one if you want to log in again.
+        /// * Up to 30 re-connection attempts allowed in one minute.
+        /// After you get the value of `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link `https://img.qcloud.com/qcloud/app/active_vnc/index.html?`.
+        /// 
+        ///   - `InstanceVncUrl`: Its value will be returned after the API is successfully called.
+        /// 
+        ///     The final URL can be in the following formats:
+        /// 
+        /// ```
+        /// https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
+        /// ```
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
         /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
@@ -1232,56 +1170,6 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstanceVncUrl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceVncUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the details of one or multiple instances.
-        /// 
-        /// * You can query the details of an instance according to its ID, name, or private IP.
-        /// * For more information on filters, please see [Filters](https://intl.cloud.tencent.com/document/product/1207/47576?from_cn_redirect=1#Filter).
-        /// * If no parameter is defined, the status of a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.
-        /// * The latest operation (LatestOperation) and the latest operation status (LatestOperationState) of the instance can be queried.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
-        /// <returns><see cref="DescribeInstancesResponse"/></returns>
-        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
-        {
-             JsonResponseModel<DescribeInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the details of one or multiple instances.
-        /// 
-        /// * You can query the details of an instance according to its ID, name, or private IP.
-        /// * For more information on filters, please see [Filters](https://intl.cloud.tencent.com/document/product/1207/47576?from_cn_redirect=1#Filter).
-        /// * If no parameter is defined, the status of a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.
-        /// * The latest operation (LatestOperation) and the latest operation status (LatestOperationState) of the instance can be queried.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
-        /// <returns><see cref="DescribeInstancesResponse"/></returns>
-        public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
-        {
-             JsonResponseModel<DescribeInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2054,46 +1942,6 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "InquirePriceRenewDisks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDisksResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the price of renewed instance.
-        /// </summary>
-        /// <param name="req"><see cref="InquirePriceRenewInstancesRequest"/></param>
-        /// <returns><see cref="InquirePriceRenewInstancesResponse"/></returns>
-        public async Task<InquirePriceRenewInstancesResponse> InquirePriceRenewInstances(InquirePriceRenewInstancesRequest req)
-        {
-             JsonResponseModel<InquirePriceRenewInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "InquirePriceRenewInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the price of renewed instance.
-        /// </summary>
-        /// <param name="req"><see cref="InquirePriceRenewInstancesRequest"/></param>
-        /// <returns><see cref="InquirePriceRenewInstancesResponse"/></returns>
-        public InquirePriceRenewInstancesResponse InquirePriceRenewInstancesSync(InquirePriceRenewInstancesRequest req)
-        {
-             JsonResponseModel<InquirePriceRenewInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquirePriceRenewInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

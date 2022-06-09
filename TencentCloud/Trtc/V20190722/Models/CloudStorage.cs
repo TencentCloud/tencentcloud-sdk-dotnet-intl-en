@@ -56,7 +56,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+        /// The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
         /// </summary>
         [JsonProperty("FileNamePrefix")]
         public string[] FileNamePrefix{ get; set; }

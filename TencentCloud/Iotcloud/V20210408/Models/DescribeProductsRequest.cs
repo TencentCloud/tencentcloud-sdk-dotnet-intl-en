@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Iotcloud.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeZonesRequest : AbstractModel
+    public class DescribeProductsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Sorting field. Valid values:
-        /// <li>`ZONE`: Sort by the availability zone.
-        /// <li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
-        /// The default value is `ZONE`.
+        /// Offset, starting from 0
         /// </summary>
-        [JsonProperty("OrderField")]
-        public string OrderField{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Specifies how availability zones are listed. Valid values:
-        /// <li>ASC: Ascending sort. 
-        /// <li>DESC: Descending sort.
-        /// The default value is `ASC`.
+        /// Number of entries returned per page. Valid range: 10–250.
         /// </summary>
-        [JsonProperty("Order")]
-        public string Order{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -48,8 +42,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

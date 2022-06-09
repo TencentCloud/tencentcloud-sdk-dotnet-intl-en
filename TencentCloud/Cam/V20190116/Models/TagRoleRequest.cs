@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LoginSettings : AbstractModel
+    public class TagRoleRequest : AbstractModel
     {
         
         /// <summary>
-        /// Key ID list. After a key is associated, you can use it to access the instance. Note: this field may return [], indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
-        [JsonProperty("KeyIds")]
-        public string[] KeyIds{ get; set; }
+        [JsonProperty("Tags")]
+        public RoleTags[] Tags{ get; set; }
+
+        /// <summary>
+        /// Role name. Specify either the role name or role ID.
+        /// </summary>
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
+
+        /// <summary>
+        /// Role ID. Specify either the role ID or role name.
+        /// </summary>
+        [JsonProperty("RoleId")]
+        public string RoleId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
+            this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
         }
     }
 }

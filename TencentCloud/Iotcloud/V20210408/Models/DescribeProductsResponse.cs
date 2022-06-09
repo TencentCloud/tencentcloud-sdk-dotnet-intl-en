@@ -15,34 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Iotcloud.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InternetAccessible : AbstractModel
+    public class DescribeProductsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Network billing mode. Valid values:
-        /// <li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-        /// <li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+        /// Total number of products
         /// </summary>
-        [JsonProperty("InternetChargeType")]
-        public string InternetChargeType{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Public network outbound bandwidth cap in Mbps.
+        /// List of product details
         /// </summary>
-        [JsonProperty("InternetMaxBandwidthOut")]
-        public long? InternetMaxBandwidthOut{ get; set; }
+        [JsonProperty("Products")]
+        public ProductInfo[] Products{ get; set; }
 
         /// <summary>
-        /// Whether to assign a public IP.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("PublicIpAssigned")]
-        public bool? PublicIpAssigned{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +48,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
-            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
-            this.SetParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Products.", this.Products);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

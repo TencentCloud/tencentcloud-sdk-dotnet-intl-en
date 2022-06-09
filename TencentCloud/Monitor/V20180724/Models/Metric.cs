@@ -73,6 +73,27 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("MetricConfig")]
         public MetricConfig MetricConfig{ get; set; }
 
+        /// <summary>
+        /// Whether it is an advanced metric. 1: Yes; 0: No.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsAdvanced")]
+        public long? IsAdvanced{ get; set; }
+
+        /// <summary>
+        /// Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsOpen")]
+        public long? IsOpen{ get; set; }
+
+        /// <summary>
+        /// Integration center product ID.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public long? ProductId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +108,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "Dimensions.", this.Dimensions);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamObj(map, prefix + "MetricConfig.", this.MetricConfig);
+            this.SetParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+            this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

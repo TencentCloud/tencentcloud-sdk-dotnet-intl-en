@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DataDiskPrice : AbstractModel
+    public class DescribeIndexMetaRequest : AbstractModel
     {
         
         /// <summary>
-        /// Cloud disk ID.
+        /// ES cluster ID
         /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Cloud disk unit price.
+        /// Index type. `auto`: Automated; `normal`: General.
         /// </summary>
-        [JsonProperty("OriginalDiskPrice")]
-        public float? OriginalDiskPrice{ get; set; }
+        [JsonProperty("IndexType")]
+        public string IndexType{ get; set; }
 
         /// <summary>
-        /// Total cloud disk price.
+        /// Index name. `null` indicates that all indexes are requested.
         /// </summary>
-        [JsonProperty("OriginalPrice")]
-        public float? OriginalPrice{ get; set; }
+        [JsonProperty("IndexName")]
+        public string IndexName{ get; set; }
 
         /// <summary>
-        /// Discount.
+        /// Username for cluster access
         /// </summary>
-        [JsonProperty("Discount")]
-        public float? Discount{ get; set; }
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
 
         /// <summary>
-        /// Discounted total price.
+        /// Password for cluster access
         /// </summary>
-        [JsonProperty("DiscountPrice")]
-        public float? DiscountPrice{ get; set; }
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
-            this.SetParamSimple(map, prefix + "OriginalDiskPrice", this.OriginalDiskPrice);
-            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-            this.SetParamSimple(map, prefix + "Discount", this.Discount);
-            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "IndexType", this.IndexType);
+            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

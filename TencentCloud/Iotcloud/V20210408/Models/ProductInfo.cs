@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Iotcloud.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DockerContainerVolume : AbstractModel
+    public class ProductInfo : AbstractModel
     {
         
         /// <summary>
-        /// Container path
+        /// Product ID
         /// </summary>
-        [JsonProperty("ContainerPath")]
-        public string ContainerPath{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
-        /// Host path
+        /// Product name
         /// </summary>
-        [JsonProperty("HostPath")]
-        public string HostPath{ get; set; }
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
+        /// <summary>
+        /// Product metadata
+        /// </summary>
+        [JsonProperty("ProductMetadata")]
+        public ProductMetadata ProductMetadata{ get; set; }
+
+        /// <summary>
+        /// Product properties
+        /// </summary>
+        [JsonProperty("ProductProperties")]
+        public ProductProperties ProductProperties{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ContainerPath", this.ContainerPath);
-            this.SetParamSimple(map, prefix + "HostPath", this.HostPath);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamObj(map, prefix + "ProductMetadata.", this.ProductMetadata);
+            this.SetParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
         }
     }
 }

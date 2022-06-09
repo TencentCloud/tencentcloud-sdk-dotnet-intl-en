@@ -15,21 +15,36 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LoginConfiguration : AbstractModel
+    public class DescribeIndexMetaResponse : AbstractModel
     {
         
+        /// <summary>
+        /// Index metadata field
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("IndexMetaField")]
+        public IndexMetaField IndexMetaField{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "IndexMetaField.", this.IndexMetaField);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

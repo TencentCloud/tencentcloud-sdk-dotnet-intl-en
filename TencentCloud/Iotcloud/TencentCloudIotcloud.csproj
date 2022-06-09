@@ -52,6 +52,8 @@
     <Compile Include="V20210408\Models\CreateDeviceResponse.cs" />
     <Compile Include="V20210408\Models\CreatePrivateCARequest.cs" />
     <Compile Include="V20210408\Models\CreatePrivateCAResponse.cs" />
+    <Compile Include="V20210408\Models\CreateProductRequest.cs" />
+    <Compile Include="V20210408\Models\CreateProductResponse.cs" />
     <Compile Include="V20210408\Models\DeleteDeviceRequest.cs" />
     <Compile Include="V20210408\Models\DeleteDeviceResponse.cs" />
     <Compile Include="V20210408\Models\DeletePrivateCARequest.cs" />
@@ -72,9 +74,12 @@
     <Compile Include="V20210408\Models\DescribeProductCAResponse.cs" />
     <Compile Include="V20210408\Models\DescribeProductRequest.cs" />
     <Compile Include="V20210408\Models\DescribeProductResponse.cs" />
+    <Compile Include="V20210408\Models\DescribeProductsRequest.cs" />
+    <Compile Include="V20210408\Models\DescribeProductsResponse.cs" />
     <Compile Include="V20210408\Models\DeviceInfo.cs" />
     <Compile Include="V20210408\Models\DeviceLabel.cs" />
     <Compile Include="V20210408\Models\DeviceTag.cs" />
+    <Compile Include="V20210408\Models\ProductInfo.cs" />
     <Compile Include="V20210408\Models\ProductMetadata.cs" />
     <Compile Include="V20210408\Models\ProductProperties.cs" />
     <Compile Include="V20210408\Models\SetProductsForbiddenStatusRequest.cs" />

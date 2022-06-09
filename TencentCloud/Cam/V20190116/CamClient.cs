@@ -2693,6 +2693,86 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// This API is used to bind tags to a role.
+        /// </summary>
+        /// <param name="req"><see cref="TagRoleRequest"/></param>
+        /// <returns><see cref="TagRoleResponse"/></returns>
+        public async Task<TagRoleResponse> TagRole(TagRoleRequest req)
+        {
+             JsonResponseModel<TagRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TagRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TagRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind tags to a role.
+        /// </summary>
+        /// <param name="req"><see cref="TagRoleRequest"/></param>
+        /// <returns><see cref="TagRoleResponse"/></returns>
+        public TagRoleResponse TagRoleSync(TagRoleRequest req)
+        {
+             JsonResponseModel<TagRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TagRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TagRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind tags from a role.
+        /// </summary>
+        /// <param name="req"><see cref="UntagRoleRequest"/></param>
+        /// <returns><see cref="UntagRoleResponse"/></returns>
+        public async Task<UntagRoleResponse> UntagRole(UntagRoleRequest req)
+        {
+             JsonResponseModel<UntagRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UntagRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UntagRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind tags from a role.
+        /// </summary>
+        /// <param name="req"><see cref="UntagRoleRequest"/></param>
+        /// <returns><see cref="UntagRoleResponse"/></returns>
+        public UntagRoleResponse UntagRoleSync(UntagRoleRequest req)
+        {
+             JsonResponseModel<UntagRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UntagRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UntagRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
         /// </summary>
         /// <param name="req"><see cref="UpdateAssumeRolePolicyRequest"/></param>

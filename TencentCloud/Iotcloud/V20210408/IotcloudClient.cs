@@ -133,6 +133,46 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
+        /// This API is used to create a new IoT communication product. 
+        /// </summary>
+        /// <param name="req"><see cref="CreateProductRequest"/></param>
+        /// <returns><see cref="CreateProductResponse"/></returns>
+        public async Task<CreateProductResponse> CreateProduct(CreateProductRequest req)
+        {
+             JsonResponseModel<CreateProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a new IoT communication product. 
+        /// </summary>
+        /// <param name="req"><see cref="CreateProductRequest"/></param>
+        /// <returns><see cref="CreateProductResponse"/></returns>
+        public CreateProductResponse CreateProductSync(CreateProductRequest req)
+        {
+             JsonResponseModel<CreateProductResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an IoT Hub device. 
         /// </summary>
         /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
@@ -524,6 +564,46 @@ namespace TencentCloud.Iotcloud.V20210408
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProductCA");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductCAResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the product list. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductsRequest"/></param>
+        /// <returns><see cref="DescribeProductsResponse"/></returns>
+        public async Task<DescribeProductsResponse> DescribeProducts(DescribeProductsRequest req)
+        {
+             JsonResponseModel<DescribeProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the product list. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductsRequest"/></param>
+        /// <returns><see cref="DescribeProductsResponse"/></returns>
+        public DescribeProductsResponse DescribeProductsSync(DescribeProductsRequest req)
+        {
+             JsonResponseModel<DescribeProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

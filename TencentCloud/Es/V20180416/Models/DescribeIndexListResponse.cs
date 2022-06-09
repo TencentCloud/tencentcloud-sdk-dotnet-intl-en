@@ -15,22 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstancesResponse : AbstractModel
+    public class DescribeIndexListResponse : AbstractModel
     {
         
         /// <summary>
-        /// List of IDs created by using this API. The returning of IDs does not mean that the instances are created successfully.
-        /// 
-        /// You can call `DescribeInstances` API, and find the instance ID in the `InstancesSet` returned to check its status. If the `status` is `running`, the instance is created successfully.
+        /// Index metadata field
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("InstanceIdSet")]
-        public string[] InstanceIdSet{ get; set; }
+        [JsonProperty("IndexMetaFields")]
+        public IndexMetaField[] IndexMetaFields{ get; set; }
+
+        /// <summary>
+        /// Total number of results
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,7 +50,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+            this.SetParamArrayObj(map, prefix + "IndexMetaFields.", this.IndexMetaFields);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

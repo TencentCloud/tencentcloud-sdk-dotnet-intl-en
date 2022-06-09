@@ -21,44 +21,44 @@ namespace TencentCloud.Es.V20180416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePluginsRequest : AbstractModel
+    public class CreateIndexRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// ES cluster ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List of names of the plugins to be installed
+        /// Type of the index to create. `auto`: Automated; `normal`: General.
         /// </summary>
-        [JsonProperty("InstallPluginList")]
-        public string[] InstallPluginList{ get; set; }
+        [JsonProperty("IndexType")]
+        public string IndexType{ get; set; }
 
         /// <summary>
-        /// List of names of the plugins to be uninstalled
+        /// Name of the index to create
         /// </summary>
-        [JsonProperty("RemovePluginList")]
-        public string[] RemovePluginList{ get; set; }
+        [JsonProperty("IndexName")]
+        public string IndexName{ get; set; }
 
         /// <summary>
-        /// Whether to force restart the cluster. The default value is `false`.
+        /// JSON-formatted index metadata to create, such as `mappings` and `settings`
         /// </summary>
-        [JsonProperty("ForceRestart")]
-        public bool? ForceRestart{ get; set; }
+        [JsonProperty("IndexMetaJson")]
+        public string IndexMetaJson{ get; set; }
 
         /// <summary>
-        /// Whether to reinstall the cluster. The default value is `false`.
+        /// Username for cluster access
         /// </summary>
-        [JsonProperty("ForceUpdate")]
-        public bool? ForceUpdate{ get; set; }
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
 
         /// <summary>
-        /// 0: system plugin
+        /// Password for cluster access
         /// </summary>
-        [JsonProperty("PluginType")]
-        public ulong? PluginType{ get; set; }
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
 
 
         /// <summary>
@@ -67,11 +67,11 @@ namespace TencentCloud.Es.V20180416.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArraySimple(map, prefix + "InstallPluginList.", this.InstallPluginList);
-            this.SetParamArraySimple(map, prefix + "RemovePluginList.", this.RemovePluginList);
-            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
-            this.SetParamSimple(map, prefix + "ForceUpdate", this.ForceUpdate);
-            this.SetParamSimple(map, prefix + "PluginType", this.PluginType);
+            this.SetParamSimple(map, prefix + "IndexType", this.IndexType);
+            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
+            this.SetParamSimple(map, prefix + "IndexMetaJson", this.IndexMetaJson);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

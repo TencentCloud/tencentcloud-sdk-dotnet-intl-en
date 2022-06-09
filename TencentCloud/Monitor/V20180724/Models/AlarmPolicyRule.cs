@@ -119,6 +119,27 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
+        /// <summary>
+        /// Whether it is an advanced metric. 0: No; 1: Yes.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsAdvanced")]
+        public long? IsAdvanced{ get; set; }
+
+        /// <summary>
+        /// Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsOpen")]
+        public long? IsOpen{ get; set; }
+
+        /// <summary>
+        /// Integration center product ID.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +157,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+            this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

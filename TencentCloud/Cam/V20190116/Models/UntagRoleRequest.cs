@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeZonesRequest : AbstractModel
+    public class UntagRoleRequest : AbstractModel
     {
         
         /// <summary>
-        /// Sorting field. Valid values:
-        /// <li>`ZONE`: Sort by the availability zone.
-        /// <li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
-        /// The default value is `ZONE`.
+        /// Tag key.
         /// </summary>
-        [JsonProperty("OrderField")]
-        public string OrderField{ get; set; }
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// Specifies how availability zones are listed. Valid values:
-        /// <li>ASC: Ascending sort. 
-        /// <li>DESC: Descending sort.
-        /// The default value is `ASC`.
+        /// Role name. Specify either the role name or role ID.
         /// </summary>
-        [JsonProperty("Order")]
-        public string Order{ get; set; }
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
+
+        /// <summary>
+        /// Role ID. Specify either the role ID or role name.
+        /// </summary>
+        [JsonProperty("RoleId")]
+        public string RoleId{ get; set; }
 
 
         /// <summary>
@@ -48,8 +48,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
+            this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
         }
     }
 }

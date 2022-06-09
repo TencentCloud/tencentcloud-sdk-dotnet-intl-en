@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGeneralResourceQuotasResponse : AbstractModel
+    public class CreateIndexResponse : AbstractModel
     {
         
-        /// <summary>
-        /// List of general resource quota details.
-        /// </summary>
-        [JsonProperty("GeneralResourceQuotaSet")]
-        public GeneralResourceQuota[] GeneralResourceQuotaSet{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GeneralResourceQuotaSet.", this.GeneralResourceQuotaSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

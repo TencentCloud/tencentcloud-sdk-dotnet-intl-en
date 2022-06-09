@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Iotcloud.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralResourceQuota : AbstractModel
+    public class CreateProductResponse : AbstractModel
     {
         
         /// <summary>
-        /// Resource name.
+        /// Product name
         /// </summary>
-        [JsonProperty("ResourceName")]
-        public string ResourceName{ get; set; }
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
         /// <summary>
-        /// Number of available resources.
+        /// Product ID, the globally unique ID assigned by Tencent Cloud.
         /// </summary>
-        [JsonProperty("ResourceQuotaAvailable")]
-        public long? ResourceQuotaAvailable{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
-        /// Total number of resources.
+        /// Product properties
         /// </summary>
-        [JsonProperty("ResourceQuotaTotal")]
-        public long? ResourceQuotaTotal{ get; set; }
+        [JsonProperty("ProductProperties")]
+        public ProductProperties ProductProperties{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
-            this.SetParamSimple(map, prefix + "ResourceQuotaAvailable", this.ResourceQuotaAvailable);
-            this.SetParamSimple(map, prefix + "ResourceQuotaTotal", this.ResourceQuotaTotal);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
