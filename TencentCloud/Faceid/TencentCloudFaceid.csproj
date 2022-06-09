@@ -45,8 +45,12 @@
 
   <ItemGroup>
     <Compile Include="V20180301\FaceidClient.cs" />
+    <Compile Include="V20180301\Models\CreateUploadUrlRequest.cs" />
+    <Compile Include="V20180301\Models\CreateUploadUrlResponse.cs" />
     <Compile Include="V20180301\Models\DetectReflectLivenessAndCompareRequest.cs" />
     <Compile Include="V20180301\Models\DetectReflectLivenessAndCompareResponse.cs" />
+    <Compile Include="V20180301\Models\GenerateReflectSequenceRequest.cs" />
+    <Compile Include="V20180301\Models\GenerateReflectSequenceResponse.cs" />
     <Compile Include="V20180301\Models\LivenessCompareRequest.cs" />
     <Compile Include="V20180301\Models\LivenessCompareResponse.cs" />
   </ItemGroup>
