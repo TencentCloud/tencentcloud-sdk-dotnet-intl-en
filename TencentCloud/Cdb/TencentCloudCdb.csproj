@@ -328,6 +328,7 @@
     <Compile Include="V20170320\Models\SwitchForUpgradeRequest.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeResponse.cs" />
     <Compile Include="V20170320\Models\TablePrivilege.cs" />
+    <Compile Include="V20170320\Models\Tag.cs" />
     <Compile Include="V20170320\Models\TagInfo.cs" />
     <Compile Include="V20170320\Models\TagInfoItem.cs" />
     <Compile Include="V20170320\Models\TagInfoUnit.cs" />

@@ -103,6 +103,10 @@
     <Compile Include="V20180412\Models\SourceCommand.cs" />
     <Compile Include="V20180412\Models\SourceInfo.cs" />
     <Compile Include="V20180412\Models\TendisNodes.cs" />
+    <Compile Include="V20180412\Models\UpgradeProxyVersionRequest.cs" />
+    <Compile Include="V20180412\Models\UpgradeProxyVersionResponse.cs" />
+    <Compile Include="V20180412\Models\UpgradeSmallVersionRequest.cs" />
+    <Compile Include="V20180412\Models\UpgradeSmallVersionResponse.cs" />
     <Compile Include="V20180412\Models\ZoneCapacityConf.cs" />
   </ItemGroup>
 </Project>

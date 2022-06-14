@@ -892,5 +892,85 @@ namespace TencentCloud.Redis.V20180412
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to upgrade instance proxy version.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
+        /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>
+        public async Task<UpgradeProxyVersionResponse> UpgradeProxyVersion(UpgradeProxyVersionRequest req)
+        {
+             JsonResponseModel<UpgradeProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeProxyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade instance proxy version.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
+        /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>
+        public UpgradeProxyVersionResponse UpgradeProxyVersionSync(UpgradeProxyVersionRequest req)
+        {
+             JsonResponseModel<UpgradeProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeProxyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade instance minor version.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeSmallVersionRequest"/></param>
+        /// <returns><see cref="UpgradeSmallVersionResponse"/></returns>
+        public async Task<UpgradeSmallVersionResponse> UpgradeSmallVersion(UpgradeSmallVersionRequest req)
+        {
+             JsonResponseModel<UpgradeSmallVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeSmallVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeSmallVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade instance minor version.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeSmallVersionRequest"/></param>
+        /// <returns><see cref="UpgradeSmallVersionResponse"/></returns>
+        public UpgradeSmallVersionResponse UpgradeSmallVersionSync(UpgradeSmallVersionRequest req)
+        {
+             JsonResponseModel<UpgradeSmallVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeSmallVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeSmallVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

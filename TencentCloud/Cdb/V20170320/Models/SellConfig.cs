@@ -122,6 +122,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeviceTypeName")]
         public string DeviceTypeName{ get; set; }
 
+        /// <summary>
+        /// Engine type. Valid values: `Innodb`,`RocksDB`.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +151,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "DeviceTypeName", this.DeviceTypeName);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }
