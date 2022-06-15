@@ -53,6 +53,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// This API is available for clusters with OpenLDAP components configured.
         /// This API is used to add user lists (user management).
         /// </summary>
         /// <param name="req"><see cref="AddUsersForUserManagerRequest"/></param>
@@ -73,6 +74,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// This API is available for clusters with OpenLDAP components configured.
         /// This API is used to add user lists (user management).
         /// </summary>
         /// <param name="req"><see cref="AddUsersForUserManagerRequest"/></param>
@@ -293,7 +295,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to export users in batches.
+        /// This API is available for clusters with OpenLDAP components configured.
+        /// This API is used to export users in batches. For a Kerberos cluster, set `NeedKeytabInfo` to `true` to obtain the download link of the Keytab file. If `SupportDownLoadKeyTab` is `true`, but `DownLoadKeyTabUrl` is null, the Keytab file is not ready yet (being generated) in the backend.
         /// </summary>
         /// <param name="req"><see cref="DescribeUsersForUserManagerRequest"/></param>
         /// <returns><see cref="DescribeUsersForUserManagerResponse"/></returns>
@@ -313,7 +316,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to export users in batches.
+        /// This API is available for clusters with OpenLDAP components configured.
+        /// This API is used to export users in batches. For a Kerberos cluster, set `NeedKeytabInfo` to `true` to obtain the download link of the Keytab file. If `SupportDownLoadKeyTab` is `true`, but `DownLoadKeyTabUrl` is null, the Keytab file is not ready yet (being generated) in the backend.
         /// </summary>
         /// <param name="req"><see cref="DescribeUsersForUserManagerRequest"/></param>
         /// <returns><see cref="DescribeUsersForUserManagerResponse"/></returns>

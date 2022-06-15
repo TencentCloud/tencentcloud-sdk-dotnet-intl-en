@@ -98,6 +98,8 @@
     <Compile Include="V20190103\Models\TopologyInfo.cs" />
     <Compile Include="V20190103\Models\UpdateInstanceSettings.cs" />
     <Compile Include="V20190103\Models\UserInfoForUserManager.cs" />
+    <Compile Include="V20190103\Models\UserManagerFilter.cs" />
+    <Compile Include="V20190103\Models\UserManagerUserBriefInfo.cs" />
     <Compile Include="V20190103\Models\VPCSettings.cs" />
   </ItemGroup>
 </Project>

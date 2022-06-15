@@ -21,14 +21,14 @@ namespace TencentCloud.Live.V20180801.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DropLiveStreamResponse : AbstractModel
+    public class FlvSpecialParam : AbstractModel
     {
         
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Whether to enable upload while recording. This parameter is only valid for FLV recording.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("UploadInRecording")]
+        public bool? UploadInRecording{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "UploadInRecording", this.UploadInRecording);
         }
     }
 }

@@ -74,7 +74,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? IsDelayLive{ get; set; }
 
         /// <summary>
-        /// Custom HLS recording parameter
+        /// A special parameter for HLS recording.
         /// </summary>
         [JsonProperty("HlsSpecialParam")]
         public HlsSpecialParam HlsSpecialParam{ get; set; }
@@ -91,6 +91,13 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         [JsonProperty("RemoveWatermark")]
         public bool? RemoveWatermark{ get; set; }
+
+        /// <summary>
+        /// A special parameter for FLV recording.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("FlvSpecialParam")]
+        public FlvSpecialParam FlvSpecialParam{ get; set; }
 
 
         /// <summary>
@@ -109,6 +116,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
             this.SetParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
             this.SetParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
+            this.SetParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
         }
     }
 }

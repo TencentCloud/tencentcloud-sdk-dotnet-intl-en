@@ -15,15 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Eb.V20210416.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckRuleResponse : AbstractModel
+    public class DescribeDBSecurityGroupsResponse : AbstractModel
     {
         
+        /// <summary>
+        /// Security group details
+        /// </summary>
+        [JsonProperty("Groups")]
+        public SecurityGroup[] Groups{ get; set; }
+
+        /// <summary>
+        /// Instance VIP
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VIP")]
+        public string VIP{ get; set; }
+
+        /// <summary>
+        /// Instance Port
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VPort")]
+        public string VPort{ get; set; }
+
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -36,6 +56,9 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
+            this.SetParamSimple(map, prefix + "VIP", this.VIP);
+            this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

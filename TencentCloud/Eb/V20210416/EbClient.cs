@@ -53,46 +53,6 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// This API is used to check a rule.
-        /// </summary>
-        /// <param name="req"><see cref="CheckRuleRequest"/></param>
-        /// <returns><see cref="CheckRuleResponse"/></returns>
-        public async Task<CheckRuleResponse> CheckRule(CheckRuleRequest req)
-        {
-             JsonResponseModel<CheckRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CheckRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to check a rule.
-        /// </summary>
-        /// <param name="req"><see cref="CheckRuleRequest"/></param>
-        /// <returns><see cref="CheckRuleResponse"/></returns>
-        public CheckRuleResponse CheckRuleSync(CheckRuleRequest req)
-        {
-             JsonResponseModel<CheckRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CheckRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to test rules and data on the ETL configuration page.
         /// </summary>
         /// <param name="req"><see cref="CheckTransformationRequest"/></param>
@@ -124,86 +84,6 @@ namespace TencentCloud.Eb.V20210416
              {
                  var strResp = this.InternalRequestSync(req, "CheckTransformation");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckTransformationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create an event connector.
-        /// </summary>
-        /// <param name="req"><see cref="CreateConnectionRequest"/></param>
-        /// <returns><see cref="CreateConnectionResponse"/></returns>
-        public async Task<CreateConnectionResponse> CreateConnection(CreateConnectionRequest req)
-        {
-             JsonResponseModel<CreateConnectionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateConnection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConnectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create an event connector.
-        /// </summary>
-        /// <param name="req"><see cref="CreateConnectionRequest"/></param>
-        /// <returns><see cref="CreateConnectionResponse"/></returns>
-        public CreateConnectionResponse CreateConnectionSync(CreateConnectionRequest req)
-        {
-             JsonResponseModel<CreateConnectionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateConnection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConnectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create an event bus.
-        /// </summary>
-        /// <param name="req"><see cref="CreateEventBusRequest"/></param>
-        /// <returns><see cref="CreateEventBusResponse"/></returns>
-        public async Task<CreateEventBusResponse> CreateEventBus(CreateEventBusRequest req)
-        {
-             JsonResponseModel<CreateEventBusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateEventBus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEventBusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create an event bus.
-        /// </summary>
-        /// <param name="req"><see cref="CreateEventBusRequest"/></param>
-        /// <returns><see cref="CreateEventBusResponse"/></returns>
-        public CreateEventBusResponse CreateEventBusSync(CreateEventBusRequest req)
-        {
-             JsonResponseModel<CreateEventBusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateEventBus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEventBusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -533,46 +413,6 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// This API is used to get the details of an event bus.
-        /// </summary>
-        /// <param name="req"><see cref="GetEventBusRequest"/></param>
-        /// <returns><see cref="GetEventBusResponse"/></returns>
-        public async Task<GetEventBusResponse> GetEventBus(GetEventBusRequest req)
-        {
-             JsonResponseModel<GetEventBusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetEventBus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetEventBusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the details of an event bus.
-        /// </summary>
-        /// <param name="req"><see cref="GetEventBusRequest"/></param>
-        /// <returns><see cref="GetEventBusResponse"/></returns>
-        public GetEventBusResponse GetEventBusSync(GetEventBusRequest req)
-        {
-             JsonResponseModel<GetEventBusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetEventBus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetEventBusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to get the details of an event rule.
         /// </summary>
         /// <param name="req"><see cref="GetRuleRequest"/></param>
@@ -844,46 +684,6 @@ namespace TencentCloud.Eb.V20210416
              {
                  var strResp = this.InternalRequestSync(req, "UpdateConnection");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateConnectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to update an event bus.
-        /// </summary>
-        /// <param name="req"><see cref="UpdateEventBusRequest"/></param>
-        /// <returns><see cref="UpdateEventBusResponse"/></returns>
-        public async Task<UpdateEventBusResponse> UpdateEventBus(UpdateEventBusRequest req)
-        {
-             JsonResponseModel<UpdateEventBusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateEventBus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEventBusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to update an event bus.
-        /// </summary>
-        /// <param name="req"><see cref="UpdateEventBusRequest"/></param>
-        /// <returns><see cref="UpdateEventBusResponse"/></returns>
-        public UpdateEventBusResponse UpdateEventBusSync(UpdateEventBusRequest req)
-        {
-             JsonResponseModel<UpdateEventBusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateEventBus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEventBusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -577,6 +577,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to query the security group information of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public async Task<DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security group information of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroupsSync(DescribeDBSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of slow query logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowLogsRequest"/></param>
@@ -1010,6 +1050,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query TDSQL order information. You can pass in an order ID to query the TDSQL instance associated with the order and the corresponding task process ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
+        /// <returns><see cref="DescribeOrdersResponse"/></returns>
+        public async Task<DescribeOrdersResponse> DescribeOrders(DescribeOrdersRequest req)
+        {
+             JsonResponseModel<DescribeOrdersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrders");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query TDSQL order information. You can pass in an order ID to query the TDSQL instance associated with the order and the corresponding task process ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
+        /// <returns><see cref="DescribeOrdersResponse"/></returns>
+        public DescribeOrdersResponse DescribeOrdersSync(DescribeOrdersRequest req)
+        {
+             JsonResponseModel<DescribeOrdersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrders");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,6 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
+        /// Total number
+        /// </summary>
+        [JsonProperty("TotalCnt")]
+        public long? TotalCnt{ get; set; }
+
+        /// <summary>
+        /// User information list
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("UserManagerUserList")]
+        public UserManagerUserBriefInfo[] UserManagerUserList{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +49,8 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
+            this.SetParamArrayObj(map, prefix + "UserManagerUserList.", this.UserManagerUserList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

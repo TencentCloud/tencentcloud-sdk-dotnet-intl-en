@@ -25,6 +25,20 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
+        /// The user list that is successfully added
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SuccessUserList")]
+        public string[] SuccessUserList{ get; set; }
+
+        /// <summary>
+        /// The user list that is not successfully added
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("FailedUserList")]
+        public string[] FailedUserList{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +50,8 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "SuccessUserList.", this.SuccessUserList);
+            this.SetParamArraySimple(map, prefix + "FailedUserList.", this.FailedUserList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

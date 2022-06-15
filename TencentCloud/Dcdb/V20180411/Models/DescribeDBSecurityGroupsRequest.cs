@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BillAreaInfo : AbstractModel
+    public class DescribeDBSecurityGroupsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Region name
+        /// Database engine name. Valid value: `dcdb`.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
 
         /// <summary>
-        /// Detailed country information
+        /// Instance ID
         /// </summary>
-        [JsonProperty("Countrys")]
-        public BillCountryInfo[] Countrys{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArrayObj(map, prefix + "Countrys.", this.Countrys);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

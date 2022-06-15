@@ -73,6 +73,7 @@
     <Compile Include="V20180411\Models\DatabaseTable.cs" />
     <Compile Include="V20180411\Models\DatabaseView.cs" />
     <Compile Include="V20180411\Models\DcnDetailItem.cs" />
+    <Compile Include="V20180411\Models\Deal.cs" />
     <Compile Include="V20180411\Models\DeleteAccountRequest.cs" />
     <Compile Include="V20180411\Models\DeleteAccountResponse.cs" />
     <Compile Include="V20180411\Models\DescribeAccountPrivilegesRequest.cs" />
@@ -83,6 +84,8 @@
     <Compile Include="V20180411\Models\DescribeDBLogFilesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDBParametersRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDBParametersResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDBSyncModeRequest.cs" />
@@ -105,6 +108,8 @@
     <Compile Include="V20180411\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="V20180411\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20180411\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeOrdersRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\DestroyDCDBInstanceRequest.cs" />

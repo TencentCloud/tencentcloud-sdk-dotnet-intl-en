@@ -15,32 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DropLiveStreamRequest : AbstractModel
+    public class UserManagerFilter : AbstractModel
     {
         
         /// <summary>
-        /// Stream name.
+        /// Username
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("StreamName")]
-        public string StreamName{ get; set; }
-
-        /// <summary>
-        /// Your acceleration domain name.
-        /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
-
-        /// <summary>
-        /// Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-        /// </summary>
-        [JsonProperty("AppName")]
-        public string AppName{ get; set; }
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
 
 
         /// <summary>
@@ -48,9 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
         }
     }
 }

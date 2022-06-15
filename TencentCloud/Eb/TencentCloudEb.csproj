@@ -46,8 +46,6 @@
   <ItemGroup>
     <Compile Include="V20210416\EbClient.cs" />
     <Compile Include="V20210416\Models\APIGWParams.cs" />
-    <Compile Include="V20210416\Models\CheckRuleRequest.cs" />
-    <Compile Include="V20210416\Models\CheckRuleResponse.cs" />
     <Compile Include="V20210416\Models\CheckTransformationRequest.cs" />
     <Compile Include="V20210416\Models\CheckTransformationResponse.cs" />
     <Compile Include="V20210416\Models\CkafkaDeliveryParams.cs" />
@@ -55,10 +53,6 @@
     <Compile Include="V20210416\Models\CkafkaTargetParams.cs" />
     <Compile Include="V20210416\Models\Connection.cs" />
     <Compile Include="V20210416\Models\ConnectionDescription.cs" />
-    <Compile Include="V20210416\Models\CreateConnectionRequest.cs" />
-    <Compile Include="V20210416\Models\CreateConnectionResponse.cs" />
-    <Compile Include="V20210416\Models\CreateEventBusRequest.cs" />
-    <Compile Include="V20210416\Models\CreateEventBusResponse.cs" />
     <Compile Include="V20210416\Models\CreateRuleRequest.cs" />
     <Compile Include="V20210416\Models\CreateRuleResponse.cs" />
     <Compile Include="V20210416\Models\CreateTargetRequest.cs" />
@@ -80,8 +74,6 @@
     <Compile Include="V20210416\Models\EventBus.cs" />
     <Compile Include="V20210416\Models\Extraction.cs" />
     <Compile Include="V20210416\Models\Filter.cs" />
-    <Compile Include="V20210416\Models\GetEventBusRequest.cs" />
-    <Compile Include="V20210416\Models\GetEventBusResponse.cs" />
     <Compile Include="V20210416\Models\GetRuleRequest.cs" />
     <Compile Include="V20210416\Models\GetRuleResponse.cs" />
     <Compile Include="V20210416\Models\GetTransformationRequest.cs" />
@@ -106,8 +98,6 @@
     <Compile Include="V20210416\Models\Transformation.cs" />
     <Compile Include="V20210416\Models\UpdateConnectionRequest.cs" />
     <Compile Include="V20210416\Models\UpdateConnectionResponse.cs" />
-    <Compile Include="V20210416\Models\UpdateEventBusRequest.cs" />
-    <Compile Include="V20210416\Models\UpdateEventBusResponse.cs" />
     <Compile Include="V20210416\Models\UpdateRuleRequest.cs" />
     <Compile Include="V20210416\Models\UpdateRuleResponse.cs" />
     <Compile Include="V20210416\Models\UpdateTargetRequest.cs" />

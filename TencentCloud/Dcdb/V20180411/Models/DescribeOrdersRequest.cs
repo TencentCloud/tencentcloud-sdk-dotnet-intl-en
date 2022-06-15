@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BillCountryInfo : AbstractModel
+    public class DescribeOrdersRequest : AbstractModel
     {
         
         /// <summary>
-        /// Country
+        /// List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Detailed bandwidth information
-        /// </summary>
-        [JsonProperty("BandInfoList")]
-        public BillDataInfo[] BandInfoList{ get; set; }
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArrayObj(map, prefix + "BandInfoList.", this.BandInfoList);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         }
     }
 }

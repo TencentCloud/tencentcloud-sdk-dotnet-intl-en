@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Eb.V20210416.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateEventBusRequest : AbstractModel
+    public class DescribeOrdersResponse : AbstractModel
     {
         
         /// <summary>
-        /// Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+        /// Returned number of orders
         /// </summary>
-        [JsonProperty("EventBusName")]
-        public string EventBusName{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Event bus description, which can contain up to 200 characters of any type
+        /// Order information list
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Deals")]
+        public Deal[] Deals{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Deals.", this.Deals);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

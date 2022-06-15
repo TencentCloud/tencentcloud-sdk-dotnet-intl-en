@@ -1415,86 +1415,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query the downstream information of all streams at a specified point in time (at a 1-minute granularity).
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAllStreamPlayInfoListRequest"/></param>
-        /// <returns><see cref="DescribeAllStreamPlayInfoListResponse"/></returns>
-        public async Task<DescribeAllStreamPlayInfoListResponse> DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req)
-        {
-             JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAllStreamPlayInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the downstream information of all streams at a specified point in time (at a 1-minute granularity).
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAllStreamPlayInfoListRequest"/></param>
-        /// <returns><see cref="DescribeAllStreamPlayInfoListResponse"/></returns>
-        public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoListSync(DescribeAllStreamPlayInfoListRequest req)
-        {
-             JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAllStreamPlayInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the billable LVB bandwidth and traffic data outside Chinese mainland.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAreaBillBandwidthAndFluxListRequest"/></param>
-        /// <returns><see cref="DescribeAreaBillBandwidthAndFluxListResponse"/></returns>
-        public async Task<DescribeAreaBillBandwidthAndFluxListResponse> DescribeAreaBillBandwidthAndFluxList(DescribeAreaBillBandwidthAndFluxListRequest req)
-        {
-             JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAreaBillBandwidthAndFluxList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the billable LVB bandwidth and traffic data outside Chinese mainland.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAreaBillBandwidthAndFluxListRequest"/></param>
-        /// <returns><see cref="DescribeAreaBillBandwidthAndFluxListResponse"/></returns>
-        public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxListSync(DescribeAreaBillBandwidthAndFluxListRequest req)
-        {
-             JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAreaBillBandwidthAndFluxList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
         /// </summary>
         /// <param name="req"><see cref="DescribeConcurrentRecordStreamNumRequest"/></param>
@@ -1968,46 +1888,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLiveDomainCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the real-time downstream playback data at the domain name level. As it takes certain time to process data, the API queries quasi-real-time data generated 4 minutes ago by default.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLiveDomainPlayInfoListRequest"/></param>
-        /// <returns><see cref="DescribeLiveDomainPlayInfoListResponse"/></returns>
-        public async Task<DescribeLiveDomainPlayInfoListResponse> DescribeLiveDomainPlayInfoList(DescribeLiveDomainPlayInfoListRequest req)
-        {
-             JsonResponseModel<DescribeLiveDomainPlayInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainPlayInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainPlayInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the real-time downstream playback data at the domain name level. As it takes certain time to process data, the API queries quasi-real-time data generated 4 minutes ago by default.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLiveDomainPlayInfoListRequest"/></param>
-        /// <returns><see cref="DescribeLiveDomainPlayInfoListResponse"/></returns>
-        public DescribeLiveDomainPlayInfoListResponse DescribeLiveDomainPlayInfoListSync(DescribeLiveDomainPlayInfoListRequest req)
-        {
-             JsonResponseModel<DescribeLiveDomainPlayInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeLiveDomainPlayInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainPlayInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3107,46 +2987,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProIspPlaySumInfoListRequest"/></param>
-        /// <returns><see cref="DescribeProIspPlaySumInfoListResponse"/></returns>
-        public async Task<DescribeProIspPlaySumInfoListResponse> DescribeProIspPlaySumInfoList(DescribeProIspPlaySumInfoListRequest req)
-        {
-             JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeProIspPlaySumInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProIspPlaySumInfoListRequest"/></param>
-        /// <returns><see cref="DescribeProIspPlaySumInfoListResponse"/></returns>
-        public DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoListSync(DescribeProIspPlaySumInfoListRequest req)
-        {
-             JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeProIspPlaySumInfoList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the downstream playback data of a specified ISP in a specified district, including bandwidth, traffic, number of requests, and number of concurrent connections.
         /// </summary>
         /// <param name="req"><see cref="DescribeProvinceIspPlayInfoListRequest"/></param>
@@ -3420,46 +3260,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVisitTopSumInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVisitTopSumInfoListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to disconnect the push connection, which can be resumed.
-        /// </summary>
-        /// <param name="req"><see cref="DropLiveStreamRequest"/></param>
-        /// <returns><see cref="DropLiveStreamResponse"/></returns>
-        public async Task<DropLiveStreamResponse> DropLiveStream(DropLiveStreamRequest req)
-        {
-             JsonResponseModel<DropLiveStreamResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DropLiveStream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropLiveStreamResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to disconnect the push connection, which can be resumed.
-        /// </summary>
-        /// <param name="req"><see cref="DropLiveStreamRequest"/></param>
-        /// <returns><see cref="DropLiveStreamResponse"/></returns>
-        public DropLiveStreamResponse DropLiveStreamSync(DropLiveStreamRequest req)
-        {
-             JsonResponseModel<DropLiveStreamResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DropLiveStream");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropLiveStreamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

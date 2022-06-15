@@ -25,6 +25,30 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
+        /// Cluster instance ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Page number
+        /// </summary>
+        [JsonProperty("PageNo")]
+        public long? PageNo{ get; set; }
+
+        /// <summary>
+        /// Page size
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// User list query filter
+        /// </summary>
+        [JsonProperty("UserManagerFilter")]
+        public UserManagerFilter UserManagerFilter{ get; set; }
+
+        /// <summary>
         /// Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
         /// </summary>
         [JsonProperty("NeedKeytabInfo")]
@@ -36,6 +60,10 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamObj(map, prefix + "UserManagerFilter.", this.UserManagerFilter);
             this.SetParamSimple(map, prefix + "NeedKeytabInfo", this.NeedKeytabInfo);
         }
     }
