@@ -21,21 +21,34 @@ namespace TencentCloud.Teo.V20220106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FailReason : AbstractModel
+    public class CreatePrefetchTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// Failure reason
+        /// ID of the site
         /// </summary>
-        [JsonProperty("Reason")]
-        public string Reason{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of resources failed to be processed. 
-        ///  
+        /// List of resources to be pre-warmed, for example:
+        /// http://www.example.com/example.txt
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to encode the URL
+        /// Note that if it’s enabled, the purging is based on the converted URLs.
+        /// </summary>
+        [JsonProperty("EncodeUrl")]
+        public bool? EncodeUrl{ get; set; }
+
+        /// <summary>
+        /// HTTP header information
+        /// </summary>
+        [JsonProperty("Headers")]
+        public Header[] Headers{ get; set; }
 
 
         /// <summary>
@@ -43,8 +56,10 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
+            this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
         }
     }
 }

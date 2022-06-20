@@ -72,6 +72,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// The list of tags bound to the key.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIds.", this.AssociatedInstanceIds);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

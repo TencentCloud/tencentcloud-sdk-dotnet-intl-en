@@ -86,6 +86,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceAdvancedSettingsOverrides")]
         public InstanceAdvancedSettings[] InstanceAdvancedSettingsOverrides{ get; set; }
 
+        /// <summary>
+        /// Node image (it is required when creating a node)
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "NodePool.", this.NodePool);
             this.SetParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
             this.SetParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
         }
     }
 }

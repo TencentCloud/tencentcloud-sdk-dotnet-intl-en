@@ -41,7 +41,15 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// The target resource to be purged. One target per line.
+        /// Target resource to be purged, which depends on the `Type` field.
+        /// 1. When `Type = purge_host`:
+        /// Hostnames are purged, such as www.example.com and foo.bar.example.com.
+        /// 2. When `Type = purge_prefix`:
+        /// Prefixes are purged, such as http://www.example.com/example.
+        /// 3. When `Type = purge_url`:
+        /// URLs are purged, such as https://www.example.com/example.jpg.
+        /// 4. When `Type = purge_all`: All types of resources are purged.
+        /// `Targets` is not a required field.
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }

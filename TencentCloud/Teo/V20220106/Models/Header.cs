@@ -21,21 +21,20 @@ namespace TencentCloud.Teo.V20220106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FailReason : AbstractModel
+    public class Header : AbstractModel
     {
         
         /// <summary>
-        /// Failure reason
+        /// HTTP header name
         /// </summary>
-        [JsonProperty("Reason")]
-        public string Reason{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// List of resources failed to be processed. 
-        ///  
+        /// HTTP header value
         /// </summary>
-        [JsonProperty("Targets")]
-        public string[] Targets{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Reason", this.Reason);
-            this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

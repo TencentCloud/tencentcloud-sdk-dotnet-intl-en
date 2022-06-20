@@ -87,6 +87,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("PreStartUserScript")]
         public string PreStartUserScript{ get; set; }
 
+        /// <summary>
+        /// Node taint
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Taints")]
+        public Taint[] Taints{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
             this.SetParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
             this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
+            this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
         }
     }
 }

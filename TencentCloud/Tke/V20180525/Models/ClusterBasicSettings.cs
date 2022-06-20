@@ -73,7 +73,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
-        /// Whether to enable the node’s default security group (default: `No`, Aphla feature)
+        /// Whether to enable the node’s default security group (default: `No`, Alpha feature)
         /// </summary>
         [JsonProperty("NeedWorkSecurityGroup")]
         public bool? NeedWorkSecurityGroup{ get; set; }

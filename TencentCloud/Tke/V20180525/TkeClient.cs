@@ -293,46 +293,6 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// Create a scaling group for an existing cluster
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterAsGroupRequest"/></param>
-        /// <returns><see cref="CreateClusterAsGroupResponse"/></returns>
-        public async Task<CreateClusterAsGroupResponse> CreateClusterAsGroup(CreateClusterAsGroupRequest req)
-        {
-             JsonResponseModel<CreateClusterAsGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateClusterAsGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterAsGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// Create a scaling group for an existing cluster
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterAsGroupRequest"/></param>
-        /// <returns><see cref="CreateClusterAsGroupResponse"/></returns>
-        public CreateClusterAsGroupResponse CreateClusterAsGroupSync(CreateClusterAsGroupRequest req)
-        {
-             JsonResponseModel<CreateClusterAsGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateClusterAsGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterAsGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// Create a cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointRequest"/></param>

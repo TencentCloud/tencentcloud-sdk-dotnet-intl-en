@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Teo.V20220106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateClusterAsGroupResponse : AbstractModel
+    public class CreatePrefetchTaskResponse : AbstractModel
     {
         
         /// <summary>
-        /// Launch configuration ID
+        /// Task ID
         /// </summary>
-        [JsonProperty("LaunchConfigurationId")]
-        public string LaunchConfigurationId{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
 
         /// <summary>
-        /// Scaling group ID
+        /// List of failed tasks
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("AutoScalingGroupId")]
-        public string AutoScalingGroupId{ get; set; }
+        [JsonProperty("FailedList")]
+        public FailReason[] FailedList{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +49,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
-            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamArrayObj(map, prefix + "FailedList.", this.FailedList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

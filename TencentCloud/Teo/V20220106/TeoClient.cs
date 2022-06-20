@@ -53,6 +53,46 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// This API is used to create a pre-warming task.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
+        /// <returns><see cref="CreatePrefetchTaskResponse"/></returns>
+        public async Task<CreatePrefetchTaskResponse> CreatePrefetchTask(CreatePrefetchTaskRequest req)
+        {
+             JsonResponseModel<CreatePrefetchTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrefetchTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrefetchTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a pre-warming task.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
+        /// <returns><see cref="CreatePrefetchTaskResponse"/></returns>
+        public CreatePrefetchTaskResponse CreatePrefetchTaskSync(CreatePrefetchTaskRequest req)
+        {
+             JsonResponseModel<CreatePrefetchTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrefetchTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrefetchTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a cache purging task.
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "CreatePurgeTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePurgeTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the pre-warming task status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
+        /// <returns><see cref="DescribePrefetchTasksResponse"/></returns>
+        public async Task<DescribePrefetchTasksResponse> DescribePrefetchTasks(DescribePrefetchTasksRequest req)
+        {
+             JsonResponseModel<DescribePrefetchTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrefetchTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrefetchTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the pre-warming task status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
+        /// <returns><see cref="DescribePrefetchTasksResponse"/></returns>
+        public DescribePrefetchTasksResponse DescribePrefetchTasksSync(DescribePrefetchTasksRequest req)
+        {
+             JsonResponseModel<DescribePrefetchTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrefetchTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrefetchTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -164,6 +244,46 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "DescribeZones");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query layer-7 logs.
+        /// </summary>
+        /// <param name="req"><see cref="DownloadL7LogsRequest"/></param>
+        /// <returns><see cref="DownloadL7LogsResponse"/></returns>
+        public async Task<DownloadL7LogsResponse> DownloadL7Logs(DownloadL7LogsRequest req)
+        {
+             JsonResponseModel<DownloadL7LogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadL7Logs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadL7LogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query layer-7 logs.
+        /// </summary>
+        /// <param name="req"><see cref="DownloadL7LogsRequest"/></param>
+        /// <returns><see cref="DownloadL7LogsResponse"/></returns>
+        public DownloadL7LogsResponse DownloadL7LogsSync(DownloadL7LogsRequest req)
+        {
+             JsonResponseModel<DownloadL7LogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadL7Logs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadL7LogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

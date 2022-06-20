@@ -45,13 +45,21 @@
 
   <ItemGroup>
     <Compile Include="V20220106\TeoClient.cs" />
+    <Compile Include="V20220106\Models\CreatePrefetchTaskRequest.cs" />
+    <Compile Include="V20220106\Models\CreatePrefetchTaskResponse.cs" />
     <Compile Include="V20220106\Models\CreatePurgeTaskRequest.cs" />
     <Compile Include="V20220106\Models\CreatePurgeTaskResponse.cs" />
+    <Compile Include="V20220106\Models\DescribePrefetchTasksRequest.cs" />
+    <Compile Include="V20220106\Models\DescribePrefetchTasksResponse.cs" />
     <Compile Include="V20220106\Models\DescribePurgeTasksRequest.cs" />
     <Compile Include="V20220106\Models\DescribePurgeTasksResponse.cs" />
     <Compile Include="V20220106\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20220106\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20220106\Models\DownloadL7LogsRequest.cs" />
+    <Compile Include="V20220106\Models\DownloadL7LogsResponse.cs" />
     <Compile Include="V20220106\Models\FailReason.cs" />
+    <Compile Include="V20220106\Models\Header.cs" />
+    <Compile Include="V20220106\Models\L7OfflineLog.cs" />
     <Compile Include="V20220106\Models\Task.cs" />
     <Compile Include="V20220106\Models\Zone.cs" />
     <Compile Include="V20220106\Models\ZoneFilter.cs" />

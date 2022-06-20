@@ -21,21 +21,26 @@ namespace TencentCloud.Teo.V20220106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FailReason : AbstractModel
+    public class DescribePrefetchTasksResponse : AbstractModel
     {
         
         /// <summary>
-        /// Failure reason
+        /// Total entries that match the specified query condition
         /// </summary>
-        [JsonProperty("Reason")]
-        public string Reason{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of resources failed to be processed. 
-        ///  
+        /// List of tasks returned
         /// </summary>
-        [JsonProperty("Targets")]
-        public string[] Targets{ get; set; }
+        [JsonProperty("Tasks")]
+        public Task[] Tasks{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +48,9 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Reason", this.Reason);
-            this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

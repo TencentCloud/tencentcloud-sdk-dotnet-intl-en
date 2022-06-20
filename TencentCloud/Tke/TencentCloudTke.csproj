@@ -72,8 +72,6 @@
     <Compile Include="V20180525\Models\ClusterStatus.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CommonName.cs" />
-    <Compile Include="V20180525\Models\CreateClusterAsGroupRequest.cs" />
-    <Compile Include="V20180525\Models\CreateClusterAsGroupResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointVipRequest.cs" />
