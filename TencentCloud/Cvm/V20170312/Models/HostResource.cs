@@ -37,34 +37,46 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? CpuAvailable{ get; set; }
 
         /// <summary>
-        /// Total memory of the CDH instance; unit: GiB
+        /// Total memory size of the CDH instance (unit: GiB)
         /// </summary>
         [JsonProperty("MemTotal")]
         public float? MemTotal{ get; set; }
 
         /// <summary>
-        /// Available memory of the CDH instance; unit: GiB
+        /// Available memory size of the CDH instance (unit: GiB)
         /// </summary>
         [JsonProperty("MemAvailable")]
         public float? MemAvailable{ get; set; }
 
         /// <summary>
-        /// Total disk size of the CDH instance; unit: GiB
+        /// Total disk size of the CDH instance (unit: GiB)
         /// </summary>
         [JsonProperty("DiskTotal")]
         public ulong? DiskTotal{ get; set; }
 
         /// <summary>
-        /// Avilable disk size of the CDH instance; unit: GiB
+        /// Available disk size of the CDH instance (unit: GiB)
         /// </summary>
         [JsonProperty("DiskAvailable")]
         public ulong? DiskAvailable{ get; set; }
 
         /// <summary>
-        /// CDH instance disk type.
+        /// Disk type of the CDH instance
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
+
+        /// <summary>
+        /// Total number of GPU cards in the CDH instance
+        /// </summary>
+        [JsonProperty("GpuTotal")]
+        public ulong? GpuTotal{ get; set; }
+
+        /// <summary>
+        /// Number of available GPU cards in the CDH instance
+        /// </summary>
+        [JsonProperty("GpuAvailable")]
+        public ulong? GpuAvailable{ get; set; }
 
 
         /// <summary>
@@ -79,6 +91,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskTotal", this.DiskTotal);
             this.SetParamSimple(map, prefix + "DiskAvailable", this.DiskAvailable);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "GpuTotal", this.GpuTotal);
+            this.SetParamSimple(map, prefix + "GpuAvailable", this.GpuAvailable);
         }
     }
 }

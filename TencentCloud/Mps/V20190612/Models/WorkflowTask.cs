@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video processing task ID.
+        /// The media processing task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -51,8 +51,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Information of a target file of video processing.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The information of the file processed.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
@@ -65,7 +65,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// Execution status and result of a video processing task.
+        /// The execution status and result of the media processing task.
         /// </summary>
         [JsonProperty("MediaProcessResultSet")]
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }

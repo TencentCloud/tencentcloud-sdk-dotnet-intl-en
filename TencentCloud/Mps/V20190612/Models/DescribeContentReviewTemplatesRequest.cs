@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
+        /// The IDs of the content moderation templates to query. Array length limit: 50.
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

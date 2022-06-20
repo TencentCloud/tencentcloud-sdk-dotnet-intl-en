@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+        /// The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

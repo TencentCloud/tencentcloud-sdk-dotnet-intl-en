@@ -25,28 +25,28 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+        /// The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
         /// </summary>
         [JsonProperty("CmqModel")]
         public string CmqModel{ get; set; }
 
         /// <summary>
-        /// CMQ region, such as `sh` and `bj`.
+        /// The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
         /// </summary>
         [JsonProperty("CmqRegion")]
         public string CmqRegion{ get; set; }
 
         /// <summary>
-        /// This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-        /// </summary>
-        [JsonProperty("QueueName")]
-        public string QueueName{ get; set; }
-
-        /// <summary>
-        /// This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+        /// The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
+
+        /// <summary>
+        /// The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
 
         /// <summary>
         /// Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
@@ -55,7 +55,11 @@ namespace TencentCloud.Mps.V20190612.Models
         public string NotifyMode{ get; set; }
 
         /// <summary>
-        /// Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+        /// The notification type. Valid values:
+        /// <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+        /// <li>TDMQ-CMQ: Message queue</li>
+        /// <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+        /// Default value: `TDMQ-CMQ`.
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
@@ -74,8 +78,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "CmqModel", this.CmqModel);
             this.SetParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
-            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "NotifyMode", this.NotifyMode);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);

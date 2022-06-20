@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Name of an intelligent content recognition template. Length limit: 64 characters
+        /// The name of the content moderation template. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of an intelligent content recognition template. Length limit: 256 characters
+        /// The template description. Length limit: 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for custom intelligent content recognition tasks
+        /// Custom content moderation parameters.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }

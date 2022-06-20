@@ -75,16 +75,17 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Connection status. Valid values:
-        /// `RUNNING`: running
-        /// `CREATING`: creating
-        /// `DESTROYING`: terminating
-        /// `OPENING`: enabling
-        /// `CLOSING`: disabling
-        /// `CLOSED`: disabled
-        /// `ADJUSTING`: adjusting configuration
-        /// `ISOLATING`: isolating
-        /// `ISOLATED`: isolated
-        /// `CLONING`: copying
+        /// `RUNNING`: Running
+        /// `CREATING`: Creating
+        /// `DESTROYING`: Terminating
+        /// `OPENING`: Enabling
+        /// `CLOSING`: Disabling
+        /// `CLOSED`: Disabled
+        /// `ADJUSTING`: Adjusting configuration
+        /// `ISOLATING`: Isolating
+        /// `ISOLATED`: Isolated
+        /// `CLONING`: Copying
+        /// `RECOVERING`: Maintaining
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -217,8 +218,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }

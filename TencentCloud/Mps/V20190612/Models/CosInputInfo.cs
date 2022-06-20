@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
+        /// The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
+        /// The region of the COS bucket, such as `ap-chongqing`.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+        /// The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
         /// </summary>
         [JsonProperty("Object")]
         public string Object{ get; set; }

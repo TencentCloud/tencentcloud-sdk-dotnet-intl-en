@@ -244,6 +244,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("GPUInfo")]
         public GPUInfo GPUInfo{ get; set; }
 
+        /// <summary>
+        /// Instance OS license type. Default value: `TencentCloud`
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        public string LicenseType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -285,6 +291,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
             this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
             this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
         }
     }
 }

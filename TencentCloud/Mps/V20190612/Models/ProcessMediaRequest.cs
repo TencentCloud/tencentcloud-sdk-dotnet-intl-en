@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Input information of a file for video processing.
+        /// The information of the file to process.
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+        /// The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
+        /// The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
 
         /// <summary>
-        /// Parameter of a video processing task.
+        /// The media processing parameters to use.
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }

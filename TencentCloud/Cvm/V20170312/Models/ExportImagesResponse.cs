@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteContentReviewTemplateRequest : AbstractModel
+    public class ExportImagesResponse : AbstractModel
     {
         
         /// <summary>
-        /// The unique ID of the content moderation template.
+        /// ID of the image export task
         /// </summary>
-        [JsonProperty("Definition")]
-        public long? Definition{ get; set; }
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

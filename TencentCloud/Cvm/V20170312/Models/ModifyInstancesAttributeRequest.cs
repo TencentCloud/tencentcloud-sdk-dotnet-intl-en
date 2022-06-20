@@ -44,10 +44,24 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] SecurityGroups{ get; set; }
 
         /// <summary>
+        /// The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+        /// </summary>
+        [JsonProperty("CamRoleName")]
+        public string CamRoleName{ get; set; }
+
+        /// <summary>
         /// Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
         /// </summary>
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
+
+        /// <summary>
+        /// The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+        /// For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+        /// When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+        /// </summary>
+        [JsonProperty("CamRoleType")]
+        public string CamRoleType{ get; set; }
 
 
         /// <summary>
@@ -58,7 +72,9 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
         }
     }
 }

@@ -37,19 +37,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public WorkflowTrigger Trigger{ get; set; }
 
         /// <summary>
-        /// Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+        /// The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
+        /// The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
 
         /// <summary>
-        /// Parameter of a video processing task.
+        /// The media processing parameters to use.
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }

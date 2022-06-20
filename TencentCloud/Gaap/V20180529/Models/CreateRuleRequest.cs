@@ -74,7 +74,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+        /// The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
         /// </summary>
         [JsonProperty("ForwardHost")]
         public string ForwardHost{ get; set; }

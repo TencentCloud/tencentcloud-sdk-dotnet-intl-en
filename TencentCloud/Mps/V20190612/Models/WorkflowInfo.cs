@@ -51,15 +51,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public WorkflowTrigger Trigger{ get; set; }
 
         /// <summary>
-        /// Target storage of a video processing output file.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The location to save the media processing output file.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Parameter of a video processing task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The media processing parameters to use.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
@@ -98,7 +98,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? TaskPriority{ get; set; }
 
         /// <summary>
-        /// Target directory of a video processing output file, such as `/movie/201907/`.
+        /// The directory to save the media processing output file, such as `/movie/201907/`.
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }

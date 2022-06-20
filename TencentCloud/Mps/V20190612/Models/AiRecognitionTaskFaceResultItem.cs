@@ -50,6 +50,75 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskFaceSegmentItem[] SegmentSet{ get; set; }
 
+        /// <summary>
+        /// The person’s gender.
+        /// <li>Male</li>
+        /// <li>Female</li>
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Gender")]
+        public string Gender{ get; set; }
+
+        /// <summary>
+        /// The person’s birth date.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Birthday")]
+        public string Birthday{ get; set; }
+
+        /// <summary>
+        /// The person’s job or job title.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Profession")]
+        public string Profession{ get; set; }
+
+        /// <summary>
+        /// The college the person graduated from.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SchoolOfGraduation")]
+        public string SchoolOfGraduation{ get; set; }
+
+        /// <summary>
+        /// The person’s profile.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Abstract")]
+        public string Abstract{ get; set; }
+
+        /// <summary>
+        /// The person’s place of birth.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("PlaceOfBirth")]
+        public string PlaceOfBirth{ get; set; }
+
+        /// <summary>
+        /// Whether the person is a politician or artist.
+        /// <li>Politician</li>
+        /// <li>Artist</li>
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("PersonType")]
+        public string PersonType{ get; set; }
+
+        /// <summary>
+        /// Sensitivity
+        /// <li>Normal</li>
+        /// <li>Sensitive</li>
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// The screenshot URL.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +129,15 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+            this.SetParamSimple(map, prefix + "Gender", this.Gender);
+            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamSimple(map, prefix + "Profession", this.Profession);
+            this.SetParamSimple(map, prefix + "SchoolOfGraduation", this.SchoolOfGraduation);
+            this.SetParamSimple(map, prefix + "Abstract", this.Abstract);
+            this.SetParamSimple(map, prefix + "PlaceOfBirth", this.PlaceOfBirth);
+            this.SetParamSimple(map, prefix + "PersonType", this.PersonType);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

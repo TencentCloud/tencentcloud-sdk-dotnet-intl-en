@@ -31,14 +31,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+        /// The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
         /// </summary>
         [JsonProperty("CosInputInfo")]
         public CosInputInfo CosInputInfo{ get; set; }
 
         /// <summary>
-        /// This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UrlInputInfo")]
         public UrlInputInfo UrlInputInfo{ get; set; }

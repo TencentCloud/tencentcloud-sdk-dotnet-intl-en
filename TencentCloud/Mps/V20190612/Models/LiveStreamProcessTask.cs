@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video processing task ID.
+        /// The media processing task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

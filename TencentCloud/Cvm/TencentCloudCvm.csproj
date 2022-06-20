@@ -118,6 +118,8 @@
     <Compile Include="V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DisasterRecoverGroup.cs" />
     <Compile Include="V20170312\Models\EnhancedService.cs" />
+    <Compile Include="V20170312\Models\ExportImagesRequest.cs" />
+    <Compile Include="V20170312\Models\ExportImagesResponse.cs" />
     <Compile Include="V20170312\Models\Externals.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\GPUInfo.cs" />

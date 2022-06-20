@@ -25,14 +25,14 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Storage location type of a video processing output object. Only COS is supported currently.
+        /// The type of storage location for the media processing output object. Only COS is supported currently.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CosOutputStorage")]
         public CosOutputStorage CosOutputStorage{ get; set; }
