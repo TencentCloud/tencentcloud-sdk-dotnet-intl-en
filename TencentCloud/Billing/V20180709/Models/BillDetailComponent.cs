@@ -140,6 +140,55 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ContractPrice")]
         public string ContractPrice{ get; set; }
 
+        /// <summary>
+        /// The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("RiTimeSpan")]
+        public string RiTimeSpan{ get; set; }
+
+        /// <summary>
+        /// The amount deducted by a reserved instance based on the original component cost.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("OriginalCostWithRI")]
+        public string OriginalCostWithRI{ get; set; }
+
+        /// <summary>
+        /// The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SPDeductionRate")]
+        public string SPDeductionRate{ get; set; }
+
+        /// <summary>
+        /// The savings plan deduction amount.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SPDeduction")]
+        public string SPDeduction{ get; set; }
+
+        /// <summary>
+        /// The amount deducted by a savings plan based on the original component cost.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("OriginalCostWithSP")]
+        public string OriginalCostWithSP{ get; set; }
+
+        /// <summary>
+        /// The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BlendedDiscount")]
+        public string BlendedDiscount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +214,13 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ItemCode", this.ItemCode);
             this.SetParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
             this.SetParamSimple(map, prefix + "ContractPrice", this.ContractPrice);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "RiTimeSpan", this.RiTimeSpan);
+            this.SetParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
+            this.SetParamSimple(map, prefix + "SPDeductionRate", this.SPDeductionRate);
+            this.SetParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+            this.SetParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
+            this.SetParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
         }
     }
 }

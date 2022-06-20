@@ -224,6 +224,38 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
+        /// <summary>
+        /// The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+        /// 
+        /// ri=Standard RI
+        /// 
+        /// svp=Savings Plan
+        /// 
+        /// si=Spot Instances
+        /// 
+        /// rp=Resource Pack
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// The amount deducted by a reserved instance based on the original component cost.
+        /// </summary>
+        [JsonProperty("OriginalCostWithRI")]
+        public string OriginalCostWithRI{ get; set; }
+
+        /// <summary>
+        /// The savings plan deduction amount.
+        /// </summary>
+        [JsonProperty("SPDeduction")]
+        public string SPDeduction{ get; set; }
+
+        /// <summary>
+        /// The amount deducted by a savings plan based on the original component cost.
+        /// </summary>
+        [JsonProperty("OriginalCostWithSP")]
+        public string OriginalCostWithSP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -263,6 +295,10 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
+            this.SetParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+            this.SetParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
         }
     }
 }
