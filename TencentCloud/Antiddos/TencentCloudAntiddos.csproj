@@ -26,12 +26,12 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
 
@@ -52,13 +52,19 @@
     <Compile Include="V20200309\Models\BGPIPInstance.cs" />
     <Compile Include="V20200309\Models\BGPIPInstanceSpecification.cs" />
     <Compile Include="V20200309\Models\BGPIPInstanceUsages.cs" />
+    <Compile Include="V20200309\Models\BGPInstance.cs" />
+    <Compile Include="V20200309\Models\BGPInstanceSpecification.cs" />
+    <Compile Include="V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="V20200309\Models\BlackWhiteIpRelation.cs" />
     <Compile Include="V20200309\Models\BoundIpInfo.cs" />
     <Compile Include="V20200309\Models\CCLevelPolicy.cs" />
     <Compile Include="V20200309\Models\CCPrecisionPlyRecord.cs" />
+    <Compile Include="V20200309\Models\CCPrecisionPolicy.cs" />
     <Compile Include="V20200309\Models\CCReqLimitPolicyRecord.cs" />
     <Compile Include="V20200309\Models\CCThresholdPolicy.cs" />
+    <Compile Include="V20200309\Models\CcBlackWhiteIpPolicy.cs" />
     <Compile Include="V20200309\Models\CcGeoIPBlockConfig.cs" />
+    <Compile Include="V20200309\Models\CcGeoIpPolicyNew.cs" />
     <Compile Include="V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
@@ -132,10 +138,16 @@
     <Compile Include="V20200309\Models\DescribeCCLevelListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCLevelPolicyRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCLevelPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCCPrecisionPlyListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCCPrecisionPlyListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCThresholdListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCThresholdListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCTrendResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCcBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCcGeoIPBlockConfigListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCcGeoIPBlockConfigListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -144,6 +156,8 @@
     <Compile Include="V20200309\Models\DescribeL7RulesBySSLCertIdResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListBGPIPInstancesRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListBGPIPInstancesResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListBGPInstancesRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListBGPInstancesResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListDDoSAIRequest.cs" />
@@ -170,6 +184,7 @@
     <Compile Include="V20200309\Models\DisassociateDDoSEipAddressResponse.cs" />
     <Compile Include="V20200309\Models\EipAddressPackRelation.cs" />
     <Compile Include="V20200309\Models\EipAddressRelation.cs" />
+    <Compile Include="V20200309\Models\EipProductInfo.cs" />
     <Compile Include="V20200309\Models\ForwardListener.cs" />
     <Compile Include="V20200309\Models\IPAlarmThresholdRelation.cs" />
     <Compile Include="V20200309\Models\IPLineInfo.cs" />
