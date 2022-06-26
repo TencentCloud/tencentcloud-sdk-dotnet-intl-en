@@ -15,35 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FullTextInfo : AbstractModel
+    public class DeleteApplicationRequest : AbstractModel
     {
         
         /// <summary>
-        /// Case sensitivity
+        /// Service ID
         /// </summary>
-        [JsonProperty("CaseSensitive")]
-        public bool? CaseSensitive{ get; set; }
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Separator of the full-text index. Each character represents a separator;
-        /// Supports only English punctuation marks and (\n\t\r);
-        /// We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+        /// Environment ID
         /// </summary>
-        [JsonProperty("Tokenizer")]
-        public string Tokenizer{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Whether Chinese characters are contained
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Retain as default
         /// </summary>
-        [JsonProperty("ContainZH")]
-        public bool? ContainZH{ get; set; }
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
+
+        /// <summary>
+        /// Whether to delete this application automatically when there is no running version.
+        /// </summary>
+        [JsonProperty("DeleteApplicationIfNoRunningVersion")]
+        public bool? DeleteApplicationIfNoRunningVersion{ get; set; }
 
 
         /// <summary>
@@ -51,9 +54,10 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
-            this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
-            this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "DeleteApplicationIfNoRunningVersion", this.DeleteApplicationIfNoRunningVersion);
         }
     }
 }

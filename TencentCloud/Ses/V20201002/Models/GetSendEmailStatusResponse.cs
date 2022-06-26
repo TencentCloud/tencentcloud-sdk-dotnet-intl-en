@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Ses.V20201002.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FullTextInfo : AbstractModel
+    public class GetSendEmailStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// Case sensitivity
+        /// Email sending status list
         /// </summary>
-        [JsonProperty("CaseSensitive")]
-        public bool? CaseSensitive{ get; set; }
+        [JsonProperty("EmailStatusList")]
+        public SendEmailStatus[] EmailStatusList{ get; set; }
 
         /// <summary>
-        /// Separator of the full-text index. Each character represents a separator;
-        /// Supports only English punctuation marks and (\n\t\r);
-        /// We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Tokenizer")]
-        public string Tokenizer{ get; set; }
-
-        /// <summary>
-        /// Whether Chinese characters are contained
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ContainZH")]
-        public bool? ContainZH{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
-            this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
-            this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
+            this.SetParamArrayObj(map, prefix + "EmailStatusList.", this.EmailStatusList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="V20210701\TemClient.cs" />
     <Compile Include="V20210701\Models\CosToken.cs" />
+    <Compile Include="V20210701\Models\CreateApplicationRequest.cs" />
+    <Compile Include="V20210701\Models\CreateApplicationResponse.cs" />
     <Compile Include="V20210701\Models\CreateCosTokenRequest.cs" />
     <Compile Include="V20210701\Models\CreateCosTokenResponse.cs" />
     <Compile Include="V20210701\Models\CreateEnvironmentRequest.cs" />
@@ -54,6 +56,8 @@
     <Compile Include="V20210701\Models\CreateResourceResponse.cs" />
     <Compile Include="V20210701\Models\CronHorizontalAutoscaler.cs" />
     <Compile Include="V20210701\Models\CronHorizontalAutoscalerSchedule.cs" />
+    <Compile Include="V20210701\Models\DeleteApplicationRequest.cs" />
+    <Compile Include="V20210701\Models\DeleteApplicationResponse.cs" />
     <Compile Include="V20210701\Models\DeleteIngressRequest.cs" />
     <Compile Include="V20210701\Models\DeleteIngressResponse.cs" />
     <Compile Include="V20210701\Models\DeployApplicationRequest.cs" />

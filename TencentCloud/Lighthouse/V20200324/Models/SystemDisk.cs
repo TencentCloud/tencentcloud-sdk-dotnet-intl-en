@@ -15,35 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FullTextInfo : AbstractModel
+    public class SystemDisk : AbstractModel
     {
         
         /// <summary>
-        /// Case sensitivity
+        /// System disk type.
+        /// Valid values: 
+        /// <li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
         /// </summary>
-        [JsonProperty("CaseSensitive")]
-        public bool? CaseSensitive{ get; set; }
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
 
         /// <summary>
-        /// Separator of the full-text index. Each character represents a separator;
-        /// Supports only English punctuation marks and (\n\t\r);
-        /// We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+        /// System disk size in GB.
         /// </summary>
-        [JsonProperty("Tokenizer")]
-        public string Tokenizer{ get; set; }
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Whether Chinese characters are contained
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// System disk ID.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ContainZH")]
-        public bool? ContainZH{ get; set; }
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
-            this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
-            this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
         }
     }
 }

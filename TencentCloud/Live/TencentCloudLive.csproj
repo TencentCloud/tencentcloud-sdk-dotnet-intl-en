@@ -179,6 +179,8 @@
     <Compile Include="V20180801\Models\DescribeLiveStreamPushInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveStreamStateRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveStreamStateResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTimeShiftBillInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTimeShiftBillInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTranscodeDetailInfoRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTranscodeDetailInfoResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveTranscodeRulesRequest.cs" />
@@ -275,6 +277,7 @@
     <Compile Include="V20180801\Models\StreamNameInfo.cs" />
     <Compile Include="V20180801\Models\StreamOnlineInfo.cs" />
     <Compile Include="V20180801\Models\TemplateInfo.cs" />
+    <Compile Include="V20180801\Models\TimeShiftBillData.cs" />
     <Compile Include="V20180801\Models\TimeValue.cs" />
     <Compile Include="V20180801\Models\TranscodeDetailInfo.cs" />
     <Compile Include="V20180801\Models\TranscodeTotalInfo.cs" />

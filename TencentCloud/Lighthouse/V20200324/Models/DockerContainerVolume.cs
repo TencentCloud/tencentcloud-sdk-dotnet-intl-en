@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FullTextInfo : AbstractModel
+    public class DockerContainerVolume : AbstractModel
     {
         
         /// <summary>
-        /// Case sensitivity
+        /// Container path
         /// </summary>
-        [JsonProperty("CaseSensitive")]
-        public bool? CaseSensitive{ get; set; }
+        [JsonProperty("ContainerPath")]
+        public string ContainerPath{ get; set; }
 
         /// <summary>
-        /// Separator of the full-text index. Each character represents a separator;
-        /// Supports only English punctuation marks and (\n\t\r);
-        /// We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+        /// Host path
         /// </summary>
-        [JsonProperty("Tokenizer")]
-        public string Tokenizer{ get; set; }
-
-        /// <summary>
-        /// Whether Chinese characters are contained
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ContainZH")]
-        public bool? ContainZH{ get; set; }
+        [JsonProperty("HostPath")]
+        public string HostPath{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
-            this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
-            this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
+            this.SetParamSimple(map, prefix + "ContainerPath", this.ContainerPath);
+            this.SetParamSimple(map, prefix + "HostPath", this.HostPath);
         }
     }
 }

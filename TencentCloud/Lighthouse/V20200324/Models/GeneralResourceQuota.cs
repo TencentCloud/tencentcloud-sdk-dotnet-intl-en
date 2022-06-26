@@ -15,35 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FullTextInfo : AbstractModel
+    public class GeneralResourceQuota : AbstractModel
     {
         
         /// <summary>
-        /// Case sensitivity
+        /// Resource name.
         /// </summary>
-        [JsonProperty("CaseSensitive")]
-        public bool? CaseSensitive{ get; set; }
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
 
         /// <summary>
-        /// Separator of the full-text index. Each character represents a separator;
-        /// Supports only English punctuation marks and (\n\t\r);
-        /// We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+        /// Number of available resources.
         /// </summary>
-        [JsonProperty("Tokenizer")]
-        public string Tokenizer{ get; set; }
+        [JsonProperty("ResourceQuotaAvailable")]
+        public long? ResourceQuotaAvailable{ get; set; }
 
         /// <summary>
-        /// Whether Chinese characters are contained
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Total number of resources.
         /// </summary>
-        [JsonProperty("ContainZH")]
-        public bool? ContainZH{ get; set; }
+        [JsonProperty("ResourceQuotaTotal")]
+        public long? ResourceQuotaTotal{ get; set; }
 
 
         /// <summary>
@@ -51,9 +48,9 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
-            this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
-            this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
+            this.SetParamSimple(map, prefix + "ResourceQuotaAvailable", this.ResourceQuotaAvailable);
+            this.SetParamSimple(map, prefix + "ResourceQuotaTotal", this.ResourceQuotaTotal);
         }
     }
 }

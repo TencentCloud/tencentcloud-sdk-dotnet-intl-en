@@ -32,8 +32,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? EnableTag{ get; set; }
 
         /// <summary>
-        /// List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MetaFields")]
         public string[] MetaFields{ get; set; }
@@ -45,6 +45,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("TagJsonNotTiled")]
         public bool? TagJsonNotTiled{ get; set; }
 
+        /// <summary>
+        /// Shipping timestamp precision in seconds (default) or milliseconds
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TimestampAccuracy")]
+        public long? TimestampAccuracy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "EnableTag", this.EnableTag);
             this.SetParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
             this.SetParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
+            this.SetParamSimple(map, prefix + "TimestampAccuracy", this.TimestampAccuracy);
         }
     }
 }

@@ -53,6 +53,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// This API is used to create an application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationRequest"/></param>
+        /// <returns><see cref="CreateApplicationResponse"/></returns>
+        public async Task<CreateApplicationResponse> CreateApplication(CreateApplicationRequest req)
+        {
+             JsonResponseModel<CreateApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationRequest"/></param>
+        /// <returns><see cref="CreateApplicationResponse"/></returns>
+        public CreateApplicationResponse CreateApplicationSync(CreateApplicationRequest req)
+        {
+             JsonResponseModel<CreateApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to generate a COS temporary key.
         /// </summary>
         /// <param name="req"><see cref="CreateCosTokenRequest"/></param>
@@ -164,6 +204,52 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "CreateResource");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an application.
+        ///   - Stop the application if it’s running
+        ///   - Delete resources associated with this application
+        ///   - Delele the application
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
+        /// <returns><see cref="DeleteApplicationResponse"/></returns>
+        public async Task<DeleteApplicationResponse> DeleteApplication(DeleteApplicationRequest req)
+        {
+             JsonResponseModel<DeleteApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an application.
+        ///   - Stop the application if it’s running
+        ///   - Delete resources associated with this application
+        ///   - Delele the application
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
+        /// <returns><see cref="DeleteApplicationResponse"/></returns>
+        public DeleteApplicationResponse DeleteApplicationSync(DeleteApplicationRequest req)
+        {
+             JsonResponseModel<DeleteApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

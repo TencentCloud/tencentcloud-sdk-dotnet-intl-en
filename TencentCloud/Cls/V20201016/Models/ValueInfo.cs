@@ -31,7 +31,10 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+        /// Separator of fields. Each character represents a separator;
+        /// Supports only English punctuation marks and (\n\t\r);
+        /// `long` and `double` fields need to be null;
+        /// We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
         /// </summary>
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }

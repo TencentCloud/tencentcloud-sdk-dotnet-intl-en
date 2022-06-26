@@ -15,35 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FullTextInfo : AbstractModel
+    public class InternetAccessible : AbstractModel
     {
         
         /// <summary>
-        /// Case sensitivity
+        /// Network billing mode. Valid values:
+        /// <li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
+        /// <li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
         /// </summary>
-        [JsonProperty("CaseSensitive")]
-        public bool? CaseSensitive{ get; set; }
+        [JsonProperty("InternetChargeType")]
+        public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// Separator of the full-text index. Each character represents a separator;
-        /// Supports only English punctuation marks and (\n\t\r);
-        /// We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+        /// Public network outbound bandwidth cap in Mbps.
         /// </summary>
-        [JsonProperty("Tokenizer")]
-        public string Tokenizer{ get; set; }
+        [JsonProperty("InternetMaxBandwidthOut")]
+        public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// Whether Chinese characters are contained
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether to assign a public IP.
         /// </summary>
-        [JsonProperty("ContainZH")]
-        public bool? ContainZH{ get; set; }
+        [JsonProperty("PublicIpAssigned")]
+        public bool? PublicIpAssigned{ get; set; }
 
 
         /// <summary>
@@ -51,9 +50,9 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
-            this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
-            this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
+            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
         }
     }
 }
