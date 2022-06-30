@@ -51,6 +51,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? ExtendEniPrivateIpAddressQuantity{ get; set; }
 
         /// <summary>
+        /// The quota of relayed ENIs
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubEniQuantity")]
+        public long? SubEniQuantity{ get; set; }
+
+        /// <summary>
+        /// The quota of IPs that can be assigned to each relayed ENI.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubEniPrivateIpAddressQuantity")]
+        public long? SubEniPrivateIpAddressQuantity{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -66,6 +80,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
             this.SetParamSimple(map, prefix + "ExtendEniQuantity", this.ExtendEniQuantity);
             this.SetParamSimple(map, prefix + "ExtendEniPrivateIpAddressQuantity", this.ExtendEniPrivateIpAddressQuantity);
+            this.SetParamSimple(map, prefix + "SubEniQuantity", this.SubEniQuantity);
+            this.SetParamSimple(map, prefix + "SubEniPrivateIpAddressQuantity", this.SubEniPrivateIpAddressQuantity);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

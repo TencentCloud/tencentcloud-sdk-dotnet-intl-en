@@ -31,31 +31,31 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayName{ get; set; }
 
         /// <summary>
-        /// The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+        /// The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+        /// The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+        /// The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
         /// </summary>
         [JsonProperty("MaxConcurrentConnection")]
         public ulong? MaxConcurrentConnection{ get; set; }
 
         /// <summary>
-        /// The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+        /// The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
         /// </summary>
         [JsonProperty("AddressCount")]
         public ulong? AddressCount{ get; set; }
 
         /// <summary>
-        /// The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+        /// The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+        /// Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? StockPublicIpAddressesBandwidthOut{ get; set; }
 
         /// <summary>
-        /// The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+        /// The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
         /// </summary>
         [JsonProperty("PublicIpAddressesBandwidthOut")]
         public ulong? PublicIpAddressesBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
         /// </summary>
         [JsonProperty("PublicIpFromSameZone")]
         public bool? PublicIpFromSameZone{ get; set; }

@@ -44,8 +44,8 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// The status of the NAT gateway.
-        ///  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-        /// ‘FAILED’: Failed.
+        ///  `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+        /// `FAILED`: Failed.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public NatGatewayAddress[] PublicIpAddressSet{ get; set; }
 
         /// <summary>
-        /// The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+        /// The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
         /// </summary>
         [JsonProperty("NetworkState")]
         public string NetworkState{ get; set; }
@@ -93,47 +93,49 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// IDs of direct connect gateway associated.
+        /// ID of the direct connect gateway bound.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DirectConnectGatewayIds")]
         public string[] DirectConnectGatewayIds{ get; set; }
 
         /// <summary>
         /// Subnet ID.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Tag key-value pair.
+        /// Tag key-value pairs.
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
         /// The list of the security groups bound to the NAT Gateway
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecurityGroupSet")]
         public string[] SecurityGroupSet{ get; set; }
 
         /// <summary>
-        /// SNAT forwarding rule of the NAT Gateway.
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// SNAT forwarding rule of the NAT gateway.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceIpTranslationNatRuleSet")]
         public SourceIpTranslationNatRule[] SourceIpTranslationNatRuleSet{ get; set; }
 
         /// <summary>
-        /// Whether the NAT Gateway is dedicated.
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the NAT gateway is dedicated.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsExclusive")]
         public bool? IsExclusive{ get; set; }
 
         /// <summary>
         /// Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExclusiveGatewayBandwidth")]
         public ulong? ExclusiveGatewayBandwidth{ get; set; }

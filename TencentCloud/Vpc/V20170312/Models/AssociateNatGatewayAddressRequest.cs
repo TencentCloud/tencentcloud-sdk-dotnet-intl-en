@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+        /// The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
         /// </summary>
         [JsonProperty("AddressCount")]
         public ulong? AddressCount{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? StockPublicIpAddressesBandwidthOut{ get; set; }
 
         /// <summary>
-        /// The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+        /// The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
         /// </summary>
         [JsonProperty("PublicIpAddressesBandwidthOut")]
         public ulong? PublicIpAddressesBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
         /// </summary>
         [JsonProperty("PublicIpFromSameZone")]
         public bool? PublicIpFromSameZone{ get; set; }

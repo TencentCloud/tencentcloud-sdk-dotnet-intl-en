@@ -170,6 +170,20 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("ShortEdgeAsHeight")]
         public long? ShortEdgeAsHeight{ get; set; }
 
+        /// <summary>
+        /// The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+        /// If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+        /// </summary>
+        [JsonProperty("DRMType")]
+        public string DRMType{ get; set; }
+
+        /// <summary>
+        /// The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+        /// If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+        /// </summary>
+        [JsonProperty("DRMTracks")]
+        public string DRMTracks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -196,6 +210,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
             this.SetParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
             this.SetParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
+            this.SetParamSimple(map, prefix + "DRMType", this.DRMType);
+            this.SetParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
         }
     }
 }

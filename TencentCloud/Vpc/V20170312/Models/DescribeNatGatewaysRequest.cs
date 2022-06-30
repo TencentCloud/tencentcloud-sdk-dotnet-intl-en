@@ -31,23 +31,23 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] NatGatewayIds{ get; set; }
 
         /// <summary>
-        /// Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-        /// <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-        /// <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-        /// <li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-        /// <li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
+        /// Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+        /// <li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+        /// <li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+        /// <li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+        /// <li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Offset. The default value is 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of values to be returned. The default value is 20. Maximum is 100.
+        /// Number of returned results. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

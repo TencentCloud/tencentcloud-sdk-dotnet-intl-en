@@ -158,6 +158,19 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("V6Flag")]
         public ulong? V6Flag{ get; set; }
 
+        /// <summary>
+        /// Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BGPIPChannelFlag")]
+        public ulong? BGPIPChannelFlag{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TagInfoList")]
+        public TagInfo[] TagInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +196,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
             this.SetParamSimple(map, prefix + "V6Flag", this.V6Flag);
+            this.SetParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
+            this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         }
     }
 }

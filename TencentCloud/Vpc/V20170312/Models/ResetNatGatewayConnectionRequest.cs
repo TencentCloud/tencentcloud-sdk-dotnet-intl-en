@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// NAT gateway ID.
+        /// The NAT gateway ID.
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }

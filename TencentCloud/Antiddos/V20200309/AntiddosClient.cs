@@ -2293,6 +2293,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to obtain the list of DDoS attacks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewDDoSEventListRequest"/></param>
+        /// <returns><see cref="DescribeOverviewDDoSEventListResponse"/></returns>
+        public async Task<DescribeOverviewDDoSEventListResponse> DescribeOverviewDDoSEventList(DescribeOverviewDDoSEventListRequest req)
+        {
+             JsonResponseModel<DescribeOverviewDDoSEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOverviewDDoSEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewDDoSEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of DDoS attacks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewDDoSEventListRequest"/></param>
+        /// <returns><see cref="DescribeOverviewDDoSEventListResponse"/></returns>
+        public DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventListSync(DescribeOverviewDDoSEventListRequest req)
+        {
+             JsonResponseModel<DescribeOverviewDDoSEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOverviewDDoSEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewDDoSEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unbind an Anti-DDoS EIP.
         /// </summary>
         /// <param name="req"><see cref="DisassociateDDoSEipAddressRequest"/></param>

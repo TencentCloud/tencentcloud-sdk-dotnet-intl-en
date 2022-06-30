@@ -96,6 +96,24 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterStatus")]
         public string FilterStatus{ get; set; }
 
+        /// <summary>
+        /// Filters by the instance CNAME
+        /// </summary>
+        [JsonProperty("FilterCname")]
+        public string FilterCname{ get; set; }
+
+        /// <summary>
+        /// Filters by the instance ID
+        /// </summary>
+        [JsonProperty("FilterInstanceIdList")]
+        public string[] FilterInstanceIdList{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FilterTag")]
+        public TagFilter FilterTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +131,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
             this.SetParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
             this.SetParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
+            this.SetParamSimple(map, prefix + "FilterCname", this.FilterCname);
+            this.SetParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
+            this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
         }
     }
 }

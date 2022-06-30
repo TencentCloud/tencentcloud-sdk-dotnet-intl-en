@@ -43,13 +43,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? PublicPort{ get; set; }
 
         /// <summary>
-        /// Private network address.
+        /// Private IP.
         /// </summary>
         [JsonProperty("PrivateIpAddress")]
         public string PrivateIpAddress{ get; set; }
 
         /// <summary>
-        /// Private network port.
+        /// Private port.
         /// </summary>
         [JsonProperty("PrivatePort")]
         public ulong? PrivatePort{ get; set; }
@@ -62,21 +62,21 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// NAT gateway ID.
-        /// Note: This field may return null, indicating no valid value.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
         /// <summary>
         /// VPC ID.
-        /// Note: This field may return null, indicating no valid value.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// The creation time of the NAT gateway forwarding rule.
-        /// Note: This field may return null, indicating no valid value.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

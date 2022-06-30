@@ -25,14 +25,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Object array of the SNAT rule for a NAT Gateway.
+        /// Array of objects of a NAT gateway's SNAT rules.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceIpTranslationNatRuleSet")]
         public SourceIpTranslationNatRule[] SourceIpTranslationNatRuleSet{ get; set; }
 
         /// <summary>
-        /// The number of object arrays of eligible forwarding rules for a NAT Gateway
+        /// The number of eligible object arrays of a NAT gateway's forwarding rules.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

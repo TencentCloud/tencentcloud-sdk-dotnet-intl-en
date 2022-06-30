@@ -300,6 +300,8 @@
     <Compile Include="V20170312\Models\DescribeLocalGatewayResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeNatGatewayDirectConnectGatewayRouteRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeNatGatewayDirectConnectGatewayRouteResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaysRequest.cs" />
@@ -367,6 +369,7 @@
     <Compile Include="V20170312\Models\DetachNetworkInterfaceResponse.cs" />
     <Compile Include="V20170312\Models\DirectConnectGateway.cs" />
     <Compile Include="V20170312\Models\DirectConnectGatewayCcnRoute.cs" />
+    <Compile Include="V20170312\Models\DirectConnectSubnet.cs" />
     <Compile Include="V20170312\Models\DisableCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DisableCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DisableFlowLogsRequest.cs" />
@@ -508,6 +511,7 @@
     <Compile Include="V20170312\Models\ModifyVpnGatewayCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpnGatewayRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpnGatewayRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\NatDirectConnectGatewayRoute.cs" />
     <Compile Include="V20170312\Models\NatGateway.cs" />
     <Compile Include="V20170312\Models\NatGatewayAddress.cs" />
     <Compile Include="V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
@@ -525,6 +529,8 @@
     <Compile Include="V20170312\Models\PrivateIpAddressSpecification.cs" />
     <Compile Include="V20170312\Models\Quota.cs" />
     <Compile Include="V20170312\Models\ReferredSecurityGroup.cs" />
+    <Compile Include="V20170312\Models\RefreshDirectConnectGatewayRouteToNatGatewayRequest.cs" />
+    <Compile Include="V20170312\Models\RefreshDirectConnectGatewayRouteToNatGatewayResponse.cs" />
     <Compile Include="V20170312\Models\RejectAttachCcnInstancesRequest.cs" />
     <Compile Include="V20170312\Models\RejectAttachCcnInstancesResponse.cs" />
     <Compile Include="V20170312\Models\ReleaseAddressesRequest.cs" />

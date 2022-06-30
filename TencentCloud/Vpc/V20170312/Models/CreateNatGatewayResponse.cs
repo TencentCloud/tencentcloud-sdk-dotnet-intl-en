@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public NatGateway[] NatGatewaySet{ get; set; }
 
         /// <summary>
-        /// The number of NAT gateway objects meeting the conditions.
+        /// The number of eligible NAT gateway objects.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

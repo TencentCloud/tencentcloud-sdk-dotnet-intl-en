@@ -32,7 +32,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// Resource type. Valid values: SUBNET, NETWORKINTERFACE
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -62,22 +62,22 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewaySnatId{ get; set; }
 
         /// <summary>
-        /// NAT Gateway ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// NAT gateway ID.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// VPC ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// VPC ID.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Creation time of a SNAT rule for a NAT Gateway
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The creation time of a NAT gateway's SNAT rule.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

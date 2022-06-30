@@ -31,27 +31,27 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] NatGatewayIds{ get; set; }
 
         /// <summary>
-        /// Filter conditions:
+        /// Filters:
         /// `NatGatewayIds` and `Filters` cannot be specified at the same time.
-        /// <li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-        /// <li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-        /// <li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-        /// <li>public-port, the public network port.</li>
-        /// <li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-        /// <li>private-port, the private network port.</li>
-        /// <li>description, the rule description.</li>
+        /// <li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+        /// <li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+        /// <li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+        /// <li>`public-port`: The public network port.</li>
+        /// <li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+        /// <li>`private-port`. The private network port.</li>
+        /// <li>`description`. The rule description.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Offset. The default value is 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of values to be returned. The default value is 20. Maximum is 100.
+        /// Number of returned results. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

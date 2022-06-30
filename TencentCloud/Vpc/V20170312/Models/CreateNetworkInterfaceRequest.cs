@@ -72,6 +72,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+        /// </summary>
+        [JsonProperty("TrunkingFlag")]
+        public string TrunkingFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TrunkingFlag", this.TrunkingFlag);
         }
     }
 }

@@ -180,6 +180,8 @@
     <Compile Include="V20200309\Models\DescribeListSchedulingDomainResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListWaterPrintConfigRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListWaterPrintConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeOverviewDDoSEventListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeOverviewDDoSEventListResponse.cs" />
     <Compile Include="V20200309\Models\DisassociateDDoSEipAddressRequest.cs" />
     <Compile Include="V20200309\Models\DisassociateDDoSEipAddressResponse.cs" />
     <Compile Include="V20200309\Models\EipAddressPackRelation.cs" />
@@ -211,6 +213,7 @@
     <Compile Include="V20200309\Models\ModifyPacketFilterConfigRequest.cs" />
     <Compile Include="V20200309\Models\ModifyPacketFilterConfigResponse.cs" />
     <Compile Include="V20200309\Models\NewL7RuleEntry.cs" />
+    <Compile Include="V20200309\Models\OverviewDDoSEvent.cs" />
     <Compile Include="V20200309\Models\PackInfo.cs" />
     <Compile Include="V20200309\Models\PacketFilterConfig.cs" />
     <Compile Include="V20200309\Models\PacketFilterRelation.cs" />
@@ -221,6 +224,7 @@
     <Compile Include="V20200309\Models\ProtocolPort.cs" />
     <Compile Include="V20200309\Models\ProxyTypeInfo.cs" />
     <Compile Include="V20200309\Models\RegionInfo.cs" />
+    <Compile Include="V20200309\Models\RuleInstanceRelation.cs" />
     <Compile Include="V20200309\Models\SchedulingDomainInfo.cs" />
     <Compile Include="V20200309\Models\SourceServer.cs" />
     <Compile Include="V20200309\Models\SpeedValue.cs" />
@@ -228,6 +232,8 @@
     <Compile Include="V20200309\Models\SuccessCode.cs" />
     <Compile Include="V20200309\Models\SwitchWaterPrintConfigRequest.cs" />
     <Compile Include="V20200309\Models\SwitchWaterPrintConfigResponse.cs" />
+    <Compile Include="V20200309\Models\TagFilter.cs" />
+    <Compile Include="V20200309\Models\TagInfo.cs" />
     <Compile Include="V20200309\Models\WaterPrintConfig.cs" />
     <Compile Include="V20200309\Models\WaterPrintKey.cs" />
     <Compile Include="V20200309\Models\WaterPrintRelation.cs" />

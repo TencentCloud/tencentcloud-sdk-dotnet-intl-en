@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Time{ get; set; }
 
         /// <summary>
-        /// 
+        /// The total time-shift duration (minutes).
         /// </summary>
         [JsonProperty("TotalDuration")]
         public float? TotalDuration{ get; set; }

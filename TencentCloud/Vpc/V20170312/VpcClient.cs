@@ -459,7 +459,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to bind an EIP to NAT Gateway.
+        /// This API is used to bind an EIP to a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
         /// <returns><see cref="AssociateNatGatewayAddressResponse"/></returns>
@@ -479,7 +479,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to bind an EIP to NAT Gateway.
+        /// This API is used to bind an EIP to a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
         /// <returns><see cref="AssociateNatGatewayAddressResponse"/></returns>
@@ -1448,7 +1448,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to create a NAT Gateway.
-        /// Before taking actions on a NAT Gateway, ensure that it has been successfully created, namely, the `State` field in the response of the `DescribeNatGateway` API is `AVAILABLE`.
+        /// Before taking actions on a NAT gateway, ensure that it has been successfully created, namely, the `State` field in the response of the `DescribeNatGateway` API is `AVAILABLE`.
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewayRequest"/></param>
         /// <returns><see cref="CreateNatGatewayResponse"/></returns>
@@ -1469,7 +1469,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to create a NAT Gateway.
-        /// Before taking actions on a NAT Gateway, ensure that it has been successfully created, namely, the `State` field in the response of the `DescribeNatGateway` API is `AVAILABLE`.
+        /// Before taking actions on a NAT gateway, ensure that it has been successfully created, namely, the `State` field in the response of the `DescribeNatGateway` API is `AVAILABLE`.
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewayRequest"/></param>
         /// <returns><see cref="CreateNatGatewayResponse"/></returns>
@@ -1489,7 +1489,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
+        /// This API is used to create the port forwarding rules of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
         /// <returns><see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
@@ -1509,7 +1509,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
+        /// This API is used to create the port forwarding rules of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
         /// <returns><see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
@@ -1529,7 +1529,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a SNAT rule for the NAT Gateway.
+        /// This API is used to create SNAT rules for a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewaySourceIpTranslationNatRuleRequest"/></param>
         /// <returns><see cref="CreateNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
@@ -1549,7 +1549,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a SNAT rule for the NAT Gateway.
+        /// This API is used to create SNAT rules for a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewaySourceIpTranslationNatRuleRequest"/></param>
         /// <returns><see cref="CreateNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
@@ -1837,20 +1837,20 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a security group policy (SecurityGroupPolicy).
+        /// This API is used to create security group policies.
         /// 
         /// For parameters of SecurityGroupPolicySet,
         /// <ul>
-        /// <li>`Version`: the version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
-        /// <li>When creating the `Egress` and `Ingress` policies,<ul>
-        /// <li>`Protocol`: allows `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, or `ALL`.</li>
-        /// <li>`CidrBlock`: a CIDR block in the correct format. In the classic network, if a `CidrBlock` contains private IPs of devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// <li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// <li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of another security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
-        /// <li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
-        /// <li>`Action`: only allows `ACCEPT` or `DROP`.</li>
+        /// <li>`Version`: The version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
+        /// <li>When creating the `Egress` and `Ingress` polices,<ul>
+        /// <li>`Protocol`: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, or `ALL`.</li>
+        /// <li>`CidrBlock`: A CIDR block in the correct format. </li>For 
+        /// <li>`Ipv6CidrBlock`: An IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// <li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
+        /// <li>`Port`: A single port number such as 80, or a port range in the format of "8000-8010". This parameter is only available when the `Protocol` is `TCP` or `UDP`. Otherwise, `Protocol` and `Port` are mutually exclusive.</li>
+        /// <li>`Action`: `ACCEPT` or `DROP`.</li>
         /// <li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
-        /// <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies.</li>
+        /// <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies. If you want to insert a rule before the first rule, enter 0; if you want to add a rule after the last rule, leave it empty.</li>
         /// </ul></li></ul>
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupPoliciesRequest"/></param>
@@ -1871,20 +1871,20 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a security group policy (SecurityGroupPolicy).
+        /// This API is used to create security group policies.
         /// 
         /// For parameters of SecurityGroupPolicySet,
         /// <ul>
-        /// <li>`Version`: the version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
-        /// <li>When creating the `Egress` and `Ingress` policies,<ul>
-        /// <li>`Protocol`: allows `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, or `ALL`.</li>
-        /// <li>`CidrBlock`: a CIDR block in the correct format. In the classic network, if a `CidrBlock` contains private IPs of devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// <li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-        /// <li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of another security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
-        /// <li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
-        /// <li>`Action`: only allows `ACCEPT` or `DROP`.</li>
+        /// <li>`Version`: The version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
+        /// <li>When creating the `Egress` and `Ingress` polices,<ul>
+        /// <li>`Protocol`: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, or `ALL`.</li>
+        /// <li>`CidrBlock`: A CIDR block in the correct format. </li>For 
+        /// <li>`Ipv6CidrBlock`: An IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+        /// <li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
+        /// <li>`Port`: A single port number such as 80, or a port range in the format of "8000-8010". This parameter is only available when the `Protocol` is `TCP` or `UDP`. Otherwise, `Protocol` and `Port` are mutually exclusive.</li>
+        /// <li>`Action`: `ACCEPT` or `DROP`.</li>
         /// <li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
-        /// <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies.</li>
+        /// <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies. If you want to insert a rule before the first rule, enter 0; if you want to add a rule after the last rule, leave it empty.</li>
         /// </ul></li></ul>
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupPoliciesRequest"/></param>
@@ -2897,8 +2897,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteNatGateway) is used to delete a NAT gateway.
-        /// After the deletion of a NAT gateway, the system will automatically delete the routing entry that contains the NAT gateway from the route table. It will also unbind the Elastic IP.
+        /// This API is used to delete a NAT gateway.
+        /// When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewayRequest"/></param>
         /// <returns><see cref="DeleteNatGatewayResponse"/></returns>
@@ -2918,8 +2918,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteNatGateway) is used to delete a NAT gateway.
-        /// After the deletion of a NAT gateway, the system will automatically delete the routing entry that contains the NAT gateway from the route table. It will also unbind the Elastic IP.
+        /// This API is used to delete a NAT gateway.
+        /// When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewayRequest"/></param>
         /// <returns><see cref="DeleteNatGatewayResponse"/></returns>
@@ -2939,7 +2939,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteNatGatewayDestinationIpPortTranslationNatRule) is used to delete a port forwarding rule for a NAT gateway.
+        /// This API is used to delete the port forwarding rule of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
         /// <returns><see cref="DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
@@ -2959,7 +2959,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteNatGatewayDestinationIpPortTranslationNatRule) is used to delete a port forwarding rule for a NAT gateway.
+        /// This API is used to delete the port forwarding rule of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
         /// <returns><see cref="DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
@@ -2979,7 +2979,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a SNAT forwarding rule of the NAT Gateway.
+        /// This API is used to delete a SNAT forwarding rule of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewaySourceIpTranslationNatRuleRequest"/></param>
         /// <returns><see cref="DeleteNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
@@ -2999,7 +2999,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a SNAT forwarding rule of the NAT Gateway.
+        /// This API is used to delete a SNAT forwarding rule of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewaySourceIpTranslationNatRuleRequest"/></param>
         /// <returns><see cref="DeleteNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
@@ -4853,7 +4853,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
+        /// This API is used to query the array of objects of a NAT gateway's port forwarding rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest"/></param>
         /// <returns><see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse"/></returns>
@@ -4873,7 +4873,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
+        /// This API is used to query the array of objects of a NAT gateway's port forwarding rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest"/></param>
         /// <returns><see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse"/></returns>
@@ -4893,7 +4893,47 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the object arrays of SNAT forwarding rules of the NAT Gateway.
+        /// This API is used to query the routes between a NAT gateway and Direct Connect.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayDirectConnectGatewayRouteRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayDirectConnectGatewayRouteResponse"/></returns>
+        public async Task<DescribeNatGatewayDirectConnectGatewayRouteResponse> DescribeNatGatewayDirectConnectGatewayRoute(DescribeNatGatewayDirectConnectGatewayRouteRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatGatewayDirectConnectGatewayRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the routes between a NAT gateway and Direct Connect.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayDirectConnectGatewayRouteRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayDirectConnectGatewayRouteResponse"/></returns>
+        public DescribeNatGatewayDirectConnectGatewayRouteResponse DescribeNatGatewayDirectConnectGatewayRouteSync(DescribeNatGatewayDirectConnectGatewayRouteRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNatGatewayDirectConnectGatewayRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the NAT gateway's SNAT forwarding rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewaySourceIpTranslationNatRulesRequest"/></param>
         /// <returns><see cref="DescribeNatGatewaySourceIpTranslationNatRulesResponse"/></returns>
@@ -4913,7 +4953,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the object arrays of SNAT forwarding rules of the NAT Gateway.
+        /// This API is used to query the NAT gateway's SNAT forwarding rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewaySourceIpTranslationNatRulesRequest"/></param>
         /// <returns><see cref="DescribeNatGatewaySourceIpTranslationNatRulesResponse"/></returns>
@@ -4933,7 +4973,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeNatGateways) is used to query NAT gateways.
+        /// This API is used to query NAT gateways.
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewaysRequest"/></param>
         /// <returns><see cref="DescribeNatGatewaysResponse"/></returns>
@@ -4953,7 +4993,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeNatGateways) is used to query NAT gateways.
+        /// This API is used to query NAT gateways.
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewaysRequest"/></param>
         /// <returns><see cref="DescribeNatGatewaysResponse"/></returns>
@@ -6393,7 +6433,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DisassociateNatGatewayAddress) is used to unbind an EIP from a NAT gateway.
+        /// This API is used to unbind an EIP from a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="DisassociateNatGatewayAddressRequest"/></param>
         /// <returns><see cref="DisassociateNatGatewayAddressResponse"/></returns>
@@ -6413,7 +6453,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DisassociateNatGatewayAddress) is used to unbind an EIP from a NAT gateway.
+        /// This API is used to unbind an EIP from a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="DisassociateNatGatewayAddressRequest"/></param>
         /// <returns><see cref="DisassociateNatGatewayAddressResponse"/></returns>
@@ -7773,7 +7813,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyNatGatewayAttribute) is used to modify the attributes of a NAT gateway.
+        /// This API is used to modify the attributes of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="ModifyNatGatewayAttributeRequest"/></param>
         /// <returns><see cref="ModifyNatGatewayAttributeResponse"/></returns>
@@ -7793,7 +7833,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyNatGatewayAttribute) is used to modify the attributes of a NAT gateway.
+        /// This API is used to modify the attributes of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="ModifyNatGatewayAttributeRequest"/></param>
         /// <returns><see cref="ModifyNatGatewayAttributeResponse"/></returns>
@@ -7813,7 +7853,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyNatGatewayDestinationIpPortTranslationNatRule) is used to modify a port forwarding rule for a NAT gateway.
+        /// This API is used to modify the port forwarding rule of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
         /// <returns><see cref="ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
@@ -7833,7 +7873,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyNatGatewayDestinationIpPortTranslationNatRule) is used to modify a port forwarding rule for a NAT gateway.
+        /// This API is used to modify the port forwarding rule of a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
         /// <returns><see cref="ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse"/></returns>
@@ -7853,7 +7893,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify a SNAT forwarding rule of the NAT Gateway.
+        /// This API is used to modify a NAT gateway's SNAT forwarding rules.
         /// </summary>
         /// <param name="req"><see cref="ModifyNatGatewaySourceIpTranslationNatRuleRequest"/></param>
         /// <returns><see cref="ModifyNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
@@ -7873,7 +7913,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify a SNAT forwarding rule of the NAT Gateway.
+        /// This API is used to modify a NAT gateway's SNAT forwarding rules.
         /// </summary>
         /// <param name="req"><see cref="ModifyNatGatewaySourceIpTranslationNatRuleRequest"/></param>
         /// <returns><see cref="ModifyNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
@@ -8725,6 +8765,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
+        /// </summary>
+        /// <param name="req"><see cref="RefreshDirectConnectGatewayRouteToNatGatewayRequest"/></param>
+        /// <returns><see cref="RefreshDirectConnectGatewayRouteToNatGatewayResponse"/></returns>
+        public async Task<RefreshDirectConnectGatewayRouteToNatGatewayResponse> RefreshDirectConnectGatewayRouteToNatGateway(RefreshDirectConnectGatewayRouteToNatGatewayRequest req)
+        {
+             JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefreshDirectConnectGatewayRouteToNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
+        /// </summary>
+        /// <param name="req"><see cref="RefreshDirectConnectGatewayRouteToNatGatewayRequest"/></param>
+        /// <returns><see cref="RefreshDirectConnectGatewayRouteToNatGatewayResponse"/></returns>
+        public RefreshDirectConnectGatewayRouteToNatGatewayResponse RefreshDirectConnectGatewayRouteToNatGatewaySync(RefreshDirectConnectGatewayRouteToNatGatewayRequest req)
+        {
+             JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefreshDirectConnectGatewayRouteToNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (RejectAttachCcnInstances) is used to reject association operations when instances are associated across accounts for the CCN owner.
         /// </summary>
         /// <param name="req"><see cref="RejectAttachCcnInstancesRequest"/></param>
@@ -9093,7 +9173,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ResetNatGatewayConnection) is used to adjust concurrent connection cap for the NAT gateway.
+        /// This API is used to adjust concurrent connection cap for the NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="ResetNatGatewayConnectionRequest"/></param>
         /// <returns><see cref="ResetNatGatewayConnectionResponse"/></returns>
@@ -9113,7 +9193,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ResetNatGatewayConnection) is used to adjust concurrent connection cap for the NAT gateway.
+        /// This API is used to adjust concurrent connection cap for the NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="ResetNatGatewayConnectionRequest"/></param>
         /// <returns><see cref="ResetNatGatewayConnectionResponse"/></returns>

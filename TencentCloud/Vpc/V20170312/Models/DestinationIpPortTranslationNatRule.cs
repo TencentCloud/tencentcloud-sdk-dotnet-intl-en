@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Network protocol. Available choices: `TCP`, `UDP`.
+        /// Network protocol. Valid values: `TCP`, `UDP`.
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string PublicIpAddress{ get; set; }
 
         /// <summary>
-        /// Public port.
+        /// Public network port.
         /// </summary>
         [JsonProperty("PublicPort")]
         public ulong? PublicPort{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? PrivatePort{ get; set; }
 
         /// <summary>
-        /// NAT gateway forwarding rule description.
+        /// Description of NAT gateway forwarding rules.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

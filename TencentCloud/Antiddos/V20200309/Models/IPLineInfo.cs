@@ -42,6 +42,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Eip")]
         public string Eip{ get; set; }
 
+        /// <summary>
+        /// CNAME of the instance
+        /// </summary>
+        [JsonProperty("Cname")]
+        public string Cname{ get; set; }
+
+        /// <summary>
+        /// Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+        /// </summary>
+        [JsonProperty("ResourceFlag")]
+        public long? ResourceFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,6 +62,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Eip", this.Eip);
+            this.SetParamSimple(map, prefix + "Cname", this.Cname);
+            this.SetParamSimple(map, prefix + "ResourceFlag", this.ResourceFlag);
         }
     }
 }

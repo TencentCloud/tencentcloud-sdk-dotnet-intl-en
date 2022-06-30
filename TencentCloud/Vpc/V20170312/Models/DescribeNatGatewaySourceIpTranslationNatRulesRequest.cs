@@ -31,16 +31,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// Filter conditions:
-        /// <li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-        /// <li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-        /// <li>description, the rule description</li>
+        /// Filter:
+        /// <li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+        /// <li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+        /// <li>`description` The rule description</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Offset. Default is 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

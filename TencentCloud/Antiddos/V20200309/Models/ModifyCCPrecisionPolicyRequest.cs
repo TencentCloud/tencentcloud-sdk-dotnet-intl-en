@@ -37,7 +37,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+        /// Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
         /// </summary>
         [JsonProperty("PolicyAction")]
         public string PolicyAction{ get; set; }

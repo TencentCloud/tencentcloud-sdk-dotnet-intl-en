@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// Whether to modify the security group bound to the NAT Gateway
+        /// Whether to modify the security group bound to the NAT gateway
         /// </summary>
         [JsonProperty("ModifySecurityGroup")]
         public bool? ModifySecurityGroup{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public NatGatewayDestinationIpPortTranslationNatRule[] NatGatewayDestinationIpPortTranslationNatRuleSet{ get; set; }
 
         /// <summary>
-        /// The number of object arrays of NAT port forwarding rules meeting the conditions.
+        /// The number of eligible object arrays of NAT port forwarding rules.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
