@@ -21,7 +21,7 @@ namespace TencentCloud.Teo.V20220106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Zone : AbstractModel
+    public class ModifyZoneResponse : AbstractModel
     {
         
         /// <summary>
@@ -37,10 +37,27 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// List of name servers used by the site
+        /// Name server used by the site
         /// </summary>
         [JsonProperty("OriginalNameServers")]
         public string[] OriginalNameServers{ get; set; }
+
+        /// <summary>
+        /// Site status.
+        /// - `pending`: The name server is not connected.
+        /// - `active`: The name server is connected.
+        /// - `moved`: The name server is moved.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// Specifies how the site is connected to EdgeOne.
+        /// - `full`: Connect via the name server.
+        /// - `partial`: Connect via the CNAME.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
         /// List of name servers assigned by Tencent Cloud
@@ -49,49 +66,31 @@ namespace TencentCloud.Teo.V20220106.Models
         public string[] NameServers{ get; set; }
 
         /// <summary>
-        /// Site status
-        /// - `active`: The name server is switched.
-        /// - `pending`: The name server is not switched.
-        /// - `moved`: The name server is moved.
-        /// - `deactivated`: The name server is blocked.
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// How the site is connected to EdgeOne.
-        /// - `full`: The site is connected via name server.
-        /// - `partial`: The site is connected via CNAME.
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// Indicates whether the site is disabled
-        /// </summary>
-        [JsonProperty("Paused")]
-        public bool? Paused{ get; set; }
-
-        /// <summary>
-        /// Site creation date
+        /// Creation time
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// Site modification date
+        /// Modification time
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }
 
         /// <summary>
-        /// Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-        /// - `finished`: The site is verified.
+        /// CNAME access status.
+        /// - `finished`: Ownership of the site is verified.
         /// - `pending`: Verifying the ownership of the site.
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CnameStatus")]
         public string CnameStatus{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -102,13 +101,13 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);
-            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Paused", this.Paused);
+            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
             this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

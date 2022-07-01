@@ -21,7 +21,7 @@ namespace TencentCloud.Teo.V20220106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Zone : AbstractModel
+    public class DescribeZoneDetailsResponse : AbstractModel
     {
         
         /// <summary>
@@ -37,13 +37,15 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// List of name servers used by the site
+        /// List of name servers used
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OriginalNameServers")]
         public string[] OriginalNameServers{ get; set; }
 
         /// <summary>
-        /// List of name servers assigned by Tencent Cloud
+        /// List of name servers assigned to users by Tencent Cloud
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("NameServers")]
         public string[] NameServers{ get; set; }
@@ -59,7 +61,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// How the site is connected to EdgeOne.
+        /// Specifies how the site is connected to EdgeOne.
         /// - `full`: The site is connected via name server.
         /// - `partial`: The site is connected via CNAME.
         /// </summary>
@@ -85,13 +87,41 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ModifiedOn{ get; set; }
 
         /// <summary>
-        /// Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+        /// User-defined name server information
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VanityNameServers")]
+        public VanityNameServers VanityNameServers{ get; set; }
+
+        /// <summary>
+        /// User-defined name server IP information
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VanityNameServersIps")]
+        public VanityNameServersIps[] VanityNameServersIps{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable CNAME acceleration
+        /// - `enabled`: Enable
+        /// - `disabled`: Disable
+        /// </summary>
+        [JsonProperty("CnameSpeedUp")]
+        public string CnameSpeedUp{ get; set; }
+
+        /// <summary>
+        /// Ownership verification status of the site when it accesses via CNAME.
         /// - `finished`: The site is verified.
-        /// - `pending`: Verifying the ownership of the site.
+        /// - `pending`: The site is waiting for verification.
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CnameStatus")]
         public string CnameStatus{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -108,7 +138,11 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Paused", this.Paused);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+            this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+            this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
+            this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
             this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
