@@ -25,11 +25,11 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Time granularity of the returned data. Specify one of the following during querying:
-        /// min: 1 minute
-        /// 5min: 5 minutes
-        /// hour: 1 hour
-        /// day: 1 day
+        /// Time granularity of the returned data. 
+        /// `min`: 1 minute
+        /// `5min`: 5 minutes
+        /// `hour`: 1 hour
+        /// `day`: 1 day
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }

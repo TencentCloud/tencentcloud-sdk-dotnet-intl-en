@@ -53,17 +53,17 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to add a CDN acceleration domain name.
+        /// This API is used to add one or more domains to a specified log topic.
         /// </summary>
-        /// <param name="req"><see cref="AddCdnDomainRequest"/></param>
-        /// <returns><see cref="AddCdnDomainResponse"/></returns>
-        public async Task<AddCdnDomainResponse> AddCdnDomain(AddCdnDomainRequest req)
+        /// <param name="req"><see cref="AddCLSTopicDomainsRequest"/></param>
+        /// <returns><see cref="AddCLSTopicDomainsResponse"/></returns>
+        public async Task<AddCLSTopicDomainsResponse> AddCLSTopicDomains(AddCLSTopicDomainsRequest req)
         {
-             JsonResponseModel<AddCdnDomainResponse> rsp = null;
+             JsonResponseModel<AddCLSTopicDomainsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "AddCdnDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCdnDomainResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "AddCLSTopicDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCLSTopicDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -73,17 +73,17 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to add a CDN acceleration domain name.
+        /// This API is used to add one or more domains to a specified log topic.
         /// </summary>
-        /// <param name="req"><see cref="AddCdnDomainRequest"/></param>
-        /// <returns><see cref="AddCdnDomainResponse"/></returns>
-        public AddCdnDomainResponse AddCdnDomainSync(AddCdnDomainRequest req)
+        /// <param name="req"><see cref="AddCLSTopicDomainsRequest"/></param>
+        /// <returns><see cref="AddCLSTopicDomainsResponse"/></returns>
+        public AddCLSTopicDomainsResponse AddCLSTopicDomainsSync(AddCLSTopicDomainsRequest req)
         {
-             JsonResponseModel<AddCdnDomainResponse> rsp = null;
+             JsonResponseModel<AddCLSTopicDomainsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "AddCdnDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCdnDomainResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "AddCLSTopicDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCLSTopicDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,7 +293,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+        /// This API is used to query CDN real-time access monitoring data and supports the following metrics:
         /// 
         /// + Traffic (in bytes)
         /// + Bandwidth (in bps)
@@ -325,7 +325,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+        /// This API is used to query CDN real-time access monitoring data and supports the following metrics:
         /// 
         /// + Traffic (in bytes)
         /// + Bandwidth (in bps)
@@ -729,7 +729,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+        /// This API is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
         /// 
         /// + Origin-pull traffic (in bytes)
         /// + Origin-pull bandwidth (in bps)
@@ -759,7 +759,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+        /// This API is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
         /// 
         /// + Origin-pull traffic (in bytes)
         /// + Origin-pull bandwidth (in bps)

@@ -32,18 +32,18 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Node type.
-        /// edge: edge server
-        /// last: intermediate server
+        /// `edge`: Edge server
+        /// `last`: Intermediate server
         /// If this parameter is left empty, edge server information will be returned by default
         /// </summary>
         [JsonProperty("Layer")]
         public string Layer{ get; set; }
 
         /// <summary>
-        /// Region to be queried.
-        /// mainland: domestic nodes
-        /// overseas: overseas nodes
-        /// global: global nodes
+        /// Specifies a region to query.
+        /// `mainland`: Nodes in the Chinese mainland
+        /// `overseas`: Nodes outside the Chinese mainland
+        /// `global`: Global nodes
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

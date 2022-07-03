@@ -21,23 +21,14 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SummarizedData : AbstractModel
+    public class AddCLSTopicDomainsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Aggregation method, which can be:
-        /// `sum`: Aggregate summation
-        /// `max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
-        /// `avg`: Average value
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Aggregated value
-        /// </summary>
-        [JsonProperty("Value")]
-        public float? Value{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

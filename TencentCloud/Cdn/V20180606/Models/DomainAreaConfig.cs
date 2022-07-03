@@ -31,7 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Region list, where the element can be `mainland/overseas`
+        /// Region list, where the element can be `mainland`/`overseas`
         /// </summary>
         [JsonProperty("Area")]
         public string[] Area{ get; set; }

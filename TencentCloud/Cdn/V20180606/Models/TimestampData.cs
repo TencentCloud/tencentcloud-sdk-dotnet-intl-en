@@ -25,8 +25,8 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Statistical point in time in forward rounding mode
-        /// Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+        /// The start point of the sampling period. 
+        /// For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }

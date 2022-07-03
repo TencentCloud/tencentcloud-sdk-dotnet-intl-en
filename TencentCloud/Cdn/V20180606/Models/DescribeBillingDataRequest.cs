@@ -25,17 +25,17 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-        /// The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-        /// The range between the start time and end time should be less than or equal to 90 days
+        /// Start time of the query, e.g., 2018-09-04 10:40:00.
+        /// The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+        /// The period between the start time and end time can be up to 90 days.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-        /// The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-        /// The range between the start time and end time should be less than or equal to 90 days
+        /// End time of the query, e.g. 2018-09-04 10:40:00.
+        /// The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+        /// The period between the start time and end time can be up to 90 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -47,7 +47,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// `hour`: 1-hour granularity. The query period cannot exceed 31 days.
         /// `day`: 1-day granularity. The query period cannot exceed 31 days.
         /// 
-        /// Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+        /// `min` is not supported if the `Area` field is `overseas`.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
@@ -59,16 +59,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-        /// If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+        /// Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+        /// If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
         /// </summary>
         [JsonProperty("Project")]
         public long? Project{ get; set; }
 
         /// <summary>
         /// Acceleration region whose billing data is to be queried:
-        /// mainland: in the mainland of China
-        /// overseas: outside the mainland of China
+        /// `mainland`: Regions within the Chinese mainland
+        /// `overseas`: Regions outside the Chinese mainland
         /// If this parameter is left empty, `mainland` will be used by default
         /// </summary>
         [JsonProperty("Area")]
@@ -76,7 +76,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Country/region to be queried if `Area` is `overseas`
-        /// For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+        /// To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
         /// If this parameter is left empty, all countries/regions will be queried
         /// </summary>
         [JsonProperty("District")]
@@ -84,8 +84,8 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Billing statistics type
-        /// flux: bill-by-traffic
-        /// bandwidth: bill-by-bandwidth
+        /// `flux`: Bill by traffic
+        /// `bandwidth`: Bill by bandwidth
         /// Default value: `bandwidth`
         /// </summary>
         [JsonProperty("Metric")]
@@ -96,6 +96,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
 
 
         /// <summary>
@@ -112,6 +118,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "District", this.District);
             this.SetParamSimple(map, prefix + "Metric", this.Metric);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
         }
     }
 }

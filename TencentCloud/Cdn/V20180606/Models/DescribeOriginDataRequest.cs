@@ -25,58 +25,58 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Query start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-        /// According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-        /// The gap between the start time and end time should be less than or equal to 90 days.
+        /// Start time of the query, e.g., 2018-09-04 10:40:00.
+        /// The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+        /// The period between the start time and end time can be up to 90 days.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-        /// According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-        /// The gap between the start time and end time should be less than or equal to 90 days.
+        /// End time of the query, e.g. 2018-09-04 10:40:00.
+        /// The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+        /// The period between the start time and end time can be up to 90 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Specifies the query metric, which can be:
-        /// flux: origin-pull traffic (in bytes)
-        /// bandwidth: origin-pull bandwidth (in bps)
-        /// request: number of origin-pull requests
-        /// failRequest: number of failed origin-pull requests
-        /// failRate: origin-pull failure rate (in %)
-        /// statusCode: origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
-        /// 2xx: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
-        /// 3xx: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
-        /// 4xx: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
-        /// 5xx: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
+        /// Specifies the metric to query, which can be:
+        /// `flux`: Origin-pull traffic (in bytes)
+        /// `bandwidth`: Origin-pull bandwidth (in bps)
+        /// `request`: Number of origin-pull requests
+        /// `failRequest`: Number of failed origin-pull requests
+        /// `failRate`: Origin-pull failure rate (in %)
+        /// `statusCode`: Origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
+        /// `2xx`: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
+        /// `3xx`: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
+        /// `4xx`: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
+        /// `5xx`: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
         /// It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
+        /// Specifies the list of domain names to query. You can query up to 30 domain names at a time.
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-        /// If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
-        /// If the domain name information is specified, the domain name will prevail
+        /// Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+        /// If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time.
+        /// If the domain name information is specified, this parameter can be ignored.
         /// </summary>
         [JsonProperty("Project")]
         public long? Project{ get; set; }
 
         /// <summary>
-        /// Time granularity; valid values:
-        /// `min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-        /// `5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-        /// `hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-        /// `day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+        /// Time granularity, which can be:
+        /// `min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+        /// `5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+        /// `hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+        /// `day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
@@ -89,12 +89,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Detail{ get; set; }
 
         /// <summary>
-        /// Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-        /// `mainland`: specifies to query CDN data within Mainland China;
-        /// `overseas`: specifies to query CDN data outside Mainland China.
+        /// Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+        /// `mainland`: Query CDN data in the Chinese mainland.
+        /// `overseas`: Query CDN data outside the Chinese mainland.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
+
+        /// <summary>
+        /// Specifies a time zone to query. The default time zone is UTC+08:00.
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
 
 
         /// <summary>
@@ -110,6 +116,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "Detail", this.Detail);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
         }
     }
 }

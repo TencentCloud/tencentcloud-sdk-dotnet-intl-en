@@ -47,8 +47,8 @@
     <Compile Include="V20180606\CdnClient.cs" />
     <Compile Include="V20180606\Models\AccessControl.cs" />
     <Compile Include="V20180606\Models\AccessControlRule.cs" />
-    <Compile Include="V20180606\Models\AddCdnDomainRequest.cs" />
-    <Compile Include="V20180606\Models\AddCdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\AddCLSTopicDomainsRequest.cs" />
+    <Compile Include="V20180606\Models\AddCLSTopicDomainsResponse.cs" />
     <Compile Include="V20180606\Models\AdvanceCacheRule.cs" />
     <Compile Include="V20180606\Models\AdvanceConfig.cs" />
     <Compile Include="V20180606\Models\AdvanceHttps.cs" />

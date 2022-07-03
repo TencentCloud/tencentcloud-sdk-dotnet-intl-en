@@ -31,27 +31,27 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Node region
+        /// Region of the node
         /// </summary>
         [JsonProperty("District")]
         public string District{ get; set; }
 
         /// <summary>
-        /// Node ISP
+        /// ISP of the node
         /// </summary>
         [JsonProperty("Isp")]
         public string Isp{ get; set; }
 
         /// <summary>
-        /// Node city
+        /// City of the node
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// Node status
-        /// online: the node is online; scheduling service running
-        /// offline: the node is offline
+        /// Status of the node
+        /// `online`: The node is active and scheduling normally.
+        /// `offline`: The node is inactive.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

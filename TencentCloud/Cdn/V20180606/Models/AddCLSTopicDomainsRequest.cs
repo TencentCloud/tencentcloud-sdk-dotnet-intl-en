@@ -21,14 +21,32 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddCdnDomainResponse : AbstractModel
+    public class AddCLSTopicDomainsRequest : AbstractModel
     {
         
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Logset ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("LogsetId")]
+        public string LogsetId{ get; set; }
+
+        /// <summary>
+        /// Log topic ID
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
+        /// Region configuration for domains
+        /// </summary>
+        [JsonProperty("DomainAreaConfigs")]
+        public DomainAreaConfig[] DomainAreaConfigs{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+        /// </summary>
+        [JsonProperty("Channel")]
+        public string Channel{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamArrayObj(map, prefix + "DomainAreaConfigs.", this.DomainAreaConfigs);
+            this.SetParamSimple(map, prefix + "Channel", this.Channel);
         }
     }
 }
