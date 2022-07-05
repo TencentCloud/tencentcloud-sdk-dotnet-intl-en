@@ -73,6 +73,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public string TagMsg{ get; set; }
 
         /// <summary>
+        /// ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("HsmClusterId")]
+        public string HsmClusterId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +99,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
             this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
             this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
+            this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

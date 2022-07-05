@@ -225,13 +225,13 @@ namespace TencentCloud.Tem.V20210701.Models
         public DeployStrategyConf DeployStrategyConf{ get; set; }
 
         /// <summary>
-        /// Auto scaling policy
+        /// Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
         /// </summary>
         [JsonProperty("HorizontalAutoscaler")]
         public HorizontalAutoscaler[] HorizontalAutoscaler{ get; set; }
 
         /// <summary>
-        /// Scheduled auto scaling policy
+        /// Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
         /// </summary>
         [JsonProperty("CronHorizontalAutoscaler")]
         public CronHorizontalAutoscaler[] CronHorizontalAutoscaler{ get; set; }
@@ -277,6 +277,12 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         [JsonProperty("EnablePrometheusConf")]
         public EnablePrometheusConf EnablePrometheusConf{ get; set; }
+
+        /// <summary>
+        /// `1`: Enable APM collection; `0`: Disable APM collection
+        /// </summary>
+        [JsonProperty("EnableTracing")]
+        public long? EnableTracing{ get; set; }
 
 
         /// <summary>
@@ -324,6 +330,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
             this.SetParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
             this.SetParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
+            this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
         }
     }
 }

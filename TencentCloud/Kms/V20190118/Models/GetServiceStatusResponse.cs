@@ -64,6 +64,20 @@ namespace TencentCloud.Kms.V20190118.Models
         public string ProResourceId{ get; set; }
 
         /// <summary>
+        /// Whether to activate Managed KMS
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ExclusiveVSMEnabled")]
+        public bool? ExclusiveVSMEnabled{ get; set; }
+
+        /// <summary>
+        /// Whether to activate Exclusive KMS
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ExclusiveHSMEnabled")]
+        public bool? ExclusiveHSMEnabled{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -81,6 +95,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "ProExpireTime", this.ProExpireTime);
             this.SetParamSimple(map, prefix + "ProRenewFlag", this.ProRenewFlag);
             this.SetParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
+            this.SetParamSimple(map, prefix + "ExclusiveVSMEnabled", this.ExclusiveVSMEnabled);
+            this.SetParamSimple(map, prefix + "ExclusiveHSMEnabled", this.ExclusiveHSMEnabled);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
