@@ -21,21 +21,20 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAssistantCidrResponse : AbstractModel
+    public class AdjustPublicAddressRequest : AbstractModel
     {
         
         /// <summary>
-        /// Array of secondary CIDR blocks.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The unique ID of the CVM instance, such as `ins-11112222`.
         /// </summary>
-        [JsonProperty("AssistantCidrSet")]
-        public AssistantCidr[] AssistantCidrSet{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The unique ID of the EIP, such as `eip-11112222`.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("AddressId")]
+        public string AddressId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AddressId", this.AddressId);
         }
     }
 }

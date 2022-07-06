@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Sub-account name. If the root account is to be modified, enter `root`
+        /// Sub-account name. If the root account is to be modified, enter `root`.
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+        /// Routing policy. Valid values: master (master node); replication (replica node)
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+        /// Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+        /// true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }

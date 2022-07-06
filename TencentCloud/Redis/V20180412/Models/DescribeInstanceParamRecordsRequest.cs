@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of entries per page
+        /// Maximum number of results returned per page
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`
+        /// Offset, which is an integral multiple of `Limit`.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

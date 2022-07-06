@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string CommandLine{ get; set; }
 
         /// <summary>
-        /// Execution duration
+        /// Execution time
         /// </summary>
         [JsonProperty("ExecuteTime")]
         public string ExecuteTime{ get; set; }

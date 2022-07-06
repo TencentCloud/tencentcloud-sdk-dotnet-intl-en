@@ -49,13 +49,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// The maximum number of results returned per page. Default value: `20`
+        /// Maximum number of results returned per page. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`
+        /// Offset, which is an integral multiple of `Limit`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

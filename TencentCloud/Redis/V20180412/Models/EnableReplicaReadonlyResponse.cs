@@ -25,15 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Valid values: `ERROR`, `OK`. This field has been deprecated.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Valid values: `ERROR`, `OK`. This field has been disused.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// Task ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

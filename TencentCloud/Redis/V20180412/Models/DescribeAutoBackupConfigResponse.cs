@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Backup type. Auto backup type: 1 "scheduled rollback"
+        /// Backup type. Automatic backup type: 1 (scheduled rollback)
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
@@ -43,6 +43,18 @@ namespace TencentCloud.Redis.V20180412.Models
         public string TimePeriod{ get; set; }
 
         /// <summary>
+        /// Number of days to retain full backup files
+        /// </summary>
+        [JsonProperty("BackupStorageDays")]
+        public long? BackupStorageDays{ get; set; }
+
+        /// <summary>
+        /// Number of days to retain Tendis binlog backup files
+        /// </summary>
+        [JsonProperty("BinlogStorageDays")]
+        public long? BinlogStorageDays{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
             this.SetParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
             this.SetParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
+            this.SetParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
+            this.SetParamSimple(map, prefix + "BinlogStorageDays", this.BinlogStorageDays);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// ID of the runtime node of an instance
+        /// ID of the runtime node of the instance
         /// </summary>
         [JsonProperty("RunId")]
         public string RunId{ get; set; }
 
         /// <summary>
-        /// Cluster role. 0: primary; 1: secondary
+        /// Cluster role. 0: master; 1: replica
         /// </summary>
         [JsonProperty("Role")]
         public long? Role{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Node deactivation time
+        /// Node elimination time
         /// </summary>
         [JsonProperty("DownTime")]
         public string DownTime{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// QPS slope of a node
+        /// Node QPS slope
         /// </summary>
         [JsonProperty("QpsSlope")]
         public float? QpsSlope{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Storage slope of a node
+        /// Node storage slope
         /// </summary>
         [JsonProperty("StorageSlope")]
         public float? StorageSlope{ get; set; }

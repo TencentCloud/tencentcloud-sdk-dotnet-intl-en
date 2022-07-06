@@ -15,40 +15,50 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBackupUrlResponse : AbstractModel
+    public class DescribeLivePullStreamTasksResponse : AbstractModel
     {
         
         /// <summary>
-        /// Public network download address (valid for six hours). This field will be disused soon.
+        /// The information of stream pulling tasks.
         /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string[] DownloadUrl{ get; set; }
+        [JsonProperty("TaskInfos")]
+        public PullStreamTaskInfo[] TaskInfos{ get; set; }
 
         /// <summary>
-        /// Private network download address (valid for six hours). This field will be disused soon.
+        /// The page number.
         /// </summary>
-        [JsonProperty("InnerDownloadUrl")]
-        public string[] InnerDownloadUrl{ get; set; }
+        [JsonProperty("PageNum")]
+        public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// Filename. This field will be disused soon.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The number of records per page.
         /// </summary>
-        [JsonProperty("Filenames")]
-        public string[] Filenames{ get; set; }
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// List of backup file information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The total number of records.
         /// </summary>
-        [JsonProperty("BackupInfos")]
-        public BackupDownloadInfo[] BackupInfos{ get; set; }
+        [JsonProperty("TotalNum")]
+        public ulong? TotalNum{ get; set; }
+
+        /// <summary>
+        /// The total number of pages.
+        /// </summary>
+        [JsonProperty("TotalPage")]
+        public ulong? TotalPage{ get; set; }
+
+        /// <summary>
+        /// The maximum number of tasks allowed.
+        /// </summary>
+        [JsonProperty("LimitTaskNum")]
+        public ulong? LimitTaskNum{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -62,10 +72,12 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DownloadUrl.", this.DownloadUrl);
-            this.SetParamArraySimple(map, prefix + "InnerDownloadUrl.", this.InnerDownloadUrl);
-            this.SetParamArraySimple(map, prefix + "Filenames.", this.Filenames);
-            this.SetParamArrayObj(map, prefix + "BackupInfos.", this.BackupInfos);
+            this.SetParamArrayObj(map, prefix + "TaskInfos.", this.TaskInfos);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
+            this.SetParamSimple(map, prefix + "TotalPage", this.TotalPage);
+            this.SetParamSimple(map, prefix + "LimitTaskNum", this.LimitTaskNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

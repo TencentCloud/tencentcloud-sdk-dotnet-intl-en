@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+        /// Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// New name of instance
+        /// New name of the instance
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+        /// Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
         /// </summary>
         [JsonProperty("AutoRenews")]
         public long?[] AutoRenews{ get; set; }

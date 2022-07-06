@@ -15,38 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class KillMasterGroupRequest : AbstractModel
+    public class DescribeLivePullStreamTasksRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// The task ID. 
+        /// A task ID is returned by the `CreateLivePullStreamTask` API.
+        /// If you do not pass this parameter, all tasks will be returned, sorted by last updated time in descending order.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-        /// 2. The password cannot start with a slash (/).
-        /// 3. The password must contain at least two of the following four types:
-        ///     a. Lowercase letters (a-z)
-        ///     b. Uppercase letters (A-Z)
-        ///     c. Digits (0-9)
-        ///     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+        /// The number of page to start from. Default value: 1.
         /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
+        [JsonProperty("PageNum")]
+        public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// Node information of a single-AZ deployed instance
+        /// The maximum number of records per page. Default value: 10.
+        /// Valid values: Any integer between 1 and 20.
         /// </summary>
-        [JsonProperty("ShardIds")]
-        public long?[] ShardIds{ get; set; }
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
 
 
         /// <summary>
@@ -54,9 +51,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

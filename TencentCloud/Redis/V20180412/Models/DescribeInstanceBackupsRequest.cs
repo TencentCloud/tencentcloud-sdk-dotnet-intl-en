@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+        /// ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`
+        /// Offset, which is an integral multiple of `Limit`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

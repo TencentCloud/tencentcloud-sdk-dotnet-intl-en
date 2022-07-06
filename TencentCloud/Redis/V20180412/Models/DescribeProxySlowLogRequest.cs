@@ -43,19 +43,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Slow query threshold in microseconds
+        /// Slow query threshold in milliseconds
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// Page size
+        /// Maximum number of results returned per page
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`
+        /// Offset, which is an integral multiple of `Limit`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string NewValue{ get; set; }
 
         /// <summary>
-        /// Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+        /// Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

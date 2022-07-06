@@ -431,6 +431,60 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to create a task to pull streams from video files or an external live streaming source and publish them to a specified destination URL.
+        /// Notes:
+        /// 1. By default, you can have at most 20 stream pulling tasks at a time. You can submit a ticket to raise the limit.
+        /// 2. Only H.264 and H.265 are supported for video. If the source video is in a different format, please transcode it first.
+        /// 3. Only AAC is supported for audio. If the source audio is in a different format, please transcode it first.
+        /// 4. You can enable auto deletion in the console to delete expired tasks automatically.
+        /// 5. The pull and relay feature is a paid feature. For its billing details, see [Relay](https://intl.cloud.tencent.com/document/product/267/53308?from_cn_redirect=1).
+        /// 6. CSS is only responsible for pulling and relaying content. Please make sure that your content is authorized and complies with relevant laws and regulations. In case of copyright infringement or violation of laws or regulations, CSS will suspend its service for you and reserves the right to seek legal remedies.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="CreateLivePullStreamTaskResponse"/></returns>
+        public async Task<CreateLivePullStreamTaskResponse> CreateLivePullStreamTask(CreateLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<CreateLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a task to pull streams from video files or an external live streaming source and publish them to a specified destination URL.
+        /// Notes:
+        /// 1. By default, you can have at most 20 stream pulling tasks at a time. You can submit a ticket to raise the limit.
+        /// 2. Only H.264 and H.265 are supported for video. If the source video is in a different format, please transcode it first.
+        /// 3. Only AAC is supported for audio. If the source audio is in a different format, please transcode it first.
+        /// 4. You can enable auto deletion in the console to delete expired tasks automatically.
+        /// 5. The pull and relay feature is a paid feature. For its billing details, see [Relay](https://intl.cloud.tencent.com/document/product/267/53308?from_cn_redirect=1).
+        /// 6. CSS is only responsible for pulling and relaying content. Please make sure that your content is authorized and complies with relevant laws and regulations. In case of copyright infringement or violation of laws or regulations, CSS will suspend its service for you and reserves the right to seek legal remedies.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="CreateLivePullStreamTaskResponse"/></returns>
+        public CreateLivePullStreamTaskResponse CreateLivePullStreamTaskSync(CreateLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<CreateLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// - Prerequisites
         ///   1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
         ///   2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the [corresponding document](https://intl.cloud.tencent.com/document/product/266/2838?from_cn_redirect=1).
@@ -1004,6 +1058,52 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a task created by `CreateLivePullStreamTask`.
+        /// Notes:
+        /// 1. For the `TaskId` request parameter, pass in the task ID returned by the `CreateLivePullStreamTask` API.
+        /// 2. You can query the ID of a task using the `DescribeLivePullStreamTasks` API.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="DeleteLivePullStreamTaskResponse"/></returns>
+        public async Task<DeleteLivePullStreamTaskResponse> DeleteLivePullStreamTask(DeleteLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<DeleteLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a task created by `CreateLivePullStreamTask`.
+        /// Notes:
+        /// 1. For the `TaskId` request parameter, pass in the task ID returned by the `CreateLivePullStreamTask` API.
+        /// 2. You can query the ID of a task using the `DescribeLivePullStreamTasks` API.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="DeleteLivePullStreamTaskResponse"/></returns>
+        public DeleteLivePullStreamTaskResponse DeleteLivePullStreamTaskSync(DeleteLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<DeleteLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLivePullStreamTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2054,6 +2154,48 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLivePlayAuthKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePlayAuthKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the stream pulling tasks created by `CreateLivePullStreamTask`.
+        /// The tasks returned are sorted by last updated time in descending order.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePullStreamTasksRequest"/></param>
+        /// <returns><see cref="DescribeLivePullStreamTasksResponse"/></returns>
+        public async Task<DescribeLivePullStreamTasksResponse> DescribeLivePullStreamTasks(DescribeLivePullStreamTasksRequest req)
+        {
+             JsonResponseModel<DescribeLivePullStreamTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLivePullStreamTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePullStreamTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the stream pulling tasks created by `CreateLivePullStreamTask`.
+        /// The tasks returned are sorted by last updated time in descending order.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePullStreamTasksRequest"/></param>
+        /// <returns><see cref="DescribeLivePullStreamTasksResponse"/></returns>
+        public DescribeLivePullStreamTasksResponse DescribeLivePullStreamTasksSync(DescribeLivePullStreamTasksRequest req)
+        {
+             JsonResponseModel<DescribeLivePullStreamTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLivePullStreamTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePullStreamTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3662,6 +3804,50 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLivePlayDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePlayDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a stream pulling task. 
+        /// 1. You cannot modify the destination URL. To publish to a new destination, please create a new task.
+        /// 2. You cannot modify the source type. To use a different source type, please create a new task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="ModifyLivePullStreamTaskResponse"/></returns>
+        public async Task<ModifyLivePullStreamTaskResponse> ModifyLivePullStreamTask(ModifyLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<ModifyLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a stream pulling task. 
+        /// 1. You cannot modify the destination URL. To publish to a new destination, please create a new task.
+        /// 2. You cannot modify the source type. To use a different source type, please create a new task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="ModifyLivePullStreamTaskResponse"/></returns>
+        public ModifyLivePullStreamTaskResponse ModifyLivePullStreamTaskSync(ModifyLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<ModifyLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePullStreamTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

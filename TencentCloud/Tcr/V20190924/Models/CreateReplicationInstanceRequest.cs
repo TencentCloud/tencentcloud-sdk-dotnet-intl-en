@@ -42,6 +42,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("ReplicationRegionName")]
         public string ReplicationRegionName{ get; set; }
 
+        /// <summary>
+        /// Whether to sync TCR cloud tags to the COS Bucket
+        /// </summary>
+        [JsonProperty("SyncTag")]
+        public bool? SyncTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "ReplicationRegionId", this.ReplicationRegionId);
             this.SetParamSimple(map, prefix + "ReplicationRegionName", this.ReplicationRegionName);
+            this.SetParamSimple(map, prefix + "SyncTag", this.SyncTag);
         }
     }
 }

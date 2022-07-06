@@ -133,6 +133,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to change the IP address. It supports changing the common public IPs and EIPs billed by monthly subscribed bandwidth of a CVM instance.
+        /// </summary>
+        /// <param name="req"><see cref="AdjustPublicAddressRequest"/></param>
+        /// <returns><see cref="AdjustPublicAddressResponse"/></returns>
+        public async Task<AdjustPublicAddressResponse> AdjustPublicAddress(AdjustPublicAddressRequest req)
+        {
+             JsonResponseModel<AdjustPublicAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AdjustPublicAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AdjustPublicAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to change the IP address. It supports changing the common public IPs and EIPs billed by monthly subscribed bandwidth of a CVM instance.
+        /// </summary>
+        /// <param name="req"><see cref="AdjustPublicAddressRequest"/></param>
+        /// <returns><see cref="AdjustPublicAddressResponse"/></returns>
+        public AdjustPublicAddressResponse AdjustPublicAddressSync(AdjustPublicAddressRequest req)
+        {
+             JsonResponseModel<AdjustPublicAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AdjustPublicAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AdjustPublicAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to apply for one or more [Elastic IP Addresses](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIPs for short).
         /// * An EIP is a static IP address that is dedicated for dynamic cloud computing. You can quickly re-map an EIP to another instance under your account to protect against instance failures.
         /// * Your EIP is associated with your Tencent Cloud account rather than an instance. It remains associated with your Tencent Cloud account until you choose to explicitly release it or your account is in arrears for more than 24 hours.
@@ -1027,7 +1067,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+        /// This API is used to batch create secondary CIDR blocks. This API is in beta test. To use it, please submit a ticket.
         /// </summary>
         /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
         /// <returns><see cref="CreateAssistantCidrResponse"/></returns>
@@ -1047,7 +1087,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+        /// This API is used to batch create secondary CIDR blocks. This API is in beta test. To use it, please submit a ticket.
         /// </summary>
         /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
         /// <returns><see cref="CreateAssistantCidrResponse"/></returns>
@@ -1610,7 +1650,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
-        /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
+        /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` to set rules for the new network ACL as needed.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkAclRequest"/></param>
         /// <returns><see cref="CreateNetworkAclResponse"/></returns>
@@ -1631,7 +1671,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
-        /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
+        /// * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` to set rules for the new network ACL as needed.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkAclRequest"/></param>
         /// <returns><see cref="CreateNetworkAclResponse"/></returns>
@@ -2525,7 +2565,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteAssistantCidr) is used to delete secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+        /// This API is used to delete secondary CIDR blocks. This API is in beta test. To use it, please submit a ticket.
         /// </summary>
         /// <param name="req"><see cref="DeleteAssistantCidrRequest"/></param>
         /// <returns><see cref="DeleteAssistantCidrResponse"/></returns>
@@ -2545,7 +2585,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteAssistantCidr) is used to delete secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+        /// This API is used to delete secondary CIDR blocks. This API is in beta test. To use it, please submit a ticket.
         /// </summary>
         /// <param name="req"><see cref="DeleteAssistantCidrRequest"/></param>
         /// <returns><see cref="DeleteAssistantCidrResponse"/></returns>
@@ -4651,7 +4691,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeGatewayFlowQos) is used to query the QoS bandwidth limit of inbound IP flow in a gateway.
+        /// This API is used to query the inbound IP bandwidth limit of a gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewayFlowQosRequest"/></param>
         /// <returns><see cref="DescribeGatewayFlowQosResponse"/></returns>
@@ -4671,7 +4711,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DescribeGatewayFlowQos) is used to query the QoS bandwidth limit of inbound IP flow in a gateway.
+        /// This API is used to query the inbound IP bandwidth limit of a gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewayFlowQosRequest"/></param>
         /// <returns><see cref="DescribeGatewayFlowQosResponse"/></returns>
@@ -6305,7 +6345,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DisableGatewayFlowMonitor) is used to disable gateway flow monitor.
+        /// This API is used to disable gateway traffic monitor.
         /// </summary>
         /// <param name="req"><see cref="DisableGatewayFlowMonitorRequest"/></param>
         /// <returns><see cref="DisableGatewayFlowMonitorResponse"/></returns>
@@ -6325,7 +6365,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DisableGatewayFlowMonitor) is used to disable gateway flow monitor.
+        /// This API is used to disable gateway traffic monitor.
         /// </summary>
         /// <param name="req"><see cref="DisableGatewayFlowMonitorRequest"/></param>
         /// <returns><see cref="DisableGatewayFlowMonitorResponse"/></returns>
@@ -6715,7 +6755,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (EnableGatewayFlowMonitor) is used to enable gateway flow monitor.
+        /// This API is used to enable gateway traffic monitor.
         /// </summary>
         /// <param name="req"><see cref="EnableGatewayFlowMonitorRequest"/></param>
         /// <returns><see cref="EnableGatewayFlowMonitorResponse"/></returns>
@@ -6735,7 +6775,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (EnableGatewayFlowMonitor) is used to enable gateway flow monitor.
+        /// This API is used to enable gateway traffic monitor.
         /// </summary>
         /// <param name="req"><see cref="EnableGatewayFlowMonitorRequest"/></param>
         /// <returns><see cref="EnableGatewayFlowMonitorResponse"/></returns>
@@ -7333,7 +7373,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAssistantCidr) is used to batch modify (e.g. add and delete) secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+        /// This API is used to modify (add or delete) secondary CIDR blocks in batch. This API is in beta test. To use it, please submit a ticket.
         /// </summary>
         /// <param name="req"><see cref="ModifyAssistantCidrRequest"/></param>
         /// <returns><see cref="ModifyAssistantCidrResponse"/></returns>
@@ -7353,7 +7393,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyAssistantCidr) is used to batch modify (e.g. add and delete) secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+        /// This API is used to modify (add or delete) secondary CIDR blocks in batch. This API is in beta test. To use it, please submit a ticket.
         /// </summary>
         /// <param name="req"><see cref="ModifyAssistantCidrRequest"/></param>
         /// <returns><see cref="ModifyAssistantCidrResponse"/></returns>
@@ -7653,7 +7693,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyGatewayFlowQos) is used to adjust the QoS bandwidth limit in a gateway.
+        /// This API is used to adjust the bandwidth limit of a gateway.
         /// </summary>
         /// <param name="req"><see cref="ModifyGatewayFlowQosRequest"/></param>
         /// <returns><see cref="ModifyGatewayFlowQosResponse"/></returns>
@@ -7673,7 +7713,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ModifyGatewayFlowQos) is used to adjust the QoS bandwidth limit in a gateway.
+        /// This API is used to adjust the bandwidth limit of a gateway.
         /// </summary>
         /// <param name="req"><see cref="ModifyGatewayFlowQosRequest"/></param>
         /// <returns><see cref="ModifyGatewayFlowQosResponse"/></returns>
@@ -8013,7 +8053,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
+        /// This API is used to modify (add or delete) the inbound and outbound rules of a network ACL. In `NetworkAclEntrySet` parameters,
+        /// * Passing in the new inbound/outbound rules will reset the original rules.
+        /// * Passing in the inbound rules will only reset the original inbound rules and not affect the original outbound rules, and vice versa.
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkAclEntriesRequest"/></param>
         /// <returns><see cref="ModifyNetworkAclEntriesResponse"/></returns>
@@ -8033,7 +8075,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
+        /// This API is used to modify (add or delete) the inbound and outbound rules of a network ACL. In `NetworkAclEntrySet` parameters,
+        /// * Passing in the new inbound/outbound rules will reset the original rules.
+        /// * Passing in the inbound rules will only reset the original inbound rules and not affect the original outbound rules, and vice versa.
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkAclEntriesRequest"/></param>
         /// <returns><see cref="ModifyNetworkAclEntriesResponse"/></returns>
@@ -8725,7 +8769,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
+        /// This API is used to publish a route to CCN. This can also be done by clicking "Publish to CCN" in the operation column on the page of route table list.
         /// </summary>
         /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
         /// <returns><see cref="NotifyRoutesResponse"/></returns>
@@ -8745,7 +8789,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
+        /// This API is used to publish a route to CCN. This can also be done by clicking "Publish to CCN" in the operation column on the page of route table list.
         /// </summary>
         /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
         /// <returns><see cref="NotifyRoutesResponse"/></returns>
@@ -9589,7 +9633,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
+        /// This API is used to withdraw a route from CCN. 
         /// </summary>
         /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
         /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>
@@ -9609,7 +9653,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
+        /// This API is used to withdraw a route from CCN. 
         /// </summary>
         /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
         /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>

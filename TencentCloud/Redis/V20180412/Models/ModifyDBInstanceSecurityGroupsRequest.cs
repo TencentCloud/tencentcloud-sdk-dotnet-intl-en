@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// The ID list of the security groups to be modified, which is an array of one or more security group IDs.
+        /// ID list of the security groups to be modified, which is an array of one or more security group IDs.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+        /// Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

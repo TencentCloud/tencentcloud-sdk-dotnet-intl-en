@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time of the maintenance window, such as 17:00
+        /// Maintenance start time, such as 17:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the maintenance window, such as 19:00
+        /// Maintenance end time, such as 19:00
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

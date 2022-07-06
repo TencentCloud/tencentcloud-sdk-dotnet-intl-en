@@ -75,6 +75,8 @@
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveCertRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveCertResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLivePullStreamTaskRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordRuleRequest.cs" />
@@ -103,6 +105,8 @@
     <Compile Include="V20180801\Models\DeleteLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLivePullStreamTaskRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveRecordRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveRecordResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveRecordRuleRequest.cs" />
@@ -155,6 +159,8 @@
     <Compile Include="V20180801\Models\DescribeLiveForbidStreamListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePullStreamTasksRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePullStreamTasksResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePushAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePushAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveRecordRulesRequest.cs" />
@@ -243,6 +249,8 @@
     <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayDomainRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayDomainResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePullStreamTaskRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePushAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLivePushAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveRecordTemplateRequest.cs" />
@@ -258,8 +266,10 @@
     <Compile Include="V20180801\Models\PlaySumStatInfo.cs" />
     <Compile Include="V20180801\Models\ProIspPlayCodeDataInfo.cs" />
     <Compile Include="V20180801\Models\PublishTimeInfo.cs" />
+    <Compile Include="V20180801\Models\PullStreamTaskInfo.cs" />
     <Compile Include="V20180801\Models\PushAuthKeyInfo.cs" />
     <Compile Include="V20180801\Models\PushDataInfo.cs" />
+    <Compile Include="V20180801\Models\RecentPullInfo.cs" />
     <Compile Include="V20180801\Models\RecordParam.cs" />
     <Compile Include="V20180801\Models\RecordTemplateInfo.cs" />
     <Compile Include="V20180801\Models\RefererAuthConfig.cs" />

@@ -30,6 +30,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+        /// </summary>
+        [JsonProperty("UpgradeProxyAndRedisServer")]
+        public bool? UpgradeProxyAndRedisServer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "UpgradeProxyAndRedisServer", this.UpgradeProxyAndRedisServer);
         }
     }
 }

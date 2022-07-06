@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// Whether restart is required after a modification is made. Value range: true, false
+        /// Whether restart is required after a modification is made. Valid values: true, false
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// Current value of a parameter
+        /// Current value
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Tips{ get; set; }
 
         /// <summary>
-        /// Value range of a parameter
+        /// Valid values of the parameter
         /// </summary>
         [JsonProperty("TextValue")]
         public string[] TextValue{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// ID of the parameter template to be modified.
+        /// ID of the source parameter template.
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

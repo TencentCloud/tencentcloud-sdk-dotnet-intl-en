@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Node type. Valid values: `0` (master node), `1` (replica node)
+        /// Node type. 0: master node; 1: replica node
         /// </summary>
         [JsonProperty("NodeType")]
         public long? NodeType{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node, which is not required upon creation of the instance
+        /// ID of the master or replica node, which is not required during instance creation
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// AZ ID of the master or replica node
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// ID of the availability zone of the master or replica node
+        /// AZ name of the master or replica node
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

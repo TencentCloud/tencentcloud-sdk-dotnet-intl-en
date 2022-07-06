@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
+        /// VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Name of the network ACL. The maximum length is 60 bytes.
+        /// Network ACL name, which can contain up to 60 bytes.
         /// </summary>
         [JsonProperty("NetworkAclName")]
         public string NetworkAclName{ get; set; }

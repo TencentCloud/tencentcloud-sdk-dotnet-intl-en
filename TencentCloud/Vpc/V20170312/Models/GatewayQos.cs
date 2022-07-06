@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// The creation time.
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

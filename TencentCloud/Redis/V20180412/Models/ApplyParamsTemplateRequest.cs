@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID list
+        /// List of instance IDs
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// The ID of the parameter template to be applied
+        /// ID of the parameter template to be applied
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// The unique ID of the routing policy
+        /// The unique ID of the route
         /// </summary>
         [JsonProperty("RouteItemIds")]
         public string[] RouteItemIds{ get; set; }

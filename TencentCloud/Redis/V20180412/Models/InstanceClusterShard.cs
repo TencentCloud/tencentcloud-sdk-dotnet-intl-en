@@ -67,7 +67,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? StorageSlope{ get; set; }
 
         /// <summary>
-        /// ID of the runtime node of an instance
+        /// ID of the runtime node of the instance
         /// </summary>
         [JsonProperty("Runid")]
         public string Runid{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+        /// Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
@@ -55,10 +55,31 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Whether a backup is locked. 0: no; 1: yes
+        /// Whether a backup is locked. 0: no; 1: yes.
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
+
+        /// <summary>
+        /// Internal field, which can be ignored.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupSize")]
+        public long? BackupSize{ get; set; }
+
+        /// <summary>
+        /// Internal field, which can be ignored.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FullBackup")]
+        public long? FullBackup{ get; set; }
+
+        /// <summary>
+        /// Internal field, which can be ignored.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +93,9 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Locked", this.Locked);
+            this.SetParamSimple(map, prefix + "BackupSize", this.BackupSize);
+            this.SetParamSimple(map, prefix + "FullBackup", this.FullBackup);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

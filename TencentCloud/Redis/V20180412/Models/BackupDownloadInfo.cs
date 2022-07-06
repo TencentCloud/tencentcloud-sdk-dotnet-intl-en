@@ -37,13 +37,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? FileSize{ get; set; }
 
         /// <summary>
-        /// Address (valid for 6 hours) used to download the backup file over a public network
+        /// Address (valid for six hours) used to download the backup file over the public network
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }
 
         /// <summary>
-        /// Address (valid for 6 hours) used to download the backup file over a private network
+        /// Address (valid for six hours) used to download the backup file over the private network
         /// </summary>
         [JsonProperty("InnerDownloadUrl")]
         public string InnerDownloadUrl{ get; set; }

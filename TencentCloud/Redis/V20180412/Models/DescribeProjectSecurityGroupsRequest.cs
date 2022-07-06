@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The number of security groups to be pulled.
+        /// Number of results to be pulled. Default value: 20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

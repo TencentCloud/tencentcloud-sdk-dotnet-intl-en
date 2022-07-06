@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Network ACL instance ID. Example: acl-12345678.
+        /// Network ACL instance ID, such as `acl-12345678`.
         /// </summary>
         [JsonProperty("NetworkAclId")]
         public string NetworkAclId{ get; set; }
 
         /// <summary>
-        /// Name of the network ACL. The maximum length is 60 bytes.
+        /// Network ACL name, which can contain up to 60 bytes.
         /// </summary>
         [JsonProperty("NetworkAclName")]
         public string NetworkAclName{ get; set; }

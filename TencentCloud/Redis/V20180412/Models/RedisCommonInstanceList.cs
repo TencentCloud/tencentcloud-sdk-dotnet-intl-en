@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Project ID of the instance
+        /// Instance project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Instance availability zone
+        /// Instance AZ
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+        /// Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Createtime{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
+        /// Billing mode. 0: pay-as-you-go; 1: monthly subscription
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: `0` (classic network), `1` (VPC)
+        /// Network type. Valid values: 0 (classic network); 1 (VPC).
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// Instance ID list, which is an array of one or more instance IDs.
+        /// List of instance IDs, which is an array of one or more instance IDs.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class KillMasterGroupResponse : AbstractModel
+    public class AdjustPublicAddressResponse : AbstractModel
     {
         
         /// <summary>
-        /// Async task ID
+        /// The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
         /// </summary>
         [JsonProperty("TaskId")]
-        public long? TaskId{ get; set; }
+        public ulong? TaskId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.

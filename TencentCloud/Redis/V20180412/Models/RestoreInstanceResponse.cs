@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
+        /// Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

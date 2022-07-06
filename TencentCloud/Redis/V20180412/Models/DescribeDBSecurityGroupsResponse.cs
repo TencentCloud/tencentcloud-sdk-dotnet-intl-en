@@ -25,10 +25,22 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Security group rules.
+        /// Security group rules
         /// </summary>
         [JsonProperty("Groups")]
         public SecurityGroup[] Groups{ get; set; }
+
+        /// <summary>
+        /// Private IP for which the security group takes effect
+        /// </summary>
+        [JsonProperty("VIP")]
+        public string VIP{ get; set; }
+
+        /// <summary>
+        /// Private port for which the security group takes effect
+        /// </summary>
+        [JsonProperty("VPort")]
+        public string VPort{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,6 +55,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
+            this.SetParamSimple(map, prefix + "VIP", this.VIP);
+            this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

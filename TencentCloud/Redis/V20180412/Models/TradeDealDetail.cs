@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Order ID, which is used when a TencentCloud API is called
+        /// Order ID, which is used when a TencentCloud API is called.
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }
 
         /// <summary>
-        /// Long order ID, which is used when an order issue is submitted for assistance
+        /// Long order ID, which is used when an order issue is submitted for assistance.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// Number of instances associated with an order
+        /// Number of instances associated with the order
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// Creates a user uin
+        /// Creator UIN
         /// </summary>
         [JsonProperty("Creater")]
         public string Creater{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Actual total price of an order in 0.01 CNY
+        /// Actual total price of the order in 0.01 CNY
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }

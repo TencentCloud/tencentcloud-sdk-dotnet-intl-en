@@ -57,6 +57,8 @@
     <Compile Include="V20170312\Models\AddressTemplateGroup.cs" />
     <Compile Include="V20170312\Models\AddressTemplateItem.cs" />
     <Compile Include="V20170312\Models\AddressTemplateSpecification.cs" />
+    <Compile Include="V20170312\Models\AdjustPublicAddressRequest.cs" />
+    <Compile Include="V20170312\Models\AdjustPublicAddressResponse.cs" />
     <Compile Include="V20170312\Models\AlgType.cs" />
     <Compile Include="V20170312\Models\AllocateAddressesRequest.cs" />
     <Compile Include="V20170312\Models\AllocateAddressesResponse.cs" />

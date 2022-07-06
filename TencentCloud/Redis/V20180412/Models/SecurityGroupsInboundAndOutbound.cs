@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Action{ get; set; }
 
         /// <summary>
-        /// IP address
+        /// IP addresses
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

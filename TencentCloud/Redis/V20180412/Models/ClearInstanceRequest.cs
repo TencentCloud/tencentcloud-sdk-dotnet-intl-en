@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+        /// Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

@@ -25,10 +25,10 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Gateway instance ID, which currently supports these types:
-        /// ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-        /// ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-        /// ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
+        /// Gateway instance ID. Supported types:
+        /// Direct connect gateway instance, such as `dcg-ltjahce6`;
+        /// NAT gateway instance, such as `nat-ltjahce6`;
+        /// VPN gateway instance, such as `vpn-ltjahce6`.
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }

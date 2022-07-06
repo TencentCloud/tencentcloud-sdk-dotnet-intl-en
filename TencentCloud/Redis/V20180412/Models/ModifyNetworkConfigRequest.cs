@@ -31,19 +31,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
+        /// Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
+        /// VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+        /// VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("Recycle")]
+        public long? Recycle{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "Recycle", this.Recycle);
         }
     }
 }

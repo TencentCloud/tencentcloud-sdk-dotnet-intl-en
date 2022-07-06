@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// The number of keys on a node
+        /// Number of keys on the node
         /// </summary>
         [JsonProperty("Keys")]
         public long? Keys{ get; set; }

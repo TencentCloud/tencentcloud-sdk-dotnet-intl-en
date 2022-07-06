@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// User's Appid
+        /// User `Appid`
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong, China; 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+        /// Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// Port number of an instance
+        /// Port number of the instance
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
@@ -109,13 +109,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? SizeUsed{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
+        /// Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Whether to set the auto-renewal flag for an instance. 1: auto-renewal set; 0: auto-renewal not set
+        /// Whether to set the auto-renewal flag for the instance. 1: yes; 0: no
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// Engine: Redis community edition, Tencent Cloud CKV
+        /// Engine: Redis Community Edition, Tencent Cloud CKV
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
+        /// Instance type. Valid values: standalone (Standard Edition); cluster (Cluster Edition)
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
@@ -151,25 +151,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Billing method. 0: pay-as-you-go; 1: monthly subscription
+        /// Billing mode. 0: pay-as-you-go; 1: monthly subscription
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// Description of an instance status, such as "instance running"
+        /// Description of the instance status, such as "instance running"
         /// </summary>
         [JsonProperty("InstanceTitle")]
         public string InstanceTitle{ get; set; }
 
         /// <summary>
-        /// Scheduled deactivation time
+        /// Planned elimination time
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// Sub-status returned for an instance in process
+        /// Sub-status returned for the instance in process
         /// </summary>
         [JsonProperty("SubStatus")]
         public long? SubStatus{ get; set; }
@@ -217,7 +217,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string CloseTime{ get; set; }
 
         /// <summary>
-        /// Read weight of a secondary node
+        /// Read weight of the replica node
         /// </summary>
         [JsonProperty("SlaveReadWeight")]
         public long? SlaveReadWeight{ get; set; }
@@ -237,7 +237,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// Whether an instance is password-free. true: yes; false: no
+        /// Whether the instance is password-free. true: yes; false: no.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NoAuth")]
@@ -245,91 +245,91 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Number of client connections
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }
 
         /// <summary>
         /// DTS status (internal parameter, which can be ignored)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DtsStatus")]
         public long? DtsStatus{ get; set; }
 
         /// <summary>
-        /// Upper shard bandwidth limit in MB
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Shard bandwidth cap in MB
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetLimit")]
         public long? NetLimit{ get; set; }
 
         /// <summary>
         /// Password-free instance flag (internal parameter, which can be ignored)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PasswordFree")]
         public long? PasswordFree{ get; set; }
 
         /// <summary>
         /// Read-only instance flag (internal parameter, which can be ignored)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Internal parameter, which can be ignored.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Internal parameter, which can be ignored.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RemainBandwidthDuration")]
         public string RemainBandwidthDuration{ get; set; }
 
         /// <summary>
         /// Disk size of the Tendis instance
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Monitoring version. Valid values: 1m (monitoring at 1-minute granularity); 5s (monitoring at 5-second granularity)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
         /// <summary>
-        /// The minimum value of the range of maximum connections to the client
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Minimum value for the range of maximum connections to the client
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientLimitMin")]
         public long? ClientLimitMin{ get; set; }
 
         /// <summary>
-        /// The maximum value of the range of maximum connections to the client
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Maximum value for the range of maximum connections to the client
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientLimitMax")]
         public long? ClientLimitMax{ get; set; }
 
         /// <summary>
         /// Instance node details
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// Region where the instance is deployed
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Instance region, such as ap-guangzhou
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

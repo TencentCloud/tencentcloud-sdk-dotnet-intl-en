@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
+        /// Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }

@@ -31,25 +31,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// Node group name
+        /// Node group name, which is empty for the master node
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Node availability zone ID, such as ap-guangzhou-1
+        /// Node AZ ID, such as ap-guangzhou-1
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Node group type. Valid values: `master` (master node group), `replica` (replica node group)
+        /// Node group type. Valid values: master (master node group); replica (replica node group)
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
-        /// The list of nodes in a node group
+        /// List of nodes in the node group
         /// </summary>
         [JsonProperty("RedisNodes")]
         public RedisNode[] RedisNodes{ get; set; }

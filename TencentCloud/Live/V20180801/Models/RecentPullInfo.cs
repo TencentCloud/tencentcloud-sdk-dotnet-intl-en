@@ -15,32 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskListResponse : AbstractModel
+    public class RecentPullInfo : AbstractModel
     {
         
         /// <summary>
-        /// Total number of tasks
+        /// The URL of the file currently pulled.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
 
         /// <summary>
-        /// Task details
+        /// The offset of the file currently pulled.
         /// </summary>
-        [JsonProperty("Tasks")]
-        public TaskInfoDetail[] Tasks{ get; set; }
+        [JsonProperty("OffsetTime")]
+        public ulong? OffsetTime{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The time when the offset is reported, in UTC format.
+        /// Example: 2020-07-23T03:20:39Z
+        /// Note: Beijing time is 8 hours ahead of UTC.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ReportTime")]
+        public string ReportTime{ get; set; }
+
+        /// <summary>
+        /// The number of times looped.
+        /// </summary>
+        [JsonProperty("LoopedTimes")]
+        public long? LoopedTimes{ get; set; }
 
 
         /// <summary>
@@ -48,9 +56,10 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
+            this.SetParamSimple(map, prefix + "ReportTime", this.ReportTime);
+            this.SetParamSimple(map, prefix + "LoopedTimes", this.LoopedTimes);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Network protocol, such as UDP and TCP, etc.
+        /// Network protocol, such as UDP and TCP.
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }

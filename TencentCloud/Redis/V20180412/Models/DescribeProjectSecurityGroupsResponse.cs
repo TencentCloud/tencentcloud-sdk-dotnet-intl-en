@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public SecurityGroup[] Groups{ get; set; }
 
         /// <summary>
-        /// Total number of the security groups meeting the condition.
+        /// Total number of eligible security groups.
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

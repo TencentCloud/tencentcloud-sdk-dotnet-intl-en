@@ -25,8 +25,8 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// A set of secondary CIDR blocks.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Array of secondary CIDR blocks.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssistantCidrSet")]
         public AssistantCidr[] AssistantCidrSet{ get; set; }

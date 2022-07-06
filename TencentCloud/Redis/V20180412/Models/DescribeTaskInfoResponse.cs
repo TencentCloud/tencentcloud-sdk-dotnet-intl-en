@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+        /// Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
         /// </summary>
         [JsonProperty("TaskMessage")]
         public string TaskMessage{ get; set; }

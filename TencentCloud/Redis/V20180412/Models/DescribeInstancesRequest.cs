@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance list size. Default value: 20
+        /// Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`
+        /// Offset, which is an integral multiple of `Limit`.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+        /// Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
         /// </summary>
         [JsonProperty("VpcIds")]
         public string[] VpcIds{ get; set; }
 
         /// <summary>
-        /// Array of subnet IDs such as 56854. The array subscript starts from 0
+        /// Array of subnet IDs such as 56854. The array subscript starts from 0.
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// Array of project IDs. The array subscript starts from 0
+        /// Array of project IDs. The array subscript starts from 0.
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
@@ -85,19 +85,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+        /// Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
         /// </summary>
         [JsonProperty("UniqVpcIds")]
         public string[] UniqVpcIds{ get; set; }
 
         /// <summary>
-        /// Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+        /// Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
         /// </summary>
         [JsonProperty("UniqSubnetIds")]
         public string[] UniqSubnetIds{ get; set; }
 
         /// <summary>
-        /// Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+        /// Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
         /// </summary>
         [JsonProperty("RegionIds")]
         public long?[] RegionIds{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+        /// Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
         /// </summary>
         [JsonProperty("TypeVersion")]
         public long? TypeVersion{ get; set; }
@@ -127,34 +127,46 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] AutoRenew{ get; set; }
 
         /// <summary>
-        /// Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+        /// Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
         /// </summary>
         [JsonProperty("BillingMode")]
         public string BillingMode{ get; set; }
 
         /// <summary>
-        /// Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+        /// Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Search keywords, which can be instance ID, instance name, or complete IP
+        /// Search keywords, which can be instance ID, instance name, or complete IP.
         /// </summary>
         [JsonProperty("SearchKeys")]
         public string[] SearchKeys{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored
+        /// Internal parameter, which can be ignored.
         /// </summary>
         [JsonProperty("TypeList")]
         public long?[] TypeList{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored
+        /// Internal parameter, which can be ignored.
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
+
+        /// <summary>
+        /// Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public InstanceTagInfo[] InstanceTags{ get; set; }
+
+        /// <summary>
+        /// Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+        /// </summary>
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
 
 
         /// <summary>
@@ -184,6 +196,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
             this.SetParamArraySimple(map, prefix + "TypeList.", this.TypeList);
             this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         }
     }
 }

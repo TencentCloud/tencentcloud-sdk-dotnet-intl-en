@@ -26,56 +26,56 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// DTS task ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
         /// DTS task name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
         /// Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// Status description
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// Synchronization latency in bytes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Sync latency in bytes
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
         /// Disconnection time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CutDownTime")]
         public string CutDownTime{ get; set; }
 
         /// <summary>
         /// Source instance information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SrcInfo")]
         public DescribeInstanceDTSInstanceInfo SrcInfo{ get; set; }
 
         /// <summary>
         /// Target instance information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DstInfo")]
         public DescribeInstanceDTSInstanceInfo DstInfo{ get; set; }

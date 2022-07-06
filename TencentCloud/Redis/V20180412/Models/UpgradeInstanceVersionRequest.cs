@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+        /// Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TargetInstanceType")]
         public string TargetInstanceType{ get; set; }
 
         /// <summary>
-        /// Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+        /// Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
         /// </summary>
         [JsonProperty("SwitchOption")]
         public long? SwitchOption{ get; set; }

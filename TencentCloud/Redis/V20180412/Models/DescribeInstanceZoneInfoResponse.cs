@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// The number of instance node groups
+        /// Number of instance node groups
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// The list of instance node groups
+        /// List of instance node groups
         /// </summary>
         [JsonProperty("ReplicaGroups")]
         public ReplicaGroup[] ReplicaGroups{ get; set; }

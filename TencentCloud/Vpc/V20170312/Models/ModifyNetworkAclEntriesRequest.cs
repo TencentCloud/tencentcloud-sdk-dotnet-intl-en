@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Network ACL instance ID. Example: acl-12345678.
+        /// Network ACL instance ID, such as `acl-12345678`.
         /// </summary>
         [JsonProperty("NetworkAclId")]
         public string NetworkAclId{ get; set; }
 
         /// <summary>
-        /// Network ACL rule set.
+        /// Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
         /// </summary>
         [JsonProperty("NetworkAclEntrySet")]
         public NetworkAclEntrySet NetworkAclEntrySet{ get; set; }

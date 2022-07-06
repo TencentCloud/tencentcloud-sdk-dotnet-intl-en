@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+        /// Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
         /// </summary>
         [JsonProperty("WeekDays")]
         public string[] WeekDays{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string TimePeriod{ get; set; }
 
         /// <summary>
-        /// Auto backup type: 1 "scheduled rollback"
+        /// Automatic backup type: 1 (scheduled rollback)
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }

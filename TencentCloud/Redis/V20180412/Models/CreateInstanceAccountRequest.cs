@@ -37,25 +37,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-        /// 2. The password cannot start with a slash (/).
-        /// 3. The password must contain at least two of the following four types:
-        ///     a. Lowercase letters (a-z)
-        ///     b. Uppercase letters (A-Z)
-        ///     c. Digits (0-9)
+        /// 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+        /// 2. It cannot start with a slash (/).
+        /// 3. It must contain characters in at least two of the following types:
+        ///     a. Lowercase letters (a–z)
+        ///     b. Uppercase letters (A–Z)
+        ///     c. Digits (0–9)
         ///     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// Routing policy. Enter `master` for primary node or `replication` for secondary node
+        /// Routing policy. Valid values: master (master node); replication (replica node)
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Read/write policy. Valid values: r (read-only), rw (read/write).
+        /// Read/Write policy. Valid values: r (read-only); rw (read/write).
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }

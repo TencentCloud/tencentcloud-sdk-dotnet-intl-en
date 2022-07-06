@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// List of instance VIPs
+        /// List of VPC IDs
         /// </summary>
         [JsonProperty("VpcIds")]
         public long?[] VpcIds{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+        /// List of billing modes. 0: monthly subscription; 1: pay-as-you-go
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] Status{ get; set; }
 
         /// <summary>
-        /// Sort field
+        /// Sorting field
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sort order
+        /// Sorting order
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] UniqSubnetIds{ get; set; }
 
         /// <summary>
-        /// Quantity limit. The default value `100` is recommended.
+        /// Quantity limit. Recommended default value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

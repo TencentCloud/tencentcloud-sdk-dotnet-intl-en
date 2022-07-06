@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// List of instance details.
+        /// List of instance details
         /// </summary>
         [JsonProperty("GatewayQosSet")]
         public GatewayQos[] GatewayQosSet{ get; set; }
