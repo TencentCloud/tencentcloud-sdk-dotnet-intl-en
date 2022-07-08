@@ -79,6 +79,12 @@ namespace TencentCloud.Es.V20180416.Models
         public long? Status{ get; set; }
 
         /// <summary>
+        /// This parameter is not used on the global website
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
+
+        /// <summary>
         /// Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
         /// </summary>
         [JsonProperty("ChargeType")]
@@ -89,12 +95,6 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         [JsonProperty("ChargePeriod")]
         public ulong? ChargePeriod{ get; set; }
-
-        /// <summary>
-        /// This parameter is not used on the global website
-        /// </summary>
-        [JsonProperty("RenewFlag")]
-        public string RenewFlag{ get; set; }
 
         /// <summary>
         /// Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
@@ -506,6 +506,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EsPrivateDomain")]
         public string EsPrivateDomain{ get; set; }
 
+        /// <summary>
+        /// Configuration set info of the cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EsConfigSets")]
+        public EsConfigSetInfo[] EsConfigSets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -521,9 +528,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "VpcUid", this.VpcUid);
             this.SetParamSimple(map, prefix + "SubnetUid", this.SubnetUid);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "ChargePeriod", this.ChargePeriod);
-            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
@@ -586,6 +593,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
             this.SetParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
             this.SetParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
+            this.SetParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
         }
     }
 }

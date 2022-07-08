@@ -140,6 +140,8 @@
     <Compile Include="V20180412\Models\DescribeSlowLogResponse.cs" />
     <Compile Include="V20180412\Models\DescribeTaskInfoRequest.cs" />
     <Compile Include="V20180412\Models\DescribeTaskInfoResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeTaskListRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeTaskListResponse.cs" />
     <Compile Include="V20180412\Models\DescribeTendisSlowLogRequest.cs" />
     <Compile Include="V20180412\Models\DescribeTendisSlowLogResponse.cs" />
     <Compile Include="V20180412\Models\DestroyPostpaidInstanceRequest.cs" />
@@ -174,6 +176,8 @@
     <Compile Include="V20180412\Models\InstanceTagInfo.cs" />
     <Compile Include="V20180412\Models\InstanceTextParam.cs" />
     <Compile Include="V20180412\Models\Instances.cs" />
+    <Compile Include="V20180412\Models\KillMasterGroupRequest.cs" />
+    <Compile Include="V20180412\Models\KillMasterGroupResponse.cs" />
     <Compile Include="V20180412\Models\ManualBackupInstanceRequest.cs" />
     <Compile Include="V20180412\Models\ManualBackupInstanceResponse.cs" />
     <Compile Include="V20180412\Models\ModfiyInstancePasswordRequest.cs" />
@@ -226,6 +230,7 @@
     <Compile Include="V20180412\Models\StartupInstanceResponse.cs" />
     <Compile Include="V20180412\Models\SwitchInstanceVipRequest.cs" />
     <Compile Include="V20180412\Models\SwitchInstanceVipResponse.cs" />
+    <Compile Include="V20180412\Models\TaskInfoDetail.cs" />
     <Compile Include="V20180412\Models\TendisNodes.cs" />
     <Compile Include="V20180412\Models\TendisSlowLogDetail.cs" />
     <Compile Include="V20180412\Models\TradeDealDetail.cs" />

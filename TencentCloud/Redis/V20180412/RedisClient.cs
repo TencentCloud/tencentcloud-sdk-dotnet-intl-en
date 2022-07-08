@@ -1813,6 +1813,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query the list of tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskListRequest"/></param>
+        /// <returns><see cref="DescribeTaskListResponse"/></returns>
+        public async Task<DescribeTaskListResponse> DescribeTaskList(DescribeTaskListRequest req)
+        {
+             JsonResponseModel<DescribeTaskListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskListRequest"/></param>
+        /// <returns><see cref="DescribeTaskListResponse"/></returns>
+        public DescribeTaskListResponse DescribeTaskListSync(DescribeTaskListRequest req)
+        {
+             JsonResponseModel<DescribeTaskListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query slow queries of a Tendis instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeTendisSlowLogRequest"/></param>
@@ -2124,6 +2164,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "InquiryPriceUpgradeInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to perform a failure simulation.
+        /// </summary>
+        /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
+        /// <returns><see cref="KillMasterGroupResponse"/></returns>
+        public async Task<KillMasterGroupResponse> KillMasterGroup(KillMasterGroupRequest req)
+        {
+             JsonResponseModel<KillMasterGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KillMasterGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMasterGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to perform a failure simulation.
+        /// </summary>
+        /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
+        /// <returns><see cref="KillMasterGroupResponse"/></returns>
+        public KillMasterGroupResponse KillMasterGroupSync(KillMasterGroupRequest req)
+        {
+             JsonResponseModel<KillMasterGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KillMasterGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMasterGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
