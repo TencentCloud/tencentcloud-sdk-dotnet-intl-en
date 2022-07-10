@@ -4195,62 +4195,6 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
-        /// 
-        /// This API is used to initiate an image processing task. Image processing operations include the following:
-        /// 
-        /// 1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
-        /// 
-        /// ><li>File size: < 5 MB</li>
-        /// ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-        /// ><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
-        /// </summary>
-        /// <param name="req"><see cref="ProcessImageRequest"/></param>
-        /// <returns><see cref="ProcessImageResponse"/></returns>
-        public async Task<ProcessImageResponse> ProcessImage(ProcessImageRequest req)
-        {
-             JsonResponseModel<ProcessImageResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ProcessImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessImageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
-        /// 
-        /// This API is used to initiate an image processing task. Image processing operations include the following:
-        /// 
-        /// 1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
-        /// 
-        /// ><li>File size: < 5 MB</li>
-        /// ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-        /// ><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
-        /// </summary>
-        /// <param name="req"><see cref="ProcessImageRequest"/></param>
-        /// <returns><see cref="ProcessImageResponse"/></returns>
-        public ProcessImageResponse ProcessImageSync(ProcessImageRequest req)
-        {
-             JsonResponseModel<ProcessImageResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ProcessImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessImageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to initiate a media processing task on a VOD file. The task may include:
         /// 1. Video transcoding (with watermark)
         /// 2. Animated image generating
@@ -4264,6 +4208,12 @@ namespace TencentCloud.Vod.V20180717
         /// 10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
         /// 
         /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// 
+        /// A digital watermark has the following restrictions:
+        /// <li>Digital watermarks can only be image watermarks.</li>
+        /// <li>Digital watermarks must be looped.</li>
+        /// <li>If you use digital watermarks, the output video must be in HLS format.</li>
+        /// <li>Digital watermarks can only be displayed in the upper half of a video.</li>
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -4296,6 +4246,12 @@ namespace TencentCloud.Vod.V20180717
         /// 10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
         /// 
         /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// 
+        /// A digital watermark has the following restrictions:
+        /// <li>Digital watermarks can only be image watermarks.</li>
+        /// <li>Digital watermarks must be looped.</li>
+        /// <li>If you use digital watermarks, the output video must be in HLS format.</li>
+        /// <li>Digital watermarks can only be displayed in the upper half of a video.</li>
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -4494,6 +4450,7 @@ namespace TencentCloud.Vod.V20180717
         /// 1. This API is used to prefetch a list of specified URLs.
         /// 2. The URL domain names must have already been registered with VOD.
         /// 3. Up to 20 URLs can be specified in one request.
+        /// 4. By default, the maximum number of URLs that can be refreshed per day is 10,000.
         /// </summary>
         /// <param name="req"><see cref="PushUrlCacheRequest"/></param>
         /// <returns><see cref="PushUrlCacheResponse"/></returns>
@@ -4516,6 +4473,7 @@ namespace TencentCloud.Vod.V20180717
         /// 1. This API is used to prefetch a list of specified URLs.
         /// 2. The URL domain names must have already been registered with VOD.
         /// 3. Up to 20 URLs can be specified in one request.
+        /// 4. By default, the maximum number of URLs that can be refreshed per day is 10,000.
         /// </summary>
         /// <param name="req"><see cref="PushUrlCacheRequest"/></param>
         /// <returns><see cref="PushUrlCacheResponse"/></returns>
@@ -4526,6 +4484,52 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "PushUrlCache");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PushUrlCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1. This API is used to purge URLs.
+        /// 2. The URL domain names must have already been registered with VOD.
+        /// 3. Up to 20 URLs can be specified in one request.
+        /// 4. By default, the maximum number of URLs allowed for purge per day is 100,000.
+        /// </summary>
+        /// <param name="req"><see cref="RefreshUrlCacheRequest"/></param>
+        /// <returns><see cref="RefreshUrlCacheResponse"/></returns>
+        public async Task<RefreshUrlCacheResponse> RefreshUrlCache(RefreshUrlCacheRequest req)
+        {
+             JsonResponseModel<RefreshUrlCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefreshUrlCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshUrlCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1. This API is used to purge URLs.
+        /// 2. The URL domain names must have already been registered with VOD.
+        /// 3. Up to 20 URLs can be specified in one request.
+        /// 4. By default, the maximum number of URLs allowed for purge per day is 100,000.
+        /// </summary>
+        /// <param name="req"><see cref="RefreshUrlCacheRequest"/></param>
+        /// <returns><see cref="RefreshUrlCacheResponse"/></returns>
+        public RefreshUrlCacheResponse RefreshUrlCacheSync(RefreshUrlCacheRequest req)
+        {
+             JsonResponseModel<RefreshUrlCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefreshUrlCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshUrlCacheResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4575,21 +4579,17 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
-        /// 
-        /// ><li>File size: < 5 MB</li>
-        /// ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-        /// ><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+        /// This API is used to restore files from ARCHIVE or DEEP ARCHIVE. Files stored in ARCHIVE or DEEP ARCHIVE must be restored before they can be accessed. Restored files are available for a limited period of time.
         /// </summary>
-        /// <param name="req"><see cref="ReviewImageRequest"/></param>
-        /// <returns><see cref="ReviewImageResponse"/></returns>
-        public async Task<ReviewImageResponse> ReviewImage(ReviewImageRequest req)
+        /// <param name="req"><see cref="RestoreMediaRequest"/></param>
+        /// <returns><see cref="RestoreMediaResponse"/></returns>
+        public async Task<RestoreMediaResponse> RestoreMedia(RestoreMediaRequest req)
         {
-             JsonResponseModel<ReviewImageResponse> rsp = null;
+             JsonResponseModel<RestoreMediaResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ReviewImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewImageResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "RestoreMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreMediaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4599,21 +4599,17 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
-        /// 
-        /// ><li>File size: < 5 MB</li>
-        /// ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-        /// ><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+        /// This API is used to restore files from ARCHIVE or DEEP ARCHIVE. Files stored in ARCHIVE or DEEP ARCHIVE must be restored before they can be accessed. Restored files are available for a limited period of time.
         /// </summary>
-        /// <param name="req"><see cref="ReviewImageRequest"/></param>
-        /// <returns><see cref="ReviewImageResponse"/></returns>
-        public ReviewImageResponse ReviewImageSync(ReviewImageRequest req)
+        /// <param name="req"><see cref="RestoreMediaRequest"/></param>
+        /// <returns><see cref="RestoreMediaResponse"/></returns>
+        public RestoreMediaResponse RestoreMediaSync(RestoreMediaRequest req)
         {
-             JsonResponseModel<ReviewImageResponse> rsp = null;
+             JsonResponseModel<RestoreMediaResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ReviewImage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewImageResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "RestoreMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreMediaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

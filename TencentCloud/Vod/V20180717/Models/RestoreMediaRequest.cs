@@ -21,26 +21,32 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProcessImageRequest : AbstractModel
+    public class RestoreMediaRequest : AbstractModel
     {
         
         /// <summary>
-        /// The unique ID of the media file. For this API to work, the file must be an image.
+        /// The IDs of media files.
         /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("FileIds")]
+        public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// Operation. `ContentReview` is the only valid value currently.
+        /// The number of days during which the restored files will remain available.
         /// </summary>
-        [JsonProperty("Operation")]
-        public string Operation{ get; set; }
+        [JsonProperty("RestoreDay")]
+        public ulong? RestoreDay{ get; set; }
 
         /// <summary>
-        /// Image recognition parameters. This parameter is valid if `Operation` is `ContentReview`.
+        /// The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
+        /// <li>Expedited: The files are made available in five minutes.</li>
+        /// <li>Standard: The files are made available in five hours.</li>
+        /// <li>Bulk: The files are made available in 12 hours.</li>
+        /// If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
+        /// <li>Standard: The files are made available in 24 hours.</li>
+        /// <li>Bulk: The files are made available in 48 hours.</li>
         /// </summary>
-        [JsonProperty("ContentReviewInput")]
-        public ImageContentReviewInput ContentReviewInput{ get; set; }
+        [JsonProperty("RestoreTier")]
+        public string RestoreTier{ get; set; }
 
         /// <summary>
         /// The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
@@ -54,9 +60,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamSimple(map, prefix + "Operation", this.Operation);
-            this.SetParamObj(map, prefix + "ContentReviewInput.", this.ContentReviewInput);
+            this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+            this.SetParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
+            this.SetParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

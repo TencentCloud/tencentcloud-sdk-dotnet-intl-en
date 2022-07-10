@@ -31,13 +31,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page. Default value: 20. Value range: 1-100.
+        /// Number of entries returned per page. Default value: 10. Value range: 1–100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Page number for data return in paged query. Pagination starts from 0
+        /// Data offset, which starts from 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

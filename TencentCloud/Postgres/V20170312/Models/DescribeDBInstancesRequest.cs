@@ -42,16 +42,16 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
+        /// Data offset, which starts from 0.
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
         /// Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
-
-        /// <summary>
-        /// Pagination offset, starting from 0
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
 
         /// <summary>
         /// Sorting order. Valid values: `asc` (ascending), `desc` (descending)
@@ -67,8 +67,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }
     }

@@ -31,15 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Media playback address.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The media playback URL.
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
 
         /// <summary>
-        /// Media cover address.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The thumbnail URL.
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }

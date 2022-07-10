@@ -37,16 +37,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalStorage{ get; set; }
 
         /// <summary>
+        /// Current Standard storage capacity in bytes.
+        /// </summary>
+        [JsonProperty("StandardStorage")]
+        public ulong? StandardStorage{ get; set; }
+
+        /// <summary>
         /// Current Standard_IA storage capacity in bytes.
         /// </summary>
         [JsonProperty("InfrequentStorage")]
         public ulong? InfrequentStorage{ get; set; }
 
         /// <summary>
-        /// Current Standard storage capacity in bytes.
+        /// The current ARCHIVE storage usage in bytes.
         /// </summary>
-        [JsonProperty("StandardStorage")]
-        public ulong? StandardStorage{ get; set; }
+        [JsonProperty("ArchiveStorage")]
+        public ulong? ArchiveStorage{ get; set; }
+
+        /// <summary>
+        /// The current DEEP ARCHIVE storage usage in bytes.
+        /// </summary>
+        [JsonProperty("DeepArchiveStorage")]
+        public ulong? DeepArchiveStorage{ get; set; }
 
         /// <summary>
         /// Storage usage by billing region.
@@ -68,8 +80,10 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "MediaCount", this.MediaCount);
             this.SetParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
-            this.SetParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
             this.SetParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+            this.SetParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
+            this.SetParamSimple(map, prefix + "ArchiveStorage", this.ArchiveStorage);
+            this.SetParamSimple(map, prefix + "DeepArchiveStorage", this.DeepArchiveStorage);
             this.SetParamArrayObj(map, prefix + "StorageStat.", this.StorageStat);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

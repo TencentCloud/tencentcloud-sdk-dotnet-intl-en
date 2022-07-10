@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string PersonId{ get; set; }
 
         /// <summary>
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// Name. Length limit: 128 characters.
         /// </summary>
         [JsonProperty("Name")]
@@ -63,12 +69,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("TagOperationInfo")]
         public AiSampleTagOperation TagOperationInfo{ get; set; }
 
-        /// <summary>
-        /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,12 +76,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArraySimple(map, prefix + "Usages.", this.Usages);
             this.SetParamObj(map, prefix + "FaceOperationInfo.", this.FaceOperationInfo);
             this.SetParamObj(map, prefix + "TagOperationInfo.", this.TagOperationInfo);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

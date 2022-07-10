@@ -37,19 +37,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
+        /// Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
         /// </summary>
         [JsonProperty("SwitchTag")]
         public long? SwitchTag{ get; set; }
 
         /// <summary>
-        /// The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+        /// Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
         /// </summary>
         [JsonProperty("SwitchStartTime")]
         public string SwitchStartTime{ get; set; }
 
         /// <summary>
-        /// The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+        /// Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
         /// </summary>
         [JsonProperty("SwitchEndTime")]
         public string SwitchEndTime{ get; set; }

@@ -181,7 +181,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string KMSKeyId{ get; set; }
 
         /// <summary>
-        /// The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+        /// The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
         /// </summary>
         [JsonProperty("KMSRegion")]
         public string KMSRegion{ get; set; }

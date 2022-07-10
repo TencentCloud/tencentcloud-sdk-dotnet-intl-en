@@ -21,20 +21,14 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProcessImageResponse : AbstractModel
+    public class TraceWatermarkInput : AbstractModel
     {
         
         /// <summary>
-        /// The image recognition result.
+        /// The watermark template ID.
         /// </summary>
-        [JsonProperty("ContentReviewResultSet")]
-        public ContentReviewResult[] ContentReviewResultSet{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ContentReviewResultSet.", this.ContentReviewResultSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }
 }

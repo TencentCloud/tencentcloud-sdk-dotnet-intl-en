@@ -45,6 +45,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DataType{ get; set; }
 
         /// <summary>
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+        /// You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// Time granularity of usage data in minutes. Valid values:
         /// <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
         /// <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
@@ -60,13 +67,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("DomainNames")]
         public string[] DomainNames{ get; set; }
 
-        /// <summary>
-        /// ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-        /// When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,9 +76,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "DataType", this.DataType);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "DataInterval", this.DataInterval);
             this.SetParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

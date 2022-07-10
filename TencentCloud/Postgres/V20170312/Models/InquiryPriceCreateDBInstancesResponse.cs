@@ -37,6 +37,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Price{ get; set; }
 
         /// <summary>
+        /// Currency, such as USD for US dollar.
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
             this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

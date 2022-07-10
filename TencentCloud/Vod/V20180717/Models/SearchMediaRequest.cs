@@ -25,6 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// File ID set. Any element in the set can be matched.
         /// <li>Array length limit: 10.</li>
         /// <li>ID length limit: 40 characters.</li>
@@ -64,8 +70,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public long?[] ClassIds{ get; set; }
 
         /// <summary>
-        /// Tag set, which matches any element in the set.
-        /// <li>Tag length limit: 8 characters.</li>
+        /// The tag set. A file is considered a match if it has any of the tags in the tag set.
+        /// <li>Tag length limit: 16 characters.</li>
         /// <li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("Tags")]
@@ -162,12 +168,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StorageRegions{ get; set; }
 
         /// <summary>
-        /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
-        /// <summary>
         /// An array of storage classes. Valid values:
         /// <li>STANDARD</li>
         /// <li>STANDARD_IA</li>
@@ -231,6 +231,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamArraySimple(map, prefix + "NamePrefixes.", this.NamePrefixes);
@@ -248,7 +249,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);

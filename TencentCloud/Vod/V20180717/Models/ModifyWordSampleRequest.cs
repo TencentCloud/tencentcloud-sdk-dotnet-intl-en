@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Keyword{ get; set; }
 
         /// <summary>
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// <b>Keyword usage. Valid values:</b>
         /// 1. Recognition.Ocr: OCR-based content recognition
         /// 2. Recognition.Asr: ASR-based content recognition
@@ -50,12 +56,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("TagOperationInfo")]
         public AiSampleTagOperation TagOperationInfo{ get; set; }
 
-        /// <summary>
-        /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,9 +63,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "Usages.", this.Usages);
             this.SetParamObj(map, prefix + "TagOperationInfo.", this.TagOperationInfo);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

@@ -40,6 +40,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Usages{ get; set; }
 
         /// <summary>
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// Description of a sample. Length limit: 1024 characters.
         /// </summary>
         [JsonProperty("Description")]
@@ -60,12 +66,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
-        /// <summary>
-        /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,10 +74,10 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Usages.", this.Usages);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArraySimple(map, prefix + "FaceContents.", this.FaceContents);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

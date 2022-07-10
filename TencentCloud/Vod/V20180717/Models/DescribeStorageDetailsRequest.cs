@@ -37,6 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+        /// You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin.</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// Time granularity. Valid values:
         /// <li>Minute: 5-minute granularity</li>
         /// <li>Day: 1-day granularity</li>
@@ -66,13 +73,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-        /// When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
-        /// <summary>
         /// Storage region to query. Valid values:
         /// <li>Chinese Mainland</li>
         /// <li>Outside Chinese Mainland</li>
@@ -89,9 +89,9 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }

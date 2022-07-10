@@ -38,10 +38,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// List of blurs. Up to 10 ones can be supported.
+        /// Digital watermark.
         /// </summary>
-        [JsonProperty("MosaicSet")]
-        public MosaicInput[] MosaicSet{ get; set; }
+        [JsonProperty("TraceWatermark")]
+        public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
         /// List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
@@ -50,13 +50,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public HeadTailTaskInput[] HeadTailSet{ get; set; }
 
         /// <summary>
-        /// Start time offset of a transcoded video, in seconds.
-        /// <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+        /// List of blurs. Up to 10 ones can be supported.
         /// </summary>
-        [JsonProperty("StartTimeOffset")]
-        public float? StartTimeOffset{ get; set; }
+        [JsonProperty("MosaicSet")]
+        public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
         /// End time offset of a transcoded video, in seconds.
@@ -67,6 +64,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
+        /// <summary>
+        /// Start time offset of a transcoded video, in seconds.
+        /// <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+        /// </summary>
+        [JsonProperty("StartTimeOffset")]
+        public float? StartTimeOffset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,10 +81,11 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
-            this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+            this.SetParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
             this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
-            this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         }
     }
 }

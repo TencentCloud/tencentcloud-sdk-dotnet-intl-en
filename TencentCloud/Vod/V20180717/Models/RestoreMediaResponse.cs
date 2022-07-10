@@ -21,33 +21,14 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PornImageResult : AbstractModel
+    public class RestoreMediaResponse : AbstractModel
     {
         
         /// <summary>
-        /// The confidence score for the pornographic content recognition result. Value range: 0-100.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Confidence")]
-        public float? Confidence{ get; set; }
-
-        /// <summary>
-        /// The suggestion for handling the detected pornographic content. Valid values:
-        /// <li>pass/li>
-        /// <li>review</li>
-        /// <li>block</li>
-        /// </summary>
-        [JsonProperty("Suggestion")]
-        public string Suggestion{ get; set; }
-
-        /// <summary>
-        /// The label for the detected pornographic content. Valid values:
-        /// <li>porn</li>
-        /// <li>sexy</li>
-        /// <li>vulgar</li>
-        /// <li>intimacy</li>
-        /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -55,9 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
-            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

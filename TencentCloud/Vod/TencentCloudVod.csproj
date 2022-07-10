@@ -179,8 +179,6 @@
     <Compile Include="V20180717\Models\ConcatTask2017.cs" />
     <Compile Include="V20180717\Models\ConfirmEventsRequest.cs" />
     <Compile Include="V20180717\Models\ConfirmEventsResponse.cs" />
-    <Compile Include="V20180717\Models\ContentReviewOcrResult.cs" />
-    <Compile Include="V20180717\Models\ContentReviewResult.cs" />
     <Compile Include="V20180717\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="V20180717\Models\CoverBySnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\CoverBySnapshotTaskOutput.cs" />
@@ -349,7 +347,6 @@
     <Compile Include="V20180717\Models\HighlightSegmentItem.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
-    <Compile Include="V20180717\Models\ImageContentReviewInput.cs" />
     <Compile Include="V20180717\Models\ImageReviewUsageDataItem.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTemplate.cs" />
@@ -474,7 +471,6 @@
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PoliticalConfigureInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalConfigureInfoForUpdate.cs" />
-    <Compile Include="V20180717\Models\PoliticalImageResult.cs" />
     <Compile Include="V20180717\Models\PoliticalImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PoliticalOcrReviewTemplateInfo.cs" />
@@ -483,15 +479,12 @@
     <Compile Include="V20180717\Models\PornAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PornConfigureInfo.cs" />
     <Compile Include="V20180717\Models\PornConfigureInfoForUpdate.cs" />
-    <Compile Include="V20180717\Models\PornImageResult.cs" />
     <Compile Include="V20180717\Models\PornImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PornImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PornOcrReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PornOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\ProcedureTask.cs" />
     <Compile Include="V20180717\Models\ProcedureTemplate.cs" />
-    <Compile Include="V20180717\Models\ProcessImageRequest.cs" />
-    <Compile Include="V20180717\Models\ProcessImageResponse.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureRequest.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureResponse.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByUrlRequest.cs" />
@@ -512,13 +505,15 @@
     <Compile Include="V20180717\Models\PushUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheResponse.cs" />
     <Compile Include="V20180717\Models\RefererAuthPolicy.cs" />
+    <Compile Include="V20180717\Models\RefreshUrlCacheRequest.cs" />
+    <Compile Include="V20180717\Models\RefreshUrlCacheResponse.cs" />
     <Compile Include="V20180717\Models\ResetProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ResolutionNameInfo.cs" />
     <Compile Include="V20180717\Models\ResourceTag.cs" />
+    <Compile Include="V20180717\Models\RestoreMediaRequest.cs" />
+    <Compile Include="V20180717\Models\RestoreMediaResponse.cs" />
     <Compile Include="V20180717\Models\RestoreMediaTask.cs" />
-    <Compile Include="V20180717\Models\ReviewImageRequest.cs" />
-    <Compile Include="V20180717\Models\ReviewImageResponse.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20180717\Models\SearchMediaRequest.cs" />
@@ -555,7 +550,6 @@
     <Compile Include="V20180717\Models\TempCertificate.cs" />
     <Compile Include="V20180717\Models\TerrorismConfigureInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismConfigureInfoForUpdate.cs" />
-    <Compile Include="V20180717\Models\TerrorismImageResult.cs" />
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\TerrorismOcrReviewTemplateInfo.cs" />
@@ -563,6 +557,7 @@
     <Compile Include="V20180717\Models\TextWatermarkTemplateInput.cs" />
     <Compile Include="V20180717\Models\TextWatermarkTemplateInputForUpdate.cs" />
     <Compile Include="V20180717\Models\TimeRange.cs" />
+    <Compile Include="V20180717\Models\TraceWatermarkInput.cs" />
     <Compile Include="V20180717\Models\TranscodePlayInfo2017.cs" />
     <Compile Include="V20180717\Models\TranscodeTask2017.cs" />
     <Compile Include="V20180717\Models\TranscodeTaskInput.cs" />

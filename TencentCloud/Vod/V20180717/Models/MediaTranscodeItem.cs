@@ -60,8 +60,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The file size (bytes).
+        /// <li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
@@ -74,13 +74,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Container, such as m4a and mp4.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Container")]
-        public string Container{ get; set; }
-
-        /// <summary>
         /// MD5 value of video.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -88,11 +81,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Md5{ get; set; }
 
         /// <summary>
-        /// Audio stream information.
+        /// Container, such as m4a and mp4.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("AudioStreamSet")]
-        public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
+        [JsonProperty("Container")]
+        public string Container{ get; set; }
 
         /// <summary>
         /// Video stream information.
@@ -100,6 +93,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
+
+        /// <summary>
+        /// Audio stream information.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AudioStreamSet")]
+        public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
 
         /// <summary>
@@ -114,10 +114,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
-            this.SetParamSimple(map, prefix + "Container", this.Container);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
-            this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
+            this.SetParamSimple(map, prefix + "Container", this.Container);
             this.SetParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
+            this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         }
     }
 }
