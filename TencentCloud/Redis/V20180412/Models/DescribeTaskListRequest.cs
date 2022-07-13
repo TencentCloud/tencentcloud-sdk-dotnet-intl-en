@@ -85,13 +85,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] Result{ get; set; }
 
         /// <summary>
-        /// Operator UIN
+        /// The field `OperatorUin` has been disused and replaced by `OperateUin`.
         /// </summary>
         [JsonProperty("OperatorUin")]
         public long?[] OperatorUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Operator Uin
         /// </summary>
         [JsonProperty("OperateUin")]
         public string[] OperateUin{ get; set; }
