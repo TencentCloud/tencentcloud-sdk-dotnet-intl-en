@@ -379,6 +379,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// This API is used to query the status of all applications in an envrionment.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApplicationsStatusResponse"/></returns>
+        public async Task<DescribeApplicationsStatusResponse> DescribeApplicationsStatus(DescribeApplicationsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApplicationsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the status of all applications in an envrionment.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApplicationsStatusResponse"/></returns>
+        public DescribeApplicationsStatusResponse DescribeApplicationsStatusSync(DescribeApplicationsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApplicationsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of tenant environments.
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
