@@ -25,14 +25,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Quantity
+        /// The number of queues.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of queues
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Queue list.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QueueList")]
         public CmqQueue[] QueueList{ get; set; }

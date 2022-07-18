@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Number of dedicated clusters
+        /// The number of dedicated clusters
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

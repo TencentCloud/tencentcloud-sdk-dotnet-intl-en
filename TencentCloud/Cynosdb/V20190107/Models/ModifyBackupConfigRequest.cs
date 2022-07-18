@@ -43,19 +43,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
+        /// Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
+        /// Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
         /// </summary>
         [JsonProperty("BackupFreq")]
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
-        /// Backup mode. logic: logic backup; snapshot: snapshot backup
+        /// Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }

@@ -25,57 +25,57 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Namespace name
+        /// Namespace name.
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Description.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
+        /// Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
         /// </summary>
         [JsonProperty("MsgTTL")]
         public long? MsgTTL{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Modification time
+        /// Last modified.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Namespace ID
+        /// Namespace ID.
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// Namespace name
+        /// Namespace name.
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// Number of topics
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of topics.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicNum")]
         public long? TopicNum{ get; set; }
 
         /// <summary>
-        /// Message retention policy
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Message retention policy.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RetentionPolicy")]
         public RetentionPolicy RetentionPolicy{ get; set; }

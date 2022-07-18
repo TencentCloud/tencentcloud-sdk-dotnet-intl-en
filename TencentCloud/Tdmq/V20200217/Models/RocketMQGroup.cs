@@ -25,82 +25,82 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Consumer group name
+        /// Consumer group name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Number of online consumers
+        /// The number of online consumers.
         /// </summary>
         [JsonProperty("ConsumerNum")]
         public ulong? ConsumerNum{ get; set; }
 
         /// <summary>
-        /// Consumption TPS
+        /// Consumption TPS.
         /// </summary>
         [JsonProperty("TPS")]
         public ulong? TPS{ get; set; }
 
         /// <summary>
-        /// Total number of retained messages
+        /// The total number of heaped messages.
         /// </summary>
         [JsonProperty("TotalAccumulative")]
         public long? TotalAccumulative{ get; set; }
 
         /// <summary>
-        /// 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
+        /// 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
         /// </summary>
         [JsonProperty("ConsumptionMode")]
         public long? ConsumptionMode{ get; set; }
 
         /// <summary>
-        /// Whether to allow consumption
+        /// Whether to allow consumption.
         /// </summary>
         [JsonProperty("ReadEnabled")]
         public bool? ReadEnabled{ get; set; }
 
         /// <summary>
-        /// Number of partitions in the retry letter topic
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of partitions in a retry topic.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RetryPartitionNum")]
         public ulong? RetryPartitionNum{ get; set; }
 
         /// <summary>
-        /// Creation time in milliseconds
+        /// Creation time in milliseconds.
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Modification time in milliseconds
+        /// Modification time in milliseconds.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
         /// <summary>
-        /// Client protocol
+        /// Client protocol.
         /// </summary>
         [JsonProperty("ClientProtocol")]
         public string ClientProtocol{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Description.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumerType")]
         public string ConsumerType{ get; set; }
 
         /// <summary>
-        /// Whether to enable broadcast consumption
+        /// Whether to enable broadcast consumption.
         /// </summary>
         [JsonProperty("BroadcastEnabled")]
         public bool? BroadcastEnabled{ get; set; }

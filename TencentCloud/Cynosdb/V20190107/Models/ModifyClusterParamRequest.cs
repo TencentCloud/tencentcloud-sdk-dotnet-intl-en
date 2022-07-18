@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// The list of parameters to be modified
+        /// List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
         /// </summary>
         [JsonProperty("ParamList")]
         public ParamItem[] ParamList{ get; set; }

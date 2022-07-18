@@ -37,31 +37,29 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default.
+        /// Offset, which defaults to 0 if left empty.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+        /// The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
         /// Topic type description:
-        /// 0: general message;
-        /// 1: globally sequential message;
-        /// 2: partitionally sequential message;
-        /// 3: retry letter queue;
-        /// 4: dead letter queue;
-        /// 5: transaction message.
+        /// 0: Non-persistent and non-partitioned topic;
+        /// 1: Non-persistent and partitioned topic;
+        /// 2: Persistent and non-partitioned topic;
+        /// 3: Persistent and partitioned topic.
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }
 
         /// <summary>
-        /// Pulsar cluster ID
+        /// Pulsar cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -70,10 +68,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// * TopicName
         /// Query by topic name for exact search.
         /// Type: String
-        /// Required: no
+        /// Required: No
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// Topic creator:
+        /// 1: User
+        /// 2: System
+        /// </summary>
+        [JsonProperty("TopicCreator")]
+        public ulong? TopicCreator{ get; set; }
 
 
         /// <summary>
@@ -88,6 +94,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "TopicCreator", this.TopicCreator);
         }
     }
 }

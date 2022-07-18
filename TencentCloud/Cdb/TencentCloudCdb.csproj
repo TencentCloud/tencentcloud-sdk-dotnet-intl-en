@@ -258,6 +258,8 @@
     <Compile Include="V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\OfflineIsolatedInstancesRequest.cs" />
     <Compile Include="V20170320\Models\OfflineIsolatedInstancesResponse.cs" />
+    <Compile Include="V20170320\Models\OpenAuditServiceRequest.cs" />
+    <Compile Include="V20170320\Models\OpenAuditServiceResponse.cs" />
     <Compile Include="V20170320\Models\OpenDBInstanceGTIDRequest.cs" />
     <Compile Include="V20170320\Models\OpenDBInstanceGTIDResponse.cs" />
     <Compile Include="V20170320\Models\OpenWanServiceRequest.cs" />

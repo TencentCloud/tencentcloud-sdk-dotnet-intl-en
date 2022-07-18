@@ -25,31 +25,31 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default.
+        /// Start offset, which defaults to 0 if left empty.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+        /// The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter by list of cluster IDs
+        /// Filter by cluster ID.
         /// </summary>
         [JsonProperty("ClusterIdList")]
         public string[] ClusterIdList{ get; set; }
 
         /// <summary>
-        /// Whether to filter by tag
+        /// Whether to filter by tag.
         /// </summary>
         [JsonProperty("IsTagFilter")]
         public bool? IsTagFilter{ get; set; }
 
         /// <summary>
-        /// Filter. Currently, you can filter only by tag.
+        /// Filter. Currently, you can filter by tag.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

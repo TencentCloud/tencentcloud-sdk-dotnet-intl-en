@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? MaintainDuration{ get; set; }
 
         /// <summary>
-        /// Maintenance days of the week
+        /// Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
         /// </summary>
         [JsonProperty("MaintainWeekDays")]
         public string[] MaintainWeekDays{ get; set; }

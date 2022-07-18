@@ -57,6 +57,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string SubName{ get; set; }
 
         /// <summary>
+        /// MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MessageIDList")]
+        public string MessageIDList{ get; set; }
+
+        /// <summary>
+        /// Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MessagesPayload")]
+        public string MessagesPayload{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +87,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "AckTopic", this.AckTopic);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "SubName", this.SubName);
+            this.SetParamSimple(map, prefix + "MessageIDList", this.MessageIDList);
+            this.SetParamSimple(map, prefix + "MessagesPayload", this.MessagesPayload);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,31 +25,31 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Environment (namespace) name (required).
+        /// Environment/namespace name (required).
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default.
+        /// Offset, which defaults to 0 if left empty.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+        /// The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pulsar cluster ID (required)
+        /// Pulsar cluster ID (required).
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Role name
+        /// Role name.
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
@@ -58,7 +58,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// * RoleName
         /// Filter by role name for exact query.
         /// Type: String
-        /// Required: no
+        /// Required: No
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

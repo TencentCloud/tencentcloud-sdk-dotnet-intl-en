@@ -31,13 +31,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Message content
+        /// Message content. The total message size is up to 1,024 KB.
         /// </summary>
         [JsonProperty("MsgContent")]
         public string MsgContent{ get; set; }
 
         /// <summary>
-        /// Message tag
+        /// Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
         /// </summary>
         [JsonProperty("MsgTag")]
         public string[] MsgTag{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+        /// Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }
@@ -50,13 +50,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 0: general message;
-        /// 1: globally sequential message;
-        /// 2: partitionally sequential message;
-        /// 3: retry letter queue;
-        /// 4: dead letter queue;
-        /// 5: transaction message.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 0: General message;
+        /// 1: Globally sequential message;
+        /// 2: Partitionally sequential message;
+        /// 3: Retry letter topic;
+        /// 4: Dead letter topic.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }

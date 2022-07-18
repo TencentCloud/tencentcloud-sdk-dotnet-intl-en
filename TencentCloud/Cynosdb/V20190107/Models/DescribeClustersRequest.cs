@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Engine type. Valid values: MYSQL, POSTGRESQL
+        /// Engine type. Currently, `MYSQL` is supported.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }

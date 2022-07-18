@@ -25,25 +25,25 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Namespace
+        /// Namespace.
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number
+        /// The max number of returned results.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string FilterGroup{ get; set; }
 
         /// <summary>
-        /// Sort by specified field. Valid values: tps, accumulative.
+        /// Sort by specified field. Valid values: `tps`, `accumulative`.
         /// </summary>
         [JsonProperty("SortedBy")]
         public string SortedBy{ get; set; }
 
         /// <summary>
-        /// Sort in ascending or descending order. Valid values: asc, desc.
+        /// Sort in ascending or descending order. Valid values: `asc`, `desc`.
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
         /// <summary>
-        /// Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+        /// Subscription group name. After it is specified, the information of only this subscription group will be returned.
         /// </summary>
         [JsonProperty("FilterOneGroup")]
         public string FilterOneGroup{ get; set; }

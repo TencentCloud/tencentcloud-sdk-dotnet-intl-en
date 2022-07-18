@@ -25,14 +25,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// List of topics
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Topic list.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicList")]
         public CmqTopic[] TopicList{ get; set; }
 
         /// <summary>
-        /// Total number of topics
+        /// The total number of topics.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

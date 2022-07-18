@@ -25,14 +25,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Cluster information.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterList")]
         public RocketMQClusterDetail[] ClusterList{ get; set; }
 
         /// <summary>
-        /// Total number
+        /// The total number of returned results.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

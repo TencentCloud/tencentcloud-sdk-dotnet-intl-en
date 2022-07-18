@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
+        /// List of IDs of security groups to be modified, which is an array of one or more security group IDs.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

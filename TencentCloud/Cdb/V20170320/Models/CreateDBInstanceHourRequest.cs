@@ -151,7 +151,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Instance name.
+        /// Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
+        /// Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
         /// </summary>
         [JsonProperty("MsgTTL")]
         public ulong? MsgTTL{ get; set; }

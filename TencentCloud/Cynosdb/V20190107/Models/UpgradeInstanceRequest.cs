@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Database memory
+        /// Database memory in GB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// Storage upper limit. 0 indicates to use the standard configuration
+        /// This parameter has been disused.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public ulong? StorageLimit{ get; set; }
@@ -61,8 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Database type. Valid values: 
-        /// <li> MYSQL </li>
+        /// This parameter has been disused.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }

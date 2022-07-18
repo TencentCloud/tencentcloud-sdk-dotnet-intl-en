@@ -37,43 +37,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory
+        /// Memory in GB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Number of added read-only instances
+        /// Number of added read-only instances. Value range: (0,16].
         /// </summary>
         [JsonProperty("ReadOnlyCount")]
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
-        /// Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
+        /// Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID. This parameter has been disused.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Port used when adding RO group
+        /// The port used when adding an RO group. Value range: [0,65535).
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name. String length range: [0,64).
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Order source
+        /// Order source. String length range: [0,64).
         /// </summary>
         [JsonProperty("OrderSource")]
         public string OrderSource{ get; set; }

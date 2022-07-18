@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
+        /// Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
         /// </summary>
         [JsonProperty("MsgTTL")]
         public ulong? MsgTTL{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Retention period of local binlog. Value range: [72,168].
+        /// Retention period of local binlog. Value range: [120,168].
         /// </summary>
         [JsonProperty("SaveHours")]
         public long? SaveHours{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
+        /// Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+        /// The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Filter by list of CMQ topic names
+        /// Filter by CMQ topic name.
         /// </summary>
         [JsonProperty("TopicNameList")]
         public string[] TopicNameList{ get; set; }
 
         /// <summary>
-        /// For filtering by tag, this must be configured to `true`.
+        /// For filtering by tag, this parameter must be set to `true`.
         /// </summary>
         [JsonProperty("IsTagFilter")]
         public bool? IsTagFilter{ get; set; }
 
         /// <summary>
-        /// Filter. Currently, you can filter only by tag.
+        /// Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

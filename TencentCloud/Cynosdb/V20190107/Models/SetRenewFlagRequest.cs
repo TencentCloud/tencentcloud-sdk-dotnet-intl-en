@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// Auto-Renewal flag
+        /// Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

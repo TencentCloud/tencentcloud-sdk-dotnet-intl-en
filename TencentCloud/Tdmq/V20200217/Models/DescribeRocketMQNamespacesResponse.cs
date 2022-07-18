@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public RocketMQNamespace[] Namespaces{ get; set; }
 
         /// <summary>
-        /// Total number
+        /// The total number of returned results.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

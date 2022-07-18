@@ -25,25 +25,25 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Whether to display only subscriptions that include real consumers.
+        /// Whether to only display subscriptions that include real consumers.
         /// </summary>
         [JsonProperty("ConsumerHasCount")]
         public bool? ConsumerHasCount{ get; set; }
 
         /// <summary>
-        /// Whether to display only subscriptions with retained messages.
+        /// Whether to only display subscriptions with heaped messages.
         /// </summary>
         [JsonProperty("ConsumerHasBacklog")]
         public bool? ConsumerHasBacklog{ get; set; }
 
         /// <summary>
-        /// Whether to display only subscriptions with messages discarded after expiration.
+        /// Whether to only display subscriptions with messages discarded after expiration.
         /// </summary>
         [JsonProperty("ConsumerHasExpired")]
         public bool? ConsumerHasExpired{ get; set; }
 
         /// <summary>
-        /// Filter by subscription name for exact search.
+        /// Filter by subscription name for exact query.
         /// </summary>
         [JsonProperty("SubscriptionNames")]
         public string[] SubscriptionNames{ get; set; }

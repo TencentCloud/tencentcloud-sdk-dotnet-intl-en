@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Number of clusters
+        /// The number of clusters.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of cluster information
+        /// Cluster information list
         /// </summary>
         [JsonProperty("ClusterSet")]
         public Cluster[] ClusterSet{ get; set; }

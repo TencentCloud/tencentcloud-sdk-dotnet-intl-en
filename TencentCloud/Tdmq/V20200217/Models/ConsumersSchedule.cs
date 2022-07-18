@@ -25,41 +25,41 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Current partition ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// ID of the current partition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }
 
         /// <summary>
-        /// Number of messages.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of messages.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NumberOfEntries")]
         public ulong? NumberOfEntries{ get; set; }
 
         /// <summary>
-        /// Number of retained messages.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of heaped messages.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgBacklog")]
         public ulong? MsgBacklog{ get; set; }
 
         /// <summary>
-        /// Sum of the numbers of messages delivered by the consumer per second.
+        /// The total number of messages delivered by the consumer per second.
         /// </summary>
         [JsonProperty("MsgRateOut")]
         public string MsgRateOut{ get; set; }
 
         /// <summary>
-        /// Number of bytes of messages consumed by the consumer per second.
+        /// The size (in bytes) of messages consumed by the consumer per second.
         /// </summary>
         [JsonProperty("MsgThroughputOut")]
         public string MsgThroughputOut{ get; set; }
 
         /// <summary>
         /// Percentage of messages discarded due to timeout.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgRateExpired")]
         public string MsgRateExpired{ get; set; }

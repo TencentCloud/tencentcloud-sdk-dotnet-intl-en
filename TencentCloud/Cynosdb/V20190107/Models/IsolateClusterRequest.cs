@@ -31,8 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Database type. Valid values: 
-        /// <li> MYSQL </li>
+        /// This parameter has been disused.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }

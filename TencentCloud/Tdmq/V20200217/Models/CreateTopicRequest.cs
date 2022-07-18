@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
+        /// The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }
@@ -49,11 +49,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 0: general message;
-        /// 1: globally sequential message;
-        /// 2: partitionally sequential message;
-        /// 3: retry letter queue;
-        /// 4: dead letter queue.
+        /// This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+        /// 0: General message;
+        /// 1: Globally sequential message;
+        /// 2: Partitionally sequential message;
+        /// 3: Retry letter topic;
+        /// 4: Dead letter topic.
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }

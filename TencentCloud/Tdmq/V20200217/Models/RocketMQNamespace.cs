@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+        /// Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -37,17 +37,31 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Ttl{ get; set; }
 
         /// <summary>
-        /// Retention period for persisted messages in milliseconds
+        /// Retention period for persistently stored messages in milliseconds.
         /// </summary>
         [JsonProperty("RetentionTime")]
         public ulong? RetentionTime{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Description.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// Public network access point address.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublicEndpoint")]
+        public string PublicEndpoint{ get; set; }
+
+        /// <summary>
+        /// VPC access point address.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VpcEndpoint")]
+        public string VpcEndpoint{ get; set; }
 
 
         /// <summary>
@@ -59,6 +73,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
             this.SetParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "PublicEndpoint", this.PublicEndpoint);
+            this.SetParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
         }
     }
 }

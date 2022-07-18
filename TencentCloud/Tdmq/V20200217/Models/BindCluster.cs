@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Physical cluster name
+        /// Name of a physical cluster.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }

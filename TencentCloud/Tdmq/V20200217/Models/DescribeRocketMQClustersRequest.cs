@@ -25,37 +25,37 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number
+        /// The max number of returned results.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Search by cluster ID
+        /// Search by cluster ID.
         /// </summary>
         [JsonProperty("IdKeyword")]
         public string IdKeyword{ get; set; }
 
         /// <summary>
-        /// Search by cluster name
+        /// Search by cluster name.
         /// </summary>
         [JsonProperty("NameKeyword")]
         public string NameKeyword{ get; set; }
 
         /// <summary>
-        /// Filter by list of cluster IDs
+        /// Filter by cluster ID.
         /// </summary>
         [JsonProperty("ClusterIdList")]
         public string[] ClusterIdList{ get; set; }
 
         /// <summary>
-        /// For filtering by tag, this must be configured to `true`
+        /// For filtering by tag, this parameter must be set to `true`.
         /// </summary>
         [JsonProperty("IsTagFilter")]
         public bool? IsTagFilter{ get; set; }

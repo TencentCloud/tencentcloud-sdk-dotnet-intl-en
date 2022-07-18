@@ -26,35 +26,35 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// The time when the consumer started connecting.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConnectedSince")]
         public string ConnectedSince{ get; set; }
 
         /// <summary>
         /// Consumer address.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumerAddr")]
         public string ConsumerAddr{ get; set; }
 
         /// <summary>
         /// Consumer name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumerName")]
         public string ConsumerName{ get; set; }
 
         /// <summary>
         /// Consumer version.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientVersion")]
         public string ClientVersion{ get; set; }
 
         /// <summary>
         /// Serial number of the topic partition connected to the consumer.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

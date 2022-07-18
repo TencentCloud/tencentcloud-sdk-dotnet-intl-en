@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Number of namespaces.
+        /// The number of namespaces.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Array set of namespaces.
+        /// Array of namespace sets.
         /// </summary>
         [JsonProperty("EnvironmentSet")]
         public Environment[] EnvironmentSet{ get; set; }

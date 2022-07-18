@@ -38,126 +38,126 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// The time when the consumer started connecting.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConnectedSince")]
         public string ConnectedSince{ get; set; }
 
         /// <summary>
         /// Consumer address.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumerAddr")]
         public string ConsumerAddr{ get; set; }
 
         /// <summary>
-        /// Number of consumers.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of consumers.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumerCount")]
         public string ConsumerCount{ get; set; }
 
         /// <summary>
         /// Consumer name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumerName")]
         public string ConsumerName{ get; set; }
 
         /// <summary>
-        /// Number of retained messages.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of heaped messages.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgBacklog")]
         public string MsgBacklog{ get; set; }
 
         /// <summary>
-        /// Proportion of messages under this subscription that were discarded but not sent after TTL.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Percentage of messages under this subscription that were discarded but not sent after TTL.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgRateExpired")]
         public string MsgRateExpired{ get; set; }
 
         /// <summary>
-        /// Sum of the numbers of messages delivered by the consumer per second.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The total number of messages delivered by the consumer per second.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgRateOut")]
         public string MsgRateOut{ get; set; }
 
         /// <summary>
-        /// Number of bytes of messages consumed by the consumer per second.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The size (in bytes) of messages consumed by the consumer per second.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgThroughputOut")]
         public string MsgThroughputOut{ get; set; }
 
         /// <summary>
         /// Subscription name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubscriptionName")]
         public string SubscriptionName{ get; set; }
 
         /// <summary>
         /// Set of consumers.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumerSets")]
         public Consumer[] ConsumerSets{ get; set; }
 
         /// <summary>
-        /// Whether it is online.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether the consumer is online.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsOnline")]
         public bool? IsOnline{ get; set; }
 
         /// <summary>
         /// Set of consumption progress information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumersScheduleSets")]
         public ConsumersSchedule[] ConsumersScheduleSets{ get; set; }
 
         /// <summary>
         /// Remarks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// Creation time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Modification time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Last modified.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
 
         /// <summary>
         /// Whether messages are blocked as the limit of unacknowledged messages has been reached.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BlockedSubscriptionOnUnackedMsgs")]
         public bool? BlockedSubscriptionOnUnackedMsgs{ get; set; }
 
         /// <summary>
-        /// Maximum number of unacknowledged messages.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// The maximum number of unacknowledged messages.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxUnackedMsgNum")]
         public long? MaxUnackedMsgNum{ get; set; }

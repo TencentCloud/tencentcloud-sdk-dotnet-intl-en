@@ -37,13 +37,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default.
+        /// Offset, which defaults to 0 if left empty.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+        /// The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

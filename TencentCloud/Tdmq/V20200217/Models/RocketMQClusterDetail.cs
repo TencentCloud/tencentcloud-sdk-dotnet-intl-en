@@ -25,20 +25,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster's basic information
+        /// Basic cluster information.
         /// </summary>
         [JsonProperty("Info")]
         public RocketMQClusterInfo Info{ get; set; }
 
         /// <summary>
-        /// Cluster configuration information
+        /// Cluster configuration information.
         /// </summary>
         [JsonProperty("Config")]
         public RocketMQClusterConfig Config{ get; set; }
 
         /// <summary>
-        /// Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

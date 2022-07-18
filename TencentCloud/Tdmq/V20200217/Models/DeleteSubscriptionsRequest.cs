@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+        /// Subscription set. Up to 20 subscriptions can be deleted at a time.
         /// </summary>
         [JsonProperty("SubscriptionTopicSets")]
         public SubscriptionTopic[] SubscriptionTopicSets{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Whether to force deletion. Default value: false
+        /// Whether to forcibly delete a subscription. Default value: `false`.
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }

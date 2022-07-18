@@ -26,91 +26,91 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// Average size of the messages published in the last interval in bytes.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AverageMsgSize")]
         public string AverageMsgSize{ get; set; }
 
         /// <summary>
-        /// Number of consumers.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of consumers.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConsumerCount")]
         public string ConsumerCount{ get; set; }
 
         /// <summary>
-        /// Total number of recorded messages.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The total number of recorded messages.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastConfirmedEntry")]
         public string LastConfirmedEntry{ get; set; }
 
         /// <summary>
         /// Time when the last ledger was created.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastLedgerCreatedTimestamp")]
         public string LastLedgerCreatedTimestamp{ get; set; }
 
         /// <summary>
-        /// Number of messages published by local and replicated publishers per second.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of messages published by local and replicated publishers per second.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgRateIn")]
         public string MsgRateIn{ get; set; }
 
         /// <summary>
-        /// Sum of the numbers of messages delivered by local and replicated consumers per second.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The total number of messages delivered by local and replicated consumers per second.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgRateOut")]
         public string MsgRateOut{ get; set; }
 
         /// <summary>
-        /// Number of bytes of messages published by local and replicated publishers per second.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The size (in bytes) of messages published by local and replicated publishers per second.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgThroughputIn")]
         public string MsgThroughputIn{ get; set; }
 
         /// <summary>
-        /// Number of bytes of messages delivered by local and replicated consumers per second.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The size (in bytes) of messages delivered by local and replicated consumers per second.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MsgThroughputOut")]
         public string MsgThroughputOut{ get; set; }
 
         /// <summary>
-        /// Total number of recorded messages.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The total number of recorded messages.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NumberOfEntries")]
         public string NumberOfEntries{ get; set; }
 
         /// <summary>
         /// Subpartition ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Partitions")]
         public long? Partitions{ get; set; }
 
         /// <summary>
-        /// Number of producers.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of producers.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProducerCount")]
         public string ProducerCount{ get; set; }
 
         /// <summary>
-        /// Total amount of all stored messages in bytes.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total size of all stored messages in bytes.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalSize")]
         public string TotalSize{ get; set; }
 
         /// <summary>
         /// Topic type description.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }

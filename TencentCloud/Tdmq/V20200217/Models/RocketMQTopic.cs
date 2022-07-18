@@ -25,32 +25,32 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Topic name
+        /// Topic name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Description.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Number of read/write partitions
+        /// The number of read/write partitions.
         /// </summary>
         [JsonProperty("PartitionNum")]
         public ulong? PartitionNum{ get; set; }
 
         /// <summary>
-        /// Creation time in milliseconds
+        /// Creation time in milliseconds.
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Creation time in milliseconds
+        /// Creation time in milliseconds.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }

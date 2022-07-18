@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Set of topics. Up to 20 topics can be deleted at a time.
+        /// Topic set. Up to 20 topics can be deleted at a time.
         /// </summary>
         [JsonProperty("TopicSets")]
         public TopicRecord[] TopicSets{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Whether to force deletion. Default value: false
+        /// Whether to forcibly delete a topic. Default value: `false`.
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }

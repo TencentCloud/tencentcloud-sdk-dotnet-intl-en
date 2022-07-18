@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Array set of topics.
+        /// Array of topic sets.
         /// </summary>
         [JsonProperty("TopicSets")]
         public Topic[] TopicSets{ get; set; }
 
         /// <summary>
-        /// Number of topics.
+        /// The number of topics.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

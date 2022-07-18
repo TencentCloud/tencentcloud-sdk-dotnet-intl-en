@@ -3651,6 +3651,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to enable the audit service.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public async Task<OpenAuditServiceResponse> OpenAuditService(OpenAuditServiceRequest req)
+        {
+             JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the audit service.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public OpenAuditServiceResponse OpenAuditServiceSync(OpenAuditServiceRequest req)
+        {
+             JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (OpenDBInstanceGTID) is used to enable GTID for a TencentDB instance. Only instances on or above version 5.6 are supported.
         /// </summary>
         /// <param name="req"><see cref="OpenDBInstanceGTIDRequest"/></param>

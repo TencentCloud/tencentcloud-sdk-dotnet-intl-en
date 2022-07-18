@@ -48,6 +48,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SubInitialPosition")]
         public string SubInitialPosition{ get; set; }
 
+        /// <summary>
+        /// This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+        /// </summary>
+        [JsonProperty("MaxNumMessages")]
+        public long? MaxNumMessages{ get; set; }
+
+        /// <summary>
+        /// This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+        /// </summary>
+        [JsonProperty("MaxNumBytes")]
+        public long? MaxNumBytes{ get; set; }
+
+        /// <summary>
+        /// This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public long? Timeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
             this.SetParamSimple(map, prefix + "ReceiverQueueSize", this.ReceiverQueueSize);
             this.SetParamSimple(map, prefix + "SubInitialPosition", this.SubInitialPosition);
+            this.SetParamSimple(map, prefix + "MaxNumMessages", this.MaxNumMessages);
+            this.SetParamSimple(map, prefix + "MaxNumBytes", this.MaxNumBytes);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

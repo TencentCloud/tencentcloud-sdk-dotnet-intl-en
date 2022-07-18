@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Array set of subscribers.
+        /// Array of subscriber sets.
         /// </summary>
         [JsonProperty("SubscriptionSets")]
         public Subscription[] SubscriptionSets{ get; set; }
 
         /// <summary>
-        /// Quantity.
+        /// The total number of returned results.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
