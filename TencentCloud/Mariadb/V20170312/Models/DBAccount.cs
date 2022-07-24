@@ -67,6 +67,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("DelayThresh")]
         public long? DelayThresh{ get; set; }
 
+        /// <summary>
+        /// Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+        /// </summary>
+        [JsonProperty("SlaveConst")]
+        public long? SlaveConst{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
+            this.SetParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
         }
     }
 }

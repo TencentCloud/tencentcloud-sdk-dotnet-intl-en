@@ -105,6 +105,8 @@
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DestroyDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\DestroyDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\DestroyHourDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\DestroyHourDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateSecurityGroupsRequest.cs" />

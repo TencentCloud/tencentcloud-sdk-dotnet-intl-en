@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+        /// Number of returned results. Default value: 20. Maximum value: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -168,6 +168,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }
 
+        /// <summary>
+        /// Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+        /// </summary>
+        [JsonProperty("ProductVersions")]
+        public string[] ProductVersions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamArraySimple(map, prefix + "ProductVersions.", this.ProductVersions);
         }
     }
 }

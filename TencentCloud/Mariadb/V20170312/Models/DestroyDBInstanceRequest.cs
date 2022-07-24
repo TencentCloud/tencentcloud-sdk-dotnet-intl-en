@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SendMessageRequest : AbstractModel
+    public class DestroyDBInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Datahub access ID.
+        /// Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
         /// </summary>
-        [JsonProperty("DataHubId")]
-        public string DataHubId{ get; set; }
-
-        /// <summary>
-        /// Content of the message that has been sent. Up to 500 messages can be sent in a single request.
-        /// </summary>
-        [JsonProperty("Message")]
-        public BatchContent[] Message{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DataHubId", this.DataHubId);
-            this.SetParamArrayObj(map, prefix + "Message.", this.Message);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

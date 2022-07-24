@@ -979,6 +979,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to terminate an isolated monthly subscribed instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
+        public async Task<DestroyDBInstanceResponse> DestroyDBInstance(DestroyDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate an isolated monthly subscribed instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
+        public DestroyDBInstanceResponse DestroyDBInstanceSync(DestroyDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to terminate a pay-as-you-go instance.
         /// </summary>
         /// <param name="req"><see cref="DestroyHourDBInstanceRequest"/></param>

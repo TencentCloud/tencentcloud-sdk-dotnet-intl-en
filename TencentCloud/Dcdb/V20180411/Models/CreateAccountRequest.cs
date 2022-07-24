@@ -67,6 +67,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("DelayThresh")]
         public long? DelayThresh{ get; set; }
 
+        /// <summary>
+        /// Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+        /// </summary>
+        [JsonProperty("SlaveConst")]
+        public long? SlaveConst{ get; set; }
+
+        /// <summary>
+        /// Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+        /// </summary>
+        [JsonProperty("MaxUserConnections")]
+        public ulong? MaxUserConnections{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +92,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
+            this.SetParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
+            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }
     }
 }

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SendMessageRequest : AbstractModel
+    public class DestroyDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Datahub access ID.
+        /// Instance ID, which is the same as the request parameter `InstanceId`.
         /// </summary>
-        [JsonProperty("DataHubId")]
-        public string DataHubId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Content of the message that has been sent. Up to 500 messages can be sent in a single request.
+        /// Async task ID, which can be used in the [DescribeFlow](https://intl.cloud.tencent.com/document/product/557/56485?from_cn_redirect=1) API to query the async task result.
         /// </summary>
-        [JsonProperty("Message")]
-        public BatchContent[] Message{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DataHubId", this.DataHubId);
-            this.SetParamArrayObj(map, prefix + "Message.", this.Message);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
