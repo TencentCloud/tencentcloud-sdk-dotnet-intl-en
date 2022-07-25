@@ -32,16 +32,17 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Connection status.
-        /// Valid values:
-        /// `RUNNING`: running
-        /// `CREATING`: creating
-        /// `DESTROYING`: terminating
-        /// `OPENING`: enabling
-        /// `CLOSING`: disabling
-        /// `CLOSED`: disabled
-        /// `ADJUSTING`: adjusting configuration
-        /// `ISOLATING`: isolating
-        /// `ISOLATED`: isolated
+        /// Where:
+        /// `RUNNING`: Running
+        /// `CREATING`: Creating
+        /// `DESTROYING`: Terminating
+        /// `OPENING`: Enabling
+        /// `CLOSING`: Disabling
+        /// `CLOSED`: Disabled
+        /// `ADJUSTING`: Adjusting configuration
+        /// `ISOLATING`: Isolating
+        /// `ISOLATED`: Isolated
+        /// `MOVING`: Migrating
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

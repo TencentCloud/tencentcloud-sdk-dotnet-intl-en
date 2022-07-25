@@ -31,13 +31,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Connection instance information list; It's an old parameter, please switch to ProxySet.
+        /// Connection instance information list; It’s an old parameter, please switch to ProxySet.
         /// </summary>
         [JsonProperty("InstanceSet")]
         public ProxyInfo[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// Connection instance information list; It's a new parameter.
+        /// Connection instance information list; It’s a new parameter.
         /// </summary>
         [JsonProperty("ProxySet")]
         public ProxyInfo[] ProxySet{ get; set; }

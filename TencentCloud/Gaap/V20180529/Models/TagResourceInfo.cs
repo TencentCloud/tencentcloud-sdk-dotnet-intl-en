@@ -26,15 +26,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         
         /// <summary>
         /// Resource types:
-        /// `Proxy`: connections;
-        /// `ProxyGroup`: connection groups;
-        /// `RealServer`: origin servers.
+        /// `Proxy`: Connection
+        /// `ProxyGroup`: Connection group
+        /// `RealServer`: Origin server
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// Resource ID
+        /// Instance ID
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

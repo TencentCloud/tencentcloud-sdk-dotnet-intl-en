@@ -60,6 +60,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ContinentInnerCode")]
         public string ContinentInnerCode{ get; set; }
 
+        /// <summary>
+        /// Remark information
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "GeographicalZoneInnerCode", this.GeographicalZoneInnerCode);
             this.SetParamSimple(map, prefix + "ContinentName", this.ContinentName);
             this.SetParamSimple(map, prefix + "ContinentInnerCode", this.ContinentInnerCode);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

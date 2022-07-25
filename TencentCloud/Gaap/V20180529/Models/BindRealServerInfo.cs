@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Tag list
+        /// Tag list.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TagSet")]

@@ -50,9 +50,9 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-        /// Time range: <= 1 day, supported minimum granularity: 60 seconds;
-        /// Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-        /// Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+        /// Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+        /// Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+        /// Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
         /// </summary>
         [JsonProperty("Granularity")]
         public ulong? Granularity{ get; set; }

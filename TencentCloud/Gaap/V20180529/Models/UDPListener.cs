@@ -62,12 +62,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Listener status. Valid values:
-        /// 0: running;
-        /// 1: creating;
-        /// 2: terminating;
-        /// 3: adjusting origin server;
-        /// 4: adjusting configuration.
+        /// Listener status:
+        /// `0`: Running
+        /// `1`: Creating
+        /// `2`: Terminating
+        /// `3`: Adjusting origin server
+        /// `4`: Adjusting configuration
         /// </summary>
         [JsonProperty("ListenerStatus")]
         public ulong? ListenerStatus{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+        /// Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
         /// </summary>
         [JsonProperty("BindStatus")]
         public ulong? BindStatus{ get; set; }
@@ -91,14 +91,14 @@ namespace TencentCloud.Gaap.V20180529.Models
         public BindRealServer[] RealServerSet{ get; set; }
 
         /// <summary>
-        /// Listener creation time; using UNIX timestamp.
+        /// Listener creation time in the format of UNIX timestamp
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
         /// Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SessionPersist")]
         public ulong? SessionPersist{ get; set; }

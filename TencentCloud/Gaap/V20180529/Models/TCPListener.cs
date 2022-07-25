@@ -62,21 +62,21 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Listener status. Valid values:
-        /// 0: running;
-        /// 1: creating;
-        /// 2: terminating;
-        /// 3: adjusting origin server;
-        /// 4: adjusting configuration.
+        /// Listener status:
+        /// `0`: Running
+        /// `1`: Creating
+        /// `2`: Terminating
+        /// `3`: Adjusting origin server
+        /// `4`: Adjusting configuration
         /// </summary>
         [JsonProperty("ListenerStatus")]
         public ulong? ListenerStatus{ get; set; }
 
         /// <summary>
-        /// Origin server access policy of listener. Valid values:
-        /// rr: round robin;
-        /// wrr: weighted round robin;
-        /// lc: least connection.
+        /// Origin server access policy of listeners:
+        /// `rr`: Round robin
+        /// `wrr`: Weighted round robin
+        /// `lc`: Least connection
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -94,17 +94,17 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? DelayLoop{ get; set; }
 
         /// <summary>
-        /// Whether health check is enabled for listener. Valid values:
-        /// 0: disabled;
-        /// 1: enabled
+        /// Whether to enable the listener health check:
+        /// `0`: Disable
+        /// `1`: Enable
         /// </summary>
         [JsonProperty("HealthCheck")]
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
-        /// Status of origin server bound to listener. Valid values:
-        /// 0: exceptional;
-        /// 1: normal.
+        /// Status of the origin server bound to listeners:
+        /// `0`: Abnormal
+        /// `1`: Normal
         /// </summary>
         [JsonProperty("BindStatus")]
         public ulong? BindStatus{ get; set; }
@@ -117,42 +117,42 @@ namespace TencentCloud.Gaap.V20180529.Models
         public BindRealServer[] RealServerSet{ get; set; }
 
         /// <summary>
-        /// Listener creation time; using UNIX timestamp.
+        /// Listener creation time in the format of UNIX timestamp
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientIPMethod")]
         public ulong? ClientIPMethod{ get; set; }
 
         /// <summary>
         /// Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HealthyThreshold")]
         public ulong? HealthyThreshold{ get; set; }
 
         /// <summary>
         /// Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UnhealthyThreshold")]
         public ulong? UnhealthyThreshold{ get; set; }
 
         /// <summary>
         /// Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FailoverSwitch")]
         public ulong? FailoverSwitch{ get; set; }
 
         /// <summary>
         /// Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SessionPersist")]
         public ulong? SessionPersist{ get; set; }

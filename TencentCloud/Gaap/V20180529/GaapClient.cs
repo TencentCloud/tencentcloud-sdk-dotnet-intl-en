@@ -295,7 +295,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API is used to disable security policies.
+        /// This API is used to disable a security policy.
         /// </summary>
         /// <param name="req"><see cref="CloseSecurityPolicyRequest"/></param>
         /// <returns><see cref="CloseSecurityPolicyResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API is used to disable security policies.
+        /// This API is used to disable a security policy.
         /// </summary>
         /// <param name="req"><see cref="CloseSecurityPolicyRequest"/></param>
         /// <returns><see cref="CloseSecurityPolicyResponse"/></returns>
@@ -897,7 +897,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (DeleteCertificate) is used to delete certificates.
+        /// This API is used to delete a certificate.
         /// </summary>
         /// <param name="req"><see cref="DeleteCertificateRequest"/></param>
         /// <returns><see cref="DeleteCertificateResponse"/></returns>
@@ -917,7 +917,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (DeleteCertificate) is used to delete certificates.
+        /// This API is used to delete a certificate.
         /// </summary>
         /// <param name="req"><see cref="DeleteCertificateRequest"/></param>
         /// <returns><see cref="DeleteCertificateResponse"/></returns>
@@ -1137,7 +1137,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API is used to delete security policies.
+        /// This API is used to delete a security policy.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityPolicyRequest"/></param>
         /// <returns><see cref="DeleteSecurityPolicyResponse"/></returns>
@@ -1157,7 +1157,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API is used to delete security policies.
+        /// This API is used to delete a security policy.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityPolicyRequest"/></param>
         /// <returns><see cref="DeleteSecurityPolicyResponse"/></returns>
@@ -3419,7 +3419,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API is used to enable security policies.
+        /// This API is used to enable a security policy.
         /// </summary>
         /// <param name="req"><see cref="OpenSecurityPolicyRequest"/></param>
         /// <returns><see cref="OpenSecurityPolicyResponse"/></returns>
@@ -3439,7 +3439,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API is used to enable security policies.
+        /// This API is used to enable a security policy.
         /// </summary>
         /// <param name="req"><see cref="OpenSecurityPolicyRequest"/></param>
         /// <returns><see cref="OpenSecurityPolicyResponse"/></returns>

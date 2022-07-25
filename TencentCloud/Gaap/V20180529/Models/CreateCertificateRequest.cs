@@ -26,19 +26,19 @@ namespace TencentCloud.Gaap.V20180529.Models
         
         /// <summary>
         /// Certificate type. Where:
-        /// 0: basic authentication configuration;
-        /// 1: indicates client CA certificate;
-        /// 2: server SSL certificate;
-        /// 3: origin server CA certificate;
-        /// 4: connection SSL certificate.
+        /// `0`: Basic authentication configuration;
+        /// `1`: Client CA certificate;
+        /// `2`: Server SSL certificate;
+        /// `3`: Origin server CA certificate;
+        /// `4`: Connection SSL certificate.
         /// </summary>
         [JsonProperty("CertificateType")]
         public long? CertificateType{ get; set; }
 
         /// <summary>
         /// Certificate content. URL encoding. Where:
-        /// If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-        /// When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+        /// If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+        /// When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
         /// </summary>
         [JsonProperty("CertificateContent")]
         public string CertificateContent{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string CertificateAlias{ get; set; }
 
         /// <summary>
-        /// Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
+        /// URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
         /// </summary>
         [JsonProperty("CertificateKey")]
         public string CertificateKey{ get; set; }

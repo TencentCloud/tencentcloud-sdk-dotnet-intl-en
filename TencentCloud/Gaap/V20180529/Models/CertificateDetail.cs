@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Certificate ID.
+        /// Certificate ID
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
@@ -64,21 +64,21 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+        /// Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BeginTime")]
         public ulong? BeginTime{ get; set; }
 
         /// <summary>
-        /// Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+        /// Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// Common name of the certificate's issuer.
+        /// Common name of the certificate’s issuer.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IssuerCN")]

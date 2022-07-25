@@ -53,6 +53,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to bind a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="BindPrometheusManagedGrafanaRequest"/></param>
+        /// <returns><see cref="BindPrometheusManagedGrafanaResponse"/></returns>
+        public async Task<BindPrometheusManagedGrafanaResponse> BindPrometheusManagedGrafana(BindPrometheusManagedGrafanaRequest req)
+        {
+             JsonResponseModel<BindPrometheusManagedGrafanaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindPrometheusManagedGrafana");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindPrometheusManagedGrafanaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="BindPrometheusManagedGrafanaRequest"/></param>
+        /// <returns><see cref="BindPrometheusManagedGrafanaResponse"/></returns>
+        public BindPrometheusManagedGrafanaResponse BindPrometheusManagedGrafanaSync(BindPrometheusManagedGrafanaRequest req)
+        {
+             JsonResponseModel<BindPrometheusManagedGrafanaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindPrometheusManagedGrafana");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindPrometheusManagedGrafanaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to bind an alarm policy to a specific object.
         /// </summary>
         /// <param name="req"><see cref="BindingPolicyObjectRequest"/></param>
@@ -173,6 +213,90 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to create a Prometheus alerting rule.
+        /// 
+        /// Note that alert object and alert message are special fields of Prometheus Rule Annotations, which need to be passed in through `annotations` and correspond to `summary` and `description` keys respectively. For more information, see [Alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertRuleRequest"/></param>
+        /// <returns><see cref="CreateAlertRuleResponse"/></returns>
+        public async Task<CreateAlertRuleResponse> CreateAlertRule(CreateAlertRuleRequest req)
+        {
+             JsonResponseModel<CreateAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus alerting rule.
+        /// 
+        /// Note that alert object and alert message are special fields of Prometheus Rule Annotations, which need to be passed in through `annotations` and correspond to `summary` and `description` keys respectively. For more information, see [Alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlertRuleRequest"/></param>
+        /// <returns><see cref="CreateAlertRuleResponse"/></returns>
+        public CreateAlertRuleResponse CreateAlertRuleSync(CreateAlertRuleRequest req)
+        {
+             JsonResponseModel<CreateAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an exporter integration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateExporterIntegrationRequest"/></param>
+        /// <returns><see cref="CreateExporterIntegrationResponse"/></returns>
+        public async Task<CreateExporterIntegrationResponse> CreateExporterIntegration(CreateExporterIntegrationRequest req)
+        {
+             JsonResponseModel<CreateExporterIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateExporterIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an exporter integration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateExporterIntegrationRequest"/></param>
+        /// <returns><see cref="CreateExporterIntegrationResponse"/></returns>
+        public CreateExporterIntegrationResponse CreateExporterIntegrationSync(CreateExporterIntegrationRequest req)
+        {
+             JsonResponseModel<CreateExporterIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateExporterIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add a policy group.
         /// </summary>
         /// <param name="req"><see cref="CreatePolicyGroupRequest"/></param>
@@ -204,6 +328,210 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "CreatePolicyGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePolicyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus CVM agent.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAgentRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAgentResponse"/></returns>
+        public async Task<CreatePrometheusAgentResponse> CreatePrometheusAgent(CreatePrometheusAgentRequest req)
+        {
+             JsonResponseModel<CreatePrometheusAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrometheusAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus CVM agent.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAgentRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAgentResponse"/></returns>
+        public CreatePrometheusAgentResponse CreatePrometheusAgentSync(CreatePrometheusAgentRequest req)
+        {
+             JsonResponseModel<CreatePrometheusAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrometheusAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a pay-as-you-go Prometheus instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusMultiTenantInstancePostPayModeRequest"/></param>
+        /// <returns><see cref="CreatePrometheusMultiTenantInstancePostPayModeResponse"/></returns>
+        public async Task<CreatePrometheusMultiTenantInstancePostPayModeResponse> CreatePrometheusMultiTenantInstancePostPayMode(CreatePrometheusMultiTenantInstancePostPayModeRequest req)
+        {
+             JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrometheusMultiTenantInstancePostPayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a pay-as-you-go Prometheus instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusMultiTenantInstancePostPayModeRequest"/></param>
+        /// <returns><see cref="CreatePrometheusMultiTenantInstancePostPayModeResponse"/></returns>
+        public CreatePrometheusMultiTenantInstancePostPayModeResponse CreatePrometheusMultiTenantInstancePostPayModeSync(CreatePrometheusMultiTenantInstancePostPayModeRequest req)
+        {
+             JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrometheusMultiTenantInstancePostPayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus scrape task.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusScrapeJobRequest"/></param>
+        /// <returns><see cref="CreatePrometheusScrapeJobResponse"/></returns>
+        public async Task<CreatePrometheusScrapeJobResponse> CreatePrometheusScrapeJob(CreatePrometheusScrapeJobRequest req)
+        {
+             JsonResponseModel<CreatePrometheusScrapeJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrometheusScrapeJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusScrapeJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus scrape task.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusScrapeJobRequest"/></param>
+        /// <returns><see cref="CreatePrometheusScrapeJobResponse"/></returns>
+        public CreatePrometheusScrapeJobResponse CreatePrometheusScrapeJobSync(CreatePrometheusScrapeJobRequest req)
+        {
+             JsonResponseModel<CreatePrometheusScrapeJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrometheusScrapeJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusScrapeJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus recording rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleResponse"/></returns>
+        public async Task<CreateRecordingRuleResponse> CreateRecordingRule(CreateRecordingRuleRequest req)
+        {
+             JsonResponseModel<CreateRecordingRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRecordingRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus recording rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleResponse"/></returns>
+        public CreateRecordingRuleResponse CreateRecordingRuleSync(CreateRecordingRuleRequest req)
+        {
+             JsonResponseModel<CreateRecordingRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRecordingRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus scrape configuration in TKE.
+        /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
+        /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="CreateServiceDiscoveryResponse"/></returns>
+        public async Task<CreateServiceDiscoveryResponse> CreateServiceDiscovery(CreateServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<CreateServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus scrape configuration in TKE.
+        /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
+        /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="CreateServiceDiscoveryResponse"/></returns>
+        public CreateServiceDiscoveryResponse CreateServiceDiscoverySync(CreateServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<CreateServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceDiscoveryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,6 +621,86 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to batch delete Prometheus alerting rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlertRulesRequest"/></param>
+        /// <returns><see cref="DeleteAlertRulesResponse"/></returns>
+        public async Task<DeleteAlertRulesResponse> DeleteAlertRules(DeleteAlertRulesRequest req)
+        {
+             JsonResponseModel<DeleteAlertRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAlertRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAlertRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch delete Prometheus alerting rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlertRulesRequest"/></param>
+        /// <returns><see cref="DeleteAlertRulesResponse"/></returns>
+        public DeleteAlertRulesResponse DeleteAlertRulesSync(DeleteAlertRulesRequest req)
+        {
+             JsonResponseModel<DeleteAlertRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAlertRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAlertRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an exporter integration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExporterIntegrationRequest"/></param>
+        /// <returns><see cref="DeleteExporterIntegrationResponse"/></returns>
+        public async Task<DeleteExporterIntegrationResponse> DeleteExporterIntegration(DeleteExporterIntegrationRequest req)
+        {
+             JsonResponseModel<DeleteExporterIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteExporterIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an exporter integration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteExporterIntegrationRequest"/></param>
+        /// <returns><see cref="DeleteExporterIntegrationResponse"/></returns>
+        public DeleteExporterIntegrationResponse DeleteExporterIntegrationSync(DeleteExporterIntegrationRequest req)
+        {
+             JsonResponseModel<DeleteExporterIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteExporterIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an alarm policy group.
         /// </summary>
         /// <param name="req"><see cref="DeletePolicyGroupRequest"/></param>
@@ -324,6 +732,86 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DeletePolicyGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePolicyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Prometheus scrape task.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusScrapeJobsRequest"/></param>
+        /// <returns><see cref="DeletePrometheusScrapeJobsResponse"/></returns>
+        public async Task<DeletePrometheusScrapeJobsResponse> DeletePrometheusScrapeJobs(DeletePrometheusScrapeJobsRequest req)
+        {
+             JsonResponseModel<DeletePrometheusScrapeJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePrometheusScrapeJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrometheusScrapeJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Prometheus scrape task.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusScrapeJobsRequest"/></param>
+        /// <returns><see cref="DeletePrometheusScrapeJobsResponse"/></returns>
+        public DeletePrometheusScrapeJobsResponse DeletePrometheusScrapeJobsSync(DeletePrometheusScrapeJobsRequest req)
+        {
+             JsonResponseModel<DeletePrometheusScrapeJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePrometheusScrapeJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrometheusScrapeJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch delete Prometheus recording rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRulesRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRulesResponse"/></returns>
+        public async Task<DeleteRecordingRulesResponse> DeleteRecordingRules(DeleteRecordingRulesRequest req)
+        {
+             JsonResponseModel<DeleteRecordingRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRecordingRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordingRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch delete Prometheus recording rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRulesRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRulesResponse"/></returns>
+        public DeleteRecordingRulesResponse DeleteRecordingRulesSync(DeleteRecordingRulesRequest req)
+        {
+             JsonResponseModel<DeleteRecordingRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRecordingRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordingRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -697,6 +1185,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to query a Prometheus alerting rule.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlertRulesRequest"/></param>
+        /// <returns><see cref="DescribeAlertRulesResponse"/></returns>
+        public async Task<DescribeAlertRulesResponse> DescribeAlertRules(DescribeAlertRulesRequest req)
+        {
+             JsonResponseModel<DescribeAlertRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlertRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlertRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query a Prometheus alerting rule.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlertRulesRequest"/></param>
+        /// <returns><see cref="DescribeAlertRulesResponse"/></returns>
+        public DescribeAlertRulesResponse DescribeAlertRulesSync(DescribeAlertRulesRequest req)
+        {
+             JsonResponseModel<DescribeAlertRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlertRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlertRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query all namespaces.
         /// </summary>
         /// <param name="req"><see cref="DescribeAllNamespacesRequest"/></param>
@@ -888,6 +1416,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribeConditionsTemplateList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConditionsTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of exporter integrations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExporterIntegrationsRequest"/></param>
+        /// <returns><see cref="DescribeExporterIntegrationsResponse"/></returns>
+        public async Task<DescribeExporterIntegrationsResponse> DescribeExporterIntegrations(DescribeExporterIntegrationsRequest req)
+        {
+             JsonResponseModel<DescribeExporterIntegrationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExporterIntegrations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExporterIntegrationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of exporter integrations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExporterIntegrationsRequest"/></param>
+        /// <returns><see cref="DescribeExporterIntegrationsResponse"/></returns>
+        public DescribeExporterIntegrationsResponse DescribeExporterIntegrationsSync(DescribeExporterIntegrationsRequest req)
+        {
+             JsonResponseModel<DescribeExporterIntegrationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExporterIntegrations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExporterIntegrationsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1097,6 +1665,218 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to list Prometheus CVM agents.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAgentsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAgentsResponse"/></returns>
+        public async Task<DescribePrometheusAgentsResponse> DescribePrometheusAgents(DescribePrometheusAgentsRequest req)
+        {
+             JsonResponseModel<DescribePrometheusAgentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusAgents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusAgentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Prometheus CVM agents.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAgentsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAgentsResponse"/></returns>
+        public DescribePrometheusAgentsResponse DescribePrometheusAgentsSync(DescribePrometheusAgentsRequest req)
+        {
+             JsonResponseModel<DescribePrometheusAgentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusAgents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusAgentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of one or multiple instances.
+        /// <ul>
+        /// <li>You can query the details of an instance by its ID, name, or status.</li>
+        /// <li>If this parameter is empty, the information of a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstancesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstancesResponse"/></returns>
+        public async Task<DescribePrometheusInstancesResponse> DescribePrometheusInstances(DescribePrometheusInstancesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of one or multiple instances.
+        /// <ul>
+        /// <li>You can query the details of an instance by its ID, name, or status.</li>
+        /// <li>If this parameter is empty, the information of a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstancesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstancesResponse"/></returns>
+        public DescribePrometheusInstancesResponse DescribePrometheusInstancesSync(DescribePrometheusInstancesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Prometheus scrape tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusScrapeJobsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusScrapeJobsResponse"/></returns>
+        public async Task<DescribePrometheusScrapeJobsResponse> DescribePrometheusScrapeJobs(DescribePrometheusScrapeJobsRequest req)
+        {
+             JsonResponseModel<DescribePrometheusScrapeJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusScrapeJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusScrapeJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Prometheus scrape tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusScrapeJobsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusScrapeJobsResponse"/></returns>
+        public DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobsSync(DescribePrometheusScrapeJobsRequest req)
+        {
+             JsonResponseModel<DescribePrometheusScrapeJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusScrapeJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusScrapeJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query Prometheus recording rules by filter.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRulesRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRulesResponse"/></returns>
+        public async Task<DescribeRecordingRulesResponse> DescribeRecordingRules(DescribeRecordingRulesRequest req)
+        {
+             JsonResponseModel<DescribeRecordingRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordingRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordingRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query Prometheus recording rules by filter.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRulesRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRulesResponse"/></returns>
+        public DescribeRecordingRulesResponse DescribeRecordingRulesSync(DescribeRecordingRulesRequest req)
+        {
+             JsonResponseModel<DescribeRecordingRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordingRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordingRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Prometheus scrape configurations in TKE.
+        /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
+        /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="DescribeServiceDiscoveryResponse"/></returns>
+        public async Task<DescribeServiceDiscoveryResponse> DescribeServiceDiscovery(DescribeServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<DescribeServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Prometheus scrape configurations in TKE.
+        /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
+        /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="DescribeServiceDiscoveryResponse"/></returns>
+        public DescribeServiceDiscoveryResponse DescribeServiceDiscoverySync(DescribeServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<DescribeServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query monitoring data by dimension conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeStatisticDataRequest"/></param>
@@ -1128,6 +1908,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStatisticData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStatisticDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the data of a Prometheus instance. The specified instance must be terminated first.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPrometheusInstanceRequest"/></param>
+        /// <returns><see cref="DestroyPrometheusInstanceResponse"/></returns>
+        public async Task<DestroyPrometheusInstanceResponse> DestroyPrometheusInstance(DestroyPrometheusInstanceRequest req)
+        {
+             JsonResponseModel<DestroyPrometheusInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyPrometheusInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyPrometheusInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the data of a Prometheus instance. The specified instance must be terminated first.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPrometheusInstanceRequest"/></param>
+        /// <returns><see cref="DestroyPrometheusInstanceResponse"/></returns>
+        public DestroyPrometheusInstanceResponse DestroyPrometheusInstanceSync(DestroyPrometheusInstanceRequest req)
+        {
+             JsonResponseModel<DestroyPrometheusInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyPrometheusInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyPrometheusInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1174,6 +1994,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "GetMonitorData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetMonitorDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the command line for Prometheus agent management.
+        /// </summary>
+        /// <param name="req"><see cref="GetPrometheusAgentManagementCommandRequest"/></param>
+        /// <returns><see cref="GetPrometheusAgentManagementCommandResponse"/></returns>
+        public async Task<GetPrometheusAgentManagementCommandResponse> GetPrometheusAgentManagementCommand(GetPrometheusAgentManagementCommandRequest req)
+        {
+             JsonResponseModel<GetPrometheusAgentManagementCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPrometheusAgentManagementCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPrometheusAgentManagementCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the command line for Prometheus agent management.
+        /// </summary>
+        /// <param name="req"><see cref="GetPrometheusAgentManagementCommandRequest"/></param>
+        /// <returns><see cref="GetPrometheusAgentManagementCommandResponse"/></returns>
+        public GetPrometheusAgentManagementCommandResponse GetPrometheusAgentManagementCommandSync(GetPrometheusAgentManagementCommandRequest req)
+        {
+             JsonResponseModel<GetPrometheusAgentManagementCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPrometheusAgentManagementCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPrometheusAgentManagementCommandResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1503,6 +2363,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to modify the attributes of a Prometheus instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusInstanceAttributesRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusInstanceAttributesResponse"/></returns>
+        public async Task<ModifyPrometheusInstanceAttributesResponse> ModifyPrometheusInstanceAttributes(ModifyPrometheusInstanceAttributesRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusInstanceAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPrometheusInstanceAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusInstanceAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the attributes of a Prometheus instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusInstanceAttributesRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusInstanceAttributesResponse"/></returns>
+        public ModifyPrometheusInstanceAttributesResponse ModifyPrometheusInstanceAttributesSync(ModifyPrometheusInstanceAttributesRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusInstanceAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPrometheusInstanceAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusInstanceAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// The default API request rate limit is 50 requests/sec.
         /// The default upper limit on metrics of a single tenant is 100.
         /// A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
@@ -1637,6 +2537,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to terminate a pay-as-you-go Prometheus instance.
+        /// </summary>
+        /// <param name="req"><see cref="TerminatePrometheusInstancesRequest"/></param>
+        /// <returns><see cref="TerminatePrometheusInstancesResponse"/></returns>
+        public async Task<TerminatePrometheusInstancesResponse> TerminatePrometheusInstances(TerminatePrometheusInstancesRequest req)
+        {
+             JsonResponseModel<TerminatePrometheusInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminatePrometheusInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminatePrometheusInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate a pay-as-you-go Prometheus instance.
+        /// </summary>
+        /// <param name="req"><see cref="TerminatePrometheusInstancesRequest"/></param>
+        /// <returns><see cref="TerminatePrometheusInstancesResponse"/></returns>
+        public TerminatePrometheusInstancesResponse TerminatePrometheusInstancesSync(TerminatePrometheusInstancesRequest req)
+        {
+             JsonResponseModel<TerminatePrometheusInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminatePrometheusInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminatePrometheusInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete all bound objects.
         /// </summary>
         /// <param name="req"><see cref="UnBindingAllPolicyObjectRequest"/></param>
@@ -1708,6 +2648,370 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "UnBindingPolicyObject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnBindingPolicyObjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a Grafana instance from an instance.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindPrometheusManagedGrafanaRequest"/></param>
+        /// <returns><see cref="UnbindPrometheusManagedGrafanaResponse"/></returns>
+        public async Task<UnbindPrometheusManagedGrafanaResponse> UnbindPrometheusManagedGrafana(UnbindPrometheusManagedGrafanaRequest req)
+        {
+             JsonResponseModel<UnbindPrometheusManagedGrafanaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindPrometheusManagedGrafana");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindPrometheusManagedGrafanaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a Grafana instance from an instance.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindPrometheusManagedGrafanaRequest"/></param>
+        /// <returns><see cref="UnbindPrometheusManagedGrafanaResponse"/></returns>
+        public UnbindPrometheusManagedGrafanaResponse UnbindPrometheusManagedGrafanaSync(UnbindPrometheusManagedGrafanaRequest req)
+        {
+             JsonResponseModel<UnbindPrometheusManagedGrafanaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindPrometheusManagedGrafana");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindPrometheusManagedGrafanaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Grafana dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="UninstallGrafanaDashboardRequest"/></param>
+        /// <returns><see cref="UninstallGrafanaDashboardResponse"/></returns>
+        public async Task<UninstallGrafanaDashboardResponse> UninstallGrafanaDashboard(UninstallGrafanaDashboardRequest req)
+        {
+             JsonResponseModel<UninstallGrafanaDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UninstallGrafanaDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallGrafanaDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Grafana dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="UninstallGrafanaDashboardRequest"/></param>
+        /// <returns><see cref="UninstallGrafanaDashboardResponse"/></returns>
+        public UninstallGrafanaDashboardResponse UninstallGrafanaDashboardSync(UninstallGrafanaDashboardRequest req)
+        {
+             JsonResponseModel<UninstallGrafanaDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UninstallGrafanaDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallGrafanaDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a Prometheus alerting rule.
+        /// 
+        /// Note that alert object and alert message are special fields of Prometheus Rule Annotations, which need to be passed in through `annotations` and correspond to `summary` and `description` keys respectively. For more information, see [Alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlertRuleRequest"/></param>
+        /// <returns><see cref="UpdateAlertRuleResponse"/></returns>
+        public async Task<UpdateAlertRuleResponse> UpdateAlertRule(UpdateAlertRuleRequest req)
+        {
+             JsonResponseModel<UpdateAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a Prometheus alerting rule.
+        /// 
+        /// Note that alert object and alert message are special fields of Prometheus Rule Annotations, which need to be passed in through `annotations` and correspond to `summary` and `description` keys respectively. For more information, see [Alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlertRuleRequest"/></param>
+        /// <returns><see cref="UpdateAlertRuleResponse"/></returns>
+        public UpdateAlertRuleResponse UpdateAlertRuleSync(UpdateAlertRuleRequest req)
+        {
+             JsonResponseModel<UpdateAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the status of a Prometheus alerting rule.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlertRuleStateRequest"/></param>
+        /// <returns><see cref="UpdateAlertRuleStateResponse"/></returns>
+        public async Task<UpdateAlertRuleStateResponse> UpdateAlertRuleState(UpdateAlertRuleStateRequest req)
+        {
+             JsonResponseModel<UpdateAlertRuleStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAlertRuleState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAlertRuleStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the status of a Prometheus alerting rule.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlertRuleStateRequest"/></param>
+        /// <returns><see cref="UpdateAlertRuleStateResponse"/></returns>
+        public UpdateAlertRuleStateResponse UpdateAlertRuleStateSync(UpdateAlertRuleStateRequest req)
+        {
+             JsonResponseModel<UpdateAlertRuleStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAlertRuleState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAlertRuleStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the exporter integration configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateExporterIntegrationRequest"/></param>
+        /// <returns><see cref="UpdateExporterIntegrationResponse"/></returns>
+        public async Task<UpdateExporterIntegrationResponse> UpdateExporterIntegration(UpdateExporterIntegrationRequest req)
+        {
+             JsonResponseModel<UpdateExporterIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateExporterIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the exporter integration configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateExporterIntegrationRequest"/></param>
+        /// <returns><see cref="UpdateExporterIntegrationResponse"/></returns>
+        public UpdateExporterIntegrationResponse UpdateExporterIntegrationSync(UpdateExporterIntegrationRequest req)
+        {
+             JsonResponseModel<UpdateExporterIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateExporterIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the status of a Prometheus CVM agent.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAgentStatusRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAgentStatusResponse"/></returns>
+        public async Task<UpdatePrometheusAgentStatusResponse> UpdatePrometheusAgentStatus(UpdatePrometheusAgentStatusRequest req)
+        {
+             JsonResponseModel<UpdatePrometheusAgentStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdatePrometheusAgentStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePrometheusAgentStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the status of a Prometheus CVM agent.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAgentStatusRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAgentStatusResponse"/></returns>
+        public UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatusSync(UpdatePrometheusAgentStatusRequest req)
+        {
+             JsonResponseModel<UpdatePrometheusAgentStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdatePrometheusAgentStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePrometheusAgentStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a Prometheus scrape task.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusScrapeJobRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusScrapeJobResponse"/></returns>
+        public async Task<UpdatePrometheusScrapeJobResponse> UpdatePrometheusScrapeJob(UpdatePrometheusScrapeJobRequest req)
+        {
+             JsonResponseModel<UpdatePrometheusScrapeJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdatePrometheusScrapeJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePrometheusScrapeJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a Prometheus scrape task.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusScrapeJobRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusScrapeJobResponse"/></returns>
+        public UpdatePrometheusScrapeJobResponse UpdatePrometheusScrapeJobSync(UpdatePrometheusScrapeJobRequest req)
+        {
+             JsonResponseModel<UpdatePrometheusScrapeJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdatePrometheusScrapeJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePrometheusScrapeJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a Prometheus recording rule.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRecordingRuleRequest"/></param>
+        /// <returns><see cref="UpdateRecordingRuleResponse"/></returns>
+        public async Task<UpdateRecordingRuleResponse> UpdateRecordingRule(UpdateRecordingRuleRequest req)
+        {
+             JsonResponseModel<UpdateRecordingRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateRecordingRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a Prometheus recording rule.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRecordingRuleRequest"/></param>
+        /// <returns><see cref="UpdateRecordingRuleResponse"/></returns>
+        public UpdateRecordingRuleResponse UpdateRecordingRuleSync(UpdateRecordingRuleRequest req)
+        {
+             JsonResponseModel<UpdateRecordingRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateRecordingRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a Grafana dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeGrafanaDashboardRequest"/></param>
+        /// <returns><see cref="UpgradeGrafanaDashboardResponse"/></returns>
+        public async Task<UpgradeGrafanaDashboardResponse> UpgradeGrafanaDashboard(UpgradeGrafanaDashboardRequest req)
+        {
+             JsonResponseModel<UpgradeGrafanaDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeGrafanaDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGrafanaDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a Grafana dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeGrafanaDashboardRequest"/></param>
+        /// <returns><see cref="UpgradeGrafanaDashboardResponse"/></returns>
+        public UpgradeGrafanaDashboardResponse UpgradeGrafanaDashboardSync(UpgradeGrafanaDashboardRequest req)
+        {
+             JsonResponseModel<UpgradeGrafanaDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeGrafanaDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGrafanaDashboardResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

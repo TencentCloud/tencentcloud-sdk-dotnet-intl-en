@@ -25,30 +25,30 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+        /// Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Offset. The default value is 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. The default value is 20, and the maximum value is 100.
+        /// Number of returned results. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter condition   
-        /// The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-        /// ProjectId - String - Required: No - Filter by project ID.   
-        /// AccessRegion - String - Required: No - Filter by access region.    
-        /// RealServerRegion - String - Required: No - Filter by origin server region.
-        /// GroupId - String - Required: No - Filter by connection group ID.
+        /// Filters   
+        /// The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+        /// ProjectId - String - Required: No - Filter by a project ID.   
+        /// AccessRegion - String - Required: No - Filter by an access region.    
+        /// RealServerRegion - String - Required: No - Filter by an origin server region.
+        /// GroupId - String - Required: No - Filter by a connection group ID.
         /// IPAddressVersion - String - Required: No - Filter by IP version.
         /// PackageType - String - Required: No - Filter by package type of connection groups.
         /// </summary>
@@ -56,7 +56,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+        /// Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
         /// </summary>
         [JsonProperty("ProxyIds")]
         public string[] ProxyIds{ get; set; }
@@ -78,8 +78,8 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Specifies how connections are listed. Valid values:
-        /// `asc`: ascending order
-        /// `desc`: descending order
+        /// `asc`: Ascending order
+        /// `desc`: Descending order
         /// Default: `desc`
         /// </summary>
         [JsonProperty("Order")]
@@ -87,10 +87,10 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Sorting field. Valid values:
-        /// `create_time`: sort by the creation time
-        /// `proxy_id`: sort by the connection ID
-        /// `bandwidth`:sort by the bandwidth limit
-        /// `concurrent_connections`: sort by the number of concurrent connections
+        /// `create_time`: Sort by creation time
+        /// `proxy_id`: Sort by connection ID
+        /// `bandwidth`:Sort by bandwidth limit
+        /// `concurrent_connections`: Sort by number of concurrent connections
         /// Default: `create_time`
         /// </summary>
         [JsonProperty("OrderField")]

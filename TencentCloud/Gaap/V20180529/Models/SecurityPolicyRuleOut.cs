@@ -64,6 +64,7 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Security policy ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

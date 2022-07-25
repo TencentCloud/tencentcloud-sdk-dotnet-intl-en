@@ -37,7 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// Resource type, including:
+        /// Resource types:
         /// Proxy (connection);
         /// ProxyGroup (connection group);
         /// RealServer (origin server).

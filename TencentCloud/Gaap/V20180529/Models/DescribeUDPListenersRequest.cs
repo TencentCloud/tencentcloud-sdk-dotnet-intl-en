@@ -25,13 +25,15 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+        /// Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
         /// Filter condition. Exact query by listener IDs.
+        /// When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+        /// When GroupId is specified, the listener will be checked whether it belongs to the connection group.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
@@ -61,7 +63,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+        /// Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

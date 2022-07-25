@@ -86,6 +86,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// `ISOLATED`: Isolated
         /// `CLONING`: Copying
         /// `RECOVERING`: Maintaining
+        /// `MOVING`: Migrating
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -218,7 +219,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+        /// Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("NetworkType")]

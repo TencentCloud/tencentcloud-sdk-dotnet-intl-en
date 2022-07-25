@@ -44,10 +44,11 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Connection group status:
-        /// 0: running normally;
-        /// 1: creating;
-        /// 4: terminating;
-        /// 11: migrating;
+        /// `0`: Running normally
+        /// `1`: Creating
+        /// `4`: Terminating
+        /// `11`: Migrating
+        /// `12`: Deploying
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -110,44 +111,44 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Security policy ID. This field exists if security policies are set.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
         /// Connection group version
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientIPMethod")]
         public long?[] ClientIPMethod{ get; set; }
 
         /// <summary>
         /// IP version. Valid values: `IPv4` (default), `IPv6`.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
         /// Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
         /// Specifies whether to enable HTTP3. Valid values:
-        /// `0`: disable;
-        /// `1`: enable.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// `0`: Disable
+        /// `1`: Enable
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }

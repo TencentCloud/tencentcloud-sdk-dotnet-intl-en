@@ -25,31 +25,33 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+        /// Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Filter condition. Exact query by listener IDs.
+        /// Filter condition. Exact query by listener ID.
+        /// When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+        /// When GroupId is specified, the listener will be checked whether it belongs to the connection group.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Filter condition. Exact query by listener names.
+        /// Filter condition. Exact query by listener name.
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// Filter condition. Exact query by listener ports.
+        /// Filter condition. Exact query by listener port.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Offset. The default value is 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -61,13 +63,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+        /// Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
+        /// Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
         /// </summary>
         [JsonProperty("SearchValue")]
         public string SearchValue{ get; set; }

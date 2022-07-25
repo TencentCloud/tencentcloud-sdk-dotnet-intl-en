@@ -109,6 +109,13 @@ namespace TencentCloud.Vm.V20201229.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// List of recognized category labels
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("RecognitionResults")]
+        public RecognitionResult[] RecognitionResults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +134,7 @@ namespace TencentCloud.Vm.V20201229.Models
             this.SetParamArrayObj(map, prefix + "MoanResults.", this.MoanResults);
             this.SetParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
         }
     }
 }

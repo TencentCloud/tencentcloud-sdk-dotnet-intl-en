@@ -61,8 +61,8 @@ namespace TencentCloud.Vm.V20201229.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// This field is used to return the video moderation type passed in when the video moderation API is called. Valid values: **VIDEO** (video on demand), **LIVE_VIDEO** (video live streaming). Default value: VIDEO.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// This field is used to return the type of video for moderation. Valid values: `VIDEO` (video on demand), `LIVE_VIDEO` (video live streaming). Default value: `VIDEO`.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -75,8 +75,8 @@ namespace TencentCloud.Vm.V20201229.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// This field is used to return the maliciousness tag in the detection result.<br>Values: `Normal`: normal; `Porn`: pornographic; `Abuse`: abusive; `Ad`: advertising; `Custom`: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Labels")]
         public TaskLabel[] Labels{ get; set; }
@@ -140,6 +140,13 @@ namespace TencentCloud.Vm.V20201229.Models
         public string ErrorDescription{ get; set; }
 
         /// <summary>
+        /// If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -167,6 +174,7 @@ namespace TencentCloud.Vm.V20201229.Models
             this.SetParamArrayObj(map, prefix + "AudioSegments.", this.AudioSegments);
             this.SetParamSimple(map, prefix + "ErrorType", this.ErrorType);
             this.SetParamSimple(map, prefix + "ErrorDescription", this.ErrorDescription);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -37,7 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of values to be returned. The default value is 20. Maximum is 1000.
+        /// Number of returned results. Default value: 20. Maximum value: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

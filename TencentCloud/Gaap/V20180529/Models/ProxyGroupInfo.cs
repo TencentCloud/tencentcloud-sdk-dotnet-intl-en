@@ -59,10 +59,11 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// <summary>
         /// Connection group status.
         /// Where:
-        /// 0: running;
-        /// 1: creating;
-        /// 4: terminating;
-        /// 11: connection migrating.
+        /// `RUNNING`: Running
+        /// `CREATING`: Creating
+        /// `DESTROYING`: Terminating
+        /// `MOVING`: Migrating
+        /// `CHANGING`: Deploying
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -96,9 +97,9 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// Specifies whether to enable HTTP3. Valid values:
-        /// `0`: disable HTTP3;
-        /// `1`: enable HTTP3.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// `0`: Disable
+        /// `1`: Enable
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }

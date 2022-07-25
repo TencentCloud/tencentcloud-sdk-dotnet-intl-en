@@ -61,7 +61,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
+        /// Filter by monitor type. Valid values: "MT_QCE" (Tencent Cloud service monitoring), "MT_TAW" (application performance monitoring), "MT_RUM" (frontend performance monitoring), "MT_PROBE" (cloud automated testing). If this parameter is left empty, all types will be queried by default.
         /// </summary>
         [JsonProperty("MonitorTypes")]
         public string[] MonitorTypes{ get; set; }
