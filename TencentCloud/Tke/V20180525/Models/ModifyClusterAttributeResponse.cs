@@ -60,6 +60,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public AutoUpgradeClusterLevel AutoUpgradeClusterLevel{ get; set; }
 
         /// <summary>
+        /// Whether to enable qGPU Sharing
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("QGPUShareEnable")]
+        public bool? QGPUShareEnable{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -76,6 +83,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
             this.SetParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
+            this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

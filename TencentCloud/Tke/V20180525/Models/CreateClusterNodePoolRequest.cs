@@ -85,7 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string RuntimeVersion{ get; set; }
 
         /// <summary>
-        /// Operating system of the node pool
+        /// Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
         /// </summary>
         [JsonProperty("NodePoolOs")]
         public string NodePoolOs{ get; set; }
@@ -101,6 +101,12 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Whether Deletion Protection is enabled
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

@@ -15,27 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskStatusRequest : AbstractModel
+    public class EdgeClusterInternalLB : AbstractModel
     {
         
         /// <summary>
-        /// Request ID, i.e., the RequestId parameter returned by the API.
+        /// Whether the private LB is enabled
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// Order ID.
-        /// Note: Either `TaskId` or `DealName` is required.
+        /// ID of the subnet associated with the private LB
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
+        [JsonProperty("SubnetId")]
+        public string[] SubnetId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +44,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamArraySimple(map, prefix + "SubnetId.", this.SubnetId);
         }
     }
 }

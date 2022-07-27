@@ -132,6 +132,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("CiliumMode")]
         public string CiliumMode{ get; set; }
 
+        /// <summary>
+        /// Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+        /// </summary>
+        [JsonProperty("IsDualStack")]
+        public bool? IsDualStack{ get; set; }
+
+        /// <summary>
+        /// Whether to enable qGPU Sharing
+        /// </summary>
+        [JsonProperty("QGPUShareEnable")]
+        public bool? QGPUShareEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +167,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
             this.SetParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
             this.SetParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
+            this.SetParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
+            this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         }
     }
 }

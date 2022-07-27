@@ -15,27 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskStatusRequest : AbstractModel
+    public class DescribeEdgeClusterExtraArgsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Request ID, i.e., the RequestId parameter returned by the API.
+        /// Custom parameters of the cluster
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("ClusterExtraArgs")]
+        public EdgeClusterExtraArgs ClusterExtraArgs{ get; set; }
 
         /// <summary>
-        /// Order ID.
-        /// Note: Either `TaskId` or `DealName` is required.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +43,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamObj(map, prefix + "ClusterExtraArgs.", this.ClusterExtraArgs);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

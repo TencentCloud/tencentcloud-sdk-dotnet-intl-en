@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskStatusRequest : AbstractModel
+    public class ECMEnhancedService : AbstractModel
     {
         
         /// <summary>
-        /// Request ID, i.e., the RequestId parameter returned by the API.
+        /// Whether Cloud Monitoring is enabled
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("SecurityService")]
+        public ECMRunMonitorServiceEnabled SecurityService{ get; set; }
 
         /// <summary>
-        /// Order ID.
-        /// Note: Either `TaskId` or `DealName` is required.
+        /// Whether Cloud Workload Protection is enabled
         /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
+        [JsonProperty("MonitorService")]
+        public ECMRunSecurityServiceEnabled MonitorService{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamObj(map, prefix + "SecurityService.", this.SecurityService);
+            this.SetParamObj(map, prefix + "MonitorService.", this.MonitorService);
         }
     }
 }

@@ -213,6 +213,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to check if the CIDR block of a TKE Edge cluster conflicts with other CIDR blocks.
+        /// </summary>
+        /// <param name="req"><see cref="CheckEdgeClusterCIDRRequest"/></param>
+        /// <returns><see cref="CheckEdgeClusterCIDRResponse"/></returns>
+        public async Task<CheckEdgeClusterCIDRResponse> CheckEdgeClusterCIDR(CheckEdgeClusterCIDRRequest req)
+        {
+             JsonResponseModel<CheckEdgeClusterCIDRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckEdgeClusterCIDR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckEdgeClusterCIDRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to check if the CIDR block of a TKE Edge cluster conflicts with other CIDR blocks.
+        /// </summary>
+        /// <param name="req"><see cref="CheckEdgeClusterCIDRRequest"/></param>
+        /// <returns><see cref="CheckEdgeClusterCIDRResponse"/></returns>
+        public CheckEdgeClusterCIDRResponse CheckEdgeClusterCIDRSync(CheckEdgeClusterCIDRRequest req)
+        {
+             JsonResponseModel<CheckEdgeClusterCIDRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckEdgeClusterCIDR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckEdgeClusterCIDRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to check which nodes can be upgraded in the given node list. 
         /// </summary>
         /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>
@@ -533,6 +573,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to create an ECM instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateECMInstancesRequest"/></param>
+        /// <returns><see cref="CreateECMInstancesResponse"/></returns>
+        public async Task<CreateECMInstancesResponse> CreateECMInstances(CreateECMInstancesRequest req)
+        {
+             JsonResponseModel<CreateECMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateECMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateECMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an ECM instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateECMInstancesRequest"/></param>
+        /// <returns><see cref="CreateECMInstancesResponse"/></returns>
+        public CreateECMInstancesResponse CreateECMInstancesSync(CreateECMInstancesRequest req)
+        {
+             JsonResponseModel<CreateECMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateECMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateECMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an alarm rule.
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusAlertRuleRequest"/></param>
@@ -564,6 +644,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "CreatePrometheusAlertRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTKEEdgeClusterRequest"/></param>
+        /// <returns><see cref="CreateTKEEdgeClusterResponse"/></returns>
+        public async Task<CreateTKEEdgeClusterResponse> CreateTKEEdgeCluster(CreateTKEEdgeClusterRequest req)
+        {
+             JsonResponseModel<CreateTKEEdgeClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTKEEdgeCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTKEEdgeClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTKEEdgeClusterRequest"/></param>
+        /// <returns><see cref="CreateTKEEdgeClusterResponse"/></returns>
+        public CreateTKEEdgeClusterResponse CreateTKEEdgeClusterSync(CreateTKEEdgeClusterRequest req)
+        {
+             JsonResponseModel<CreateTKEEdgeClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTKEEdgeCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTKEEdgeClusterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -893,6 +1013,126 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to delete one or more ECM instances.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteECMInstancesRequest"/></param>
+        /// <returns><see cref="DeleteECMInstancesResponse"/></returns>
+        public async Task<DeleteECMInstancesResponse> DeleteECMInstances(DeleteECMInstancesRequest req)
+        {
+             JsonResponseModel<DeleteECMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteECMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteECMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more ECM instances.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteECMInstancesRequest"/></param>
+        /// <returns><see cref="DeleteECMInstancesResponse"/></returns>
+        public DeleteECMInstancesResponse DeleteECMInstancesSync(DeleteECMInstancesRequest req)
+        {
+             JsonResponseModel<DeleteECMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteECMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteECMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more edge CVM instances.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdgeCVMInstancesRequest"/></param>
+        /// <returns><see cref="DeleteEdgeCVMInstancesResponse"/></returns>
+        public async Task<DeleteEdgeCVMInstancesResponse> DeleteEdgeCVMInstances(DeleteEdgeCVMInstancesRequest req)
+        {
+             JsonResponseModel<DeleteEdgeCVMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEdgeCVMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEdgeCVMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more edge CVM instances.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdgeCVMInstancesRequest"/></param>
+        /// <returns><see cref="DeleteEdgeCVMInstancesResponse"/></returns>
+        public DeleteEdgeCVMInstancesResponse DeleteEdgeCVMInstancesSync(DeleteEdgeCVMInstancesRequest req)
+        {
+             JsonResponseModel<DeleteEdgeCVMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEdgeCVMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEdgeCVMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more edge compute instances.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdgeClusterInstancesRequest"/></param>
+        /// <returns><see cref="DeleteEdgeClusterInstancesResponse"/></returns>
+        public async Task<DeleteEdgeClusterInstancesResponse> DeleteEdgeClusterInstances(DeleteEdgeClusterInstancesRequest req)
+        {
+             JsonResponseModel<DeleteEdgeClusterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEdgeClusterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEdgeClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more edge compute instances.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdgeClusterInstancesRequest"/></param>
+        /// <returns><see cref="DeleteEdgeClusterInstancesResponse"/></returns>
+        public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstancesSync(DeleteEdgeClusterInstancesRequest req)
+        {
+             JsonResponseModel<DeleteEdgeClusterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEdgeClusterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEdgeClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an alarm rule.
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusAlertRuleRequest"/></param>
@@ -933,6 +1173,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to delete a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTKEEdgeClusterRequest"/></param>
+        /// <returns><see cref="DeleteTKEEdgeClusterResponse"/></returns>
+        public async Task<DeleteTKEEdgeClusterResponse> DeleteTKEEdgeCluster(DeleteTKEEdgeClusterRequest req)
+        {
+             JsonResponseModel<DeleteTKEEdgeClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTKEEdgeCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTKEEdgeClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTKEEdgeClusterRequest"/></param>
+        /// <returns><see cref="DeleteTKEEdgeClusterResponse"/></returns>
+        public DeleteTKEEdgeClusterResponse DeleteTKEEdgeClusterSync(DeleteTKEEdgeClusterRequest req)
+        {
+             JsonResponseModel<DeleteTKEEdgeClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTKEEdgeCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTKEEdgeClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain all versions that the cluster can upgrade to.
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailableClusterVersionRequest"/></param>
@@ -964,6 +1244,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAvailableClusterVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the K8s versions supported by TKE Edge.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableTKEEdgeVersionRequest"/></param>
+        /// <returns><see cref="DescribeAvailableTKEEdgeVersionResponse"/></returns>
+        public async Task<DescribeAvailableTKEEdgeVersionResponse> DescribeAvailableTKEEdgeVersion(DescribeAvailableTKEEdgeVersionRequest req)
+        {
+             JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAvailableTKEEdgeVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the K8s versions supported by TKE Edge.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableTKEEdgeVersionRequest"/></param>
+        /// <returns><see cref="DescribeAvailableTKEEdgeVersionResponse"/></returns>
+        public DescribeAvailableTKEEdgeVersionResponse DescribeAvailableTKEEdgeVersionSync(DescribeAvailableTKEEdgeVersionRequest req)
+        {
+             JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAvailableTKEEdgeVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1653,6 +1973,206 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to obtain the ECM instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeECMInstancesRequest"/></param>
+        /// <returns><see cref="DescribeECMInstancesResponse"/></returns>
+        public async Task<DescribeECMInstancesResponse> DescribeECMInstances(DescribeECMInstancesRequest req)
+        {
+             JsonResponseModel<DescribeECMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeECMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeECMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the ECM instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeECMInstancesRequest"/></param>
+        /// <returns><see cref="DescribeECMInstancesResponse"/></returns>
+        public DescribeECMInstancesResponse DescribeECMInstancesSync(DescribeECMInstancesRequest req)
+        {
+             JsonResponseModel<DescribeECMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeECMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeECMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the custom parameters available for an edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeAvailableExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeEdgeAvailableExtraArgsResponse"/></returns>
+        public async Task<DescribeEdgeAvailableExtraArgsResponse> DescribeEdgeAvailableExtraArgs(DescribeEdgeAvailableExtraArgsRequest req)
+        {
+             JsonResponseModel<DescribeEdgeAvailableExtraArgsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgeAvailableExtraArgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeAvailableExtraArgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the custom parameters available for an edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeAvailableExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeEdgeAvailableExtraArgsResponse"/></returns>
+        public DescribeEdgeAvailableExtraArgsResponse DescribeEdgeAvailableExtraArgsSync(DescribeEdgeAvailableExtraArgsRequest req)
+        {
+             JsonResponseModel<DescribeEdgeAvailableExtraArgsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgeAvailableExtraArgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeAvailableExtraArgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the edge CVM instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeCVMInstancesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeCVMInstancesResponse"/></returns>
+        public async Task<DescribeEdgeCVMInstancesResponse> DescribeEdgeCVMInstances(DescribeEdgeCVMInstancesRequest req)
+        {
+             JsonResponseModel<DescribeEdgeCVMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgeCVMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeCVMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the edge CVM instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeCVMInstancesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeCVMInstancesResponse"/></returns>
+        public DescribeEdgeCVMInstancesResponse DescribeEdgeCVMInstancesSync(DescribeEdgeCVMInstancesRequest req)
+        {
+             JsonResponseModel<DescribeEdgeCVMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgeCVMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeCVMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query custom parameters of an edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeClusterExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeEdgeClusterExtraArgsResponse"/></returns>
+        public async Task<DescribeEdgeClusterExtraArgsResponse> DescribeEdgeClusterExtraArgs(DescribeEdgeClusterExtraArgsRequest req)
+        {
+             JsonResponseModel<DescribeEdgeClusterExtraArgsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgeClusterExtraArgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterExtraArgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query custom parameters of an edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeClusterExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeEdgeClusterExtraArgsResponse"/></returns>
+        public DescribeEdgeClusterExtraArgsResponse DescribeEdgeClusterExtraArgsSync(DescribeEdgeClusterExtraArgsRequest req)
+        {
+             JsonResponseModel<DescribeEdgeClusterExtraArgsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgeClusterExtraArgs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterExtraArgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the TKE Edge cluster node information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeClusterInstancesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeClusterInstancesResponse"/></returns>
+        public async Task<DescribeEdgeClusterInstancesResponse> DescribeEdgeClusterInstances(DescribeEdgeClusterInstancesRequest req)
+        {
+             JsonResponseModel<DescribeEdgeClusterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgeClusterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the TKE Edge cluster node information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeClusterInstancesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeClusterInstancesResponse"/></returns>
+        public DescribeEdgeClusterInstancesResponse DescribeEdgeClusterInstancesSync(DescribeEdgeClusterInstancesRequest req)
+        {
+             JsonResponseModel<DescribeEdgeClusterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgeClusterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the task progress of enabling VPC-CNI mode.
         /// </summary>
         /// <param name="req"><see cref="DescribeEnableVpcCniProgressRequest"/></param>
@@ -1933,7 +2453,167 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the URL of TKE edge script.
+        /// This API is used to obtain the authentication information of a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeClusterCredentialRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeClusterCredentialResponse"/></returns>
+        public async Task<DescribeTKEEdgeClusterCredentialResponse> DescribeTKEEdgeClusterCredential(DescribeTKEEdgeClusterCredentialRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeClusterCredentialResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTKEEdgeClusterCredential");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeClusterCredentialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the authentication information of a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeClusterCredentialRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeClusterCredentialResponse"/></returns>
+        public DescribeTKEEdgeClusterCredentialResponse DescribeTKEEdgeClusterCredentialSync(DescribeTKEEdgeClusterCredentialRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeClusterCredentialResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTKEEdgeClusterCredential");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeClusterCredentialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the current status and process information of a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeClusterStatusRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeClusterStatusResponse"/></returns>
+        public async Task<DescribeTKEEdgeClusterStatusResponse> DescribeTKEEdgeClusterStatus(DescribeTKEEdgeClusterStatusRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeClusterStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTKEEdgeClusterStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeClusterStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the current status and process information of a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeClusterStatusRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeClusterStatusResponse"/></returns>
+        public DescribeTKEEdgeClusterStatusResponse DescribeTKEEdgeClusterStatusSync(DescribeTKEEdgeClusterStatusRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeClusterStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTKEEdgeClusterStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeClusterStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TKE Edge clusters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeClustersRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeClustersResponse"/></returns>
+        public async Task<DescribeTKEEdgeClustersResponse> DescribeTKEEdgeClusters(DescribeTKEEdgeClustersRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTKEEdgeClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TKE Edge clusters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeClustersRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeClustersResponse"/></returns>
+        public DescribeTKEEdgeClustersResponse DescribeTKEEdgeClustersSync(DescribeTKEEdgeClustersRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTKEEdgeClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the kubeconfig for access to a TKE Edge cluster through the public network.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeExternalKubeconfigRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeExternalKubeconfigResponse"/></returns>
+        public async Task<DescribeTKEEdgeExternalKubeconfigResponse> DescribeTKEEdgeExternalKubeconfig(DescribeTKEEdgeExternalKubeconfigRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeExternalKubeconfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTKEEdgeExternalKubeconfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeExternalKubeconfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the kubeconfig for access to a TKE Edge cluster through the public network.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeExternalKubeconfigRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeExternalKubeconfigResponse"/></returns>
+        public DescribeTKEEdgeExternalKubeconfigResponse DescribeTKEEdgeExternalKubeconfigSync(DescribeTKEEdgeExternalKubeconfigRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeExternalKubeconfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTKEEdgeExternalKubeconfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeExternalKubeconfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the URL of TKE edge script. You can add external nodes to a TKE Edge cluster by downloading the URL.
         /// </summary>
         /// <param name="req"><see cref="DescribeTKEEdgeScriptRequest"/></param>
         /// <returns><see cref="DescribeTKEEdgeScriptResponse"/></returns>
@@ -1953,7 +2633,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the URL of TKE edge script.
+        /// This API is used to query the URL of TKE edge script. You can add external nodes to a TKE Edge cluster by downloading the URL.
         /// </summary>
         /// <param name="req"><see cref="DescribeTKEEdgeScriptRequest"/></param>
         /// <returns><see cref="DescribeTKEEdgeScriptResponse"/></returns>
@@ -2164,6 +2844,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "EnableVpcCniNetworkType");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to work with the add-ons of a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ForwardTKEEdgeApplicationRequestV3Request"/></param>
+        /// <returns><see cref="ForwardTKEEdgeApplicationRequestV3Response"/></returns>
+        public async Task<ForwardTKEEdgeApplicationRequestV3Response> ForwardTKEEdgeApplicationRequestV3(ForwardTKEEdgeApplicationRequestV3Request req)
+        {
+             JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ForwardTKEEdgeApplicationRequestV3");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to work with the add-ons of a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ForwardTKEEdgeApplicationRequestV3Request"/></param>
+        /// <returns><see cref="ForwardTKEEdgeApplicationRequestV3Response"/></returns>
+        public ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3Sync(ForwardTKEEdgeApplicationRequestV3Request req)
+        {
+             JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ForwardTKEEdgeApplicationRequestV3");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -21,26 +21,22 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTKEEdgeScriptResponse : AbstractModel
+    public class DescribeEdgeAvailableExtraArgsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Whether to download the link
+        /// Cluster version
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Link")]
-        public string Link{ get; set; }
+        [JsonProperty("ClusterVersion")]
+        public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// Whether to download the desired token
+        /// Available custom parameters
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Token")]
-        public string Token{ get; set; }
-
-        /// <summary>
-        /// Whether to download the command
-        /// </summary>
-        [JsonProperty("Command")]
-        public string Command{ get; set; }
+        [JsonProperty("AvailableExtraArgs")]
+        public EdgeAvailableExtraArgs AvailableExtraArgs{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,9 +50,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Link", this.Link);
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+            this.SetParamObj(map, prefix + "AvailableExtraArgs.", this.AvailableExtraArgs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

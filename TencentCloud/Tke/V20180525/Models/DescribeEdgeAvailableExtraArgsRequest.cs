@@ -15,27 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskStatusRequest : AbstractModel
+    public class DescribeEdgeAvailableExtraArgsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Request ID, i.e., the RequestId parameter returned by the API.
+        /// Cluster version
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
-        /// Order ID.
-        /// Note: Either `TaskId` or `DealName` is required.
-        /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
+        [JsonProperty("ClusterVersion")]
+        public string ClusterVersion{ get; set; }
 
 
         /// <summary>
@@ -43,8 +36,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         }
     }
 }

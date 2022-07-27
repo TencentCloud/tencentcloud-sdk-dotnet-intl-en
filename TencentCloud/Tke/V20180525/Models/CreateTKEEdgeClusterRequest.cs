@@ -21,20 +21,20 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyClusterAttributeRequest : AbstractModel
+    public class CreateTKEEdgeClusterRequest : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// 
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("K8SVersion")]
+        public string K8SVersion{ get; set; }
 
         /// <summary>
-        /// Project of the Cluster
+        /// VPC ID
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public long? ProjectId{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
         /// Cluster name
@@ -43,28 +43,40 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
+        /// Cluster Pod CIDR block
+        /// </summary>
+        [JsonProperty("PodCIDR")]
+        public string PodCIDR{ get; set; }
+
+        /// <summary>
+        /// Cluster service CIDR block
+        /// </summary>
+        [JsonProperty("ServiceCIDR")]
+        public string ServiceCIDR{ get; set; }
+
+        /// <summary>
         /// Cluster description
         /// </summary>
         [JsonProperty("ClusterDesc")]
         public string ClusterDesc{ get; set; }
 
         /// <summary>
-        /// Cluster specification
+        /// Cluster advanced settings
         /// </summary>
-        [JsonProperty("ClusterLevel")]
-        public string ClusterLevel{ get; set; }
+        [JsonProperty("ClusterAdvancedSettings")]
+        public EdgeClusterAdvancedSettings ClusterAdvancedSettings{ get; set; }
 
         /// <summary>
-        /// Auto-upgrades cluster specification
+        /// Maximum number of Pods on the node
         /// </summary>
-        [JsonProperty("AutoUpgradeClusterLevel")]
-        public AutoUpgradeClusterLevel AutoUpgradeClusterLevel{ get; set; }
+        [JsonProperty("MaxNodePodNum")]
+        public long? MaxNodePodNum{ get; set; }
 
         /// <summary>
-        /// Whether to enable qGPU Sharing
+        /// Public LB of the TKE Edge cluster
         /// </summary>
-        [JsonProperty("QGPUShareEnable")]
-        public bool? QGPUShareEnable{ get; set; }
+        [JsonProperty("PublicLB")]
+        public EdgeClusterPublicLB PublicLB{ get; set; }
 
 
         /// <summary>
@@ -72,13 +84,15 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "K8SVersion", this.K8SVersion);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "PodCIDR", this.PodCIDR);
+            this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
             this.SetParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
-            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
-            this.SetParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
-            this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
+            this.SetParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
+            this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
+            this.SetParamObj(map, prefix + "PublicLB.", this.PublicLB);
         }
     }
 }

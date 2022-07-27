@@ -94,6 +94,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("IgnoreServiceCIDRConflict")]
         public bool? IgnoreServiceCIDRConflict{ get; set; }
 
+        /// <summary>
+        /// Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("IsDualStack")]
+        public bool? IsDualStack{ get; set; }
+
+        /// <summary>
+        /// It is used to automatically assign the IP ranges for the service.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Ipv6ServiceCIDR")]
+        public string Ipv6ServiceCIDR{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +125,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
             this.SetParamArraySimple(map, prefix + "Subnets.", this.Subnets);
             this.SetParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
+            this.SetParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
+            this.SetParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
         }
     }
 }

@@ -21,32 +21,33 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTKEEdgeScriptResponse : AbstractModel
+    public class DescribeTKEEdgeClustersRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether to download the link
+        /// Cluster ID list (when it is empty,
+        /// all clusters under the account are obtained)
         /// </summary>
-        [JsonProperty("Link")]
-        public string Link{ get; set; }
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// Whether to download the desired token
+        /// Offset. Default value: `0`
         /// </summary>
-        [JsonProperty("Token")]
-        public string Token{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Whether to download the command
+        /// Maximum number of output entries. Default value: `20`
         /// </summary>
-        [JsonProperty("Command")]
-        public string Command{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Filter condition (only filtering by a single ClusterName is supported)
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -54,10 +55,10 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Link", this.Link);
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "Command", this.Command);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

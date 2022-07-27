@@ -147,6 +147,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
 
+        /// <summary>
+        /// Attribute of listener
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AttrFlags")]
+        public string[] AttrFlags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +178,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "Toa", this.Toa);
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
+            this.SetParamArraySimple(map, prefix + "AttrFlags.", this.AttrFlags);
         }
     }
 }
