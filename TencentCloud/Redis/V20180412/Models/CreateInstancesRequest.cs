@@ -165,6 +165,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
+        /// <summary>
+        /// Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+        /// </summary>
+        [JsonProperty("ProductVersion")]
+        public string ProductVersion{ get; set; }
+
+        /// <summary>
+        /// Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+        /// </summary>
+        [JsonProperty("RedisClusterId")]
+        public string RedisClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +206,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
+            this.SetParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
         }
     }
 }
