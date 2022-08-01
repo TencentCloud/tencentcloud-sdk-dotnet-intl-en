@@ -25,19 +25,20 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 
+        /// Switch. Valid values: `on`, `off`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access ID
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

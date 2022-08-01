@@ -58,7 +58,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paged queries. Default value: 20
+        /// Limit on paginated queries. Default value: 20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -44,8 +44,8 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Acceleration region corresponding to the log package
-        /// `mainland`: within Mainland China
-        /// `overseas`: outside Mainland China
+        /// `mainland`: Within the Chinese mainland
+        /// `overseas`: Outside the Chinese mainland
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

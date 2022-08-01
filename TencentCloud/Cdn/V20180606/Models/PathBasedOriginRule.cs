@@ -26,10 +26,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Rule types:
-        /// `file`: effective for files with specified suffixes.
-        /// `directory`: effective for specified paths.
-        /// `path`: effective for specified absolute paths.
-        /// `index`: effective for specified homepages.
+        /// `file`: Apply to files with the specified suffixes.
+        /// `directory`: Apply to specified paths.
+        /// `path`: Apply to specified absolute paths.
+        /// `index`: Apply to specified homepages.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
@@ -45,7 +45,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// Origin server list. Domain names and IPv4 addresses are supported.
+        /// Origin server list. Domain name and IPv4 addresses are supported.
         /// </summary>
         [JsonProperty("Origin")]
         public string[] Origin{ get; set; }

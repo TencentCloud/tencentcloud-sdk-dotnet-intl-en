@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Limit the size of a POST request. The default value is 32 MB.
+        /// Limit the size of POST requests. The default value is 32 MB.
         /// off: Disable
         /// on: Enable
         /// </summary>

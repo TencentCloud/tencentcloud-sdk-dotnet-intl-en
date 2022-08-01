@@ -25,10 +25,12 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video stream codec. Valid values:
+        /// The video codec. Valid values:
         /// <li>libx264: H.264</li>
         /// <li>libx265: H.265</li>
-        /// Currently, a resolution within 640*480p must be specified for H.265.
+        /// <li>av1: AOMedia Video 1</li>
+        /// Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+        /// Note: You can only use the AOMedia Video 1 codec for MP4 files.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
@@ -49,8 +51,9 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Resolution adaption. Valid values:
-        /// <li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-        /// <li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+        /// <li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+        /// <li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
+        /// Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }

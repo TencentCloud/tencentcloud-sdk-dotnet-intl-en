@@ -43,14 +43,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Result{ get; set; }
 
         /// <summary>
-        /// Whether the rule is effective. Valid values: `active` and `inactive`.
+        /// Whether the rule is activated. Valid values: `active` and `inactive`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error page configuration.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Error page configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ErrorPage")]
         public ScdnErrorPage ErrorPage{ get; set; }

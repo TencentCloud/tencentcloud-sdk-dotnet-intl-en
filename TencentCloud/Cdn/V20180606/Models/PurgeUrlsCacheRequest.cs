@@ -32,16 +32,16 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Purging region
-        /// The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-        /// If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-        /// If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-        /// The specified purging region should match the domain name acceleration region
+        /// The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+        /// If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+        /// If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+        /// The specified purging region should match the domain name acceleration region.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Whether to encode Chinese characters before purge.
+        /// Whether to encode Chinese characters for purge
         /// </summary>
         [JsonProperty("UrlEncode")]
         public bool? UrlEncode{ get; set; }

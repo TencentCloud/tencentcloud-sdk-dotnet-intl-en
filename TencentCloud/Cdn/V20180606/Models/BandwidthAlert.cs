@@ -26,8 +26,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Specifies whether to enable the bandwidth cap
-        /// `on`: enable
-        /// `off`: disable
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -41,9 +41,9 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Action taken when threshold is reached
-        /// RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-        /// RETURN_404: a 404 error will be returned for all requests.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+        /// `RETURN_404`: A 404 error will be returned for all requests.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CounterMeasure")]
         public string CounterMeasure{ get; set; }
@@ -57,8 +57,8 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Indicates whether to trigger alerts when the upper limit is reached
-        /// `on`: enable
-        /// `off`: disable
+        /// `on`: Enable
+        /// `off`: Disable
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AlertSwitch")]
@@ -80,12 +80,19 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Dimension of the usage limit
-        /// `bandwidth`: bandwidth
-        /// `flux`: traffic
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// `bandwidth`: Bandwidth
+        /// `flux`: Traffic
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
+
+        /// <summary>
+        /// Usage limit configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("StatisticItems")]
+        public StatisticItem[] StatisticItems{ get; set; }
 
 
         /// <summary>
@@ -101,6 +108,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
             this.SetParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
             this.SetParamSimple(map, prefix + "Metric", this.Metric);
+            this.SetParamArrayObj(map, prefix + "StatisticItems.", this.StatisticItems);
         }
     }
 }

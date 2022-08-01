@@ -115,6 +115,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// Audio/Video enhancement configuration.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnhanceConfig")]
+        public EnhanceConfig EnhanceConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ContainerType", this.ContainerType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         }
     }
 }

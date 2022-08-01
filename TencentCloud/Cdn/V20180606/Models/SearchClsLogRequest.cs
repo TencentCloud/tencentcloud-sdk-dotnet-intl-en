@@ -37,13 +37,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string TopicIds{ get; set; }
 
         /// <summary>
-        /// Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+        /// Query start time in the format of YYYY-mm-dd HH:MM:SS
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+        /// Query end time in the format of YYYY-mm-dd HH:MM:SS
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Channel{ get; set; }
 
         /// <summary>
-        /// Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+        /// Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

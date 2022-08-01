@@ -157,13 +157,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Seo Seo{ get; set; }
 
         /// <summary>
-        /// Access protocol forced redirect configuration
+        /// Protocol redirect configuration
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// Referer hotlink protection configuration
+        /// Referer configuration
         /// </summary>
         [JsonProperty("Referer")]
         public Referer Referer{ get; set; }
@@ -175,27 +175,27 @@ namespace TencentCloud.Cdn.V20180606.Models
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// Domain name service type
-        /// web: static acceleration
-        /// download: download acceleration
-        /// media: streaming media VOD acceleration
-        /// </summary>
-        [JsonProperty("ServiceType")]
-        public string ServiceType{ get; set; }
-
-        /// <summary>
-        /// Specific region configuration
-        /// Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+        /// Specific-region special configuration
+        /// Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
         /// </summary>
         [JsonProperty("SpecificConfig")]
         public SpecificConfig SpecificConfig{ get; set; }
 
         /// <summary>
+        /// Domain name service type
+        /// `web`: Static acceleration
+        /// `download`: Download acceleration
+        /// `media`: Streaming media VOD acceleration
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
+
+        /// <summary>
         /// Domain name acceleration region
-        /// `mainland`: acceleration inside the Chinese mainland
-        /// `overseas`: acceleration outside the Chinese mainland
-        /// `global`: global acceleration
-        /// When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+        /// `mainland`: Acceleration inside the Chinese mainland
+        /// `overseas`: Acceleration outside the Chinese mainland
+        /// `global`: Acceleration over the globe
+        /// After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -207,13 +207,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OriginPullTimeout OriginPullTimeout{ get; set; }
 
         /// <summary>
-        /// Origin access authentication for S3 bucket
+        /// Access authentication for S3 origin
         /// </summary>
         [JsonProperty("AwsPrivateAccess")]
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
         /// <summary>
-        /// UA blocklist/allowlist Configuration
+        /// UA blocklist/allowlist configuration
         /// </summary>
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }
@@ -225,7 +225,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public AccessControl AccessControl{ get; set; }
 
         /// <summary>
-        /// Configuration of URL rewriting
+        /// URL rewriting configuration
         /// </summary>
         [JsonProperty("UrlRedirect")]
         public UrlRedirect UrlRedirect{ get; set; }
@@ -267,6 +267,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OriginCombine OriginCombine{ get; set; }
 
         /// <summary>
+        /// Post transport configuration
+        /// </summary>
+        [JsonProperty("PostMaxSize")]
+        public PostSize PostMaxSize{ get; set; }
+
+        /// <summary>
         /// QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
         /// </summary>
         [JsonProperty("Quic")]
@@ -279,13 +285,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OssPrivateAccess OssPrivateAccess{ get; set; }
 
         /// <summary>
-        /// WebSocket configuration.
+        /// WebSocket configuration
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
         /// <summary>
-        /// Configuration of remote authentication
+        /// Remote authentication configuration
         /// </summary>
         [JsonProperty("RemoteAuthentication")]
         public RemoteAuthentication RemoteAuthentication{ get; set; }
@@ -295,6 +301,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("ShareCname")]
         public ShareCname ShareCname{ get; set; }
+
+        /// <summary>
+        /// Access authentication for Huawei Cloud OBS origin
+        /// </summary>
+        [JsonProperty("HwPrivateAccess")]
+        public HwPrivateAccess HwPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// Access authentication for QiNiu Cloud Kodo origin
+        /// </summary>
+        [JsonProperty("QnPrivateAccess")]
+        public QnPrivateAccess QnPrivateAccess{ get; set; }
 
 
         /// <summary>
@@ -327,8 +345,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
             this.SetParamObj(map, prefix + "Referer.", this.Referer);
             this.SetParamObj(map, prefix + "MaxAge.", this.MaxAge);
-            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
             this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
@@ -341,11 +359,14 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
             this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
             this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+            this.SetParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
             this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
+            this.SetParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
+            this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
         }
     }
 }

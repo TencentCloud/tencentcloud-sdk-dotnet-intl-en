@@ -26,14 +26,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Detailed purge record.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PurgeLogs")]
         public PurgeTask[] PurgeLogs{ get; set; }
 
         /// <summary>
         /// Total number of tasks, which is used for pagination.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

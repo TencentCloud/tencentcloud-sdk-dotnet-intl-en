@@ -26,33 +26,33 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// IP blocklist/allowlist configuration switch
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// IP blocklist/allowlist type
-        /// whitelist: allowlist
-        /// blacklist: blocklist
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `whitelist`: IP allowlist
+        /// `blacklist`: IP blocklist
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// IP blocklist/allowlist list
-        /// Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-        /// Up to 50 allowlists or blocklists can be entered
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// IP blocklist/allowlist
+        /// Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+        /// Up to 50 whitelists or blacklists can be entered
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }
 
         /// <summary>
         /// IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FilterRules")]
         public IpFilterPathRule[] FilterRules{ get; set; }
@@ -60,7 +60,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// HTTP code returned when the IP allowlist/blocklist verification fails
         /// Valid values: 400-499
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }

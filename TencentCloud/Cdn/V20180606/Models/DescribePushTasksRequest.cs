@@ -56,26 +56,26 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paged queries. Default value: 20
+        /// Limit on paginated queries. Default value: 20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
         /// Specifies a region for your query:
-        /// `mainland`: within Mainland China
-        /// `overseas`: outside Mainland China
-        /// `global`: global
+        /// `mainland`: Chinese mainland
+        /// `overseas`: Outside the Chinese mainland
+        /// `global`: Globe
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
         /// Queries the status of a specified task
-        /// `fail`: prefetch failed
-        /// `done`: prefetch succeeded
-        /// `process`: prefetch in progress
-        /// `invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+        /// `fail`: Prefetch failed
+        /// `done`: Prefetch succeeded
+        /// `process`: Prefetch in progress
+        /// `invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

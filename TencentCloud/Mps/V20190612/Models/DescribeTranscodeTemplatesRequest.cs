@@ -66,6 +66,16 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// The template type (replacing `TEHDType`). Valid values:
+        /// <li>Common: Common transcoding template</li>
+        /// <li>TEHD: TESHD template</li>
+        /// <li>Enhance: Audio/Video enhancement template.</li>
+        /// This parameter is left empty by default, which indicates to return all types of templates.
+        /// </summary>
+        [JsonProperty("TranscodeType")]
+        public string TranscodeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +88,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TEHDType", this.TEHDType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "TranscodeType", this.TranscodeType);
         }
     }
 }

@@ -26,57 +26,57 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Whether to enable full-path cache
-        /// `on`: enables full-path cache (i.e., disables Ignore Query String)
-        /// `off`: disables full-path cache (i.e., enables Ignore Query String)
+        /// `on`: Enable full-path cache (i.e., disable Ignore Query String)
+        /// `off`: Disable full-path cache (i.e., enable Ignore Query String)
         /// </summary>
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }
 
         /// <summary>
-        /// Whether caches are case insensitive
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether the cache key is case sensitive
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IgnoreCase")]
         public string IgnoreCase{ get; set; }
 
         /// <summary>
         /// Request parameter contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("QueryString")]
         public QueryStringKey QueryString{ get; set; }
 
         /// <summary>
         /// Cookie contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Cookie")]
         public CookieKey Cookie{ get; set; }
 
         /// <summary>
         /// Request header contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Header")]
         public HeaderKey Header{ get; set; }
 
         /// <summary>
         /// Custom string contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheTag")]
         public CacheTagKey CacheTag{ get; set; }
 
         /// <summary>
         /// Request protocol contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Scheme")]
         public SchemeKey Scheme{ get; set; }
 
         /// <summary>
-        /// Path-based cache key configuration
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Path-specific cache key configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("KeyRules")]
         public KeyRule[] KeyRules{ get; set; }

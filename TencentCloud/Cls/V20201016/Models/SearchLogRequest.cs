@@ -59,8 +59,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+        /// You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
         /// Notes:
+        /// * Do not modify any other parameters while passing through the `Context` parameter.
         /// * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
         /// * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
         /// </summary>

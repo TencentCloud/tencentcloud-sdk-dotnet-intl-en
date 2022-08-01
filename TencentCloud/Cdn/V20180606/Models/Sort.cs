@@ -34,7 +34,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// `asc` or `desc`. Default: `desc`.
+        /// asc/desc. Default value: desc.
         /// </summary>
         [JsonProperty("Sequence")]
         public string Sequence{ get; set; }

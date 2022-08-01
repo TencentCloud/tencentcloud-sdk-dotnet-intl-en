@@ -26,15 +26,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Range GETs configuration switch
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// Range GETs configuration
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RangeRules")]
         public RangeOriginPullRule[] RangeRules{ get; set; }

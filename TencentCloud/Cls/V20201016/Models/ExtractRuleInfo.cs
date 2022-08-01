@@ -94,6 +94,20 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Backtracking")]
         public long? Backtracking{ get; set; }
 
+        /// <summary>
+        /// Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsGBK")]
+        public long? IsGBK{ get; set; }
+
+        /// <summary>
+        /// Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("JsonStandard")]
+        public long? JsonStandard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +124,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UnMatchUpLoadSwitch", this.UnMatchUpLoadSwitch);
             this.SetParamSimple(map, prefix + "UnMatchLogKey", this.UnMatchLogKey);
             this.SetParamSimple(map, prefix + "Backtracking", this.Backtracking);
+            this.SetParamSimple(map, prefix + "IsGBK", this.IsGBK);
+            this.SetParamSimple(map, prefix + "JsonStandard", this.JsonStandard);
         }
     }
 }

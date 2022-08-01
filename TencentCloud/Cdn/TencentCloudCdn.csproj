@@ -74,6 +74,7 @@
     <Compile Include="V20180606\Models\BotJavaScript.cs" />
     <Compile Include="V20180606\Models\BriefDomain.cs" />
     <Compile Include="V20180606\Models\Cache.cs" />
+    <Compile Include="V20180606\Models\CacheConfig.cs" />
     <Compile Include="V20180606\Models\CacheConfigCache.cs" />
     <Compile Include="V20180606\Models\CacheConfigFollowOrigin.cs" />
     <Compile Include="V20180606\Models\CacheConfigNoCache.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="V20180606\Models\GuetzliAdapter.cs" />
     <Compile Include="V20180606\Models\HeaderKey.cs" />
+    <Compile Include="V20180606\Models\HeuristicCache.cs" />
     <Compile Include="V20180606\Models\Hsts.cs" />
     <Compile Include="V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="V20180606\Models\HttpHeaderRule.cs" />
@@ -212,6 +214,7 @@
     <Compile Include="V20180606\Models\Quota.cs" />
     <Compile Include="V20180606\Models\RangeOriginPull.cs" />
     <Compile Include="V20180606\Models\RangeOriginPullRule.cs" />
+    <Compile Include="V20180606\Models\RedirectConfig.cs" />
     <Compile Include="V20180606\Models\Referer.cs" />
     <Compile Include="V20180606\Models\RefererRule.cs" />
     <Compile Include="V20180606\Models\RegionMapRelation.cs" />
@@ -253,6 +256,7 @@
     <Compile Include="V20180606\Models\SpecificConfig.cs" />
     <Compile Include="V20180606\Models\StartCdnDomainRequest.cs" />
     <Compile Include="V20180606\Models\StartCdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\StatisticItem.cs" />
     <Compile Include="V20180606\Models\StatusCodeCache.cs" />
     <Compile Include="V20180606\Models\StatusCodeCacheRule.cs" />
     <Compile Include="V20180606\Models\StopCdnDomainRequest.cs" />

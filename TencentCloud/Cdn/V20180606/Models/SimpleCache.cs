@@ -26,55 +26,55 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Cache expiration time rules
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheRules")]
         public SimpleCacheRule[] CacheRules{ get; set; }
 
         /// <summary>
         /// Follows origin server Cache-Control: max-age configurations
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
         /// This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public string FollowOrigin{ get; set; }
 
         /// <summary>
         /// Forced cache
-        /// on: enable
-        /// off: disable
+        /// `on`: Enable
+        /// `off`: Disable
         /// This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]
         public string IgnoreCacheControl{ get; set; }
 
         /// <summary>
         /// Ignores the Set-Cookie header of the origin server
-        /// on: enabled
-        /// off: disabled
-        /// This is disabled by default
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `on`: Enable
+        /// `off`: Disable
+        /// It is disabled by default.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IgnoreSetCookie")]
         public string IgnoreSetCookie{ get; set; }
 
         /// <summary>
         /// Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-        /// on: enabled
-        /// off: disabled
-        /// This is disabled by default
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `on`: Enable
+        /// `off`: Disable
+        /// It is disabled by default.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CompareMaxAge")]
         public string CompareMaxAge{ get; set; }
 
         /// <summary>
         /// Always forwards to the origin server for verification
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Revalidate")]
         public Revalidate Revalidate{ get; set; }

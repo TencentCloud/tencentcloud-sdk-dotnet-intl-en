@@ -31,15 +31,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         public MapInfo[] MapInfoList{ get; set; }
 
         /// <summary>
-        /// The relationship between server region ID and sub-region ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mapping relationship between server region ID and sub-region ID
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ServerRegionRelation")]
         public RegionMapRelation[] ServerRegionRelation{ get; set; }
 
         /// <summary>
-        /// The relationship between client region ID and sub-region ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mapping relationship between client region ID and sub-region ID
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ClientRegionRelation")]
         public RegionMapRelation[] ClientRegionRelation{ get; set; }

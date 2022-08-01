@@ -46,7 +46,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// ACL rule group, which is required when the access control is on.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AdvancedScriptData")]
         public AdvancedScdnAclGroup[] AdvancedScriptData{ get; set; }

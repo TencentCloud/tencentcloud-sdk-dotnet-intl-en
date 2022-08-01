@@ -73,7 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Log download status. Valid values: `Processing`: exporting; `Complete`: completed; `Failed`: failed; `Expired`: expired (3-day validity period).
+        /// Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

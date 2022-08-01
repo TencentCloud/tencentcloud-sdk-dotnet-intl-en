@@ -26,14 +26,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Tag key
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Tag value.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Tag value
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

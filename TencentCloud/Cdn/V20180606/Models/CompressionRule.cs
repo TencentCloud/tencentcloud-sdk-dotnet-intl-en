@@ -26,52 +26,52 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// true: must be set as true, enables compression
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Compress")]
         public bool? Compress{ get; set; }
 
         /// <summary>
         /// The minimum file size to trigger compression (in bytes)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MinLength")]
         public long? MinLength{ get; set; }
 
         /// <summary>
-        /// The maximum file size to trigger compression (in bytes)
-        /// The maximum value is 30 MB
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The maximum file size to trigger compression (in bytes).
+        /// The maximum value is 30 MB.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("MaxLength")]
         public long? MaxLength{ get; set; }
 
         /// <summary>
         /// File compression algorithm
-        /// gzip: specifies Gzip compression
-        /// brotli: specifies Brotli compression
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `gzip`: Gzip compression
+        /// `brotli`: Brotli compression
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Algorithms")]
         public string[] Algorithms{ get; set; }
 
         /// <summary>
-        /// Compress according to the file suffix type
-        /// Such as: jpg, txt
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Compress based on file suffix.
+        /// File suffixes such as jpg and txt are supported.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FileExtensions")]
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
         /// Rule types:
-        /// `all`: effective for all files.
-        /// `file`: effective for specified file suffixes.
-        /// `directory`: effective for specified paths.
-        /// `path`: effective for specified absolute paths.
-        /// `contentType`: effective when the `ContentType` is specified
+        /// `all`: Apply to all files.
+        /// `file`: Apply to files with the specified suffixes.
+        /// `directory`: Apply to specified paths.
+        /// `path`: Apply to specified absolute paths.
+        /// `contentType`: Apply when the `ContentType` is specified.
         /// If this field is specified, `FileExtensions` does not take effect.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
@@ -83,7 +83,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// For `directory`, enter a path, e.g., `/xxx/test/`.
         /// For `path`, enter an absolute path, e.g., `/xxx/test.html`.
         /// For `contentType`, enter `text/html`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }

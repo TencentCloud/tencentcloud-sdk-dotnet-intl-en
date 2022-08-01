@@ -26,11 +26,17 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Origin-pull follow-redirect switch
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RedirectConfig")]
+        public RedirectConfig RedirectConfig{ get; set; }
 
 
         /// <summary>
@@ -39,6 +45,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamObj(map, prefix + "RedirectConfig.", this.RedirectConfig);
         }
     }
 }

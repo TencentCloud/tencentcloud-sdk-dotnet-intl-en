@@ -50,14 +50,14 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Redirection target page
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }
 
         /// <summary>
         /// Update time
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

@@ -26,14 +26,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Result list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CacheOptResult")]
         public CacheOptResult CacheOptResult{ get; set; }
 
         /// <summary>
         /// Task ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

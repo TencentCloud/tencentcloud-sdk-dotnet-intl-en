@@ -26,8 +26,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// The key for signature calculation
-        /// Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 6-32 characters. Only digits and letters are allowed. 
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
@@ -54,8 +54,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
-        /// allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-        /// blacklist: indicates that only the file types in the FileExtensions list are authenticated
+        /// `whitelist`: All file types apart from the FileExtensions list are authenticated.
+        /// `blacklist`: Only the file types in the FileExtensions list are authenticated.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Backup key, which is used to calculate a signature.
         /// 6-32 characters. Only digits and letters are allowed. 
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("BackupSecretKey")]
         public string BackupSecretKey{ get; set; }

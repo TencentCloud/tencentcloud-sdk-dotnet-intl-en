@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 
+        /// The list of successfully created integrations.
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }

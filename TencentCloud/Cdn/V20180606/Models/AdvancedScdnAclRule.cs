@@ -34,27 +34,27 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// `ipCountry`: country/region of the requester IP
         /// `ipArea`: region of the requester IP
         /// `xForwardFor`: X-Forward-For request header
-        /// `directory`: path
-        /// `index`: homepage
-        /// `path`: full path of a file
-        /// `file`: file extension
-        /// `param`: request parameter
+        /// `directory`: Path
+        /// `index`: Homepage
+        /// `path`: Full path of a file
+        /// `file`: File extension
+        /// `param`: Request parameter
         /// `referer`: Referer request header
         /// `cookie`: Cookie request header
         /// `userAgent`: User-Agent request header
-        /// `head`: custom request header
+        /// `head`: Custom request header
         /// </summary>
         [JsonProperty("MatchKey")]
         public string MatchKey{ get; set; }
 
         /// <summary>
         /// Logical operator. Valid values:
-        /// `exclude`: the keyword is not included
-        /// `include`: the keyword is included
-        /// `notequal`: not the same as the keyword
-        /// `equal`: the same as the keyword
-        /// `matching`: the prefix is matched
-        /// `null`: empty or does not exist
+        /// `exclude`: The keyword is not included
+        /// `include`: The keyword is included
+        /// `notequal`: Not the same as the keyword
+        /// `equal`: The same as the keyword
+        /// `matching`: The prefix is matched
+        /// `null`: Empty or does not exist
         /// </summary>
         [JsonProperty("LogicOperator")]
         public string LogicOperator{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Values: `HEAD`, `GET`, `POST`, `PUT`, `OPTIONS`, `TRACE`, `DELETE`, `PATCH` and `CONNECT`.
         /// 
         /// When `MatchKey` is `ipCountry`, valid values include:
-        /// `OTHER`: other countries/regions
+        /// `OTHER`: Other areas
         /// `VE`: Venezuela
         /// `UY`: Uruguay
         /// `SR`: Suriname

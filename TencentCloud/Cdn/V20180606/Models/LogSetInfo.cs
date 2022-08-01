@@ -32,7 +32,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Channel
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? LogsetSavePeriod{ get; set; }
 
         /// <summary>
-        /// Creation date
+        /// Creation time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -75,14 +75,14 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Whether the logset has been removed from CLS
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Deleted")]
         public string Deleted{ get; set; }
 
         /// <summary>
         /// Whether English is used in this region
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RegionEn")]
         public string RegionEn{ get; set; }

@@ -37,6 +37,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ScrollToken{ get; set; }
 
         /// <summary>
+        /// The total number of records that meet the conditions.
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);
             this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20201016\ClsClient.cs" />
+    <Compile Include="V20201016\Models\AlarmAnalysisConfig.cs" />
     <Compile Include="V20201016\Models\AlarmInfo.cs" />
     <Compile Include="V20201016\Models\AlarmNotice.cs" />
     <Compile Include="V20201016\Models\AlarmTarget.cs" />

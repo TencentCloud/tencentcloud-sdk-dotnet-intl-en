@@ -25,8 +25,8 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -34,7 +34,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Server certificate name
         /// This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CertName")]
         public string CertName{ get; set; }
@@ -42,7 +42,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Server certificate information
         /// This is required when uploading an external certificate, which should contain the complete certificate chain.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Certificate")]
         public string Certificate{ get; set; }
@@ -50,15 +50,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Server key information
         /// This is required when uploading an external certificate.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }
 
         /// <summary>
-        /// Certificate expiration time
+        /// Time when the certificate expires
         /// Can be left blank when used as an input parameter
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -66,21 +66,21 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Certificate issuance time
         /// Can be left blank when used as an input parameter
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DeployTime")]
         public string DeployTime{ get; set; }
 
         /// <summary>
         /// Certificate remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// Certificate source
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }

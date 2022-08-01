@@ -53,6 +53,12 @@
     <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\ChargePrepaid.cs" />
+    <Compile Include="V20170312\Models\ChcDeployExtraConfig.cs" />
+    <Compile Include="V20170312\Models\ChcHost.cs" />
+    <Compile Include="V20170312\Models\ConfigureChcAssistVpcRequest.cs" />
+    <Compile Include="V20170312\Models\ConfigureChcAssistVpcResponse.cs" />
+    <Compile Include="V20170312\Models\ConfigureChcDeployVpcRequest.cs" />
+    <Compile Include="V20170312\Models\ConfigureChcDeployVpcResponse.cs" />
     <Compile Include="V20170312\Models\CreateDisasterRecoverGroupRequest.cs" />
     <Compile Include="V20170312\Models\CreateDisasterRecoverGroupResponse.cs" />
     <Compile Include="V20170312\Models\CreateImageRequest.cs" />
@@ -72,6 +78,8 @@
     <Compile Include="V20170312\Models\DeleteLaunchTemplateResponse.cs" />
     <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeChcHostsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeChcHostsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupsRequest.cs" />
@@ -157,6 +165,8 @@
     <Compile Include="V20170312\Models\LaunchTemplateVersionInfo.cs" />
     <Compile Include="V20170312\Models\LocalDiskType.cs" />
     <Compile Include="V20170312\Models\LoginSettings.cs" />
+    <Compile Include="V20170312\Models\ModifyChcAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyChcAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDisasterRecoverGroupAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDisasterRecoverGroupAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyHostsAttributeRequest.cs" />
@@ -184,6 +194,10 @@
     <Compile Include="V20170312\Models\RebootInstancesRequest.cs" />
     <Compile Include="V20170312\Models\RebootInstancesResponse.cs" />
     <Compile Include="V20170312\Models\RegionInfo.cs" />
+    <Compile Include="V20170312\Models\RemoveChcAssistVpcRequest.cs" />
+    <Compile Include="V20170312\Models\RemoveChcAssistVpcResponse.cs" />
+    <Compile Include="V20170312\Models\RemoveChcDeployVpcRequest.cs" />
+    <Compile Include="V20170312\Models\RemoveChcDeployVpcResponse.cs" />
     <Compile Include="V20170312\Models\ReservedInstanceConfigInfoItem.cs" />
     <Compile Include="V20170312\Models\ReservedInstanceFamilyItem.cs" />
     <Compile Include="V20170312\Models\ReservedInstancePrice.cs" />

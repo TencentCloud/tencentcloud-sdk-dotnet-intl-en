@@ -26,8 +26,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Origin server header cache switch
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

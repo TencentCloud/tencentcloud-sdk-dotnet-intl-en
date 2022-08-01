@@ -31,7 +31,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
+        /// System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
+        /// It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }

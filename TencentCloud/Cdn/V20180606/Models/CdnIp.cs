@@ -46,23 +46,23 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Location{ get; set; }
 
         /// <summary>
-        /// Node activation and deactivation history
+        /// Activation and deactivation history of the node.
         /// </summary>
         [JsonProperty("History")]
         public CdnIpHistory[] History{ get; set; }
 
         /// <summary>
         /// Node region
-        /// mainland: cache node in Mainland China
-        /// overseas: cache node outside Mainland China
-        /// unknown: service region unknown
+        /// `mainland`: Acceleration nodes inside the Chinese mainland
+        /// `overseas`: Acceleration nodes outside the Chinese mainland
+        /// `unknown`: Service region unknown
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// City where the node resides
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// City where the nodes reside
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }

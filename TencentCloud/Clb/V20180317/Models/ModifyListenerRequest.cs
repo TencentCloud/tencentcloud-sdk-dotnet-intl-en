@@ -74,6 +74,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SniSwitch{ get; set; }
 
         /// <summary>
+        /// Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+        /// </summary>
+        [JsonProperty("TargetType")]
+        public string TargetType{ get; set; }
+
+        /// <summary>
         /// Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
@@ -105,6 +111,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+            this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);

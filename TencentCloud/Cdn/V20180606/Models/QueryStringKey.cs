@@ -26,28 +26,28 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// Whether to sort again
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Reorder")]
         public string Reorder{ get; set; }
 
         /// <summary>
         /// Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Array of included/excluded URL parameters (separated by ';')
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Array of included/excluded query strings (separated by ';')
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

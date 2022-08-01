@@ -26,32 +26,32 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Effective access path type
-        /// all: all access paths are effective
-        /// file: effective by file extension
-        /// directory: effective by directory
-        /// path: effective by full access path
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `all`: All access paths are effective
+        /// `file`: Effective by file extension
+        /// `directory`: Effective by directory
+        /// `path`: Effective by full access path
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
         /// Effective access paths
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
 
         /// <summary>
         /// `UserAgent` list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UserAgents")]
         public string[] UserAgents{ get; set; }
 
         /// <summary>
-        /// blocklist or allowlist. Valid values: blacklist, whitelist
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }

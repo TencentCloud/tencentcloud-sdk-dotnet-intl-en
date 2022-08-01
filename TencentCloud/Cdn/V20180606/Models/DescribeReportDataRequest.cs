@@ -26,9 +26,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Query the start time in the format of `yyyy-MM-dd`
-        /// If the report type is `daily`, the start time and end time must be the same day.
+        /// If the report type is `daily`, the start time and end time must be of the same day.
         /// If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-        /// If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+        /// If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Query the end time in the format of `yyyy-MM-dd`
         /// If the report type is `daily`, the start time and end time must be of the same day.
         /// If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-        /// If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+        /// If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -53,8 +53,8 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Domain name acceleration region
-        /// mainland: in Mainland China
-        /// overseas: outside Mainland China
+        /// `mainland`: Regions within the Chinese mainland
+        /// `overseas`: Regions outside the Chinese mainland
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

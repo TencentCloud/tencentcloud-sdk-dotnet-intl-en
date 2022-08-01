@@ -50,7 +50,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Cache configuration
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheConfig")]
         public RuleCacheConfig CacheConfig{ get; set; }

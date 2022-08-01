@@ -25,9 +25,11 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task type. Currently valid values:
-        /// <li>WorkflowTask: Video workflow processing task.</li>
-        /// <li>LiveStreamProcessTask: Live stream processing task.</li>
+        /// The task type. Valid values:
+        /// <li>WorkflowTask</li>
+        /// <li>EditMediaTask</li>
+        /// <li>LiveStreamProcessTask</li>
+        /// <li>ScheduleTask (scheme)</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -60,17 +62,17 @@ namespace TencentCloud.Mps.V20190612.Models
         public string FinishTime{ get; set; }
 
         /// <summary>
+        /// Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+        /// </summary>
+        [JsonProperty("EditMediaTask")]
+        public EditMediaTask EditMediaTask{ get; set; }
+
+        /// <summary>
         /// Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WorkflowTask")]
         public WorkflowTask WorkflowTask{ get; set; }
-
-        /// <summary>
-        /// Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-        /// </summary>
-        [JsonProperty("EditMediaTask")]
-        public EditMediaTask EditMediaTask{ get; set; }
 
         /// <summary>
         /// Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
@@ -111,6 +113,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ExtInfo{ get; set; }
 
         /// <summary>
+        /// The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ScheduleTask")]
+        public ScheduleTask ScheduleTask{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -127,14 +136,15 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
-            this.SetParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
             this.SetParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
+            this.SetParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
             this.SetParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+            this.SetParamObj(map, prefix + "ScheduleTask.", this.ScheduleTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

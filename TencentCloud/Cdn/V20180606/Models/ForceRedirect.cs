@@ -26,9 +26,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Access forced redirect configuration switch
-        /// on: enabled
-        /// off: disabled
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Access forced redirect types
         /// http: forced HTTP redirect
         /// https: forced HTTPS redirect
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RedirectType")]
         public string RedirectType{ get; set; }
@@ -45,14 +45,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Status code returned for forced redirect 
         /// Supports 301, 302.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RedirectStatusCode")]
         public long? RedirectStatusCode{ get; set; }
 
         /// <summary>
-        /// Whether to return the added header in forced redirection.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether to return the newly added header during force redirection
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CarryHeaders")]
         public string CarryHeaders{ get; set; }

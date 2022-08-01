@@ -26,14 +26,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Specific configuration for domain name inside mainland China.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Mainland")]
         public MainlandConfig Mainland{ get; set; }
 
         /// <summary>
         /// Specific configuration for domain name outside mainland China.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Overseas")]
         public OverseaConfig Overseas{ get; set; }

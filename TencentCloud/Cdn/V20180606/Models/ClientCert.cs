@@ -25,16 +25,16 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Client Certificate
+        /// Client certificate
         /// PEM format, requires Base64 encoding.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Certificate")]
         public string Certificate{ get; set; }
 
         /// <summary>
         /// Client certificate name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CertName")]
         public string CertName{ get; set; }
@@ -42,7 +42,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Certificate expiration time
         /// When this is used as an input parameter, it can be left blank.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Certificate issuance time
         /// When this is used as an input parameter, it can be left blank.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DeployTime")]
         public string DeployTime{ get; set; }

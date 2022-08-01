@@ -185,6 +185,86 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to configure the out-of-band network and deployment network of a CHC host.
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureChcAssistVpcRequest"/></param>
+        /// <returns><see cref="ConfigureChcAssistVpcResponse"/></returns>
+        public async Task<ConfigureChcAssistVpcResponse> ConfigureChcAssistVpc(ConfigureChcAssistVpcRequest req)
+        {
+             JsonResponseModel<ConfigureChcAssistVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ConfigureChcAssistVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfigureChcAssistVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure the out-of-band network and deployment network of a CHC host.
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureChcAssistVpcRequest"/></param>
+        /// <returns><see cref="ConfigureChcAssistVpcResponse"/></returns>
+        public ConfigureChcAssistVpcResponse ConfigureChcAssistVpcSync(ConfigureChcAssistVpcRequest req)
+        {
+             JsonResponseModel<ConfigureChcAssistVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ConfigureChcAssistVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfigureChcAssistVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure the deployment network of a CHC host.
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureChcDeployVpcRequest"/></param>
+        /// <returns><see cref="ConfigureChcDeployVpcResponse"/></returns>
+        public async Task<ConfigureChcDeployVpcResponse> ConfigureChcDeployVpc(ConfigureChcDeployVpcRequest req)
+        {
+             JsonResponseModel<ConfigureChcDeployVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ConfigureChcDeployVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfigureChcDeployVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure the deployment network of a CHC host.
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureChcDeployVpcRequest"/></param>
+        /// <returns><see cref="ConfigureChcDeployVpcResponse"/></returns>
+        public ConfigureChcDeployVpcResponse ConfigureChcDeployVpcSync(ConfigureChcDeployVpcRequest req)
+        {
+             JsonResponseModel<ConfigureChcDeployVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ConfigureChcDeployVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfigureChcDeployVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). After you create one, you can specify it for an instance when you [create the instance](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1), 
         /// </summary>
         /// <param name="req"><see cref="CreateDisasterRecoverGroupRequest"/></param>
@@ -560,6 +640,52 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLaunchTemplateVersions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of one or more CHC host.
+        /// 
+        /// * You can filter the query results with the instance ID, name or device type. See `Filter` for more information.
+        /// * If no parameter is defined, a certain number of instances under the current account will be returned. The number is specified by `Limit` and is `20` by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChcHostsRequest"/></param>
+        /// <returns><see cref="DescribeChcHostsResponse"/></returns>
+        public async Task<DescribeChcHostsResponse> DescribeChcHosts(DescribeChcHostsRequest req)
+        {
+             JsonResponseModel<DescribeChcHostsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChcHosts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChcHostsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of one or more CHC host.
+        /// 
+        /// * You can filter the query results with the instance ID, name or device type. See `Filter` for more information.
+        /// * If no parameter is defined, a certain number of instances under the current account will be returned. The number is specified by `Limit` and is `20` by default.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChcHostsRequest"/></param>
+        /// <returns><see cref="DescribeChcHostsResponse"/></returns>
+        public DescribeChcHostsResponse DescribeChcHostsSync(DescribeChcHostsRequest req)
+        {
+             JsonResponseModel<DescribeChcHostsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChcHosts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChcHostsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1839,6 +1965,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the CHC host attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChcAttributeRequest"/></param>
+        /// <returns><see cref="ModifyChcAttributeResponse"/></returns>
+        public async Task<ModifyChcAttributeResponse> ModifyChcAttribute(ModifyChcAttributeRequest req)
+        {
+             JsonResponseModel<ModifyChcAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyChcAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyChcAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the CHC host attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChcAttributeRequest"/></param>
+        /// <returns><see cref="ModifyChcAttributeResponse"/></returns>
+        public ModifyChcAttributeResponse ModifyChcAttributeSync(ModifyChcAttributeRequest req)
+        {
+             JsonResponseModel<ModifyChcAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyChcAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyChcAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the attributes of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyDisasterRecoverGroupAttributeRequest"/></param>
@@ -2065,13 +2231,12 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to change the project to which an instance belongs.
+        /// This API is used to change the project to which an instance is assigned.
         /// 
-        /// * Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter results.
-        /// * You cannot modify the project of an instance that is bound to a load balancer. You need to firstly unbind the load balancer from the instance by using the [`DeregisterInstancesFromLoadBalancer`](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API.
-        /// [^_^]: # (If you modify the project of an instance, security groups associated with the instance will be automatically disassociated. You can use the [`ModifyInstancesAttribute`](https://intl.cloud.tencent.com/document/api/213/15739?from_cn_redirect=1) API to associate the instance with the security groups again.
-        /// * Batch operations are supported. You can operate up to 100 instances in each request.
-        /// * You can call the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
+        /// * Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter the results.
+        /// * You cannot modify the project of an instance that is bound to a load balancer. You need to unbind the load balancer from the instance by using the [DeregisterInstancesFromLoadBalancer](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API before using this API.
+        /// * Batch operations are supported. Up to 100 instances per request is allowed.
+        /// * You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the operation result. If the `LatestOperationState` in the response is `SUCCESS`, the operation is successful.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesProjectRequest"/></param>
         /// <returns><see cref="ModifyInstancesProjectResponse"/></returns>
@@ -2091,13 +2256,12 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to change the project to which an instance belongs.
+        /// This API is used to change the project to which an instance is assigned.
         /// 
-        /// * Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter results.
-        /// * You cannot modify the project of an instance that is bound to a load balancer. You need to firstly unbind the load balancer from the instance by using the [`DeregisterInstancesFromLoadBalancer`](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API.
-        /// [^_^]: # (If you modify the project of an instance, security groups associated with the instance will be automatically disassociated. You can use the [`ModifyInstancesAttribute`](https://intl.cloud.tencent.com/document/api/213/15739?from_cn_redirect=1) API to associate the instance with the security groups again.
-        /// * Batch operations are supported. You can operate up to 100 instances in each request.
-        /// * You can call the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
+        /// * Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter the results.
+        /// * You cannot modify the project of an instance that is bound to a load balancer. You need to unbind the load balancer from the instance by using the [DeregisterInstancesFromLoadBalancer](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API before using this API.
+        /// * Batch operations are supported. Up to 100 instances per request is allowed.
+        /// * You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the operation result. If the `LatestOperationState` in the response is `SUCCESS`, the operation is successful.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesProjectRequest"/></param>
         /// <returns><see cref="ModifyInstancesProjectResponse"/></returns>
@@ -2330,6 +2494,86 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "RebootInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebootInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove the out-of-band network and deployment network of a CHC host.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveChcAssistVpcRequest"/></param>
+        /// <returns><see cref="RemoveChcAssistVpcResponse"/></returns>
+        public async Task<RemoveChcAssistVpcResponse> RemoveChcAssistVpc(RemoveChcAssistVpcRequest req)
+        {
+             JsonResponseModel<RemoveChcAssistVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveChcAssistVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveChcAssistVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove the out-of-band network and deployment network of a CHC host.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveChcAssistVpcRequest"/></param>
+        /// <returns><see cref="RemoveChcAssistVpcResponse"/></returns>
+        public RemoveChcAssistVpcResponse RemoveChcAssistVpcSync(RemoveChcAssistVpcRequest req)
+        {
+             JsonResponseModel<RemoveChcAssistVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveChcAssistVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveChcAssistVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove the deployment network of a CHC host.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveChcDeployVpcRequest"/></param>
+        /// <returns><see cref="RemoveChcDeployVpcResponse"/></returns>
+        public async Task<RemoveChcDeployVpcResponse> RemoveChcDeployVpc(RemoveChcDeployVpcRequest req)
+        {
+             JsonResponseModel<RemoveChcDeployVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveChcDeployVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveChcDeployVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove the deployment network of a CHC host.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveChcDeployVpcRequest"/></param>
+        /// <returns><see cref="RemoveChcDeployVpcResponse"/></returns>
+        public RemoveChcDeployVpcResponse RemoveChcDeployVpcSync(RemoveChcDeployVpcRequest req)
+        {
+             JsonResponseModel<RemoveChcDeployVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveChcDeployVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveChcDeployVpcResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

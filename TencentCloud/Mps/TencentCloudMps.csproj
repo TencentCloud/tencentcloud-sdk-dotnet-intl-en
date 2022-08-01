@@ -47,6 +47,8 @@
     <Compile Include="V20190612\MpsClient.cs" />
     <Compile Include="V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20190612\Models\AIRecognitionTemplateItem.cs" />
+    <Compile Include="V20190612\Models\ActivityResItem.cs" />
+    <Compile Include="V20190612\Models\ActivityResult.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTemplate.cs" />
@@ -132,6 +134,7 @@
     <Compile Include="V20190612\Models\AiSampleWordInfo.cs" />
     <Compile Include="V20190612\Models\AnimatedGraphicTaskInput.cs" />
     <Compile Include="V20190612\Models\AnimatedGraphicsTemplate.cs" />
+    <Compile Include="V20190612\Models\ArtifactRepairConfig.cs" />
     <Compile Include="V20190612\Models\AsrFullTextConfigureInfo.cs" />
     <Compile Include="V20190612\Models\AsrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\AsrWordsConfigureInfo.cs" />
@@ -140,6 +143,7 @@
     <Compile Include="V20190612\Models\AudioTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\ColorEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="V20190612\Models\CosFileUploadTrigger.cs" />
     <Compile Include="V20190612\Models\CosInputInfo.cs" />
@@ -241,13 +245,18 @@
     <Compile Include="V20190612\Models\EditMediaTaskOutput.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowResponse.cs" />
+    <Compile Include="V20190612\Models\EnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\FaceEnhanceConfig.cs" />
+    <Compile Include="V20190612\Models\FrameRateConfig.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\HdrConfig.cs" />
     <Compile Include="V20190612\Models\HeadTailParameter.cs" />
+    <Compile Include="V20190612\Models\ImageQualityEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20190612\Models\ImageSpriteTemplate.cs" />
     <Compile Include="V20190612\Models\ImageWatermarkInput.cs" />
@@ -269,6 +278,7 @@
     <Compile Include="V20190612\Models\LiveStreamProcessErrorInfo.cs" />
     <Compile Include="V20190612\Models\LiveStreamProcessTask.cs" />
     <Compile Include="V20190612\Models\LiveStreamTaskNotifyConfig.cs" />
+    <Compile Include="V20190612\Models\LowLightEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\ManageTaskRequest.cs" />
     <Compile Include="V20190612\Models\ManageTaskResponse.cs" />
     <Compile Include="V20190612\Models\MediaAiAnalysisClassificationItem.cs" />
@@ -366,8 +376,15 @@
     <Compile Include="V20190612\Models\ResetWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTemplate.cs" />
+    <Compile Include="V20190612\Models\ScheduleAnalysisTaskResult.cs" />
+    <Compile Include="V20190612\Models\ScheduleRecognitionTaskResult.cs" />
+    <Compile Include="V20190612\Models\ScheduleReviewTaskResult.cs" />
+    <Compile Include="V20190612\Models\ScheduleTask.cs" />
+    <Compile Include="V20190612\Models\ScratchRepairConfig.cs" />
+    <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTemplate.cs" />
+    <Compile Include="V20190612\Models\SuperResolutionConfig.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInput.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInputForUpdate.cs" />
     <Compile Include="V20190612\Models\TEHDConfig.cs" />
@@ -396,6 +413,8 @@
     <Compile Include="V20190612\Models\UserDefineFaceReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\VideoDenoiseConfig.cs" />
+    <Compile Include="V20190612\Models\VideoEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\VideoTemplateInfo.cs" />
     <Compile Include="V20190612\Models\VideoTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\WatermarkInput.cs" />

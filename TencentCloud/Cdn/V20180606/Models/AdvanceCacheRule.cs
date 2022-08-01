@@ -26,24 +26,24 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Rule types:
-        /// `all`: effective for all files
-        /// `file`: effective for specified file suffixes
-        /// `directory`: effective for specified paths
-        /// `path`: effective for specified absolute paths
+        /// `all`: Apply to all files.
+        /// `file`: Apply to files with the specified suffixes.
+        /// `directory`: Apply to specified paths.
+        /// `path`: Apply to specified absolute paths.
         /// `default`: the cache rules when the origin server has not returned max-age
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheType")]
         public string CacheType{ get; set; }
 
         /// <summary>
         /// Content for each CacheType:
-        /// For `all`, enter an asterisk (*).
-        /// For `file`, enter the suffix, such as jpg, txt.
-        /// For `directory`, enter the path, such as /xxx/test/.
-        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+        /// For `all`, enter a wildcard `*`.
+        /// For `file`, enter a suffix, e.g., `jpg` or `txt`.
+        /// For `directory`, enter a path, e.g., `/xxx/test/`.
+        /// For `path`, enter an absolute path, e.g., `/xxx/test.html`.
         /// For `default`, enter "no max-age".
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheContents")]
         public string[] CacheContents{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Cache expiration time
         /// Unit: second. The maximum value is 365 days.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheTime")]
         public long? CacheTime{ get; set; }

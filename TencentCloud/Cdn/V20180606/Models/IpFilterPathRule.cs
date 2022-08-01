@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// IP blocklist/allowlist type
         /// `whitelist`: allowlist IPs
         /// `blacklist`: blocklist IPs
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
@@ -37,18 +37,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// IP blocklist/allowlist list
         /// Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
         /// Up to 50 allowlists or blocklists can be entered.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }
 
         /// <summary>
         /// Rule types:
-        /// `all`: effective for all files
-        /// `file`: effective for specified file suffixes
-        /// `directory`: effective for specified paths
-        /// `path`: effective for specified absolute paths
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// `all`: Effective for all files
+        /// `file`: Effective for specified file suffixes
+        /// `directory`: Effective for specified paths
+        /// `path`: Effective for specified absolute paths
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
@@ -59,7 +59,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// For `file`, enter the suffix, such as jpg, txt.
         /// For `directory`, enter the path, such as /xxx/test/.
         /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }

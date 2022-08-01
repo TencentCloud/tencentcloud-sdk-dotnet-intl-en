@@ -44,21 +44,21 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Creation time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Either `cdn` or `ecdn`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
         /// <summary>
-        /// Whether the log topic has been removed from CLS
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether the logset has been removed from CLS
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Deleted")]
         public string Deleted{ get; set; }

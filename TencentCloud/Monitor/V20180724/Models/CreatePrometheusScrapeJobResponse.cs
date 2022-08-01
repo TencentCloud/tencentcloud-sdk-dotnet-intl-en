@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 
+        /// ID of a successfully created scrape task.
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

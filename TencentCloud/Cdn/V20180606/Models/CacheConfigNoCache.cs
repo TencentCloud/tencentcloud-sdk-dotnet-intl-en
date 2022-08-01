@@ -25,9 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// No cache configuration switch
-        /// on: enable
-        /// off: disable
+        /// No-cache configuration switch
+        /// `on`: Enable
+        /// `off`: Disable
         /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Switch")]
@@ -35,10 +35,10 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Always forwards to the origin server for verification
-        /// on: enable
-        /// off: disable
-        /// This is disabled by default.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// `on`: Enable
+        /// `off`: Disable
+        /// It is disabled by default.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Revalidate")]
         public string Revalidate{ get; set; }

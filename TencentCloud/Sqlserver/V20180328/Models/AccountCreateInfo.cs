@@ -55,7 +55,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public bool? IsAdmin{ get; set; }
 
         /// <summary>
-        /// Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+        /// Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
         /// </summary>
         [JsonProperty("Authentication")]
         public string Authentication{ get; set; }

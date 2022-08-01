@@ -213,7 +213,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5-15 minutes.
+        /// This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
         /// </summary>
         /// <param name="req"><see cref="DeleteClsLogTopicRequest"/></param>
         /// <returns><see cref="DeleteClsLogTopicResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5-15 minutes.
+        /// This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
         /// </summary>
         /// <param name="req"><see cref="DeleteClsLogTopicRequest"/></param>
         /// <returns><see cref="DeleteClsLogTopicResponse"/></returns>
@@ -439,7 +439,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon. Please call `DescribeIpStatus` instead.
+        /// This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon and no longer be maintained. Please call `DescribeIpStatus` instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -459,7 +459,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon. Please call `DescribeIpStatus` instead.
+        /// This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon and no longer be maintained. Please call `DescribeIpStatus` instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -479,7 +479,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
+        /// This API is used to verify a SSL certificate and obtain its domain names.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertDomainsRequest"/></param>
         /// <returns><see cref="DescribeCertDomainsResponse"/></returns>
@@ -499,7 +499,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
+        /// This API is used to verify a SSL certificate and obtain its domain names.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertDomainsRequest"/></param>
         /// <returns><see cref="DescribeCertDomainsResponse"/></returns>
@@ -950,7 +950,6 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// This API is used to query the submission record and progress of prefetch tasks.
-        /// This API is in beta test and not fully available yet. Please stay tuned.
         /// </summary>
         /// <param name="req"><see cref="DescribePushTasksRequest"/></param>
         /// <returns><see cref="DescribePushTasksResponse"/></returns>
@@ -971,7 +970,6 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// This API is used to query the submission record and progress of prefetch tasks.
-        /// This API is in beta test and not fully available yet. Please stay tuned.
         /// </summary>
         /// <param name="req"><see cref="DescribePushTasksRequest"/></param>
         /// <returns><see cref="DescribePushTasksResponse"/></returns>
@@ -1113,7 +1111,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5-15 minutes.
+        /// This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
         /// </summary>
         /// <param name="req"><see cref="DisableClsLogTopicRequest"/></param>
         /// <returns><see cref="DisableClsLogTopicResponse"/></returns>
@@ -1133,7 +1131,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5-15 minutes.
+        /// This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
         /// </summary>
         /// <param name="req"><see cref="DisableClsLogTopicRequest"/></param>
         /// <returns><see cref="DisableClsLogTopicResponse"/></returns>
@@ -1193,7 +1191,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5-15 minutes.
+        /// This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
         /// </summary>
         /// <param name="req"><see cref="EnableClsLogTopicRequest"/></param>
         /// <returns><see cref="EnableClsLogTopicResponse"/></returns>
@@ -1213,7 +1211,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5-15 minutes.
+        /// This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
         /// </summary>
         /// <param name="req"><see cref="EnableClsLogTopicRequest"/></param>
         /// <returns><see cref="EnableClsLogTopicResponse"/></returns>

@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 
+        /// ID of a successfully created agent.
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }

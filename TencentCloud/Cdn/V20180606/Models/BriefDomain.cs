@@ -50,10 +50,10 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Acceleration service status
-        /// rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-        /// processing: deploying
-        /// online: activated
-        /// offline: disabled
+        /// `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+        /// `processing`: Deploying
+        /// `online`: Activated
+        /// `offline`: Disabled
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -66,60 +66,60 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Domain name service type
-        /// web: static acceleration
-        /// download: download acceleration
-        /// media: streaming VOD acceleration
+        /// `web`: Static acceleration
+        /// `download`: Download acceleration
+        /// `media`: Streaming media VOD acceleration
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// Domain name creation time
+        /// Domain name creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of domain name
+        /// Domain name update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Origin server configuration details
+        /// Origin server configuration details.
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
         /// Domain name block status
-        /// normal: normal
-        /// overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-        /// malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-        /// ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-        /// idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-        /// unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-        /// capping: the configured upper limit for bandwidth has been reached.
-        /// readonly: the domain name has a special configuration and has been locked.
+        /// `normal`: Normal
+        /// `overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+        /// `malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+        /// `ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+        /// `idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+        /// `unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+        /// `capping`: The configured upper limit for bandwidth has been reached.
+        /// `readonly`: The domain name has a special configuration and has been locked.
         /// </summary>
         [JsonProperty("Disable")]
         public string Disable{ get; set; }
 
         /// <summary>
         /// Acceleration region
-        /// mainland: acceleration in Mainland China
-        /// overseas: acceleration outside Mainland China
-        /// global: global acceleration
+        /// `mainland`: Acceleration inside the Chinese mainland
+        /// `overseas`: Acceleration outside the Chinese mainland
+        /// `global`: Acceleration over the globe
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
         /// Domain name lock status
-        /// normal: not locked
-        /// mainland: locked in Mainland China
-        /// overseas: locked outside Mainland China
-        /// global: locked globally
+        /// `normal`: Not locked
+        /// `mainland`: Locked in the Chinese mainland
+        /// overseas: Locked outside the Chinese mainland
+        /// global: Locked globally
         /// </summary>
         [JsonProperty("Readonly")]
         public string Readonly{ get; set; }

@@ -27,14 +27,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// requestHeader: access control over request header
         /// url: access control over access URL
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
         /// Blocked content
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleContent")]
         public string RuleContent{ get; set; }
@@ -42,14 +42,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// on: regular match
         /// off: exact match
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Regex")]
         public string Regex{ get; set; }
 
         /// <summary>
         /// This parameter is required only if `RuleType` is `requestHeader`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleHeader")]
         public string RuleHeader{ get; set; }

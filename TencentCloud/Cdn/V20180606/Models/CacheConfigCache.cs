@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Cache configuration switch
         /// on: enable
         /// off: disable
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -36,27 +36,27 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Cache expiration time settings
         /// Unit: second. The maximum value is 365 days.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheTime")]
         public long? CacheTime{ get; set; }
 
         /// <summary>
         /// Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-        /// on: enable
-        /// off: disable
+        /// `on`: Enable
+        /// `off`: Disable
         /// This is disabled by default.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CompareMaxAge")]
         public string CompareMaxAge{ get; set; }
 
         /// <summary>
         /// Force cache
-        /// on: enable
-        /// off: disable
+        /// `on`: Enable
+        /// `off`: Disable
         /// This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]
         public string IgnoreCacheControl{ get; set; }

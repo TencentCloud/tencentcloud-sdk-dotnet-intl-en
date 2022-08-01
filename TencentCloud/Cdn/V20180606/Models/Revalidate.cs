@@ -26,14 +26,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Whether to always forward to the origin server for verification. Valid values: on, off
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// Forwards to the origin server for verification only for specific request path
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }

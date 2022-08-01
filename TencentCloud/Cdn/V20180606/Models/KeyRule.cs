@@ -26,52 +26,52 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Content for each CacheType:
-        /// For `file`, enter the suffix, such as jpg, txt.
+        /// For `file`, enter a suffix, e.g., `jpg` or `txt`.
         /// For `directory`, enter the path, such as /xxx/test/.
-        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+        /// For `path`, enter an absolute path, e.g., `/xxx/test.html`.
         /// For `index`, enter a backslash (/).
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
 
         /// <summary>
         /// Rule types:
-        /// `file`: effective for specified file suffixes
-        /// `directory`: effective for specified paths
-        /// `path`: effective for specified absolute paths
+        /// `file`: Apply to files with the specified suffixes.
+        /// `directory`: Apply to specified paths.
+        /// `path`: Apply to specified absolute paths.
         /// `index`: home page
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Whether full-path cache is enaled
-        /// `on`: enables full-path cache (i.e., disables ignore query string)
-        /// `off`: disables full-path cache (i.e., enables ignore query string)
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Whether to enable full-path cache
+        /// `on`: Enable full-path cache (i.e., disable Ignore Query String).
+        /// `off`: Disable full-path cache (i.e., enable Ignore Query String).
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }
 
         /// <summary>
         /// Whether caches are case insensitive
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IgnoreCase")]
         public string IgnoreCase{ get; set; }
 
         /// <summary>
         /// Request parameter contained in `CacheKey`
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("QueryString")]
         public RuleQueryString QueryString{ get; set; }
 
         /// <summary>
         /// Path cache key tag, the value "user" is passed.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleTag")]
         public string RuleTag{ get; set; }

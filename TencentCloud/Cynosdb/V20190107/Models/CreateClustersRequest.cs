@@ -51,20 +51,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Database version. Valid values: 
-        /// <li> Valid values for `MYSQL`: 5.7 </li>
+        /// <li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// It is required when `DbMode` is set to `NORMAL` or left empty.
-        /// Number of CPU cores of a non-serverless instance
+        /// Number of CPU cores of normal instance
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
@@ -78,45 +78,45 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// This parameter has been deprecated.
-        /// Storage capacity in GB.
+        /// Storage capacity in GB
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Cluster name
+        /// Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
+        /// Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
 
         /// <summary>
-        /// Port. Default value: 5432
+        /// Port. Valid range: [0, 65535). Default value: 3306
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Billing mode. 0: pay-as-you-go; 1: monthly subscription. Default value: 0
+        /// Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Number of purchased items. Currently, only 1 can be passed in. If this parameter is left empty, 1 will be used by default.
+        /// Number of purchased clusters. Valid range: [1,50]. Default value: 1
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
         /// Rollback type:
-        /// noneRollback: no rollback
-        /// snapRollback: rollback by snapshot
+        /// noneRollback: no rollback;
+        /// snapRollback: rollback by snapshot;
         /// timeRollback: rollback by time point
         /// </summary>
         [JsonProperty("RollbackStrategy")]
@@ -129,7 +129,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? RollbackId{ get; set; }
 
         /// <summary>
-        /// Pass in the source cluster ID during rollback to find the source `poolId`
+        /// The source cluster ID passed in during rollback to find the source `poolId`
         /// </summary>
         [JsonProperty("OriginalClusterId")]
         public string OriginalClusterId{ get; set; }
@@ -148,14 +148,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? ExpectTimeThresh{ get; set; }
 
         /// <summary>
-        /// The maximum storage of a non-serverless instance in GB
-        /// If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
+        /// Storage upper limit of normal instance in GB
+        /// If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Number of instances
+        /// Number of Instances. Valid range: (0,16]
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
@@ -167,19 +167,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Purchase duration unit of monthly subscription plan
+        /// Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Whether auto-renewal is enabled for monthly subscription plan
+        /// Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+        /// Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
@@ -204,7 +204,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Database type
-        /// Valid values when `DbType` is `MYSQL` (default value: NORMAL):
+        /// Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
         /// <li>NORMAL</li>
         /// <li>SERVERLESS</li>
         /// </summary>
@@ -212,15 +212,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// This parameter is required if `DbMode` is `SERVERLESS`
-        /// Minimum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
+        /// This parameter is required if `DbMode` is `SERVERLESS`.
+        /// Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// This parameter is required if `DbMode` is `SERVERLESS`:
-        /// Maximum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
+        /// This parameter is required if `DbMode` is `SERVERLESS`.
+        /// Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
@@ -236,15 +236,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-        /// Default value: 600
+        /// Default value: `600`
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
 
         /// <summary>
-        /// The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
-        /// If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
-        /// Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+        /// The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+        /// If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
+        /// Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
@@ -274,10 +274,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// Parameter template ID
+        /// Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
+
+        /// <summary>
+        /// Multi-AZ address
+        /// </summary>
+        [JsonProperty("SlaveZone")]
+        public string SlaveZone{ get; set; }
 
 
         /// <summary>
@@ -324,6 +330,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+            this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
         }
     }
 }

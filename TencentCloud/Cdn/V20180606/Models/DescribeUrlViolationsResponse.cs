@@ -26,7 +26,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Details of URLs in violation
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UrlRecordList")]
         public ViolationUrl[] UrlRecordList{ get; set; }

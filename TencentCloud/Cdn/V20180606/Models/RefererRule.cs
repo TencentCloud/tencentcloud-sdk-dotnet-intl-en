@@ -26,28 +26,28 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Rule types:
-        /// `all`: effective for all files
-        /// `file`: effective for specified file suffixes
-        /// `directory`: effective for specified paths
-        /// `path`: effective for specified absolute paths
+        /// `all`: Apply to all files.
+        /// `file`: Apply to files with the specified suffixes.
+        /// `directory`: Apply to specified paths.
+        /// `path`: Apply to specified absolute paths.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Content for each RuleType:
-        /// For `all`, enter an asterisk (*).
-        /// For `file`, enter the suffix, such as jpg, txt.
-        /// For `directory`, enter the path, such as /xxx/test/.
-        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+        /// Content for each `RuleType`:
+        /// For `all`, enter a wildcard `*`.
+        /// For `file`, enter a suffix, e.g., `jpg` or `txt`.
+        /// For `directory`, enter a path, e.g., `/xxx/test/`.
+        /// For `path`, enter an absolute path, e.g., `/xxx/test.html`.
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
 
         /// <summary>
         /// Referer configuration types
-        /// whitelist: allowlist
-        /// blacklist: blocklist
+        /// `whitelist`: Allowlist
+        /// `blacklist`: Blocklist
         /// </summary>
         [JsonProperty("RefererType")]
         public string RefererType{ get; set; }
@@ -60,8 +60,8 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Whether to allow empty referer
-        /// true: allow empty referer
-        /// false: do not allow empty referer
+        /// `true`: Allow empty referer when `RefererType = whitelist`.
+        /// `false`: Reject empty refer when `RefererType = blacklist`.
         /// </summary>
         [JsonProperty("AllowEmpty")]
         public bool? AllowEmpty{ get; set; }

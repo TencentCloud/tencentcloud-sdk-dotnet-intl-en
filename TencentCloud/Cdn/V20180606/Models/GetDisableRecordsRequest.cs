@@ -37,7 +37,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time, such as 2018-12-14 10:24:00
+        /// End time, such as `2018-12-14 10:24:00`
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -57,7 +57,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paged queries. Default value: 20
+        /// Pagination limit. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

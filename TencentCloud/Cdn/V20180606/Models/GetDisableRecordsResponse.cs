@@ -26,14 +26,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Blocking history
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UrlRecordList")]
         public UrlRecord[] UrlRecordList{ get; set; }
 
         /// <summary>
-        /// Total number of tasks, which is used for pagination
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total number of tasks, which is used for pagination.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

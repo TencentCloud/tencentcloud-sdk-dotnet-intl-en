@@ -26,16 +26,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Advanced configuration name
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Whether advanced configuration is supported:
-        /// `on`: support
-        /// `off`: do not support
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether to support advanced configuration
+        /// `on`: Supported
+        /// `off`: Not supported
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

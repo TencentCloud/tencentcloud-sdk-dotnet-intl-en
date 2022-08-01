@@ -70,6 +70,8 @@
     <Compile Include="V20180328\Models\CreateIncrementalMigrationResponse.cs" />
     <Compile Include="V20180328\Models\CreateMigrationRequest.cs" />
     <Compile Include="V20180328\Models\CreateMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\CrossBackupAddr.cs" />
+    <Compile Include="V20180328\Models\CrossRegionStatus.cs" />
     <Compile Include="V20180328\Models\DBCreateInfo.cs" />
     <Compile Include="V20180328\Models\DBDetail.cs" />
     <Compile Include="V20180328\Models\DBInstance.cs" />

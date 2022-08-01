@@ -41,8 +41,8 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-        /// Note: either `InstanceId` or `EniIp` must be passed in.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: Either `InstanceId` or `EniIp` can be passed in.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -55,8 +55,8 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-        /// Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }

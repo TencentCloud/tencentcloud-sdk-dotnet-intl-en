@@ -26,14 +26,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Switch. Valid values: on, off
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// UA blocklist/allowlist effect rule list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// UA blacklist/whitelist effect rule list
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FilterRules")]
         public UserAgentFilterRule[] FilterRules{ get; set; }

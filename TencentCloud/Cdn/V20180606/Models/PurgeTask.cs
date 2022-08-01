@@ -38,9 +38,9 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Purge task status
-        /// `fail`: purge failed
-        /// `done`: purge succeeded
-        /// `process`: purge in progress
+        /// `fail`: Purge failed
+        /// `done`: Purge succeeded
+        /// `process`: Purge in progress
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Purge method
         /// `flush`: purges updated resources; this type is available only for directory purges
-        /// `delete`: purges all resources
+        /// `delete`: Purge all resources
         /// </summary>
         [JsonProperty("FlushType")]
         public string FlushType{ get; set; }

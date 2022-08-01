@@ -26,63 +26,63 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// HTTPS configuration switch
-        /// on: enabled
-        /// off: disabled
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// HTTP2 configuration switch
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Http2")]
         public string Http2{ get; set; }
 
         /// <summary>
         /// OCSP configuration switch
-        /// on: enabled
-        /// off: disabled
-        /// This is disabled by default
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `on`: Enable
+        /// `off`: Disable
+        /// It is disabled by default.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OcspStapling")]
         public string OcspStapling{ get; set; }
 
         /// <summary>
         /// Client certificate authentication feature
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("VerifyClient")]
         public string VerifyClient{ get; set; }
 
         /// <summary>
         /// Server certificate configuration information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CertInfo")]
         public ServerCert CertInfo{ get; set; }
 
         /// <summary>
         /// Client certificate configuration information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ClientCertInfo")]
         public ClientCert ClientCertInfo{ get; set; }
 
         /// <summary>
         /// Spdy configuration switch
-        /// on: enabled
-        /// off: disabled
-        /// This is disabled by default
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `on`: Enable
+        /// `off`: Disable
+        /// It is disabled by default.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Spdy")]
         public string Spdy{ get; set; }
@@ -93,20 +93,21 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// deploying: in deployment
         /// deployed: successfully deployed
         /// failed: deployment failed
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SslStatus")]
         public string SslStatus{ get; set; }
 
         /// <summary>
         /// HSTS configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Hsts")]
         public Hsts Hsts{ get; set; }
 
         /// <summary>
         /// TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TlsVersion")]
         public string[] TlsVersion{ get; set; }

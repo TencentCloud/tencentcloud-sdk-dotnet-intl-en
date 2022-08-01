@@ -46,28 +46,28 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string BillingCycle{ get; set; }
 
         /// <summary>
-        /// `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
-        /// `day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
-        /// `month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
-        /// `sum`: billed by the total traffic/total requests (daily or monthly settlement)
-        /// `max`: billed by the peak bandwidth (daily settlement)
+        /// `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
+        /// `day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
+        /// `month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
+        /// `sum`: Billed by the total traffic/total requests (daily or monthly settlement)
+        /// `max`: Billed by the peak bandwidth (daily settlement)
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
 
         /// <summary>
-        /// Billing method outside Mainland China:
-        /// `all`: unified billing for all regions
-        /// `multiple`: separate billing for different regions
+        /// Billing method for regions outside the Chinese mainland:
+        /// `all`: Unified billing for all regions
+        /// `multiple`: Region-specific billing
         /// </summary>
         [JsonProperty("RegionType")]
         public string RegionType{ get; set; }
 
         /// <summary>
         /// The current billing mode in effect:
-        /// `flux`: Bill by traffic
-        /// `bandwidth`: Bill by bandwidth
-        /// `request`: Bill by the number of requests
+        /// `flux`: Billed by traffic
+        /// `bandwidth`: Billed by bandwidth
+        /// `request`: Billed by the number of requests
         /// `flux_sep`: Disused field
         /// `bandwidth_sep`: Disused field
         /// </summary>

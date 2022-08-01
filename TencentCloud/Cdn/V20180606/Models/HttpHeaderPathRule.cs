@@ -36,7 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// HTTP header name. Up to 100 characters can be set.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("HeaderName")]
         public string HeaderName{ get; set; }
@@ -45,29 +45,29 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// HTTP header value. Up to 1000 characters can be set.
         /// Not required when Mode is del
         /// Required when Mode is add/set
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("HeaderValue")]
         public string HeaderValue{ get; set; }
 
         /// <summary>
         /// Rule types:
-        /// `all`: effective for all files
-        /// `file`: effective for specified file suffixes
-        /// `directory`: effective for specified paths
-        /// `path`: effective for specified absolute paths
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `all`: Apply to all files.
+        /// `file`: Apply to files with the specified suffixes.
+        /// `directory`: Apply to specified paths.
+        /// `path`: Apply to specified absolute paths.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Content for each RuleType:
-        /// For `all`, enter an asterisk (*).
-        /// For `file`, enter the suffix, such as jpg, txt.
-        /// For `directory`, enter the path, such as /xxx/test/.
-        /// For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Content for each `RuleType`:
+        /// For `all`, enter a wildcard `*`.
+        /// For `file`, enter a suffix, e.g., `jpg` or `txt`.
+        /// For `directory`, enter a path, e.g., `/xxx/test/`.
+        /// For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }

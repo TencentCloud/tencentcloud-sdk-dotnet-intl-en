@@ -26,16 +26,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Status code cache expiration configuration switch
-        /// on: enabled
-        /// off: disabled
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// Status code cache expiration rules details
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheRules")]
         public StatusCodeCacheRule[] CacheRules{ get; set; }

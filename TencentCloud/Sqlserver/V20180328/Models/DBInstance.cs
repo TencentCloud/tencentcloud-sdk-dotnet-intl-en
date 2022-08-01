@@ -289,6 +289,36 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+        /// </summary>
+        [JsonProperty("CrossRegions")]
+        public string[] CrossRegions{ get; set; }
+
+        /// <summary>
+        /// Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+        /// </summary>
+        [JsonProperty("CrossBackupEnabled")]
+        public string CrossBackupEnabled{ get; set; }
+
+        /// <summary>
+        /// The retention period of cross-region backup. Default value: 7 days
+        /// </summary>
+        [JsonProperty("CrossBackupSaveDays")]
+        public ulong? CrossBackupSaveDays{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DnsPodDomain")]
+        public string DnsPodDomain{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TgwWanVPort")]
+        public long? TgwWanVPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -338,6 +368,11 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupCycleType", this.BackupCycleType);
             this.SetParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+            this.SetParamSimple(map, prefix + "CrossBackupEnabled", this.CrossBackupEnabled);
+            this.SetParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
+            this.SetParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
+            this.SetParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
         }
     }
 }

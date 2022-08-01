@@ -44,6 +44,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("PublicKey")]
         public string PublicKey{ get; set; }
 
+        /// <summary>
+        /// Tag description list. This parameter is used to bind a tag to a key pair.
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "KeyName", this.KeyName);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "PublicKey", this.PublicKey);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

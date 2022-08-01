@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Query result
+        /// Query results
         /// </summary>
         [JsonProperty("Logs")]
         public ClsSearchLogs Logs{ get; set; }

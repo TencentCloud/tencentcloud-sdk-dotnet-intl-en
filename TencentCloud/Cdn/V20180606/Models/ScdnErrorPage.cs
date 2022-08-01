@@ -33,7 +33,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? RedirectCode{ get; set; }
 
         /// <summary>
-        /// Redirection URL
+        /// URL to be redirected
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }

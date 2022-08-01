@@ -44,14 +44,14 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RedirectHost")]
         public string RedirectHost{ get; set; }
 
         /// <summary>
         /// Whether to use full-path matching or arbitrary matching
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FullMatch")]
         public bool? FullMatch{ get; set; }

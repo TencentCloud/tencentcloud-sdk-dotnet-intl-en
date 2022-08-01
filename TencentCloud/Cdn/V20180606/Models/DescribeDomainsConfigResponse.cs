@@ -31,7 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public DetailDomain[] Domains{ get; set; }
 
         /// <summary>
-        /// The number of domain names that matched the query conditions
+        /// Number of domain names that match the specified query conditions
         /// Used for paginated queries
         /// </summary>
         [JsonProperty("TotalNumber")]

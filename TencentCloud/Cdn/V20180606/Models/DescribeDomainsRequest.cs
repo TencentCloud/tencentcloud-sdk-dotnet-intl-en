@@ -37,7 +37,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Query condition filter, complex type.
+        /// Query condition filter, which supports complex type.
         /// </summary>
         [JsonProperty("Filters")]
         public DomainFilter[] Filters{ get; set; }

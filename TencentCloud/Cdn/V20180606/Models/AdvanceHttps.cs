@@ -32,7 +32,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string CustomTlsStatus{ get; set; }
 
         /// <summary>
-        /// Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+        /// TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TlsVersion")]
@@ -46,24 +46,24 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Cipher{ get; set; }
 
         /// <summary>
-        /// Origin authentication type
-        /// `off`: disable authentication
-        /// `oneWay`: authenticate the origin 
-        /// `twoWay`: two-way authentication
+        /// Origin-pull verification status
+        /// `off`: Disables origin-pull verification
+        /// `oneWay`: Only verify the origin
+        /// `twoWay`: Enables two-way origin-pull verification
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VerifyOriginType")]
         public string VerifyOriginType{ get; set; }
 
         /// <summary>
-        /// Information of the origin-pull certificate
+        /// Configuration information of the origin-pull certificate
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertInfo")]
         public ServerCert CertInfo{ get; set; }
 
         /// <summary>
-        /// Information of the origin server certificate
+        /// Configuration information of the origin server certificate
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginCertInfo")]

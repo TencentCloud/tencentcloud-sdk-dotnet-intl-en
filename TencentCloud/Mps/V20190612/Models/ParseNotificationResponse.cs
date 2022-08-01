@@ -25,8 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Supported event type. Valid values:
-        /// <li>WorkflowTask: Video workflow processing task.</li>
+        /// The event type. Valid values:
+        /// <li>WorkflowTask</li>
+        /// <li>EditMediaTask</li>
+        /// <li>ScheduleTask (scheme)</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -57,6 +59,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
+        /// The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ScheduleTaskEvent")]
+        public ScheduleTask ScheduleTaskEvent{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +82,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EditMediaTaskEvent.", this.EditMediaTaskEvent);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

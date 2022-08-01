@@ -38,7 +38,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-        /// This parameter is only available for the `DescribeInstances` API.
+        /// It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }

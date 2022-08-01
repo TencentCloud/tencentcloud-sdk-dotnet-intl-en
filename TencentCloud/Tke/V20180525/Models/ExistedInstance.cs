@@ -121,6 +121,14 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
+        /// <summary>
+        /// IPv6 address of the instance
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IPv6Addresses")]
+        public string[] IPv6Addresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +149,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
         }
     }
 }

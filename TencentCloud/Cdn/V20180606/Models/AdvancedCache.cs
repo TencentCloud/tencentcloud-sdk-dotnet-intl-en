@@ -26,7 +26,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Cache expiration rule
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CacheRules")]
         public AdvanceCacheRule[] CacheRules{ get; set; }
@@ -37,17 +37,17 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// off: disabled
         /// When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
         /// This is disabled by default
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]
         public string IgnoreCacheControl{ get; set; }
 
         /// <summary>
-        /// Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-        /// on: Enable; do not cache the header and body.
-        /// off: Disable; follow the custom cache rules of cache nodes.
+        /// Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+        /// `on`: Ignore; do not cache the header and body.
+        /// `off`: Do not ignore; follow the custom cache rules of cache nodes.
         /// It is disabled by default.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IgnoreSetCookie")]
         public string IgnoreSetCookie{ get; set; }

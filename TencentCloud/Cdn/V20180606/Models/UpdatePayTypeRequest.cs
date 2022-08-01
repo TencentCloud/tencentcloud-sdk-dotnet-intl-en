@@ -25,13 +25,13 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Billing region, which can be mainland or overseas.
+        /// Billing region, which can be `mainland` or `overseas`.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Billing mode, which can be flux or bandwidth.
+        /// Billing mode, which can be `flux` or `bandwidth`.
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }

@@ -27,9 +27,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Rule types:
         /// `all`: effective for all files.
-        /// `file`: effective for specified file suffixes.
-        /// `directory`: effective for specified paths.
-        /// `path`: effective for specified absolute paths.
+        /// `file`: Apply to files with the specified suffixes.
+        /// `directory`: Apply to specified paths.
+        /// `path`: Apply to specified absolute paths.
         /// `index`: effective for web homepages and root directories.
         /// </summary>
         [JsonProperty("RuleType")]

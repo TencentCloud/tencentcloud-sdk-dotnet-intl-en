@@ -44,11 +44,11 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Current status of the resources in violation
-        /// forbid: blocked
-        /// release: unblocked
-        /// delay: processing delayed 
-        /// reject: appeal dismissed. The status is still blocked.
-        /// complain: appeal in process
+        /// `forbid`: Blocked
+        /// `release`: Unblocked
+        /// `delay`: Processing delayed
+        /// `reject`: Appeal dismissed. The status is still blocked.
+        /// `complain`: Appeal in process
         /// </summary>
         [JsonProperty("UrlStatus")]
         public string UrlStatus{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? IgnoreClusterCIDRConflict{ get; set; }
 
         /// <summary>
-        /// Maximum number of pods on each node in the cluster
+        /// Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
         /// </summary>
         [JsonProperty("MaxNodePodNum")]
         public ulong? MaxNodePodNum{ get; set; }

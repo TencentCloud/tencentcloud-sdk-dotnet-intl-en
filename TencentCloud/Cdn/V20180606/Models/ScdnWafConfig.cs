@@ -60,14 +60,14 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// WAF rule level. Valid values: 100, 200, and 300.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
         /// WAF sub-rule switch
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SubRuleSwitch")]
         public WafSubRuleStatus[] SubRuleSwitch{ get; set; }

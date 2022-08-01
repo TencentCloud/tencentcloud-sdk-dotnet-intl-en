@@ -90,6 +90,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
+        /// <summary>
+        /// The scheme ID.
+        /// Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+        /// 2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+        /// 3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public long? ScheduleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +116,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         }
     }
 }

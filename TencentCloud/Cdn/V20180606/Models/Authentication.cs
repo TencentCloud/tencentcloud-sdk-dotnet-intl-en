@@ -26,8 +26,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Hotlink protection configuration switch
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// When this is enabled, one mode needs to be configured. Other modes need to be set to null.
         /// </summary>
         [JsonProperty("Switch")]
@@ -35,28 +35,28 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Timestamp hotlink protection mode A configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TypeA")]
         public AuthenticationTypeA TypeA{ get; set; }
 
         /// <summary>
         /// Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TypeB")]
         public AuthenticationTypeB TypeB{ get; set; }
 
         /// <summary>
         /// Timestamp hotlink protection mode C configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TypeC")]
         public AuthenticationTypeC TypeC{ get; set; }
 
         /// <summary>
         /// Timestamp hotlink protection mode D configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TypeD")]
         public AuthenticationTypeD TypeD{ get; set; }

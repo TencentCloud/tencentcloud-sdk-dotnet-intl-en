@@ -27,8 +27,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Query start time in the format of `yyyy-MM-dd HH:mm:ss`
         /// Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-        /// Data generated after or at 00:00:00 on the start date will be returned
-        /// Only data for the last 90 days can be queried
+        /// If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
+        /// Only data from the last 90 days will be queried.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -36,19 +36,19 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// Query end time in the format of `yyyy-MM-dd HH:mm:ss`
         /// Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-        /// Data generated before or at 23:59:59 on the end date will be returned
+        /// If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
         /// `EndTime` must be later than or equal to `StartTime`
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Object representing the sort criteria. The following objects are supported:
-        /// `url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-        /// `district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
-        /// `isp`: sorts by ISP. Supported filters are `flux` and `request`.
-        /// `host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-        /// `originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+        /// Objects to be sorted. Valid values:
+        /// `url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+        /// `district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
+        /// `isp`: sorts ISPs. Supported filters are `flux` and `request`.
+        /// `host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+        /// `originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
@@ -87,7 +87,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Project{ get; set; }
 
         /// <summary>
-        /// Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
+        /// The sorted results of all domain names are returned by default (false) during a multi-domain-name query
         /// If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
         /// </summary>
         [JsonProperty("Detail")]
@@ -100,17 +100,17 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Code{ get; set; }
 
         /// <summary>
-        /// Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
-        /// `mainland`: specifies to query CDN data within Mainland China;
-        /// `overseas`: specifies to query CDN data outside Mainland China. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
+        /// Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+        /// `mainland`: Query CDN data in the Chinese mainland.
+        /// `overseas`: Query CDN data outside the Chinese mainland. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
-        /// server: specifies to query data of service region (where a CDN node is located)
-        /// client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
+        /// Specifies a region type for the query. If it is left blank, data of the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `district` or `host`.
+        /// `server`: Query by the location of server (Tencent Cloud CDN nodes).
+        /// `client`: Query data of the client region where the request devices are located; if `Metric` is `host`, supported filters are `flux`, `request`, and `bandwidth`.
         /// </summary>
         [JsonProperty("AreaType")]
         public string AreaType{ get; set; }

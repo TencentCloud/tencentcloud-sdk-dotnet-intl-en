@@ -26,9 +26,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Whether to enable wildcard match (`*`).
-        /// false: disable
-        /// true: enable
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// `false`: disabled
+        /// `true`: enabled
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Regex")]
         public bool? Regex{ get; set; }
@@ -55,9 +55,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string ServerName{ get; set; }
 
         /// <summary>
-        /// Origin server region. Valid values: `CN` and `OV`.
-        /// CN: the Chinese mainland
-        /// OV: outside the Chinese mainland
+        /// Region of the origin server. Valid values: `CN` and `OV`.
+        /// `CN`: Within the Chinese mainland
+        /// `OV`: Outside the Chinese mainland
         /// Default value: `CN`.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
@@ -66,23 +66,23 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ForwardUri")]
         public string ForwardUri{ get; set; }
 
         /// <summary>
         /// Origin-pull header setting when the path matches.
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RequestHeaders")]
         public HttpHeaderRule[] RequestHeaders{ get; set; }
 
         /// <summary>
         /// When `Regex` is `false`, this parameter should be `true`.
-        /// `false`: disabled
+        /// `false`: Disabled
         /// `true`: enabled
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FullMatch")]
         public bool? FullMatch{ get; set; }

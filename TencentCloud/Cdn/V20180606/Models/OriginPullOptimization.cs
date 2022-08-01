@@ -26,8 +26,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Cross-border origin-pull optimization configuration switch
-        /// on: enabled
-        /// off: disabled
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -36,7 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Cross-border types
         /// OVToCN: origin-pull from outside mainland China to inside mainland China
         /// CNToOV: origin-pull from inside mainland China to outside mainland China
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OptimizationType")]
         public string OptimizationType{ get; set; }

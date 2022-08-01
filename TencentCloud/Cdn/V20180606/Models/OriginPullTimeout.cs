@@ -26,14 +26,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// The origin-pull connection timeout (in seconds). Valid range: 5-60.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ConnectTimeout")]
         public ulong? ConnectTimeout{ get; set; }
 
         /// <summary>
         /// The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ReceiveTimeout")]
         public ulong? ReceiveTimeout{ get; set; }

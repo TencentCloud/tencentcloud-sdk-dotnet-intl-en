@@ -52,7 +52,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Project{ get; set; }
 
         /// <summary>
-        /// Time granularity, which can be:
+        /// Sampling interval in minutes. The available options vary for different query period. See below: 
         /// 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
         /// day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
         /// </summary>

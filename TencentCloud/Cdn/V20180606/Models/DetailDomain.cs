@@ -37,24 +37,24 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Acceleration domain name
+        /// Accelerated domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// CNAME address of domain name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
         /// Acceleration service status
-        /// rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-        /// processing: deploying
-        /// online: activated
-        /// offline: disabled
+        /// `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+        /// `processing`: Deploying
+        /// `online`: Enabled
+        /// `offline`: Disabled
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -83,402 +83,408 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of domain name
+        /// Domain name update time
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Origin server configuration
+        /// Origin server configuration.
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// IP blacklist/whitelist configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// IP blocklist/allowlist configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IpFilter")]
         public IpFilter IpFilter{ get; set; }
 
         /// <summary>
-        /// IP access frequency limit configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// IP access limit configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IpFreqLimit")]
         public IpFreqLimit IpFreqLimit{ get; set; }
 
         /// <summary>
-        /// Status code cache configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Status code cache configuration.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("StatusCodeCache")]
         public StatusCodeCache StatusCodeCache{ get; set; }
 
         /// <summary>
-        /// Smart compression configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Smart compression configuration.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Compression")]
         public Compression Compression{ get; set; }
 
         /// <summary>
         /// Bandwidth cap configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("BandwidthAlert")]
         public BandwidthAlert BandwidthAlert{ get; set; }
 
         /// <summary>
         /// Range GETs configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RangeOriginPull")]
         public RangeOriginPull RangeOriginPull{ get; set; }
 
         /// <summary>
         /// 301/302 origin-pull follow-redirect configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FollowRedirect")]
         public FollowRedirect FollowRedirect{ get; set; }
 
         /// <summary>
-        /// Configuration of custom error page
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Custom error page configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ErrorPage")]
         public ErrorPage ErrorPage{ get; set; }
 
         /// <summary>
         /// Custom request header configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RequestHeader")]
         public RequestHeader RequestHeader{ get; set; }
 
         /// <summary>
         /// Custom response header configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ResponseHeader")]
         public ResponseHeader ResponseHeader{ get; set; }
 
         /// <summary>
         /// Single-link downstream speed limit configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DownstreamCapping")]
         public DownstreamCapping DownstreamCapping{ get; set; }
 
         /// <summary>
         /// Configuration of cache with/without parameter
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheKey")]
         public CacheKey CacheKey{ get; set; }
 
         /// <summary>
         /// Origin server header cache configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ResponseHeaderCache")]
         public ResponseHeaderCache ResponseHeaderCache{ get; set; }
 
         /// <summary>
-        /// Video dragging configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Video dragging configuration.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("VideoSeek")]
         public VideoSeek VideoSeek{ get; set; }
 
         /// <summary>
         /// Node cache expiration rule configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Cache")]
         public Cache Cache{ get; set; }
 
         /// <summary>
         /// Cross-border linkage optimization configuration (in beta)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OriginPullOptimization")]
         public OriginPullOptimization OriginPullOptimization{ get; set; }
 
         /// <summary>
-        /// HTTPS acceleration configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// HTTPS Acceleration Configuration Guide
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
         /// <summary>
-        /// Timestamp hotlink protection configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Timestamp hotlink protection configuration.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Authentication")]
         public Authentication Authentication{ get; set; }
 
         /// <summary>
         /// SEO configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Seo")]
         public Seo Seo{ get; set; }
 
         /// <summary>
         /// Domain name block status
-        /// normal: normal
-        /// overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-        /// malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-        /// ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-        /// idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-        /// unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-        /// capping: the configured upper limit for bandwidth has been reached.
-        /// readonly: the domain name has a special configuration and has been locked.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `normal`: Normal
+        /// `overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+        /// `malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+        /// `ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+        /// `idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+        /// `unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+        /// `capping`: The configured upper limit for bandwidth has been reached.
+        /// `readonly`: The domain name has a special configuration and has been locked.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Disable")]
         public string Disable{ get; set; }
 
         /// <summary>
         /// Access protocol forced redirect configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// Referer hotlink protection configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Referer configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Referer")]
         public Referer Referer{ get; set; }
 
         /// <summary>
         /// Browser cache expiration rule configuration (in beta)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("MaxAge")]
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
         /// IPv6 origin-pull configuration (in beta)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
         /// Backwards compatibility configuration (compatibility field for internal use)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Compatibility")]
         public Compatibility Compatibility{ get; set; }
 
         /// <summary>
         /// Region-specific configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SpecificConfig")]
         public SpecificConfig SpecificConfig{ get; set; }
 
         /// <summary>
         /// Acceleration region
-        /// mainland: acceleration in Mainland China
-        /// overseas: acceleration outside Mainland China
-        /// global: global acceleration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `mainland`: Acceleration inside the Chinese mainland
+        /// `overseas`: Acceleration outside the Chinese mainland
+        /// `global`: Acceleration over the globe
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
         /// Domain name lock status
-        /// normal: not locked
-        /// mainland: locked in Mainland China
-        /// overseas: locked outside Mainland China
-        /// global: locked globally
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `normal`: Not locked
+        /// `mainland`: Locked in the Chinese mainland
+        /// `overseas`: Locked outside the Chinese mainland
+        /// global: Locked globally
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Readonly")]
         public string Readonly{ get; set; }
 
         /// <summary>
         /// Origin-pull timeout configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OriginPullTimeout")]
         public OriginPullTimeout OriginPullTimeout{ get; set; }
 
         /// <summary>
         /// S3 bucket origin access authentication configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AwsPrivateAccess")]
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
         /// <summary>
         /// SCDN configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SecurityConfig")]
         public SecurityConfig SecurityConfig{ get; set; }
 
         /// <summary>
-        /// Image Optimization configuration
+        /// Image optimization configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ImageOptimization")]
         public ImageOptimization ImageOptimization{ get; set; }
 
         /// <summary>
-        /// `UA` blocklist/allowlist configuration
+        /// UA blocklist/allowlist configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }
 
         /// <summary>
         /// Access control
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AccessControl")]
         public AccessControl AccessControl{ get; set; }
 
         /// <summary>
         /// Whether to support advanced configuration items
-        /// on: supported
-        /// off: not supported
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// `on`: Supported
+        /// `off`: Not supported
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Advance")]
         public string Advance{ get; set; }
 
         /// <summary>
         /// URL redirect configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UrlRedirect")]
         public UrlRedirect UrlRedirect{ get; set; }
 
         /// <summary>
         /// Access port configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AccessPort")]
         public long?[] AccessPort{ get; set; }
 
         /// <summary>
         /// Tag configuration
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
         /// <summary>
         /// Timestamp hotlink protection advanced configuration (allowlist feature)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AdvancedAuthentication")]
         public AdvancedAuthentication AdvancedAuthentication{ get; set; }
 
         /// <summary>
         /// Origin-pull authentication advanced configuration (allowlist feature)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OriginAuthentication")]
         public OriginAuthentication OriginAuthentication{ get; set; }
 
         /// <summary>
         /// IPv6 access configuration
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Ipv6Access")]
         public Ipv6Access Ipv6Access{ get; set; }
 
         /// <summary>
         /// Advanced configuration settings
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AdvanceSet")]
         public AdvanceConfig[] AdvanceSet{ get; set; }
 
         /// <summary>
         /// Offline cache (only available to beta users)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OfflineCache")]
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
         /// Merging origin-pull requests (only available to beta users)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OriginCombine")]
         public OriginCombine OriginCombine{ get; set; }
 
         /// <summary>
         /// POST request configuration item
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PostMaxSize")]
         public PostSize PostMaxSize{ get; set; }
 
         /// <summary>
         /// QUIC configuration
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
         /// <summary>
         /// Access authentication for OSS origin
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OssPrivateAccess")]
         public OssPrivateAccess OssPrivateAccess{ get; set; }
 
         /// <summary>
         /// WebSocket configuration.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
         /// <summary>
         /// Remote authentication configuration
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RemoteAuthentication")]
         public RemoteAuthentication RemoteAuthentication{ get; set; }
 
         /// <summary>
         /// Shared CNAME configuration (only available to beta users)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ShareCname")]
         public ShareCname ShareCname{ get; set; }
 
         /// <summary>
         /// Rule engine
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RuleEngine")]
         public RuleEngine RuleEngine{ get; set; }
 
         /// <summary>
         /// Primary domain name
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ParentHost")]
         public string ParentHost{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access authentication for Huawei Cloud OBS origin
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("HwPrivateAccess")]
         public HwPrivateAccess HwPrivateAccess{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access authentication for QiNiu Cloud Kodo origin
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("QnPrivateAccess")]
         public QnPrivateAccess QnPrivateAccess{ get; set; }

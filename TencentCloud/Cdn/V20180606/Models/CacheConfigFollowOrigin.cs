@@ -26,11 +26,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// Follow origin server switch configuration
-        /// on: enable
-        /// off: disable
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
+
+        /// <summary>
+        /// Heuristic cache configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("HeuristicCache")]
+        public HeuristicCache HeuristicCache{ get; set; }
 
 
         /// <summary>
@@ -39,6 +46,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamObj(map, prefix + "HeuristicCache.", this.HeuristicCache);
         }
     }
 }
