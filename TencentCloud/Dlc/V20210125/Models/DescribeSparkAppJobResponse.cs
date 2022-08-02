@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralAccurateOCRResponse : AbstractModel
+    public class DescribeSparkAppJobResponse : AbstractModel
     {
         
         /// <summary>
-        /// Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+        /// Spark job details
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TextDetections")]
-        public TextDetection[] TextDetections{ get; set; }
+        [JsonProperty("Job")]
+        public SparkJobInfo Job{ get; set; }
 
         /// <summary>
-        /// Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+        /// Whether the queried Spark job exists
         /// </summary>
-        [JsonProperty("Angel")]
-        public float? Angel{ get; set; }
+        [JsonProperty("IsExists")]
+        public bool? IsExists{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +49,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-            this.SetParamSimple(map, prefix + "Angel", this.Angel);
+            this.SetParamObj(map, prefix + "Job.", this.Job);
+            this.SetParamSimple(map, prefix + "IsExists", this.IsExists);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

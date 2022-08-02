@@ -15,38 +15,43 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralBasicOCRResponse : AbstractModel
+    public class InquiryPriceScaleOutInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+        /// Original price.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TextDetections")]
-        public TextDetection[] TextDetections{ get; set; }
+        [JsonProperty("OriginalCost")]
+        public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
+        /// Discounted price.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Language")]
-        public string Language{ get; set; }
+        [JsonProperty("DiscountCost")]
+        public string DiscountCost{ get; set; }
 
         /// <summary>
-        /// Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+        /// Time unit of scale-out. Valid value:
+        /// <li>s: Second.</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Angel")]
-        public float? Angel{ get; set; }
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
 
         /// <summary>
-        /// Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+        /// Node spec queried for price.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("PdfPageSize")]
-        public long? PdfPageSize{ get; set; }
+        [JsonProperty("PriceSpec")]
+        public PriceResource PriceSpec{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -60,10 +65,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-            this.SetParamSimple(map, prefix + "Language", this.Language);
-            this.SetParamSimple(map, prefix + "Angel", this.Angel);
-            this.SetParamSimple(map, prefix + "PdfPageSize", this.PdfPageSize);
+            this.SetParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
+            this.SetParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamObj(map, prefix + "PriceSpec.", this.PriceSpec);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

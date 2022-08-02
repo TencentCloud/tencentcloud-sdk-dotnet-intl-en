@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralAccurateOCRResponse : AbstractModel
+    public class DescribeTaskResultRequest : AbstractModel
     {
         
         /// <summary>
-        /// Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+        /// Unique task ID
         /// </summary>
-        [JsonProperty("TextDetections")]
-        public TextDetection[] TextDetections{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+        /// Pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. 1,000 rows of data are returned each time.
         /// </summary>
-        [JsonProperty("Angel")]
-        public float? Angel{ get; set; }
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("MaxResults")]
+        public long? MaxResults{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-            this.SetParamSimple(map, prefix + "Angel", this.Angel);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
+            this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
         }
     }
 }

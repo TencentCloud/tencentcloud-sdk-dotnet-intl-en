@@ -15,38 +15,48 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralBasicOCRResponse : AbstractModel
+    public class ScaleOutInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+        /// Instance ID.
         /// </summary>
-        [JsonProperty("TextDetections")]
-        public TextDetection[] TextDetections{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
+        /// Order number.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Language")]
-        public string Language{ get; set; }
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+        /// Client token.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Angel")]
-        public float? Angel{ get; set; }
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
 
         /// <summary>
-        /// Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+        /// Scale-out workflow ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("PdfPageSize")]
-        public long? PdfPageSize{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
+
+        /// <summary>
+        /// Big order ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BillId")]
+        public string BillId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -60,10 +70,11 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-            this.SetParamSimple(map, prefix + "Language", this.Language);
-            this.SetParamSimple(map, prefix + "Angel", this.Angel);
-            this.SetParamSimple(map, prefix + "PdfPageSize", this.PdfPageSize);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "BillId", this.BillId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

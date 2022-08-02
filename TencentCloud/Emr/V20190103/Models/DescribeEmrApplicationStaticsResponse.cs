@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralBasicOCRResponse : AbstractModel
+    public class DescribeEmrApplicationStaticsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+        /// Application statistics
         /// </summary>
-        [JsonProperty("TextDetections")]
-        public TextDetection[] TextDetections{ get; set; }
+        [JsonProperty("Statics")]
+        public ApplicationStatics[] Statics{ get; set; }
 
         /// <summary>
-        /// Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
+        /// Total count
         /// </summary>
-        [JsonProperty("Language")]
-        public string Language{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+        /// Available queue name
         /// </summary>
-        [JsonProperty("Angel")]
-        public float? Angel{ get; set; }
+        [JsonProperty("Queues")]
+        public string[] Queues{ get; set; }
 
         /// <summary>
-        /// Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+        /// Available usernames
         /// </summary>
-        [JsonProperty("PdfPageSize")]
-        public long? PdfPageSize{ get; set; }
+        [JsonProperty("Users")]
+        public string[] Users{ get; set; }
+
+        /// <summary>
+        /// Available application type
+        /// </summary>
+        [JsonProperty("ApplicationTypes")]
+        public string[] ApplicationTypes{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -60,10 +66,11 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-            this.SetParamSimple(map, prefix + "Language", this.Language);
-            this.SetParamSimple(map, prefix + "Angel", this.Angel);
-            this.SetParamSimple(map, prefix + "PdfPageSize", this.PdfPageSize);
+            this.SetParamArrayObj(map, prefix + "Statics.", this.Statics);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArraySimple(map, prefix + "Queues.", this.Queues);
+            this.SetParamArraySimple(map, prefix + "Users.", this.Users);
+            this.SetParamArraySimple(map, prefix + "ApplicationTypes.", this.ApplicationTypes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

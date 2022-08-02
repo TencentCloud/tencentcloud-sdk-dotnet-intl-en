@@ -57,8 +57,6 @@
     <Compile Include="V20181119\Models\HKIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\HKIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\ItemCoord.cs" />
-    <Compile Include="V20181119\Models\MLIDCardOCRRequest.cs" />
-    <Compile Include="V20181119\Models\MLIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRRequest.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRResponse.cs" />
     <Compile Include="V20181119\Models\TableOCRRequest.cs" />
