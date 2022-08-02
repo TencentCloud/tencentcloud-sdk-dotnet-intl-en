@@ -223,7 +223,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance feature list.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
