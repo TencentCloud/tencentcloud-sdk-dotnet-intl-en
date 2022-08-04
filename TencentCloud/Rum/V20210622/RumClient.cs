@@ -1679,6 +1679,46 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to get the list of projects (under teams created by an instance).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public async Task<DescribeProjectsResponse> DescribeProjects(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of projects (under teams created by an instance).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public DescribeProjectsResponse DescribeProjectsSync(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of PVs under a project.
         /// </summary>
         /// <param name="req"><see cref="DescribePvListRequest"/></param>
@@ -1790,6 +1830,46 @@ namespace TencentCloud.Rum.V20210622
              {
                  var strResp = this.InternalRequestSync(req, "DescribeReleaseFiles");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReleaseFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of homepage scores.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScoresRequest"/></param>
+        /// <returns><see cref="DescribeScoresResponse"/></returns>
+        public async Task<DescribeScoresResponse> DescribeScores(DescribeScoresRequest req)
+        {
+             JsonResponseModel<DescribeScoresResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScores");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScoresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of homepage scores.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScoresRequest"/></param>
+        /// <returns><see cref="DescribeScoresResponse"/></returns>
+        public DescribeScoresResponse DescribeScoresSync(DescribeScoresRequest req)
+        {
+             JsonResponseModel<DescribeScoresResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScores");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScoresResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

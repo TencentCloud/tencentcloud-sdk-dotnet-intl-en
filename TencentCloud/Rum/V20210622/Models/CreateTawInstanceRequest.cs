@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? AreaId{ get; set; }
 
         /// <summary>
-        /// Billing mode (1: trial; 2: prepaid; 3: postpaid)
+        /// Billing type (1: Pay-as-you-go).
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
