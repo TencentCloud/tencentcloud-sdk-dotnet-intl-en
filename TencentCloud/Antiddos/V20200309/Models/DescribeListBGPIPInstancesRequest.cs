@@ -109,10 +109,16 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string[] FilterInstanceIdList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Searches by tag
         /// </summary>
         [JsonProperty("FilterTag")]
         public TagFilter FilterTag{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FilterPackType")]
+        public string[] FilterPackType{ get; set; }
 
 
         /// <summary>
@@ -134,6 +140,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterCname", this.FilterCname);
             this.SetParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
             this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
+            this.SetParamArraySimple(map, prefix + "FilterPackType.", this.FilterPackType);
         }
     }
 }

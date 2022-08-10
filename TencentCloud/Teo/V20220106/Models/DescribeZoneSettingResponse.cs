@@ -135,7 +135,8 @@ namespace TencentCloud.Teo.V20220106.Models
         public ClientIp ClientIpHeader{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cache prefresh configuration
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CachePrefresh")]
         public CachePrefresh CachePrefresh{ get; set; }

@@ -25,14 +25,16 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// ID of the proxy
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Name of the proxy:
+        /// Domain name or subdomain name when `ProxyType=hostname`
+        /// Instance name when `ProxyType=instance`
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
@@ -124,16 +126,18 @@ namespace TencentCloud.Teo.V20220106.Models
 
         /// <summary>
         /// Specifies how a layer-4 proxy is created.
-        /// `hostname`: Subdomain name
-        /// `instance`: Instance
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// `hostname`: Create by subdomain name
+        /// `instance`: Create by instance
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }
 
         /// <summary>
-        /// ID of the layer-7 domain name
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// When `ProxyType=hostname`:
+        /// `ProxyName` indicates a specified domain name;
+        /// `HostId` indicates a unique ID of the domain name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }

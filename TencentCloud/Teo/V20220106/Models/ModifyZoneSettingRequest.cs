@@ -115,7 +115,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public ClientIp ClientIpHeader{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cache prefresh configuration
         /// </summary>
         [JsonProperty("CachePrefresh")]
         public CachePrefresh CachePrefresh{ get; set; }

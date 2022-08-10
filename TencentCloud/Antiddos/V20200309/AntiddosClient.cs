@@ -813,46 +813,6 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to delete an Anti-DDoS IP blocklist/allowlist.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DeleteBlackWhiteIpListResponse"/></returns>
-        public async Task<DeleteBlackWhiteIpListResponse> DeleteBlackWhiteIpList(DeleteBlackWhiteIpListRequest req)
-        {
-             JsonResponseModel<DeleteBlackWhiteIpListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteBlackWhiteIpList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBlackWhiteIpListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete an Anti-DDoS IP blocklist/allowlist.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DeleteBlackWhiteIpListResponse"/></returns>
-        public DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpListSync(DeleteBlackWhiteIpListRequest req)
-        {
-             JsonResponseModel<DeleteBlackWhiteIpListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteBlackWhiteIpList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBlackWhiteIpListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to delete a level-defining policy of CC attacks. 
         /// </summary>
         /// <param name="req"><see cref="DeleteCCLevelPolicyRequest"/></param>
@@ -1373,7 +1333,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to query the list of CC protection levels.
+        /// Gets the list of CC protection levels
         /// </summary>
         /// <param name="req"><see cref="DescribeCCLevelListRequest"/></param>
         /// <returns><see cref="DescribeCCLevelListResponse"/></returns>
@@ -1393,7 +1353,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to query the list of CC protection levels.
+        /// Gets the list of CC protection levels
         /// </summary>
         /// <param name="req"><see cref="DescribeCCLevelListRequest"/></param>
         /// <returns><see cref="DescribeCCLevelListResponse"/></returns>

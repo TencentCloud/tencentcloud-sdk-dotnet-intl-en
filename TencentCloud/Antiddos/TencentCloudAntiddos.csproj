@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20200309\AntiddosClient.cs" />
+    <Compile Include="V20200309\Models\AnycastOutPackRelation.cs" />
     <Compile Include="V20200309\Models\AssociateDDoSEipAddressRequest.cs" />
     <Compile Include="V20200309\Models\AssociateDDoSEipAddressResponse.cs" />
     <Compile Include="V20200309\Models\AssociateDDoSEipLoadBalancerRequest.cs" />
@@ -106,8 +107,6 @@
     <Compile Include="V20200309\Models\DDoSSpeedLimitConfig.cs" />
     <Compile Include="V20200309\Models\DDoSSpeedLimitConfigRelation.cs" />
     <Compile Include="V20200309\Models\DefaultAlarmThreshold.cs" />
-    <Compile Include="V20200309\Models\DeleteBlackWhiteIpListRequest.cs" />
-    <Compile Include="V20200309\Models\DeleteBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DeleteCCLevelPolicyRequest.cs" />
     <Compile Include="V20200309\Models\DeleteCCLevelPolicyResponse.cs" />
     <Compile Include="V20200309\Models\DeleteCCPrecisionPolicyRequest.cs" />

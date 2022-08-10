@@ -31,13 +31,15 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Layer-4 proxy ID
+        /// ID of the proxy
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Layer-4 proxy name
+        /// Name of the proxy:
+        /// Domain name or subdomain name when `ProxyType=hostname`
+        /// Instance name when `ProxyType=instance`
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
@@ -62,8 +64,8 @@ namespace TencentCloud.Teo.V20220106.Models
 
         /// <summary>
         /// Specifies how a layer-4 proxy is created.
-        /// `hostname`: Subdomain name
-        /// `instance`: Instance
+        /// `hostname`: Create by subdomain name
+        /// `instance`: Create by instance
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }

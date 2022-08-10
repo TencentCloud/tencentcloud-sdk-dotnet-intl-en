@@ -166,10 +166,23 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? BGPIPChannelFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag that the Anti-DDoS Advanced instance is associated with
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TagInfoList")]
         public TagInfo[] TagInfoList{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AnycastOutPackRelation")]
+        public AnycastOutPackRelation AnycastOutPackRelation{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceVersion")]
+        public ulong? InstanceVersion{ get; set; }
 
 
         /// <summary>
@@ -198,6 +211,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "V6Flag", this.V6Flag);
             this.SetParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+            this.SetParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
+            this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         }
     }
 }

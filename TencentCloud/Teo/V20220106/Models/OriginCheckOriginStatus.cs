@@ -25,13 +25,14 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 
+        /// `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of unhealthy origin groups when `Status = unhealthy`
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Host")]
         public string[] Host{ get; set; }

@@ -37,7 +37,9 @@ namespace TencentCloud.Teo.V20220106.Models
         public string OriginName{ get; set; }
 
         /// <summary>
-        /// Origin server type
+        /// Origin-pull configuration type
+        /// `area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+        /// `weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -74,27 +76,33 @@ namespace TencentCloud.Teo.V20220106.Models
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Whether the origin group is used for layer-4 proxy
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the origin group uses layer-4 proxy.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationProxyUsed")]
         public bool? ApplicationProxyUsed{ get; set; }
 
         /// <summary>
-        /// Whether the origin group is used for load balancing
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the origin group is used for load balancing.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancingUsed")]
         public bool? LoadBalancingUsed{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin status 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public OriginCheckOriginStatus Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Proxy mode of the load balancing task associated with the origin group.
+        /// `none`: This origin group is not used for load balancing.
+        /// `dns_only`: Used for DNS-only load balancing 
+        /// `proxied`: Used for proxied load balancing
+        /// `both`: It’s used for both DNS-only and proxied load balancing.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancingUsedType")]
         public string LoadBalancingUsedType{ get; set; }

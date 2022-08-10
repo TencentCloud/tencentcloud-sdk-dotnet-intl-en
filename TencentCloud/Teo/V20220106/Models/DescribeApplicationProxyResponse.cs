@@ -39,20 +39,22 @@ namespace TencentCloud.Teo.V20220106.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Indicates the number of instances that can be created by the site when `ZoneId` is specified
+        /// Disused
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Quota")]
         public long? Quota{ get; set; }
 
         /// <summary>
-        /// 
+        /// When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IpCount")]
         public ulong? IpCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DomainCount")]
         public ulong? DomainCount{ get; set; }

@@ -31,14 +31,16 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Record{ get; set; }
 
         /// <summary>
-        /// Region of the origin group. It’s available when the origin group `Type` is `area`. 
-        /// If it’s left empty, it means to use the default region.
+        /// A specific region when `Type=area`.
+        /// The default region when `Type` is not specified.
         /// </summary>
         [JsonProperty("Area")]
         public string[] Area{ get; set; }
 
         /// <summary>
-        /// The weight of the origin group. It’s available when the `Type` is `weight`.
+        /// A specific weight when `Type=weight`.
+        /// The value range is [1-100].
+        /// The total weight of multiple origins in an origin group should be 100.
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
@@ -71,6 +73,12 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("PrivateParameter")]
         public OriginRecordPrivateParameter[] PrivateParameter{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Proto")]
+        public string Proto{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +92,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "Private", this.Private);
             this.SetParamArrayObj(map, prefix + "PrivateParameter.", this.PrivateParameter);
+            this.SetParamSimple(map, prefix + "Proto", this.Proto);
         }
     }
 }

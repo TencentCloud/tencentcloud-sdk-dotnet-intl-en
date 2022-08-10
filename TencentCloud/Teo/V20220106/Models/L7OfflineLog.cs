@@ -32,7 +32,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public long? LogTime{ get; set; }
 
         /// <summary>
-        /// Site name
+        /// Subdomain name
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Domain")]

@@ -213,6 +213,46 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// This API is used to create a custom error page.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomErrorPageRequest"/></param>
+        /// <returns><see cref="CreateCustomErrorPageResponse"/></returns>
+        public async Task<CreateCustomErrorPageResponse> CreateCustomErrorPage(CreateCustomErrorPageRequest req)
+        {
+             JsonResponseModel<CreateCustomErrorPageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomErrorPage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomErrorPageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a custom error page.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomErrorPageRequest"/></param>
+        /// <returns><see cref="CreateCustomErrorPageResponse"/></returns>
+        public CreateCustomErrorPageResponse CreateCustomErrorPageSync(CreateCustomErrorPageRequest req)
+        {
+             JsonResponseModel<CreateCustomErrorPageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomErrorPage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomErrorPageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a DNS record.
         /// </summary>
         /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "CreateLoadBalancing");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an origin group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
+        /// <returns><see cref="CreateOriginGroupResponse"/></returns>
+        public async Task<CreateOriginGroupResponse> CreateOriginGroup(CreateOriginGroupRequest req)
+        {
+             JsonResponseModel<CreateOriginGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOriginGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an origin group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
+        /// <returns><see cref="CreateOriginGroupResponse"/></returns>
+        public CreateOriginGroupResponse CreateOriginGroupSync(CreateOriginGroupRequest req)
+        {
+             JsonResponseModel<CreateOriginGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOriginGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOriginGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,6 +653,46 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// This API is used to delete an origin group.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
+        /// <returns><see cref="DeleteOriginGroupResponse"/></returns>
+        public async Task<DeleteOriginGroupResponse> DeleteOriginGroup(DeleteOriginGroupRequest req)
+        {
+             JsonResponseModel<DeleteOriginGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteOriginGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an origin group.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
+        /// <returns><see cref="DeleteOriginGroupResponse"/></returns>
+        public DeleteOriginGroupResponse DeleteOriginGroupSync(DeleteOriginGroupRequest req)
+        {
+             JsonResponseModel<DeleteOriginGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOriginGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a site.
         /// </summary>
         /// <param name="req"><see cref="DeleteZoneRequest"/></param>
@@ -693,6 +813,86 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// This API is used to query bot attack logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotLogRequest"/></param>
+        /// <returns><see cref="DescribeBotLogResponse"/></returns>
+        public async Task<DescribeBotLogResponse> DescribeBotLog(DescribeBotLogRequest req)
+        {
+             JsonResponseModel<DescribeBotLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBotLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBotLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query bot attack logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotLogRequest"/></param>
+        /// <returns><see cref="DescribeBotLogResponse"/></returns>
+        public DescribeBotLogResponse DescribeBotLogSync(DescribeBotLogRequest req)
+        {
+             JsonResponseModel<DescribeBotLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBotLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBotLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query bot managed rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotManagedRulesRequest"/></param>
+        /// <returns><see cref="DescribeBotManagedRulesResponse"/></returns>
+        public async Task<DescribeBotManagedRulesResponse> DescribeBotManagedRules(DescribeBotManagedRulesRequest req)
+        {
+             JsonResponseModel<DescribeBotManagedRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBotManagedRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBotManagedRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query bot managed rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotManagedRulesRequest"/></param>
+        /// <returns><see cref="DescribeBotManagedRulesResponse"/></returns>
+        public DescribeBotManagedRulesResponse DescribeBotManagedRulesSync(DescribeBotManagedRulesRequest req)
+        {
+             JsonResponseModel<DescribeBotManagedRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBotManagedRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBotManagedRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the CNAME status of a domain name.
         /// </summary>
         /// <param name="req"><see cref="DescribeCnameStatusRequest"/></param>
@@ -724,6 +924,286 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCnameStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCnameStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the DDoS protection configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSPolicyRequest"/></param>
+        /// <returns><see cref="DescribeDDoSPolicyResponse"/></returns>
+        public async Task<DescribeDDoSPolicyResponse> DescribeDDoSPolicy(DescribeDDoSPolicyRequest req)
+        {
+             JsonResponseModel<DescribeDDoSPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the DDoS protection configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSPolicyRequest"/></param>
+        /// <returns><see cref="DescribeDDoSPolicyResponse"/></returns>
+        public DescribeDDoSPolicyResponse DescribeDDoSPolicySync(DescribeDDoSPolicyRequest req)
+        {
+             JsonResponseModel<DescribeDDoSPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDoSPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the DDoS attack data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackDataRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackDataResponse"/></returns>
+        public async Task<DescribeDDosAttackDataResponse> DescribeDDosAttackData(DescribeDDosAttackDataRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDosAttackData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the DDoS attack data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackDataRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackDataResponse"/></returns>
+        public DescribeDDosAttackDataResponse DescribeDDosAttackDataSync(DescribeDDosAttackDataRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDosAttackData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query DDoS attack events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackEventRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackEventResponse"/></returns>
+        public async Task<DescribeDDosAttackEventResponse> DescribeDDosAttackEvent(DescribeDDosAttackEventRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDosAttackEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query DDoS attack events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackEventRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackEventResponse"/></returns>
+        public DescribeDDosAttackEventResponse DescribeDDosAttackEventSync(DescribeDDosAttackEventRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDosAttackEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query DDoS attack event details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackEventDetailRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackEventDetailResponse"/></returns>
+        public async Task<DescribeDDosAttackEventDetailResponse> DescribeDDosAttackEventDetail(DescribeDDosAttackEventDetailRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackEventDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDosAttackEventDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackEventDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query DDoS attack event details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackEventDetailRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackEventDetailResponse"/></returns>
+        public DescribeDDosAttackEventDetailResponse DescribeDDosAttackEventDetailSync(DescribeDDosAttackEventDetailRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackEventDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDosAttackEventDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackEventDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query DDoS attack sources.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackSourceEventRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackSourceEventResponse"/></returns>
+        public async Task<DescribeDDosAttackSourceEventResponse> DescribeDDosAttackSourceEvent(DescribeDDosAttackSourceEventRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackSourceEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDosAttackSourceEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackSourceEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query DDoS attack sources.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackSourceEventRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackSourceEventResponse"/></returns>
+        public DescribeDDosAttackSourceEventResponse DescribeDDosAttackSourceEventSync(DescribeDDosAttackSourceEventRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackSourceEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDosAttackSourceEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackSourceEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the top data of DDoS attacks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackTopDataRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackTopDataResponse"/></returns>
+        public async Task<DescribeDDosAttackTopDataResponse> DescribeDDosAttackTopData(DescribeDDosAttackTopDataRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackTopDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDosAttackTopData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the top data of DDoS attacks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosAttackTopDataRequest"/></param>
+        /// <returns><see cref="DescribeDDosAttackTopDataResponse"/></returns>
+        public DescribeDDosAttackTopDataResponse DescribeDDosAttackTopDataSync(DescribeDDosAttackTopDataRequest req)
+        {
+             JsonResponseModel<DescribeDDosAttackTopDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDosAttackTopData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosAttackTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the major DDoS attack event.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosMajorAttackEventRequest"/></param>
+        /// <returns><see cref="DescribeDDosMajorAttackEventResponse"/></returns>
+        public async Task<DescribeDDosMajorAttackEventResponse> DescribeDDosMajorAttackEvent(DescribeDDosMajorAttackEventRequest req)
+        {
+             JsonResponseModel<DescribeDDosMajorAttackEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDosMajorAttackEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosMajorAttackEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the major DDoS attack event.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDosMajorAttackEventRequest"/></param>
+        /// <returns><see cref="DescribeDDosMajorAttackEventResponse"/></returns>
+        public DescribeDDosMajorAttackEventResponse DescribeDDosMajorAttackEventSync(DescribeDDosMajorAttackEventRequest req)
+        {
+             JsonResponseModel<DescribeDDosMajorAttackEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDosMajorAttackEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDosMajorAttackEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1093,6 +1573,126 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// This API is used to get the list of origin groups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginGroupRequest"/></param>
+        /// <returns><see cref="DescribeOriginGroupResponse"/></returns>
+        public async Task<DescribeOriginGroupResponse> DescribeOriginGroup(DescribeOriginGroupRequest req)
+        {
+             JsonResponseModel<DescribeOriginGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOriginGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of origin groups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginGroupRequest"/></param>
+        /// <returns><see cref="DescribeOriginGroupResponse"/></returns>
+        public DescribeOriginGroupResponse DescribeOriginGroupSync(DescribeOriginGroupRequest req)
+        {
+             JsonResponseModel<DescribeOriginGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOriginGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of the origin group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginGroupDetailRequest"/></param>
+        /// <returns><see cref="DescribeOriginGroupDetailResponse"/></returns>
+        public async Task<DescribeOriginGroupDetailResponse> DescribeOriginGroupDetail(DescribeOriginGroupDetailRequest req)
+        {
+             JsonResponseModel<DescribeOriginGroupDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOriginGroupDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginGroupDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of the origin group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginGroupDetailRequest"/></param>
+        /// <returns><see cref="DescribeOriginGroupDetailResponse"/></returns>
+        public DescribeOriginGroupDetailResponse DescribeOriginGroupDetailSync(DescribeOriginGroupDetailRequest req)
+        {
+             JsonResponseModel<DescribeOriginGroupDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOriginGroupDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginGroupDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the layer-7 time series traffic data for monitoring.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
+        /// <returns><see cref="DescribeOverviewL7DataResponse"/></returns>
+        public async Task<DescribeOverviewL7DataResponse> DescribeOverviewL7Data(DescribeOverviewL7DataRequest req)
+        {
+             JsonResponseModel<DescribeOverviewL7DataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOverviewL7Data");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewL7DataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the layer-7 time series traffic data for monitoring.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
+        /// <returns><see cref="DescribeOverviewL7DataResponse"/></returns>
+        public DescribeOverviewL7DataResponse DescribeOverviewL7DataSync(DescribeOverviewL7DataRequest req)
+        {
+             JsonResponseModel<DescribeOverviewL7DataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOverviewL7Data");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewL7DataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the pre-warming task status.
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
@@ -1164,6 +1764,766 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "DescribePurgeTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePurgeTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security protection configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
+        public async Task<DescribeSecurityPolicyResponse> DescribeSecurityPolicy(DescribeSecurityPolicyRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security protection configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
+        public DescribeSecurityPolicyResponse DescribeSecurityPolicySync(DescribeSecurityPolicyRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all protected subdomain names.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyListResponse"/></returns>
+        public async Task<DescribeSecurityPolicyListResponse> DescribeSecurityPolicyList(DescribeSecurityPolicyListRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityPolicyList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all protected subdomain names.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyListResponse"/></returns>
+        public DescribeSecurityPolicyListResponse DescribeSecurityPolicyListSync(DescribeSecurityPolicyListRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityPolicyList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query managed rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyManagedRulesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyManagedRulesResponse"/></returns>
+        public async Task<DescribeSecurityPolicyManagedRulesResponse> DescribeSecurityPolicyManagedRules(DescribeSecurityPolicyManagedRulesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyManagedRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityPolicyManagedRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyManagedRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query managed rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyManagedRulesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyManagedRulesResponse"/></returns>
+        public DescribeSecurityPolicyManagedRulesResponse DescribeSecurityPolicyManagedRulesSync(DescribeSecurityPolicyManagedRulesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyManagedRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityPolicyManagedRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyManagedRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a managed rule by rule ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyManagedRulesIdRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyManagedRulesIdResponse"/></returns>
+        public async Task<DescribeSecurityPolicyManagedRulesIdResponse> DescribeSecurityPolicyManagedRulesId(DescribeSecurityPolicyManagedRulesIdRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyManagedRulesIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityPolicyManagedRulesId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyManagedRulesIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a managed rule by rule ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyManagedRulesIdRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyManagedRulesIdResponse"/></returns>
+        public DescribeSecurityPolicyManagedRulesIdResponse DescribeSecurityPolicyManagedRulesIdSync(DescribeSecurityPolicyManagedRulesIdRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyManagedRulesIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityPolicyManagedRulesId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyManagedRulesIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query information of all regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyRegionsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyRegionsResponse"/></returns>
+        public async Task<DescribeSecurityPolicyRegionsResponse> DescribeSecurityPolicyRegions(DescribeSecurityPolicyRegionsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityPolicyRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query information of all regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyRegionsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyRegionsResponse"/></returns>
+        public DescribeSecurityPolicyRegionsResponse DescribeSecurityPolicyRegionsSync(DescribeSecurityPolicyRegionsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPolicyRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityPolicyRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPolicyRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query user profiling rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPortraitRulesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPortraitRulesResponse"/></returns>
+        public async Task<DescribeSecurityPortraitRulesResponse> DescribeSecurityPortraitRules(DescribeSecurityPortraitRulesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPortraitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityPortraitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPortraitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query user profiling rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPortraitRulesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPortraitRulesResponse"/></returns>
+        public DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRulesSync(DescribeSecurityPortraitRulesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPortraitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityPortraitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPortraitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the layer-4 time series traffic data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL4DataResponse"/></returns>
+        public async Task<DescribeTimingL4DataResponse> DescribeTimingL4Data(DescribeTimingL4DataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL4DataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimingL4Data");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL4DataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the layer-4 time series traffic data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL4DataResponse"/></returns>
+        public DescribeTimingL4DataResponse DescribeTimingL4DataSync(DescribeTimingL4DataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL4DataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimingL4Data");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL4DataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the layer-7 time series traffic data for data analysis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
+        public async Task<DescribeTimingL7AnalysisDataResponse> DescribeTimingL7AnalysisData(DescribeTimingL7AnalysisDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7AnalysisDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimingL7AnalysisData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7AnalysisDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the layer-7 time series traffic data for data analysis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
+        public DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisDataSync(DescribeTimingL7AnalysisDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7AnalysisDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimingL7AnalysisData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7AnalysisDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query time-series L7 cached data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
+        public async Task<DescribeTimingL7CacheDataResponse> DescribeTimingL7CacheData(DescribeTimingL7CacheDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7CacheDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimingL7CacheData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7CacheDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query time-series L7 cached data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
+        public DescribeTimingL7CacheDataResponse DescribeTimingL7CacheDataSync(DescribeTimingL7CacheDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7CacheDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimingL7CacheData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7CacheDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the top traffic data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTopL7AnalysisDataResponse"/></returns>
+        public async Task<DescribeTopL7AnalysisDataResponse> DescribeTopL7AnalysisData(DescribeTopL7AnalysisDataRequest req)
+        {
+             JsonResponseModel<DescribeTopL7AnalysisDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopL7AnalysisData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopL7AnalysisDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the top traffic data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTopL7AnalysisDataResponse"/></returns>
+        public DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisDataSync(DescribeTopL7AnalysisDataRequest req)
+        {
+             JsonResponseModel<DescribeTopL7AnalysisDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopL7AnalysisData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopL7AnalysisDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the top-ranked L7 cached data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
+        /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
+        public async Task<DescribeTopL7CacheDataResponse> DescribeTopL7CacheData(DescribeTopL7CacheDataRequest req)
+        {
+             JsonResponseModel<DescribeTopL7CacheDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopL7CacheData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopL7CacheDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the top-ranked L7 cached data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
+        /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
+        public DescribeTopL7CacheDataResponse DescribeTopL7CacheDataSync(DescribeTopL7CacheDataRequest req)
+        {
+             JsonResponseModel<DescribeTopL7CacheDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopL7CacheData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopL7CacheDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query web hosting attack events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebManagedRulesAttackEventsRequest"/></param>
+        /// <returns><see cref="DescribeWebManagedRulesAttackEventsResponse"/></returns>
+        public async Task<DescribeWebManagedRulesAttackEventsResponse> DescribeWebManagedRulesAttackEvents(DescribeWebManagedRulesAttackEventsRequest req)
+        {
+             JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebManagedRulesAttackEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query web hosting attack events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebManagedRulesAttackEventsRequest"/></param>
+        /// <returns><see cref="DescribeWebManagedRulesAttackEventsResponse"/></returns>
+        public DescribeWebManagedRulesAttackEventsResponse DescribeWebManagedRulesAttackEventsSync(DescribeWebManagedRulesAttackEventsRequest req)
+        {
+             JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebManagedRulesAttackEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebManagedRulesAttackEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the web hosting rule data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebManagedRulesDataRequest"/></param>
+        /// <returns><see cref="DescribeWebManagedRulesDataResponse"/></returns>
+        public async Task<DescribeWebManagedRulesDataResponse> DescribeWebManagedRulesData(DescribeWebManagedRulesDataRequest req)
+        {
+             JsonResponseModel<DescribeWebManagedRulesDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebManagedRulesData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebManagedRulesDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the web hosting rule data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebManagedRulesDataRequest"/></param>
+        /// <returns><see cref="DescribeWebManagedRulesDataResponse"/></returns>
+        public DescribeWebManagedRulesDataResponse DescribeWebManagedRulesDataSync(DescribeWebManagedRulesDataRequest req)
+        {
+             JsonResponseModel<DescribeWebManagedRulesDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebManagedRulesData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebManagedRulesDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query web hosting logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebManagedRulesLogRequest"/></param>
+        /// <returns><see cref="DescribeWebManagedRulesLogResponse"/></returns>
+        public async Task<DescribeWebManagedRulesLogResponse> DescribeWebManagedRulesLog(DescribeWebManagedRulesLogRequest req)
+        {
+             JsonResponseModel<DescribeWebManagedRulesLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebManagedRulesLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebManagedRulesLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query web hosting logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebManagedRulesLogRequest"/></param>
+        /// <returns><see cref="DescribeWebManagedRulesLogResponse"/></returns>
+        public DescribeWebManagedRulesLogResponse DescribeWebManagedRulesLogSync(DescribeWebManagedRulesLogRequest req)
+        {
+             JsonResponseModel<DescribeWebManagedRulesLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebManagedRulesLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebManagedRulesLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the top data of web hosting rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebManagedRulesTopDataRequest"/></param>
+        /// <returns><see cref="DescribeWebManagedRulesTopDataResponse"/></returns>
+        public async Task<DescribeWebManagedRulesTopDataResponse> DescribeWebManagedRulesTopData(DescribeWebManagedRulesTopDataRequest req)
+        {
+             JsonResponseModel<DescribeWebManagedRulesTopDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebManagedRulesTopData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebManagedRulesTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the top data of web hosting rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebManagedRulesTopDataRequest"/></param>
+        /// <returns><see cref="DescribeWebManagedRulesTopDataResponse"/></returns>
+        public DescribeWebManagedRulesTopDataResponse DescribeWebManagedRulesTopDataSync(DescribeWebManagedRulesTopDataRequest req)
+        {
+             JsonResponseModel<DescribeWebManagedRulesTopDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebManagedRulesTopData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebManagedRulesTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query web attack events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebProtectionAttackEventsRequest"/></param>
+        /// <returns><see cref="DescribeWebProtectionAttackEventsResponse"/></returns>
+        public async Task<DescribeWebProtectionAttackEventsResponse> DescribeWebProtectionAttackEvents(DescribeWebProtectionAttackEventsRequest req)
+        {
+             JsonResponseModel<DescribeWebProtectionAttackEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebProtectionAttackEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebProtectionAttackEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query web attack events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebProtectionAttackEventsRequest"/></param>
+        /// <returns><see cref="DescribeWebProtectionAttackEventsResponse"/></returns>
+        public DescribeWebProtectionAttackEventsResponse DescribeWebProtectionAttackEventsSync(DescribeWebProtectionAttackEventsRequest req)
+        {
+             JsonResponseModel<DescribeWebProtectionAttackEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebProtectionAttackEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebProtectionAttackEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the web protection data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebProtectionDataRequest"/></param>
+        /// <returns><see cref="DescribeWebProtectionDataResponse"/></returns>
+        public async Task<DescribeWebProtectionDataResponse> DescribeWebProtectionData(DescribeWebProtectionDataRequest req)
+        {
+             JsonResponseModel<DescribeWebProtectionDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebProtectionData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebProtectionDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the web protection data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebProtectionDataRequest"/></param>
+        /// <returns><see cref="DescribeWebProtectionDataResponse"/></returns>
+        public DescribeWebProtectionDataResponse DescribeWebProtectionDataSync(DescribeWebProtectionDataRequest req)
+        {
+             JsonResponseModel<DescribeWebProtectionDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebProtectionData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebProtectionDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query web protection logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebProtectionLogRequest"/></param>
+        /// <returns><see cref="DescribeWebProtectionLogResponse"/></returns>
+        public async Task<DescribeWebProtectionLogResponse> DescribeWebProtectionLog(DescribeWebProtectionLogRequest req)
+        {
+             JsonResponseModel<DescribeWebProtectionLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebProtectionLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebProtectionLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query web protection logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebProtectionLogRequest"/></param>
+        /// <returns><see cref="DescribeWebProtectionLogResponse"/></returns>
+        public DescribeWebProtectionLogResponse DescribeWebProtectionLogSync(DescribeWebProtectionLogRequest req)
+        {
+             JsonResponseModel<DescribeWebProtectionLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebProtectionLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebProtectionLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all DDoS mitigation configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneDDoSPolicyRequest"/></param>
+        /// <returns><see cref="DescribeZoneDDoSPolicyResponse"/></returns>
+        public async Task<DescribeZoneDDoSPolicyResponse> DescribeZoneDDoSPolicy(DescribeZoneDDoSPolicyRequest req)
+        {
+             JsonResponseModel<DescribeZoneDDoSPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZoneDDoSPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneDDoSPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all DDoS mitigation configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneDDoSPolicyRequest"/></param>
+        /// <returns><see cref="DescribeZoneDDoSPolicyResponse"/></returns>
+        public DescribeZoneDDoSPolicyResponse DescribeZoneDDoSPolicySync(DescribeZoneDDoSPolicyRequest req)
+        {
+             JsonResponseModel<DescribeZoneDDoSPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeZoneDDoSPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneDDoSPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1573,6 +2933,86 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// This API is used to modify DDoS mitigation configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSPolicyRequest"/></param>
+        /// <returns><see cref="ModifyDDoSPolicyResponse"/></returns>
+        public async Task<ModifyDDoSPolicyResponse> ModifyDDoSPolicy(ModifyDDoSPolicyRequest req)
+        {
+             JsonResponseModel<ModifyDDoSPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDDoSPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify DDoS mitigation configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSPolicyRequest"/></param>
+        /// <returns><see cref="ModifyDDoSPolicyResponse"/></returns>
+        public ModifyDDoSPolicyResponse ModifyDDoSPolicySync(ModifyDDoSPolicyRequest req)
+        {
+             JsonResponseModel<ModifyDDoSPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDDoSPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable high availability for domain names.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSPolicyHostRequest"/></param>
+        /// <returns><see cref="ModifyDDoSPolicyHostResponse"/></returns>
+        public async Task<ModifyDDoSPolicyHostResponse> ModifyDDoSPolicyHost(ModifyDDoSPolicyHostRequest req)
+        {
+             JsonResponseModel<ModifyDDoSPolicyHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDDoSPolicyHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSPolicyHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable high availability for domain names.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSPolicyHostRequest"/></param>
+        /// <returns><see cref="ModifyDDoSPolicyHostResponse"/></returns>
+        public ModifyDDoSPolicyHostResponse ModifyDDoSPolicyHostSync(ModifyDDoSPolicyHostRequest req)
+        {
+             JsonResponseModel<ModifyDDoSPolicyHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDDoSPolicyHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSPolicyHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the status of a default certificate.
         /// </summary>
         /// <param name="req"><see cref="ModifyDefaultCertificateRequest"/></param>
@@ -1804,6 +3244,86 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLoadBalancingStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an origin group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
+        /// <returns><see cref="ModifyOriginGroupResponse"/></returns>
+        public async Task<ModifyOriginGroupResponse> ModifyOriginGroup(ModifyOriginGroupRequest req)
+        {
+             JsonResponseModel<ModifyOriginGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyOriginGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an origin group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
+        /// <returns><see cref="ModifyOriginGroupResponse"/></returns>
+        public ModifyOriginGroupResponse ModifyOriginGroupSync(ModifyOriginGroupRequest req)
+        {
+             JsonResponseModel<ModifyOriginGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyOriginGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the web and bot security configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityPolicyRequest"/></param>
+        /// <returns><see cref="ModifySecurityPolicyResponse"/></returns>
+        public async Task<ModifySecurityPolicyResponse> ModifySecurityPolicy(ModifySecurityPolicyRequest req)
+        {
+             JsonResponseModel<ModifySecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the web and bot security configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityPolicyRequest"/></param>
+        /// <returns><see cref="ModifySecurityPolicyResponse"/></returns>
+        public ModifySecurityPolicyResponse ModifySecurityPolicySync(ModifySecurityPolicyRequest req)
+        {
+             JsonResponseModel<ModifySecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

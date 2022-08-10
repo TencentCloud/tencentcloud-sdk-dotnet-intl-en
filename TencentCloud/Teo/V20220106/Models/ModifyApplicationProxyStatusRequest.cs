@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Layer-4 proxy ID
+        /// ID of the proxy
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }

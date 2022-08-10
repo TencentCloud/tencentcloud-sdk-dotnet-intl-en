@@ -113,11 +113,11 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Cname{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-        /// - `lb`: Load balancing.
-        /// - `security`: Security protection.
-        /// - `l4`: Layer-4 proxy.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Which service is enabled for the domain name.
+        /// - `lb`: Load balancing
+        /// - `security`: Security acceleration
+        /// - `l4`: L4 proxy
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DomainStatus")]
         public string[] DomainStatus{ get; set; }

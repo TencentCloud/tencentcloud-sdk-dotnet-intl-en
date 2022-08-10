@@ -54,6 +54,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Policy")]
         public CCReqLimitPolicyRecord Policy{ get; set; }
 
+        /// <summary>
+        /// Whether it’s a global CC frequency limit
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public long? IsGlobal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamObj(map, prefix + "Policy.", this.Policy);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         }
     }
 }

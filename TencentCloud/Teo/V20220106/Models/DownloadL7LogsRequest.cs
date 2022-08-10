@@ -49,13 +49,13 @@ namespace TencentCloud.Teo.V20220106.Models
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// List of sites
+        /// Array of site names
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// List of domain names
+        /// Array of subdomain names
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

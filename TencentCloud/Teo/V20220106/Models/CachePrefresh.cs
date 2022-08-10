@@ -25,13 +25,14 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 
+        /// Configuration switch
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cache prefresh percentage. Values: 1-99
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }

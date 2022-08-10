@@ -59,19 +59,19 @@ namespace TencentCloud.Teo.V20220106.Models
         /// <summary>
         /// Origin server type. Valid values:
         /// `custom`: Specified origins
-        /// `origins`: An origin group
-        /// `load_balancing`: A load balancer
+        /// `origins`: Origin group
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Origin server information.
-        /// When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-        /// IP:Port
-        /// Domain name: Port
-        /// When `OriginType=origins`, it indicates the origin group ID.
-        ///  
+        /// Origin server information:
+        /// When `OriginType=custom`, it indicates one or more origin servers. Example:
+        /// OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+        /// OriginValue=["test.com:80"]
+        /// 
+        /// When `OriginType=origins`, it indicates an origin group ID. Example:
+        /// OriginValue=["origin-xxx"]
         /// </summary>
         [JsonProperty("OriginValue")]
         public string[] OriginValue{ get; set; }

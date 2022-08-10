@@ -31,7 +31,9 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Name of the proxy:
+        /// Domain name or subdomain name when `ProxyType=hostname`
+        /// Instance name when `ProxyType=instance`
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
@@ -115,14 +117,16 @@ namespace TencentCloud.Teo.V20220106.Models
 
         /// <summary>
         /// Specifies how a layer-4 proxy is created.
-        /// `hostname`: Subdomain name
-        /// `instance`: Instance
+        /// `hostname`: Create by subdomain name
+        /// `instance`: Create by instance
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }
 
         /// <summary>
-        /// ID of the layer-7 domain name
+        /// When `ProxyType=hostname`:
+        /// `ProxyName` indicates a specified domain name, such as test.123.com
+        /// `HostId` indicates a unique ID of the domain name.
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
