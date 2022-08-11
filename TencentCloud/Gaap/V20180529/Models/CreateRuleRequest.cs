@@ -91,6 +91,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ServerNameIndication")]
         public string ServerNameIndication{ get; set; }
 
+        /// <summary>
+        /// Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+        /// </summary>
+        [JsonProperty("ForcedRedirect")]
+        public string ForcedRedirect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
             this.SetParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
             this.SetParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
+            this.SetParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
         }
     }
 }

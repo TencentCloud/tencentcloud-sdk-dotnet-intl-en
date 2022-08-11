@@ -15,32 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Eb.V20210416.Models
+namespace TencentCloud.Ciam.V20220331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEventBusRequest : AbstractModel
+    public class ListUserRequest : AbstractModel
     {
         
         /// <summary>
-        /// Event bus ID
+        /// User directory ID
         /// </summary>
-        [JsonProperty("EventBusId")]
-        public string EventBusId{ get; set; }
+        [JsonProperty("UserStoreId")]
+        public string UserStoreId{ get; set; }
 
         /// <summary>
-        /// Event bus description, which can contain up to 200 characters of any type.
+        /// Pagination data
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Pageable")]
+        public Pageable Pageable{ get; set; }
 
         /// <summary>
-        /// Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+        /// Valid values of `Key`: `condition`, `userGroupId`.
+        /// 
+        /// <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
+        /// <li> **userGroupId** </li>	Values = User group ID
         /// </summary>
-        [JsonProperty("EventBusName")]
-        public string EventBusName{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Original")]
+        public bool? Original{ get; set; }
 
 
         /// <summary>
@@ -48,9 +57,10 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
+            this.SetParamSimple(map, prefix + "UserStoreId", this.UserStoreId);
+            this.SetParamObj(map, prefix + "Pageable.", this.Pageable);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Original", this.Original);
         }
     }
 }

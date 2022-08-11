@@ -115,6 +115,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ServerNameIndication")]
         public string ServerNameIndication{ get; set; }
 
+        /// <summary>
+        /// Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ForcedRedirect")]
+        public string ForcedRedirect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +142,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
             this.SetParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
             this.SetParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
+            this.SetParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
         }
     }
 }

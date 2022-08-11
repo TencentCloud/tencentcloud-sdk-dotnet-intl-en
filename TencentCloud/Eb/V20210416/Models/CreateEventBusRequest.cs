@@ -25,13 +25,13 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+        /// Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
         /// </summary>
         [JsonProperty("EventBusName")]
         public string EventBusName{ get; set; }
 
         /// <summary>
-        /// Event bus description, which can contain up to 200 characters of any type
+        /// Event bus description, which can contain up to 200 characters of any type.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

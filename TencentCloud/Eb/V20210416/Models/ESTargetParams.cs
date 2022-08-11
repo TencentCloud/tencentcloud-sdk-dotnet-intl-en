@@ -21,44 +21,44 @@ namespace TencentCloud.Eb.V20210416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateConnectionRequest : AbstractModel
+    public class ESTargetParams : AbstractModel
     {
         
         /// <summary>
-        /// Connector description
+        /// Network connection type
         /// </summary>
-        [JsonProperty("ConnectionDescription")]
-        public ConnectionDescription ConnectionDescription{ get; set; }
+        [JsonProperty("NetMode")]
+        public string NetMode{ get; set; }
 
         /// <summary>
-        /// Event bus ID
+        /// Index prefix
         /// </summary>
-        [JsonProperty("EventBusId")]
-        public string EventBusId{ get; set; }
+        [JsonProperty("IndexPrefix")]
+        public string IndexPrefix{ get; set; }
 
         /// <summary>
-        /// Connector name
+        /// ES log rotation interval
         /// </summary>
-        [JsonProperty("ConnectionName")]
-        public string ConnectionName{ get; set; }
+        [JsonProperty("RotationInterval")]
+        public string RotationInterval{ get; set; }
 
         /// <summary>
-        /// Description
+        /// DTS event configuration
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("OutputMode")]
+        public string OutputMode{ get; set; }
 
         /// <summary>
-        /// Whether to enable
+        /// DTS indexing configuration
         /// </summary>
-        [JsonProperty("Enable")]
-        public bool? Enable{ get; set; }
+        [JsonProperty("IndexSuffixMode")]
+        public string IndexSuffixMode{ get; set; }
 
         /// <summary>
-        /// Type of the connector
+        /// ES template type
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("IndexTemplateType")]
+        public string IndexTemplateType{ get; set; }
 
 
         /// <summary>
@@ -66,12 +66,12 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ConnectionDescription.", this.ConnectionDescription);
-            this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
-            this.SetParamSimple(map, prefix + "ConnectionName", this.ConnectionName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "Enable", this.Enable);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "NetMode", this.NetMode);
+            this.SetParamSimple(map, prefix + "IndexPrefix", this.IndexPrefix);
+            this.SetParamSimple(map, prefix + "RotationInterval", this.RotationInterval);
+            this.SetParamSimple(map, prefix + "OutputMode", this.OutputMode);
+            this.SetParamSimple(map, prefix + "IndexSuffixMode", this.IndexSuffixMode);
+            this.SetParamSimple(map, prefix + "IndexTemplateType", this.IndexTemplateType);
         }
     }
 }

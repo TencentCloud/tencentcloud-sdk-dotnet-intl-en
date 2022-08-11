@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Eb.V20210416.Models
+namespace TencentCloud.Ciam.V20220331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEventBusRequest : AbstractModel
+    public class DescribeUserByIdRequest : AbstractModel
     {
         
         /// <summary>
-        /// Event bus ID
+        /// User directory ID
         /// </summary>
-        [JsonProperty("EventBusId")]
-        public string EventBusId{ get; set; }
+        [JsonProperty("UserStoreId")]
+        public string UserStoreId{ get; set; }
 
         /// <summary>
-        /// Event bus description, which can contain up to 200 characters of any type.
+        /// User ID
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+        /// 
         /// </summary>
-        [JsonProperty("EventBusName")]
-        public string EventBusName{ get; set; }
+        [JsonProperty("Original")]
+        public bool? Original{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
+            this.SetParamSimple(map, prefix + "UserStoreId", this.UserStoreId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Original", this.Original);
         }
     }
 }

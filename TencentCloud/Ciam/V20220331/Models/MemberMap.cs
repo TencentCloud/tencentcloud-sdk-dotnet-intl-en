@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Eb.V20210416.Models
+namespace TencentCloud.Ciam.V20220331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEventBusRequest : AbstractModel
+    public class MemberMap : AbstractModel
     {
         
         /// <summary>
-        /// Event bus ID
+        /// Key
         /// </summary>
-        [JsonProperty("EventBusId")]
-        public string EventBusId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Event bus description, which can contain up to 200 characters of any type.
+        /// Value
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
         /// <summary>
-        /// Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+        /// Type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("EventBusName")]
-        public string EventBusName{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

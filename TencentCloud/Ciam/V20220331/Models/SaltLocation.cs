@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Eb.V20210416.Models
+namespace TencentCloud.Ciam.V20220331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEventBusRequest : AbstractModel
+    public class SaltLocation : AbstractModel
     {
         
         /// <summary>
-        /// Event bus ID
+        /// Password salt type. Valid values: `HEAD`, `TAIL`, `OTHER`.
         /// </summary>
-        [JsonProperty("EventBusId")]
-        public string EventBusId{ get; set; }
+        [JsonProperty("SaltLocationTypeEnum")]
+        public string SaltLocationTypeEnum{ get; set; }
 
         /// <summary>
-        /// Event bus description, which can contain up to 200 characters of any type.
+        /// Salting rule
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
-        /// </summary>
-        [JsonProperty("EventBusName")]
-        public string EventBusName{ get; set; }
+        [JsonProperty("SaltLocationRule")]
+        public SaltLocationRule SaltLocationRule{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
+            this.SetParamSimple(map, prefix + "SaltLocationTypeEnum", this.SaltLocationTypeEnum);
+            this.SetParamObj(map, prefix + "SaltLocationRule.", this.SaltLocationRule);
         }
     }
 }

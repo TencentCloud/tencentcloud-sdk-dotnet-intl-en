@@ -345,6 +345,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// Database version
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DbVersionId")]
+        public string DbVersionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -402,6 +409,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
         }
     }
 }

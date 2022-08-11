@@ -78,6 +78,15 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
+        /// <summary>
+        /// The license type used to activate the OS after importing an image.
+        /// Valid values:
+        /// `TencentCloud`: Tencent Cloud official license
+        /// `BYOL`: Bring Your Own License
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        public string LicenseType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +102,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "Force", this.Force);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
         }
     }
 }

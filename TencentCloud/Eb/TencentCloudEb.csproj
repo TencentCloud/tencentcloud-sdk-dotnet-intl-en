@@ -76,6 +76,7 @@
     <Compile Include="V20210416\Models\DeleteTargetResponse.cs" />
     <Compile Include="V20210416\Models\DeleteTransformationRequest.cs" />
     <Compile Include="V20210416\Models\DeleteTransformationResponse.cs" />
+    <Compile Include="V20210416\Models\ESTargetParams.cs" />
     <Compile Include="V20210416\Models\EtlFilter.cs" />
     <Compile Include="V20210416\Models\EventBus.cs" />
     <Compile Include="V20210416\Models\Extraction.cs" />

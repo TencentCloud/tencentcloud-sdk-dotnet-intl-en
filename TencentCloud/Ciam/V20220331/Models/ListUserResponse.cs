@@ -15,35 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Ciam.V20220331.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateHourDBInstanceResponse : AbstractModel
+    public class ListUserResponse : AbstractModel
     {
         
         /// <summary>
-        /// Order ID, which is used for calling the `DescribeOrders` API.
-        ///  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
-        /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
-
-        /// <summary>
-        /// IDs of the instances you have purchased in this order. If no instance IDs are returned, you can query them with the `DescribeOrders` API. You can also use the `DescribeDBInstances` API to check whether an instance has been created successfully.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
-
-        /// <summary>
-        /// Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+        /// Total number
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("FlowId")]
-        public long? FlowId{ get; set; }
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
+
+        /// <summary>
+        /// Pagination object
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Pageable")]
+        public Pageable Pageable{ get; set; }
+
+        /// <summary>
+        /// List of users
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Content")]
+        public User[] Content{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -57,9 +57,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamObj(map, prefix + "Pageable.", this.Pageable);
+            this.SetParamArrayObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -173,6 +173,86 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to modify the role of an instance in a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeInstanceRoleRequest"/></param>
+        /// <returns><see cref="ChangeInstanceRoleResponse"/></returns>
+        public async Task<ChangeInstanceRoleResponse> ChangeInstanceRole(ChangeInstanceRoleRequest req)
+        {
+             JsonResponseModel<ChangeInstanceRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeInstanceRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeInstanceRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the role of an instance in a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeInstanceRoleRequest"/></param>
+        /// <returns><see cref="ChangeInstanceRoleResponse"/></returns>
+        public ChangeInstanceRoleResponse ChangeInstanceRoleSync(ChangeInstanceRoleRequest req)
+        {
+             JsonResponseModel<ChangeInstanceRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeInstanceRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeInstanceRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to switch with master instance in a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeMasterInstanceRequest"/></param>
+        /// <returns><see cref="ChangeMasterInstanceResponse"/></returns>
+        public async Task<ChangeMasterInstanceResponse> ChangeMasterInstance(ChangeMasterInstanceRequest req)
+        {
+             JsonResponseModel<ChangeMasterInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeMasterInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeMasterInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to switch with master instance in a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeMasterInstanceRequest"/></param>
+        /// <returns><see cref="ChangeMasterInstanceResponse"/></returns>
+        public ChangeMasterInstanceResponse ChangeMasterInstanceSync(ChangeMasterInstanceRequest req)
+        {
+             JsonResponseModel<ChangeMasterInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeMasterInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeMasterInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
         /// </summary>
         /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>

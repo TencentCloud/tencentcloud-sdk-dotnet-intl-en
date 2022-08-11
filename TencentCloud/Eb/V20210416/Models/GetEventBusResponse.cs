@@ -43,7 +43,7 @@ namespace TencentCloud.Eb.V20210416.Models
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
