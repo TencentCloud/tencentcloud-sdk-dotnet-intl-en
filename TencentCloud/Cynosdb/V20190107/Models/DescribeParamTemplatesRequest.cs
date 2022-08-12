@@ -15,42 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListEmailTemplatesResponse : AbstractModel
+    public class DescribeParamTemplatesRequest : AbstractModel
     {
         
-        /// <summary>
-        /// List of email templates.
-        /// </summary>
-        [JsonProperty("TemplatesMetadata")]
-        public TemplatesMetadata[] TemplatesMetadata{ get; set; }
-
-        /// <summary>
-        /// Total number of templates
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TemplatesMetadata.", this.TemplatesMetadata);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

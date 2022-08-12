@@ -853,6 +853,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to query all parameter templates information of a user-specified product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
+        public async Task<DescribeParamTemplatesResponse> DescribeParamTemplates(DescribeParamTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all parameter templates information of a user-specified product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
+        public DescribeParamTemplatesResponse DescribeParamTemplatesSync(DescribeParamTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParamTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the security group information of a project.
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
@@ -1044,6 +1084,86 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ExportInstanceSlowQueries");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportInstanceSlowQueriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the purchasable price of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateResponse"/></returns>
+        public async Task<InquirePriceCreateResponse> InquirePriceCreate(InquirePriceCreateRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the purchasable price of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateResponse"/></returns>
+        public InquirePriceCreateResponse InquirePriceCreateSync(InquirePriceCreateRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewResponse"/></returns>
+        public async Task<InquirePriceRenewResponse> InquirePriceRenew(InquirePriceRenewRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewResponse"/></returns>
+        public InquirePriceRenewResponse InquirePriceRenewSync(InquirePriceRenewRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

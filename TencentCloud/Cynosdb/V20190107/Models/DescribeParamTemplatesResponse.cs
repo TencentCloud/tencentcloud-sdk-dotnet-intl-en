@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetEmailTemplateResponse : AbstractModel
+    public class DescribeParamTemplatesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Template content.
+        /// Number of parameter templates
         /// </summary>
-        [JsonProperty("TemplateContent")]
-        public TemplateContent TemplateContent{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+        /// Parameter template information
         /// </summary>
-        [JsonProperty("TemplateStatus")]
-        public ulong? TemplateStatus{ get; set; }
+        [JsonProperty("Items")]
+        public ParamTemplateListInfo[] Items{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +48,8 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
-            this.SetParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

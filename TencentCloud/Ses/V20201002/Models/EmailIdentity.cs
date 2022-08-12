@@ -42,6 +42,18 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("SendingEnabled")]
         public bool? SendingEnabled{ get; set; }
 
+        /// <summary>
+        /// Current reputation level
+        /// </summary>
+        [JsonProperty("CurrentReputationLevel")]
+        public ulong? CurrentReputationLevel{ get; set; }
+
+        /// <summary>
+        /// Maximum number of messages sent per day
+        /// </summary>
+        [JsonProperty("DailyQuota")]
+        public ulong? DailyQuota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "IdentityName", this.IdentityName);
             this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
             this.SetParamSimple(map, prefix + "SendingEnabled", this.SendingEnabled);
+            this.SetParamSimple(map, prefix + "CurrentReputationLevel", this.CurrentReputationLevel);
+            this.SetParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
         }
     }
 }

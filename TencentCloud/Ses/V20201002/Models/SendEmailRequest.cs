@@ -45,7 +45,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string Subject{ get; set; }
 
         /// <summary>
-        /// Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+        /// Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
@@ -57,7 +57,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public Template Template{ get; set; }
 
         /// <summary>
-        /// Email content when sending emails by calling the API.
+        /// Disused
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }

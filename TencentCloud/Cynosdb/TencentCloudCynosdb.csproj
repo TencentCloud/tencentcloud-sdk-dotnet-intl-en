@@ -96,6 +96,8 @@
     <Compile Include="V20190107\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeMaintainPeriodRequest.cs" />
     <Compile Include="V20190107\Models\DescribeMaintainPeriodResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeParamTemplatesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeParamTemplatesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeResourcesByDealNameRequest.cs" />
@@ -106,6 +108,10 @@
     <Compile Include="V20190107\Models\DescribeRollbackTimeValidityResponse.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesRequest.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesResponse.cs" />
+    <Compile Include="V20190107\Models\InquirePriceCreateRequest.cs" />
+    <Compile Include="V20190107\Models\InquirePriceCreateResponse.cs" />
+    <Compile Include="V20190107\Models\InquirePriceRenewRequest.cs" />
+    <Compile Include="V20190107\Models\InquirePriceRenewResponse.cs" />
     <Compile Include="V20190107\Models\InstanceSpec.cs" />
     <Compile Include="V20190107\Models\IsolateClusterRequest.cs" />
     <Compile Include="V20190107\Models\IsolateClusterResponse.cs" />
@@ -133,6 +139,7 @@
     <Compile Include="V20190107\Models\OfflineInstanceRequest.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ParamItem.cs" />
+    <Compile Include="V20190107\Models\ParamTemplateListInfo.cs" />
     <Compile Include="V20190107\Models\PauseServerlessRequest.cs" />
     <Compile Include="V20190107\Models\PauseServerlessResponse.cs" />
     <Compile Include="V20190107\Models\PolicyRule.cs" />
@@ -144,6 +151,7 @@
     <Compile Include="V20190107\Models\SetRenewFlagResponse.cs" />
     <Compile Include="V20190107\Models\SlowQueriesItem.cs" />
     <Compile Include="V20190107\Models\Tag.cs" />
+    <Compile Include="V20190107\Models\TradePrice.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceResponse.cs" />
   </ItemGroup>

@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// `MessageId` field returned by the `SendEmail` API
+        /// The `MessageId` field returned by the `SendEmail` API
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }
@@ -43,40 +43,40 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// Tencent Cloud processing status:
-        /// 0: successful.
-        /// 1001: internal system exception.
-        /// 1002: internal system exception.
-        /// 1003: internal system exception.
-        /// 1003: internal system exception.
-        /// 1004: email sending timeout.
-        /// 1005: internal system exception.
-        /// 1006: you have sent too many emails to the same address in a short period.
-        /// 1007: the email address is in the blocklist.
-        /// 1009: internal system exception.
-        /// 1010: daily email sending limit exceeded.
-        /// 1011: no permission to send custom content. Use a template.
-        /// 2001: no results found.
-        /// 3007: invalid template ID or unavailable template.
-        /// 3008: template status exception.
-        /// 3009: no permission to use this template.
-        /// 3010: the format of the `TemplateData` field is incorrect. 
-        /// 3014: unable to send the email because the sender domain is not verified.
-        /// 3020: the recipient email address is in the blocklist.
-        /// 3024: failed to pre-check the email address format.
-        /// 3030: email sending is restricted temporarily due to high bounce rate.
-        /// 3033: the account has insufficient balance or overdue payment.
+        /// Tencent Cloud processing status
+        /// 0: Successful.
+        /// 1001: Internal system exception.
+        /// 1002: Internal system exception.
+        /// 1003: Internal system exception.
+        /// 1003: Internal system exception.
+        /// 1004: Email sending timed out.
+        /// 1005: Internal system exception.
+        /// 1006: You have sent too many emails to the same address in a short period.
+        /// 1007: The email address is in the blocklist.
+        /// 1009: Internal system exception.
+        /// 1010: The daily email sending limit is exceeded.
+        /// 1011: You have no permission to send custom content. Use a template.
+        /// 2001: No results were found.
+        /// 3007: The template ID is invalid or the template is unavailable.
+        /// 3008: Template status exception.
+        /// 3009: You have no permission to use this template.
+        /// 3010: The format of the `TemplateData` field is incorrect. 
+        /// 3014: The email cannot be sent because the sender domain is not verified.
+        /// 3020: The recipient email address is in the blocklist.
+        /// 3024: Failed to precheck the email address format.
+        /// 3030: Email sending is restricted temporarily due to high bounce rate.
+        /// 3033: The account has insufficient balance or overdue payment.
         /// </summary>
         [JsonProperty("SendStatus")]
         public long? SendStatus{ get; set; }
 
         /// <summary>
-        /// Recipient processing status:
+        /// Recipient processing status
         /// 0: Tencent Cloud has accepted the request and added it to the send queue.
-        /// 1: the email is delivered successfully, `DeliverTime` indicates the time when the email is delivered successfully.
-        /// 2: the email is discarded. `DeliverMessage` indicates the reason for discarding.
-        /// 3: the recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
-        /// 8: the email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
+        /// 1: The email is delivered successfully. `DeliverTime` indicates the time when the email is delivered successfully.
+        /// 2: The email is discarded. `DeliverMessage` indicates the reason for discarding.
+        /// 3: The recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
+        /// 8: The email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
         /// </summary>
         [JsonProperty("DeliverStatus")]
         public long? DeliverStatus{ get; set; }
@@ -112,7 +112,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public bool? UserClicked{ get; set; }
 
         /// <summary>
-        /// Whether the recipient has unsubscribed from emails sent by the sender
+        /// Whether the recipient has unsubscribed from the email sent by the sender
         /// </summary>
         [JsonProperty("UserUnsubscribed")]
         public bool? UserUnsubscribed{ get; set; }

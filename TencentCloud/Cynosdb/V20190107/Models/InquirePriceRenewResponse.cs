@@ -15,26 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetEmailTemplateResponse : AbstractModel
+    public class InquirePriceRenewResponse : AbstractModel
     {
         
         /// <summary>
-        /// Template content.
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("TemplateContent")]
-        public TemplateContent TemplateContent{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+        /// Instance ID list
         /// </summary>
-        [JsonProperty("TemplateStatus")]
-        public ulong? TemplateStatus{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
+        /// Price of instance specification in array
+        /// </summary>
+        [JsonProperty("Prices")]
+        public TradePrice[] Prices{ get; set; }
+
+        /// <summary>
+        /// Total renewal price of compute node
+        /// </summary>
+        [JsonProperty("InstanceRealTotalPrice")]
+        public long? InstanceRealTotalPrice{ get; set; }
+
+        /// <summary>
+        /// Total renewal price of storage node
+        /// </summary>
+        [JsonProperty("StorageRealTotalPrice")]
+        public long? StorageRealTotalPrice{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +66,11 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
-            this.SetParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamArrayObj(map, prefix + "Prices.", this.Prices);
+            this.SetParamSimple(map, prefix + "InstanceRealTotalPrice", this.InstanceRealTotalPrice);
+            this.SetParamSimple(map, prefix + "StorageRealTotalPrice", this.StorageRealTotalPrice);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

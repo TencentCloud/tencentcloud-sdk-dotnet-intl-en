@@ -25,31 +25,31 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Sent date. This parameter is required. You can only query the sending status for a single date at a time.
+        /// Date sent. This parameter is required. You can only query the sending status for a single date at a time.
         /// </summary>
         [JsonProperty("RequestDate")]
         public string RequestDate{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: `0`
+        /// Offset. Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number of pulled entries. The maximum value is `100`.
+        /// Maximum number of pulled entries. Maximum value: `100`.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// `MessageId` field returned by the `SendMail` API
+        /// The `MessageId` field returned by the `SendMail` API.
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }
 
         /// <summary>
-        /// Recipient email address
+        /// Recipient email address.
         /// </summary>
         [JsonProperty("ToEmailAddress")]
         public string ToEmailAddress{ get; set; }

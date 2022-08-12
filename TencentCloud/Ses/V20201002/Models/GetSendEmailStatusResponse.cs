@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Email sending status list
+        /// Status of sent emails
         /// </summary>
         [JsonProperty("EmailStatusList")]
         public SendEmailStatus[] EmailStatusList{ get; set; }
