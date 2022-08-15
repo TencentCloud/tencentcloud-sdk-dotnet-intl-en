@@ -218,5 +218,45 @@ namespace TencentCloud.Faceid.V20180301
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+        /// </summary>
+        /// <param name="req"><see cref="VideoLivenessCompareRequest"/></param>
+        /// <returns><see cref="VideoLivenessCompareResponse"/></returns>
+        public async Task<VideoLivenessCompareResponse> VideoLivenessCompare(VideoLivenessCompareRequest req)
+        {
+             JsonResponseModel<VideoLivenessCompareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VideoLivenessCompare");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoLivenessCompareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+        /// </summary>
+        /// <param name="req"><see cref="VideoLivenessCompareRequest"/></param>
+        /// <returns><see cref="VideoLivenessCompareResponse"/></returns>
+        public VideoLivenessCompareResponse VideoLivenessCompareSync(VideoLivenessCompareRequest req)
+        {
+             JsonResponseModel<VideoLivenessCompareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VideoLivenessCompare");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoLivenessCompareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
