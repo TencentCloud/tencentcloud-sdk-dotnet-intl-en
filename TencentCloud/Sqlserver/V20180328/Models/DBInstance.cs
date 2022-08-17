@@ -308,16 +308,28 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public ulong? CrossBackupSaveDays{ get; set; }
 
         /// <summary>
-        /// 
+        /// Domain name of the public network address
         /// </summary>
         [JsonProperty("DnsPodDomain")]
         public string DnsPodDomain{ get; set; }
 
         /// <summary>
-        /// 
+        /// Port number of the public network
         /// </summary>
         [JsonProperty("TgwWanVPort")]
         public long? TgwWanVPort{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Collation")]
+        public string Collation{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
 
 
         /// <summary>
@@ -373,6 +385,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
             this.SetParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
             this.SetParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
+            this.SetParamSimple(map, prefix + "Collation", this.Collation);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
         }
     }
 }
