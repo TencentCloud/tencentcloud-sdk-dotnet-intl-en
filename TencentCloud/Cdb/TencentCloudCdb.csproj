@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="V20170320\CdbClient.cs" />
     <Compile Include="V20170320\Models\Account.cs" />
+    <Compile Include="V20170320\Models\AccountInfo.cs" />
     <Compile Include="V20170320\Models\AddTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\AddTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\Address.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="V20170320\Models\ColumnPrivilege.cs" />
     <Compile Include="V20170320\Models\CommonTimeWindow.cs" />
     <Compile Include="V20170320\Models\ConnectionPoolInfo.cs" />
+    <Compile Include="V20170320\Models\CreateAccountsRequest.cs" />
+    <Compile Include="V20170320\Models\CreateAccountsResponse.cs" />
     <Compile Include="V20170320\Models\CreateAuditPolicyRequest.cs" />
     <Compile Include="V20170320\Models\CreateAuditPolicyResponse.cs" />
     <Compile Include="V20170320\Models\CreateBackupRequest.cs" />
@@ -101,6 +104,8 @@
     <Compile Include="V20170320\Models\DeleteTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\DescribeAccountPrivilegesRequest.cs" />
     <Compile Include="V20170320\Models\DescribeAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20170320\Models\DescribeAsyncRequestInfoRequest.cs" />
     <Compile Include="V20170320\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="V20170320\Models\DescribeAuditPoliciesRequest.cs" />
@@ -244,12 +249,18 @@
     <Compile Include="V20170320\Models\ModifyDBInstanceProjectResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceVipVportRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceVipVportResponse.cs" />
     <Compile Include="V20170320\Models\ModifyInstanceParamRequest.cs" />
     <Compile Include="V20170320\Models\ModifyInstanceParamResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyInstancePasswordComplexityRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyInstancePasswordComplexityResponse.cs" />
     <Compile Include="V20170320\Models\ModifyInstanceTagRequest.cs" />
     <Compile Include="V20170320\Models\ModifyInstanceTagResponse.cs" />
     <Compile Include="V20170320\Models\ModifyLocalBinlogConfigRequest.cs" />
     <Compile Include="V20170320\Models\ModifyLocalBinlogConfigResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyNameOrDescByDpIdRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyNameOrDescByDpIdResponse.cs" />
     <Compile Include="V20170320\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="V20170320\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="V20170320\Models\ModifyRoGroupInfoRequest.cs" />

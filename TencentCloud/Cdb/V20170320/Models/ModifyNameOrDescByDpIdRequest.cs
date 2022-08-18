@@ -21,26 +21,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLocalBinlogConfigRequest : AbstractModel
+    public class ModifyNameOrDescByDpIdRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+        /// ID of a placement group.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("DeployGroupId")]
+        public string DeployGroupId{ get; set; }
 
         /// <summary>
-        /// Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+        /// Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
         /// </summary>
-        [JsonProperty("SaveHours")]
-        public long? SaveHours{ get; set; }
+        [JsonProperty("DeployGroupName")]
+        public string DeployGroupName{ get; set; }
 
         /// <summary>
-        /// Space utilization of local binlog. Value range: [30,50].
+        /// Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
         /// </summary>
-        [JsonProperty("MaxUsage")]
-        public long? MaxUsage{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SaveHours", this.SaveHours);
-            this.SetParamSimple(map, prefix + "MaxUsage", this.MaxUsage);
+            this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+            this.SetParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

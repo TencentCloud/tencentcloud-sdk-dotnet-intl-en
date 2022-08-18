@@ -38,9 +38,10 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Type of the scaling activity. Valid values:<br>
-        /// <li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-        /// <li>START_INSTANCES: starts an instance.
-        /// <li>STOP_INSTANCES: stops an instance.
+        /// <li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+        /// <li>`START_INSTANCES`: Starts up instances.
+        /// <li>`STOP_INSTANCES`: Shut down instances.
+        /// <li>`INVOKE_COMMAND`: Execute commands
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
@@ -117,6 +118,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DetailedStatusMessageSet")]
         public DetailedStatusMessage[] DetailedStatusMessageSet{ get; set; }
 
+        /// <summary>
+        /// Result of the command execution
+        /// </summary>
+        [JsonProperty("InvocationResultSet")]
+        public InvocationResult[] InvocationResultSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
             this.SetParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
             this.SetParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
+            this.SetParamArrayObj(map, prefix + "InvocationResultSet.", this.InvocationResultSet);
         }
     }
 }

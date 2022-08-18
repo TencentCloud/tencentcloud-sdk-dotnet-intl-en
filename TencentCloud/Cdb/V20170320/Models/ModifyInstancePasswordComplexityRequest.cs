@@ -21,26 +21,20 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLocalBinlogConfigRequest : AbstractModel
+    public class ModifyInstancePasswordComplexityRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+        /// Instance ID list
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+        /// List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
         /// </summary>
-        [JsonProperty("SaveHours")]
-        public long? SaveHours{ get; set; }
-
-        /// <summary>
-        /// Space utilization of local binlog. Value range: [30,50].
-        /// </summary>
-        [JsonProperty("MaxUsage")]
-        public long? MaxUsage{ get; set; }
+        [JsonProperty("ParamList")]
+        public Parameter[] ParamList{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SaveHours", this.SaveHours);
-            this.SetParamSimple(map, prefix + "MaxUsage", this.MaxUsage);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
         }
     }
 }

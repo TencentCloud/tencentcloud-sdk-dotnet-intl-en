@@ -21,26 +21,32 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLocalBinlogConfigRequest : AbstractModel
+    public class DescribeAccountsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+        /// Record offset. Default value: 0.
         /// </summary>
-        [JsonProperty("SaveHours")]
-        public long? SaveHours{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// Space utilization of local binlog. Value range: [30,50].
+        /// Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
         /// </summary>
-        [JsonProperty("MaxUsage")]
-        public long? MaxUsage{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// Regular expression for matching account names, which complies with the rules at MySQL official website.
+        /// </summary>
+        [JsonProperty("AccountRegexp")]
+        public string AccountRegexp{ get; set; }
 
 
         /// <summary>
@@ -49,8 +55,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SaveHours", this.SaveHours);
-            this.SetParamSimple(map, prefix + "MaxUsage", this.MaxUsage);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
         }
     }
 }

@@ -293,6 +293,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountsRequest"/></param>
+        /// <returns><see cref="CreateAccountsResponse"/></returns>
+        public async Task<CreateAccountsResponse> CreateAccounts(CreateAccountsRequest req)
+        {
+             JsonResponseModel<CreateAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountsRequest"/></param>
+        /// <returns><see cref="CreateAccountsResponse"/></returns>
+        public CreateAccountsResponse CreateAccountsSync(CreateAccountsRequest req)
+        {
+             JsonResponseModel<CreateAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="CreateAuditPolicyRequest"/></param>
@@ -784,6 +824,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAccountPrivileges");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeAccounts) is used to query information of all TencentDB accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
+        /// <returns><see cref="DescribeAccountsResponse"/></returns>
+        public async Task<DescribeAccountsResponse> DescribeAccounts(DescribeAccountsRequest req)
+        {
+             JsonResponseModel<DescribeAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeAccounts) is used to query information of all TencentDB accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
+        /// <returns><see cref="DescribeAccountsResponse"/></returns>
+        public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
+        {
+             JsonResponseModel<DescribeAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3363,6 +3443,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API (ModifyDBInstanceVipVport) is used to modify the IP and port number of a TencentDB instance, switch from the basic network to VPC, or change VPC subnets.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceVipVportRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceVipVportResponse"/></returns>
+        public async Task<ModifyDBInstanceVipVportResponse> ModifyDBInstanceVipVport(ModifyDBInstanceVipVportRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceVipVportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceVipVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceVipVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (ModifyDBInstanceVipVport) is used to modify the IP and port number of a TencentDB instance, switch from the basic network to VPC, or change VPC subnets.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceVipVportRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceVipVportResponse"/></returns>
+        public ModifyDBInstanceVipVportResponse ModifyDBInstanceVipVportSync(ModifyDBInstanceVipVportRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceVipVportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceVipVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceVipVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyInstanceParam) is used to modify instance parameters.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
@@ -3394,6 +3514,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyInstanceParam");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the password complexity of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordComplexityRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordComplexityResponse"/></returns>
+        public async Task<ModifyInstancePasswordComplexityResponse> ModifyInstancePasswordComplexity(ModifyInstancePasswordComplexityRequest req)
+        {
+             JsonResponseModel<ModifyInstancePasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstancePasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancePasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the password complexity of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordComplexityRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordComplexityResponse"/></returns>
+        public ModifyInstancePasswordComplexityResponse ModifyInstancePasswordComplexitySync(ModifyInstancePasswordComplexityRequest req)
+        {
+             JsonResponseModel<ModifyInstancePasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstancePasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancePasswordComplexityResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3474,6 +3634,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLocalBinlogConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLocalBinlogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the name or description of a placement group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNameOrDescByDpIdRequest"/></param>
+        /// <returns><see cref="ModifyNameOrDescByDpIdResponse"/></returns>
+        public async Task<ModifyNameOrDescByDpIdResponse> ModifyNameOrDescByDpId(ModifyNameOrDescByDpIdRequest req)
+        {
+             JsonResponseModel<ModifyNameOrDescByDpIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNameOrDescByDpId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNameOrDescByDpIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the name or description of a placement group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNameOrDescByDpIdRequest"/></param>
+        /// <returns><see cref="ModifyNameOrDescByDpIdResponse"/></returns>
+        public ModifyNameOrDescByDpIdResponse ModifyNameOrDescByDpIdSync(ModifyNameOrDescByDpIdRequest req)
+        {
+             JsonResponseModel<ModifyNameOrDescByDpIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNameOrDescByDpId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNameOrDescByDpIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public CommonTimeWindow BackupTimeWindow{ get; set; }
 
         /// <summary>
-        /// Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+        /// Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
         /// </summary>
         [JsonProperty("EnableBackupPeriodSave")]
         public string EnableBackupPeriodSave{ get; set; }

@@ -21,26 +21,38 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLocalBinlogConfigRequest : AbstractModel
+    public class CreateAccountsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+        /// TencentDB account.
         /// </summary>
-        [JsonProperty("SaveHours")]
-        public long? SaveHours{ get; set; }
+        [JsonProperty("Accounts")]
+        public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// Space utilization of local binlog. Value range: [30,50].
+        /// Password of the new account
         /// </summary>
-        [JsonProperty("MaxUsage")]
-        public long? MaxUsage{ get; set; }
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
+        /// <summary>
+        /// Remarks
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+        /// </summary>
+        [JsonProperty("MaxUserConnections")]
+        public long? MaxUserConnections{ get; set; }
 
 
         /// <summary>
@@ -49,8 +61,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SaveHours", this.SaveHours);
-            this.SetParamSimple(map, prefix + "MaxUsage", this.MaxUsage);
+            this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }
     }
 }
