@@ -21,7 +21,7 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTKEEdgeScriptRequest : AbstractModel
+    public class CreateEdgeLogConfigRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,28 +31,16 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// ENI
+        /// Log collection configuration in json form
         /// </summary>
-        [JsonProperty("Interface")]
-        public string Interface{ get; set; }
+        [JsonProperty("LogConfig")]
+        public string LogConfig{ get; set; }
 
         /// <summary>
-        /// Name of the name
+        /// CLS logset ID
         /// </summary>
-        [JsonProperty("NodeName")]
-        public string NodeName{ get; set; }
-
-        /// <summary>
-        /// Node configuration in JSON format 
-        /// </summary>
-        [JsonProperty("Config")]
-        public string Config{ get; set; }
-
-        /// <summary>
-        /// A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
-        /// </summary>
-        [JsonProperty("ScriptVersion")]
-        public string ScriptVersion{ get; set; }
+        [JsonProperty("LogsetId")]
+        public string LogsetId{ get; set; }
 
 
         /// <summary>
@@ -61,10 +49,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "Interface", this.Interface);
-            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
-            this.SetParamSimple(map, prefix + "Config", this.Config);
-            this.SetParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
+            this.SetParamSimple(map, prefix + "LogConfig", this.LogConfig);
+            this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
         }
     }
 }

@@ -31,6 +31,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtraArgs")]
         public EdgeClusterExtraArgs ExtraArgs{ get; set; }
 
+        /// <summary>
+        /// Runtime type. Valid values: "docker" (default), "containerd".
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Runtime")]
+        public string Runtime{ get; set; }
+
+        /// <summary>
+        /// Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProxyMode")]
+        public string ProxyMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +52,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+            this.SetParamSimple(map, prefix + "Runtime", this.Runtime);
+            this.SetParamSimple(map, prefix + "ProxyMode", this.ProxyMode);
         }
     }
 }

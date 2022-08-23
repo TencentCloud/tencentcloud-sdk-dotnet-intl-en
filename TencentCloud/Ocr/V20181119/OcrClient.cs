@@ -245,6 +245,50 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// This API is used to recognize a Malaysian identity card, including identity card number, name, gender, and address. It is also used to crop identity photos and give alarms for photographed or photocopied certificates.
+        /// 
+        /// This API is not fully available for the time being. For more information, contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="MLIDCardOCRRequest"/></param>
+        /// <returns><see cref="MLIDCardOCRResponse"/></returns>
+        public async Task<MLIDCardOCRResponse> MLIDCardOCR(MLIDCardOCRRequest req)
+        {
+             JsonResponseModel<MLIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MLIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize a Malaysian identity card, including identity card number, name, gender, and address. It is also used to crop identity photos and give alarms for photographed or photocopied certificates.
+        /// 
+        /// This API is not fully available for the time being. For more information, contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="MLIDCardOCRRequest"/></param>
+        /// <returns><see cref="MLIDCardOCRResponse"/></returns>
+        public MLIDCardOCRResponse MLIDCardOCRSync(MLIDCardOCRRequest req)
+        {
+             JsonResponseModel<MLIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MLIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
         /// 
         /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).

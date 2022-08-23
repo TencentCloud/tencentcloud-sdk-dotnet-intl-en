@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20190823\TtsClient.cs" />
+    <Compile Include="V20190823\Models\Subtitle.cs" />
     <Compile Include="V20190823\Models\TextToVoiceRequest.cs" />
     <Compile Include="V20190823\Models\TextToVoiceResponse.cs" />
   </ItemGroup>

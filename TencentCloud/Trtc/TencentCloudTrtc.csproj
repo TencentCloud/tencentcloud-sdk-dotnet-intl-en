@@ -64,7 +64,10 @@
     <Compile Include="V20190722\Models\McuAudioParams.cs" />
     <Compile Include="V20190722\Models\McuLayout.cs" />
     <Compile Include="V20190722\Models\McuLayoutParams.cs" />
+    <Compile Include="V20190722\Models\McuLayoutVolume.cs" />
+    <Compile Include="V20190722\Models\McuPassThrough.cs" />
     <Compile Include="V20190722\Models\McuPublishCdnParam.cs" />
+    <Compile Include="V20190722\Models\McuSeiParams.cs" />
     <Compile Include="V20190722\Models\McuUserInfoParams.cs" />
     <Compile Include="V20190722\Models\McuVideoParams.cs" />
     <Compile Include="V20190722\Models\McuWaterMarkImage.cs" />

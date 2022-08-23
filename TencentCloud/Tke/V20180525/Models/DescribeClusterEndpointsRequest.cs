@@ -21,7 +21,7 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTKEEdgeScriptRequest : AbstractModel
+    public class DescribeClusterEndpointsRequest : AbstractModel
     {
         
         /// <summary>
@@ -30,30 +30,6 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
-        /// <summary>
-        /// ENI
-        /// </summary>
-        [JsonProperty("Interface")]
-        public string Interface{ get; set; }
-
-        /// <summary>
-        /// Name of the name
-        /// </summary>
-        [JsonProperty("NodeName")]
-        public string NodeName{ get; set; }
-
-        /// <summary>
-        /// Node configuration in JSON format 
-        /// </summary>
-        [JsonProperty("Config")]
-        public string Config{ get; set; }
-
-        /// <summary>
-        /// A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
-        /// </summary>
-        [JsonProperty("ScriptVersion")]
-        public string ScriptVersion{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,10 +37,6 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "Interface", this.Interface);
-            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
-            this.SetParamSimple(map, prefix + "Config", this.Config);
-            this.SetParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
         }
     }
 }

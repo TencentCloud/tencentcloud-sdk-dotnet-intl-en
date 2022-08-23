@@ -613,6 +613,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to create log collection configuration for a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeLogConfigRequest"/></param>
+        /// <returns><see cref="CreateEdgeLogConfigResponse"/></returns>
+        public async Task<CreateEdgeLogConfigResponse> CreateEdgeLogConfig(CreateEdgeLogConfigRequest req)
+        {
+             JsonResponseModel<CreateEdgeLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEdgeLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEdgeLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create log collection configuration for a TKE Edge cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeLogConfigRequest"/></param>
+        /// <returns><see cref="CreateEdgeLogConfigResponse"/></returns>
+        public CreateEdgeLogConfigResponse CreateEdgeLogConfigSync(CreateEdgeLogConfigRequest req)
+        {
+             JsonResponseModel<CreateEdgeLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEdgeLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEdgeLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an alarm rule.
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusAlertRuleRequest"/></param>
@@ -1533,6 +1573,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query cluster access addresses, including private network address, public network address, public network domain name, and security policy for public network access.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeClusterEndpointsResponse"/></returns>
+        public async Task<DescribeClusterEndpointsResponse> DescribeClusterEndpoints(DescribeClusterEndpointsRequest req)
+        {
+             JsonResponseModel<DescribeClusterEndpointsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterEndpoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterEndpointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query cluster access addresses, including private network address, public network address, public network domain name, and security policy for public network access.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeClusterEndpointsResponse"/></returns>
+        public DescribeClusterEndpointsResponse DescribeClusterEndpointsSync(DescribeClusterEndpointsRequest req)
+        {
+             JsonResponseModel<DescribeClusterEndpointsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterEndpoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterEndpointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         ///  This API is used to query information of one or more instances in a cluster. 
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstancesRequest"/></param>
@@ -2164,6 +2244,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEdgeClusterInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the status of events, audits and logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeLogSwitchesResponse"/></returns>
+        public async Task<DescribeEdgeLogSwitchesResponse> DescribeEdgeLogSwitches(DescribeEdgeLogSwitchesRequest req)
+        {
+             JsonResponseModel<DescribeEdgeLogSwitchesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgeLogSwitches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeLogSwitchesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the status of events, audits and logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeLogSwitchesResponse"/></returns>
+        public DescribeEdgeLogSwitchesResponse DescribeEdgeLogSwitchesSync(DescribeEdgeLogSwitchesRequest req)
+        {
+             JsonResponseModel<DescribeEdgeLogSwitchesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgeLogSwitches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeLogSwitchesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2973,6 +3093,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to install the log collection add-on on TKE Edge cluster nodes.
+        /// </summary>
+        /// <param name="req"><see cref="InstallEdgeLogAgentRequest"/></param>
+        /// <returns><see cref="InstallEdgeLogAgentResponse"/></returns>
+        public async Task<InstallEdgeLogAgentResponse> InstallEdgeLogAgent(InstallEdgeLogAgentRequest req)
+        {
+             JsonResponseModel<InstallEdgeLogAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InstallEdgeLogAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallEdgeLogAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to install the log collection add-on on TKE Edge cluster nodes.
+        /// </summary>
+        /// <param name="req"><see cref="InstallEdgeLogAgentRequest"/></param>
+        /// <returns><see cref="InstallEdgeLogAgentResponse"/></returns>
+        public InstallEdgeLogAgentResponse InstallEdgeLogAgentSync(InstallEdgeLogAgentRequest req)
+        {
+             JsonResponseModel<InstallEdgeLogAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InstallEdgeLogAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallEdgeLogAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Modify cluster scaling group attributes
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterAsGroupAttributeRequest"/></param>
@@ -3364,6 +3524,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "SetNodePoolNodeProtection");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetNodePoolNodeProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to uninstall the log collection add-on from TKE Edge cluster nodes.
+        /// </summary>
+        /// <param name="req"><see cref="UninstallEdgeLogAgentRequest"/></param>
+        /// <returns><see cref="UninstallEdgeLogAgentResponse"/></returns>
+        public async Task<UninstallEdgeLogAgentResponse> UninstallEdgeLogAgent(UninstallEdgeLogAgentRequest req)
+        {
+             JsonResponseModel<UninstallEdgeLogAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UninstallEdgeLogAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallEdgeLogAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to uninstall the log collection add-on from TKE Edge cluster nodes.
+        /// </summary>
+        /// <param name="req"><see cref="UninstallEdgeLogAgentRequest"/></param>
+        /// <returns><see cref="UninstallEdgeLogAgentResponse"/></returns>
+        public UninstallEdgeLogAgentResponse UninstallEdgeLogAgentSync(UninstallEdgeLogAgentRequest req)
+        {
+             JsonResponseModel<UninstallEdgeLogAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UninstallEdgeLogAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallEdgeLogAgentResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

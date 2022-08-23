@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class McuWaterMarkParams : AbstractModel
+    public class DescribeEdgeLogSwitchesRequest : AbstractModel
     {
         
         /// <summary>
-        /// The watermark type. The default is 0, which indicates an image watermark.
+        /// List of cluster IDs
         /// </summary>
-        [JsonProperty("WaterMarkType")]
-        public ulong? WaterMarkType{ get; set; }
-
-        /// <summary>
-        /// The watermark image information. This parameter is required if `WaterMarkType` is 0.
-        /// </summary>
-        [JsonProperty("WaterMarkImage")]
-        public McuWaterMarkImage WaterMarkImage{ get; set; }
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
-            this.SetParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         }
     }
 }

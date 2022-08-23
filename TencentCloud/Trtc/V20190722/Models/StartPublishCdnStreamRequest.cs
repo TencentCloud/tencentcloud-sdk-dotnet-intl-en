@@ -78,6 +78,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("PublishCdnParams")]
         public McuPublishCdnParam[] PublishCdnParams{ get; set; }
 
+        /// <summary>
+        /// The stream mixing SEI parameters.
+        /// </summary>
+        [JsonProperty("SeiParams")]
+        public McuSeiParams SeiParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "VideoParams.", this.VideoParams);
             this.SetParamObj(map, prefix + "SingleSubscribeParams.", this.SingleSubscribeParams);
             this.SetParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
+            this.SetParamObj(map, prefix + "SeiParams.", this.SeiParams);
         }
     }
 }

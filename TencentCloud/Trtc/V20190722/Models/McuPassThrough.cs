@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tts.V20190823.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextToVoiceResponse : AbstractModel
+    public class McuPassThrough : AbstractModel
     {
         
         /// <summary>
-        /// Base64-encoded WAV/MP3 audio data
+        /// The payload of the pass-through SEI.
         /// </summary>
-        [JsonProperty("Audio")]
-        public string Audio{ get; set; }
+        [JsonProperty("PayloadContent")]
+        public string PayloadContent{ get; set; }
 
         /// <summary>
-        /// The `SessionId` of a request
+        /// The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
         /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
+        [JsonProperty("PayloadType")]
+        public ulong? PayloadType{ get; set; }
 
         /// <summary>
-        /// Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+        /// This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
         /// </summary>
-        [JsonProperty("Subtitles")]
-        public Subtitle[] Subtitles{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("PayloadUuid")]
+        public string PayloadUuid{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Tts.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Audio", this.Audio);
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
-            this.SetParamArrayObj(map, prefix + "Subtitles.", this.Subtitles);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "PayloadContent", this.PayloadContent);
+            this.SetParamSimple(map, prefix + "PayloadType", this.PayloadType);
+            this.SetParamSimple(map, prefix + "PayloadUuid", this.PayloadUuid);
         }
     }
 }

@@ -15,33 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Tts.V20190823.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextToVoiceResponse : AbstractModel
+    public class UninstallEdgeLogAgentResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Base64-encoded WAV/MP3 audio data
-        /// </summary>
-        [JsonProperty("Audio")]
-        public string Audio{ get; set; }
-
-        /// <summary>
-        /// The `SessionId` of a request
-        /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
-
-        /// <summary>
-        /// Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
-        /// </summary>
-        [JsonProperty("Subtitles")]
-        public Subtitle[] Subtitles{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -54,9 +36,6 @@ namespace TencentCloud.Tts.V20190823.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Audio", this.Audio);
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
-            this.SetParamArrayObj(map, prefix + "Subtitles.", this.Subtitles);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

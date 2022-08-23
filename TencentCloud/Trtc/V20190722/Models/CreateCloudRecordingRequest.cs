@@ -37,13 +37,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
+        /// The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+        /// The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public RecordParams RecordParams{ get; set; }
 
         /// <summary>
-        /// The cloud storage parameters.
+        /// The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
         /// </summary>
         [JsonProperty("StorageParams")]
         public StorageParams StorageParams{ get; set; }

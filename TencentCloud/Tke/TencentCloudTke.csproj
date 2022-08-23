@@ -92,6 +92,8 @@
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
     <Compile Include="V20180525\Models\CreateECMInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateECMInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\CreateEdgeLogConfigRequest.cs" />
+    <Compile Include="V20180525\Models\CreateEdgeLogConfigResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertRuleRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\CreateTKEEdgeClusterRequest.cs" />
@@ -139,6 +141,8 @@
     <Compile Include="V20180525\Models\DescribeClusterEndpointStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterEndpointsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterEndpointsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
@@ -171,6 +175,8 @@
     <Compile Include="V20180525\Models\DescribeEdgeClusterExtraArgsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEdgeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEdgeClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeLogSwitchesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeLogSwitchesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesRequest.cs" />
@@ -230,6 +236,8 @@
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
     <Compile Include="V20180525\Models\IPAddress.cs" />
     <Compile Include="V20180525\Models\ImageInstance.cs" />
+    <Compile Include="V20180525\Models\InstallEdgeLogAgentRequest.cs" />
+    <Compile Include="V20180525\Models\InstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\Instance.cs" />
     <Compile Include="V20180525\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="V20180525\Models\InstanceDataDiskMountSetting.cs" />
@@ -286,6 +294,8 @@
     <Compile Include="V20180525\Models\TagSpecification.cs" />
     <Compile Include="V20180525\Models\Taint.cs" />
     <Compile Include="V20180525\Models\TaskStepInfo.cs" />
+    <Compile Include="V20180525\Models\UninstallEdgeLogAgentRequest.cs" />
+    <Compile Include="V20180525\Models\UninstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeAbleInstancesItem.cs" />

@@ -21,33 +21,40 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTKEEdgeScriptResponse : AbstractModel
+    public class DescribeClusterEndpointsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Whether to download the link
+        /// CA certificate of cluster APIServer
         /// </summary>
-        [JsonProperty("Link")]
-        public string Link{ get; set; }
+        [JsonProperty("CertificationAuthority")]
+        public string CertificationAuthority{ get; set; }
 
         /// <summary>
-        /// Whether to download the desired token
+        /// Public network access address of cluster APIServer
         /// </summary>
-        [JsonProperty("Token")]
-        public string Token{ get; set; }
+        [JsonProperty("ClusterExternalEndpoint")]
+        public string ClusterExternalEndpoint{ get; set; }
 
         /// <summary>
-        /// Whether to download the command
+        /// Private network access address of cluster APIServer
         /// </summary>
-        [JsonProperty("Command")]
-        public string Command{ get; set; }
+        [JsonProperty("ClusterIntranetEndpoint")]
+        public string ClusterIntranetEndpoint{ get; set; }
 
         /// <summary>
-        /// Version of edgectl script. The latest version is obtained by default.
+        /// Domain name of cluster APIServer
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ScriptVersion")]
-        public string ScriptVersion{ get; set; }
+        [JsonProperty("ClusterDomain")]
+        public string ClusterDomain{ get; set; }
+
+        /// <summary>
+        /// Public network access ACL of cluster APIServer
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterExternalACL")]
+        public string[] ClusterExternalACL{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -61,10 +68,11 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Link", this.Link);
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "Command", this.Command);
-            this.SetParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
+            this.SetParamSimple(map, prefix + "CertificationAuthority", this.CertificationAuthority);
+            this.SetParamSimple(map, prefix + "ClusterExternalEndpoint", this.ClusterExternalEndpoint);
+            this.SetParamSimple(map, prefix + "ClusterIntranetEndpoint", this.ClusterIntranetEndpoint);
+            this.SetParamSimple(map, prefix + "ClusterDomain", this.ClusterDomain);
+            this.SetParamArraySimple(map, prefix + "ClusterExternalACL.", this.ClusterExternalACL);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

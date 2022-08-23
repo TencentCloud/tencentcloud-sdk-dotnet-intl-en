@@ -91,6 +91,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("MaxNodePodNum")]
         public long? MaxNodePodNum{ get; set; }
 
+        /// <summary>
+        /// Cluster advanced settings
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterAdvancedSettings")]
+        public EdgeClusterAdvancedSettings ClusterAdvancedSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +115,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "EdgeClusterVersion", this.EdgeClusterVersion);
             this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
+            this.SetParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
         }
     }
 }
