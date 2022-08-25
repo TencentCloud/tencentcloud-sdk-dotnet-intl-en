@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// Type of audio/video played. Valid values:
         /// <li>AdaptiveDynamicStreaming</li>
         /// <li>Transcode</li>
@@ -98,12 +104,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
-        /// <summary>
-        /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +111,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
             this.SetParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
@@ -121,7 +122,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

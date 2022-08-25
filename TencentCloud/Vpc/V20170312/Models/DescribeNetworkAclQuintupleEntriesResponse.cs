@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BindLiveDomainCertRequest : AbstractModel
+    public class DescribeNetworkAclQuintupleEntriesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Certificate ID, which can be obtained through the `CreateLiveCert` API.
+        /// The list of the network ACL quintuple entries
         /// </summary>
-        [JsonProperty("CertId")]
-        public long? CertId{ get; set; }
+        [JsonProperty("NetworkAclQuintupleSet")]
+        public NetworkAclQuintupleEntry[] NetworkAclQuintupleSet{ get; set; }
 
         /// <summary>
-        /// Playback domain name.
+        /// Number of eligible instances.
         /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// HTTPS status. 0: disabled, 1: enabled.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

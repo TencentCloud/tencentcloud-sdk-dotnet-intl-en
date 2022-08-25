@@ -1691,6 +1691,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to add one or more in/outbound rules of the network ACL quintuple.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="CreateNetworkAclQuintupleEntriesResponse"/></returns>
+        public async Task<CreateNetworkAclQuintupleEntriesResponse> CreateNetworkAclQuintupleEntries(CreateNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add one or more in/outbound rules of the network ACL quintuple.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="CreateNetworkAclQuintupleEntriesResponse"/></returns>
+        public CreateNetworkAclQuintupleEntriesResponse CreateNetworkAclQuintupleEntriesSync(CreateNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an ENI.
         /// * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be in the same subnet as the ENI and is not occupied.
         /// * When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
@@ -3130,6 +3170,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNetworkAcl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete specified in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="DeleteNetworkAclQuintupleEntriesResponse"/></returns>
+        public async Task<DeleteNetworkAclQuintupleEntriesResponse> DeleteNetworkAclQuintupleEntries(DeleteNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete specified in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="DeleteNetworkAclQuintupleEntriesResponse"/></returns>
+        public DeleteNetworkAclQuintupleEntriesResponse DeleteNetworkAclQuintupleEntriesSync(DeleteNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4812,7 +4892,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to query the location and network information of one or more IP addresses.
-        /// This API is currently in beta test. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
+        /// This API is only available for existing customers. For any questions, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
         /// </summary>
         /// <param name="req"><see cref="DescribeIpGeolocationInfosRequest"/></param>
         /// <returns><see cref="DescribeIpGeolocationInfosResponse"/></returns>
@@ -4833,7 +4913,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to query the location and network information of one or more IP addresses.
-        /// This API is currently in beta test. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
+        /// This API is only available for existing customers. For any questions, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
         /// </summary>
         /// <param name="req"><see cref="DescribeIpGeolocationInfosRequest"/></param>
         /// <returns><see cref="DescribeIpGeolocationInfosResponse"/></returns>
@@ -5124,6 +5204,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNetDetects");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetDetectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of in/outbound network ACL quintuple entries.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="DescribeNetworkAclQuintupleEntriesResponse"/></returns>
+        public async Task<DescribeNetworkAclQuintupleEntriesResponse> DescribeNetworkAclQuintupleEntries(DescribeNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of in/outbound network ACL quintuple entries.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="DescribeNetworkAclQuintupleEntriesResponse"/></returns>
+        public DescribeNetworkAclQuintupleEntriesResponse DescribeNetworkAclQuintupleEntriesSync(DescribeNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -8088,6 +8208,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNetworkAclEntries");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAclQuintupleEntriesResponse"/></returns>
+        public async Task<ModifyNetworkAclQuintupleEntriesResponse> ModifyNetworkAclQuintupleEntries(ModifyNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAclQuintupleEntriesResponse"/></returns>
+        public ModifyNetworkAclQuintupleEntriesResponse ModifyNetworkAclQuintupleEntriesSync(ModifyNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

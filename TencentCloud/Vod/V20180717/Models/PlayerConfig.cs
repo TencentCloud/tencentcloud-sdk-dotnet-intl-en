@@ -39,6 +39,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// The type of audio/video played. Valid values:
+        /// <li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+        /// <li>Transcode: Transcoded stream</li>
+        /// <li>Original: The original stream</li>
+        /// </summary>
+        [JsonProperty("AudioVideoType")]
+        public string AudioVideoType{ get; set; }
+
+        /// <summary>
         /// Switch of DRM-protected adaptive bitstream playback:
         /// <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
         /// <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -57,6 +66,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("DrmStreamingsInfo")]
         public DrmStreamingsInfo DrmStreamingsInfo{ get; set; }
+
+        /// <summary>
+        /// The ID of the transcoding template allowed.
+        /// </summary>
+        [JsonProperty("TranscodeDefinition")]
+        public ulong? TranscodeDefinition{ get; set; }
 
         /// <summary>
         /// ID of the image sprite generating template that allows output.
@@ -111,9 +126,11 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
             this.SetParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
             this.SetParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+            this.SetParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
             this.SetParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
             this.SetParamArrayObj(map, prefix + "ResolutionNameSet.", this.ResolutionNameSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

@@ -134,6 +134,8 @@
     <Compile Include="V20190819\Models\DynamicRetentionTime.cs" />
     <Compile Include="V20190819\Models\FetchMessageByOffsetRequest.cs" />
     <Compile Include="V20190819\Models\FetchMessageByOffsetResponse.cs" />
+    <Compile Include="V20190819\Models\FetchMessageListByOffsetRequest.cs" />
+    <Compile Include="V20190819\Models\FetchMessageListByOffsetResponse.cs" />
     <Compile Include="V20190819\Models\Filter.cs" />
     <Compile Include="V20190819\Models\Group.cs" />
     <Compile Include="V20190819\Models\GroupInfoMember.cs" />

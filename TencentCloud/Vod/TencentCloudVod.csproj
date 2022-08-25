@@ -271,6 +271,8 @@
     <Compile Include="V20180717\Models\DescribeCDNUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCdnLogsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCdnLogsResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeClientUploadAccelerationUsageDataRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeClientUploadAccelerationUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />

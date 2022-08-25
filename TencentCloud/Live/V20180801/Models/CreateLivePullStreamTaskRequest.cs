@@ -52,7 +52,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// The push domain name.
         /// The pulled stream is pushed to this domain.
-        /// Use a push domain you have added in the CSS console.
+        /// Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
@@ -193,6 +193,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("BackupSourceUrl")]
         public string BackupSourceUrl{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("WatermarkList")]
+        public PullPushWatermarkInfo[] WatermarkList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -217,6 +223,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "ToUrl", this.ToUrl);
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+            this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         }
     }
 }

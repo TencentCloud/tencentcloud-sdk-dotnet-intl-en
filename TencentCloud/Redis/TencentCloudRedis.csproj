@@ -234,6 +234,8 @@
     <Compile Include="V20180412\Models\StartupInstanceResponse.cs" />
     <Compile Include="V20180412\Models\SwitchInstanceVipRequest.cs" />
     <Compile Include="V20180412\Models\SwitchInstanceVipResponse.cs" />
+    <Compile Include="V20180412\Models\SwitchProxyRequest.cs" />
+    <Compile Include="V20180412\Models\SwitchProxyResponse.cs" />
     <Compile Include="V20180412\Models\TaskInfoDetail.cs" />
     <Compile Include="V20180412\Models\TendisNodes.cs" />
     <Compile Include="V20180412\Models\TendisSlowLogDetail.cs" />

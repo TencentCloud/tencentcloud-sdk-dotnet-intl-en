@@ -21,14 +21,26 @@ namespace TencentCloud.Live.V20180801.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLiveCertResponse : AbstractModel
+    public class BatchDomainOperateErrors : AbstractModel
     {
         
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The domain that the API failed to operate.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
+        /// <summary>
+        /// The API 3.0 error code.
+        /// </summary>
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
+
+        /// <summary>
+        /// The API 3.0 error message.
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

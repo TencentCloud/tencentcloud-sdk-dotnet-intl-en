@@ -62,25 +62,23 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-        /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-        /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-        /// <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-        /// <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+        /// The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+        /// <li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+        /// <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+        /// <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+        /// <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
         /// Default value: 0.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-        /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-        /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-        /// <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-        /// <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+        /// The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
+        /// <li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+        /// <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+        /// <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+        /// <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
         /// Default value: 0.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
@@ -114,6 +112,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Gop")]
         public ulong? Gop{ get; set; }
 
+        /// <summary>
+        /// Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+        /// <li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+        /// <li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+        /// Default value: OFF.
+        /// </summary>
+        [JsonProperty("PreserveHDRSwitch")]
+        public string PreserveHDRSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +136,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
+            this.SetParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
         }
     }
 }

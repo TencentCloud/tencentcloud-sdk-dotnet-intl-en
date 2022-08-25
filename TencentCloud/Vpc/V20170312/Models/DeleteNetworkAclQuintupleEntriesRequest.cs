@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLiveDomainCertResponse : AbstractModel
+    public class DeleteNetworkAclQuintupleEntriesRequest : AbstractModel
     {
         
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Network ACL instance ID, such as `acl-12345678`.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("NetworkAclId")]
+        public string NetworkAclId{ get; set; }
+
+        /// <summary>
+        /// Network ACL quintuple rule set.
+        /// </summary>
+        [JsonProperty("NetworkAclQuintupleSet")]
+        public NetworkAclQuintupleEntries NetworkAclQuintupleSet{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
+            this.SetParamObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
         }
     }
 }

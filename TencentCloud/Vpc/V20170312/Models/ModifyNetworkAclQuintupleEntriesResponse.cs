@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedirectConfig : AbstractModel
+    public class ModifyNetworkAclQuintupleEntriesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Configuration switch
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// The custom host header that is sent when the primary origin server follows 302 redirects
-        /// </summary>
-        [JsonProperty("FollowRedirectHost")]
-        public string FollowRedirectHost{ get; set; }
-
-        /// <summary>
-        /// The custom host header that is sent when the secondary origin server follows 302 redirects
-        /// </summary>
-        [JsonProperty("FollowRedirectBackupHost")]
-        public string FollowRedirectBackupHost{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "FollowRedirectHost", this.FollowRedirectHost);
-            this.SetParamSimple(map, prefix + "FollowRedirectBackupHost", this.FollowRedirectBackupHost);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

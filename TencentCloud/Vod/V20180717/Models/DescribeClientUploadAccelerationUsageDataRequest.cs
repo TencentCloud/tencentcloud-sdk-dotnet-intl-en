@@ -21,9 +21,21 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSuperPlayerConfigsRequest : AbstractModel
+    public class DescribeClientUploadAccelerationUsageDataRequest : AbstractModel
     {
         
+        /// <summary>
+        /// The start date for the query in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// The end date for the query in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format). The end date must be later than the start date.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
         /// <summary>
         /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
         /// </summary>
@@ -31,27 +43,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Player configuration name filter. Array length limit: 100.
-        /// </summary>
-        [JsonProperty("Names")]
-        public string[] Names{ get; set; }
-
-        /// <summary>
-        /// Pagination offset. Default value: 0.
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// Number of entries to be returned. Default value: 10. Maximum value: 100.
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// Player configuration type filter. Valid values:
-        /// <li>Preset: preset configuration;</li>
-        /// <li>Custom: custom configuration.</li>
+        /// The client upload acceleration type. Valid values:
+        /// <li> AccelerationWithHTTP: Acceleration of HTTP transmission</li>
+        /// <li> AccelerationWithQUIC: Acceleration of QUIC transmission</li>
+        /// If you do not specify this parameter, the usage of both types will be queried.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -62,10 +57,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }

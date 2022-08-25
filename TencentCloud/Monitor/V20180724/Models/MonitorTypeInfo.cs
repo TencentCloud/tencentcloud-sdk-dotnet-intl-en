@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedirectConfig : AbstractModel
+    public class MonitorTypeInfo : AbstractModel
     {
         
         /// <summary>
-        /// Configuration switch
+        /// Monitoring type ID
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// The custom host header that is sent when the primary origin server follows 302 redirects
+        /// Monitoring type
         /// </summary>
-        [JsonProperty("FollowRedirectHost")]
-        public string FollowRedirectHost{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// The custom host header that is sent when the secondary origin server follows 302 redirects
+        /// Sort order
         /// </summary>
-        [JsonProperty("FollowRedirectBackupHost")]
-        public string FollowRedirectBackupHost{ get; set; }
+        [JsonProperty("SortId")]
+        public long? SortId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "FollowRedirectHost", this.FollowRedirectHost);
-            this.SetParamSimple(map, prefix + "FollowRedirectBackupHost", this.FollowRedirectBackupHost);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "SortId", this.SortId);
         }
     }
 }

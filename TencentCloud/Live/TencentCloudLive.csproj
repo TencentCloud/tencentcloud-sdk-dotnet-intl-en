@@ -52,8 +52,7 @@
     <Compile Include="V20180801\Models\AddLiveWatermarkRequest.cs" />
     <Compile Include="V20180801\Models\AddLiveWatermarkResponse.cs" />
     <Compile Include="V20180801\Models\BandwidthInfo.cs" />
-    <Compile Include="V20180801\Models\BindLiveDomainCertRequest.cs" />
-    <Compile Include="V20180801\Models\BindLiveDomainCertResponse.cs" />
+    <Compile Include="V20180801\Models\BatchDomainOperateErrors.cs" />
     <Compile Include="V20180801\Models\CallBackRuleInfo.cs" />
     <Compile Include="V20180801\Models\CallBackTemplateInfo.cs" />
     <Compile Include="V20180801\Models\CancelCommonMixStreamRequest.cs" />
@@ -73,8 +72,6 @@
     <Compile Include="V20180801\Models\CreateLiveCallbackRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
-    <Compile Include="V20180801\Models\CreateLiveCertRequest.cs" />
-    <Compile Include="V20180801\Models\CreateLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\CreateLivePullStreamTaskRequest.cs" />
     <Compile Include="V20180801\Models\CreateLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordRequest.cs" />
@@ -101,8 +98,6 @@
     <Compile Include="V20180801\Models\DeleteLiveCallbackRuleResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackTemplateResponse.cs" />
-    <Compile Include="V20180801\Models\DeleteLiveCertRequest.cs" />
-    <Compile Include="V20180801\Models\DeleteLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLivePullStreamTaskRequest.cs" />
@@ -147,6 +142,8 @@
     <Compile Include="V20180801\Models\DescribeLiveCertsResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDelayInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDelayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainCertBindingsRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainCertBindingsResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainCertRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainCertResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainRefererRequest.cs" />
@@ -237,12 +234,12 @@
     <Compile Include="V20180801\Models\HttpCodeValue.cs" />
     <Compile Include="V20180801\Models\HttpStatusData.cs" />
     <Compile Include="V20180801\Models\HttpStatusInfo.cs" />
+    <Compile Include="V20180801\Models\LiveCertDomainInfo.cs" />
+    <Compile Include="V20180801\Models\LiveDomainCertBindings.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateResponse.cs" />
-    <Compile Include="V20180801\Models\ModifyLiveCertRequest.cs" />
-    <Compile Include="V20180801\Models\ModifyLiveCertResponse.cs" />
-    <Compile Include="V20180801\Models\ModifyLiveDomainCertRequest.cs" />
-    <Compile Include="V20180801\Models\ModifyLiveDomainCertResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveDomainCertBindingsRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveDomainCertBindingsResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainRefererRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainRefererResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyRequest.cs" />
@@ -266,6 +263,7 @@
     <Compile Include="V20180801\Models\PlaySumStatInfo.cs" />
     <Compile Include="V20180801\Models\ProIspPlayCodeDataInfo.cs" />
     <Compile Include="V20180801\Models\PublishTimeInfo.cs" />
+    <Compile Include="V20180801\Models\PullPushWatermarkInfo.cs" />
     <Compile Include="V20180801\Models\PullStreamTaskInfo.cs" />
     <Compile Include="V20180801\Models\PushAuthKeyInfo.cs" />
     <Compile Include="V20180801\Models\PushDataInfo.cs" />

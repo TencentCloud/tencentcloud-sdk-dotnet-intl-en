@@ -1415,6 +1415,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to query the message list based on an offset.
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByOffsetRequest"/></param>
+        /// <returns><see cref="FetchMessageListByOffsetResponse"/></returns>
+        public async Task<FetchMessageListByOffsetResponse> FetchMessageListByOffset(FetchMessageListByOffsetRequest req)
+        {
+             JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FetchMessageListByOffset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the message list based on an offset.
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByOffsetRequest"/></param>
+        /// <returns><see cref="FetchMessageListByOffsetResponse"/></returns>
+        public FetchMessageListByOffsetResponse FetchMessageListByOffsetSync(FetchMessageListByOffsetRequest req)
+        {
+             JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FetchMessageListByOffset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to set the consumer group (Groups) offset.
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupOffsetsRequest"/></param>

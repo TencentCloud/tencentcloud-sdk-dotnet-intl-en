@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedirectConfig : AbstractModel
+    public class ModifyLiveDomainCertBindingsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Configuration switch
+        /// The domains skipped due to certificate mismatch.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("MismatchedDomainNames")]
+        public string[] MismatchedDomainNames{ get; set; }
 
         /// <summary>
-        /// The custom host header that is sent when the primary origin server follows 302 redirects
+        /// The domains that the API failed to bind, including those in `MismatchedDomainNames`, and the error information.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("FollowRedirectHost")]
-        public string FollowRedirectHost{ get; set; }
+        [JsonProperty("Errors")]
+        public BatchDomainOperateErrors[] Errors{ get; set; }
 
         /// <summary>
-        /// The custom host header that is sent when the secondary origin server follows 302 redirects
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("FollowRedirectBackupHost")]
-        public string FollowRedirectBackupHost{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "FollowRedirectHost", this.FollowRedirectHost);
-            this.SetParamSimple(map, prefix + "FollowRedirectBackupHost", this.FollowRedirectBackupHost);
+            this.SetParamArraySimple(map, prefix + "MismatchedDomainNames.", this.MismatchedDomainNames);
+            this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -15,32 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedirectConfig : AbstractModel
+    public class LiveCertDomainInfo : AbstractModel
     {
         
         /// <summary>
-        /// Configuration switch
+        /// The domain name.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
 
         /// <summary>
-        /// The custom host header that is sent when the primary origin server follows 302 redirects
+        /// Whether to enable HTTPS for the domain.
+        /// 1: Enable
+        /// 0: Disable
+        /// -1: Keep the current configuration
         /// </summary>
-        [JsonProperty("FollowRedirectHost")]
-        public string FollowRedirectHost{ get; set; }
-
-        /// <summary>
-        /// The custom host header that is sent when the secondary origin server follows 302 redirects
-        /// </summary>
-        [JsonProperty("FollowRedirectBackupHost")]
-        public string FollowRedirectBackupHost{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -48,9 +45,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "FollowRedirectHost", this.FollowRedirectHost);
-            this.SetParamSimple(map, prefix + "FollowRedirectBackupHost", this.FollowRedirectBackupHost);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

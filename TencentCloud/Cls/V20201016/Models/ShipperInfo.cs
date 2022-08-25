@@ -105,6 +105,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FilenameMode")]
+        public ulong? FilenameMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +131,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Compress.", this.Compress);
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
         }
     }
 }

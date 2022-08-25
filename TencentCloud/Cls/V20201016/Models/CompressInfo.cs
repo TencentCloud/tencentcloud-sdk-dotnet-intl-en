@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
+        /// Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

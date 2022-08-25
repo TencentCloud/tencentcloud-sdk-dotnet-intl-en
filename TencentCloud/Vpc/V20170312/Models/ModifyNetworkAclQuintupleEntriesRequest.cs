@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteLiveCertRequest : AbstractModel
+    public class ModifyNetworkAclQuintupleEntriesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Certificate ID obtained through the `DescribeLiveCerts` API.
+        /// Network ACL instance ID, such as `acl-12345678`.
         /// </summary>
-        [JsonProperty("CertId")]
-        public long? CertId{ get; set; }
+        [JsonProperty("NetworkAclId")]
+        public string NetworkAclId{ get; set; }
+
+        /// <summary>
+        /// Network ACL quintuple rule set.
+        /// </summary>
+        [JsonProperty("NetworkAclQuintupleSet")]
+        public NetworkAclQuintupleEntries NetworkAclQuintupleSet{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
+            this.SetParamObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
         }
     }
 }

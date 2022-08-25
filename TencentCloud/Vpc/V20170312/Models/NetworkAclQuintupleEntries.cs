@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateLiveCertResponse : AbstractModel
+    public class NetworkAclQuintupleEntries : AbstractModel
     {
         
         /// <summary>
-        /// Certificate ID
+        /// Network ACL quintuple inbound rule.
         /// </summary>
-        [JsonProperty("CertId")]
-        public long? CertId{ get; set; }
+        [JsonProperty("Ingress")]
+        public NetworkAclQuintupleEntry[] Ingress{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Network ACL quintuple outbound rule.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Egress")]
+        public NetworkAclQuintupleEntry[] Egress{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "Ingress.", this.Ingress);
+            this.SetParamArrayObj(map, prefix + "Egress.", this.Egress);
         }
     }
 }

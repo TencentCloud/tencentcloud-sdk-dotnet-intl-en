@@ -44,6 +44,13 @@ namespace TencentCloud.Live.V20180801.Models
         public long? CreateLimitCount{ get; set; }
 
         /// <summary>
+        /// The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PlayTypeCount")]
+        public long?[] PlayTypeCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +65,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "AllCount", this.AllCount);
             this.SetParamArrayObj(map, prefix + "DomainList.", this.DomainList);
             this.SetParamSimple(map, prefix + "CreateLimitCount", this.CreateLimitCount);
+            this.SetParamArraySimple(map, prefix + "PlayTypeCount.", this.PlayTypeCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

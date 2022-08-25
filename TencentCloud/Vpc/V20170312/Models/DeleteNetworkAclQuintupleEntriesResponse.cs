@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLiveDomainCertRequest : AbstractModel
+    public class DeleteNetworkAclQuintupleEntriesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Playback domain name.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
-
-        /// <summary>
-        /// Certificate ID.
-        /// </summary>
-        [JsonProperty("CertId")]
-        public long? CertId{ get; set; }
-
-        /// <summary>
-        /// Status. 0: off, 1: on.
-        /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

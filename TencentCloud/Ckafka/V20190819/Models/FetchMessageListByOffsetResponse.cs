@@ -15,15 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteLiveCertResponse : AbstractModel
+    public class FetchMessageListByOffsetResponse : AbstractModel
     {
         
+        /// <summary>
+        /// Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+        /// </summary>
+        [JsonProperty("Result")]
+        public ConsumerRecord[] Result{ get; set; }
+
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -36,6 +42,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

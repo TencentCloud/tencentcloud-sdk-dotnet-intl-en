@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Category ID
+        /// The category ID.
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
@@ -37,10 +37,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ParentId{ get; set; }
 
         /// <summary>
-        /// Category name
+        /// The category name.
         /// </summary>
-        [JsonProperty("ClassName")]
-        public string ClassName{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
         /// Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
@@ -49,10 +49,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// Set of IDs of the immediate subcategories in current category
+        /// The IDs of the immediate subcategories of the current category.
         /// </summary>
         [JsonProperty("SubClassIdSet")]
         public long?[] SubClassIdSet{ get; set; }
+
+        /// <summary>
+        /// The category name. This parameter is not recommended. Please use `Name` instead.
+        /// </summary>
+        [JsonProperty("ClassName")]
+        public string ClassName{ get; set; }
 
 
         /// <summary>
@@ -62,9 +68,10 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "ParentId", this.ParentId);
-            this.SetParamSimple(map, prefix + "ClassName", this.ClassName);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamArraySimple(map, prefix + "SubClassIdSet.", this.SubClassIdSet);
+            this.SetParamSimple(map, prefix + "ClassName", this.ClassName);
         }
     }
 }

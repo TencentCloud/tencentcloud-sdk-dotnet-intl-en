@@ -31,10 +31,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Subapplication name.
+        /// The subapplication name.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("SubAppIdName")]
+        public string SubAppIdName{ get; set; }
 
         /// <summary>
         /// Subapplication overview.
@@ -58,6 +58,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,10 +71,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "SubAppIdName", this.SubAppIdName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

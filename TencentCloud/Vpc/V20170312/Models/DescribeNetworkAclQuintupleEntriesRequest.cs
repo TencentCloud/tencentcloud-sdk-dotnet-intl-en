@@ -15,46 +15,45 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSuperPlayerConfigsRequest : AbstractModel
+    public class DescribeNetworkAclQuintupleEntriesRequest : AbstractModel
     {
         
         /// <summary>
-        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+        /// Network ACL instance ID, such as `acl-12345678`.
         /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
+        [JsonProperty("NetworkAclId")]
+        public string NetworkAclId{ get; set; }
 
         /// <summary>
-        /// Player configuration name filter. Array length limit: 100.
-        /// </summary>
-        [JsonProperty("Names")]
-        public string[] Names{ get; set; }
-
-        /// <summary>
-        /// Pagination offset. Default value: 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries to be returned. Default value: 10. Maximum value: 100.
+        /// Returned quantity. Default: 20. Value range: 1-100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Player configuration type filter. Valid values:
-        /// <li>Preset: preset configuration;</li>
-        /// <li>Custom: custom configuration.</li>
+        /// Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+        /// <li>`protocol` - String - Such as `TCP`</li>
+        /// <li>`description` - String - Description</li>
+        /// <li>`destination-cidr` - String - Destination CIDR block, such as `192.168.0.0/24`</li>
+        /// <li>`source-cidr` - String - Source CIDR block, such as `192.168.0.0/24`</li>
+        /// <li>`action` - String - ·Values: `ACCEPT`, `DROP`</li>
+        /// <li>`network-acl-quintuple-entry-id` - String - Unique ID of the quintuple, such as `acli45-ahnu4rv5`</li>
+        /// <li>`network-acl-direction` - String - Direction of the policy. Values: `INGRESS` or `EGRESS`.</li>
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -62,11 +61,10 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
+            this.SetParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

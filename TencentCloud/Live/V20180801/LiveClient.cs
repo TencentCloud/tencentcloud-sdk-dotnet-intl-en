@@ -179,48 +179,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to bind a domain name certificate.
-        /// Note: you need to call the `CreateLiveCert` API first to add a certificate. After getting the certificate ID, call this API for binding.
-        /// </summary>
-        /// <param name="req"><see cref="BindLiveDomainCertRequest"/></param>
-        /// <returns><see cref="BindLiveDomainCertResponse"/></returns>
-        public async Task<BindLiveDomainCertResponse> BindLiveDomainCert(BindLiveDomainCertRequest req)
-        {
-             JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BindLiveDomainCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindLiveDomainCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to bind a domain name certificate.
-        /// Note: you need to call the `CreateLiveCert` API first to add a certificate. After getting the certificate ID, call this API for binding.
-        /// </summary>
-        /// <param name="req"><see cref="BindLiveDomainCertRequest"/></param>
-        /// <returns><see cref="BindLiveDomainCertResponse"/></returns>
-        public BindLiveDomainCertResponse BindLiveDomainCertSync(BindLiveDomainCertRequest req)
-        {
-             JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BindLiveDomainCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindLiveDomainCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
         /// </summary>
         /// <param name="req"><see cref="CancelCommonMixStreamRequest"/></param>
@@ -382,46 +340,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "CreateLiveCallbackTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCallbackTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to add a certificate.
-        /// </summary>
-        /// <param name="req"><see cref="CreateLiveCertRequest"/></param>
-        /// <returns><see cref="CreateLiveCertResponse"/></returns>
-        public async Task<CreateLiveCertResponse> CreateLiveCert(CreateLiveCertRequest req)
-        {
-             JsonResponseModel<CreateLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to add a certificate.
-        /// </summary>
-        /// <param name="req"><see cref="CreateLiveCertRequest"/></param>
-        /// <returns><see cref="CreateLiveCertResponse"/></returns>
-        public CreateLiveCertResponse CreateLiveCertSync(CreateLiveCertRequest req)
-        {
-             JsonResponseModel<CreateLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCertResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -978,46 +896,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveCallbackTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a certificate corresponding to the domain name.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLiveCertRequest"/></param>
-        /// <returns><see cref="DeleteLiveCertResponse"/></returns>
-        public async Task<DeleteLiveCertResponse> DeleteLiveCert(DeleteLiveCertRequest req)
-        {
-             JsonResponseModel<DeleteLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a certificate corresponding to the domain name.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLiveCertRequest"/></param>
-        /// <returns><see cref="DeleteLiveCertResponse"/></returns>
-        public DeleteLiveCertResponse DeleteLiveCertSync(DeleteLiveCertRequest req)
-        {
-             JsonResponseModel<DeleteLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCertResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1988,6 +1866,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLiveDomainCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query domains bound with certificates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainCertBindingsRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainCertBindingsResponse"/></returns>
+        public async Task<DescribeLiveDomainCertBindingsResponse> DescribeLiveDomainCertBindings(DescribeLiveDomainCertBindingsRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainCertBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query domains bound with certificates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainCertBindingsRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainCertBindingsResponse"/></returns>
+        public DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindingsSync(DescribeLiveDomainCertBindingsRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveDomainCertBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3611,17 +3529,18 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to modify a certificate.
+        /// This API is used to bind a certificate to multiple playback domains and update the HTTPS configuration of the domains.
+        /// If a self-owned certificate is used, it will be automatically uploaded to Tencent Cloud’s SSL Certificate Service.
         /// </summary>
-        /// <param name="req"><see cref="ModifyLiveCertRequest"/></param>
-        /// <returns><see cref="ModifyLiveCertResponse"/></returns>
-        public async Task<ModifyLiveCertResponse> ModifyLiveCert(ModifyLiveCertRequest req)
+        /// <param name="req"><see cref="ModifyLiveDomainCertBindingsRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainCertBindingsResponse"/></returns>
+        public async Task<ModifyLiveDomainCertBindingsResponse> ModifyLiveDomainCertBindings(ModifyLiveDomainCertBindingsRequest req)
         {
-             JsonResponseModel<ModifyLiveCertResponse> rsp = null;
+             JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ModifyLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveCertResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyLiveDomainCertBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3631,57 +3550,18 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to modify a certificate.
+        /// This API is used to bind a certificate to multiple playback domains and update the HTTPS configuration of the domains.
+        /// If a self-owned certificate is used, it will be automatically uploaded to Tencent Cloud’s SSL Certificate Service.
         /// </summary>
-        /// <param name="req"><see cref="ModifyLiveCertRequest"/></param>
-        /// <returns><see cref="ModifyLiveCertResponse"/></returns>
-        public ModifyLiveCertResponse ModifyLiveCertSync(ModifyLiveCertRequest req)
+        /// <param name="req"><see cref="ModifyLiveDomainCertBindingsRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainCertBindingsResponse"/></returns>
+        public ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindingsSync(ModifyLiveDomainCertBindingsRequest req)
         {
-             JsonResponseModel<ModifyLiveCertResponse> rsp = null;
+             JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the domain name and certificate binding information.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLiveDomainCertRequest"/></param>
-        /// <returns><see cref="ModifyLiveDomainCertResponse"/></returns>
-        public async Task<ModifyLiveDomainCertResponse> ModifyLiveDomainCert(ModifyLiveDomainCertRequest req)
-        {
-             JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLiveDomainCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the domain name and certificate binding information.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLiveDomainCertRequest"/></param>
-        /// <returns><see cref="ModifyLiveDomainCertResponse"/></returns>
-        public ModifyLiveDomainCertResponse ModifyLiveDomainCertSync(ModifyLiveDomainCertRequest req)
-        {
-             JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLiveDomainCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveDomainCertBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

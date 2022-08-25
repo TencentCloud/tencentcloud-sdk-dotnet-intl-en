@@ -52,6 +52,34 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
+        /// <summary>
+        /// Payment by cash credits
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CashPayAmount")]
+        public string CashPayAmount{ get; set; }
+
+        /// <summary>
+        /// Payment by free credits
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IncentivePayAmount")]
+        public string IncentivePayAmount{ get; set; }
+
+        /// <summary>
+        /// Payment by vouchers
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VoucherPayAmount")]
+        public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// Payment by commission credits
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +90,10 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
+            this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         }
     }
 }

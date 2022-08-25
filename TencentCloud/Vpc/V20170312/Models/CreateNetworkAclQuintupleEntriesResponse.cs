@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BindLiveDomainCertResponse : AbstractModel
+    public class CreateNetworkAclQuintupleEntriesResponse : AbstractModel
     {
         
         /// <summary>

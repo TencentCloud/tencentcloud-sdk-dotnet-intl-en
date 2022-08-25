@@ -175,11 +175,18 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to compose a media file, including:
+        /// This API is used to compose a media file. You can use it to do the following:
         /// 
-        /// 1. Clipping a media file to generate a new media file;
-        /// 2. Clipping and splicing multiple media files to generate a new media file;
-        /// 3. Clipping and splicing the media streams of multiple media files to generate a new media file;
+        /// 1. **Rotation/Flipping**: Rotate a video or image by a specific angle or flip a video or image.
+        /// 2. **Audio control**: Increase/Lower the volume of an audio/video file or mute an audio/video file.
+        /// 3. **Overlaying**: Overlay videos/images in a specified sequence to achieve the picture-in-picture effect.
+        /// 4. **Audio mixing**: Mix the audios of audio/video files.
+        /// 5 **Audio extraction**: Extract audio from a video.
+        /// 6. **Clipping**: Clip segments from audio/video files according to a specified start and end time.
+        /// 7. **Splicing**: Splice videos/audios/images in a specified sequence.
+        /// 8. **Transition**: Add transition effects between video segments or images that are spliced together.
+        /// 
+        /// The output file is in MP4 or MP3 format. In the callback for media composition, the event type is [ComposeMediaComplete](https://intl.cloud.tencent.com/document/product/266/43000?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ComposeMediaRequest"/></param>
         /// <returns><see cref="ComposeMediaResponse"/></returns>
@@ -199,11 +206,18 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to compose a media file, including:
+        /// This API is used to compose a media file. You can use it to do the following:
         /// 
-        /// 1. Clipping a media file to generate a new media file;
-        /// 2. Clipping and splicing multiple media files to generate a new media file;
-        /// 3. Clipping and splicing the media streams of multiple media files to generate a new media file;
+        /// 1. **Rotation/Flipping**: Rotate a video or image by a specific angle or flip a video or image.
+        /// 2. **Audio control**: Increase/Lower the volume of an audio/video file or mute an audio/video file.
+        /// 3. **Overlaying**: Overlay videos/images in a specified sequence to achieve the picture-in-picture effect.
+        /// 4. **Audio mixing**: Mix the audios of audio/video files.
+        /// 5 **Audio extraction**: Extract audio from a video.
+        /// 6. **Clipping**: Clip segments from audio/video files according to a specified start and end time.
+        /// 7. **Splicing**: Splice videos/audios/images in a specified sequence.
+        /// 8. **Transition**: Add transition effects between video segments or images that are spliced together.
+        /// 
+        /// The output file is in MP4 or MP3 format. In the callback for media composition, the event type is [ComposeMediaComplete](https://intl.cloud.tencent.com/document/product/266/43000?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ComposeMediaRequest"/></param>
         /// <returns><see cref="ComposeMediaResponse"/></returns>
@@ -797,7 +811,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to create a superplayer configuration. Up to 100 configurations can be created.
+        /// This API is used to create a player configuration. Up to 100 configurations can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>
         /// <returns><see cref="CreateSuperPlayerConfigResponse"/></returns>
@@ -817,7 +831,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to create a superplayer configuration. Up to 100 configurations can be created.
+        /// This API is used to create a player configuration. Up to 100 configurations can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>
         /// <returns><see cref="CreateSuperPlayerConfigResponse"/></returns>
@@ -1489,8 +1503,8 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to delete a superplayer configuration.  
-        /// *Note: preset player configurations cannot be deleted.*
+        /// This API is used to delete a player configuration.  
+        /// *Note: Preset player configurations cannot be deleted.*
         /// </summary>
         /// <param name="req"><see cref="DeleteSuperPlayerConfigRequest"/></param>
         /// <returns><see cref="DeleteSuperPlayerConfigResponse"/></returns>
@@ -1510,8 +1524,8 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to delete a superplayer configuration.  
-        /// *Note: preset player configurations cannot be deleted.*
+        /// This API is used to delete a player configuration.  
+        /// *Note: Preset player configurations cannot be deleted.*
         /// </summary>
         /// <param name="req"><see cref="DeleteSuperPlayerConfigRequest"/></param>
         /// <returns><see cref="DeleteSuperPlayerConfigResponse"/></returns>
@@ -2024,6 +2038,52 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCdnLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the usage of the client upload acceleration service in a specific time period.
+        ///    1. You can query the usage of client upload acceleration in the last 365 days.
+        ///    2. The maximum time period allowed for query is 90 days.
+        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientUploadAccelerationUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeClientUploadAccelerationUsageDataResponse"/></returns>
+        public async Task<DescribeClientUploadAccelerationUsageDataResponse> DescribeClientUploadAccelerationUsageData(DescribeClientUploadAccelerationUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClientUploadAccelerationUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the usage of the client upload acceleration service in a specific time period.
+        ///    1. You can query the usage of client upload acceleration in the last 365 days.
+        ///    2. The maximum time period allowed for query is 90 days.
+        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientUploadAccelerationUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeClientUploadAccelerationUsageDataResponse"/></returns>
+        public DescribeClientUploadAccelerationUsageDataResponse DescribeClientUploadAccelerationUsageDataSync(DescribeClientUploadAccelerationUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClientUploadAccelerationUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientUploadAccelerationUsageDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2791,7 +2851,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query the list of superplayer configurations and supports paginated queries by filters.
+        /// This API is used to query player configurations. It supports pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeSuperPlayerConfigsRequest"/></param>
         /// <returns><see cref="DescribeSuperPlayerConfigsResponse"/></returns>
@@ -2811,7 +2871,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query the list of superplayer configurations and supports paginated queries by filters.
+        /// This API is used to query player configurations. It supports pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeSuperPlayerConfigsRequest"/></param>
         /// <returns><see cref="DescribeSuperPlayerConfigsResponse"/></returns>
@@ -3911,7 +3971,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to modify a superplayer configuration.
+        /// This API is used to modify a player configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifySuperPlayerConfigRequest"/></param>
         /// <returns><see cref="ModifySuperPlayerConfigResponse"/></returns>
@@ -3931,7 +3991,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to modify a superplayer configuration.
+        /// This API is used to modify a player configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifySuperPlayerConfigRequest"/></param>
         /// <returns><see cref="ModifySuperPlayerConfigResponse"/></returns>
