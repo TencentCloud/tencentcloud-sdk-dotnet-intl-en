@@ -21,14 +21,14 @@ namespace TencentCloud.Cvm.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RunInstancesResponse : AbstractModel
+    public class DescribeChcDeniedActionsResponse : AbstractModel
     {
         
         /// <summary>
-        /// If you use this API to create instance(s), this parameter will be returned, representing one or more instance IDs. Retuning the instance ID list does not necessarily mean that the instance(s) were created successfully. To check whether the instance(s) were created successfully, you can call [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and check the status of the instances in `InstancesSet` in the response. If the status of an instance changes from "PENDING" to "RUNNING", it means that the instance has been created successfully.
+        /// Actions not allowed for the CHC instance
         /// </summary>
-        [JsonProperty("InstanceIdSet")]
-        public string[] InstanceIdSet{ get; set; }
+        [JsonProperty("ChcHostDeniedActionSet")]
+        public ChcHostDeniedActions[] ChcHostDeniedActionSet{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +42,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+            this.SetParamArrayObj(map, prefix + "ChcHostDeniedActionSet.", this.ChcHostDeniedActionSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

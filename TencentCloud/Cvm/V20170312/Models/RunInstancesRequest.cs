@@ -70,7 +70,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// Configuration information of VPC. This parameter is used to specify VPC ID and subnet ID, etc. If this parameter is not specified, the classic network is used by default. If a VPC IP is specified in this parameter, it indicates the primary ENI IP of each instance. The value of parameter InstanceCount must be same as the number of VPC IPs, which cannot be greater than 20.
+        /// Configuration information of VPC. This parameter is used to specify VPC ID and subnet ID, etc. If a VPC IP is specified in this parameter, it indicates the primary ENI IP of each instance. The value of parameter InstanceCount must be the same as the number of VPC IPs, which cannot be greater than 20.
         /// </summary>
         [JsonProperty("VirtualPrivateCloud")]
         public VirtualPrivateCloud VirtualPrivateCloud{ get; set; }

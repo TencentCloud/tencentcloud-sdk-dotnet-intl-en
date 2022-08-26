@@ -55,6 +55,7 @@
     <Compile Include="V20170312\Models\ChargePrepaid.cs" />
     <Compile Include="V20170312\Models\ChcDeployExtraConfig.cs" />
     <Compile Include="V20170312\Models\ChcHost.cs" />
+    <Compile Include="V20170312\Models\ChcHostDeniedActions.cs" />
     <Compile Include="V20170312\Models\ConfigureChcAssistVpcRequest.cs" />
     <Compile Include="V20170312\Models\ConfigureChcAssistVpcResponse.cs" />
     <Compile Include="V20170312\Models\ConfigureChcDeployVpcRequest.cs" />
@@ -78,6 +79,8 @@
     <Compile Include="V20170312\Models\DeleteLaunchTemplateResponse.cs" />
     <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeChcDeniedActionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeChcDeniedActionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeChcHostsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeChcHostsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />

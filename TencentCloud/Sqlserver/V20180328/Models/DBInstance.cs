@@ -320,13 +320,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? TgwWanVPort{ get; set; }
 
         /// <summary>
-        /// 
+        /// Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
         /// </summary>
         [JsonProperty("Collation")]
         public string Collation{ get; set; }
 
         /// <summary>
-        /// 
+        /// System time zone. Default value: `China Standard Time`.
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }

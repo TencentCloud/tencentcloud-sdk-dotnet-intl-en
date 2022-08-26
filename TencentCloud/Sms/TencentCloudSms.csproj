@@ -132,6 +132,9 @@
     <Compile Include="V20210111\Models\PullSmsSendStatusByPhoneNumberResponse.cs" />
     <Compile Include="V20210111\Models\PullSmsSendStatusRequest.cs" />
     <Compile Include="V20210111\Models\PullSmsSendStatusResponse.cs" />
+    <Compile Include="V20210111\Models\ReportConversionRequest.cs" />
+    <Compile Include="V20210111\Models\ReportConversionResponse.cs" />
+    <Compile Include="V20210111\Models\ReportConversionStatus.cs" />
     <Compile Include="V20210111\Models\SendSmsRequest.cs" />
     <Compile Include="V20210111\Models\SendSmsResponse.cs" />
     <Compile Include="V20210111\Models\SendStatus.cs" />

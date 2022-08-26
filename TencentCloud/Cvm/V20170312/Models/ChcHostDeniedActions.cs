@@ -21,20 +21,26 @@ namespace TencentCloud.Cvm.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RunInstancesResponse : AbstractModel
+    public class ChcHostDeniedActions : AbstractModel
     {
         
         /// <summary>
-        /// If you use this API to create instance(s), this parameter will be returned, representing one or more instance IDs. Retuning the instance ID list does not necessarily mean that the instance(s) were created successfully. To check whether the instance(s) were created successfully, you can call [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and check the status of the instances in `InstancesSet` in the response. If the status of an instance changes from "PENDING" to "RUNNING", it means that the instance has been created successfully.
+        /// CHC instance ID
         /// </summary>
-        [JsonProperty("InstanceIdSet")]
-        public string[] InstanceIdSet{ get; set; }
+        [JsonProperty("ChcId")]
+        public string ChcId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// CHC instance status
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
+        /// <summary>
+        /// Actions not allowed for the current CHC instance
+        /// </summary>
+        [JsonProperty("DenyActions")]
+        public string[] DenyActions{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ChcId", this.ChcId);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamArraySimple(map, prefix + "DenyActions.", this.DenyActions);
         }
     }
 }

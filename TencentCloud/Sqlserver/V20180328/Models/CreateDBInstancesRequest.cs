@@ -144,6 +144,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+        /// </summary>
+        [JsonProperty("Collation")]
+        public string Collation{ get; set; }
+
+        /// <summary>
+        /// System time zone. Default value: `China Standard Time`.
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +182,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "HAType", this.HAType);
             this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "Collation", this.Collation);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
         }
     }
 }

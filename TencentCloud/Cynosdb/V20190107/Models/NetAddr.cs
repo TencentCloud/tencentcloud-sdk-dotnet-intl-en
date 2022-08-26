@@ -59,6 +59,27 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
+        /// <summary>
+        /// Subnet ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
+        /// <summary>
+        /// VPC ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// Description
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +91,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "WanDomain", this.WanDomain);
             this.SetParamSimple(map, prefix + "WanPort", this.WanPort);
             this.SetParamSimple(map, prefix + "NetType", this.NetType);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

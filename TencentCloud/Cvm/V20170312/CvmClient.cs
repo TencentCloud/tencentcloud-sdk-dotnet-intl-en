@@ -649,6 +649,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the actions not allowed for the specified CHC instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChcDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeChcDeniedActionsResponse"/></returns>
+        public async Task<DescribeChcDeniedActionsResponse> DescribeChcDeniedActions(DescribeChcDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeChcDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChcDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChcDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the actions not allowed for the specified CHC instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChcDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeChcDeniedActionsResponse"/></returns>
+        public DescribeChcDeniedActionsResponse DescribeChcDeniedActionsSync(DescribeChcDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeChcDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChcDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChcDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of one or more CHC host.
         /// 
         /// * You can filter the query results with the instance ID, name or device type. See `Filter` for more information.

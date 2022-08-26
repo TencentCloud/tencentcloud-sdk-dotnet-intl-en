@@ -50,6 +50,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public Ckafka Ckafka{ get; set; }
 
         /// <summary>
+        /// Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Compression")]
+        public long? Compression{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -65,6 +72,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "NeedContent", this.NeedContent);
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamObj(map, prefix + "Ckafka.", this.Ckafka);
+            this.SetParamSimple(map, prefix + "Compression", this.Compression);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
