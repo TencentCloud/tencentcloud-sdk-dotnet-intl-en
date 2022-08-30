@@ -21,20 +21,25 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskDetailRequest : AbstractModel
+    public class SubtitleFormatsOperation : AbstractModel
     {
         
         /// <summary>
-        /// Video processing task ID.
+        /// The modification type. Valid values:
+        /// <li>add: Add the formats specified by `Formats`.</li>
+        /// <li>delete: Delete the formats specified by `Formats`.<l/i>
+        /// <li>reset: Reset the format list to formats specified by `Formats`.</li>
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+        /// The subtitle format list. Valid values:
+        /// <li>vtt</li>
+        /// <li>srt</li>
         /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
+        [JsonProperty("Formats")]
+        public string[] Formats{ get; set; }
 
 
         /// <summary>
@@ -42,8 +47,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "Formats.", this.Formats);
         }
     }
 }

@@ -38,13 +38,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+        /// The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }
 
         /// <summary>
-        /// Subtitles file URL.
+        /// The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+        /// </summary>
+        [JsonProperty("SubtitleSet")]
+        public AiRecognitionTaskAsrFullTextResultOutputSubtitleItem[] SubtitleSet{ get; set; }
+
+        /// <summary>
+        /// The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
         /// </summary>
         [JsonProperty("SubtitleUrl")]
         public string SubtitleUrl{ get; set; }
@@ -58,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
             this.SetParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
+            this.SetParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
             this.SetParamSimple(map, prefix + "SubtitleUrl", this.SubtitleUrl);
         }
     }

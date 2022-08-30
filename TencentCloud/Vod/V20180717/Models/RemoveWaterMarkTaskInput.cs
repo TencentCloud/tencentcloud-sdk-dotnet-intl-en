@@ -21,20 +21,14 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskDetailRequest : AbstractModel
+    public class RemoveWaterMarkTaskInput : AbstractModel
     {
         
         /// <summary>
-        /// Video processing task ID.
+        /// The ID of the media file.
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
-        /// <summary>
-        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

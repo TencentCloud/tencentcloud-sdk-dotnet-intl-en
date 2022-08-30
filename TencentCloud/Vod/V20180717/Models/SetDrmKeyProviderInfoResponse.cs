@@ -21,33 +21,9 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SimpleHlsClipResponse : AbstractModel
+    public class SetDrmKeyProviderInfoResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Address of clipped video.
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
-        /// </summary>
-        [JsonProperty("MetaData")]
-        public MediaMetaData MetaData{ get; set; }
-
-        /// <summary>
-        /// Unique ID of a video clip for persistent storage.
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
-
-        /// <summary>
-        /// The ID of the task flow to execute on the video clipped for persistent storage.
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -60,10 +36,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

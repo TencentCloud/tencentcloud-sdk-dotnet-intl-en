@@ -54,6 +54,38 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("IsPersistence")]
         public long? IsPersistence{ get; set; }
 
+        /// <summary>
+        /// The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+        /// </summary>
+        [JsonProperty("Procedure")]
+        public string Procedure{ get; set; }
+
+        /// <summary>
+        /// The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+        /// <li>The default value is `0`, which means the “Other” category.</li>
+        /// This parameter is valid only if `IsPersistence` is `1`.
+        /// </summary>
+        [JsonProperty("ClassId")]
+        public long? ClassId{ get; set; }
+
+        /// <summary>
+        /// The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+        /// </summary>
+        [JsonProperty("SourceContext")]
+        public string SourceContext{ get; set; }
+
+        /// <summary>
+        /// The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +97,11 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
+            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
+            this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }
     }
 }

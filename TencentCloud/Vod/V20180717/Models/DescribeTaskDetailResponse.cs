@@ -31,16 +31,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>SplitMedia: Video splitting</li>
         /// <li>ComposeMedia: Media file producing</li>
         /// <li>WechatPublish: WeChat publishing</li>
-        /// <li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
         /// <li>PullUpload: Pulling media files for upload</li>
         /// <li>FastClipMedia: Quick clipping</li>
-        /// 
-        /// Task types for v2017:
-        /// <li>Transcode: Transcoding</li>
-        /// <li>SnapshotByTimeOffset: Screencapturing</li>
-        /// <li>Concat: Video splicing</li>
-        /// <li>Clip: Video clipping</li>
-        /// <li>ImageSprites: Image sprite generating</li>
+        /// <li>RemoveWatermarkTask: Watermark removal</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -157,6 +150,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
+        /// The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RemoveWatermarkTask")]
+        public RemoveWatermarkTask RemoveWatermarkTask{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -185,6 +185,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ClipTask.", this.ClipTask);
             this.SetParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
+            this.SetParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

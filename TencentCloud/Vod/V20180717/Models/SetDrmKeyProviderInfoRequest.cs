@@ -21,14 +21,14 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskDetailRequest : AbstractModel
+    public class SetDrmKeyProviderInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// Video processing task ID.
+        /// The DRM key information provided by SDMC.
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("SDMCInfo")]
+        public SDMCDrmKeyProviderInfo SDMCInfo{ get; set; }
 
         /// <summary>
         /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -42,7 +42,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamObj(map, prefix + "SDMCInfo.", this.SDMCInfo);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

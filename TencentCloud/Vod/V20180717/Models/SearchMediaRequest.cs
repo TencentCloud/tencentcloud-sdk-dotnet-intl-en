@@ -178,6 +178,21 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StorageClasses{ get; set; }
 
         /// <summary>
+        /// The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+        /// <li>Array length limit: 10</li>
+        /// </summary>
+        [JsonProperty("TrtcSdkAppIds")]
+        public ulong?[] TrtcSdkAppIds{ get; set; }
+
+        /// <summary>
+        /// The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+        /// <li>Element length limit: 64 characters.</li>
+        /// <li>Array length limit: 10.</li>
+        /// </summary>
+        [JsonProperty("TrtcRoomIds")]
+        public string[] TrtcRoomIds{ get; set; }
+
+        /// <summary>
         /// (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
         /// Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
         /// </summary>
@@ -250,6 +265,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
+            this.SetParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
+            this.SetParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);

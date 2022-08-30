@@ -67,6 +67,26 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Procedure{ get; set; }
 
         /// <summary>
+        /// The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+        /// <li>The default value is `0`, which means the “Other” category.</li>
+        /// This parameter is valid only if `IsPersistence` is `1`.
+        /// </summary>
+        [JsonProperty("ClassId")]
+        public long? ClassId{ get; set; }
+
+        /// <summary>
+        /// The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+        /// </summary>
+        [JsonProperty("SourceContext")]
+        public string SourceContext{ get; set; }
+
+        /// <summary>
+        /// The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
+
+        /// <summary>
         /// Whether the metadata of clipped video needs to be returned. 0: no, 1: yes. Default value: no.
         /// </summary>
         [JsonProperty("MetaDataRequired")]
@@ -77,6 +97,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
+
+        /// <summary>
+        /// The information of the live stream to clip.
+        /// <li>The video clip is cut from the original stream by default.</li>
+        /// <li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+        /// </summary>
+        [JsonProperty("StreamInfo")]
+        public LiveRealTimeClipStreamInfo StreamInfo{ get; set; }
 
         /// <summary>
         /// Reserved field. Do not enter a value for it.
@@ -97,8 +125,12 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
+            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
+            this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "MetaDataRequired", this.MetaDataRequired);
             this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamObj(map, prefix + "StreamInfo.", this.StreamInfo);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }

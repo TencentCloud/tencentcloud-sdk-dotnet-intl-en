@@ -33,8 +33,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-        /// <li>vtt: generates a WebVTT subtitles file.</li>
+        /// The modification information of the subtitle format list.
+        /// </summary>
+        [JsonProperty("SubtitleFormatsOperation")]
+        public SubtitleFormatsOperation SubtitleFormatsOperation{ get; set; }
+
+        /// <summary>
+        /// The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+        /// <li>vtt</li>
+        /// <li>srt</li>
+        /// <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
@@ -46,6 +54,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamObj(map, prefix + "SubtitleFormatsOperation.", this.SubtitleFormatsOperation);
             this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
         }
     }

@@ -75,6 +75,7 @@
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextResult.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextResultInput.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextResultOutput.cs" />
+    <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextResultOutputSubtitleItem.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextSegmentItem.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrWordsResult.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrWordsResultInput.cs" />
@@ -277,6 +278,8 @@
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageReviewUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
@@ -359,6 +362,7 @@
     <Compile Include="V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipResponse.cs" />
+    <Compile Include="V20180717\Models\LiveRealTimeClipStreamInfo.cs" />
     <Compile Include="V20180717\Models\ManageTaskRequest.cs" />
     <Compile Include="V20180717\Models\ManageTaskResponse.cs" />
     <Compile Include="V20180717\Models\MediaAdaptiveDynamicStreamingInfo.cs" />
@@ -509,6 +513,11 @@
     <Compile Include="V20180717\Models\RefererAuthPolicy.cs" />
     <Compile Include="V20180717\Models\RefreshUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\RefreshUrlCacheResponse.cs" />
+    <Compile Include="V20180717\Models\RemoveWaterMarkTaskInput.cs" />
+    <Compile Include="V20180717\Models\RemoveWaterMarkTaskOutput.cs" />
+    <Compile Include="V20180717\Models\RemoveWatermarkRequest.cs" />
+    <Compile Include="V20180717\Models\RemoveWatermarkResponse.cs" />
+    <Compile Include="V20180717\Models\RemoveWatermarkTask.cs" />
     <Compile Include="V20180717\Models\ResetProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ResolutionNameInfo.cs" />
@@ -516,12 +525,15 @@
     <Compile Include="V20180717\Models\RestoreMediaRequest.cs" />
     <Compile Include="V20180717\Models\RestoreMediaResponse.cs" />
     <Compile Include="V20180717\Models\RestoreMediaTask.cs" />
+    <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20180717\Models\SearchMediaRequest.cs" />
     <Compile Include="V20180717\Models\SearchMediaResponse.cs" />
     <Compile Include="V20180717\Models\SegmentConfigureInfo.cs" />
     <Compile Include="V20180717\Models\SegmentConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\SetDrmKeyProviderInfoRequest.cs" />
+    <Compile Include="V20180717\Models\SetDrmKeyProviderInfoResponse.cs" />
     <Compile Include="V20180717\Models\SimpleHlsClipRequest.cs" />
     <Compile Include="V20180717\Models\SimpleHlsClipResponse.cs" />
     <Compile Include="V20180717\Models\SnapshotByTimeOffset2017.cs" />
@@ -539,6 +551,7 @@
     <Compile Include="V20180717\Models\StorageRegionInfo.cs" />
     <Compile Include="V20180717\Models\StorageStatData.cs" />
     <Compile Include="V20180717\Models\SubAppIdInfo.cs" />
+    <Compile Include="V20180717\Models\SubtitleFormatsOperation.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInput.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInputForUpdate.cs" />
     <Compile Include="V20180717\Models\TEHDConfig.cs" />
@@ -565,6 +578,7 @@
     <Compile Include="V20180717\Models\TranscodeTaskInput.cs" />
     <Compile Include="V20180717\Models\TranscodeTemplate.cs" />
     <Compile Include="V20180717\Models\TransitionOpertion.cs" />
+    <Compile Include="V20180717\Models\TrtcRecordInfo.cs" />
     <Compile Include="V20180717\Models\UrlSignatureAuthPolicy.cs" />
     <Compile Include="V20180717\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />

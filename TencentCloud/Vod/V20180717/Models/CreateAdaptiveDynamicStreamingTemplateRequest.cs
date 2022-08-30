@@ -62,6 +62,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DrmType{ get; set; }
 
         /// <summary>
+        /// The provider of the DRM key. Valid values:
+        /// <li>SDMC</li>
+        /// <li>VOD</li>
+        /// The default is `VOD`.
+        /// </summary>
+        [JsonProperty("DrmKeyProvider")]
+        public string DrmKeyProvider{ get; set; }
+
+        /// <summary>
         /// Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
         /// <li>0: no,</li>
         /// <li>1: yes.</li>
@@ -96,6 +105,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
+            this.SetParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);

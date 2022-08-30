@@ -68,6 +68,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DrmType{ get; set; }
 
         /// <summary>
+        /// The provider of the DRM key. Valid values:
+        /// <li>SDMC</li>
+        /// <li>VOD</li>
+        /// The default is `VOD`.
+        /// </summary>
+        [JsonProperty("DrmKeyProvider")]
+        public string DrmKeyProvider{ get; set; }
+
+        /// <summary>
         /// Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
         /// </summary>
         [JsonProperty("StreamInfos")]
@@ -113,6 +122,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
+            this.SetParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
             this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
