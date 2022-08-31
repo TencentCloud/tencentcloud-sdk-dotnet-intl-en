@@ -25,22 +25,10 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Scheduled snapshot policy ID.
+        /// The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
         /// </summary>
-        [JsonProperty("AutoSnapshotPolicyId")]
-        public string AutoSnapshotPolicyId{ get; set; }
-
-        /// <summary>
-        /// Scheduled snapshot policy name.
-        /// </summary>
-        [JsonProperty("AutoSnapshotPolicyName")]
-        public string AutoSnapshotPolicyName{ get; set; }
-
-        /// <summary>
-        /// Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-        /// </summary>
-        [JsonProperty("AutoSnapshotPolicyState")]
-        public string AutoSnapshotPolicyState{ get; set; }
+        [JsonProperty("DiskIdSet")]
+        public string[] DiskIdSet{ get; set; }
 
         /// <summary>
         /// Whether scheduled snapshot policy is activated.
@@ -49,22 +37,23 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? IsActivated{ get; set; }
 
         /// <summary>
+        /// Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyState")]
+        public string AutoSnapshotPolicyState{ get; set; }
+
+        /// <summary>
+        /// Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsCopyToRemote")]
+        public ulong? IsCopyToRemote{ get; set; }
+
+        /// <summary>
         /// Whether the snapshot created by this scheduled snapshot policy is retained permanently.
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }
-
-        /// <summary>
-        /// Number of days the snapshot created by this scheduled snapshot policy is retained.
-        /// </summary>
-        [JsonProperty("RetentionDays")]
-        public ulong? RetentionDays{ get; set; }
-
-        /// <summary>
-        /// The time the scheduled snapshot policy was created.
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
 
         /// <summary>
         /// The time the scheduled snapshot will be triggered again.
@@ -73,16 +62,48 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string NextTriggerTime{ get; set; }
 
         /// <summary>
+        /// Scheduled snapshot policy name.
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyName")]
+        public string AutoSnapshotPolicyName{ get; set; }
+
+        /// <summary>
+        /// Scheduled snapshot policy ID.
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyId")]
+        public string AutoSnapshotPolicyId{ get; set; }
+
+        /// <summary>
         /// The policy for executing the scheduled snapshot.
         /// </summary>
         [JsonProperty("Policy")]
         public Policy[] Policy{ get; set; }
 
         /// <summary>
-        /// The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+        /// The time the scheduled snapshot policy was created.
         /// </summary>
-        [JsonProperty("DiskIdSet")]
-        public string[] DiskIdSet{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Number of days the snapshot created by this scheduled snapshot policy is retained.
+        /// </summary>
+        [JsonProperty("RetentionDays")]
+        public ulong? RetentionDays{ get; set; }
+
+        /// <summary>
+        /// ID of the replication target account
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CopyToAccountUin")]
+        public string CopyToAccountUin{ get; set; }
+
+        /// <summary>
+        /// List of IDs of the instances associated with the scheduled snapshot policy.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceIdSet")]
+        public string[] InstanceIdSet{ get; set; }
 
 
         /// <summary>
@@ -90,16 +111,19 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
-            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
-            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyState", this.AutoSnapshotPolicyState);
-            this.SetParamSimple(map, prefix + "IsActivated", this.IsActivated);
-            this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
-            this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "NextTriggerTime", this.NextTriggerTime);
-            this.SetParamArrayObj(map, prefix + "Policy.", this.Policy);
             this.SetParamArraySimple(map, prefix + "DiskIdSet.", this.DiskIdSet);
+            this.SetParamSimple(map, prefix + "IsActivated", this.IsActivated);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyState", this.AutoSnapshotPolicyState);
+            this.SetParamSimple(map, prefix + "IsCopyToRemote", this.IsCopyToRemote);
+            this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+            this.SetParamSimple(map, prefix + "NextTriggerTime", this.NextTriggerTime);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+            this.SetParamArrayObj(map, prefix + "Policy.", this.Policy);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
+            this.SetParamSimple(map, prefix + "CopyToAccountUin", this.CopyToAccountUin);
+            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         }
     }
 }

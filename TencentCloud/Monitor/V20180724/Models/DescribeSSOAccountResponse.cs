@@ -21,28 +21,15 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePolicyGroupListResponse : AbstractModel
+    public class DescribeSSOAccountResponse : AbstractModel
     {
         
         /// <summary>
-        /// Policy group list.
-        /// Note: This field may return null, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("GroupList")]
-        public DescribePolicyGroupListGroup[] GroupList{ get; set; }
-
-        /// <summary>
-        /// Total number of policy groups.
-        /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
-
-        /// <summary>
-        /// Remarks
+        /// List of authorized accounts
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Warning")]
-        public string Warning{ get; set; }
+        [JsonProperty("AccountSet")]
+        public GrafanaAccountInfo[] AccountSet{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -56,9 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GroupList.", this.GroupList);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "Warning", this.Warning);
+            this.SetParamArrayObj(map, prefix + "AccountSet.", this.AccountSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

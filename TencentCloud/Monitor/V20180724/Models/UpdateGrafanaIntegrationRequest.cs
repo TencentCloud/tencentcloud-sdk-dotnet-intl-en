@@ -21,34 +21,32 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePolicyGroupListResponse : AbstractModel
+    public class UpdateGrafanaIntegrationRequest : AbstractModel
     {
         
         /// <summary>
-        /// Policy group list.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Integration ID
         /// </summary>
-        [JsonProperty("GroupList")]
-        public DescribePolicyGroupListGroup[] GroupList{ get; set; }
+        [JsonProperty("IntegrationId")]
+        public string IntegrationId{ get; set; }
 
         /// <summary>
-        /// Total number of policy groups.
+        /// Instance ID
         /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Integration type
         /// </summary>
-        [JsonProperty("Warning")]
-        public string Warning{ get; set; }
+        [JsonProperty("Kind")]
+        public string Kind{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Integration content
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
 
         /// <summary>
@@ -56,10 +54,10 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GroupList.", this.GroupList);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "Warning", this.Warning);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "IntegrationId", this.IntegrationId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Kind", this.Kind);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
         }
     }
 }

@@ -49,6 +49,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public CommonNamespace[] CustomNamespacesNew{ get; set; }
 
         /// <summary>
+        /// General alarm policy type, including TAPM, RUM, and CAT.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CommonNamespaces")]
+        public CommonNamespaceNew[] CommonNamespaces{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +71,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "CustomNamespaces.", this.CustomNamespaces);
             this.SetParamArrayObj(map, prefix + "QceNamespacesNew.", this.QceNamespacesNew);
             this.SetParamArrayObj(map, prefix + "CustomNamespacesNew.", this.CustomNamespacesNew);
+            this.SetParamArrayObj(map, prefix + "CommonNamespaces.", this.CommonNamespaces);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

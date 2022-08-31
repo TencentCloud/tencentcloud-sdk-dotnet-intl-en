@@ -133,6 +133,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to forcibly terminate a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="CleanGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="CleanGrafanaInstanceResponse"/></returns>
+        public async Task<CleanGrafanaInstanceResponse> CleanGrafanaInstance(CleanGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<CleanGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CleanGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CleanGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to forcibly terminate a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="CleanGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="CleanGrafanaInstanceResponse"/></returns>
+        public CleanGrafanaInstanceResponse CleanGrafanaInstanceSync(CleanGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<CleanGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CleanGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CleanGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a notification template.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
@@ -288,6 +328,126 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "CreateExporterIntegration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
+        public async Task<CreateGrafanaInstanceResponse> CreateGrafanaInstance(CreateGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<CreateGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
+        public CreateGrafanaInstanceResponse CreateGrafanaInstanceSync(CreateGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<CreateGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Grafana integration configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="CreateGrafanaIntegrationResponse"/></returns>
+        public async Task<CreateGrafanaIntegrationResponse> CreateGrafanaIntegration(CreateGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<CreateGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Grafana integration configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="CreateGrafanaIntegrationResponse"/></returns>
+        public CreateGrafanaIntegrationResponse CreateGrafanaIntegrationSync(CreateGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<CreateGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Grafana notification channel.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="CreateGrafanaNotificationChannelResponse"/></returns>
+        public async Task<CreateGrafanaNotificationChannelResponse> CreateGrafanaNotificationChannel(CreateGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<CreateGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Grafana notification channel.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="CreateGrafanaNotificationChannelResponse"/></returns>
+        public CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannelSync(CreateGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<CreateGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaNotificationChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -488,6 +648,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "CreateRecordingRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to authorize a Grafana instance to another Tencent Cloud user.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSOAccountRequest"/></param>
+        /// <returns><see cref="CreateSSOAccountResponse"/></returns>
+        public async Task<CreateSSOAccountResponse> CreateSSOAccount(CreateSSOAccountRequest req)
+        {
+             JsonResponseModel<CreateSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to authorize a Grafana instance to another Tencent Cloud user.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSOAccountRequest"/></param>
+        /// <returns><see cref="CreateSSOAccountResponse"/></returns>
+        public CreateSSOAccountResponse CreateSSOAccountSync(CreateSSOAccountRequest req)
+        {
+             JsonResponseModel<CreateSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSSOAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -701,6 +901,126 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to delete a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaInstanceResponse"/></returns>
+        public async Task<DeleteGrafanaInstanceResponse> DeleteGrafanaInstance(DeleteGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaInstanceResponse"/></returns>
+        public DeleteGrafanaInstanceResponse DeleteGrafanaInstanceSync(DeleteGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Grafana integration configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaIntegrationResponse"/></returns>
+        public async Task<DeleteGrafanaIntegrationResponse> DeleteGrafanaIntegration(DeleteGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Grafana integration configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaIntegrationResponse"/></returns>
+        public DeleteGrafanaIntegrationResponse DeleteGrafanaIntegrationSync(DeleteGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Grafana notification channel.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaNotificationChannelResponse"/></returns>
+        public async Task<DeleteGrafanaNotificationChannelResponse> DeleteGrafanaNotificationChannel(DeleteGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Grafana notification channel.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaNotificationChannelResponse"/></returns>
+        public DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannelSync(DeleteGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an alarm policy group.
         /// </summary>
         /// <param name="req"><see cref="DeletePolicyGroupRequest"/></param>
@@ -812,6 +1132,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DeleteRecordingRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordingRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an authorized TCMG user.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSSOAccountRequest"/></param>
+        /// <returns><see cref="DeleteSSOAccountResponse"/></returns>
+        public async Task<DeleteSSOAccountResponse> DeleteSSOAccount(DeleteSSOAccountRequest req)
+        {
+             JsonResponseModel<DeleteSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an authorized TCMG user.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSSOAccountRequest"/></param>
+        /// <returns><see cref="DeleteSSOAccountResponse"/></returns>
+        public DeleteSSOAccountResponse DeleteSSOAccountSync(DeleteSSOAccountRequest req)
+        {
+             JsonResponseModel<DeleteSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSSOAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1425,6 +1785,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to list Grafana DNS configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDNSConfigRequest"/></param>
+        /// <returns><see cref="DescribeDNSConfigResponse"/></returns>
+        public async Task<DescribeDNSConfigResponse> DescribeDNSConfig(DescribeDNSConfigRequest req)
+        {
+             JsonResponseModel<DescribeDNSConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDNSConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDNSConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Grafana DNS configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDNSConfigRequest"/></param>
+        /// <returns><see cref="DescribeDNSConfigResponse"/></returns>
+        public DescribeDNSConfigResponse DescribeDNSConfigSync(DescribeDNSConfigRequest req)
+        {
+             JsonResponseModel<DescribeDNSConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDNSConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDNSConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of exporter integrations.
         /// </summary>
         /// <param name="req"><see cref="DescribeExporterIntegrationsRequest"/></param>
@@ -1456,6 +1856,286 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribeExporterIntegrations");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExporterIntegrationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Grafana settings, i.e., the `grafana.ini` file content.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaConfigRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaConfigResponse"/></returns>
+        public async Task<DescribeGrafanaConfigResponse> DescribeGrafanaConfig(DescribeGrafanaConfigRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Grafana settings, i.e., the `grafana.ini` file content.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaConfigRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaConfigResponse"/></returns>
+        public DescribeGrafanaConfigResponse DescribeGrafanaConfigSync(DescribeGrafanaConfigRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Grafana environment variables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaEnvironmentsResponse"/></returns>
+        public async Task<DescribeGrafanaEnvironmentsResponse> DescribeGrafanaEnvironments(DescribeGrafanaEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Grafana environment variables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaEnvironmentsResponse"/></returns>
+        public DescribeGrafanaEnvironmentsResponse DescribeGrafanaEnvironmentsSync(DescribeGrafanaEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list all Grafana instances under a user account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaInstancesRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaInstancesResponse"/></returns>
+        public async Task<DescribeGrafanaInstancesResponse> DescribeGrafanaInstances(DescribeGrafanaInstancesRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list all Grafana instances under a user account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaInstancesRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaInstancesResponse"/></returns>
+        public DescribeGrafanaInstancesResponse DescribeGrafanaInstancesSync(DescribeGrafanaInstancesRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list installed Grafana integrations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaIntegrationsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaIntegrationsResponse"/></returns>
+        public async Task<DescribeGrafanaIntegrationsResponse> DescribeGrafanaIntegrations(DescribeGrafanaIntegrationsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaIntegrationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaIntegrations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaIntegrationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list installed Grafana integrations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaIntegrationsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaIntegrationsResponse"/></returns>
+        public DescribeGrafanaIntegrationsResponse DescribeGrafanaIntegrationsSync(DescribeGrafanaIntegrationsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaIntegrationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaIntegrations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaIntegrationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Grafana notification channels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaNotificationChannelsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaNotificationChannelsResponse"/></returns>
+        public async Task<DescribeGrafanaNotificationChannelsResponse> DescribeGrafanaNotificationChannels(DescribeGrafanaNotificationChannelsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaNotificationChannelsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaNotificationChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaNotificationChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list Grafana notification channels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaNotificationChannelsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaNotificationChannelsResponse"/></returns>
+        public DescribeGrafanaNotificationChannelsResponse DescribeGrafanaNotificationChannelsSync(DescribeGrafanaNotificationChannelsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaNotificationChannelsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaNotificationChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaNotificationChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list the Grafana allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaWhiteListResponse"/></returns>
+        public async Task<DescribeGrafanaWhiteListResponse> DescribeGrafanaWhiteList(DescribeGrafanaWhiteListRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list the Grafana allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaWhiteListResponse"/></returns>
+        public DescribeGrafanaWhiteListResponse DescribeGrafanaWhiteListSync(DescribeGrafanaWhiteListRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list the plugins installed in an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstalledPluginsRequest"/></param>
+        /// <returns><see cref="DescribeInstalledPluginsResponse"/></returns>
+        public async Task<DescribeInstalledPluginsResponse> DescribeInstalledPlugins(DescribeInstalledPluginsRequest req)
+        {
+             JsonResponseModel<DescribeInstalledPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstalledPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstalledPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list the plugins installed in an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstalledPluginsRequest"/></param>
+        /// <returns><see cref="DescribeInstalledPluginsResponse"/></returns>
+        public DescribeInstalledPluginsResponse DescribeInstalledPluginsSync(DescribeInstalledPluginsRequest req)
+        {
+             JsonResponseModel<DescribeInstalledPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstalledPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstalledPluginsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1833,6 +2513,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to list all authorized accounts of the current Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSOAccountRequest"/></param>
+        /// <returns><see cref="DescribeSSOAccountResponse"/></returns>
+        public async Task<DescribeSSOAccountResponse> DescribeSSOAccount(DescribeSSOAccountRequest req)
+        {
+             JsonResponseModel<DescribeSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list all authorized accounts of the current Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSOAccountRequest"/></param>
+        /// <returns><see cref="DescribeSSOAccountResponse"/></returns>
+        public DescribeSSOAccountResponse DescribeSSOAccountSync(DescribeSSOAccountRequest req)
+        {
+             JsonResponseModel<DescribeSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to list Prometheus scrape configurations in TKE.
         /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
         /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
@@ -1957,6 +2677,126 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to set the Grafana public network access.
+        /// </summary>
+        /// <param name="req"><see cref="EnableGrafanaInternetRequest"/></param>
+        /// <returns><see cref="EnableGrafanaInternetResponse"/></returns>
+        public async Task<EnableGrafanaInternetResponse> EnableGrafanaInternet(EnableGrafanaInternetRequest req)
+        {
+             JsonResponseModel<EnableGrafanaInternetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableGrafanaInternet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGrafanaInternetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set the Grafana public network access.
+        /// </summary>
+        /// <param name="req"><see cref="EnableGrafanaInternetRequest"/></param>
+        /// <returns><see cref="EnableGrafanaInternetResponse"/></returns>
+        public EnableGrafanaInternetResponse EnableGrafanaInternetSync(EnableGrafanaInternetRequest req)
+        {
+             JsonResponseModel<EnableGrafanaInternetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableGrafanaInternet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGrafanaInternetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set the Grafana SSO through a Tencent Cloud account.
+        /// </summary>
+        /// <param name="req"><see cref="EnableGrafanaSSORequest"/></param>
+        /// <returns><see cref="EnableGrafanaSSOResponse"/></returns>
+        public async Task<EnableGrafanaSSOResponse> EnableGrafanaSSO(EnableGrafanaSSORequest req)
+        {
+             JsonResponseModel<EnableGrafanaSSOResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableGrafanaSSO");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGrafanaSSOResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set the Grafana SSO through a Tencent Cloud account.
+        /// </summary>
+        /// <param name="req"><see cref="EnableGrafanaSSORequest"/></param>
+        /// <returns><see cref="EnableGrafanaSSOResponse"/></returns>
+        public EnableGrafanaSSOResponse EnableGrafanaSSOSync(EnableGrafanaSSORequest req)
+        {
+             JsonResponseModel<EnableGrafanaSSOResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableGrafanaSSO");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGrafanaSSOResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set whether to enable CAM authentication during SSO.
+        /// </summary>
+        /// <param name="req"><see cref="EnableSSOCamCheckRequest"/></param>
+        /// <returns><see cref="EnableSSOCamCheckResponse"/></returns>
+        public async Task<EnableSSOCamCheckResponse> EnableSSOCamCheck(EnableSSOCamCheckRequest req)
+        {
+             JsonResponseModel<EnableSSOCamCheckResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableSSOCamCheck");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableSSOCamCheckResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set whether to enable CAM authentication during SSO.
+        /// </summary>
+        /// <param name="req"><see cref="EnableSSOCamCheckRequest"/></param>
+        /// <returns><see cref="EnableSSOCamCheckResponse"/></returns>
+        public EnableSSOCamCheckResponse EnableSSOCamCheckSync(EnableSSOCamCheckRequest req)
+        {
+             JsonResponseModel<EnableSSOCamCheckResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableSSOCamCheck");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableSSOCamCheckResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the monitoring data of Tencent Cloud services except TKE. To pull TKE’s monitoring data, please use the API [DescribeStatisticData](https://intl.cloud.tencent.com/document/product/248/51845?from_cn_redirect=1).
         /// You can get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
         /// API call rate limit: 20 calls/second (1,200 calls/minute). A single request can get the data of up to 10 instances for up to 1,440 data points.
@@ -2034,6 +2874,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "GetPrometheusAgentManagementCommand");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPrometheusAgentManagementCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to install a Grafana plugin.
+        /// </summary>
+        /// <param name="req"><see cref="InstallPluginsRequest"/></param>
+        /// <returns><see cref="InstallPluginsResponse"/></returns>
+        public async Task<InstallPluginsResponse> InstallPlugins(InstallPluginsRequest req)
+        {
+             JsonResponseModel<InstallPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InstallPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to install a Grafana plugin.
+        /// </summary>
+        /// <param name="req"><see cref="InstallPluginsRequest"/></param>
+        /// <returns><see cref="InstallPluginsResponse"/></returns>
+        public InstallPluginsResponse InstallPluginsSync(InstallPluginsRequest req)
+        {
+             JsonResponseModel<InstallPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InstallPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallPluginsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2323,6 +3203,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to modify the attributes of a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="ModifyGrafanaInstanceResponse"/></returns>
+        public async Task<ModifyGrafanaInstanceResponse> ModifyGrafanaInstance(ModifyGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<ModifyGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the attributes of a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="ModifyGrafanaInstanceResponse"/></returns>
+        public ModifyGrafanaInstanceResponse ModifyGrafanaInstanceSync(ModifyGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<ModifyGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to update policy group.
         /// </summary>
         /// <param name="req"><see cref="ModifyPolicyGroupRequest"/></param>
@@ -2446,6 +3366,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "PutMonitorData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutMonitorDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to restore a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="ResumeGrafanaInstanceResponse"/></returns>
+        public async Task<ResumeGrafanaInstanceResponse> ResumeGrafanaInstance(ResumeGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<ResumeGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResumeGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to restore a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="ResumeGrafanaInstanceResponse"/></returns>
+        public ResumeGrafanaInstanceResponse ResumeGrafanaInstanceSync(ResumeGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<ResumeGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResumeGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeGrafanaInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2737,6 +3697,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to delete installed plugins.
+        /// </summary>
+        /// <param name="req"><see cref="UninstallGrafanaPluginsRequest"/></param>
+        /// <returns><see cref="UninstallGrafanaPluginsResponse"/></returns>
+        public async Task<UninstallGrafanaPluginsResponse> UninstallGrafanaPlugins(UninstallGrafanaPluginsRequest req)
+        {
+             JsonResponseModel<UninstallGrafanaPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UninstallGrafanaPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallGrafanaPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete installed plugins.
+        /// </summary>
+        /// <param name="req"><see cref="UninstallGrafanaPluginsRequest"/></param>
+        /// <returns><see cref="UninstallGrafanaPluginsResponse"/></returns>
+        public UninstallGrafanaPluginsResponse UninstallGrafanaPluginsSync(UninstallGrafanaPluginsRequest req)
+        {
+             JsonResponseModel<UninstallGrafanaPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UninstallGrafanaPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallGrafanaPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to update a Prometheus alerting rule.
         /// 
         /// Note that alert object and alert message are special fields of Prometheus Rule Annotations, which need to be passed in through `annotations` and correspond to `summary` and `description` keys respectively. For more information, see [Alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
@@ -2821,6 +3821,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to update the Grafana DNS configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDNSConfigRequest"/></param>
+        /// <returns><see cref="UpdateDNSConfigResponse"/></returns>
+        public async Task<UpdateDNSConfigResponse> UpdateDNSConfig(UpdateDNSConfigRequest req)
+        {
+             JsonResponseModel<UpdateDNSConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDNSConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDNSConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana DNS configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDNSConfigRequest"/></param>
+        /// <returns><see cref="UpdateDNSConfigResponse"/></returns>
+        public UpdateDNSConfigResponse UpdateDNSConfigSync(UpdateDNSConfigRequest req)
+        {
+             JsonResponseModel<UpdateDNSConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDNSConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDNSConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to update the exporter integration configuration.
         /// </summary>
         /// <param name="req"><see cref="UpdateExporterIntegrationRequest"/></param>
@@ -2852,6 +3892,206 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "UpdateExporterIntegration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaConfigRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaConfigResponse"/></returns>
+        public async Task<UpdateGrafanaConfigResponse> UpdateGrafanaConfig(UpdateGrafanaConfigRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaConfigRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaConfigResponse"/></returns>
+        public UpdateGrafanaConfigResponse UpdateGrafanaConfigSync(UpdateGrafanaConfigRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update Grafana environment variables.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaEnvironmentsRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaEnvironmentsResponse"/></returns>
+        public async Task<UpdateGrafanaEnvironmentsResponse> UpdateGrafanaEnvironments(UpdateGrafanaEnvironmentsRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update Grafana environment variables.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaEnvironmentsRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaEnvironmentsResponse"/></returns>
+        public UpdateGrafanaEnvironmentsResponse UpdateGrafanaEnvironmentsSync(UpdateGrafanaEnvironmentsRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana integration configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaIntegrationResponse"/></returns>
+        public async Task<UpdateGrafanaIntegrationResponse> UpdateGrafanaIntegration(UpdateGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana integration configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaIntegrationResponse"/></returns>
+        public UpdateGrafanaIntegrationResponse UpdateGrafanaIntegrationSync(UpdateGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana notification channel.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaNotificationChannelResponse"/></returns>
+        public async Task<UpdateGrafanaNotificationChannelResponse> UpdateGrafanaNotificationChannel(UpdateGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana notification channel.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaNotificationChannelResponse"/></returns>
+        public UpdateGrafanaNotificationChannelResponse UpdateGrafanaNotificationChannelSync(UpdateGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaWhiteListRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaWhiteListResponse"/></returns>
+        public async Task<UpdateGrafanaWhiteListResponse> UpdateGrafanaWhiteList(UpdateGrafanaWhiteListRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Grafana allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaWhiteListRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaWhiteListResponse"/></returns>
+        public UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteListSync(UpdateGrafanaWhiteListRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaWhiteListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2981,6 +4221,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to update the remarks and permission information of an authorized account in an overwriting manner.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSSOAccountRequest"/></param>
+        /// <returns><see cref="UpdateSSOAccountResponse"/></returns>
+        public async Task<UpdateSSOAccountResponse> UpdateSSOAccount(UpdateSSOAccountRequest req)
+        {
+             JsonResponseModel<UpdateSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the remarks and permission information of an authorized account in an overwriting manner.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSSOAccountRequest"/></param>
+        /// <returns><see cref="UpdateSSOAccountResponse"/></returns>
+        public UpdateSSOAccountResponse UpdateSSOAccountSync(UpdateSSOAccountRequest req)
+        {
+             JsonResponseModel<UpdateSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to update a Grafana dashboard.
         /// </summary>
         /// <param name="req"><see cref="UpgradeGrafanaDashboardRequest"/></param>
@@ -3012,6 +4292,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "UpgradeGrafanaDashboard");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGrafanaDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeGrafanaInstanceResponse"/></returns>
+        public async Task<UpgradeGrafanaInstanceResponse> UpgradeGrafanaInstance(UpgradeGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade a Grafana instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeGrafanaInstanceResponse"/></returns>
+        public UpgradeGrafanaInstanceResponse UpgradeGrafanaInstanceSync(UpgradeGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGrafanaInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

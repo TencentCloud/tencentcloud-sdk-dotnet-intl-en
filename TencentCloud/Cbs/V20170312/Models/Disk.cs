@@ -39,7 +39,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+        /// Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -253,6 +253,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DeleteSnapshot")]
         public long? DeleteSnapshot{ get; set; }
 
+        /// <summary>
+        /// Number of used cloud disk backups.
+        /// </summary>
+        [JsonProperty("DiskBackupCount")]
+        public ulong? DiskBackupCount{ get; set; }
+
+        /// <summary>
+        /// Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -295,6 +307,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+            this.SetParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

@@ -21,28 +21,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePolicyGroupListResponse : AbstractModel
+    public class DescribeGrafanaInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Policy group list.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// This parameter has been disused. Use `Instances` instead.
         /// </summary>
-        [JsonProperty("GroupList")]
-        public DescribePolicyGroupListGroup[] GroupList{ get; set; }
+        [JsonProperty("InstanceSet")]
+        public GrafanaInstanceInfo[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// Total number of policy groups.
+        /// Number of eligible instances
         /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of instances
         /// </summary>
-        [JsonProperty("Warning")]
-        public string Warning{ get; set; }
+        [JsonProperty("Instances")]
+        public GrafanaInstanceInfo[] Instances{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -56,9 +54,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GroupList.", this.GroupList);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "Warning", this.Warning);
+            this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

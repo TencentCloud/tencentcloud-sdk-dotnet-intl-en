@@ -39,6 +39,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Total{ get; set; }
 
         /// <summary>
+        /// Remarks
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Warning")]
+        public string Warning{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamArrayObj(map, prefix + "Alarms.", this.Alarms);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "Warning", this.Warning);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

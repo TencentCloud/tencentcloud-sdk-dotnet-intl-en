@@ -31,18 +31,6 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// The policy for executing the scheduled snapshot.
-        /// </summary>
-        [JsonProperty("Policy")]
-        public Policy[] Policy{ get; set; }
-
-        /// <summary>
-        /// The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
-        /// </summary>
-        [JsonProperty("AutoSnapshotPolicyName")]
-        public string AutoSnapshotPolicyName{ get; set; }
-
-        /// <summary>
         /// Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
         /// </summary>
         [JsonProperty("IsActivated")]
@@ -55,7 +43,19 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? IsPermanent{ get; set; }
 
         /// <summary>
-        /// The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+        /// The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyName")]
+        public string AutoSnapshotPolicyName{ get; set; }
+
+        /// <summary>
+        /// The policy for executing the scheduled snapshot.
+        /// </summary>
+        [JsonProperty("Policy")]
+        public Policy[] Policy{ get; set; }
+
+        /// <summary>
+        /// Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
         /// </summary>
         [JsonProperty("RetentionDays")]
         public ulong? RetentionDays{ get; set; }
@@ -67,10 +67,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
-            this.SetParamArrayObj(map, prefix + "Policy.", this.Policy);
-            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
             this.SetParamSimple(map, prefix + "IsActivated", this.IsActivated);
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
+            this.SetParamArrayObj(map, prefix + "Policy.", this.Policy);
             this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
         }
     }

@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cbs.V20170312.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Policy : AbstractModel
+    public class DeleteGrafanaInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on.
+        /// Array of instance names
         /// </summary>
-        [JsonProperty("Hour")]
-        public ulong?[] Hour{ get; set; }
-
-        /// <summary>
-        /// Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-        /// </summary>
-        [JsonProperty("DayOfWeek")]
-        public ulong?[] DayOfWeek{ get; set; }
+        [JsonProperty("InstanceIDs")]
+        public string[] InstanceIDs{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Hour.", this.Hour);
-            this.SetParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
+            this.SetParamArraySimple(map, prefix + "InstanceIDs.", this.InstanceIDs);
         }
     }
 }
