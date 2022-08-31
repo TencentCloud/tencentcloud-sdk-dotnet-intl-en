@@ -194,7 +194,11 @@ namespace TencentCloud.Live.V20180801.Models
         public string BackupSourceUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// The information of watermarks to add.
+        /// Notes:
+        /// 1. You can add up to four watermarks to different locations of the video.
+        /// 2. Make sure you use publicly accessible URLs for the watermark images.
+        /// 3. Supported image formats include PNG, JPG, and GIF.
         /// </summary>
         [JsonProperty("WatermarkList")]
         public PullPushWatermarkInfo[] WatermarkList{ get; set; }

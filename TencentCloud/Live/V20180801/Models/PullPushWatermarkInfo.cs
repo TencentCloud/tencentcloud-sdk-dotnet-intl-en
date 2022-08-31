@@ -25,58 +25,46 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Watermark ID.
-        /// </summary>
-        [JsonProperty("WatermarkId")]
-        public long? WatermarkId{ get; set; }
-
-        /// <summary>
-        /// Watermark image URL.
+        /// The watermark image URL.
+        /// Characters not allowed:
+        /// ;(){}$>`#"'|
         /// </summary>
         [JsonProperty("PictureUrl")]
         public string PictureUrl{ get; set; }
 
         /// <summary>
-        /// Display position: X-axis offset.
+        /// The horizontal offset (%) of the watermark. The default value is 0.
         /// </summary>
         [JsonProperty("XPosition")]
         public long? XPosition{ get; set; }
 
         /// <summary>
-        /// Display position: Y-axis offset.
+        /// The vertical offset (%) of the watermark. The default value is 0.
         /// </summary>
         [JsonProperty("YPosition")]
         public long? YPosition{ get; set; }
 
         /// <summary>
-        /// Watermark name.
-        /// </summary>
-        [JsonProperty("WatermarkName")]
-        public string WatermarkName{ get; set; }
-
-        /// <summary>
-        /// Current status. 0: not used. 1: in use.
-        /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
-
-        /// <summary>
-        /// Creation time.
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
-        /// Watermark width
+        /// The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Watermark height
+        /// The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
+
+        /// <summary>
+        /// The origin. The default value is 0.
+        /// 0: Top left corner
+        /// 1: Top right corner
+        /// 2: Bottom right corner
+        /// 3: Bottom left corner
+        /// </summary>
+        [JsonProperty("Location")]
+        public long? Location{ get; set; }
 
 
         /// <summary>
@@ -84,15 +72,12 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
             this.SetParamSimple(map, prefix + "PictureUrl", this.PictureUrl);
             this.SetParamSimple(map, prefix + "XPosition", this.XPosition);
             this.SetParamSimple(map, prefix + "YPosition", this.YPosition);
-            this.SetParamSimple(map, prefix + "WatermarkName", this.WatermarkName);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
         }
     }
 }

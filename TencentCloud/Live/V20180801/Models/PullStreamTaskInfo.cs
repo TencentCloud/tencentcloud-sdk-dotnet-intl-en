@@ -208,6 +208,29 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// The backup source type. Valid values:
+        /// PullLivePushLive: Live streaming
+        /// PullVodPushLive: Video files
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupSourceType")]
+        public string BackupSourceType{ get; set; }
+
+        /// <summary>
+        /// The URL of the backup source.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupSourceUrl")]
+        public string BackupSourceUrl{ get; set; }
+
+        /// <summary>
+        /// The information of watermarks to add.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WatermarkList")]
+        public PullPushWatermarkInfo[] WatermarkList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +260,9 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "RecentPullInfo.", this.RecentPullInfo);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
+            this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+            this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         }
     }
 }

@@ -150,6 +150,20 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("BackupSourceUrl")]
         public string BackupSourceUrl{ get; set; }
 
+        /// <summary>
+        /// The information of watermarks to add.
+        /// Notes:
+        /// 1. You can add up to four watermarks to different locations of the video.
+        /// 2. Make sure you use publicly accessible URLs for the watermark images.
+        /// 3. Supported image formats include PNG and JPG.
+        /// 4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+        /// 5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+        /// 6. If you want to stop using watermarks, pass in an empty array.
+        /// 7. Currently, animated watermarks are not supported.
+        /// </summary>
+        [JsonProperty("WatermarkList")]
+        public PullPushWatermarkInfo[] WatermarkList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +185,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+            this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         }
     }
 }
