@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Subdomain name. You can use @ to represent the root domain.
+        /// Subdomain name
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

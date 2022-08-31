@@ -73,6 +73,38 @@ namespace TencentCloud.Teo.V20220106.Models
         public bool? Paused{ get; set; }
 
         /// <summary>
+        /// Specifies whether to enable CNAME acceleration
+        /// - `enabled`: Enable
+        /// - `disabled`: Disable
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CnameSpeedUp")]
+        public string CnameSpeedUp{ get; set; }
+
+        /// <summary>
+        /// Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+        /// - `finished`: The site is verified.
+        /// - `pending`: Verifying the ownership of the site.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CnameStatus")]
+        public string CnameStatus{ get; set; }
+
+        /// <summary>
+        /// Resource tag
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Billable resource
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Resources")]
+        public Resource[] Resources{ get; set; }
+
+        /// <summary>
         /// Site creation date
         /// </summary>
         [JsonProperty("CreatedOn")]
@@ -85,13 +117,10 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ModifiedOn{ get; set; }
 
         /// <summary>
-        /// Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-        /// - `finished`: The site is verified.
-        /// - `pending`: Verifying the ownership of the site.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
-        [JsonProperty("CnameStatus")]
-        public string CnameStatus{ get; set; }
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -106,9 +135,13 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Paused", this.Paused);
+            this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
+            this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-            this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

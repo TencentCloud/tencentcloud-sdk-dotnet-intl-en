@@ -21,30 +21,20 @@ namespace TencentCloud.Teo.V20220106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneFilter : AbstractModel
+    public class Sv : AbstractModel
     {
         
         /// <summary>
-        /// Filters by the field name. Vaules:
-        /// - `name`: Site name.
-        /// - `status`: Site status.
-        /// - `tagKey`: Tag key.
-        /// - `tagValue`: Tag value.
+        /// Parameter key
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// Filters by the field value
+        /// Parameter value
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
-
-        /// <summary>
-        /// Specifies whether to enable fuzzy query. It’s only available when filter name is `name`. If it’s enabled, the length of `Values` must be 1.
-        /// </summary>
-        [JsonProperty("Fuzzy")]
-        public bool? Fuzzy{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -52,9 +42,8 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "Fuzzy", this.Fuzzy);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

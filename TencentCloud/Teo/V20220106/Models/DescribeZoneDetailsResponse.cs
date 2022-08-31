@@ -75,32 +75,6 @@ namespace TencentCloud.Teo.V20220106.Models
         public bool? Paused{ get; set; }
 
         /// <summary>
-        /// Site creation date
-        /// </summary>
-        [JsonProperty("CreatedOn")]
-        public string CreatedOn{ get; set; }
-
-        /// <summary>
-        /// Site modification date
-        /// </summary>
-        [JsonProperty("ModifiedOn")]
-        public string ModifiedOn{ get; set; }
-
-        /// <summary>
-        /// User-defined name server information
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("VanityNameServers")]
-        public VanityNameServers VanityNameServers{ get; set; }
-
-        /// <summary>
-        /// User-defined name server IP information
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("VanityNameServersIps")]
-        public VanityNameServersIps[] VanityNameServersIps{ get; set; }
-
-        /// <summary>
         /// Specifies whether to enable CNAME acceleration
         /// - `enabled`: Enable
         /// - `disabled`: Disable
@@ -116,6 +90,52 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         [JsonProperty("CnameStatus")]
         public string CnameStatus{ get; set; }
+
+        /// <summary>
+        /// Resource tag
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
+        /// Billable resource
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Resources")]
+        public Resource[] Resources{ get; set; }
+
+        /// <summary>
+        /// Site modification date
+        /// </summary>
+        [JsonProperty("ModifiedOn")]
+        public string ModifiedOn{ get; set; }
+
+        /// <summary>
+        /// Site creation date
+        /// </summary>
+        [JsonProperty("CreatedOn")]
+        public string CreatedOn{ get; set; }
+
+        /// <summary>
+        /// User-defined name server information
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VanityNameServers")]
+        public VanityNameServers VanityNameServers{ get; set; }
+
+        /// <summary>
+        /// User-defined name server IP information
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VanityNameServersIps")]
+        public VanityNameServersIps[] VanityNameServersIps{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -136,12 +156,15 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Paused", this.Paused);
-            this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-            this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-            this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
-            this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
             this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
             this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+            this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+            this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

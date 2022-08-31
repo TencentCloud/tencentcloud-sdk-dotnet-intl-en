@@ -305,6 +305,7 @@
     <Compile Include="V20220106\Models\RateLimitUserRule.cs" />
     <Compile Include="V20220106\Models\ReclaimZoneRequest.cs" />
     <Compile Include="V20220106\Models\ReclaimZoneResponse.cs" />
+    <Compile Include="V20220106\Models\Resource.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsRequest.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsResponse.cs" />
     <Compile Include="V20220106\Models\SecEntry.cs" />
@@ -314,7 +315,9 @@
     <Compile Include="V20220106\Models\ServerCertInfo.cs" />
     <Compile Include="V20220106\Models\ShieldArea.cs" />
     <Compile Include="V20220106\Models\SmartRouting.cs" />
+    <Compile Include="V20220106\Models\Sv.cs" />
     <Compile Include="V20220106\Models\SwitchConfig.cs" />
+    <Compile Include="V20220106\Models\Tag.cs" />
     <Compile Include="V20220106\Models\Task.cs" />
     <Compile Include="V20220106\Models\TimingDataItem.cs" />
     <Compile Include="V20220106\Models\TimingDataRecord.cs" />
