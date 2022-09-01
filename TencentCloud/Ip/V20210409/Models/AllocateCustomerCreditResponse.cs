@@ -25,6 +25,18 @@ namespace TencentCloud.Ip.V20210409.Models
     {
         
         /// <summary>
+        /// The updated total credit
+        /// </summary>
+        [JsonProperty("TotalCredit")]
+        public float? TotalCredit{ get; set; }
+
+        /// <summary>
+        /// The updated available credit
+        /// </summary>
+        [JsonProperty("RemainingCredit")]
+        public float? RemainingCredit{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Ip.V20210409.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
+            this.SetParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

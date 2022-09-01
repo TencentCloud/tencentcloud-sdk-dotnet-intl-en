@@ -42,6 +42,12 @@ namespace TencentCloud.Ip.V20210409.Models
         [JsonProperty("Credit")]
         public float? Credit{ get; set; }
 
+        /// <summary>
+        /// The allocated total credit
+        /// </summary>
+        [JsonProperty("AllocatedCredit")]
+        public float? AllocatedCredit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ip.V20210409.Models
             this.SetParamSimple(map, prefix + "AllocatedTime", this.AllocatedTime);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "Credit", this.Credit);
+            this.SetParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
         }
     }
 }

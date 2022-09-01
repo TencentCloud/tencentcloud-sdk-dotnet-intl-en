@@ -84,6 +84,24 @@ namespace TencentCloud.Ip.V20210409.Models
         [JsonProperty("RemainingCredit")]
         public float? RemainingCredit{ get; set; }
 
+        /// <summary>
+        /// 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+        /// </summary>
+        [JsonProperty("IdentifyType")]
+        public ulong? IdentifyType{ get; set; }
+
+        /// <summary>
+        /// Customer remarks
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// Forced status
+        /// </summary>
+        [JsonProperty("Force")]
+        public long? Force{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +118,9 @@ namespace TencentCloud.Ip.V20210409.Models
             this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
             this.SetParamSimple(map, prefix + "Credit", this.Credit);
             this.SetParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
+            this.SetParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Force", this.Force);
         }
     }
 }

@@ -24,12 +24,47 @@ namespace TencentCloud.Ip.V20210409.Models
     public class QueryCustomersCreditRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Search condition type. You can only search by UIN, name, or remarks.
+        /// </summary>
+        [JsonProperty("FilterType")]
+        public string FilterType{ get; set; }
+
+        /// <summary>
+        /// Search condition
+        /// </summary>
+        [JsonProperty("Filter")]
+        public string Filter{ get; set; }
+
+        /// <summary>
+        /// A pagination parameter that specifies the current page number, with a value starting from 1.
+        /// </summary>
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
+
+        /// <summary>
+        /// A pagination parameter that specifies the number of entries per page.
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// A sort parameter that specifies the sort order. Valid values: `desc` (descending order), or `asc` (ascending order) based on `AssociationTime`. The value will be `desc` if left empty.
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
+            this.SetParamSimple(map, prefix + "Filter", this.Filter);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }
