@@ -138,6 +138,40 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("HealthCheckStatus")]
         public string HealthCheckStatus{ get; set; }
 
+        /// <summary>
+        /// Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DpdEnable")]
+        public long? DpdEnable{ get; set; }
+
+        /// <summary>
+        /// DPD timeout period. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DpdTimeout")]
+        public string DpdTimeout{ get; set; }
+
+        /// <summary>
+        /// The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DpdAction")]
+        public string DpdAction{ get; set; }
+
+        /// <summary>
+        /// Array of tag key-value pairs
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
+        /// <summary>
+        /// Negotiation type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NegotiationType")]
+        public string NegotiationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +197,11 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
             this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
             this.SetParamSimple(map, prefix + "HealthCheckStatus", this.HealthCheckStatus);
+            this.SetParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
+            this.SetParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
+            this.SetParamSimple(map, prefix + "DpdAction", this.DpdAction);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
         }
     }
 }

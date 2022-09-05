@@ -170,7 +170,8 @@ namespace TencentCloud.As.V20180419.Models
         public string DiskTypePolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// HPC ID<br>
+        /// Note: This field is default to empty
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
