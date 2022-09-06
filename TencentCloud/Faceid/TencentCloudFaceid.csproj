@@ -45,6 +45,14 @@
 
   <ItemGroup>
     <Compile Include="V20180301\FaceidClient.cs" />
+    <Compile Include="V20180301\Models\ApplyLivenessTokenRequest.cs" />
+    <Compile Include="V20180301\Models\ApplyLivenessTokenResponse.cs" />
+    <Compile Include="V20180301\Models\ApplySdkVerificationTokenRequest.cs" />
+    <Compile Include="V20180301\Models\ApplySdkVerificationTokenResponse.cs" />
+    <Compile Include="V20180301\Models\ApplyWebVerificationTokenRequest.cs" />
+    <Compile Include="V20180301\Models\ApplyWebVerificationTokenResponse.cs" />
+    <Compile Include="V20180301\Models\CardVerifyResult.cs" />
+    <Compile Include="V20180301\Models\CompareResult.cs" />
     <Compile Include="V20180301\Models\CreateUploadUrlRequest.cs" />
     <Compile Include="V20180301\Models\CreateUploadUrlResponse.cs" />
     <Compile Include="V20180301\Models\DetectReflectLivenessAndCompareRequest.cs" />
@@ -52,8 +60,15 @@
     <Compile Include="V20180301\Models\FileInfo.cs" />
     <Compile Include="V20180301\Models\GenerateReflectSequenceRequest.cs" />
     <Compile Include="V20180301\Models\GenerateReflectSequenceResponse.cs" />
+    <Compile Include="V20180301\Models\GetLivenessResultRequest.cs" />
+    <Compile Include="V20180301\Models\GetLivenessResultResponse.cs" />
+    <Compile Include="V20180301\Models\GetSdkVerificationResultRequest.cs" />
+    <Compile Include="V20180301\Models\GetSdkVerificationResultResponse.cs" />
+    <Compile Include="V20180301\Models\GetWebVerificationResultRequest.cs" />
+    <Compile Include="V20180301\Models\GetWebVerificationResultResponse.cs" />
     <Compile Include="V20180301\Models\LivenessCompareRequest.cs" />
     <Compile Include="V20180301\Models\LivenessCompareResponse.cs" />
+    <Compile Include="V20180301\Models\VerificationDetail.cs" />
     <Compile Include="V20180301\Models\VideoLivenessCompareRequest.cs" />
     <Compile Include="V20180301\Models\VideoLivenessCompareResponse.cs" />
   </ItemGroup>

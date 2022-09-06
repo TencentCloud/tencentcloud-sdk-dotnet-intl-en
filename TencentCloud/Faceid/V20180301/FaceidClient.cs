@@ -53,6 +53,126 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// This API is used to apply for a token before calling the liveness detection service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyLivenessTokenRequest"/></param>
+        /// <returns><see cref="ApplyLivenessTokenResponse"/></returns>
+        public async Task<ApplyLivenessTokenResponse> ApplyLivenessToken(ApplyLivenessTokenRequest req)
+        {
+             JsonResponseModel<ApplyLivenessTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyLivenessToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyLivenessTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply for a token before calling the liveness detection service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyLivenessTokenRequest"/></param>
+        /// <returns><see cref="ApplyLivenessTokenResponse"/></returns>
+        public ApplyLivenessTokenResponse ApplyLivenessTokenSync(ApplyLivenessTokenRequest req)
+        {
+             JsonResponseModel<ApplyLivenessTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyLivenessToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyLivenessTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply for a token before calling the SDK-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+        /// </summary>
+        /// <param name="req"><see cref="ApplySdkVerificationTokenRequest"/></param>
+        /// <returns><see cref="ApplySdkVerificationTokenResponse"/></returns>
+        public async Task<ApplySdkVerificationTokenResponse> ApplySdkVerificationToken(ApplySdkVerificationTokenRequest req)
+        {
+             JsonResponseModel<ApplySdkVerificationTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplySdkVerificationToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplySdkVerificationTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply for a token before calling the SDK-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+        /// </summary>
+        /// <param name="req"><see cref="ApplySdkVerificationTokenRequest"/></param>
+        /// <returns><see cref="ApplySdkVerificationTokenResponse"/></returns>
+        public ApplySdkVerificationTokenResponse ApplySdkVerificationTokenSync(ApplySdkVerificationTokenRequest req)
+        {
+             JsonResponseModel<ApplySdkVerificationTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplySdkVerificationToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplySdkVerificationTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyWebVerificationTokenRequest"/></param>
+        /// <returns><see cref="ApplyWebVerificationTokenResponse"/></returns>
+        public async Task<ApplyWebVerificationTokenResponse> ApplyWebVerificationToken(ApplyWebVerificationTokenRequest req)
+        {
+             JsonResponseModel<ApplyWebVerificationTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyWebVerificationToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyWebVerificationTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyWebVerificationTokenRequest"/></param>
+        /// <returns><see cref="ApplyWebVerificationTokenResponse"/></returns>
+        public ApplyWebVerificationTokenResponse ApplyWebVerificationTokenSync(ApplyWebVerificationTokenRequest req)
+        {
+             JsonResponseModel<ApplyWebVerificationTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyWebVerificationToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyWebVerificationTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 
         /// The data will be stored in a COS bucket in the region specified by the parameter `Region` for two hours.
         /// </summary>
@@ -179,7 +299,128 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// This API is used to get the verification result with the corresponding token (SdkToken) after the liveness detection is completed. The token is valid for two hours after issuance and can be called multiple times.
+        /// </summary>
+        /// <param name="req"><see cref="GetLivenessResultRequest"/></param>
+        /// <returns><see cref="GetLivenessResultResponse"/></returns>
+        public async Task<GetLivenessResultResponse> GetLivenessResult(GetLivenessResultRequest req)
+        {
+             JsonResponseModel<GetLivenessResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetLivenessResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLivenessResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the verification result with the corresponding token (SdkToken) after the liveness detection is completed. The token is valid for two hours after issuance and can be called multiple times.
+        /// </summary>
+        /// <param name="req"><see cref="GetLivenessResultRequest"/></param>
+        /// <returns><see cref="GetLivenessResultResponse"/></returns>
+        public GetLivenessResultResponse GetLivenessResultSync(GetLivenessResultRequest req)
+        {
+             JsonResponseModel<GetLivenessResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetLivenessResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLivenessResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the verification result with the corresponding token after the SDK-based verification is completed. The token is valid for three days after issuance and can be called multiple times.
+        /// </summary>
+        /// <param name="req"><see cref="GetSdkVerificationResultRequest"/></param>
+        /// <returns><see cref="GetSdkVerificationResultResponse"/></returns>
+        public async Task<GetSdkVerificationResultResponse> GetSdkVerificationResult(GetSdkVerificationResultRequest req)
+        {
+             JsonResponseModel<GetSdkVerificationResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSdkVerificationResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSdkVerificationResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the verification result with the corresponding token after the SDK-based verification is completed. The token is valid for three days after issuance and can be called multiple times.
+        /// </summary>
+        /// <param name="req"><see cref="GetSdkVerificationResultRequest"/></param>
+        /// <returns><see cref="GetSdkVerificationResultResponse"/></returns>
+        public GetSdkVerificationResultResponse GetSdkVerificationResultSync(GetSdkVerificationResultRequest req)
+        {
+             JsonResponseModel<GetSdkVerificationResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSdkVerificationResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSdkVerificationResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the verification result with the corresponding token (BizToken) after the web-based verification is completed. The BizToken is valid for three days (3*24*3,600s) after issuance and can be called multiple times.
+        /// </summary>
+        /// <param name="req"><see cref="GetWebVerificationResultRequest"/></param>
+        /// <returns><see cref="GetWebVerificationResultResponse"/></returns>
+        public async Task<GetWebVerificationResultResponse> GetWebVerificationResult(GetWebVerificationResultRequest req)
+        {
+             JsonResponseModel<GetWebVerificationResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetWebVerificationResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the verification result with the corresponding token (BizToken) after the web-based verification is completed. The BizToken is valid for three days (3*24*3,600s) after issuance and can be called multiple times.
+        /// </summary>
+        /// <param name="req"><see cref="GetWebVerificationResultRequest"/></param>
+        /// <returns><see cref="GetWebVerificationResultResponse"/></returns>
+        public GetWebVerificationResultResponse GetWebVerificationResultSync(GetWebVerificationResultRequest req)
+        {
+             JsonResponseModel<GetWebVerificationResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetWebVerificationResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+        /// This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
         /// </summary>
         /// <param name="req"><see cref="LivenessCompareRequest"/></param>
         /// <returns><see cref="LivenessCompareResponse"/></returns>
@@ -200,6 +441,7 @@ namespace TencentCloud.Faceid.V20180301
 
         /// <summary>
         /// This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+        /// This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
         /// </summary>
         /// <param name="req"><see cref="LivenessCompareRequest"/></param>
         /// <returns><see cref="LivenessCompareResponse"/></returns>
