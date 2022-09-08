@@ -115,7 +115,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public TagFilter FilterTag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Filters by package type.
         /// </summary>
         [JsonProperty("FilterPackType")]
         public string[] FilterPackType{ get; set; }

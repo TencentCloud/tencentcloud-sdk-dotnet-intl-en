@@ -25,25 +25,29 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 
+        /// Application bandwidth (in Mbps).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NormalBandwidth")]
         public ulong? NormalBandwidth{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of forwarding rules
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ForwardRulesLimit")]
         public ulong? ForwardRulesLimit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Auto-renewal flag
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiration date
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CurDeadline")]
         public string CurDeadline{ get; set; }

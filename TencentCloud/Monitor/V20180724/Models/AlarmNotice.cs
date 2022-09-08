@@ -95,6 +95,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] PolicyIds{ get; set; }
 
         /// <summary>
+        /// Backend AMP consumer ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AMPConsumerId")]
+        public string AMPConsumerId{ get; set; }
+
+        /// <summary>
         /// Channel to push alarm notifications to CLS.
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
@@ -117,6 +124,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "IsPreset", this.IsPreset);
             this.SetParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamSimple(map, prefix + "AMPConsumerId", this.AMPConsumerId);
             this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
         }
     }

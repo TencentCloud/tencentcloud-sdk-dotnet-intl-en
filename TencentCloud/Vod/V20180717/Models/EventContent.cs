@@ -39,8 +39,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>EditMediaComplete: Finished video editing.</li>
         /// <li>SplitMediaComplete: Finished video splitting.</li>
         /// <li>WechatPublishComplete: Published to WeChat.</li>
-        /// <li>ComposeMediaComplete: Finished composition.</li>
+        /// <li>ComposeMediaComplete: Finished producing the media file.</li>
         /// <li>FastClipMediaComplete: Finished quick clipping.</li>
+        /// <li>ReviewAudioVideoComplete: Finished moderation</li>
         /// <b>v2017 task types:</b>
         /// <li>TranscodeComplete: Finished video transcoding.</li>
         /// <li>ConcatComplete: Finished video splicing.</li>
@@ -163,6 +164,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("RestoreMediaCompleteEvent")]
         public RestoreMediaTask RestoreMediaCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoCompleteEvent")]
+        public ReviewAudioVideoTask ReviewAudioVideoCompleteEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +195,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
             this.SetParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
+            this.SetParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
         }
     }
 }

@@ -61,7 +61,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IssuingCountry{ get; set; }
 
         /// <summary>
-        /// Nationality
+        /// Country/region code
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }

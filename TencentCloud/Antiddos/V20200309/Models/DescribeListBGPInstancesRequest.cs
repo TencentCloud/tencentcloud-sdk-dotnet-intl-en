@@ -37,7 +37,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// IP filter
+        /// Filters by IP.
         /// </summary>
         [JsonProperty("FilterIp")]
         public string FilterIp{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string FilterInstanceId{ get; set; }
 
         /// <summary>
-        /// Region filter. For example, `ap-guangzhou`.
+        /// Filters by region. For example, `ap-guangzhou`.
         /// </summary>
         [JsonProperty("FilterRegion")]
         public string FilterRegion{ get; set; }
 
         /// <summary>
-        /// Name filter
+        /// Filters by name.
         /// </summary>
         [JsonProperty("FilterName")]
         public string FilterName{ get; set; }
@@ -73,10 +73,28 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string FilterStatus{ get; set; }
 
         /// <summary>
-        /// Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+        /// Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
         /// </summary>
         [JsonProperty("FilterBoundStatus")]
         public string FilterBoundStatus{ get; set; }
+
+        /// <summary>
+        /// Array of instance IDs
+        /// </summary>
+        [JsonProperty("FilterInstanceIdList")]
+        public string[] FilterInstanceIdList{ get; set; }
+
+        /// <summary>
+        /// Filters by Enterprise edition
+        /// </summary>
+        [JsonProperty("FilterEnterpriseFlag")]
+        public ulong? FilterEnterpriseFlag{ get; set; }
+
+        /// <summary>
+        /// Filters by tag
+        /// </summary>
+        [JsonProperty("FilterTag")]
+        public TagFilter FilterTag{ get; set; }
 
 
         /// <summary>
@@ -93,6 +111,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterLine", this.FilterLine);
             this.SetParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
             this.SetParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
+            this.SetParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
+            this.SetParamSimple(map, prefix + "FilterEnterpriseFlag", this.FilterEnterpriseFlag);
+            this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
         }
     }
 }

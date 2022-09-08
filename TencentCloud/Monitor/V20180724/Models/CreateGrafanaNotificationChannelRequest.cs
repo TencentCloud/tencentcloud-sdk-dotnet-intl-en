@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance name
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ExtraOrgIds")]
         public string[] ExtraOrgIds{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OrganizationIds")]
+        public string[] OrganizationIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "OrgId", this.OrgId);
             this.SetParamArraySimple(map, prefix + "Receivers.", this.Receivers);
             this.SetParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+            this.SetParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
         }
     }
 }

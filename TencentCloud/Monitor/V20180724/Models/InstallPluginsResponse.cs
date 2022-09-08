@@ -25,6 +25,12 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PluginIds")]
+        public string[] PluginIds{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "PluginIds.", this.PluginIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

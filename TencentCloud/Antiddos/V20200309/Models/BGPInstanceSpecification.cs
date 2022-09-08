@@ -37,15 +37,15 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? ProtectCountLimit{ get; set; }
 
         /// <summary>
-        /// Number of protection IPs
+        /// Number of protected IPs
         /// </summary>
         [JsonProperty("ProtectIPNumberLimit")]
         public ulong? ProtectIPNumberLimit{ get; set; }
 
         /// <summary>
-        /// Auto-renewal status. Valid values:
-        /// `0`: disabled
-        /// `1`: enabled
+        /// Auto-renewal status. Values:
+        /// `0`: Disabled
+        /// `1`: Enabled
         /// ]
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
@@ -53,16 +53,45 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UnionPackFlag")]
         public ulong? UnionPackFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Application bandwidth
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceBandWidth")]
         public ulong? ServiceBandWidth{ get; set; }
+
+        /// <summary>
+        /// Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BattleEditionFlag")]
+        public ulong? BattleEditionFlag{ get; set; }
+
+        /// <summary>
+        /// Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ChannelEditionFlag")]
+        public ulong? ChannelEditionFlag{ get; set; }
+
+        /// <summary>
+        /// Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnterpriseFlag")]
+        public ulong? EnterpriseFlag{ get; set; }
+
+        /// <summary>
+        /// Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ElasticLimit")]
+        public ulong? ElasticLimit{ get; set; }
 
 
         /// <summary>
@@ -76,6 +105,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "UnionPackFlag", this.UnionPackFlag);
             this.SetParamSimple(map, prefix + "ServiceBandWidth", this.ServiceBandWidth);
+            this.SetParamSimple(map, prefix + "BattleEditionFlag", this.BattleEditionFlag);
+            this.SetParamSimple(map, prefix + "ChannelEditionFlag", this.ChannelEditionFlag);
+            this.SetParamSimple(map, prefix + "EnterpriseFlag", this.EnterpriseFlag);
+            this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
         }
     }
 }

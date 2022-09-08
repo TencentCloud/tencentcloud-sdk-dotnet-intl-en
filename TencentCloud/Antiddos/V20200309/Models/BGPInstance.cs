@@ -25,43 +25,43 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// Anti-DDoS instance details
+        /// Details of the Anti-DDoS Pro instance
         /// </summary>
         [JsonProperty("InstanceDetail")]
         public InstanceRelation InstanceDetail{ get; set; }
 
         /// <summary>
-        /// Anti-DDoS instance specifications
+        /// Specifications of the Anti-DDoS Pro instance
         /// </summary>
         [JsonProperty("SpecificationLimit")]
         public BGPInstanceSpecification SpecificationLimit{ get; set; }
 
         /// <summary>
-        /// Anti-DDoS instance usage statistics
+        /// Usage statistics of the Anti-DDoS Pro instance
         /// </summary>
         [JsonProperty("Usage")]
         public BGPInstanceUsages Usage{ get; set; }
 
         /// <summary>
-        /// Region of the Anti-DDoS instance
+        /// Region of the Anti-DDoS Pro instance
         /// </summary>
         [JsonProperty("Region")]
         public RegionInfo Region{ get; set; }
 
         /// <summary>
-        /// Status of the Anti-DDoS instance. Valid values:
-        /// `idle`: running
-        /// `attacking`: under attacks
-        /// `blocking`: blocked
-        /// `creating`: creating
-        /// `deblocking`: unblocked
-        /// `isolate`: isolated
+        /// Status of the Anti-DDoS Pro instance. Valid values:
+        /// `idle`: The instance is running normally.
+        /// `attacking`: The instance is under attack.
+        /// `blocking`: The instance is blocked.
+        /// `creating`: The instance is being created.
+        /// `deblocking`: Unblocking the instance
+        /// `isolate`: The instance is being isolated.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Purchase Time
+        /// Purchase time
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -73,14 +73,14 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// Name of the Anti-DDoS instance
+        /// Name of the Anti-DDoS Pro instance
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Package details of the Anti-DDoS instance.
-        /// Note: This field is `null` for an Anti-DDoS instance without using a package.
+        /// Details of the package to which the Anti-DDoS Pro instance belongs.
+        /// When the package provided is not used by the instance, this field is `null`.
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PackInfo")]
@@ -94,9 +94,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
 
         /// <summary>
         /// Binding status of the Anti-DDoS Pro instance
-        /// `idle`: the instance is bound.
-        ///  `bounding`: the instance is in binding.
-        /// `failed`: the binding failed.
+        /// `idle`: The instance is bound.
+        ///  `bounding`: Binding the instance.
+        /// `failed`: Failed to bind
         /// ]
         /// </summary>
         [JsonProperty("BoundStatus")]
@@ -109,10 +109,22 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string DDoSLevel{ get; set; }
 
         /// <summary>
-        /// CC protection switch
+        /// Status of CC protection
         /// </summary>
         [JsonProperty("CCEnable")]
         public long? CCEnable{ get; set; }
+
+        /// <summary>
+        /// Tags associated with the resource
+        /// </summary>
+        [JsonProperty("TagInfoList")]
+        public TagInfo[] TagInfoList{ get; set; }
+
+        /// <summary>
+        /// New edition of Anti-DDoS Pro
+        /// </summary>
+        [JsonProperty("IpCountNewFlag")]
+        public ulong? IpCountNewFlag{ get; set; }
 
 
         /// <summary>
@@ -133,6 +145,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "BoundStatus", this.BoundStatus);
             this.SetParamSimple(map, prefix + "DDoSLevel", this.DDoSLevel);
             this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
+            this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+            this.SetParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
         }
     }
 }

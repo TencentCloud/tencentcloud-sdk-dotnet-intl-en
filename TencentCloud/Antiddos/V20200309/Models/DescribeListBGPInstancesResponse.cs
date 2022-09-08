@@ -25,7 +25,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// Total number of lists
+        /// Total number of Anti-DDoS Pro instances
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

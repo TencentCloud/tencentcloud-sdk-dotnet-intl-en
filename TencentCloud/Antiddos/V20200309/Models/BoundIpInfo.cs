@@ -43,7 +43,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Sub-product category. Valid values: `cvm` (CVM), `lb` (Load balancer), `eni` (ENI), `vpngw` (VPN gateway), `natgw` (NAT gateway), `waf` (WAF), `fpc` (financial products), `gaap` (GAAP), `eip` (BM EIP) and `other` (hosted IP). This field is required when you perform binding.
+        /// Sub-product category. Valid values: `cvm` (CVM), `lb` (Load balancer), `eni` (ENI), `vpngw` (VPN gateway), `natgw` (NAT gateway), `waf` (WAF), `fpc` (financial products), `gaap` (GAAP), `eip` (BM EIP) and `other` (managed IP). This field is required when you perform binding.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// None
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

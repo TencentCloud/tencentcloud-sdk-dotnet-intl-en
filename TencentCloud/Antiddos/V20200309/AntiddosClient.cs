@@ -1413,7 +1413,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to obtain a CC precise protection policy.
+        /// This API is used to obtain the list of CC precise protection policies.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCPrecisionPlyListRequest"/></param>
         /// <returns><see cref="DescribeCCPrecisionPlyListResponse"/></returns>
@@ -1433,7 +1433,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to obtain a CC precise protection policy.
+        /// This API is used to obtain the list of CC precise protection policies.
         /// </summary>
         /// <param name="req"><see cref="DescribeCCPrecisionPlyListRequest"/></param>
         /// <returns><see cref="DescribeCCPrecisionPlyListResponse"/></returns>
@@ -1533,7 +1533,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to obtain a layer-4 access control list.
+        /// This API is used to obtain the layer-4 access control list.
         /// </summary>
         /// <param name="req"><see cref="DescribeCcBlackWhiteIpListRequest"/></param>
         /// <returns><see cref="DescribeCcBlackWhiteIpListResponse"/></returns>
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to obtain a layer-4 access control list.
+        /// This API is used to obtain the layer-4 access control list.
         /// </summary>
         /// <param name="req"><see cref="DescribeCcBlackWhiteIpListRequest"/></param>
         /// <returns><see cref="DescribeCcBlackWhiteIpListResponse"/></returns>

@@ -173,7 +173,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public TagInfo[] TagInfoList{ get; set; }
 
         /// <summary>
-        /// 
+        /// All-out package details of the instance
+        /// When an all-out package is not used by the instance, this field is `null`.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AnycastOutPackRelation")]
         public AnycastOutPackRelation AnycastOutPackRelation{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+        /// Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] SendFor{ get; set; }
 
         /// <summary>
-        /// Uid of the alarm call recipient.
+        /// UID of the phone call alarm.
         /// </summary>
         [JsonProperty("UidList")]
         public long?[] UidList{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? NeedSendNotice{ get; set; }
 
         /// <summary>
-        /// Recipient group list. The list of recipient group IDs that is queried by a platform API.
+        /// Recipient group list. The list of recipient group IDs that is queried by API.
         /// </summary>
         [JsonProperty("ReceiverGroupList")]
         public long?[] ReceiverGroupList{ get; set; }
 
         /// <summary>
-        /// Recipient list. The list of recipient IDs that is queried by a platform API.
+        /// Recipient list. The list of recipient IDs that is queried by API.
         /// </summary>
         [JsonProperty("ReceiverUserList")]
         public long?[] ReceiverUserList{ get; set; }
