@@ -48,6 +48,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("MinStorageSize")]
         public ulong? MinStorageSize{ get; set; }
 
+        /// <summary>
+        /// Whether there is an inventory.
+        /// </summary>
+        [JsonProperty("HasStock")]
+        public bool? HasStock{ get; set; }
+
+        /// <summary>
+        /// Machine type
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
+        /// <summary>
+        /// Maximum IOPS
+        /// </summary>
+        [JsonProperty("MaxIops")]
+        public long? MaxIops{ get; set; }
+
+        /// <summary>
+        /// Maximum bandwidth
+        /// </summary>
+        [JsonProperty("MaxIoBandWidth")]
+        public long? MaxIoBandWidth{ get; set; }
+
+        /// <summary>
+        /// Inventory information in a region
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ZoneStockInfos")]
+        public ZoneStockInfo[] ZoneStockInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +89,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
             this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "MaxIops", this.MaxIops);
+            this.SetParamSimple(map, prefix + "MaxIoBandWidth", this.MaxIoBandWidth);
+            this.SetParamArrayObj(map, prefix + "ZoneStockInfos.", this.ZoneStockInfos);
         }
     }
 }

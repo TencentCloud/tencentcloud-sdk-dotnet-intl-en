@@ -59,13 +59,13 @@ namespace TencentCloud.Ip.V20210409.Models
         public string PhoneNum{ get; set; }
 
         /// <summary>
-        /// Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
+        /// Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
         /// </summary>
         [JsonProperty("CountryCode")]
         public string CountryCode{ get; set; }
 
         /// <summary>
-        /// ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
+        /// Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

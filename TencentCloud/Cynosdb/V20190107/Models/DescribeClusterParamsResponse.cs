@@ -21,26 +21,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRollbackTimeRangeResponse : AbstractModel
+    public class DescribeClusterParamsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Start time of valid rollback time range (disused)
+        /// Number of parameters
         /// </summary>
-        [JsonProperty("TimeRangeStart")]
-        public string TimeRangeStart{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// End time of valid rollback time range (disused)
+        /// Instance parameter list
         /// </summary>
-        [JsonProperty("TimeRangeEnd")]
-        public string TimeRangeEnd{ get; set; }
-
-        /// <summary>
-        /// Time range available for rollback
-        /// </summary>
-        [JsonProperty("RollbackTimeRanges")]
-        public RollbackTimeRange[] RollbackTimeRanges{ get; set; }
+        [JsonProperty("Items")]
+        public ParamInfo[] Items{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,9 +48,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TimeRangeStart", this.TimeRangeStart);
-            this.SetParamSimple(map, prefix + "TimeRangeEnd", this.TimeRangeEnd);
-            this.SetParamArrayObj(map, prefix + "RollbackTimeRanges.", this.RollbackTimeRanges);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -21,21 +21,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceSpecsRequest : AbstractModel
+    public class ZoneStockInfo : AbstractModel
     {
         
         /// <summary>
-        /// Database type. Valid values: 
-        /// <li> MYSQL </li>
+        /// AZ
         /// </summary>
-        [JsonProperty("DbType")]
-        public string DbType{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
-        /// Whether to return the AZ information.
+        /// Whether there is an inventory.
         /// </summary>
-        [JsonProperty("IncludeZoneStocks")]
-        public bool? IncludeZoneStocks{ get; set; }
+        [JsonProperty("HasStock")]
+        public bool? HasStock{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DbType", this.DbType);
-            this.SetParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
         }
     }
 }

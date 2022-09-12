@@ -21,32 +21,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRollbackTimeRangeResponse : AbstractModel
+    public class ModifyClusterSlaveZoneRequest : AbstractModel
     {
         
         /// <summary>
-        /// Start time of valid rollback time range (disused)
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("TimeRangeStart")]
-        public string TimeRangeStart{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// End time of valid rollback time range (disused)
+        /// Old replica AZ
         /// </summary>
-        [JsonProperty("TimeRangeEnd")]
-        public string TimeRangeEnd{ get; set; }
+        [JsonProperty("OldSlaveZone")]
+        public string OldSlaveZone{ get; set; }
 
         /// <summary>
-        /// Time range available for rollback
+        /// New replica AZ
         /// </summary>
-        [JsonProperty("RollbackTimeRanges")]
-        public RollbackTimeRange[] RollbackTimeRanges{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("NewSlaveZone")]
+        public string NewSlaveZone{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TimeRangeStart", this.TimeRangeStart);
-            this.SetParamSimple(map, prefix + "TimeRangeEnd", this.TimeRangeEnd);
-            this.SetParamArrayObj(map, prefix + "RollbackTimeRanges.", this.RollbackTimeRanges);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "OldSlaveZone", this.OldSlaveZone);
+            this.SetParamSimple(map, prefix + "NewSlaveZone", this.NewSlaveZone);
         }
     }
 }
