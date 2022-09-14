@@ -90,6 +90,9 @@
     <Compile Include="V20180416\Models\NodeView.cs" />
     <Compile Include="V20180416\Models\Operation.cs" />
     <Compile Include="V20180416\Models\OperationDetail.cs" />
+    <Compile Include="V20180416\Models\OperationDuration.cs" />
+    <Compile Include="V20180416\Models\OperationDurationUpdated.cs" />
+    <Compile Include="V20180416\Models\OptionalWebServiceInfo.cs" />
     <Compile Include="V20180416\Models\RestartInstanceRequest.cs" />
     <Compile Include="V20180416\Models\RestartInstanceResponse.cs" />
     <Compile Include="V20180416\Models\RestartKibanaRequest.cs" />

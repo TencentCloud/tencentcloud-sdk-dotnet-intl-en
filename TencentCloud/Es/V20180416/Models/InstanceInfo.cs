@@ -513,6 +513,34 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EsConfigSets")]
         public EsConfigSetInfo[] EsConfigSets{ get; set; }
 
+        /// <summary>
+        /// The maintenance time slot of the cluster
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OperationDuration")]
+        public OperationDuration OperationDuration{ get; set; }
+
+        /// <summary>
+        /// Web node list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OptionalWebServiceInfos")]
+        public OptionalWebServiceInfo[] OptionalWebServiceInfos{ get; set; }
+
+        /// <summary>
+        /// Autonomous index option
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AutoIndexEnabled")]
+        public bool? AutoIndexEnabled{ get; set; }
+
+        /// <summary>
+        /// Whether the storage-computing separation feature is enabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnableHybridStorage")]
+        public bool? EnableHybridStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -594,6 +622,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
             this.SetParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
             this.SetParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
+            this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+            this.SetParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
+            this.SetParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
+            this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         }
     }
 }

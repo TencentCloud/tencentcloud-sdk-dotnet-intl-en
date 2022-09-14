@@ -212,6 +212,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// The maintenance time slot
+        /// </summary>
+        [JsonProperty("OperationDuration")]
+        public OperationDuration OperationDuration{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the storage-computing separation feature.
+        /// </summary>
+        [JsonProperty("EnableHybridStorage")]
+        public bool? EnableHybridStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +260,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+            this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         }
     }
 }
