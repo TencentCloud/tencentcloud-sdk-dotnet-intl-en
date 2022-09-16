@@ -51,6 +51,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
+        /// The input of a moderation task.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Input")]
+        public ReviewAudioVideoTaskInput Input{ get; set; }
+
+        /// <summary>
         /// The output of a moderation task.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -64,7 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+        /// The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
@@ -79,6 +86,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);

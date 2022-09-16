@@ -527,6 +527,7 @@
     <Compile Include="V20180717\Models\RestoreMediaTask.cs" />
     <Compile Include="V20180717\Models\ReviewAudioVideoSegmentItem.cs" />
     <Compile Include="V20180717\Models\ReviewAudioVideoTask.cs" />
+    <Compile Include="V20180717\Models\ReviewAudioVideoTaskInput.cs" />
     <Compile Include="V20180717\Models\ReviewAudioVideoTaskOutput.cs" />
     <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
