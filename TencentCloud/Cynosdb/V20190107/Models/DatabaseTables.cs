@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenKafkaConsumerRequest : AbstractModel
+    public class DatabaseTables : AbstractModel
     {
         
         /// <summary>
-        /// `TopicId` created by the CLS console
+        /// Database name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("FromTopicId")]
-        public string FromTopicId{ get; set; }
+        [JsonProperty("Database")]
+        public string Database{ get; set; }
 
         /// <summary>
-        /// Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+        /// Table name list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Compression")]
-        public long? Compression{ get; set; }
+        [JsonProperty("Tables")]
+        public string[] Tables{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
-            this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamSimple(map, prefix + "Database", this.Database);
+            this.SetParamArraySimple(map, prefix + "Tables.", this.Tables);
         }
     }
 }

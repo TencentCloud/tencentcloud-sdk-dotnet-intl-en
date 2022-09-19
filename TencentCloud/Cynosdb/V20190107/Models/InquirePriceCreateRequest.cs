@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Purchase quantity
+        /// Number of compute node to purchase
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+        /// Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

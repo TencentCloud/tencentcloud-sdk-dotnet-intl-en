@@ -165,6 +165,8 @@
     <Compile Include="V20190823\Models\SnapshotInfo.cs" />
     <Compile Include="V20190823\Models\SnapshotInfoNew.cs" />
     <Compile Include="V20190823\Models\SnapshotResult.cs" />
+    <Compile Include="V20190823\Models\SyncTableField.cs" />
+    <Compile Include="V20190823\Models\SyncTableInfo.cs" />
     <Compile Include="V20190823\Models\TableGroupInfo.cs" />
     <Compile Include="V20190823\Models\TableInfoNew.cs" />
     <Compile Include="V20190823\Models\TableResultNew.cs" />

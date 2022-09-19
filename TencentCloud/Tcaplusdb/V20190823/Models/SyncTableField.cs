@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Tcaplusdb.V20190823.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenKafkaConsumerRequest : AbstractModel
+    public class SyncTableField : AbstractModel
     {
         
         /// <summary>
-        /// `TopicId` created by the CLS console
+        /// Field name of TcaplusDB table
         /// </summary>
-        [JsonProperty("FromTopicId")]
-        public string FromTopicId{ get; set; }
+        [JsonProperty("SourceName")]
+        public string SourceName{ get; set; }
 
         /// <summary>
-        /// Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+        /// Field name of the target cache table
         /// </summary>
-        [JsonProperty("Compression")]
-        public long? Compression{ get; set; }
+        [JsonProperty("TargetName")]
+        public string TargetName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
-            this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
+            this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
         }
     }
 }

@@ -31,8 +31,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? EnableTag{ get; set; }
 
         /// <summary>
-        /// Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MetaFields")]
         public string[] MetaFields{ get; set; }

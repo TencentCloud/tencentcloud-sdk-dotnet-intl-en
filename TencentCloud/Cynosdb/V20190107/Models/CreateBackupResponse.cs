@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenKafkaConsumerRequest : AbstractModel
+    public class CreateBackupResponse : AbstractModel
     {
         
         /// <summary>
-        /// `TopicId` created by the CLS console
+        /// Async task flow ID
         /// </summary>
-        [JsonProperty("FromTopicId")]
-        public string FromTopicId{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Compression")]
-        public long? Compression{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
-            this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

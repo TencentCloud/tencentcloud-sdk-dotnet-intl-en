@@ -213,6 +213,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to create manual backup.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupRequest"/></param>
+        /// <returns><see cref="CreateBackupResponse"/></returns>
+        public async Task<CreateBackupResponse> CreateBackup(CreateBackupRequest req)
+        {
+             JsonResponseModel<CreateBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create manual backup.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupRequest"/></param>
+        /// <returns><see cref="CreateBackupResponse"/></returns>
+        public CreateBackupResponse CreateBackupSync(CreateBackupRequest req)
+        {
+             JsonResponseModel<CreateBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>

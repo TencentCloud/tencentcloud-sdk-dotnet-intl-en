@@ -220,6 +220,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("TxhBackupExpireDay")]
         public ulong? TxhBackupExpireDay{ get; set; }
 
+        /// <summary>
+        /// Cached information of the table
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SyncTableInfo")]
+        public SyncTableInfo SyncTableInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +261,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "SortRule", this.SortRule);
             this.SetParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
             this.SetParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+            this.SetParamObj(map, prefix + "SyncTableInfo.", this.SyncTableInfo);
         }
     }
 }

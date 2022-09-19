@@ -59,6 +59,8 @@
     <Compile Include="V20190107\Models\ClusterInstanceDetail.cs" />
     <Compile Include="V20190107\Models\CreateAccountsRequest.cs" />
     <Compile Include="V20190107\Models\CreateAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\CreateBackupRequest.cs" />
+    <Compile Include="V20190107\Models\CreateBackupResponse.cs" />
     <Compile Include="V20190107\Models\CreateClustersRequest.cs" />
     <Compile Include="V20190107\Models\CreateClustersResponse.cs" />
     <Compile Include="V20190107\Models\CynosdbCluster.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="V20190107\Models\CynosdbInstance.cs" />
     <Compile Include="V20190107\Models\CynosdbInstanceDetail.cs" />
     <Compile Include="V20190107\Models\CynosdbInstanceGrp.cs" />
+    <Compile Include="V20190107\Models\DatabaseTables.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigRequest.cs" />
