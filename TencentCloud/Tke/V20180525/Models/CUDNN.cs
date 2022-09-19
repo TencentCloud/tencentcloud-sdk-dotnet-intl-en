@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAccountsResponse : AbstractModel
+    public class CUDNN : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible accounts
+        /// cuDNN version
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
         /// <summary>
-        /// Details of eligible accounts
+        /// cuDNN name
         /// </summary>
-        [JsonProperty("Items")]
-        public AccountInfo[] Items{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// The maximum number of instance connections
+        /// Doc name of cuDNN
         /// </summary>
-        [JsonProperty("MaxUserConnections")]
-        public long? MaxUserConnections{ get; set; }
+        [JsonProperty("DocName")]
+        public string DocName{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Dev name of cuDNN
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DevName")]
+        public string DevName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "DocName", this.DocName);
+            this.SetParamSimple(map, prefix + "DevName", this.DevName);
         }
     }
 }

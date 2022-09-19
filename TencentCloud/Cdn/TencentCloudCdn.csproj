@@ -159,6 +159,7 @@
     <Compile Include="V20180606\Models\GetDisableRecordsRequest.cs" />
     <Compile Include="V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="V20180606\Models\GuetzliAdapter.cs" />
+    <Compile Include="V20180606\Models\HTTPHeader.cs" />
     <Compile Include="V20180606\Models\HeaderKey.cs" />
     <Compile Include="V20180606\Models\HeuristicCache.cs" />
     <Compile Include="V20180606\Models\Hsts.cs" />

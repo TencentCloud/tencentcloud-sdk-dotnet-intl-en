@@ -30,6 +30,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EngineVersions")]
         public string[] EngineVersions{ get; set; }
 
+        /// <summary>
+        /// Engine type. If it is left empty, all engine types will be queried.
+        /// </summary>
+        [JsonProperty("EngineTypes")]
+        public string[] EngineTypes{ get; set; }
+
+        /// <summary>
+        /// Template name. If it is left empty, all template names will be queried.
+        /// </summary>
+        [JsonProperty("TemplateNames")]
+        public string[] TemplateNames{ get; set; }
+
+        /// <summary>
+        /// Template ID. If it is left empty, all template IDs will be queried.
+        /// </summary>
+        [JsonProperty("TemplateIds")]
+        public long?[] TemplateIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
+            this.SetParamArraySimple(map, prefix + "TemplateNames.", this.TemplateNames);
+            this.SetParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
         }
     }
 }

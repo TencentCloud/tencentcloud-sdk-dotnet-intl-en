@@ -55,7 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ModifyPasswordTime{ get; set; }
 
         /// <summary>
-        /// This parameter is no longer supported.
+        /// This parameter is deprecated.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

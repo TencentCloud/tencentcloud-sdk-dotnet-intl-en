@@ -31,16 +31,24 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
+        /// List of destination regions for synchronization. Limits:<br><li>It cannot be the same as the source region.<br><li>The Region parameter is correct. See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).<br><li>Image synchronization is only available in limited regions.<br>
+        /// 
+        /// For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.
         /// </summary>
         [JsonProperty("DestinationRegions")]
         public string[] DestinationRegions{ get; set; }
 
         /// <summary>
-        /// Checks whether image synchronization can be initiated 
+        /// Checks whether image synchronization can be initiated.
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
+
+        /// <summary>
+        /// Destination image name.
+        /// </summary>
+        [JsonProperty("ImageName")]
+        public string ImageName{ get; set; }
 
 
         /// <summary>
@@ -51,6 +59,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
             this.SetParamArraySimple(map, prefix + "DestinationRegions.", this.DestinationRegions);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
         }
     }
 }

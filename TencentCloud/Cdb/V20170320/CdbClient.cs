@@ -293,7 +293,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
+        /// This API is used to create a TencentDB account. The account name, host address, and password are required. Account remarks and maximum connections can also be configured.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
+        /// This API is used to create a TencentDB account. The account name, host address, and password are required. Account remarks and maximum connections can also be configured.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeAccounts) is used to query information of all TencentDB accounts.
+        /// This API is used to query information of all TencentDB accounts.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
         /// <returns><see cref="DescribeAccountsResponse"/></returns>
@@ -853,7 +853,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeAccounts) is used to query information of all TencentDB accounts.
+        /// This API is used to query information of all TencentDB accounts.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
         /// <returns><see cref="DescribeAccountsResponse"/></returns>
@@ -1633,6 +1633,50 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API (DescribeDBPrice) is used to query the prices of pay-as-you-go or monthly subscribed TencentDB instances by passing in information such as instance type, purchased duration, number of purchased instances, memory size, disk size, and AZ.
+        /// 
+        /// Note: To query prices in a specific region, please use the access point of the region. For more information on access points, see <a href="https://cloud.tencent.com/document/api/236/15832">Service Addresses</a>. For example, to query prices in Guangzhou, send a request to: cdb.ap-guangzhou.tencentcloudapi.com. Likewise, to query prices in Shanghai, send a request to: cdb.ap-shanghai.tencentcloudapi.com.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBPriceRequest"/></param>
+        /// <returns><see cref="DescribeDBPriceResponse"/></returns>
+        public async Task<DescribeDBPriceResponse> DescribeDBPrice(DescribeDBPriceRequest req)
+        {
+             JsonResponseModel<DescribeDBPriceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBPrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBPriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API (DescribeDBPrice) is used to query the prices of pay-as-you-go or monthly subscribed TencentDB instances by passing in information such as instance type, purchased duration, number of purchased instances, memory size, disk size, and AZ.
+        /// 
+        /// Note: To query prices in a specific region, please use the access point of the region. For more information on access points, see <a href="https://cloud.tencent.com/document/api/236/15832">Service Addresses</a>. For example, to query prices in Guangzhou, send a request to: cdb.ap-guangzhou.tencentcloudapi.com. Likewise, to query prices in Shanghai, send a request to: cdb.ap-shanghai.tencentcloudapi.com.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBPriceRequest"/></param>
+        /// <returns><see cref="DescribeDBPriceResponse"/></returns>
+        public DescribeDBPriceResponse DescribeDBPriceSync(DescribeDBPriceRequest req)
+        {
+             JsonResponseModel<DescribeDBPriceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBPrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBPriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeDBSecurityGroups) is used to query the security group details of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
@@ -1704,46 +1748,6 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBSwitchRecords");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSwitchRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (DescribeDBZoneConfig) is used to query the specifications of TencentDB instances purchasable in a region.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBZoneConfigRequest"/></param>
-        /// <returns><see cref="DescribeDBZoneConfigResponse"/></returns>
-        public async Task<DescribeDBZoneConfigResponse> DescribeDBZoneConfig(DescribeDBZoneConfigRequest req)
-        {
-             JsonResponseModel<DescribeDBZoneConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDBZoneConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBZoneConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API (DescribeDBZoneConfig) is used to query the specifications of TencentDB instances purchasable in a region.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBZoneConfigRequest"/></param>
-        /// <returns><see cref="DescribeDBZoneConfigResponse"/></returns>
-        public DescribeDBZoneConfigResponse DescribeDBZoneConfigSync(DescribeDBZoneConfigRequest req)
-        {
-             JsonResponseModel<DescribeDBZoneConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBZoneConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBZoneConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3443,7 +3447,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (ModifyDBInstanceVipVport) is used to modify the IP and port number of a TencentDB instance, switch from the basic network to VPC, or change VPC subnets.
+        /// This API is used to modify the IP and port number of a TencentDB instance, switch from classic network to VPC, or change VPC subnets.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceVipVportRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceVipVportResponse"/></returns>
@@ -3463,7 +3467,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (ModifyDBInstanceVipVport) is used to modify the IP and port number of a TencentDB instance, switch from the basic network to VPC, or change VPC subnets.
+        /// This API is used to modify the IP and port number of a TencentDB instance, switch from classic network to VPC, or change VPC subnets.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceVipVportRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceVipVportResponse"/></returns>

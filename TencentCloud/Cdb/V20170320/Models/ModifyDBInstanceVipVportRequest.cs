@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+        /// Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Destination IP. Either this parameter or `DstPort` must be passed in.
+        /// Target IP. Either this parameter or `DstPort` must be passed in.
         /// </summary>
         [JsonProperty("DstIp")]
         public string DstIp{ get; set; }
 
         /// <summary>
-        /// Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
+        /// Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
         /// </summary>
         [JsonProperty("DstPort")]
         public long? DstPort{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Unified subnet ID.
+        /// Unified subnet ID
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+        /// Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
         /// </summary>
         [JsonProperty("ReleaseDuration")]
         public long? ReleaseDuration{ get; set; }

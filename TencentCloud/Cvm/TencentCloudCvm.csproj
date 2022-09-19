@@ -152,6 +152,8 @@
     <Compile Include="V20170312\Models\InquiryPriceResetInstancesTypeResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResizeInstanceDisksRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResizeInstanceDisksResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRunInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRunInstancesResponse.cs" />
     <Compile Include="V20170312\Models\Instance.cs" />
     <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20170312\Models\InstanceFamilyConfig.cs" />

@@ -79,6 +79,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Configure")]
         public ScdnSevenLayerRules[] Configure{ get; set; }
 
+        /// <summary>
+        /// Whether to enable the rule. Values: `on` (enable), `off` (disable).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
             this.SetParamArrayObj(map, prefix + "Configure.", this.Configure);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

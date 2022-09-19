@@ -57,6 +57,27 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] ClusterExternalACL{ get; set; }
 
         /// <summary>
+        /// Public network domain name
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterExternalDomain")]
+        public string ClusterExternalDomain{ get; set; }
+
+        /// <summary>
+        /// Private network domain name
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterIntranetDomain")]
+        public string ClusterIntranetDomain{ get; set; }
+
+        /// <summary>
+        /// Public network security group
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +94,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterIntranetEndpoint", this.ClusterIntranetEndpoint);
             this.SetParamSimple(map, prefix + "ClusterDomain", this.ClusterDomain);
             this.SetParamArraySimple(map, prefix + "ClusterExternalACL.", this.ClusterExternalACL);
+            this.SetParamSimple(map, prefix + "ClusterExternalDomain", this.ClusterExternalDomain);
+            this.SetParamSimple(map, prefix + "ClusterIntranetDomain", this.ClusterIntranetDomain);
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

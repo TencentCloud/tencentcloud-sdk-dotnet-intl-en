@@ -85,7 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// AZ information of the primary instance, which is required for purchasing disaster recovery instances.
+        /// AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
         /// </summary>
         [JsonProperty("MasterRegion")]
         public string MasterRegion{ get; set; }
@@ -187,7 +187,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// The array of alarm policy IDs.
+        /// Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public long?[] AlarmPolicyList{ get; set; }

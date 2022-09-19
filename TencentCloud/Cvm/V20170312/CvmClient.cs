@@ -2005,6 +2005,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRunInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRunInstancesResponse"/></returns>
+        public async Task<InquiryPriceRunInstancesResponse> InquiryPriceRunInstances(InquiryPriceRunInstancesRequest req)
+        {
+             JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRunInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRunInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRunInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRunInstancesResponse"/></returns>
+        public InquiryPriceRunInstancesResponse InquiryPriceRunInstancesSync(InquiryPriceRunInstancesRequest req)
+        {
+             JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceRunInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRunInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the CHC host attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyChcAttributeRequest"/></param>

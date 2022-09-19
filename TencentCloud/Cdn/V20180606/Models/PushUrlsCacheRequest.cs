@@ -72,6 +72,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("DisableRange")]
         public bool? DisableRange{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Headers")]
+        public HTTPHeader[] Headers{ get; set; }
+
+        /// <summary>
+        /// Whether to encode the URL
+        /// </summary>
+        [JsonProperty("UrlEncode")]
+        public bool? UrlEncode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +96,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Layer", this.Layer);
             this.SetParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
             this.SetParamSimple(map, prefix + "DisableRange", this.DisableRange);
+            this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
+            this.SetParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
         }
     }
 }

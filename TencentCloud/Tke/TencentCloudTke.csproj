@@ -56,6 +56,7 @@
     <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="V20180525\Models\AutoUpgradeClusterLevel.cs" />
     <Compile Include="V20180525\Models\AutoscalingAdded.cs" />
+    <Compile Include="V20180525\Models\CUDNN.cs" />
     <Compile Include="V20180525\Models\CheckEdgeClusterCIDRRequest.cs" />
     <Compile Include="V20180525\Models\CheckEdgeClusterCIDRResponse.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />
@@ -92,12 +93,15 @@
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
     <Compile Include="V20180525\Models\CreateECMInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateECMInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\CreateEdgeCVMInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\CreateEdgeCVMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\CreateEdgeLogConfigRequest.cs" />
     <Compile Include="V20180525\Models\CreateEdgeLogConfigResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertRuleRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\CreateTKEEdgeClusterRequest.cs" />
     <Compile Include="V20180525\Models\CreateTKEEdgeClusterResponse.cs" />
+    <Compile Include="V20180525\Models\CustomDriver.cs" />
     <Compile Include="V20180525\Models\DataDisk.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
@@ -207,6 +211,7 @@
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
     <Compile Include="V20180525\Models\DisableClusterDeletionProtectionRequest.cs" />
     <Compile Include="V20180525\Models\DisableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="V20180525\Models\DriverVersion.cs" />
     <Compile Include="V20180525\Models\ECMEnhancedService.cs" />
     <Compile Include="V20180525\Models\ECMRunMonitorServiceEnabled.cs" />
     <Compile Include="V20180525\Models\ECMRunSecurityServiceEnabled.cs" />
@@ -230,6 +235,7 @@
     <Compile Include="V20180525\Models\Filter.cs" />
     <Compile Include="V20180525\Models\ForwardTKEEdgeApplicationRequestV3Request.cs" />
     <Compile Include="V20180525\Models\ForwardTKEEdgeApplicationRequestV3Response.cs" />
+    <Compile Include="V20180525\Models\GPUArgs.cs" />
     <Compile Include="V20180525\Models\GetClusterLevelPriceRequest.cs" />
     <Compile Include="V20180525\Models\GetClusterLevelPriceResponse.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />

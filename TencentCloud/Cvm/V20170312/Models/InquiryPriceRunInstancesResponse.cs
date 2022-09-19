@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAccountsResponse : AbstractModel
+    public class InquiryPriceRunInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible accounts
+        /// Price of the instance with the specified configurations.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// Details of eligible accounts
-        /// </summary>
-        [JsonProperty("Items")]
-        public AccountInfo[] Items{ get; set; }
-
-        /// <summary>
-        /// The maximum number of instance connections
-        /// </summary>
-        [JsonProperty("MaxUserConnections")]
-        public long? MaxUserConnections{ get; set; }
+        [JsonProperty("Price")]
+        public Price Price{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,9 +42,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamObj(map, prefix + "Price.", this.Price);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

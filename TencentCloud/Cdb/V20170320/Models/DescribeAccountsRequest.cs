@@ -25,25 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Record offset. Default value: 0.
+        /// Record offset. Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
+        /// Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Regular expression for matching account names, which complies with the rules at MySQL official website.
+        /// Regex for matching account names, which complies with the rules at MySQL's official website
         /// </summary>
         [JsonProperty("AccountRegexp")]
         public string AccountRegexp{ get; set; }

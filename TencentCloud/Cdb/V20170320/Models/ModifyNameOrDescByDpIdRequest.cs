@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// ID of a placement group.
+        /// Placement group ID
         /// </summary>
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
         /// <summary>
-        /// Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
+        /// Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
         /// </summary>
         [JsonProperty("DeployGroupName")]
         public string DeployGroupName{ get; set; }
 
         /// <summary>
-        /// Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
+        /// Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

@@ -81,6 +81,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? DesiredPodNumber{ get; set; }
 
         /// <summary>
+        /// GPU driver parameters
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("GPUArgs")]
+        public GPUArgs GPUArgs{ get; set; }
+
+        /// <summary>
         /// Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
@@ -108,6 +115,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
             this.SetParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
+            this.SetParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
             this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
         }

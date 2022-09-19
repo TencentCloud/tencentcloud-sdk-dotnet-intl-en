@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyDBInstanceVipVportResponse : AbstractModel
+    public class HTTPHeader : AbstractModel
     {
         
         /// <summary>
-        /// Async task ID. This parameter is deprecated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
-        [JsonProperty("AsyncRequestId")]
-        public string AsyncRequestId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// 
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }
