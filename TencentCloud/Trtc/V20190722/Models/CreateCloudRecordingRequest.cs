@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
+        /// The [user ID](https://www.tencentcloud.com/document/product/647/37714#userid) of the recording robot in the TRTC room, which cannot be identical to the user IDs of anchors in the room or other recording robots. To distinguish this user ID from others, we recommend you include the room ID in the user ID.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

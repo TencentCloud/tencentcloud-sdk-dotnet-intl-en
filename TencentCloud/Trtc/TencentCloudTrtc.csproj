@@ -62,6 +62,7 @@
     <Compile Include="V20190722\Models\DismissRoomResponse.cs" />
     <Compile Include="V20190722\Models\MaxVideoUser.cs" />
     <Compile Include="V20190722\Models\McuAudioParams.cs" />
+    <Compile Include="V20190722\Models\McuCustomCrop.cs" />
     <Compile Include="V20190722\Models\McuLayout.cs" />
     <Compile Include="V20190722\Models\McuLayoutParams.cs" />
     <Compile Include="V20190722\Models\McuLayoutVolume.cs" />

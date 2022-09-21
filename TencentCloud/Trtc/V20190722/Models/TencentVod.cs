@@ -67,6 +67,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
 
+        /// <summary>
+        /// The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public ulong? MediaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
         }
     }
 }

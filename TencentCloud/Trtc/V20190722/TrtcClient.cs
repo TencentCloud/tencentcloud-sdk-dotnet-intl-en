@@ -58,13 +58,13 @@ namespace TencentCloud.Trtc.V20190722
         /// 
         /// You can use this API to perform the following operations:
         /// * Specify the anchors whose streams you want or do not want to record by using the `RecordParams` parameter
-        /// * Specify the storage service you want to save recording files to by using the `StorageParams` parameter
+        /// * Specify the storage service you want to save recording files to by using the `StorageParams` parameter. Currently, you can only save recording files to VOD (`CloudVod`).
         /// * Specify transcoding settings for mixed-stream recording, including video resolution, video bitrate, frame rate, and audio quality, by using `MixTranscodeParams`
         /// * Specify the layout of different videos in mixed-stream recording mode or select an auto-arranged layout template
         /// 
         /// Key concepts:
         /// * Single-stream recording: Record the audio and video of each subscribed user (`UserId`) in a room and save the recording files to VOD.
-        /// * Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files to VOD.
+        /// * Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files to VOD. After a recording task ends, you can go to the VOD console (https://console.cloud.tencent.com/vod/media) to view the recording files.
         /// </summary>
         /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
         /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
@@ -89,13 +89,13 @@ namespace TencentCloud.Trtc.V20190722
         /// 
         /// You can use this API to perform the following operations:
         /// * Specify the anchors whose streams you want or do not want to record by using the `RecordParams` parameter
-        /// * Specify the storage service you want to save recording files to by using the `StorageParams` parameter
+        /// * Specify the storage service you want to save recording files to by using the `StorageParams` parameter. Currently, you can only save recording files to VOD (`CloudVod`).
         /// * Specify transcoding settings for mixed-stream recording, including video resolution, video bitrate, frame rate, and audio quality, by using `MixTranscodeParams`
         /// * Specify the layout of different videos in mixed-stream recording mode or select an auto-arranged layout template
         /// 
         /// Key concepts:
         /// * Single-stream recording: Record the audio and video of each subscribed user (`UserId`) in a room and save the recording files to VOD.
-        /// * Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files to VOD.
+        /// * Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files to VOD. After a recording task ends, you can go to the VOD console (https://console.cloud.tencent.com/vod/media) to view the recording files.
         /// </summary>
         /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
         /// <returns><see cref="CreateCloudRecordingResponse"/></returns>

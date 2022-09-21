@@ -54,10 +54,16 @@ namespace TencentCloud.Trtc.V20190722.Models
         public SubscribeStreamUserIds SubscribeStreamUserIds{ get; set; }
 
         /// <summary>
-        /// The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+        /// The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
         /// </summary>
         [JsonProperty("OutputFormat")]
         public ulong? OutputFormat{ get; set; }
+
+        /// <summary>
+        /// Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+        /// </summary>
+        [JsonProperty("AvMerge")]
+        public ulong? AvMerge{ get; set; }
 
 
         /// <summary>
@@ -70,6 +76,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "StreamType", this.StreamType);
             this.SetParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+            this.SetParamSimple(map, prefix + "AvMerge", this.AvMerge);
         }
     }
 }

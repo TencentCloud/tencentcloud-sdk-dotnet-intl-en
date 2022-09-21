@@ -85,6 +85,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("BackgroundImageUrl")]
         public string BackgroundImageUrl{ get; set; }
 
+        /// <summary>
+        /// Custom cropping.
+        /// </summary>
+        [JsonProperty("CustomCrop")]
+        public McuCustomCrop CustomCrop{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
             this.SetParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
             this.SetParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
+            this.SetParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
         }
     }
 }

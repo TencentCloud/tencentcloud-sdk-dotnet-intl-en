@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The cloud storage information.
+        /// The third-party cloud storage information (not supported currently).
         /// </summary>
         [JsonProperty("CloudStorage")]
         public CloudStorage CloudStorage{ get; set; }
