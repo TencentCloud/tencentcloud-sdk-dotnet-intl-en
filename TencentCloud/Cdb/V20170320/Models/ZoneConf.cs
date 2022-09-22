@@ -21,32 +21,32 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBPriceResponse : AbstractModel
+    public class ZoneConf : AbstractModel
     {
         
         /// <summary>
-        /// Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+        /// AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
         /// </summary>
-        [JsonProperty("Price")]
-        public long? Price{ get; set; }
+        [JsonProperty("DeployMode")]
+        public long?[] DeployMode{ get; set; }
 
         /// <summary>
-        /// Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+        /// AZ where the primary instance is located
         /// </summary>
-        [JsonProperty("OriginalPrice")]
-        public long? OriginalPrice{ get; set; }
+        [JsonProperty("MasterZone")]
+        public string[] MasterZone{ get; set; }
 
         /// <summary>
-        /// Currency: `CNY`, `USD`.
+        /// AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
         /// </summary>
-        [JsonProperty("Currency")]
-        public string Currency{ get; set; }
+        [JsonProperty("SlaveZone")]
+        public string[] SlaveZone{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// AZ where salve database 2 is located when the instance is deployed in multi-AZ mode
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("BackupZone")]
+        public string[] BackupZone{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Price", this.Price);
-            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-            this.SetParamSimple(map, prefix + "Currency", this.Currency);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "DeployMode.", this.DeployMode);
+            this.SetParamArraySimple(map, prefix + "MasterZone.", this.MasterZone);
+            this.SetParamArraySimple(map, prefix + "SlaveZone.", this.SlaveZone);
+            this.SetParamArraySimple(map, prefix + "BackupZone.", this.BackupZone);
         }
     }
 }

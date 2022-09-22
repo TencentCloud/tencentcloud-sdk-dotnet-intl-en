@@ -69,7 +69,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? DataAmount{ get; set; }
 
         /// <summary>
-        /// Task execution time in seconds
+        /// The compute time in ms.
         /// </summary>
         [JsonProperty("UsedTime")]
         public long? UsedTime{ get; set; }
@@ -136,6 +136,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DisplayFormat")]
         public string DisplayFormat{ get; set; }
 
+        /// <summary>
+        /// The task time in ms.
+        /// </summary>
+        [JsonProperty("TotalTime")]
+        public long? TotalTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +166,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Percentage", this.Percentage);
             this.SetParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
             this.SetParamSimple(map, prefix + "DisplayFormat", this.DisplayFormat);
+            this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
         }
     }
 }

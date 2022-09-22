@@ -21,32 +21,38 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBPriceResponse : AbstractModel
+    public class CdbRegionSellConf : AbstractModel
     {
         
         /// <summary>
-        /// Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+        /// Region name
         /// </summary>
-        [JsonProperty("Price")]
-        public long? Price{ get; set; }
+        [JsonProperty("RegionName")]
+        public string RegionName{ get; set; }
 
         /// <summary>
-        /// Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+        /// Area
         /// </summary>
-        [JsonProperty("OriginalPrice")]
-        public long? OriginalPrice{ get; set; }
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
         /// <summary>
-        /// Currency: `CNY`, `USD`.
+        /// Whether it is a default region
         /// </summary>
-        [JsonProperty("Currency")]
-        public string Currency{ get; set; }
+        [JsonProperty("IsDefaultRegion")]
+        public long? IsDefaultRegion{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Region name
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// The purchasable configuration in an AZ in a region
+        /// </summary>
+        [JsonProperty("RegionConfig")]
+        public CdbZoneSellConf[] RegionConfig{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Price", this.Price);
-            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-            this.SetParamSimple(map, prefix + "Currency", this.Currency);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "IsDefaultRegion", this.IsDefaultRegion);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArrayObj(map, prefix + "RegionConfig.", this.RegionConfig);
         }
     }
 }

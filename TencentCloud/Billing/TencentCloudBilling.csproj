@@ -53,6 +53,8 @@
     <Compile Include="V20180709\Models\BillTagInfo.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryTotal.cs" />
+    <Compile Include="V20180709\Models\DescribeAccountBalanceRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAccountBalanceResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillDetailRequest.cs" />
     <Compile Include="V20180709\Models\DescribeBillDetailResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillResourceSummaryRequest.cs" />

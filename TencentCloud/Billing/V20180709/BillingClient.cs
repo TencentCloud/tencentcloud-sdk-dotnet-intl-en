@@ -53,6 +53,46 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to check the Tencent Cloud account balance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountBalanceRequest"/></param>
+        /// <returns><see cref="DescribeAccountBalanceResponse"/></returns>
+        public async Task<DescribeAccountBalanceResponse> DescribeAccountBalance(DescribeAccountBalanceRequest req)
+        {
+             JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to check the Tencent Cloud account balance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountBalanceRequest"/></param>
+        /// <returns><see cref="DescribeAccountBalanceResponse"/></returns>
+        public DescribeAccountBalanceResponse DescribeAccountBalanceSync(DescribeAccountBalanceRequest req)
+        {
+             JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query bill details.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>

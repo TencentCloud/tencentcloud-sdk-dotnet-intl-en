@@ -21,32 +21,14 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBinlogBackupOverviewResponse : AbstractModel
+    public class DescribeCdbZoneConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// Total capacity of log backups in bytes (including remote log backups)
+        /// List of purchasable specification and region information
         /// </summary>
-        [JsonProperty("BinlogBackupVolume")]
-        public long? BinlogBackupVolume{ get; set; }
-
-        /// <summary>
-        /// Total number of log backups (include remote log backups)
-        /// </summary>
-        [JsonProperty("BinlogBackupCount")]
-        public long? BinlogBackupCount{ get; set; }
-
-        /// <summary>
-        /// Capacity of remote log backups in bytes
-        /// </summary>
-        [JsonProperty("RemoteBinlogVolume")]
-        public long? RemoteBinlogVolume{ get; set; }
-
-        /// <summary>
-        /// Number of remote backups
-        /// </summary>
-        [JsonProperty("RemoteBinlogCount")]
-        public long? RemoteBinlogCount{ get; set; }
+        [JsonProperty("DataResult")]
+        public CdbZoneDataResult DataResult{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -60,10 +42,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BinlogBackupVolume", this.BinlogBackupVolume);
-            this.SetParamSimple(map, prefix + "BinlogBackupCount", this.BinlogBackupCount);
-            this.SetParamSimple(map, prefix + "RemoteBinlogVolume", this.RemoteBinlogVolume);
-            this.SetParamSimple(map, prefix + "RemoteBinlogCount", this.RemoteBinlogCount);
+            this.SetParamObj(map, prefix + "DataResult.", this.DataResult);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

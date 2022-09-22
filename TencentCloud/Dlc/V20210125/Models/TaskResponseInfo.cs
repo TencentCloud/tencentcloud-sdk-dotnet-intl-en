@@ -43,7 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Computing time in ms
+        /// The compute time in ms.
         /// </summary>
         [JsonProperty("UsedTime")]
         public long? UsedTime{ get; set; }
@@ -219,6 +219,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UiUrl")]
         public string UiUrl{ get; set; }
 
+        /// <summary>
+        /// The task time in ms.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TotalTime")]
+        public long? TotalTime{ get; set; }
+
+        /// <summary>
+        /// The program entry parameter for running a task under a Spark job.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CmdArgs")]
+        public string CmdArgs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -255,6 +269,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SparkJobId", this.SparkJobId);
             this.SetParamSimple(map, prefix + "SparkJobFile", this.SparkJobFile);
             this.SetParamSimple(map, prefix + "UiUrl", this.UiUrl);
+            this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
+            this.SetParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
         }
     }
 }

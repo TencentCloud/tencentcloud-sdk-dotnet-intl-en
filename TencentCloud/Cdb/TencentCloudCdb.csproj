@@ -66,6 +66,11 @@
     <Compile Include="V20170320\Models\BalanceRoGroupLoadResponse.cs" />
     <Compile Include="V20170320\Models\BaseGroupInfo.cs" />
     <Compile Include="V20170320\Models\BinlogInfo.cs" />
+    <Compile Include="V20170320\Models\CdbRegionSellConf.cs" />
+    <Compile Include="V20170320\Models\CdbSellConfig.cs" />
+    <Compile Include="V20170320\Models\CdbSellType.cs" />
+    <Compile Include="V20170320\Models\CdbZoneDataResult.cs" />
+    <Compile Include="V20170320\Models\CdbZoneSellConf.cs" />
     <Compile Include="V20170320\Models\CloneItem.cs" />
     <Compile Include="V20170320\Models\CloseCDBProxyRequest.cs" />
     <Compile Include="V20170320\Models\CloseCDBProxyResponse.cs" />
@@ -128,6 +133,8 @@
     <Compile Include="V20170320\Models\DescribeBinlogsResponse.cs" />
     <Compile Include="V20170320\Models\DescribeCDBProxyRequest.cs" />
     <Compile Include="V20170320\Models\DescribeCDBProxyResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeCdbZoneConfigRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeCdbZoneConfigResponse.cs" />
     <Compile Include="V20170320\Models\DescribeCloneListRequest.cs" />
     <Compile Include="V20170320\Models\DescribeCloneListResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDBImportRecordsRequest.cs" />
@@ -353,5 +360,6 @@
     <Compile Include="V20170320\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="V20170320\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="V20170320\Models\UploadInfo.cs" />
+    <Compile Include="V20170320\Models\ZoneConf.cs" />
   </ItemGroup>
 </Project>

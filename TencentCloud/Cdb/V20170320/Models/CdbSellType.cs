@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskResultRequest : AbstractModel
+    public class CdbSellType : AbstractModel
     {
         
         /// <summary>
-        /// Unique task ID
+        /// Name of the purchasable instance
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("TypeName")]
+        public string TypeName{ get; set; }
 
         /// <summary>
-        /// The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
+        /// Engine version number
         /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
+        [JsonProperty("EngineVersion")]
+        public string[] EngineVersion{ get; set; }
 
         /// <summary>
-        /// Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
+        /// Purchasable specifications ID
         /// </summary>
-        [JsonProperty("MaxResults")]
-        public long? MaxResults{ get; set; }
+        [JsonProperty("ConfigIds")]
+        public long?[] ConfigIds{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
-            this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
+            this.SetParamSimple(map, prefix + "TypeName", this.TypeName);
+            this.SetParamArraySimple(map, prefix + "EngineVersion.", this.EngineVersion);
+            this.SetParamArraySimple(map, prefix + "ConfigIds.", this.ConfigIds);
         }
     }
 }

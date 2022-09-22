@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTaskResultRequest : AbstractModel
+    public class CdbZoneDataResult : AbstractModel
     {
         
         /// <summary>
-        /// Unique task ID
+        /// List of purchasable specifications
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("Configs")]
+        public CdbSellConfig[] Configs{ get; set; }
 
         /// <summary>
-        /// The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
+        /// List of AZs in purchasable regions
         /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
-
-        /// <summary>
-        /// Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
-        /// </summary>
-        [JsonProperty("MaxResults")]
-        public long? MaxResults{ get; set; }
+        [JsonProperty("Regions")]
+        public CdbRegionSellConf[] Regions{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
-            this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
+            this.SetParamArrayObj(map, prefix + "Configs.", this.Configs);
+            this.SetParamArrayObj(map, prefix + "Regions.", this.Regions);
         }
     }
 }

@@ -21,33 +21,32 @@ namespace TencentCloud.Dlc.V20210125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTasksResponse : AbstractModel
+    public class TasksOverview : AbstractModel
     {
         
         /// <summary>
-        /// List of task objects.
+        /// The number of tasks in queue.
         /// </summary>
-        [JsonProperty("TaskList")]
-        public TaskResponseInfo[] TaskList{ get; set; }
+        [JsonProperty("TaskQueuedCount")]
+        public long? TaskQueuedCount{ get; set; }
 
         /// <summary>
-        /// Total number of instances
+        /// The number of initialized tasks.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("TaskInitCount")]
+        public long? TaskInitCount{ get; set; }
 
         /// <summary>
-        /// The task overview.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The number of tasks in progress.
         /// </summary>
-        [JsonProperty("TasksOverview")]
-        public TasksOverview TasksOverview{ get; set; }
+        [JsonProperty("TaskRunningCount")]
+        public long? TaskRunningCount{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The total number of tasks in this time range.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TotalTaskCount")]
+        public long? TotalTaskCount{ get; set; }
 
 
         /// <summary>
@@ -55,10 +54,10 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TaskList.", this.TaskList);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamObj(map, prefix + "TasksOverview.", this.TasksOverview);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TaskQueuedCount", this.TaskQueuedCount);
+            this.SetParamSimple(map, prefix + "TaskInitCount", this.TaskInitCount);
+            this.SetParamSimple(map, prefix + "TaskRunningCount", this.TaskRunningCount);
+            this.SetParamSimple(map, prefix + "TotalTaskCount", this.TotalTaskCount);
         }
     }
 }
