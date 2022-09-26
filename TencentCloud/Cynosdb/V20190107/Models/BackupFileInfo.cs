@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Snapshot file ID used for rollback
+        /// Snapshot file ID, which is deprecated. You need to use `BackupId`.
         /// </summary>
         [JsonProperty("SnapshotId")]
         public ulong? SnapshotId{ get; set; }
 
         /// <summary>
-        /// Snapshot file name
+        /// Backup file name
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Snapshot file size
+        /// Backup file size
         /// </summary>
         [JsonProperty("FileSize")]
         public ulong? FileSize{ get; set; }
 
         /// <summary>
-        /// Snapshot backup start time
+        /// Backup start time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Snapshot backup end time
+        /// Backup end time
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// Backup type. snapshot: snapshot backup; timepoint: time point backup
+        /// Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
@@ -78,6 +78,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }
 
+        /// <summary>
+        /// Backup ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupId")]
+        public long? BackupId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SnapShotType")]
+        public string SnapShotType{ get; set; }
+
+        /// <summary>
+        /// Backup file alias
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +113,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
             this.SetParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
+            this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
+            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
         }
     }
 }

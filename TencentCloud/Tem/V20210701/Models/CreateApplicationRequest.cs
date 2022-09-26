@@ -37,19 +37,19 @@ namespace TencentCloud.Tem.V20210701.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Whether to use the default image service. 1: yes; 0: no
+        /// Whether to use the default image service. `1`: yes; `0`: no
         /// </summary>
         [JsonProperty("UseDefaultImageService")]
         public long? UseDefaultImageService{ get; set; }
 
         /// <summary>
-        /// Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
+        /// Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
         /// </summary>
         [JsonProperty("RepoType")]
         public long? RepoType{ get; set; }
 
         /// <summary>
-        /// Instance ID of Enterprise Edition image service
+        /// TCR Enterprise instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -96,10 +96,16 @@ namespace TencentCloud.Tem.V20210701.Models
         public string DeployMode{ get; set; }
 
         /// <summary>
-        /// Whether to enable the call chain feature
+        /// Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
         /// </summary>
         [JsonProperty("EnableTracing")]
         public long? EnableTracing{ get; set; }
+
+        /// <summary>
+        /// Parameters of the default image service
+        /// </summary>
+        [JsonProperty("UseDefaultImageServiceParameters")]
+        public UseDefaultRepoParameters UseDefaultImageServiceParameters{ get; set; }
 
 
         /// <summary>
@@ -119,6 +125,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "CodingLanguage", this.CodingLanguage);
             this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
             this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+            this.SetParamObj(map, prefix + "UseDefaultImageServiceParameters.", this.UseDefaultImageServiceParameters);
         }
     }
 }

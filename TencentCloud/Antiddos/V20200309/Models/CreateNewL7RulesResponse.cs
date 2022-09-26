@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20210701.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyApplicationInfoRequest : AbstractModel
+    public class CreateNewL7RulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// Success code
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("Success")]
+        public SuccessCode Success{ get; set; }
 
         /// <summary>
-        /// Description
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// Source channel
-        /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// (Disused) Whether to enable the call chain. 
-        /// </summary>
-        [JsonProperty("EnableTracing")]
-        public ulong? EnableTracing{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+            this.SetParamObj(map, prefix + "Success.", this.Success);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -214,9 +214,9 @@ namespace TencentCloud.Tem.V20210701
 
         /// <summary>
         /// This API is used to delete an application.
-        ///   - Stop the application if it’s running
-        ///   - Delete resources associated with this application
-        ///   - Delele the application
+        ///   - Stop running the current application
+        ///   - Delete resources related to the application
+        ///   - Delete the application
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
         /// <returns><see cref="DeleteApplicationResponse"/></returns>
@@ -237,9 +237,9 @@ namespace TencentCloud.Tem.V20210701
 
         /// <summary>
         /// This API is used to delete an application.
-        ///   - Stop the application if it’s running
-        ///   - Delete resources associated with this application
-        ///   - Delele the application
+        ///   - Stop running the current application
+        ///   - Delete resources related to the application
+        ///   - Delete the application
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
         /// <returns><see cref="DeleteApplicationResponse"/></returns>
@@ -570,6 +570,46 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRelatedIngresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRelatedIngressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate a namespace.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyEnvironmentRequest"/></param>
+        /// <returns><see cref="DestroyEnvironmentResponse"/></returns>
+        public async Task<DestroyEnvironmentResponse> DestroyEnvironment(DestroyEnvironmentRequest req)
+        {
+             JsonResponseModel<DestroyEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate a namespace.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyEnvironmentRequest"/></param>
+        /// <returns><see cref="DestroyEnvironmentResponse"/></returns>
+        public DestroyEnvironmentResponse DestroyEnvironmentSync(DestroyEnvironmentRequest req)
+        {
+             JsonResponseModel<DestroyEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyEnvironmentResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -613,6 +613,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to add layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL7RulesRequest"/></param>
+        /// <returns><see cref="CreateNewL7RulesResponse"/></returns>
+        public async Task<CreateNewL7RulesResponse> CreateNewL7Rules(CreateNewL7RulesRequest req)
+        {
+             JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL7RulesRequest"/></param>
+        /// <returns><see cref="CreateNewL7RulesResponse"/></returns>
+        public CreateNewL7RulesResponse CreateNewL7RulesSync(CreateNewL7RulesRequest req)
+        {
+             JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add Anti-DDoS feature filtering rules.
         /// </summary>
         /// <param name="req"><see cref="CreatePacketFilterConfigRequest"/></param>
@@ -1244,6 +1284,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBasicDeviceStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDeviceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain Anti-DDoS Pro traffic data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBgpBizTrendRequest"/></param>
+        /// <returns><see cref="DescribeBgpBizTrendResponse"/></returns>
+        public async Task<DescribeBgpBizTrendResponse> DescribeBgpBizTrend(DescribeBgpBizTrendRequest req)
+        {
+             JsonResponseModel<DescribeBgpBizTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBgpBizTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBgpBizTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain Anti-DDoS Pro traffic data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBgpBizTrendRequest"/></param>
+        /// <returns><see cref="DescribeBgpBizTrendResponse"/></returns>
+        public DescribeBgpBizTrendResponse DescribeBgpBizTrendSync(DescribeBgpBizTrendRequest req)
+        {
+             JsonResponseModel<DescribeBgpBizTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBgpBizTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBgpBizTrendResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2244,6 +2324,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeListWaterPrintConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListWaterPrintConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesResponse"/></returns>
+        public async Task<DescribeNewL7RulesResponse> DescribeNewL7Rules(DescribeNewL7RulesRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesResponse"/></returns>
+        public DescribeNewL7RulesResponse DescribeNewL7RulesSync(DescribeNewL7RulesRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

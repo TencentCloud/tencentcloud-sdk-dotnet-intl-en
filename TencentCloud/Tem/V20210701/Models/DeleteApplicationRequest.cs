@@ -25,7 +25,7 @@ namespace TencentCloud.Tem.V20210701.Models
     {
         
         /// <summary>
-        /// Service ID
+        /// Application ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Retain as default
+        /// Source channel. Please keep the default value.
         /// </summary>
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }

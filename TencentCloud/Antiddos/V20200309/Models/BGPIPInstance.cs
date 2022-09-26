@@ -181,7 +181,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public AnycastOutPackRelation AnycastOutPackRelation{ get; set; }
 
         /// <summary>
-        /// 
+        /// Edition of the instance
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public ulong? InstanceVersion{ get; set; }

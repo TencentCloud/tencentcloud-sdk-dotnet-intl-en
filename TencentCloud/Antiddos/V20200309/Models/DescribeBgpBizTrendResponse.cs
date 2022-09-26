@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20210701.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteApplicationResponse : AbstractModel
+    public class DescribeBgpBizTrendResponse : AbstractModel
     {
         
         /// <summary>
-        /// Returned result.
+        /// Values of the samples
         /// </summary>
-        [JsonProperty("Result")]
-        public bool? Result{ get; set; }
+        [JsonProperty("DataList")]
+        public ulong?[] DataList{ get; set; }
+
+        /// <summary>
+        /// Number of samples
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
+        /// Statistical metric
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
+
+        /// <summary>
+        /// Maximum value of the arrays returned
+        /// </summary>
+        [JsonProperty("MaxData")]
+        public ulong? MaxData{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +60,10 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamArraySimple(map, prefix + "DataList.", this.DataList);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "MaxData", this.MaxData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

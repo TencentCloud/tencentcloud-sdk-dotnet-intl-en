@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20210701.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyApplicationInfoRequest : AbstractModel
+    public class DescribeNewL7RulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// List of forwarding rules
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("Rules")]
+        public NewL7RuleEntry[] Rules{ get; set; }
 
         /// <summary>
-        /// Description
+        /// List of health check settings
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Healths")]
+        public L7RuleHealth[] Healths{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// Total number of rules
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// (Disused) Whether to enable the call chain. 
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("EnableTracing")]
-        public ulong? EnableTracing{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamArrayObj(map, prefix + "Healths.", this.Healths);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -21,32 +21,20 @@ namespace TencentCloud.Tem.V20210701.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyApplicationInfoRequest : AbstractModel
+    public class DestroyEnvironmentResponse : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// Returned result.
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("Result")]
+        public bool? Result{ get; set; }
 
         /// <summary>
-        /// Description
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// Source channel
-        /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// (Disused) Whether to enable the call chain. 
-        /// </summary>
-        [JsonProperty("EnableTracing")]
-        public ulong? EnableTracing{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

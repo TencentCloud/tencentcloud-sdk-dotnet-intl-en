@@ -43,6 +43,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
+        /// <summary>
+        /// Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Backup")]
+        public ulong? Backup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Backup", this.Backup);
         }
     }
 }

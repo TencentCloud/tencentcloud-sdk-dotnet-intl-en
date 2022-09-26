@@ -279,10 +279,35 @@ namespace TencentCloud.Tem.V20210701.Models
         public EnablePrometheusConf EnablePrometheusConf{ get; set; }
 
         /// <summary>
-        /// `1`: Enable APM collection; `0`: Disable APM collection
+        /// `1`: Enable APM tracing (Skywalking)
+        /// `0`: Disable APM tracing
         /// </summary>
         [JsonProperty("EnableTracing")]
         public long? EnableTracing{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EnableMetrics")]
+        public long? EnableMetrics{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TcrInstanceId")]
+        public string TcrInstanceId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RepoServer")]
+        public string RepoServer{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RepoType")]
+        public long? RepoType{ get; set; }
 
 
         /// <summary>
@@ -331,6 +356,10 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
             this.SetParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
             this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+            this.SetParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
+            this.SetParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
+            this.SetParamSimple(map, prefix + "RepoServer", this.RepoServer);
+            this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ip.V20210409.Models
     {
         
         /// <summary>
-        /// Account type of a new customer. Valid value: `business`.
+        /// Account type of a new customer. Valid values: `personal`, `company`.
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }

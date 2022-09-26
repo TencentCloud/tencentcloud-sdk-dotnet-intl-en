@@ -21,32 +21,20 @@ namespace TencentCloud.Tem.V20210701.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyApplicationInfoRequest : AbstractModel
+    public class DestroyEnvironmentRequest : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// Namespace ID.
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// Description
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// Source channel
+        /// Namespace
         /// </summary>
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
-
-        /// <summary>
-        /// (Disused) Whether to enable the call chain. 
-        /// </summary>
-        [JsonProperty("EnableTracing")]
-        public ulong? EnableTracing{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
         }
     }
 }

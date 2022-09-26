@@ -130,6 +130,8 @@
     <Compile Include="V20210701\Models\DescribeRelatedIngressesRequest.cs" />
     <Compile Include="V20210701\Models\DescribeRelatedIngressesResponse.cs" />
     <Compile Include="V20210701\Models\DescribeRunPodPage.cs" />
+    <Compile Include="V20210701\Models\DestroyEnvironmentRequest.cs" />
+    <Compile Include="V20210701\Models\DestroyEnvironmentResponse.cs" />
     <Compile Include="V20210701\Models\EksService.cs" />
     <Compile Include="V20210701\Models\EnablePrometheusConf.cs" />
     <Compile Include="V20210701\Models\EsInfo.cs" />
@@ -167,5 +169,6 @@
     <Compile Include="V20210701\Models\StorageConf.cs" />
     <Compile Include="V20210701\Models\StorageMountConf.cs" />
     <Compile Include="V20210701\Models\TemNamespaceInfo.cs" />
+    <Compile Include="V20210701\Models\UseDefaultRepoParameters.cs" />
   </ItemGroup>
 </Project>

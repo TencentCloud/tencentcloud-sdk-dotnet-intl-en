@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tem.V20210701.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyApplicationInfoRequest : AbstractModel
+    public class CreateNewL7RulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Application ID
+        /// List of rules
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("Rules")]
+        public L7RuleEntry[] Rules{ get; set; }
 
         /// <summary>
-        /// Description
+        /// Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
 
         /// <summary>
-        /// Source channel
+        /// List of resource IDs
         /// </summary>
-        [JsonProperty("SourceChannel")]
-        public long? SourceChannel{ get; set; }
+        [JsonProperty("IdList")]
+        public string[] IdList{ get; set; }
 
         /// <summary>
-        /// (Disused) Whether to enable the call chain. 
+        /// List of resource IPs
         /// </summary>
-        [JsonProperty("EnableTracing")]
-        public ulong? EnableTracing{ get; set; }
+        [JsonProperty("VipList")]
+        public string[] VipList{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-            this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
+            this.SetParamArraySimple(map, prefix + "VipList.", this.VipList);
         }
     }
 }

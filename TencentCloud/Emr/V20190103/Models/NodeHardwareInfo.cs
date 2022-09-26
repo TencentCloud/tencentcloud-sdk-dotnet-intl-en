@@ -332,6 +332,34 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Clients")]
         public string Clients{ get; set; }
 
+        /// <summary>
+        /// The current system time.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CurrentTime")]
+        public string CurrentTime{ get; set; }
+
+        /// <summary>
+        /// Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsFederation")]
+        public long? IsFederation{ get; set; }
+
+        /// <summary>
+        /// Device name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
+
+        /// <summary>
+        /// Service
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ServiceClient")]
+        public string ServiceClient{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -382,6 +410,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamObj(map, prefix + "SubnetInfo.", this.SubnetInfo);
             this.SetParamSimple(map, prefix + "Clients", this.Clients);
+            this.SetParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
+            this.SetParamSimple(map, prefix + "IsFederation", this.IsFederation);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
         }
     }
 }

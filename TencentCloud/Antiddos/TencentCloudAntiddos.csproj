@@ -91,6 +91,8 @@
     <Compile Include="V20200309\Models\CreateIPAlarmThresholdConfigResponse.cs" />
     <Compile Include="V20200309\Models\CreateL7RuleCertsRequest.cs" />
     <Compile Include="V20200309\Models\CreateL7RuleCertsResponse.cs" />
+    <Compile Include="V20200309\Models\CreateNewL7RulesRequest.cs" />
+    <Compile Include="V20200309\Models\CreateNewL7RulesResponse.cs" />
     <Compile Include="V20200309\Models\CreatePacketFilterConfigRequest.cs" />
     <Compile Include="V20200309\Models\CreatePacketFilterConfigResponse.cs" />
     <Compile Include="V20200309\Models\CreateProtocolBlockConfigRequest.cs" />
@@ -129,6 +131,8 @@
     <Compile Include="V20200309\Models\DeleteWaterPrintKeyResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBasicDeviceStatusRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBasicDeviceStatusResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeBgpBizTrendRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeBgpBizTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBizTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
@@ -179,6 +183,8 @@
     <Compile Include="V20200309\Models\DescribeListSchedulingDomainResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListWaterPrintConfigRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListWaterPrintConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeNewL7RulesRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeNewL7RulesResponse.cs" />
     <Compile Include="V20200309\Models\DescribeOverviewDDoSEventListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeOverviewDDoSEventListResponse.cs" />
     <Compile Include="V20200309\Models\DisassociateDDoSEipAddressRequest.cs" />
@@ -194,6 +200,8 @@
     <Compile Include="V20200309\Models\IpSegment.cs" />
     <Compile Include="V20200309\Models\KeyValue.cs" />
     <Compile Include="V20200309\Models\L4RuleSource.cs" />
+    <Compile Include="V20200309\Models\L7RuleEntry.cs" />
+    <Compile Include="V20200309\Models\L7RuleHealth.cs" />
     <Compile Include="V20200309\Models\Layer4Rule.cs" />
     <Compile Include="V20200309\Models\Layer7Rule.cs" />
     <Compile Include="V20200309\Models\ListenerCcThreholdConfig.cs" />

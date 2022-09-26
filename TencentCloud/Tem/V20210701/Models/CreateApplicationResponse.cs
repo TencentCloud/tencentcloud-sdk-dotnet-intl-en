@@ -25,7 +25,7 @@ namespace TencentCloud.Tem.V20210701.Models
     {
         
         /// <summary>
-        /// Service code
+        /// ID of the created application
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
