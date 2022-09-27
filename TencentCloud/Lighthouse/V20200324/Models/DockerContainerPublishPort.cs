@@ -38,14 +38,14 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// External IP. It defaults to 0.0.0.0.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
         /// The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

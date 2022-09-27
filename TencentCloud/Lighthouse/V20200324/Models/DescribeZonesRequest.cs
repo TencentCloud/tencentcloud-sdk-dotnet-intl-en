@@ -27,7 +27,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// Sorting field. Valid values:
         /// <li>`ZONE`: Sort by the availability zone.
-        /// <li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+        /// <li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
         /// The default value is `ZONE`.
         /// </summary>
         [JsonProperty("OrderField")]

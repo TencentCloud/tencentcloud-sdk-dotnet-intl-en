@@ -21,38 +21,40 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DiskPrice : AbstractModel
+    public class DetailPrice : AbstractModel
     {
         
         /// <summary>
-        /// Cloud disk unit price.
+        /// Values: 
+        /// <li>"DiskSpace": Cloud disk space</li>
+        /// <li>"DiskBackupQuota": Cloud disk backups</li>
         /// </summary>
-        [JsonProperty("OriginalDiskPrice")]
-        public float? OriginalDiskPrice{ get; set; }
+        [JsonProperty("PriceName")]
+        public string PriceName{ get; set; }
 
         /// <summary>
-        /// Total cloud disk price.
+        /// Official unit price of the billable item
+        /// </summary>
+        [JsonProperty("OriginUnitPrice")]
+        public float? OriginUnitPrice{ get; set; }
+
+        /// <summary>
+        /// Official total price of the billable item
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discount.
+        /// Discount of the billable item
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// Discounted total price.
+        /// Discounted total price of the billable item
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
-
-        /// <summary>
-        /// Detailed billing items
-        /// </summary>
-        [JsonProperty("DetailPrices")]
-        public DetailPrice[] DetailPrices{ get; set; }
 
 
         /// <summary>
@@ -60,11 +62,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OriginalDiskPrice", this.OriginalDiskPrice);
+            this.SetParamSimple(map, prefix + "PriceName", this.PriceName);
+            this.SetParamSimple(map, prefix + "OriginUnitPrice", this.OriginUnitPrice);
             this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
             this.SetParamSimple(map, prefix + "Discount", this.Discount);
             this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
-            this.SetParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
         }
     }
 }

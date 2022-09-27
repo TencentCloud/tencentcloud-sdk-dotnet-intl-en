@@ -36,6 +36,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
+        /// <summary>
+        /// Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public long? DiskBackupQuota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         }
     }
 }

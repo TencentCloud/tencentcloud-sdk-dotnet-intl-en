@@ -138,6 +138,7 @@
     <Compile Include="V20200324\Models\DetachCcnResponse.cs" />
     <Compile Include="V20200324\Models\DetachDisksRequest.cs" />
     <Compile Include="V20200324\Models\DetachDisksResponse.cs" />
+    <Compile Include="V20200324\Models\DetailPrice.cs" />
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsRequest.cs" />
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\DiscountDetail.cs" />

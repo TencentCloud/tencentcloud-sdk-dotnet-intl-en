@@ -37,8 +37,8 @@ namespace TencentCloud.Ssm.V20190923.Models
         public long? InvalidType{ get; set; }
 
         /// <summary>
-        /// `true`: allow SSM to manage Tencent Cloud API key secrets.
-        /// `false`: forbid SSM to manage Tencent Cloud API key secrets.
+        /// `true`: Allow SSM to manage Tencent Cloud API key secrets.
+        /// `false`: Forbid SSM to manage Tencent Cloud API key secrets.
         /// </summary>
         [JsonProperty("AccessKeyEscrowEnabled")]
         public bool? AccessKeyEscrowEnabled{ get; set; }

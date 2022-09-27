@@ -24,12 +24,32 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     public class LoginConfiguration : AbstractModel
     {
         
+        /// <summary>
+        /// <li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
+        /// <li>`No`: Custom. `Password` must be specified. </li>
+        /// </summary>
+        [JsonProperty("AutoGeneratePassword")]
+        public string AutoGeneratePassword{ get; set; }
+
+        /// <summary>
+        /// Instace login password.
+        /// For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
+        /// <li>[a-z]</li>
+        /// <li>[A-Z]</li>
+        /// <li>[0-9]</li>
+        /// <li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AutoGeneratePassword", this.AutoGeneratePassword);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

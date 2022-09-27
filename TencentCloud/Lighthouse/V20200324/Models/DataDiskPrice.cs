@@ -37,7 +37,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public float? OriginalDiskPrice{ get; set; }
 
         /// <summary>
-        /// Total cloud disk price.
+        /// Total price of cloud disk
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }

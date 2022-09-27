@@ -25,7 +25,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// List of resource names. Valid values: USER_KEY_PAIR, INSTANCE, SNAPSHOT.
+        /// Resource name list. Values:
+        /// - `GENERAL_BUNDLE_INSTANCE`: General bundle
+        /// - `STORAGE_BUNDLE_INSTANCE`:  Storage bundle 
+        /// - `ENTERPRISE_BUNDLE_INSTANCE`: Enterprise bundle 
+        /// - `EXCLUSIVE_BUNDLE_INSTANCE`： Dedicated bundle
+        /// - `BEFAST_BUNDLE_INSTANCE`: BeFast bundle
+        /// - `USER_KEY_PAIR`: Key pair
+        /// - `SNAPSHOT`: Snapshot
+        /// - `BLUEPRINT`: Custom image
+        /// - `FREE_BLUEPRINT`: Free custom image
+        /// - `DATA_DISK`: Data disk
+        /// - `FIREWALL_RULE`: Firewall rules
         /// </summary>
         [JsonProperty("ResourceNames")]
         public string[] ResourceNames{ get; set; }

@@ -79,7 +79,17 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// Disk status
+        /// Disk status. Values: 
+        /// <li>`PENDING`: Creating</li>
+        /// <li>`UNATTACHED`: Not attached</li>
+        /// <li>`ATTACHING`: Attaching</li>
+        /// <li>`ATTACHED`: Attached</li>
+        /// <li>`DETACHING`: Detaching</li>
+        /// <li>`SHUTDOWN`: Isolated</li>
+        /// <li>`CREATED_FAILED`: Failed to create</li>
+        /// <li>`TERMINATING`: Terminating</li>
+        /// <li>`DELETING`: Deleting</li>
+        /// <li>`FREEZING`: Freezing</li>
         /// </summary>
         [JsonProperty("DiskState")]
         public string DiskState{ get; set; }
@@ -115,24 +125,39 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string LatestOperationRequestId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time according to ISO 8601 standard. UTC time is used. 
+        /// Format: YYYY-MM-DDThh:mm:ssZ.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Expiration date
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Expiration time according to ISO 8601 standard. UTC time is used. 
+        /// Format: YYYY-MM-DDThh:mm:ssZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// Isolation time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Isolation time according to ISO 8601 standard. UTC time is used. 
+        /// Format: YYYY-MM-DDThh:mm:ssZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// Total disk backups
+        /// </summary>
+        [JsonProperty("DiskBackupCount")]
+        public long? DiskBackupCount{ get; set; }
+
+        /// <summary>
+        /// Disk backup quota
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public long? DiskBackupQuota{ get; set; }
 
 
         /// <summary>
@@ -158,6 +183,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         }
     }
 }

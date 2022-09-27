@@ -56,6 +56,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+        /// </summary>
+        [JsonProperty("SSHKeyName")]
+        public string SSHKeyName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "SSHKeyName", this.SSHKeyName);
         }
     }
 }

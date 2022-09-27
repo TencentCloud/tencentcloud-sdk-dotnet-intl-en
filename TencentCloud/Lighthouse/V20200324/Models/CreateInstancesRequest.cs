@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// ID of the Lighthouse package
+        /// Bundle ID.
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// ID of the Lighthouse image
+        /// Image ID
         /// </summary>
         [JsonProperty("BlueprintId")]
         public string BlueprintId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// The display name of the Lighthouse instance
+        /// Instance display name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+        /// Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
@@ -88,6 +88,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Containers")]
         public DockerContainerConfiguration[] Containers{ get; set; }
 
+        /// <summary>
+        /// Whether to use the vouchers automatically. It defaults to No.
+        /// </summary>
+        [JsonProperty("AutoVoucher")]
+        public bool? AutoVoucher{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +110,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
+            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         }
     }
 }

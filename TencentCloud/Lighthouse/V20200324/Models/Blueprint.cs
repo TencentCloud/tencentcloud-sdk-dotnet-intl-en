@@ -123,6 +123,25 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
+        /// <summary>
+        /// URL of official website of the open-source project
+        /// </summary>
+        [JsonProperty("CommunityUrl")]
+        public string CommunityUrl{ get; set; }
+
+        /// <summary>
+        /// Guide documentation URL
+        /// </summary>
+        [JsonProperty("GuideUrl")]
+        public string GuideUrl{ get; set; }
+
+        /// <summary>
+        /// Array of IDs of scenes associated with an image
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SceneIdSet")]
+        public string[] SceneIdSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +164,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
             this.SetParamSimple(map, prefix + "RequiredMemorySize", this.RequiredMemorySize);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "CommunityUrl", this.CommunityUrl);
+            this.SetParamSimple(map, prefix + "GuideUrl", this.GuideUrl);
+            this.SetParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
         }
     }
 }

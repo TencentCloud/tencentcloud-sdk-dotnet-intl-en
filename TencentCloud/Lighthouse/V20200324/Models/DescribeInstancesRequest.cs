@@ -31,14 +31,14 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Filter list
-        /// <li>instance-name</li>Filter by the instance name
+        /// Filter list.
+        /// <li>instance-name</li>Filter by **instance name**.
         /// Type: String
         /// Required: no
-        /// <li>private-ip-address</li>Filter by the private IP of instance primary ENI
+        /// <li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
         /// Type: String
         /// Required: no
-        /// <li>public-ip-address</li>Filter by the public IP of instance primary ENI
+        /// <li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
         /// Type: String
         /// Required: no
         /// <li>zone</li>Filter by the availability zone
@@ -47,7 +47,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>instance-state</li>Filter by **instance status**.
         /// Type: String
         /// Required: no
-        /// Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+        /// Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

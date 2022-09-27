@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of instance details.
+        /// List of instance details
         /// </summary>
         [JsonProperty("InstanceSet")]
         public Instance[] InstanceSet{ get; set; }

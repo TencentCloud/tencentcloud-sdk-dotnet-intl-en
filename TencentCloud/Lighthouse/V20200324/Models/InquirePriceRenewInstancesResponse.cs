@@ -32,7 +32,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// List of data disk price information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataDiskPriceSet")]
         public DataDiskPrice[] DataDiskPriceSet{ get; set; }
