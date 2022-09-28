@@ -21,22 +21,20 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TraceWatermarkInput : AbstractModel
+    public class ExtractTraceWatermarkTaskOutput : AbstractModel
     {
         
         /// <summary>
-        /// Whether to use digital watermarks. This parameter is required. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
+        /// The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("Uv")]
+        public string Uv{ get; set; }
 
         /// <summary>
         /// This parameter has been deprecated.
         /// </summary>
-        [JsonProperty("Definition")]
-        public ulong? Definition{ get; set; }
+        [JsonProperty("Uid")]
+        public string Uid{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "Uv", this.Uv);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
         }
     }
 }

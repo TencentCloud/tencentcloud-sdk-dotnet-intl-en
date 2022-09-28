@@ -31,10 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>SplitMedia: Video splitting</li>
         /// <li>ComposeMedia: Media file production</li>
         /// <li>WechatPublish: WeChat publishing</li>
+        /// <li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
         /// <li>PullUpload: Pulling media files for upload</li>
         /// <li>FastClipMedia: Quick clipping</li>
         /// <li>RemoveWatermarkTask: Watermark removal</li>
         /// <li> ReviewAudioVideo: Moderation</li>
+        /// <li> ReduceMediaBitrate: Bitrate reduction</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -158,11 +160,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public RemoveWatermarkTask RemoveWatermarkTask{ get; set; }
 
         /// <summary>
+        /// The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtractTraceWatermarkTask")]
+        public ExtractTraceWatermarkTask ExtractTraceWatermarkTask{ get; set; }
+
+        /// <summary>
         /// The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReviewAudioVideoTask")]
         public ReviewAudioVideoTask ReviewAudioVideoTask{ get; set; }
+
+        /// <summary>
+        /// The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReduceMediaBitrateTask")]
+        public ReduceMediaBitrateTask ReduceMediaBitrateTask{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -194,7 +210,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
             this.SetParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
+            this.SetParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
+            this.SetParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

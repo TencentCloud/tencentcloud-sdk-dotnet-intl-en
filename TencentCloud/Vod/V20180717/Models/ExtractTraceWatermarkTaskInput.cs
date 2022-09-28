@@ -21,22 +21,14 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TraceWatermarkInput : AbstractModel
+    public class ExtractTraceWatermarkTaskInput : AbstractModel
     {
         
         /// <summary>
-        /// Whether to use digital watermarks. This parameter is required. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
+        /// The URL of the media on which digital watermark extraction is to be performed.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// This parameter has been deprecated.
-        /// </summary>
-        [JsonProperty("Definition")]
-        public ulong? Definition{ get; set; }
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

@@ -337,6 +337,11 @@
     <Compile Include="V20180717\Models\EventContent.cs" />
     <Compile Include="V20180717\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20180717\Models\ExecuteFunctionResponse.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkRequest.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkResponse.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkTask.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkTaskInput.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkTaskOutput.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\FileDeleteResultItem.cs" />
@@ -510,6 +515,10 @@
     <Compile Include="V20180717\Models\PullUploadTask.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheResponse.cs" />
+    <Compile Include="V20180717\Models\ReduceMediaBitrateAdaptiveDynamicStreamingResult.cs" />
+    <Compile Include="V20180717\Models\ReduceMediaBitrateMediaProcessTaskResult.cs" />
+    <Compile Include="V20180717\Models\ReduceMediaBitrateTask.cs" />
+    <Compile Include="V20180717\Models\ReduceMediaBitrateTranscodeResult.cs" />
     <Compile Include="V20180717\Models\RefererAuthPolicy.cs" />
     <Compile Include="V20180717\Models\RefreshUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\RefreshUrlCacheResponse.cs" />

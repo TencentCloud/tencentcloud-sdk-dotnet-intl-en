@@ -57,6 +57,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
+        /// <summary>
+        /// The watermark type. Valid values:
+        /// <li>Trace: Digital watermark</li>
+        /// <li>None: Regular watermark</li>
+        /// </summary>
+        [JsonProperty("DigitalWatermarkType")]
+        public string DigitalWatermarkType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
         }
     }
 }

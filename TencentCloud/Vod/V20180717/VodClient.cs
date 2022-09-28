@@ -3215,6 +3215,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to extract the user ID of a user that distributed a video containing a digital watermark.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractTraceWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractTraceWatermarkResponse"/></returns>
+        public async Task<ExtractTraceWatermarkResponse> ExtractTraceWatermark(ExtractTraceWatermarkRequest req)
+        {
+             JsonResponseModel<ExtractTraceWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExtractTraceWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExtractTraceWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to extract the user ID of a user that distributed a video containing a digital watermark.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractTraceWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractTraceWatermarkResponse"/></returns>
+        public ExtractTraceWatermarkResponse ExtractTraceWatermarkSync(ExtractTraceWatermarkRequest req)
+        {
+             JsonResponseModel<ExtractTraceWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExtractTraceWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExtractTraceWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
         ///   It takes about 5-10 minutes for a forbidding/unblocking operation to take effect across the entire network.
         /// </summary>
