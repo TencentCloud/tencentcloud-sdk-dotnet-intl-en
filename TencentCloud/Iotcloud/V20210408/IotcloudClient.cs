@@ -213,6 +213,46 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
+        /// This API is used to delete a device shadow. 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceShadowRequest"/></param>
+        /// <returns><see cref="DeleteDeviceShadowResponse"/></returns>
+        public async Task<DeleteDeviceShadowResponse> DeleteDeviceShadow(DeleteDeviceShadowRequest req)
+        {
+             JsonResponseModel<DeleteDeviceShadowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDeviceShadow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceShadowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a device shadow. 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceShadowRequest"/></param>
+        /// <returns><see cref="DeleteDeviceShadowResponse"/></returns>
+        public DeleteDeviceShadowResponse DeleteDeviceShadowSync(DeleteDeviceShadowRequest req)
+        {
+             JsonResponseModel<DeleteDeviceShadowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDeviceShadow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceShadowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a private CA certificate.
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateCARequest"/></param>

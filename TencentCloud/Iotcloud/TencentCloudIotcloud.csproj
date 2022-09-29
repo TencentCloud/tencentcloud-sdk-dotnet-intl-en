@@ -56,6 +56,8 @@
     <Compile Include="V20210408\Models\CreateProductResponse.cs" />
     <Compile Include="V20210408\Models\DeleteDeviceRequest.cs" />
     <Compile Include="V20210408\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20210408\Models\DeleteDeviceShadowRequest.cs" />
+    <Compile Include="V20210408\Models\DeleteDeviceShadowResponse.cs" />
     <Compile Include="V20210408\Models\DeletePrivateCARequest.cs" />
     <Compile Include="V20210408\Models\DeletePrivateCAResponse.cs" />
     <Compile Include="V20210408\Models\DeleteProductRequest.cs" />

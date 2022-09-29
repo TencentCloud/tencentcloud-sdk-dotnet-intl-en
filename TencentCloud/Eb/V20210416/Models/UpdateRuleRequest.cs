@@ -49,6 +49,12 @@ namespace TencentCloud.Eb.V20210416.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+        /// </summary>
+        [JsonProperty("EventPattern")]
+        public string EventPattern{ get; set; }
+
+        /// <summary>
         /// Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
         /// </summary>
         [JsonProperty("RuleName")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "EventPattern", this.EventPattern);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
         }
     }
