@@ -39,13 +39,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Disused. Please use `ErrCode` of each specific task.
+        /// If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Disused. Please use `Message` of each specific task.
+        /// Except those for source errors, error messages vary with task type.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

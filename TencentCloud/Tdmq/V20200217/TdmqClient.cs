@@ -2013,6 +2013,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to query the list of the purchased TDMQ for RocketMQ exclusive instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQVipInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQVipInstancesResponse"/></returns>
+        public async Task<DescribeRocketMQVipInstancesResponse> DescribeRocketMQVipInstances(DescribeRocketMQVipInstancesRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQVipInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQVipInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQVipInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of the purchased TDMQ for RocketMQ exclusive instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQVipInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQVipInstancesResponse"/></returns>
+        public DescribeRocketMQVipInstancesResponse DescribeRocketMQVipInstancesSync(DescribeRocketMQVipInstancesRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQVipInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQVipInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQVipInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of roles.
         /// </summary>
         /// <param name="req"><see cref="DescribeRolesRequest"/></param>
@@ -2653,11 +2693,11 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to receive messages sent to a specified topic. If this API is called when there are no messages in the topic, the `ReceiveTimeout` exception will be reported.
+        /// Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
         /// 
         /// Instructions on how to use `BatchReceivePolicy`:
         /// 
-        /// `BatchReceive` has the three parameters:
+        /// `BatchReceive` has three parameters:
         /// 
         /// ● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
         /// ● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.
@@ -2692,11 +2732,11 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to receive messages sent to a specified topic. If this API is called when there are no messages in the topic, the `ReceiveTimeout` exception will be reported.
+        /// Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
         /// 
         /// Instructions on how to use `BatchReceivePolicy`:
         /// 
-        /// `BatchReceive` has the three parameters:
+        /// `BatchReceive` has three parameters:
         /// 
         /// ● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
         /// ● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.

@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? ReceiverQueueSize{ get; set; }
 
         /// <summary>
-        /// Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+        /// A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
         /// </summary>
         [JsonProperty("SubInitialPosition")]
         public string SubInitialPosition{ get; set; }

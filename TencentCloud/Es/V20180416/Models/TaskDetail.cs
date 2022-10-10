@@ -48,6 +48,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SubTasks")]
         public SubTaskDetail[] SubTasks{ get; set; }
 
+        /// <summary>
+        /// The task time.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ElapsedTime")]
+        public long? ElapsedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamArrayObj(map, prefix + "SubTasks.", this.SubTasks);
+            this.SetParamSimple(map, prefix + "ElapsedTime", this.ElapsedTime);
         }
     }
 }

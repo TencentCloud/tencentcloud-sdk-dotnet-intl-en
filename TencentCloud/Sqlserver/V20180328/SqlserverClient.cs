@@ -93,6 +93,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to disable instance interconnection.
+        /// </summary>
+        /// <param name="req"><see cref="CloseInterCommunicationRequest"/></param>
+        /// <returns><see cref="CloseInterCommunicationResponse"/></returns>
+        public async Task<CloseInterCommunicationResponse> CloseInterCommunication(CloseInterCommunicationRequest req)
+        {
+             JsonResponseModel<CloseInterCommunicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseInterCommunication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseInterCommunicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable instance interconnection.
+        /// </summary>
+        /// <param name="req"><see cref="CloseInterCommunicationRequest"/></param>
+        /// <returns><see cref="CloseInterCommunicationResponse"/></returns>
+        public CloseInterCommunicationResponse CloseInterCommunicationSync(CloseInterCommunicationRequest req)
+        {
+             JsonResponseModel<CloseInterCommunicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseInterCommunication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseInterCommunicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an instance account.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
@@ -204,6 +244,86 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "CreateBackupMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a business intelligence service instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateBusinessDBInstancesResponse"/></returns>
+        public async Task<CreateBusinessDBInstancesResponse> CreateBusinessDBInstances(CreateBusinessDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateBusinessDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBusinessDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBusinessDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a business intelligence service instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateBusinessDBInstancesResponse"/></returns>
+        public CreateBusinessDBInstancesResponse CreateBusinessDBInstancesSync(CreateBusinessDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateBusinessDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBusinessDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBusinessDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add a business intelligence service file.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="CreateBusinessIntelligenceFileResponse"/></returns>
+        public async Task<CreateBusinessIntelligenceFileResponse> CreateBusinessIntelligenceFile(CreateBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<CreateBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBusinessIntelligenceFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add a business intelligence service file.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="CreateBusinessIntelligenceFileResponse"/></returns>
+        public CreateBusinessIntelligenceFileResponse CreateBusinessIntelligenceFileSync(CreateBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<CreateBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBusinessIntelligenceFileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -444,6 +564,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DeleteBackupMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a business intelligence service file.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="DeleteBusinessIntelligenceFileResponse"/></returns>
+        public async Task<DeleteBusinessIntelligenceFileResponse> DeleteBusinessIntelligenceFile(DeleteBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<DeleteBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBusinessIntelligenceFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a business intelligence service file.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="DeleteBusinessIntelligenceFileResponse"/></returns>
+        public DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFileSync(DeleteBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<DeleteBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBusinessIntelligenceFileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,6 +973,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the files required by business intelligence service.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="DescribeBusinessIntelligenceFileResponse"/></returns>
+        public async Task<DescribeBusinessIntelligenceFileResponse> DescribeBusinessIntelligenceFile(DescribeBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<DescribeBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBusinessIntelligenceFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the files required by business intelligence service.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="DescribeBusinessIntelligenceFileResponse"/></returns>
+        public DescribeBusinessIntelligenceFileResponse DescribeBusinessIntelligenceFileSync(DescribeBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<DescribeBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBusinessIntelligenceFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the database character sets supported by an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
@@ -844,6 +1044,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBCharsets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBCharsetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of the interconnected instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceInterRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceInterResponse"/></returns>
+        public async Task<DescribeDBInstanceInterResponse> DescribeDBInstanceInter(DescribeDBInstanceInterRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceInterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceInter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceInterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of the interconnected instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceInterRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceInterResponse"/></returns>
+        public DescribeDBInstanceInterResponse DescribeDBInstanceInterSync(DescribeDBInstanceInterRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceInterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceInter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceInterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2168,6 +2408,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable instance interconnection, which can interconnect business intelligence services.
+        /// </summary>
+        /// <param name="req"><see cref="OpenInterCommunicationRequest"/></param>
+        /// <returns><see cref="OpenInterCommunicationResponse"/></returns>
+        public async Task<OpenInterCommunicationResponse> OpenInterCommunication(OpenInterCommunicationRequest req)
+        {
+             JsonResponseModel<OpenInterCommunicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenInterCommunication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenInterCommunicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable instance interconnection, which can interconnect business intelligence services.
+        /// </summary>
+        /// <param name="req"><see cref="OpenInterCommunicationRequest"/></param>
+        /// <returns><see cref="OpenInterCommunicationResponse"/></returns>
+        public OpenInterCommunicationResponse OpenInterCommunicationSync(OpenInterCommunicationRequest req)
+        {
+             JsonResponseModel<OpenInterCommunicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenInterCommunication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenInterCommunicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBInstancesResponse : AbstractModel
+    public class FileAction : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible instances.
+        /// Allowed operations. Valid values: `view` (view list), `remark` (modify remark), `deploy` (deploy files), `delete` (delete files).
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("AllAction")]
+        public string[] AllAction{ get; set; }
 
         /// <summary>
-        /// List of instance details
+        /// Operation allowed in the current status. If the subset of `AllAction` is empty, no operations will be allowed.
         /// </summary>
-        [JsonProperty("Items")]
-        public InstanceInfo[] Items{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("AllowedAction")]
+        public string[] AllowedAction{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "AllAction.", this.AllAction);
+            this.SetParamArraySimple(map, prefix + "AllowedAction.", this.AllowedAction);
         }
     }
 }

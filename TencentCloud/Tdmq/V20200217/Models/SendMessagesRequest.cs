@@ -43,7 +43,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string StringToken{ get; set; }
 
         /// <summary>
-        /// Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
+        /// Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+        /// This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
         /// </summary>
         [JsonProperty("ProducerName")]
         public string ProducerName{ get; set; }

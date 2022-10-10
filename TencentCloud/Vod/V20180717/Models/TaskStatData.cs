@@ -27,13 +27,16 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// The task type.
         /// <li>Transcoding: General transcoding</li>
-        /// <li>Transcoding-TESHD: TESHD transcoding</li>
+        /// <li>Transcoding-TESHD: Top Speed Codec transcoding</li>
         /// <li>Editing: Video editing</li>
-        /// <li>Editing-TESHD: TESHD editing</li>
+        /// <li>Editing-TESHD: Top Speed Codec editing</li>
         /// <li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
         /// <li>ContentAudit: Content moderation</li>
+        /// <li> ContentRecognition: Content recognition</li>
         /// <li>RemoveWatermark: Watermark removal</li>
-        /// <li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+        /// <li> ExtractTraceWatermark: Digital watermark extraction</li>
+        /// <li> AddTraceWatermark: Digital watermarking</li>
+        /// <li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

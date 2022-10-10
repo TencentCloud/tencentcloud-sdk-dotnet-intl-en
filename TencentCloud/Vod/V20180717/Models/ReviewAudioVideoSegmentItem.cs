@@ -89,6 +89,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+        /// <font color=red>Note</font>: This parameter is not supported currently.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

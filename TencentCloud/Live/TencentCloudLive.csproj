@@ -51,6 +51,8 @@
     <Compile Include="V20180801\Models\AddLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\AddLiveWatermarkRequest.cs" />
     <Compile Include="V20180801\Models\AddLiveWatermarkResponse.cs" />
+    <Compile Include="V20180801\Models\AuthenticateDomainOwnerRequest.cs" />
+    <Compile Include="V20180801\Models\AuthenticateDomainOwnerResponse.cs" />
     <Compile Include="V20180801\Models\BandwidthInfo.cs" />
     <Compile Include="V20180801\Models\BatchDomainOperateErrors.cs" />
     <Compile Include="V20180801\Models\CallBackRuleInfo.cs" />
@@ -214,6 +216,8 @@
     <Compile Include="V20180801\Models\DescribeStreamPlayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeTopClientIpSumInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeTopClientIpSumInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeTranscodeTaskNumRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeTranscodeTaskNumResponse.cs" />
     <Compile Include="V20180801\Models\DescribeUploadStreamNumsRequest.cs" />
     <Compile Include="V20180801\Models\DescribeUploadStreamNumsResponse.cs" />
     <Compile Include="V20180801\Models\DescribeVisitTopSumInfoListRequest.cs" />
@@ -288,6 +292,7 @@
     <Compile Include="V20180801\Models\TimeShiftBillData.cs" />
     <Compile Include="V20180801\Models\TimeValue.cs" />
     <Compile Include="V20180801\Models\TranscodeDetailInfo.cs" />
+    <Compile Include="V20180801\Models\TranscodeTaskNum.cs" />
     <Compile Include="V20180801\Models\TranscodeTotalInfo.cs" />
     <Compile Include="V20180801\Models\UnBindLiveDomainCertRequest.cs" />
     <Compile Include="V20180801\Models\UnBindLiveDomainCertResponse.cs" />

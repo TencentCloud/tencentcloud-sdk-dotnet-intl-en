@@ -31,8 +31,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-        /// The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+        /// The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+        /// The start time and end time cannot be more than 24 hours apart and must be within the past month.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -534,6 +534,8 @@
     <Compile Include="V20180717\Models\RestoreMediaRequest.cs" />
     <Compile Include="V20180717\Models\RestoreMediaResponse.cs" />
     <Compile Include="V20180717\Models\RestoreMediaTask.cs" />
+    <Compile Include="V20180717\Models\ReviewAudioVideoRequest.cs" />
+    <Compile Include="V20180717\Models\ReviewAudioVideoResponse.cs" />
     <Compile Include="V20180717\Models\ReviewAudioVideoSegmentItem.cs" />
     <Compile Include="V20180717\Models\ReviewAudioVideoTask.cs" />
     <Compile Include="V20180717\Models\ReviewAudioVideoTaskInput.cs" />

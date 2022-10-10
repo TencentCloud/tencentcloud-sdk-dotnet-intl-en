@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBInstancesResponse : AbstractModel
+    public class DescribeBusinessIntelligenceFileResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible instances.
+        /// Total number of file deployment tasks
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of instance details
+        /// File deployment task set
         /// </summary>
-        [JsonProperty("Items")]
-        public InstanceInfo[] Items{ get; set; }
+        [JsonProperty("BackupMigrationSet")]
+        public BusinessIntelligenceFile[] BackupMigrationSet{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "BackupMigrationSet.", this.BackupMigrationSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -4799,6 +4799,50 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, and speech.
+        /// 
+        /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="ReviewAudioVideoRequest"/></param>
+        /// <returns><see cref="ReviewAudioVideoResponse"/></returns>
+        public async Task<ReviewAudioVideoResponse> ReviewAudioVideo(ReviewAudioVideoRequest req)
+        {
+             JsonResponseModel<ReviewAudioVideoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReviewAudioVideo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewAudioVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, and speech.
+        /// 
+        /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="ReviewAudioVideoRequest"/></param>
+        /// <returns><see cref="ReviewAudioVideoResponse"/></returns>
+        public ReviewAudioVideoResponse ReviewAudioVideoSync(ReviewAudioVideoRequest req)
+        {
+             JsonResponseModel<ReviewAudioVideoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReviewAudioVideo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewAudioVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to search for media files by specific criteria. You can sort the results and specify the information to return.
         /// - Specify a list of file IDs (`FileIds`). Any file that matches one of the IDs will be returned.
         /// - Specify one or multiple keywords for `Names` or `Descriptions` for fuzzy search by filename or description.

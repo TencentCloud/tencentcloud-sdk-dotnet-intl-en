@@ -30,6 +30,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
+        /// <summary>
+        /// The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Container", this.Container);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

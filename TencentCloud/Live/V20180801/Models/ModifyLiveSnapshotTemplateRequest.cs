@@ -31,6 +31,28 @@ namespace TencentCloud.Live.V20180801.Models
         public long? TemplateId{ get; set; }
 
         /// <summary>
+        /// The COS application ID.
+        /// **Please note that this parameter is required now**.
+        /// </summary>
+        [JsonProperty("CosAppId")]
+        public long? CosAppId{ get; set; }
+
+        /// <summary>
+        /// The COS bucket name.
+        /// Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+        /// **Please note that this parameter is required now**.
+        /// </summary>
+        [JsonProperty("CosBucket")]
+        public string CosBucket{ get; set; }
+
+        /// <summary>
+        /// The COS region.
+        /// **Please note that this parameter is required now**.
+        /// </summary>
+        [JsonProperty("CosRegion")]
+        public string CosRegion{ get; set; }
+
+        /// <summary>
         /// Template name.
         /// Maximum length: 255 bytes.
         /// </summary>
@@ -72,25 +94,6 @@ namespace TencentCloud.Live.V20180801.Models
         public long? PornFlag{ get; set; }
 
         /// <summary>
-        /// COS application ID.
-        /// </summary>
-        [JsonProperty("CosAppId")]
-        public long? CosAppId{ get; set; }
-
-        /// <summary>
-        /// COS bucket name.
-        /// Note: the value of `CosBucket` cannot contain `-[appid]`.
-        /// </summary>
-        [JsonProperty("CosBucket")]
-        public string CosBucket{ get; set; }
-
-        /// <summary>
-        /// COS region.
-        /// </summary>
-        [JsonProperty("CosRegion")]
-        public string CosRegion{ get; set; }
-
-        /// <summary>
         /// COS bucket folder prefix.
         /// </summary>
         [JsonProperty("CosPrefix")]
@@ -109,15 +112,15 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "CosAppId", this.CosAppId);
+            this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
+            this.SetParamSimple(map, prefix + "CosRegion", this.CosRegion);
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "SnapshotInterval", this.SnapshotInterval);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "PornFlag", this.PornFlag);
-            this.SetParamSimple(map, prefix + "CosAppId", this.CosAppId);
-            this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
-            this.SetParamSimple(map, prefix + "CosRegion", this.CosRegion);
             this.SetParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
             this.SetParamSimple(map, prefix + "CosFileName", this.CosFileName);
         }

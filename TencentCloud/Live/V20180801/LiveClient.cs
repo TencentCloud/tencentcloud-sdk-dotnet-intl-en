@@ -179,6 +179,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to verify the ownership of a domain.
+        /// </summary>
+        /// <param name="req"><see cref="AuthenticateDomainOwnerRequest"/></param>
+        /// <returns><see cref="AuthenticateDomainOwnerResponse"/></returns>
+        public async Task<AuthenticateDomainOwnerResponse> AuthenticateDomainOwner(AuthenticateDomainOwnerRequest req)
+        {
+             JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AuthenticateDomainOwner");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthenticateDomainOwnerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify the ownership of a domain.
+        /// </summary>
+        /// <param name="req"><see cref="AuthenticateDomainOwnerRequest"/></param>
+        /// <returns><see cref="AuthenticateDomainOwnerResponse"/></returns>
+        public AuthenticateDomainOwnerResponse AuthenticateDomainOwnerSync(AuthenticateDomainOwnerRequest req)
+        {
+             JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AuthenticateDomainOwner");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthenticateDomainOwnerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
         /// </summary>
         /// <param name="req"><see cref="CancelCommonMixStreamRequest"/></param>
@@ -601,8 +641,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API and bind the template ID to the stream.
-        /// <br>Screencapturing-related document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
+        /// This API is used to create a screencapture template. After a template ID is returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API to bind the template ID to a stream. You can create up to 50 screencapture templates.
+        /// <br>To learn more about the live screencapture feature, see [Live Screencapture](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSnapshotTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveSnapshotTemplateResponse"/></returns>
@@ -622,8 +662,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API and bind the template ID to the stream.
-        /// <br>Screencapturing-related document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
+        /// This API is used to create a screencapture template. After a template ID is returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API to bind the template ID to a stream. You can create up to 50 screencapture templates.
+        /// <br>To learn more about the live screencapture feature, see [Live Screencapture](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSnapshotTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveSnapshotTemplateResponse"/></returns>
@@ -2839,10 +2879,10 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query your total usage of the transcoding service in the last 30 days.
+        /// This API is used to query transcoding usage. You can use it to query data in the past three months.
         /// Notes:
         /// If the start time and end time are on the same day, the data returned will be on a 5-minute basis.
-        /// If not or if the data of specified domains is queried, the data returned will be on an hourly basis.
+        /// If the start time and end time are not on the same day or if the data of specified domains is queried, the data returned will be on an hourly basis.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeTotalInfoRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeTotalInfoResponse"/></returns>
@@ -2862,10 +2902,10 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query your total usage of the transcoding service in the last 30 days.
+        /// This API is used to query transcoding usage. You can use it to query data in the past three months.
         /// Notes:
         /// If the start time and end time are on the same day, the data returned will be on a 5-minute basis.
-        /// If not or if the data of specified domains is queried, the data returned will be on an hourly basis.
+        /// If the start time and end time are not on the same day or if the data of specified domains is queried, the data returned will be on an hourly basis.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeTotalInfoRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeTotalInfoResponse"/></returns>
@@ -3280,6 +3320,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTopClientIpSumInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopClientIpSumInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of transcoding tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTranscodeTaskNumRequest"/></param>
+        /// <returns><see cref="DescribeTranscodeTaskNumResponse"/></returns>
+        public async Task<DescribeTranscodeTaskNumResponse> DescribeTranscodeTaskNum(DescribeTranscodeTaskNumRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTranscodeTaskNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeTaskNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of transcoding tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTranscodeTaskNumRequest"/></param>
+        /// <returns><see cref="DescribeTranscodeTaskNumResponse"/></returns>
+        public DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNumSync(DescribeTranscodeTaskNumRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTranscodeTaskNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeTaskNumResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

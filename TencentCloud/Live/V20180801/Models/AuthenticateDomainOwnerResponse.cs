@@ -15,26 +15,37 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBInstancesResponse : AbstractModel
+    public class AuthenticateDomainOwnerResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible instances.
+        /// The content verified.
+        /// If `VerifyType` is `dnsCheck`, this is the TXT record that should be added for verification.
+        /// If `VerifyType` is `fileCheck`, this is the file that should be uploaded for verification.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
         /// <summary>
-        /// List of instance details
+        /// The verification status.
+        /// If the value of this parameter is 0 or greater, the domain has been verified.
+        /// If the value of this parameter is smaller than 0, the domain has not been verified.
         /// </summary>
-        [JsonProperty("Items")]
-        public InstanceInfo[] Items{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// The primary domain of the domain verified.
+        /// Verification is not required if another domain under the same primary domain has been successfully verified.
+        /// </summary>
+        [JsonProperty("MainDomain")]
+        public string MainDomain{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +59,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "MainDomain", this.MainDomain);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

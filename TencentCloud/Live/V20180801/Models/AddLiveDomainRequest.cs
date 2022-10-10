@@ -66,6 +66,17 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("IsMiniProgramLive")]
         public long? IsMiniProgramLive{ get; set; }
 
+        /// <summary>
+        /// The domain verification type.
+        /// Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+        /// dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+        /// fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+        /// dbCheck: Check whether the domain has already been verified.
+        /// If you do not pass a value, `dbCheck` will be used.
+        /// </summary>
+        [JsonProperty("VerifyOwnerType")]
+        public string VerifyOwnerType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +88,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PlayType", this.PlayType);
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
             this.SetParamSimple(map, prefix + "IsMiniProgramLive", this.IsMiniProgramLive);
+            this.SetParamSimple(map, prefix + "VerifyOwnerType", this.VerifyOwnerType);
         }
     }
 }

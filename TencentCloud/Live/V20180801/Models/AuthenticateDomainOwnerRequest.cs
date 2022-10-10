@@ -15,32 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBInstancesResponse : AbstractModel
+    public class AuthenticateDomainOwnerRequest : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible instances.
+        /// The domain to verify.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
 
         /// <summary>
-        /// List of instance details
+        /// The verification type. Valid values:
+        /// dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+        /// fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+        /// dbCheck: Check whether the domain has already been successfully verified.
         /// </summary>
-        [JsonProperty("Items")]
-        public InstanceInfo[] Items{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("VerifyType")]
+        public string VerifyType{ get; set; }
 
 
         /// <summary>
@@ -48,9 +45,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "VerifyType", this.VerifyType);
         }
     }
 }

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBInstancesResponse : AbstractModel
+    public class DescribeRocketMQVipInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Number of eligible instances.
+        /// The total number of unpaginated items
         /// </summary>
         [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of instance details
+        /// Instance information list
         /// </summary>
-        [JsonProperty("Items")]
-        public InstanceInfo[] Items{ get; set; }
+        [JsonProperty("Instances")]
+        public RocketMQVipInstance[] Instances{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
