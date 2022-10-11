@@ -37,13 +37,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string[] RealServerIP{ get; set; }
 
         /// <summary>
-        /// Origin server name
+        /// Name of the origin server
         /// </summary>
         [JsonProperty("RealServerName")]
         public string RealServerName{ get; set; }
 
         /// <summary>
-        /// Tag list
+        /// List of tags
         /// </summary>
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }

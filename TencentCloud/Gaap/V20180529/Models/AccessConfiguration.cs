@@ -31,13 +31,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string AccessRegion{ get; set; }
 
         /// <summary>
-        /// Connection bandwidth upper limit in Mbps.
+        /// Connection bandwidth cap. Unit: Mbps.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+        /// Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
         /// </summary>
         [JsonProperty("Concurrent")]
         public ulong? Concurrent{ get; set; }

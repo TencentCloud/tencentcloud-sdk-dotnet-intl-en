@@ -68,7 +68,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Concurrence. Unit: requests/second.
+        /// Concurrence. Unit: 10K requests/second.
         /// </summary>
         [JsonProperty("Concurrent")]
         public long? Concurrent{ get; set; }
@@ -262,6 +262,24 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("InBanBlacklist")]
         public long? InBanBlacklist{ get; set; }
 
+        /// <summary>
+        /// Feature bitmap. Valid values:
+        /// `0`: Feature not supported
+        /// `1`: Feature supported
+        /// Each bit in the bitmap represents a feature:
+        /// 1st bit: Layer-4 acceleration;
+        /// 2nd bit: Layer-7 acceleration;
+        /// 3rd bit: HTTP3 access;
+        /// 4th bit: IPv6;
+        /// 5th bit: Dedicated BGP access;
+        /// 6th bit: Non-BGP access;
+        /// 7th bit: QoS acceleration.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("FeatureBitmap")]
+        public long? FeatureBitmap{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +320,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "IPList.", this.IPList);
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
             this.SetParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
+            this.SetParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
         }
     }
 }

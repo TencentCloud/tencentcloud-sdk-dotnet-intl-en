@@ -76,6 +76,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
 
+        /// <summary>
+        /// Remote command execution object.
+        /// </summary>
+        [JsonProperty("LifecycleCommand")]
+        public LifecycleCommand LifecycleCommand{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +96,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
             this.SetParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
             this.SetParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
+            this.SetParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
         }
     }
 }

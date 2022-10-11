@@ -65,6 +65,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("DownIPList")]
         public string[] DownIPList{ get; set; }
 
+        /// <summary>
+        /// Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+        /// </summary>
+        [JsonProperty("RealServerFailoverRole")]
+        public string RealServerFailoverRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerStatus", this.RealServerStatus);
             this.SetParamSimple(map, prefix + "RealServerPort", this.RealServerPort);
             this.SetParamArraySimple(map, prefix + "DownIPList.", this.DownIPList);
+            this.SetParamSimple(map, prefix + "RealServerFailoverRole", this.RealServerFailoverRole);
         }
     }
 }

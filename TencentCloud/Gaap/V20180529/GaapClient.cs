@@ -577,7 +577,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (CreateProxy) is used to create an acceleration connection with specified configuration.
+        /// This API is used to create/replicate an acceleration connection with the specified configuration. To replicate a connection, the basic configuration parameters need to be set for the new connection, and `ClonedProxyId` is needed to identify the replicated connection.
         /// </summary>
         /// <param name="req"><see cref="CreateProxyRequest"/></param>
         /// <returns><see cref="CreateProxyResponse"/></returns>
@@ -597,7 +597,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// This API (CreateProxy) is used to create an acceleration connection with specified configuration.
+        /// This API is used to create/replicate an acceleration connection with the specified configuration. To replicate a connection, the basic configuration parameters need to be set for the new connection, and `ClonedProxyId` is needed to identify the replicated connection.
         /// </summary>
         /// <param name="req"><see cref="CreateProxyRequest"/></param>
         /// <returns><see cref="CreateProxyResponse"/></returns>

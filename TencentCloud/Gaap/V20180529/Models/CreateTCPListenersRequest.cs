@@ -37,7 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong?[] Ports{ get; set; }
 
         /// <summary>
-        /// Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+        /// The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
-        /// The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+        /// The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
         /// </summary>
         [JsonProperty("RealServerType")]
         public string RealServerType{ get; set; }

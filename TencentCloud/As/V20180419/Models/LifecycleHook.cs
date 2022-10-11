@@ -84,6 +84,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LifecycleTransitionType")]
         public string LifecycleTransitionType{ get; set; }
 
+        /// <summary>
+        /// Remote command execution object.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LifecycleCommand")]
+        public LifecycleCommand LifecycleCommand{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
             this.SetParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
+            this.SetParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
         }
     }
 }

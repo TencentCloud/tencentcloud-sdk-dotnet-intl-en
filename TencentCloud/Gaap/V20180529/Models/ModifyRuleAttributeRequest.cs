@@ -37,10 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// Scheduling policy:
-        /// rr: round robin;
-        /// wrr: weighted round robin;
-        /// lc: least connections.
+        /// The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }

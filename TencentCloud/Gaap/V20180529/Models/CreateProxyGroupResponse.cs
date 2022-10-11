@@ -25,7 +25,7 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// Connection Group ID
+        /// ID of the connection group
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

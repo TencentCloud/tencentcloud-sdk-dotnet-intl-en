@@ -55,13 +55,13 @@ namespace TencentCloud.As.V20180419.Models
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+        /// Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }
 
         /// <summary>
-        /// Notification target
+        /// Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
         /// </summary>
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
@@ -71,6 +71,12 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         [JsonProperty("LifecycleTransitionType")]
         public string LifecycleTransitionType{ get; set; }
+
+        /// <summary>
+        /// Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+        /// </summary>
+        [JsonProperty("LifecycleCommand")]
+        public LifecycleCommand LifecycleCommand{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
             this.SetParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
             this.SetParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
+            this.SetParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
         }
     }
 }

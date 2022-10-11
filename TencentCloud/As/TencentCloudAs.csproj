@@ -134,6 +134,7 @@
     <Compile Include="V20180419\Models\InvocationResult.cs" />
     <Compile Include="V20180419\Models\LaunchConfiguration.cs" />
     <Compile Include="V20180419\Models\LifecycleActionResultInfo.cs" />
+    <Compile Include="V20180419\Models\LifecycleCommand.cs" />
     <Compile Include="V20180419\Models\LifecycleHook.cs" />
     <Compile Include="V20180419\Models\LimitedLoginSettings.cs" />
     <Compile Include="V20180419\Models\LoginSettings.cs" />

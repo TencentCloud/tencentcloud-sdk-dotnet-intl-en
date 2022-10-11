@@ -55,7 +55,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerType{ get; set; }
 
         /// <summary>
-        /// Forwarding policy of the origin server
+        /// The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }

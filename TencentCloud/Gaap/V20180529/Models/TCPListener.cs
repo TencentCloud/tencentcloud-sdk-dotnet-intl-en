@@ -73,10 +73,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? ListenerStatus{ get; set; }
 
         /// <summary>
-        /// Origin server access policy of listeners:
-        /// `rr`: Round robin
-        /// `wrr`: Weighted round robin
-        /// `lc`: Least connection
+        /// The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }

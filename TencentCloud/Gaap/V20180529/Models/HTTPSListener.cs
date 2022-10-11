@@ -114,6 +114,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolyClientCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyClientCertificateAliasInfo{ get; set; }
 
+        /// <summary>
+        /// Whether to support HTTP3. Values:
+        /// `0`: Do not support HTTP3 access;
+        /// `1`: Support HTTP3 access.
+        /// If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +143,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "ClientCertificateAlias", this.ClientCertificateAlias);
             this.SetParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }
