@@ -43,13 +43,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LocationIds{ get; set; }
 
         /// <summary>
-        /// Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+        /// The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+        /// The forwarding path of the forwarding rule to delete.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

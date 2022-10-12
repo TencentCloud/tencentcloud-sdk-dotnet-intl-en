@@ -108,6 +108,32 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("JsonStandard")]
         public long? JsonStandard{ get; set; }
 
+        /// <summary>
+        /// Syslog protocol. Valid values: `tcp`, `udp`.
+        /// This field can be used when you create/modify collection rule configurations.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+        /// This field can be used when you create/modify collection rule configurations.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
+
+        /// <summary>
+        /// `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+        /// `rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+        /// `auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+        /// This field can be used when you create/modify collection rule configurations.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ParseProtocol")]
+        public string ParseProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +152,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Backtracking", this.Backtracking);
             this.SetParamSimple(map, prefix + "IsGBK", this.IsGBK);
             this.SetParamSimple(map, prefix + "JsonStandard", this.JsonStandard);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "ParseProtocol", this.ParseProtocol);
         }
     }
 }

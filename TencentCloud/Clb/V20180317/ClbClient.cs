@@ -1423,6 +1423,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// Idle CLB instances are pay-as-you-go load balancers that, within seven days after the creation, do not have rules configured or the configured rules are not associated with any servers. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdleLoadBalancersRequest"/></param>
+        /// <returns><see cref="DescribeIdleLoadBalancersResponse"/></returns>
+        public async Task<DescribeIdleLoadBalancersResponse> DescribeIdleLoadBalancers(DescribeIdleLoadBalancersRequest req)
+        {
+             JsonResponseModel<DescribeIdleLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIdleLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdleLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Idle CLB instances are pay-as-you-go load balancers that, within seven days after the creation, do not have rules configured or the configured rules are not associated with any servers. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdleLoadBalancersRequest"/></param>
+        /// <returns><see cref="DescribeIdleLoadBalancersResponse"/></returns>
+        public DescribeIdleLoadBalancersResponse DescribeIdleLoadBalancersSync(DescribeIdleLoadBalancersRequest req)
+        {
+             JsonResponseModel<DescribeIdleLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIdleLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdleLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query CLB instances bound to the CVM or ENI.
         /// </summary>
         /// <param name="req"><see cref="DescribeLBListenersRequest"/></param>

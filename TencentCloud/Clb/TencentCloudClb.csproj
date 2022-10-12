@@ -128,6 +128,8 @@
     <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigListResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeIdleLoadBalancersRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeIdleLoadBalancersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLBListenersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLBListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeListenersRequest.cs" />
@@ -164,6 +166,7 @@
     <Compile Include="V20180317\Models\ExtraInfo.cs" />
     <Compile Include="V20180317\Models\Filter.cs" />
     <Compile Include="V20180317\Models\HealthCheck.cs" />
+    <Compile Include="V20180317\Models\IdleLoadBalancer.cs" />
     <Compile Include="V20180317\Models\InternetAccessible.cs" />
     <Compile Include="V20180317\Models\LBChargePrepaid.cs" />
     <Compile Include="V20180317\Models\LBItem.cs" />
