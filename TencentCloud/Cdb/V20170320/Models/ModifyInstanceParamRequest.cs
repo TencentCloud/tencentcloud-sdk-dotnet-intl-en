@@ -48,6 +48,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("WaitSwitch")]
         public long? WaitSwitch{ get; set; }
 
+        /// <summary>
+        /// Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+        /// </summary>
+        [JsonProperty("NotSyncRo")]
+        public bool? NotSyncRo{ get; set; }
+
+        /// <summary>
+        /// Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+        /// </summary>
+        [JsonProperty("NotSyncDr")]
+        public bool? NotSyncDr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+            this.SetParamSimple(map, prefix + "NotSyncRo", this.NotSyncRo);
+            this.SetParamSimple(map, prefix + "NotSyncDr", this.NotSyncDr);
         }
     }
 }

@@ -2771,6 +2771,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to import an OpenAPI to API gateway. 
+        /// </summary>
+        /// <param name="req"><see cref="ImportOpenApiRequest"/></param>
+        /// <returns><see cref="ImportOpenApiResponse"/></returns>
+        public async Task<ImportOpenApiResponse> ImportOpenApi(ImportOpenApiRequest req)
+        {
+             JsonResponseModel<ImportOpenApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportOpenApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportOpenApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to import an OpenAPI to API gateway. 
+        /// </summary>
+        /// <param name="req"><see cref="ImportOpenApiRequest"/></param>
+        /// <returns><see cref="ImportOpenApiResponse"/></returns>
+        public ImportOpenApiResponse ImportOpenApiSync(ImportOpenApiRequest req)
+        {
+             JsonResponseModel<ImportOpenApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportOpenApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportOpenApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify an API document.
         /// </summary>
         /// <param name="req"><see cref="ModifyAPIDocRequest"/></param>

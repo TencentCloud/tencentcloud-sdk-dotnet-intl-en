@@ -93,6 +93,7 @@
     <Compile Include="V20180808\Models\CreateApiRequest.cs" />
     <Compile Include="V20180808\Models\CreateApiResponse.cs" />
     <Compile Include="V20180808\Models\CreateApiRsp.cs" />
+    <Compile Include="V20180808\Models\CreateApiRspSet.cs" />
     <Compile Include="V20180808\Models\CreateIPStrategyRequest.cs" />
     <Compile Include="V20180808\Models\CreateIPStrategyResponse.cs" />
     <Compile Include="V20180808\Models\CreatePluginRequest.cs" />
@@ -220,6 +221,8 @@
     <Compile Include="V20180808\Models\IPStrategyApi.cs" />
     <Compile Include="V20180808\Models\IPStrategyApiStatus.cs" />
     <Compile Include="V20180808\Models\IPStrategysStatus.cs" />
+    <Compile Include="V20180808\Models\ImportOpenApiRequest.cs" />
+    <Compile Include="V20180808\Models\ImportOpenApiResponse.cs" />
     <Compile Include="V20180808\Models\K8sLabel.cs" />
     <Compile Include="V20180808\Models\K8sService.cs" />
     <Compile Include="V20180808\Models\LogQuery.cs" />
