@@ -53,6 +53,54 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// This API is used to roll back a backup point to the original cloud disk.
+        /// 
+        /// * Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
+        /// * Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
+        /// * For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyDiskBackupRequest"/></param>
+        /// <returns><see cref="ApplyDiskBackupResponse"/></returns>
+        public async Task<ApplyDiskBackupResponse> ApplyDiskBackup(ApplyDiskBackupRequest req)
+        {
+             JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyDiskBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyDiskBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to roll back a backup point to the original cloud disk.
+        /// 
+        /// * Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
+        /// * Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
+        /// * For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyDiskBackupRequest"/></param>
+        /// <returns><see cref="ApplyDiskBackupResponse"/></returns>
+        public ApplyDiskBackupResponse ApplyDiskBackupSync(ApplyDiskBackupRequest req)
+        {
+             JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyDiskBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyDiskBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ApplySnapshot) is used to roll back a snapshot to the original cloud disk.
         /// 
         /// * The snapshot can only be rolled back to the original cloud disk. For data disk snapshots, if you need to copy the snapshot data to other cloud disks, use the API [CreateDisks](https://intl.cloud.tencent.com/document/product/362/16312?from_cn_redirect=1) to create an elastic cloud disk and then copy the snapshot data to the created cloud disk. 
@@ -285,10 +333,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API is used to create one or more cloud disks.
+        /// This API is used to create cloud disks.
         /// 
         /// * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
-        /// * This API is an async API. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its state is 'UNATTACHED' or 'ATTACHED', it means that the cloud disk has been created successfully.
+        /// * This API is async. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its status is `UNATTACHED` or `ATTACHED`, the cloud disk has been created successfully.
         /// </summary>
         /// <param name="req"><see cref="CreateDisksRequest"/></param>
         /// <returns><see cref="CreateDisksResponse"/></returns>
@@ -308,10 +356,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API is used to create one or more cloud disks.
+        /// This API is used to create cloud disks.
         /// 
         /// * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
-        /// * This API is an async API. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its state is 'UNATTACHED' or 'ATTACHED', it means that the cloud disk has been created successfully.
+        /// * This API is async. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its status is `UNATTACHED` or `ATTACHED`, the cloud disk has been created successfully.
         /// </summary>
         /// <param name="req"><see cref="CreateDisksRequest"/></param>
         /// <returns><see cref="CreateDisksResponse"/></returns>
@@ -331,10 +379,11 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (CreateSnapshot) is used to create a snapshot of a specified cloud disk.
+        /// This API is used to create a snapshot for the specified cloud disk.
         /// 
-        /// * Snapshots can only be created for cloud disks with the snapshot capability. To check whether a cloud disk has the snapshot capability, see the SnapshotAbility field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-        /// * For the number of snapshots that can be created, please see [Product Usage Restriction](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+        /// * You can only create snapshots for cloud disks with the snapshot capability. To check whether a cloud disk is snapshot-enabled, call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API and see the `SnapshotAbility` field in the response.
+        /// * For the maximum number of snapshots that can be created, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+        /// * Currently, you can convert backup points into general snapshots. After the conversion, snapshot usage fees may be charged, backup points will not be retained, and the occupied backup point quota will be released.
         /// </summary>
         /// <param name="req"><see cref="CreateSnapshotRequest"/></param>
         /// <returns><see cref="CreateSnapshotResponse"/></returns>
@@ -354,10 +403,11 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (CreateSnapshot) is used to create a snapshot of a specified cloud disk.
+        /// This API is used to create a snapshot for the specified cloud disk.
         /// 
-        /// * Snapshots can only be created for cloud disks with the snapshot capability. To check whether a cloud disk has the snapshot capability, see the SnapshotAbility field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-        /// * For the number of snapshots that can be created, please see [Product Usage Restriction](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+        /// * You can only create snapshots for cloud disks with the snapshot capability. To check whether a cloud disk is snapshot-enabled, call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API and see the `SnapshotAbility` field in the response.
+        /// * For the maximum number of snapshots that can be created, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+        /// * Currently, you can convert backup points into general snapshots. After the conversion, snapshot usage fees may be charged, backup points will not be retained, and the occupied backup point quota will be released.
         /// </summary>
         /// <param name="req"><see cref="CreateSnapshotRequest"/></param>
         /// <returns><see cref="CreateSnapshotResponse"/></returns>
@@ -412,6 +462,46 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteAutoSnapshotPolicies");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAutoSnapshotPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the backup points of the specified cloud disk in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDiskBackupsRequest"/></param>
+        /// <returns><see cref="DeleteDiskBackupsResponse"/></returns>
+        public async Task<DeleteDiskBackupsResponse> DeleteDiskBackups(DeleteDiskBackupsRequest req)
+        {
+             JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDiskBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDiskBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the backup points of the specified cloud disk in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDiskBackupsRequest"/></param>
+        /// <returns><see cref="DeleteDiskBackupsResponse"/></returns>
+        public DeleteDiskBackupsResponse DeleteDiskBackupsSync(DeleteDiskBackupsRequest req)
+        {
+             JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDiskBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDiskBackupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -544,6 +634,52 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDiskAssociatedAutoSnapshotPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of backup points.
+        /// 
+        /// You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
+        /// If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskBackupsRequest"/></param>
+        /// <returns><see cref="DescribeDiskBackupsResponse"/></returns>
+        public async Task<DescribeDiskBackupsResponse> DescribeDiskBackups(DescribeDiskBackupsRequest req)
+        {
+             JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of backup points.
+        /// 
+        /// You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
+        /// If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskBackupsRequest"/></param>
+        /// <returns><see cref="DescribeDiskBackupsResponse"/></returns>
+        public DescribeDiskBackupsResponse DescribeDiskBackupsSync(DescribeDiskBackupsRequest req)
+        {
+             JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiskBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskBackupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -991,6 +1127,46 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the price of a cloud disk after its backup point quota is modified.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDiskBackupQuotaRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDiskBackupQuotaResponse"/></returns>
+        public async Task<InquirePriceModifyDiskBackupQuotaResponse> InquirePriceModifyDiskBackupQuota(InquirePriceModifyDiskBackupQuotaRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceModifyDiskBackupQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of a cloud disk after its backup point quota is modified.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDiskBackupQuotaRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDiskBackupQuotaResponse"/></returns>
+        public InquirePriceModifyDiskBackupQuotaResponse InquirePriceModifyDiskBackupQuotaSync(InquirePriceModifyDiskBackupQuotaRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceModifyDiskBackupQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the price for adjusting the cloud disk’s extra performance.
         /// </summary>
         /// <param name="req"><see cref="InquirePriceModifyDiskExtraPerformanceRequest"/></param>
@@ -1031,9 +1207,9 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
+        /// This API is used to query the price of creating cloud disks.
         /// 
-        /// * It supports inquiring the price for the creation of multiple cloud disks. The total price for the creation is returned.
+        /// * You can query the price of creating multiple cloud disks in a single request. In this case, the price returned will be the total price.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateDisksRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateDisksResponse"/></returns>
@@ -1053,9 +1229,9 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
+        /// This API is used to query the price of creating cloud disks.
         /// 
-        /// * It supports inquiring the price for the creation of multiple cloud disks. The total price for the creation is returned.
+        /// * You can query the price of creating multiple cloud disks in a single request. In this case, the price returned will be the total price.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateDisksRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateDisksResponse"/></returns>
@@ -1196,6 +1372,46 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDiskAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the cloud disk backup point quota.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiskBackupQuotaRequest"/></param>
+        /// <returns><see cref="ModifyDiskBackupQuotaResponse"/></returns>
+        public async Task<ModifyDiskBackupQuotaResponse> ModifyDiskBackupQuota(ModifyDiskBackupQuotaRequest req)
+        {
+             JsonResponseModel<ModifyDiskBackupQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDiskBackupQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskBackupQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the cloud disk backup point quota.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiskBackupQuotaRequest"/></param>
+        /// <returns><see cref="ModifyDiskBackupQuotaResponse"/></returns>
+        public ModifyDiskBackupQuotaResponse ModifyDiskBackupQuotaSync(ModifyDiskBackupQuotaRequest req)
+        {
+             JsonResponseModel<ModifyDiskBackupQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDiskBackupQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskBackupQuotaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,22 +25,40 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
+        /// Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+        /// </summary>
+        [JsonProperty("DiskChargeType")]
+        public string DiskChargeType{ get; set; }
+
+        /// <summary>
+        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+        /// Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+        /// ID of the project to which the cloud disk belongs.
         /// </summary>
-        [JsonProperty("DiskChargeType")]
-        public string DiskChargeType{ get; set; }
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
+
+        /// <summary>
+        /// Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+        /// </summary>
+        [JsonProperty("DiskCount")]
+        public ulong? DiskCount{ get; set; }
+
+        /// <summary>
+        /// Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
 
         /// <summary>
         /// Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
@@ -49,22 +67,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public DiskChargePrepaid DiskChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Quantity of cloud disks purchased. If left empty, default is 1.
+        /// Specifies the cloud disk backup point quota.
         /// </summary>
-        [JsonProperty("DiskCount")]
-        public ulong? DiskCount{ get; set; }
-
-        /// <summary>
-        /// ID of project the cloud disk belongs to.
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
-
-        /// <summary>
-        /// Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
-        /// </summary>
-        [JsonProperty("ThroughputPerformance")]
-        public ulong? ThroughputPerformance{ get; set; }
+        [JsonProperty("DiskBackupQuota")]
+        public ulong? DiskBackupQuota{ get; set; }
 
 
         /// <summary>
@@ -72,13 +78,14 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
-            this.SetParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-            this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
-            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
             this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+            this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         }
     }
 }

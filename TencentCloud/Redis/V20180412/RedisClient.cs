@@ -1813,7 +1813,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the slow log.
+        /// This API is used to query the records of slow query.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogRequest"/></param>
         /// <returns><see cref="DescribeSlowLogResponse"/></returns>
@@ -1833,7 +1833,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the slow log.
+        /// This API is used to query the records of slow query.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogRequest"/></param>
         /// <returns><see cref="DescribeSlowLogResponse"/></returns>
@@ -2533,7 +2533,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to modify instance parameters.
+        /// This API is used to modify the parameters of TencentDB for Redis instances
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
         /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
@@ -2553,7 +2553,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to modify instance parameters.
+        /// This API is used to modify the parameters of TencentDB for Redis instances
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
         /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>

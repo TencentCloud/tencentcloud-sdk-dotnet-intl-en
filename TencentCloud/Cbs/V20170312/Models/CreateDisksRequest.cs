@@ -25,73 +25,73 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
+        /// Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project. If no project is specified, the default project will be used.
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
+        /// Cloud disk billing mode. POSTPAID_BY_HOUR: Pay-as-you-go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For more information on the pricing in each mode, see [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskChargeType")]
         public string DiskChargeType{ get; set; }
 
         /// <summary>
-        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_BSSD: Balanced SSD<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+        /// Cloud disk name. If it is not specified, "Unnamed" will be used by default. The maximum length is 60 bytes.
         /// </summary>
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }
 
         /// <summary>
-        /// Cloud disk binding tag.
+        /// Tags bound to the cloud disk.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+        /// Snapshot ID. If this parameter is specified, the cloud disk will be created based on the snapshot. The snapshot must be a data disk snapshot. To query the type of a snapshot, call the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API and see the `DiskUsage` field in the response.
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+        /// Number of cloud disks to be created. If it is not specified, `1` will be used by default. There is an upper limit on the maximum number of cloud disks that can be created in a single request. For more information, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskCount")]
         public ulong? DiskCount{ get; set; }
 
         /// <summary>
-        /// Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
+        /// Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for ulTra SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public ulong? ThroughputPerformance{ get; set; }
 
         /// <summary>
-        /// Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+        /// Cloud disk size in GB. <br><li>`DiskSize` is not required if `SnapshotId` is specified. In this case, the size of the cloud disk will be equal to that of the snapshot. <br><li>If you specify both `SnapshotId` and `DiskSize`, the specified disk size cannot be smaller than the snapshot size. <br><li>For the value range of cloud disk size, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+        /// Optional parameter. Default value: `False`. If `True` is specified, the new cloud disk will be shared.
         /// </summary>
         [JsonProperty("Shareable")]
         public bool? Shareable{ get; set; }
 
         /// <summary>
-        /// A string to ensure the idempotency of the request, which is generated by the client. Each request shall have a unique string with a maximum of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be ensured.
+        /// A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// This parameter is used to create an encrypted cloud disk. Its value is always ENCRYPT.
+        /// This parameter is used to create encrypted cloud disks. It is fixed at `ENCRYPT`.
         /// </summary>
         [JsonProperty("Encrypt")]
         public string Encrypt{ get; set; }
@@ -103,16 +103,22 @@ namespace TencentCloud.Cbs.V20170312.Models
         public DiskChargePrepaid DiskChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
+        /// Whether to delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default value). `1`: Yes. To check whether a snapshot is permanently reserved, see the `IsPermanent` field returned by the `DescribeSnapshots` API.
         /// </summary>
         [JsonProperty("DeleteSnapshot")]
         public long? DeleteSnapshot{ get; set; }
 
         /// <summary>
-        /// When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+        /// Specifies whether to automatically attach and initialize the newly created data disk.
         /// </summary>
         [JsonProperty("AutoMountConfiguration")]
         public AutoMountConfiguration AutoMountConfiguration{ get; set; }
+
+        /// <summary>
+        /// Specifies the cloud disk backup point quota.
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public ulong? DiskBackupQuota{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
             this.SetParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         }
     }
 }

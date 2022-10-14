@@ -25,22 +25,34 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+        /// ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+        /// Snapshot name. If it is not specified, "Unnamed" will be used by default.
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+        /// Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
         /// </summary>
         [JsonProperty("Deadline")]
         public string Deadline{ get; set; }
+
+        /// <summary>
+        /// ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+        /// </summary>
+        [JsonProperty("DiskBackupId")]
+        public string DiskBackupId{ get; set; }
+
+        /// <summary>
+        /// Tags bound to the snapshot.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

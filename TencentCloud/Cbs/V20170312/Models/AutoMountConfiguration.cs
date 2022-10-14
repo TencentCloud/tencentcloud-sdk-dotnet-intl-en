@@ -31,13 +31,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] InstanceId{ get; set; }
 
         /// <summary>
-        /// Path to the mount point in the CVM
+        /// Mount point in the instance.
         /// </summary>
         [JsonProperty("MountPoint")]
         public string[] MountPoint{ get; set; }
 
         /// <summary>
-        /// File system type. Supported: ext4 and xfs.
+        /// File system type. Valid values: `ext4`, `xfs`.
         /// </summary>
         [JsonProperty("FileSystemType")]
         public string FileSystemType{ get; set; }

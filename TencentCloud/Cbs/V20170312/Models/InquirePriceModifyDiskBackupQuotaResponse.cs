@@ -21,11 +21,11 @@ namespace TencentCloud.Cbs.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceCreateDisksResponse : AbstractModel
+    public class InquirePriceModifyDiskBackupQuotaResponse : AbstractModel
     {
         
         /// <summary>
-        /// Describes the price of newly purchased cloud disks.
+        /// Price of the cloud disk after its backup point quota is modified.
         /// </summary>
         [JsonProperty("DiskPrice")]
         public Price DiskPrice{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Whether a modification is successfully made.
+        /// Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
         /// </summary>
         [JsonProperty("Changed")]
         public bool? Changed{ get; set; }
 
         /// <summary>
-        /// Task ID
+        /// ID of the task
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

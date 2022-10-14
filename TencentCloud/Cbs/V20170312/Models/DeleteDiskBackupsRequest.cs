@@ -21,20 +21,14 @@ namespace TencentCloud.Cbs.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceCreateDisksResponse : AbstractModel
+    public class DeleteDiskBackupsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Describes the price of newly purchased cloud disks.
+        /// ID of the cloud disk backup point to be deleted.
         /// </summary>
-        [JsonProperty("DiskPrice")]
-        public Price DiskPrice{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DiskBackupIds")]
+        public string[] DiskBackupIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "DiskPrice.", this.DiskPrice);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "DiskBackupIds.", this.DiskBackupIds);
         }
     }
 }

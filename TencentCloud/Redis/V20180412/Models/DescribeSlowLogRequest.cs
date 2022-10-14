@@ -31,34 +31,40 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time
+        /// The start time
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// End time
+        /// The end time
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Slow log threshold in microseconds
+        /// The average execution time threshold of slow query in microseconds
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// Number of entries per page
+        /// Number of slow queries displayed per page. Default value: `20`.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`
+        /// Slow query offset, which is an integral multiple of `Limit`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "MinQueryTime", this.MinQueryTime);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }
