@@ -121,6 +121,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("PreserveHDRSwitch")]
         public string PreserveHDRSwitch{ get; set; }
 
+        /// <summary>
+        /// The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+        /// <li>hvc1</li>
+        /// <li>hev1</li>
+        /// Default value: hvc1.
+        /// </summary>
+        [JsonProperty("CodecTag")]
+        public string CodecTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +146,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
             this.SetParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
+            this.SetParamSimple(map, prefix + "CodecTag", this.CodecTag);
         }
     }
 }

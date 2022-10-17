@@ -4799,9 +4799,9 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, and speech.
+        /// This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, speech, and voice.
         /// 
-        /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// If event notifications are used, the event type is [ReviewAudioVideoComplete](https://intl.cloud.tencent.com/document/product/266/81258?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ReviewAudioVideoRequest"/></param>
         /// <returns><see cref="ReviewAudioVideoResponse"/></returns>
@@ -4821,9 +4821,9 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, and speech.
+        /// This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, speech, and voice.
         /// 
-        /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// If event notifications are used, the event type is [ReviewAudioVideoComplete](https://intl.cloud.tencent.com/document/product/266/81258?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ReviewAudioVideoRequest"/></param>
         /// <returns><see cref="ReviewAudioVideoResponse"/></returns>
