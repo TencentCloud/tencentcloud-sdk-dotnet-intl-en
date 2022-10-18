@@ -15,34 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAvailableTKEEdgeVersionResponse : AbstractModel
+    public class DeleteRoomMemberResponse : AbstractModel
     {
         
         /// <summary>
-        /// Version list
+        /// Result of the operation to delete a room or remove a member
         /// </summary>
-        [JsonProperty("Versions")]
-        public string[] Versions{ get; set; }
-
-        /// <summary>
-        /// Latest version of the edge cluster
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("EdgeVersionLatest")]
-        public string EdgeVersionLatest{ get; set; }
-
-        /// <summary>
-        /// Current version of the edge cluster
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("EdgeVersionCurrent")]
-        public string EdgeVersionCurrent{ get; set; }
+        [JsonProperty("DeleteResult")]
+        public DeleteResult DeleteResult{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -56,9 +42,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Versions.", this.Versions);
-            this.SetParamSimple(map, prefix + "EdgeVersionLatest", this.EdgeVersionLatest);
-            this.SetParamSimple(map, prefix + "EdgeVersionCurrent", this.EdgeVersionCurrent);
+            this.SetParamObj(map, prefix + "DeleteResult.", this.DeleteResult);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

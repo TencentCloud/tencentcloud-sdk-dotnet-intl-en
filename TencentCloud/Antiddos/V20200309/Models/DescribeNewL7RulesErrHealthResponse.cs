@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAvailableTKEEdgeVersionResponse : AbstractModel
+    public class DescribeNewL7RulesErrHealthResponse : AbstractModel
     {
         
         /// <summary>
-        /// Version list
+        /// List of rules with exceptions. `Key`: Rule ID, `Value`: Exception IPs and error message. 
         /// </summary>
-        [JsonProperty("Versions")]
-        public string[] Versions{ get; set; }
+        [JsonProperty("ErrHealths")]
+        public KeyValue[] ErrHealths{ get; set; }
 
         /// <summary>
-        /// Latest version of the edge cluster
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Total number of rules with exceptions
         /// </summary>
-        [JsonProperty("EdgeVersionLatest")]
-        public string EdgeVersionLatest{ get; set; }
-
-        /// <summary>
-        /// Current version of the edge cluster
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("EdgeVersionCurrent")]
-        public string EdgeVersionCurrent{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -56,9 +48,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Versions.", this.Versions);
-            this.SetParamSimple(map, prefix + "EdgeVersionLatest", this.EdgeVersionLatest);
-            this.SetParamSimple(map, prefix + "EdgeVersionCurrent", this.EdgeVersionCurrent);
+            this.SetParamArrayObj(map, prefix + "ErrHealths.", this.ErrHealths);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

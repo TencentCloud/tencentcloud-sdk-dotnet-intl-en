@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The security group in use. Required only for public network access.
+        /// The security group in use, which must be passed in when public access is enabled.
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }

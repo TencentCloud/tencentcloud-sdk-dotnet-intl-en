@@ -2373,6 +2373,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to getting the exception results of the health check on layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesErrHealthResponse"/></returns>
+        public async Task<DescribeNewL7RulesErrHealthResponse> DescribeNewL7RulesErrHealth(DescribeNewL7RulesErrHealthRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNewL7RulesErrHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to getting the exception results of the health check on layer-7 forwarding rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesErrHealthResponse"/></returns>
+        public DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealthSync(DescribeNewL7RulesErrHealthRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNewL7RulesErrHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain the list of DDoS attacks.
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewDDoSEventListRequest"/></param>

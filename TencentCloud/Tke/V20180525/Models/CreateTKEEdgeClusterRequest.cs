@@ -96,6 +96,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
+        /// <summary>
+        /// Edge cluster version. It is the set of versions of all cluster components.
+        /// </summary>
+        [JsonProperty("EdgeVersion")]
+        public string EdgeVersion{ get; set; }
+
+        /// <summary>
+        /// Prefix of the image registry of an edge component
+        /// </summary>
+        [JsonProperty("RegistryPrefix")]
+        public string RegistryPrefix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
             this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
+            this.SetParamSimple(map, prefix + "RegistryPrefix", this.RegistryPrefix);
         }
     }
 }

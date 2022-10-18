@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAvailableTKEEdgeVersionRequest : AbstractModel
+    public class DeleteRoomMemberRequest : AbstractModel
     {
         
         /// <summary>
-        /// You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+        /// ID of the target room
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("RoomId")]
+        public string RoomId{ get; set; }
+
+        /// <summary>
+        /// List of the members to remove
+        /// </summary>
+        [JsonProperty("Uids")]
+        public string[] Uids{ get; set; }
+
+        /// <summary>
+        /// Operation type. `1`: Delete a room; `2`: Remove members
+        /// </summary>
+        [JsonProperty("DeleteType")]
+        public ulong? DeleteType{ get; set; }
+
+        /// <summary>
+        /// Application ID
+        /// </summary>
+        [JsonProperty("BizId")]
+        public ulong? BizId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamArraySimple(map, prefix + "Uids.", this.Uids);
+            this.SetParamSimple(map, prefix + "DeleteType", this.DeleteType);
+            this.SetParamSimple(map, prefix + "BizId", this.BizId);
         }
     }
 }

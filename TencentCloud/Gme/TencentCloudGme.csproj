@@ -50,6 +50,9 @@
     <Compile Include="V20180711\Models\CreateAppRequest.cs" />
     <Compile Include="V20180711\Models\CreateAppResp.cs" />
     <Compile Include="V20180711\Models\CreateAppResponse.cs" />
+    <Compile Include="V20180711\Models\DeleteResult.cs" />
+    <Compile Include="V20180711\Models\DeleteRoomMemberRequest.cs" />
+    <Compile Include="V20180711\Models\DeleteRoomMemberResponse.cs" />
     <Compile Include="V20180711\Models\DescribeAppStatisticsRequest.cs" />
     <Compile Include="V20180711\Models\DescribeAppStatisticsResp.cs" />
     <Compile Include="V20180711\Models\DescribeAppStatisticsResponse.cs" />

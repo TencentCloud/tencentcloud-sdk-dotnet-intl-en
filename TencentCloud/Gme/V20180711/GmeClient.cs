@@ -93,6 +93,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// This API is used to delete a room or remove members from the room.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoomMemberRequest"/></param>
+        /// <returns><see cref="DeleteRoomMemberResponse"/></returns>
+        public async Task<DeleteRoomMemberResponse> DeleteRoomMember(DeleteRoomMemberRequest req)
+        {
+             JsonResponseModel<DeleteRoomMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoomMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoomMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a room or remove members from the room.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoomMemberRequest"/></param>
+        /// <returns><see cref="DeleteRoomMemberResponse"/></returns>
+        public DeleteRoomMemberResponse DeleteRoomMemberSync(DeleteRoomMemberRequest req)
+        {
+             JsonResponseModel<DeleteRoomMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoomMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoomMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the usage statistics of a GME application, including those of voice chat, voice messaging and speech-to-text, phrase analysis, etc. The maximum query period is the past 30 days.
         /// </summary>
         /// <param name="req"><see cref="DescribeAppStatisticsRequest"/></param>

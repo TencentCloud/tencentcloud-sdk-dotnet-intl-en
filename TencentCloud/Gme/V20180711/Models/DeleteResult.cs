@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAvailableTKEEdgeVersionRequest : AbstractModel
+    public class DeleteResult : AbstractModel
     {
         
         /// <summary>
-        /// You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+        /// Status code. `0`: Succeeded. Others: Failed\
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
+
+        /// <summary>
+        /// Description
+        /// </summary>
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         }
     }
 }

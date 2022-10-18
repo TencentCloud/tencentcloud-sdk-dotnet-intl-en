@@ -183,6 +183,8 @@
     <Compile Include="V20200309\Models\DescribeListSchedulingDomainResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListWaterPrintConfigRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListWaterPrintConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeNewL7RulesErrHealthRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeNewL7RulesErrHealthResponse.cs" />
     <Compile Include="V20200309\Models\DescribeNewL7RulesRequest.cs" />
     <Compile Include="V20200309\Models\DescribeNewL7RulesResponse.cs" />
     <Compile Include="V20200309\Models\DescribeOverviewDDoSEventListRequest.cs" />

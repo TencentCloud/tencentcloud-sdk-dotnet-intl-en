@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAvailableTKEEdgeVersionRequest : AbstractModel
+    public class DescribeNewL7RulesErrHealthRequest : AbstractModel
     {
         
         /// <summary>
-        /// You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+        /// Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
+
+        /// <summary>
+        /// List of rule IDs
+        /// </summary>
+        [JsonProperty("RuleIdList")]
+        public string[] RuleIdList{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
         }
     }
 }

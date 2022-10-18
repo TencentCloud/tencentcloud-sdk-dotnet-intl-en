@@ -333,7 +333,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// Create a cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
+        /// This API is used to create a cluster access endpoint.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointRequest"/></param>
         /// <returns><see cref="CreateClusterEndpointResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// Create a cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
+        /// This API is used to create a cluster access endpoint.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointRequest"/></param>
         /// <returns><see cref="CreateClusterEndpointResponse"/></returns>
@@ -853,7 +853,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// Delete the cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
+        /// This API is used to delete a cluster access endpoint.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterEndpointRequest"/></param>
         /// <returns><see cref="DeleteClusterEndpointResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// Delete the cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
+        /// This API is used to delete a cluster access endpoint.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterEndpointRequest"/></param>
         /// <returns><see cref="DeleteClusterEndpointResponse"/></returns>
@@ -1333,7 +1333,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the K8s versions supported by TKE Edge.
+        /// This API is used to check the edge component versions and K8s versions supported by TKE Edge.
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailableTKEEdgeVersionRequest"/></param>
         /// <returns><see cref="DescribeAvailableTKEEdgeVersionResponse"/></returns>
@@ -1353,7 +1353,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the K8s versions supported by TKE Edge.
+        /// This API is used to check the edge component versions and K8s versions supported by TKE Edge.
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailableTKEEdgeVersionRequest"/></param>
         /// <returns><see cref="DescribeAvailableTKEEdgeVersionResponse"/></returns>
