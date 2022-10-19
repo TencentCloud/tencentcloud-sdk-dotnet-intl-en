@@ -48,6 +48,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// Grafana redirection address
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("GrafanaURL")]
+        public string GrafanaURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Kind", this.Kind);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "GrafanaURL", this.GrafanaURL);
         }
     }
 }

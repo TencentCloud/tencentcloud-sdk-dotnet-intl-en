@@ -59,10 +59,9 @@ namespace TencentCloud.Ciam.V20220331.Models
         /// <summary>
         /// Data type of the task
         /// 
-        /// <li> **JSON** </li>  JSON
         /// <li> **NDJSON** </li>  New-line Delimited JSON
         /// <li> **CSV** </li>  Comma-Separated Values
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

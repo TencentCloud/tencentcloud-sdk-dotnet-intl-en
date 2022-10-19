@@ -258,6 +258,20 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("AdvancedMetricNumber")]
         public long? AdvancedMetricNumber{ get; set; }
 
+        /// <summary>
+        /// Whether the policy is associated with all objects
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsBindAll")]
+        public long? IsBindAll{ get; set; }
+
+        /// <summary>
+        /// Policy tag
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -297,6 +311,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
             this.SetParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);
             this.SetParamSimple(map, prefix + "AdvancedMetricNumber", this.AdvancedMetricNumber);
+            this.SetParamSimple(map, prefix + "IsBindAll", this.IsBindAll);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

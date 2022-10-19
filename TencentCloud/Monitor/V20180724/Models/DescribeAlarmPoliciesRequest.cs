@@ -159,6 +159,24 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("OneClickPolicyType")]
         public string[] OneClickPolicyType{ get; set; }
 
+        /// <summary>
+        /// Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+        /// </summary>
+        [JsonProperty("NotBindAll")]
+        public long? NotBindAll{ get; set; }
+
+        /// <summary>
+        /// Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+        /// </summary>
+        [JsonProperty("NotInstanceGroup")]
+        public long? NotInstanceGroup{ get; set; }
+
+        /// <summary>
+        /// Filter policies by tag
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +204,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
             this.SetParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
             this.SetParamArraySimple(map, prefix + "OneClickPolicyType.", this.OneClickPolicyType);
+            this.SetParamSimple(map, prefix + "NotBindAll", this.NotBindAll);
+            this.SetParamSimple(map, prefix + "NotInstanceGroup", this.NotInstanceGroup);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

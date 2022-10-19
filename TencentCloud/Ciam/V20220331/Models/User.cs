@@ -272,6 +272,41 @@ namespace TencentCloud.Ciam.V20220331.Models
         [JsonProperty("LockTime")]
         public long? LockTime{ get; set; }
 
+        /// <summary>
+        /// Index field 1
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IndexedAttribute1")]
+        public string IndexedAttribute1{ get; set; }
+
+        /// <summary>
+        /// Index field 2
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IndexedAttribute2")]
+        public string IndexedAttribute2{ get; set; }
+
+        /// <summary>
+        /// Index field 3
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IndexedAttribute3")]
+        public string IndexedAttribute3{ get; set; }
+
+        /// <summary>
+        /// Index field 4
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IndexedAttribute4")]
+        public string IndexedAttribute4{ get; set; }
+
+        /// <summary>
+        /// Index field 5
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IndexedAttribute5")]
+        public string IndexedAttribute5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -314,6 +349,11 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "LockType", this.LockType);
             this.SetParamSimple(map, prefix + "LockTime", this.LockTime);
+            this.SetParamSimple(map, prefix + "IndexedAttribute1", this.IndexedAttribute1);
+            this.SetParamSimple(map, prefix + "IndexedAttribute2", this.IndexedAttribute2);
+            this.SetParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
+            this.SetParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
+            this.SetParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
         }
     }
 }

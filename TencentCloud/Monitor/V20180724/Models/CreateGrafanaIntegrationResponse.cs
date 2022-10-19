@@ -25,7 +25,8 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 
+        /// Integration ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IntegrationId")]
         public string IntegrationId{ get; set; }

@@ -73,7 +73,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? DisableRange{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
         /// </summary>
         [JsonProperty("Headers")]
         public HTTPHeader[] Headers{ get; set; }

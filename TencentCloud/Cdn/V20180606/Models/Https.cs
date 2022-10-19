@@ -34,11 +34,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// HTTP2 configuration switch
+        /// Whether to enable HTTP2
         /// `on`: Enable
         /// `off`: Disable
-        /// Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Http2")]
         public string Http2{ get; set; }

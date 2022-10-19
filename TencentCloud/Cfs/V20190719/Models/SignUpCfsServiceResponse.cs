@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+        /// Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
         /// </summary>
         [JsonProperty("CfsServiceStatus")]
         public string CfsServiceStatus{ get; set; }

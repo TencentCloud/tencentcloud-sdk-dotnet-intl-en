@@ -54,6 +54,33 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+        /// </summary>
+        [JsonProperty("OrgId")]
+        public string OrgId{ get; set; }
+
+        /// <summary>
+        /// Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtraOrgIds")]
+        public string[] ExtraOrgIds{ get; set; }
+
+        /// <summary>
+        /// Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OrgIds")]
+        public string OrgIds{ get; set; }
+
+        /// <summary>
+        /// All valid organizations in an alert channel
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OrganizationIds")]
+        public string OrganizationIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +92,10 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "Receivers.", this.Receivers);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "OrgId", this.OrgId);
+            this.SetParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+            this.SetParamSimple(map, prefix + "OrgIds", this.OrgIds);
+            this.SetParamSimple(map, prefix + "OrganizationIds", this.OrganizationIds);
         }
     }
 }

@@ -51,8 +51,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string CalcValue{ get; set; }
 
         /// <summary>
-        /// Duration.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Duration in seconds.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContinueTime")]
         public string ContinueTime{ get; set; }
@@ -87,6 +87,25 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
+        /// <summary>
+        /// Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+        /// </summary>
+        [JsonProperty("IsAdvanced")]
+        public long? IsAdvanced{ get; set; }
+
+        /// <summary>
+        /// Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+        /// </summary>
+        [JsonProperty("IsOpen")]
+        public long? IsOpen{ get; set; }
+
+        /// <summary>
+        /// Product ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +122,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+            this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

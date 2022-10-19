@@ -37,7 +37,10 @@ namespace TencentCloud.Ciam.V20220331.Models
         public string UserId{ get; set; }
 
         /// <summary>
+        /// Whether the content is passed through
         /// 
+        /// <li> **false** </li>Default. The returned information is desensitized.
+        /// <li> **true** </li>Return the original content.
         /// </summary>
         [JsonProperty("Original")]
         public bool? Original{ get; set; }

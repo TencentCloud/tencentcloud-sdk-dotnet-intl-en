@@ -25,7 +25,8 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 
+        /// ID of the installed plugin
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PluginIds")]
         public string[] PluginIds{ get; set; }

@@ -66,6 +66,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("UpdateTimeOrder")]
         public string UpdateTimeOrder{ get; set; }
 
+        /// <summary>
+        /// Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+        /// </summary>
+        [JsonProperty("PolicyCountOrder")]
+        public string PolicyCountOrder{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "UpdateTimeOrder", this.UpdateTimeOrder);
+            this.SetParamSimple(map, prefix + "PolicyCountOrder", this.PolicyCountOrder);
         }
     }
 }

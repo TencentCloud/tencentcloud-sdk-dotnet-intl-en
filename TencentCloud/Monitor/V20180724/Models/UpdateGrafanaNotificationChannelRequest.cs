@@ -49,13 +49,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// Array of extra organization IDs
+        /// This parameter has been deprecated. Please use `OrganizationIds` instead.
         /// </summary>
         [JsonProperty("ExtraOrgIds")]
         public string[] ExtraOrgIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Array of valid organization IDs
         /// </summary>
         [JsonProperty("OrganizationIds")]
         public string[] OrganizationIds{ get; set; }

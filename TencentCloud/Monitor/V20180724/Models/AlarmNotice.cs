@@ -108,6 +108,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("CLSNotices")]
         public CLSNotice[] CLSNotices{ get; set; }
 
+        /// <summary>
+        /// Tags bound to a notification template
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
             this.SetParamSimple(map, prefix + "AMPConsumerId", this.AMPConsumerId);
             this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

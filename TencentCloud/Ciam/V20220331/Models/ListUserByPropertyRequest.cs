@@ -46,7 +46,7 @@ namespace TencentCloud.Ciam.V20220331.Models
         public string PropertyValue{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the content is passed through
         /// </summary>
         [JsonProperty("Original")]
         public bool? Original{ get; set; }

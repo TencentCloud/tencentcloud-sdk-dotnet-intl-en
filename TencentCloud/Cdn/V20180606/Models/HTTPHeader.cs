@@ -25,13 +25,13 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 
+        /// Request header name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Request header value
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

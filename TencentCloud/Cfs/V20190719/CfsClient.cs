@@ -53,6 +53,86 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to bind one or multiple file systems to a snapshot policy. A file system can be bound to only one policy.
+        /// </summary>
+        /// <param name="req"><see cref="BindAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="BindAutoSnapshotPolicyResponse"/></returns>
+        public async Task<BindAutoSnapshotPolicyResponse> BindAutoSnapshotPolicy(BindAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind one or multiple file systems to a snapshot policy. A file system can be bound to only one policy.
+        /// </summary>
+        /// <param name="req"><see cref="BindAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="BindAutoSnapshotPolicyResponse"/></returns>
+        public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicySync(BindAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a scheduled snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="CreateAutoSnapshotPolicyResponse"/></returns>
+        public async Task<CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a scheduled snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="CreateAutoSnapshotPolicyResponse"/></returns>
+        public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicySync(CreateAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a file system.
         /// </summary>
         /// <param name="req"><see cref="CreateCfsFileSystemRequest"/></param>
@@ -164,6 +244,86 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "CreateCfsRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCfsRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a file system snapshot.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCfsSnapshotRequest"/></param>
+        /// <returns><see cref="CreateCfsSnapshotResponse"/></returns>
+        public async Task<CreateCfsSnapshotResponse> CreateCfsSnapshot(CreateCfsSnapshotRequest req)
+        {
+             JsonResponseModel<CreateCfsSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCfsSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCfsSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a file system snapshot.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCfsSnapshotRequest"/></param>
+        /// <returns><see cref="CreateCfsSnapshotResponse"/></returns>
+        public CreateCfsSnapshotResponse CreateCfsSnapshotSync(CreateCfsSnapshotRequest req)
+        {
+             JsonResponseModel<CreateCfsSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCfsSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCfsSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a scheduled snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAutoSnapshotPolicyResponse"/></returns>
+        public async Task<DeleteAutoSnapshotPolicyResponse> DeleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<DeleteAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a scheduled snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAutoSnapshotPolicyResponse"/></returns>
+        public DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicySync(DeleteAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<DeleteAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAutoSnapshotPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,6 +453,46 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to delete a file system snapshot.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCfsSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteCfsSnapshotResponse"/></returns>
+        public async Task<DeleteCfsSnapshotResponse> DeleteCfsSnapshot(DeleteCfsSnapshotRequest req)
+        {
+             JsonResponseModel<DeleteCfsSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCfsSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCfsSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a file system snapshot.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCfsSnapshotRequest"/></param>
+        /// <returns><see cref="DeleteCfsSnapshotResponse"/></returns>
+        public DeleteCfsSnapshotResponse DeleteCfsSnapshotSync(DeleteCfsSnapshotRequest req)
+        {
+             JsonResponseModel<DeleteCfsSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCfsSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCfsSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a mount target.
         /// </summary>
         /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
@@ -324,6 +524,46 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DeleteMountTarget");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMountTargetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of scheduled snapshot policies of a file system.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoSnapshotPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAutoSnapshotPoliciesResponse"/></returns>
+        public async Task<DescribeAutoSnapshotPoliciesResponse> DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoSnapshotPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoSnapshotPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of scheduled snapshot policies of a file system.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoSnapshotPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAutoSnapshotPoliciesResponse"/></returns>
+        public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPoliciesSync(DescribeAutoSnapshotPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAutoSnapshotPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoSnapshotPoliciesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,6 +813,86 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to get the snapshot overview of a file system.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfsSnapshotOverviewRequest"/></param>
+        /// <returns><see cref="DescribeCfsSnapshotOverviewResponse"/></returns>
+        public async Task<DescribeCfsSnapshotOverviewResponse> DescribeCfsSnapshotOverview(DescribeCfsSnapshotOverviewRequest req)
+        {
+             JsonResponseModel<DescribeCfsSnapshotOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCfsSnapshotOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfsSnapshotOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the snapshot overview of a file system.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfsSnapshotOverviewRequest"/></param>
+        /// <returns><see cref="DescribeCfsSnapshotOverviewResponse"/></returns>
+        public DescribeCfsSnapshotOverviewResponse DescribeCfsSnapshotOverviewSync(DescribeCfsSnapshotOverviewRequest req)
+        {
+             JsonResponseModel<DescribeCfsSnapshotOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCfsSnapshotOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfsSnapshotOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of snapshots of a file system.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfsSnapshotsRequest"/></param>
+        /// <returns><see cref="DescribeCfsSnapshotsResponse"/></returns>
+        public async Task<DescribeCfsSnapshotsResponse> DescribeCfsSnapshots(DescribeCfsSnapshotsRequest req)
+        {
+             JsonResponseModel<DescribeCfsSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCfsSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfsSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of snapshots of a file system.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfsSnapshotsRequest"/></param>
+        /// <returns><see cref="DescribeCfsSnapshotsResponse"/></returns>
+        public DescribeCfsSnapshotsResponse DescribeCfsSnapshotsSync(DescribeCfsSnapshotsRequest req)
+        {
+             JsonResponseModel<DescribeCfsSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCfsSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfsSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the mount targets of a file system.
         /// </summary>
         /// <param name="req"><see cref="DescribeMountTargetsRequest"/></param>
@@ -613,6 +933,46 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to query the operation logs of a snapshot.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotOperationLogsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotOperationLogsResponse"/></returns>
+        public async Task<DescribeSnapshotOperationLogsResponse> DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotOperationLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the operation logs of a snapshot.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotOperationLogsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotOperationLogsResponse"/></returns>
+        public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogsSync(DescribeSnapshotOperationLogsRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshotOperationLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to activate the CFS service.
         /// </summary>
         /// <param name="req"><see cref="SignUpCfsServiceRequest"/></param>
@@ -644,6 +1004,86 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "SignUpCfsService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignUpCfsServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a snapshot policy from a file system.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="UnbindAutoSnapshotPolicyResponse"/></returns>
+        public async Task<UnbindAutoSnapshotPolicyResponse> UnbindAutoSnapshotPolicy(UnbindAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a snapshot policy from a file system.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="UnbindAutoSnapshotPolicyResponse"/></returns>
+        public UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicySync(UnbindAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a scheduled snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="UpdateAutoSnapshotPolicyResponse"/></returns>
+        public async Task<UpdateAutoSnapshotPolicyResponse> UpdateAutoSnapshotPolicy(UpdateAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<UpdateAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a scheduled snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAutoSnapshotPolicyRequest"/></param>
+        /// <returns><see cref="UpdateAutoSnapshotPolicyResponse"/></returns>
+        public UpdateAutoSnapshotPolicyResponse UpdateAutoSnapshotPolicySync(UpdateAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<UpdateAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAutoSnapshotPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -844,6 +1284,46 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "UpdateCfsRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCfsRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the name and retention period of a file system snapshot.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCfsSnapshotAttributeRequest"/></param>
+        /// <returns><see cref="UpdateCfsSnapshotAttributeResponse"/></returns>
+        public async Task<UpdateCfsSnapshotAttributeResponse> UpdateCfsSnapshotAttribute(UpdateCfsSnapshotAttributeRequest req)
+        {
+             JsonResponseModel<UpdateCfsSnapshotAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCfsSnapshotAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCfsSnapshotAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the name and retention period of a file system snapshot.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCfsSnapshotAttributeRequest"/></param>
+        /// <returns><see cref="UpdateCfsSnapshotAttributeResponse"/></returns>
+        public UpdateCfsSnapshotAttributeResponse UpdateCfsSnapshotAttributeSync(UpdateCfsSnapshotAttributeRequest req)
+        {
+             JsonResponseModel<UpdateCfsSnapshotAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCfsSnapshotAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCfsSnapshotAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

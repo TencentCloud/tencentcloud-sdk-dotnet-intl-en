@@ -140,6 +140,26 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
+        /// <summary>
+        /// Maximum value
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ValueMax")]
+        public float? ValueMax{ get; set; }
+
+        /// <summary>
+        /// Minimum value
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ValueMin")]
+        public float? ValueMin{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HierarchicalValue")]
+        public AlarmHierarchicalValue HierarchicalValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +180,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
             this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "ValueMax", this.ValueMax);
+            this.SetParamSimple(map, prefix + "ValueMin", this.ValueMin);
+            this.SetParamObj(map, prefix + "HierarchicalValue.", this.HierarchicalValue);
         }
     }
 }

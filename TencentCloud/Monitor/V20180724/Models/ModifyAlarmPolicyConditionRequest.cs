@@ -66,6 +66,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }
 
+        /// <summary>
+        /// Log alarm creation request parameters
+        /// </summary>
+        [JsonProperty("LogAlarmReqInfo")]
+        public LogAlarmReq LogAlarmReqInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "EventCondition.", this.EventCondition);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
             this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+            this.SetParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
         }
     }
 }

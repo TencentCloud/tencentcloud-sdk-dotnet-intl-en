@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// Organization ID
+        /// Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
         /// </summary>
         [JsonProperty("OrgId")]
         public long? OrgId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// Array of extra organization IDs
+        /// Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
         /// </summary>
         [JsonProperty("ExtraOrgIds")]
         public string[] ExtraOrgIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Array of all valid organization IDs. Default value: `1`.
         /// </summary>
         [JsonProperty("OrganizationIds")]
         public string[] OrganizationIds{ get; set; }

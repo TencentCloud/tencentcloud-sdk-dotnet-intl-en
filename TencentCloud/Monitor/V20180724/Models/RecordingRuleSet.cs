@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? RuleState{ get; set; }
 
         /// <summary>
-        /// Rule name
+        /// Group name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -66,6 +66,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// Rule name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
         }
     }
 }
