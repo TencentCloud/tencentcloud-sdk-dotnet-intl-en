@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The name of the field to filter.
+        /// Fields to be filtered.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

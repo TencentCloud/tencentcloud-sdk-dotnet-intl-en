@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string PublishCdnUrl{ get; set; }
 
         /// <summary>
-        /// Whether to relay to Tencent Cloud’s CDN. 0 (default): No; 1: Yes. An optimized route will be assigned if you relay to Tencent Cloud’s CDN.
+        /// Whether to relay to Tencent Cloud’s CDN. 0 (default): Third-party CDN; 1: Tencent Cloud’s CDN. Note: Relaying to a third-party CDN will incur fees. If you are relaying to Tencent Cloud’s CDN, to avoid incurring fees, be sure to set this parameter to `1`. For details, see the API document.
         /// </summary>
         [JsonProperty("IsTencentCdn")]
         public ulong? IsTencentCdn{ get; set; }

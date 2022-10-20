@@ -54,7 +54,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// Subtitle ID. Its length cannot exceed 16 characters. Uppercase and lowercase letters, numbers, underscores (_), and hyphens (-) are supported. It cannot be the same as the IDs of the existing subtitles in the media file.
+        /// The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

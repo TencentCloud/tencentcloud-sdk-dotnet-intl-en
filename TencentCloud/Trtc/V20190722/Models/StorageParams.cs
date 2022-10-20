@@ -25,13 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The third-party cloud storage information (not supported currently).
+        /// The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
         /// </summary>
         [JsonProperty("CloudStorage")]
         public CloudStorage CloudStorage{ get; set; }
 
         /// <summary>
-        /// The VOD information.
+        /// The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
         /// </summary>
         [JsonProperty("CloudVod")]
         public CloudVod CloudVod{ get; set; }
