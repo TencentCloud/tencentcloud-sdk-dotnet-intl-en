@@ -25,19 +25,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Original price in 0.01 CNY.
+        /// Published price in US Cent
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public ulong? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discounted price in 0.01 CNY.
+        /// Discounted total amount in US Cent
         /// </summary>
         [JsonProperty("Price")]
         public ulong? Price{ get; set; }
 
         /// <summary>
-        /// Currency, such as USD for US dollar.
+        /// Currency, such as USD.
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

@@ -58,7 +58,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-        /// Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+        /// Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }

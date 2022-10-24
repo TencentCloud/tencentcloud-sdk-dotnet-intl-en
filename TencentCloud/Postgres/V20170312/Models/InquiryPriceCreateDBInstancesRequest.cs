@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+        /// [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
         /// </summary>
         [JsonProperty("Pid")]
         public ulong? Pid{ get; set; }
@@ -65,6 +65,20 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// Instance type. Default value: `primary`. Valid values:
+        /// `primary` (dual-server high-availability, one-primary-one-standby)
+        /// `readonly` (read-only instance)
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DBEngine")]
+        public string DBEngine{ get; set; }
 
 
         /// <summary>
@@ -79,6 +93,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
         }
     }
 }

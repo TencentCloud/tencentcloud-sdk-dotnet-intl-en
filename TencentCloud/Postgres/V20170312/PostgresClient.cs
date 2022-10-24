@@ -1533,7 +1533,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to eliminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an eliminated instance will be deleted and cannot be recovered.
+        /// This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an terminated instance will be deleted and cannot be recovered.
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to eliminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an eliminated instance will be deleted and cannot be recovered.
+        /// This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an terminated instance will be deleted and cannot be recovered.
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -1733,7 +1733,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the upgrade price of an instance.
+        /// This API is used to query the fees of upgrading a specified database instance. Only pay-as-you-go instance is supported.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>
@@ -1753,7 +1753,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the upgrade price of an instance.
+        /// This API is used to query the fees of upgrading a specified database instance. Only pay-as-you-go instance is supported.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>

@@ -256,6 +256,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("IsSupportTDE")]
         public long? IsSupportTDE{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DBEngine")]
+        public string DBEngine{ get; set; }
+
+        /// <summary>
+        /// Configuration information of database engine
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DBEngineConfig")]
+        public string DBEngineConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -299,6 +312,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
             this.SetParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
+            this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
+            this.SetParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
         }
     }
 }

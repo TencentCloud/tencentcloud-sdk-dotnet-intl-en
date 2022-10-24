@@ -30,6 +30,15 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// Database engines. Valid values:
+        /// 1. `postgresql` (TencentDB for PostgreSQL)
+        /// 2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+        /// Default value: `postgresql`
+        /// </summary>
+        [JsonProperty("DBEngine")]
+        public string DBEngine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +46,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
         }
     }
 }

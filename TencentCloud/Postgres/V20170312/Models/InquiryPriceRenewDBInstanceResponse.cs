@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Price{ get; set; }
 
         /// <summary>
-        /// Currency, such as USD for US dollar.
+        /// Currency, such as USD.
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

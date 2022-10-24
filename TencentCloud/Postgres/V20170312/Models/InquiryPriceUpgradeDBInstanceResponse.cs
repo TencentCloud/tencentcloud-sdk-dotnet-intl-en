@@ -31,13 +31,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Actual amount payable
+        /// Discounted total amount
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }
 
         /// <summary>
-        /// Currency, such as USD for US dollar.
+        /// Currency, such as USD.
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

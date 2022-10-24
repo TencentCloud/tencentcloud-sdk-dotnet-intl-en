@@ -73,7 +73,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Qps{ get; set; }
 
         /// <summary>
-        /// Billing ID for this specification
+        /// (Disused)
         /// </summary>
         [JsonProperty("Pid")]
         public ulong? Pid{ get; set; }

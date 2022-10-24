@@ -31,12 +31,6 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// PostgreSQL kernel version, which must be the same as that of the primary instance
-        /// </summary>
-        [JsonProperty("DBVersion")]
-        public string DBVersion{ get; set; }
-
-        /// <summary>
         /// Instance storage capacity in GB
         /// </summary>
         [JsonProperty("Storage")]
@@ -73,7 +67,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+        /// (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+        /// </summary>
+        [JsonProperty("DBVersion")]
+        public string DBVersion{ get; set; }
+
+        /// <summary>
+        /// Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -151,13 +151,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SpecCode", this.SpecCode);
-            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);

@@ -39,6 +39,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string BillId{ get; set; }
 
         /// <summary>
+        /// ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DBInstanceId")]
+        public string DBInstanceId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "BillId", this.BillId);
+            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
