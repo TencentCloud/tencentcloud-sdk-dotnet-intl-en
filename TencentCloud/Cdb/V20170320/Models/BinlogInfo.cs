@@ -72,6 +72,36 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("BinlogFinishTime")]
         public string BinlogFinishTime{ get; set; }
 
+        /// <summary>
+        /// The region where the binlog file resides
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// The detailed information of remote binlog backups
+        /// </summary>
+        [JsonProperty("RemoteInfo")]
+        public RemoteBackupInfo[] RemoteInfo{ get; set; }
+
+        /// <summary>
+        /// Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+        /// </summary>
+        [JsonProperty("CosStorageType")]
+        public long? CosStorageType{ get; set; }
+
+        /// <summary>
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +116,11 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "BinlogStartTime", this.BinlogStartTime);
             this.SetParamSimple(map, prefix + "BinlogFinishTime", this.BinlogFinishTime);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
+            this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

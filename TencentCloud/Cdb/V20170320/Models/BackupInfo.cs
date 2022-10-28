@@ -114,6 +114,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("SaveMode")]
         public string SaveMode{ get; set; }
 
+        /// <summary>
+        /// The region where local backup resides
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// Detailed information of remote backups
+        /// </summary>
+        [JsonProperty("RemoteInfo")]
+        public RemoteBackupInfo[] RemoteInfo{ get; set; }
+
+        /// <summary>
+        /// Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+        /// </summary>
+        [JsonProperty("CosStorageType")]
+        public long? CosStorageType{ get; set; }
+
+        /// <summary>
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +159,10 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Way", this.Way);
             this.SetParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
             this.SetParamSimple(map, prefix + "SaveMode", this.SaveMode);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
+            this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

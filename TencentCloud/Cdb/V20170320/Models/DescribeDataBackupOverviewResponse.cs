@@ -61,16 +61,28 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ManualBackupCount{ get; set; }
 
         /// <summary>
-        /// Total capacity of remote backups in the current region
+        /// Total capacity of remote backups
         /// </summary>
         [JsonProperty("RemoteBackupVolume")]
         public long? RemoteBackupVolume{ get; set; }
 
         /// <summary>
-        /// Total number of remote backups in the current region
+        /// Total number of remote backups
         /// </summary>
         [JsonProperty("RemoteBackupCount")]
         public long? RemoteBackupCount{ get; set; }
+
+        /// <summary>
+        /// Total capacity of archive backups in the current region
+        /// </summary>
+        [JsonProperty("DataBackupArchiveVolume")]
+        public long? DataBackupArchiveVolume{ get; set; }
+
+        /// <summary>
+        /// Total number of archive backups in the current region
+        /// </summary>
+        [JsonProperty("DataBackupArchiveCount")]
+        public long? DataBackupArchiveCount{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -92,6 +104,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ManualBackupCount", this.ManualBackupCount);
             this.SetParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
             this.SetParamSimple(map, prefix + "RemoteBackupCount", this.RemoteBackupCount);
+            this.SetParamSimple(map, prefix + "DataBackupArchiveVolume", this.DataBackupArchiveVolume);
+            this.SetParamSimple(map, prefix + "DataBackupArchiveCount", this.DataBackupArchiveCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

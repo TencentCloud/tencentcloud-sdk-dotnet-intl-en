@@ -49,6 +49,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? FreeVolume{ get; set; }
 
         /// <summary>
+        /// Total capacity of backups of a user in the current region
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("RemoteBackupVolume")]
+        public long? RemoteBackupVolume{ get; set; }
+
+        /// <summary>
+        /// Archive backup capacity, which includes data backups and log backups.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BackupArchiveVolume")]
+        public long? BackupArchiveVolume{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +78,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupVolume", this.BackupVolume);
             this.SetParamSimple(map, prefix + "BillingVolume", this.BillingVolume);
             this.SetParamSimple(map, prefix + "FreeVolume", this.FreeVolume);
+            this.SetParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
+            this.SetParamSimple(map, prefix + "BackupArchiveVolume", this.BackupArchiveVolume);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

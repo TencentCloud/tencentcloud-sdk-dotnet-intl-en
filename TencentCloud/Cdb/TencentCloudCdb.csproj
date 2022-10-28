@@ -302,6 +302,7 @@
     <Compile Include="V20170320\Models\ReleaseResult.cs" />
     <Compile Include="V20170320\Models\ReloadBalanceProxyNodeRequest.cs" />
     <Compile Include="V20170320\Models\ReloadBalanceProxyNodeResponse.cs" />
+    <Compile Include="V20170320\Models\RemoteBackupInfo.cs" />
     <Compile Include="V20170320\Models\ResetRootAccountRequest.cs" />
     <Compile Include="V20170320\Models\ResetRootAccountResponse.cs" />
     <Compile Include="V20170320\Models\RestartDBInstancesRequest.cs" />

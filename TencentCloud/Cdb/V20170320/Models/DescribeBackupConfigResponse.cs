@@ -91,6 +91,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string StartBackupPeriodSaveDate{ get; set; }
 
         /// <summary>
+        /// Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+        /// </summary>
+        [JsonProperty("EnableBackupArchive")]
+        public string EnableBackupArchive{ get; set; }
+
+        /// <summary>
+        /// The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+        /// </summary>
+        [JsonProperty("BackupArchiveDays")]
+        public long? BackupArchiveDays{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+        /// </summary>
+        [JsonProperty("EnableBinlogArchive")]
+        public string EnableBinlogArchive{ get; set; }
+
+        /// <summary>
+        /// The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+        /// </summary>
+        [JsonProperty("BinlogArchiveDays")]
+        public long? BinlogArchiveDays{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +137,10 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupPeriodSaveInterval", this.BackupPeriodSaveInterval);
             this.SetParamSimple(map, prefix + "BackupPeriodSaveCount", this.BackupPeriodSaveCount);
             this.SetParamSimple(map, prefix + "StartBackupPeriodSaveDate", this.StartBackupPeriodSaveDate);
+            this.SetParamSimple(map, prefix + "EnableBackupArchive", this.EnableBackupArchive);
+            this.SetParamSimple(map, prefix + "BackupArchiveDays", this.BackupArchiveDays);
+            this.SetParamSimple(map, prefix + "EnableBinlogArchive", this.EnableBinlogArchive);
+            this.SetParamSimple(map, prefix + "BinlogArchiveDays", this.BinlogArchiveDays);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
