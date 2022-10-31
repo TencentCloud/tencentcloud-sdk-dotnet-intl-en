@@ -79,6 +79,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+        /// <li>ts: TS segment</li>
+        /// <li>fmp4: fMP4 segment</li>
+        /// </summary>
+        [JsonProperty("SegmentType")]
+        public string SegmentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +101,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
         }
     }
 }

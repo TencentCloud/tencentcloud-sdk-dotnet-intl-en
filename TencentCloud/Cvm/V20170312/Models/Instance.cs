@@ -250,6 +250,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
+        /// <summary>
+        /// Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+        /// </summary>
+        [JsonProperty("DisableApiTermination")]
+        public bool? DisableApiTermination{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -292,6 +298,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
             this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         }
     }
 }

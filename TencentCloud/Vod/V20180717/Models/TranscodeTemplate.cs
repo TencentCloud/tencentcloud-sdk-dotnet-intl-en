@@ -115,6 +115,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// The segment type. This parameter is valid only if `Container` is `hls`
+        /// </summary>
+        [JsonProperty("SegmentType")]
+        public string SegmentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +140,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ContainerType", this.ContainerType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
         }
     }
 }

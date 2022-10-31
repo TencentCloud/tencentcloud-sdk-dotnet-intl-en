@@ -811,6 +811,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
         /// This API is used to create a player configuration. Up to 100 configurations can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>
@@ -831,6 +832,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
         /// This API is used to create a player configuration. Up to 100 configurations can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>
@@ -1503,6 +1505,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
         /// This API is used to delete a player configuration.  
         /// *Note: Preset player configurations cannot be deleted.*
         /// </summary>
@@ -1524,6 +1527,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
         /// This API is used to delete a player configuration.  
         /// *Note: Preset player configurations cannot be deleted.*
         /// </summary>
@@ -2891,6 +2895,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
         /// This API is used to query player configurations. It supports pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeSuperPlayerConfigsRequest"/></param>
@@ -2911,6 +2916,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
         /// This API is used to query player configurations. It supports pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeSuperPlayerConfigsRequest"/></param>
@@ -4051,6 +4057,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
         /// This API is used to modify a player configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifySuperPlayerConfigRequest"/></param>
@@ -4071,6 +4078,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
         /// This API is used to modify a player configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifySuperPlayerConfigRequest"/></param>

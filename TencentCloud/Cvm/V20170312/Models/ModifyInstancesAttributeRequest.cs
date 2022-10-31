@@ -50,6 +50,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CamRoleName{ get; set; }
 
         /// <summary>
+        /// Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+        /// </summary>
+        [JsonProperty("HostName")]
+        public string HostName{ get; set; }
+
+        /// <summary>
         /// Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
         /// </summary>
         [JsonProperty("DisableApiTermination")]
@@ -73,6 +79,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+            this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
         }

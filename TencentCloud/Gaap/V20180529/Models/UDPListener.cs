@@ -180,6 +180,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("RecvContext")]
         public string RecvContext{ get; set; }
 
+        /// <summary>
+        /// Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProxyId")]
+        public string ProxyId{ get; set; }
+
+        /// <summary>
+        /// Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -209,6 +223,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ContextType", this.ContextType);
             this.SetParamSimple(map, prefix + "SendContext", this.SendContext);
             this.SetParamSimple(map, prefix + "RecvContext", this.RecvContext);
+            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

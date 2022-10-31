@@ -32,8 +32,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// List of key IDs. After an instance is associated with a key, you can access the instance with the private key in the key pair. You can call [`DescribeKeyPairs`](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `KeyId`. A key and password cannot be specified at the same time. Windows instances do not support keys. Currently, you can only specify one key when purchasing an instance.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// List of key IDs. After an instance is associated with a key, you can access the instance with the private key in the key pair. You can call [`DescribeKeyPairs`](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `KeyId`. You cannot specify a key and a password at the same time. Windows instances do not support keys.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }

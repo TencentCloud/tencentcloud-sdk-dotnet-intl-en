@@ -31,9 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// List of destination regions for synchronization. Limits:<br><li>It cannot be the same as the source region.<br><li>The Region parameter is correct. See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).<br><li>Image synchronization is only available in limited regions.<br>
-        /// 
-        /// For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.
+        /// List of destination regions for synchronization. Limits:<br><li>It must be a valid region.<br><li>For a custom image, the destination region cannot be the source region.<br><li>For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.<br><li>Image synchronization is only available in limited regions.<br>See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DestinationRegions")]
         public string[] DestinationRegions{ get; set; }

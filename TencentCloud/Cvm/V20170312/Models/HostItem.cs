@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+        /// CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
@@ -49,37 +49,37 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Billing method of the CDH instance
+        /// CDH instance billing mode
         /// </summary>
         [JsonProperty("HostChargeType")]
         public string HostChargeType{ get; set; }
 
         /// <summary>
-        /// Auto renewal flag of the CDH instance
+        /// CDH instance renewal flag
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// Creation time of the CDH instance
+        /// CDH instance creation time
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Expiration time of the CDH instance
+        /// CDH instance expiry time
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// List of IDs of CVM instances created on the CDH
+        /// List of IDs of CVMs created on a CDH instance
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// CDH instance state
+        /// CDH instance status
         /// </summary>
         [JsonProperty("HostState")]
         public string HostState{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string HostIp{ get; set; }
 
         /// <summary>
-        /// Resource information of the CDH instance
+        /// CDH instance resource information
         /// </summary>
         [JsonProperty("HostResource")]
         public HostResource HostResource{ get; set; }
