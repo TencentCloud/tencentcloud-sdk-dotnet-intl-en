@@ -259,6 +259,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("RecordingRuleLimit")]
         public long? RecordingRuleLimit{ get; set; }
 
+        /// <summary>
+        /// Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MigrationType")]
+        public long? MigrationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +301,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
             this.SetParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
             this.SetParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
+            this.SetParamSimple(map, prefix + "MigrationType", this.MigrationType);
         }
     }
 }

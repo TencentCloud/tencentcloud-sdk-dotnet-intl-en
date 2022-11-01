@@ -55,6 +55,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string EndTime{ get; set; }
 
         /// <summary>
+        /// Returned message
+        /// </summary>
+        [JsonProperty("Msg")]
+        public string Msg{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "DataPoints.", this.DataPoints);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Msg", this.Msg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
