@@ -25,31 +25,31 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// Sorting order. Valid values: desc, asc
+        /// Sorting order (required). Valid values: `desc`, `asc`.
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// searchlog  histogram
+        /// This parameter is required. Valid values: `searchlog`, `histogram`.
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID (required)
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Start time
+        /// Start time (required)
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Number of raw logs returned in a single query. Maximum value: 100
+        /// The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// Query statement, which can contain up to 4,096 characters.
+        /// Query statement, which is required and can contain up to 4,096 characters.
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time (required)
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

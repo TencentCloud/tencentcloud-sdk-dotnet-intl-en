@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
+        /// Database engine name, which is `redis` for this API.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Offset.
+        /// Offset, which is an integral multiple of `Limit`.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be pulled. Default value: 20
+        /// The number of security groups to be pulled. Default value: `20`.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

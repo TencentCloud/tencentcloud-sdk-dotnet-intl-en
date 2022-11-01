@@ -789,7 +789,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the DescribeDataFetchProject information.
+        /// This API is used to get the `DescribeDataFetchProject` information and has been deprecated. Use `DescribeDataFetchUrl` instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataFetchProjectRequest"/></param>
         /// <returns><see cref="DescribeDataFetchProjectResponse"/></returns>
@@ -809,7 +809,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the DescribeDataFetchProject information.
+        /// This API is used to get the `DescribeDataFetchProject` information and has been deprecated. Use `DescribeDataFetchUrl` instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataFetchProjectRequest"/></param>
         /// <returns><see cref="DescribeDataFetchProjectResponse"/></returns>

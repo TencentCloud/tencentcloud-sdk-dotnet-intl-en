@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+        /// Database engine name, which is `redis` for this API.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// ID list of the security groups to be modified, which is an array of one or more security group IDs.
+        /// List of IDs of security groups to be modified, which is an array of one or more security group IDs.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

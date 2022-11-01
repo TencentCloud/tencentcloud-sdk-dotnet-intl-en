@@ -21,26 +21,14 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DisassociateSecurityGroupsRequest : AbstractModel
+    public class CloseSSLRequest : AbstractModel
     {
         
         /// <summary>
-        /// Database engine name, which is `redis` for this API.
+        /// Instance ID
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
-
-        /// <summary>
-        /// Security group ID
-        /// </summary>
-        [JsonProperty("SecurityGroupId")]
-        public string SecurityGroupId{ get; set; }
-
-        /// <summary>
-        /// List of instance IDs, which is an array of one or more instance IDs.
-        /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
-            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

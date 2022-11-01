@@ -65,6 +65,8 @@
     <Compile Include="V20180412\Models\CleanUpInstanceResponse.cs" />
     <Compile Include="V20180412\Models\ClearInstanceRequest.cs" />
     <Compile Include="V20180412\Models\ClearInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\CloseSSLRequest.cs" />
+    <Compile Include="V20180412\Models\CloseSSLResponse.cs" />
     <Compile Include="V20180412\Models\CommandTake.cs" />
     <Compile Include="V20180412\Models\CreateInstanceAccountRequest.cs" />
     <Compile Include="V20180412\Models\CreateInstanceAccountResponse.cs" />
@@ -204,6 +206,8 @@
     <Compile Include="V20180412\Models\ModifyNetworkConfigResponse.cs" />
     <Compile Include="V20180412\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="V20180412\Models\ModifyParamTemplateResponse.cs" />
+    <Compile Include="V20180412\Models\OpenSSLRequest.cs" />
+    <Compile Include="V20180412\Models\OpenSSLResponse.cs" />
     <Compile Include="V20180412\Models\Outbound.cs" />
     <Compile Include="V20180412\Models\ParamTemplateInfo.cs" />
     <Compile Include="V20180412\Models\ParameterDetail.cs" />

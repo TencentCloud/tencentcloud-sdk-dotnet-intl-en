@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+        /// Database engine name, which is `redis` for this API.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
