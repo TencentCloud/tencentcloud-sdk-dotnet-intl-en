@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB instance ID
+        /// CLB instance IDs. There can be up to 20 IDs.
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

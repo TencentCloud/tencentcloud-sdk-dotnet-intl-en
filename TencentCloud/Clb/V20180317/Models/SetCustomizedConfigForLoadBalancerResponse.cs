@@ -15,39 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MetricData : AbstractModel
+    public class SetCustomizedConfigForLoadBalancerResponse : AbstractModel
     {
         
         /// <summary>
-        /// Resource description
+        /// Configuration ID, such as "pz-1234abcd"
         /// </summary>
-        [JsonProperty("Resource")]
-        public string Resource{ get; set; }
+        [JsonProperty("ConfigId")]
+        public string ConfigId{ get; set; }
 
         /// <summary>
-        /// Table name
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Metric")]
-        public string Metric{ get; set; }
-
-        /// <summary>
-        /// Table data
-        /// </summary>
-        [JsonProperty("DataSet")]
-        public DatePoint[] DataSet{ get; set; }
-
-        /// <summary>
-        /// The total number of requests within the query scope.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("MetricCount")]
-        public long? MetricCount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -55,10 +42,8 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Resource", this.Resource);
-            this.SetParamSimple(map, prefix + "Metric", this.Metric);
-            this.SetParamArrayObj(map, prefix + "DataSet.", this.DataSet);
-            this.SetParamSimple(map, prefix + "MetricCount", this.MetricCount);
+            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -80,6 +80,8 @@
     <Compile Include="V20201028\Models\ModifyPrivateZoneResponse.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneVpcRequest.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneVpcResponse.cs" />
+    <Compile Include="V20201028\Models\ModifyRecordsStatusRequest.cs" />
+    <Compile Include="V20201028\Models\ModifyRecordsStatusResponse.cs" />
     <Compile Include="V20201028\Models\PrivateDNSAccount.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />

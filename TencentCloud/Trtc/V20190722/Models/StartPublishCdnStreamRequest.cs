@@ -84,6 +84,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("SeiParams")]
         public McuSeiParams SeiParams{ get; set; }
 
+        /// <summary>
+        /// The information of the room to which streams are relayed.
+        /// </summary>
+        [JsonProperty("FeedBackRoomParams")]
+        public McuFeedBackRoomParams[] FeedBackRoomParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "SingleSubscribeParams.", this.SingleSubscribeParams);
             this.SetParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
             this.SetParamObj(map, prefix + "SeiParams.", this.SeiParams);
+            this.SetParamArrayObj(map, prefix + "FeedBackRoomParams.", this.FeedBackRoomParams);
         }
     }
 }

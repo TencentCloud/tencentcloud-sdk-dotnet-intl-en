@@ -340,7 +340,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string CurrentTime{ get; set; }
 
         /// <summary>
-        /// Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+        /// Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsFederation")]

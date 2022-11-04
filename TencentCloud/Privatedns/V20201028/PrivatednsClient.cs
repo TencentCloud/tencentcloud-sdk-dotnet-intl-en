@@ -573,6 +573,46 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// This API is used to modify the DNS record status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordsStatusRequest"/></param>
+        /// <returns><see cref="ModifyRecordsStatusResponse"/></returns>
+        public async Task<ModifyRecordsStatusResponse> ModifyRecordsStatus(ModifyRecordsStatusRequest req)
+        {
+             JsonResponseModel<ModifyRecordsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRecordsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the DNS record status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordsStatusRequest"/></param>
+        /// <returns><see cref="ModifyRecordsStatusResponse"/></returns>
+        public ModifyRecordsStatusResponse ModifyRecordsStatusSync(ModifyRecordsStatusRequest req)
+        {
+             JsonResponseModel<ModifyRecordsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRecordsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to activate the Private DNS service.
         /// </summary>
         /// <param name="req"><see cref="SubscribePrivateZoneServiceRequest"/></param>

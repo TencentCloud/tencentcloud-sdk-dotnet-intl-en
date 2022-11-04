@@ -66,6 +66,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("FrozenMinAge")]
         public string FrozenMinAge{ get; set; }
 
+        /// <summary>
+        /// /
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ColdAction")]
+        public string ColdAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ColdMinAge", this.ColdMinAge);
             this.SetParamSimple(map, prefix + "FrozenEnable", this.FrozenEnable);
             this.SetParamSimple(map, prefix + "FrozenMinAge", this.FrozenMinAge);
+            this.SetParamSimple(map, prefix + "ColdAction", this.ColdAction);
         }
     }
 }

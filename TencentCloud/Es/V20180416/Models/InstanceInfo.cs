@@ -73,7 +73,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string SubnetUid{ get; set; }
 
         /// <summary>
-        /// Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+        /// Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -541,6 +541,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EnableHybridStorage")]
         public bool? EnableHybridStorage{ get; set; }
 
+        /// <summary>
+        /// The process progress
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProcessPercent")]
+        public float? ProcessPercent{ get; set; }
+
+        /// <summary>
+        /// The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KibanaAlteringPublicAccess")]
+        public string KibanaAlteringPublicAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -626,6 +640,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
             this.SetParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
             this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
+            this.SetParamSimple(map, prefix + "ProcessPercent", this.ProcessPercent);
+            this.SetParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
         }
     }
 }

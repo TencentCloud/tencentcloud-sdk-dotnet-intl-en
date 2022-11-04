@@ -31,10 +31,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         public AudioEncode AudioEncode{ get; set; }
 
         /// <summary>
-        /// The users whose audios are mixed. For the `StartPublishCdnStream` API, if you do not pass this parameter or leave it empty, the audios of all anchors will be mixed. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, TRTC will not change the users whose audios are mixed; if you pass in an empty string, the audios of all anchors will be mixed.
+        /// The audio mix allowlist. For the `StartPublishCdnStream` API, if you do not pass this parameter or leave it empty, the audios of all anchors will be mixed. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current allowlist; if you pass in an empty string, the audios of all anchors will be mixed.
+        /// In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
         /// </summary>
         [JsonProperty("SubscribeAudioList")]
         public McuUserInfoParams[] SubscribeAudioList{ get; set; }
+
+        /// <summary>
+        /// The audio mix blocklist. If you do not pass this parameter or leave it empty, there won’t be a blocklist. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current blocklist; if you pass in an empty string, the blocklist will be reset.
+        /// In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
+        /// </summary>
+        [JsonProperty("UnSubscribeAudioList")]
+        public McuUserInfoParams[] UnSubscribeAudioList{ get; set; }
 
 
         /// <summary>
@@ -44,6 +52,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamObj(map, prefix + "AudioEncode.", this.AudioEncode);
             this.SetParamArrayObj(map, prefix + "SubscribeAudioList.", this.SubscribeAudioList);
+            this.SetParamArrayObj(map, prefix + "UnSubscribeAudioList.", this.UnSubscribeAudioList);
         }
     }
 }

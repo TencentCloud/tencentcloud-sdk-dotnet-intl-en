@@ -146,6 +146,8 @@
     <Compile Include="V20180317\Models\DescribeLoadBalancersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeQuotaRequest.cs" />
     <Compile Include="V20180317\Models\DescribeQuotaResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeResourcesRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeResourcesResponse.cs" />
     <Compile Include="V20180317\Models\DescribeRewriteRequest.cs" />
     <Compile Include="V20180317\Models\DescribeRewriteResponse.cs" />
     <Compile Include="V20180317\Models\DescribeTargetGroupInstancesRequest.cs" />
@@ -217,6 +219,7 @@
     <Compile Include="V20180317\Models\RegisterTargetsWithClassicalLBResponse.cs" />
     <Compile Include="V20180317\Models\ReplaceCertForLoadBalancersRequest.cs" />
     <Compile Include="V20180317\Models\ReplaceCertForLoadBalancersResponse.cs" />
+    <Compile Include="V20180317\Models\Resource.cs" />
     <Compile Include="V20180317\Models\RewriteLocationMap.cs" />
     <Compile Include="V20180317\Models\RewriteTarget.cs" />
     <Compile Include="V20180317\Models\RsWeightRule.cs" />
@@ -225,6 +228,8 @@
     <Compile Include="V20180317\Models\RuleOutput.cs" />
     <Compile Include="V20180317\Models\RuleTargets.cs" />
     <Compile Include="V20180317\Models\RulesItems.cs" />
+    <Compile Include="V20180317\Models\SetCustomizedConfigForLoadBalancerRequest.cs" />
+    <Compile Include="V20180317\Models\SetCustomizedConfigForLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerClsLogRequest.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerClsLogResponse.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerSecurityGroupsRequest.cs" />
@@ -242,5 +247,6 @@
     <Compile Include="V20180317\Models\TargetHealth.cs" />
     <Compile Include="V20180317\Models\TargetRegionInfo.cs" />
     <Compile Include="V20180317\Models\ZoneInfo.cs" />
+    <Compile Include="V20180317\Models\ZoneResource.cs" />
   </ItemGroup>
 </Project>

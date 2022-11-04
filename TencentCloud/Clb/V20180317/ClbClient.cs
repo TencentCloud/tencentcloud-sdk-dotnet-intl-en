@@ -1783,6 +1783,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to query the list of AZs and resources supported for the user in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcesRequest"/></param>
+        /// <returns><see cref="DescribeResourcesResponse"/></returns>
+        public async Task<DescribeResourcesResponse> DescribeResources(DescribeResourcesRequest req)
+        {
+             JsonResponseModel<DescribeResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of AZs and resources supported for the user in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcesRequest"/></param>
+        /// <returns><see cref="DescribeResourcesResponse"/></returns>
+        public DescribeResourcesResponse DescribeResourcesSync(DescribeResourcesRequest req)
+        {
+             JsonResponseModel<DescribeResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeRewrite) is used to query the redirection relationship between the forwarding rules of a CLB instance by instance ID. If no listener ID or forwarding rule ID is specified, all redirection relationships in the instance will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeRewriteRequest"/></param>
@@ -2848,6 +2888,46 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "ReplaceCertForLoadBalancers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceCertForLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create or manage a user-defined CLB configuration template.
+        /// </summary>
+        /// <param name="req"><see cref="SetCustomizedConfigForLoadBalancerRequest"/></param>
+        /// <returns><see cref="SetCustomizedConfigForLoadBalancerResponse"/></returns>
+        public async Task<SetCustomizedConfigForLoadBalancerResponse> SetCustomizedConfigForLoadBalancer(SetCustomizedConfigForLoadBalancerRequest req)
+        {
+             JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetCustomizedConfigForLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create or manage a user-defined CLB configuration template.
+        /// </summary>
+        /// <param name="req"><see cref="SetCustomizedConfigForLoadBalancerRequest"/></param>
+        /// <returns><see cref="SetCustomizedConfigForLoadBalancerResponse"/></returns>
+        public SetCustomizedConfigForLoadBalancerResponse SetCustomizedConfigForLoadBalancerSync(SetCustomizedConfigForLoadBalancerRequest req)
+        {
+             JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetCustomizedConfigForLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

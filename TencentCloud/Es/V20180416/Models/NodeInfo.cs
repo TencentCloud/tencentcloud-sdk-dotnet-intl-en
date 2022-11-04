@@ -90,6 +90,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
+        /// <summary>
+        /// /
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DiskEnhance")]
+        public long? DiskEnhance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +113,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
+            this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
         }
     }
 }
