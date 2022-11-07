@@ -21,29 +21,22 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AlarmHierarchicalValue : AbstractModel
+    public class AlarmHierarchicalNotice : AbstractModel
     {
         
         /// <summary>
-        /// Threshold for the `Remind` level
+        /// Notification template ID
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Remind")]
-        public string Remind{ get; set; }
+        [JsonProperty("NoticeId")]
+        public string NoticeId{ get; set; }
 
         /// <summary>
-        /// Threshold for the `Warn` level
+        /// The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Warn")]
-        public string Warn{ get; set; }
-
-        /// <summary>
-        /// Threshold for the `Serious` level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Serious")]
-        public string Serious{ get; set; }
+        [JsonProperty("Classification")]
+        public string[] Classification{ get; set; }
 
 
         /// <summary>
@@ -51,9 +44,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Remind", this.Remind);
-            this.SetParamSimple(map, prefix + "Warn", this.Warn);
-            this.SetParamSimple(map, prefix + "Serious", this.Serious);
+            this.SetParamSimple(map, prefix + "NoticeId", this.NoticeId);
+            this.SetParamArraySimple(map, prefix + "Classification.", this.Classification);
         }
     }
 }

@@ -155,7 +155,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         public float? ValueMin{ get; set; }
 
         /// <summary>
-        /// 
+        /// The configuration of alarm level threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HierarchicalValue")]
         public AlarmHierarchicalValue HierarchicalValue{ get; set; }

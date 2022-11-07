@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="V20180724\MonitorClient.cs" />
     <Compile Include="V20180724\Models\AlarmEvent.cs" />
+    <Compile Include="V20180724\Models\AlarmHierarchicalNotice.cs" />
     <Compile Include="V20180724\Models\AlarmHierarchicalValue.cs" />
     <Compile Include="V20180724\Models\AlarmHistory.cs" />
     <Compile Include="V20180724\Models\AlarmHistoryMetric.cs" />

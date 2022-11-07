@@ -120,6 +120,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("LogAlarmReqInfo")]
         public LogAlarmReq LogAlarmReqInfo{ get; set; }
 
+        /// <summary>
+        /// Notification rules for different alarm levels
+        /// </summary>
+        [JsonProperty("HierarchicalNotices")]
+        public AlarmHierarchicalNotice[] HierarchicalNotices{ get; set; }
+
+        /// <summary>
+        /// A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+        /// </summary>
+        [JsonProperty("MigrateFlag")]
+        public long? MigrateFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
+            this.SetParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
+            this.SetParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
         }
     }
 }
