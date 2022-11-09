@@ -25,10 +25,11 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-        /// <li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-        /// <li>`TranscodeFiles`: transcoded files</li>
-        /// <li>`WechatPublishFiles`: files for publishing on WeChat</li>
+        /// The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+        /// <li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+        /// <li>`TranscodeFiles`: Transcoding outputs</li>
+        /// <li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+        /// <li>`WechatPublishFiles`: The file for WeChat publishing</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

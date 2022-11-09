@@ -224,6 +224,8 @@
     <Compile Include="V20180801\Models\DescribeVisitTopSumInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DomainCertInfo.cs" />
     <Compile Include="V20180801\Models\DomainInfo.cs" />
+    <Compile Include="V20180801\Models\DropLiveStreamRequest.cs" />
+    <Compile Include="V20180801\Models\DropLiveStreamResponse.cs" />
     <Compile Include="V20180801\Models\EnableLiveDomainRequest.cs" />
     <Compile Include="V20180801\Models\EnableLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\FlvSpecialParam.cs" />

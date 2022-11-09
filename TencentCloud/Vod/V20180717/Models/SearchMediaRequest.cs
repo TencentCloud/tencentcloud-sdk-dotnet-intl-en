@@ -101,13 +101,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StreamIds{ get; set; }
 
         /// <summary>
-        /// Unique ID of LVB recording file. Any element in the set can be matched.
-        /// <li>Array length limit: 10.</li>
-        /// </summary>
-        [JsonProperty("Vids")]
-        public string[] Vids{ get; set; }
-
-        /// <summary>
         /// Matches files created within the time period.
         /// <li>Includes specified start and end points in time.</li>
         /// </summary>
@@ -214,13 +207,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// (This is not recommended. `Vids` should be used instead)
-        /// Unique ID of LVB recording file.
-        /// </summary>
-        [JsonProperty("Vid")]
-        public string Vid{ get; set; }
-
-        /// <summary>
         /// (This is not recommended. `CreateTime` should be used instead)
         /// Start time in the creation time range.
         /// <li>After or at the start time.</li>
@@ -240,6 +226,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// This parameter is invalid now.
+        /// </summary>
+        [JsonProperty("Vids")]
+        public string[] Vids{ get; set; }
+
+        /// <summary>
+        /// This parameter is invalid now.
+        /// </summary>
+        [JsonProperty("Vid")]
+        public string Vid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -256,7 +254,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
             this.SetParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
             this.SetParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
-            this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
             this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
             this.SetParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
@@ -270,9 +267,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);
-            this.SetParamSimple(map, prefix + "Vid", this.Vid);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
+            this.SetParamSimple(map, prefix + "Vid", this.Vid);
         }
     }
 }

@@ -67,7 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// Type. Valid values: Transcode, MixStream, WaterMark.
+        /// The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -84,6 +84,14 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
+        /// <summary>
+        /// The region. Valid values:
+        /// `Mainland`: Inside the Chinese mainland.
+        /// `Overseas`: Outside the Chinese mainland.
+        /// </summary>
+        [JsonProperty("MainlandOrOversea")]
+        public string MainlandOrOversea{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +107,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "PushDomain", this.PushDomain);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         }
     }
 }

@@ -293,6 +293,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupRequest"/></param>
+        /// <returns><see cref="DeleteBackupResponse"/></returns>
+        public async Task<DeleteBackupResponse> DeleteBackup(DeleteBackupRequest req)
+        {
+             JsonResponseModel<DeleteBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupRequest"/></param>
+        /// <returns><see cref="DeleteBackupResponse"/></returns>
+        public DeleteBackupResponse DeleteBackupSync(DeleteBackupRequest req)
+        {
+             JsonResponseModel<DeleteBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query database management accounts.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>

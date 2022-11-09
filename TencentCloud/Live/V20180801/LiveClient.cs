@@ -3449,6 +3449,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to pause a live stream. The stream can be resumed if it is paused.
+        /// Note: If you call this API to pause an inactive stream, the request will be considered successful.
+        /// </summary>
+        /// <param name="req"><see cref="DropLiveStreamRequest"/></param>
+        /// <returns><see cref="DropLiveStreamResponse"/></returns>
+        public async Task<DropLiveStreamResponse> DropLiveStream(DropLiveStreamRequest req)
+        {
+             JsonResponseModel<DropLiveStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DropLiveStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropLiveStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pause a live stream. The stream can be resumed if it is paused.
+        /// Note: If you call this API to pause an inactive stream, the request will be considered successful.
+        /// </summary>
+        /// <param name="req"><see cref="DropLiveStreamRequest"/></param>
+        /// <returns><see cref="DropLiveStreamResponse"/></returns>
+        public DropLiveStreamResponse DropLiveStreamSync(DropLiveStreamRequest req)
+        {
+             JsonResponseModel<DropLiveStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DropLiveStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropLiveStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to enable a disabled LVB domain name.
         /// </summary>
         /// <param name="req"><see cref="EnableLiveDomainRequest"/></param>

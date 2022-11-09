@@ -46,6 +46,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Duration{ get; set; }
 
         /// <summary>
+        /// The target video duration, in seconds.
+        /// <li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+        /// <li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+        /// </summary>
+        [JsonProperty("TargetDuration")]
+        public float? TargetDuration{ get; set; }
+
+        /// <summary>
         /// Video origin position. Valid values:
         /// <li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
         /// Default value: Center.
@@ -94,18 +102,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Height{ get; set; }
 
         /// <summary>
-        /// Operation on video image such as image rotation.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ImageOperations")]
-        public ImageTransform[] ImageOperations{ get; set; }
-
-        /// <summary>
         /// Operation on audio such as muting.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AudioOperations")]
         public AudioTransform[] AudioOperations{ get; set; }
+
+        /// <summary>
+        /// Operation on video image such as image rotation.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ImageOperations")]
+        public ImageTransform[] ImageOperations{ get; set; }
 
 
         /// <summary>
@@ -116,13 +124,14 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SourceMedia", this.SourceMedia);
             this.SetParamSimple(map, prefix + "SourceMediaStartTime", this.SourceMediaStartTime);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "TargetDuration", this.TargetDuration);
             this.SetParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);
             this.SetParamSimple(map, prefix + "XPos", this.XPos);
             this.SetParamSimple(map, prefix + "YPos", this.YPos);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
-            this.SetParamArrayObj(map, prefix + "ImageOperations.", this.ImageOperations);
             this.SetParamArrayObj(map, prefix + "AudioOperations.", this.AudioOperations);
+            this.SetParamArrayObj(map, prefix + "ImageOperations.", this.ImageOperations);
         }
     }
 }

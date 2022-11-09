@@ -46,6 +46,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Duration{ get; set; }
 
         /// <summary>
+        /// The target audio duration, in seconds.
+        /// <li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+        /// <li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+        /// </summary>
+        [JsonProperty("TargetDuration")]
+        public float? TargetDuration{ get; set; }
+
+        /// <summary>
         /// Operation on audio segment, such as volume adjustment.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -61,6 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SourceMedia", this.SourceMedia);
             this.SetParamSimple(map, prefix + "SourceMediaStartTime", this.SourceMediaStartTime);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "TargetDuration", this.TargetDuration);
             this.SetParamArrayObj(map, prefix + "AudioOperations.", this.AudioOperations);
         }
     }
