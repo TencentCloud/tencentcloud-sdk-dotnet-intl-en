@@ -397,6 +397,86 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// This API is used to disable or enable the audio and video of a user. It can be used by an anchor, room owner, or admin to block or unblock a user. It supports platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API if the room ID is a number.
+        /// </summary>
+        /// <param name="req"><see cref="SetUserBlockedRequest"/></param>
+        /// <returns><see cref="SetUserBlockedResponse"/></returns>
+        public async Task<SetUserBlockedResponse> SetUserBlocked(SetUserBlockedRequest req)
+        {
+             JsonResponseModel<SetUserBlockedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetUserBlocked");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetUserBlockedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable or enable the audio and video of a user. It can be used by an anchor, room owner, or admin to block or unblock a user. It supports platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API if the room ID is a number.
+        /// </summary>
+        /// <param name="req"><see cref="SetUserBlockedRequest"/></param>
+        /// <returns><see cref="SetUserBlockedResponse"/></returns>
+        public SetUserBlockedResponse SetUserBlockedSync(SetUserBlockedRequest req)
+        {
+             JsonResponseModel<SetUserBlockedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetUserBlocked");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetUserBlockedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API allows an anchor, room owner, admin to mute/unmute a user. It can be used on platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API when the room ID is a string.
+        /// </summary>
+        /// <param name="req"><see cref="SetUserBlockedByStrRoomIdRequest"/></param>
+        /// <returns><see cref="SetUserBlockedByStrRoomIdResponse"/></returns>
+        public async Task<SetUserBlockedByStrRoomIdResponse> SetUserBlockedByStrRoomId(SetUserBlockedByStrRoomIdRequest req)
+        {
+             JsonResponseModel<SetUserBlockedByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetUserBlockedByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetUserBlockedByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API allows an anchor, room owner, admin to mute/unmute a user. It can be used on platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API when the room ID is a string.
+        /// </summary>
+        /// <param name="req"><see cref="SetUserBlockedByStrRoomIdRequest"/></param>
+        /// <returns><see cref="SetUserBlockedByStrRoomIdResponse"/></returns>
+        public SetUserBlockedByStrRoomIdResponse SetUserBlockedByStrRoomIdSync(SetUserBlockedByStrRoomIdRequest req)
+        {
+             JsonResponseModel<SetUserBlockedByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetUserBlockedByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetUserBlockedByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to mix streams and relay the mixed stream to CDNs. You can use this API to do the following:
         /// 1. Publish (also known as “relay”) the audio/video stream of one anchor to CDNs. For details, see example 2 (starting a task to relay the audio and video of a stream) and example 3 (starting a task to relay only the audio of a stream).
         /// 2. Mix the streams of multiple anchors in a room or in different rooms and publish the mixed stream to CDNs. You can use `AudioParams.SubscribeAudioList` to specify the users whose audios are mixed, and use `VideoParams.LayoutParams` to specify the layout of the anchors’ videos. For details, see example 1 (mixing streams and publishing the mixed stream to a CDN).

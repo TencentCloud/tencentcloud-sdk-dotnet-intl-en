@@ -293,6 +293,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// This API is used to get DNS records of a domain.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
+        /// <returns><see cref="DescribeRecordListResponse"/></returns>
+        public async Task<DescribeRecordListResponse> DescribeRecordList(DescribeRecordListRequest req)
+        {
+             JsonResponseModel<DescribeRecordListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get DNS records of a domain.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
+        /// <returns><see cref="DescribeRecordListResponse"/></returns>
+        public DescribeRecordListResponse DescribeRecordListSync(DescribeRecordListRequest req)
+        {
+             JsonResponseModel<DescribeRecordListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to set the remarks of a domain.
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainRemarkRequest"/></param>

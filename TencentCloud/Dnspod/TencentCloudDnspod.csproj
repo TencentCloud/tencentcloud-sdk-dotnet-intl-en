@@ -55,6 +55,8 @@
     <Compile Include="V20210323\Models\DeleteRecordResponse.cs" />
     <Compile Include="V20210323\Models\DescribeDomainRequest.cs" />
     <Compile Include="V20210323\Models\DescribeDomainResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordListResponse.cs" />
     <Compile Include="V20210323\Models\DescribeRecordRequest.cs" />
     <Compile Include="V20210323\Models\DescribeRecordResponse.cs" />
     <Compile Include="V20210323\Models\DomainCreateInfo.cs" />
@@ -65,6 +67,8 @@
     <Compile Include="V20210323\Models\ModifyDomainStatusResponse.cs" />
     <Compile Include="V20210323\Models\ModifyRecordRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordResponse.cs" />
+    <Compile Include="V20210323\Models\RecordCountInfo.cs" />
     <Compile Include="V20210323\Models\RecordInfo.cs" />
+    <Compile Include="V20210323\Models\RecordListItem.cs" />
   </ItemGroup>
 </Project>

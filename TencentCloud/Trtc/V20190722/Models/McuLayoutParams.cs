@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MixLayoutMode{ get; set; }
 
         /// <summary>
-        /// Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+        /// Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
         /// </summary>
         [JsonProperty("PureAudioHoldPlaceMode")]
         public ulong? PureAudioHoldPlaceMode{ get; set; }
