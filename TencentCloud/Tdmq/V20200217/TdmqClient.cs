@@ -1813,6 +1813,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQNodeListRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQNodeListResponse"/></returns>
+        public async Task<DescribeRabbitMQNodeListResponse> DescribeRabbitMQNodeList(DescribeRabbitMQNodeListRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQNodeListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRabbitMQNodeList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQNodeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQNodeListRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQNodeListResponse"/></returns>
+        public DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeListSync(DescribeRabbitMQNodeListRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQNodeListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRabbitMQNodeList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQNodeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVipInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVipInstancesResponse"/></returns>
+        public async Task<DescribeRabbitMQVipInstancesResponse> DescribeRabbitMQVipInstances(DescribeRabbitMQVipInstancesRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQVipInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRabbitMQVipInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVipInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVipInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVipInstancesResponse"/></returns>
+        public DescribeRabbitMQVipInstancesResponse DescribeRabbitMQVipInstancesSync(DescribeRabbitMQVipInstancesRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQVipInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRabbitMQVipInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVipInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the information of a specific RocketMQ cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQClusterRequest"/></param>

@@ -36,6 +36,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("IntervalTime")]
         public ulong? IntervalTime{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+        /// </summary>
+        [JsonProperty("TermCycle")]
+        public ulong? TermCycle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ses.V20201002.Models
         {
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "IntervalTime", this.IntervalTime);
+            this.SetParamSimple(map, prefix + "TermCycle", this.TermCycle);
         }
     }
 }

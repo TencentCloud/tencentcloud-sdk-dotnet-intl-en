@@ -143,6 +143,10 @@
     <Compile Include="V20200217\Models\DescribePublisherSummaryResponse.cs" />
     <Compile Include="V20200217\Models\DescribePublishersRequest.cs" />
     <Compile Include="V20200217\Models\DescribePublishersResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQNodeListRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQNodeListResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQVipInstancesRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQVipInstancesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClusterRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClusterResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClustersRequest.cs" />
@@ -193,6 +197,8 @@
     <Compile Include="V20200217\Models\PublishCmqMsgRequest.cs" />
     <Compile Include="V20200217\Models\PublishCmqMsgResponse.cs" />
     <Compile Include="V20200217\Models\Publisher.cs" />
+    <Compile Include="V20200217\Models\RabbitMQPrivateNode.cs" />
+    <Compile Include="V20200217\Models\RabbitMQVipInstance.cs" />
     <Compile Include="V20200217\Models\ReceiveMessageRequest.cs" />
     <Compile Include="V20200217\Models\ReceiveMessageResponse.cs" />
     <Compile Include="V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />

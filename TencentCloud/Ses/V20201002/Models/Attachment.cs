@@ -31,7 +31,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Attachment content after Base64 encoding. A single attachment cannot exceed 4 MB. Note: Tencent Cloud APIs require that a request packet should not exceed 8 MB. If you are sending multiple attachments, the total size of these attachments cannot exceed 8 MB.
+        /// Base64-encoded attachment content. You can send attachments of up to 4 MB in the total size. Note: The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

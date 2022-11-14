@@ -137,6 +137,12 @@
     <Compile Include="V20180411\Models\ModifyDBParametersResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBSyncModeRequest.cs" />
     <Compile Include="V20180411\Models\ModifyDBSyncModeResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceNetworkRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceNetworkResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceVipRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceVipResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceVportRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyInstanceVportResponse.cs" />
     <Compile Include="V20180411\Models\ParamConstraint.cs" />
     <Compile Include="V20180411\Models\ParamDesc.cs" />
     <Compile Include="V20180411\Models\ParamModifyResult.cs" />

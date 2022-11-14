@@ -51,7 +51,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
-        /// Template when sending emails using a template.
+        /// Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// Email attachments
+        /// Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }

@@ -1623,6 +1623,126 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to modify instance network.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNetworkResponse"/></returns>
+        public async Task<ModifyInstanceNetworkResponse> ModifyInstanceNetwork(ModifyInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance network.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNetworkResponse"/></returns>
+        public ModifyInstanceNetworkResponse ModifyInstanceNetworkSync(ModifyInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance VIP.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVipRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVipResponse"/></returns>
+        public async Task<ModifyInstanceVipResponse> ModifyInstanceVip(ModifyInstanceVipRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance VIP.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVipRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVipResponse"/></returns>
+        public ModifyInstanceVipResponse ModifyInstanceVipSync(ModifyInstanceVipRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance Vport.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVportRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVportResponse"/></returns>
+        public async Task<ModifyInstanceVportResponse> ModifyInstanceVport(ModifyInstanceVportRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance Vport.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVportRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVportResponse"/></returns>
+        public ModifyInstanceVportResponse ModifyInstanceVportSync(ModifyInstanceVportRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to reset the password of a TencentDB account.
         /// Note: accounts with the same username but different hosts are different accounts.
         /// </summary>

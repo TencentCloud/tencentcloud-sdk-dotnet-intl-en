@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+        /// Subscriber name, which can contain up to 128 characters.
         /// </summary>
         [JsonProperty("SubscriptionName")]
         public string SubscriptionName{ get; set; }

@@ -25,9 +25,9 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
-        /// Sender <email address>, for example:
-        /// Tencent Cloud team <noreply@mail.qcloud.com>
+        /// Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
+        /// sender &lt;email address&gt;. For example:
+        /// Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
         /// </summary>
         [JsonProperty("FromEmailAddress")]
         public string FromEmailAddress{ get; set; }
