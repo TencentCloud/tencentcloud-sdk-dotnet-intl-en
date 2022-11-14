@@ -899,6 +899,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to view the configured number of days for retention of database backup logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
+        /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
+        public async Task<DescribeLogFileRetentionPeriodResponse> DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req)
+        {
+             JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogFileRetentionPeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to view the configured number of days for retention of database backup logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
+        /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
+        public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriodSync(DescribeLogFileRetentionPeriodRequest req)
+        {
+             JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogFileRetentionPeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query TencentDB order information. You can pass in an order ID to query the TencentDB instance associated with the order and the corresponding task process ID.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
@@ -1344,6 +1384,126 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBSyncMode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBSyncModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance network.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNetworkResponse"/></returns>
+        public async Task<ModifyInstanceNetworkResponse> ModifyInstanceNetwork(ModifyInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance network.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNetworkResponse"/></returns>
+        public ModifyInstanceNetworkResponse ModifyInstanceNetworkSync(ModifyInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance VIP.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVipRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVipResponse"/></returns>
+        public async Task<ModifyInstanceVipResponse> ModifyInstanceVip(ModifyInstanceVipRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance VIP.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVipRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVipResponse"/></returns>
+        public ModifyInstanceVipResponse ModifyInstanceVipSync(ModifyInstanceVipRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance Vport.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVportRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVportResponse"/></returns>
+        public async Task<ModifyInstanceVportResponse> ModifyInstanceVport(ModifyInstanceVportRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify instance Vport.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceVportRequest"/></param>
+        /// <returns><see cref="ModifyInstanceVportResponse"/></returns>
+        public ModifyInstanceVportResponse ModifyInstanceVportSync(ModifyInstanceVportRequest req)
+        {
+             JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceVport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceVportResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -101,6 +101,8 @@
     <Compile Include="V20170312\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="V20170312\Models\DescribeInstanceNodeInfoRequest.cs" />
     <Compile Include="V20170312\Models\DescribeInstanceNodeInfoResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
@@ -125,6 +127,12 @@
     <Compile Include="V20170312\Models\ModifyDBParametersResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBSyncModeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBSyncModeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstanceNetworkRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstanceNetworkResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstanceVipRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstanceVipResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstanceVportRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstanceVportResponse.cs" />
     <Compile Include="V20170312\Models\ModifySyncTaskAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifySyncTaskAttributeResponse.cs" />
     <Compile Include="V20170312\Models\NodeInfo.cs" />
