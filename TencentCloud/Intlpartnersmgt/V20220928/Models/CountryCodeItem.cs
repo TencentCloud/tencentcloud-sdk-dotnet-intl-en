@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetEmailTemplateResponse : AbstractModel
+    public class CountryCodeItem : AbstractModel
     {
         
         /// <summary>
-        /// Template content.
+        /// Country/region name in English
         /// </summary>
-        [JsonProperty("TemplateContent")]
-        public TemplateContent TemplateContent{ get; set; }
+        [JsonProperty("EnName")]
+        public string EnName{ get; set; }
 
         /// <summary>
-        /// Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+        /// Country/region name in Chinese
         /// </summary>
-        [JsonProperty("TemplateStatus")]
-        public ulong? TemplateStatus{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Template name
+        /// 
         /// </summary>
-        [JsonProperty("TemplateName")]
-        public string TemplateName{ get; set; }
+        [JsonProperty("IOS2")]
+        public string IOS2{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// 
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("IOS3")]
+        public string IOS3{ get; set; }
+
+        /// <summary>
+        /// International dialing code
+        /// </summary>
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
-            this.SetParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
-            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "EnName", this.EnName);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "IOS2", this.IOS2);
+            this.SetParamSimple(map, prefix + "IOS3", this.IOS3);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
         }
     }
 }

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetEmailTemplateResponse : AbstractModel
+    public class AllocateCustomerCreditResponse : AbstractModel
     {
         
         /// <summary>
-        /// Template content.
+        /// The updated total credit
         /// </summary>
-        [JsonProperty("TemplateContent")]
-        public TemplateContent TemplateContent{ get; set; }
+        [JsonProperty("TotalCredit")]
+        public float? TotalCredit{ get; set; }
 
         /// <summary>
-        /// Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+        /// The updated available credit
         /// </summary>
-        [JsonProperty("TemplateStatus")]
-        public ulong? TemplateStatus{ get; set; }
-
-        /// <summary>
-        /// Template name
-        /// </summary>
-        [JsonProperty("TemplateName")]
-        public string TemplateName{ get; set; }
+        [JsonProperty("RemainingCredit")]
+        public float? RemainingCredit{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,9 +48,8 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
-            this.SetParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
-            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
+            this.SetParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
+            this.SetParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

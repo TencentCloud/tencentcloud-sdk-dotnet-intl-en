@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetEmailTemplateResponse : AbstractModel
+    public class QueryCreditAllocationHistoryData : AbstractModel
     {
         
         /// <summary>
-        /// Template content.
+        /// Allocation time
         /// </summary>
-        [JsonProperty("TemplateContent")]
-        public TemplateContent TemplateContent{ get; set; }
+        [JsonProperty("AllocatedTime")]
+        public string AllocatedTime{ get; set; }
 
         /// <summary>
-        /// Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+        /// Operator
         /// </summary>
-        [JsonProperty("TemplateStatus")]
-        public ulong? TemplateStatus{ get; set; }
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
         /// <summary>
-        /// Template name
+        /// Allocated credit value
         /// </summary>
-        [JsonProperty("TemplateName")]
-        public string TemplateName{ get; set; }
+        [JsonProperty("Credit")]
+        public float? Credit{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The allocated total credit
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("AllocatedCredit")]
+        public float? AllocatedCredit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
-            this.SetParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
-            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "AllocatedTime", this.AllocatedTime);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "Credit", this.Credit);
+            this.SetParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
         }
     }
 }
