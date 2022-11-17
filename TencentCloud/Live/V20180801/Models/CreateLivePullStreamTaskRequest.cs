@@ -28,6 +28,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// The source type. Valid values:
         /// PullLivePushLive: Live streaming
         /// PullVodPushLive: Video files
+        /// PullPicPushLive: Images
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
@@ -203,6 +204,15 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("WatermarkList")]
         public PullPushWatermarkInfo[] WatermarkList{ get; set; }
 
+        /// <summary>
+        /// Whether to use local mode when the source type is video files. The default is `0`.
+        /// 0: Do not use local mode
+        /// 1: Use local mode
+        /// Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+        /// </summary>
+        [JsonProperty("VodLocalMode")]
+        public long? VodLocalMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +238,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
+            this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
         }
     }
 }

@@ -453,6 +453,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to delete a monthly subscribed (prepaid) instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>
+        /// <returns><see cref="DeleteInstancePreResponse"/></returns>
+        public async Task<DeleteInstancePreResponse> DeleteInstancePre(DeleteInstancePreRequest req)
+        {
+             JsonResponseModel<DeleteInstancePreResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteInstancePre");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstancePreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a monthly subscribed (prepaid) instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>
+        /// <returns><see cref="DeleteInstancePreResponse"/></returns>
+        public DeleteInstancePreResponse DeleteInstancePreSync(DeleteInstancePreRequest req)
+        {
+             JsonResponseModel<DeleteInstancePreResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteInstancePre");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstancePreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a route.
         /// </summary>
         /// <param name="req"><see cref="DeleteRouteRequest"/></param>

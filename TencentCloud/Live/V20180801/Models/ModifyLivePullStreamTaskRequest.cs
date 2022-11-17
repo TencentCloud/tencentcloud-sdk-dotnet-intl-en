@@ -137,8 +137,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// PullVodPushLive: Video files
         /// Notes:
         /// 1. Backup sources are supported only if the primary source type is live streaming.
-        /// 2. When pull from the primary source is interrupted, the system will pull from the backup source.
-        /// 3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+        /// 2. Leaving this parameter empty will reset the backup source.
+        /// 3. When pull from the primary source is interrupted, the system will pull from the backup source.
+        /// 4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
         /// </summary>
         [JsonProperty("BackupSourceType")]
         public string BackupSourceType{ get; set; }
@@ -164,6 +165,15 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("WatermarkList")]
         public PullPushWatermarkInfo[] WatermarkList{ get; set; }
 
+        /// <summary>
+        /// Whether to use local mode when the source type is video files. The default is `0`.
+        /// 0: Do not use local mode
+        /// 1: Use local mode
+        /// Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+        /// </summary>
+        [JsonProperty("VodLocalMode")]
+        public long? VodLocalMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +196,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
+            this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
         }
     }
 }

@@ -83,6 +83,8 @@
     <Compile Include="V20190819\Models\CreateUserResponse.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteInstancePreRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteInstancePreResponse.cs" />
     <Compile Include="V20190819\Models\DeleteRouteRequest.cs" />
     <Compile Include="V20190819\Models\DeleteRouteResponse.cs" />
     <Compile Include="V20190819\Models\DeleteRouteTriggerTimeRequest.cs" />

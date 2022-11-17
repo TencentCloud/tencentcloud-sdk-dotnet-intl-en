@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Storage region.
+        /// The storage region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Description of the storage region.
+        /// The description of the storage region.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -50,6 +50,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
+        /// <summary>
+        /// Whether the storage region is inside or outside the Chinese mainland. Valid values:
+        /// <li>Chinese Mainland</li>
+        /// <li>Outside Chinese Mainland</li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +68,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

@@ -44,6 +44,33 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20210527\DbbrainClient.cs" />
+    <Compile Include="V20210527\Models\CreateProxySessionKillTaskRequest.cs" />
+    <Compile Include="V20210527\Models\CreateProxySessionKillTaskResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDBDiagEventsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDBDiagEventsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeDiagDBInstancesRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeDiagDBInstancesResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeMySqlProcessListRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeMySqlProcessListResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeProxySessionKillTasksRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeProxySessionKillTasksResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeSlowLogUserHostStatsRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeSlowLogUserHostStatsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeTopSpaceSchemasRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeTopSpaceSchemasResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeUserSqlAdviceRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeUserSqlAdviceResponse.cs" />
+    <Compile Include="V20210527\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="V20210527\Models\InstanceConfs.cs" />
+    <Compile Include="V20210527\Models\InstanceInfo.cs" />
+    <Compile Include="V20210527\Models\MySqlProcess.cs" />
+    <Compile Include="V20210527\Models\RedisPreKeySpaceData.cs" />
+    <Compile Include="V20210527\Models\SchemaSpaceData.cs" />
+    <Compile Include="V20210527\Models\SlowLogHost.cs" />
+    <Compile Include="V20210527\Models\TaskInfo.cs" />
     <Compile Include="V20191016\DbbrainClient.cs" />
     <Compile Include="V20191016\Models\AddUserContactRequest.cs" />
     <Compile Include="V20191016\Models\AddUserContactResponse.cs" />
@@ -119,32 +146,5 @@
     <Compile Include="V20191016\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="V20191016\Models\TimeSlice.cs" />
     <Compile Include="V20191016\Models\UserProfile.cs" />
-    <Compile Include="V20210527\DbbrainClient.cs" />
-    <Compile Include="V20210527\Models\CreateProxySessionKillTaskRequest.cs" />
-    <Compile Include="V20210527\Models\CreateProxySessionKillTaskResponse.cs" />
-    <Compile Include="V20210527\Models\DescribeDBDiagEventsRequest.cs" />
-    <Compile Include="V20210527\Models\DescribeDBDiagEventsResponse.cs" />
-    <Compile Include="V20210527\Models\DescribeDiagDBInstancesRequest.cs" />
-    <Compile Include="V20210527\Models\DescribeDiagDBInstancesResponse.cs" />
-    <Compile Include="V20210527\Models\DescribeMySqlProcessListRequest.cs" />
-    <Compile Include="V20210527\Models\DescribeMySqlProcessListResponse.cs" />
-    <Compile Include="V20210527\Models\DescribeProxySessionKillTasksRequest.cs" />
-    <Compile Include="V20210527\Models\DescribeProxySessionKillTasksResponse.cs" />
-    <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListRequest.cs" />
-    <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListResponse.cs" />
-    <Compile Include="V20210527\Models\DescribeSlowLogUserHostStatsRequest.cs" />
-    <Compile Include="V20210527\Models\DescribeSlowLogUserHostStatsResponse.cs" />
-    <Compile Include="V20210527\Models\DescribeTopSpaceSchemasRequest.cs" />
-    <Compile Include="V20210527\Models\DescribeTopSpaceSchemasResponse.cs" />
-    <Compile Include="V20210527\Models\DescribeUserSqlAdviceRequest.cs" />
-    <Compile Include="V20210527\Models\DescribeUserSqlAdviceResponse.cs" />
-    <Compile Include="V20210527\Models\DiagHistoryEventItem.cs" />
-    <Compile Include="V20210527\Models\InstanceConfs.cs" />
-    <Compile Include="V20210527\Models\InstanceInfo.cs" />
-    <Compile Include="V20210527\Models\MySqlProcess.cs" />
-    <Compile Include="V20210527\Models\RedisPreKeySpaceData.cs" />
-    <Compile Include="V20210527\Models\SchemaSpaceData.cs" />
-    <Compile Include="V20210527\Models\SlowLogHost.cs" />
-    <Compile Include="V20210527\Models\TaskInfo.cs" />
   </ItemGroup>
 </Project>

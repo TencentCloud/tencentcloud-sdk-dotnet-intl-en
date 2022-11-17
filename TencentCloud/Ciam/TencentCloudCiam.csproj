@@ -44,11 +44,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20210420\CiamClient.cs" />
-    <Compile Include="V20210420\Models\ListUserGroupsRequest.cs" />
-    <Compile Include="V20210420\Models\ListUserGroupsResponse.cs" />
-    <Compile Include="V20210420\Models\Pageable.cs" />
-    <Compile Include="V20210420\Models\UserGroup.cs" />
     <Compile Include="V20220331\CiamClient.cs" />
     <Compile Include="V20220331\Models\CreateApiImportUserJobRequest.cs" />
     <Compile Include="V20220331\Models\CreateApiImportUserJobResponse.cs" />
@@ -95,5 +90,10 @@
     <Compile Include="V20220331\Models\UpdateUserStatusRequest.cs" />
     <Compile Include="V20220331\Models\UpdateUserStatusResponse.cs" />
     <Compile Include="V20220331\Models\User.cs" />
+    <Compile Include="V20210420\CiamClient.cs" />
+    <Compile Include="V20210420\Models\ListUserGroupsRequest.cs" />
+    <Compile Include="V20210420\Models\ListUserGroupsResponse.cs" />
+    <Compile Include="V20210420\Models\Pageable.cs" />
+    <Compile Include="V20210420\Models\UserGroup.cs" />
   </ItemGroup>
 </Project>
