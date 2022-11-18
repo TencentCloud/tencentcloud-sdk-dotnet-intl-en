@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Customer information list
+        /// Direct customer information list
         /// </summary>
         [JsonProperty("Data")]
         public QueryDirectCustomersCreditData[] Data{ get; set; }

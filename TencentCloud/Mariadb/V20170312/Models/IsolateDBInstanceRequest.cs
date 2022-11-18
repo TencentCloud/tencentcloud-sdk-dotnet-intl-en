@@ -21,14 +21,14 @@ namespace TencentCloud.Mariadb.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLogFileRetentionPeriodRequest : AbstractModel
+    public class IsolateDBInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of `tdsql-ow728lmc`
+        /// Instance ID in the format of `tdsql-dasjkhd`. It is the same as the instance ID displayed on the TencentDB console. You can use the `DescribeDBInstances` API to query the ID, which is the value of the `InstanceId` output parameter.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

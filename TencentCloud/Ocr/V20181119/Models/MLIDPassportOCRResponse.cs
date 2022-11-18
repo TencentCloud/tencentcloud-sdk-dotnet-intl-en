@@ -67,9 +67,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// Alarm code
-        /// -9103 Alarm for spoofed card
-        /// -9102 Alarm for photocopied card
+        /// Alarm codes
+        /// -9103 Alarm for spoofed document
+        /// -9102 Alarm for photocopied document (including black & white and color ones)
         /// -9106 Alarm for covered card
         /// </summary>
         [JsonProperty("Warn")]

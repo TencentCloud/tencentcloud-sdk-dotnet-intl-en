@@ -21,14 +21,26 @@ namespace TencentCloud.Mariadb.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLogFileRetentionPeriodRequest : AbstractModel
+    public class IsolateDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of `tdsql-ow728lmc`
+        /// IDs of isolated instances
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("SuccessInstanceIds")]
+        public string[] SuccessInstanceIds{ get; set; }
+
+        /// <summary>
+        /// IDs of instances failed to be isolated
+        /// </summary>
+        [JsonProperty("FailedInstanceIds")]
+        public string[] FailedInstanceIds{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "SuccessInstanceIds.", this.SuccessInstanceIds);
+            this.SetParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

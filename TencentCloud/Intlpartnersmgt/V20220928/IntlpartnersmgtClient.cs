@@ -269,7 +269,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used for a partner to query a customer's credit and basic information.
+        /// This API is used for a partner to the credits and basic information of cutomers.
         /// </summary>
         /// <param name="req"><see cref="QueryCustomersCreditRequest"/></param>
         /// <returns><see cref="QueryCustomersCreditResponse"/></returns>
@@ -289,7 +289,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used for a partner to query a customer's credit and basic information.
+        /// This API is used for a partner to the credits and basic information of cutomers.
         /// </summary>
         /// <param name="req"><see cref="QueryCustomersCreditRequest"/></param>
         /// <returns><see cref="QueryCustomersCreditResponse"/></returns>
@@ -309,7 +309,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query a customer’s credit.
+        /// This API is used to query the credits of direct customers.
         /// </summary>
         /// <param name="req"><see cref="QueryDirectCustomersCreditRequest"/></param>
         /// <returns><see cref="QueryDirectCustomersCreditResponse"/></returns>
@@ -329,7 +329,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query a customer’s credit.
+        /// This API is used to query the credits of direct customers.
         /// </summary>
         /// <param name="req"><see cref="QueryDirectCustomersCreditRequest"/></param>
         /// <returns><see cref="QueryDirectCustomersCreditResponse"/></returns>

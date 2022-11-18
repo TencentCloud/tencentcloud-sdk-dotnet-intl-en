@@ -1341,6 +1341,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to isolate a dedicated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDedicatedDBInstanceResponse"/></returns>
+        public async Task<IsolateDedicatedDBInstanceResponse> IsolateDedicatedDBInstance(IsolateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate a dedicated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDedicatedDBInstanceResponse"/></returns>
+        public IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstanceSync(IsolateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
         /// </summary>
         /// <param name="req"><see cref="IsolateHourDCDBInstanceRequest"/></param>
@@ -1816,6 +1856,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "SwitchDBInstanceHA");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceHAResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate the isolated dedicated TDSQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="TerminateDedicatedDBInstanceResponse"/></returns>
+        public async Task<TerminateDedicatedDBInstanceResponse> TerminateDedicatedDBInstance(TerminateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate the isolated dedicated TDSQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="TerminateDedicatedDBInstanceResponse"/></returns>
+        public TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstanceSync(TerminateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -116,6 +116,10 @@
     <Compile Include="V20170312\Models\FunctionPrivilege.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170312\Models\IsolateDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\IsolateDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\IsolateDedicatedDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\IsolateDedicatedDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\LogFileInfo.cs" />
     <Compile Include="V20170312\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountDescriptionResponse.cs" />
@@ -148,6 +152,8 @@
     <Compile Include="V20170312\Models\SlowLogData.cs" />
     <Compile Include="V20170312\Models\TableColumn.cs" />
     <Compile Include="V20170312\Models\TablePrivilege.cs" />
+    <Compile Include="V20170312\Models\TerminateDedicatedDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\TerminateDedicatedDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\ViewPrivileges.cs" />
   </ItemGroup>
 </Project>

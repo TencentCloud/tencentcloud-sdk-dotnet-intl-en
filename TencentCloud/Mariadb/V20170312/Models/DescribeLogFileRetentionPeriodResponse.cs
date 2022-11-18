@@ -25,7 +25,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of `tdsql-ow728lmc`.
+        /// Instance ID in the format of `tdsql-ow728lmc`
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

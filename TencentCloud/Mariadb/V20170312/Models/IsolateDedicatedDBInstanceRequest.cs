@@ -21,7 +21,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLogFileRetentionPeriodRequest : AbstractModel
+    public class IsolateDedicatedDBInstanceRequest : AbstractModel
     {
         
         /// <summary>

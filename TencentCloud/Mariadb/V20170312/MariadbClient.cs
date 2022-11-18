@@ -899,7 +899,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to view the configured number of days for retention of database backup logs.
+        /// This API is used to view the backup log retention days.
         /// </summary>
         /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
         /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
@@ -919,7 +919,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to view the configured number of days for retention of database backup logs.
+        /// This API is used to view the backup log retention days.
         /// </summary>
         /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
         /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
@@ -1172,6 +1172,86 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "GrantAccountPrivileges");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GrantAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate a monthly subscribed TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to overdue payments, top up your account as soon as possible.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
+        public async Task<IsolateDBInstanceResponse> IsolateDBInstance(IsolateDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate a monthly subscribed TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to overdue payments, top up your account as soon as possible.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
+        public IsolateDBInstanceResponse IsolateDBInstanceSync(IsolateDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate a dedicated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDedicatedDBInstanceResponse"/></returns>
+        public async Task<IsolateDedicatedDBInstanceResponse> IsolateDedicatedDBInstance(IsolateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to isolate a dedicated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateDedicatedDBInstanceResponse"/></returns>
+        public IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstanceSync(IsolateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1586,6 +1666,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ResetAccountPassword");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate the isolated dedicated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="TerminateDedicatedDBInstanceResponse"/></returns>
+        public async Task<TerminateDedicatedDBInstanceResponse> TerminateDedicatedDBInstance(TerminateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to terminate the isolated dedicated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="TerminateDedicatedDBInstanceResponse"/></returns>
+        public TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstanceSync(TerminateDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
