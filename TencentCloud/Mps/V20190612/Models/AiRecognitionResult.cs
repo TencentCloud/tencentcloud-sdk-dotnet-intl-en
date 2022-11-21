@@ -25,14 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task type. Valid values:
-        /// <li>FaceRecognition: Face recognition,</li>
-        /// <li>AsrWordsRecognition: Speech keyword recognition,</li>
-        /// <li>OcrWordsRecognition: Text keyword recognition,</li>
-        /// <li>AsrFullTextRecognition: Full speech recognition,</li>
-        /// <li>OcrFullTextRecognition: Full text recognition,</li>
-        /// <li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-        /// <li>ObjectRecognition: Object recognition.</li>
+        /// The task type. Valid values:
+        /// <li>FaceRecognition: Face recognition</li>
+        /// <li>AsrWordsRecognition: Speech keyword recognition</li>
+        /// <li>OcrWordsRecognition: Text keyword recognition</li>
+        /// <li>AsrFullTextRecognition: Full speech recognition</li>
+        /// <li>OcrFullTextRecognition: Full text recognition</li>
+        /// <li>TransTextRecognition: Speech translation</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -77,6 +76,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OcrFullTextTask")]
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
 
+        /// <summary>
+        /// The translation result. This parameter is valid only if `Type` is
+        ///  `TransTextRecognition`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TransTextTask")]
+        public AiRecognitionTaskTransTextResult TransTextTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +96,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
             this.SetParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
             this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
+            this.SetParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
         }
     }
 }

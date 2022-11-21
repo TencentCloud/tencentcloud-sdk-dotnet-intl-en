@@ -68,7 +68,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Image format. Valid values: jpg; png. Default value: jpg.
+        /// The image format. Valid values: jpg (default), png, webp.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

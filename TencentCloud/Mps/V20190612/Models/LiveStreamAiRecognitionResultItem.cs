@@ -25,12 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Result type. Valid values:
-        /// <li>FaceRecognition: face recognition,</li>
-        /// <li>AsrWordsRecognition: speech keyword recognition,</li>
-        /// <li>OcrWordsRecognition: text keyword recognition,</li>
-        /// <li>AsrFullTextRecognition: full speech recognition,</li>
-        /// <li>OcrFullTextRecognition: full text recognition.</li>
+        /// The result type. Valid values:
+        /// <li>FaceRecognition: Face recognition</li>
+        /// <li>AsrWordsRecognition: Speech keyword recognition</li>
+        /// <li>OcrWordsRecognition: Text keyword recognition</li>
+        /// <li>AsrFullTextRecognition: Full speech recognition</li>
+        /// <li>OcrFullTextRecognition: Full text recognition</li>
+        /// <li>TransTextRecognition: Speech translation</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -70,6 +71,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OcrFullTextRecognitionResultSet")]
         public LiveStreamOcrFullTextRecognitionResult[] OcrFullTextRecognitionResultSet{ get; set; }
 
+        /// <summary>
+        /// The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+        /// </summary>
+        [JsonProperty("TransTextRecognitionResultSet")]
+        public LiveStreamTransTextRecognitionResult[] TransTextRecognitionResultSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +89,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "OcrWordsRecognitionResultSet.", this.OcrWordsRecognitionResultSet);
             this.SetParamArrayObj(map, prefix + "AsrFullTextRecognitionResultSet.", this.AsrFullTextRecognitionResultSet);
             this.SetParamArrayObj(map, prefix + "OcrFullTextRecognitionResultSet.", this.OcrFullTextRecognitionResultSet);
+            this.SetParamArrayObj(map, prefix + "TransTextRecognitionResultSet.", this.TransTextRecognitionResultSet);
         }
     }
 }

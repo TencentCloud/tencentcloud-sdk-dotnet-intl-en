@@ -34,14 +34,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string EventType{ get; set; }
 
         /// <summary>
-        /// Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+        /// The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WorkflowTaskEvent")]
         public WorkflowTask WorkflowTaskEvent{ get; set; }
 
         /// <summary>
-        /// Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+        /// The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EditMediaTaskEvent")]
         public EditMediaTask EditMediaTaskEvent{ get; set; }
@@ -59,7 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+        /// The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScheduleTaskEvent")]
