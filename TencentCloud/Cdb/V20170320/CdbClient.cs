@@ -2841,7 +2841,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (InitDBInstances) is used to initialize instances, including their password, default character set, and instance port number.
+        /// This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
         /// <returns><see cref="InitDBInstancesResponse"/></returns>
@@ -2861,7 +2861,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (InitDBInstances) is used to initialize instances, including their password, default character set, and instance port number.
+        /// This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
         /// <returns><see cref="InitDBInstancesResponse"/></returns>
