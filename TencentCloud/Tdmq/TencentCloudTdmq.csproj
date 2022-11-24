@@ -234,5 +234,6 @@
     <Compile Include="V20200217\Models\UnbindCmqDeadLetterRequest.cs" />
     <Compile Include="V20200217\Models\UnbindCmqDeadLetterResponse.cs" />
     <Compile Include="V20200217\Models\VpcBindRecord.cs" />
+    <Compile Include="V20200217\Models\VpcConfig.cs" />
   </ItemGroup>
 </Project>

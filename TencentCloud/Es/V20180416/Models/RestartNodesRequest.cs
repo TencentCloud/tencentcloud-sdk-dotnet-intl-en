@@ -42,6 +42,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
+        /// <summary>
+        /// The restart mode. Valid values: `in-place` (default), `blue-green`.
+        /// </summary>
+        [JsonProperty("RestartMode")]
+        public string RestartMode{ get; set; }
+
+        /// <summary>
+        /// The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+        /// </summary>
+        [JsonProperty("IsOffline")]
+        public bool? IsOffline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "NodeNames.", this.NodeNames);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+            this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
+            this.SetParamSimple(map, prefix + "IsOffline", this.IsOffline);
         }
     }
 }
