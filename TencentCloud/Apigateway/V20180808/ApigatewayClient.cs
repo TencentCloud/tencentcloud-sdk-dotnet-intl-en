@@ -1957,6 +1957,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// This API is used to query all plug-ins bound with the API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginsByApiRequest"/></param>
+        /// <returns><see cref="DescribePluginsByApiResponse"/></returns>
+        public async Task<DescribePluginsByApiResponse> DescribePluginsByApi(DescribePluginsByApiRequest req)
+        {
+             JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePluginsByApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginsByApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all plug-ins bound with the API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginsByApiRequest"/></param>
+        /// <returns><see cref="DescribePluginsByApiResponse"/></returns>
+        public DescribePluginsByApiResponse DescribePluginsByApiSync(DescribePluginsByApiRequest req)
+        {
+             JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePluginsByApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginsByApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceRequest"/></param>

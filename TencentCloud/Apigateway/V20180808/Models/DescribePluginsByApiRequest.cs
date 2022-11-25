@@ -21,32 +21,38 @@ namespace TencentCloud.Apigateway.V20180808.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeApisStatusRequest : AbstractModel
+    public class DescribePluginsByApiRequest : AbstractModel
     {
         
         /// <summary>
-        /// Unique service ID of API.
+        /// ID of the API to query
+        /// </summary>
+        [JsonProperty("ApiId")]
+        public string ApiId{ get; set; }
+
+        /// <summary>
+        /// ID of the service to query
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// Environment information
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("EnvironmentName")]
+        public string EnvironmentName{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 100.
+        /// Number of returned results. Default value: 20. Maximum value: 100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// API filter. Valid values: `ApiId`, `ApiName`, `ApiPath`, `ApiType`, `AuthRelationApiId`, `AuthType`, `ApiBuniessType`, `NotUsagePlanId`, `Environment`, `Tags` (whose values are the list of `$tag_key:tag_value`), `TagKeys` (whose values are the list of tag keys). Note that `NotUsagePlanId` and `Environment` must be used in the same time.
+        /// Offset. Default value: 0
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ApiId", this.ApiId);
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

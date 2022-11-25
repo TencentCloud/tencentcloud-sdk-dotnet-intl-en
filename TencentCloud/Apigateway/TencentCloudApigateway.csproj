@@ -67,6 +67,8 @@
     <Compile Include="V20180808\Models\AttachPluginResponse.cs" />
     <Compile Include="V20180808\Models\AttachedApiInfo.cs" />
     <Compile Include="V20180808\Models\AttachedApiSummary.cs" />
+    <Compile Include="V20180808\Models\AttachedPluginInfo.cs" />
+    <Compile Include="V20180808\Models\AttachedPluginSummary.cs" />
     <Compile Include="V20180808\Models\AvailableApiInfo.cs" />
     <Compile Include="V20180808\Models\Base64EncodedTriggerRule.cs" />
     <Compile Include="V20180808\Models\BindApiAppRequest.cs" />
@@ -167,6 +169,8 @@
     <Compile Include="V20180808\Models\DescribePluginApisResponse.cs" />
     <Compile Include="V20180808\Models\DescribePluginRequest.cs" />
     <Compile Include="V20180808\Models\DescribePluginResponse.cs" />
+    <Compile Include="V20180808\Models\DescribePluginsByApiRequest.cs" />
+    <Compile Include="V20180808\Models\DescribePluginsByApiResponse.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentListRequest.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentListResponse.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentReleaseHistoryRequest.cs" />
