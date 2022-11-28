@@ -110,6 +110,16 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
+        /// <summary>
+        /// The image format. Valid values:
+        /// <li> jpg</li>
+        /// <li> png</li>
+        /// <li> webp</li>
+        /// Default: jpg
+        /// </summary>
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +137,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
         }
     }
 }

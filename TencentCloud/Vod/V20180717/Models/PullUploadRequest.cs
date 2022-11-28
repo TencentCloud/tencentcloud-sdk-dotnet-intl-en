@@ -44,7 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+        /// The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }

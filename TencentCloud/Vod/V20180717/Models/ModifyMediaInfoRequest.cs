@@ -86,7 +86,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClearKeyFrameDescs{ get; set; }
 
         /// <summary>
-        /// Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
+        /// The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
         /// </summary>
         [JsonProperty("AddTags")]
         public string[] AddTags{ get; set; }
