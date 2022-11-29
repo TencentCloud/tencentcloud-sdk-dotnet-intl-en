@@ -68,9 +68,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// The rule status. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
-        /// <li>Default value: on</li>
+        /// <li>`on`: Enabled</li>
+        /// <li>`off`: Disabled</li>Default value: on
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
@@ -96,7 +95,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// The filter. Values:
-        /// <li>`host`: Domain name</li>
         /// <li>`sip`: Client IP</li>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -109,6 +107,15 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// The statistical dimension. Values:
+        /// <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+        /// <li>`client_to_eo`: Requests from the client to EdgeOne</li>
+        /// Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+        /// </summary>
+        [JsonProperty("FreqScope")]
+        public string[] FreqScope{ get; set; }
 
 
         /// <summary>
@@ -128,6 +135,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
         }
     }
 }

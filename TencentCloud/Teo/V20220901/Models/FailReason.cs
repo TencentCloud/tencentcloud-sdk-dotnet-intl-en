@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Reason{ get; set; }
 
         /// <summary>
-        /// List of resources failed to be processed.
+        /// List of resources failed to be processed. 
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }

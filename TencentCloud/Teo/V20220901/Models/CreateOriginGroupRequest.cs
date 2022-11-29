@@ -61,7 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public OriginRecord[] OriginRecords{ get; set; }
 
         /// <summary>
-        /// 
+        /// The origin domain. This field can be specified only when `OriginType=self`.
         /// </summary>
         [JsonProperty("HostHeader")]
         public string HostHeader{ get; set; }

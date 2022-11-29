@@ -37,7 +37,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 
+        /// The action. Values:
+        /// <li>`alg`: JavaScript challenge</li>
+        /// <li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

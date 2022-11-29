@@ -42,15 +42,17 @@ namespace TencentCloud.Teo.V20220901.Models
         /// Origin-pull protocol configuration. Values:
         /// <li>`http`: Force HTTP for origin-pull.</li>
         /// <li>`follow`: Follow protocol.</li>
-        /// <li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <li>`https`: Force HTTPS for origin-pull.</li>
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OriginPullProtocol")]
         public string OriginPullProtocol{ get; set; }
 
         /// <summary>
-        /// When OriginType is COS, you can specify if access to private buckets is allowed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to allow private access to buckets when `OriginType=cos`. Values:
+        /// <li>`on`: Allow private access.</li>
+        /// <li>`off`: Allow public access.</li>
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CosPrivateAccess")]
         public string CosPrivateAccess{ get; set; }

@@ -25,16 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Subdomain name/Application name
+        /// The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
         /// </summary>
         [JsonProperty("Entity")]
         public string Entity{ get; set; }
+
+        /// <summary>
+        /// The template ID. You must specify either this field or "ZoneId+Entity". 
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Entity", this.Entity);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

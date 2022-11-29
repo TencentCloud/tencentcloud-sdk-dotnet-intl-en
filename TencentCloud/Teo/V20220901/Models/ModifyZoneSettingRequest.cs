@@ -143,7 +143,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to carry the location information of the client IP during origin-pull.
+        /// The original configuration will apply if this field is not specified.
         /// </summary>
         [JsonProperty("ClientIpCountry")]
         public ClientIpCountry ClientIpCountry{ get; set; }

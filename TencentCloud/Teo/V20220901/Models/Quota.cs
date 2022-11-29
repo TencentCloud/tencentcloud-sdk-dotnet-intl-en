@@ -43,11 +43,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? DailyAvailable{ get; set; }
 
         /// <summary>
-        /// Quota type. Values:
-        /// <li>`purge_prefix`: Purge prefixes;</li>
-        /// <li>`purge_url`: Purge URLs;</li>
-        /// <li>`purge_host`: Purge hostnames;</li>
-        /// <li>`purge_all`: Purge all caches.</li>
+        /// Type of cache purging/pre-warming. Values:
+        /// <li>`purge_prefix`: Purge by prefix</li>
+        /// <li>`purge_url`: Purge by URL</li>
+        /// <li>`purge_host`: Purge by hostname</li>
+        /// <li>`purge_all`: Purge all caches</li>
+        /// <li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

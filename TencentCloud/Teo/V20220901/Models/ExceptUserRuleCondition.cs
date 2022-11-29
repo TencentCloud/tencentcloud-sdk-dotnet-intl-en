@@ -37,13 +37,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`method`: Request method</li>
         /// <li>`header`: Request header</li>
         /// <li>`sip_proto`: Network layer protocol</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string MatchFrom{ get; set; }
 
         /// <summary>
-        /// The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+        /// The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
         /// </summary>
         [JsonProperty("MatchParam")]
         public string MatchParam{ get; set; }
@@ -66,14 +65,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`match_prefix`: Prefix matches</li>
         /// <li>`match_suffix`: Suffix matches</li>
         /// <li>`wildcard`: Wildcard</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
         /// The value of the parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MatchContent")]
         public string MatchContent{ get; set; }

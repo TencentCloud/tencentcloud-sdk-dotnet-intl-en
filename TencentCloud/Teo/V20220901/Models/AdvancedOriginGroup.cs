@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Matching condition. The "Target" field must be unique.
         /// </summary>
         [JsonProperty("OriginGroupConditions")]
         public OriginGroupCondition[] OriginGroupConditions{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the primary origin server.
         /// </summary>
         [JsonProperty("OriginGroupId")]
         public string OriginGroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the secondary origin server.
         /// </summary>
         [JsonProperty("BackupOriginGroupId")]
         public string BackupOriginGroupId{ get; set; }

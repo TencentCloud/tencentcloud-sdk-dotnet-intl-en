@@ -21,24 +21,14 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BillingDataFilter : AbstractModel
+    public class CreateAliasDomainResponse : AbstractModel
     {
         
         /// <summary>
-        /// Parameter name. Valid values:
-        /// `zone`: Site name
-        /// `host`: Domain name
-        /// `proxy`: L4 proxy
-        /// `plan`: Plan type
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// Parameter value
-        /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -46,8 +36,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

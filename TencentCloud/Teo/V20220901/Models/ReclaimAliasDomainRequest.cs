@@ -21,28 +21,20 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBillingDataResponse : AbstractModel
+    public class ReclaimAliasDomainRequest : AbstractModel
     {
         
         /// <summary>
-        /// Data of the sampling point
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The site ID.
         /// </summary>
-        [JsonProperty("Data")]
-        public DnsData[] Data{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Time granularity of sampling
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The site name.
         /// </summary>
-        [JsonProperty("Interval")]
-        public string Interval{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "Interval", this.Interval);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

@@ -50,6 +50,20 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Whether to allow duplicate sites. Values:
+        /// <li>`true`: Duplicate sites are allowed.</li>
+        /// <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+        /// </summary>
+        [JsonProperty("AllowDuplicates")]
+        public bool? AllowDuplicates{ get; set; }
+
+        /// <summary>
+        /// The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+        /// </summary>
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +74,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "JumpStart", this.JumpStart);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AllowDuplicates", this.AllowDuplicates);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         }
     }
 }

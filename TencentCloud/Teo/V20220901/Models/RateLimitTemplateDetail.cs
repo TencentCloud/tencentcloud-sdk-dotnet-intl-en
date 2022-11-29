@@ -32,7 +32,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`normal`: Moderate</li>
         /// <li>`strict`: Strict</li>
         /// <li>`close`: Off</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
@@ -44,15 +44,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// The action, which will be triggered when the specified threshold reaches.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The action. Values:
+        /// <li>`alg`: JavaScript challenge</li>
+        /// <li>`monitor`: Observe</li>
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The amount of time taken to perform the action. Value range: 0-172800 seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The blocking duration, in seconds. Value range: 0-172800.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }

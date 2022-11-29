@@ -25,6 +25,12 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
+        /// Feature to be executed.
+        /// </summary>
+        [JsonProperty("Actions")]
+        public Action[] Actions{ get; set; }
+
+        /// <summary>
         /// Feature execution conditions.
         /// Note: If any condition in the array is met, the feature will run.
         /// </summary>
@@ -32,10 +38,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public RuleAndConditions[] Conditions{ get; set; }
 
         /// <summary>
-        /// Feature to be executed.
+        /// The nested rule.
         /// </summary>
-        [JsonProperty("Actions")]
-        public Action[] Actions{ get; set; }
+        [JsonProperty("SubRules")]
+        public SubRuleItem[] SubRules{ get; set; }
 
 
         /// <summary>
@@ -43,8 +49,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
             this.SetParamArrayObj(map, prefix + "Actions.", this.Actions);
+            this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+            this.SetParamArrayObj(map, prefix + "SubRules.", this.SubRules);
         }
     }
 }

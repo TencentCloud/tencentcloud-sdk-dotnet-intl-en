@@ -67,6 +67,15 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("CertInfo")]
         public ServerCertInfo[] CertInfo{ get; set; }
 
+        /// <summary>
+        /// Whether the certificate is managed by EdgeOne. Values:
+        /// <li>`apply`: Managed by EdgeOne.</li>
+        /// <li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ApplyType")]
+        public string ApplyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +87,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "TlsVersion.", this.TlsVersion);
             this.SetParamObj(map, prefix + "Hsts.", this.Hsts);
             this.SetParamArrayObj(map, prefix + "CertInfo.", this.CertInfo);
+            this.SetParamSimple(map, prefix + "ApplyType", this.ApplyType);
         }
     }
 }

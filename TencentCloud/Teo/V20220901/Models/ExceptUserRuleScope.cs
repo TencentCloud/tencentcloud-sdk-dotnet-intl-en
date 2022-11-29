@@ -25,26 +25,33 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Exception mode. Values:
+        /// <li>`complete`: Skip the exception rule for full requests.</li>
+        /// <li>`partial`: Skip the exception rule for partial requests.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The module that applies. Only WAF managed rules are supported currently.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The module to be activated. Values:
+        /// <li>`waf`: Managed rules</li>
+        /// <li>`cc`: Rate limiting rules</li>
+        /// <li>`bot`: bot protection</li>
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Modules")]
         public string[] Modules{ get; set; }
 
         /// <summary>
-        /// 
+        /// Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PartialModules")]
         public PartialModule[] PartialModules{ get; set; }
 
         /// <summary>
-        /// 
+        /// Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SkipConditions")]
         public SkipCondition[] SkipConditions{ get; set; }

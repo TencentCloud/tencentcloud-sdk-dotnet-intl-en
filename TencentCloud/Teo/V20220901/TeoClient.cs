@@ -53,6 +53,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to bind a site to a plan.
+        /// </summary>
+        /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>
+        /// <returns><see cref="BindZoneToPlanResponse"/></returns>
+        public async Task<BindZoneToPlanResponse> BindZoneToPlan(BindZoneToPlanRequest req)
+        {
+             JsonResponseModel<BindZoneToPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindZoneToPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindZoneToPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a site to a plan.
+        /// </summary>
+        /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>
+        /// <returns><see cref="BindZoneToPlanResponse"/></returns>
+        public BindZoneToPlanResponse BindZoneToPlanSync(BindZoneToPlanRequest req)
+        {
+             JsonResponseModel<BindZoneToPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindZoneToPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindZoneToPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to verify a certificate.
         /// </summary>
         /// <param name="req"><see cref="CheckCertificateRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "CheckCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an alias domain name.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
+        /// <returns><see cref="CreateAliasDomainResponse"/></returns>
+        public async Task<CreateAliasDomainResponse> CreateAliasDomain(CreateAliasDomainRequest req)
+        {
+             JsonResponseModel<CreateAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an alias domain name.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
+        /// <returns><see cref="CreateAliasDomainResponse"/></returns>
+        public CreateAliasDomainResponse CreateAliasDomainSync(CreateAliasDomainRequest req)
+        {
+             JsonResponseModel<CreateAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAliasDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,6 +893,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to delete an alias domain name.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
+        /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
+        public async Task<DeleteAliasDomainResponse> DeleteAliasDomain(DeleteAliasDomainRequest req)
+        {
+             JsonResponseModel<DeleteAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an alias domain name.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
+        /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
+        public DeleteAliasDomainResponse DeleteAliasDomainSync(DeleteAliasDomainRequest req)
+        {
+             JsonResponseModel<DeleteAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an application proxy.
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRequest"/></param>
@@ -1173,6 +1293,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the information of alias domain names.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
+        /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
+        public async Task<DescribeAliasDomainsResponse> DescribeAliasDomains(DescribeAliasDomainsRequest req)
+        {
+             JsonResponseModel<DescribeAliasDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAliasDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAliasDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of alias domain names.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
+        /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
+        public DescribeAliasDomainsResponse DescribeAliasDomainsSync(DescribeAliasDomainsRequest req)
+        {
+             JsonResponseModel<DescribeAliasDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAliasDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAliasDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of application proxies.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationProxiesRequest"/></param>
@@ -1244,46 +1404,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAvailablePlans");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailablePlansResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the billing data.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
-        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
-        public async Task<DescribeBillingDataResponse> DescribeBillingData(DescribeBillingDataRequest req)
-        {
-             JsonResponseModel<DescribeBillingDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBillingData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to get the billing data.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
-        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
-        public DescribeBillingDataResponse DescribeBillingDataSync(DescribeBillingDataRequest req)
-        {
-             JsonResponseModel<DescribeBillingDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillingData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillingDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2653,7 +2773,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the security protection configuration.
+        /// This API is used to query the security protection configuration. You must either specify "ZoneId+Entity" or "TemplateId".
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
         /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
@@ -2673,7 +2793,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the security protection configuration.
+        /// This API is used to query the security protection configuration. You must either specify "ZoneId+Entity" or "TemplateId".
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
         /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
@@ -3853,6 +3973,86 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to modify an alias domain name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
+        /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
+        public async Task<ModifyAliasDomainResponse> ModifyAliasDomain(ModifyAliasDomainRequest req)
+        {
+             JsonResponseModel<ModifyAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an alias domain name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
+        /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
+        public ModifyAliasDomainResponse ModifyAliasDomainSync(ModifyAliasDomainRequest req)
+        {
+             JsonResponseModel<ModifyAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the status of an alias domain name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
+        /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
+        public async Task<ModifyAliasDomainStatusResponse> ModifyAliasDomainStatus(ModifyAliasDomainStatusRequest req)
+        {
+             JsonResponseModel<ModifyAliasDomainStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAliasDomainStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAliasDomainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the status of an alias domain name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
+        /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
+        public ModifyAliasDomainStatusResponse ModifyAliasDomainStatusSync(ModifyAliasDomainStatusRequest req)
+        {
+             JsonResponseModel<ModifyAliasDomainStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAliasDomainStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAliasDomainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify an application proxy.
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRequest"/></param>
@@ -4724,6 +4924,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "ModifyZoneStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyZoneStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// To reclaim a site and its associated alias domain names, specify the "ZoneId" field; to reclaim an alias domain name that is already added, specify the "ZoneName" filed.
+        /// </summary>
+        /// <param name="req"><see cref="ReclaimAliasDomainRequest"/></param>
+        /// <returns><see cref="ReclaimAliasDomainResponse"/></returns>
+        public async Task<ReclaimAliasDomainResponse> ReclaimAliasDomain(ReclaimAliasDomainRequest req)
+        {
+             JsonResponseModel<ReclaimAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReclaimAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReclaimAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// To reclaim a site and its associated alias domain names, specify the "ZoneId" field; to reclaim an alias domain name that is already added, specify the "ZoneName" filed.
+        /// </summary>
+        /// <param name="req"><see cref="ReclaimAliasDomainRequest"/></param>
+        /// <returns><see cref="ReclaimAliasDomainResponse"/></returns>
+        public ReclaimAliasDomainResponse ReclaimAliasDomainSync(ReclaimAliasDomainRequest req)
+        {
+             JsonResponseModel<ReclaimAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReclaimAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReclaimAliasDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,19 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Match type. Values:
+        /// <li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+        /// </li>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }
 
         /// <summary>
-        /// 
+        /// The operator. Values:
+        /// <li>`equal`: Equals</li>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 
+        /// Values of the match type.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

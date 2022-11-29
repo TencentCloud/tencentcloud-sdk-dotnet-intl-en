@@ -73,6 +73,17 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// The bot tag. Values:
+        /// <li>`evil_bot`: Malicious bot</li>
+        /// <li>`suspect_bot`: Suspected bot</li>
+        /// <li>`good_bot`: Good bot</li>
+        /// <li>`normal`: Normal request</li>
+        /// <li>`none`: Uncategorized</li>
+        /// </summary>
+        [JsonProperty("BotLabel")]
+        public string BotLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +97,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "RequestNum", this.RequestNum);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "BotLabel", this.BotLabel);
         }
     }
 }

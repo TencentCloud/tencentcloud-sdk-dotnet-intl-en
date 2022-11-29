@@ -51,9 +51,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// The port, which can be specified in the following formats:
-        /// Single port, such as 80.
-        /// Port range, such as 81-90. The original configuration will apply if this field is not specified.
+        /// The access port, which can be:
+        /// <li>A single port, such as 80</li>
+        /// <li>A port range, such as 81-90</li>
         /// </summary>
         [JsonProperty("Port")]
         public string[] Port{ get; set; }
@@ -68,11 +68,9 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Origin server information:
-        /// When `OriginType=custom`, it indicates one or more origin servers. Example:
-        /// OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-        /// OriginValue=["test.com:80"];
-        /// When `OriginType=origins`, it indicates an origin group ID. Example:
-        /// OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+        /// <li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+        /// <li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+        /// 
         /// The original configuration will apply if this field is not specified.
         /// </summary>
         [JsonProperty("OriginValue")]
@@ -91,10 +89,18 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Whether to enable session persistence. Values:
         /// <li>`true`: Enable</li>
-        /// <li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+        /// <li>`false`: Disable</li>If it is left empty, the default value `false` is used.
         /// </summary>
         [JsonProperty("SessionPersist")]
         public bool? SessionPersist{ get; set; }
+
+        /// <summary>
+        /// The origin port, which can be:
+        /// <li>A single port, such as 80</li>
+        /// <li>A port range, such as 81-82</li>
+        /// </summary>
+        [JsonProperty("OriginPort")]
+        public string OriginPort{ get; set; }
 
 
         /// <summary>
@@ -111,6 +117,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
             this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+            this.SetParamSimple(map, prefix + "OriginPort", this.OriginPort);
         }
     }
 }

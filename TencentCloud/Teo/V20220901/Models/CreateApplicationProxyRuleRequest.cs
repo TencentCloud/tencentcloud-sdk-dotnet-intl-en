@@ -45,28 +45,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Proto{ get; set; }
 
         /// <summary>
-        /// The origin type. Values:
-        /// <li>`custom`: Specified origins</li>
-        /// <li>`origins`: Origin group</li>
+        /// The access port, which can be:
+        /// <li>A single port, such as 80</li>
+        /// <li>A port range, such as 81-90</li>
         /// </summary>
         [JsonProperty("Port")]
         public string[] Port{ get; set; }
 
         /// <summary>
         /// The origin type. Values:
-        /// `custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-        /// `origins`: Origin group
+        /// <li>`custom`: Specified origins</li>
+        /// <li>`origins`: Origin group</li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
         /// Origin server information:
-        /// When `OriginType=custom`, it indicates one or more origin servers. Example:
-        /// OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-        /// OriginValue=["test.com:80"];
-        /// When `OriginType=origins`, it indicates an origin group ID. Example:
-        /// OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+        /// <li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+        /// <li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
         /// </summary>
         [JsonProperty("OriginValue")]
         public string[] OriginValue{ get; set; }
@@ -89,6 +86,14 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("SessionPersist")]
         public bool? SessionPersist{ get; set; }
 
+        /// <summary>
+        /// The origin port, which can be:
+        /// <li>A single port, such as 80</li>
+        /// <li>A port range, such as 81-82</li>
+        /// </summary>
+        [JsonProperty("OriginPort")]
+        public string OriginPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +108,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
             this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+            this.SetParamSimple(map, prefix + "OriginPort", this.OriginPort);
         }
     }
 }

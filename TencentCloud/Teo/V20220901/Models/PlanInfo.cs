@@ -50,15 +50,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Frequency{ get; set; }
 
         /// <summary>
-        /// Plan option. Values:
-        /// <li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-        /// <li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-        /// <li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-        /// <li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-        /// <li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-        /// <li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-        /// <li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-        /// <li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
+        /// The plan option. Values:
+        /// <li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+        /// <li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+        /// <li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+        /// <li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+        /// <li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+        /// <li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+        /// <li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+        /// <li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+        /// <li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+        /// <li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+        /// <li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+        /// <li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
         /// </summary>
         [JsonProperty("PlanType")]
         public string PlanType{ get; set; }
@@ -82,9 +86,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? SiteNumber{ get; set; }
 
         /// <summary>
-        /// Acceleration region. Values:
-        /// <li>`mainland`: Chinese mainland;</li>
-        /// <li>`overseas`: Global (Chinese mainland not included).</li>
+        /// The acceleration region. Values:
+        /// <li>`mainland`: Chinese mainland</li>
+        /// <li>`overseas`: Global (Chinese mainland not included)</li>
+        /// <li>`global`: Global (Chinese mainland included)</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

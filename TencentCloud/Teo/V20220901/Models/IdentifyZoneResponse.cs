@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ownership information.
+        /// Details of the DNS record.
         /// </summary>
         [JsonProperty("Ascription")]
         public AscriptionInfo Ascription{ get; set; }
 
         /// <summary>
-        /// 
+        /// Details of the verification file.
         /// </summary>
         [JsonProperty("FileAscription")]
         public FileAscriptionInfo FileAscription{ get; set; }

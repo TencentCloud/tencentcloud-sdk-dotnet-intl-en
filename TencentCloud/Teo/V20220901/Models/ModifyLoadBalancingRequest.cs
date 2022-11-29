@@ -64,13 +64,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? TTL{ get; set; }
 
         /// <summary>
-        /// 
+        /// The origin-pull type. Values:
+        /// <li>`normal`: Primary/Secondary origin-pull</li>
+        /// <li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+        /// If it is left empty, this configuration is not used.
         /// </summary>
         [JsonProperty("AdvancedOriginGroups")]
         public AdvancedOriginGroup[] AdvancedOriginGroups{ get; set; }

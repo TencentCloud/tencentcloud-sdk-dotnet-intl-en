@@ -79,7 +79,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// The origin domain when `OriginType=self`.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("HostHeader")]
         public string HostHeader{ get; set; }

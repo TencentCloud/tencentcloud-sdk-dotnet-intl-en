@@ -89,13 +89,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// The origin-pull type. Values:
+        /// <li>`normal`: Primary/Secondary origin-pull</li>
+        /// <li>`advanced`: Advanced origin-pull</li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AdvancedOriginGroups")]
         public AdvancedOriginGroup[] AdvancedOriginGroups{ get; set; }

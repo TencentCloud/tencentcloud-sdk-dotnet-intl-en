@@ -59,6 +59,15 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// The rule status. A null value indicates that the rule is enabled. Values:
+        /// <li>`on`: Enabled</li>
+        /// <li>`off`: Disabled</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +79,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "MatchContent", this.MatchContent);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

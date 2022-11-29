@@ -109,7 +109,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// 
+        /// Type of the shipping task. Values:
+        /// <li>`cls`: Ship logs to CLS.</li>
+        /// <li>`custom_endpoint`: Ship logs to custom APIs.</li>
         /// </summary>
         [JsonProperty("LogSetType")]
         public string LogSetType{ get; set; }

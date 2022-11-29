@@ -26,14 +26,12 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// The rule name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -42,21 +40,19 @@ namespace TencentCloud.Teo.V20220901.Models
         /// The rule status. Values:
         /// <li>`on`: Enabled</li>
         /// <li>`off`: Disabled</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as an output parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The rule ID, which is automatically created and only used as an output parameter.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// The update time, which is only used as an output parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The update time. If it is null, the current date and time is recorded.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -76,8 +72,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ExceptUserRuleScope ExceptUserRuleScope{ get; set; }
 
         /// <summary>
-        /// The rule priority. Value range: 0-100.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The rule priority. Value range: 0-100. If it is null, it defaults to 0.
         /// </summary>
         [JsonProperty("RulePriority")]
         public long? RulePriority{ get; set; }

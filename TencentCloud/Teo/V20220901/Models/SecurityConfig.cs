@@ -80,6 +80,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("DropPageConfig")]
         public DropPageConfig DropPageConfig{ get; set; }
 
+        /// <summary>
+        /// Security template settings
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("TemplateConfig")]
+        public TemplateConfig TemplateConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "IpTableConfig.", this.IpTableConfig);
             this.SetParamObj(map, prefix + "ExceptConfig.", this.ExceptConfig);
             this.SetParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
+            this.SetParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
         }
     }
 }

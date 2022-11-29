@@ -25,18 +25,6 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
-
-        /// <summary>
-        /// The subdomain name.
-        /// </summary>
-        [JsonProperty("Entity")]
-        public string Entity{ get; set; }
-
-        /// <summary>
         /// The page offset. Default value: 0
         /// </summary>
         [JsonProperty("Offset")]
@@ -49,6 +37,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Limit{ get; set; }
 
         /// <summary>
+        /// The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+        /// </summary>
+        [JsonProperty("Entity")]
+        public string Entity{ get; set; }
+
+        /// <summary>
         /// The rule type. Values:
         /// <li>`idcid`</li>
         /// <li>`sipbot`</li>
@@ -57,17 +57,24 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
+        /// <summary>
+        /// The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "Entity", this.Entity);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Entity", this.Entity);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

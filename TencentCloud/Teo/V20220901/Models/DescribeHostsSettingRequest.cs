@@ -44,7 +44,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Filter criteria. Each filter criteria can have up to 20 entries.
-        /// <li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+        /// <li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

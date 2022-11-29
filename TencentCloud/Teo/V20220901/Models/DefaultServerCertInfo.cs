@@ -78,9 +78,10 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Deployment status. Values:
-        /// <li>`processing`: Deployment in progress;</li>
-        /// <li>`deployed`: Deployed.</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <li>`processing`: Deployment in progress</li>
+        /// <li>`deployed`: Deployed</li>
+        /// <li>`failed`: Deployment failed</li>
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -93,7 +94,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Certificate algorithm.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SignAlgo")]
         public string SignAlgo{ get; set; }

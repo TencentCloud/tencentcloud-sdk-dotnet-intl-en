@@ -39,7 +39,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// The site ownership information.
+        /// Details of the DNS record.
         /// </summary>
         [JsonProperty("Ascription")]
         public AscriptionInfo Ascription{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] OriginalNameServers{ get; set; }
 
         /// <summary>
-        /// 
+        /// Details of the verification file.
         /// </summary>
         [JsonProperty("FileAscription")]
         public FileAscriptionInfo FileAscription{ get; set; }

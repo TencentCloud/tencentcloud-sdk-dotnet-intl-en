@@ -38,10 +38,30 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Filter criteria. Each filter criteria can have up to 20 entries.
-        /// <li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+        /// <li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
+
+        /// <summary>
+        /// The sorting field. Values:
+        /// <li>`type`: Access mode</li>
+        /// <li>`area`: Acceleration region</li>
+        /// <li>`create-time`: Creation date</li>
+        /// <li>`zone-name`: Site name</li>
+        /// <li>`use-time`: Last used date</li>
+        /// <li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// The sorting direction. Values:
+        /// <li>`asc`: From smallest to largest</li>
+        /// <li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+        /// </summary>
+        [JsonProperty("Direction")]
+        public string Direction{ get; set; }
 
 
         /// <summary>
@@ -52,6 +72,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }

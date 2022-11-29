@@ -25,13 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to enable configuration. Values:
+        /// <li>`on`: Enable</li>
+        /// <li>`off`: Disable</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+        /// If it is left empty, the default value `EO-Client-IPCountry` will be used.
         /// </summary>
         [JsonProperty("HeaderName")]
         public string HeaderName{ get; set; }

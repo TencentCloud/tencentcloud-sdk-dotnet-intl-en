@@ -25,13 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// The module. Values:
+        /// <li>`waf`: Managed rules</li>
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of managed rule IDs to be skipped.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Include")]
         public long?[] Include{ get; set; }

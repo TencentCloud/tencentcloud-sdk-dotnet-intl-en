@@ -33,9 +33,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Proto{ get; set; }
 
         /// <summary>
-        /// The port, which can be specified in the following formats:
-        /// Single port, such as 80.
-        /// Port range, such as 81-82.
+        /// The access port, which can be:
+        /// <li>A single port, such as 80</li>
+        /// <li>A port range, such as 81-82</li>
         /// Note that each rule can have up to 20 ports.
         /// </summary>
         [JsonProperty("Port")]
@@ -50,12 +50,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Origin server information.
-        /// When `OriginType=custom`, it indicates one or more origin servers. Example:
-        /// OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-        /// OriginValue=["test.com:80"];
-        /// When `OriginType=origins`, it indicates an origin group ID. Example:
-        /// OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+        /// Origin server information:
+        /// <li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+        /// <li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
         /// </summary>
         [JsonProperty("OriginValue")]
         public string[] OriginValue{ get; set; }
@@ -95,6 +92,14 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("SessionPersist")]
         public bool? SessionPersist{ get; set; }
 
+        /// <summary>
+        /// The origin port, which can be:
+        /// <li>A single port, such as 80</li>
+        /// <li>A port range, such as 81-82</li>
+        /// </summary>
+        [JsonProperty("OriginPort")]
+        public string OriginPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +114,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+            this.SetParamSimple(map, prefix + "OriginPort", this.OriginPort);
         }
     }
 }

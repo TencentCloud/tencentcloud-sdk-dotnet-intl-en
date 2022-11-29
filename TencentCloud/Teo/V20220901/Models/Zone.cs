@@ -73,9 +73,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? Paused{ get; set; }
 
         /// <summary>
-        /// Whether CNAME flattening is enabled. Valid values:
-        /// <li>`enabled`: Enabled.</li>
-        /// <li>`disabled`: Disabled.</li>
+        /// Whether CNAME acceleration is enabled. Values:
+        /// <li>`enabled`: Enabled</li>
+        /// <li>`disabled`: Disabled</li>
         /// </summary>
         [JsonProperty("CnameSpeedUp")]
         public string CnameSpeedUp{ get; set; }
@@ -135,6 +135,22 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("VanityNameServersIps")]
         public VanityNameServersIps[] VanityNameServersIps{ get; set; }
 
+        /// <summary>
+        /// Status of the proxy. Values:
+        /// <li>`active`: Enabled</li>
+        /// <li>`inactive`: Not activated</li>
+        /// <li>`paused`: Disabled</li>
+        /// </summary>
+        [JsonProperty("ActiveStatus")]
+        public string ActiveStatus{ get; set; }
+
+        /// <summary>
+        /// The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +173,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
             this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
+            this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         }
     }
 }

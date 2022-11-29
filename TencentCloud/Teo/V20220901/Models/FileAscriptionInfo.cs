@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Directory of the verification file.
         /// </summary>
         [JsonProperty("IdentifyPath")]
         public string IdentifyPath{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content of the verification file.
         /// </summary>
         [JsonProperty("IdentifyContent")]
         public string IdentifyContent{ get; set; }

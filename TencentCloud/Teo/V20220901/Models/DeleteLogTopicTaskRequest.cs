@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Region of the logset.
+        /// Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
         /// </summary>
         [JsonProperty("LogSetRegion")]
         public string LogSetRegion{ get; set; }

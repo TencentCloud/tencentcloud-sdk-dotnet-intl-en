@@ -32,6 +32,20 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
+        /// <summary>
+        /// Sets the default cache time when the origin server does not return the Cache-Control header.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DefaultCacheTime")]
+        public long? DefaultCacheTime{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DefaultCache")]
+        public string DefaultCache{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -39,6 +53,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
+            this.SetParamSimple(map, prefix + "DefaultCache", this.DefaultCache);
         }
     }
 }

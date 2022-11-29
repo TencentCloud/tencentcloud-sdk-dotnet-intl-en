@@ -40,10 +40,10 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Type of the certificate. Values:
-        /// <li>`default`: Default certificate;</lil>
-        /// <li>`upload`: Custom certificate;</li>
-        /// <li>`managed`: Tencent Cloud-managed certificate.</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <li>`default`: Default certificate</lil>
+        /// <li>`upload`: Specified certificate</li>
+        /// <li>`managed`: Tencent Cloud-managed certificate</li>
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -69,6 +69,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("SignAlgo")]
         public string SignAlgo{ get; set; }
 
+        /// <summary>
+        /// Domain name of the certificate.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CommonName")]
+        public string CommonName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +88,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "DeployTime", this.DeployTime);
             this.SetParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
+            this.SetParamSimple(map, prefix + "CommonName", this.CommonName);
         }
     }
 }
