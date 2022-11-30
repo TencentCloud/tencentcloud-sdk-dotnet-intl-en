@@ -67,7 +67,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+        /// Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
         /// </summary>
         [JsonProperty("BackupWay")]
         public long? BackupWay{ get; set; }

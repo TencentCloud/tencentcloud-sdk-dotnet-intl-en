@@ -66,6 +66,36 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupSaveDays")]
         public ulong? BackupSaveDays{ get; set; }
 
+        /// <summary>
+        /// Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+        /// </summary>
+        [JsonProperty("RegularBackupEnable")]
+        public string RegularBackupEnable{ get; set; }
+
+        /// <summary>
+        /// Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+        /// </summary>
+        [JsonProperty("RegularBackupSaveDays")]
+        public ulong? RegularBackupSaveDays{ get; set; }
+
+        /// <summary>
+        /// Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+        /// </summary>
+        [JsonProperty("RegularBackupStrategy")]
+        public string RegularBackupStrategy{ get; set; }
+
+        /// <summary>
+        /// The number of retained archive backups. Default value: `1`.
+        /// </summary>
+        [JsonProperty("RegularBackupCounts")]
+        public ulong? RegularBackupCounts{ get; set; }
+
+        /// <summary>
+        /// Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+        /// </summary>
+        [JsonProperty("RegularBackupStartTime")]
+        public string RegularBackupStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +109,11 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupModel", this.BackupModel);
             this.SetParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
             this.SetParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
+            this.SetParamSimple(map, prefix + "RegularBackupEnable", this.RegularBackupEnable);
+            this.SetParamSimple(map, prefix + "RegularBackupSaveDays", this.RegularBackupSaveDays);
+            this.SetParamSimple(map, prefix + "RegularBackupStrategy", this.RegularBackupStrategy);
+            this.SetParamSimple(map, prefix + "RegularBackupCounts", this.RegularBackupCounts);
+            this.SetParamSimple(map, prefix + "RegularBackupStartTime", this.RegularBackupStartTime);
         }
     }
 }

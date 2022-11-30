@@ -85,7 +85,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// Backup mode. 0: scheduled, 1: manual
+        /// Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
         /// </summary>
         [JsonProperty("BackupWay")]
         public long? BackupWay{ get; set; }
