@@ -373,6 +373,46 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to query COS usage details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDosageCosDetailByDateRequest"/></param>
+        /// <returns><see cref="DescribeDosageCosDetailByDateResponse"/></returns>
+        public async Task<DescribeDosageCosDetailByDateResponse> DescribeDosageCosDetailByDate(DescribeDosageCosDetailByDateRequest req)
+        {
+             JsonResponseModel<DescribeDosageCosDetailByDateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDosageCosDetailByDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query COS usage details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDosageCosDetailByDateRequest"/></param>
+        /// <returns><see cref="DescribeDosageCosDetailByDateResponse"/></returns>
+        public DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDateSync(DescribeDosageCosDetailByDateRequest req)
+        {
+             JsonResponseModel<DescribeDosageCosDetailByDateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDosageCosDetailByDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query vouchers.
         /// </summary>
         /// <param name="req"><see cref="DescribeVoucherInfoRequest"/></param>

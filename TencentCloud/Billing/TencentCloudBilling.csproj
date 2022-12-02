@@ -53,6 +53,7 @@
     <Compile Include="V20180709\Models\BillTagInfo.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryTotal.cs" />
+    <Compile Include="V20180709\Models\CosDetailSets.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceRequest.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillDetailRequest.cs" />
@@ -69,6 +70,8 @@
     <Compile Include="V20180709\Models\DescribeBillSummaryByRegionResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillSummaryByTagRequest.cs" />
     <Compile Include="V20180709\Models\DescribeBillSummaryByTagResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateResponse.cs" />
     <Compile Include="V20180709\Models\DescribeVoucherInfoRequest.cs" />
     <Compile Include="V20180709\Models\DescribeVoucherInfoResponse.cs" />
     <Compile Include="V20180709\Models\DescribeVoucherUsageDetailsRequest.cs" />
