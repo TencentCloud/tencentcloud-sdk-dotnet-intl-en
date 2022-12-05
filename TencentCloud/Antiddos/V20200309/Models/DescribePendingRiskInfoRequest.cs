@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceAllNamespacesRequest : AbstractModel
+    public class DescribePendingRiskInfoRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Number of entries per page
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// Start position offset
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

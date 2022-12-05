@@ -189,6 +189,8 @@
     <Compile Include="V20200309\Models\DescribeNewL7RulesResponse.cs" />
     <Compile Include="V20200309\Models\DescribeOverviewDDoSEventListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeOverviewDDoSEventListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribePendingRiskInfoRequest.cs" />
+    <Compile Include="V20200309\Models\DescribePendingRiskInfoResponse.cs" />
     <Compile Include="V20200309\Models\DisassociateDDoSEipAddressRequest.cs" />
     <Compile Include="V20200309\Models\DisassociateDDoSEipAddressResponse.cs" />
     <Compile Include="V20200309\Models\EipAddressPackRelation.cs" />

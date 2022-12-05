@@ -15,27 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCdnDomainLogsResponse : AbstractModel
+    public class DescribePendingRiskInfoResponse : AbstractModel
     {
         
         /// <summary>
-        /// Download link of the log package.
-        /// You can open the link to download a .gz log package that contains all log files without extension.
+        /// Whether the user is a paid user
         /// </summary>
-        [JsonProperty("DomainLogs")]
-        public DomainLog[] DomainLogs{ get; set; }
+        [JsonProperty("IsPaidUsr")]
+        public bool? IsPaidUsr{ get; set; }
 
         /// <summary>
-        /// Total number of entries obtained
+        /// Number of resources being attacked
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("AttackingCount")]
+        public long? AttackingCount{ get; set; }
+
+        /// <summary>
+        /// Number of resource blocked
+        /// </summary>
+        [JsonProperty("BlockingCount")]
+        public long? BlockingCount{ get; set; }
+
+        /// <summary>
+        /// Number of expired resources
+        /// </summary>
+        [JsonProperty("ExpiredCount")]
+        public long? ExpiredCount{ get; set; }
+
+        /// <summary>
+        /// Total pending risk events
+        /// </summary>
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -49,8 +66,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "DomainLogs.", this.DomainLogs);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "IsPaidUsr", this.IsPaidUsr);
+            this.SetParamSimple(map, prefix + "AttackingCount", this.AttackingCount);
+            this.SetParamSimple(map, prefix + "BlockingCount", this.BlockingCount);
+            this.SetParamSimple(map, prefix + "ExpiredCount", this.ExpiredCount);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

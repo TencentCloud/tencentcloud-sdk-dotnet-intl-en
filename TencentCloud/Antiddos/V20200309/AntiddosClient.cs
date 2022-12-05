@@ -2453,6 +2453,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to query the information of pending risks at the account level.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePendingRiskInfoRequest"/></param>
+        /// <returns><see cref="DescribePendingRiskInfoResponse"/></returns>
+        public async Task<DescribePendingRiskInfoResponse> DescribePendingRiskInfo(DescribePendingRiskInfoRequest req)
+        {
+             JsonResponseModel<DescribePendingRiskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePendingRiskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePendingRiskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of pending risks at the account level.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePendingRiskInfoRequest"/></param>
+        /// <returns><see cref="DescribePendingRiskInfoResponse"/></returns>
+        public DescribePendingRiskInfoResponse DescribePendingRiskInfoSync(DescribePendingRiskInfoRequest req)
+        {
+             JsonResponseModel<DescribePendingRiskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePendingRiskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePendingRiskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to unbind an Anti-DDoS EIP.
         /// </summary>
         /// <param name="req"><see cref="DisassociateDDoSEipAddressRequest"/></param>

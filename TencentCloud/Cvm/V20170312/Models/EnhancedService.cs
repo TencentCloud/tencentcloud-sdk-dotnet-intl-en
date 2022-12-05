@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public RunMonitorServiceEnabled MonitorService{ get; set; }
 
         /// <summary>
-        /// Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+        /// Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
         /// </summary>
         [JsonProperty("AutomationService")]
         public RunAutomationServiceEnabled AutomationService{ get; set; }

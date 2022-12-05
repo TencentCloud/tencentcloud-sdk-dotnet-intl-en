@@ -76,6 +76,76 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ListenerCcThresholdList")]
         public ListenerCcThreholdConfig[] ListenerCcThresholdList{ get; set; }
 
+        /// <summary>
+        /// SYN traffic threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SynFloodThreshold")]
+        public ulong? SynFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// SYN packet threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SynFloodPktThreshold")]
+        public ulong? SynFloodPktThreshold{ get; set; }
+
+        /// <summary>
+        /// UDP traffic threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UdpFloodThreshold")]
+        public ulong? UdpFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// UDP packet threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UdpFloodPktThreshold")]
+        public ulong? UdpFloodPktThreshold{ get; set; }
+
+        /// <summary>
+        /// ACK traffic threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AckFloodThreshold")]
+        public ulong? AckFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// ACK packet threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AckFloodPktThreshold")]
+        public ulong? AckFloodPktThreshold{ get; set; }
+
+        /// <summary>
+        /// SYNACK traffic threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SynAckFloodThreshold")]
+        public ulong? SynAckFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// SYNACK packet threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SynAckFloodPktThreshold")]
+        public ulong? SynAckFloodPktThreshold{ get; set; }
+
+        /// <summary>
+        /// RST traffic threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RstFloodThreshold")]
+        public ulong? RstFloodThreshold{ get; set; }
+
+        /// <summary>
+        /// RST packet threshold
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RstFloodPktThreshold")]
+        public ulong? RstFloodPktThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +159,16 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
             this.SetParamArrayObj(map, prefix + "InstanceDetailList.", this.InstanceDetailList);
             this.SetParamArrayObj(map, prefix + "ListenerCcThresholdList.", this.ListenerCcThresholdList);
+            this.SetParamSimple(map, prefix + "SynFloodThreshold", this.SynFloodThreshold);
+            this.SetParamSimple(map, prefix + "SynFloodPktThreshold", this.SynFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "UdpFloodThreshold", this.UdpFloodThreshold);
+            this.SetParamSimple(map, prefix + "UdpFloodPktThreshold", this.UdpFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "AckFloodThreshold", this.AckFloodThreshold);
+            this.SetParamSimple(map, prefix + "AckFloodPktThreshold", this.AckFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "SynAckFloodThreshold", this.SynAckFloodThreshold);
+            this.SetParamSimple(map, prefix + "SynAckFloodPktThreshold", this.SynAckFloodPktThreshold);
+            this.SetParamSimple(map, prefix + "RstFloodThreshold", this.RstFloodThreshold);
+            this.SetParamSimple(map, prefix + "RstFloodPktThreshold", this.RstFloodPktThreshold);
         }
     }
 }

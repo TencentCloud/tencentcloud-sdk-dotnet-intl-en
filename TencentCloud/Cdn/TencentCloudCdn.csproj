@@ -68,6 +68,7 @@
     <Compile Include="V20180606\Models\AuthenticationTypeB.cs" />
     <Compile Include="V20180606\Models\AuthenticationTypeC.cs" />
     <Compile Include="V20180606\Models\AuthenticationTypeD.cs" />
+    <Compile Include="V20180606\Models\AvifAdapter.cs" />
     <Compile Include="V20180606\Models\AwsPrivateAccess.cs" />
     <Compile Include="V20180606\Models\BandwidthAlert.cs" />
     <Compile Include="V20180606\Models\BotCookie.cs" />
@@ -187,6 +188,7 @@
     <Compile Include="V20180606\Models\ManageClsTopicDomainsResponse.cs" />
     <Compile Include="V20180606\Models\MapInfo.cs" />
     <Compile Include="V20180606\Models\MaxAge.cs" />
+    <Compile Include="V20180606\Models\MaxAgeCodeRule.cs" />
     <Compile Include="V20180606\Models\MaxAgeRule.cs" />
     <Compile Include="V20180606\Models\OfflineCache.cs" />
     <Compile Include="V20180606\Models\Origin.cs" />

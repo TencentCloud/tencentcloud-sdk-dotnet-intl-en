@@ -61,6 +61,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
+        /// <summary>
+        /// User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16 KB. For more information on how to get the value of this parameter, see the commands you need to execute on startup for [Windows](https://intl.cloud.tencent.com/document/product/213/17526) or [Linux](https://intl.cloud.tencent.com/document/product/213/17525).
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
         }
     }
 }

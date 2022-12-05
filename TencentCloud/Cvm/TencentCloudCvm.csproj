@@ -232,6 +232,7 @@
     <Compile Include="V20170312\Models\StopInstancesRequest.cs" />
     <Compile Include="V20170312\Models\StopInstancesResponse.cs" />
     <Compile Include="V20170312\Models\StorageBlock.cs" />
+    <Compile Include="V20170312\Models\SyncImage.cs" />
     <Compile Include="V20170312\Models\SyncImagesRequest.cs" />
     <Compile Include="V20170312\Models\SyncImagesResponse.cs" />
     <Compile Include="V20170312\Models\SystemDisk.cs" />

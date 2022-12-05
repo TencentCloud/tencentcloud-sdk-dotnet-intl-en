@@ -54,6 +54,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("CheckExceptNullConnect")]
         public long? CheckExceptNullConnect{ get; set; }
 
+        /// <summary>
+        /// PoD protection. Values: `0` (disable), `1` (enable).
+        /// </summary>
+        [JsonProperty("PingOfDeath")]
+        public long? PingOfDeath{ get; set; }
+
+        /// <summary>
+        /// Teardrop protection. Values: `0` (disable), `1` (enable).
+        /// </summary>
+        [JsonProperty("TearDrop")]
+        public long? TearDrop{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "DropIcmp", this.DropIcmp);
             this.SetParamSimple(map, prefix + "DropOther", this.DropOther);
             this.SetParamSimple(map, prefix + "CheckExceptNullConnect", this.CheckExceptNullConnect);
+            this.SetParamSimple(map, prefix + "PingOfDeath", this.PingOfDeath);
+            this.SetParamSimple(map, prefix + "TearDrop", this.TearDrop);
         }
     }
 }

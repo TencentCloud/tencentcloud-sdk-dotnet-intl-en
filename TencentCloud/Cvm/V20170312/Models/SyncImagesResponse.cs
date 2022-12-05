@@ -25,6 +25,12 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ImageSet")]
+        public SyncImage[] ImageSet{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "ImageSet.", this.ImageSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

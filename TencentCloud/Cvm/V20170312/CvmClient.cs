@@ -1361,7 +1361,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// (Suspended) This API is used to query the information of regions. Due to platform policy, the update of this API has been temporarily stopped. Please try the new one as described in https://intl.cloud.tencent.com/document/product/1278/55255?from_cn_redirect=1
+        /// This API is suspended. To query the information of regions, use [DescribeZones](https://intl.cloud.tencent.com/document/product/1596/77929?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
         /// <returns><see cref="DescribeRegionsResponse"/></returns>
@@ -1381,7 +1381,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// (Suspended) This API is used to query the information of regions. Due to platform policy, the update of this API has been temporarily stopped. Please try the new one as described in https://intl.cloud.tencent.com/document/product/1278/55255?from_cn_redirect=1
+        /// This API is suspended. To query the information of regions, use [DescribeZones](https://intl.cloud.tencent.com/document/product/1596/77929?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
         /// <returns><see cref="DescribeRegionsResponse"/></returns>

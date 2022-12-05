@@ -21,27 +21,15 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCdnDomainLogsResponse : AbstractModel
+    public class AvifAdapter : AbstractModel
     {
         
         /// <summary>
-        /// Download link of the log package.
-        /// You can open the link to download a .gz log package that contains all log files without extension.
+        /// Switch. Valid values: `on`, `off`.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
-        [JsonProperty("DomainLogs")]
-        public DomainLog[] DomainLogs{ get; set; }
-
-        /// <summary>
-        /// Total number of entries obtained
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -49,9 +37,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "DomainLogs.", this.DomainLogs);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

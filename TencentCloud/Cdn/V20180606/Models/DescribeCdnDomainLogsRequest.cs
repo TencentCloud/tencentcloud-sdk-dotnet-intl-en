@@ -65,8 +65,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// The type of log to be downloaded.
-        /// access: access logs
+        /// Specifies the type of logs to download (only access logs supported).
+        /// `access`: Access logs.
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

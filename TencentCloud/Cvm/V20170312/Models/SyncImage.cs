@@ -15,33 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCdnDomainLogsResponse : AbstractModel
+    public class SyncImage : AbstractModel
     {
         
         /// <summary>
-        /// Download link of the log package.
-        /// You can open the link to download a .gz log package that contains all log files without extension.
+        /// 
         /// </summary>
-        [JsonProperty("DomainLogs")]
-        public DomainLog[] DomainLogs{ get; set; }
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
 
         /// <summary>
-        /// Total number of entries obtained
+        /// 
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -49,9 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "DomainLogs.", this.DomainLogs);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

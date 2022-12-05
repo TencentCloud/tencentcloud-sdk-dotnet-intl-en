@@ -1693,7 +1693,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// This API is used to query the list of all instance namespaces.
+        /// This API is used to query the list of all namespaces in an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllNamespacesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAllNamespacesResponse"/></returns>
@@ -1713,7 +1713,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// This API is used to query the list of all instance namespaces.
+        /// This API is used to query the list of all namespaces in an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllNamespacesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAllNamespacesResponse"/></returns>

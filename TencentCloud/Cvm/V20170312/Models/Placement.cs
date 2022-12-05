@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// ID of the project to which the instance belongs. To obtain the project IDs, you can call [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1) and look for the `projectId` fields in the response. If this parameter is not specified, the default project will be used.
+        /// ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` returned by [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1). If this is left empty, the default project is used.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
