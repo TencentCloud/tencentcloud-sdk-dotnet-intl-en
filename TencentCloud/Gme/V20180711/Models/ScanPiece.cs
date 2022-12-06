@@ -25,8 +25,8 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DumpUrl")]
         public string DumpUrl{ get; set; }
@@ -39,55 +39,55 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// Main non-compliant content type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MainType")]
         public string MainType{ get; set; }
 
         /// <summary>
-        /// Speech detection details
+        /// Voice detection details
         /// </summary>
         [JsonProperty("ScanDetail")]
         public ScanDetail[] ScanDetail{ get; set; }
 
         /// <summary>
-        /// GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
         /// Remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }
 
         /// <summary>
-        /// Offset time in milliseconds of segment in stream during stream detection
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Offset time of multipart in stream during stream detection (in milliseconds)
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Segment duration during stream detection
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Multipart duration during stream detection
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// Segment detection start time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Multipart detection start time
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PieceStartTime")]
         public ulong? PieceStartTime{ get; set; }

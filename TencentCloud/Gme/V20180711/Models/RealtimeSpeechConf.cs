@@ -25,13 +25,13 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Voice chat status. Valid values: open, close
+        /// Voice Chat status. Valid values: `open`, `close`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Voice chat sound quality. Valid value: `high`
+        /// Voice Chat sound quality. Valid value: `high`.
         /// </summary>
         [JsonProperty("Quality")]
         public string Quality{ get; set; }

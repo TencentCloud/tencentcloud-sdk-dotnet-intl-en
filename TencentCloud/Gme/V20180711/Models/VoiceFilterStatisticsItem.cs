@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Total duration of phrase filtering
+        /// Total duration of phrase filtering (in minutes)
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }

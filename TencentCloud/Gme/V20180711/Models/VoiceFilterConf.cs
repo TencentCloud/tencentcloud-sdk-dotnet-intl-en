@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Phrase filtering status. Valid values: open, close
+        /// Phrase Filtering status. Valid values: `open`, `close`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

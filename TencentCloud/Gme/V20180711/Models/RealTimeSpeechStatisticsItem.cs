@@ -25,37 +25,37 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// DAU in Mainland China
+        /// DAUs in the Chinese mainland
         /// </summary>
         [JsonProperty("MainLandDau")]
         public ulong? MainLandDau{ get; set; }
 
         /// <summary>
-        /// PCU in Mainland China
+        /// PCUs in the Chinese mainland
         /// </summary>
         [JsonProperty("MainLandPcu")]
         public ulong? MainLandPcu{ get; set; }
 
         /// <summary>
-        /// Total duration of use in Mainland China in minutes
+        /// Total duration of use in the Chinese mainland (in minutes)
         /// </summary>
         [JsonProperty("MainLandDuration")]
         public ulong? MainLandDuration{ get; set; }
 
         /// <summary>
-        /// DAU outside Mainland China
+        /// DAUs outside the Chinese mainland
         /// </summary>
         [JsonProperty("OverseaDau")]
         public ulong? OverseaDau{ get; set; }
 
         /// <summary>
-        /// PCU outside Mainland China
+        /// PCUs outside the Chinese mainland
         /// </summary>
         [JsonProperty("OverseaPcu")]
         public ulong? OverseaPcu{ get; set; }
 
         /// <summary>
-        /// Total duration of use outside Mainland China in minutes
+        /// Total duration of use outside the Chinese mainland (in minutes)
         /// </summary>
         [JsonProperty("OverseaDuration")]
         public ulong? OverseaDuration{ get; set; }

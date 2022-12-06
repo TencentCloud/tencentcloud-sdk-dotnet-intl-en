@@ -25,13 +25,13 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+        /// Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+        /// Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
         /// </summary>
         [JsonProperty("Rate")]
         public string Rate{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public string KeyWord{ get; set; }
 
         /// <summary>
-        /// Start time offset in milliseconds from 0 of keyword in audio
+        /// Start time offset of keyword from 0 in audio (in milliseconds)
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// End time offset in milliseconds from 0 of keyword in audio
+        /// End time offset of keyword from 0 in audio (in milliseconds)
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

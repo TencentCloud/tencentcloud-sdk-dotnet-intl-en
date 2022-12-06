@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string StatDate{ get; set; }
 
         /// <summary>
-        /// Statistics
+        /// Statistical value
         /// </summary>
         [JsonProperty("Data")]
         public ulong? Data{ get; set; }

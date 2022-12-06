@@ -25,39 +25,39 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
+        /// Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+        /// Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
         /// </summary>
         [JsonProperty("Scenes")]
         public string[] Scenes{ get; set; }
 
         /// <summary>
-        /// Whether it is a live stream. false: audio file detection, true: audio stream detection.
+        /// Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
         /// </summary>
         [JsonProperty("Live")]
         public bool? Live{ get; set; }
 
         /// <summary>
-        /// Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-        /// <li>DataId: unique data ID</li>
-        /// <li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
+        /// Voice detection task list. Up to 100 tasks can be added in the list. 
+        /// <li>`DataId`: Unique data ID</li>
+        /// <li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
         /// </summary>
         [JsonProperty("Tasks")]
         public Task[] Tasks{ get; set; }
 
         /// <summary>
-        /// Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+        /// Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
         /// </summary>
         [JsonProperty("Callback")]
         public string Callback{ get; set; }
 
         /// <summary>
-        /// The language. `jp` represents Japanese
+        /// Language. `jp`: Japanese
         /// </summary>
         [JsonProperty("Lang")]
         public string Lang{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Tencent Cloud project ID. Default value: 0, which means the default project
+        /// Tencent Cloud project ID. Default value: 0, which means that the default project is used.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Gme.V20180711.Models
         public string[] RegionList{ get; set; }
 
         /// <summary>
-        /// Configuration information of voice chat
+        /// Configuration information of Voice Chat
         /// </summary>
         [JsonProperty("RealtimeSpeechConf")]
         public RealtimeSpeechConf RealtimeSpeechConf{ get; set; }
 
         /// <summary>
-        /// Configuration information of voice messaging and speech-to-text
+        /// Configuration information of Voice Message Service
         /// </summary>
         [JsonProperty("VoiceMessageConf")]
         public VoiceMessageConf VoiceMessageConf{ get; set; }
 
         /// <summary>
-        /// Configuration information of phrase analysis
+        /// Configuration information of Voice Analysis Service
         /// </summary>
         [JsonProperty("VoiceFilterConf")]
         public VoiceFilterConf VoiceFilterConf{ get; set; }

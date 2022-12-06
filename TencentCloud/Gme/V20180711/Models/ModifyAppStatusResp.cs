@@ -25,13 +25,13 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// GME app ID
+        /// GME application ID
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// App status. Valid values: `open`, `close`
+        /// Application status. Valid values: `open`, `close`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

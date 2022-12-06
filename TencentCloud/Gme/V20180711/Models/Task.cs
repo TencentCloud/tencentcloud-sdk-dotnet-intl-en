@@ -31,19 +31,19 @@ namespace TencentCloud.Gme.V20180711.Models
         public string DataId{ get; set; }
 
         /// <summary>
-        /// URL-encoded data file URL, which is a pull address if the detected speech is a stream
+        /// URL-encoded data file URL, which is a pull address if the detected voice is a stream.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// GME voice chat room ID, which is entered during speech detection by GME voice chat
+        /// GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// GME voice chat user ID, which is entered during speech detection by GME voice chat
+        /// GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

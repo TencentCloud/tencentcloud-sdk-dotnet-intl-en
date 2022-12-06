@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// DAU of voice messaging and speech-to-text
+        /// DAUs of Voice Message Service
         /// </summary>
         [JsonProperty("Dau")]
         public ulong? Dau{ get; set; }

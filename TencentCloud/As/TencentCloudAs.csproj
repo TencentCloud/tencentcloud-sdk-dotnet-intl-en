@@ -160,6 +160,7 @@
     <Compile Include="V20180419\Models\NotificationTarget.cs" />
     <Compile Include="V20180419\Models\RemoveInstancesRequest.cs" />
     <Compile Include="V20180419\Models\RemoveInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="V20180419\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180419\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="V20180419\Models\ScaleInInstancesRequest.cs" />

@@ -36,6 +36,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("MonitorService")]
         public RunMonitorServiceEnabled MonitorService{ get; set; }
 
+        /// <summary>
+        /// Deprecated parameter.
+        /// </summary>
+        [JsonProperty("AutomationService")]
+        public RunAutomationServiceEnabled[] AutomationService{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutomationToolsService")]
+        public RunAutomationServiceEnabled AutomationToolsService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamObj(map, prefix + "SecurityService.", this.SecurityService);
             this.SetParamObj(map, prefix + "MonitorService.", this.MonitorService);
+            this.SetParamArrayObj(map, prefix + "AutomationService.", this.AutomationService);
+            this.SetParamObj(map, prefix + "AutomationToolsService.", this.AutomationToolsService);
         }
     }
 }

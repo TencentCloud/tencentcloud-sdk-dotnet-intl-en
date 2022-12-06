@@ -31,13 +31,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// Data start date in the format of yyyy-mm-dd, such as 2018-07-13
+        /// Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+        /// Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }

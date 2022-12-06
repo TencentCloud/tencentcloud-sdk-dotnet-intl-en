@@ -25,13 +25,13 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Application ID, which is generated and returned by the backend after application creation.
+        /// Application ID, which is generated and returned by the backend after the application creation.
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// Application status. Valid values: open, close
+        /// Application status. Valid values: `open`, `close`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

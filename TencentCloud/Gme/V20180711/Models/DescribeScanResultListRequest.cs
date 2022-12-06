@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+        /// Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string[] TaskIdList{ get; set; }
 
         /// <summary>
-        /// Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+        /// Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

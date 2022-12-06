@@ -21,21 +21,15 @@ namespace TencentCloud.Gme.V20180711.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeScanResultListResponse : AbstractModel
+    public class AudioTextStatisticsItem : AbstractModel
     {
         
         /// <summary>
-        /// Result of the voice detection task to be queried
+        /// Statistical value (in seconds)
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Data")]
-        public DescribeScanResult[] Data{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        public float? Data{ get; set; }
 
 
         /// <summary>
@@ -43,8 +37,7 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
         }
     }
 }

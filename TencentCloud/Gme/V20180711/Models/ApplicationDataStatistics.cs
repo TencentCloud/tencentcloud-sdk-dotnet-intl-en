@@ -31,73 +31,73 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// DAU data
+        /// Number of DAU metrics
         /// </summary>
         [JsonProperty("DauDataNum")]
         public ulong? DauDataNum{ get; set; }
 
         /// <summary>
-        /// DAU in Chinese mainland
+        /// DAUs in the Chinese mainland
         /// </summary>
         [JsonProperty("DauDataMainland")]
         public StatisticsItem[] DauDataMainland{ get; set; }
 
         /// <summary>
-        /// DAU outside Chinese mainland
+        /// DAUs outside the Chinese mainland
         /// </summary>
         [JsonProperty("DauDataOversea")]
         public StatisticsItem[] DauDataOversea{ get; set; }
 
         /// <summary>
-        /// Total DAU
+        /// Total DAUs
         /// </summary>
         [JsonProperty("DauDataSum")]
         public StatisticsItem[] DauDataSum{ get; set; }
 
         /// <summary>
-        /// Number of voice chat metrics
+        /// Number of Voice Chat metrics
         /// </summary>
         [JsonProperty("DurationDataNum")]
         public ulong? DurationDataNum{ get; set; }
 
         /// <summary>
-        /// Duration of voice chat in Chinese mainland in minutes
+        /// Duration of Voice Chat in the Chinese mainland (in minutes)
         /// </summary>
         [JsonProperty("DurationDataMainland")]
         public StatisticsItem[] DurationDataMainland{ get; set; }
 
         /// <summary>
-        /// Duration of voice chat outside Chinese mainland in minutes
+        /// Duration of Voice Chat outside the Chinese mainland (in minutes)
         /// </summary>
         [JsonProperty("DurationDataOversea")]
         public StatisticsItem[] DurationDataOversea{ get; set; }
 
         /// <summary>
-        /// Total duration of voice chat in minutes
+        /// Total duration of Voice Chat (in minutes)
         /// </summary>
         [JsonProperty("DurationDataSum")]
         public StatisticsItem[] DurationDataSum{ get; set; }
 
         /// <summary>
-        /// PCU data
+        /// Number of PCU metrics
         /// </summary>
         [JsonProperty("PcuDataNum")]
         public ulong? PcuDataNum{ get; set; }
 
         /// <summary>
-        /// PCU in Chinese mainland
+        /// PCUs in the Chinese mainland
         /// </summary>
         [JsonProperty("PcuDataMainland")]
         public StatisticsItem[] PcuDataMainland{ get; set; }
 
         /// <summary>
-        /// PCU outside Chinese mainland
+        /// PCUs outside the Chinese mainland
         /// </summary>
         [JsonProperty("PcuDataOversea")]
         public StatisticsItem[] PcuDataOversea{ get; set; }
 
         /// <summary>
-        /// Total PCU
+        /// Total PCUs
         /// </summary>
         [JsonProperty("PcuDataSum")]
         public StatisticsItem[] PcuDataSum{ get; set; }

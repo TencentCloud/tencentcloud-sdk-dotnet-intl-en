@@ -56,14 +56,14 @@ namespace TencentCloud.Gme.V20180711.Models
 
         /// <summary>
         /// Business return description
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
         /// Detection result, which will be returned if `Code` is 0
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanPiece")]
         public ScanPiece[] ScanPiece{ get; set; }
@@ -75,13 +75,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? ScanStartTime{ get; set; }
 
         /// <summary>
-        /// Speech detection scenario, which corresponds to the `Scene` at the time of request
+        /// Voice detection scenario, which corresponds to the `Scene` at the time of request
         /// </summary>
         [JsonProperty("Scenes")]
         public string[] Scenes{ get; set; }
 
         /// <summary>
-        /// Speech detection task ID, which is assigned by the backend
+        /// Voice detection task ID, which is assigned by the backend
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -93,10 +93,10 @@ namespace TencentCloud.Gme.V20180711.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Detection task execution result task. Valid values:
-        /// <li>Start: task started</li>
-        /// <li>Success: task ended successfully</li>
-        /// <li>Error: exceptional</li>
+        /// Detection task execution result status. Valid values:
+        /// <li>Start: Task started</li>
+        /// <li>Success: Task ended successfully</li>
+        /// <li>Error: An exception occurs</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

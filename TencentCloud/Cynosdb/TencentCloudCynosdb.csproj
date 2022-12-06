@@ -168,6 +168,7 @@
     <Compile Include="V20190107\Models\SwitchClusterZoneRequest.cs" />
     <Compile Include="V20190107\Models\SwitchClusterZoneResponse.cs" />
     <Compile Include="V20190107\Models\Tag.cs" />
+    <Compile Include="V20190107\Models\TemplateParamInfo.cs" />
     <Compile Include="V20190107\Models\TradePrice.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceResponse.cs" />

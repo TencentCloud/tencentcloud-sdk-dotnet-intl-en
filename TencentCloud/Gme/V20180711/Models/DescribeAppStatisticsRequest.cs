@@ -31,19 +31,19 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+        /// Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+        /// Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+        /// List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
         /// </summary>
         [JsonProperty("Services")]
         public string[] Services{ get; set; }

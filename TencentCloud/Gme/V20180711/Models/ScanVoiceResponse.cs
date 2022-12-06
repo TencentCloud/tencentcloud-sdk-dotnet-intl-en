@@ -25,8 +25,8 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-        /// <li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+        /// Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+        /// <li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
         /// </summary>
         [JsonProperty("Data")]
         public ScanVoiceResult[] Data{ get; set; }
