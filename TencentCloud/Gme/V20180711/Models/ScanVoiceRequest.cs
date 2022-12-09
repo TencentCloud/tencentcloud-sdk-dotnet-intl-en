@@ -57,7 +57,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string Callback{ get; set; }
 
         /// <summary>
-        /// Language. `jp`: Japanese
+        /// Language. Chinese will be used if it is left empty.
         /// </summary>
         [JsonProperty("Lang")]
         public string Lang{ get; set; }
