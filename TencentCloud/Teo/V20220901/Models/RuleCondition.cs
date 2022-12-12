@@ -35,13 +35,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Operator{ get; set; }
 
         /// <summary>
-        /// Match type. Valid values:
+        /// The match type. Values:
         /// <li>`filename`: File name</li>
         /// <li>`extension`: File extension</li>
         /// <li>`host`: Host</li>
         /// <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
         /// <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-        /// <li>`query_string`: Query string in the URL</li>
+        /// <li>`query_string`: Query string in the request URL</li>
         /// <li>`request_header`: HTTP request header</li>
         /// </summary>
         [JsonProperty("Target")]
@@ -54,7 +54,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>When `Target=all`, it indicates any site request.</li>
         /// <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
         /// <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-        /// <li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+        /// <li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
         /// <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
         /// <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
         /// <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -77,7 +77,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the parameter name is case insensitive. Default value: `false`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IgnoreNameCase")]
         public bool? IgnoreNameCase{ get; set; }

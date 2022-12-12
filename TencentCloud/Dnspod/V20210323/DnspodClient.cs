@@ -293,7 +293,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// This API is used to get DNS records of a domain.
+        /// This API is used to get the DNS records of a domain.
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
         /// <returns><see cref="DescribeRecordListResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
-        /// This API is used to get DNS records of a domain.
+        /// This API is used to get the DNS records of a domain.
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
         /// <returns><see cref="DescribeRecordListResponse"/></returns>

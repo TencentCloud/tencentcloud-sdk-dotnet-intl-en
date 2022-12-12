@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+        /// The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// The split zone name.
+        /// The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
         /// </summary>
         [JsonProperty("RecordLine")]
         public string RecordLine{ get; set; }
 
         /// <summary>
-        /// The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
+        /// The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
         /// </summary>
         [JsonProperty("RecordLineId")]
         public string RecordLineId{ get; set; }
 
         /// <summary>
-        /// The group ID.
+        /// The group ID passed in to get DNS records in the group.
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }

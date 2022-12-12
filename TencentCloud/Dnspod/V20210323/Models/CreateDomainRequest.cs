@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Domain group ID
+        /// The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }

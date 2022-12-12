@@ -49,13 +49,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// Record ID.
+        /// The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
         /// </summary>
         [JsonProperty("RecordId")]
         public ulong? RecordId{ get; set; }
 
         /// <summary>
-        /// Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+        /// The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
         /// </summary>
         [JsonProperty("DomainId")]
         public ulong? DomainId{ get; set; }

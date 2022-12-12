@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// The access mode. Values:
         /// <li>`full`: Access through a name server.</li>
-        /// <li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+        /// <li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
