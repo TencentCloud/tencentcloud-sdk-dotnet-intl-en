@@ -63,6 +63,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
+        /// <summary>
+        /// The resource ID list for batch configuration change.
+        /// </summary>
+        [JsonProperty("ResourceIdList")]
+        public string[] ResourceIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +81,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamArraySimple(map, prefix + "ResourceIdList.", this.ResourceIdList);
         }
     }
 }

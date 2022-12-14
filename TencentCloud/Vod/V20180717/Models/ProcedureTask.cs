@@ -142,6 +142,20 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// The operator. Valid values:
+        /// <li>`SYSTEM`: The task is triggered by the system.</li>
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
+        /// <summary>
+        /// The operation type. Valid values:
+        /// <li>`TSC`: TSC-based smart bitrate reduction</li>
+        /// </summary>
+        [JsonProperty("OperationType")]
+        public string OperationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +178,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
         }
     }
 }

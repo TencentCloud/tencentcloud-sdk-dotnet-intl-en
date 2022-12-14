@@ -25,27 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Product ID. Different product IDs represent different EMR product versions. Valid values:
-        /// <li>1: EMR v1.3.1</li>
-        /// <li>2: EMR v2.0.1</li>
-        /// <li>4: EMR v2.1.0</li>
-        /// <li>7: EMR v3.0.0</li>
-        /// <li>9: EMR v2.2.0</li>
-        /// <li>11: ClickHouse v1.0.0</li>
-        /// <li>13: Druid v1.0.0</li>
-        /// <li>15: EMR v2.2.1</li>
+        /// The product ID. Different product IDs represent different EMR product versions. Valid values:
         /// <li>16: EMR v2.3.0</li>
-        /// <li>17: ClickHouse v1.1.0</li>
-        /// <li>19: EMR v2.4.0</li>
         /// <li>20: EMR v2.5.0</li>
-        /// <li>22: ClickHouse v1.2.0</li>
-        /// <li>24: EMR TianQiong v1.0.0</li>
         /// <li>25: EMR v3.1.0</li>
-        /// <li>26: Doris v1.0.0</li>
         /// <li>27: Kafka v1.0.0</li>
-        /// <li>28: EMR v3.2.0</li>
-        /// <li>29: EMR v2.5.1</li>
         /// <li>30: EMR v2.6.0</li>
+        /// <li>33: EMR v3.2.1</li>
+        /// <li>34: EMR v3.3.0</li>
+        /// <li>36: StarRocks v1.0.0</li>
+        /// <li>37: EMR v3.4.0</li>
+        /// <li>38: EMR v2.7.0</li>
+        /// <li>39: StarRocks v1.1.0</li>
+        /// <li>41: Druid v1.1.0</li>
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }

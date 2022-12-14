@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Password
+        /// The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Public Key
+        /// The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
         /// </summary>
         [JsonProperty("PublicKeyId")]
         public string PublicKeyId{ get; set; }

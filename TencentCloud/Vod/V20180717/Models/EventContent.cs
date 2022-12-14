@@ -181,11 +181,17 @@ namespace TencentCloud.Vod.V20180717.Models
         public ReviewAudioVideoTask ReviewAudioVideoCompleteEvent{ get; set; }
 
         /// <summary>
-        /// The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+        /// This parameter is invalid now.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReduceMediaBitrateCompleteEvent")]
         public ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DescribeFileAttributesCompleteEvent")]
+        public DescribeFileAttributesTask DescribeFileAttributesCompleteEvent{ get; set; }
 
 
         /// <summary>
@@ -214,6 +220,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ExtractTraceWatermarkCompleteEvent.", this.ExtractTraceWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);
+            this.SetParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);
         }
     }
 }

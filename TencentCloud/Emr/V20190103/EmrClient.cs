@@ -135,7 +135,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the information of a hardware node.
+        /// This API is used to query the information of nodes in a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
         /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
@@ -155,7 +155,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the information of a hardware node.
+        /// This API is used to query the information of nodes in a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
         /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
@@ -215,7 +215,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query EMR instances.
+        /// This API is used to query the information of instances in a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -235,7 +235,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query EMR instances.
+        /// This API is used to query the information of instances in a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -255,7 +255,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query EMR cluster instances.
+        /// This API is used to query the cluster list.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesListRequest"/></param>
         /// <returns><see cref="DescribeInstancesListResponse"/></returns>
@@ -275,7 +275,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query EMR cluster instances.
+        /// This API is used to query the cluster list.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesListRequest"/></param>
         /// <returns><see cref="DescribeInstancesListResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to get data from the YARN Resource Scheduling page.
+        /// This API is used to query the data of YARN Resource Scheduling.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to get data from the YARN Resource Scheduling page.
+        /// This API is used to query the data of YARN Resource Scheduling.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>

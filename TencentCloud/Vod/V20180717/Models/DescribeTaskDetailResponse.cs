@@ -36,7 +36,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>FastClipMedia: Quick clipping</li>
         /// <li>RemoveWatermarkTask: Watermark removal</li>
         /// <li> ReviewAudioVideo: Moderation</li>
-        /// <li> ReduceMediaBitrate: Bitrate reduction</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -174,11 +173,17 @@ namespace TencentCloud.Vod.V20180717.Models
         public ReviewAudioVideoTask ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
-        /// The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+        /// This parameter is invalid now.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReduceMediaBitrateTask")]
         public ReduceMediaBitrateTask ReduceMediaBitrateTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DescribeFileAttributesTask")]
+        public DescribeFileAttributesTask DescribeFileAttributesTask{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -213,6 +218,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
+            this.SetParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

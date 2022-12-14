@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Total cost before discount; for example, 24650 indicates 246.5 CNY
+        /// Published price in cents. For example, 24650 indicates 246.5 USD.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Actual amount payable; for example, 24650 indicates 246.5 CNY
+        /// Discounted total amount. For example, 24650 indicates 246.5 USD.
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }

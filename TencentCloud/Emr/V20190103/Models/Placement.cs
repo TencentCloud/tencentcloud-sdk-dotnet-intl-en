@@ -25,16 +25,16 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public long? ProjectId{ get; set; }
-
-        /// <summary>
-        /// AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
+        /// The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
+
+        /// <summary>
+        /// The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

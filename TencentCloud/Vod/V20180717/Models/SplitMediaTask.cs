@@ -74,6 +74,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// The progress of a video splitting task. Value range: 0-100.
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "FileInfoSet.", this.FileInfoSet);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

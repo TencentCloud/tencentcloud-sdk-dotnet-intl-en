@@ -360,6 +360,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ServiceClient")]
         public string ServiceClient{ get; set; }
 
+        /// <summary>
+        /// Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DisableApiTermination")]
+        public bool? DisableApiTermination{ get; set; }
+
+        /// <summary>
+        /// The billing version. Valid values: `0` (original billing) and `1` (new billing)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TradeVersion")]
+        public long? TradeVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -414,6 +428,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsFederation", this.IsFederation);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
+            this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
         }
     }
 }

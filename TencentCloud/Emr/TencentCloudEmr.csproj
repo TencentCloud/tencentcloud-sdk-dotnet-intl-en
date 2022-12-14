@@ -26,12 +26,12 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
 
@@ -99,6 +99,7 @@
     <Compile Include="V20190103\Models\PodSpec.cs" />
     <Compile Include="V20190103\Models\PodVolume.cs" />
     <Compile Include="V20190103\Models\PreExecuteFileSettings.cs" />
+    <Compile Include="V20190103\Models\PriceDetail.cs" />
     <Compile Include="V20190103\Models\PriceResource.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
     <Compile Include="V20190103\Models\ScaleOutInstanceRequest.cs" />

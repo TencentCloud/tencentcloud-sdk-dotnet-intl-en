@@ -26,12 +26,12 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
 
@@ -197,6 +197,8 @@
     <Compile Include="V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="V20180717\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateImageProcessingTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateImageProcessingTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateImageSpriteTask2017.cs" />
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
@@ -234,6 +236,8 @@
     <Compile Include="V20180717\Models\DeleteClassResponse.cs" />
     <Compile Include="V20180717\Models\DeleteContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteImageProcessingTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteImageProcessingTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteMediaRequest.cs" />
@@ -280,6 +284,10 @@
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeFileAttributesTask.cs" />
+    <Compile Include="V20180717\Models\DescribeFileAttributesTaskOutput.cs" />
+    <Compile Include="V20180717\Models\DescribeImageProcessingTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeImageProcessingTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageReviewUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
@@ -357,7 +365,11 @@
     <Compile Include="V20180717\Models\HighlightSegmentItem.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\ImageCenterCut.cs" />
+    <Compile Include="V20180717\Models\ImageOperation.cs" />
+    <Compile Include="V20180717\Models\ImageProcessingTemplate.cs" />
     <Compile Include="V20180717\Models\ImageReviewUsageDataItem.cs" />
+    <Compile Include="V20180717\Models\ImageScale.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTemplate.cs" />
     <Compile Include="V20180717\Models\ImageTransform.cs" />

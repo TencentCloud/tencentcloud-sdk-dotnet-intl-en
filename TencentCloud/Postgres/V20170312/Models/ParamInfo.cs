@@ -49,8 +49,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string ParamValueType{ get; set; }
 
         /// <summary>
-        /// Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Unit of the parameter value. If the parameter has no unit, this field will return null.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
@@ -70,18 +70,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Value range of the enum parameter
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("EnumValue")]
-        public string[] EnumValue{ get; set; }
-
-        /// <summary>
         /// The maximum value of the `integer` or `real` parameter
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Max")]
         public float? Max{ get; set; }
+
+        /// <summary>
+        /// Value range of the enum parameter
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnumValue")]
+        public string[] EnumValue{ get; set; }
 
         /// <summary>
         /// The minimum value of the `integer` or `real` parameter
@@ -146,6 +146,27 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("LastModifyTime")]
         public string LastModifyTime{ get; set; }
 
+        /// <summary>
+        /// Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StandbyRelated")]
+        public long? StandbyRelated{ get; set; }
+
+        /// <summary>
+        /// Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VersionRelationSet")]
+        public ParamVersionRelation[] VersionRelationSet{ get; set; }
+
+        /// <summary>
+        /// Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SpecRelationSet")]
+        public ParamSpecRelation[] SpecRelationSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,8 +179,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
             this.SetParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
-            this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
             this.SetParamSimple(map, prefix + "Max", this.Max);
+            this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
             this.SetParamSimple(map, prefix + "Min", this.Min);
             this.SetParamSimple(map, prefix + "ParamDescriptionCH", this.ParamDescriptionCH);
             this.SetParamSimple(map, prefix + "ParamDescriptionEN", this.ParamDescriptionEN);
@@ -169,6 +190,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "SpecRelated", this.SpecRelated);
             this.SetParamSimple(map, prefix + "Advanced", this.Advanced);
             this.SetParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+            this.SetParamSimple(map, prefix + "StandbyRelated", this.StandbyRelated);
+            this.SetParamArrayObj(map, prefix + "VersionRelationSet.", this.VersionRelationSet);
+            this.SetParamArrayObj(map, prefix + "SpecRelationSet.", this.SpecRelationSet);
         }
     }
 }

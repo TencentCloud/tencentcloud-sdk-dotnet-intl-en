@@ -527,6 +527,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to create a custom image processing template. You can create up to 16 templates, and each template can contain up to three operations, for example, cropping, scaling, and cropping again.
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageProcessingTemplateRequest"/></param>
+        /// <returns><see cref="CreateImageProcessingTemplateResponse"/></returns>
+        public async Task<CreateImageProcessingTemplateResponse> CreateImageProcessingTemplate(CreateImageProcessingTemplateRequest req)
+        {
+             JsonResponseModel<CreateImageProcessingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImageProcessingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageProcessingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a custom image processing template. You can create up to 16 templates, and each template can contain up to three operations, for example, cropping, scaling, and cropping again.
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageProcessingTemplateRequest"/></param>
+        /// <returns><see cref="CreateImageProcessingTemplateResponse"/></returns>
+        public CreateImageProcessingTemplateResponse CreateImageProcessingTemplateSync(CreateImageProcessingTemplateRequest req)
+        {
+             JsonResponseModel<CreateImageProcessingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImageProcessingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageProcessingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateImageSpriteTemplateRequest"/></param>
@@ -1252,6 +1292,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteContentReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an image processing template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageProcessingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteImageProcessingTemplateResponse"/></returns>
+        public async Task<DeleteImageProcessingTemplateResponse> DeleteImageProcessingTemplate(DeleteImageProcessingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteImageProcessingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImageProcessingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageProcessingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an image processing template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageProcessingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteImageProcessingTemplateResponse"/></returns>
+        public DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplateSync(DeleteImageProcessingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteImageProcessingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImageProcessingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageProcessingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2222,6 +2302,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDrmKeyProviderInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDrmKeyProviderInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query image processing templates. You can specify the filters as well as the offset to start returning records from.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageProcessingTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeImageProcessingTemplatesResponse"/></returns>
+        public async Task<DescribeImageProcessingTemplatesResponse> DescribeImageProcessingTemplates(DescribeImageProcessingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeImageProcessingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageProcessingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageProcessingTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query image processing templates. You can specify the filters as well as the offset to start returning records from.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageProcessingTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeImageProcessingTemplatesResponse"/></returns>
+        public DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplatesSync(DescribeImageProcessingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeImageProcessingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageProcessingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageProcessingTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4351,17 +4471,11 @@ namespace TencentCloud.Vod.V20180717
         /// 5. Image sprite generating
         /// 6. Taking a screenshot to use as the thumbnail
         /// 7. Adaptive bitrate streaming and encryption
-        /// 8. Intelligent recognition of pornographic, terrorism, and politically sensitive content
-        /// 9. Intelligent content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
-        /// 10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
+        /// 8. Detecting pornographic, terrorist, and politically sensitive content
+        /// 9. Content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
+        /// 10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
         /// 
         /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
-        /// 
-        /// A digital watermark has the following restrictions:
-        /// <li>Digital watermarks can only be image watermarks.</li>
-        /// <li>Digital watermarks must be looped.</li>
-        /// <li>If you use digital watermarks, the output video must be in HLS format.</li>
-        /// <li>Digital watermarks can only be displayed in the upper half of a video.</li>
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -4389,17 +4503,11 @@ namespace TencentCloud.Vod.V20180717
         /// 5. Image sprite generating
         /// 6. Taking a screenshot to use as the thumbnail
         /// 7. Adaptive bitrate streaming and encryption
-        /// 8. Intelligent recognition of pornographic, terrorism, and politically sensitive content
-        /// 9. Intelligent content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
-        /// 10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
+        /// 8. Detecting pornographic, terrorist, and politically sensitive content
+        /// 9. Content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
+        /// 10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
         /// 
         /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
-        /// 
-        /// A digital watermark has the following restrictions:
-        /// <li>Digital watermarks can only be image watermarks.</li>
-        /// <li>Digital watermarks must be looped.</li>
-        /// <li>If you use digital watermarks, the output video must be in HLS format.</li>
-        /// <li>Digital watermarks can only be displayed in the upper half of a video.</li>
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
