@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Instance to be renewed.
+        /// IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Whether to renew the data disk
+        /// Whether to renew the data disk. Default: `false`.
         /// </summary>
         [JsonProperty("RenewDataDisk")]
         public bool? RenewDataDisk{ get; set; }
 
         /// <summary>
-        /// Whether the data disk has the same expiration time as the instance
+        /// Whether to align the data disk expiration with the instance expiration time. Default: `false`.
         /// </summary>
         [JsonProperty("AlignInstanceExpiredTime")]
         public bool? AlignInstanceExpiredTime{ get; set; }

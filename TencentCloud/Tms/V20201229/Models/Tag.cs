@@ -15,28 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Tms.V20201229.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OriginPullTimeout : AbstractModel
+    public class Tag : AbstractModel
     {
         
         /// <summary>
-        /// The origin-pull connection timeout (in seconds). Valid range: 5-60.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Returns the hit keywords.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ConnectTimeout")]
-        public ulong? ConnectTimeout{ get; set; }
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
 
         /// <summary>
-        /// The origin-pull receipt timeout (in seconds). Valid range: 10-300.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Returns the sub-tags.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ReceiveTimeout")]
-        public ulong? ReceiveTimeout{ get; set; }
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
+        /// <summary>
+        /// Returns the score for the sub-label
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Score")]
+        public long? Score{ get; set; }
 
 
         /// <summary>
@@ -44,8 +51,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
-            this.SetParamSimple(map, prefix + "ReceiveTimeout", this.ReceiveTimeout);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
         }
     }
 }

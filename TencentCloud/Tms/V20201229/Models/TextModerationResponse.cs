@@ -91,6 +91,13 @@ namespace TencentCloud.Tms.V20201229.Models
         public string SubLabel{ get; set; }
 
         /// <summary>
+        /// Returns the context text.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ContextText")]
+        public string ContextText{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -112,6 +119,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "DataId", this.DataId);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamSimple(map, prefix + "ContextText", this.ContextText);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

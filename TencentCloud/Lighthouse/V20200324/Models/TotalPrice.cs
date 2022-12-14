@@ -15,28 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OriginPullTimeout : AbstractModel
+    public class TotalPrice : AbstractModel
     {
         
         /// <summary>
-        /// The origin-pull connection timeout (in seconds). Valid range: 5-60.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Total original price
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ConnectTimeout")]
-        public ulong? ConnectTimeout{ get; set; }
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// The origin-pull receipt timeout (in seconds). Valid range: 10-300.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Total discounted price
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ReceiveTimeout")]
-        public ulong? ReceiveTimeout{ get; set; }
+        [JsonProperty("DiscountPrice")]
+        public float? DiscountPrice{ get; set; }
 
 
         /// <summary>
@@ -44,8 +44,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
-            this.SetParamSimple(map, prefix + "ReceiveTimeout", this.ReceiveTimeout);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         }
     }
 }

@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OriginPullTimeout : AbstractModel
+    public class Scene : AbstractModel
     {
         
         /// <summary>
-        /// The origin-pull connection timeout (in seconds). Valid range: 5-60.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Scene ID
         /// </summary>
-        [JsonProperty("ConnectTimeout")]
-        public ulong? ConnectTimeout{ get; set; }
+        [JsonProperty("SceneId")]
+        public string SceneId{ get; set; }
 
         /// <summary>
-        /// The origin-pull receipt timeout (in seconds). Valid range: 10-300.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Display name of the scene
         /// </summary>
-        [JsonProperty("ReceiveTimeout")]
-        public ulong? ReceiveTimeout{ get; set; }
+        [JsonProperty("DisplayName")]
+        public string DisplayName{ get; set; }
+
+        /// <summary>
+        /// Scene description
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
-            this.SetParamSimple(map, prefix + "ReceiveTimeout", this.ReceiveTimeout);
+            this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
+            this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

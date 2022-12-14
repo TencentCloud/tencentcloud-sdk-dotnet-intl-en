@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OriginPullTimeout : AbstractModel
+    public class DescribeAllScenesResponse : AbstractModel
     {
         
         /// <summary>
-        /// The origin-pull connection timeout (in seconds). Valid range: 5-60.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// List of scenes
         /// </summary>
-        [JsonProperty("ConnectTimeout")]
-        public ulong? ConnectTimeout{ get; set; }
+        [JsonProperty("SceneInfoSet")]
+        public SceneInfo[] SceneInfoSet{ get; set; }
 
         /// <summary>
-        /// The origin-pull receipt timeout (in seconds). Valid range: 10-300.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Total count of scenes
         /// </summary>
-        [JsonProperty("ReceiveTimeout")]
-        public ulong? ReceiveTimeout{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
-            this.SetParamSimple(map, prefix + "ReceiveTimeout", this.ReceiveTimeout);
+            this.SetParamArrayObj(map, prefix + "SceneInfoSet.", this.SceneInfoSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

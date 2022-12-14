@@ -48,6 +48,7 @@
     <Compile Include="V20201229\Models\DetailResults.cs" />
     <Compile Include="V20201229\Models\Device.cs" />
     <Compile Include="V20201229\Models\RiskDetails.cs" />
+    <Compile Include="V20201229\Models\Tag.cs" />
     <Compile Include="V20201229\Models\TextModerationRequest.cs" />
     <Compile Include="V20201229\Models\TextModerationResponse.cs" />
     <Compile Include="V20201229\Models\User.cs" />

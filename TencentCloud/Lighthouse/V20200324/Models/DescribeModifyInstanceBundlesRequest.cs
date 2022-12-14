@@ -31,15 +31,23 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Filter list.
-        /// <li>bundle-id</li>Filter by **package ID**.
+        /// Filter list
+        /// <li>bundle-id</li>Filter by the **bundle ID**.
         /// Type: String
-        /// Required: no
-        /// <li>support-platform-type</li>Filter by **system type**.
-        /// Valid values: LINUX_UNIX (Linux/Unix), WINDOWS ( Windows)
+        /// Required: No
+        /// <li>support-platform-type</li>Filter by the **OS type**.
+        /// Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
         /// Type: String
-        /// Required: no
-        /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+        /// Required: No
+        /// <li>bundle-type</li>Filter by the **bundle type**.
+        /// Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+        /// Type: String
+        /// Required: No
+        /// <li>bundle-state</li>Filter by the **bundle status**.
+        /// Valid values: `ONLINE`, `OFFLINE`
+        /// Type: String
+        /// Required: No
+        /// Each request can contain up to 10 `Filters`, and each filter can have up to 5 `Filter.Values`.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

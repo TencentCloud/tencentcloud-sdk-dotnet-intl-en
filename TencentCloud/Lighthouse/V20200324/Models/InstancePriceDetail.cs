@@ -15,28 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OriginPullTimeout : AbstractModel
+    public class InstancePriceDetail : AbstractModel
     {
         
         /// <summary>
-        /// The origin-pull connection timeout (in seconds). Valid range: 5-60.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Instance ID.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
-        [JsonProperty("ConnectTimeout")]
-        public ulong? ConnectTimeout{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The origin-pull receipt timeout (in seconds). Valid range: 10-300.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Price query information.
+        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
-        [JsonProperty("ReceiveTimeout")]
-        public ulong? ReceiveTimeout{ get; set; }
+        [JsonProperty("InstancePrice")]
+        public InstancePrice InstancePrice{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DiscountDetail")]
+        public DiscountDetail[] DiscountDetail{ get; set; }
 
 
         /// <summary>
@@ -44,8 +50,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
-            this.SetParamSimple(map, prefix + "ReceiveTimeout", this.ReceiveTimeout);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
+            this.SetParamArrayObj(map, prefix + "DiscountDetail.", this.DiscountDetail);
         }
     }
 }

@@ -38,8 +38,8 @@ namespace TencentCloud.Tms.V20201229.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
@@ -79,6 +79,13 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// Returns the keywords, label, sub-label and the score.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "LibId", this.LibId);
             this.SetParamSimple(map, prefix + "LibName", this.LibName);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

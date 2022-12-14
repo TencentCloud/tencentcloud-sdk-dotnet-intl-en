@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Price query information.
+        /// Price information. It defaults to the price information of the first instance in the list.
         /// </summary>
         [JsonProperty("Price")]
         public Price Price{ get; set; }
@@ -36,6 +36,19 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         [JsonProperty("DataDiskPriceSet")]
         public DataDiskPrice[] DataDiskPriceSet{ get; set; }
+
+        /// <summary>
+        /// Price list of the instances to be renewed.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("InstancePriceDetailSet")]
+        public InstancePriceDetail[] InstancePriceDetailSet{ get; set; }
+
+        /// <summary>
+        /// Total price
+        /// </summary>
+        [JsonProperty("TotalPrice")]
+        public TotalPrice TotalPrice{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,6 +64,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamObj(map, prefix + "Price.", this.Price);
             this.SetParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+            this.SetParamArrayObj(map, prefix + "InstancePriceDetailSet.", this.InstancePriceDetailSet);
+            this.SetParamObj(map, prefix + "TotalPrice.", this.TotalPrice);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

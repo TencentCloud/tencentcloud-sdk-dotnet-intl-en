@@ -80,6 +80,8 @@
     <Compile Include="V20200324\Models\DeleteSnapshotsRequest.cs" />
     <Compile Include="V20200324\Models\DeleteSnapshotsResponse.cs" />
     <Compile Include="V20200324\Models\DeniedAction.cs" />
+    <Compile Include="V20200324\Models\DescribeAllScenesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeAllScenesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintInstancesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintInstancesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintsRequest.cs" />
@@ -128,6 +130,8 @@
     <Compile Include="V20200324\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeResetInstanceBlueprintsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeResetInstanceBlueprintsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeScenesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeScenesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeSnapshotsDeniedActionsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeSnapshotsDeniedActionsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeSnapshotsRequest.cs" />
@@ -171,6 +175,7 @@
     <Compile Include="V20200324\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20200324\Models\InstanceDeniedActions.cs" />
     <Compile Include="V20200324\Models\InstancePrice.cs" />
+    <Compile Include="V20200324\Models\InstancePriceDetail.cs" />
     <Compile Include="V20200324\Models\InstanceReturnable.cs" />
     <Compile Include="V20200324\Models\InstanceTrafficPackage.cs" />
     <Compile Include="V20200324\Models\InternetAccessible.cs" />
@@ -209,6 +214,8 @@
     <Compile Include="V20200324\Models\ResetInstanceResponse.cs" />
     <Compile Include="V20200324\Models\ResetInstancesPasswordRequest.cs" />
     <Compile Include="V20200324\Models\ResetInstancesPasswordResponse.cs" />
+    <Compile Include="V20200324\Models\Scene.cs" />
+    <Compile Include="V20200324\Models\SceneInfo.cs" />
     <Compile Include="V20200324\Models\Snapshot.cs" />
     <Compile Include="V20200324\Models\SnapshotDeniedActions.cs" />
     <Compile Include="V20200324\Models\Software.cs" />
@@ -223,6 +230,7 @@
     <Compile Include="V20200324\Models\TerminateDisksResponse.cs" />
     <Compile Include="V20200324\Models\TerminateInstancesRequest.cs" />
     <Compile Include="V20200324\Models\TerminateInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\TotalPrice.cs" />
     <Compile Include="V20200324\Models\TrafficPackage.cs" />
     <Compile Include="V20200324\Models\ZoneInfo.cs" />
   </ItemGroup>

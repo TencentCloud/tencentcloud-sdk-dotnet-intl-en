@@ -44,28 +44,28 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// Filter list
-        /// <li>blueprint-id</li>Filter by **image ID**.
+        /// <li>blueprint-id</li>Filter by the **image ID**.
         /// Type: String
         /// Required: no
-        /// <li>blueprint-type</li>Filter by **image type**.
+        /// <li>blueprint-type</li>Filter by the **image type**.
         /// Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
         /// Type: String
         /// Required: no
-        /// <li>platform-type</li>Filter by **image operating system**.
+        /// <li>platform-type</li>Filter by the **image operating system**.
         /// Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
         /// Type: String
         /// Required: no
-        /// <li>blueprint-name</li>Filter by **image name**.
+        /// <li>blueprint-name</li>Filter by the **image name**.
         /// Type: String
         /// Required: no
-        /// <li>blueprint-state</li>Filter by **image status**.
+        /// <li>blueprint-state</li>Filter by the **image status**.
         /// Type: String
         /// Required: no
-        /// <li>scene-id</li>Filter by **scene ID**.
+        /// <li>scene-id</li>Filter by the **scene ID**.
         /// Type: String
         /// Required: no
         /// 
-        /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+        /// Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

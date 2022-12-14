@@ -43,14 +43,14 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter list
+        /// Filter list.
         /// <li>key-id</li>Filter by **key pair ID**.
         /// Type: String
         /// Required: no
-        /// <li>key-name</li>Filter by **key pair name**.
+        /// <li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
         /// Type: String
         /// Required: no
-        /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+        /// Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
