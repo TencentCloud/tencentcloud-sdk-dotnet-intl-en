@@ -15,49 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StepTip : AbstractModel
+    public class DCNReplicaConfig : AbstractModel
     {
         
         /// <summary>
-        /// Error code
+        /// DCN running status. Valid values: `START` (running), `STOP` (pause)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Code")]
-        public string Code{ get; set; }
+        [JsonProperty("RoReplicationMode")]
+        public string RoReplicationMode{ get; set; }
 
         /// <summary>
-        /// Error message
+        /// Delayed replication type. Valid values: `DEFAULT` (no delay), `DUE_TIME` (specified replication time)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
+        [JsonProperty("DelayReplicationType")]
+        public string DelayReplicationType{ get; set; }
 
         /// <summary>
-        /// Solution
+        /// Specified time for delayed replication
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Solution")]
-        public string Solution{ get; set; }
+        [JsonProperty("DueTime")]
+        public string DueTime{ get; set; }
 
         /// <summary>
-        /// Help document
+        /// The number of seconds to delay the replication
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("HelpDoc")]
-        public string HelpDoc{ get; set; }
-
-        /// <summary>
-        /// Whether the current step is skipped
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("SkipInfo")]
-        public string SkipInfo{ get; set; }
+        [JsonProperty("ReplicationDelay")]
+        public long? ReplicationDelay{ get; set; }
 
 
         /// <summary>
@@ -65,11 +58,10 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Code", this.Code);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamSimple(map, prefix + "Solution", this.Solution);
-            this.SetParamSimple(map, prefix + "HelpDoc", this.HelpDoc);
-            this.SetParamSimple(map, prefix + "SkipInfo", this.SkipInfo);
+            this.SetParamSimple(map, prefix + "RoReplicationMode", this.RoReplicationMode);
+            this.SetParamSimple(map, prefix + "DelayReplicationType", this.DelayReplicationType);
+            this.SetParamSimple(map, prefix + "DueTime", this.DueTime);
+            this.SetParamSimple(map, prefix + "ReplicationDelay", this.ReplicationDelay);
         }
     }
 }

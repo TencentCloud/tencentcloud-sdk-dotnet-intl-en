@@ -88,7 +88,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? BackgroundImageRenderMode{ get; set; }
 
         /// <summary>
-        /// The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+        /// The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
         /// </summary>
         [JsonProperty("DefaultSubBackgroundImage")]
         public string DefaultSubBackgroundImage{ get; set; }
@@ -98,6 +98,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         [JsonProperty("WaterMarkList")]
         public WaterMark[] WaterMarkList{ get; set; }
+
+        /// <summary>
+        /// The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+        /// </summary>
+        [JsonProperty("RenderMode")]
+        public ulong? RenderMode{ get; set; }
+
+        /// <summary>
+        /// This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+        /// </summary>
+        [JsonProperty("MaxResolutionUserAlign")]
+        public ulong? MaxResolutionUserAlign{ get; set; }
 
 
         /// <summary>
@@ -115,6 +127,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackgroundImageRenderMode", this.BackgroundImageRenderMode);
             this.SetParamSimple(map, prefix + "DefaultSubBackgroundImage", this.DefaultSubBackgroundImage);
             this.SetParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
+            this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
+            this.SetParamSimple(map, prefix + "MaxResolutionUserAlign", this.MaxResolutionUserAlign);
         }
     }
 }

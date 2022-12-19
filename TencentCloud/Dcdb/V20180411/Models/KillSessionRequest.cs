@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class McuPublishCdnParam : AbstractModel
+    public class KillSessionRequest : AbstractModel
     {
         
         /// <summary>
-        /// The URLs of the CDNs to relay to.
+        /// Instance ID
         /// </summary>
-        [JsonProperty("PublishCdnUrl")]
-        public string PublishCdnUrl{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
+        /// List of session IDs
         /// </summary>
-        [JsonProperty("IsTencentCdn")]
-        public ulong? IsTencentCdn{ get; set; }
+        [JsonProperty("SessionId")]
+        public long?[] SessionId{ get; set; }
+
+        /// <summary>
+        /// Shard ID. Either `ShardId` or `ShardSerialId` is required.
+        /// </summary>
+        [JsonProperty("ShardId")]
+        public string ShardId{ get; set; }
+
+        /// <summary>
+        /// Shard sequence ID. Either `ShardId` or `ShardSerialId` is required.
+        /// </summary>
+        [JsonProperty("ShardSerialId")]
+        public string ShardSerialId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PublishCdnUrl", this.PublishCdnUrl);
-            this.SetParamSimple(map, prefix + "IsTencentCdn", this.IsTencentCdn);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "SessionId.", this.SessionId);
+            this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
+            this.SetParamSimple(map, prefix + "ShardSerialId", this.ShardSerialId);
         }
     }
 }

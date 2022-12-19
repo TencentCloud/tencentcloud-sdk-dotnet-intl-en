@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class McuPublishCdnParam : AbstractModel
+    public class KillSessionResponse : AbstractModel
     {
         
         /// <summary>
-        /// The URLs of the CDNs to relay to.
+        /// Task ID
         /// </summary>
-        [JsonProperty("PublishCdnUrl")]
-        public string PublishCdnUrl{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
-        /// Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("IsTencentCdn")]
-        public ulong? IsTencentCdn{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PublishCdnUrl", this.PublishCdnUrl);
-            this.SetParamSimple(map, prefix + "IsTencentCdn", this.IsTencentCdn);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -137,7 +137,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to verify a sync task by checking required parameters and peripheral information.
+        /// This API is used to verify a sync task by checking required parameters and peripheral configuration.
         /// </summary>
         /// <param name="req"><see cref="CreateCheckSyncJobRequest"/></param>
         /// <returns><see cref="CreateCheckSyncJobResponse"/></returns>
@@ -157,7 +157,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to verify a sync task by checking required parameters and peripheral information.
+        /// This API is used to verify a sync task by checking required parameters and peripheral configuration.
         /// </summary>
         /// <param name="req"><see cref="CreateCheckSyncJobRequest"/></param>
         /// <returns><see cref="CreateCheckSyncJobResponse"/></returns>
@@ -341,7 +341,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to delete a data consistency check task.
+        /// This API is used to delete a data consistency check task, which can be called when the task status is `success`, `failed`, or `canceled`.
         /// </summary>
         /// <param name="req"><see cref="DeleteCompareTaskRequest"/></param>
         /// <returns><see cref="DeleteCompareTaskResponse"/></returns>
@@ -361,7 +361,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to delete a data consistency check task.
+        /// This API is used to delete a data consistency check task, which can be called when the task status is `success`, `failed`, or `canceled`.
         /// </summary>
         /// <param name="req"><see cref="DeleteCompareTaskRequest"/></param>
         /// <returns><see cref="DeleteCompareTaskResponse"/></returns>
@@ -585,7 +585,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to query the details of a data migration task.
+        /// This API is used to query the details of a migration task.
         /// </summary>
         /// <param name="req"><see cref="DescribeMigrationDetailRequest"/></param>
         /// <returns><see cref="DescribeMigrationDetailResponse"/></returns>
@@ -605,7 +605,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to query the details of a data migration task.
+        /// This API is used to query the details of a migration task.
         /// </summary>
         /// <param name="req"><see cref="DescribeMigrationDetailRequest"/></param>
         /// <returns><see cref="DescribeMigrationDetailResponse"/></returns>
@@ -1185,7 +1185,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to retry a failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
+        /// This API is used to retry an abnormal or failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
         /// </summary>
         /// <param name="req"><see cref="ResumeMigrateJobRequest"/></param>
         /// <returns><see cref="ResumeMigrateJobResponse"/></returns>
@@ -1205,7 +1205,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to retry a failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
+        /// This API is used to retry an abnormal or failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
         /// </summary>
         /// <param name="req"><see cref="ResumeMigrateJobRequest"/></param>
         /// <returns><see cref="ResumeMigrateJobResponse"/></returns>
@@ -1467,7 +1467,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to stop a sync task.
+        /// This API is used to stop a sync task. After calling this API, you can call the `DescribeSyncJobs` API to query the latest task status.
         /// </summary>
         /// <param name="req"><see cref="StopSyncJobRequest"/></param>
         /// <returns><see cref="StopSyncJobResponse"/></returns>
@@ -1487,7 +1487,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to stop a sync task.
+        /// This API is used to stop a sync task. After calling this API, you can call the `DescribeSyncJobs` API to query the latest task status.
         /// </summary>
         /// <param name="req"><see cref="StopSyncJobRequest"/></param>
         /// <returns><see cref="StopSyncJobResponse"/></returns>

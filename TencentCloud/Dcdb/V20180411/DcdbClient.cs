@@ -335,6 +335,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, and purchased duration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDCDBInstanceResponse"/></returns>
+        public async Task<CreateDCDBInstanceResponse> CreateDCDBInstance(CreateDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, and purchased duration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDCDBInstanceResponse"/></returns>
+        public CreateDCDBInstanceResponse CreateDCDBInstanceSync(CreateDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create pay-as-you-go TDSQL for MySQL instances.
         /// </summary>
         /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
@@ -1412,6 +1452,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "IsolateHourDCDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to kill the specified session.
+        /// </summary>
+        /// <param name="req"><see cref="KillSessionRequest"/></param>
+        /// <returns><see cref="KillSessionResponse"/></returns>
+        public async Task<KillSessionResponse> KillSession(KillSessionRequest req)
+        {
+             JsonResponseModel<KillSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KillSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to kill the specified session.
+        /// </summary>
+        /// <param name="req"><see cref="KillSessionRequest"/></param>
+        /// <returns><see cref="KillSessionResponse"/></returns>
+        public KillSessionResponse KillSessionSync(KillSessionRequest req)
+        {
+             JsonResponseModel<KillSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KillSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillSessionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

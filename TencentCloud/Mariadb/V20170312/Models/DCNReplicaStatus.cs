@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class McuPublishCdnParam : AbstractModel
+    public class DCNReplicaStatus : AbstractModel
     {
         
         /// <summary>
-        /// The URLs of the CDNs to relay to.
+        /// DCN running status. Valid values: `START` (running), `STOP` (pause).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("PublishCdnUrl")]
-        public string PublishCdnUrl{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
+        /// The current delay, which takes the delay value of the replica instance.
         /// </summary>
-        [JsonProperty("IsTencentCdn")]
-        public ulong? IsTencentCdn{ get; set; }
+        [JsonProperty("Delay")]
+        public long? Delay{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PublishCdnUrl", this.PublishCdnUrl);
-            this.SetParamSimple(map, prefix + "IsTencentCdn", this.IsTencentCdn);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Delay", this.Delay);
         }
     }
 }

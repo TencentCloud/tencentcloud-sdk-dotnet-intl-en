@@ -110,7 +110,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// Syslog protocol. Valid values: `tcp`, `udp`.
-        /// This field can be used when you create/modify collection rule configurations.
+        /// This field can be used when you create or modify collection rule configurations.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Protocol")]
@@ -118,17 +118,17 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-        /// This field can be used when you create/modify collection rule configurations.
+        /// This field can be used when you create or modify collection rule configurations.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-        /// `rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-        /// `auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-        /// This field can be used when you create/modify collection rule configurations.
+        /// `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+        /// `rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+        /// `auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+        /// This field can be used when you create or modify collection rule configurations.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ParseProtocol")]

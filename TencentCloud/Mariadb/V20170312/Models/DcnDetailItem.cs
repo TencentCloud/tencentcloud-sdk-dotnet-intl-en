@@ -132,6 +132,26 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
+        /// <summary>
+        /// Configuration information of DCN replication. This field is null for a primary instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReplicaConfig")]
+        public DCNReplicaConfig ReplicaConfig{ get; set; }
+
+        /// <summary>
+        /// DCN replication status. This field is null for the primary instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReplicaStatus")]
+        public DCNReplicaStatus ReplicaStatus{ get; set; }
+
+        /// <summary>
+        /// Whether KMS is enabled.
+        /// </summary>
+        [JsonProperty("EncryptStatus")]
+        public long? EncryptStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +176,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamObj(map, prefix + "ReplicaConfig.", this.ReplicaConfig);
+            this.SetParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
+            this.SetParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
         }
     }
 }

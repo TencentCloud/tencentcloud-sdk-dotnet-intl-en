@@ -33,7 +33,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? RecordMode{ get; set; }
 
         /// <summary>
-        /// The time period (seconds) to wait after there are no anchors in a room to stop recording automatically. The value cannot be smaller than 5 or larger than 86400 (24 hours). Default value: 30.
+        /// The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
         /// </summary>
         [JsonProperty("MaxIdleTime")]
         public ulong? MaxIdleTime{ get; set; }
@@ -54,7 +54,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public SubscribeStreamUserIds SubscribeStreamUserIds{ get; set; }
 
         /// <summary>
-        /// The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+        /// The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
         /// </summary>
         [JsonProperty("OutputFormat")]
         public ulong? OutputFormat{ get; set; }
@@ -64,6 +64,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         [JsonProperty("AvMerge")]
         public ulong? AvMerge{ get; set; }
+
+        /// <summary>
+        /// The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
+        /// This parameter is invalid if the output format is HLS.
+        /// </summary>
+        [JsonProperty("MaxMediaFileDuration")]
+        public ulong? MaxMediaFileDuration{ get; set; }
 
 
         /// <summary>
@@ -77,6 +84,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
             this.SetParamSimple(map, prefix + "AvMerge", this.AvMerge);
+            this.SetParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
         }
     }
 }

@@ -31,6 +31,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ConfigId{ get; set; }
 
         /// <summary>
+        /// Name of the collection rule configuration
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
         /// Log formatting method
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
@@ -98,6 +105,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "LogFormat", this.LogFormat);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);

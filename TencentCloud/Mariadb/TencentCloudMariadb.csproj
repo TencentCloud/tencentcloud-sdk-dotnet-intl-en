@@ -65,6 +65,8 @@
     <Compile Include="V20170312\Models\DBAccount.cs" />
     <Compile Include="V20170312\Models\DBInstance.cs" />
     <Compile Include="V20170312\Models\DBParamValue.cs" />
+    <Compile Include="V20170312\Models\DCNReplicaConfig.cs" />
+    <Compile Include="V20170312\Models\DCNReplicaStatus.cs" />
     <Compile Include="V20170312\Models\Database.cs" />
     <Compile Include="V20170312\Models\DatabaseFunction.cs" />
     <Compile Include="V20170312\Models\DatabasePrivilege.cs" />
@@ -105,6 +107,8 @@
     <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePriceRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePriceResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DestroyDBInstanceRequest.cs" />

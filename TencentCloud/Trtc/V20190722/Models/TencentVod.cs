@@ -68,10 +68,16 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SourceContext{ get; set; }
 
         /// <summary>
-        /// The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+        /// The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
         /// </summary>
         [JsonProperty("MediaType")]
         public ulong? MediaType{ get; set; }
+
+        /// <summary>
+        /// The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+        /// </summary>
+        [JsonProperty("UserDefineRecordId")]
+        public string UserDefineRecordId{ get; set; }
 
 
         /// <summary>
@@ -87,6 +93,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
             this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
+            this.SetParamSimple(map, prefix + "UserDefineRecordId", this.UserDefineRecordId);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Sync task ID
+        /// Sync task ID, such as `sync-werwfs23`.
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

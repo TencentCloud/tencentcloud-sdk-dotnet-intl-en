@@ -61,6 +61,8 @@
     <Compile Include="V20180411\Models\CopyAccountPrivilegesResponse.cs" />
     <Compile Include="V20180411\Models\CreateAccountRequest.cs" />
     <Compile Include="V20180411\Models\CreateAccountResponse.cs" />
+    <Compile Include="V20180411\Models\CreateDCDBInstanceRequest.cs" />
+    <Compile Include="V20180411\Models\CreateDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\CreateHourDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\CreateHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\DBAccount.cs" />
@@ -126,6 +128,8 @@
     <Compile Include="V20180411\Models\IsolateDedicatedDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\IsolateHourDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\IsolateHourDCDBInstanceResponse.cs" />
+    <Compile Include="V20180411\Models\KillSessionRequest.cs" />
+    <Compile Include="V20180411\Models\KillSessionResponse.cs" />
     <Compile Include="V20180411\Models\LogFileInfo.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionResponse.cs" />

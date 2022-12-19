@@ -61,31 +61,31 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Specification{ get; set; }
 
         /// <summary>
-        /// Tag
+        /// Tag information
         /// </summary>
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
         /// <summary>
-        /// Number of sync tasks
+        /// The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag
+        /// Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// Sync link specification
+        /// Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }
 
         /// <summary>
-        /// Sync link name
+        /// Sync task name
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }

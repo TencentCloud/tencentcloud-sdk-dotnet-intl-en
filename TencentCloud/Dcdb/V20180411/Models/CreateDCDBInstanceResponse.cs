@@ -15,51 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Deal : AbstractModel
+    public class CreateDCDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Order number
+        /// Long order ID, which is used to call the `DescribeOrders` API.
+        ///  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// Account
-        /// </summary>
-        [JsonProperty("OwnerUin")]
-        public string OwnerUin{ get; set; }
-
-        /// <summary>
-        /// Number of items
-        /// </summary>
-        [JsonProperty("Count")]
-        public long? Count{ get; set; }
-
-        /// <summary>
-        /// ID of the associated process, which can be used to query the process execution status.
-        /// </summary>
-        [JsonProperty("FlowId")]
-        public long? FlowId{ get; set; }
-
-        /// <summary>
-        /// The ID of the created instance, which is required only for the order that creates an instance.
+        /// IDs of the instances you have purchased in this order. If no instance IDs are returned, you can query them with the `DescribeOrders` API. You can also use the `DescribeDBInstances` API to check whether an instance has been created successfully.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("PayMode")]
-        public long? PayMode{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -68,11 +51,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
-            this.SetParamSimple(map, prefix + "Count", this.Count);
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

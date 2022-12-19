@@ -979,6 +979,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the instance price before you purchase it.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceRequest"/></param>
+        /// <returns><see cref="DescribePriceResponse"/></returns>
+        public async Task<DescribePriceResponse> DescribePrice(DescribePriceRequest req)
+        {
+             JsonResponseModel<DescribePriceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the instance price before you purchase it.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceRequest"/></param>
+        /// <returns><see cref="DescribePriceResponse"/></returns>
+        public DescribePriceResponse DescribePriceSync(DescribePriceRequest req)
+        {
+             JsonResponseModel<DescribePriceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the security group details of a project.
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>

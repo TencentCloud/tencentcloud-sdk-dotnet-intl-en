@@ -1293,7 +1293,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to build a histogram.
+        /// This API is used to get a log count histogram. 
         /// </summary>
         /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
         /// <returns><see cref="DescribeLogHistogramResponse"/></returns>
@@ -1313,7 +1313,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to build a histogram.
+        /// This API is used to get a log count histogram. 
         /// </summary>
         /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
         /// <returns><see cref="DescribeLogHistogramResponse"/></returns>

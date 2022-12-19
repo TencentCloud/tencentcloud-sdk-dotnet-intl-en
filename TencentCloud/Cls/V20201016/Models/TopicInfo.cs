@@ -55,6 +55,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? Index{ get; set; }
 
         /// <summary>
+        /// Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AssumerName")]
+        public string AssumerName{ get; set; }
+
+        /// <summary>
         /// Creation time
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -101,6 +108,20 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
+        /// <summary>
+        /// Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubAssumerName")]
+        public string SubAssumerName{ get; set; }
+
+        /// <summary>
+        /// Log topic description
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Describes")]
+        public string Describes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +133,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
@@ -119,6 +141,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
+            this.SetParamSimple(map, prefix + "Describes", this.Describes);
         }
     }
 }

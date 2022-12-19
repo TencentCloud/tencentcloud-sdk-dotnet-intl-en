@@ -178,6 +178,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("TmpToken")]
         public string TmpToken{ get; set; }
 
+        /// <summary>
+        /// External role ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RoleExternalId")]
+        public string RoleExternalId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +213,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
+            this.SetParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
         }
     }
 }

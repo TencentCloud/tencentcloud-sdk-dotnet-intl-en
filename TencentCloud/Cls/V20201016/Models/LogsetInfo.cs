@@ -43,6 +43,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AssumerName")]
+        public string AssumerName{ get; set; }
+
+        /// <summary>
         /// Tag bound to logset
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
@@ -56,7 +63,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? TopicCount{ get; set; }
 
         /// <summary>
-        /// If `AssumerUin` is not empty, it indicates the service provider who creates the logset
+        /// If `AssumerName` is not empty, it indicates the service provider who creates the logset.
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
@@ -70,6 +77,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TopicCount", this.TopicCount);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);

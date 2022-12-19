@@ -85,6 +85,16 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UseNewAnalysis")]
         public bool? UseNewAnalysis{ get; set; }
 
+        /// <summary>
+        /// Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+        /// `0`: Auto-sample.
+        /// `0–1`: Sample by the specified sample rate, such as `0.02`.
+        /// `1`: Precise analysis without sampling.
+        /// Default value: `1`
+        /// </summary>
+        [JsonProperty("SamplingRate")]
+        public float? SamplingRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +109,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
+            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         }
     }
 }
