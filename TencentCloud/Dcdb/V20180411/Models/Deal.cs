@@ -50,7 +50,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// The ID of the created instance, which is required only for the order that creates an instance.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

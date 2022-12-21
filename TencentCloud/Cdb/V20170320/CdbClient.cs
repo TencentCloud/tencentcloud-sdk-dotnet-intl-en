@@ -93,46 +93,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to create a database proxy group for a source instance.
-        /// </summary>
-        /// <param name="req"><see cref="ApplyCDBProxyRequest"/></param>
-        /// <returns><see cref="ApplyCDBProxyResponse"/></returns>
-        public async Task<ApplyCDBProxyResponse> ApplyCDBProxy(ApplyCDBProxyRequest req)
-        {
-             JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCDBProxyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a database proxy group for a source instance.
-        /// </summary>
-        /// <param name="req"><see cref="ApplyCDBProxyRequest"/></param>
-        /// <returns><see cref="ApplyCDBProxyResponse"/></returns>
-        public ApplyCDBProxyResponse ApplyCDBProxySync(ApplyCDBProxyRequest req)
-        {
-             JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCDBProxyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -3198,46 +3158,6 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBackupDownloadRestriction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to configure read/write separation of database proxy.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCDBProxyRequest"/></param>
-        /// <returns><see cref="ModifyCDBProxyResponse"/></returns>
-        public async Task<ModifyCDBProxyResponse> ModifyCDBProxy(ModifyCDBProxyRequest req)
-        {
-             JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to configure read/write separation of database proxy.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCDBProxyRequest"/></param>
-        /// <returns><see cref="ModifyCDBProxyResponse"/></returns>
-        public ModifyCDBProxyResponse ModifyCDBProxySync(ModifyCDBProxyRequest req)
-        {
-             JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

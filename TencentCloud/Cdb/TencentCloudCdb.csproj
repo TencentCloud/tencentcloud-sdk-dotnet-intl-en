@@ -50,8 +50,6 @@
     <Compile Include="V20170320\Models\AddTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\AddTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\Address.cs" />
-    <Compile Include="V20170320\Models\ApplyCDBProxyRequest.cs" />
-    <Compile Include="V20170320\Models\ApplyCDBProxyResponse.cs" />
     <Compile Include="V20170320\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170320\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170320\Models\AuditFilter.cs" />
@@ -246,8 +244,6 @@
     <Compile Include="V20170320\Models\ModifyCDBProxyConnectionPoolResponse.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyDescRequest.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyDescResponse.cs" />
-    <Compile Include="V20170320\Models\ModifyCDBProxyRequest.cs" />
-    <Compile Include="V20170320\Models\ModifyCDBProxyResponse.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyVipVPortRequest.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyVipVPortResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceNameRequest.cs" />
@@ -311,7 +307,6 @@
     <Compile Include="V20170320\Models\RoGroupAttr.cs" />
     <Compile Include="V20170320\Models\RoInstanceInfo.cs" />
     <Compile Include="V20170320\Models\RoVipInfo.cs" />
-    <Compile Include="V20170320\Models\RoWeight.cs" />
     <Compile Include="V20170320\Models\RoWeightValue.cs" />
     <Compile Include="V20170320\Models\RollbackDBName.cs" />
     <Compile Include="V20170320\Models\RollbackInstancesInfo.cs" />

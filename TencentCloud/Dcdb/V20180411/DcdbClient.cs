@@ -819,6 +819,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to query the price of an instance before you purchase it.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBPriceRequest"/></param>
+        /// <returns><see cref="DescribeDCDBPriceResponse"/></returns>
+        public async Task<DescribeDCDBPriceResponse> DescribeDCDBPrice(DescribeDCDBPriceRequest req)
+        {
+             JsonResponseModel<DescribeDCDBPriceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDCDBPrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBPriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of an instance before you purchase it.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBPriceRequest"/></param>
+        /// <returns><see cref="DescribeDCDBPriceResponse"/></returns>
+        public DescribeDCDBPriceResponse DescribeDCDBPriceSync(DescribeDCDBPriceRequest req)
+        {
+             JsonResponseModel<DescribeDCDBPriceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDCDBPrice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBPriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the information of shards of a TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDCDBShardsRequest"/></param>
@@ -1534,6 +1574,56 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountDescription");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the permissions of a TencentDB instance account.
+        /// 
+        /// **Notes**
+        /// - Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
+        /// - An error will be reported if read-write permissions are granted to a read-only account.
+        /// - If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public async Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the permissions of a TencentDB instance account.
+        /// 
+        /// **Notes**
+        /// - Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
+        /// - An error will be reported if read-write permissions are granted to a read-only account.
+        /// - If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

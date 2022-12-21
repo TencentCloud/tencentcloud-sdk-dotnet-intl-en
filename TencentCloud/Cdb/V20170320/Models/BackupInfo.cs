@@ -138,6 +138,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EncryptionFlag")]
+        public string EncryptionFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +170,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
             this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
         }
     }
 }

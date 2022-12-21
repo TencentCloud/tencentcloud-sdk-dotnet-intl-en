@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyInstancePasswordComplexityRequest : AbstractModel
+    public class TablePrivilege : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID list
+        /// Database name
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("Database")]
+        public string Database{ get; set; }
 
         /// <summary>
-        /// List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
+        /// Table name
         /// </summary>
-        [JsonProperty("ParamList")]
-        public Parameter[] ParamList{ get; set; }
+        [JsonProperty("Table")]
+        public string Table{ get; set; }
+
+        /// <summary>
+        /// Permission information
+        /// </summary>
+        [JsonProperty("Privileges")]
+        public string[] Privileges{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+            this.SetParamSimple(map, prefix + "Database", this.Database);
+            this.SetParamSimple(map, prefix + "Table", this.Table);
+            this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
         }
     }
 }

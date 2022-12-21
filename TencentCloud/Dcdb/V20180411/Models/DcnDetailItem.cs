@@ -132,6 +132,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
+        /// <summary>
+        /// Whether KMS is enabled.
+        /// </summary>
+        [JsonProperty("EncryptStatus")]
+        public long? EncryptStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
         }
     }
 }

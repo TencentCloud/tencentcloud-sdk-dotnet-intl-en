@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20180411\DcdbClient.cs" />
+    <Compile Include="V20180411\Models\Account.cs" />
     <Compile Include="V20180411\Models\ActiveHourDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\ActiveHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\AssociateSecurityGroupsRequest.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="V20180411\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="V20180411\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="V20180411\Models\ColumnPrivilege.cs" />
     <Compile Include="V20180411\Models\ConstraintRange.cs" />
     <Compile Include="V20180411\Models\CopyAccountPrivilegesRequest.cs" />
     <Compile Include="V20180411\Models\CopyAccountPrivilegesResponse.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="V20180411\Models\DCDBShardInfo.cs" />
     <Compile Include="V20180411\Models\Database.cs" />
     <Compile Include="V20180411\Models\DatabaseFunction.cs" />
+    <Compile Include="V20180411\Models\DatabasePrivilege.cs" />
     <Compile Include="V20180411\Models\DatabaseProcedure.cs" />
     <Compile Include="V20180411\Models\DatabaseTable.cs" />
     <Compile Include="V20180411\Models\DatabaseView.cs" />
@@ -96,6 +99,8 @@
     <Compile Include="V20180411\Models\DescribeDCDBInstanceNodeInfoResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDCDBInstancesRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDCDBInstancesResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeDCDBPriceRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeDCDBPriceResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDCDBShardsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDCDBShardsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDatabaseObjectsRequest.cs" />
@@ -133,6 +138,8 @@
     <Compile Include="V20180411\Models\LogFileInfo.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyAccountPrivilegesRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyAccountPrivilegesResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
@@ -162,7 +169,9 @@
     <Compile Include="V20180411\Models\SwitchDBInstanceHARequest.cs" />
     <Compile Include="V20180411\Models\SwitchDBInstanceHAResponse.cs" />
     <Compile Include="V20180411\Models\TableColumn.cs" />
+    <Compile Include="V20180411\Models\TablePrivilege.cs" />
     <Compile Include="V20180411\Models\TerminateDedicatedDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\TerminateDedicatedDBInstanceResponse.cs" />
+    <Compile Include="V20180411\Models\ViewPrivileges.cs" />
   </ItemGroup>
 </Project>
