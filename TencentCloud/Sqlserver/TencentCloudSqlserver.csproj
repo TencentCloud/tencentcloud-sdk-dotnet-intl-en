@@ -217,6 +217,7 @@
     <Compile Include="V20180328\Models\RollbackInstanceResponse.cs" />
     <Compile Include="V20180328\Models\RunMigrationRequest.cs" />
     <Compile Include="V20180328\Models\RunMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\SlaveZones.cs" />
     <Compile Include="V20180328\Models\SlowlogInfo.cs" />
     <Compile Include="V20180328\Models\SpecInfo.cs" />
     <Compile Include="V20180328\Models\StartBackupMigrationRequest.cs" />
