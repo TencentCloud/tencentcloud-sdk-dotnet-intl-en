@@ -72,6 +72,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
+        /// <summary>
+        /// Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+        /// </summary>
+        [JsonProperty("UpgradeMode")]
+        public string UpgradeMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
+            this.SetParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
         }
     }
 }

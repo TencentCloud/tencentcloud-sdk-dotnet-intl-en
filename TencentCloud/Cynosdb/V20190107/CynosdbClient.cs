@@ -1893,6 +1893,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to reset the password of a TencentDB instance account.
+        /// </summary>
+        /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
+        public async Task<ResetAccountPasswordResponse> ResetAccountPassword(ResetAccountPasswordRequest req)
+        {
+             JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetAccountPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to reset the password of a TencentDB instance account.
+        /// </summary>
+        /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
+        public ResetAccountPasswordResponse ResetAccountPasswordSync(ResetAccountPasswordRequest req)
+        {
+             JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetAccountPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAccountPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to resume a serverless cluster.
         /// </summary>
         /// <param name="req"><see cref="ResumeServerlessRequest"/></param>
@@ -1924,6 +1964,86 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ResumeServerless");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeServerlessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search the list of cluster databases.
+        /// </summary>
+        /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
+        /// <returns><see cref="SearchClusterDatabasesResponse"/></returns>
+        public async Task<SearchClusterDatabasesResponse> SearchClusterDatabases(SearchClusterDatabasesRequest req)
+        {
+             JsonResponseModel<SearchClusterDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchClusterDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClusterDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search the list of cluster databases.
+        /// </summary>
+        /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
+        /// <returns><see cref="SearchClusterDatabasesResponse"/></returns>
+        public SearchClusterDatabasesResponse SearchClusterDatabasesSync(SearchClusterDatabasesRequest req)
+        {
+             JsonResponseModel<SearchClusterDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchClusterDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClusterDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search the list of cluster data tables.
+        /// </summary>
+        /// <param name="req"><see cref="SearchClusterTablesRequest"/></param>
+        /// <returns><see cref="SearchClusterTablesResponse"/></returns>
+        public async Task<SearchClusterTablesResponse> SearchClusterTables(SearchClusterTablesRequest req)
+        {
+             JsonResponseModel<SearchClusterTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchClusterTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClusterTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to search the list of cluster data tables.
+        /// </summary>
+        /// <param name="req"><see cref="SearchClusterTablesRequest"/></param>
+        /// <returns><see cref="SearchClusterTablesResponse"/></returns>
+        public SearchClusterTablesResponse SearchClusterTablesSync(SearchClusterTablesRequest req)
+        {
+             JsonResponseModel<SearchClusterTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchClusterTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClusterTablesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2004,6 +2124,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "SwitchClusterZone");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchClusterZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the database proxy VPC.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchProxyVpcRequest"/></param>
+        /// <returns><see cref="SwitchProxyVpcResponse"/></returns>
+        public async Task<SwitchProxyVpcResponse> SwitchProxyVpc(SwitchProxyVpcRequest req)
+        {
+             JsonResponseModel<SwitchProxyVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchProxyVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchProxyVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the database proxy VPC.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchProxyVpcRequest"/></param>
+        /// <returns><see cref="SwitchProxyVpcResponse"/></returns>
+        public SwitchProxyVpcResponse SwitchProxyVpcSync(SwitchProxyVpcRequest req)
+        {
+             JsonResponseModel<SwitchProxyVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchProxyVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchProxyVpcResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

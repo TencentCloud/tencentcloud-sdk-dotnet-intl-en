@@ -21,7 +21,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterParamsRequest : AbstractModel
+    public class SearchClusterTablesRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,10 +31,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Parameter name
+        /// Database name
         /// </summary>
-        [JsonProperty("ParamName")]
-        public string ParamName{ get; set; }
+        [JsonProperty("Database")]
+        public string Database{ get; set; }
+
+        /// <summary>
+        /// Data table name
+        /// </summary>
+        [JsonProperty("Table")]
+        public string Table{ get; set; }
+
+        /// <summary>
+        /// Data table type. Valid values:
+        /// `view`: Only return to view,
+        /// `base_table`: Only return to basic table,
+        /// `all`: Return to view and table.
+        /// </summary>
+        [JsonProperty("TableType")]
+        public string TableType{ get; set; }
 
 
         /// <summary>
@@ -43,7 +58,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
+            this.SetParamSimple(map, prefix + "Database", this.Database);
+            this.SetParamSimple(map, prefix + "Table", this.Table);
+            this.SetParamSimple(map, prefix + "TableType", this.TableType);
         }
     }
 }

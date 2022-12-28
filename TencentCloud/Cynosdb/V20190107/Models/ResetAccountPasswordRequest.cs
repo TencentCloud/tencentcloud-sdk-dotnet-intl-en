@@ -21,7 +21,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Account : AbstractModel
+    public class ResetAccountPasswordRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,34 +31,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Database account description
+        /// New password of the database account
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("AccountPassword")]
+        public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Update time
-        /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
-
-        /// <summary>
-        /// Host
+        /// Host. Default value: `%`
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
-
-        /// <summary>
-        /// The max connections
-        /// </summary>
-        [JsonProperty("MaxUserConnections")]
-        public long? MaxUserConnections{ get; set; }
 
 
         /// <summary>
@@ -67,11 +55,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Host", this.Host);
-            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }
     }
 }

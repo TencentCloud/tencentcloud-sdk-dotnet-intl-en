@@ -21,29 +21,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterParamsRequest : AbstractModel
+    public class ModifiableInfo : AbstractModel
     {
         
-        /// <summary>
-        /// Cluster ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// Parameter name
-        /// </summary>
-        [JsonProperty("ParamName")]
-        public string ParamName{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
         }
     }
 }

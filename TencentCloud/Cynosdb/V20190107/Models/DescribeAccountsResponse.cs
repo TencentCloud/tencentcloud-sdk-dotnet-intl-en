@@ -26,9 +26,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Database account list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AccountSet")]
         public Account[] AccountSet{ get; set; }
+
+        /// <summary>
+        /// Total number of accounts
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "AccountSet.", this.AccountSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

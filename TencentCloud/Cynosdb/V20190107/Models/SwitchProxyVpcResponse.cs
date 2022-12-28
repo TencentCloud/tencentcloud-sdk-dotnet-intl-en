@@ -21,20 +21,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterParamsRequest : AbstractModel
+    public class SwitchProxyVpcResponse : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Async task ID
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Parameter name
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("ParamName")]
-        public string ParamName{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

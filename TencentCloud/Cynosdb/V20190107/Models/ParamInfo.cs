@@ -91,6 +91,34 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// Whether it is global parameter
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public long? IsGlobal{ get; set; }
+
+        /// <summary>
+        /// Whether the parameter can be modified
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ModifiableInfo")]
+        public ModifiableInfo ModifiableInfo{ get; set; }
+
+        /// <summary>
+        /// Whether it is a function
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsFunc")]
+        public bool? IsFunc{ get; set; }
+
+        /// <summary>
+        /// Function
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Func")]
+        public string Func{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +136,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MatchType", this.MatchType);
             this.SetParamSimple(map, prefix + "MatchValue", this.MatchValue);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
+            this.SetParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
+            this.SetParamSimple(map, prefix + "IsFunc", this.IsFunc);
+            this.SetParamSimple(map, prefix + "Func", this.Func);
         }
     }
 }

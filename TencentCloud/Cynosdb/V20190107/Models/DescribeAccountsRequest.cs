@@ -39,9 +39,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// Database type. Valid values: 
         /// <li> MYSQL </li>
+        /// This parameter has been disused.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
+
+        /// <summary>
+        /// List of accounts to be filtered
+        /// </summary>
+        [JsonProperty("Hosts")]
+        public string[] Hosts{ get; set; }
+
+        /// <summary>
+        /// Maximum entries returned per page
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// Offset
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -52,6 +71,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "AccountNames.", this.AccountNames);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
+            this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

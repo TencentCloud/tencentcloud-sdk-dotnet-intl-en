@@ -26,12 +26,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Start time of valid rollback time range (disused)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TimeRangeStart")]
         public string TimeRangeStart{ get; set; }
 
         /// <summary>
         /// End time of valid rollback time range (disused)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TimeRangeEnd")]
         public string TimeRangeEnd{ get; set; }

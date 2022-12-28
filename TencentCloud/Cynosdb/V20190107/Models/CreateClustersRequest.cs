@@ -262,7 +262,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] AlarmPolicyIds{ get; set; }
 
         /// <summary>
-        /// Array of parameters
+        /// Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
         /// </summary>
         [JsonProperty("ClusterParams")]
         public ParamItem[] ClusterParams{ get; set; }
@@ -284,6 +284,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceInitInfos")]
+        public InstanceInitInfo[] InstanceInitInfos{ get; set; }
 
 
         /// <summary>
@@ -331,6 +337,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
+            this.SetParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
         }
     }
 }

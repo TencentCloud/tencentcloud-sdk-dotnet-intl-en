@@ -21,20 +21,32 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterParamsRequest : AbstractModel
+    public class InstanceInitInfo : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// 
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Parameter name
+        /// 
         /// </summary>
-        [JsonProperty("ParamName")]
-        public string ParamName{ get; set; }
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceCount")]
+        public long? InstanceCount{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         }
     }
 }

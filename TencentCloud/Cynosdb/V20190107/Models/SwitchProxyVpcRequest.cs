@@ -21,44 +21,38 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Account : AbstractModel
+    public class SwitchProxyVpcRequest : AbstractModel
     {
         
         /// <summary>
-        /// Database account name
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("AccountName")]
-        public string AccountName{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Database account description
+        /// VPC ID in string
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Subnet ID in string
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Valid hours of old IP
         /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
+        [JsonProperty("OldIpReserveHours")]
+        public long? OldIpReserveHours{ get; set; }
 
         /// <summary>
-        /// Host
+        /// Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
-
-        /// <summary>
-        /// The max connections
-        /// </summary>
-        [JsonProperty("MaxUserConnections")]
-        public long? MaxUserConnections{ get; set; }
+        [JsonProperty("ProxyGroupId")]
+        public string ProxyGroupId{ get; set; }
 
 
         /// <summary>
@@ -66,12 +60,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "Host", this.Host);
-            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "OldIpReserveHours", this.OldIpReserveHours);
+            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
         }
     }
 }

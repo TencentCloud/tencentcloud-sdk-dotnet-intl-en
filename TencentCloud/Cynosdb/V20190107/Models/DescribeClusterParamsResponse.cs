@@ -32,6 +32,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Instance parameter list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Items")]
         public ParamInfo[] Items{ get; set; }

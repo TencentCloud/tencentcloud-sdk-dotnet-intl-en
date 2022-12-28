@@ -279,6 +279,40 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
+        /// <summary>
+        /// Physical zone
+        /// </summary>
+        [JsonProperty("PhysicalZone")]
+        public string PhysicalZone{ get; set; }
+
+        /// <summary>
+        /// Business type
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BusinessType")]
+        public string BusinessType{ get; set; }
+
+        /// <summary>
+        /// Task
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tasks")]
+        public ObjectTask[] Tasks{ get; set; }
+
+        /// <summary>
+        /// Whether to freeze
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsFreeze")]
+        public string IsFreeze{ get; set; }
+
+        /// <summary>
+        /// The resource tag
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -327,6 +361,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
             this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
             this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+            this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }
