@@ -49,7 +49,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+        /// The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+        /// 
+        /// <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

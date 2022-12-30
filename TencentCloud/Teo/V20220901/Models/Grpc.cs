@@ -21,26 +21,16 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AdvancedOriginGroup : AbstractModel
+    public class Grpc : AbstractModel
     {
         
         /// <summary>
-        /// Matching condition. The "Target" field must be unique.
+        /// Whether to enable gRPC support
+        /// <li>`on`: Enable</li>
+        /// <li>`off`: Disable</li>
         /// </summary>
-        [JsonProperty("OriginGroupConditions")]
-        public OriginGroupCondition[] OriginGroupConditions{ get; set; }
-
-        /// <summary>
-        /// ID of the primary origin server.
-        /// </summary>
-        [JsonProperty("OriginGroupId")]
-        public string OriginGroupId{ get; set; }
-
-        /// <summary>
-        /// ID of the secondary origin server.
-        /// </summary>
-        [JsonProperty("BackupOriginGroupId")]
-        public string BackupOriginGroupId{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -48,9 +38,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "OriginGroupConditions.", this.OriginGroupConditions);
-            this.SetParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
-            this.SetParamSimple(map, prefix + "BackupOriginGroupId", this.BackupOriginGroupId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

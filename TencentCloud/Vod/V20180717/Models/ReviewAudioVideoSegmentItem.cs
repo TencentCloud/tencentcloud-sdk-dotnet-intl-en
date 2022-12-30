@@ -106,6 +106,19 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }
 
+        /// <summary>
+        /// The URL of a suspected image (which will be deleted
+        ///  after `PicUrlExpireTime`).
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// </summary>
+        [JsonProperty("PicUrlExpireTime")]
+        public string PicUrlExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +135,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamArraySimple(map, prefix + "KeywordSet.", this.KeywordSet);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "PicUrlExpireTime", this.PicUrlExpireTime);
         }
     }
 }

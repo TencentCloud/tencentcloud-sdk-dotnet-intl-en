@@ -38,12 +38,12 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// The statistical metric. Values:
-        /// <li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-        /// <li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-        /// <li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-        /// <li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-        /// <li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-        /// <li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+        /// <li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+        /// <li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+        /// <li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+        /// <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+        /// <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+        /// <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

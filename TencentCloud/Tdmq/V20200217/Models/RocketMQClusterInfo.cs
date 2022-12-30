@@ -88,6 +88,37 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("IsVip")]
         public bool? IsVip{ get; set; }
 
+        /// <summary>
+        /// TDMQ for RocketMQ cluster type flag
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RocketMQFlag")]
+        public bool? RocketMQFlag{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsolateTime")]
+        public long? IsolateTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HttpPublicEndpoint")]
+        public string HttpPublicEndpoint{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HttpVpcEndpoint")]
+        public string HttpVpcEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +135,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
             this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
             this.SetParamSimple(map, prefix + "IsVip", this.IsVip);
+            this.SetParamSimple(map, prefix + "RocketMQFlag", this.RocketMQFlag);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+            this.SetParamSimple(map, prefix + "HttpPublicEndpoint", this.HttpPublicEndpoint);
+            this.SetParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
         }
     }
 }

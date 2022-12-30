@@ -102,6 +102,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ScheduleId")]
         public long? ScheduleId{ get; set; }
 
+        /// <summary>
+        /// The task type.
+        /// <li> `Online` (default): A task that is executed immediately.</li>
+        /// <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +128,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

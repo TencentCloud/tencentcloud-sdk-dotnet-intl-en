@@ -46,6 +46,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("DefaultCache")]
         public string DefaultCache{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DefaultCacheStrategy")]
+        public string DefaultCacheStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +62,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
             this.SetParamSimple(map, prefix + "DefaultCache", this.DefaultCache);
+            this.SetParamSimple(map, prefix + "DefaultCacheStrategy", this.DefaultCacheStrategy);
         }
     }
 }

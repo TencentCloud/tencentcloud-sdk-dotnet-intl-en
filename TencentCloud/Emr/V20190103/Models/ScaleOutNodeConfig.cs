@@ -15,35 +15,30 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OriginGroupCondition : AbstractModel
+    public class ScaleOutNodeConfig : AbstractModel
     {
         
         /// <summary>
-        /// Match type. Values:
-        /// <li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
-        /// </li>
+        /// Valid values of node type:
+        ///   <li>MASTER</li>
+        ///   <li>TASK</li>
+        ///   <li>CORE</li>
+        ///   <li>ROUTER</li>
         /// </summary>
-        [JsonProperty("Target")]
-        public string Target{ get; set; }
+        [JsonProperty("NodeFlag")]
+        public string NodeFlag{ get; set; }
 
         /// <summary>
-        /// The operator. Values:
-        /// <li>`equal`: Equals</li>
+        /// The number of nodes.
         /// </summary>
-        [JsonProperty("Operator")]
-        public string Operator{ get; set; }
-
-        /// <summary>
-        /// Values of the match type.
-        /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("NodeCount")]
+        public ulong? NodeCount{ get; set; }
 
 
         /// <summary>
@@ -51,9 +46,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Target", this.Target);
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
         }
     }
 }

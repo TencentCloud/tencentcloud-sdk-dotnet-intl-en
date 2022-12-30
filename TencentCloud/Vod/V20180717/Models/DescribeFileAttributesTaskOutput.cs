@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// The MD5 hash of the file.
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }

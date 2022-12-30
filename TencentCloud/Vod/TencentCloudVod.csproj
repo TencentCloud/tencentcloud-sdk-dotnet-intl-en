@@ -284,6 +284,8 @@
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeFileAttributesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeFileAttributesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeFileAttributesTask.cs" />
     <Compile Include="V20180717\Models\DescribeFileAttributesTaskOutput.cs" />
     <Compile Include="V20180717\Models\DescribeImageProcessingTemplatesRequest.cs" />

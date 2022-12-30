@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateLoadBalancingResponse : AbstractModel
+    public class PodSpecInfo : AbstractModel
     {
         
         /// <summary>
-        /// The load balancer ID.
+        /// The specified information such as pod spec and source for scale-out with pod resources.
         /// </summary>
-        [JsonProperty("LoadBalancingId")]
-        public string LoadBalancingId{ get; set; }
+        [JsonProperty("PodSpec")]
+        public PodNewSpec PodSpec{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The custom pod permission and parameter.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("PodParameter")]
+        public PodNewParameter PodParameter{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LoadBalancingId", this.LoadBalancingId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "PodSpec.", this.PodSpec);
+            this.SetParamObj(map, prefix + "PodParameter.", this.PodParameter);
         }
     }
 }

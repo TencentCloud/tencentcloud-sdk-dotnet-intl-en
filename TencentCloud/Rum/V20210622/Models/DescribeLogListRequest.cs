@@ -61,7 +61,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// Query statement, which is required and can contain up to 4,096 characters.
+        /// Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

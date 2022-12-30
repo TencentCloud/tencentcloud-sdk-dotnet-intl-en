@@ -101,6 +101,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("AudioDuration")]
         public float? AudioDuration{ get; set; }
 
+        /// <summary>
+        /// The MD5 hash of the file.
+        /// <li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+        /// </summary>
+        [JsonProperty("Md5")]
+        public string Md5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
             this.SetParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
+            this.SetParamSimple(map, prefix + "Md5", this.Md5);
         }
     }
 }

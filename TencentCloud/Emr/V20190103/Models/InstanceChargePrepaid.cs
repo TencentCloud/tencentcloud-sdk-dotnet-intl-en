@@ -15,26 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteLoadBalancingRequest : AbstractModel
+    public class InstanceChargePrepaid : AbstractModel
     {
         
         /// <summary>
-        /// The site ID.
+        /// The period of monthly subscription, which defaults to 1 and is expressed in month.
+        /// Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
 
         /// <summary>
-        /// The load balancer ID.
+        /// Whether to enable auto-renewal. Valid values:
+        /// <li>`true`: Enable</li>
+        /// <li>`false` (default): Disable</li>
         /// </summary>
-        [JsonProperty("LoadBalancingId")]
-        public string LoadBalancingId{ get; set; }
+        [JsonProperty("RenewFlag")]
+        public bool? RenewFlag{ get; set; }
 
 
         /// <summary>
@@ -42,8 +45,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "LoadBalancingId", this.LoadBalancingId);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

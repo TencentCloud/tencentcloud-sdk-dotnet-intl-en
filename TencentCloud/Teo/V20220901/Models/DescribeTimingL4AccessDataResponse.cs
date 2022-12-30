@@ -21,20 +21,21 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLoadBalancingResponse : AbstractModel
+    public class DescribeTimingL4AccessDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// Total number of records.
+        /// Total number of query results.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Load balancer information.
+        /// Number of L4 connections over time
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Data")]
-        public LoadBalancing[] Data{ get; set; }
+        [JsonProperty("TimingDataRecords")]
+        public TimingDataRecord[] TimingDataRecords{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -49,7 +50,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamArrayObj(map, prefix + "TimingDataRecords.", this.TimingDataRecords);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

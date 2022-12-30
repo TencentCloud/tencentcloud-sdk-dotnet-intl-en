@@ -56,7 +56,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// Access control list
+        /// The policy for visual component (Kibana and Cerebro) access over public network.
         /// </summary>
         [JsonProperty("EsAcl")]
         public EsAcl EsAcl{ get; set; }
@@ -115,7 +115,9 @@ namespace TencentCloud.Es.V20180416.Models
         public NodeInfo[] NodeInfoList{ get; set; }
 
         /// <summary>
-        /// Public network access status
+        /// The status of ES cluster access over public network.
+        /// `OPEN`: Enabled.
+        /// `CLOSE`: Disabled.
         /// </summary>
         [JsonProperty("PublicAccess")]
         public string PublicAccess{ get; set; }
@@ -127,13 +129,17 @@ namespace TencentCloud.Es.V20180416.Models
         public EsPublicAcl EsPublicAcl{ get; set; }
 
         /// <summary>
-        /// Public network access status of Kibana
+        /// The status of Kibana access over public network.
+        /// `OPEN`: Enabled.
+        /// `CLOSE`: Disabled.
         /// </summary>
         [JsonProperty("KibanaPublicAccess")]
         public string KibanaPublicAccess{ get; set; }
 
         /// <summary>
-        /// Private network access status of Kibana
+        /// The status of Kibana access over private network.
+        /// `OPEN`: Enabled.
+        /// `CLOSE`: Disabled.
         /// </summary>
         [JsonProperty("KibanaPrivateAccess")]
         public string KibanaPrivateAccess{ get; set; }
@@ -193,13 +199,17 @@ namespace TencentCloud.Es.V20180416.Models
         public bool? EnableCerebro{ get; set; }
 
         /// <summary>
-        /// Cerebro public network access status
+        /// The status of Cerebro access over public network.
+        /// `OPEN`: Enabled.
+        /// `CLOSE`: Disabled.
         /// </summary>
         [JsonProperty("CerebroPublicAccess")]
         public string CerebroPublicAccess{ get; set; }
 
         /// <summary>
-        /// Cerebro private network access status
+        /// The status of Cerebro access over private network.
+        /// `OPEN`: Enabled.
+        /// `CLOSE`: Disabled.
         /// </summary>
         [JsonProperty("CerebroPrivateAccess")]
         public string CerebroPrivateAccess{ get; set; }
@@ -218,6 +228,8 @@ namespace TencentCloud.Es.V20180416.Models
 
         /// <summary>
         /// Whether to enable the option for sending alerting messages over the public network.
+        /// `OPEN`: Enabled.
+        /// `CLOSE`: Disabled.
         /// </summary>
         [JsonProperty("KibanaAlteringPublicAccess")]
         public string KibanaAlteringPublicAccess{ get; set; }

@@ -50,12 +50,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// The key of the parameter QueryCondition, which is used to specify a filter. Values:
-        /// <li>`country`: Country/Region;</li>
-        /// <li>`domain`: Domain name;</li>
-        /// <li>`protocol`: Protocol type;</li>
-        /// <li>`tagKey`: Tag key;</li>
-        /// <li>`tagValue`: Tag value.</li>
+        /// Filter conditions. See below for details: 
+        /// <li>`country`:<br>   Filter by the <strong>country/region code</strong>. <a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a> country codes are used.<br>   Type: String<br>   Required: No</li>
+        /// <li>`domain`<br>   Filter by the <strong>sub-domain name</strong>, such as `test.example.com`<br>   Type: String<br>   Required: No</li>
+        /// <li>`protocol`:<br>   Filter by the <strong>HTTP protocol</strong><br>   Type: String<br>   Required: No<br>   Values:<br>   `HTTP/1.0`: HTTP 1.0<br>   `HTTP/1.1`: HTTP 1.1<br>   `HTTP/2.0`: HTTP 2.0<br>   `HTTP/3.0`: HTTP 3.0<br>   `WebSocket`: WebSocket</li>
+        /// <li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+        /// <li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
@@ -71,9 +71,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Data storage region. Values:
-        /// <li>`overseas`: Global (outside the Chinese mainland);</li>
-        /// <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+        /// Geolocation scope. Values:
+        /// <li>`overseas`: Regions outside the Chinese mainland</li>
+        /// <li>`mainland`: Chinese mainland</li>
+        /// <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

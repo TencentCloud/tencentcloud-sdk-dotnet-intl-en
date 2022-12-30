@@ -26,16 +26,17 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// The task type. Valid values:
-        /// <li>Procedure: Video processing</li>
-        /// <li>EditMedia: Video editing</li>
-        /// <li>SplitMedia: Video splitting</li>
-        /// <li>ComposeMedia: Media file production</li>
-        /// <li>WechatPublish: WeChat publishing</li>
-        /// <li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-        /// <li>PullUpload: Pulling media files for upload</li>
-        /// <li>FastClipMedia: Quick clipping</li>
-        /// <li>RemoveWatermarkTask: Watermark removal</li>
-        /// <li> ReviewAudioVideo: Moderation</li>
+        /// <li>`Procedure`: Video processing</li>
+        /// <li>`EditMedia`: Video editing</li>
+        /// <li>`SplitMedia`: Video splitting</li>
+        /// <li>`ComposeMedia`: Media file production</li>
+        /// <li>`WechatPublish`: WeChat publishing</li>
+        /// <li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+        /// <li>`PullUpload`: Pulling media files for upload</li>
+        /// <li>`FastClipMedia`: Quick clipping</li>
+        /// <li>`RemoveWatermarkTask`: Watermark removal</li>
+        /// <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+        /// <li> `ReviewAudioVideo`: Moderation</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -180,7 +181,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public ReduceMediaBitrateTask ReduceMediaBitrateTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DescribeFileAttributesTask")]
         public DescribeFileAttributesTask DescribeFileAttributesTask{ get; set; }

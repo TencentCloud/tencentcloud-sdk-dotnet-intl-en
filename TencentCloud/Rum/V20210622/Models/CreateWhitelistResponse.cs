@@ -31,6 +31,12 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Msg{ get; set; }
 
         /// <summary>
+        /// Allowlist ID
+        /// </summary>
+        [JsonProperty("ID")]
+        public ulong? ID{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Msg", this.Msg);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

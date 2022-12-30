@@ -15,34 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLoadBalancingStatusRequest : AbstractModel
+    public class SceneSoftwareConfig : AbstractModel
     {
         
         /// <summary>
-        /// The site ID.
+        /// The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+        /// The instance type, `hive` or `flink`.
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("Software")]
+        public string[] Software{ get; set; }
 
         /// <summary>
-        /// The load balancer ID.
+        /// The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+        /// Hadoop-Kudu
+        /// Hadoop-Zookeeper
+        /// Hadoop-Presto
+        /// Hadoop-Hbase
+        /// Hadoop-Default
         /// </summary>
-        [JsonProperty("LoadBalancingId")]
-        public string LoadBalancingId{ get; set; }
-
-        /// <summary>
-        /// The load balancer status. Values:
-        /// <li>`online`: Enabled</li>
-        /// <li>`offline`: Disabled</li>
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("SceneName")]
+        public string SceneName{ get; set; }
 
 
         /// <summary>
@@ -50,9 +48,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "LoadBalancingId", this.LoadBalancingId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "Software.", this.Software);
+            this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
         }
     }
 }

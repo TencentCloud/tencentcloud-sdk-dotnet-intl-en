@@ -32,24 +32,25 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// <b>Supported event types:</b>
-        /// <li>NewFileUpload: Video uploaded.</li>
-        /// <li>ProcedureStateChanged: Task flow status changed.</li>
-        /// <li>FileDeleted: Video deleted.</li>
-        /// <li>PullComplete: Finished video pulling.</li>
-        /// <li>EditMediaComplete: Finished video editing.</li>
-        /// <li>SplitMediaComplete: Finished video splitting.</li>
-        /// <li>WechatPublishComplete: Published to WeChat.</li>
-        /// <li>ComposeMediaComplete: Finished producing the media file.</li>
-        /// <li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
-        /// <li>FastClipMediaComplete: Finished quick clipping.</li>
-        /// <li>ReviewAudioVideoComplete: Finished moderation.</li>
-        /// <li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
+        /// <li>`NewFileUpload`: Video uploaded.</li>
+        /// <li>`ProcedureStateChanged`: Task flow status changed.</li>
+        /// <li>`FileDeleted`: Video deleted.</li>
+        /// <li>`PullComplete`: Finished video pulling.</li>
+        /// <li>`EditMediaComplete`: Finished video editing.</li>
+        /// <li>`SplitMediaComplete`: Finished video splitting.</li>
+        /// <li>`WechatPublishComplete`: Published to WeChat.</li>
+        /// <li>`ComposeMediaComplete`: Finished producing the media file.</li>
+        /// <li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
+        /// <li>`FastClipMediaComplete`: Finished quick clipping.</li>
+        /// <li>`ReviewAudioVideoComplete`: Finished moderation.</li>
+        /// <li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
+        /// <li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
         /// <b>v2017 task types:</b>
-        /// <li>TranscodeComplete: Finished video transcoding.</li>
-        /// <li>ConcatComplete: Finished video splicing.</li>
-        /// <li>ClipComplete: Finished video clipping.</li>
-        /// <li>CreateImageSpriteComplete: Finished image sprite generation.</li>
-        /// <li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
+        /// <li>`TranscodeComplete`: Finished video transcoding.</li>
+        /// <li>`ConcatComplete`: Finished video splicing.</li>
+        /// <li>`ClipComplete`: Finished video clipping.</li>
+        /// <li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
+        /// <li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -188,7 +189,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 
+        /// The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DescribeFileAttributesCompleteEvent")]
         public DescribeFileAttributesTask DescribeFileAttributesCompleteEvent{ get; set; }

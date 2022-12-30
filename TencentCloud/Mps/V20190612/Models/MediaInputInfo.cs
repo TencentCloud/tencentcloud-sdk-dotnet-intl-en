@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The type of video processing input object, which supports COS and URL.
+        /// The input type, which can be `COS` or `URL`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -2311,6 +2311,50 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to get file attributes asynchronously.
+        /// - Currently, this API can only get the MD5 hash of a file.
+        /// - If the file queried is in HLS or DASH format, the attributes of the index file will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileAttributesRequest"/></param>
+        /// <returns><see cref="DescribeFileAttributesResponse"/></returns>
+        public async Task<DescribeFileAttributesResponse> DescribeFileAttributes(DescribeFileAttributesRequest req)
+        {
+             JsonResponseModel<DescribeFileAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFileAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get file attributes asynchronously.
+        /// - Currently, this API can only get the MD5 hash of a file.
+        /// - If the file queried is in HLS or DASH format, the attributes of the index file will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileAttributesRequest"/></param>
+        /// <returns><see cref="DescribeFileAttributesResponse"/></returns>
+        public DescribeFileAttributesResponse DescribeFileAttributesSync(DescribeFileAttributesRequest req)
+        {
+             JsonResponseModel<DescribeFileAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFileAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query image processing templates. You can specify the filters as well as the offset to start returning records from.
         /// </summary>
         /// <param name="req"><see cref="DescribeImageProcessingTemplatesRequest"/></param>

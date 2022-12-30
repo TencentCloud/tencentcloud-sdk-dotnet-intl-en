@@ -21,70 +21,51 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOverviewL7DataRequest : AbstractModel
+    public class DescribeTimingL4AccessDataRequest : AbstractModel
     {
         
         /// <summary>
-        /// The start time.
+        /// Query start time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time.
+        /// Query end time
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The query metric. Values:
-        /// <li>`l7Flow_outFlux`: Access traffic;</li>
-        /// <li>`l7Flow_request`: Access requests;</li>
-        /// <li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-        /// <li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
+        /// Metric to query. Values:
+        /// <li>`l4Flow_connections`: Number of connections</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// List of sites to be queried. All sites will be selected if this field is not specified.
+        /// IDs of sites to be queried. All sites will be selected if this field is not specified.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
-        /// </summary>
-        [JsonProperty("Domains")]
-        public string[] Domains{ get; set; }
-
-        /// <summary>
-        /// The protocol type. Values:
-        /// <li>`http`: HTTP protocol;</li>
-        /// <li>`https`: HTTPS protocol;</li>
-        /// <li>`http2`: HTTP2 protocol;</li>
-        /// <li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
-        /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
-
-        /// <summary>
-        /// The query time granularity. Values:
-        /// <li>`min`: 1 minute;</li>
-        /// <li>`5min`: 5 minute;</li>
-        /// <li>`hour`: 1 hour;</li>
-        /// <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+        /// The query granularity. Values:
+        /// <li>`min`: 1 minute</li>
+        /// <li>`5min`: 5 minutes</li>
+        /// <li>`hour`: 1 hour</li>
+        /// <li>`day`: 1 day</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
         /// Filter conditions. See below for details: 
-        /// <li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-        /// <li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+        /// <li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
+        /// <li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
         /// </summary>
-        [JsonProperty("Filters")]
-        public QueryCondition[] Filters{ get; set; }
+        [JsonProperty("QueryConditions")]
+        public QueryCondition[] QueryConditions{ get; set; }
 
         /// <summary>
         /// Geolocation scope. Values:
@@ -105,10 +86,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
-            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "QueryConditions.", this.QueryConditions);
             this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }

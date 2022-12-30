@@ -333,46 +333,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a DNS record.
-        /// </summary>
-        /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
-        /// <returns><see cref="CreateDnsRecordResponse"/></returns>
-        public async Task<CreateDnsRecordResponse> CreateDnsRecord(CreateDnsRecordRequest req)
-        {
-             JsonResponseModel<CreateDnsRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDnsRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDnsRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a DNS record.
-        /// </summary>
-        /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
-        /// <returns><see cref="CreateDnsRecordResponse"/></returns>
-        public CreateDnsRecordResponse CreateDnsRecordSync(CreateDnsRecordRequest req)
-        {
-             JsonResponseModel<CreateDnsRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDnsRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDnsRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to create an IP blocklist/allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateIpTableListRequest"/></param>
@@ -404,46 +364,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "CreateIpTableList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIpTableListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a CLB instance.
-        /// </summary>
-        /// <param name="req"><see cref="CreateLoadBalancingRequest"/></param>
-        /// <returns><see cref="CreateLoadBalancingResponse"/></returns>
-        public async Task<CreateLoadBalancingResponse> CreateLoadBalancing(CreateLoadBalancingRequest req)
-        {
-             JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create a CLB instance.
-        /// </summary>
-        /// <param name="req"><see cref="CreateLoadBalancingRequest"/></param>
-        /// <returns><see cref="CreateLoadBalancingResponse"/></returns>
-        public CreateLoadBalancingResponse CreateLoadBalancingSync(CreateLoadBalancingRequest req)
-        {
-             JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1004,86 +924,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DeleteApplicationProxyRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationProxyRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete DNS records in batches.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
-        /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
-        public async Task<DeleteDnsRecordsResponse> DeleteDnsRecords(DeleteDnsRecordsRequest req)
-        {
-             JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteDnsRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDnsRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete DNS records in batches.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
-        /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
-        public DeleteDnsRecordsResponse DeleteDnsRecordsSync(DeleteDnsRecordsRequest req)
-        {
-             JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteDnsRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDnsRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a CLB instance.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLoadBalancingRequest"/></param>
-        /// <returns><see cref="DeleteLoadBalancingResponse"/></returns>
-        public async Task<DeleteLoadBalancingResponse> DeleteLoadBalancing(DeleteLoadBalancingRequest req)
-        {
-             JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to delete a CLB instance.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLoadBalancingRequest"/></param>
-        /// <returns><see cref="DeleteLoadBalancingResponse"/></returns>
-        public DeleteLoadBalancingResponse DeleteLoadBalancingSync(DeleteLoadBalancingRequest req)
-        {
-             JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2093,6 +1933,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the data of L4 connection duration over time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDistributionL4AccessDataRequest"/></param>
+        /// <returns><see cref="DescribeDistributionL4AccessDataResponse"/></returns>
+        public async Task<DescribeDistributionL4AccessDataResponse> DescribeDistributionL4AccessData(DescribeDistributionL4AccessDataRequest req)
+        {
+             JsonResponseModel<DescribeDistributionL4AccessDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDistributionL4AccessData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDistributionL4AccessDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the data of L4 connection duration over time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDistributionL4AccessDataRequest"/></param>
+        /// <returns><see cref="DescribeDistributionL4AccessDataResponse"/></returns>
+        public DescribeDistributionL4AccessDataResponse DescribeDistributionL4AccessDataSync(DescribeDistributionL4AccessDataRequest req)
+        {
+             JsonResponseModel<DescribeDistributionL4AccessDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDistributionL4AccessData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDistributionL4AccessDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get DNS requests.
         /// </summary>
         /// <param name="req"><see cref="DescribeDnsDataRequest"/></param>
@@ -2124,46 +2004,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDnsData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDnsDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query DNS records. Paging, sorting and filtering are supported.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
-        /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
-        public async Task<DescribeDnsRecordsResponse> DescribeDnsRecords(DescribeDnsRecordsRequest req)
-        {
-             JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDnsRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDnsRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query DNS records. Paging, sorting and filtering are supported.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
-        /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
-        public DescribeDnsRecordsResponse DescribeDnsRecordsSync(DescribeDnsRecordsRequest req)
-        {
-             JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDnsRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDnsRecordsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2284,46 +2124,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIdentifications");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdentificationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain a list of CLB instances.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLoadBalancingRequest"/></param>
-        /// <returns><see cref="DescribeLoadBalancingResponse"/></returns>
-        public async Task<DescribeLoadBalancingResponse> DescribeLoadBalancing(DescribeLoadBalancingRequest req)
-        {
-             JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to obtain a list of CLB instances.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLoadBalancingRequest"/></param>
-        /// <returns><see cref="DescribeLoadBalancingResponse"/></returns>
-        public DescribeLoadBalancingResponse DescribeLoadBalancingSync(DescribeLoadBalancingRequest req)
-        {
-             JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3124,6 +2924,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSpeedTestingQuota");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpeedTestingQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of L4 connections over time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL4AccessDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL4AccessDataResponse"/></returns>
+        public async Task<DescribeTimingL4AccessDataResponse> DescribeTimingL4AccessData(DescribeTimingL4AccessDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL4AccessDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimingL4AccessData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL4AccessDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the number of L4 connections over time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL4AccessDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL4AccessDataResponse"/></returns>
+        public DescribeTimingL4AccessDataResponse DescribeTimingL4AccessDataSync(DescribeTimingL4AccessDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL4AccessDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimingL4AccessData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL4AccessDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4333,46 +4173,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify DNS records.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDnsRecordRequest"/></param>
-        /// <returns><see cref="ModifyDnsRecordResponse"/></returns>
-        public async Task<ModifyDnsRecordResponse> ModifyDnsRecord(ModifyDnsRecordRequest req)
-        {
-             JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDnsRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDnsRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify DNS records.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDnsRecordRequest"/></param>
-        /// <returns><see cref="ModifyDnsRecordResponse"/></returns>
-        public ModifyDnsRecordResponse ModifyDnsRecordSync(ModifyDnsRecordRequest req)
-        {
-             JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDnsRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDnsRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to modify the DNSSEC status of a site.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnssecRequest"/></param>
@@ -4444,86 +4244,6 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "ModifyHostsCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHostsCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify a CLB instance.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLoadBalancingRequest"/></param>
-        /// <returns><see cref="ModifyLoadBalancingResponse"/></returns>
-        public async Task<ModifyLoadBalancingResponse> ModifyLoadBalancing(ModifyLoadBalancingRequest req)
-        {
-             JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify a CLB instance.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLoadBalancingRequest"/></param>
-        /// <returns><see cref="ModifyLoadBalancingResponse"/></returns>
-        public ModifyLoadBalancingResponse ModifyLoadBalancingSync(ModifyLoadBalancingRequest req)
-        {
-             JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancing");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the status of a CLB instance.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLoadBalancingStatusRequest"/></param>
-        /// <returns><see cref="ModifyLoadBalancingStatusResponse"/></returns>
-        public async Task<ModifyLoadBalancingStatusResponse> ModifyLoadBalancingStatus(ModifyLoadBalancingStatusRequest req)
-        {
-             JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancingStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to modify the status of a CLB instance.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLoadBalancingStatusRequest"/></param>
-        /// <returns><see cref="ModifyLoadBalancingStatusResponse"/></returns>
-        public ModifyLoadBalancingStatusResponse ModifyLoadBalancingStatusSync(ModifyLoadBalancingStatusRequest req)
-        {
-             JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancingStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancingStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

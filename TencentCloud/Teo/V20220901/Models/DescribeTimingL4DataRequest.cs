@@ -70,17 +70,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// The key of the parameter QueryCondition, which is used to specify a filter. Values:
-        /// <li>`ruleId`: Filter by rule ID;</li>
-        /// <li>`proxyId`: Filter by connection ID.</li>
+        /// Filter conditions. See below for details: 
+        /// <li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
+        /// <li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
 
         /// <summary>
-        /// Data storage region. Values:
-        /// <li>`overseas`: Global (outside the Chinese mainland);</li>
-        /// <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+        /// Geolocation scope. Values:
+        /// <li>`overseas`: Regions outside the Chinese mainland</li>
+        /// <li>`mainland`: Chinese mainland</li>
+        /// <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

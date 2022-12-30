@@ -115,6 +115,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
+        /// <summary>
+        /// The number of index docs.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IndexDocs")]
+        public ulong? IndexDocs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "IndexOptionsField.", this.IndexOptionsField);
             this.SetParamObj(map, prefix + "IndexSettingsField.", this.IndexSettingsField);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
         }
     }
 }

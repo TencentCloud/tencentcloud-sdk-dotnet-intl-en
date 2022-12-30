@@ -21,9 +21,22 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLoadBalancingStatusResponse : AbstractModel
+    public class DescribeDistributionL4AccessDataResponse : AbstractModel
     {
         
+        /// <summary>
+        /// Total number of query results.
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// Distribution of connection duration
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TopDataRecords")]
+        public TopDataRecord[] TopDataRecords{ get; set; }
+
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -36,6 +49,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "TopDataRecords.", this.TopDataRecords);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -97,6 +97,46 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// This API is used to create an EMR cluster instance.
         /// </summary>
+        /// <param name="req"><see cref="CreateClusterRequest"/></param>
+        /// <returns><see cref="CreateClusterResponse"/></returns>
+        public async Task<CreateClusterResponse> CreateCluster(CreateClusterRequest req)
+        {
+             JsonResponseModel<CreateClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an EMR cluster instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterRequest"/></param>
+        /// <returns><see cref="CreateClusterResponse"/></returns>
+        public CreateClusterResponse CreateClusterSync(CreateClusterRequest req)
+        {
+             JsonResponseModel<CreateClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an EMR cluster instance.
+        /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
         public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest req)
@@ -608,6 +648,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "ModifyResourceScheduler");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceSchedulerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to scale out a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutClusterRequest"/></param>
+        /// <returns><see cref="ScaleOutClusterResponse"/></returns>
+        public async Task<ScaleOutClusterResponse> ScaleOutCluster(ScaleOutClusterRequest req)
+        {
+             JsonResponseModel<ScaleOutClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleOutCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to scale out a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutClusterRequest"/></param>
+        /// <returns><see cref="ScaleOutClusterResponse"/></returns>
+        public ScaleOutClusterResponse ScaleOutClusterSync(ScaleOutClusterRequest req)
+        {
+             JsonResponseModel<ScaleOutClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleOutCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutClusterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

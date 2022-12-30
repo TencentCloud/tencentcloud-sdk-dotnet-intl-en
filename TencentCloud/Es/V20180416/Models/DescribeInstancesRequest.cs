@@ -55,7 +55,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+        /// The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
         /// </summary>
         [JsonProperty("OrderByKey")]
         public ulong? OrderByKey{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string[] ZoneList{ get; set; }
 
         /// <summary>
-        /// Health status filter list
+        /// The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
         /// </summary>
         [JsonProperty("HealthStatus")]
         public long?[] HealthStatus{ get; set; }
