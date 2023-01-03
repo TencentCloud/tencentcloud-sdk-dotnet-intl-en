@@ -80,8 +80,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Filter conditions. See below for details: 
-        /// <li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-        /// <li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+        /// <li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+        /// <li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }

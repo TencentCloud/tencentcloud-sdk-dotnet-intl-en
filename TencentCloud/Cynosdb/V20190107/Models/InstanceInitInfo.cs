@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Instance CPU
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance memory
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance type. Valid values:`rw`, `ro`.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of the instances. Value range: 1-15.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }

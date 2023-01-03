@@ -286,7 +286,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
         /// </summary>
         [JsonProperty("InstanceInitInfos")]
         public InstanceInitInfo[] InstanceInitInfos{ get; set; }
