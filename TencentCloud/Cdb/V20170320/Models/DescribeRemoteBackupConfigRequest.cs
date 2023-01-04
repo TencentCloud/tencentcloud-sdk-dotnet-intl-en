@@ -21,26 +21,14 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CdbSellType : AbstractModel
+    public class DescribeRemoteBackupConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
         /// </summary>
-        [JsonProperty("TypeName")]
-        public string TypeName{ get; set; }
-
-        /// <summary>
-        /// Engine version number
-        /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string[] EngineVersion{ get; set; }
-
-        /// <summary>
-        /// Purchasable specifications ID
-        /// </summary>
-        [JsonProperty("ConfigIds")]
-        public long?[] ConfigIds{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TypeName", this.TypeName);
-            this.SetParamArraySimple(map, prefix + "EngineVersion.", this.EngineVersion);
-            this.SetParamArraySimple(map, prefix + "ConfigIds.", this.ConfigIds);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

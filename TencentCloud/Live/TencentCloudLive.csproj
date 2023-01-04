@@ -124,6 +124,8 @@
     <Compile Include="V20180801\Models\DeleteLiveWatermarkRuleResponse.cs" />
     <Compile Include="V20180801\Models\DeleteRecordTaskRequest.cs" />
     <Compile Include="V20180801\Models\DeleteRecordTaskResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeAllStreamPlayInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeAllStreamPlayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeConcurrentRecordStreamNumRequest.cs" />
     <Compile Include="V20180801\Models\DescribeConcurrentRecordStreamNumResponse.cs" />
     <Compile Include="V20180801\Models\DescribeDeliverBandwidthListRequest.cs" />
@@ -214,6 +216,8 @@
     <Compile Include="V20180801\Models\DescribeStreamDayPlayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeStreamPlayInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeStreamPlayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeStreamPushInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeStreamPushInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeTopClientIpSumInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeTopClientIpSumInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeTranscodeTaskNumRequest.cs" />
@@ -262,6 +266,7 @@
     <Compile Include="V20180801\Models\ModifyLiveSnapshotTemplateResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveTranscodeTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\MonitorStreamPlayInfo.cs" />
     <Compile Include="V20180801\Models\PlayAuthKeyInfo.cs" />
     <Compile Include="V20180801\Models\PlayCodeTotalInfo.cs" />
     <Compile Include="V20180801\Models\PlayDataInfoByStream.cs" />
@@ -273,6 +278,7 @@
     <Compile Include="V20180801\Models\PullStreamTaskInfo.cs" />
     <Compile Include="V20180801\Models\PushAuthKeyInfo.cs" />
     <Compile Include="V20180801\Models\PushDataInfo.cs" />
+    <Compile Include="V20180801\Models\PushQualityData.cs" />
     <Compile Include="V20180801\Models\RecentPullInfo.cs" />
     <Compile Include="V20180801\Models\RecordParam.cs" />
     <Compile Include="V20180801\Models\RecordTemplateInfo.cs" />

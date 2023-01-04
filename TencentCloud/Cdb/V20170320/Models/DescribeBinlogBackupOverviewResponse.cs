@@ -61,6 +61,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BinlogArchiveCount{ get; set; }
 
         /// <summary>
+        /// Log backup capacity of standard storage in bytes
+        /// </summary>
+        [JsonProperty("BinlogStandbyVolume")]
+        public long? BinlogStandbyVolume{ get; set; }
+
+        /// <summary>
+        /// Number of log backups of standard storage
+        /// </summary>
+        [JsonProperty("BinlogStandbyCount")]
+        public long? BinlogStandbyCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +90,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "RemoteBinlogCount", this.RemoteBinlogCount);
             this.SetParamSimple(map, prefix + "BinlogArchiveVolume", this.BinlogArchiveVolume);
             this.SetParamSimple(map, prefix + "BinlogArchiveCount", this.BinlogArchiveCount);
+            this.SetParamSimple(map, prefix + "BinlogStandbyVolume", this.BinlogStandbyVolume);
+            this.SetParamSimple(map, prefix + "BinlogStandbyCount", this.BinlogStandbyCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

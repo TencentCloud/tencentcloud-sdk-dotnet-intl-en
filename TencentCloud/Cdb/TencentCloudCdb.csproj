@@ -181,6 +181,8 @@
     <Compile Include="V20170320\Models\DescribeProxyConnectionPoolConfResponse.cs" />
     <Compile Include="V20170320\Models\DescribeProxyCustomConfRequest.cs" />
     <Compile Include="V20170320\Models\DescribeProxyCustomConfResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeRemoteBackupConfigRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeRemoteBackupConfigResponse.cs" />
     <Compile Include="V20170320\Models\DescribeRoGroupsRequest.cs" />
     <Compile Include="V20170320\Models\DescribeRoGroupsResponse.cs" />
     <Compile Include="V20170320\Models\DescribeRoMinScaleRequest.cs" />
@@ -266,6 +268,8 @@
     <Compile Include="V20170320\Models\ModifyNameOrDescByDpIdResponse.cs" />
     <Compile Include="V20170320\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="V20170320\Models\ModifyParamTemplateResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyRemoteBackupConfigRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyRemoteBackupConfigResponse.cs" />
     <Compile Include="V20170320\Models\ModifyRoGroupInfoRequest.cs" />
     <Compile Include="V20170320\Models\ModifyRoGroupInfoResponse.cs" />
     <Compile Include="V20170320\Models\ModifyTimeWindowRequest.cs" />

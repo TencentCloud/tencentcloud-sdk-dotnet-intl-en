@@ -97,11 +97,19 @@ namespace TencentCloud.Live.V20180801.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The region of the source (please choose the nearest region).
-        /// ap-beijing: North China (Beijing)
-        /// ap-shanghai: East China (Shanghai)
-        /// ap-guangzhou: South China (Guangzhou)
-        /// ap-mumbai: India
+        /// The region where the task was created.
+        /// `ap-beijing`: North China (Beijing)
+        /// `ap-shanghai`: East China (Shanghai)
+        /// `ap-guangzhou`: South China (Guangzhou)
+        /// `ap-mumbai`: India
+        /// `ap-hongkong`: Hong Kong
+        /// `eu-frankfurt`: Germany
+        /// `ap-seoul`: Korea
+        /// `ap-bangkok`: Thailand
+        /// `ap-singapore`: Singapore
+        /// `na-siliconvalley`: Western US
+        /// `na-ashburn`: Eastern US
+        /// `ap-tokyo`: Japan
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

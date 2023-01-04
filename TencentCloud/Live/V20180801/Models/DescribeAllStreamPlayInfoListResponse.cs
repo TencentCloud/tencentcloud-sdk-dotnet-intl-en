@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CdbSellType : AbstractModel
+    public class DescribeAllStreamPlayInfoListResponse : AbstractModel
     {
         
         /// <summary>
-        /// Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+        /// The time point queried, whose value is the same as that of the corresponding request parameter.
         /// </summary>
-        [JsonProperty("TypeName")]
-        public string TypeName{ get; set; }
+        [JsonProperty("QueryTime")]
+        public string QueryTime{ get; set; }
 
         /// <summary>
-        /// Engine version number
+        /// The playback data.
         /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string[] EngineVersion{ get; set; }
+        [JsonProperty("DataInfoList")]
+        public MonitorStreamPlayInfo[] DataInfoList{ get; set; }
 
         /// <summary>
-        /// Purchasable specifications ID
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("ConfigIds")]
-        public long?[] ConfigIds{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TypeName", this.TypeName);
-            this.SetParamArraySimple(map, prefix + "EngineVersion.", this.EngineVersion);
-            this.SetParamArraySimple(map, prefix + "ConfigIds.", this.ConfigIds);
+            this.SetParamSimple(map, prefix + "QueryTime", this.QueryTime);
+            this.SetParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

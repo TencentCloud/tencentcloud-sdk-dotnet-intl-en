@@ -345,9 +345,9 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API and bind the template ID to the domain name/path.
-        /// <br>Callback protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-        /// Note: at least enter one callback URL.
+        /// This API is used to create a callback template. Up to 50 templates can be created. After the template ID is returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API to bind the template ID to a domain name/path.
+        /// <br>For information about callback protocols, see [How to Receive Event Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+        /// Note: You need to specify at least one callback URL.
         /// </summary>
         /// <param name="req"><see cref="CreateLiveCallbackTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveCallbackTemplateResponse"/></returns>
@@ -367,9 +367,9 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API and bind the template ID to the domain name/path.
-        /// <br>Callback protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-        /// Note: at least enter one callback URL.
+        /// This API is used to create a callback template. Up to 50 templates can be created. After the template ID is returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API to bind the template ID to a domain name/path.
+        /// <br>For information about callback protocols, see [How to Receive Event Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+        /// Note: You need to specify at least one callback URL.
         /// </summary>
         /// <param name="req"><see cref="CreateLiveCallbackTemplateRequest"/></param>
         /// <returns><see cref="CreateLiveCallbackTemplateResponse"/></returns>
@@ -1424,6 +1424,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteRecordTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the playback data of all streams at a specified time point (accurate to the minute).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllStreamPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeAllStreamPlayInfoListResponse"/></returns>
+        public async Task<DescribeAllStreamPlayInfoListResponse> DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllStreamPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the playback data of all streams at a specified time point (accurate to the minute).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllStreamPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeAllStreamPlayInfoListResponse"/></returns>
+        public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoListSync(DescribeAllStreamPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllStreamPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3280,6 +3320,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStreamPlayInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the push data of a stream, including the audio/video frame rate, bitrate, elapsed time, and codec.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPushInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStreamPushInfoListResponse"/></returns>
+        public async Task<DescribeStreamPushInfoListResponse> DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamPushInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPushInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the push data of a stream, including the audio/video frame rate, bitrate, elapsed time, and codec.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPushInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStreamPushInfoListResponse"/></returns>
+        public DescribeStreamPushInfoListResponse DescribeStreamPushInfoListSync(DescribeStreamPushInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamPushInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPushInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

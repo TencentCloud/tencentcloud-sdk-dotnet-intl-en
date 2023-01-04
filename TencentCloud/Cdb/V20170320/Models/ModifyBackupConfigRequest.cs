@@ -120,6 +120,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EnableBinlogArchive")]
         public string EnableBinlogArchive{ get; set; }
 
+        /// <summary>
+        /// Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+        /// </summary>
+        [JsonProperty("EnableBackupStandby")]
+        public string EnableBackupStandby{ get; set; }
+
+        /// <summary>
+        /// The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+        /// </summary>
+        [JsonProperty("BackupStandbyDays")]
+        public long? BackupStandbyDays{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+        /// </summary>
+        [JsonProperty("EnableBinlogStandby")]
+        public string EnableBinlogStandby{ get; set; }
+
+        /// <summary>
+        /// The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+        /// </summary>
+        [JsonProperty("BinlogStandbyDays")]
+        public long? BinlogStandbyDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +166,10 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupArchiveDays", this.BackupArchiveDays);
             this.SetParamSimple(map, prefix + "BinlogArchiveDays", this.BinlogArchiveDays);
             this.SetParamSimple(map, prefix + "EnableBinlogArchive", this.EnableBinlogArchive);
+            this.SetParamSimple(map, prefix + "EnableBackupStandby", this.EnableBackupStandby);
+            this.SetParamSimple(map, prefix + "BackupStandbyDays", this.BackupStandbyDays);
+            this.SetParamSimple(map, prefix + "EnableBinlogStandby", this.EnableBinlogStandby);
+            this.SetParamSimple(map, prefix + "BinlogStandbyDays", this.BinlogStandbyDays);
         }
     }
 }

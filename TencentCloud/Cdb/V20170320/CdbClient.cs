@@ -2279,6 +2279,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the configuration information of a remote TencentDB instance backup.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteBackupConfigRequest"/></param>
+        /// <returns><see cref="DescribeRemoteBackupConfigResponse"/></returns>
+        public async Task<DescribeRemoteBackupConfigResponse> DescribeRemoteBackupConfig(DescribeRemoteBackupConfigRequest req)
+        {
+             JsonResponseModel<DescribeRemoteBackupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRemoteBackupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRemoteBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the configuration information of a remote TencentDB instance backup.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteBackupConfigRequest"/></param>
+        /// <returns><see cref="DescribeRemoteBackupConfigResponse"/></returns>
+        public DescribeRemoteBackupConfigResponse DescribeRemoteBackupConfigSync(DescribeRemoteBackupConfigRequest req)
+        {
+             JsonResponseModel<DescribeRemoteBackupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRemoteBackupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRemoteBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the information of all RO groups of a TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeRoGroupsRequest"/></param>
@@ -3678,6 +3718,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyParamTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration information of a remote TencentDB instance backup.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteBackupConfigRequest"/></param>
+        /// <returns><see cref="ModifyRemoteBackupConfigResponse"/></returns>
+        public async Task<ModifyRemoteBackupConfigResponse> ModifyRemoteBackupConfig(ModifyRemoteBackupConfigRequest req)
+        {
+             JsonResponseModel<ModifyRemoteBackupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRemoteBackupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRemoteBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration information of a remote TencentDB instance backup.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteBackupConfigRequest"/></param>
+        /// <returns><see cref="ModifyRemoteBackupConfigResponse"/></returns>
+        public ModifyRemoteBackupConfigResponse ModifyRemoteBackupConfigSync(ModifyRemoteBackupConfigRequest req)
+        {
+             JsonResponseModel<ModifyRemoteBackupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRemoteBackupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRemoteBackupConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -63,6 +63,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BackupArchiveVolume{ get; set; }
 
         /// <summary>
+        /// Backup capacity of standard storage, which includes data backups and log backups.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BackupStandbyVolume")]
+        public long? BackupStandbyVolume{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -80,6 +87,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "FreeVolume", this.FreeVolume);
             this.SetParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
             this.SetParamSimple(map, prefix + "BackupArchiveVolume", this.BackupArchiveVolume);
+            this.SetParamSimple(map, prefix + "BackupStandbyVolume", this.BackupStandbyVolume);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

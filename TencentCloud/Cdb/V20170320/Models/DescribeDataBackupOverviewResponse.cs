@@ -85,6 +85,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? DataBackupArchiveCount{ get; set; }
 
         /// <summary>
+        /// Total backup capacity of standard storage in current region
+        /// </summary>
+        [JsonProperty("DataBackupStandbyVolume")]
+        public long? DataBackupStandbyVolume{ get; set; }
+
+        /// <summary>
+        /// Total number of standard storage backups in current region
+        /// </summary>
+        [JsonProperty("DataBackupStandbyCount")]
+        public long? DataBackupStandbyCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +118,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "RemoteBackupCount", this.RemoteBackupCount);
             this.SetParamSimple(map, prefix + "DataBackupArchiveVolume", this.DataBackupArchiveVolume);
             this.SetParamSimple(map, prefix + "DataBackupArchiveCount", this.DataBackupArchiveCount);
+            this.SetParamSimple(map, prefix + "DataBackupStandbyVolume", this.DataBackupStandbyVolume);
+            this.SetParamSimple(map, prefix + "DataBackupStandbyCount", this.DataBackupStandbyCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
