@@ -21,26 +21,32 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnhancedService : AbstractModel
+    public class UpdateEdgeClusterVersionRequest : AbstractModel
     {
         
         /// <summary>
-        /// Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("SecurityService")]
-        public RunSecurityServiceEnabled SecurityService{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
+        /// Target version
         /// </summary>
-        [JsonProperty("MonitorService")]
-        public RunMonitorServiceEnabled MonitorService{ get; set; }
+        [JsonProperty("EdgeVersion")]
+        public string EdgeVersion{ get; set; }
 
         /// <summary>
-        /// Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
+        /// Prefix of the image repository of a custom edge component
         /// </summary>
-        [JsonProperty("AutomationService")]
-        public RunAutomationServiceEnabled AutomationService{ get; set; }
+        [JsonProperty("RegistryPrefix")]
+        public string RegistryPrefix{ get; set; }
+
+        /// <summary>
+        /// Whether to skip precheck
+        /// </summary>
+        [JsonProperty("SkipPreCheck")]
+        public bool? SkipPreCheck{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "SecurityService.", this.SecurityService);
-            this.SetParamObj(map, prefix + "MonitorService.", this.MonitorService);
-            this.SetParamObj(map, prefix + "AutomationService.", this.AutomationService);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
+            this.SetParamSimple(map, prefix + "RegistryPrefix", this.RegistryPrefix);
+            this.SetParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
         }
     }
 }

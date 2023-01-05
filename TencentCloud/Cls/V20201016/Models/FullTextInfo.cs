@@ -31,9 +31,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// Separator of the full-text index. Each character represents a separator;
-        /// Supports only English punctuation marks and (\n\t\r);
-        /// We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+        /// Separator of the full-text index. Each character represents a separator.
+        /// Only symbols, \n\t\r, and escape character \ are supported.
+        /// Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
         /// </summary>
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }

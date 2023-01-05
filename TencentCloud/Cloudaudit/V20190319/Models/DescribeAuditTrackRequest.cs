@@ -21,7 +21,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAuditTrackResponse : AbstractModel
+    public class DescribeAuditTrackRequest : AbstractModel
     {
         
         /// <summary>
@@ -30,12 +30,6 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         [JsonProperty("TrackId")]
         public ulong? TrackId{ get; set; }
 
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -43,7 +37,6 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TrackId", this.TrackId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

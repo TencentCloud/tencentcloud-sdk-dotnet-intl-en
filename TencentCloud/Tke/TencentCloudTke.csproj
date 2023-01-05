@@ -83,8 +83,6 @@
     <Compile Include="V20180525\Models\CreateClusterEndpointVipResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterInstancesResponse.cs" />
-    <Compile Include="V20180525\Models\CreateClusterNodePoolFromExistingAsgRequest.cs" />
-    <Compile Include="V20180525\Models\CreateClusterNodePoolFromExistingAsgResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRequest.cs" />
@@ -179,6 +177,8 @@
     <Compile Include="V20180525\Models\DescribeEdgeClusterExtraArgsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEdgeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEdgeClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeClusterUpgradeInfoRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeClusterUpgradeInfoResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEdgeLogSwitchesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEdgeLogSwitchesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
@@ -274,6 +274,7 @@
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="V20180525\Models\NodePool.cs" />
     <Compile Include="V20180525\Models\NodePoolOption.cs" />
+    <Compile Include="V20180525\Models\OIDCConfigAuthenticationOptions.cs" />
     <Compile Include="V20180525\Models\PodLimitsByType.cs" />
     <Compile Include="V20180525\Models\PodLimitsInstance.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertRule.cs" />
@@ -304,6 +305,8 @@
     <Compile Include="V20180525\Models\UninstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionResponse.cs" />
+    <Compile Include="V20180525\Models\UpdateEdgeClusterVersionRequest.cs" />
+    <Compile Include="V20180525\Models\UpdateEdgeClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeAbleInstancesItem.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />

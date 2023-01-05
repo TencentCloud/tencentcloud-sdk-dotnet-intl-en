@@ -24,12 +24,26 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     public class DescribeAuditTracksRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Page number
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public ulong? PageNumber{ get; set; }
+
+        /// <summary>
+        /// The number of tracking sets per page
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

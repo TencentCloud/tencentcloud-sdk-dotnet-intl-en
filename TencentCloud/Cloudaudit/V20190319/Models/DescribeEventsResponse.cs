@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// Whether the logset ends.
+        /// Whether the log list has come to an end. `true`: Yes. Pagination is not required.
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
@@ -44,8 +44,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public Event[] Events{ get; set; }
 
         /// <summary>
-        /// Total number of events.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

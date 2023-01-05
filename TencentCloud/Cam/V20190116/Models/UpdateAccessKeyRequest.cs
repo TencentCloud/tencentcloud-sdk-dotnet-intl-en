@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cloudaudit.V20190319.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAuditTrackResponse : AbstractModel
+    public class UpdateAccessKeyRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tracking set ID
+        /// ID of the specified access key that needs to be updated
         /// </summary>
-        [JsonProperty("TrackId")]
-        public ulong? TrackId{ get; set; }
+        [JsonProperty("AccessKeyId")]
+        public string AccessKeyId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Key status. Valid values: `Active` (activated), `Inactive` (not activated).
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// UIN of the specified user. If this parameter is left empty, the access key will be updated for the current user by default.
+        /// </summary>
+        [JsonProperty("TargetUin")]
+        public ulong? TargetUin{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TrackId", this.TrackId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "AccessKeyId", this.AccessKeyId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
         }
     }
 }

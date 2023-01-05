@@ -493,46 +493,6 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to upgrade a scaling group to a node pool.
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterNodePoolFromExistingAsgRequest"/></param>
-        /// <returns><see cref="CreateClusterNodePoolFromExistingAsgResponse"/></returns>
-        public async Task<CreateClusterNodePoolFromExistingAsgResponse> CreateClusterNodePoolFromExistingAsg(CreateClusterNodePoolFromExistingAsgRequest req)
-        {
-             JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateClusterNodePoolFromExistingAsg");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to upgrade a scaling group to a node pool.
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterNodePoolFromExistingAsgRequest"/></param>
-        /// <returns><see cref="CreateClusterNodePoolFromExistingAsgResponse"/></returns>
-        public CreateClusterNodePoolFromExistingAsgResponse CreateClusterNodePoolFromExistingAsgSync(CreateClusterNodePoolFromExistingAsgRequest req)
-        {
-             JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateClusterNodePoolFromExistingAsg");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to create a cluster route table.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRouteTableRequest"/></param>
@@ -2293,6 +2253,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query the upgrade information of an edge cluster, including the upgradeable components, the current upgrade status, and errors occur during the upgrade.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeClusterUpgradeInfoRequest"/></param>
+        /// <returns><see cref="DescribeEdgeClusterUpgradeInfoResponse"/></returns>
+        public async Task<DescribeEdgeClusterUpgradeInfoResponse> DescribeEdgeClusterUpgradeInfo(DescribeEdgeClusterUpgradeInfoRequest req)
+        {
+             JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgeClusterUpgradeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the upgrade information of an edge cluster, including the upgradeable components, the current upgrade status, and errors occur during the upgrade.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeClusterUpgradeInfoRequest"/></param>
+        /// <returns><see cref="DescribeEdgeClusterUpgradeInfoResponse"/></returns>
+        public DescribeEdgeClusterUpgradeInfoResponse DescribeEdgeClusterUpgradeInfoSync(DescribeEdgeClusterUpgradeInfoRequest req)
+        {
+             JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgeClusterUpgradeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the status of events, audits and logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
@@ -3644,6 +3644,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UpdateClusterVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade an edge cluster component to a TKE Edge version.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEdgeClusterVersionRequest"/></param>
+        /// <returns><see cref="UpdateEdgeClusterVersionResponse"/></returns>
+        public async Task<UpdateEdgeClusterVersionResponse> UpdateEdgeClusterVersion(UpdateEdgeClusterVersionRequest req)
+        {
+             JsonResponseModel<UpdateEdgeClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateEdgeClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEdgeClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade an edge cluster component to a TKE Edge version.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEdgeClusterVersionRequest"/></param>
+        /// <returns><see cref="UpdateEdgeClusterVersionResponse"/></returns>
+        public UpdateEdgeClusterVersionResponse UpdateEdgeClusterVersionSync(UpdateEdgeClusterVersionRequest req)
+        {
+             JsonResponseModel<UpdateEdgeClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateEdgeClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEdgeClusterVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

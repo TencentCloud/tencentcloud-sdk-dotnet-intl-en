@@ -49,7 +49,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public ulong? MaxResults{ get; set; }
 
         /// <summary>
-        /// Search criterion. Valid values: RequestId, EventName, ActionType (write/read), PrincipalId (sub-account), ResourceType, ResourceName, AccessKeyId, SensitiveAction, ApiErrorCode, and CamErrorCode.
+        /// Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
         /// </summary>
         [JsonProperty("LookupAttributes")]
         public LookupAttribute[] LookupAttributes{ get; set; }

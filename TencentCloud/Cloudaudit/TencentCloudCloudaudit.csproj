@@ -59,6 +59,8 @@
     <Compile Include="V20190319\Models\DeleteAuditTrackResponse.cs" />
     <Compile Include="V20190319\Models\DescribeAuditRequest.cs" />
     <Compile Include="V20190319\Models\DescribeAuditResponse.cs" />
+    <Compile Include="V20190319\Models\DescribeAuditTrackRequest.cs" />
+    <Compile Include="V20190319\Models\DescribeAuditTrackResponse.cs" />
     <Compile Include="V20190319\Models\DescribeAuditTracksRequest.cs" />
     <Compile Include="V20190319\Models\DescribeAuditTracksResponse.cs" />
     <Compile Include="V20190319\Models\DescribeEventsRequest.cs" />
@@ -84,6 +86,8 @@
     <Compile Include="V20190319\Models\StartLoggingResponse.cs" />
     <Compile Include="V20190319\Models\StopLoggingRequest.cs" />
     <Compile Include="V20190319\Models\StopLoggingResponse.cs" />
+    <Compile Include="V20190319\Models\Storage.cs" />
+    <Compile Include="V20190319\Models\Tracks.cs" />
     <Compile Include="V20190319\Models\UpdateAuditRequest.cs" />
     <Compile Include="V20190319\Models\UpdateAuditResponse.cs" />
   </ItemGroup>

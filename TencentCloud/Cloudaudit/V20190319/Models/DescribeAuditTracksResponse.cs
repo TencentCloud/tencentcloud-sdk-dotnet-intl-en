@@ -25,6 +25,18 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
+        /// Tracking set list
+        /// </summary>
+        [JsonProperty("Tracks")]
+        public Tracks[] Tracks{ get; set; }
+
+        /// <summary>
+        /// Total number of tracking sets
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Tracks.", this.Tracks);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

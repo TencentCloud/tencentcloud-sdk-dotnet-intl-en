@@ -21,17 +21,11 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAuditTrackRequest : AbstractModel
+    public class Tracks : AbstractModel
     {
         
         /// <summary>
-        /// Tracking set ID
-        /// </summary>
-        [JsonProperty("TrackId")]
-        public ulong? TrackId{ get; set; }
-
-        /// <summary>
-        /// Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores.
+        /// Tracking set name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,7 +37,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// The product to which the tracking set event belongs. The value can be a single product such as `cos`, or `*` that indicates all products.
+        /// The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -55,7 +49,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
+        /// The list of API names of tracking set events (`*`: All)
         /// </summary>
         [JsonProperty("EventNames")]
         public string[] EventNames{ get; set; }
@@ -67,10 +61,16 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public Storage Storage{ get; set; }
 
         /// <summary>
-        /// Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+        /// Creation time of the tracking set
         /// </summary>
-        [JsonProperty("TrackForAllMembers")]
-        public ulong? TrackForAllMembers{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Tracking set ID
+        /// </summary>
+        [JsonProperty("TrackId")]
+        public ulong? TrackId{ get; set; }
 
 
         /// <summary>
@@ -78,14 +78,14 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TrackId", this.TrackId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "EventNames.", this.EventNames);
             this.SetParamObj(map, prefix + "Storage.", this.Storage);
-            this.SetParamSimple(map, prefix + "TrackForAllMembers", this.TrackForAllMembers);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "TrackId", this.TrackId);
         }
     }
 }

@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cloudaudit.V20190319.Models
+namespace TencentCloud.Cls.V20201016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAuditTrackResponse : AbstractModel
+    public class AddMachineGroupInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tracking set ID
+        /// Machine group ID
         /// </summary>
-        [JsonProperty("TrackId")]
-        public ulong? TrackId{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Machine group type
+        /// Supported types: `ip` and `label`
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("MachineGroupType")]
+        public MachineGroupTypeInfo MachineGroupType{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TrackId", this.TrackId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamObj(map, prefix + "MachineGroupType.", this.MachineGroupType);
         }
     }
 }

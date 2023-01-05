@@ -85,6 +85,24 @@ namespace TencentCloud.Tke.V20180525.Models
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
+        /// GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+        /// </summary>
+        [JsonProperty("GPUArgs")]
+        public GPUArgs GPUArgs{ get; set; }
+
+        /// <summary>
+        /// Base64-encoded custom script
+        /// </summary>
+        [JsonProperty("UserScript")]
+        public string UserScript{ get; set; }
+
+        /// <summary>
+        /// Ignore existing nodes when update `Label` and `Taint`
+        /// </summary>
+        [JsonProperty("IgnoreExistedNode")]
+        public bool? IgnoreExistedNode{ get; set; }
+
+        /// <summary>
         /// Node custom parameter
         /// </summary>
         [JsonProperty("ExtraArgs")]
@@ -108,6 +126,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
+        /// <summary>
+        /// Specified value of dockerd --graph. Default value: /var/lib/docker
+        /// </summary>
+        [JsonProperty("DockerGraphPath")]
+        public string DockerGraphPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,10 +148,14 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+            this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
+            this.SetParamSimple(map, prefix + "IgnoreExistedNode", this.IgnoreExistedNode);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
         }
     }
 }

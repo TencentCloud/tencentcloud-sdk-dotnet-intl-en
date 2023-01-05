@@ -39,6 +39,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string LatestOperationState{ get; set; }
 
         /// <summary>
+        /// OIDC authentication configurations
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("OIDCConfig")]
+        public OIDCConfigAuthenticationOptions OIDCConfig{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+            this.SetParamObj(map, prefix + "OIDCConfig.", this.OIDCConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

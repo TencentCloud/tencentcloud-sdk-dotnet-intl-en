@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Cls.V20201016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateClusterNodePoolFromExistingAsgResponse : AbstractModel
+    public class AddMachineGroupInfoResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Node pool ID
-        /// </summary>
-        [JsonProperty("NodePoolId")]
-        public string NodePoolId{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

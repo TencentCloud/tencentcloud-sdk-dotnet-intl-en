@@ -2513,6 +2513,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// This API is used to list the AZs of Tencent Managed Service for Prometheus (TMP).
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusZonesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusZonesResponse"/></returns>
+        public async Task<DescribePrometheusZonesResponse> DescribePrometheusZones(DescribePrometheusZonesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to list the AZs of Tencent Managed Service for Prometheus (TMP).
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusZonesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusZonesResponse"/></returns>
+        public DescribePrometheusZonesResponse DescribePrometheusZonesSync(DescribePrometheusZonesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query Prometheus recording rules by filter.
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordingRulesRequest"/></param>

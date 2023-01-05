@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetachRolePolicyRequest : AbstractModel
+    public class PrometheusZoneItem : AbstractModel
     {
         
         /// <summary>
-        /// Policy ID. Either `PolicyId` or `PolicyName` must be entered
+        /// AZ
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
-        /// Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+        /// AZ ID
         /// </summary>
-        [JsonProperty("DetachRoleId")]
-        public string DetachRoleId{ get; set; }
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+        /// AZ status. Valid values: `0`(Unavailable), `1` (Available).
         /// </summary>
-        [JsonProperty("DetachRoleName")]
-        public string DetachRoleName{ get; set; }
+        [JsonProperty("ZoneState")]
+        public long? ZoneState{ get; set; }
 
         /// <summary>
-        /// Policy name. Either `PolicyId` or `PolicyName` must be entered
+        /// Region ID
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("RegionId")]
+        public long? RegionId{ get; set; }
+
+        /// <summary>
+        /// AZ name
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "DetachRoleId", this.DetachRoleId);
-            this.SetParamSimple(map, prefix + "DetachRoleName", this.DetachRoleName);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ZoneState", this.ZoneState);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

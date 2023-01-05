@@ -15,20 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cloudaudit.V20190319.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAuditTrackResponse : AbstractModel
+    public class CreateAccessKeyResponse : AbstractModel
     {
         
         /// <summary>
-        /// Tracking set ID
+        /// Access key
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TrackId")]
-        public ulong? TrackId{ get; set; }
+        [JsonProperty("AccessKey")]
+        public AccessKeyDetail AccessKey{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +43,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TrackId", this.TrackId);
+            this.SetParamObj(map, prefix + "AccessKey.", this.AccessKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
