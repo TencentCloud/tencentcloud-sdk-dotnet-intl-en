@@ -10,6 +10,7 @@
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>TencentCloudSDK.Tcaplusdb</PackageId>
     <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
