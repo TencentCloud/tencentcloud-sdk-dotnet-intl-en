@@ -79,13 +79,13 @@ namespace TencentCloud.Rum.V20210622.Models
         public string BuyingChannel{ get; set; }
 
         /// <summary>
-        /// 
+        /// Type of prepaid resource pack (only required for prepaid mode)
         /// </summary>
         [JsonProperty("ResourcePackageType")]
         public ulong? ResourcePackageType{ get; set; }
 
         /// <summary>
-        /// 
+        /// The number of prepaid resource packs (only required for prepaid mode)
         /// </summary>
         [JsonProperty("ResourcePackageNum")]
         public ulong? ResourcePackageNum{ get; set; }

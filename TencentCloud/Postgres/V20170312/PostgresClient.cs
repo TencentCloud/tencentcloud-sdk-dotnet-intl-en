@@ -333,6 +333,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateParameterTemplateRequest"/></param>
+        /// <returns><see cref="CreateParameterTemplateResponse"/></returns>
+        public async Task<CreateParameterTemplateResponse> CreateParameterTemplate(CreateParameterTemplateRequest req)
+        {
+             JsonResponseModel<CreateParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParameterTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateParameterTemplateRequest"/></param>
+        /// <returns><see cref="CreateParameterTemplateResponse"/></returns>
+        public CreateParameterTemplateResponse CreateParameterTemplateSync(CreateParameterTemplateRequest req)
+        {
+             JsonResponseModel<CreateParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParameterTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create read-only replicas.
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyDBInstanceRequest"/></param>
@@ -524,6 +564,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDBInstanceNetworkAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParameterTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParameterTemplateResponse"/></returns>
+        public async Task<DeleteParameterTemplateResponse> DeleteParameterTemplate(DeleteParameterTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParameterTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParameterTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParameterTemplateResponse"/></returns>
+        public DeleteParameterTemplateResponse DeleteParameterTemplateSync(DeleteParameterTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParameterTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -973,6 +1053,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the security group information of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceSecurityGroupsResponse"/></returns>
+        public async Task<DescribeDBInstanceSecurityGroupsResponse> DescribeDBInstanceSecurityGroups(DescribeDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the security group information of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceSecurityGroupsResponse"/></returns>
+        public DescribeDBInstanceSecurityGroupsResponse DescribeDBInstanceSecurityGroupsSync(DescribeDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of one or more instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
@@ -1133,6 +1253,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to query all parameters supported by a database version and engine.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultParametersRequest"/></param>
+        /// <returns><see cref="DescribeDefaultParametersResponse"/></returns>
+        public async Task<DescribeDefaultParametersResponse> DescribeDefaultParameters(DescribeDefaultParametersRequest req)
+        {
+             JsonResponseModel<DescribeDefaultParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDefaultParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query all parameters supported by a database version and engine.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultParametersRequest"/></param>
+        /// <returns><see cref="DescribeDefaultParametersResponse"/></returns>
+        public DescribeDefaultParametersResponse DescribeDefaultParametersSync(DescribeDefaultParametersRequest req)
+        {
+             JsonResponseModel<DescribeDefaultParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDefaultParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get instance key list.
         /// </summary>
         /// <param name="req"><see cref="DescribeEncryptionKeysRequest"/></param>
@@ -1204,6 +1364,86 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeOrders");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a parameter template, including basic information and parameter information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParameterTemplateAttributesRequest"/></param>
+        /// <returns><see cref="DescribeParameterTemplateAttributesResponse"/></returns>
+        public async Task<DescribeParameterTemplateAttributesResponse> DescribeParameterTemplateAttributes(DescribeParameterTemplateAttributesRequest req)
+        {
+             JsonResponseModel<DescribeParameterTemplateAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParameterTemplateAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParameterTemplateAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a parameter template, including basic information and parameter information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParameterTemplateAttributesRequest"/></param>
+        /// <returns><see cref="DescribeParameterTemplateAttributesResponse"/></returns>
+        public DescribeParameterTemplateAttributesResponse DescribeParameterTemplateAttributesSync(DescribeParameterTemplateAttributesRequest req)
+        {
+             JsonResponseModel<DescribeParameterTemplateAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParameterTemplateAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParameterTemplateAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of parameter templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParameterTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParameterTemplatesResponse"/></returns>
+        public async Task<DescribeParameterTemplatesResponse> DescribeParameterTemplates(DescribeParameterTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParameterTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParameterTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParameterTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of parameter templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParameterTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParameterTemplatesResponse"/></returns>
+        public DescribeParameterTemplatesResponse DescribeParameterTemplatesSync(DescribeParameterTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParameterTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParameterTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParameterTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2053,6 +2293,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the security group of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public async Task<ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the security group of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroupsSync(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify instance specifications including memory and disk size.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
@@ -2124,6 +2404,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstancesProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstancesProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the parameter template name and description, and add or delete parameter template parameters.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParameterTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParameterTemplateResponse"/></returns>
+        public async Task<ModifyParameterTemplateResponse> ModifyParameterTemplate(ModifyParameterTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParameterTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the parameter template name and description, and add or delete parameter template parameters.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParameterTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParameterTemplateResponse"/></returns>
+        public ModifyParameterTemplateResponse ModifyParameterTemplateSync(ModifyParameterTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParameterTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyParameterTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParameterTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

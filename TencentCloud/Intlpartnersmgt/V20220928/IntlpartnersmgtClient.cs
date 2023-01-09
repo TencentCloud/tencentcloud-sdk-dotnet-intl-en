@@ -388,5 +388,125 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to query the voucher quota based on the customer UIN.
+        /// </summary>
+        /// <param name="req"><see cref="QueryVoucherAmountByUinRequest"/></param>
+        /// <returns><see cref="QueryVoucherAmountByUinResponse"/></returns>
+        public async Task<QueryVoucherAmountByUinResponse> QueryVoucherAmountByUin(QueryVoucherAmountByUinRequest req)
+        {
+             JsonResponseModel<QueryVoucherAmountByUinResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryVoucherAmountByUin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVoucherAmountByUinResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the voucher quota based on the customer UIN.
+        /// </summary>
+        /// <param name="req"><see cref="QueryVoucherAmountByUinRequest"/></param>
+        /// <returns><see cref="QueryVoucherAmountByUinResponse"/></returns>
+        public QueryVoucherAmountByUinResponse QueryVoucherAmountByUinSync(QueryVoucherAmountByUinRequest req)
+        {
+             JsonResponseModel<QueryVoucherAmountByUinResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryVoucherAmountByUin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVoucherAmountByUinResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the voucher list based on the customer UIN.
+        /// </summary>
+        /// <param name="req"><see cref="QueryVoucherListByUinRequest"/></param>
+        /// <returns><see cref="QueryVoucherListByUinResponse"/></returns>
+        public async Task<QueryVoucherListByUinResponse> QueryVoucherListByUin(QueryVoucherListByUinRequest req)
+        {
+             JsonResponseModel<QueryVoucherListByUinResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryVoucherListByUin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVoucherListByUinResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the voucher list based on the customer UIN.
+        /// </summary>
+        /// <param name="req"><see cref="QueryVoucherListByUinRequest"/></param>
+        /// <returns><see cref="QueryVoucherListByUinResponse"/></returns>
+        public QueryVoucherListByUinResponse QueryVoucherListByUinSync(QueryVoucherListByUinRequest req)
+        {
+             JsonResponseModel<QueryVoucherListByUinResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryVoucherListByUin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVoucherListByUinResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the voucher quota pool.
+        /// </summary>
+        /// <param name="req"><see cref="QueryVoucherPoolRequest"/></param>
+        /// <returns><see cref="QueryVoucherPoolResponse"/></returns>
+        public async Task<QueryVoucherPoolResponse> QueryVoucherPool(QueryVoucherPoolRequest req)
+        {
+             JsonResponseModel<QueryVoucherPoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryVoucherPool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVoucherPoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the voucher quota pool.
+        /// </summary>
+        /// <param name="req"><see cref="QueryVoucherPoolRequest"/></param>
+        /// <returns><see cref="QueryVoucherPoolResponse"/></returns>
+        public QueryVoucherPoolResponse QueryVoucherPoolSync(QueryVoucherPoolRequest req)
+        {
+             JsonResponseModel<QueryVoucherPoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryVoucherPool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVoucherPoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
