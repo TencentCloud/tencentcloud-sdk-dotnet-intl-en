@@ -108,6 +108,8 @@
     <Compile Include="V20201002\Models\TimedEmailParam.cs" />
     <Compile Include="V20201002\Models\UpdateEmailIdentityRequest.cs" />
     <Compile Include="V20201002\Models\UpdateEmailIdentityResponse.cs" />
+    <Compile Include="V20201002\Models\UpdateEmailSmtpPassWordRequest.cs" />
+    <Compile Include="V20201002\Models\UpdateEmailSmtpPassWordResponse.cs" />
     <Compile Include="V20201002\Models\UpdateEmailTemplateRequest.cs" />
     <Compile Include="V20201002\Models\UpdateEmailTemplateResponse.cs" />
     <Compile Include="V20201002\Models\Volume.cs" />
