@@ -210,6 +210,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("IsHandsCluster")]
         public bool? IsHandsCluster{ get; set; }
 
+        /// <summary>
+        /// Client component information.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OutSideSoftInfo")]
+        public SoftDependInfo[] OutSideSoftInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -244,6 +251,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ClusterClass", this.ClusterClass);
             this.SetParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
             this.SetParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
+            this.SetParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
         }
     }
 }

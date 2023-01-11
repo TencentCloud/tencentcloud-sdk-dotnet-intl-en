@@ -21,26 +21,29 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class OldAddrInfo : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// IP
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Port
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
+        [JsonProperty("Vport")]
+        public long? Vport{ get; set; }
 
         /// <summary>
-        /// Quantity in stock
+        /// Expected valid hours of old IPs
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("ReturnTime")]
+        public string ReturnTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "Vport", this.Vport);
+            this.SetParamSimple(map, prefix + "ReturnTime", this.ReturnTime);
         }
     }
 }

@@ -21,26 +21,32 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class DescribeAuditRuleTemplatesRequest : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// Rule template ID
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("RuleTemplateIds")]
+        public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Rule template name
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
+        [JsonProperty("RuleTemplateNames")]
+        public string[] RuleTemplateNames{ get; set; }
 
         /// <summary>
-        /// Quantity in stock
+        /// Number of results returned per request. Default value: `20`.
         /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// Offset. Default value: `0`.
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+            this.SetParamArraySimple(map, prefix + "RuleTemplateNames.", this.RuleTemplateNames);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

@@ -21,26 +21,27 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class ModifyParamItem : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// Parameter name
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("ParamName")]
+        public string ParamName{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Current parameter value
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
+        [JsonProperty("CurrentValue")]
+        public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Quantity in stock
+        /// Old parameter value, which is used only in output parameters.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("OldValue")]
+        public string OldValue{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
+            this.SetParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
+            this.SetParamSimple(map, prefix + "OldValue", this.OldValue);
         }
     }
 }

@@ -80,6 +80,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// Public IP
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WanIP")]
+        public string WanIP{ get; set; }
+
+        /// <summary>
+        /// Public network status
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WanStatus")]
+        public string WanStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "WanIP", this.WanIP);
+            this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
         }
     }
 }

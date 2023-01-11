@@ -21,50 +21,50 @@ namespace TencentCloud.Emr.V20190103.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceScaleOutInstanceResponse : AbstractModel
+    public class PartDetailPriceItem : AbstractModel
     {
         
         /// <summary>
-        /// Original price.
+        /// The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("OriginalCost")]
-        public string OriginalCost{ get; set; }
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Discounted price.
+        /// Rate (original)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("DiscountCost")]
-        public string DiscountCost{ get; set; }
+        [JsonProperty("Price")]
+        public float? Price{ get; set; }
 
         /// <summary>
-        /// Time unit of scale-out. Valid value:
-        /// <li>s: Second.</li>
+        /// Rate (discounted)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Unit")]
-        public string Unit{ get; set; }
+        [JsonProperty("RealCost")]
+        public float? RealCost{ get; set; }
 
         /// <summary>
-        /// Node spec queried for price.
+        /// Total price (discounted)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("PriceSpec")]
-        public PriceResource PriceSpec{ get; set; }
+        [JsonProperty("RealTotalCost")]
+        public float? RealTotalCost{ get; set; }
 
         /// <summary>
-        /// The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+        /// Discount
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("MultipleEmrPrice")]
-        public EmrPrice[] MultipleEmrPrice{ get; set; }
+        [JsonProperty("Policy")]
+        public float? Policy{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Quantity
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("GoodsNum")]
+        public long? GoodsNum{ get; set; }
 
 
         /// <summary>
@@ -72,12 +72,12 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
-            this.SetParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
-            this.SetParamSimple(map, prefix + "Unit", this.Unit);
-            this.SetParamObj(map, prefix + "PriceSpec.", this.PriceSpec);
-            this.SetParamArrayObj(map, prefix + "MultipleEmrPrice.", this.MultipleEmrPrice);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "RealCost", this.RealCost);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+            this.SetParamSimple(map, prefix + "Policy", this.Policy);
+            this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
         }
     }
 }

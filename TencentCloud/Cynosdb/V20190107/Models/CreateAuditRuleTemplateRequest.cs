@@ -21,26 +21,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class CreateAuditRuleTemplateRequest : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// Audit rule
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("RuleFilters")]
+        public RuleFilters[] RuleFilters{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Rule template name
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
+        [JsonProperty("RuleTemplateName")]
+        public string RuleTemplateName{ get; set; }
 
         /// <summary>
-        /// Quantity in stock
+        /// Rule template description.
         /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
+            this.SetParamSimple(map, prefix + "RuleTemplateName", this.RuleTemplateName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

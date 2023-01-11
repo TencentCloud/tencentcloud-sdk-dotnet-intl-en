@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20190107\CynosdbClient.cs" />
+    <Compile Include="V20190107\Models\Ability.cs" />
     <Compile Include="V20190107\Models\Account.cs" />
     <Compile Include="V20190107\Models\ActivateInstanceRequest.cs" />
     <Compile Include="V20190107\Models\ActivateInstanceResponse.cs" />
@@ -56,12 +57,18 @@
     <Compile Include="V20190107\Models\AddInstancesRequest.cs" />
     <Compile Include="V20190107\Models\AddInstancesResponse.cs" />
     <Compile Include="V20190107\Models\Addr.cs" />
+    <Compile Include="V20190107\Models\AuditRuleFilters.cs" />
+    <Compile Include="V20190107\Models\AuditRuleTemplateInfo.cs" />
     <Compile Include="V20190107\Models\BackupFileInfo.cs" />
     <Compile Include="V20190107\Models\BillingResourceInfo.cs" />
     <Compile Include="V20190107\Models\BinlogItem.cs" />
+    <Compile Include="V20190107\Models\CloseAuditServiceRequest.cs" />
+    <Compile Include="V20190107\Models\CloseAuditServiceResponse.cs" />
     <Compile Include="V20190107\Models\ClusterInstanceDetail.cs" />
     <Compile Include="V20190107\Models\CreateAccountsRequest.cs" />
     <Compile Include="V20190107\Models\CreateAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\CreateAuditRuleTemplateRequest.cs" />
+    <Compile Include="V20190107\Models\CreateAuditRuleTemplateResponse.cs" />
     <Compile Include="V20190107\Models\CreateBackupRequest.cs" />
     <Compile Include="V20190107\Models\CreateBackupResponse.cs" />
     <Compile Include="V20190107\Models\CreateClustersRequest.cs" />
@@ -72,10 +79,16 @@
     <Compile Include="V20190107\Models\CynosdbInstanceDetail.cs" />
     <Compile Include="V20190107\Models\CynosdbInstanceGrp.cs" />
     <Compile Include="V20190107\Models\DatabaseTables.cs" />
+    <Compile Include="V20190107\Models\DeleteAuditRuleTemplatesRequest.cs" />
+    <Compile Include="V20190107\Models\DeleteAuditRuleTemplatesResponse.cs" />
     <Compile Include="V20190107\Models\DeleteBackupRequest.cs" />
     <Compile Include="V20190107\Models\DeleteBackupResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditRuleTemplatesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditRuleTemplatesResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditRuleWithInstanceIdsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditRuleWithInstanceIdsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupDownloadUrlRequest.cs" />
@@ -124,6 +137,7 @@
     <Compile Include="V20190107\Models\InquirePriceCreateResponse.cs" />
     <Compile Include="V20190107\Models\InquirePriceRenewRequest.cs" />
     <Compile Include="V20190107\Models\InquirePriceRenewResponse.cs" />
+    <Compile Include="V20190107\Models\InstanceAuditRule.cs" />
     <Compile Include="V20190107\Models\InstanceInitInfo.cs" />
     <Compile Include="V20190107\Models\InstanceSpec.cs" />
     <Compile Include="V20190107\Models\IsolateClusterRequest.cs" />
@@ -131,6 +145,10 @@
     <Compile Include="V20190107\Models\IsolateInstanceRequest.cs" />
     <Compile Include="V20190107\Models\IsolateInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ModifiableInfo.cs" />
+    <Compile Include="V20190107\Models\ModifyAuditRuleTemplatesRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyAuditRuleTemplatesResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyAuditServiceRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyAuditServiceResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBackupNameRequest.cs" />
@@ -147,6 +165,7 @@
     <Compile Include="V20190107\Models\ModifyInstanceNameResponse.cs" />
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyParamItem.cs" />
     <Compile Include="V20190107\Models\NetAddr.cs" />
     <Compile Include="V20190107\Models\NewAccount.cs" />
     <Compile Include="V20190107\Models\ObjectTask.cs" />
@@ -154,6 +173,9 @@
     <Compile Include="V20190107\Models\OfflineClusterResponse.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceRequest.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\OldAddrInfo.cs" />
+    <Compile Include="V20190107\Models\OpenAuditServiceRequest.cs" />
+    <Compile Include="V20190107\Models\OpenAuditServiceResponse.cs" />
     <Compile Include="V20190107\Models\ParamInfo.cs" />
     <Compile Include="V20190107\Models\ParamItem.cs" />
     <Compile Include="V20190107\Models\ParamTemplateListInfo.cs" />
@@ -168,6 +190,7 @@
     <Compile Include="V20190107\Models\ResumeServerlessRequest.cs" />
     <Compile Include="V20190107\Models\ResumeServerlessResponse.cs" />
     <Compile Include="V20190107\Models\RollbackTimeRange.cs" />
+    <Compile Include="V20190107\Models\RuleFilters.cs" />
     <Compile Include="V20190107\Models\SearchClusterDatabasesRequest.cs" />
     <Compile Include="V20190107\Models\SearchClusterDatabasesResponse.cs" />
     <Compile Include="V20190107\Models\SearchClusterTablesRequest.cs" />

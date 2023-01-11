@@ -48,7 +48,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// The instance billing mode. Valid values:
-        /// <li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
         /// <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]

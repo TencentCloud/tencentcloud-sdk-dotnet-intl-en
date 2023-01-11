@@ -21,26 +21,21 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class CreateAuditRuleTemplateResponse : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// The generated rule template ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("RuleTemplateId")]
+        public string RuleTemplateId{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
-
-        /// <summary>
-        /// Quantity in stock
-        /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamSimple(map, prefix + "RuleTemplateId", this.RuleTemplateId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

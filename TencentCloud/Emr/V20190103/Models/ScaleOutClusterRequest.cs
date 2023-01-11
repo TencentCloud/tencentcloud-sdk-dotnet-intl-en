@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// The node billing mode. Valid values:
-        /// <li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
         /// <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
         /// <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
         /// </summary>

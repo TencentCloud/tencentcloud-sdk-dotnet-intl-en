@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+        /// Project ID of the instance. If no ID is passed in, the default project ID is used.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

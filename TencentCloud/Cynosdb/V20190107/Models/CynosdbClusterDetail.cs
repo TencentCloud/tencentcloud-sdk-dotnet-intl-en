@@ -172,6 +172,160 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
+        /// <summary>
+        /// Binlog switch. Valid values: `ON`, `OFF`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LogBin")]
+        public string LogBin{ get; set; }
+
+        /// <summary>
+        /// PITR type. Valid values: `normal`, `redo_pitr`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PitrType")]
+        public string PitrType{ get; set; }
+
+        /// <summary>
+        /// Physical AZ
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PhysicalZone")]
+        public string PhysicalZone{ get; set; }
+
+        /// <summary>
+        /// Storage ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StorageId")]
+        public string StorageId{ get; set; }
+
+        /// <summary>
+        /// Storage capacity in GB
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Storage")]
+        public long? Storage{ get; set; }
+
+        /// <summary>
+        /// Maximum storage specification in GB
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxStorageSize")]
+        public long? MaxStorageSize{ get; set; }
+
+        /// <summary>
+        /// Minimum storage specification in GB
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MinStorageSize")]
+        public long? MinStorageSize{ get; set; }
+
+        /// <summary>
+        /// Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
+
+        /// <summary>
+        /// Database type. Valid values: `normal`, `serverless`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
+        /// Maximum storage space
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StorageLimit")]
+        public long? StorageLimit{ get; set; }
+
+        /// <summary>
+        /// Features supported by the cluster
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Ability")]
+        public Ability Ability{ get; set; }
+
+        /// <summary>
+        /// TDSQL-C version
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CynosVersion")]
+        public string CynosVersion{ get; set; }
+
+        /// <summary>
+        /// Business type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BusinessType")]
+        public string BusinessType{ get; set; }
+
+        /// <summary>
+        /// Whether there is a secondary AZ
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HasSlaveZone")]
+        public string HasSlaveZone{ get; set; }
+
+        /// <summary>
+        /// Whether to freeze
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsFreeze")]
+        public string IsFreeze{ get; set; }
+
+        /// <summary>
+        /// Task list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tasks")]
+        public ObjectTask[] Tasks{ get; set; }
+
+        /// <summary>
+        /// Primary AZ
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public string MasterZone{ get; set; }
+
+        /// <summary>
+        /// Secondary AZ list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SlaveZones")]
+        public string[] SlaveZones{ get; set; }
+
+        /// <summary>
+        /// Proxy status
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProxyStatus")]
+        public string ProxyStatus{ get; set; }
+
+        /// <summary>
+        /// Whether to skip the transaction
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsSkipTrade")]
+        public string IsSkipTrade{ get; set; }
+
+        /// <summary>
+        /// Whether to enable password complexity
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsOpenPasswordComplexity")]
+        public string IsOpenPasswordComplexity{ get; set; }
+
+        /// <summary>
+        /// Network type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NetworkStatus")]
+        public string NetworkStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,6 +356,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+            this.SetParamSimple(map, prefix + "LogBin", this.LogBin);
+            this.SetParamSimple(map, prefix + "PitrType", this.PitrType);
+            this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+            this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
+            this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
+            this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
+            this.SetParamObj(map, prefix + "Ability.", this.Ability);
+            this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+            this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
+            this.SetParamSimple(map, prefix + "HasSlaveZone", this.HasSlaveZone);
+            this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
+            this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamSimple(map, prefix + "ProxyStatus", this.ProxyStatus);
+            this.SetParamSimple(map, prefix + "IsSkipTrade", this.IsSkipTrade);
+            this.SetParamSimple(map, prefix + "IsOpenPasswordComplexity", this.IsOpenPasswordComplexity);
+            this.SetParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
         }
     }
 }

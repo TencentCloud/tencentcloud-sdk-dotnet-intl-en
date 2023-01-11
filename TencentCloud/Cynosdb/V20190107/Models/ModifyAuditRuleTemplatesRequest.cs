@@ -21,26 +21,32 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class ModifyAuditRuleTemplatesRequest : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// Audit rule template ID
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("RuleTemplateIds")]
+        public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Audit rule after modification
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
+        [JsonProperty("RuleFilters")]
+        public RuleFilters[] RuleFilters{ get; set; }
 
         /// <summary>
-        /// Quantity in stock
+        /// New name of the rule template
         /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("RuleTemplateName")]
+        public string RuleTemplateName{ get; set; }
+
+        /// <summary>
+        /// New description of the rule template
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+            this.SetParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
+            this.SetParamSimple(map, prefix + "RuleTemplateName", this.RuleTemplateName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

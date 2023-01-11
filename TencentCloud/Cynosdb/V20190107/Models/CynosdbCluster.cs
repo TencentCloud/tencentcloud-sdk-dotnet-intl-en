@@ -82,162 +82,244 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? InstanceNum{ get; set; }
 
         /// <summary>
-        /// User `uin`
+        /// User UIN
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// Engine type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
         /// User `appid`
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// Cluster status description
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
         /// Cluster creation time
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Billing mode. 0: pay-as-you-go; 1: monthly subscription
+        /// Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
         /// End time
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
         /// Cluster read-write VIP
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// Cluster read-write vport
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
         /// Project ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
         /// VPC ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// Subnet ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// TDSQL-C kernel version
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
         /// Storage capacity
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
         /// Renewal flag
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
         /// Task in progress
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProcessingTask")]
         public string ProcessingTask{ get; set; }
 
         /// <summary>
-        /// Array of tasks in cluster
+        /// Array of tasks in the cluster
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// Array of tags bound to cluster
+        /// Array of tags bound to the cluster
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Database type (`NORMAL` or `SERVERLESS`)
+        /// Database type. Valid values: `NORMAL`, `SERVERLESS`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
         /// Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-        /// resume
-        /// pause
+        /// `resume`
+        /// `pause`
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// Prepaid cluster storage
+        /// Prepaid cluster storage capacity
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
         /// Cluster storage ID used in prepaid storage modification
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+        /// Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// The minimum storage corresponding to the compute specifications of the cluster
+        /// The minimum storage corresponding to the compute specification of the cluster
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// The maximum storage corresponding to the compute specifications of the cluster
+        /// The maximum storage corresponding to the compute specification of the cluster
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
         /// Network information of the cluster
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetAddrs")]
         public NetAddr[] NetAddrs{ get; set; }
+
+        /// <summary>
+        /// Physical AZ
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PhysicalZone")]
+        public string PhysicalZone{ get; set; }
+
+        /// <summary>
+        /// Primary AZ
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public string MasterZone{ get; set; }
+
+        /// <summary>
+        /// Whether there is a secondary AZ
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HasSlaveZone")]
+        public string HasSlaveZone{ get; set; }
+
+        /// <summary>
+        /// Secondary AZ
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SlaveZones")]
+        public string[] SlaveZones{ get; set; }
+
+        /// <summary>
+        /// Business type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BusinessType")]
+        public string BusinessType{ get; set; }
+
+        /// <summary>
+        /// Whether to freeze
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsFreeze")]
+        public string IsFreeze{ get; set; }
+
+        /// <summary>
+        /// Order source
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OrderSource")]
+        public string OrderSource{ get; set; }
+
+        /// <summary>
+        /// Capability
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Ability")]
+        public Ability Ability{ get; set; }
 
 
         /// <summary>
@@ -279,6 +361,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
             this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
             this.SetParamArrayObj(map, prefix + "NetAddrs.", this.NetAddrs);
+            this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+            this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
+            this.SetParamSimple(map, prefix + "HasSlaveZone", this.HasSlaveZone);
+            this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
+            this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+            this.SetParamSimple(map, prefix + "OrderSource", this.OrderSource);
+            this.SetParamObj(map, prefix + "Ability.", this.Ability);
         }
     }
 }

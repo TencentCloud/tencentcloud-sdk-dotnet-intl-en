@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class SoftDependInfo : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// The component name.
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("SoftName")]
+        public string SoftName{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Whether the component is required.
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
-
-        /// <summary>
-        /// Quantity in stock
-        /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("Required")]
+        public bool? Required{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamSimple(map, prefix + "SoftName", this.SoftName);
+            this.SetParamSimple(map, prefix + "Required", this.Required);
         }
     }
 }

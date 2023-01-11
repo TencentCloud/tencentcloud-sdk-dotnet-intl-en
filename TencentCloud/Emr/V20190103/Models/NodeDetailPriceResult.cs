@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cynosdb.V20190107.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class NodeDetailPriceResult : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Price details by node part
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
-
-        /// <summary>
-        /// Quantity in stock
-        /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("PartDetailPrice")]
+        public PartDetailPriceItem[] PartDetailPrice{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamArrayObj(map, prefix + "PartDetailPrice.", this.PartDetailPrice);
         }
     }
 }

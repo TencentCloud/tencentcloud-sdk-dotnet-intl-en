@@ -21,38 +21,39 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class NewAccount : AbstractModel
+    public class AuditRuleTemplateInfo : AbstractModel
     {
         
         /// <summary>
-        /// Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+        /// Rule template ID
         /// </summary>
-        [JsonProperty("AccountName")]
-        public string AccountName{ get; set; }
+        [JsonProperty("RuleTemplateId")]
+        public string RuleTemplateId{ get; set; }
 
         /// <summary>
-        /// Password, which can contain 8-64 characters.
+        /// Rule template name
         /// </summary>
-        [JsonProperty("AccountPassword")]
-        public string AccountPassword{ get; set; }
+        [JsonProperty("RuleTemplateName")]
+        public string RuleTemplateName{ get; set; }
 
         /// <summary>
-        /// Host
+        /// Filter of the rule template
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
+        [JsonProperty("RuleFilters")]
+        public RuleFilters[] RuleFilters{ get; set; }
 
         /// <summary>
-        /// Description
+        /// Description of a rule template
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Maximum number of user connections, which cannot be above 10,240.
+        /// Creation time of a rule template
         /// </summary>
-        [JsonProperty("MaxUserConnections")]
-        public long? MaxUserConnections{ get; set; }
+        [JsonProperty("CreateAt")]
+        public string CreateAt{ get; set; }
 
 
         /// <summary>
@@ -60,11 +61,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
-            this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
-            this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "RuleTemplateId", this.RuleTemplateId);
+            this.SetParamSimple(map, prefix + "RuleTemplateName", this.RuleTemplateName);
+            this.SetParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
             this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
         }
     }
 }

@@ -21,26 +21,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ZoneStockInfo : AbstractModel
+    public class InstanceAuditRule : AbstractModel
     {
         
         /// <summary>
-        /// AZ
+        /// Instance ID.
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("HasStock")]
-        public bool? HasStock{ get; set; }
+        [JsonProperty("AuditRule")]
+        public bool? AuditRule{ get; set; }
 
         /// <summary>
-        /// Quantity in stock
+        /// Audit rule details, which is valid only when `AuditRule` is `true`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("StockCount")]
-        public long? StockCount{ get; set; }
+        [JsonProperty("AuditRuleFilters")]
+        public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
 
         /// <summary>
@@ -48,9 +50,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
-            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AuditRule", this.AuditRule);
+            this.SetParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
         }
     }
 }

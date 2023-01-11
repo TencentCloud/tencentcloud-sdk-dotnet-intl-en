@@ -173,6 +173,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to disable the audit service for a TDSQL-C for MySQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public async Task<CloseAuditServiceResponse> CloseAuditService(CloseAuditServiceRequest req)
+        {
+             JsonResponseModel<CloseAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable the audit service for a TDSQL-C for MySQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public CloseAuditServiceResponse CloseAuditServiceSync(CloseAuditServiceRequest req)
+        {
+             JsonResponseModel<CloseAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an account.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "CreateAccounts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an audit rule template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
+        public async Task<CreateAuditRuleTemplateResponse> CreateAuditRuleTemplate(CreateAuditRuleTemplateRequest req)
+        {
+             JsonResponseModel<CreateAuditRuleTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAuditRuleTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditRuleTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an audit rule template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
+        public CreateAuditRuleTemplateResponse CreateAuditRuleTemplateSync(CreateAuditRuleTemplateRequest req)
+        {
+             JsonResponseModel<CreateAuditRuleTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAuditRuleTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditRuleTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,6 +373,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to delete an audit rule template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
+        public async Task<DeleteAuditRuleTemplatesResponse> DeleteAuditRuleTemplates(DeleteAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<DeleteAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an audit rule template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
+        public DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplatesSync(DeleteAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<DeleteAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
@@ -364,6 +484,86 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAccounts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query audit rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
+        public async Task<DescribeAuditRuleTemplatesResponse> DescribeAuditRuleTemplates(DescribeAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query audit rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
+        public DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplatesSync(DescribeAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the audit rule templates of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleWithInstanceIdsRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleWithInstanceIdsResponse"/></returns>
+        public async Task<DescribeAuditRuleWithInstanceIdsResponse> DescribeAuditRuleWithInstanceIds(DescribeAuditRuleWithInstanceIdsRequest req)
+        {
+             JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditRuleWithInstanceIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the audit rule templates of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleWithInstanceIdsRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleWithInstanceIdsResponse"/></returns>
+        public DescribeAuditRuleWithInstanceIdsResponse DescribeAuditRuleWithInstanceIdsSync(DescribeAuditRuleWithInstanceIdsRequest req)
+        {
+             JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditRuleWithInstanceIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -613,7 +813,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to display cluster details.
+        /// This API is used to show the details of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>
         /// <returns><see cref="DescribeClusterDetailResponse"/></returns>
@@ -633,7 +833,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to display cluster details.
+        /// This API is used to show the details of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>
         /// <returns><see cref="DescribeClusterDetailResponse"/></returns>
@@ -1413,6 +1613,86 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify an audit rule template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
+        public async Task<ModifyAuditRuleTemplatesResponse> ModifyAuditRuleTemplates(ModifyAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<ModifyAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an audit rule template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
+        public ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplatesSync(ModifyAuditRuleTemplatesRequest req)
+        {
+             JsonResponseModel<ModifyAuditRuleTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAuditRuleTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditRuleTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the audit configurations of an instance, such as audit log retention period and audit rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public async Task<ModifyAuditServiceResponse> ModifyAuditService(ModifyAuditServiceRequest req)
+        {
+             JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the audit configurations of an instance, such as audit log retention period and audit rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public ModifyAuditServiceResponse ModifyAuditServiceSync(ModifyAuditServiceRequest req)
+        {
+             JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the backup configuration of the specified cluster.
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupConfigRequest"/></param>
@@ -1804,6 +2084,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "OfflineInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OfflineInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the audit service for a TDSQL-C for MySQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public async Task<OpenAuditServiceResponse> OpenAuditService(OpenAuditServiceRequest req)
+        {
+             JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the audit service for a TDSQL-C for MySQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public OpenAuditServiceResponse OpenAuditServiceSync(OpenAuditServiceRequest req)
+        {
+             JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenAuditServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
