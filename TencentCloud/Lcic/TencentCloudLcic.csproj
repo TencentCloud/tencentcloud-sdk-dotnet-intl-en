@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDK.Lcic</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20220817\LcicClient.cs" />
+    <Compile Include="V20220817\Models\AppCustomContent.cs" />
+    <Compile Include="V20220817\Models\BindDocumentToRoomRequest.cs" />
+    <Compile Include="V20220817\Models\BindDocumentToRoomResponse.cs" />
+    <Compile Include="V20220817\Models\CreateDocumentRequest.cs" />
+    <Compile Include="V20220817\Models\CreateDocumentResponse.cs" />
+    <Compile Include="V20220817\Models\CreateRoomRequest.cs" />
+    <Compile Include="V20220817\Models\CreateRoomResponse.cs" />
+    <Compile Include="V20220817\Models\CreateSupervisorRequest.cs" />
+    <Compile Include="V20220817\Models\CreateSupervisorResponse.cs" />
+    <Compile Include="V20220817\Models\DeleteRoomRequest.cs" />
+    <Compile Include="V20220817\Models\DeleteRoomResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeRoomRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeRoomResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeRoomStatisticsRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeRoomStatisticsResponse.cs" />
+    <Compile Include="V20220817\Models\DescribeUserRequest.cs" />
+    <Compile Include="V20220817\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20220817\Models\LoginOriginIdRequest.cs" />
+    <Compile Include="V20220817\Models\LoginOriginIdResponse.cs" />
+    <Compile Include="V20220817\Models\LoginUserRequest.cs" />
+    <Compile Include="V20220817\Models\LoginUserResponse.cs" />
+    <Compile Include="V20220817\Models\MemberRecord.cs" />
+    <Compile Include="V20220817\Models\ModifyAppRequest.cs" />
+    <Compile Include="V20220817\Models\ModifyAppResponse.cs" />
+    <Compile Include="V20220817\Models\RegisterUserRequest.cs" />
+    <Compile Include="V20220817\Models\RegisterUserResponse.cs" />
+    <Compile Include="V20220817\Models\SetAppCustomContentRequest.cs" />
+    <Compile Include="V20220817\Models\SetAppCustomContentResponse.cs" />
+    <Compile Include="V20220817\Models\UnbindDocumentFromRoomRequest.cs" />
+    <Compile Include="V20220817\Models\UnbindDocumentFromRoomResponse.cs" />
+  </ItemGroup>
+</Project>

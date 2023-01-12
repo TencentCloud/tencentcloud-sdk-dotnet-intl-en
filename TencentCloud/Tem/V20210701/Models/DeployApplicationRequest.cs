@@ -273,38 +273,39 @@ namespace TencentCloud.Tem.V20210701.Models
         public string OsFlavour{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Prometheus metric
+        /// Configuration of metrics of this application
         /// </summary>
         [JsonProperty("EnablePrometheusConf")]
         public EnablePrometheusConf EnablePrometheusConf{ get; set; }
 
         /// <summary>
-        /// `1`: Enable APM tracing (Skywalking)
+        /// `1`: Automatically enable APM tracing (Skywalking)
         /// `0`: Disable APM tracing
         /// </summary>
         [JsonProperty("EnableTracing")]
         public long? EnableTracing{ get; set; }
 
         /// <summary>
-        /// 
+        /// `1`: Automatically enable metrics collection (open-telemetry)
+        /// `0`: Disable metrics collection
         /// </summary>
         [JsonProperty("EnableMetrics")]
         public long? EnableMetrics{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the TCR instance used for image deployment
         /// </summary>
         [JsonProperty("TcrInstanceId")]
         public string TcrInstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image server address for image deployment
         /// </summary>
         [JsonProperty("RepoServer")]
         public string RepoServer{ get; set; }
 
         /// <summary>
-        /// 
+        /// Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
         /// </summary>
         [JsonProperty("RepoType")]
         public long? RepoType{ get; set; }

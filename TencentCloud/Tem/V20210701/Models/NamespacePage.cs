@@ -48,6 +48,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Pages")]
         public long? Pages{ get; set; }
 
+        /// <summary>
+        /// Current entry
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Current")]
+        public long? Current{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "Pages", this.Pages);
+            this.SetParamSimple(map, prefix + "Current", this.Current);
         }
     }
 }

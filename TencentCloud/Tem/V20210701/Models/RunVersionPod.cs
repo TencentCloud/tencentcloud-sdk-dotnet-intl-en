@@ -89,6 +89,48 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("ContainerState")]
         public string ContainerState{ get; set; }
 
+        /// <summary>
+        /// Information of the node whether the instance locates
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("NodeInfo")]
+        public NodeInfo NodeInfo{ get; set; }
+
+        /// <summary>
+        /// Start time
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// Whether the status is unhealthy or healthy
+        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Unhealthy")]
+        public bool? Unhealthy{ get; set; }
+
+        /// <summary>
+        /// Warning message when the result is unhealthy
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("UnhealthyWarningMsg")]
+        public string UnhealthyWarningMsg{ get; set; }
+
+        /// <summary>
+        /// Version ID
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
+        /// <summary>
+        /// Application name
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string ApplicationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +147,12 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "RestartCount", this.RestartCount);
             this.SetParamSimple(map, prefix + "Ready", this.Ready);
             this.SetParamSimple(map, prefix + "ContainerState", this.ContainerState);
+            this.SetParamObj(map, prefix + "NodeInfo.", this.NodeInfo);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Unhealthy", this.Unhealthy);
+            this.SetParamSimple(map, prefix + "UnhealthyWarningMsg", this.UnhealthyWarningMsg);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         }
     }
 }

@@ -345,6 +345,8 @@
     <Compile Include="V20170312\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="V20170312\Models\DescribeTaskResultResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeTrafficPackagesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeTrafficPackagesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointServiceRequest.cs" />
@@ -574,6 +576,8 @@
     <Compile Include="V20170312\Models\ResetVpnGatewayInternetMaxBandwidthResponse.cs" />
     <Compile Include="V20170312\Models\Resource.cs" />
     <Compile Include="V20170312\Models\ResourceDashboard.cs" />
+    <Compile Include="V20170312\Models\ReturnNormalAddressesRequest.cs" />
+    <Compile Include="V20170312\Models\ReturnNormalAddressesResponse.cs" />
     <Compile Include="V20170312\Models\Route.cs" />
     <Compile Include="V20170312\Models\RouteTable.cs" />
     <Compile Include="V20170312\Models\RouteTableAssociation.cs" />
@@ -588,10 +592,13 @@
     <Compile Include="V20170312\Models\ServicesInfo.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
+    <Compile Include="V20170312\Models\SetVpnGatewaysRenewFlagRequest.cs" />
+    <Compile Include="V20170312\Models\SetVpnGatewaysRenewFlagResponse.cs" />
     <Compile Include="V20170312\Models\SourceIpTranslationNatRule.cs" />
     <Compile Include="V20170312\Models\Subnet.cs" />
     <Compile Include="V20170312\Models\SubnetInput.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
+    <Compile Include="V20170312\Models\TrafficPackage.cs" />
     <Compile Include="V20170312\Models\TransformAddressRequest.cs" />
     <Compile Include="V20170312\Models\TransformAddressResponse.cs" />
     <Compile Include="V20170312\Models\UnassignIpv6AddressesRequest.cs" />

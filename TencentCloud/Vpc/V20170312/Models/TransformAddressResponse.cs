@@ -25,6 +25,18 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AddressId")]
+        public string AddressId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "AddressId", this.AddressId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

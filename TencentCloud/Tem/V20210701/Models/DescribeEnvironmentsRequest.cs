@@ -42,6 +42,24 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
 
+        /// <summary>
+        /// Filters for query 
+        /// </summary>
+        [JsonProperty("Filters")]
+        public QueryFilter[] Filters{ get; set; }
+
+        /// <summary>
+        /// Sorting field
+        /// </summary>
+        [JsonProperty("SortInfo")]
+        public SortType SortInfo{ get; set; }
+
+        /// <summary>
+        /// Environment ID
+        /// </summary>
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamObj(map, prefix + "SortInfo.", this.SortInfo);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         }
     }
 }

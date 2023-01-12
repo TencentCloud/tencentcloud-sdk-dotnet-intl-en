@@ -47,7 +47,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-        /// Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }

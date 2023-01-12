@@ -91,7 +91,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? IsEipDirectConnection{ get; set; }
 
         /// <summary>
-        /// EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+        /// IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }

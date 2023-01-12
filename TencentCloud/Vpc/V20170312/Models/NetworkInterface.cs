@@ -147,6 +147,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AttachType")]
         public ulong? AttachType{ get; set; }
 
+        /// <summary>
+        /// The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// Service level
+        /// <li>`DEFAULT`: Default level</lil>
+        /// <li>`PT`: Gold</li>
+        /// <li>`AU`: Silver</li>
+        /// <li>`AG`: Bronze</li>
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("QosLevel")]
+        public string QosLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +190,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Business", this.Business);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "AttachType", this.AttachType);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
         }
     }
 }

@@ -66,6 +66,24 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("EnableTswTraceService")]
         public bool? EnableTswTraceService{ get; set; }
 
+        /// <summary>
+        /// Tag
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Environment type. Values: `test`, `pre`, `prod`
+        /// </summary>
+        [JsonProperty("EnvType")]
+        public string EnvType{ get; set; }
+
+        /// <summary>
+        /// The region to create the environment
+        /// </summary>
+        [JsonProperty("CreateRegion")]
+        public string CreateRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
             this.SetParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
+            this.SetParamSimple(map, prefix + "CreateRegion", this.CreateRegion);
         }
     }
 }

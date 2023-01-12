@@ -140,6 +140,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ExclusiveGatewayBandwidth")]
         public ulong? ExclusiveGatewayBandwidth{ get; set; }
 
+        /// <summary>
+        /// Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RestrictState")]
+        public string RestrictState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +171,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "SourceIpTranslationNatRuleSet.", this.SourceIpTranslationNatRuleSet);
             this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
             this.SetParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
+            this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
         }
     }
 }

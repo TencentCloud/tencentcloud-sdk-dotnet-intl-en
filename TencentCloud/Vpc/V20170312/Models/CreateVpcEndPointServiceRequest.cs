@@ -49,10 +49,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceInstanceId{ get; set; }
 
         /// <summary>
-        /// Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+        /// (Disused) Whether it’s a PaaS service
         /// </summary>
         [JsonProperty("IsPassService")]
         public bool? IsPassService{ get; set; }
+
+        /// <summary>
+        /// Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AutoAcceptFlag", this.AutoAcceptFlag);
             this.SetParamSimple(map, prefix + "ServiceInstanceId", this.ServiceInstanceId);
             this.SetParamSimple(map, prefix + "IsPassService", this.IsPassService);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
         }
     }
 }

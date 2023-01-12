@@ -37,13 +37,27 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? MaxReplicas{ get; set; }
 
         /// <summary>
-        /// Metrics (CPU or memory)
+        /// Metric measurement
+        /// `CPU`: CPU utilization (%)
+        /// `MEMORY`: Memory utilization (%)
+        /// `CPU_CORE_USED`: CPU usage (core)
+        /// `MEMORY_SIZE_USED`: Memory usage (MiB)
+        /// `NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+        /// `NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+        /// `NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+        /// `NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+        /// `NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+        /// `NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+        /// `FS_IOPS_WRITE`: Disk writes (count/sec)
+        /// `FS_IOPS_READ`: Disk reads (count/sec)
+        /// `FS_SIZE_WRITE`: Disk write size (MiB/s)
+        /// `FS_SIZE_READ`: Disk read size (MiB/s)
         /// </summary>
         [JsonProperty("Metrics")]
         public string Metrics{ get; set; }
 
         /// <summary>
-        /// Threshold (percentage)
+        /// The value of threshold (integer)
         /// </summary>
         [JsonProperty("Threshold")]
         public long? Threshold{ get; set; }
@@ -53,6 +67,13 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
+
+        /// <summary>
+        /// The value of threshold (demical)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DoubleThreshold")]
+        public float? DoubleThreshold{ get; set; }
 
 
         /// <summary>
@@ -65,6 +86,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Metrics", this.Metrics);
             this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "DoubleThreshold", this.DoubleThreshold);
         }
     }
 }

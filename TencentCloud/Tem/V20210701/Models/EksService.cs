@@ -101,6 +101,41 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("PortMappings")]
         public PortMapping[] PortMappings{ get; set; }
 
+        /// <summary>
+        /// Details of each type of access configuration
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ServicePortMappingList")]
+        public ServicePortMapping[] ServicePortMappingList{ get; set; }
+
+        /// <summary>
+        /// Flush all types
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FlushAll")]
+        public bool? FlushAll{ get; set; }
+
+        /// <summary>
+        /// `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnableRegistryNextDeploy")]
+        public long? EnableRegistryNextDeploy{ get; set; }
+
+        /// <summary>
+        /// The application ID returned.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// Whether all the application IPs are ready
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AllIpDone")]
+        public bool? AllIpDone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +153,11 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "LoadBalanceId", this.LoadBalanceId);
             this.SetParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
+            this.SetParamArrayObj(map, prefix + "ServicePortMappingList.", this.ServicePortMappingList);
+            this.SetParamSimple(map, prefix + "FlushAll", this.FlushAll);
+            this.SetParamSimple(map, prefix + "EnableRegistryNextDeploy", this.EnableRegistryNextDeploy);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "AllIpDone", this.AllIpDone);
         }
     }
 }

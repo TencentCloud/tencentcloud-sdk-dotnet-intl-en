@@ -37,16 +37,11 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageName{ get; set; }
 
         /// <summary>
-        /// The billing mode of the bandwidth package.
+        /// The billing mode of the bandwidth package. Values: 
+        /// `TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
-
-        /// <summary>
-        /// When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-        /// </summary>
-        [JsonProperty("MigrateOnRefund")]
-        public bool? MigrateOnRefund{ get; set; }
 
 
         /// <summary>
@@ -57,7 +52,6 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
-            this.SetParamSimple(map, prefix + "MigrateOnRefund", this.MigrateOnRefund);
         }
     }
 }
