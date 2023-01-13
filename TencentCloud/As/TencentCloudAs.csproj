@@ -128,6 +128,7 @@
     <Compile Include="V20180419\Models\ForwardLoadBalancer.cs" />
     <Compile Include="V20180419\Models\ForwardLoadBalancerIdentification.cs" />
     <Compile Include="V20180419\Models\HostNameSettings.cs" />
+    <Compile Include="V20180419\Models\IPv6InternetAccessible.cs" />
     <Compile Include="V20180419\Models\Instance.cs" />
     <Compile Include="V20180419\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20180419\Models\InstanceMarketOptionsRequest.cs" />

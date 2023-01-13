@@ -200,15 +200,15 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string StatusName{ get; set; }
 
         /// <summary>
-        /// Domain names associated with the certificate (including the primary domain name)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubjectAltName")]
         public string[] SubjectAltName{ get; set; }
 
         /// <summary>
-        /// Whether the customer is a VIP customer
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether the certificate is a paid one.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsVip")]
         public bool? IsVip{ get; set; }
@@ -242,8 +242,8 @@ namespace TencentCloud.Ssl.V20191205.Models
         public SubmittedData SubmittedData{ get; set; }
 
         /// <summary>
-        /// Whether the certificate can be reissued
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether the certificate can be renewed.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RenewAble")]
         public bool? RenewAble{ get; set; }
@@ -261,6 +261,48 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
+
+        /// <summary>
+        /// Root certificate.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RootCert")]
+        public RootCertificates RootCert{ get; set; }
+
+        /// <summary>
+        /// Chinese SM encryption certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EncryptCert")]
+        public string EncryptCert{ get; set; }
+
+        /// <summary>
+        /// Private key of Chinese SM encryption
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EncryptPrivateKey")]
+        public string EncryptPrivateKey{ get; set; }
+
+        /// <summary>
+        /// SHA1 fingerprint of the signature certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CertFingerprint")]
+        public string CertFingerprint{ get; set; }
+
+        /// <summary>
+        /// SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EncryptCertFingerprint")]
+        public string EncryptCertFingerprint{ get; set; }
+
+        /// <summary>
+        /// Certificate algorithm
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EncryptAlgorithm")]
+        public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -308,6 +350,12 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "RenewAble", this.RenewAble);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "RootCert.", this.RootCert);
+            this.SetParamSimple(map, prefix + "EncryptCert", this.EncryptCert);
+            this.SetParamSimple(map, prefix + "EncryptPrivateKey", this.EncryptPrivateKey);
+            this.SetParamSimple(map, prefix + "CertFingerprint", this.CertFingerprint);
+            this.SetParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
+            this.SetParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

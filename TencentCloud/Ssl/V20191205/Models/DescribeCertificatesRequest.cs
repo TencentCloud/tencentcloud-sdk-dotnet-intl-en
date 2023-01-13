@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of certificates on each page. The default value is 20.
+        /// Number of entries per page. Default value: `20`. Maximum value: `1000`.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ExpirationSort{ get; set; }
 
         /// <summary>
-        /// Certificate status
+        /// Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
         /// </summary>
         [JsonProperty("CertificateStatus")]
         public ulong?[] CertificateStatus{ get; set; }
@@ -71,6 +71,36 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         [JsonProperty("Deployable")]
         public ulong? Deployable{ get; set; }
+
+        /// <summary>
+        /// Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+        /// </summary>
+        [JsonProperty("Upload")]
+        public long? Upload{ get; set; }
+
+        /// <summary>
+        /// Whether to filter renewable certificates. `1`: Yes; `0`: No.
+        /// </summary>
+        [JsonProperty("Renew")]
+        public long? Renew{ get; set; }
+
+        /// <summary>
+        /// Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+        /// </summary>
+        [JsonProperty("FilterSource")]
+        public string FilterSource{ get; set; }
+
+        /// <summary>
+        /// Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+        /// </summary>
+        [JsonProperty("IsSM")]
+        public long? IsSM{ get; set; }
+
+        /// <summary>
+        /// Whether to filter expiring certificates. `1`: Yes; `0`: No.
+        /// </summary>
+        [JsonProperty("FilterExpiring")]
+        public ulong? FilterExpiring{ get; set; }
 
 
         /// <summary>
@@ -86,6 +116,11 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ExpirationSort", this.ExpirationSort);
             this.SetParamArraySimple(map, prefix + "CertificateStatus.", this.CertificateStatus);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
+            this.SetParamSimple(map, prefix + "Upload", this.Upload);
+            this.SetParamSimple(map, prefix + "Renew", this.Renew);
+            this.SetParamSimple(map, prefix + "FilterSource", this.FilterSource);
+            this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
+            this.SetParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
         }
     }
 }

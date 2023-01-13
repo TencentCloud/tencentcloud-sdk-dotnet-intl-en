@@ -96,6 +96,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }
 
+        /// <summary>
+        /// Benefit package ID, which is used to expand the free certificate package
+        /// </summary>
+        [JsonProperty("PackageId")]
+        public string PackageId{ get; set; }
+
+        /// <summary>
+        /// Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+        /// </summary>
+        [JsonProperty("DeleteDnsAutoRecord")]
+        public bool? DeleteDnsAutoRecord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CsrKeyPassword", this.CsrKeyPassword);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
+            this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
+            this.SetParamSimple(map, prefix + "DeleteDnsAutoRecord", this.DeleteDnsAutoRecord);
         }
     }
 }

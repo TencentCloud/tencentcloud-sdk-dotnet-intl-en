@@ -75,9 +75,11 @@
     <Compile Include="V20191205\Models\ModifyCertificateProjectRequest.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateProjectResponse.cs" />
     <Compile Include="V20191205\Models\OperationLog.cs" />
+    <Compile Include="V20191205\Models\PreAuditInfo.cs" />
     <Compile Include="V20191205\Models\ProjectInfo.cs" />
     <Compile Include="V20191205\Models\ReplaceCertificateRequest.cs" />
     <Compile Include="V20191205\Models\ReplaceCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\RootCertificates.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\SubmittedData.cs" />

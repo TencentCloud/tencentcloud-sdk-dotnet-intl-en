@@ -81,8 +81,8 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -234,6 +234,62 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
+        /// <summary>
+        /// Whether the expiration notification was ignored
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsIgnore")]
+        public bool? IsIgnore{ get; set; }
+
+        /// <summary>
+        /// Whether the certificate is a Chinese SM certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsSM")]
+        public bool? IsSM{ get; set; }
+
+        /// <summary>
+        /// Certificate algorithm
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EncryptAlgorithm")]
+        public string EncryptAlgorithm{ get; set; }
+
+        /// <summary>
+        /// Encryption algorithm of the uploaded CA certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CAEncryptAlgorithms")]
+        public string[] CAEncryptAlgorithms{ get; set; }
+
+        /// <summary>
+        /// Expiration time of the uploaded CA certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CAEndTimes")]
+        public string[] CAEndTimes{ get; set; }
+
+        /// <summary>
+        /// Generic name of the uploaded CA certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CACommonNames")]
+        public string[] CACommonNames{ get; set; }
+
+        /// <summary>
+        /// Prereview information of the certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PreAuditInfo")]
+        public PreAuditInfo PreAuditInfo{ get; set; }
+
+        /// <summary>
+        /// Whether auto-renewal is enabled.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +326,14 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArraySimple(map, prefix + "BoundResource.", this.BoundResource);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
+            this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
+            this.SetParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
+            this.SetParamArraySimple(map, prefix + "CAEncryptAlgorithms.", this.CAEncryptAlgorithms);
+            this.SetParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
+            this.SetParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
+            this.SetParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         }
     }
 }

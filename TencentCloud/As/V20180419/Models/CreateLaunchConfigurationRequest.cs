@@ -176,6 +176,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
 
+        /// <summary>
+        /// IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+        /// </summary>
+        [JsonProperty("IPv6InternetAccessible")]
+        public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+            this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.As.V20180419.Models
         public RunAutomationServiceEnabled[] AutomationService{ get; set; }
 
         /// <summary>
-        /// 
+        /// Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AutomationToolsService")]
         public RunAutomationServiceEnabled AutomationToolsService{ get; set; }
